@@ -26,6 +26,7 @@ android/
 /*.log
 /*.png
 /*.html
+!/index.html
 !/scripts/*.js
 !/scripts/*.cjs
 
