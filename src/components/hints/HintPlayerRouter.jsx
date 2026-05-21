@@ -650,10 +650,6 @@ export default function HintPlayerRouter({ unit, problemId, data: propData, show
     }
     } // end of else (non-CSAT)
 
-    // ★★★ 핵심: resolveAsset → getSafePath가 한국어 폴더명을 영어로 변환해서
-    //   실제 파일을 못 찾는 근본 버그. math_hints는 직접 URL 구성으로 우회.
-    const PREFIX = (typeof window !== 'undefined' && window.URL_PREFIX) ? window.URL_PREFIX : '';
-
     const tolerantParse = (rawText) => {
       try { return JSON.parse(rawText); }
       catch (e) {
@@ -673,10 +669,9 @@ export default function HintPlayerRouter({ unit, problemId, data: propData, show
     const paddedId = !isNaN(numPid) && numPid < 100
       ? String(numPid).padStart(3, '0') : String(problemId);
 
-    // encodeURIComponent로 한국어 URL 안전 처리, getSafePath 완전 우회
+    // [SSOT 연동] window.resolveAsset를 활용해 로컬/배포 영어 경로 완벽 번역 및 URL_PREFIX 동적 자동 적용
     const mkUrl = (uid, pid, v2 = false) => {
-      const safeUid = uid.split('/').map(encodeURIComponent).join('/');
-      return `${PREFIX}/math_hints/${safeUid}/${encodeURIComponent(pid)}${v2 ? '_v2' : ''}.json`;
+      return window.resolveAsset(`/math_hints/${uid}/${pid}${v2 ? '_v2' : ''}.json`);
     };
 
     console.log('[HintRouter] 페치 unit:', fetchUnit, '| padded:', paddedId);
