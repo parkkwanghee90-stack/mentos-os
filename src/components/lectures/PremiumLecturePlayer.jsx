@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BlockMath, InlineMath } from 'react-katex';
+import { BlockMath, InlineMath } from '@/components/KaTeXWrapper';
 import { Play, Pause, ChevronRight, ChevronLeft, Volume2, X } from 'lucide-react';
 import 'katex/dist/katex.min.css';
 import SineRuleAnimation from '../SineRuleAnimation';

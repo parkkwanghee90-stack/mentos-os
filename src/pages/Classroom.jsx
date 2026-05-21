@@ -22,7 +22,7 @@ import {
   getPhaseProgress
 } from '@/services/lessonPhaseEngine';
 import '@/pages/Classroom.css';
-import { BlockMath, InlineMath } from 'react-katex';
+import { BlockMath, InlineMath } from '@/components/KaTeXWrapper';
 import WhiteFocusMode from '@/components/WhiteFocusMode';
 
 export const normalizeMathText = (text) => {

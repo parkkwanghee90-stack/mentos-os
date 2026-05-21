@@ -30,7 +30,7 @@ import MathCanvas from './MathCanvas';
 import TTS_UNIT_MAP from '../../data/tts_map.json';
 
 import 'katex/dist/katex.min.css';
-import { BlockMath, InlineMath } from 'react-katex';
+import { BlockMath, InlineMath } from '@/components/KaTeXWrapper';
 
 // RichText: 한글+LaTeX 혼합 텍스트를 완벽하게 렌더링
 // $...$ → InlineMath, $$...$$ / \[...\] → BlockMath, 나머지 → 텍스트

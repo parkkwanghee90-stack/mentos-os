@@ -5,7 +5,7 @@
  * - 보기: MathText 파서로 KaTeX 렌더링 (모바일 세로 리스트 대응)
  */
 import React from 'react';
-import { InlineMath, BlockMath } from 'react-katex';
+import { InlineMath, BlockMath } from '@/components/KaTeXWrapper';
 import 'katex/dist/katex.min.css';
 
 const OPTION_CHARS = ['①','②','③','④','⑤'];
