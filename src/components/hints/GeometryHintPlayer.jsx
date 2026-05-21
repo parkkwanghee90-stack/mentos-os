@@ -437,20 +437,7 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
             {hasMath && <MathCanvas objects={accumulatedObjects} height={450} viewBox={isV3 ? data.viewBox : cur.math?.viewBox} />}
             {hasShapes && !isV3 && <LegacySvgCanvas shapes={cur.shapes} />}
           </div>
-        ) : (
-          <div className="w-full lg:w-5/12 lg:sticky order-first lg:order-last" style={{
-            background: '#1e293b', borderRadius: 12, top: '1.5rem',
-            display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
-            padding: '2rem', marginBottom: '1rem',
-            height: '480px', color: '#94a3b8', textAlign: 'center'
-          }}>
-            <div style={{ fontSize: '3.5rem', marginBottom: '1rem', filter: 'grayscale(0.5)' }}>📐</div>
-            <h4 style={{ color: '#e2e8f0', margin: '0 0 0.5rem 0' }}>시각적 해설 준비 중</h4>
-            <p style={{ fontSize: '0.9rem', opacity: 0.7, margin: 0 }}>
-              본 문제는 고품질 도형 애니메이션이<br/>제작되고 있는 단계입니다.
-            </p>
-          </div>
-        )}
+        ) : null}
       </div>
     </div>
   );
