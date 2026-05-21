@@ -1,6 +1,12 @@
 import { getSafePath } from './pathMapping';
 
-export const URL_PREFIX = '';
+// 브라우저 환경 판별: 로컬호스트(localhost, 127.0.0.1)가 아닌 배포 프로덕션 도메인인 경우
+// Supabase Storage Public URL_PREFIX를 자동으로 지정해줍니다.
+const isLocalhost = typeof window !== 'undefined' && 
+  (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+
+export const URL_PREFIX = isLocalhost ? '' : 'https://trvqgqvwhqvlgqzlsxbu.supabase.co/storage/v1/object/public/mentos-assets';
+
 
 /**
  * Resolves a local asset path to a Supabase public URL.

@@ -22,7 +22,7 @@ import DynamicProblemAnimation from '@/components/DynamicProblemAnimation';
 import HintPlayerRouter from '@/components/hints/HintPlayerRouter';
 import PremiumLecturePlayer from '@/components/lectures/PremiumLecturePlayer';
 
-const Error = ({ text }) => <div style={{ color: 'red', padding: '2rem', background: '#09090b', height: '100vh' }}>🚨 {text}</div>;
+const ErrorComponent = ({ text }) => <div style={{ color: 'red', padding: '2rem', background: '#09090b', height: '100vh' }}>🚨 {text}</div>;
 const Loading = () => <div style={{ color: 'white', padding: '2rem', background: '#09090b', height: '100vh' }}>Loading V2 Engine...</div>;
 
 function useSTT(setInput) {

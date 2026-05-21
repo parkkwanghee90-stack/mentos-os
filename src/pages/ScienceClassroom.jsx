@@ -12,7 +12,7 @@ import { finalizeScienceSession } from '@/engine/science/finalizeSession';
 import '@/pages/Classroom.css';
 import FreeTrialBanner from '@/components/FreeTrialBanner';
 
-const Error = ({ text }) => <div style={{ color: 'red', padding: '2rem', background: '#09090b', height: '100vh' }}>🚨 {text}</div>;
+const ErrorComponent = ({ text }) => <div style={{ color: 'red', padding: '2rem', background: '#09090b', height: '100vh' }}>🚨 {text}</div>;
 const Loading = () => <div style={{ color: 'white', padding: '2rem', background: '#09090b', height: '100vh' }}>Loading V2 Engine...</div>;
 
 function useSTT(setInput) {
