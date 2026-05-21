@@ -1,0 +1,559 @@
+{
+  "teacherId": "h_eng1",
+  "round": 2,
+  "title": "Curriculum Mode for 4~5등급",
+  "targetGrades": [
+    "고1",
+    "고2"
+  ],
+  "targetRanks": [
+    "4~5등급"
+  ],
+  "reading": {
+    "passageCount": 10,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "Emma wakes up at 6:30 every morning. She starts her day with a quick workout. After exercising, she eats a healthy breakfast. Then, she gets ready for school. She enjoys the morning routine because it gives her energy for the day.",
+        "teachPoint": "Daily routines help establish good habits.",
+        "question": "What does Emma do right after she wakes up?"
+      },
+      {
+        "id": "Passage_2",
+        "text": "Tom loves playing soccer with his friends. They meet at the park every Saturday afternoon. After playing, they usually have ice cream together. Tom thinks these moments are the highlight of his week.",
+        "teachPoint": "Spending time with friends can create happy memories.",
+        "question": "What does Tom do with his friends after playing soccer?"
+      },
+      {
+        "id": "Passage_3",
+        "text": "Lisa is reading a new book series about dragons. She reads for an hour before going to bed. The story is exciting and full of adventure. Lisa can't wait to find out what happens next.",
+        "teachPoint": "Reading before bed can improve sleep quality and imagination.",
+        "question": "What type of book is Lisa reading?"
+      },
+      {
+        "id": "Passage_4",
+        "text": "David helps his mother in the kitchen every Sunday. Together, they cook lunch for the family. David enjoys learning new recipes and spending time with his mom. This has become their special weekend tradition.",
+        "teachPoint": "Cooking together can strengthen family bonds.",
+        "question": "What do David and his mother do together every Sunday?"
+      },
+      {
+        "id": "Passage_5",
+        "text": "Jenny rides her bike to school every day. The ride takes about 20 minutes. She enjoys feeling the fresh air and seeing the morning sun. It's her favorite part of the day.",
+        "teachPoint": "Riding a bike is a healthy and eco-friendly way to travel.",
+        "question": "How long does it take Jenny to ride her bike to school?"
+      },
+      {
+        "id": "Passage_6",
+        "text": "Amy loves to spend her weekends at the park near her house. She often takes her dog, Max, with her. They enjoy playing fetch and meeting other dogs. The park is also a great place for Amy to relax and read a book under a tree.",
+        "teachPoint": "Describing weekend activities and places.",
+        "question": "What does Amy like to do at the park?"
+      },
+      {
+        "id": "Passage_7",
+        "text": "James has recently started a new hobby: cooking. He finds it exciting to try different recipes and experiment with flavors. His favorite dish to make is pasta, and he often adds his own twist to traditional recipes.",
+        "teachPoint": "Talking about hobbies and interests.",
+        "question": "What is James’s favorite dish to cook?"
+      },
+      {
+        "id": "Passage_8",
+        "text": "Sophie enjoys drawing during her free time. She likes to sketch landscapes and animals the most. Her friends admire her creativity and often ask her to draw something for them. Sophie feels happy when she sees her friends' smiles.",
+        "teachPoint": "Discussing personal interests and talents.",
+        "question": "What subjects does Sophie like to draw?"
+      },
+      {
+        "id": "Passage_9",
+        "text": "Tom has a morning routine that helps him start his day well. He begins by stretching and then has a healthy breakfast. After that, he listens to music while getting ready for school. This routine energizes him for the day ahead.",
+        "teachPoint": "Describing daily routines and habits.",
+        "question": "What does Tom do after stretching in the morning?"
+      },
+      {
+        "id": "Passage_10",
+        "text": "Lina and her family go on a picnic every spring. They choose a different place each time, like a beach or a mountain. Lina enjoys these trips because she gets to spend time with her family and explore new places.",
+        "teachPoint": "Talking about family activities and traditions.",
+        "question": "Where do Lina and her family go for picnics?"
+      }
+    ],
+    "teachPoints": [
+      "Daily routines help establish good habits.",
+      "Spending time with friends can create happy memories.",
+      "Reading before bed can improve sleep quality and imagination.",
+      "Cooking together can strengthen family bonds.",
+      "Riding a bike is a healthy and eco-friendly way to travel.",
+      "Describing weekend activities and places.",
+      "Talking about hobbies and interests.",
+      "Discussing personal interests and talents.",
+      "Describing daily routines and habits.",
+      "Talking about family activities and traditions."
+    ],
+    "questions": [
+      "What does Emma do right after she wakes up?",
+      "What does Tom do with his friends after playing soccer?",
+      "What type of book is Lisa reading?",
+      "What do David and his mother do together every Sunday?",
+      "How long does it take Jenny to ride her bike to school?",
+      "What does Amy like to do at the park?",
+      "What is James’s favorite dish to cook?",
+      "What subjects does Sophie like to draw?",
+      "What does Tom do after stretching in the morning?",
+      "Where do Lina and her family go for picnics?"
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "script": [
+          "A: Hey, did you finish the report for history class?",
+          "B: Not yet, I'm struggling with the last part.",
+          "A: Which part are you having trouble with?",
+          "B: The conclusion. I can't seem to wrap everything up nicely.",
+          "A: Maybe try summarizing the main points first, then add your thoughts.",
+          "B: That's a good idea. I'll give it a try. Thanks!"
+        ],
+        "question": "What is B struggling with in their report?",
+        "choices": [
+          "Introduction",
+          "Main points",
+          "Conclusion",
+          "References",
+          "Title"
+        ],
+        "answer": "Conclusion"
+      },
+      {
+        "script": [
+          "A: Are you going to the concert this weekend?",
+          "B: I want to, but I haven't bought a ticket yet.",
+          "A: You should hurry, they might sell out soon.",
+          "B: I know, but I'm waiting for my friend to confirm.",
+          "A: Do you think they'll decide in time?",
+          "B: I hope so. I'll remind them today."
+        ],
+        "question": "Why hasn't B bought a concert ticket yet?",
+        "choices": [
+          "Tickets sold out",
+          "Waiting for friend's confirmation",
+          "Too expensive",
+          "Not interested",
+          "Already has a ticket"
+        ],
+        "answer": "Waiting for friend's confirmation"
+      },
+      {
+        "script": [
+          "A: Did you see the new movie that came out last Friday?",
+          "B: Yes, I watched it on Saturday.",
+          "A: How was it?",
+          "B: It was really good! The storyline was amazing.",
+          "A: I’ve been wanting to see it. Who did you go with?",
+          "B: I went with my brother. He loved it too."
+        ],
+        "question": "When did B watch the new movie?",
+        "choices": [
+          "Friday",
+          "Saturday",
+          "Sunday",
+          "Monday",
+          "Tuesday"
+        ],
+        "answer": "Saturday"
+      },
+      {
+        "script": [
+          "A: How was your vacation?",
+          "B: It was fantastic! We went to the mountains.",
+          "A: Sounds fun! Did you go hiking?",
+          "B: Yes, and the view from the top was breathtaking.",
+          "A: Did you take any pictures?",
+          "B: Tons! I'll show them to you later."
+        ],
+        "question": "What activity did B do on their vacation?",
+        "choices": [
+          "Swimming",
+          "Skiing",
+          "Hiking",
+          "Fishing",
+          "Shopping"
+        ],
+        "answer": "Hiking"
+      },
+      {
+        "script": [
+          "A: Are you attending the seminar tomorrow?",
+          "B: I am, but I need to prepare my presentation.",
+          "A: What’s your topic?",
+          "B: I’m talking about renewable energy.",
+          "A: That sounds interesting. Do you have all your materials ready?",
+          "B: Almost. I just need to finalize my slides."
+        ],
+        "question": "What is B presenting about at the seminar?",
+        "choices": [
+          "Climate change",
+          "Renewable energy",
+          "Technology trends",
+          "Economic growth",
+          "Healthcare"
+        ],
+        "answer": "Renewable energy"
+      },
+      {
+        "script": [
+          "A: Have you chosen a book for the book club meeting?",
+          "B: Not yet. I’m deciding between a mystery or a romance novel.",
+          "A: Why not pick a mystery? They’re usually more engaging.",
+          "B: True, I do enjoy a good mystery.",
+          "A: Let me know which one you pick, I might read it too.",
+          "B: Sure, I’ll decide by tonight."
+        ],
+        "question": "What type of book is A suggesting B to choose?",
+        "choices": [
+          "Romance",
+          "Mystery",
+          "Science fiction",
+          "Non-fiction",
+          "Fantasy"
+        ],
+        "answer": "Mystery"
+      },
+      {
+        "script": [
+          "A: Have you heard about the new café in town?",
+          "B: Yes, I heard their coffee is really good.",
+          "A: Do you want to check it out this weekend?",
+          "B: Sure, I’d love to. What time?",
+          "A: How about Saturday morning?",
+          "B: Perfect, see you then!"
+        ],
+        "question": "When do A and B plan to visit the new café?",
+        "choices": [
+          "Friday afternoon",
+          "Saturday morning",
+          "Saturday evening",
+          "Sunday afternoon",
+          "Sunday evening"
+        ],
+        "answer": "Saturday morning"
+      },
+      {
+        "script": [
+          "A: Did you finish reading the article for class?",
+          "B: Yes, I did. It was quite informative.",
+          "A: What part did you find most interesting?",
+          "B: The section about climate change was eye-opening.",
+          "A: I agree, it had some shocking statistics.",
+          "B: It really made me think about our impact on the environment."
+        ],
+        "question": "What did B find most interesting in the article?",
+        "choices": [
+          "Economic trends",
+          "Technology advancements",
+          "Climate change",
+          "Healthcare developments",
+          "Historical events"
+        ],
+        "answer": "Climate change"
+      },
+      {
+        "script": [
+          "A: Are you planning to join the gym this month?",
+          "B: I want to, but I’m not sure which one to choose.",
+          "A: Have you checked the one near our office?",
+          "B: Not yet, is it good?",
+          "A: Yes, they have great facilities and trainers.",
+          "B: I’ll visit them this weekend and see for myself."
+        ],
+        "question": "Why is B hesitant about joining a gym?",
+        "choices": [
+          "Lack of time",
+          "Not sure which gym to choose",
+          "Too expensive",
+          "Not interested",
+          "Has a home gym"
+        ],
+        "answer": "Not sure which gym to choose"
+      },
+      {
+        "script": [
+          "A: Did you hear about the art exhibition next week?",
+          "B: Yes, I’m planning to go.",
+          "A: Me too! I heard they’ll have some famous paintings.",
+          "B: Really? That’s exciting. Do you know if there’s an entry fee?",
+          "A: I think it’s free, but we might need to register online.",
+          "B: I’ll check the website tonight."
+        ],
+        "question": "What do A and B need to do before attending the art exhibition?",
+        "choices": [
+          "Buy tickets",
+          "Register online",
+          "Bring ID",
+          "Wear formal attire",
+          "Arrive early"
+        ],
+        "answer": "Register online"
+      }
+    ],
+    "timeline": [
+      "[0~3m] AudioItem_1",
+      "[3~6m] AudioItem_2",
+      "[6~9m] AudioItem_3",
+      "[9~12m] AudioItem_4",
+      "[12~15m] AudioItem_5",
+      "[15~18m] AudioItem_6",
+      "[18~21m] AudioItem_7",
+      "[21~24m] AudioItem_8",
+      "[24~27m] AudioItem_9",
+      "[27~30m] AudioItem_10"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "increase",
+        "meaning": "양이나 수가 많아지다",
+        "alt_meaning": "증가하다",
+        "example_sentence": "The population is expected to increase next year.",
+        "context_explain": "This word is often used when talking about growth or rise in numbers or amounts."
+      },
+      {
+        "word": "decrease",
+        "meaning": "양이나 수가 적어지다",
+        "alt_meaning": "감소하다",
+        "example_sentence": "The temperature will decrease at night.",
+        "context_explain": "This word is often used when talking about reduction or decline in numbers or amounts."
+      },
+      {
+        "word": "problem",
+        "meaning": "문제",
+        "alt_meaning": "어려움",
+        "example_sentence": "There is a problem with the computer.",
+        "context_explain": "This word is used to describe a situation that needs to be dealt with or solved."
+      },
+      {
+        "word": "reason",
+        "meaning": "이유",
+        "alt_meaning": "원인",
+        "example_sentence": "The reason for his absence was a family emergency.",
+        "context_explain": "This word is used to explain why something happens or why someone does something."
+      },
+      {
+        "word": "result",
+        "meaning": "결과",
+        "alt_meaning": "결과물",
+        "example_sentence": "The result of the test was surprising.",
+        "context_explain": "This word is used to describe the outcome or effect of an action or situation."
+      },
+      {
+        "word": "help",
+        "meaning": "돕다",
+        "alt_meaning": "지원하다",
+        "example_sentence": "Can you help me with my homework?",
+        "context_explain": "This word is used when offering or providing assistance to someone."
+      },
+      {
+        "word": "use",
+        "meaning": "사용하다",
+        "alt_meaning": "이용하다",
+        "example_sentence": "You can use this tool to fix the bike.",
+        "context_explain": "This word is used when talking about employing something for a particular purpose."
+      },
+      {
+        "word": "make",
+        "meaning": "만들다",
+        "alt_meaning": "제작하다",
+        "example_sentence": "She likes to make cakes on weekends.",
+        "context_explain": "This word is used when talking about creating or producing something."
+      },
+      {
+        "word": "find",
+        "meaning": "찾다",
+        "alt_meaning": "발견하다",
+        "example_sentence": "I need to find my keys before leaving.",
+        "context_explain": "This word is used when discovering something that was lost or not known."
+      },
+      {
+        "word": "start",
+        "meaning": "시작하다",
+        "alt_meaning": "개시하다",
+        "example_sentence": "We will start the meeting at 10 AM.",
+        "context_explain": "This word is used when beginning an activity or process."
+      },
+      {
+        "word": "end",
+        "meaning": "끝나다",
+        "alt_meaning": "마치다",
+        "example_sentence": "The show will end at 9 PM.",
+        "context_explain": "This word is used when something comes to a conclusion or stop."
+      },
+      {
+        "word": "give",
+        "meaning": "주다",
+        "alt_meaning": "제공하다",
+        "example_sentence": "Please give me the book.",
+        "context_explain": "This word is used when offering or passing something to someone."
+      },
+      {
+        "word": "take",
+        "meaning": "받다",
+        "alt_meaning": "취하다",
+        "example_sentence": "Take an umbrella with you.",
+        "context_explain": "This word is used when receiving or acquiring something."
+      },
+      {
+        "word": "see",
+        "meaning": "보다",
+        "alt_meaning": "관찰하다",
+        "example_sentence": "I see a bird in the tree.",
+        "context_explain": "This word is used when using your eyes to look at something."
+      },
+      {
+        "word": "know",
+        "meaning": "알다",
+        "alt_meaning": "인지하다",
+        "example_sentence": "I know the answer to the question.",
+        "context_explain": "This word is used when you have information about something or someone."
+      }
+    ],
+    "venice": {
+      "time": "5분",
+      "theme": "SSOT Words",
+      "content": "Review Games"
+    },
+    "wordLearn": {
+      "time": "8분",
+      "content": "Learn basic meanings"
+    },
+    "wordTest": {
+      "questionsCount": 10,
+      "questions": [
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'increase'?",
+          "choices": [
+            "감소하다",
+            "증가하다",
+            "시작하다",
+            "종료하다"
+          ],
+          "answer": "증가하다"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'problem'?",
+          "choices": [
+            "해결책",
+            "문제",
+            "이유",
+            "결과"
+          ],
+          "answer": "문제"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'result'?",
+          "choices": [
+            "문제",
+            "이유",
+            "결과",
+            "시작"
+          ],
+          "answer": "결과"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'help'?",
+          "choices": [
+            "돕다",
+            "사용하다",
+            "만들다",
+            "찾다"
+          ],
+          "answer": "돕다"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'use'?",
+          "choices": [
+            "시작하다",
+            "사용하다",
+            "끝나다",
+            "주다"
+          ],
+          "answer": "사용하다"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'make'?",
+          "choices": [
+            "만들다",
+            "찾다",
+            "시작하다",
+            "종료하다"
+          ],
+          "answer": "만들다"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'find'?",
+          "choices": [
+            "끝나다",
+            "발견하다",
+            "주다",
+            "받다"
+          ],
+          "answer": "발견하다"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'start'?",
+          "choices": [
+            "시작하다",
+            "종료하다",
+            "주다",
+            "받다"
+          ],
+          "answer": "시작하다"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'end'?",
+          "choices": [
+            "시작하다",
+            "종료하다",
+            "주다",
+            "받다"
+          ],
+          "answer": "종료하다"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'give'?",
+          "choices": [
+            "받다",
+            "주다",
+            "시작하다",
+            "끝나다"
+          ],
+          "answer": "주다"
+        }
+      ],
+      "testType": "meaning_choice"
+    }
+  },
+  "homework": {
+    "title": "기초/핵심 과제",
+    "items": [
+      {
+        "type": "reading",
+        "title": "10개 지문 풀이 분석"
+      },
+      {
+        "type": "listening",
+        "title": "15개 듣기 실전 딕테이션"
+      },
+      {
+        "type": "vocab",
+        "title": "15개 단어 완벽 암기"
+      }
+    ]
+  }
+}

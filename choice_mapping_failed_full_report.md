@@ -1,0 +1,314 @@
+# Choice Mapping Failure Report (58 Problems)
+
+## 1. Statistics
+- **Total Failed**: 58
+- **By Unit**:
+  - 고차방정식: 12
+  - 이차부등식: 16
+  - 원의방정식: 11
+  - 도형의이동: 19
+- **By Stage**:
+  - 2단계: 22
+  - 3단계: 18
+  - 4단계: 18
+
+---
+
+### [고차방정식]
+- **3단계 / 002**
+  - **finalAnswer**: 6
+  - **choices**: 사차방정식 $x(x-1)(x-2)(x-3)-24=0$의 모든 허근의 곱을 구하여라.
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\고차방정식3단계\002.json
+- **3단계 / 011**
+  - **finalAnswer**: 6
+  - **choices**: 방정식 $x^4 + 4x^3 - 2ax^2 - (2a + 1)x - 10 = 0$의 한 근이 2일 때, 나머지 세 근 중 허근의 합을 구하여라. (단, $a$는 실수이다.)
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\고차방정식3단계\011.json
+- **3단계 / 012**
+  - **finalAnswer**: 0
+  - **choices**: 방정식 $x^4 + 2x^3 + ax + b = 0$의 두 근이 1, -2일 때, 다른 두 근의 곱을 구하여라.
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\고차방정식3단계\012.json
+- **3단계 / 036**
+  - **finalAnswer**: 12
+  - **choices**: 삼차방정식 $x^3 = 1$의 한 허근을 $\omega$라 할 때, $\omega^{10} + (\omega + 1)^{20} + (\omega^2 + \omega)^{30} = a + b\omega$를 만족하는 실수 $a, b$에 대하여 $10a + b$의 값을 구하여라.
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\고차방정식3단계\036.json
+- **3단계 / 041**
+  - **finalAnswer**: 8
+  - **choices**: 가로와 세로의 길이가 같고 높이는 가로의 두 배인 어떤 직육면체의 가로와 세로의 길이를 각각 $2\text{cm}$, $1\text{cm}$씩 늘이고, 높이를 $3\text{cm}$ 줄여서 새로운 직육면체를 만들면 그 부피가 $150\text{cm}^3$가 된다. 처음 직육면체의 높이는 몇 $\text{cm}$인지 구하여라.
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\고차방정식3단계\041.json
+- **3단계 / 078**
+  - **finalAnswer**: 8
+  - **choices**: 두 근을 $\alpha$, $\beta$ $(\alpha \geq \beta)$라 하면  $\alpha + \beta = \frac{m}{2} \qquad \cdots \;  ①$  $\alpha \beta = m + 3 \qquad \cdots \; ②$  $② - ① \times 2$를 하면  $\alpha \beta - 2\alpha - 2\beta = 3$  $(\alpha - 2)(\beta - 2) = 7$  그러므로 $\alpha - 2 = 7$, $\beta - 2 = 1$  또는 $\alpha - 2 = -1$, $\beta - 2 = -7$  즉, $\alpha = 9$, $\beta = 3$일 때 $m = 24$이고  $\alpha = 1$, $\beta = -5$일 때 $m = -8$이다.  따라서 두 수의 합은 16이다.
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\고차방정식3단계\078.json
+- **4단계 / 013**
+  - **finalAnswer**: 0
+  - **choices**: 삼차방정식 $x^3 + 2x - 3 = 0$의 세 근을 $\alpha, \beta, \gamma$라고 할 때, $\frac{\beta + \gamma}{\alpha^2}, \frac{\gamma + \alpha}{\beta^2}, \frac{\alpha + \beta}{\gamma^2}$를 세 근으로 하는 삼차방정식은? ① $3x^3 + 2x^2 + 1 = 0$ ② $3x^3 + 2x - 1 = 0$ ③ $3x^3 - 2x^2 - 1 = 0$ ④ $3x^3 - 2x^2 + 1 = 0$ ⑤ $3x^3 - 2x + 1 = 0$
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\고차방정식4단계\013.json
+- **4단계 / 014**
+  - **finalAnswer**: 0
+  - **choices**: 삼차방정식 $x^3 + x^2 - 1 = 0$의 세 근을 $\alpha, \beta, \gamma$라 할 때, $\alpha + \beta, \beta + \gamma, \gamma + \alpha$를 세 근으로 하고 $x^3$의 계수가 1인 삼차방정식은? ① $x^3 - 2x^2 - x - 1 = 0$ ② $x^3 - 2x^2 + x - 1 = 0$ ③ $x^3 + 2x^2 - x - 1 = 0$ ④ $x^3 + 2x^2 + x - 1 = 0$ ⑤ $x^3 + 2x^2 + x + 1 = 0$
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\고차방정식4단계\014.json
+- **4단계 / 015**
+  - **finalAnswer**: 0
+  - **choices**: x^3 - 6x - 9 = 0의 세 근을 $\alpha$, $\beta$, $\gamma$라고 할 때, $\frac{1}{\alpha + \beta}, \frac{1}{\beta + \gamma}, \frac{1}{\gamma + \alpha}$을 세 근으로 하고 x^3의 계수가 9인 삼차방정식은? ① $9x^3 + 6x^2 - x + 1 = 0$ ② $9x^3 + 6x^2 + 1 = 0$ ③ $9x^3 - 6x^2 - x + 1 = 0$ ④ $9x^3 - 6x^2 + 1 = 0$ ⑤ $9x^3 - 6x^2 + x + 1 = 0$
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\고차방정식4단계\015.json
+- **4단계 / 020**
+  - **finalAnswer**: 25
+  - **choices**: 방정식 $x^3 = -1$의 한 허근을 $\omega$라 할 때, $$(\omega - 1)^n = \left( \frac{\overline{\omega}}{\omega + \overline{\omega}} \right)^n$$ 을 만족시키는 50 이하의 자연수 $n$의 개수를 구하시오.
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\고차방정식4단계\020.json
+- **4단계 / 043**
+  - **finalAnswer**: 6
+  - **choices**: 방정식 $x^3 = 1$의 한 허근을 $\omega$라 하고 자연수 $n$에 대하여  $$a_n = 1 + \omega + \omega^2 + \omega^3 + \cdots + \omega^{n-1}$$  이라 할 때, 옳은 것만을 보기에서 있는 대로 고른 것은?  |보기|  ㄱ. $a_n = 0$을 만족시키는 자연수 $n$의 최소값은 $3$이다. ㄴ. $a_n = 0$을 만족시키는 짝수 $n$이 존재한다. ㄷ. $a_{11}^2$의 실수부분은 $\frac{1}{2}$이다.  ① ㄱ ② ㄴ ③ ㄱ, ㄴ ④ ㄱ, ㄷ ⑤ ㄴ, ㄷ
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\고차방정식4단계\043.json
+- **4단계 / 045**
+  - **finalAnswer**: 24
+  - **choices**: 다음 그림에서 $\square ABCD$의 각 변의 길이는 자연수이고, $\overline{AD} = 2$, $\overline{CD} = 6$, $\angle A = \angle C = 90^\circ$ 이다. 이 사각형의 둘레의 최대 길이는? ① 18 ② 20 ③ 22 ④ 24 ⑤ 26
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\고차방정식4단계\045.json
+
+### [이차부등식]
+- **2단계 / 008**
+  - **finalAnswer**: 16
+  - **choices**: N/A
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\이차부등식2단계\008.json
+- **2단계 / 015**
+  - **finalAnswer**: 0
+  - **choices**: N/A
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\이차부등식2단계\015.json
+- **2단계 / 020**
+  - **finalAnswer**: 0
+  - **choices**: N/A
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\이차부등식2단계\020.json
+- **2단계 / 026**
+  - **finalAnswer**: 6
+  - **choices**: N/A
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\이차부등식2단계\026.json
+- **2단계 / 029**
+  - **finalAnswer**: 0
+  - **choices**: N/A
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\이차부등식2단계\029.json
+- **2단계 / 033**
+  - **finalAnswer**: 6
+  - **choices**: N/A
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\이차부등식2단계\033.json
+- **2단계 / 039**
+  - **finalAnswer**: 0
+  - **choices**: N/A
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\이차부등식2단계\039.json
+- **3단계 / 005**
+  - **finalAnswer**: 30
+  - **choices**: 부등식 $x^2 + ax + b > 0$의 해가 $x < -3$ 또는 $x > 4$일 때, 부등식 $x^2 + (a-1)x + b-1 < 0$의 해는 $\alpha < x < \beta$이다. 이때, 두 실수 $\alpha$, $\beta$에 대하여 $\alpha^2 + \beta^2$의 값을 구하시오.
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\이차부등식3단계\005.json
+- **3단계 / 006**
+  - **finalAnswer**: 0
+  - **choices**: 이차부등식 $x^2 + ax + b \leq 0$의 해가 $x = 3$일 때, 이차부등식 $bx^2 - ax - 8 < 0$을 만족시키는 모든 정수 $x$의 값의 합을 구하시오. (단, $a$, $b$는 실수이다.)
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\이차부등식3단계\006.json
+- **3단계 / 016**
+  - **finalAnswer**: 6
+  - **choices**: 연립부등식 \[ \begin{cases} |x-2| < 5 \\ x^2 - 2x - 8 \geq 0 \end{cases} \] 을 만족시키는 정수 $x$의 개수는? ① 2 ② 3 ③ 4 ④ 5 ⑤ 6
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\이차부등식3단계\016.json
+- **3단계 / 018**
+  - **finalAnswer**: 7
+  - **choices**: 연립부등식 \[ \begin{cases} |x-2| < 5 \\ x^2 - 3x - 4 \geq 0 \end{cases} \] 을 만족시키는 모든 정수 $x$의 개수는? ① $2$ ② $3$ ③ $4$ ④ $5$ ⑤ $6$
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\이차부등식3단계\018.json
+- **3단계 / 034**
+  - **finalAnswer**: 56
+  - **choices**: 이차함수 $f(x)$에 대하여 $f(1) = 8$이고 부등식 $f(x) \leq 0$의 해가 $-3 \leq x \leq 0$일 때, $f(4)$의 값을 구하시오.
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\이차부등식3단계\034.json
+- **3단계 / 038**
+  - **finalAnswer**: 0
+  - **choices**: 이차부등식 $ax^2 + 2bx + c \geq 0$의 해가 $x = 2$일 때, 보기에서 옳은 것만을 있는 대로 고른 것은? (단, $a$, $b$, $c$는 상수이다.)  보기  ㄱ. $b^2 = ac$ ㄴ. $abc > 0$ ㄷ. 부등식 $bx^2 + cx - 2a \geq 0$의 해는 모든 실수이다.  ① ㄱ ② ㄱ, ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\이차부등식3단계\038.json
+- **4단계 / 016**
+  - **finalAnswer**: 0
+  - **choices**: 사차방정식 $x^4 - 2ax^2 + b = 0$이 서로 다른 네 실근을 가질 때, 보기에서 옳은 것만을 있는 대로 고른 것은? (단, $a$, $b$는 실수이다.)  보기  ㄱ. $a^2 > b$ ㄴ. $a > 0$이고 $b > 0$ ㄷ. $1 - 2a + b > 0$  ① ㄱ ② ㄱ, ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\이차부등식4단계\016.json
+- **4단계 / 017**
+  - **finalAnswer**: 6
+  - **choices**: 사차방정식 $x^4 - 2(k+1)x^2 + k^2 + 3 = 0$이 서로 다른 네 실근을 가지도록 하는 상수 $k$의 값의 범위는? ① $k > -1$ ② $k > 1$ ③ $0 < k < 1$ ④ $k \geq 2$ ⑤ $0 < k \leq 3$
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\이차부등식4단계\017.json
+- **4단계 / 018**
+  - **finalAnswer**: 9
+  - **choices**: 사차방정식 $x^4 + ax^2 + a^2 - a - 6 = 0$이 두 개의 허근과 한 개의 실근(중근)을 가질 때, 실수 $a$의 값은? ① $-2$ ② $-1$ ③ $1$ ④ $2$ ⑤ $3$
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\이차부등식4단계\018.json
+
+### [원의방정식]
+- **2단계 / 006**
+  - **finalAnswer**: 6
+  - **choices**: N/A
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\원의방정식2단계\006.json
+- **2단계 / 015**
+  - **finalAnswer**: 6
+  - **choices**: N/A
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\원의방정식2단계\015.json
+- **2단계 / 046**
+  - **finalAnswer**: 9
+  - **choices**: N/A
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\원의방정식2단계\046.json
+- **2단계 / 053**
+  - **finalAnswer**: 0
+  - **choices**: N/A
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\원의방정식2단계\053.json
+- **3단계 / 005**
+  - **finalAnswer**: 6
+  - **choices**: 다음 그림과 같이 원 \((x-2)^2 + (y-4)^2 = 4\) 위를 움직이는 동점 P와 원 \((x-8)^2 + y^2 = 1\) 위를 움직이는 동점 Q에 대하여 \(\overline{PQ}\)의 길이의 최댓값이 \(M\), 최소값이 \(m\)일 때, \(M-m\)의 값을 구하시오.
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\원의방정식3단계\005.json
+- **3단계 / 016**
+  - **finalAnswer**: 0
+  - **choices**: 원 \(x^2 + y^2 - 2ax + 6y + a^2 - 3 = 0\)에 대하여 보기에서 옳은 것만을 있는 대로 고른 것은? (단, \(a\)는 상수이다.)  —————  |보기  —————  ㄱ. 원의 넓이는 \(12\pi\)이다. ㄴ. \(a=2\)일 때 점 \((0, 1)\)을 지난다. ㄷ. 원의 중심이 \(y\)축 위에 있을 때 \(a=0\)이다.  ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\원의방정식3단계\016.json
+- **3단계 / 028**
+  - **finalAnswer**: 0
+  - **choices**: 점 P에 접하는 원은 중심이 (2, 2), 반지름이 2인 원이다.  ∴ $(x-2)^2 + (y-2)^2 = 4$ …… ①  따라서 원래의 원 $(x-1)^2 + y^2 = 4$ ……  ②  따라서  ①- ②에서 $2x + 4y - 7 = 0$ 이다. (공통현)
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\원의방정식3단계\028.json
+- **4단계 / 003**
+  - **finalAnswer**: 8
+  - **choices**: 점 $A(2, 4)$와 원 $(x-1)^2 + (y+3)^2 = 4$ 위의 점 $P$에 대하여 선분 $AP$의 길이가 정수가 되는 점 $P$의 개수는? ① 2개 ② 4개 ③ 6개 ④ 8개 ⑤ 10개
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\원의방정식4단계\003.json
+- **4단계 / 033**
+  - **finalAnswer**: 8
+  - **choices**: 두 원 $x^2 + y^2 = 20$, $(x-3)^2 + (y-4)^2 = 25$의 공통현의 길이를 구하시오.
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\원의방정식4단계\033.json
+- **4단계 / 047**
+  - **finalAnswer**: 8
+  - **choices**: 두 점 $A(-1, 0)$, $B(2, 0)$으로부터의 거리의 비가 $1:2$인 점 $P$의 자취의 방정식을 구하면 $(x-a)^2+(y-b)^2=r^2$이라 할 때, $a^2+b^2+r^2$의 값을 구하시오. ① 5 ② 6 ③ 7 ④ 8 ⑤ 9
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\원의방정식4단계\047.json
+- **4단계 / 060**
+  - **finalAnswer**: 7
+  - **choices**: 원 $(x-a)^2+y^2=9$가 두 직선 $3x+4y-3=0$, $x-\sqrt{3}y+2=0$과 서로 다른 네 점에서 만나도록 하는 정수 $a$의 개수는? ① 6 ② 7 ③ 8 ④ 9 ⑤ 10
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\원의방정식4단계\060.json
+
+### [도형의이동]
+- **2단계 / 007**
+  - **finalAnswer**: 8
+  - **choices**: N/A
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\도형의이동2단계\007.json
+- **2단계 / 015**
+  - **finalAnswer**: 0
+  - **choices**: N/A
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\도형의이동2단계\015.json
+- **2단계 / 020**
+  - **finalAnswer**: 0
+  - **choices**: N/A
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\도형의이동2단계\020.json
+- **2단계 / 024**
+  - **finalAnswer**: 6
+  - **choices**: N/A
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\도형의이동2단계\024.json
+- **2단계 / 031**
+  - **finalAnswer**: 0
+  - **choices**: N/A
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\도형의이동2단계\031.json
+- **2단계 / 032**
+  - **finalAnswer**: 0
+  - **choices**: N/A
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\도형의이동2단계\032.json
+- **2단계 / 035**
+  - **finalAnswer**: 9
+  - **choices**: N/A
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\도형의이동2단계\035.json
+- **2단계 / 036**
+  - **finalAnswer**: 0
+  - **choices**: N/A
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\도형의이동2단계\036.json
+- **2단계 / 037**
+  - **finalAnswer**: 7
+  - **choices**: N/A
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\도형의이동2단계\037.json
+- **2단계 / 041**
+  - **finalAnswer**: 0
+  - **choices**: N/A
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\도형의이동2단계\041.json
+- **2단계 / 042**
+  - **finalAnswer**: 0
+  - **choices**: N/A
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\도형의이동2단계\042.json
+- **3단계 / 007**
+  - **finalAnswer**: 0
+  - **choices**: 점 $(3, -2)$이 직선에 대한 대칭이동에 의하여 점 $(2, -3)$으로 옮겨질 때, 같은 대칭이동에 의하여 직선 $4x + 5y + 3 = 0$이 옮겨지는 직선은 점 $(3, a)$를 지난다. 이때 $a$의 값은? ① $-3$ ② $-1$ ③ $1$ ④ $3$ ⑤ $5$
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\도형의이동3단계\007.json
+- **3단계 / 019**
+  - **finalAnswer**: 0
+  - **choices**: 점 $(m,\ 1)$을 점 $(2m,\ -4)$로 옮기는 평행이동에 의하여 포물선 $y=-x^2-1$을 평행이동한 포물선이 직선 $y=4x-6$과 접할 때, $m$의 값을 구하시오.
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\도형의이동3단계\019.json
+- **3단계 / 026**
+  - **finalAnswer**: 0
+  - **choices**: 직선 $3x + y - 1 = 0$ 을 점 $(2, 2)$에 대하여 대칭이동시킨 도형의 방정식은? ① $2x - 3y - 2 = 0$ ② $2x + 3y + 6 = 0$ ③ $3x + y - 15 = 0$ ④ $3x - y + 4 = 0$ ⑤ $3x + 2y + 11 = 0$
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\도형의이동3단계\026.json
+- **4단계 / 006**
+  - **finalAnswer**: 8
+  - **choices**: 포물선 $y = -x^2 - 6x + m$을 포물선 $y = -x^2$으로 옮기는 평행이동에 의하여 포물선 $y = x^2 + mx$가 옮겨지는 포물선의 방정식은 $y = x^2 - 8x + k$이다. 이때 $k$의 값을 구하시오. (단, $m$, $k$는 상수이다.)
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\도형의이동4단계\006.json
+- **4단계 / 010**
+  - **finalAnswer**: 0
+  - **choices**: 두 방정식 $f(x, y) = 0$, $g(x, y) = 0$이 나타내는 도형이 아래 그림과 같을 때, 다음 중 옳은 것은?  ① $g(x, y) = f(x + 3, y)$ ② $g(x, y) = f(x - 3, y)$ ③ $g(x, y) = f(x + 3, -y)$ ④ $g(x, y) = f(x - 3, -y)$ ⑤ $g(x, y) = f(-x + 3, -y)$
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\도형의이동4단계\010.json
+- **4단계 / 011**
+  - **finalAnswer**: 0
+  - **choices**: 다음 그림과 같은 도형 $A$를 나타내는 방정식이 $f(x, y) = 0$일 때, 도형 $B$를 나타낼 수 있는 방정식만을 보기에서 있는 대로 고른 것은?  ① ㄱ, ㄴ ② ㄱ, ㄷ ③ ㄴ, ㄷ ④ ㄴ, ㄹ ⑤ ㄷ, ㄹ
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\도형의이동4단계\011.json
+- **4단계 / 012**
+  - **finalAnswer**: 0
+  - **choices**: [그림 1]의 도형이 평행이동 및 대칭이동에 의하여 [그림 2]의 도형이 되었다. [그림 1]의 도형의 방정식이 $f(x, y) = 0$일 때, [그림 2]의 도형의 방정식은? ① $f(x+1, y-1) = 0$ ② $f(x-1, -y-5) = 0$ ③ $f(x-5, y-5) = 0$ ④ $f(-x+5, -y-1) = 0$ ⑤ $f(y-1, x+5) = 0$
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\도형의이동4단계\012.json
+- **4단계 / 021**
+  - **finalAnswer**: 0
+  - **choices**: 직선 $y = -2x$를 직선 $y = -x - 1$에 대하여 대칭이동한 도형의 방정식은? ① $x + 2y + 1 = 0$ ② $x + 2y + 2 = 0$ ③ $x + 2y + 3 = 0$ ④ $x + 2y + 4 = 0$ ⑤ $x + 2y + 5 = 0$
+  - **reason**: choice_mapping_failed
+  - **sourceFile**: public\math_hints\도형의이동4단계\021.json
+

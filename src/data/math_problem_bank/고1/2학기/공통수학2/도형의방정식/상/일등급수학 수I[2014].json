@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "2.0",
+  "sourceQuestionPdf": "\\\\Subitmainpc\\수학의 빛 사무폴더\\09.새 교과과정 자료\\01.자료_수학1\\교재_시중교재\\일등급수학 수학1-PDF\\일등급수학 수I[2014].pdf",
+  "sourceAnswerPdf": null,
+  "curriculum": {
+    "grade": "고1",
+    "semester": "2학기",
+    "course": "공통수학2",
+    "unit": "도형의방정식",
+    "score": 12
+  },
+  "difficulty": "상",
+  "items": [
+    {
+      "number": 0,
+      "questionImage": "questions/일등급수학 수I[2014]_q000.webp",
+      "solutionRaw": "3 g\nl '0kca'\n기\nJ\n23 ㉴㉣㉱\n어느 공장에서 두 제품 A, B를 1 t 만드는 데 필요한\n원료 M, N의 양과 이익은 다음 표와 같다. 또 필요한\n원료 M, N은 각각 4 t, 6 t까지 쓸 수 있을 때, 이익을\n최대로 하기 위해서는 제품 A, B를 각각 몇 t씩 생산해\n야 하는가?\n식 품\nA\nB\n(A : 0t B :\n(A : 1t B :\n(A : 2t B :\n이 익 (만원)\n4\no\nF\n2 t",
+      "solutionDisplay": "기 어느 공장에서 두 제품 A, B를 1 t 만드는 데 필요한 원료 M, N의 양과 이익은 다음 표와 같다. 또 필요한 원료 M, N은 각각 4 t, 6 t까지 쓸 수 있을 때, 이익을 최대로 하기 위해서는 제품 A, B를 각각 몇 t씩 생산해 야 하는가? 식 품 이 익 (만원)",
+      "formulaLatex": [
+        "0kca"
+      ],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    },
+    {
+      "number": 1,
+      "questionImage": "questions/일등급수학 수I[2014]_q001.webp",
+      "solutionRaw": "이책을구입하게된\n稀 HO궁백nll00 F-0- 론니트=\n①서점에서다른책들과비교해보고②광고를보고/듣고\n④선생님의추천 ⑤친구/선배의권유\n2교재를선택할때가장큰기준이되는것은?(복수응답가능\n①유명출판사 ②교재내용\n④교재분량 ⑤해설\n)\n★③ 학교/학원 보충 교재 [\n⑥기타\n3 디자인\n⑧ 기타\nI\nI",
+      "solutionDisplay": "이책을구입하게된 稀 HO궁백n1100 F-0- 론니트= ①서점에서다른책들과비교해보고②광고를보고/듣고 ④선생님의추천 ⑤친구/선배의권유 2교재를선택할때가장큰기준이되는것은?(복수응답가능 ①유명출판사 ②교재내용 ④교재분량 ⑤해설 ★③ 학교/학원 보충 교재 [ ⑥기타 3 디자인 ⑧ 기타",
+      "formulaLatex": [],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    },
+    {
+      "number": 3,
+      "questionImage": "questions/일등급수학 수I[2014]_q003.webp",
+      "solutionRaw": "이 책의 전반적인 부분에 대한 질문입니다.\n◆표지 디자인: 좋다l그 보통이다 디 좋지 않다 디\n◆문제난이도: 어렵다다 알맞다디 쉽다○\n◆본문디자안 좋다디 보통이다D 좋지않다口\n◆교재의분량: 많다디 알맞다티 적다○",
+      "solutionDisplay": "이 책의 전반적인 부분에 대한 질문입니다. 표지 디자인: 좋다1그 보통이다 디 좋지 않다 디 문제난이도: 어렵다다 알맞다디 쉽다 본문디자안 좋다디 보통이다D 좋지않다口 교재의분량: 많다디 알맞다티 적다",
+      "formulaLatex": [],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    },
+    {
+      "number": 4,
+      "questionImage": "questions/일등급수학 수I[2014]_q004.webp",
+      "solutionRaw": "이 책의 요소를 평가한다면?\n①매우만족 ②만족\n. 개념 확인 (\no 일등급 서술형 문제 (\n③ 보통\n④ 불만\n. 일등급 핵심 유형 문제 (\no일등급도전문제( )\n㉠ 매우 불만\nl o일등급실전문제(\n.정답및해설(\n\n찮\nJ\n쥘\n밝\n忽\n잃\n뽀\n垣\n꿀\n초\n룔\n:\n래\n掛豁 ”\n(주)0像\n☎ ⑧\n瀨\n일등급 수학 I\n[ 개 정 교 육 과 정\nl l\n洲혜삐好 빠성\n~\nK\n~ ~ - - ~ ~ ~ ~ ~ 류 ~ - - ~ ~ ~ ~ - ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ - 三 ~ ~ ~ ~ ~ - ~ ~ ~ ~ ~ ~ ~ - - - ~ ~ ~ - -- - - - - - - - ~~ - ~ ~ ~ - - - - ~ ~ - ~ - - - - - - - ~r",
+      "solutionDisplay": "이 책의 요소를 평가한다면? ①매우만족 ②만족 . 개념 확인 ( o 일등급 서술형 문제 ( ③ 보통 ④ 불만 . 일등급 핵심 유형 문제 ( o일등급도전문제( ) ㉠ 매우 불만 1 o일등급실전문제( .정답및해설( 찮 쥘 밝 잃 뽀 꿀 초 룔 래 일등급 수학 I [ 개 정 교 육 과 정 洲혜삐好 빠성 ~ ~ - - ~ ~ ~ ~ ~ 류 ~ - - ~ ~ ~ ~ - ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ - 三 ~ ~ ~ ~ ~ - ~ ~ ~ ~ ~ ~ ~ - - - ~ ~ ~ - -- - - - - - - - ~~ - ~ ~ ~ - - - - ~ ~ - ~ - - - - - - - ~r",
+      "formulaLatex": [],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    },
+    {
+      "number": 5,
+      "questionImage": "questions/일등급수학 수I[2014]_q005.webp",
+      "solutionRaw": "이책에서불편하다고생각되는점이나보왼해야할점이있다면무엇입니까?",
+      "solutionDisplay": "이책에서불편하다고생각되는점이나보왼해야할점이있다면무엇입니까?",
+      "formulaLatex": [],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    },
+    {
+      "number": 6,
+      "questionImage": "questions/일등급수학 수I[2014]_q006.webp",
+      "solutionRaw": "최근 가장 인기있는 문제집이나 본인이 크게 도움을 받은 책이 있다면?\n교재명: 영역:",
+      "solutionDisplay": "최근 가장 인기있는 문제집이나 본인이 크게 도움을 받은 책이 있다면? 교재명: 영역:",
+      "formulaLatex": [],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    },
+    {
+      "number": 7,
+      "questionImage": "questions/일등급수학 수I[2014]_q007.webp",
+      "solutionRaw": "내가 원하는 교재가 있다면? (이런 교재가 필요해요!!)\nF悳~\n연 락 처\n이 메 일\n원하는 교재를 체크 하시고, 마인드트리를 붙여주세요\n※원하는 교재를 1권 체크\n디문장으로외우는 디문장으로외우는\n결정적보카 결정적보카\nl고등기초편l l고등실전편l\nl\n벼\"맨 비 뱌e e\nI .\nl\ndT ‘ n d 해 e e\n2\n효\n디 문제로 외우는\n결정적보카\n고등기초편l\n1\n혜md 'e g\nl\n3\nc,,“\"“ I\nU\nl\n4\n~쉽~쇔\n보 三 삶\n보쉽\n벼md 뱌트 떨\nI\n6\n•\nI\n邵 m 센 해 e ㉣\n7\n~쉽\nl\n벼m d ' 별 .\n8\n•\nl\ndγl'z센 뱌∈ e\n9\n•\n디 문제로 외우는\n결정적보카\nl고등실전편l\n0\n伽'EdcKc. I\nI\n5\n덕 ☜\n배r\" 센 해 또\nl\n10\n•\nl",
+      "solutionDisplay": "내가 원하는 교재가 있다면? (이런 교재가 필요해요!!) 연 락 처 이 메 일 원하는 교재를 체크 하시고, 마인드트리를 붙여주세요 ※원하는 교재를 1권 체크 디문장으로외우는 디문장으로외우는 결정적보카 결정적보카 1고등기초편1 1고등실전편1 벼맨 비 뱌e e dT ‘ n d 해 e e 효 디 문제로 외우는 결정적보카 고등기초편1 혜md 'e g ~쉽~쇔 보 三 삶 보쉽 벼md 뱌트 떨 邵 m 센 해 e ㉣ ~쉽 벼m d ' 별 . dγ1'z센 뱌∈ e 디 문제로 외우는 결정적보카 1고등실전편1 덕 ☜ 배r 센 해 또",
+      "formulaLatex": [],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    }
+  ]
+}

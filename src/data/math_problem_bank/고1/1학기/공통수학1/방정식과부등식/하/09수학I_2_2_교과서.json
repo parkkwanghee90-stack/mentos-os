@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "2.0",
+  "sourceQuestionPdf": "\\\\Subitmainpc\\수학의 빛 사무폴더\\09.새 교과과정 자료\\01.자료_수학1\\자료_교과서,익힘책\\미래엔컬쳐_수학1\\2. 방정식과 부등식\\09수학I_2_교과서PDF\\09수학I_2_2_교과서.pdf",
+  "sourceAnswerPdf": null,
+  "curriculum": {
+    "grade": "고1",
+    "semester": "1학기",
+    "course": "공통수학1",
+    "unit": "방정식과부등식",
+    "score": 18
+  },
+  "difficulty": "하",
+  "items": [
+    {
+      "number": 0,
+      "questionImage": "questions/09수학I_2_2_교과서_q000.webp",
+      "solutionRaw": "..x...3y=x¤-4x+k5\n(k)\n7\n\n\n\n2m4m\n\n\n\n8\n\n\n100064\n\n1008\n\n\n9\n\n\n\n\n2m\n4m\n\n\n\n\n\n\n\n\n\n\n\n94\n\n1\ny=-x¤+2x+1y=x-2\n\nx\n\n\ny=x¤-2x-3y=x-3\n\nx\n\n\ny=x¤-2x-3\n\ny=x-3\n\ny=x¤-2x-3y=x-3\n\n\nxx03",
+      "solutionDisplay": "식 정리 후 3y=x 형태를 이용한다.",
+      "formulaLatex": [
+        "3y=x",
+        "4x+k5",
+        "2x+1y=x-2",
+        "2x-3y=x-3",
+        "2x-3",
+        "y=x-3",
+        "xx03"
+      ],
+      "graphExpressions": [
+        "3y=x",
+        "2x+1y=x-2",
+        "2x-3y=x-3",
+        "y=x-3"
+      ],
+      "matched": true,
+      "matchScore": 1
+    },
+    {
+      "number": 2,
+      "questionImage": "questions/09수학I_2_2_교과서_q002.webp",
+      "solutionRaw": "5 m\n30 m\n\n\n12m\n\n\nxmym¤y\n\n\n2\n\n92\n\nx\ny=x¤+x+1y=-x¤+6x-9\ny=2x¤+5x+1y=-3x¤+x-1\n1\ny=x¤+6x+kx\nk\n4\ny=x¤+ax+bx(-20)(50)\n\nab\n5\ny=x¤-3x+2y=x-3\n2\n\ny=x¤-6x+3 (0...x...4)y=-x¤+2x+3 (-2...x...0)\n3\n\n\n\n\n\n\n\n\n93\n\n\n\ny=x¤+x+2y=-x+mm\n\n6",
+      "solutionDisplay": "식 정리 후 x+1y=-x 형태를 이용한다.",
+      "formulaLatex": [
+        "x+1y=-x",
+        "6x-9",
+        "y=2x",
+        "5x+1y=-3x",
+        "6x+kx",
+        "ax+bx(-20)(50)",
+        "3x+2y=x-3",
+        "6x+3",
+        "4)y=-x",
+        "2x+3",
+        "x+2y=-x+mm"
+      ],
+      "graphExpressions": [
+        "x+1y=-x",
+        "y=2x",
+        "5x+1y=-3x",
+        "3x+2y=x-3",
+        "4)y=-x",
+        "x+2y=-x+mm"
+      ],
+      "matched": true,
+      "matchScore": 1
+    },
+    {
+      "number": 4,
+      "questionImage": "questions/09수학I_2_2_교과서_q004.webp",
+      "solutionRaw": "5 m",
+      "solutionDisplay": "수식 기반으로 풀이를 진행합니다.",
+      "formulaLatex": [],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    }
+  ]
+}

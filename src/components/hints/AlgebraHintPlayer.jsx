@@ -1,0 +1,181 @@
+/**
+ * AlgebraHintPlayer.jsx — 해설 이미지 Pan-and-Scan 플레이어
+ * 
+ * 해설 이미지(001a.webp 등)를 단계에 따라 위→아래로 스크롤하며 보여줍니다.
+ * 가짜 텍스트 해설 없음. 실제 해설 이미지 그대로 보여줌.
+ */
+import React, { useState, useRef, useEffect, useCallback } from 'react';
+import { Play, Pause, RotateCcw, ChevronLeft, ChevronRight } from 'lucide-react';
+
+export default function AlgebraHintPlayer({ data }) {
+  const [step, setStep] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [imgNaturalH, setImgNaturalH] = useState(0);
+  const containerRef = useRef(null);
+  const imgRef = useRef(null);
+
+  if (!data || !data.steps) return null;
+  const steps = data.steps;
+  const totalSteps = steps.length;
+
+  // 해설 이미지 URL (steps에서 a.webp 찾기)
+  const solutionImg = steps.find(s => s.picture?.endsWith('a.webp'))?.picture || null;
+  // 문제 이미지 URL
+  const problemImg = steps.find(s => s.picture && !s.picture.endsWith('a.webp'))?.picture || null;
+
+  // 현재 단계의 스크롤 퍼센트 (0~100)
+  const pct = steps[step]?.focus_point?.[1] ?? Math.round((step / (totalSteps - 1)) * 100);
+
+  // 이미지 실제 픽셀 높이 기반 스크롤 위치 계산
+  const getScrollTop = useCallback(() => {
+    const containerH = containerRef.current?.clientHeight || 480;
+    const imgH = imgNaturalH > 0
+      ? imgRef.current?.clientHeight || imgNaturalH
+      : (imgRef.current?.clientHeight || 0);
+    const scrollable = Math.max(0, imgH - containerH);
+    return -(scrollable * pct / 100);
+  }, [pct, imgNaturalH]);
+
+  // 자동 재생
+  useEffect(() => {
+    if (!isPlaying) return;
+    const t = setTimeout(() => {
+      if (step < totalSteps - 1) setStep(s => s + 1);
+      else { setIsPlaying(false); }
+    }, 3000);
+    return () => clearTimeout(t);
+  }, [isPlaying, step, totalSteps]);
+
+  const handlePlay = () => {
+    if (step >= totalSteps - 1) { setStep(0); setIsPlaying(true); }
+    else setIsPlaying(v => !v);
+  };
+
+  const chalkYellow = '#fde047';
+  const dark = '#0f172a';
+  const darkCard = '#1e293b';
+
+  return (
+    <div style={{ background: dark, borderRadius: 14, overflow: 'hidden', border: '1px solid #334155' }}>
+
+      {/* 헤더 */}
+      <div style={{ background: darkCard, padding: '0.7rem 1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #334155' }}>
+        <div style={{ color: chalkYellow, fontWeight: 700, fontSize: '1rem' }}>
+          📋 {data.problem_id?.replace(/^0+/, '')}번 — 단계별 해설 스크롤
+        </div>
+        <div style={{ display: 'flex', gap: 5 }}>
+          <button onClick={() => { setStep(0); setIsPlaying(false); }} style={btnS('#334155')}><RotateCcw size={13} /></button>
+          <button onClick={() => step > 0 && setStep(s => s - 1)} style={btnS('#334155')} disabled={step === 0}><ChevronLeft size={13} /> 이전</button>
+          <button onClick={handlePlay} style={btnS(isPlaying ? '#7c3aed' : '#dc2626')}>
+            {isPlaying ? <><Pause size={13} /> 정지</> : <><Play size={13} /> 재생</>}
+          </button>
+          <button onClick={() => step < totalSteps - 1 && setStep(s => s + 1)} style={btnS('#334155')} disabled={step === totalSteps - 1}>다음 <ChevronRight size={13} /></button>
+        </div>
+      </div>
+
+      {/* 진행 바 */}
+      <div style={{ display: 'flex', gap: 2, padding: '0.4rem 0.8rem', background: '#0a0f1a' }}>
+        {steps.map((_, i) => (
+          <div key={i} onClick={() => setStep(i)} style={{
+            flex: 1, height: 6, borderRadius: 3, cursor: 'pointer',
+            background: i <= step ? chalkYellow : '#1e293b',
+            transition: 'background 0.25s',
+          }} />
+        ))}
+      </div>
+
+      {/* 단계 표시 */}
+      <div style={{ padding: '0.3rem 1rem', background: '#0a0f1a', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+        <span style={{ color: '#dc2626', fontWeight: 700, fontSize: '0.85rem', background: '#1e293b', padding: '2px 10px', borderRadius: 20 }}>
+          {step + 1} / {totalSteps}
+        </span>
+        <span style={{ color: '#94a3b8', fontSize: '0.82rem' }}>
+          해설 이미지를 단계별로 스크롤합니다
+        </span>
+      </div>
+
+      {/* 핵심: 해설 이미지 Pan & Scan 뷰어 */}
+      {solutionImg ? (
+        <div
+          ref={containerRef}
+          style={{
+            position: 'relative',
+            overflow: 'hidden',
+            height: '500px',
+            background: '#ffffff',
+            margin: '0.5rem',
+            borderRadius: 8,
+            border: '2px solid #334155',
+          }}
+        >
+          {/* 빨간 위치 마커 (우측 스크롤바처럼) */}
+          <div style={{
+            position: 'absolute', right: 0, top: `${pct}%`,
+            width: 5, height: 40, background: '#dc2626', zIndex: 20,
+            borderRadius: '3px 0 0 3px',
+            transform: 'translateY(-50%)',
+            transition: 'top 0.8s cubic-bezier(0.4,0,0.2,1)',
+            boxShadow: '0 0 10px rgba(220,38,38,0.9)',
+          }} />
+
+          {/* 해설 이미지 */}
+          <img
+            ref={imgRef}
+            src={solutionImg}
+            alt="해설"
+            onLoad={(e) => setImgNaturalH(e.target.naturalHeight)}
+            style={{
+              width: '100%',
+              position: 'absolute',
+              left: 0,
+              top: `${getScrollTop()}px`,
+              transition: 'top 0.8s cubic-bezier(0.4,0,0.2,1)',
+              display: 'block',
+            }}
+          />
+
+          {/* 단계 숫자 오버레이 */}
+          <div style={{
+            position: 'absolute', top: 8, left: 8, zIndex: 10,
+            background: 'rgba(220,38,38,0.92)', color: '#fff',
+            borderRadius: 8, padding: '4px 12px',
+            fontWeight: 700, fontSize: '0.9rem',
+          }}>
+            {step + 1}단계
+          </div>
+        </div>
+      ) : (
+        <div style={{ padding: '2rem', textAlign: 'center', color: '#94a3b8' }}>
+          해설 이미지를 불러오는 중...
+        </div>
+      )}
+
+      {/* 단계 버튼 그리드 */}
+      <div style={{ padding: '0.6rem 0.8rem 0.8rem', display: 'flex', flexWrap: 'wrap', gap: '0.3rem' }}>
+        {steps.map((_, i) => (
+          <button key={i} onClick={() => setStep(i)} style={{
+            background: i === step ? '#dc2626' : i < step ? '#1e3a5f' : '#1e293b',
+            border: `1px solid ${i === step ? '#dc2626' : '#334155'}`,
+            color: i <= step ? '#fff' : '#64748b',
+            padding: '0.3rem 0.7rem',
+            borderRadius: 6,
+            fontSize: '0.78rem',
+            fontWeight: i === step ? 700 : 400,
+            cursor: 'pointer',
+            transition: 'all 0.2s',
+          }}>
+            {i + 1}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function btnS(bg) {
+  return {
+    background: bg, border: 'none', color: 'white',
+    padding: '0.3rem 0.6rem', borderRadius: 6, cursor: 'pointer',
+    display: 'flex', alignItems: 'center', gap: 3, fontSize: '0.78rem', fontWeight: 600,
+  };
+}

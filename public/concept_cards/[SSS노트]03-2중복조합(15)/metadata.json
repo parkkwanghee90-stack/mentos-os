@@ -1,0 +1,38 @@
+[
+  {
+    "id": "[SSS노트]03-2중복조합(15)_p3_01",
+    "source_file": "[SSS노트]03-2중복조합(15)",
+    "source_page": 3,
+    "section_index": "01",
+    "section_title": "중복조합",
+    "card_index": "01",
+    "card_title": "중복조합",
+    "y_start": 342,
+    "y_end": 1602,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[SSS노트]03-2중복조합(15)_p5_02",
+    "source_file": "[SSS노트]03-2중복조합(15)",
+    "source_page": 5,
+    "section_index": "01",
+    "section_title": "중복조합",
+    "card_index": "02",
+    "card_title": "중복조합의 대표적인 예",
+    "y_start": 278,
+    "y_end": 1602,
+    "file_png": "card_02_p5.webp"
+  },
+  {
+    "id": "[SSS노트]03-2중복조합(15)_p6_03",
+    "source_file": "[SSS노트]03-2중복조합(15)",
+    "source_page": 6,
+    "section_index": "01",
+    "section_title": "중복조합",
+    "card_index": "03",
+    "card_title": "중복조합을 이용하여 방정식의 해의 개수 구하기",
+    "y_start": 278,
+    "y_end": 1602,
+    "file_png": "card_03_p6.webp"
+  }
+]

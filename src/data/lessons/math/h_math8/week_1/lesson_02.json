@@ -1,0 +1,15 @@
+{
+  "title": "⭐ 지수로그함수의극한 2단계 (2회차)",
+  "core": {
+    "description": "지수로그함수의극한 2단계 실전",
+    "original_unit": "[2단계] 지수로그함수의극한",
+    "problem_image": "/math_crops/미적분/2단계/3)지수로그함수의극한/006.webp",
+    "problems": [
+      {"number":6,"questionImage":"/math_crops/미적분/2단계/3)지수로그함수의극한/006.webp","solutionText":"지수로그함수의극한 2단계 해설","formulaLatex":[],"graphExpressions":[],"matchScore":1},
+      {"number":7,"questionImage":"/math_crops/미적분/2단계/3)지수로그함수의극한/007.webp","solutionText":"지수로그함수의극한 2단계 해설","formulaLatex":[],"graphExpressions":[],"matchScore":1},
+      {"number":8,"questionImage":"/math_crops/미적분/2단계/3)지수로그함수의극한/008.webp","solutionText":"지수로그함수의극한 2단계 해설","formulaLatex":[],"graphExpressions":[],"matchScore":1},
+      {"number":9,"questionImage":"/math_crops/미적분/2단계/3)지수로그함수의극한/009.webp","solutionText":"지수로그함수의극한 2단계 해설","formulaLatex":[],"graphExpressions":[],"matchScore":1},
+      {"number":10,"questionImage":"/math_crops/미적분/2단계/3)지수로그함수의극한/010.webp","solutionText":"지수로그함수의극한 2단계 해설","formulaLatex":[],"graphExpressions":[],"matchScore":1}
+    ]
+  }
+}

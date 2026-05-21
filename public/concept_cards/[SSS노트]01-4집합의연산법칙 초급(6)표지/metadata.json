@@ -1,0 +1,38 @@
+[
+  {
+    "id": "[SSS노트]01-4집합의연산법칙 초급(6)표지_p3_01",
+    "source_file": "[SSS노트]01-4집합의연산법칙 초급(6)표지",
+    "source_page": 3,
+    "section_index": "05",
+    "section_title": "집합의 연산법칙",
+    "card_index": "01",
+    "card_title": "3 대 기본 법칙",
+    "y_start": 369,
+    "y_end": 735,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[SSS노트]01-4집합의연산법칙 초급(6)표지_p3_02",
+    "source_file": "[SSS노트]01-4집합의연산법칙 초급(6)표지",
+    "source_page": 3,
+    "section_index": "05",
+    "section_title": "집합의 연산법칙",
+    "card_index": "02",
+    "card_title": " 대 중요 공식",
+    "y_start": 735,
+    "y_end": 1249,
+    "file_png": "card_02_p3.webp"
+  },
+  {
+    "id": "[SSS노트]01-4집합의연산법칙 초급(6)표지_p3_03",
+    "source_file": "[SSS노트]01-4집합의연산법칙 초급(6)표지",
+    "source_page": 3,
+    "section_index": "05",
+    "section_title": "집합의 연산법칙",
+    "card_index": "03",
+    "card_title": "기타 공식",
+    "y_start": 1249,
+    "y_end": 1602,
+    "file_png": "card_03_p3.webp"
+  }
+]

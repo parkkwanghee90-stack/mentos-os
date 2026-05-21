@@ -1,0 +1,26 @@
+[
+  {
+    "id": "[S.S.S note]_07-2 기댓값과 표준편차(12)[QR]_p3_01",
+    "source_file": "[S.S.S note]_07-2 기댓값과 표준편차(12)[QR]",
+    "source_page": 3,
+    "section_index": "02",
+    "section_title": "이산확률변수의 기댓값과 표준편차",
+    "card_index": "01",
+    "card_title": "이산확률변수의 기댓값 ( 평균 )",
+    "y_start": 512,
+    "y_end": 1602,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[S.S.S note]_07-2 기댓값과 표준편차(12)[QR]_p4_02",
+    "source_file": "[S.S.S note]_07-2 기댓값과 표준편차(12)[QR]",
+    "source_page": 4,
+    "section_index": "02",
+    "section_title": "이산확률변수의 기댓값과 표준편차",
+    "card_index": "02",
+    "card_title": "이산확률변수의 분산과 표준편차",
+    "y_start": 421,
+    "y_end": 1602,
+    "file_png": "card_02_p4.webp"
+  }
+]

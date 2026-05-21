@@ -1,0 +1,38 @@
+[
+  {
+    "id": "[SSS노트]2-2 로그의 기본성질(20)_p3_01",
+    "source_file": "[SSS노트]2-2 로그의 기본성질(20)",
+    "source_page": 3,
+    "section_index": "",
+    "section_title": "",
+    "card_index": "01",
+    "card_title": "로그의 기본 성질",
+    "y_start": 391,
+    "y_end": 1602,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[SSS노트]2-2 로그의 기본성질(20)_p4_02",
+    "source_file": "[SSS노트]2-2 로그의 기본성질(20)",
+    "source_page": 4,
+    "section_index": "",
+    "section_title": "",
+    "card_index": "02",
+    "card_title": "밑의 변환 공식",
+    "y_start": 392,
+    "y_end": 966,
+    "file_png": "card_02_p4.webp"
+  },
+  {
+    "id": "[SSS노트]2-2 로그의 기본성질(20)_p4_03",
+    "source_file": "[SSS노트]2-2 로그의 기본성질(20)",
+    "source_page": 4,
+    "section_index": "",
+    "section_title": "",
+    "card_index": "03",
+    "card_title": "로그 지수 공식",
+    "y_start": 966,
+    "y_end": 1602,
+    "file_png": "card_03_p4.webp"
+  }
+]

@@ -1,0 +1,160 @@
+.dashboard-container {
+  padding: 3rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dash-header {
+  margin-bottom: 3rem;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.back-btn:hover {
+  color: var(--text-main);
+}
+
+.dash-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dash-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.stat-icon.purple { color: #c084fc; background: rgba(168, 85, 247, 0.15); }
+.stat-icon.blue { color: #60a5fa; background: rgba(59, 130, 246, 0.15); }
+.stat-icon.teal { color: #2dd4bf; background: rgba(20, 184, 166, 0.15); }
+.stat-icon.red { color: #f87171; background: rgba(239, 68, 68, 0.15); }
+
+.stat-info h4 {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.stat-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+}
+
+.trend {
+  font-size: 0.85rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+}
+
+.trend.up { background: rgba(20, 184, 166, 0.15); color: #2dd4bf; }
+.trend.down { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.chart-panel {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-header {
+  margin-bottom: 2rem;
+}
+
+.chart-header h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.chart-desc {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.chart-wrapper {
+  flex-grow: 1;
+  min-height: 350px;
+  margin-bottom: 1.5rem;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.leg-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.leg-item .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* 강제 모바일 비율 적용 (앱 전역이 390px 이므로 미디어 쿼리 불필요) */
+.dashboard-container { padding: 1rem 0.5rem !important; }
+.stats-cards { grid-template-columns: 1fr 1fr !important; gap: 0.8rem; }
+.chart-wrapper { min-height: 200px !important; }
+.dash-title { font-size: 1.3rem !important; }
+.dash-subtitle { font-size: 0.9rem !important; }
+.glass-panel { padding: 1rem !important; margin: 0 !important; margin-bottom: 1rem !important; flex-direction: column !important; align-items: stretch !important; gap: 1rem !important; }
+.btn-primary { width: 100% !important; text-align: center; }
+.charts-grid { display: flex; flex-direction: column; gap: 1rem; }

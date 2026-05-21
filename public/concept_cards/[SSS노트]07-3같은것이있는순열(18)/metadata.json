@@ -1,0 +1,38 @@
+[
+  {
+    "id": "[SSS노트]07-3같은것이있는순열(18)_p3_01",
+    "source_file": "[SSS노트]07-3같은것이있는순열(18)",
+    "source_page": 3,
+    "section_index": "04",
+    "section_title": "같은 것이 있는 순열",
+    "card_index": "01",
+    "card_title": "같은 것이 있는 순열의 수",
+    "y_start": 342,
+    "y_end": 1602,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[SSS노트]07-3같은것이있는순열(18)_p5_02",
+    "source_file": "[SSS노트]07-3같은것이있는순열(18)",
+    "source_page": 5,
+    "section_index": "04",
+    "section_title": "같은 것이 있는 순열",
+    "card_index": "02",
+    "card_title": "특정한 나열에서 우선순위가 정해진 순열의 수",
+    "y_start": 278,
+    "y_end": 1602,
+    "file_png": "card_02_p5.webp"
+  },
+  {
+    "id": "[SSS노트]07-3같은것이있는순열(18)_p6_03",
+    "source_file": "[SSS노트]07-3같은것이있는순열(18)",
+    "source_page": 6,
+    "section_index": "04",
+    "section_title": "같은 것이 있는 순열",
+    "card_index": "03",
+    "card_title": "최단 경로의 수",
+    "y_start": 278,
+    "y_end": 1602,
+    "file_png": "card_03_p6.webp"
+  }
+]

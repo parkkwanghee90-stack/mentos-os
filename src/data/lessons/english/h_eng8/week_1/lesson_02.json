@@ -1,0 +1,637 @@
+{
+  "teacherId": "h_eng8",
+  "round": 2,
+  "title": "Curriculum Mode for 1등급 (Top Tier SSOT)",
+  "targetGrades": [
+    "고3",
+    "N수"
+  ],
+  "targetRanks": [
+    "1등급"
+  ],
+  "reading": {
+    "passageCount": 7,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "Cognitive dissonance, a psychological phenomenon where individuals experience discomfort due to conflicting beliefs, significantly impacts decision-making processes. Consider a scenario where a person values environmental conservation yet drives a fuel-inefficient vehicle. To alleviate the dissonance, they might rationalize their behavior by emphasizing the car’s safety features. However, this rationalization often perpetuates a cycle of justifications rather than prompting behavioral change. Ultimately, understanding this concept is crucial as it highlights the inherent complexities of human rationality.",
+        "teachPoint": "Understanding the concept of cognitive dissonance and its implications on decision-making.",
+        "question": "What is the underlying reason for the individual's rationalization in the given scenario? ① Their genuine concern for safety. ② A desire to reduce guilt. ③ Lack of awareness about environmental issues. ④ Influence from peers. ⑤ Economic constraints.",
+        "questionType": "빈칸 추론",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_2",
+        "text": "In evolutionary biology, the concept of kin selection explains altruistic behavior towards related individuals. An example is seen in social insects like bees, where workers sacrifice their reproductive potential for the hive's benefit. This behavior ensures that genes shared with the queen are propagated. However, kin selection doesn't account for altruism towards non-relatives, prompting the exploration of reciprocal altruism. Thus, while kin selection provides a foundational understanding, it necessitates integration with broader evolutionary theories.",
+        "teachPoint": "Exploring the limitations of kin selection in explaining altruistic behavior.",
+        "question": "What does the concept of kin selection fail to fully explain? ① Cooperative behavior in bees. ② Altruistic actions toward unrelated individuals. ③ The propagation of genetic material. ④ Social structures in insects. ⑤ Genetic mutations.",
+        "questionType": "빈칸 추론",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_3",
+        "text": "Epistemology, the study of knowledge, questions the nature and scope of human understanding. For instance, the Gettier problem challenges the traditional definition of knowledge as justified true belief. By presenting scenarios where such conditions are met, yet knowledge seems absent, it unsettles foundational epistemic assumptions. On the other hand, pragmatism suggests knowledge is validated by practical consequences. Therefore, epistemology remains a dynamic field, continuously shaped by new philosophical inquiries.",
+        "teachPoint": "Understanding the evolving nature of epistemology through the examination of the Gettier problem.",
+        "question": "Summarize the challenge posed by the Gettier problem to traditional epistemic assumptions.",
+        "questionType": "주관식",
+        "format": "서술형"
+      },
+      {
+        "id": "Passage_4",
+        "text": "Behavioral economics integrates psychological insights into economic theory, redefining rationality assumptions. An example is the endowment effect, where individuals ascribe higher value to owned items. Unlike traditional economic models which assume consistent preferences, this effect reveals a bias towards loss aversion. However, it complicates market predictions as emotional factors heavily influence decisions. Thus, acknowledging these biases is vital for creating more accurate economic models.",
+        "teachPoint": "Examining the influence of psychological factors on economic decision-making.",
+        "question": "What does the endowment effect reveal about traditional economic assumptions? ① They accurately predict market behaviors. ② They overlook emotional influences. ③ They are based on loss aversion. ④ They account for irrational behaviors. ⑤ They integrate psychological insights.",
+        "questionType": "빈칸 추론",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_5",
+        "text": "Quantum mechanics fundamentally challenges classical conceptions of determinism with its probabilistic nature. In experiments like Schrödinger's cat, superposition illustrates the coexistence of multiple states until observation. This paradox contrasts with deterministic interpretations where outcomes are pre-determined. Consequently, quantum mechanics introduces profound philosophical implications, questioning the very fabric of reality and the limits of human perception.",
+        "teachPoint": "Understanding the implications of quantum mechanics on determinism.",
+        "question": "Where should the following sentence be inserted? 'Such uncertainties force a reevaluation of philosophical stances on reality.'",
+        "questionType": "문장 삽입",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_6",
+        "text": "Neuroplasticity illustrates the brain's remarkable ability to reorganize itself by forming new neural connections. This adaptability is crucial during learning processes, where repeated experiences forge stronger synaptic pathways. Conversely, it also underscores the potential for maladaptive changes following trauma or negative experiences. Understanding this duality is essential in therapeutic contexts, emphasizing the necessity for positive reinforcement in rehabilitation settings.",
+        "teachPoint": "Analyzing the dual nature of neuroplasticity in cognitive processes.",
+        "question": "Arrange the sentences to best convey the progression of ideas about neuroplasticity. ① Neuroplasticity allows the brain to adapt. ② Repetition strengthens synaptic pathways. ③ Maladaptive changes can occur after trauma. ④ Positive reinforcement aids rehabilitation. ⑤ It is pivotal during learning.",
+        "questionType": "단락 순서",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_7",
+        "text": "Emergent properties refer to unexpected phenomena that arise from complex systems, transcending individual component functions. For instance, consciousness cannot be fully understood by merely analyzing neuronal activity. This complexity presents a philosophical challenge, as it questions reductionist approaches typically employed in scientific inquiry. Awareness of emergent properties urges a holistic perspective, acknowledging that systems may exhibit behaviors irreducible to their parts.",
+        "teachPoint": "Exploring the philosophical implications of emergent properties in complex systems.",
+        "question": "Explain why emergent properties challenge reductionist scientific views.",
+        "questionType": "빈칸 혹은 단답형 이유 서술",
+        "format": "주관식"
+      }
+    ],
+    "teachPoints": [
+      "Understanding the concept of cognitive dissonance and its implications on decision-making.",
+      "Exploring the limitations of kin selection in explaining altruistic behavior.",
+      "Understanding the evolving nature of epistemology through the examination of the Gettier problem.",
+      "Examining the influence of psychological factors on economic decision-making.",
+      "Understanding the implications of quantum mechanics on determinism.",
+      "Analyzing the dual nature of neuroplasticity in cognitive processes.",
+      "Exploring the philosophical implications of emergent properties in complex systems."
+    ],
+    "questions": [
+      "What is the underlying reason for the individual's rationalization in the given scenario? ① Their genuine concern for safety. ② A desire to reduce guilt. ③ Lack of awareness about environmental issues. ④ Influence from peers. ⑤ Economic constraints.",
+      "What does the concept of kin selection fail to fully explain? ① Cooperative behavior in bees. ② Altruistic actions toward unrelated individuals. ③ The propagation of genetic material. ④ Social structures in insects. ⑤ Genetic mutations.",
+      "Summarize the challenge posed by the Gettier problem to traditional epistemic assumptions.",
+      "What does the endowment effect reveal about traditional economic assumptions? ① They accurately predict market behaviors. ② They overlook emotional influences. ③ They are based on loss aversion. ④ They account for irrational behaviors. ⑤ They integrate psychological insights.",
+      "Where should the following sentence be inserted? 'Such uncertainties force a reevaluation of philosophical stances on reality.'",
+      "Arrange the sentences to best convey the progression of ideas about neuroplasticity. ① Neuroplasticity allows the brain to adapt. ② Repetition strengthens synaptic pathways. ③ Maladaptive changes can occur after trauma. ④ Positive reinforcement aids rehabilitation. ⑤ It is pivotal during learning.",
+      "Explain why emergent properties challenge reductionist scientific views."
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "script": [
+          "A: Hey, did you see the new art exhibit at the downtown gallery?",
+          "B: No, I haven't had the chance yet. Is it worth visiting?",
+          "A: Absolutely! The artist uses such vibrant colors and unique textures.",
+          "B: That sounds interesting. How long will it be open?",
+          "A: It's available until the end of the month, so there's still some time.",
+          "B: Great, I'll try to check it out this weekend."
+        ],
+        "question": "What are the speakers mainly discussing?",
+        "choices": [
+          "A new restaurant opening.",
+          "A recent art exhibit.",
+          "A movie they watched.",
+          "A concert they attended.",
+          "A book they read."
+        ],
+        "answer": "A recent art exhibit."
+      },
+      {
+        "script": [
+          "A: Did you hear about the changes in the company policy?",
+          "B: Yes, I got the email this morning. What do you think of it?",
+          "A: I'm not sure. It seems like it might make things more complicated.",
+          "B: I agree, especially the part about the new reporting procedures.",
+          "A: Exactly, it seems like it's going to take more time.",
+          "B: Maybe we should discuss this with the team to see how everyone feels."
+        ],
+        "question": "What are the speakers concerned about?",
+        "choices": [
+          "A change in company policy.",
+          "A new project deadline.",
+          "An upcoming team meeting.",
+          "A recent staff promotion.",
+          "A new office location."
+        ],
+        "answer": "A change in company policy."
+      },
+      {
+        "script": [
+          "A: Have you made any plans for the summer vacation?",
+          "B: Not yet. I'm thinking about going to the mountains.",
+          "A: That sounds nice. Are you planning on doing any hiking?",
+          "B: Definitely. I love exploring new trails.",
+          "A: Make sure you check the weather forecast before you go.",
+          "B: Good idea. I'll also pack some extra gear just in case."
+        ],
+        "question": "What activity is B planning to do during the summer vacation?",
+        "choices": [
+          "Visit a beach.",
+          "Explore a city.",
+          "Go hiking in the mountains.",
+          "Take a cooking class.",
+          "Attend a music festival."
+        ],
+        "answer": "Go hiking in the mountains."
+      },
+      {
+        "script": [
+          "A: Do you remember the name of that book you recommended?",
+          "B: Yes, it's called 'The Great Escape'.",
+          "A: I started reading it yesterday, and it's hard to put down.",
+          "B: I'm glad you like it. The plot really picks up after the first few chapters.",
+          "A: I'm already hooked. The characters are so well-developed.",
+          "B: I thought so too. Let me know what you think when you finish it."
+        ],
+        "question": "What is A's opinion about the book?",
+        "choices": [
+          "It's hard to understand.",
+          "It's boring and uninteresting.",
+          "It's engaging and well-written.",
+          "It's too long.",
+          "It's confusing."
+        ],
+        "answer": "It's engaging and well-written."
+      },
+      {
+        "script": [
+          "A: I heard the concert last night was amazing.",
+          "B: Yes, the band played all their greatest hits.",
+          "A: I'm so jealous. I couldn't get tickets in time.",
+          "B: I'm sure they'll come back again next year.",
+          "A: I hope so. I've been wanting to see them live for ages.",
+          "B: Next time, we'll buy tickets as soon as they're available."
+        ],
+        "question": "Why is A disappointed?",
+        "choices": [
+          "A missed the concert.",
+          "The concert was canceled.",
+          "A did not enjoy the concert.",
+          "The tickets were too expensive.",
+          "The band played poorly."
+        ],
+        "answer": "A missed the concert."
+      },
+      {
+        "script": [
+          "A: Can you help me with this math problem?",
+          "B: Sure, which one is it?",
+          "A: It's the one about calculating the area of a circle.",
+          "B: Oh, that's easy. You just need to use the formula πr².",
+          "A: I always forget that formula. Thanks for the reminder.",
+          "B: No problem. Let me know if you need help with anything else."
+        ],
+        "question": "What formula does B remind A of?",
+        "choices": [
+          "The formula for the area of a rectangle.",
+          "The formula for the perimeter of a circle.",
+          "The formula for the area of a triangle.",
+          "The formula for the area of a circle.",
+          "The formula for the volume of a cube."
+        ],
+        "answer": "The formula for the area of a circle."
+      },
+      {
+        "script": [
+          "A: How's the new job treating you?",
+          "B: It's going well, but there's a lot to learn.",
+          "A: What kind of projects are you working on?",
+          "B: Mostly data analysis and reporting.",
+          "A: That sounds challenging. Are you enjoying it?",
+          "B: Yes, I am. It's a great opportunity to develop new skills."
+        ],
+        "question": "What type of work is B involved in?",
+        "choices": [
+          "Graphic design.",
+          "Data analysis.",
+          "Marketing research.",
+          "Software development.",
+          "Customer service."
+        ],
+        "answer": "Data analysis."
+      },
+      {
+        "script": [
+          "A: I'm thinking about buying a new laptop.",
+          "B: What are you looking for in a laptop?",
+          "A: I need something lightweight and portable.",
+          "B: Have you considered getting a tablet instead?",
+          "A: I have, but I need a full keyboard for typing.",
+          "B: In that case, maybe a lightweight ultrabook would be perfect."
+        ],
+        "question": "What is A's main requirement for a new laptop?",
+        "choices": [
+          "High processing power.",
+          "Lightweight and portable.",
+          "Large storage capacity.",
+          "High-resolution display.",
+          "Long battery life."
+        ],
+        "answer": "Lightweight and portable."
+      },
+      {
+        "script": [
+          "A: Did you watch the documentary on climate change?",
+          "B: Yes, it was quite eye-opening.",
+          "A: I was shocked by some of the statistics they presented.",
+          "B: Same here. It's alarming how fast things are changing.",
+          "A: We really need to start making some changes.",
+          "B: Absolutely. Every little effort counts."
+        ],
+        "question": "What is the main topic of the documentary discussed?",
+        "choices": [
+          "The history of Earth.",
+          "Climate change.",
+          "Space exploration.",
+          "Marine life.",
+          "Renewable energy."
+        ],
+        "answer": "Climate change."
+      },
+      {
+        "script": [
+          "A: I'm thinking about joining a gym.",
+          "B: That's a good idea. Do you have one in mind?",
+          "A: I'm considering the one near my office.",
+          "B: Convenient location is important. What's their membership fee?",
+          "A: It's a bit pricey, but they offer a lot of classes.",
+          "B: If you'll use the classes, it might be worth the investment."
+        ],
+        "question": "What factor is important to A when choosing a gym?",
+        "choices": [
+          "Low membership fee.",
+          "Proximity to home.",
+          "Variety of classes offered.",
+          "State-of-the-art equipment.",
+          "Personal trainers available."
+        ],
+        "answer": "Variety of classes offered."
+      }
+    ],
+    "timeline": [
+      "[0~3m] AudioItem_1",
+      "[3~6m] AudioItem_2",
+      "[6~9m] AudioItem_3",
+      "[9~12m] AudioItem_4",
+      "[12~15m] AudioItem_5",
+      "[15~18m] AudioItem_6",
+      "[18~21m] AudioItem_7",
+      "[21~24m] AudioItem_8",
+      "[24~27m] AudioItem_9",
+      "[27~30m] AudioItem_10"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "appreciate",
+        "meaning": "to recognize the value or significance of something",
+        "alt_meaning": "to increase in value",
+        "example_sentence": "I appreciate your help with the project.",
+        "context_explain": "In this context, 'appreciate' means to recognize the value of someone's assistance."
+      },
+      {
+        "word": "account",
+        "meaning": "to provide a record or report of an event or situation",
+        "alt_meaning": "a bank account or financial record",
+        "example_sentence": "She couldn't account for her absence on that day.",
+        "context_explain": "Here, 'account for' means to provide an explanation for why she was absent."
+      },
+      {
+        "word": "compromise",
+        "meaning": "an agreement or settlement of a dispute through mutual concession",
+        "alt_meaning": "to weaken or undermine",
+        "example_sentence": "They reached a compromise after several hours of negotiation.",
+        "context_explain": "In this context, 'compromise' refers to an agreement reached by both parties."
+      },
+      {
+        "word": "fast",
+        "meaning": "moving or capable of moving at high speed",
+        "alt_meaning": "to abstain from all or some kinds of food or drink",
+        "example_sentence": "He is a fast runner.",
+        "context_explain": "Here, 'fast' refers to someone who can move quickly."
+      },
+      {
+        "word": "engage",
+        "meaning": "to participate or become involved in",
+        "alt_meaning": "to attract or hold attention",
+        "example_sentence": "The speaker's stories never fail to engage the audience.",
+        "context_explain": "In this context, 'engage' means to capture the audience's attention."
+      },
+      {
+        "word": "address",
+        "meaning": "to speak to someone, typically in a formal way",
+        "alt_meaning": "the particulars of the place where someone lives",
+        "example_sentence": "The president will address the nation at 8 PM.",
+        "context_explain": "Here, 'address' means to speak to the public or a group."
+      },
+      {
+        "word": "bear",
+        "meaning": "to carry or support",
+        "alt_meaning": "a large heavy mammal",
+        "example_sentence": "She couldn't bear the thought of losing her friend.",
+        "context_explain": "In this context, 'bear' means to endure or tolerate."
+      },
+      {
+        "word": "capital",
+        "meaning": "a city where a region's government is located",
+        "alt_meaning": "wealth in the form of money or assets",
+        "example_sentence": "Paris is the capital of France.",
+        "context_explain": "Here, 'capital' refers to the city where the government is based."
+      },
+      {
+        "word": "contract",
+        "meaning": "a written or spoken agreement that is enforceable by law",
+        "alt_meaning": "to decrease in size or number",
+        "example_sentence": "They signed a contract to buy the house.",
+        "context_explain": "In this context, 'contract' refers to a formal agreement."
+      },
+      {
+        "word": "current",
+        "meaning": "happening or existing at the present time",
+        "alt_meaning": "a flow of water, air, or electricity",
+        "example_sentence": "She stays informed about current events.",
+        "context_explain": "Here, 'current' refers to events happening now."
+      },
+      {
+        "word": "degree",
+        "meaning": "a unit of measurement for angles or temperature",
+        "alt_meaning": "a qualification awarded to students by a college or university",
+        "example_sentence": "She earned her degree in chemistry.",
+        "context_explain": "In this context, 'degree' refers to an academic qualification."
+      },
+      {
+        "word": "drive",
+        "meaning": "to operate and control the direction and speed of a vehicle",
+        "alt_meaning": "a strong motivation or urge",
+        "example_sentence": "Her drive to succeed is impressive.",
+        "context_explain": "Here, 'drive' refers to her strong motivation."
+      },
+      {
+        "word": "even",
+        "meaning": "flat or level",
+        "alt_meaning": "used to emphasize something surprising or extreme",
+        "example_sentence": "The surface of the table was even.",
+        "context_explain": "In this context, 'even' means flat or level."
+      },
+      {
+        "word": "fair",
+        "meaning": "treating people equally without favoritism or discrimination",
+        "alt_meaning": "a gathering of stalls and amusements for public entertainment",
+        "example_sentence": "The judge made a fair decision.",
+        "context_explain": "Here, 'fair' means just and impartial."
+      },
+      {
+        "word": "fine",
+        "meaning": "of high quality",
+        "alt_meaning": "a sum of money to be paid as a penalty for an offense",
+        "example_sentence": "She wore a fine dress to the event.",
+        "context_explain": "In this context, 'fine' means of high quality."
+      },
+      {
+        "word": "grave",
+        "meaning": "a place of burial for a dead body",
+        "alt_meaning": "serious or solemn",
+        "example_sentence": "He looked grave when he heard the news.",
+        "context_explain": "Here, 'grave' means serious or solemn."
+      },
+      {
+        "word": "host",
+        "meaning": "a person who receives or entertains guests",
+        "alt_meaning": "an organism that harbors a parasite",
+        "example_sentence": "She was the host of the party.",
+        "context_explain": "In this context, 'host' refers to the person entertaining guests."
+      },
+      {
+        "word": "issue",
+        "meaning": "an important topic or problem for debate or discussion",
+        "alt_meaning": "to supply or distribute something",
+        "example_sentence": "The issue of climate change is critical.",
+        "context_explain": "Here, 'issue' refers to a topic for discussion."
+      },
+      {
+        "word": "light",
+        "meaning": "the natural agent that stimulates sight and makes things visible",
+        "alt_meaning": "to ignite or set fire to something",
+        "example_sentence": "She turned on the light in the room.",
+        "context_explain": "In this context, 'light' refers to illumination."
+      },
+      {
+        "word": "object",
+        "meaning": "a material thing that can be seen and touched",
+        "alt_meaning": "to express disapproval or opposition",
+        "example_sentence": "The sculpture is a beautiful object.",
+        "context_explain": "Here, 'object' refers to a tangible item."
+      },
+      {
+        "word": "order",
+        "meaning": "the arrangement or disposition of people or things in relation to each other",
+        "alt_meaning": "a request to make, supply, or deliver food or goods",
+        "example_sentence": "The books were placed in alphabetical order.",
+        "context_explain": "In this context, 'order' refers to an arrangement."
+      },
+      {
+        "word": "present",
+        "meaning": "existing or happening now",
+        "alt_meaning": "to give something formally or ceremonially",
+        "example_sentence": "She is present at the meeting.",
+        "context_explain": "Here, 'present' refers to being in attendance."
+      },
+      {
+        "word": "project",
+        "meaning": "an individual or collaborative enterprise planned and designed to achieve an aim",
+        "alt_meaning": "to estimate or forecast something based on present trends",
+        "example_sentence": "They worked on a project to improve the community park.",
+        "context_explain": "In this context, 'project' refers to a planned endeavor."
+      },
+      {
+        "word": "range",
+        "meaning": "the area of variation between upper and lower limits on a particular scale",
+        "alt_meaning": "to vary or extend between specified limits",
+        "example_sentence": "The temperature range for today is 20 to 30 degrees.",
+        "context_explain": "Here, 'range' refers to the spread between two limits."
+      },
+      {
+        "word": "secure",
+        "meaning": "to fix or attach something firmly",
+        "alt_meaning": "safe from harm",
+        "example_sentence": "She secured the rope to the post.",
+        "context_explain": "In this context, 'secure' means to fasten something firmly."
+      },
+      {
+        "word": "sound",
+        "meaning": "vibrations that travel through the air and can be heard",
+        "alt_meaning": "in good condition; not damaged, injured, or diseased",
+        "example_sentence": "The sound of music filled the room.",
+        "context_explain": "Here, 'sound' refers to what can be heard."
+      }
+    ],
+    "venice": {
+      "time": "5분",
+      "theme": "Review",
+      "content": "Words"
+    },
+    "wordLearn": {
+      "time": "8분",
+      "content": "Learn"
+    },
+    "wordTest": {
+      "time": "5분",
+      "questionsCount": 12,
+      "questions": [
+        {
+          "question": "What does 'appreciate' mean in the context: 'The value of the antique painting has appreciated over the years'?",
+          "choices": [
+            "To recognize the value of something",
+            "To increase in value",
+            "To diminish in importance",
+            "To express gratitude"
+          ],
+          "answer": "To increase in value"
+        },
+        {
+          "question": "What does 'account' mean in the context: 'She opened a new account at the bank'?",
+          "choices": [
+            "To explain or justify something",
+            "A bank account or financial record",
+            "To narrate a story",
+            "To be responsible for something"
+          ],
+          "answer": "A bank account or financial record"
+        },
+        {
+          "question": "What does 'compromise' mean in the context: 'The security of the system was compromised by the breach'?",
+          "choices": [
+            "An agreement reached by mutual concessions",
+            "To weaken or undermine",
+            "To enhance security",
+            "To reach a consensus"
+          ],
+          "answer": "To weaken or undermine"
+        },
+        {
+          "question": "What does 'engage' mean in the context: 'The gears in the machine engaged smoothly'?",
+          "choices": [
+            "To attract attention",
+            "To participate in an activity",
+            "To interlock or cause to interlock",
+            "To hire someone"
+          ],
+          "answer": "To interlock or cause to interlock"
+        },
+        {
+          "question": "What does 'address' mean in the context: 'The letter was sent to the wrong address'?",
+          "choices": [
+            "To speak to someone",
+            "The particulars of the place where someone lives",
+            "To solve a problem",
+            "To make a formal speech"
+          ],
+          "answer": "The particulars of the place where someone lives"
+        },
+        {
+          "question": "What does 'bear' mean in the context: 'The financial costs of the project will be borne by the company'?",
+          "choices": [
+            "A large heavy mammal",
+            "To carry or support",
+            "To endure or tolerate",
+            "To give birth to"
+          ],
+          "answer": "To carry or support"
+        },
+        {
+          "question": "What does 'capital' mean in the context: 'The company is seeking capital to expand its operations'?",
+          "choices": [
+            "A city where a region's government is located",
+            "Wealth in the form of money or assets",
+            "An uppercase letter",
+            "A crime punishable by death"
+          ],
+          "answer": "Wealth in the form of money or assets"
+        },
+        {
+          "question": "What does 'contract' mean in the context: 'Muscles contract when you exercise'?",
+          "choices": [
+            "A written agreement",
+            "To decrease in size or number",
+            "To enter into a legal agreement",
+            "To catch a disease"
+          ],
+          "answer": "To decrease in size or number"
+        },
+        {
+          "question": "What does 'current' mean in the context: 'The ocean current carried the boat swiftly'?",
+          "choices": [
+            "Happening at the present time",
+            "A flow of water, air, or electricity",
+            "Recent news",
+            "Standard practice"
+          ],
+          "answer": "A flow of water, air, or electricity"
+        },
+        {
+          "question": "What does 'degree' mean in the context: 'The thermometer read 100 degrees'?",
+          "choices": [
+            "A qualification from a college",
+            "A unit of measurement for angles or temperature",
+            "An extent or level of something",
+            "A step or stage in a process"
+          ],
+          "answer": "A unit of measurement for angles or temperature"
+        },
+        {
+          "question": "What does 'drive' mean in the context: 'She has a strong drive to succeed in her career'?",
+          "choices": [
+            "To operate a vehicle",
+            "A strong motivation or urge",
+            "A trip or journey",
+            "To propel forward"
+          ],
+          "answer": "A strong motivation or urge"
+        },
+        {
+          "question": "What does 'even' mean in the context: 'Even the experts were surprised by the outcome'?",
+          "choices": [
+            "Flat or level",
+            "Used to emphasize something surprising or extreme",
+            "Fair or impartial",
+            "Divisible by two"
+          ],
+          "answer": "Used to emphasize something surprising or extreme"
+        }
+      ],
+      "testType": "matching"
+    }
+  },
+  "homework": {
+    "title": "심층/하드코어 과제",
+    "items": [
+      {
+        "type": "reading",
+        "title": "10개 지문 풀이 분석"
+      },
+      {
+        "type": "listening",
+        "title": "8개 듣기 실전 딕테이션"
+      },
+      {
+        "type": "vocab",
+        "title": "25개 단어 완벽 암기"
+      }
+    ]
+  }
+}

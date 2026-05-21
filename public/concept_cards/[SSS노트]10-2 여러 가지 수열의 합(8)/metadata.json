@@ -1,0 +1,38 @@
+[
+  {
+    "id": "[SSS노트]10-2 여러 가지 수열의 합(8)_p3_01",
+    "source_file": "[SSS노트]10-2 여러 가지 수열의 합(8)",
+    "source_page": 3,
+    "section_index": "03",
+    "section_title": "여러 가지 수열의 합",
+    "card_index": "01",
+    "card_title": "분수 꼴로 된 수열의 합",
+    "y_start": 485,
+    "y_end": 1074,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[SSS노트]10-2 여러 가지 수열의 합(8)_p3_02",
+    "source_file": "[SSS노트]10-2 여러 가지 수열의 합(8)",
+    "source_page": 3,
+    "section_index": "03",
+    "section_title": "여러 가지 수열의 합",
+    "card_index": "02",
+    "card_title": "분모에 근호가 있는 수열의 합",
+    "y_start": 1074,
+    "y_end": 1410,
+    "file_png": "card_02_p3.webp"
+  },
+  {
+    "id": "[SSS노트]10-2 여러 가지 수열의 합(8)_p3_03",
+    "source_file": "[SSS노트]10-2 여러 가지 수열의 합(8)",
+    "source_page": 3,
+    "section_index": "03",
+    "section_title": "여러 가지 수열의 합",
+    "card_index": "03",
+    "card_title": "( 등차수열 ) × ( 등비수열 )",
+    "y_start": 1410,
+    "y_end": 1602,
+    "file_png": "card_03_p3.webp"
+  }
+]

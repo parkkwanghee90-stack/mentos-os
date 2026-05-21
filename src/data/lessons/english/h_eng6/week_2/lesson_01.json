@@ -1,0 +1,539 @@
+{
+  "teacherId": "h_eng6",
+  "round": 1,
+  "title": "Curriculum Mode for 3등급",
+  "targetGrades": [
+    "고3"
+  ],
+  "targetRanks": [
+    "3등급"
+  ],
+  "reading": {
+    "passageCount": 10,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "The sun was setting behind the mountains, casting a warm glow over the valley. Birds were chirping, and a gentle breeze rustled the leaves of the trees. It was a perfect evening for a walk. As Emma strolled along the path, she felt a sense of peace wash over her. The beauty of nature always had a calming effect on her.",
+        "teachPoint": "Identify the use of sensory details in the passage.",
+        "question": "What effect does the setting have on Emma's mood?"
+      },
+      {
+        "id": "Passage_2",
+        "text": "In the heart of the city, skyscrapers towered above the bustling streets. Cars honked and people hurried along the sidewalks, each absorbed in their own world. The aroma of street food filled the air, mingling with the sounds of laughter and conversation. Despite the chaos, there was a certain energy that was invigorating. It was the pulse of urban life.",
+        "teachPoint": "Discuss the use of imagery to convey the atmosphere.",
+        "question": "How does the author describe the city's atmosphere?"
+      },
+      {
+        "id": "Passage_3",
+        "text": "The library was a haven of quiet and order. Rows of books lined the shelves, each waiting to be discovered. Soft light filtered through the windows, creating a serene environment. Students sat at tables with their laptops, focused on their studies. The smell of old paper and ink was comforting, a reminder of countless stories waiting to be read.",
+        "teachPoint": "Examine how the setting contributes to the theme of knowledge and learning.",
+        "question": "What elements make the library a peaceful place?"
+      },
+      {
+        "id": "Passage_4",
+        "text": "A small cottage sat at the edge of the forest, surrounded by wildflowers. Smoke curled from the chimney, hinting at a warm fire inside. The sound of a brook could be heard nearby, adding to the tranquil setting. It was a place of solitude, away from the rush of modern life. Here, time seemed to slow down, allowing one to reflect and relax.",
+        "teachPoint": "Analyze how the author uses setting to convey a sense of isolation.",
+        "question": "What details in the passage suggest a sense of solitude?"
+      },
+      {
+        "id": "Passage_5",
+        "text": "The garden was a riot of color, with flowers blooming in every hue imaginable. Bees buzzed from blossom to blossom, collecting nectar. The air was fragrant with the scent of roses and jasmine. In the center, a fountain bubbled gently, attracting birds that splashed playfully. It was a paradise, a sanctuary away from the outside world.",
+        "teachPoint": "Identify the figurative language used to enhance the description of the garden.",
+        "question": "What makes the garden described in the passage seem idyllic?"
+      },
+      {
+        "id": "Passage_6",
+        "text": "The leaves of the maple tree are turning a brilliant shade of red and orange, signaling the arrival of autumn. As the days grow shorter, the air becomes crisp, and the scent of fallen leaves fills the neighborhood. Children can be seen jumping into piles of these leaves, their laughter echoing through the streets. Many people enjoy taking long walks during this season, admiring the vibrant colors nature has to offer. It's a time for warm drinks, cozy sweaters, and preparing for the upcoming winter.",
+        "teachPoint": "The passage describes the sensory details of autumn, focusing on visual and olfactory imagery.",
+        "question": "What are some activities people enjoy during autumn according to the passage?"
+      },
+      {
+        "id": "Passage_7",
+        "text": "The invention of the light bulb was a groundbreaking moment in history. Before its creation, people relied on candles and oil lamps, which were less efficient and more dangerous. The light bulb not only provided a safer and more reliable source of light but also extended the hours people could work and play. This invention paved the way for modern electric lighting and contributed significantly to the industrial revolution. Today, we often take artificial lighting for granted, but its impact on society has been profound.",
+        "teachPoint": "The passage highlights the historical significance and impact of the light bulb's invention.",
+        "question": "How did the invention of the light bulb change people's daily lives according to the passage?"
+      },
+      {
+        "id": "Passage_8",
+        "text": "The ocean covers more than 70% of the Earth's surface and is home to an incredible diversity of life. From the smallest plankton to the largest whales, the ocean's inhabitants are adapted to an environment that is both beautiful and harsh. Coral reefs, often called the 'rainforests of the sea,' are particularly rich in biodiversity, providing habitat and food for countless marine species. However, human activities such as pollution and overfishing threaten these ecosystems. Conservation efforts are crucial to preserving the ocean's health and resources for future generations.",
+        "teachPoint": "The passage emphasizes the importance of ocean conservation and the threats it faces.",
+        "question": "What are some threats to ocean ecosystems mentioned in the passage?"
+      },
+      {
+        "id": "Passage_9",
+        "text": "Mountains have always fascinated humans, representing both physical challenges and spiritual experiences. Many people find peace and inspiration in their solitude and majesty. The trek up a mountain can be grueling, demanding physical endurance and mental resilience. Yet, reaching the summit offers a sense of accomplishment and a breathtaking view that makes the effort worthwhile. Mountains are also vital ecosystems, hosting unique species and playing a crucial role in the water cycle.",
+        "teachPoint": "The passage explores the dual nature of mountains as both challenging and inspiring.",
+        "question": "What are some reasons people are drawn to mountains according to the passage?"
+      },
+      {
+        "id": "Passage_10",
+        "text": "Advances in technology have transformed the way we communicate. With the rise of smartphones and social media, people can connect instantly across the globe. This has led to a more interconnected world where information is readily accessible. However, this constant connectivity also has drawbacks, such as reduced face-to-face interactions and concerns over privacy. Balancing the benefits and challenges of digital communication is an ongoing conversation in today's society.",
+        "teachPoint": "The passage discusses the impact of technology on communication, highlighting both positive and negative aspects.",
+        "question": "What are some positive and negative impacts of digital communication mentioned in the passage?"
+      }
+    ],
+    "teachPoints": [
+      "Identify the use of sensory details in the passage.",
+      "Discuss the use of imagery to convey the atmosphere.",
+      "Examine how the setting contributes to the theme of knowledge and learning.",
+      "Analyze how the author uses setting to convey a sense of isolation.",
+      "Identify the figurative language used to enhance the description of the garden.",
+      "The passage describes the sensory details of autumn, focusing on visual and olfactory imagery.",
+      "The passage highlights the historical significance and impact of the light bulb's invention.",
+      "The passage emphasizes the importance of ocean conservation and the threats it faces.",
+      "The passage explores the dual nature of mountains as both challenging and inspiring.",
+      "The passage discusses the impact of technology on communication, highlighting both positive and negative aspects."
+    ],
+    "questions": [
+      "What effect does the setting have on Emma's mood?",
+      "How does the author describe the city's atmosphere?",
+      "What elements make the library a peaceful place?",
+      "What details in the passage suggest a sense of solitude?",
+      "What makes the garden described in the passage seem idyllic?",
+      "What are some activities people enjoy during autumn according to the passage?",
+      "How did the invention of the light bulb change people's daily lives according to the passage?",
+      "What are some threats to ocean ecosystems mentioned in the passage?",
+      "What are some reasons people are drawn to mountains according to the passage?",
+      "What are some positive and negative impacts of digital communication mentioned in the passage?"
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "id": "AudioItem_1",
+        "script": "M: Hi, are you ready for the presentation today?\nW: Yes, I've been preparing all week. How about you?\nM: I'm a bit nervous but excited too. Did you review the slides?\nW: I did. I think we should focus more on the last section.\nM: Good idea. It's the most important part.\nW: Let's meet an hour before to go over everything one last time.",
+        "points": "Discussing preparation for a presentation.",
+        "choices": [
+          "They are discussing a movie.",
+          "They are preparing for a presentation.",
+          "They are planning a trip.",
+          "They are grocery shopping.",
+          "They are talking about a book."
+        ],
+        "answer": "They are preparing for a presentation.",
+        "explanation": "The conversation revolves around preparing slides and meeting to review, indicating it's about a presentation."
+      },
+      {
+        "id": "AudioItem_2",
+        "script": "W: Did you see the news about the park renovation?\nM: Yes, I'm really excited about it.\nW: Me too. I think it's going to be great for the community.\nM: Absolutely, especially the new playground they're building.\nW: And don't forget the walking trails. It'll be nice to have more green space.\nM: I can't wait to see how it all turns out.",
+        "points": "Discussing a local park renovation.",
+        "choices": [
+          "They are talking about a concert.",
+          "They are discussing a park renovation.",
+          "They are planning a wedding.",
+          "They are shopping for furniture.",
+          "They are debating a sports event."
+        ],
+        "answer": "They are discussing a park renovation.",
+        "explanation": "The conversation mentions a playground, walking trails, and green space, which are typical of a park renovation."
+      },
+      {
+        "id": "AudioItem_3",
+        "script": "M: Have you decided on where to go for vacation?\nW: Not yet. I'm torn between the beach and the mountains.\nM: Both sound great, but I personally love the beach.\nW: I know. The idea of relaxing by the sea is tempting.\nM: Plus, there's so much you can do there.\nW: True, but the mountains offer a peaceful escape.",
+        "points": "Discussing vacation destination options.",
+        "choices": [
+          "They are selecting a restaurant.",
+          "They are choosing a vacation destination.",
+          "They are deciding on a concert.",
+          "They are picking a movie.",
+          "They are planning a business trip."
+        ],
+        "answer": "They are choosing a vacation destination.",
+        "explanation": "The dialogue contrasts the beach and the mountains, indicating a discussion about vacation destinations."
+      },
+      {
+        "id": "AudioItem_4",
+        "script": "W: I'm thinking about adopting a pet. What do you think?\nM: That's a big decision. Have you considered what kind?\nW: I'm leaning towards a cat. They're independent but affectionate.\nM: That's true. Cats are great companions and relatively low maintenance.\nW: Exactly. Plus, I have a busy schedule, so a dog might be too demanding.\nM: Sounds like a cat would be a perfect fit for you.",
+        "points": "Discussing adopting a pet.",
+        "choices": [
+          "They are discussing a new car.",
+          "They are considering adopting a pet.",
+          "They are planning a garden.",
+          "They are renovating a house.",
+          "They are buying a computer."
+        ],
+        "answer": "They are considering adopting a pet.",
+        "explanation": "The conversation focuses on adopting a cat, indicating a discussion about getting a pet."
+      },
+      {
+        "id": "AudioItem_5",
+        "script": "M: Do you enjoy cooking at home?\nW: I do, but I don't always have time during the week.\nM: I understand. Have you tried meal prepping?\nW: I have, and it helps a lot. I usually set aside Sundays for that.\nM: That's a smart way to manage your time and eat healthily.\nW: Exactly, plus it saves money and reduces stress during busy days.",
+        "points": "Discussing cooking and meal prepping.",
+        "choices": [
+          "They are talking about gardening.",
+          "They are discussing cooking and meal prepping.",
+          "They are planning a party.",
+          "They are organizing a study group.",
+          "They are shopping for clothes."
+        ],
+        "answer": "They are discussing cooking and meal prepping.",
+        "explanation": "The conversation revolves around cooking at home and meal prepping, indicating a focus on managing meals efficiently."
+      },
+      {
+        "id": "AudioItem_6",
+        "script": "M: Hi, have you finished the report for our meeting tomorrow?\nW: I'm nearly done, just need to double-check the data.\nM: Great, do you need any help with that?\nW: I think I've got it covered, but thanks for offering.\nM: No problem. Just let me know if anything comes up.\nW: Sure, I will. What time is the meeting again?",
+        "points": "2",
+        "choices": [
+          "9 AM",
+          "10 AM",
+          "11 AM",
+          "1 PM",
+          "3 PM"
+        ],
+        "answer": "10 AM",
+        "explanation": "The man and woman are discussing a meeting that is happening tomorrow. The correct answer is provided in the choices, and it's important to remember the time mentioned in the conversation."
+      },
+      {
+        "id": "AudioItem_7",
+        "script": "W: Did you hear about the new cafe that opened downtown?\nM: Yes, I heard they have great coffee and pastries.\nW: I was thinking of checking it out this weekend.\nM: That sounds like a good idea. Maybe we can go together.\nW: Perfect, let's make a plan. What time works for you?\nM: How about Saturday morning?",
+        "points": "2",
+        "choices": [
+          "Friday afternoon",
+          "Saturday morning",
+          "Sunday evening",
+          "Monday lunch",
+          "Tuesday breakfast"
+        ],
+        "answer": "Saturday morning",
+        "explanation": "The man suggests Saturday morning as a time to visit the new cafe, so the correct choice is 'Saturday morning'."
+      },
+      {
+        "id": "AudioItem_8",
+        "script": "M: Are you going to the concert next week?\nW: I haven't decided yet. Are tickets still available?\nM: Yes, but they're selling out fast.\nW: In that case, I should probably get mine soon.\nM: Definitely, it's going to be a great show.\nW: Okay, I'll buy them tonight.",
+        "points": "2",
+        "choices": [
+          "The concert is tonight",
+          "Tickets are sold out",
+          "Tickets are selling fast",
+          "The concert is canceled",
+          "The concert is next month"
+        ],
+        "answer": "Tickets are selling fast",
+        "explanation": "In the conversation, the man mentions that tickets are still available but are selling out quickly, indicating urgency to buy them soon."
+      },
+      {
+        "id": "AudioItem_9",
+        "script": "W: How was your vacation in Italy?\nM: It was amazing! The food was incredible.\nW: I bet. Did you visit any famous landmarks?\nM: Yes, we saw the Colosseum and the Vatican.\nW: That sounds wonderful. Did you take lots of pictures?\nM: Tons, I'll show them to you sometime.",
+        "points": "2",
+        "choices": [
+          "He didn't like the food",
+          "He visited no landmarks",
+          "He visited the Colosseum",
+          "He lost his camera",
+          "He disliked the trip"
+        ],
+        "answer": "He visited the Colosseum",
+        "explanation": "The man mentions visiting the Colosseum and the Vatican, so the correct choice is 'He visited the Colosseum'."
+      },
+      {
+        "id": "AudioItem_10",
+        "script": "M: Have you seen the latest movie everyone is talking about?\nW: Not yet, but I've heard it's really good.\nM: I watched it last night, and it was fantastic.\nW: Really? What did you like most about it?\nM: The storyline was very engaging and the acting was superb.\nW: I should definitely watch it soon then.",
+        "points": "2",
+        "choices": [
+          "She has seen the movie",
+          "He didn't like the movie",
+          "He found the storyline dull",
+          "He watched the movie last night",
+          "She disliked the actor"
+        ],
+        "answer": "He watched the movie last night",
+        "explanation": "The man explicitly states he watched the movie last night, which makes 'He watched the movie last night' the correct choice."
+      }
+    ],
+    "points": [
+      "Discussing preparation for a presentation.",
+      "Discussing a local park renovation.",
+      "Discussing vacation destination options.",
+      "Discussing adopting a pet.",
+      "Discussing cooking and meal prepping.",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2"
+    ],
+    "timeline": [
+      "[0m] Audio",
+      "[1m] Audio",
+      "[2m] Audio",
+      "[3m] Audio",
+      "[4m] Audio",
+      "[5m] Audio",
+      "[6m] Audio",
+      "[7m] Audio",
+      "[8m] Audio",
+      "[9m] Audio"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "appreciate",
+        "meaning": "to recognize the value of something",
+        "alt_meaning": "to increase in value",
+        "example_sentence": "She didn't fully appreciate the complexity of the situation until it was too late.",
+        "context_explain": "발음의 어려움을 완전히 인식하지 못함을 의미."
+      },
+      {
+        "word": "compromise",
+        "meaning": "to settle a dispute by mutual concession",
+        "alt_meaning": "to undermine or weaken",
+        "example_sentence": "They decided to compromise on the location of their new office.",
+        "context_explain": "서로 양보하여 해결책을 찾음을 의미."
+      },
+      {
+        "word": "address",
+        "meaning": "to speak to someone",
+        "alt_meaning": "to deal with a problem",
+        "example_sentence": "The manager will address the issues during the meeting.",
+        "context_explain": "문제를 다루겠다는 의미."
+      },
+      {
+        "word": "subject",
+        "meaning": "a person or thing being discussed",
+        "alt_meaning": "likely to be affected by something",
+        "example_sentence": "The painting was the subject of much admiration.",
+        "context_explain": "많은 칭찬을 받은 대상임을 의미."
+      },
+      {
+        "word": "yield",
+        "meaning": "to produce or provide",
+        "alt_meaning": "to give way to arguments or demands",
+        "example_sentence": "The experiment yielded fascinating results.",
+        "context_explain": "흥미로운 결과를 산출함을 의미."
+      },
+      {
+        "word": "observe",
+        "meaning": "to watch carefully",
+        "alt_meaning": "to fulfill or comply with",
+        "example_sentence": "She observed the animal's behavior for hours.",
+        "context_explain": "동물의 행동을 주의 깊게 관찰함을 의미."
+      },
+      {
+        "word": "engage",
+        "meaning": "to participate or become involved in",
+        "alt_meaning": "to attract or hold attention",
+        "example_sentence": "He engaged in a debate about the environment.",
+        "context_explain": "환경에 관한 토론에 참여함을 의미."
+      },
+      {
+        "word": "assume",
+        "meaning": "to suppose something without proof",
+        "alt_meaning": "to take on responsibility or role",
+        "example_sentence": "She assumed the role of team leader during the project.",
+        "context_explain": "팀 리더의 역할을 맡았음을 의미."
+      },
+      {
+        "word": "conduct",
+        "meaning": "to organize and carry out",
+        "alt_meaning": "to behave in a specified way",
+        "example_sentence": "The scientist conducted an important experiment.",
+        "context_explain": "중요한 실험을 수행했음을 의미."
+      },
+      {
+        "word": "reflect",
+        "meaning": "to think deeply or carefully about",
+        "alt_meaning": "to show an image of",
+        "example_sentence": "He took time to reflect on his decisions.",
+        "context_explain": "자신의 결정을 깊이 생각함을 의미."
+      },
+      {
+        "word": "mediate",
+        "meaning": "to intervene in a dispute to bring about an agreement",
+        "alt_meaning": "to act as a middleman",
+        "example_sentence": "She mediated the conflict between the two departments.",
+        "context_explain": "두 부서 간의 갈등을 중재함을 의미."
+      },
+      {
+        "word": "secure",
+        "meaning": "to obtain something after a lot of effort",
+        "alt_meaning": "to make safe or protect",
+        "example_sentence": "They secured funding for the new project.",
+        "context_explain": "새 프로젝트를 위한 자금을 확보했음을 의미."
+      },
+      {
+        "word": "derive",
+        "meaning": "to obtain something from a specified source",
+        "alt_meaning": "to base a concept on a logical extension",
+        "example_sentence": "The word is derived from Latin.",
+        "context_explain": "라틴어에서 유래되었음을 의미."
+      },
+      {
+        "word": "exhibit",
+        "meaning": "to display or show",
+        "alt_meaning": "to manifest or demonstrate a quality",
+        "example_sentence": "The artist will exhibit her work at the gallery.",
+        "context_explain": "작품을 갤러리에 전시할 것임을 의미."
+      },
+      {
+        "word": "invest",
+        "meaning": "to put money into financial schemes, shares, or property",
+        "alt_meaning": "to devote time or effort to a particular undertaking",
+        "example_sentence": "He invested a lot of time in learning the new language.",
+        "context_explain": "새 언어를 배우는 데 많은 시간을 들였음을 의미."
+      },
+      {
+        "word": "maintain",
+        "meaning": "to keep something in good condition",
+        "alt_meaning": "to assert or declare",
+        "example_sentence": "She maintained that she was right all along.",
+        "context_explain": "계속해서 자신이 옳다고 주장했음을 의미."
+      }
+    ],
+    "wordTest": {
+      "questionsCount": 12,
+      "questions": [
+        {
+          "type": "meaning_choice",
+          "question": "What does 'appreciate' mean in the following sentence? 'The land value has appreciated over the years.'",
+          "choices": [
+            "to recognize the value",
+            "to increase in value",
+            "to express gratitude",
+            "to understand fully"
+          ],
+          "answer": "to increase in value"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "In the sentence 'They reached a compromise', what does 'compromise' mean?",
+          "choices": [
+            "to settle a dispute",
+            "to weaken",
+            "to agree fully",
+            "to make a plan"
+          ],
+          "answer": "to settle a dispute"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'address' in 'The letter was addressed to her'?",
+          "choices": [
+            "to deal with",
+            "to speak to",
+            "to send",
+            "to focus on"
+          ],
+          "answer": "to send"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "In 'The subject of the novel is very intriguing', what does 'subject' mean?",
+          "choices": [
+            "a topic",
+            "a person",
+            "an effect",
+            "a result"
+          ],
+          "answer": "a topic"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Choose the correct meaning of 'yield' in 'The tree yields fruit every summer.'",
+          "choices": [
+            "to give way",
+            "to produce",
+            "to surrender",
+            "to allow"
+          ],
+          "answer": "to produce"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'observe' mean in 'They observed the holiday by gathering as a family'?",
+          "choices": [
+            "to watch carefully",
+            "to celebrate",
+            "to notice",
+            "to fulfill"
+          ],
+          "answer": "to celebrate"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "In 'She engaged the audience with her speech', what does 'engage' mean?",
+          "choices": [
+            "to participate",
+            "to attract",
+            "to employ",
+            "to join"
+          ],
+          "answer": "to attract"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'assume' mean in 'He assumed responsibility for the project'?",
+          "choices": [
+            "to suppose",
+            "to take on",
+            "to guess",
+            "to imagine"
+          ],
+          "answer": "to take on"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "In 'The company conducted a survey', what does 'conducted' mean?",
+          "choices": [
+            "to behave",
+            "to lead",
+            "to organize",
+            "to direct"
+          ],
+          "answer": "to organize"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Choose the meaning of 'reflect' in 'The mirror reflects her image.'",
+          "choices": [
+            "to think deeply",
+            "to show an image",
+            "to cast back",
+            "to express"
+          ],
+          "answer": "to show an image"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "In 'She mediated the negotiation', what does 'mediate' mean?",
+          "choices": [
+            "to intervene",
+            "to argue",
+            "to decide",
+            "to agree"
+          ],
+          "answer": "to intervene"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'secure' in 'He secured a spot in the competition'?",
+          "choices": [
+            "to protect",
+            "to obtain",
+            "to guarantee",
+            "to safeguard"
+          ],
+          "answer": "to obtain"
+        }
+      ]
+    }
+  },
+  "homework": {
+    "title": "HW",
+    "items": [
+      {
+        "type": "reading",
+        "title": "10 items"
+      },
+      {
+        "type": "listening",
+        "title": "10 items"
+      },
+      {
+        "type": "vocab",
+        "title": "10 items"
+      }
+    ]
+  }
+}

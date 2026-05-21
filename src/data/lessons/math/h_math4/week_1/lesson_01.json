@@ -1,0 +1,474 @@
+{
+  "title": "⭐ 고차방정식 2단계",
+  "core": {
+    "description": "고차방정식 개념 2단계 핵심",
+    "original_unit": "고차방정식2단계",
+    "problem_image": "/math_crops/(2)수학(상)기말/고차방정식2단계/001.webp",
+    "problems": [
+      {
+        "number": 1,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/001.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 2,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/002.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 3,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/003.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 4,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/004.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 5,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/005.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 6,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/006.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 7,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/007.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 8,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/008.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 9,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/009.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 10,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/010.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 11,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/011.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 12,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/012.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 13,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/013.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 14,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/014.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 15,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/015.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 16,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/016.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 17,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/017.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 18,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/018.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 19,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/019.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 20,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/020.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 21,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/021.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 22,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/022.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 23,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/023.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 24,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/024.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 25,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/025.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 26,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/026.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 27,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/027.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 28,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/028.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 29,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/029.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 30,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/030.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 31,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/031.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 32,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/032.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 33,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/033.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 34,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/034.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 35,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/035.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 36,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/036.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 37,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/037.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 38,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/038.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 39,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/039.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 40,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/040.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 41,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/041.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 42,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/042.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 43,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/043.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 44,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/044.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 45,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/045.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 46,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/046.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 47,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/047.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 48,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/048.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 49,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/049.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 50,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/050.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 51,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/051.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 52,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/052.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 53,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/053.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 54,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/054.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 55,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/055.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 56,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/056.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 57,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/057.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 58,
+        "questionImage": "/math_crops/(2)수학(상)기말/고차방정식2단계/058.webp",
+        "solutionText": "고차방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      }
+    ]
+  }
+}

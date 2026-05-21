@@ -1,0 +1,616 @@
+{
+  "teacherId": "h_eng3",
+  "round": 1,
+  "title": "Curriculum Mode for 3등급",
+  "targetGrades": [
+    "고1",
+    "고2"
+  ],
+  "targetRanks": [
+    "3등급"
+  ],
+  "reading": {
+    "passageCount": 10,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "The forest was filled with the sound of chirping birds and rustling leaves. Sunlight filtered through the canopy, creating patterns on the forest floor. A gentle breeze carried the fresh scent of pine and earth. In the distance, a deer cautiously stepped out from behind the trees. It paused for a moment, then bounded away, disappearing into the undergrowth.",
+        "teachPoint": "This passage uses sensory details to create a vivid scene.",
+        "question": "What sensory details are used to describe the forest?"
+      },
+      {
+        "id": "Passage_2",
+        "text": "Maria carefully opened the old, dusty book. As she turned the pages, she found notes written in the margins. The handwriting was elegant yet appeared hurried, as if the writer had been racing against time. Each scribble revealed a glimpse into the past, stories untold but preserved in ink. She wondered about the person who once held this book in their hands.",
+        "teachPoint": "This passage highlights the use of descriptive language to evoke curiosity.",
+        "question": "How does the author create a sense of mystery about the book's previous owner?"
+      },
+      {
+        "id": "Passage_3",
+        "text": "The city bustled with life as people hurried along the sidewalks. Street vendors called out, trying to attract customers with colorful displays of fruit and flowers. A street musician played a lively tune on his violin, adding to the vibrant atmosphere. Even amidst the noise, there was a sense of harmony in the chaos. It was a place where every corner seemed to tell its own story.",
+        "teachPoint": "This passage uses vivid imagery to convey the lively atmosphere of the city.",
+        "question": "What elements contribute to the lively atmosphere described in the passage?"
+      },
+      {
+        "id": "Passage_4",
+        "text": "In the small coastal village, the sound of waves crashing against the shore was a constant presence. Fishermen returned with their catch, their boats bobbing gently in the harbor. Seagulls circled overhead, their cries mingling with the salty air. The village was a tapestry of colors, from the vibrant boats to the pastel-painted houses. Life here moved to the rhythm of the sea.",
+        "teachPoint": "This passage uses sensory details and metaphor to depict the village.",
+        "question": "How does the author use metaphor to describe the village?"
+      },
+      {
+        "id": "Passage_5",
+        "text": "As night fell, the temperature dropped, and the stars began to twinkle in the clear sky. The campfire crackled, providing warmth and a cozy glow. Friends gathered around, sharing stories and laughter. The scent of roasting marshmallows filled the air. It was a night of camaraderie, where time seemed to stand still under the vast expanse of the universe.",
+        "teachPoint": "This passage uses imagery and atmosphere to convey a sense of warmth and friendship.",
+        "question": "What elements in the passage contribute to the sense of warmth and camaraderie?"
+      },
+      {
+        "id": "Passage_6",
+        "text": "A gentle breeze swept across the field, causing the tall grass to sway rhythmically. Birds chirped melodiously in the distance, creating a harmonious soundtrack to the morning. A group of children played nearby, their laughter echoing in the open expanse. The sky was a brilliant blue, with fluffy clouds lazily drifting by. It was a perfect day to be outdoors, enjoying the beauty of nature.",
+        "teachPoint": "Identify and describe the sensory details that make the scene vivid.",
+        "question": "What elements contribute to the peaceful atmosphere in the passage?"
+      },
+      {
+        "id": "Passage_7",
+        "text": "The old library stood at the corner of the street, its brick walls etched with the passage of time. Inside, the air was filled with the scent of aged paper and wood polish. Rows of books lined the shelves, each containing a world of stories waiting to be discovered. A soft light filtered through the high windows, casting a warm glow over the reading tables. The silence was occasionally broken by the soft whisper of pages turning.",
+        "teachPoint": "Use descriptive language to create a vivid setting.",
+        "question": "How does the author use sensory details to bring the library to life?"
+      },
+      {
+        "id": "Passage_8",
+        "text": "The bustling city never slept, with its streets always teeming with life. Neon lights flashed brightly against the night sky, painting the surroundings in vibrant hues. The sound of honking cars and busy chatter filled the air, creating a symphony of urban life. Street vendors called out to passersby, offering a variety of tempting snacks. Amidst the chaos, a lone musician played a soothing melody, adding a touch of tranquility to the scene.",
+        "teachPoint": "Explore the contrast between chaos and calm in urban settings.",
+        "question": "What role does the musician play in the bustling city scene?"
+      },
+      {
+        "id": "Passage_9",
+        "text": "The garden was a riot of colors, with flowers blooming in every shade imaginable. Bees buzzed from bloom to bloom, diligently collecting nectar. A small fountain burbled in the center, its gentle sound providing a soothing backdrop. Sunlight filtered through the leaves, casting dappled shadows on the ground. The air was fragrant with the scent of roses and freshly cut grass.",
+        "teachPoint": "Analyze the use of vivid imagery to convey the beauty of nature.",
+        "question": "What sensory details does the author use to describe the garden?"
+      },
+      {
+        "id": "Passage_10",
+        "text": "As the sun dipped below the horizon, the beach came alive with the glow of a magnificent sunset. Waves lapped gently at the shore, their rhythmic motion calming to the soul. Couples strolled hand in hand, leaving footprints in the soft sand. The sky was ablaze with warm oranges and pinks, reflecting off the water's surface. It was a moment of serene beauty, captured in the fleeting light of dusk.",
+        "teachPoint": "Discuss the impact of setting on mood and emotion.",
+        "question": "How does the description of the sunset contribute to the overall mood of the passage?"
+      }
+    ],
+    "teachPoints": [
+      "This passage uses sensory details to create a vivid scene.",
+      "This passage highlights the use of descriptive language to evoke curiosity.",
+      "This passage uses vivid imagery to convey the lively atmosphere of the city.",
+      "This passage uses sensory details and metaphor to depict the village.",
+      "This passage uses imagery and atmosphere to convey a sense of warmth and friendship.",
+      "Identify and describe the sensory details that make the scene vivid.",
+      "Use descriptive language to create a vivid setting.",
+      "Explore the contrast between chaos and calm in urban settings.",
+      "Analyze the use of vivid imagery to convey the beauty of nature.",
+      "Discuss the impact of setting on mood and emotion."
+    ],
+    "questions": [
+      "What sensory details are used to describe the forest?",
+      "How does the author create a sense of mystery about the book's previous owner?",
+      "What elements contribute to the lively atmosphere described in the passage?",
+      "How does the author use metaphor to describe the village?",
+      "What elements in the passage contribute to the sense of warmth and camaraderie?",
+      "What elements contribute to the peaceful atmosphere in the passage?",
+      "How does the author use sensory details to bring the library to life?",
+      "What role does the musician play in the bustling city scene?",
+      "What sensory details does the author use to describe the garden?",
+      "How does the description of the sunset contribute to the overall mood of the passage?"
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "script": [
+          "A: Hey, did you watch the movie last night?",
+          "B: No, I missed it. Was it any good?",
+          "A: It was amazing! The plot twist at the end was mind-blowing.",
+          "B: Really? I heard mixed reviews about it.",
+          "A: Trust me, it's worth watching. The cinematography was also top-notch.",
+          "B: Alright, I'll check it out this weekend."
+        ],
+        "question": "What did A think of the movie?",
+        "choices": [
+          "A thought the movie was boring.",
+          "A didn't watch the movie.",
+          "A thought the movie was amazing.",
+          "A gave the movie mixed reviews.",
+          "A thought the cinematography was poor."
+        ],
+        "answer": "A thought the movie was amazing."
+      },
+      {
+        "script": [
+          "A: Do you know where the nearest grocery store is?",
+          "B: Yes, it's just two blocks down the street.",
+          "A: Great, and what time does it close?",
+          "B: I believe it closes at 10 PM.",
+          "A: Perfect, I have plenty of time then.",
+          "B: Yes, you do. Do you need any help with directions?"
+        ],
+        "question": "What time does the grocery store close?",
+        "choices": [
+          "8 PM",
+          "9 PM",
+          "10 PM",
+          "11 PM",
+          "Midnight"
+        ],
+        "answer": "10 PM"
+      },
+      {
+        "script": [
+          "A: Are you planning to attend the conference next week?",
+          "B: Yes, I am. I'm really looking forward to it.",
+          "A: Me too. The keynote speaker is supposed to be excellent.",
+          "B: I heard the same. Have you attended any of their talks before?",
+          "A: Not yet, but I’ve read a lot about them.",
+          "B: It should be interesting then."
+        ],
+        "question": "What is B looking forward to?",
+        "choices": [
+          "A meeting",
+          "A vacation",
+          "The conference",
+          "A party",
+          "A workshop"
+        ],
+        "answer": "The conference"
+      },
+      {
+        "script": [
+          "A: Do you think it will rain today?",
+          "B: I checked the weather forecast, and it looks clear.",
+          "A: That's good to know. I was worried about the picnic getting canceled.",
+          "B: You should be fine. Just in case, maybe pack an umbrella.",
+          "A: Good idea, better safe than sorry.",
+          "B: Exactly, enjoy your picnic!"
+        ],
+        "question": "What does B suggest A do?",
+        "choices": [
+          "Cancel the picnic",
+          "Check the weather again",
+          "Pack an umbrella",
+          "Wear a raincoat",
+          "Stay indoors"
+        ],
+        "answer": "Pack an umbrella"
+      },
+      {
+        "script": [
+          "A: Have you finished reading the book I lent you?",
+          "B: Not yet, but I’m almost done.",
+          "A: No rush, just wanted to know how you're finding it.",
+          "B: It's fascinating. The plot is really engaging.",
+          "A: I knew you’d like it. The author is brilliant.",
+          "B: Definitely, I’m looking forward to finishing it."
+        ],
+        "question": "What does B think about the book?",
+        "choices": [
+          "B thinks the book is boring.",
+          "B finds the book engaging.",
+          "B hasn't started reading the book.",
+          "B doesn't like the author's style.",
+          "B plans to return the book unread."
+        ],
+        "answer": "B finds the book engaging."
+      },
+      {
+        "script": [
+          "A: Did you hear about the new restaurant downtown?",
+          "B: Yes, I heard it's really good.",
+          "A: I went there last night. The food was delicious.",
+          "B: What did you try?",
+          "A: I had the pasta, and it was fantastic.",
+          "B: I'll have to check it out soon."
+        ],
+        "question": "What did A think of the food at the new restaurant?",
+        "choices": [
+          "The food was average.",
+          "The food was delicious.",
+          "The food was too spicy.",
+          "The food was expensive.",
+          "The food was not good."
+        ],
+        "answer": "The food was delicious."
+      },
+      {
+        "script": [
+          "A: Are you going to the gym later?",
+          "B: Yes, I plan to go after work.",
+          "A: I might join you. What time are you going?",
+          "B: Around 6 PM.",
+          "A: That works for me. Let's meet there.",
+          "B: Sounds good. See you then!"
+        ],
+        "question": "What time is B planning to go to the gym?",
+        "choices": [
+          "5 PM",
+          "6 PM",
+          "7 PM",
+          "8 PM",
+          "9 PM"
+        ],
+        "answer": "6 PM"
+      },
+      {
+        "script": [
+          "A: Have you decided on a place for vacation?",
+          "B: Yes, we're going to Hawaii.",
+          "A: That sounds amazing. Have you been there before?",
+          "B: No, this will be our first time.",
+          "A: You're going to love it. The beaches are beautiful.",
+          "B: I can't wait to relax and enjoy the scenery."
+        ],
+        "question": "Where is B going on vacation?",
+        "choices": [
+          "Hawaii",
+          "Florida",
+          "California",
+          "Bahamas",
+          "Mexico"
+        ],
+        "answer": "Hawaii"
+      },
+      {
+        "script": [
+          "A: Did you complete the project report?",
+          "B: Yes, I submitted it this morning.",
+          "A: Great, did you face any challenges?",
+          "B: Just a few, but nothing too difficult.",
+          "A: I'm glad to hear that. Thanks for your hard work.",
+          "B: You're welcome. It was a team effort."
+        ],
+        "question": "When did B submit the project report?",
+        "choices": [
+          "Yesterday morning",
+          "This morning",
+          "Last night",
+          "This afternoon",
+          "Tomorrow"
+        ],
+        "answer": "This morning"
+      },
+      {
+        "script": [
+          "A: Are you interested in joining the book club?",
+          "B: Yes, I love reading and discussing books.",
+          "A: We meet every Thursday evening.",
+          "B: That sounds perfect. What book are you currently reading?",
+          "A: We're reading 'To Kill a Mockingbird'.",
+          "B: I've been wanting to read that. Count me in!"
+        ],
+        "question": "When does the book club meet?",
+        "choices": [
+          "Monday evening",
+          "Tuesday evening",
+          "Wednesday evening",
+          "Thursday evening",
+          "Friday evening"
+        ],
+        "answer": "Thursday evening"
+      }
+    ],
+    "timeline": [
+      "[0~3m] AudioItem_1",
+      "[3~6m] AudioItem_2",
+      "[6~9m] AudioItem_3",
+      "[9~12m] AudioItem_4",
+      "[12~15m] AudioItem_5",
+      "[15~18m] AudioItem_6",
+      "[18~21m] AudioItem_7",
+      "[21~24m] AudioItem_8",
+      "[24~27m] AudioItem_9",
+      "[27~30m] AudioItem_10"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "analyze",
+        "meaning": "to examine in detail",
+        "alt_meaning": "to break down into components",
+        "example_sentence": "The scientist analyzed the data to find patterns.",
+        "context_explain": "Used when discussing the process of examining information or data."
+      },
+      {
+        "word": "evaluate",
+        "meaning": "to assess the value or significance of something",
+        "alt_meaning": "to judge carefully",
+        "example_sentence": "The teacher evaluated the students' essays with care.",
+        "context_explain": "Commonly used in academic and professional settings to describe the process of judging the quality or importance of something."
+      },
+      {
+        "word": "interpret",
+        "meaning": "to explain the meaning of",
+        "alt_meaning": "to understand in a particular way",
+        "example_sentence": "She interpreted the poem in a unique way.",
+        "context_explain": "Often used when discussing understanding or explaining texts, data, or situations."
+      },
+      {
+        "word": "justify",
+        "meaning": "to show or prove to be right or reasonable",
+        "alt_meaning": "to defend with reasons",
+        "example_sentence": "He justified his decision with solid evidence.",
+        "context_explain": "Used in contexts requiring explanation or defense of actions or decisions."
+      },
+      {
+        "word": "illustrate",
+        "meaning": "to explain or make clear using examples",
+        "alt_meaning": "to demonstrate visually or descriptively",
+        "example_sentence": "The teacher illustrated the concept with a diagram.",
+        "context_explain": "Commonly used in instructional or explanatory contexts."
+      },
+      {
+        "word": "summarize",
+        "meaning": "to give a brief statement of the main points",
+        "alt_meaning": "to condense information",
+        "example_sentence": "He summarized the article in a few sentences.",
+        "context_explain": "Used when condensing information into a brief overview."
+      },
+      {
+        "word": "predict",
+        "meaning": "to declare or indicate in advance",
+        "alt_meaning": "to forecast",
+        "example_sentence": "Meteorologists predict the weather for the upcoming week.",
+        "context_explain": "Often used in scientific and analytical contexts involving forecasts."
+      },
+      {
+        "word": "distinguish",
+        "meaning": "to recognize or point out the difference",
+        "alt_meaning": "to differentiate",
+        "example_sentence": "He could distinguish between the twins easily.",
+        "context_explain": "Used when identifying differences or unique characteristics."
+      },
+      {
+        "word": "formulate",
+        "meaning": "to create or prepare methodically",
+        "alt_meaning": "to devise",
+        "example_sentence": "The team formulated a new strategy for the project.",
+        "context_explain": "Often used in contexts involving planning or strategy creation."
+      },
+      {
+        "word": "validate",
+        "meaning": "to confirm the truth or accuracy",
+        "alt_meaning": "to substantiate",
+        "example_sentence": "The experiment validated the hypothesis.",
+        "context_explain": "Used in scientific and research contexts to confirm findings or beliefs."
+      },
+      {
+        "word": "synthesize",
+        "meaning": "to combine into a coherent whole",
+        "alt_meaning": "to integrate",
+        "example_sentence": "The author synthesized various sources in her book.",
+        "context_explain": "Commonly used in academic and research settings to describe the integration of ideas."
+      },
+      {
+        "word": "infer",
+        "meaning": "to deduce or conclude from evidence",
+        "alt_meaning": "to derive",
+        "example_sentence": "From her tone, he inferred she was upset.",
+        "context_explain": "Used when concluding or deducing information not explicitly stated."
+      },
+      {
+        "word": "emphasize",
+        "meaning": "to give special importance to",
+        "alt_meaning": "to highlight",
+        "example_sentence": "The speaker emphasized the importance of education.",
+        "context_explain": "Used when highlighting or stressing the importance of something."
+      },
+      {
+        "word": "correlate",
+        "meaning": "to have a mutual relationship or connection",
+        "alt_meaning": "to link",
+        "example_sentence": "Researchers found that the two variables correlate strongly.",
+        "context_explain": "Used in contexts involving relationships or connections between data points."
+      },
+      {
+        "word": "articulate",
+        "meaning": "to express clearly",
+        "alt_meaning": "to communicate effectively",
+        "example_sentence": "She articulated her ideas clearly during the meeting.",
+        "context_explain": "Commonly used in communication contexts to express clarity."
+      },
+      {
+        "word": "clarify",
+        "meaning": "to make something clear or easier to understand",
+        "alt_meaning": "to explain",
+        "example_sentence": "He asked the teacher to clarify the assignment instructions.",
+        "context_explain": "Used when making information or instructions more understandable."
+      },
+      {
+        "word": "contrast",
+        "meaning": "to compare in order to show differences",
+        "alt_meaning": "to distinguish",
+        "example_sentence": "The essay contrasts the political systems of two countries.",
+        "context_explain": "Used when highlighting differences between two or more items."
+      },
+      {
+        "word": "speculate",
+        "meaning": "to form a theory without firm evidence",
+        "alt_meaning": "to conjecture",
+        "example_sentence": "They speculated about the reasons for his sudden departure.",
+        "context_explain": "Often used in contexts involving guesses or assumptions."
+      },
+      {
+        "word": "explore",
+        "meaning": "to investigate or study",
+        "alt_meaning": "to examine",
+        "example_sentence": "The book explores the complexities of human nature.",
+        "context_explain": "Used when discussing investigation or detailed study of a subject."
+      },
+      {
+        "word": "argue",
+        "meaning": "to give reasons for or against something",
+        "alt_meaning": "to debate",
+        "example_sentence": "He argued that the policy should be changed.",
+        "context_explain": "Used in debate or discussion contexts where reasoning is presented."
+      }
+    ],
+    "venice": {
+      "time": "5분",
+      "theme": "SSOT Words",
+      "content": "Review Games"
+    },
+    "wordLearn": {
+      "time": "8분",
+      "content": "Learn basic meanings"
+    },
+    "wordTest": {
+      "questionsCount": 12,
+      "questions": [
+        {
+          "type": "meaning_choice",
+          "question": "What does 'evaluate' mean?",
+          "choices": [
+            "to create",
+            "to assess the value",
+            "to ignore",
+            "to destroy"
+          ],
+          "answer": "to assess the value"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'synthesize' mean?",
+          "choices": [
+            "to separate",
+            "to integrate",
+            "to destroy",
+            "to observe"
+          ],
+          "answer": "to integrate"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'justify' mean?",
+          "choices": [
+            "to forgive",
+            "to show to be right",
+            "to ignore",
+            "to create"
+          ],
+          "answer": "to show to be right"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'illustrate' mean?",
+          "choices": [
+            "to hide",
+            "to explain using examples",
+            "to forget",
+            "to damage"
+          ],
+          "answer": "to explain using examples"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'interpret' mean?",
+          "choices": [
+            "to misunderstand",
+            "to explain the meaning",
+            "to confuse",
+            "to destroy"
+          ],
+          "answer": "to explain the meaning"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'analyze' mean?",
+          "choices": [
+            "to overlook",
+            "to examine in detail",
+            "to simplify",
+            "to build"
+          ],
+          "answer": "to examine in detail"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'predict' mean?",
+          "choices": [
+            "to guess",
+            "to declare in advance",
+            "to ignore",
+            "to forget"
+          ],
+          "answer": "to declare in advance"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'distinguish' mean?",
+          "choices": [
+            "to combine",
+            "to recognize differences",
+            "to destroy",
+            "to ignore"
+          ],
+          "answer": "to recognize differences"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'validate' mean?",
+          "choices": [
+            "to confirm the truth",
+            "to deny",
+            "to ignore",
+            "to invent"
+          ],
+          "answer": "to confirm the truth"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'emphasize' mean?",
+          "choices": [
+            "to ignore",
+            "to highlight",
+            "to destroy",
+            "to confuse"
+          ],
+          "answer": "to highlight"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'contrast' mean?",
+          "choices": [
+            "to compare differences",
+            "to merge",
+            "to create",
+            "to destroy"
+          ],
+          "answer": "to compare differences"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'explore' mean?",
+          "choices": [
+            "to ignore",
+            "to investigate",
+            "to destroy",
+            "to forget"
+          ],
+          "answer": "to investigate"
+        }
+      ],
+      "testType": "meaning_choice"
+    }
+  },
+  "homework": {
+    "title": "HW",
+    "items": [
+      {
+        "type": "reading",
+        "title": "10 items"
+      },
+      {
+        "type": "listening",
+        "title": "10 items"
+      },
+      {
+        "type": "vocab",
+        "title": "10 items"
+      }
+    ]
+  }
+}

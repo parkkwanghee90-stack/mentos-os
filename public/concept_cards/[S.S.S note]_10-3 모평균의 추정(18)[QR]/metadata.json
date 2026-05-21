@@ -1,0 +1,26 @@
+[
+  {
+    "id": "[S.S.S note]_10-3 모평균의 추정(18)[QR]_p3_01",
+    "source_file": "[S.S.S note]_10-3 모평균의 추정(18)[QR]",
+    "source_page": 3,
+    "section_index": "02",
+    "section_title": "모평균의 추정",
+    "card_index": "01",
+    "card_title": "모평균의 신뢰구간",
+    "y_start": 483,
+    "y_end": 1602,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[S.S.S note]_10-3 모평균의 추정(18)[QR]_p6_02",
+    "source_file": "[S.S.S note]_10-3 모평균의 추정(18)[QR]",
+    "source_page": 6,
+    "section_index": "02",
+    "section_title": "모평균의 추정",
+    "card_index": "02",
+    "card_title": "모평균의 신뢰구간의 길이",
+    "y_start": 391,
+    "y_end": 1602,
+    "file_png": "card_02_p6.webp"
+  }
+]

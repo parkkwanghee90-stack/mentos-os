@@ -1,0 +1,584 @@
+{
+  "teacherId": "h_eng3",
+  "round": 2,
+  "title": "Curriculum Mode for 3등급",
+  "targetGrades": [
+    "고1",
+    "고2"
+  ],
+  "targetRanks": [
+    "3등급"
+  ],
+  "reading": {
+    "passageCount": 6,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "Many people believe that eating breakfast can help improve concentration and performance in school. A healthy breakfast provides the necessary nutrients and energy to start the day.",
+        "teachPoint": "The importance of breakfast in maintaining focus and energy.",
+        "question": "What is one benefit of having breakfast according to the passage?"
+      },
+      {
+        "id": "Passage_2",
+        "text": "Global warming is a significant issue affecting our planet today. It leads to rising sea levels and extreme weather conditions. Efforts to reduce carbon emissions are crucial in tackling this problem.",
+        "teachPoint": "Understanding the impact of global warming and the importance of reducing carbon emissions.",
+        "question": "What are two effects of global warming mentioned in the passage?"
+      },
+      {
+        "id": "Passage_3",
+        "text": "Recycling is an effective way to manage waste and conserve natural resources. It involves processing used materials into new products, reducing the need for extracting raw materials.",
+        "teachPoint": "The benefits of recycling in waste management and resource conservation.",
+        "question": "How does recycling contribute to conserving natural resources?"
+      },
+      {
+        "id": "Passage_4",
+        "text": "Learning a new language can be challenging but rewarding. It opens up opportunities for traveling, career advancement, and understanding different cultures. Consistent practice is key to mastering a new language.",
+        "teachPoint": "The advantages of learning a new language and the importance of practice.",
+        "question": "What is one benefit of learning a new language according to the passage?"
+      },
+      {
+        "id": "Passage_5",
+        "text": "Regular exercise is important for maintaining good health. It helps in improving cardiovascular fitness, strengthening muscles, and boosting mental health. Incorporating daily physical activities can lead to a healthier lifestyle.",
+        "teachPoint": "The role of regular exercise in promoting overall health.",
+        "question": "What are two benefits of regular exercise mentioned in the passage?"
+      },
+      {
+        "id": "Passage_6",
+        "text": "Maria had always dreamed of visiting Paris. Last summer, she finally got the chance to travel there with her family. They visited famous landmarks like the Eiffel Tower and the Louvre Museum. Maria was particularly fascinated by the art in the museum, especially the Mona Lisa. She also enjoyed trying French cuisine, such as croissants and escargot. Her trip to Paris was an unforgettable experience, and she hopes to return someday.",
+        "teachPoint": "Understanding the main idea and details of a travel experience narrative.",
+        "question": "What was Maria's favorite part of visiting Paris?"
+      }
+    ],
+    "teachPoints": [
+      "The importance of breakfast in maintaining focus and energy.",
+      "Understanding the impact of global warming and the importance of reducing carbon emissions.",
+      "The benefits of recycling in waste management and resource conservation.",
+      "The advantages of learning a new language and the importance of practice.",
+      "The role of regular exercise in promoting overall health.",
+      "Understanding the main idea and details of a travel experience narrative."
+    ],
+    "questions": [
+      "What is one benefit of having breakfast according to the passage?",
+      "What are two effects of global warming mentioned in the passage?",
+      "How does recycling contribute to conserving natural resources?",
+      "What is one benefit of learning a new language according to the passage?",
+      "What are two benefits of regular exercise mentioned in the passage?",
+      "What was Maria's favorite part of visiting Paris?"
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "script": [
+          "A: Hey, did you finish the math homework?",
+          "B: Not yet. I got stuck on the last problem. How about you?",
+          "A: Yeah, I finished it last night. Do you need help with the last problem?",
+          "B: That would be great, thanks. I just can't figure out the equation.",
+          "A: No worries. Let's take a look at it together.",
+          "B: Thanks! I really appreciate your help."
+        ],
+        "question": "What are A and B discussing?",
+        "choices": [
+          "A. A science project",
+          "B. A math homework problem",
+          "C. Plans for the weekend",
+          "D. An English essay",
+          "E. A history assignment"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Have you seen the new action movie that came out last week?",
+          "B: No, I haven't. Is it any good?",
+          "A: I thought it was fantastic! Lots of twists and great special effects.",
+          "B: Sounds interesting. Who's in it?",
+          "A: The lead actor is someone new, but he did an amazing job.",
+          "B: I'll have to check it out this weekend."
+        ],
+        "question": "What is A's opinion about the new movie?",
+        "choices": [
+          "A. It was boring",
+          "B. It had great special effects",
+          "C. The actors were not good",
+          "D. It was too long",
+          "E. It was a documentary"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Do you remember when our project is due?",
+          "B: I think it's due next Friday.",
+          "A: Are you sure? I thought it was this Wednesday.",
+          "B: Oh, you might be right. I should double-check with the teacher.",
+          "A: Yeah, we don't want to miss the deadline.",
+          "B: Definitely. I'll confirm it tomorrow."
+        ],
+        "question": "What are A and B concerned about?",
+        "choices": [
+          "A. The project deadline",
+          "B. The project topic",
+          "C. The project presentation",
+          "D. The project group members",
+          "E. The project budget"
+        ],
+        "answer": "A"
+      },
+      {
+        "script": [
+          "A: What time is the meeting scheduled for?",
+          "B: It's at 3 PM. Are you presenting today?",
+          "A: Yes, I am. I just finished preparing my slides.",
+          "B: That's great. Do you need any help setting up?",
+          "A: I think I'm good, but thanks for offering.",
+          "B: No problem, good luck with your presentation!"
+        ],
+        "question": "What is A doing at the meeting?",
+        "choices": [
+          "A. Attending only",
+          "B. Presenting slides",
+          "C. Taking notes",
+          "D. Leading the meeting",
+          "E. Arranging refreshments"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Have you heard about the new restaurant opening downtown?",
+          "B: Yeah, I heard they serve amazing Italian food.",
+          "A: I'm thinking of going there this weekend. Want to join?",
+          "B: I'd love to! I could use a good pasta dish.",
+          "A: Great, let's make a reservation for Saturday evening.",
+          "B: Sounds perfect. I'll check the menu online."
+        ],
+        "question": "What type of cuisine does the new restaurant serve?",
+        "choices": [
+          "A. Chinese",
+          "B. Mexican",
+          "C. Italian",
+          "D. Indian",
+          "E. French"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: How's the weather looking for the weekend?",
+          "B: I heard it's going to be sunny and warm.",
+          "A: That's perfect! We can finally have that picnic in the park.",
+          "B: Absolutely. I'll bring the sandwiches and drinks.",
+          "A: And I'll take care of the dessert and snacks.",
+          "B: Great! Looking forward to it."
+        ],
+        "question": "What are A and B planning to do?",
+        "choices": [
+          "A. Go skiing",
+          "B. Have a picnic",
+          "C. Visit a museum",
+          "D. Watch a movie",
+          "E. Attend a concert"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Did you catch the game last night?",
+          "B: I missed it. Was it any good?",
+          "A: It was amazing! Our team won in the last minute.",
+          "B: Wow, that sounds exciting. Who scored the winning goal?",
+          "A: The new player did. He's really impressive.",
+          "B: I have to watch the highlights later."
+        ],
+        "question": "What happened in the game last night?",
+        "choices": [
+          "A. The game was postponed",
+          "B. There was a tie",
+          "C. The team lost",
+          "D. The team won in the last minute",
+          "E. The game was canceled"
+        ],
+        "answer": "D"
+      },
+      {
+        "script": [
+          "A: Do you have any plans for the summer vacation?",
+          "B: I'm thinking of traveling to Europe.",
+          "A: That sounds amazing! Where in Europe?",
+          "B: I want to visit France and Italy.",
+          "A: You're going to have the best time. What are you most excited about?",
+          "B: The food and the historical sites, for sure."
+        ],
+        "question": "Where does B plan to travel during the summer vacation?",
+        "choices": [
+          "A. Asia",
+          "B. South America",
+          "C. Europe",
+          "D. Africa",
+          "E. Australia"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: Can you help me with my computer? It won't start.",
+          "B: Sure, I can take a look. When did this start happening?",
+          "A: Just this morning. It was working fine yesterday.",
+          "B: Let's check the power cable first.",
+          "A: Good idea. I'll also try restarting it.",
+          "B: If that doesn't work, we might need to call tech support."
+        ],
+        "question": "What problem is A experiencing?",
+        "choices": [
+          "A. Internet connection issues",
+          "B. Printer malfunction",
+          "C. Computer won't start",
+          "D. Software installation error",
+          "E. Email not working"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: I can't decide what to get for Jane's birthday.",
+          "B: How about a book? She loves reading.",
+          "A: That's a great idea. Do you know what genre she likes?",
+          "B: She enjoys mystery novels the most.",
+          "A: Perfect, I'll look for a popular mystery book.",
+          "B: I'm sure she'll love it!"
+        ],
+        "question": "What gift does A decide to get for Jane?",
+        "choices": [
+          "A. A video game",
+          "B. A mystery novel",
+          "C. A piece of jewelry",
+          "D. A bouquet of flowers",
+          "E. A gift card"
+        ],
+        "answer": "B"
+      }
+    ],
+    "timeline": [
+      "[0~3m] AudioItem_1",
+      "[3~6m] AudioItem_2",
+      "[6~9m] AudioItem_3",
+      "[9~12m] AudioItem_4",
+      "[12~15m] AudioItem_5",
+      "[15~18m] AudioItem_6",
+      "[18~21m] AudioItem_7",
+      "[21~24m] AudioItem_8",
+      "[24~27m] AudioItem_9",
+      "[27~30m] AudioItem_10"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "analyze",
+        "meaning": "to examine in detail",
+        "alt_meaning": "to break down into components",
+        "example_sentence": "The scientist will analyze the data to find patterns.",
+        "context_explain": "Used in logic to describe the process of examining something methodically."
+      },
+      {
+        "word": "interpret",
+        "meaning": "to explain the meaning of",
+        "alt_meaning": "to understand in a particular way",
+        "example_sentence": "She had to interpret the results of the experiment.",
+        "context_explain": "Often used in contexts where understanding or explanation is required."
+      },
+      {
+        "word": "evaluate",
+        "meaning": "to assess the value or significance of",
+        "alt_meaning": "to judge carefully",
+        "example_sentence": "The teacher will evaluate the students' projects next week.",
+        "context_explain": "Used when making judgments about the worth or importance of something."
+      },
+      {
+        "word": "infer",
+        "meaning": "to deduce or conclude from evidence",
+        "alt_meaning": "to derive by reasoning",
+        "example_sentence": "From her tone, he could infer that she was upset.",
+        "context_explain": "Used to describe drawing logical conclusions from available information."
+      },
+      {
+        "word": "justify",
+        "meaning": "to show or prove to be right or reasonable",
+        "alt_meaning": "to provide reasons for",
+        "example_sentence": "She had to justify her absence from school.",
+        "context_explain": "Used when someone needs to explain or defend their actions or decisions."
+      },
+      {
+        "word": "criticize",
+        "meaning": "to express disapproval of",
+        "alt_meaning": "to evaluate negatively",
+        "example_sentence": "The film critic will likely criticize the new movie.",
+        "context_explain": "Used when evaluating or pointing out faults in something."
+      },
+      {
+        "word": "synthesize",
+        "meaning": "to combine into a coherent whole",
+        "alt_meaning": "to integrate parts into a unified entity",
+        "example_sentence": "The musician was able to synthesize different styles of music.",
+        "context_explain": "Used when bringing together multiple elements to create something new."
+      },
+      {
+        "word": "predict",
+        "meaning": "to declare or indicate in advance",
+        "alt_meaning": "to foretell based on evidence",
+        "example_sentence": "Meteorologists predict the weather using various models.",
+        "context_explain": "Used when forecasting future events based on data or evidence."
+      },
+      {
+        "word": "contrast",
+        "meaning": "to compare in order to show differences",
+        "alt_meaning": "to set in opposition",
+        "example_sentence": "The essay requires students to contrast two different viewpoints.",
+        "context_explain": "Used when comparing and highlighting differences between two things."
+      },
+      {
+        "word": "illustrate",
+        "meaning": "to explain or make clear using examples",
+        "alt_meaning": "to clarify by giving details",
+        "example_sentence": "The teacher used a diagram to illustrate the math problem.",
+        "context_explain": "Used when providing examples to clarify or explain something."
+      },
+      {
+        "word": "argue",
+        "meaning": "to present reasons for or against something",
+        "alt_meaning": "to persuade by reasoning",
+        "example_sentence": "He will argue his case in front of the committee.",
+        "context_explain": "Used when presenting a case or reasoning to support a position."
+      },
+      {
+        "word": "emphasize",
+        "meaning": "to give special importance to",
+        "alt_meaning": "to stress a point",
+        "example_sentence": "The coach emphasized the importance of teamwork.",
+        "context_explain": "Used when highlighting or giving priority to a particular point or idea."
+      },
+      {
+        "word": "summarize",
+        "meaning": "to give a brief statement of the main points",
+        "alt_meaning": "to condense information",
+        "example_sentence": "Please summarize the article in your own words.",
+        "context_explain": "Used when condensing information to its essential points for clarity."
+      },
+      {
+        "word": "assess",
+        "meaning": "to evaluate or estimate the nature of",
+        "alt_meaning": "to determine the value of",
+        "example_sentence": "The manager needs to assess the situation before making a decision.",
+        "context_explain": "Used when determining the value, importance, or quality of something."
+      },
+      {
+        "word": "clarify",
+        "meaning": "to make clear or understandable",
+        "alt_meaning": "to remove confusion",
+        "example_sentence": "Could you clarify your last statement?",
+        "context_explain": "Used when making something more understandable or less ambiguous."
+      },
+      {
+        "word": "explore",
+        "meaning": "to investigate or study",
+        "alt_meaning": "to examine thoroughly",
+        "example_sentence": "The students will explore different career options.",
+        "context_explain": "Used when investigating or examining something in detail."
+      },
+      {
+        "word": "debate",
+        "meaning": "to discuss a subject formally",
+        "alt_meaning": "to argue about a topic",
+        "example_sentence": "They had a debate over the best course of action.",
+        "context_explain": "Used when discussing opposing viewpoints on a subject."
+      },
+      {
+        "word": "determine",
+        "meaning": "to establish something exactly",
+        "alt_meaning": "to ascertain",
+        "example_sentence": "He tried to determine the cause of the problem.",
+        "context_explain": "Used when finding out or establishing facts or truths."
+      },
+      {
+        "word": "illustrate",
+        "meaning": "to explain with examples",
+        "alt_meaning": "to make clear by showing",
+        "example_sentence": "The teacher illustrated her point with a story.",
+        "context_explain": "Used when providing examples to clarify a concept."
+      },
+      {
+        "word": "formulate",
+        "meaning": "to create or devise methodically",
+        "alt_meaning": "to express in a systematic way",
+        "example_sentence": "The team formulated a new strategy for the project.",
+        "context_explain": "Used when systematically creating or expressing a plan or idea."
+      }
+    ],
+    "venice": {
+      "time": "5분",
+      "theme": "SSOT Words",
+      "content": "Review Games"
+    },
+    "wordLearn": {
+      "time": "8분",
+      "content": "Learn basic meanings"
+    },
+    "wordTest": {
+      "questionsCount": 12,
+      "questions": [
+        {
+          "type": "meaning_choice",
+          "question": "What does 'analyze' mean?",
+          "choices": [
+            "to express disapproval",
+            "to examine in detail",
+            "to summarize briefly",
+            "to ignore"
+          ],
+          "answer": "to examine in detail"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'interpret' mean?",
+          "choices": [
+            "to combine elements",
+            "to explain the meaning of",
+            "to evaluate negatively",
+            "to predict the future"
+          ],
+          "answer": "to explain the meaning of"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'evaluate' mean?",
+          "choices": [
+            "to assess the value",
+            "to break into parts",
+            "to make clear",
+            "to discuss formally"
+          ],
+          "answer": "to assess the value"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'infer' mean?",
+          "choices": [
+            "to summarize",
+            "to deduce from evidence",
+            "to justify actions",
+            "to explore options"
+          ],
+          "answer": "to deduce from evidence"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'justify' mean?",
+          "choices": [
+            "to make clear",
+            "to provide reasons for",
+            "to synthesize",
+            "to ignore"
+          ],
+          "answer": "to provide reasons for"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'criticize' mean?",
+          "choices": [
+            "to draw conclusions",
+            "to express disapproval",
+            "to illustrate with examples",
+            "to clarify meaning"
+          ],
+          "answer": "to express disapproval"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'synthesize' mean?",
+          "choices": [
+            "to explain simply",
+            "to combine into a whole",
+            "to argue a point",
+            "to debate formally"
+          ],
+          "answer": "to combine into a whole"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'predict' mean?",
+          "choices": [
+            "to foretell based on evidence",
+            "to explain with examples",
+            "to form an opinion",
+            "to argue logically"
+          ],
+          "answer": "to foretell based on evidence"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'contrast' mean?",
+          "choices": [
+            "to highlight differences",
+            "to make assumptions",
+            "to evaluate positively",
+            "to clarify doubts"
+          ],
+          "answer": "to highlight differences"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'illustrate' mean?",
+          "choices": [
+            "to form a judgment",
+            "to explain using examples",
+            "to assess value",
+            "to explore horizons"
+          ],
+          "answer": "to explain using examples"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'argue' mean?",
+          "choices": [
+            "to present reasons",
+            "to predict outcomes",
+            "to summarize points",
+            "to clarify issues"
+          ],
+          "answer": "to present reasons"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'emphasize' mean?",
+          "choices": [
+            "to stress a point",
+            "to ignore details",
+            "to simplify arguments",
+            "to debate a topic"
+          ],
+          "answer": "to stress a point"
+        }
+      ],
+      "testType": "meaning_choice"
+    }
+  },
+  "homework": {
+    "title": "기초/핵심 과제",
+    "items": [
+      {
+        "type": "reading",
+        "title": "6개 지문 풀이 분석"
+      },
+      {
+        "type": "listening",
+        "title": "6개 듣기 실전 딕테이션"
+      },
+      {
+        "type": "vocab",
+        "title": "15개 단어 완벽 암기"
+      }
+    ]
+  }
+}

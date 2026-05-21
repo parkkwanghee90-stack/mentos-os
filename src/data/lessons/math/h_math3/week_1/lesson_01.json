@@ -1,0 +1,493 @@
+{
+  "title": "⭐ 원의방정식 2단계",
+  "core": {
+    "description": "원의방정식 개념 2단계 핵심",
+    "original_unit": "(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)",
+    "problem_image": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/001.webp",
+    "problems": [
+      {
+        "number": 1,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/001.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "이차함수 $f(x) = ax^2 + b \\ (a > 0)$과 원 $x^2 + y^2 = 4$의 교점이 원의 둘레를 삼등분할 때, $f(5)$의 값을 구하시오."
+      },
+      {
+        "number": 2,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/002.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "점 $(a, 1)$ 을 중심으로 하고 점 $(0, -3)$ 을 지나는 원의 반지름의 길이가 $5$ 일 때, 양수 $a$ 의 값은? ① $2$ ② $2\\sqrt{2}$ ③ $3$ ④ $2\\sqrt{3}$ ⑤ $4$"
+      },
+      {
+        "number": 3,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/003.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "방정식 $x^2 + y^2 - 6y + k^2 - 8k + 24 = 0$이 원을 나타낼 때, 그중 넓이가 최대인 원의 반지름의 길이를 구하시오. (단, $k$는 상수이다.)"
+      },
+      {
+        "number": 4,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/004.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "방정식 $x^2 + y^2 - 4y + k^2 - 4k + 7 = 0$이 원을 나타낼 때, 그중 넓이가 최대인 원의 반지름의 길이를 구하시오. (단, $k$는 상수이다.)"
+      },
+      {
+        "number": 5,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/005.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 점 $(5, 2), (5, 18)$을 지나고 $x$축에 접하는 두 원의 중심 사이의 거리는? ① 8 ② 10 ③ 12 ④ 14 ⑤ 16"
+      },
+      {
+        "number": 6,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/006.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 점 $(3, -2), (2, -1)$을 지나고 $x$축에 접하는 두 원의 반지름의 길이의 합은? ① 6 ② 7 ③ 8 ④ 9 ⑤ 10"
+      },
+      {
+        "number": 7,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/007.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "원 $x^2 + y^2 - 6x + 8y = 0$과 중심이 같고, $y$축에 접하는 원의 둘레의 길이는? ① $2\\pi$ ② $4\\pi$ ③ $6\\pi$ ④ $8\\pi$ ⑤ $10\\pi$"
+      },
+      {
+        "number": 8,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/008.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "원 $x^2 + y^2 - 4x + 8y = 0$과 중심이 같고 $y$축에 접하는 원의 둘레의 길이를 구하시오."
+      },
+      {
+        "number": 9,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/009.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "점 $(1, -2)$를 지나고 $x$축, $y$축에 동시에 접하는 두 원의 넓이의 합은? ① $25\\pi$ ② $26\\pi$ ③ $27\\pi$ ④ $28\\pi$ ⑤ $29\\pi$"
+      },
+      {
+        "number": 10,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/010.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "점 $(-2, 4)$를 지나고 $x$축, $y$축에 동시에 접하는 두 원의 넓이의 합은? ① $96\\pi$ ② $100\\pi$ ③ $104\\pi$ ④ $108\\pi$ ⑤ $112\\pi$"
+      },
+      {
+        "number": 11,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/011.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 실수 $x, y$가 방정식 $(x-12)^2 + (y-5)^2 = 9$를 만족할 때, $\\sqrt{x^2 + y^2}$의 최댓값 $M$과 최솟값 $m$의 곱 $Mm$의 값을 구하시오."
+      },
+      {
+        "number": 12,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/012.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 실수 $x,\\ y$가 방정식 $(x-3)^2 + (y-4)^2 = 4$를 만족할 때, $\\sqrt{x^2 + y^2}$의 최댓값 $M$과 최솟값 $m$의 곱 $Mm$의 값을 구하시오."
+      },
+      {
+        "number": 13,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/013.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "점 $A(3, 0)$과 중심이 $C$인 원 $x^2 + y^2 + 6x = 0$ 위를 움직이는 점 $P$에 대하여 삼각형 $ACP$의 넓이가 자연수가 되도록 하는 점 $P$의 개수를 구하시오."
+      },
+      {
+        "number": 14,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/014.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "원 $x^2 + y^2 = 20$ 위의 두 점 $A(-2, -4)$, $B(4, -2)$와 원 위의 점 $P$에 대하여 삼각형 $ABP$의 넓이의 최댓값을 구하시오."
+      },
+      {
+        "number": 15,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/015.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 점 $A(3, 0)$, $B(0, 3)$에 대하여 $\\overline{AP} : \\overline{BP} = 1 : 2$를 만족하는 점 $P$가 그리는 삼각형 $PAB$의 최대 넓이는? ① 3 ② 3\\sqrt{2} ③ 6 ④ 6\\sqrt{2} ⑤ 9"
+      },
+      {
+        "number": 16,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/016.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 점 $A(3, 0)$, $B(0, -6)$에 대하여 $\\frac{AP}{BP} = 1 : 2$를 만족시키는 점 $P$가 있다. 세 점 $A$, $B$, $P$를 꼭짓점으로 하는 삼각형 $ABP$의 넓이의 최댓값을 구하시오."
+      },
+      {
+        "number": 17,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/017.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 18,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/018.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 19,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/019.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 원 $x^2 + y^2 - 6x + y = 0$, $x^2 + y^2 + 2x + 5y - 4 = 0$의 교점을 지나고 중심이 $y$축 위에 있는 원의 반지름의 길이를 구하시오."
+      },
+      {
+        "number": 20,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/020.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 원 $x^2 + y^2 + 2x + 4y = 0$, $x^2 + y^2 - x + 2y - 3 = 0$의 교점을 지나고 중심이 $x$축 위에 있는 원의 반지름의 길이를 구하세요."
+      },
+      {
+        "number": 21,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/021.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 원 $x^2 + y^2 - 3y = 0$, $x^2 + y^2 + 2x - 5y + 7 = 0$의 교점을 지나는 직선이 직선 $y = ax - 7$과 수직일 때, 상수 $a$의 값을 구하시오."
+      },
+      {
+        "number": 22,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/022.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 원 $x^2 + y^2 - 4x = 0$, $x^2 + y^2 - 2x - 6y + 5 = 0$의 교점을 지나는 직선이 직선 $y = ax + 8$과 수직일 때, 상수 $a$의 값을 구하시오."
+      },
+      {
+        "number": 23,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/023.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 원 $x^2 + y^2 = 4$, $(x-1)^2 + (y-1)^2 = 4$의 두 교점을 $A$, $B$라 할 때, 선분 $AB$의 중점의 $x$좌표를 구하시오."
+      },
+      {
+        "number": 24,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/024.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 원 $x^2 + y^2 + 6x + 2y + 1 = 0, x^2 + y^2 - 2x - 3 = 0$ 의 교점을 모두 지나는 원 중에서 넓이가 최소인 원의 중심의 좌표를 구하시오."
+      },
+      {
+        "number": 25,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/025.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 원 $x^2 + y^2 + 2x + 2y - k = 0$, $x^2 + y^2 - 2x - 2y - 6 = 0$의 공통인 현의 길이가 $2\\sqrt{6}$이 되도록 하는 모든 실수 $k$의 값의 합은? ① 22 ② 24 ③ 26 ④ 28 ⑤ 30"
+      },
+      {
+        "number": 26,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/026.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 원 $x^2 + y^2 - 2x + k = 0$, $x^2 + y^2 + 2x + 2y - 10 = 0$의 공통인 현의 길이가 $4\\sqrt{2}$가 되도록 하는 모든 실수 $k$의 값의 곱을 구하시오."
+      },
+      {
+        "number": 27,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/027.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "원 $x^2 + y^2 - 2ax - 2y - 4 = 0$이 원 $x^2 + y^2 + 2x + 2ay - 2 = 0$의 둘레를 이동분하면서 지날 때, $a$의 값의 합은? ① $-4$ ② $-2$ ③ $-1$ ④ $1$ ⑤ $2$"
+      },
+      {
+        "number": 28,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/028.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "원 $x^2 + y^2 + 2ax + 2y - 6 = 0$이 원 $x^2 + y^2 + 2x - 2ay - 2 = 0$의 둘레를 이등분할 때, $a^2$의 값은? ① 1 ② 2 ③ 4 ④ 8 ⑤ 9"
+      },
+      {
+        "number": 29,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/029.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "원 $x^2 + y^2 - 4x - 2y = a - 3$이 $x$축과 만나고, $y$축과 만나지 않도록 하는 실수 $a$의 값의 범위는? ① $a > -2$ ② $a \\ge -1$ ③ $-1 \\le a < 2$ ④ $-2 < a \\le 2$ ⑤ $-2 \\le a < 3$"
+      },
+      {
+        "number": 30,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/030.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "원 $x^2 + y^2 - 4x + 6y + k = 0$이 $x$축과는 만나지 않고, $y$축과는 만나도록 하는 실수 $k$의 값의 범위를 구하여라."
+      },
+      {
+        "number": 31,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/031.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "점 $A(7, 2)$, $B(1, 4)$를 지름의 양 끝 점으로 하는 원과 직선 $y = 3x + k$가 서로 다른 두 점에서 만나기 위한 $k$의 값의 범위는? ① $-20 < k < 0$ ② $-19 < k < 1$ ③ $-18 < k < 2$ ④ $-2 < k < 18$ ⑤ $-1 < k < 19$"
+      },
+      {
+        "number": 32,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/032.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "점 $A(5, 3)$, $B(1, 1)$을 지름의 양 끝 점으로 하는 원과 직선 $y = 2x + k$가 서로 다른 두 점에서 만나기 위한 실수 $k$의 값의 범위는? ① $-12 < k < -2$ ② $-11 < k < -1$ ③ $-10 < k < 0$ ④ $-9 < k < 1$ ⑤ $-8 < k < 3$"
+      },
+      {
+        "number": 33,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/033.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "원 $x^2 + y^2 - 6x + 4y + 4 = 0$과 직선 $4x + 3y + 4 = 0$이 두 점 $A, B$에서 만날 때, 두 점 $A, B$를 지나는 원 중에서 그 둘레의 길이가 최소인 원의 둘레의 길이는? ① $\\sqrt{5\\pi}$ ② $2\\sqrt{5\\pi}$ ③ $3\\sqrt{5\\pi}$ ④ $4\\sqrt{5\\pi}$ ⑤ $5\\sqrt{5\\pi}$"
+      },
+      {
+        "number": 34,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/034.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "좌표평면에 원 $x^2 + y^2 - 14x - 51 = 0$이 있다. 이 원의 현 중에서 점 $A(15, 0)$을 지나고 그 길이가 자연수인 현의 개수는? ① 14 ② 16 ③ 18 ④ 20 ⑤ 22"
+      },
+      {
+        "number": 35,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/035.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "점 $P(4, 1)$에서 중심이 점 $(0, 3)$인 원에 그은 접선의 길이가 $4$일 때, 이 원의 반지름의 길이를 구하시오."
+      },
+      {
+        "number": 36,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/036.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "점 $P(-1, 1)$에서 중심이 점 $(2, 5)$인 원에 그은 접선의 길이가 $4$일 때, 이 원의 반지름의 길이를 구하시오."
+      },
+      {
+        "number": 37,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/037.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "곡선 $y = x^2 - 2x + 5$ 위의 점 중 $x^2 + y^2 = 2$의 중심과의 거리가 최소가 되는 점을 $P(x, y)$라 한다. 이때 점 $P$에서 원 $x^2 + y^2 = 2$에 이르는 거리의 최댓값과 최소값의 차는? ① $2\\sqrt{2}$ ② $3$ ③ $3\\sqrt{2}$ ④ $4$ ⑤ $4\\sqrt{2}$"
+      },
+      {
+        "number": 38,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/038.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "원 $(x-3)^2 + (y-3)^2 = 1$ 위의 점과 직선 $4x + 3y - 6 = 0$ 사이의 거리의 최댓값과 최솟값을 구하시오."
+      },
+      {
+        "number": 39,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/039.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "원 $(x-4)^2 + (y-1)^2 = 49$와 직선 $y = 5x$가 만나는 두 점 $A$, $B$에 대하여 선분 $AB$의 수직이등분선의 방정식을 구하시오."
+      },
+      {
+        "number": 40,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/040.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "원 $(x-2)^2 + y^2 = 25$와 직선 $y = 4x$가 만나는 두 점 A, B에 대하여 선분 AB의 수직이등분선의 방정식을 구하시오."
+      },
+      {
+        "number": 41,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/041.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "원 $x^2 + y^2 = 10$과 직선 $y = x + 2$의 교점 중에서 제3사분면 위에 있는 점에서의 접선의 방정식을 구하시오."
+      },
+      {
+        "number": 42,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/042.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "원 $x^2 + y^2 = 100$과 직선 $y = x + 2$의 교점 중에서 제1사분면 위에 있는 점에서의 접선의 방정식을 구하시오."
+      },
+      {
+        "number": 43,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/043.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "다음 그림과 같이 원 $x^2 + y^2 = 16$과 직선 $3x + y = 6$이 만나는 두 점을 각각 $A$, $B$라 하자. 삼각형 $ABC$가 최대가 되도록 원 위에 점 $C$를 잡을 때, 점 $C$에서 원에 그은 접선의 방정식을 구하시오."
+      },
+      {
+        "number": 44,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/044.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "다음 그림과 같이 원 $x^2 + y^2 = 25$와 직선 $7x + y = 9$가 만나는 두 점을 각각 $A$, $B$라 하자. 삼각형 $ABC$의 넓이가 최대가 되도록 원 위에 점 $C$를 잡을 때, 점 $C$에서 원에 그은 접선의 방정식을 구하시오."
+      },
+      {
+        "number": 45,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/045.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "원 $(x+2)^2 + (y-5)^2 = r^2$ 밖의 한 점 $A(5, 8)$에서 원에 그은 두 접선이 서로 수직일 때, 양수 $r$의 값은? ① $\\sqrt{29}$ ② $\\sqrt{30}$ ③ $\\sqrt{31}$ ④ $4\\sqrt{2}$ ⑤ $\\sqrt{33}$"
+      },
+      {
+        "number": 46,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/046.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "원 $(x-3)^2 + (y+1)^2 = r^2$ 밖의 한 점 $A(6, 2)$에서 원에 그은 두 접선이 서로 수직일 때, 양수 $r$의 값은? ① $\\sqrt{7}$ ② $2\\sqrt{2}$ ③ $3$ ④ $\\sqrt{10}$ ⑤ $\\sqrt{11}$"
+      },
+      {
+        "number": 47,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/047.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "x축 및 직선 $3x - 4y = 0$에 접하는 원 중에서 $x$축과 점 $(3, 0)$에서 접하고, 중심의 $y$좌표가 양수인 원의 반지름의 길이는? ① 1 ② 5 ③ 6 ④ 9 ⑤ 10"
+      },
+      {
+        "number": 48,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/048.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "점 $(7, 0)$에서 원 $(x-3)^2 + (y+8)^2 = 9$에 그은 두 접선이 이루는 각을 이등분하는 직선의 방정식을 모두 구하시오."
+      },
+      {
+        "number": 49,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/049.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "다음 두 원의 공통접선의 방정식은? $$x^2 + y^2 = 4, \\quad (x-5)^2 + y^2 = 25$$ ① $y = \\pm \\frac{3}{4}x \\pm \\frac{5}{2}$ (복부호 동순) ② $y = \\pm \\frac{4}{5}x \\pm 2$ (복부호 동순) ③ $y = \\pm \\frac{5}{6}x \\pm \\frac{7}{5}$ (복부호 동순) ④ $y = \\pm \\frac{9}{10}x \\pm \\frac{11}{8}$ (복부호 동순) ⑤ $y = \\pm \\frac{10}{11}x \\pm \\frac{4}{3}$ (복부호 동순)"
+      },
+      {
+        "number": 50,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/050.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "다음 두 원의 공통접선의 방정식은? $$x^2 + y^2 = 16, \\; x^2 + (y-5)^2 = 9$$ ① $y = \\pm \\sqrt{6}x + 10$ ② $y = \\pm 2\\sqrt{6}x + 20$ ③ $y = \\pm 3\\sqrt{6}x + 30$ ④ $y = \\pm 4\\sqrt{6}x + 40$ ⑤ $y = \\pm 5\\sqrt{6}x + 50$"
+      },
+      {
+        "number": 51,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/051.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 52,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/052.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "원 $(x-3)^2 + y^2 = r^2$ 밖의 한 점 $A(5, 6)$에서 그은 두 접선이 이루는 각의 크기가 $60^\\circ$일 때, 접선의 길이를 구하시오."
+      },
+      {
+        "number": 53,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/053.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "중심이 C인 원 $(x+1)^2 + y^2 = 5$ 위의 점 $P(1, 1)$에서의 접선과 점 $Q(-2, 2)$에서의 접선이 만나는 점을 $R$라 할 때, 사각형 $CPRQ$의 넓이는? ① 3 ② 5 ③ 7 ④ 9 ⑤ 11"
+      },
+      {
+        "number": 54,
+        "questionImage": "/math_crops/(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)/054.webp",
+        "solutionText": "원의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "원 $x^2 + y^2 = 5$ 위의 점 $P(1, 2)$에서의 접선과 점 $Q(-2, 1)$에서의 접선이 만나는 점을 $R$라 할 때, 사각형 $OPRQ$의 넓이는? (단, $O$는 원점이다.) ① 3 ② 5 ③ 7 ④ 9 ⑤ 11"
+      }
+    ]
+  }
+}

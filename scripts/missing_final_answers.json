@@ -1,0 +1,1731 @@
+[
+  {
+    "unit": "고차방정식",
+    "stage": 2,
+    "problemNumber": 6,
+    "sourceFile": "고차방정식2단계\\006.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 2,
+    "problemNumber": 20,
+    "sourceFile": "고차방정식2단계\\020.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 2,
+    "problemNumber": 24,
+    "sourceFile": "고차방정식2단계\\024.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 2,
+    "problemNumber": 30,
+    "sourceFile": "고차방정식2단계\\030.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 2,
+    "problemNumber": 31,
+    "sourceFile": "고차방정식2단계\\031.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 2,
+    "problemNumber": 47,
+    "sourceFile": "고차방정식2단계\\047.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 2,
+    "problemNumber": 48,
+    "sourceFile": "고차방정식2단계\\048.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 2,
+    "problemNumber": 51,
+    "sourceFile": "고차방정식2단계\\051.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 2,
+    "problemNumber": 55,
+    "sourceFile": "고차방정식2단계\\055.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 2,
+    "problemNumber": 57,
+    "sourceFile": "고차방정식2단계\\057.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 2,
+    "problemNumber": 58,
+    "sourceFile": "고차방정식2단계\\058.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 3,
+    "problemNumber": 15,
+    "sourceFile": "고차방정식3단계\\015.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 3,
+    "problemNumber": 20,
+    "sourceFile": "고차방정식3단계\\020.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 3,
+    "problemNumber": 40,
+    "sourceFile": "고차방정식3단계\\040.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 3,
+    "problemNumber": 50,
+    "sourceFile": "고차방정식3단계\\050.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 3,
+    "problemNumber": 54,
+    "sourceFile": "고차방정식3단계\\054.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 3,
+    "problemNumber": 58,
+    "sourceFile": "고차방정식3단계\\058.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 3,
+    "problemNumber": 63,
+    "sourceFile": "고차방정식3단계\\063.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 3,
+    "problemNumber": 70,
+    "sourceFile": "고차방정식3단계\\070.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 3,
+    "problemNumber": 71,
+    "sourceFile": "고차방정식3단계\\071.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 3,
+    "problemNumber": 74,
+    "sourceFile": "고차방정식3단계\\074.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 4,
+    "problemNumber": 3,
+    "sourceFile": "고차방정식4단계\\003.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 4,
+    "problemNumber": 7,
+    "sourceFile": "고차방정식4단계\\007.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 4,
+    "problemNumber": 8,
+    "sourceFile": "고차방정식4단계\\008.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 4,
+    "problemNumber": 16,
+    "sourceFile": "고차방정식4단계\\016.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 4,
+    "problemNumber": 19,
+    "sourceFile": "고차방정식4단계\\019.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 4,
+    "problemNumber": 22,
+    "sourceFile": "고차방정식4단계\\022.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 4,
+    "problemNumber": 24,
+    "sourceFile": "고차방정식4단계\\024.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 4,
+    "problemNumber": 26,
+    "sourceFile": "고차방정식4단계\\026.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 4,
+    "problemNumber": 27,
+    "sourceFile": "고차방정식4단계\\027.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 4,
+    "problemNumber": 35,
+    "sourceFile": "고차방정식4단계\\035.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 4,
+    "problemNumber": 36,
+    "sourceFile": "고차방정식4단계\\036.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 4,
+    "problemNumber": 41,
+    "sourceFile": "고차방정식4단계\\041.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 4,
+    "problemNumber": 46,
+    "sourceFile": "고차방정식4단계\\046.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 4,
+    "problemNumber": 47,
+    "sourceFile": "고차방정식4단계\\047.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 4,
+    "problemNumber": 50,
+    "sourceFile": "고차방정식4단계\\050.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 4,
+    "problemNumber": 52,
+    "sourceFile": "고차방정식4단계\\052.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "고차방정식",
+    "stage": 4,
+    "problemNumber": 56,
+    "sourceFile": "고차방정식4단계\\056.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 2,
+    "problemNumber": 5,
+    "sourceFile": "이차부등식2단계\\005.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 2,
+    "problemNumber": 19,
+    "sourceFile": "이차부등식2단계\\019.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 2,
+    "problemNumber": 27,
+    "sourceFile": "이차부등식2단계\\027.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 2,
+    "problemNumber": 28,
+    "sourceFile": "이차부등식2단계\\028.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 2,
+    "problemNumber": 34,
+    "sourceFile": "이차부등식2단계\\034.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 2,
+    "problemNumber": 35,
+    "sourceFile": "이차부등식2단계\\035.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 2,
+    "problemNumber": 37,
+    "sourceFile": "이차부등식2단계\\037.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 2,
+    "problemNumber": 40,
+    "sourceFile": "이차부등식2단계\\040.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 2,
+    "problemNumber": 41,
+    "sourceFile": "이차부등식2단계\\041.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 3,
+    "problemNumber": 1,
+    "sourceFile": "이차부등식3단계\\001.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 3,
+    "problemNumber": 3,
+    "sourceFile": "이차부등식3단계\\003.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 3,
+    "problemNumber": 6,
+    "sourceFile": "이차부등식3단계\\006.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 3,
+    "problemNumber": 7,
+    "sourceFile": "이차부등식3단계\\007.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 3,
+    "problemNumber": 10,
+    "sourceFile": "이차부등식3단계\\010.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 3,
+    "problemNumber": 14,
+    "sourceFile": "이차부등식3단계\\014.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 3,
+    "problemNumber": 15,
+    "sourceFile": "이차부등식3단계\\015.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 3,
+    "problemNumber": 21,
+    "sourceFile": "이차부등식3단계\\021.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 3,
+    "problemNumber": 23,
+    "sourceFile": "이차부등식3단계\\023.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 3,
+    "problemNumber": 28,
+    "sourceFile": "이차부등식3단계\\028.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 3,
+    "problemNumber": 33,
+    "sourceFile": "이차부등식3단계\\033.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 3,
+    "problemNumber": 35,
+    "sourceFile": "이차부등식3단계\\035.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 3,
+    "problemNumber": 36,
+    "sourceFile": "이차부등식3단계\\036.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 3,
+    "problemNumber": 37,
+    "sourceFile": "이차부등식3단계\\037.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 3,
+    "problemNumber": 41,
+    "sourceFile": "이차부등식3단계\\041.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 3,
+    "problemNumber": 44,
+    "sourceFile": "이차부등식3단계\\044.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 3,
+    "problemNumber": 48,
+    "sourceFile": "이차부등식3단계\\048.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 3,
+    "problemNumber": 49,
+    "sourceFile": "이차부등식3단계\\049.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 4,
+    "problemNumber": 10,
+    "sourceFile": "이차부등식4단계\\010.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 4,
+    "problemNumber": 12,
+    "sourceFile": "이차부등식4단계\\012.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 4,
+    "problemNumber": 13,
+    "sourceFile": "이차부등식4단계\\013.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 4,
+    "problemNumber": 17,
+    "sourceFile": "이차부등식4단계\\017.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 4,
+    "problemNumber": 18,
+    "sourceFile": "이차부등식4단계\\018.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 4,
+    "problemNumber": 20,
+    "sourceFile": "이차부등식4단계\\020.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 4,
+    "problemNumber": 21,
+    "sourceFile": "이차부등식4단계\\021.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 4,
+    "problemNumber": 31,
+    "sourceFile": "이차부등식4단계\\031.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 4,
+    "problemNumber": 32,
+    "sourceFile": "이차부등식4단계\\032.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 4,
+    "problemNumber": 33,
+    "sourceFile": "이차부등식4단계\\033.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 4,
+    "problemNumber": 34,
+    "sourceFile": "이차부등식4단계\\034.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 4,
+    "problemNumber": 35,
+    "sourceFile": "이차부등식4단계\\035.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 4,
+    "problemNumber": 37,
+    "sourceFile": "이차부등식4단계\\037.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 4,
+    "problemNumber": 38,
+    "sourceFile": "이차부등식4단계\\038.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "이차부등식",
+    "stage": 4,
+    "problemNumber": 39,
+    "sourceFile": "이차부등식4단계\\039.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 7,
+    "sourceFile": "원의방정식2단계\\007.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 8,
+    "sourceFile": "원의방정식2단계\\008.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 9,
+    "sourceFile": "원의방정식2단계\\009.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 10,
+    "sourceFile": "원의방정식2단계\\010.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 11,
+    "sourceFile": "원의방정식2단계\\011.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 19,
+    "sourceFile": "원의방정식2단계\\019.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 20,
+    "sourceFile": "원의방정식2단계\\020.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 23,
+    "sourceFile": "원의방정식2단계\\023.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 24,
+    "sourceFile": "원의방정식2단계\\024.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 26,
+    "sourceFile": "원의방정식2단계\\026.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 27,
+    "sourceFile": "원의방정식2단계\\027.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 29,
+    "sourceFile": "원의방정식2단계\\029.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 30,
+    "sourceFile": "원의방정식2단계\\030.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 31,
+    "sourceFile": "원의방정식2단계\\031.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 32,
+    "sourceFile": "원의방정식2단계\\032.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 34,
+    "sourceFile": "원의방정식2단계\\034.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 39,
+    "sourceFile": "원의방정식2단계\\039.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 40,
+    "sourceFile": "원의방정식2단계\\040.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 41,
+    "sourceFile": "원의방정식2단계\\041.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 43,
+    "sourceFile": "원의방정식2단계\\043.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 44,
+    "sourceFile": "원의방정식2단계\\044.json",
+    "reason": "Broken JSON"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 45,
+    "sourceFile": "원의방정식2단계\\045.json",
+    "reason": "Broken JSON"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 47,
+    "sourceFile": "원의방정식2단계\\047.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 48,
+    "sourceFile": "원의방정식2단계\\048.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 2,
+    "problemNumber": 50,
+    "sourceFile": "원의방정식2단계\\050.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 1,
+    "sourceFile": "원의방정식3단계\\001.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 2,
+    "sourceFile": "원의방정식3단계\\002.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 3,
+    "sourceFile": "원의방정식3단계\\003.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 4,
+    "sourceFile": "원의방정식3단계\\004.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 5,
+    "sourceFile": "원의방정식3단계\\005.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 6,
+    "sourceFile": "원의방정식3단계\\006.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 7,
+    "sourceFile": "원의방정식3단계\\007.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 8,
+    "sourceFile": "원의방정식3단계\\008.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 9,
+    "sourceFile": "원의방정식3단계\\009.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 10,
+    "sourceFile": "원의방정식3단계\\010.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 11,
+    "sourceFile": "원의방정식3단계\\011.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 12,
+    "sourceFile": "원의방정식3단계\\012.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 13,
+    "sourceFile": "원의방정식3단계\\013.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 14,
+    "sourceFile": "원의방정식3단계\\014.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 15,
+    "sourceFile": "원의방정식3단계\\015.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 17,
+    "sourceFile": "원의방정식3단계\\017.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 18,
+    "sourceFile": "원의방정식3단계\\018.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 19,
+    "sourceFile": "원의방정식3단계\\019.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 20,
+    "sourceFile": "원의방정식3단계\\020.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 22,
+    "sourceFile": "원의방정식3단계\\022.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 23,
+    "sourceFile": "원의방정식3단계\\023.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 24,
+    "sourceFile": "원의방정식3단계\\024.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 26,
+    "sourceFile": "원의방정식3단계\\026.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 3,
+    "problemNumber": 27,
+    "sourceFile": "원의방정식3단계\\027.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 1,
+    "sourceFile": "원의방정식4단계\\001.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 2,
+    "sourceFile": "원의방정식4단계\\002.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 4,
+    "sourceFile": "원의방정식4단계\\004.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 5,
+    "sourceFile": "원의방정식4단계\\005.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 8,
+    "sourceFile": "원의방정식4단계\\008.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 11,
+    "sourceFile": "원의방정식4단계\\011.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 12,
+    "sourceFile": "원의방정식4단계\\012.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 14,
+    "sourceFile": "원의방정식4단계\\014.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 16,
+    "sourceFile": "원의방정식4단계\\016.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 17,
+    "sourceFile": "원의방정식4단계\\017.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 19,
+    "sourceFile": "원의방정식4단계\\019.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 21,
+    "sourceFile": "원의방정식4단계\\021.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 22,
+    "sourceFile": "원의방정식4단계\\022.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 23,
+    "sourceFile": "원의방정식4단계\\023.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 24,
+    "sourceFile": "원의방정식4단계\\024.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 27,
+    "sourceFile": "원의방정식4단계\\027.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 28,
+    "sourceFile": "원의방정식4단계\\028.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 29,
+    "sourceFile": "원의방정식4단계\\029.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 30,
+    "sourceFile": "원의방정식4단계\\030.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 34,
+    "sourceFile": "원의방정식4단계\\034.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 35,
+    "sourceFile": "원의방정식4단계\\035.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 37,
+    "sourceFile": "원의방정식4단계\\037.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 38,
+    "sourceFile": "원의방정식4단계\\038.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 39,
+    "sourceFile": "원의방정식4단계\\039.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 40,
+    "sourceFile": "원의방정식4단계\\040.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 41,
+    "sourceFile": "원의방정식4단계\\041.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 42,
+    "sourceFile": "원의방정식4단계\\042.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 44,
+    "sourceFile": "원의방정식4단계\\044.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 48,
+    "sourceFile": "원의방정식4단계\\048.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 49,
+    "sourceFile": "원의방정식4단계\\049.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 50,
+    "sourceFile": "원의방정식4단계\\050.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 51,
+    "sourceFile": "원의방정식4단계\\051.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 52,
+    "sourceFile": "원의방정식4단계\\052.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 54,
+    "sourceFile": "원의방정식4단계\\054.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 56,
+    "sourceFile": "원의방정식4단계\\056.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 57,
+    "sourceFile": "원의방정식4단계\\057.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 58,
+    "sourceFile": "원의방정식4단계\\058.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 61,
+    "sourceFile": "원의방정식4단계\\061.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 62,
+    "sourceFile": "원의방정식4단계\\062.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 63,
+    "sourceFile": "원의방정식4단계\\063.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 66,
+    "sourceFile": "원의방정식4단계\\066.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 67,
+    "sourceFile": "원의방정식4단계\\067.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 68,
+    "sourceFile": "원의방정식4단계\\068.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 70,
+    "sourceFile": "원의방정식4단계\\070.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 72,
+    "sourceFile": "원의방정식4단계\\072.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 73,
+    "sourceFile": "원의방정식4단계\\073.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 74,
+    "sourceFile": "원의방정식4단계\\074.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 75,
+    "sourceFile": "원의방정식4단계\\075.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 76,
+    "sourceFile": "원의방정식4단계\\076.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 77,
+    "sourceFile": "원의방정식4단계\\077.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 78,
+    "sourceFile": "원의방정식4단계\\078.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 82,
+    "sourceFile": "원의방정식4단계\\082.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 83,
+    "sourceFile": "원의방정식4단계\\083.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 84,
+    "sourceFile": "원의방정식4단계\\084.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 85,
+    "sourceFile": "원의방정식4단계\\085.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 87,
+    "sourceFile": "원의방정식4단계\\087.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 89,
+    "sourceFile": "원의방정식4단계\\089.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 90,
+    "sourceFile": "원의방정식4단계\\090.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 91,
+    "sourceFile": "원의방정식4단계\\091.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "원의방정식",
+    "stage": 4,
+    "problemNumber": 92,
+    "sourceFile": "원의방정식4단계\\092.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 2,
+    "problemNumber": 19,
+    "sourceFile": "도형의이동2단계\\019.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 2,
+    "problemNumber": 25,
+    "sourceFile": "도형의이동2단계\\025.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 2,
+    "problemNumber": 26,
+    "sourceFile": "도형의이동2단계\\026.json",
+    "reason": "Broken JSON"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 2,
+    "problemNumber": 27,
+    "sourceFile": "도형의이동2단계\\027.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 2,
+    "problemNumber": 34,
+    "sourceFile": "도형의이동2단계\\034.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 2,
+    "problemNumber": 38,
+    "sourceFile": "도형의이동2단계\\038.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 2,
+    "problemNumber": 39,
+    "sourceFile": "도형의이동2단계\\039.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 2,
+    "problemNumber": 40,
+    "sourceFile": "도형의이동2단계\\040.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 2,
+    "problemNumber": 43,
+    "sourceFile": "도형의이동2단계\\043.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 2,
+    "problemNumber": 44,
+    "sourceFile": "도형의이동2단계\\044.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 3,
+    "problemNumber": 4,
+    "sourceFile": "도형의이동3단계\\004.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 3,
+    "problemNumber": 5,
+    "sourceFile": "도형의이동3단계\\005.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 3,
+    "problemNumber": 6,
+    "sourceFile": "도형의이동3단계\\006.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 3,
+    "problemNumber": 9,
+    "sourceFile": "도형의이동3단계\\009.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 3,
+    "problemNumber": 10,
+    "sourceFile": "도형의이동3단계\\010.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 3,
+    "problemNumber": 11,
+    "sourceFile": "도형의이동3단계\\011.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 3,
+    "problemNumber": 12,
+    "sourceFile": "도형의이동3단계\\012.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 3,
+    "problemNumber": 13,
+    "sourceFile": "도형의이동3단계\\013.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 3,
+    "problemNumber": 14,
+    "sourceFile": "도형의이동3단계\\014.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 3,
+    "problemNumber": 16,
+    "sourceFile": "도형의이동3단계\\016.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 3,
+    "problemNumber": 17,
+    "sourceFile": "도형의이동3단계\\017.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 3,
+    "problemNumber": 18,
+    "sourceFile": "도형의이동3단계\\018.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 3,
+    "problemNumber": 21,
+    "sourceFile": "도형의이동3단계\\021.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 3,
+    "problemNumber": 22,
+    "sourceFile": "도형의이동3단계\\022.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 3,
+    "problemNumber": 27,
+    "sourceFile": "도형의이동3단계\\027.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 3,
+    "problemNumber": 28,
+    "sourceFile": "도형의이동3단계\\028.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 3,
+    "problemNumber": 29,
+    "sourceFile": "도형의이동3단계\\029.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 3,
+    "sourceFile": "도형의이동4단계\\003.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 4,
+    "sourceFile": "도형의이동4단계\\004.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 5,
+    "sourceFile": "도형의이동4단계\\005.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 7,
+    "sourceFile": "도형의이동4단계\\007.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 8,
+    "sourceFile": "도형의이동4단계\\008.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 13,
+    "sourceFile": "도형의이동4단계\\013.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 15,
+    "sourceFile": "도형의이동4단계\\015.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 16,
+    "sourceFile": "도형의이동4단계\\016.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 17,
+    "sourceFile": "도형의이동4단계\\017.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 18,
+    "sourceFile": "도형의이동4단계\\018.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 19,
+    "sourceFile": "도형의이동4단계\\019.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 20,
+    "sourceFile": "도형의이동4단계\\020.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 22,
+    "sourceFile": "도형의이동4단계\\022.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 23,
+    "sourceFile": "도형의이동4단계\\023.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 25,
+    "sourceFile": "도형의이동4단계\\025.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 27,
+    "sourceFile": "도형의이동4단계\\027.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 30,
+    "sourceFile": "도형의이동4단계\\030.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 31,
+    "sourceFile": "도형의이동4단계\\031.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 32,
+    "sourceFile": "도형의이동4단계\\032.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 33,
+    "sourceFile": "도형의이동4단계\\033.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 34,
+    "sourceFile": "도형의이동4단계\\034.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 35,
+    "sourceFile": "도형의이동4단계\\035.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 37,
+    "sourceFile": "도형의이동4단계\\037.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 38,
+    "sourceFile": "도형의이동4단계\\038.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 40,
+    "sourceFile": "도형의이동4단계\\040.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 41,
+    "sourceFile": "도형의이동4단계\\041.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 42,
+    "sourceFile": "도형의이동4단계\\042.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 43,
+    "sourceFile": "도형의이동4단계\\043.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 45,
+    "sourceFile": "도형의이동4단계\\045.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 46,
+    "sourceFile": "도형의이동4단계\\046.json",
+    "reason": "Missing finalAnswer"
+  },
+  {
+    "unit": "도형의이동",
+    "stage": 4,
+    "problemNumber": 47,
+    "sourceFile": "도형의이동4단계\\047.json",
+    "reason": "Missing finalAnswer"
+  }
+]

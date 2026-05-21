@@ -1,0 +1,62 @@
+[
+  {
+    "id": "[S.S.S note]_09-1 정규분포(36)[QR]_p3_01",
+    "source_file": "[S.S.S note]_09-1 정규분포(36)[QR]",
+    "source_page": 3,
+    "section_index": "02",
+    "section_title": "정규분포",
+    "card_index": "01",
+    "card_title": "정규분포와 확률밀도함수",
+    "y_start": 483,
+    "y_end": 1602,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[S.S.S note]_09-1 정규분포(36)[QR]_p4_02",
+    "source_file": "[S.S.S note]_09-1 정규분포(36)[QR]",
+    "source_page": 4,
+    "section_index": "02",
+    "section_title": "정규분포",
+    "card_index": "02",
+    "card_title": "정규분포곡선      ",
+    "y_start": 392,
+    "y_end": 1602,
+    "file_png": "card_02_p4.webp"
+  },
+  {
+    "id": "[S.S.S note]_09-1 정규분포(36)[QR]_p6_03",
+    "source_file": "[S.S.S note]_09-1 정규분포(36)[QR]",
+    "source_page": 6,
+    "section_index": "02",
+    "section_title": "정규분포",
+    "card_index": "03",
+    "card_title": "표준정규분포를 이용한 확률 구하기",
+    "y_start": 392,
+    "y_end": 1602,
+    "file_png": "card_03_p6.webp"
+  },
+  {
+    "id": "[S.S.S note]_09-1 정규분포(36)[QR]_p8_04",
+    "source_file": "[S.S.S note]_09-1 정규분포(36)[QR]",
+    "source_page": 8,
+    "section_index": "02",
+    "section_title": "정규분포",
+    "card_index": "04",
+    "card_title": "정규분포의 표준화",
+    "y_start": 281,
+    "y_end": 1602,
+    "file_png": "card_04_p8.webp"
+  },
+  {
+    "id": "[S.S.S note]_09-1 정규분포(36)[QR]_p10_05",
+    "source_file": "[S.S.S note]_09-1 정규분포(36)[QR]",
+    "source_page": 10,
+    "section_index": "02",
+    "section_title": "정규분포",
+    "card_index": "05",
+    "card_title": "정규분포에서 확률 구하기",
+    "y_start": 281,
+    "y_end": 1602,
+    "file_png": "card_05_p10.webp"
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "questionId": "001",
+  "grade": "고1",
+  "unit": "다항식의 연산",
+  "content": {
+    "questionImage": "/data/math_vision_db/고1/다항식/문제_001.webp",
+    "videoStreamUrl": "https://cafe.naver.com/subit/video/hmath_001.m3u8",
+    "originalCafePostUrl": "https://cafe.naver.com/subit/article/1001"
+  },
+  "aiTeachingData": {
+    "transcript": "[음성 추출본] 자 1번 문제 볼까. 다항식 A하고 B가 주어져 있고 A - 2B를 구하라고 했지? 여기서 애들이 제일 많이 실수하는 게 저 -2 분배할 때 뒤에 있는 놈 부호 안 바꾸는 거야. 괄호 치고 차근차근 하나씩 분배해.",
+    "logicMap": [
+      {
+        "step": 1,
+        "action": "다항식 대입 준비",
+        "teacherHint": "A와 B 식 전체에 반드시 괄호를 치고 식을 써야 해."
+      },
+      {
+        "step": 2,
+        "action": "-2 분배법칙 적용",
+        "teacherHint": "여기서 제일 많이 틀린다. 상수항까지 부호가 바뀌는지 무조건 확인해."
+      },
+      {
+        "step": 3,
+        "action": "동류항 계산",
+        "teacherHint": "차수가 같은 것들끼리 세로 셈으로 줄맞춰 풀면 실수 안 해."
+      }
+    ],
+    "tacticBase": {
+      "출제 의도": "다항식의 뺄셈과 상수배(분배법칙)의 결합",
+      "함정 포인트": "음수(-2)를 분배할 때 뒤따라오는 모든 항의 부호를 반대로 바꾸지 않고 앞의 항만 계산하는 치명적 연산 실수",
+      "해결 전략": "암산하지 말고 온전한 식을 적은 뒤 동류항끼리 묶어서 정리하라."
+    }
+  }
+}

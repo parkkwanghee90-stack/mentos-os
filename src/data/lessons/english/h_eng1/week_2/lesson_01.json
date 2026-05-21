@@ -1,0 +1,559 @@
+{
+  "teacherId": "h_eng1",
+  "round": 1,
+  "title": "Curriculum Mode for 4~5등급",
+  "targetGrades": [
+    "고1",
+    "고2"
+  ],
+  "targetRanks": [
+    "4~5등급"
+  ],
+  "reading": {
+    "passageCount": 10,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "Sumi loves to play soccer every weekend with her friends. They meet at the park and start their game in the morning. Soccer is a great way for them to exercise and have fun together. After the game, they usually share snacks and drinks. This routine helps Sumi feel happy and healthy.",
+        "teachPoint": "The importance of physical activities and social interaction for well-being.",
+        "question": "Why does Sumi enjoy playing soccer with her friends?"
+      },
+      {
+        "id": "Passage_2",
+        "text": "Jin's family decided to adopt a dog from a local shelter. They visited several dogs but instantly connected with a small brown puppy. They named him Max, and he quickly became part of the family. Jin loves taking Max for walks and teaching him new tricks. Adopting Max brought a lot of joy to Jin's life.",
+        "teachPoint": "The positive impact of adopting pets on family life.",
+        "question": "How did adopting Max change Jin's life?"
+      },
+      {
+        "id": "Passage_3",
+        "text": "Every afternoon, Minji helps her grandmother in the garden. They plant flowers and vegetables, enjoying the fresh air and sunshine. Minji learns a lot about plants from her grandmother, who has been gardening for many years. She enjoys these moments and values the time spent together.",
+        "teachPoint": "The benefits of gardening and spending time with family.",
+        "question": "What does Minji learn from helping her grandmother in the garden?"
+      },
+      {
+        "id": "Passage_4",
+        "text": "Tommy's favorite hobby is painting. He sets up his easel near the window where the light is best. Tommy finds painting relaxing and often loses track of time while he creates. His room is filled with colorful pictures of landscapes and animals. Painting helps Tommy express his creativity and unwind after school.",
+        "teachPoint": "The role of hobbies in personal expression and relaxation.",
+        "question": "How does painting benefit Tommy?"
+      },
+      {
+        "id": "Passage_5",
+        "text": "Lisa and her brother, Mark, like to bake cookies on Sunday afternoons. They gather all the ingredients and follow their grandmother's special recipe. The kitchen fills with the sweet smell of freshly baked cookies. They enjoy eating the cookies while watching a movie together. Baking has become a fun and delicious tradition for them.",
+        "teachPoint": "The joy of family traditions and cooking together.",
+        "question": "What makes baking cookies a special activity for Lisa and Mark?"
+      },
+      {
+        "id": "Passage_6",
+        "text": "Jenny loves going to the park with her friends. Every weekend, they play basketball and have a picnic. She enjoys the fresh air and the sound of birds. Her favorite snack is a sandwich with ham and cheese. After playing, they relax under a big tree.",
+        "teachPoint": "Present simple tense to describe habits and routines.",
+        "question": "What does Jenny do every weekend at the park?"
+      },
+      {
+        "id": "Passage_7",
+        "text": "Tom's family has a small garden behind their house. They grow tomatoes and cucumbers in the summer. Tom helps his parents water the plants every morning. He feels proud when they eat the vegetables at dinner. Gardening is a fun and healthy hobby for them.",
+        "teachPoint": "Using verbs to describe daily routines and activities.",
+        "question": "What does Tom do every morning in the garden?"
+      },
+      {
+        "id": "Passage_8",
+        "text": "Lisa and her brother like to ride their bikes in the neighborhood. They often go after school and explore new streets. Sometimes, they stop at a small cafe to drink lemonade. Biking helps them stay active and discover new places.",
+        "teachPoint": "Using pastimes to express interest and hobbies.",
+        "question": "Where do Lisa and her brother sometimes stop when biking?"
+      },
+      {
+        "id": "Passage_9",
+        "text": "Mike enjoys cooking different dishes at home. His favorite dish to cook is spaghetti with tomato sauce. On weekends, he tries new recipes from a cookbook. His family loves to taste his new creations. Cooking is a way for Mike to relax and be creative.",
+        "teachPoint": "Describing hobbies and interests with details.",
+        "question": "What is Mike's favorite dish to cook?"
+      },
+      {
+        "id": "Passage_10",
+        "text": "Emma's school is organizing a charity event next month. She volunteered to help with the decorations. Emma wants to make colorful banners and posters. Working with her classmates, she hopes the event will be successful. It's a chance for her to contribute to a good cause.",
+        "teachPoint": "Expressing future plans and intentions using 'will' and 'going to'.",
+        "question": "What is Emma doing to help with the charity event?"
+      }
+    ],
+    "teachPoints": [
+      "The importance of physical activities and social interaction for well-being.",
+      "The positive impact of adopting pets on family life.",
+      "The benefits of gardening and spending time with family.",
+      "The role of hobbies in personal expression and relaxation.",
+      "The joy of family traditions and cooking together.",
+      "Present simple tense to describe habits and routines.",
+      "Using verbs to describe daily routines and activities.",
+      "Using pastimes to express interest and hobbies.",
+      "Describing hobbies and interests with details.",
+      "Expressing future plans and intentions using 'will' and 'going to'."
+    ],
+    "questions": [
+      "Why does Sumi enjoy playing soccer with her friends?",
+      "How did adopting Max change Jin's life?",
+      "What does Minji learn from helping her grandmother in the garden?",
+      "How does painting benefit Tommy?",
+      "What makes baking cookies a special activity for Lisa and Mark?",
+      "What does Jenny do every weekend at the park?",
+      "What does Tom do every morning in the garden?",
+      "Where do Lisa and her brother sometimes stop when biking?",
+      "What is Mike's favorite dish to cook?",
+      "What is Emma doing to help with the charity event?"
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "script": [
+          "A: Hey, did you finish the history assignment?",
+          "B: Not yet. I'm still working on the last question.",
+          "A: Which one? Maybe I can help.",
+          "B: It's the one about the causes of World War I.",
+          "A: Oh, I remember that. It was mainly about alliances and imperialism, right?",
+          "B: Yes, but there's also something about nationalism. I need to expand on that."
+        ],
+        "question": "What is the topic of the history assignment?",
+        "choices": [
+          "World War II",
+          "The causes of World War I",
+          "The Industrial Revolution",
+          "The Cold War",
+          "American Civil War"
+        ],
+        "answer": "The causes of World War I"
+      },
+      {
+        "script": [
+          "A: Are you coming to the meeting tomorrow?",
+          "B: I didn't know there was one. What's it about?",
+          "A: It's about the new project we're starting next month.",
+          "B: Oh, I should definitely attend then. What time is it?",
+          "A: It starts at 10 AM in the main conference room.",
+          "B: Perfect. I'll make sure to be there."
+        ],
+        "question": "What is the meeting about?",
+        "choices": [
+          "A team-building exercise",
+          "A farewell party",
+          "The new project starting next month",
+          "A budget review",
+          "A customer feedback session"
+        ],
+        "answer": "The new project starting next month"
+      },
+      {
+        "script": [
+          "A: Did you hear about the new restaurant that opened downtown?",
+          "B: No, I haven't. What's it called?",
+          "A: It's called The Green Plate. They specialize in vegetarian dishes.",
+          "B: That sounds interesting. Have you tried it yet?",
+          "A: Yes, I went there last weekend. The food was amazing.",
+          "B: I should check it out sometime. Is it expensive?"
+        ],
+        "question": "What type of food does The Green Plate specialize in?",
+        "choices": [
+          "Seafood",
+          "Italian",
+          "Vegetarian",
+          "Mexican",
+          "Barbecue"
+        ],
+        "answer": "Vegetarian"
+      },
+      {
+        "script": [
+          "A: Are you going to the concert on Saturday?",
+          "B: I want to, but I haven't bought a ticket yet.",
+          "A: You should hurry. I heard they're almost sold out.",
+          "B: Really? I didn't realize it was so popular.",
+          "A: Yeah, the band has a huge following.",
+          "B: In that case, I'll get a ticket today."
+        ],
+        "question": "What is the urgency about the concert tickets?",
+        "choices": [
+          "The concert is today.",
+          "The tickets are almost sold out.",
+          "There is a discount on tickets.",
+          "The venue has changed.",
+          "The concert is canceled."
+        ],
+        "answer": "The tickets are almost sold out."
+      },
+      {
+        "script": [
+          "A: Have you seen the new science fiction movie?",
+          "B: Not yet. Is it any good?",
+          "A: I thought it was fantastic. The special effects were top-notch.",
+          "B: That's good to hear. I've been looking forward to it.",
+          "A: You should definitely watch it. The storyline is great too.",
+          "B: I'll try to catch it this weekend."
+        ],
+        "question": "What aspect of the movie did A particularly enjoy?",
+        "choices": [
+          "The soundtrack",
+          "The acting",
+          "The special effects",
+          "The humor",
+          "The costumes"
+        ],
+        "answer": "The special effects"
+      },
+      {
+        "script": [
+          "A: I need to get my car serviced. Do you know a good place?",
+          "B: Yeah, I always go to Joe's Auto Shop. They're reliable.",
+          "A: How are their prices?",
+          "B: Reasonable, and they don't try to upsell unnecessary services.",
+          "A: That's reassuring. I hate when shops do that.",
+          "B: Exactly why I stick with them."
+        ],
+        "question": "Why does B recommend Joe's Auto Shop?",
+        "choices": [
+          "They offer the cheapest prices.",
+          "They have the fastest service.",
+          "They're reliable and don't upsell.",
+          "They have a convenient location.",
+          "They offer a loyalty program."
+        ],
+        "answer": "They're reliable and don't upsell."
+      },
+      {
+        "script": [
+          "A: Do you want to join the gym with me?",
+          "B: I've been thinking about it. Which one do you go to?",
+          "A: I go to FitLife. They have a lot of classes and equipment.",
+          "B: Sounds good. Is it crowded?",
+          "A: Not really, especially if you go in the morning.",
+          "B: I might sign up then. I prefer going early too."
+        ],
+        "question": "What is one benefit of going to FitLife in the morning?",
+        "choices": [
+          "It's less crowded.",
+          "They offer free breakfast.",
+          "It's more expensive.",
+          "They have more trainers available.",
+          "The gym is closed."
+        ],
+        "answer": "It's less crowded."
+      },
+      {
+        "script": [
+          "A: Did you finish reading that book I lent you?",
+          "B: Yes, I did. It was hard to put down.",
+          "A: I know, right? The plot twists were amazing.",
+          "B: Absolutely, and the ending was unexpected.",
+          "A: I'm glad you liked it. Do you want another recommendation?",
+          "B: Sure, I'm always looking for good reads."
+        ],
+        "question": "What did B think about the book?",
+        "choices": [
+          "It was boring.",
+          "It was hard to follow.",
+          "It was hard to put down.",
+          "It was predictable.",
+          "It was too long."
+        ],
+        "answer": "It was hard to put down."
+      },
+      {
+        "script": [
+          "A: Are you free to meet up this weekend?",
+          "B: I should be. Do you have something in mind?",
+          "A: I was thinking we could go hiking.",
+          "B: That sounds fun. Where do you want to go?",
+          "A: There's a trail near the lake that's really nice.",
+          "B: Great, I've never been there. Let's do it."
+        ],
+        "question": "What activity does A suggest for the weekend?",
+        "choices": [
+          "Going to a movie",
+          "Hiking",
+          "Shopping",
+          "Visiting a museum",
+          "Having a picnic"
+        ],
+        "answer": "Hiking"
+      },
+      {
+        "script": [
+          "A: Have you decided on a major yet?",
+          "B: I'm leaning towards psychology, but I'm not sure.",
+          "A: It's a fascinating field with lots of opportunities.",
+          "B: That's what I like about it. Plus, I enjoy understanding how people think.",
+          "A: If you need any advice, I'm here to help.",
+          "B: Thanks, I appreciate that."
+        ],
+        "question": "What major is B considering?",
+        "choices": [
+          "History",
+          "Engineering",
+          "Psychology",
+          "Business",
+          "Biology"
+        ],
+        "answer": "Psychology"
+      }
+    ],
+    "timeline": [
+      "[0~3m] AudioItem_1",
+      "[3~6m] AudioItem_2",
+      "[6~9m] AudioItem_3",
+      "[9~12m] AudioItem_4",
+      "[12~15m] AudioItem_5",
+      "[15~18m] AudioItem_6",
+      "[18~21m] AudioItem_7",
+      "[21~24m] AudioItem_8",
+      "[24~27m] AudioItem_9",
+      "[27~30m] AudioItem_10"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "plan",
+        "meaning": "a detailed proposal for doing or achieving something",
+        "alt_meaning": "an intention or decision about what one is going to do",
+        "example_sentence": "We need to make a plan for the weekend.",
+        "context_explain": "A strategy or method for accomplishing a goal."
+      },
+      {
+        "word": "answer",
+        "meaning": "a solution to a problem or a correct response to a question",
+        "alt_meaning": "something that is said, written, or done as a reaction to a question, statement, or situation",
+        "example_sentence": "She gave the correct answer to the question.",
+        "context_explain": "A reply or response to a question or situation."
+      },
+      {
+        "word": "build",
+        "meaning": "to construct by putting parts or materials together",
+        "alt_meaning": "to create or develop something over a period of time",
+        "example_sentence": "They plan to build a new school in the area.",
+        "context_explain": "Process of creating or assembling a structure or concept."
+      },
+      {
+        "word": "believe",
+        "meaning": "to accept something as true; feel sure of the truth of",
+        "alt_meaning": "to have confidence in the existence of something",
+        "example_sentence": "I believe in her ability to succeed.",
+        "context_explain": "To trust or have faith in something or someone."
+      },
+      {
+        "word": "allow",
+        "meaning": "to give permission for something to happen",
+        "alt_meaning": "to let someone do something",
+        "example_sentence": "The teacher will allow us to use calculators during the test.",
+        "context_explain": "Permission for an action to occur."
+      },
+      {
+        "word": "stay",
+        "meaning": "to remain in the same place or position",
+        "alt_meaning": "to continue in a particular state or condition",
+        "example_sentence": "We decided to stay at home instead of going out.",
+        "context_explain": "To remain in one location or state."
+      },
+      {
+        "word": "try",
+        "meaning": "to make an attempt or effort to do something",
+        "alt_meaning": "to test something to see if it is effective or functions as expected",
+        "example_sentence": "I will try to finish my homework before dinner.",
+        "context_explain": "The act of attempting or testing."
+      },
+      {
+        "word": "ask",
+        "meaning": "to request information or an answer from someone",
+        "alt_meaning": "to make a request or seek help",
+        "example_sentence": "Can I ask you a question about the project?",
+        "context_explain": "To inquire or request information."
+      },
+      {
+        "word": "pay",
+        "meaning": "to give money in exchange for goods or services",
+        "alt_meaning": "to settle a debt or obligation",
+        "example_sentence": "I need to pay my phone bill today.",
+        "context_explain": "Exchanging money for a service or product."
+      },
+      {
+        "word": "plan",
+        "meaning": "a detailed proposal for doing or achieving something",
+        "alt_meaning": "an intention or decision about what one is going to do",
+        "example_sentence": "Our plan is to have the project completed by next month.",
+        "context_explain": "A strategy or method for accomplishing a goal."
+      },
+      {
+        "word": "meet",
+        "meaning": "to come into the presence or company of someone",
+        "alt_meaning": "to see and talk to someone for the first time",
+        "example_sentence": "Let's meet at the café at 3 PM.",
+        "context_explain": "An encounter or gathering with someone."
+      },
+      {
+        "word": "stay",
+        "meaning": "to remain in the same place or position",
+        "alt_meaning": "to continue in a particular state or condition",
+        "example_sentence": "We decided to stay at the resort for another day.",
+        "context_explain": "To remain in one location or state."
+      },
+      {
+        "word": "ask",
+        "meaning": "to request information or an answer from someone",
+        "alt_meaning": "to make a request or seek help",
+        "example_sentence": "Please ask if you need any assistance.",
+        "context_explain": "To inquire or request information."
+      },
+      {
+        "word": "hope",
+        "meaning": "to want something to happen or be true",
+        "alt_meaning": "to cherish a desire with anticipation",
+        "example_sentence": "I hope you have a great trip.",
+        "context_explain": "A desire or wish for a particular outcome."
+      },
+      {
+        "word": "share",
+        "meaning": "to have a portion of something with others",
+        "alt_meaning": "to give others a part of what you have",
+        "example_sentence": "Can you share your notes with me?",
+        "context_explain": "The act of distributing or making available to others."
+      }
+    ],
+    "venice": {
+      "time": "5분",
+      "theme": "SSOT Words",
+      "content": "Review Games"
+    },
+    "wordLearn": {
+      "time": "8분",
+      "content": "Learn basic meanings"
+    },
+    "wordTest": {
+      "questionsCount": 10,
+      "questions": [
+        {
+          "type": "meaning_choice",
+          "question": "What does 'plan' mean?",
+          "choices": [
+            "to give up",
+            "a proposal for doing something",
+            "to argue",
+            "to travel"
+          ],
+          "answer": "a proposal for doing something"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'believe'?",
+          "choices": [
+            "to trust",
+            "to run",
+            "to swim",
+            "to fly"
+          ],
+          "answer": "to trust"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Choose the correct meaning of 'build'.",
+          "choices": [
+            "to destroy",
+            "to construct",
+            "to forget",
+            "to interrupt"
+          ],
+          "answer": "to construct"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'allow' mean?",
+          "choices": [
+            "to deny",
+            "to permit",
+            "to explain",
+            "to hide"
+          ],
+          "answer": "to permit"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'stay'?",
+          "choices": [
+            "to leave",
+            "to remain",
+            "to dance",
+            "to sleep"
+          ],
+          "answer": "to remain"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Choose the correct meaning of 'try'.",
+          "choices": [
+            "to succeed",
+            "to attempt",
+            "to avoid",
+            "to jump"
+          ],
+          "answer": "to attempt"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'ask' mean?",
+          "choices": [
+            "to listen",
+            "to inquire",
+            "to clean",
+            "to laugh"
+          ],
+          "answer": "to inquire"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'pay'?",
+          "choices": [
+            "to receive",
+            "to give money",
+            "to play",
+            "to read"
+          ],
+          "answer": "to give money"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Choose the correct meaning of 'meet'.",
+          "choices": [
+            "to avoid",
+            "to encounter",
+            "to whisper",
+            "to paint"
+          ],
+          "answer": "to encounter"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'hope' mean?",
+          "choices": [
+            "to despair",
+            "to cherish a desire",
+            "to ignore",
+            "to relax"
+          ],
+          "answer": "to cherish a desire"
+        }
+      ],
+      "testType": "meaning_choice"
+    }
+  },
+  "homework": {
+    "title": "기초/핵심 과제",
+    "items": [
+      {
+        "type": "reading",
+        "title": "10개 지문 풀이 분석"
+      },
+      {
+        "type": "listening",
+        "title": "15개 듣기 실전 딕테이션"
+      },
+      {
+        "type": "vocab",
+        "title": "15개 단어 완벽 암기"
+      }
+    ]
+  }
+}

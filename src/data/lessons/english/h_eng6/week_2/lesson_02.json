@@ -1,0 +1,537 @@
+{
+  "teacherId": "h_eng6",
+  "round": 2,
+  "title": "Curriculum Mode for 3등급",
+  "targetGrades": [
+    "고3"
+  ],
+  "targetRanks": [
+    "3등급"
+  ],
+  "reading": {
+    "passageCount": 6,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "A healthy diet is essential for maintaining good health. Eating a variety of fruits and vegetables provides the body with necessary vitamins and minerals. Whole grains, such as brown rice and oats, give energy and improve digestion. Proteins from sources like beans and fish help build and repair tissues. Reducing sugar and salt intake can also prevent chronic diseases.",
+        "teachPoint": "The importance of a balanced diet in maintaining health.",
+        "question": "What are the benefits of including fruits and vegetables in your diet?"
+      },
+      {
+        "id": "Passage_2",
+        "text": "The invention of the smartphone has changed modern communication significantly. People can now access information instantly and stay connected with friends and family across the world. However, excessive use of smartphones can lead to problems like eye strain and reduced social interaction in real life. It's important to balance screen time with other activities.",
+        "teachPoint": "Understanding the impact of smartphones on communication and daily life.",
+        "question": "What are some negative effects of excessive smartphone use?"
+      },
+      {
+        "id": "Passage_3",
+        "text": "Recycling is an effective way to manage waste and conserve natural resources. By reusing materials like paper, plastic, and glass, we reduce the need for new raw materials. This process saves energy and decreases pollution in the environment. Communities around the world are encouraged to participate in recycling programs to promote sustainability.",
+        "teachPoint": "The benefits of recycling in environmental conservation.",
+        "question": "How does recycling help reduce environmental pollution?"
+      },
+      {
+        "id": "Passage_4",
+        "text": "Teamwork is a key element in achieving success in any organization. When people work together, they can share ideas and solve problems more effectively. Collaboration encourages creativity and innovation, leading to better outcomes. Moreover, teamwork helps build strong relationships among colleagues, which is important for a positive work environment.",
+        "teachPoint": "The role of teamwork in organizational success.",
+        "question": "Why is teamwork important in an organization?"
+      },
+      {
+        "id": "Passage_5",
+        "text": "Traveling exposes individuals to different cultures and lifestyles. It broadens perspectives and helps people understand and appreciate diversity. Travelers often gain new experiences and knowledge, which contribute to personal growth. Additionally, tourism supports local economies by creating jobs and promoting cultural exchange.",
+        "teachPoint": "The advantages of traveling and its impact on personal and cultural growth.",
+        "question": "What are the benefits of traveling in terms of personal development?"
+      },
+      {
+        "id": "Passage_6",
+        "text": "In recent years, there has been a significant increase in the use of renewable energy sources. These include solar, wind, and hydroelectric power. The shift towards renewable energy is driven by the need to reduce carbon emissions. This is crucial to combat climate change. Additionally, renewable energy sources are becoming more cost-effective. Governments worldwide are investing in these technologies to secure a sustainable future.",
+        "teachPoint": "The passage discusses the rise in the use of renewable energy and its importance in reducing carbon emissions and combating climate change.",
+        "question": "What are some reasons for the increased use of renewable energy sources mentioned in the passage?"
+      }
+    ],
+    "teachPoints": [
+      "The importance of a balanced diet in maintaining health.",
+      "Understanding the impact of smartphones on communication and daily life.",
+      "The benefits of recycling in environmental conservation.",
+      "The role of teamwork in organizational success.",
+      "The advantages of traveling and its impact on personal and cultural growth.",
+      "The passage discusses the rise in the use of renewable energy and its importance in reducing carbon emissions and combating climate change."
+    ],
+    "questions": [
+      "What are the benefits of including fruits and vegetables in your diet?",
+      "What are some negative effects of excessive smartphone use?",
+      "How does recycling help reduce environmental pollution?",
+      "Why is teamwork important in an organization?",
+      "What are the benefits of traveling in terms of personal development?",
+      "What are some reasons for the increased use of renewable energy sources mentioned in the passage?"
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "script": [
+          "A: Hey, did you finish the reading assignment for history class?",
+          "B: Not yet. I was planning to do it tonight. How about you?",
+          "A: I finished it last night. It was quite interesting.",
+          "B: Really? What was it about?",
+          "A: It covered the Industrial Revolution and its impact on society.",
+          "B: That does sound interesting. I'll make sure to start it soon."
+        ],
+        "question": "What is the main topic of the reading assignment?",
+        "choices": [
+          "The history of ancient Egypt",
+          "The Industrial Revolution",
+          "World War II",
+          "The Renaissance",
+          "Modern technology"
+        ],
+        "answer": "The Industrial Revolution"
+      },
+      {
+        "script": [
+          "A: Are you going to the concert this weekend?",
+          "B: I wish I could, but I have to work.",
+          "A: That's too bad. I heard it's going to be amazing.",
+          "B: Who's performing?",
+          "A: It's a local band, but they're really good.",
+          "B: Maybe I can catch them next time."
+        ],
+        "question": "Why can't B attend the concert?",
+        "choices": [
+          "B has another event to attend",
+          "B doesn't like the band",
+          "B has to work",
+          "B forgot about the concert",
+          "B is out of town"
+        ],
+        "answer": "B has to work"
+      },
+      {
+        "script": [
+          "A: Did you see the new movie that came out last weekend?",
+          "B: No, not yet. Was it good?",
+          "A: It was fantastic! The special effects were incredible.",
+          "B: I've heard that from a few people. What was the plot?",
+          "A: It's about a group of explorers on a distant planet.",
+          "B: Sounds exciting. I'll have to check it out."
+        ],
+        "question": "What is the main setting of the movie?",
+        "choices": [
+          "A historical battlefield",
+          "A futuristic city",
+          "A distant planet",
+          "An underwater world",
+          "A medieval kingdom"
+        ],
+        "answer": "A distant planet"
+      },
+      {
+        "script": [
+          "A: Have you tried the new café that opened downtown?",
+          "B: Yes, I went there last weekend. The coffee was great!",
+          "A: I haven't been yet. What else do they offer?",
+          "B: They have a variety of pastries and sandwiches too.",
+          "A: That sounds perfect for a brunch.",
+          "B: Definitely. We should go together sometime."
+        ],
+        "question": "What does B recommend about the new café?",
+        "choices": [
+          "The atmosphere",
+          "The location",
+          "The coffee",
+          "The service",
+          "The price"
+        ],
+        "answer": "The coffee"
+      },
+      {
+        "script": [
+          "A: Did you hear about the new policy at work?",
+          "B: No, what is it?",
+          "A: They're implementing flexible working hours starting next month.",
+          "B: That sounds great! It will make balancing work and personal life easier.",
+          "A: Absolutely. I'm looking forward to it.",
+          "B: Me too. I wonder how it will affect our productivity."
+        ],
+        "question": "What change is happening at A and B's workplace?",
+        "choices": [
+          "New dress code",
+          "Flexible working hours",
+          "Salary increase",
+          "Remote work option",
+          "More vacation days"
+        ],
+        "answer": "Flexible working hours"
+      },
+      {
+        "script": [
+          "A: What's your plan for the summer break?",
+          "B: I'm thinking of going on a road trip with some friends.",
+          "A: That sounds like fun. Where are you planning to go?",
+          "B: We're considering the coast. The beaches there are beautiful.",
+          "A: Make sure to take lots of pictures!",
+          "B: I will. Hopefully, the weather will be nice."
+        ],
+        "question": "Where is B planning to go for the summer break?",
+        "choices": [
+          "To the mountains",
+          "To the desert",
+          "To the coast",
+          "To the city",
+          "To the countryside"
+        ],
+        "answer": "To the coast"
+      },
+      {
+        "script": [
+          "A: Have you decided on a major yet?",
+          "B: I'm still considering a few options.",
+          "A: What are you leaning towards?",
+          "B: I'm interested in computer science, but also considering biology.",
+          "A: Both are great fields. What do you like about each?",
+          "B: I love technology, but I'm also fascinated by living organisms."
+        ],
+        "question": "What are the two majors B is considering?",
+        "choices": [
+          "Physics and chemistry",
+          "Mathematics and statistics",
+          "Computer science and biology",
+          "History and literature",
+          "Economics and finance"
+        ],
+        "answer": "Computer science and biology"
+      },
+      {
+        "script": [
+          "A: Did you catch the game last night?",
+          "B: No, I missed it. How did it go?",
+          "A: It was a close match, but our team won in the end.",
+          "B: That's awesome! Who scored the winning goal?",
+          "A: It was the new player, and he did it in the last minute.",
+          "B: Sounds like an exciting game. I need to watch the highlights."
+        ],
+        "question": "How did the game end according to A?",
+        "choices": [
+          "It was a draw",
+          "Our team lost",
+          "Our team won",
+          "It was postponed",
+          "The other team won"
+        ],
+        "answer": "Our team won"
+      },
+      {
+        "script": [
+          "A: Are you going to the book club meeting tomorrow?",
+          "B: Yes, I am. Did you finish this month's book?",
+          "A: I did! It was a real page-turner.",
+          "B: I agree. The plot twists were unexpected.",
+          "A: I can't wait to discuss it with everyone.",
+          "B: Same here. It's going to be an interesting discussion."
+        ],
+        "question": "What did A and B think about this month's book?",
+        "choices": [
+          "It was boring",
+          "It was confusing",
+          "It was a page-turner",
+          "It was too long",
+          "It was predictable"
+        ],
+        "answer": "It was a page-turner"
+      },
+      {
+        "script": [
+          "A: I just got a new phone. It's amazing!",
+          "B: Really? What features does it have?",
+          "A: It has a great camera and a long battery life.",
+          "B: That sounds impressive. How's the display?",
+          "A: It's really clear and vibrant. I'm very happy with it.",
+          "B: Sounds like you made a good choice."
+        ],
+        "question": "What does A like about the new phone?",
+        "choices": [
+          "The price",
+          "The brand",
+          "The camera and battery life",
+          "The weight",
+          "The size"
+        ],
+        "answer": "The camera and battery life"
+      }
+    ],
+    "timeline": [
+      "[0~3m] AudioItem_1",
+      "[3~6m] AudioItem_2",
+      "[6~9m] AudioItem_3",
+      "[9~12m] AudioItem_4",
+      "[12~15m] AudioItem_5",
+      "[15~18m] AudioItem_6",
+      "[18~21m] AudioItem_7",
+      "[21~24m] AudioItem_8",
+      "[24~27m] AudioItem_9",
+      "[27~30m] AudioItem_10"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "abundant",
+        "meaning": "existing or available in large quantities",
+        "alt_meaning": "plentiful",
+        "example_sentence": "The region is abundant in natural resources.",
+        "context_explain": "Often used to describe resources, opportunities, or elements that are present in large amounts."
+      },
+      {
+        "word": "contemplate",
+        "meaning": "to think deeply or carefully about something",
+        "alt_meaning": "ponder",
+        "example_sentence": "She sat quietly, contemplating the meaning of life.",
+        "context_explain": "Used when considering something seriously or for a long time."
+      },
+      {
+        "word": "diligent",
+        "meaning": "having or showing care and conscientiousness in one's work or duties",
+        "alt_meaning": "industrious",
+        "example_sentence": "The diligent student completed all her assignments on time.",
+        "context_explain": "Often used to describe people who are hardworking and meticulous."
+      },
+      {
+        "word": "elaborate",
+        "meaning": "involving many carefully arranged parts or details",
+        "alt_meaning": "complex",
+        "example_sentence": "The chef prepared an elaborate meal for the guests.",
+        "context_explain": "Describes something that is intricate or detailed."
+      },
+      {
+        "word": "feasible",
+        "meaning": "possible to do easily or conveniently",
+        "alt_meaning": "practicable",
+        "example_sentence": "The plan was feasible and within the budget.",
+        "context_explain": "Used to describe actions or plans that are achievable."
+      },
+      {
+        "word": "gratify",
+        "meaning": "to give pleasure or satisfaction",
+        "alt_meaning": "please",
+        "example_sentence": "The praise he received gratified him immensely.",
+        "context_explain": "Usually refers to feelings of happiness or satisfaction."
+      },
+      {
+        "word": "hinder",
+        "meaning": "to create difficulties for someone or something",
+        "alt_meaning": "obstruct",
+        "example_sentence": "Heavy traffic can hinder emergency vehicles.",
+        "context_explain": "Often used when something is preventing progress or movement."
+      },
+      {
+        "word": "inherent",
+        "meaning": "existing in something as a permanent, essential, or characteristic attribute",
+        "alt_meaning": "innate",
+        "example_sentence": "There are inherent risks in this type of investment.",
+        "context_explain": "Describes qualities or characteristics that are naturally part of something."
+      },
+      {
+        "word": "meticulous",
+        "meaning": "showing great attention to detail",
+        "alt_meaning": "careful",
+        "example_sentence": "She was meticulous in her research, ensuring every detail was correct.",
+        "context_explain": "Used to describe people or work that is very precise and careful."
+      },
+      {
+        "word": "notorious",
+        "meaning": "famous or well known, typically for some bad quality or deed",
+        "alt_meaning": "infamous",
+        "example_sentence": "The city is notorious for its traffic jams.",
+        "context_explain": "Used to describe negative fame or bad reputation."
+      },
+      {
+        "word": "obsolete",
+        "meaning": "no longer produced or used; out of date",
+        "alt_meaning": "outdated",
+        "example_sentence": "Many believe that typewriters are now obsolete.",
+        "context_explain": "Refers to things that are no longer in use or are outdated."
+      },
+      {
+        "word": "pragmatic",
+        "meaning": "dealing with things sensibly and realistically",
+        "alt_meaning": "practical",
+        "example_sentence": "Her pragmatic approach to problem-solving was appreciated by her colleagues.",
+        "context_explain": "Used when referring to practical and realistic approaches."
+      },
+      {
+        "word": "reconcile",
+        "meaning": "to restore friendly relations between",
+        "alt_meaning": "settle",
+        "example_sentence": "The two friends were finally reconciled after their long dispute.",
+        "context_explain": "Often used when making peace between conflicting parties."
+      },
+      {
+        "word": "subtle",
+        "meaning": "so delicate or precise as to be difficult to analyze or describe",
+        "alt_meaning": "faint",
+        "example_sentence": "There was a subtle change in his expression.",
+        "context_explain": "Describes things that are not immediately obvious or noticeable."
+      },
+      {
+        "word": "vulnerable",
+        "meaning": "susceptible to physical or emotional attack or harm",
+        "alt_meaning": "exposed",
+        "example_sentence": "The species is vulnerable due to habitat destruction.",
+        "context_explain": "Used when describing someone or something open to harm or attack."
+      }
+    ],
+    "venice": {
+      "time": "5분",
+      "theme": "Review",
+      "content": "Words"
+    },
+    "wordLearn": {
+      "time": "8분",
+      "content": "Learn"
+    },
+    "wordTest": {
+      "time": "5분",
+      "questionsCount": 12,
+      "questions": [
+        {
+          "question": "What is the meaning of 'abundant'?",
+          "choices": [
+            "rare",
+            "plentiful",
+            "scant",
+            "insufficient"
+          ],
+          "answer": "plentiful"
+        },
+        {
+          "question": "What does 'contemplate' mean?",
+          "choices": [
+            "ignore",
+            "ponder",
+            "dismiss",
+            "neglect"
+          ],
+          "answer": "ponder"
+        },
+        {
+          "question": "Choose the correct meaning of 'diligent'.",
+          "choices": [
+            "lazy",
+            "industrious",
+            "careless",
+            "negligent"
+          ],
+          "answer": "industrious"
+        },
+        {
+          "question": "The word 'elaborate' is best described as:",
+          "choices": [
+            "simple",
+            "complex",
+            "plain",
+            "basic"
+          ],
+          "answer": "complex"
+        },
+        {
+          "question": "Select the meaning of 'feasible'.",
+          "choices": [
+            "impossible",
+            "practicable",
+            "unlikely",
+            "unachievable"
+          ],
+          "answer": "practicable"
+        },
+        {
+          "question": "What does 'gratify' mean?",
+          "choices": [
+            "annoy",
+            "please",
+            "anger",
+            "frustrate"
+          ],
+          "answer": "please"
+        },
+        {
+          "question": "The word 'hinder' means:",
+          "choices": [
+            "assist",
+            "obstruct",
+            "facilitate",
+            "promote"
+          ],
+          "answer": "obstruct"
+        },
+        {
+          "question": "Choose the correct meaning of 'inherent'.",
+          "choices": [
+            "acquired",
+            "innate",
+            "external",
+            "foreign"
+          ],
+          "answer": "innate"
+        },
+        {
+          "question": "Select the meaning of 'meticulous'.",
+          "choices": [
+            "careless",
+            "careful",
+            "sloppy",
+            "hasty"
+          ],
+          "answer": "careful"
+        },
+        {
+          "question": "What is the meaning of 'notorious'?",
+          "choices": [
+            "unknown",
+            "infamous",
+            "celebrated",
+            "anonymous"
+          ],
+          "answer": "infamous"
+        },
+        {
+          "question": "The word 'obsolete' is best described as:",
+          "choices": [
+            "modern",
+            "outdated",
+            "new",
+            "current"
+          ],
+          "answer": "outdated"
+        },
+        {
+          "question": "What does 'pragmatic' mean?",
+          "choices": [
+            "idealistic",
+            "practical",
+            "impractical",
+            "fanciful"
+          ],
+          "answer": "practical"
+        }
+      ],
+      "testType": "matching"
+    }
+  },
+  "homework": {
+    "title": "기초/핵심 과제",
+    "items": [
+      {
+        "type": "reading",
+        "title": "6개 지문 풀이 분석"
+      },
+      {
+        "type": "listening",
+        "title": "6개 듣기 실전 딕테이션"
+      },
+      {
+        "type": "vocab",
+        "title": "15개 단어 완벽 암기"
+      }
+    ]
+  }
+}

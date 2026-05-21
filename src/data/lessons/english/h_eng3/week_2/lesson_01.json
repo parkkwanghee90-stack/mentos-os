@@ -1,0 +1,616 @@
+{
+  "teacherId": "h_eng3",
+  "round": 1,
+  "title": "Curriculum Mode for 3등급",
+  "targetGrades": [
+    "고1",
+    "고2"
+  ],
+  "targetRanks": [
+    "3등급"
+  ],
+  "reading": {
+    "passageCount": 10,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "The ancient Romans were known for their impressive engineering feats, including the construction of extensive road networks. These roads were crucial for military and trade purposes, allowing for efficient movement across the vast empire. Roman roads were built with layers of material to ensure durability and were often straight to provide the shortest possible routes. Many of these roads are still visible today, a testament to their engineering prowess. The phrase 'All roads lead to Rome' emphasizes the central importance of Roman roads in connecting distant parts of the empire.",
+        "teachPoint": "Understanding the historical significance of Roman engineering and its impact on connectivity.",
+        "question": "What were the primary purposes of Roman roads?"
+      },
+      {
+        "id": "Passage_2",
+        "text": "Honeybees play a critical role in pollination, which is essential for the production of many fruits and vegetables. Without bees, the ecosystem would struggle to maintain its balance, as many plants depend on them to reproduce. Unfortunately, bee populations have been declining due to pesticide use, habitat loss, and disease. Conservation efforts are underway to protect these vital pollinators. Planting bee-friendly flowers and reducing pesticide use are simple ways individuals can contribute to saving the bees.",
+        "teachPoint": "Recognizing the importance of bees in ecosystems and human agriculture.",
+        "question": "What are some factors contributing to the decline in bee populations?"
+      },
+      {
+        "id": "Passage_3",
+        "text": "The process of photosynthesis is fundamental to life on Earth. Plants, algae, and some bacteria convert sunlight into chemical energy through this process, producing oxygen as a byproduct. Photosynthesis occurs mainly in the leaves of plants, where chlorophyll absorbs sunlight. This energy is then used to transform carbon dioxide and water into glucose, a simple sugar. The oxygen released into the atmosphere during photosynthesis is vital for the survival of most living organisms.",
+        "teachPoint": "Explaining the process and importance of photosynthesis in ecosystems.",
+        "question": "What are the main components needed for photosynthesis to occur?"
+      },
+      {
+        "id": "Passage_4",
+        "text": "William Shakespeare, often referred to as the Bard of Avon, is one of the most influential writers in English literature. His plays and sonnets have been studied and performed worldwide for centuries. Shakespeare's mastery of language and his ability to capture the human experience have made his work timeless. Plays like 'Hamlet,' 'Romeo and Juliet,' and 'Macbeth' explore themes of love, power, and betrayal. His contribution to the English language includes many words and phrases still in use today.",
+        "teachPoint": "Appreciating the lasting impact of Shakespeare's works on literature and language.",
+        "question": "What are some common themes found in Shakespeare's plays?"
+      },
+      {
+        "id": "Passage_5",
+        "text": "The Grand Canyon, located in Arizona, USA, is a natural wonder known for its immense size and intricate landscape. Carved by the Colorado River over millions of years, it offers breathtaking views and diverse ecosystems. The canyon's geology reveals layers of rock that date back billions of years, providing a window into Earth's history. Visitors can explore the canyon through hiking, rafting, and guided tours. The Grand Canyon is not only a popular tourist destination but also a UNESCO World Heritage Site.",
+        "teachPoint": "Understanding the geological and historical significance of the Grand Canyon.",
+        "question": "How was the Grand Canyon formed?"
+      },
+      {
+        "id": "Passage_6",
+        "text": "The dawn chorus of birds begins as the first light of day peeks over the horizon. Each bird adds its unique song to the symphony, creating a harmonious blend of melodies. This natural orchestra serves as a gentle alarm clock, waking the world from its slumber. As the sun rises higher, the songs grow louder, filling the air with vibrant energy. Eventually, the chorus fades as the day progresses, but its memory lingers on.",
+        "teachPoint": "The passage describes the sounds of birds in the morning, focusing on auditory imagery.",
+        "question": "What role do the birds' songs play in the morning?"
+      },
+      {
+        "id": "Passage_7",
+        "text": "In a bustling city, skyscrapers stretch towards the sky, casting long shadows on the streets below. The constant hum of traffic is punctuated by the occasional honk of a horn. People from all walks of life weave through the crowd, each with their own destination in mind. Despite the chaos, there is a sense of organized rhythm that keeps the city moving. It's a place where dreams are both made and broken, depending on the choices one makes.",
+        "teachPoint": "The passage illustrates the atmosphere and dynamics of a busy city using vivid descriptions.",
+        "question": "How does the passage describe the movement and activities in the city?"
+      },
+      {
+        "id": "Passage_8",
+        "text": "The ancient oak tree stands as a silent witness to the passage of time. Its gnarled branches are home to countless creatures, providing shelter and sustenance. The tree's leaves rustle gently in the wind, whispering secrets of the past. Each ring in its trunk tells a story of years gone by, of seasons changing and storms weathered. Despite its age, the oak remains steadfast, a symbol of strength and endurance.",
+        "teachPoint": "The passage uses the oak tree as a metaphor for resilience and history.",
+        "question": "What does the oak tree symbolize in the passage?"
+      },
+      {
+        "id": "Passage_9",
+        "text": "The ocean waves crash against the rocky shore, sending a fine mist into the salty air. Seagulls circle overhead, their calls echoing across the water. The rhythmic sound of the waves is both calming and powerful, a reminder of nature's vastness. As the tide ebbs, shells and seaweed are left scattered on the sand, treasures for those who wander the beach. The ocean's beauty lies in its ever-changing yet timeless presence.",
+        "teachPoint": "The passage highlights the beauty and power of the ocean through descriptive language.",
+        "question": "How does the passage describe the interaction between the ocean and the shore?"
+      },
+      {
+        "id": "Passage_10",
+        "text": "The small village nestled in the valley is a haven of peace and simplicity. Cobblestone streets wind through charming cottages, where flowers bloom in vibrant displays. The sound of a distant bell marks the passage of time, while villagers go about their daily routines. Laughter and conversation spill from the local tavern, a gathering place for stories and camaraderie. Despite the modern world outside, the village maintains its timeless charm.",
+        "teachPoint": "The passage paints a picture of a quaint village, emphasizing its tranquility and community spirit.",
+        "question": "What elements contribute to the village's peaceful atmosphere in the passage?"
+      }
+    ],
+    "teachPoints": [
+      "Understanding the historical significance of Roman engineering and its impact on connectivity.",
+      "Recognizing the importance of bees in ecosystems and human agriculture.",
+      "Explaining the process and importance of photosynthesis in ecosystems.",
+      "Appreciating the lasting impact of Shakespeare's works on literature and language.",
+      "Understanding the geological and historical significance of the Grand Canyon.",
+      "The passage describes the sounds of birds in the morning, focusing on auditory imagery.",
+      "The passage illustrates the atmosphere and dynamics of a busy city using vivid descriptions.",
+      "The passage uses the oak tree as a metaphor for resilience and history.",
+      "The passage highlights the beauty and power of the ocean through descriptive language.",
+      "The passage paints a picture of a quaint village, emphasizing its tranquility and community spirit."
+    ],
+    "questions": [
+      "What were the primary purposes of Roman roads?",
+      "What are some factors contributing to the decline in bee populations?",
+      "What are the main components needed for photosynthesis to occur?",
+      "What are some common themes found in Shakespeare's plays?",
+      "How was the Grand Canyon formed?",
+      "What role do the birds' songs play in the morning?",
+      "How does the passage describe the movement and activities in the city?",
+      "What does the oak tree symbolize in the passage?",
+      "How does the passage describe the interaction between the ocean and the shore?",
+      "What elements contribute to the village's peaceful atmosphere in the passage?"
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "script": [
+          "A: Hi, Lisa. How was your weekend?",
+          "B: It was great! I went hiking with some friends.",
+          "A: That sounds fun. Where did you go?",
+          "B: We went to Blue Mountain. The view from the top was amazing.",
+          "A: I've heard about that place. Was it a difficult hike?",
+          "B: Not really. It was a bit challenging but totally worth it."
+        ],
+        "question": "What did Lisa do over the weekend?",
+        "choices": [
+          "She went hiking.",
+          "She went to a concert.",
+          "She visited her family.",
+          "She watched a movie.",
+          "She went shopping."
+        ],
+        "answer": "She went hiking."
+      },
+      {
+        "script": [
+          "A: Have you finished the book I lent you?",
+          "B: Yes, I finished it last night.",
+          "A: What did you think about it?",
+          "B: It was quite interesting, especially the ending.",
+          "A: I know, right? The twist was unexpected.",
+          "B: Definitely. I didn't see that coming at all."
+        ],
+        "question": "What did B think about the book?",
+        "choices": [
+          "B thought it was boring.",
+          "B thought it was confusing.",
+          "B found it interesting.",
+          "B didn't like the ending.",
+          "B hasn't finished it yet."
+        ],
+        "answer": "B found it interesting."
+      },
+      {
+        "script": [
+          "A: Are you attending the workshop tomorrow?",
+          "B: Yes, I am. Are you?",
+          "A: I plan to. I heard it's going to be very informative.",
+          "B: I heard the same. It's about project management, right?",
+          "A: Yes, and the speaker is supposed to be really good.",
+          "B: Great! I look forward to it."
+        ],
+        "question": "What is the topic of the workshop?",
+        "choices": [
+          "Time management",
+          "Project management",
+          "Financial planning",
+          "Team building",
+          "Public speaking"
+        ],
+        "answer": "Project management"
+      },
+      {
+        "script": [
+          "A: Where did you get that jacket? It's nice.",
+          "B: I bought it online. It was on sale.",
+          "A: Really? Which website?",
+          "B: I got it from Trendy Wear. They have great discounts.",
+          "A: I'll check it out. I need a new jacket too.",
+          "B: They have a lot of options. I'm sure you'll find something."
+        ],
+        "question": "Where did B buy the jacket?",
+        "choices": [
+          "At a local store",
+          "From Trendy Wear",
+          "At the mall",
+          "From a friend",
+          "At a flea market"
+        ],
+        "answer": "From Trendy Wear"
+      },
+      {
+        "script": [
+          "A: Did you watch the game last night?",
+          "B: Yes, I did! It was so intense.",
+          "A: I know! I can't believe it went into overtime.",
+          "B: The last-minute goal was incredible.",
+          "A: It was! The team really pulled through.",
+          "B: I hope they continue to play like this in the next match."
+        ],
+        "question": "What happened in the game last night?",
+        "choices": [
+          "There was a last-minute goal.",
+          "The game was canceled.",
+          "It was a boring match.",
+          "The team lost by a large margin.",
+          "No goals were scored."
+        ],
+        "answer": "There was a last-minute goal."
+      },
+      {
+        "script": [
+          "A: I'm thinking about getting a pet. What do you suggest?",
+          "B: How about a cat? They're independent and easy to care for.",
+          "A: I was considering a dog, but a cat sounds good too.",
+          "B: Dogs are great, but they need more attention.",
+          "A: True. I might not have enough time for a dog.",
+          "B: Cats are perfect if you're busy. Plus, they're adorable."
+        ],
+        "question": "Why does B suggest getting a cat?",
+        "choices": [
+          "Cats are cheaper than dogs.",
+          "Cats are independent.",
+          "Cats are more playful.",
+          "Cats are better for allergies.",
+          "Cats live longer."
+        ],
+        "answer": "Cats are independent."
+      },
+      {
+        "script": [
+          "A: Have you heard about the new cafe in town?",
+          "B: Yes, I've been there twice already.",
+          "A: Really? How is it?",
+          "B: The coffee is excellent, and the atmosphere is cozy.",
+          "A: Sounds like my kind of place. I'll have to visit soon.",
+          "B: You should. They also have great pastries."
+        ],
+        "question": "What does B say about the new cafe?",
+        "choices": [
+          "It's too expensive.",
+          "It's very crowded.",
+          "It has excellent coffee.",
+          "It's not worth visiting.",
+          "It's in a bad location."
+        ],
+        "answer": "It has excellent coffee."
+      },
+      {
+        "script": [
+          "A: Are you going to the music festival this weekend?",
+          "B: I'm not sure yet. Are you?",
+          "A: Yes, I bought my ticket last week.",
+          "B: Who's performing?",
+          "A: Several bands, but I'm most excited about The Rockers.",
+          "B: I've heard they're amazing live. Maybe I'll get a ticket too."
+        ],
+        "question": "Which band is A most excited to see?",
+        "choices": [
+          "The Jazzers",
+          "The Rockers",
+          "The Poppers",
+          "The Blues Band",
+          "The Classic Trio"
+        ],
+        "answer": "The Rockers"
+      },
+      {
+        "script": [
+          "A: I can't decide what to have for dinner tonight. Any ideas?",
+          "B: How about Italian? Pasta is always a good choice.",
+          "A: I'm in the mood for something different.",
+          "B: What about trying a new Thai place downtown?",
+          "A: That sounds interesting. I've never had Thai food before.",
+          "B: It's delicious and quite flavorful. You'll love it."
+        ],
+        "question": "What type of food does B suggest trying?",
+        "choices": [
+          "Mexican",
+          "Italian",
+          "Thai",
+          "Chinese",
+          "Indian"
+        ],
+        "answer": "Thai"
+      },
+      {
+        "script": [
+          "A: Do you have any plans for the holiday season?",
+          "B: I'm planning to visit my family.",
+          "A: That sounds nice. Are they far from here?",
+          "B: They live about three hours away by car.",
+          "A: Not too bad. I hope you have a great time.",
+          "B: Thank you! I'm looking forward to it."
+        ],
+        "question": "How far does B's family live from here?",
+        "choices": [
+          "One hour",
+          "Two hours",
+          "Three hours",
+          "Four hours",
+          "Five hours"
+        ],
+        "answer": "Three hours"
+      }
+    ],
+    "timeline": [
+      "[0~3m] AudioItem_1",
+      "[3~6m] AudioItem_2",
+      "[6~9m] AudioItem_3",
+      "[9~12m] AudioItem_4",
+      "[12~15m] AudioItem_5",
+      "[15~18m] AudioItem_6",
+      "[18~21m] AudioItem_7",
+      "[21~24m] AudioItem_8",
+      "[24~27m] AudioItem_9",
+      "[27~30m] AudioItem_10"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "significant",
+        "meaning": "important and meaningful",
+        "alt_meaning": "having a major effect or influence",
+        "example_sentence": "The study found a significant difference between the two groups.",
+        "context_explain": "Used to describe something that has a notable impact or consequence."
+      },
+      {
+        "word": "indicate",
+        "meaning": "to show or point out",
+        "alt_meaning": "to suggest as a probable fact",
+        "example_sentence": "The symptoms indicate a possible infection.",
+        "context_explain": "Used when providing evidence or information that suggests something specific."
+      },
+      {
+        "word": "comprehend",
+        "meaning": "to understand or grasp the meaning of",
+        "alt_meaning": "to perceive or recognize",
+        "example_sentence": "He couldn't comprehend the complexity of the problem.",
+        "context_explain": "Used when referring to someone's ability to understand something fully."
+      },
+      {
+        "word": "demonstrate",
+        "meaning": "to show clearly and deliberately",
+        "alt_meaning": "to prove or make clear by reasoning or evidence",
+        "example_sentence": "The teacher demonstrated the experiment in front of the class.",
+        "context_explain": "Used when showing or proving something effectively."
+      },
+      {
+        "word": "acquire",
+        "meaning": "to gain possession of or develop",
+        "alt_meaning": "to obtain or get as one's own",
+        "example_sentence": "She acquired new skills through the training program.",
+        "context_explain": "Used in the context of gaining new skills, knowledge, or objects."
+      },
+      {
+        "word": "compensate",
+        "meaning": "to make up for something",
+        "alt_meaning": "to provide something good as a balance against something bad",
+        "example_sentence": "The company compensated the workers for their overtime.",
+        "context_explain": "Used when providing a benefit to counterbalance a loss or disadvantage."
+      },
+      {
+        "word": "contribute",
+        "meaning": "to give or supply in common with others",
+        "alt_meaning": "to play a significant part in bringing about a result",
+        "example_sentence": "Everyone is expected to contribute to the discussion.",
+        "context_explain": "Used when indicating participation or addition to a group effort or result."
+      },
+      {
+        "word": "determine",
+        "meaning": "to establish or ascertain definitely",
+        "alt_meaning": "to decide or conclude through reasoning or observation",
+        "example_sentence": "The results of the test will determine the next steps.",
+        "context_explain": "Used when making a decision based on analysis or observation."
+      },
+      {
+        "word": "define",
+        "meaning": "to explain the meaning of a word or concept",
+        "alt_meaning": "to determine or identify the essential qualities of",
+        "example_sentence": "The teacher asked the students to define the term 'ecosystem'.",
+        "context_explain": "Used in the context of providing clear explanations or descriptions."
+      },
+      {
+        "word": "affect",
+        "meaning": "to have an influence on or make a change in",
+        "alt_meaning": "to produce an effect or change",
+        "example_sentence": "The weather can greatly affect our mood.",
+        "context_explain": "Used when describing how one thing can impact or change another."
+      },
+      {
+        "word": "mediate",
+        "meaning": "to act as an intermediary to resolve differences",
+        "alt_meaning": "to intervene between parties to reconcile",
+        "example_sentence": "The teacher mediated the conflict between the two students.",
+        "context_explain": "Used when referring to someone who facilitates resolution in disputes."
+      },
+      {
+        "word": "facilitate",
+        "meaning": "to make easier or help bring about",
+        "alt_meaning": "to assist the progress of",
+        "example_sentence": "The new software will facilitate project management.",
+        "context_explain": "Used when making a process or task easier to accomplish."
+      },
+      {
+        "word": "mitigate",
+        "meaning": "to make less severe or serious",
+        "alt_meaning": "to lessen or ease",
+        "example_sentence": "The government took steps to mitigate the economic crisis.",
+        "context_explain": "Used in the context of reducing the severity of a problem or difficulty."
+      },
+      {
+        "word": "implement",
+        "meaning": "to put into effect or action",
+        "alt_meaning": "to carry out or accomplish",
+        "example_sentence": "The company will implement new safety measures.",
+        "context_explain": "Used when initiating a plan, policy, or procedure."
+      },
+      {
+        "word": "adapt",
+        "meaning": "to adjust or modify to suit a new condition",
+        "alt_meaning": "to change to fit different circumstances",
+        "example_sentence": "The children quickly adapted to the new environment.",
+        "context_explain": "Used when describing changes made to accommodate a new situation."
+      },
+      {
+        "word": "regulate",
+        "meaning": "to control or maintain the rate or speed of",
+        "alt_meaning": "to govern or direct according to rule",
+        "example_sentence": "The thermostat helps regulate the room temperature.",
+        "context_explain": "Used when overseeing or controlling a process or system to ensure it functions correctly."
+      },
+      {
+        "word": "sustain",
+        "meaning": "to support or maintain over time",
+        "alt_meaning": "to keep in existence or prolong",
+        "example_sentence": "They worked hard to sustain their business through tough times.",
+        "context_explain": "Used in the context of maintaining efforts or supporting something continuously."
+      },
+      {
+        "word": "acknowledge",
+        "meaning": "to recognize the existence or truth of",
+        "alt_meaning": "to admit or accept",
+        "example_sentence": "He acknowledged the need for improvement in his work.",
+        "context_explain": "Used when accepting or admitting the truth or reality of a situation."
+      },
+      {
+        "word": "integrate",
+        "meaning": "to combine or coordinate into a unified whole",
+        "alt_meaning": "to bring together or incorporate parts into a whole",
+        "example_sentence": "The new system will integrate the various departments.",
+        "context_explain": "Used when combining elements to form a cohesive and functional structure."
+      },
+      {
+        "word": "anticipate",
+        "meaning": "to expect or predict",
+        "alt_meaning": "to look forward to",
+        "example_sentence": "We anticipate that the new product will be popular.",
+        "context_explain": "Used when expecting or preparing for something in advance."
+      }
+    ],
+    "venice": {
+      "time": "5분",
+      "theme": "SSOT Words",
+      "content": "Review Games"
+    },
+    "wordLearn": {
+      "time": "8분",
+      "content": "Learn basic meanings"
+    },
+    "wordTest": {
+      "questionsCount": 12,
+      "questions": [
+        {
+          "type": "meaning_choice",
+          "question": "What does the word 'demonstrate' mean?",
+          "choices": [
+            "to hide",
+            "to show clearly",
+            "to ignore",
+            "to mitigate"
+          ],
+          "answer": "to show clearly"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Which word means 'to adjust to new conditions'?",
+          "choices": [
+            "regulate",
+            "contribute",
+            "adapt",
+            "affect"
+          ],
+          "answer": "adapt"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "To 'facilitate' something means to:",
+          "choices": [
+            "make it harder",
+            "make it easier",
+            "forget it",
+            "complicate it"
+          ],
+          "answer": "make it easier"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'regulate'?",
+          "choices": [
+            "to destroy",
+            "to maintain",
+            "to control",
+            "to abandon"
+          ],
+          "answer": "to control"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "If you 'acknowledge' something, you:",
+          "choices": [
+            "deny it",
+            "hide it",
+            "admit it",
+            "ignore it"
+          ],
+          "answer": "admit it"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'integrate' mean?",
+          "choices": [
+            "to separate",
+            "to unify",
+            "to destroy",
+            "to overlook"
+          ],
+          "answer": "to unify"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "The word 'anticipate' is closest in meaning to:",
+          "choices": [
+            "to expect",
+            "to ignore",
+            "to dismiss",
+            "to abandon"
+          ],
+          "answer": "to expect"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Which word means 'to show or point out'?",
+          "choices": [
+            "indicate",
+            "define",
+            "mediate",
+            "compensate"
+          ],
+          "answer": "indicate"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "To 'compensate' means to:",
+          "choices": [
+            "receive",
+            "take",
+            "make up for",
+            "ignore"
+          ],
+          "answer": "make up for"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does the word 'sustain' mean?",
+          "choices": [
+            "to destroy",
+            "to support",
+            "to confuse",
+            "to neglect"
+          ],
+          "answer": "to support"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Which of the following means 'to gain possession of'?",
+          "choices": [
+            "affect",
+            "acquire",
+            "mediate",
+            "anticipate"
+          ],
+          "answer": "acquire"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of the word 'mitigate'?",
+          "choices": [
+            "to worsen",
+            "to lessen",
+            "to forget",
+            "to expand"
+          ],
+          "answer": "to lessen"
+        }
+      ],
+      "testType": "meaning_choice"
+    }
+  },
+  "homework": {
+    "title": "HW",
+    "items": [
+      {
+        "type": "reading",
+        "title": "10 items"
+      },
+      {
+        "type": "listening",
+        "title": "10 items"
+      },
+      {
+        "type": "vocab",
+        "title": "10 items"
+      }
+    ]
+  }
+}

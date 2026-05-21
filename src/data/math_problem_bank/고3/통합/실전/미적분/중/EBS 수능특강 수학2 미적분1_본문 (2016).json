@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "2.0",
+  "sourceQuestionPdf": "\\\\Subitmainpc\\수학의 빛 사무폴더\\09.새 교과과정 자료\\02.자료_수학2\\교재_스캔(수학2)\\EBS 수능특강 수학2 미적분1 (2016)[20160212145716058]\\EBS 수능특강 수학2 미적분1_본문 (2016).pdf",
+  "sourceAnswerPdf": null,
+  "curriculum": {
+    "grade": "고3",
+    "semester": "통합",
+    "course": "실전",
+    "unit": "미적분",
+    "score": 20
+  },
+  "difficulty": "중",
+  "items": [
+    {
+      "number": 0,
+      "questionImage": "questions/EBS 수능특강 수학2 미적분1_본문 (2016)_q000.webp",
+      "solutionRaw": "..x...2f(x)...0yy\n\n:@3|f(x)|dx=:@3f(x)dx",
+      "solutionDisplay": "식 정리 후 2f(x) 형태를 이용한다.",
+      "formulaLatex": [
+        "2f(x)",
+        "3f(x)dx"
+      ],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    },
+    {
+      "number": 1,
+      "questionImage": "questions/EBS 수능특강 수학2 미적분1_본문 (2016)_q001.webp",
+      "solutionRaw": "9",
+      "solutionDisplay": "수식 기반으로 풀이를 진행합니다.",
+      "formulaLatex": [],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    },
+    {
+      "number": 2,
+      "questionImage": "questions/EBS 수능특강 수학2 미적분1_본문 (2016)_q002.webp",
+      "solutionRaw": "9",
+      "solutionDisplay": "수식 기반으로 풀이를 진행합니다.",
+      "formulaLatex": [],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    },
+    {
+      "number": 3,
+      "questionImage": "questions/EBS 수능특강 수학2 미적분1_본문 (2016)_q003.webp",
+      "solutionRaw": "9",
+      "solutionDisplay": "수식 기반으로 풀이를 진행합니다.",
+      "formulaLatex": [],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    },
+    {
+      "number": 4,
+      "questionImage": "questions/EBS 수능특강 수학2 미적분1_본문 (2016)_q004.webp",
+      "solutionRaw": "9",
+      "solutionDisplay": "수식 기반으로 풀이를 진행합니다.",
+      "formulaLatex": [],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    },
+    {
+      "number": 5,
+      "questionImage": "questions/EBS 수능특강 수학2 미적분1_본문 (2016)_q005.webp",
+      "solutionRaw": "9",
+      "solutionDisplay": "수식 기반으로 풀이를 진행합니다.",
+      "formulaLatex": [],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    },
+    {
+      "number": 6,
+      "questionImage": "questions/EBS 수능특강 수학2 미적분1_본문 (2016)_q006.webp",
+      "solutionRaw": "9",
+      "solutionDisplay": "수식 기반으로 풀이를 진행합니다.",
+      "formulaLatex": [],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    },
+    {
+      "number": 7,
+      "questionImage": "questions/EBS 수능특강 수학2 미적분1_본문 (2016)_q007.webp",
+      "solutionRaw": "9",
+      "solutionDisplay": "수식 기반으로 풀이를 진행합니다.",
+      "formulaLatex": [],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    },
+    {
+      "number": 8,
+      "questionImage": "questions/EBS 수능특강 수학2 미적분1_본문 (2016)_q008.webp",
+      "solutionRaw": "9",
+      "solutionDisplay": "수식 기반으로 풀이를 진행합니다.",
+      "formulaLatex": [],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    },
+    {
+      "number": 9,
+      "questionImage": "questions/EBS 수능특강 수학2 미적분1_본문 (2016)_q009.webp",
+      "solutionRaw": "9\n.7404\n.7482\n.7559\n.7634\n.7709\n.7782\n.7853\n.7924\n.7993\n.8062\n.8129\n.8195\n.8261\n.8325\n.8388\n.8451\n.8513\n.8573\n.8633\n.8692\n.8751\n.8808\n.8865\n.8921\n.8976\n.9031\n.9085\n.9138\n.9191\n.9243\n.9294\n.9345\n.9395\n.9445\n.9494\n.9542\n.9590\n.9638\n.9685\n.9731\n.9777\n.9823\n.9868\n.9912\n.9956\n.7412\n.7490\n.7566\n.7642\n.7716\n.7789\n.7860\n.7931\n.8000\n.8069\n.8136\n.8202\n.8267\n.8331\n.8395\n.8457\n.8519\n.8579\n.8639\n.8698\n.8756\n.8814\n.8871\n.8927\n.8982\n.9036\n.9090\n.9143\n.9196\n.9248\n.9299\n.9350\n.9400\n.9450\n.9499\n.9547\n.9595\n.9643\n.9689\n.9736\n.9782\n.9827\n.9872\n.9917\n.9961\n.7419\n.7497\n.7574\n.7649\n.7723\n.7796\n.7868\n.7938\n.8007\n.8075\n.8142\n.8209\n.8274\n.8338\n.8401\n.8463\n.8525\n.8585\n.8645\n.8704\n.8762\n.8820\n.8876\n.8932\n.8987\n.9042\n.9096\n.9149\n.9201\n.9253\n.9304\n.9355\n.9405\n.9455\n.9504\n.9552\n.9600\n.9647\n.9694\n.9741\n.9786\n.9832\n.9877\n.9921\n.9965\n.7427\n.7505\n.7582\n.7657\n.7731\n.7803\n.7875\n.7945\n.8014\n.8082\n.8149\n.8215\n.8280\n.8344\n.8407\n.8470\n.8531\n.8591\n.8651\n.8710\n.8768\n.8825\n.8882\n.8938\n.8993\n.9047\n.9101\n.9154\n.9206\n.9258\n.9309\n.9360\n.9410\n.9460\n.9509\n.9557\n.9605\n.9652\n.9699\n.9745\n.9791\n.9836\n.9881\n.9926\n.9969\n.7435\n.7513\n.7589\n.7664\n.7738\n.7810\n.7882\n.7952\n.8021\n.8089\n.8156\n.8222\n.8287\n.8351\n.8414\n.8476\n.8537\n.8597\n.8657\n.8716\n.8774\n.8831\n.8887\n.8943\n.8998\n.9053\n.9106\n.9159\n.9212\n.9263\n.9315\n.9365\n.9415\n.9465\n.9513\n.9562\n.9609\n.9657\n.9703\n.9750\n.9795\n.9841\n.9886\n.9930\n.9974\n.7443\n.7520\n.7597\n.7672\n.7745\n.7818\n.7889\n.7959\n.8028\n.8096\n.8162\n.8228\n.8293\n.8357\n.8420\n.8482\n.8543\n.8603\n.8663\n.8722\n.8779\n.8837\n.8893\n.8949\n.9004\n.9058\n.9112\n.9165\n.9217\n.9269\n.9320\n.9370\n.9420\n.9469\n.9518\n.9566\n.9614\n.9661\n.9708\n.9754\n.9800\n.9845\n.9890\n.9934\n.9978\n.7451\n.7528\n.7604\n.7679\n.7752\n.7825\n.7896\n.7966\n.8035\n.8102\n.8169\n.8235\n.8299\n.8363\n.8426\n.8488\n.8549\n.8609\n.8669\n.8727\n.8785\n.8842\n.8899\n.8954\n.9009\n.9063\n.9117\n.9170\n.9222\n.9274\n.9325\n.9375\n.9425\n.9474\n.9523\n.9571\n.9619\n.9666\n.9713\n.9759\n.9805\n.9850\n.9894\n.9939\n.9983\n.7459\n.7536\n.7612\n.7686\n.7760\n.7832\n.7903\n.7973\n.8041\n.8109\n.8176\n.8241\n.8306\n.8370\n.8432\n.8494\n.8555\n.8615\n.8675\n.8733\n.8791\n.8848\n.8904\n.8960\n.9015\n.9069\n.9122\n.9175\n.9227\n.9279\n.9330\n.9380\n.9430\n.9479\n.9528\n.9576\n.9624\n.9671\n.9717\n.9763\n.9809\n.9854\n.9899\n.9943\n.9987\n.7466\n.7543\n.7619\n.7694\n.7767\n.7839\n.7910\n.7980\n.8048\n.8116\n.8182\n.8248\n.8312\n.8376\n.8439\n.8500\n.8561\n.8621\n.8681\n.8739\n.8797\n.8854\n.8910\n.8965\n.9020\n.9074\n.9128\n.9180\n.9232\n.9284\n.9335\n.9385\n.9435\n.9484\n.9533\n.9581\n.9628\n.9675\n.9722\n.9768\n.9814\n.9859\n.9903\n.9948\n.9991\n.7474\n.7551\n.7627\n.7701\n.7774\n.7846\n.7917\n.7987\n.8055\n.8122\n.8189\n.8254\n.8319\n.8382\n.8445\n.8506\n.8567\n.8627\n.8686\n.8745\n.8802\n.8859\n.8915\n.8971\n.9025\n.9079\n.9133\n.9186\n.9238\n.9289\n.9340\n.9390\n.9440\n.9489\n.9538\n.9586\n.9633\n.9680\n.9727\n.9773\n.9818\n.9863\n.9908\n.9952\n.9996\n상용로그표(2)",
+      "solutionDisplay": "수식 기반으로 풀이를 진행합니다.",
+      "formulaLatex": [],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    },
+    {
+      "number": 11,
+      "questionImage": "questions/EBS 수능특강 수학2 미적분1_본문 (2016)_q011.webp",
+      "solutionRaw": "41.411.4141.4142y\n\n2⁄2",
+      "solutionDisplay": "식 정리 후 4142y 형태를 이용한다.",
+      "formulaLatex": [
+        "4142y"
+      ],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    }
+  ]
+}

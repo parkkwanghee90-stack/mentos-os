@@ -1,0 +1,647 @@
+{
+  "teacherId": "h_eng8",
+  "round": 2,
+  "title": "Curriculum Mode for 1등급 (Top Tier SSOT)",
+  "targetGrades": [
+    "고3",
+    "N수"
+  ],
+  "targetRanks": [
+    "1등급"
+  ],
+  "reading": {
+    "passageCount": 7,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "Cognitive dissonance, a psychological phenomenon where individuals experience discomfort due to conflicting beliefs, significantly impacts decision-making processes. Consider a scenario where a person values environmental conservation yet drives a fuel-inefficient vehicle. To alleviate the dissonance, they might rationalize their behavior by emphasizing the car’s safety features. However, this rationalization often perpetuates a cycle of justifications rather than prompting behavioral change. Ultimately, understanding this concept is crucial as it highlights the inherent complexities of human rationality.",
+        "teachPoint": "Understanding the concept of cognitive dissonance and its implications on decision-making.",
+        "question": "What is the underlying reason for the individual's rationalization in the given scenario? ① Their genuine concern for safety. ② A desire to reduce guilt. ③ Lack of awareness about environmental issues. ④ Influence from peers. ⑤ Economic constraints.",
+        "questionType": "빈칸 추론",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_2",
+        "text": "In evolutionary biology, the concept of kin selection explains altruistic behavior towards related individuals. An example is seen in social insects like bees, where workers sacrifice their reproductive potential for the hive's benefit. This behavior ensures that genes shared with the queen are propagated. However, kin selection doesn't account for altruism towards non-relatives, prompting the exploration of reciprocal altruism. Thus, while kin selection provides a foundational understanding, it necessitates integration with broader evolutionary theories.",
+        "teachPoint": "Exploring the limitations of kin selection in explaining altruistic behavior.",
+        "question": "What does the concept of kin selection fail to fully explain? ① Cooperative behavior in bees. ② Altruistic actions toward unrelated individuals. ③ The propagation of genetic material. ④ Social structures in insects. ⑤ Genetic mutations.",
+        "questionType": "빈칸 추론",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_3",
+        "text": "Epistemology, the study of knowledge, questions the nature and scope of human understanding. For instance, the Gettier problem challenges the traditional definition of knowledge as justified true belief. By presenting scenarios where such conditions are met, yet knowledge seems absent, it unsettles foundational epistemic assumptions. On the other hand, pragmatism suggests knowledge is validated by practical consequences. Therefore, epistemology remains a dynamic field, continuously shaped by new philosophical inquiries.",
+        "teachPoint": "Understanding the evolving nature of epistemology through the examination of the Gettier problem.",
+        "question": "Summarize the challenge posed by the Gettier problem to traditional epistemic assumptions.",
+        "questionType": "주관식",
+        "format": "서술형"
+      },
+      {
+        "id": "Passage_4",
+        "text": "Behavioral economics integrates psychological insights into economic theory, redefining rationality assumptions. An example is the endowment effect, where individuals ascribe higher value to owned items. Unlike traditional economic models which assume consistent preferences, this effect reveals a bias towards loss aversion. However, it complicates market predictions as emotional factors heavily influence decisions. Thus, acknowledging these biases is vital for creating more accurate economic models.",
+        "teachPoint": "Examining the influence of psychological factors on economic decision-making.",
+        "question": "What does the endowment effect reveal about traditional economic assumptions? ① They accurately predict market behaviors. ② They overlook emotional influences. ③ They are based on loss aversion. ④ They account for irrational behaviors. ⑤ They integrate psychological insights.",
+        "questionType": "빈칸 추론",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_5",
+        "text": "Quantum mechanics fundamentally challenges classical conceptions of determinism with its probabilistic nature. In experiments like Schrödinger's cat, superposition illustrates the coexistence of multiple states until observation. This paradox contrasts with deterministic interpretations where outcomes are pre-determined. Consequently, quantum mechanics introduces profound philosophical implications, questioning the very fabric of reality and the limits of human perception.",
+        "teachPoint": "Understanding the implications of quantum mechanics on determinism.",
+        "question": "Where should the following sentence be inserted? 'Such uncertainties force a reevaluation of philosophical stances on reality.'",
+        "questionType": "문장 삽입",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_6",
+        "text": "Neuroplasticity illustrates the brain's remarkable ability to reorganize itself by forming new neural connections. This adaptability is crucial during learning processes, where repeated experiences forge stronger synaptic pathways. Conversely, it also underscores the potential for maladaptive changes following trauma or negative experiences. Understanding this duality is essential in therapeutic contexts, emphasizing the necessity for positive reinforcement in rehabilitation settings.",
+        "teachPoint": "Analyzing the dual nature of neuroplasticity in cognitive processes.",
+        "question": "Arrange the sentences to best convey the progression of ideas about neuroplasticity. ① Neuroplasticity allows the brain to adapt. ② Repetition strengthens synaptic pathways. ③ Maladaptive changes can occur after trauma. ④ Positive reinforcement aids rehabilitation. ⑤ It is pivotal during learning.",
+        "questionType": "단락 순서",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_7",
+        "text": "Emergent properties refer to unexpected phenomena that arise from complex systems, transcending individual component functions. For instance, consciousness cannot be fully understood by merely analyzing neuronal activity. This complexity presents a philosophical challenge, as it questions reductionist approaches typically employed in scientific inquiry. Awareness of emergent properties urges a holistic perspective, acknowledging that systems may exhibit behaviors irreducible to their parts.",
+        "teachPoint": "Exploring the philosophical implications of emergent properties in complex systems.",
+        "question": "Explain why emergent properties challenge reductionist scientific views.",
+        "questionType": "빈칸 혹은 단답형 이유 서술",
+        "format": "주관식"
+      }
+    ],
+    "teachPoints": [
+      "Understanding the concept of cognitive dissonance and its implications on decision-making.",
+      "Exploring the limitations of kin selection in explaining altruistic behavior.",
+      "Understanding the evolving nature of epistemology through the examination of the Gettier problem.",
+      "Examining the influence of psychological factors on economic decision-making.",
+      "Understanding the implications of quantum mechanics on determinism.",
+      "Analyzing the dual nature of neuroplasticity in cognitive processes.",
+      "Exploring the philosophical implications of emergent properties in complex systems."
+    ],
+    "questions": [
+      "What is the underlying reason for the individual's rationalization in the given scenario? ① Their genuine concern for safety. ② A desire to reduce guilt. ③ Lack of awareness about environmental issues. ④ Influence from peers. ⑤ Economic constraints.",
+      "What does the concept of kin selection fail to fully explain? ① Cooperative behavior in bees. ② Altruistic actions toward unrelated individuals. ③ The propagation of genetic material. ④ Social structures in insects. ⑤ Genetic mutations.",
+      "Summarize the challenge posed by the Gettier problem to traditional epistemic assumptions.",
+      "What does the endowment effect reveal about traditional economic assumptions? ① They accurately predict market behaviors. ② They overlook emotional influences. ③ They are based on loss aversion. ④ They account for irrational behaviors. ⑤ They integrate psychological insights.",
+      "Where should the following sentence be inserted? 'Such uncertainties force a reevaluation of philosophical stances on reality.'",
+      "Arrange the sentences to best convey the progression of ideas about neuroplasticity. ① Neuroplasticity allows the brain to adapt. ② Repetition strengthens synaptic pathways. ③ Maladaptive changes can occur after trauma. ④ Positive reinforcement aids rehabilitation. ⑤ It is pivotal during learning.",
+      "Explain why emergent properties challenge reductionist scientific views."
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "script": [
+          "A: Hi, Sarah. How was your weekend?",
+          "B: It was great! I went hiking with some friends. How about you?",
+          "A: I just relaxed at home. Watched a couple of movies.",
+          "B: Sounds nice. What did you watch?",
+          "A: I finally saw that new superhero movie everyone’s been talking about.",
+          "B: Oh, I’ve been meaning to watch that. Did you like it?",
+          "A: It was good, but I felt the ending was a bit rushed."
+        ],
+        "question": "What did Sarah do over the weekend?",
+        "choices": [
+          "A) Watched movies at home",
+          "B) Went hiking with friends",
+          "C) Went to a concert",
+          "D) Visited family",
+          "E) Attended a cooking class"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Did you hear about the new restaurant downtown?",
+          "B: Yes, I heard it's really good. Have you tried it yet?",
+          "A: Not yet, but I’m planning to go this weekend. Want to join?",
+          "B: Sure, that sounds fun. What kind of food do they serve?",
+          "A: It’s an Italian place, famous for their pasta dishes.",
+          "B: Oh, I love Italian food. What time are you thinking of going?",
+          "A: How about 7 PM on Saturday?"
+        ],
+        "question": "What type of cuisine does the new restaurant serve?",
+        "choices": [
+          "A) Mexican",
+          "B) Chinese",
+          "C) Italian",
+          "D) Indian",
+          "E) Thai"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: Hey, did you finish the book for the book club?",
+          "B: Yes, I did. I actually finished it last night.",
+          "A: What did you think of the ending?",
+          "B: It was unexpected. I didn’t see that twist coming.",
+          "A: I know, right? The author really surprised me.",
+          "B: Have you read anything else by them?",
+          "A: No, but I’m thinking of picking up their previous novel."
+        ],
+        "question": "What did B think of the book's ending?",
+        "choices": [
+          "A) It was predictable",
+          "B) It was boring",
+          "C) It was unexpected",
+          "D) It was disappointing",
+          "E) It was confusing"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: Are you attending the conference next week?",
+          "B: Yes, I am. I’m really looking forward to it.",
+          "A: Me too. I hear there are going to be some interesting speakers.",
+          "B: Yes, especially the keynote speaker. Have you seen the schedule?",
+          "A: Not yet. I should probably check it out soon.",
+          "B: I can send you a link to the schedule if you want.",
+          "A: That would be great, thanks!"
+        ],
+        "question": "What is B looking forward to at the conference?",
+        "choices": [
+          "A) Networking opportunities",
+          "B) The food",
+          "C) Interesting speakers",
+          "D) The location",
+          "E) The workshops"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: How was your flight yesterday?",
+          "B: It was okay, but we were delayed for a couple of hours.",
+          "A: That’s frustrating. Did they say why there was a delay?",
+          "B: Yes, apparently it was due to bad weather.",
+          "A: I see. At least you arrived safely in the end.",
+          "B: True, and the airline gave us vouchers for food while we waited.",
+          "A: That’s something, at least."
+        ],
+        "question": "What caused the flight delay?",
+        "choices": [
+          "A) Mechanical issues",
+          "B) Bad weather",
+          "C) Overbooking",
+          "D) Air traffic",
+          "E) Pilot unavailability"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Have you decided where to go for vacation this year?",
+          "B: Yes, we’re thinking of going to Spain.",
+          "A: That sounds exciting. Have you been there before?",
+          "B: No, it will be our first time. We’re planning to visit Barcelona and Madrid.",
+          "A: Great choices. Make sure to check out the local cuisine.",
+          "B: We definitely will. I’ve heard the tapas are amazing.",
+          "A: Yes, and don’t miss the Sagrada Familia in Barcelona."
+        ],
+        "question": "Which cities in Spain does B plan to visit?",
+        "choices": [
+          "A) Seville and Valencia",
+          "B) Madrid and Barcelona",
+          "C) Granada and Malaga",
+          "D) Bilbao and San Sebastian",
+          "E) Valencia and Madrid"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Are you working on the new project with the marketing team?",
+          "B: Yes, we started last week. It’s quite challenging.",
+          "A: What is it about?",
+          "B: We’re launching a new product and planning the campaign for it.",
+          "A: That sounds interesting. How’s it going so far?",
+          "B: We’ve had some good brainstorming sessions, but there’s still a lot to do.",
+          "A: Let me know if you need any help with it."
+        ],
+        "question": "What is the marketing team working on?",
+        "choices": [
+          "A) A new website",
+          "B) A product launch",
+          "C) An advertising report",
+          "D) A social media strategy",
+          "E) A customer survey"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Did you watch the soccer match last night?",
+          "B: Yes, I did. It was such a close game!",
+          "A: I know! I was on the edge of my seat the whole time.",
+          "B: Who were you rooting for?",
+          "A: I was cheering for the home team. They played really well.",
+          "B: They sure did, especially in the second half.",
+          "A: Yeah, their defense was impressive."
+        ],
+        "question": "How did A feel about the soccer match?",
+        "choices": [
+          "A) It was boring",
+          "B) It was disappointing",
+          "C) It was frustrating",
+          "D) It was exciting",
+          "E) It was predictable"
+        ],
+        "answer": "D"
+      },
+      {
+        "script": [
+          "A: I heard you’re taking a cooking class. How’s it going?",
+          "B: It’s going well! I’ve learned a lot of new recipes.",
+          "A: That’s great. What have you cooked so far?",
+          "B: Last week we made homemade pasta, and yesterday we baked bread.",
+          "A: Homemade pasta sounds delicious. Was it difficult?",
+          "B: It was a bit tricky, but the instructor was really helpful.",
+          "A: I’d love to try some of your cooking someday."
+        ],
+        "question": "What did B make in the cooking class?",
+        "choices": [
+          "A) Sushi",
+          "B) Stir-fry",
+          "C) Pasta and bread",
+          "D) Pizza",
+          "E) Salad"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: Are you going to the concert on Friday?",
+          "B: I wish I could, but I have a work commitment.",
+          "A: That’s too bad. Who’s performing?",
+          "B: It’s a local band I’ve been wanting to see for a while.",
+          "A: Maybe they’ll have another show soon.",
+          "B: I hope so. Let me know how it goes if you attend.",
+          "A: Will do. Hopefully, we can go together next time."
+        ],
+        "question": "Why can't B attend the concert on Friday?",
+        "choices": [
+          "A) B is out of town",
+          "B) B has a family event",
+          "C) B has a work commitment",
+          "D) B is not interested",
+          "E) B forgot to buy tickets"
+        ],
+        "answer": "C"
+      }
+    ],
+    "timeline": [
+      "[0~3m] AudioItem_1",
+      "[3~6m] AudioItem_2",
+      "[6~9m] AudioItem_3",
+      "[9~12m] AudioItem_4",
+      "[12~15m] AudioItem_5",
+      "[15~18m] AudioItem_6",
+      "[18~21m] AudioItem_7",
+      "[21~24m] AudioItem_8",
+      "[24~27m] AudioItem_9",
+      "[27~30m] AudioItem_10"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "appreciate",
+        "meaning": "to recognize the value or significance of something",
+        "alt_meaning": "to increase in value over time",
+        "example_sentence": "I appreciate your help with the project.",
+        "context_explain": "In this context, 'appreciate' means to recognize the value of assistance."
+      },
+      {
+        "word": "account for",
+        "meaning": "to explain the reason or cause of something",
+        "alt_meaning": "to constitute a part of a total",
+        "example_sentence": "The manager had to account for the missing funds.",
+        "context_explain": "Here, 'account for' means to provide an explanation for the absence of funds."
+      },
+      {
+        "word": "compromise",
+        "meaning": "to settle a dispute by mutual concession",
+        "alt_meaning": "to weaken or reduce in quality, value, or degree",
+        "example_sentence": "They reached a compromise on the budget issue.",
+        "context_explain": "In this example, 'compromise' means finding a middle ground in a disagreement."
+      },
+      {
+        "word": "resort",
+        "meaning": "to turn to and adopt a strategy or course of action, especially an undesirable one",
+        "alt_meaning": "a place frequented for holidays or recreation",
+        "example_sentence": "She had to resort to borrowing money to pay her bills.",
+        "context_explain": "Here, 'resort' means using borrowing as a last option."
+      },
+      {
+        "word": "reflect",
+        "meaning": "to think deeply or carefully about",
+        "alt_meaning": "to cast back (light, heat, sound, etc.) from a surface",
+        "example_sentence": "He took a moment to reflect on his achievements.",
+        "context_explain": "In this sentence, 'reflect' means to think carefully about one's past achievements."
+      },
+      {
+        "word": "compound",
+        "meaning": "to make something worse by adding to it",
+        "alt_meaning": "a thing that is composed of two or more separate elements",
+        "example_sentence": "His financial problems were compounded by a sudden illness.",
+        "context_explain": "Here, 'compound' means that the illness made his financial problems worse."
+      },
+      {
+        "word": "project",
+        "meaning": "to estimate or forecast something on the basis of present trends",
+        "alt_meaning": "to extend outward beyond something else",
+        "example_sentence": "The company projected an increase in sales for the next quarter.",
+        "context_explain": "In this context, 'project' means to estimate future sales based on current trends."
+      },
+      {
+        "word": "address",
+        "meaning": "to deal with a matter or problem",
+        "alt_meaning": "the particulars of the place where someone lives or an organization is situated",
+        "example_sentence": "The new policy addresses the issue of workplace discrimination.",
+        "context_explain": "Here, 'address' means to tackle or deal with the issue mentioned."
+      },
+      {
+        "word": "capital",
+        "meaning": "wealth in the form of money or assets",
+        "alt_meaning": "the city where a government is based",
+        "example_sentence": "The startup raised enough capital to launch their product.",
+        "context_explain": "In this example, 'capital' refers to financial resources or assets."
+      },
+      {
+        "word": "content",
+        "meaning": "in a state of peaceful happiness",
+        "alt_meaning": "the ideas or topics covered in a book or document",
+        "example_sentence": "She was content with the outcome of the meeting.",
+        "context_explain": "Here, 'content' means being satisfied with the result of the meeting."
+      },
+      {
+        "word": "harbor",
+        "meaning": "to keep a thought or feeling in one's mind, especially secretly",
+        "alt_meaning": "a place on the coast where vessels may find shelter",
+        "example_sentence": "He harbored resentment towards his former employer.",
+        "context_explain": "In this context, 'harbor' means to keep resentment in mind secretly."
+      },
+      {
+        "word": "engage",
+        "meaning": "to participate or become involved in",
+        "alt_meaning": "to attract someone's interest or attention",
+        "example_sentence": "The speaker engaged the audience with an interesting topic.",
+        "context_explain": "Here, 'engage' means to attract and hold the audience's attention."
+      },
+      {
+        "word": "maintain",
+        "meaning": "to keep in existence or continuance",
+        "alt_meaning": "to assert something to be the case",
+        "example_sentence": "She maintained her innocence throughout the trial.",
+        "context_explain": "In this sentence, 'maintain' means to assert or insist on one's innocence."
+      },
+      {
+        "word": "sustain",
+        "meaning": "to support physically or mentally",
+        "alt_meaning": "to undergo or suffer something unpleasant",
+        "example_sentence": "The pillars sustain the weight of the roof.",
+        "context_explain": "Here, 'sustain' means to physically support the roof."
+      },
+      {
+        "word": "issue",
+        "meaning": "an important topic or problem for debate or discussion",
+        "alt_meaning": "to supply or distribute something",
+        "example_sentence": "The government issued new regulations on emissions.",
+        "context_explain": "In this example, 'issue' means to distribute or announce new regulations."
+      },
+      {
+        "word": "mean",
+        "meaning": "to intend to convey or refer to a particular thing",
+        "alt_meaning": "average",
+        "example_sentence": "What do you mean by that statement?",
+        "context_explain": "Here, 'mean' refers to intending to convey a specific idea with the statement."
+      },
+      {
+        "word": "bear",
+        "meaning": "to carry or support",
+        "alt_meaning": "to endure an ordeal or difficulty",
+        "example_sentence": "She could not bear the pain any longer.",
+        "context_explain": "In this sentence, 'bear' means to endure or withstand pain."
+      },
+      {
+        "word": "state",
+        "meaning": "the particular condition that someone or something is in at a specific time",
+        "alt_meaning": "to express something in speech or writing",
+        "example_sentence": "He stated his opinion clearly during the meeting.",
+        "context_explain": "Here, 'state' means to express an opinion verbally."
+      },
+      {
+        "word": "found",
+        "meaning": "to establish or set up on a firm basis",
+        "alt_meaning": "to discover by chance or unexpectedly",
+        "example_sentence": "The company was founded in 1990.",
+        "context_explain": "In this context, 'found' means to establish or create the company."
+      },
+      {
+        "word": "subject",
+        "meaning": "likely or prone to be affected by",
+        "alt_meaning": "a person or thing being discussed or described",
+        "example_sentence": "The schedule is subject to change.",
+        "context_explain": "Here, 'subject' means likely to experience changes."
+      },
+      {
+        "word": "yield",
+        "meaning": "to produce or provide",
+        "alt_meaning": "to surrender or give way to arguments, demands, or pressure",
+        "example_sentence": "The farm yields a high amount of crops each year.",
+        "context_explain": "In this example, 'yield' means to produce agricultural products."
+      },
+      {
+        "word": "secure",
+        "meaning": "to make something safe or protect it from harm",
+        "alt_meaning": "to obtain something, especially with difficulty",
+        "example_sentence": "The bank secured its assets against theft.",
+        "context_explain": "Here, 'secure' means to protect assets from being stolen."
+      },
+      {
+        "word": "conduct",
+        "meaning": "to organize and carry out",
+        "alt_meaning": "behavior or the manner in which a person behaves",
+        "example_sentence": "The scientist conducted an experiment to test the hypothesis.",
+        "context_explain": "In this context, 'conduct' means to carry out scientific research."
+      },
+      {
+        "word": "commit",
+        "meaning": "to pledge or bind to a certain course or policy",
+        "alt_meaning": "to perpetrate or carry out, especially a crime",
+        "example_sentence": "He committed to the project for six months.",
+        "context_explain": "Here, 'commit' means to pledge one's time or resources to a project."
+      },
+      {
+        "word": "range",
+        "meaning": "to vary or extend between specified limits",
+        "alt_meaning": "a set of different things of the same general type",
+        "example_sentence": "The temperatures range from mild to extremely hot in the summer.",
+        "context_explain": "In this sentence, 'range' means to vary within certain temperature limits."
+      },
+      {
+        "word": "generate",
+        "meaning": "to produce or create",
+        "alt_meaning": "to cause something to arise or come about",
+        "example_sentence": "The new policy is expected to generate a lot of interest.",
+        "context_explain": "Here, 'generate' means to produce interest or attention."
+      }
+    ],
+    "venice": {
+      "time": "5분",
+      "theme": "Review",
+      "content": "Words"
+    },
+    "wordLearn": {
+      "time": "8분",
+      "content": "Learn"
+    },
+    "wordTest": {
+      "time": "5분",
+      "questionsCount": 12,
+      "questions": [
+        {
+          "question": "What does 'appreciate' mean in the sentence 'I appreciate your help with the project'?",
+          "choices": [
+            "To increase in value",
+            "To recognize the value",
+            "To settle a dispute",
+            "To keep a thought secret"
+          ],
+          "answer": "To recognize the value"
+        },
+        {
+          "question": "In the context of 'The manager had to account for the missing funds', what does 'account for' mean?",
+          "choices": [
+            "To constitute a part of a total",
+            "To explain the reason",
+            "To project",
+            "To endure"
+          ],
+          "answer": "To explain the reason"
+        },
+        {
+          "question": "What is the meaning of 'compromise' in 'They reached a compromise on the budget issue'?",
+          "choices": [
+            "To make worse",
+            "To settle by concession",
+            "To increase in value",
+            "To endure"
+          ],
+          "answer": "To settle by concession"
+        },
+        {
+          "question": "What does 'reflect' mean in 'He took a moment to reflect on his achievements'?",
+          "choices": [
+            "To cast back light",
+            "To think deeply",
+            "To weaken",
+            "To extend outward"
+          ],
+          "answer": "To think deeply"
+        },
+        {
+          "question": "In 'The company projected an increase in sales for the next quarter', what does 'project' mean?",
+          "choices": [
+            "To increase in value",
+            "To estimate",
+            "To carry",
+            "To organize"
+          ],
+          "answer": "To estimate"
+        },
+        {
+          "question": "How is 'address' used in 'The new policy addresses the issue of workplace discrimination'?",
+          "choices": [
+            "To supply",
+            "To constitute",
+            "To deal with",
+            "To vary"
+          ],
+          "answer": "To deal with"
+        },
+        {
+          "question": "What does 'secure' mean in 'The bank secured its assets against theft'?",
+          "choices": [
+            "To obtain",
+            "To protect",
+            "To settle by concession",
+            "To make worse"
+          ],
+          "answer": "To protect"
+        },
+        {
+          "question": "What is the meaning of 'issue' in 'The government issued new regulations on emissions'?",
+          "choices": [
+            "To supply",
+            "An important topic",
+            "To undergo",
+            "To pledge"
+          ],
+          "answer": "To supply"
+        },
+        {
+          "question": "In 'The schedule is subject to change', what does 'subject' mean?",
+          "choices": [
+            "A person being discussed",
+            "To endure",
+            "Likely to be affected",
+            "To increase in value"
+          ],
+          "answer": "Likely to be affected"
+        },
+        {
+          "question": "What does 'conduct' mean in 'The scientist conducted an experiment to test the hypothesis'?",
+          "choices": [
+            "To behave",
+            "To organize and carry out",
+            "To intend",
+            "To carry"
+          ],
+          "answer": "To organize and carry out"
+        },
+        {
+          "question": "How is 'commit' understood in 'He committed to the project for six months'?",
+          "choices": [
+            "To perpetrate",
+            "To pledge",
+            "To organize",
+            "To discover"
+          ],
+          "answer": "To pledge"
+        },
+        {
+          "question": "What does 'generate' mean in 'The new policy is expected to generate a lot of interest'?",
+          "choices": [
+            "To produce",
+            "To cast back light",
+            "To increase in value",
+            "To constitute"
+          ],
+          "answer": "To produce"
+        }
+      ],
+      "testType": "matching"
+    }
+  },
+  "homework": {
+    "title": "심층/하드코어 과제",
+    "items": [
+      {
+        "type": "reading",
+        "title": "10개 지문 풀이 분석"
+      },
+      {
+        "type": "listening",
+        "title": "8개 듣기 실전 딕테이션"
+      },
+      {
+        "type": "vocab",
+        "title": "25개 단어 완벽 암기"
+      }
+    ]
+  }
+}

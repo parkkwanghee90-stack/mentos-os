@@ -1,0 +1,50 @@
+[
+  {
+    "id": "[SSS노트]03-1 필요조건과 충분조건 초급(16)_p3_01",
+    "source_file": "[SSS노트]03-1 필요조건과 충분조건 초급(16)",
+    "source_page": 3,
+    "section_index": "04",
+    "section_title": "대우를 이용한 증명법과 귀류법",
+    "card_index": "01",
+    "card_title": "대우를 이용한 증명법",
+    "y_start": 369,
+    "y_end": 1025,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[SSS노트]03-1 필요조건과 충분조건 초급(16)_p3_02",
+    "source_file": "[SSS노트]03-1 필요조건과 충분조건 초급(16)",
+    "source_page": 3,
+    "section_index": "04",
+    "section_title": "대우를 이용한 증명법과 귀류법",
+    "card_index": "02",
+    "card_title": "귀류법",
+    "y_start": 1025,
+    "y_end": 1602,
+    "file_png": "card_02_p3.webp"
+  },
+  {
+    "id": "[SSS노트]03-1 필요조건과 충분조건 초급(16)_p4_01",
+    "source_file": "[SSS노트]03-1 필요조건과 충분조건 초급(16)",
+    "source_page": 4,
+    "section_index": "05",
+    "section_title": "필요조건과 충분조건",
+    "card_index": "01",
+    "card_title": "필요조건과 충분조건 , 필요충분조건",
+    "y_start": 368,
+    "y_end": 811,
+    "file_png": "card_01_p4.webp"
+  },
+  {
+    "id": "[SSS노트]03-1 필요조건과 충분조건 초급(16)_p4_02",
+    "source_file": "[SSS노트]03-1 필요조건과 충분조건 초급(16)",
+    "source_page": 4,
+    "section_index": "05",
+    "section_title": "필요조건과 충분조건",
+    "card_index": "02",
+    "card_title": "필요조건 , 충분조건과 진리집합",
+    "y_start": 811,
+    "y_end": 1602,
+    "file_png": "card_02_p4.webp"
+  }
+]

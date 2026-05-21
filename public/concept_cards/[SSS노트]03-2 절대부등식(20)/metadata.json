@@ -1,0 +1,62 @@
+[
+  {
+    "id": "[SSS노트]03-2 절대부등식(20)_p3_01",
+    "source_file": "[SSS노트]03-2 절대부등식(20)",
+    "source_page": 3,
+    "section_index": "06",
+    "section_title": "절대부등식",
+    "card_index": "01",
+    "card_title": "절대부등식",
+    "y_start": 420,
+    "y_end": 734,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[SSS노트]03-2 절대부등식(20)_p3_02",
+    "source_file": "[SSS노트]03-2 절대부등식(20)",
+    "source_page": 3,
+    "section_index": "06",
+    "section_title": "절대부등식",
+    "card_index": "02",
+    "card_title": "부등식의 증명에 자주 이용되는 실수의 성질",
+    "y_start": 734,
+    "y_end": 1282,
+    "file_png": "card_02_p3.webp"
+  },
+  {
+    "id": "[SSS노트]03-2 절대부등식(20)_p3_03",
+    "source_file": "[SSS노트]03-2 절대부등식(20)",
+    "source_page": 3,
+    "section_index": "06",
+    "section_title": "절대부등식",
+    "card_index": "03",
+    "card_title": "기본적인 절대부등식",
+    "y_start": 1282,
+    "y_end": 1602,
+    "file_png": "card_03_p3.webp"
+  },
+  {
+    "id": "[SSS노트]03-2 절대부등식(20)_p5_04",
+    "source_file": "[SSS노트]03-2 절대부등식(20)",
+    "source_page": 5,
+    "section_index": "06",
+    "section_title": "절대부등식",
+    "card_index": "04",
+    "card_title": "산술평균 , 기하평균 , 조화평균의 관계",
+    "y_start": 331,
+    "y_end": 890,
+    "file_png": "card_04_p5.webp"
+  },
+  {
+    "id": "[SSS노트]03-2 절대부등식(20)_p5_05",
+    "source_file": "[SSS노트]03-2 절대부등식(20)",
+    "source_page": 5,
+    "section_index": "06",
+    "section_title": "절대부등식",
+    "card_index": "05",
+    "card_title": "코시 - 슈바르츠의 부등식",
+    "y_start": 890,
+    "y_end": 1602,
+    "file_png": "card_05_p5.webp"
+  }
+]

@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "2.0",
+  "sourceQuestionPdf": "\\\\Subitmainpc\\수학의 빛 사무폴더\\09.새 교과과정 자료\\02.자료_수학2\\자료_교과서,익힘책\\미래엔컬쳐_수학2\\4. 지수와 로그\\09수학Ⅱ_4_1_교사용교과서.pdf",
+  "sourceAnswerPdf": null,
+  "curriculum": {
+    "grade": "고2",
+    "semester": "1학기",
+    "course": "대수1",
+    "unit": "지수로그",
+    "score": 13
+  },
+  "difficulty": "하",
+  "items": [
+    {
+      "number": 0,
+      "questionImage": "questions/09수학Ⅱ_4_1_교사용교과서_q000.webp",
+      "solutionRaw": "3\n3\n;4#;\n_3\n-;2!;\n÷3\n;4!;\n(a\n;4#;\n)\n;3@;\n(a¤b‹)\n;3!;\n÷(a\n;3!;\nb—⁄)¤\n\n7\n2\n;2!;\n_2\n-;3!;\n=2\n;2!;+{-;3!;}\n=2\n;6!;\n5\n;2&;\n÷5‹=5\n;2&;-3\n=5\n;2!;\n(a\n;2#;\n)›=a\n;2#;_4\n=afla>0\n(ab\n;2!;\n)¤=a¤(b\n;2!;\n)¤=a¤ba>0b>0\n\n\n{(-3)¤}\n;2!;\n=(-3)\n2_\n;2!;;\n=-3{(-3)¤}\n;2!;;\n=9\n;2!;\n=(3¤)\n;2!;\n=3\n\n\n\nrs\nr=s=\n(m\nnpq)\nnq\nnæ2qæ2\n\np\nq\nm\nn\n2\n;2!;\n2\n;2!;\na\n;2!;\n1\nb‹\n\n\n\n\n\n\n\n163\na>0b>0\n‹\"ç'ßafi\"ça'ßa\n\"çafi_‹\"ça¤÷fl\"ça‡›\"çab¤÷fl\"ça¤b‹_⁄¤\"ça‡b›\n\n8",
+      "solutionDisplay": "식 정리 후 af1a 형태를 이용한다.",
+      "formulaLatex": [
+        "af1a"
+      ],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    },
+    {
+      "number": 1,
+      "questionImage": "questions/09수학Ⅱ_4_1_교사용교과서_q001.webp",
+      "solutionRaw": "4142\n\na\n;6!;\na¤\na\n;1£0;\na\n;2!;\nb\n;3!;\n\n\n\n\n3\n'2-1\n_3\n'2+1\n2\n2+'2\n÷2\n'2-1\n(5\n'2\n)\n-'2\n3\np\n_4\np\n2\n\n9\na>0b>0\na\n'2\n_a\n'8\n÷a\n4'2\n(a\n'3-1\nb\n'3+1\n)\n'3+1\n÷(ab¤)¤\n\n10\n3\n-'2\n_3\n'2\n=3\n-'2+'2\n=3‚=1\n5\n2'2\n÷5\n'2\n=5\n2'2-'2\n=5\n'2\n(a\n'3\n)\n'∂27\n=a\n'3_'∂27\n=a·a>0\n(a\n'8\nb\n'2\n)\n'2\n=(a\n'8\n)\n'2\n(b\n'2\n)\n'2\n=a›b¤a>0b>0\n\na≈_b¥abxy\n\n\n\n\n\n\n\n\na>0b>0xy\na≈a¥=a\nx+y\na≈÷a¥=a\nx-y\n(a≈)¥=a\nxy\n(ab)≈=a≈b≈\n\n('2)¤_{;3!;}\n-1\n=6\n164\n\n3\n2'2\na\n-'2\nb\n2'3\n8\n;2¡5;\n6\np\n(2'3)›_{;3$;}\n-2\n=81\n\n\n\n\n\n\n\n165\n\n\n3‹=27\n\n27\n{-;2!;}\n4\n=;1¡6;{;2!;}\n4\n=;1¡6;\n\n\n\n;1¡6;\n1\n\n\n›\"ç3‹fi\"ç3—¤\n5\n-;3@;\n{;8!;}\n-;2!;\n2\n\n\n\n\n\n16\n\n-;8!;\n81-243\n3\n\n2\n;2#;\n÷4\n;3!;\n_8\n;4!;\n(3\n;2!;\n_3\n;3!;\n)¤\n(16\n'3\n)(2\n'2\n_3\n-\n)\n3'2\n'\n2\n3\n'\n3\n6\n5\n\n›'6_›'8-›'3_(fl'3)›\nfl'∂18\nfl'2\n4\n\n\n\n\n\n\n\n\n3\n-;5@;\n3\n-;2!;\n;2!;\n3\n;4#;\n-44\n-3\n3\n›'3\n4\n3\n-;2!;\n-3\n1\n‹'\n∂\n25\n64\n9\n2'2\n2\n;1!2(;\n3\n;3%;\n\n166\n\n{;6¡4;}\n-\nn\n1\nn\n7\nabca¤+b¤+c¤=12a+b+c='\n∂\n15\n(2å)\nb+c\n_(2∫)\nc+a\n_(2ç)\na+b\n\n6\n‹'6›'∂10fl'∂30\n‹'6›'∂10fl'∂30⁄¤'aa\n\n\n8\n(Einstein, A. ; 1879~1955)\nm=mº(1-v¤c—¤)\n-;2!;\nmºmgvm/s\nmmg8mg\n;5(;_10°m/s\n\nc3_10°m/s\n9\n\n\n\n\n\n\n\n\n\n\na«\n\n\n\n8\n1\n236\n10mg\n‹'6=⁄¤'ƒ1296›'ß10=⁄¤'ƒ1000fl'ß30=⁄¤'ƒ900\nfl'ß30<›'ß10<‹'6\n\n\n\n\n\n\n\n\n\n\n167\n123\n\n1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1\n\n122\n\n334\n\n\n\n20\n\n\n\n\n\n\n\n240038000",
+      "solutionDisplay": "식 정리 후 81-243 형태를 이용한다.",
+      "formulaLatex": [
+        "81-243",
+        "3(f1",
+        "12a+b+c=",
+        "10f1",
+        "mgvm/s",
+        "mmg8mg",
+        "c310",
+        "10mg",
+        "1000f1"
+      ],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    },
+    {
+      "number": 11,
+      "questionImage": "questions/09수학Ⅱ_4_1_교사용교과서_q011.webp",
+      "solutionRaw": "41.411.4141.4142y\n\n2\n1\n2",
+      "solutionDisplay": "식 정리 후 4142y 형태를 이용한다.",
+      "formulaLatex": [
+        "4142y"
+      ],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    },
+    {
+      "number": 49,
+      "questionImage": "questions/09수학Ⅱ_4_1_교사용교과서_q049.webp",
+      "solutionRaw": "‹\n‹øπ\n›\"\nç\n25fl\n‹'∂16\n‹'2\n\n4\n\"\n√\n(-2)\n10\n\n\n\n5\n‹'2_‹'4=‹‹'∂2_4=‹'8=‹\"ç2‹=(‹'2)‹=2\n=\n‹\nÆ¬=‹'∂27=‹\"ç3‹=(‹'3)‹=3\n(›'9)¤=\n›\n\"\nç\n9¤=\n›\n\"\nç\n3›=(›'3)›=3\n\n‹\nø\nπ\n\"ç2fl=\nfl\n\"ç2fl=(fl'2)fl=2\n54\n2\n‹\n'\n∂54\n‹\n'2\n\n3T\n\nR\nT¤=R‹\n17'3\n\nAUTRAU\n\n\n\n\n\n157\n\"√(-2)\n10\n=\"√(-2)\n5_2\n={\"√(-2)fi}¤=(-2)fi=-32\n\"√(-2)\n10\n=\"≈2⁄\n10\n=\"√2\n5_2\n=(\"≈2fi)¤=2fi=32\n\n\na>0\nb>0a>0\nb>0\n\n\n\na<0b<0\n'ßa'b=-'\n∂\nab\na>0b<0\n\n=-Æ;bA;\n\n'ßa\n'b\n32\n\n‹'ƒ867 AU\n75\n\n\n\n\n\n158\n\nm=5n=2345678m-naμ÷a«a+0\nm-naμ÷a«\nm-n0aμ÷a«=a\nm-n\n\n1;a!;\n1\na‹\n1\na¤\n0\n\na+0mn\naμa«=a\nm+n\nyy\n\nm=0\na‚a«=a\n0+n\n=a«\na‚=1\nm=-n\na—«a«=a\n-n+n\n=a‚=1\na—«=\n1\na«\nm...n\naμ÷a«=a\nm-n\nm 5555555\nn 2345678\nm-n3210-1    -2   -3\naμ÷a«a‹a¤a1;a!;\n1\na‹\n1\na¤\n\n\n\n\n\n2\n\n\n\naμ÷a«=a\nm-n\n1;a!;\n\n1\na‹\n1\na¤\n\n\nn0\n\na«(a+0)\n\n\n\n\n\n\n\n159\n0\na+0n\na‚=1a—«=\n1\na«\n0\n\n('2)‚{-;5!;}\n0\n(-3)—‹{;7!;}\n-2\n\n1\na+0b+0mn\naμ÷a«=a\nm-n\n(ab)«=a«b«\n\n2\n3‚=12—fi==;3¡2;\n1\n2fi\n\n0‚\nmn\n\n\n\n\na+0mnm=-pn=-qpq\naμa«=a—πa—œ=_=\naμa«=a\n-(p+q)\n=a\n(-p)+(-q)\naμa«=a\nm+n\n(aμ)«=(a—π)—œ={}\n-q\n==\n(aμ)«=a\npq\n=a\n(-p)(-q)\n(aμ)«=a\nmn\n\naμa«=a\nm+n\n(aμ)«=a\nmn\n111\na\nπ\n1\na\np+q\n1\naœ\n1\naπ\n{}\nq\n1\na\nπ\n1\na\npq\n1\n-;2¡7;\n1\n\n49\n\n\n\n\n\n160\n\n\na+0b+0mn\naμa«=a\nm+n\naμ÷a«=a\nm-n\n(aμ)«=a\nmn\n(ab)«=a«b\nn\n\na+0b+0\n2fi_2—¤3¤÷3›_3—‹\n(a—¤÷a‹)—¤(a¤b—‹)—›\n\n3\n3¤_3—›=3\n2+(-4)\n=3—¤==;9!;\n5—‹÷5—¤=5\n-3-(-2)\n=5—⁄=;5!;\n(a—‹)—¤=a\n(-3)_(-2)\n=afla+0\n(ab¤)—‹=a—‹(b¤)—‹=a—‹b—fl=a+0b+0\n1\na‹bfl\n1\n3¤\n\n\n\n\n\n\n\n\n\n\n(km)\n\n(mg)\n\n1000\n\n\n(k)10001 km=10‹m(m)10—‹\n\n1 mm=10—‹m(μ)10\n-6\n1μm=10\n-6\nm\n\n\n10⁄¤(tera)T\n10·\n(giga)G\n10fl\n(mega)M\n10‹\n(kilo)k\n10—‹\n(milli)m\n10—fl\n(micro)μ\n10—·\n(nano)n\n10—⁄¤\n(pico)p\n\n\n\n88\na⁄‚\n;24!3;\nb⁄¤\na°\n\n\n\n\n161\n\n\na>0mn\n(aμ)«=a\nmn\nyy\n\n\n(næ2)\n(a  )«=a\n_n\n=aμ\na>0a>0\n\naaμn\na=«\"çaμ\n\n\nm\nn\nm\nn\nm\nn\nm\nn\nm\nn\nm\nn\na>0mn(næ2)\na=«\"çaμa=«'a\n1\nn\nm\nn\n\n\n\na>0\nfi\"ça¤›\"ça—‹a\n;2%;\na\n-0.5\n\n4\n\n9\n;2!;\n27\n;3@;\n8\n—\n;3@;\n16\n-1.25\n\n5\n3\n;5!;\n=fi'34\n;2#;\n=\"ç4‹='∂64=\"ç8¤=8\n\n\na«n\n\na+0\nn\na>0\na\n;5@;\na\n-;4#;\n\"çafi\n'9=3‹\"\nç\n27¤=9\n=;4!;\n1\n‹\"\nç8¤\n=;3¡2;\n1\n›\"\nç\n16fi\n1\n'a\n\n\n\n\n\n162\n\na>0b>0rs\na®÷aß=a\nr-s\n(a®)ß=a®ß(ab)®=a®b®\n\n6\n\na>0rsr=s=mnpqnæ2qæ2\n\na®aß=a  a=aa=\nnq\n\"ç\na\nmq\nnq\n\"ç\na\nnp\n=\nnq\n\"ç\na\nmq+np\na®aß\n=a=a\n+\n=\na\nr+s\na®aß=a\nr+s\n\np\nq\nm\nn\nmq+np\nnq\nnp\nnq\nmq\nnq\np\nq\nm\nn\np\nq\nm\nn\n\na>0b>0rs\na®aß=a\nr+s\na®÷aß=a\nr-s\n(a®)ß=a\nrs\n(ab)®=a®b®\n\na>0b>0\n2\n;5!;\n_2",
+      "solutionDisplay": "식 정리 후 25f1 형태를 이용한다.",
+      "formulaLatex": [
+        "25f1",
+        "2f1=",
+        "2f1=(f1",
+        "2)f1=2",
+        "2)fi",
+        "2)fi=-32",
+        "2fi)",
+        "2fi=32",
+        "m=5n=2345678m-na",
+        "m-na",
+        "m-n0a",
+        "a+0mn",
+        "m-n3210-1",
+        "a+0n",
+        "a+0b+0mn",
+        "a+0mnm=-pn=-qpq",
+        "a+0b+0",
+        "2fi2",
+        "af1a+0",
+        "f1=a+0b+0",
+        "km=10",
+        "m(m)10",
+        "mm=10",
+        "m=10",
+        "tera)T",
+        "giga)G",
+        "10f1",
+        "mega)M",
+        "micro)",
+        "nano)n",
+        "pico)p",
+        "0mn(n",
+        "16fi",
+        "0rsr=s=mnpqn",
+        "a=aa=",
+        "mq+np"
+      ],
+      "graphExpressions": [],
+      "matched": true,
+      "matchScore": 1
+    }
+  ]
+}

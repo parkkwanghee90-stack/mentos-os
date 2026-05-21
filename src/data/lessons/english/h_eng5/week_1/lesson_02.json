@@ -1,0 +1,660 @@
+{
+  "teacherId": "h_eng5",
+  "round": 2,
+  "title": "Curriculum Mode for 4~5등급",
+  "targetGrades": [
+    "고3"
+  ],
+  "targetRanks": [
+    "4~5등급"
+  ],
+  "reading": {
+    "passageCount": 5,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "Hi Jisoo, I hope you're doing well. I wanted to remind you about our group project meeting tomorrow at 3 PM in the school library. Please bring any research materials you have. Let's make sure we're all prepared to discuss our parts. See you then!",
+        "teachPoint": "Practicing reminders and planning for group activities.",
+        "question": "What time is the group project meeting scheduled for?"
+      },
+      {
+        "id": "Passage_2",
+        "text": "Dear Mom, I just wanted to let you know that I arrived safely at the school camp. The bus ride was long, but I enjoyed it because I sat with my friends. We'll have various activities over the next few days. I'll call you soon. Love, Jin.",
+        "teachPoint": "Writing updates about travel and reassuring parents.",
+        "question": "Who did Jin sit with on the bus ride?"
+      },
+      {
+        "id": "Passage_3",
+        "text": "Hello Mr. Kim, I hope this email finds you well. I am writing to request an extension for my history project. Due to some personal issues, I haven't been able to complete it on time. I would really appreciate your understanding. Thank you.",
+        "teachPoint": "How to formally request an extension for assignments.",
+        "question": "What is the student requesting from Mr. Kim?"
+      },
+      {
+        "id": "Passage_4",
+        "text": "Hi everyone, as a reminder, our school's annual sports day is on Friday. Please make sure to wear your team colors and bring your own water bottles. Let's show our team spirit and have a fun day together!",
+        "teachPoint": "Informing about school events and necessary preparations.",
+        "question": "What should students bring to the sports day?"
+      },
+      {
+        "id": "Passage_5",
+        "text": "Dear Alex, I hope you're having a great week. I just finished reading the book you recommended. It was amazing! The storyline was captivating, and I couldn't put it down. Thank you for suggesting it. Let's discuss it over coffee soon.",
+        "teachPoint": "Expressing gratitude and suggesting a meetup to discuss a book.",
+        "question": "What did the writer think about the book Alex recommended?"
+      }
+    ],
+    "teachPoints": [
+      "Practicing reminders and planning for group activities.",
+      "Writing updates about travel and reassuring parents.",
+      "How to formally request an extension for assignments.",
+      "Informing about school events and necessary preparations.",
+      "Expressing gratitude and suggesting a meetup to discuss a book."
+    ],
+    "questions": [
+      "What time is the group project meeting scheduled for?",
+      "Who did Jin sit with on the bus ride?",
+      "What is the student requesting from Mr. Kim?",
+      "What should students bring to the sports day?",
+      "What did the writer think about the book Alex recommended?"
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "script": [
+          "A: Hey, do you have any plans for the weekend?",
+          "B: Not really, I was thinking about just staying in. Why?",
+          "A: I heard there's a new art exhibit opening downtown. Do you want to check it out?",
+          "B: That sounds interesting! What time were you thinking of going?",
+          "A: How about Saturday afternoon, around 2 PM?",
+          "B: That works for me. Should we invite anyone else?",
+          "A: Sure, let's ask Clara and Daniel. They might be interested too."
+        ],
+        "question": "What are the speakers planning to do this weekend?",
+        "choices": [
+          "A. Go to a movie",
+          "B. Visit a new restaurant",
+          "C. Attend an art exhibit",
+          "D. Go hiking",
+          "E. Stay home and relax"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: Did you finish the report for the meeting tomorrow?",
+          "B: Not yet, I'm still working on the last section.",
+          "A: Do you need any help? I have some free time this afternoon.",
+          "B: That would be great, actually. I'm having trouble with the data analysis part.",
+          "A: No problem, I can help you with that. Let's meet in the conference room at 3 PM.",
+          "B: Sounds good, I'll bring my laptop and notes.",
+          "A: Perfect, see you then."
+        ],
+        "question": "What time will they meet to work on the report?",
+        "choices": [
+          "A. 1 PM",
+          "B. 2 PM",
+          "C. 3 PM",
+          "D. 4 PM",
+          "E. 5 PM"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: I'm thinking about getting a new phone. My current one is too slow.",
+          "B: Have you decided which model you want?",
+          "A: Not yet, I'm considering either the latest iPhone or the new Samsung Galaxy.",
+          "B: Both are good choices. What features are most important to you?",
+          "A: I really want a good camera and long battery life.",
+          "B: In that case, you should compare their specs online. It might help you decide.",
+          "A: That's a good idea. I'll do that tonight."
+        ],
+        "question": "What is the main reason A wants a new phone?",
+        "choices": [
+          "A. The current phone's screen is cracked",
+          "B. The current phone is too slow",
+          "C. The current phone's battery is perfect",
+          "D. A wants to try a different brand",
+          "E. The current phone is too big"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Hi, can I get a large coffee and a blueberry muffin, please?",
+          "B: Sure, would you like any milk or sugar with your coffee?",
+          "A: Just a little bit of milk, no sugar.",
+          "B: Alright, anything else for you today?",
+          "A: No, that's all. How much do I owe you?",
+          "B: That'll be $5.50, please.",
+          "A: Here you go. Thank you!"
+        ],
+        "question": "What did the customer order?",
+        "choices": [
+          "A. A small coffee and a croissant",
+          "B. A large coffee and a blueberry muffin",
+          "C. A medium coffee and a doughnut",
+          "D. A large tea and a chocolate chip cookie",
+          "E. A small latte and a scone"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Are you going to the company picnic this weekend?",
+          "B: I wasn't planning to, but I heard it's going to be a lot of fun.",
+          "A: Yeah, they're having a barbecue and some games for families.",
+          "B: That sounds nice. Do you know what time it starts?",
+          "A: It starts at noon and goes until 5 PM.",
+          "B: Maybe I'll drop by for a little while. Are you bringing your family?",
+          "A: Yes, we all love these kinds of events."
+        ],
+        "question": "What event are the speakers discussing?",
+        "choices": [
+          "A. A concert",
+          "B. A company picnic",
+          "C. A sports match",
+          "D. A family reunion",
+          "E. A wedding"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Have you seen the new movie that just came out?",
+          "B: Not yet, I heard it's really good though.",
+          "A: I watched it last night, and it was amazing!",
+          "B: Really? What did you like about it?",
+          "A: The storyline was very engaging and the special effects were fantastic.",
+          "B: I definitely need to check it out. Do you want to watch it again sometime?",
+          "A: Sure, I'd love to see it again."
+        ],
+        "question": "What did A like about the movie?",
+        "choices": [
+          "A. The music and costumes",
+          "B. The storyline and special effects",
+          "C. The ending and the director",
+          "D. The cinematography and soundtrack",
+          "E. The actors and the script"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: I heard you started a new job recently. How's it going?",
+          "B: It's going well, thanks. I'm still getting used to the new environment.",
+          "A: That's understandable. What do you do there?",
+          "B: I'm working as a project manager in their IT department.",
+          "A: That sounds interesting. What's the best part about your job?",
+          "B: I really enjoy collaborating with different teams and learning new things.",
+          "A: That's great! I'm sure you'll do well there."
+        ],
+        "question": "What is B's new job title?",
+        "choices": [
+          "A. Software Engineer",
+          "B. Project Manager",
+          "C. Data Analyst",
+          "D. IT Technician",
+          "E. Marketing Specialist"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Do you want to grab lunch together today?",
+          "B: I'd love to, but I have a meeting at noon.",
+          "A: How about after your meeting? We could go around 1 PM.",
+          "B: That works for me. Where do you want to eat?",
+          "A: There's a new Italian place that just opened. We could try that.",
+          "B: Sounds good, I've heard their pasta is delicious.",
+          "A: Great, I'll meet you at the office lobby at 1 PM."
+        ],
+        "question": "What time will they meet for lunch?",
+        "choices": [
+          "A. 11 AM",
+          "B. 12 PM",
+          "C. 1 PM",
+          "D. 2 PM",
+          "E. 3 PM"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: I need to buy a gift for my sister's birthday. Any ideas?",
+          "B: How about a nice piece of jewelry?",
+          "A: That's a good idea. She loves necklaces.",
+          "B: There's a great jewelry store at the mall. You should check it out.",
+          "A: I think I will. Do you know if they have any sales going on?",
+          "B: Yes, they have a 20% discount on selected items this week.",
+          "A: Perfect, I'll go there this afternoon."
+        ],
+        "question": "What gift is A considering for their sister?",
+        "choices": [
+          "A. A book",
+          "B. A dress",
+          "C. A piece of jewelry",
+          "D. A handbag",
+          "E. A perfume"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: Can you recommend a good restaurant in town?",
+          "B: Sure, what type of food are you in the mood for?",
+          "A: I'm thinking about trying some Mexican food.",
+          "B: There's a place called 'El Sol' that's really good. It's just a few blocks from here.",
+          "A: That sounds perfect. Do they have vegetarian options?",
+          "B: Yes, they have a great selection of vegetarian dishes.",
+          "A: Thanks for the recommendation! I'll check it out."
+        ],
+        "question": "What type of restaurant is A looking for?",
+        "choices": [
+          "A. Italian",
+          "B. Chinese",
+          "C. Mexican",
+          "D. Indian",
+          "E. Japanese"
+        ],
+        "answer": "C"
+      }
+    ],
+    "timeline": [
+      "[0~3m] AudioItem_1",
+      "[3~6m] AudioItem_2",
+      "[6~9m] AudioItem_3",
+      "[9~12m] AudioItem_4",
+      "[12~15m] AudioItem_5",
+      "[15~18m] AudioItem_6",
+      "[18~21m] AudioItem_7",
+      "[21~24m] AudioItem_8",
+      "[24~27m] AudioItem_9",
+      "[27~30m] AudioItem_10"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "derive",
+        "meaning": "to obtain something from a specified source",
+        "alt_meaning": "to deduce or infer from data or information",
+        "example_sentence": "Scientists can derive the age of ancient artifacts based on carbon dating.",
+        "context_explain": "In scientific and logical contexts, deriving often involves using data or information to reach a conclusion or obtain results."
+      },
+      {
+        "word": "constrain",
+        "meaning": "to limit or restrict someone or something",
+        "alt_meaning": "to compel or force toward a particular course of action",
+        "example_sentence": "Economic factors can constrain the growth of new businesses.",
+        "context_explain": "In logical and analytical contexts, constraints are often conditions or limitations that must be considered."
+      },
+      {
+        "word": "justify",
+        "meaning": "to show or prove to be right or reasonable",
+        "alt_meaning": "to provide valid reasons or evidence in support of something",
+        "example_sentence": "The lawyer had to justify his client's actions to the court.",
+        "context_explain": "In debates or arguments, justifying involves providing evidence or reasoning to support a claim."
+      },
+      {
+        "word": "interpret",
+        "meaning": "to explain the meaning of information or actions",
+        "alt_meaning": "to understand or perceive in a particular way",
+        "example_sentence": "Historians often need to interpret ancient texts to uncover their full meanings.",
+        "context_explain": "Interpretation in logical contexts involves analyzing data or information to derive meaning or understanding."
+      },
+      {
+        "word": "infer",
+        "meaning": "to deduce or conclude information from evidence and reasoning",
+        "alt_meaning": "to derive as a conclusion from facts or premises",
+        "example_sentence": "From the data gathered, researchers can infer patterns of behavior.",
+        "context_explain": "In logical reasoning, inferring involves drawing conclusions based on available evidence and logical processes."
+      },
+      {
+        "word": "approximate",
+        "meaning": "to come close to a value or quantity but not be exact",
+        "alt_meaning": "to estimate or bring near to correctness",
+        "example_sentence": "The engineer had to approximate the amount of material needed for the project.",
+        "context_explain": "Approximating in mathematical and scientific contexts involves estimating values that are close to the actual or desired result."
+      },
+      {
+        "word": "attribute",
+        "meaning": "to regard something as being caused by",
+        "alt_meaning": "to assign a characteristic or quality to someone or something",
+        "example_sentence": "The success of the project was largely attributed to the team's hard work.",
+        "context_explain": "In logical and analytical contexts, attributing involves identifying the cause or source of an outcome or phenomenon."
+      },
+      {
+        "word": "regulate",
+        "meaning": "to control or maintain the rate or speed of a process",
+        "alt_meaning": "to set or adjust the rules or parameters",
+        "example_sentence": "The government has the authority to regulate industries for public safety.",
+        "context_explain": "Regulation in scientific and policy contexts involves controlling or directing processes according to specific standards or laws."
+      },
+      {
+        "word": "reinforce",
+        "meaning": "to strengthen or support an idea, habit, or structure",
+        "alt_meaning": "to make something more pronounced or intense",
+        "example_sentence": "Positive feedback can reinforce good behavior in students.",
+        "context_explain": "Reinforcement in psychological and educational contexts involves strengthening behaviors or concepts through positive or negative feedback."
+      },
+      {
+        "word": "sustain",
+        "meaning": "to support, maintain, or endure over time",
+        "alt_meaning": "to provide the necessities for life or existence",
+        "example_sentence": "Renewable energy sources are essential to sustain the environment.",
+        "context_explain": "In environmental and economic contexts, sustaining involves maintaining conditions or resources over a prolonged period."
+      },
+      {
+        "word": "facilitate",
+        "meaning": "to make an action or process easier or more achievable",
+        "alt_meaning": "to assist or help in the progress of something",
+        "example_sentence": "The new software will facilitate the management of customer data.",
+        "context_explain": "Facilitation in organizational and educational contexts involves making processes or activities easier to achieve or manage."
+      },
+      {
+        "word": "inhibit",
+        "meaning": "to hinder, restrain, or prevent an action or process",
+        "alt_meaning": "to suppress or hold back",
+        "example_sentence": "Excessive regulations can inhibit innovation in technology.",
+        "context_explain": "Inhibition in biological and psychological contexts involves processes or actions being slowed down or prevented."
+      },
+      {
+        "word": "compensate",
+        "meaning": "to make up for a deficiency or loss",
+        "alt_meaning": "to provide something good in place of something bad",
+        "example_sentence": "The company offered to compensate the customers for the inconvenience caused.",
+        "context_explain": "Compensating in economic and social contexts involves providing a benefit or reparation for a deficit or loss."
+      },
+      {
+        "word": "validate",
+        "meaning": "to confirm the truth or accuracy of something",
+        "alt_meaning": "to substantiate or verify as legitimate",
+        "example_sentence": "The results of the study were validated through peer review.",
+        "context_explain": "Validation in scientific and research contexts involves confirming that data or results are accurate and reliable."
+      },
+      {
+        "word": "align",
+        "meaning": "to arrange in a straight line or in correct relative positions",
+        "alt_meaning": "to bring into cooperation or agreement",
+        "example_sentence": "The company's goals should align with its mission statement.",
+        "context_explain": "Alignment in organizational contexts involves ensuring that strategies or objectives are in agreement with overarching goals."
+      },
+      {
+        "word": "optimize",
+        "meaning": "to make something as effective or functional as possible",
+        "alt_meaning": "to improve or enhance efficiency",
+        "example_sentence": "The software was optimized to run faster on older computers.",
+        "context_explain": "Optimization in technological and operational contexts involves making systems or processes work at their best potential."
+      },
+      {
+        "word": "synthesize",
+        "meaning": "to combine various elements into a coherent whole",
+        "alt_meaning": "to produce by chemical synthesis",
+        "example_sentence": "The scientist synthesized a new compound in the lab.",
+        "context_explain": "Synthesis in academic and scientific contexts involves merging different ideas or components to create a new and comprehensive understanding or product."
+      },
+      {
+        "word": "correlate",
+        "meaning": "to have a mutual relationship or connection",
+        "alt_meaning": "to show a relationship between two variables or sets of data",
+        "example_sentence": "The study found that smoking correlates with an increased risk of heart disease.",
+        "context_explain": "Correlation in statistical and research contexts involves identifying and assessing relationships between variables or data sets."
+      },
+      {
+        "word": "articulate",
+        "meaning": "to express an idea or feeling fluently and coherently",
+        "alt_meaning": "to pronounce clearly and distinctly",
+        "example_sentence": "She was able to articulate her thoughts during the presentation.",
+        "context_explain": "Articulation in communication contexts involves clearly expressing thoughts, ideas, or arguments in a manner that is easily understood."
+      },
+      {
+        "word": "extrapolate",
+        "meaning": "to extend or project known information into an unknown area",
+        "alt_meaning": "to estimate or predict based on existing data",
+        "example_sentence": "Scientists can extrapolate future climate patterns based on historical data.",
+        "context_explain": "Extrapolation in scientific and statistical contexts involves using known information to make predictions about unknown or future data."
+      },
+      {
+        "word": "quantify",
+        "meaning": "to express or measure the quantity of something",
+        "alt_meaning": "to determine the amount or number of something",
+        "example_sentence": "Researchers quantified the amount of carbon emissions produced by the factory.",
+        "context_explain": "Quantification in scientific and analytical contexts involves measuring or expressing something in numerical terms."
+      },
+      {
+        "word": "differentiate",
+        "meaning": "to recognize or ascertain what makes someone or something different",
+        "alt_meaning": "to identify differences between items or concepts",
+        "example_sentence": "It's important to differentiate between fact and opinion in any argument.",
+        "context_explain": "Differentiation in educational and logical contexts involves identifying differences between concepts, ideas, or entities."
+      },
+      {
+        "word": "integrate",
+        "meaning": "to combine or incorporate parts into a whole",
+        "alt_meaning": "to unite with something else",
+        "example_sentence": "The new policy aims to integrate technology into the classroom.",
+        "context_explain": "Integration in organizational and technical contexts involves combining different components or systems to function together as a cohesive unit."
+      },
+      {
+        "word": "anticipate",
+        "meaning": "to expect or predict",
+        "alt_meaning": "to look forward to with pleasure",
+        "example_sentence": "The company needs to anticipate market trends to remain competitive.",
+        "context_explain": "Anticipation in strategic and planning contexts involves predicting or expecting future events or trends based on current information."
+      },
+      {
+        "word": "elucidate",
+        "meaning": "to make something clear; to explain",
+        "alt_meaning": "to shed light on a subject",
+        "example_sentence": "The professor elucidated the complex theories in a way that was easy to understand.",
+        "context_explain": "Elucidation in academic and educational contexts involves clarifying complex ideas or theories to enhance understanding."
+      },
+      {
+        "word": "validate",
+        "meaning": "to check or prove the validity or accuracy of something",
+        "alt_meaning": "to authorize or confirm as official or legitimate",
+        "example_sentence": "The results of the experiment need to be validated by further research.",
+        "context_explain": "Validation in scientific and research contexts involves confirming that results or data are accurate and reliable through additional experiments or analysis."
+      }
+    ],
+    "venice": {
+      "time": "5분",
+      "theme": "SSOT Words",
+      "content": "Review Games"
+    },
+    "wordLearn": {
+      "time": "8분",
+      "content": "Learn basic meanings"
+    },
+    "wordTest": {
+      "questionsCount": 15,
+      "questions": [
+        {
+          "type": "meaning_choice",
+          "question": "What does the word 'derive' mean?",
+          "choices": [
+            "To limit or restrict",
+            "To obtain from a source",
+            "To express clearly",
+            "To predict an outcome"
+          ],
+          "answer": "To obtain from a source"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'inhibit' mean in a logical context?",
+          "choices": [
+            "To enhance or support",
+            "To hinder or prevent",
+            "To align or arrange",
+            "To combine or synthesize"
+          ],
+          "answer": "To hinder or prevent"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Choose the correct meaning of 'approximate'.",
+          "choices": [
+            "To make precise",
+            "To come close to",
+            "To completely define",
+            "To disregard"
+          ],
+          "answer": "To come close to"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'articulate'?",
+          "choices": [
+            "To express clearly",
+            "To obscure or hide",
+            "To summarize briefly",
+            "To argue aggressively"
+          ],
+          "answer": "To express clearly"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'optimize' entail?",
+          "choices": [
+            "To degrade performance",
+            "To make as effective as possible",
+            "To overlook details",
+            "To generalize broadly"
+          ],
+          "answer": "To make as effective as possible"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does the term 'synthesize' refer to?",
+          "choices": [
+            "To separate into parts",
+            "To combine into a whole",
+            "To ignore complexities",
+            "To randomize data"
+          ],
+          "answer": "To combine into a whole"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'reinforce' mean?",
+          "choices": [
+            "To weaken or reduce",
+            "To strengthen or support",
+            "To create or invent",
+            "To question or doubt"
+          ],
+          "answer": "To strengthen or support"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'correlate'?",
+          "choices": [
+            "To show a relationship",
+            "To differentiate distinctly",
+            "To assume or guess",
+            "To refute or deny"
+          ],
+          "answer": "To show a relationship"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'facilitate' mean in an educational context?",
+          "choices": [
+            "To complicate processes",
+            "To make easier or assist",
+            "To limit access",
+            "To enforce strictly"
+          ],
+          "answer": "To make easier or assist"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'anticipate' involve?",
+          "choices": [
+            "To ignore possibilities",
+            "To expect or predict",
+            "To delay indefinitely",
+            "To react impulsively"
+          ],
+          "answer": "To expect or predict"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does the word 'align' imply?",
+          "choices": [
+            "To misplace or disorganize",
+            "To arrange in correct positions",
+            "To conclude without evidence",
+            "To dismiss casually"
+          ],
+          "answer": "To arrange in correct positions"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is meant by 'validate'?",
+          "choices": [
+            "To disregard as false",
+            "To confirm accuracy",
+            "To create from scratch",
+            "To simplify unnecessarily"
+          ],
+          "answer": "To confirm accuracy"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Choose the correct meaning of 'integrate'.",
+          "choices": [
+            "To divide into parts",
+            "To combine into a whole",
+            "To subtract or remove",
+            "To obscure or hide"
+          ],
+          "answer": "To combine into a whole"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'elucidate' mean in an academic setting?",
+          "choices": [
+            "To make clear",
+            "To complicate further",
+            "To summarize briefly",
+            "To argue aggressively"
+          ],
+          "answer": "To make clear"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'differentiate' mean?",
+          "choices": [
+            "To make things the same",
+            "To identify differences",
+            "To forget quickly",
+            "To agree unconditionally"
+          ],
+          "answer": "To identify differences"
+        }
+      ],
+      "testType": "meaning_choice"
+    }
+  },
+  "homework": {
+    "title": "기초/핵심 과제",
+    "items": [
+      {
+        "type": "reading",
+        "title": "5개 지문 풀이 분석"
+      },
+      {
+        "type": "listening",
+        "title": "6개 듣기 실전 딕테이션"
+      },
+      {
+        "type": "vocab",
+        "title": "10개 단어 완벽 암기"
+      }
+    ]
+  }
+}

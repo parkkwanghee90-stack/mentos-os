@@ -1,0 +1,588 @@
+{
+  "teacherId": "h_eng7",
+  "round": 1,
+  "title": "SSOT Track: h_eng7 Week 2 Lesson 1",
+  "targetGrades": [
+    "고3"
+  ],
+  "targetRanks": [
+    "2~3등급"
+  ],
+  "reading": {
+    "passageCount": 8,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "Mountaineering is a physically demanding and exhilarating pursuit. For many climbers, reaching the summit is the ultimate goal. It involves a combination of physical strength, mental resilience, and technical skills. Proper preparation is crucial for a successful climb, which includes understanding the terrain and weather conditions. Climbers must also carry essential gear like ropes, harnesses, and helmets. Safety is paramount, as the risks involved can be significant. With the right training and equipment, the thrill of conquering a peak is unmatched.",
+        "teachPoint": "The importance of preparation and safety in mountaineering.",
+        "question": "What are the essential aspects climbers must focus on for a successful and safe climb?"
+      },
+      {
+        "id": "Passage_2",
+        "text": "Honeybees are crucial to the environment due to their role in pollination. They transfer pollen from one flower to another, facilitating plant reproduction. This process is vital for the production of fruits and vegetables. Recently, there has been a decline in bee populations worldwide. This decline poses a threat to global food supplies. Factors contributing to this include pesticide use and habitat loss. Efforts are being made to protect bees and ensure their survival.",
+        "teachPoint": "The ecological importance of honeybees and threats to their population.",
+        "question": "What are some reasons for the decline in bee populations, and why is it a concern?"
+      },
+      {
+        "id": "Passage_3",
+        "text": "Digital technology has revolutionized the way we communicate. Smartphones and social media platforms have made it easier to connect with others instantly. This change has both positive and negative effects on society. On one hand, it allows for greater connectivity and access to information. On the other hand, it can lead to issues like decreased face-to-face interactions and privacy concerns. Balancing the benefits and risks of digital communication is essential.",
+        "teachPoint": "The impact of digital technology on communication and social interaction.",
+        "question": "What are some potential positive and negative effects of digital communication on society?"
+      },
+      {
+        "id": "Passage_4",
+        "text": "The concept of mindfulness involves being present and fully engaged in the moment. Practicing mindfulness can reduce stress and improve overall well-being. Techniques such as meditation and deep breathing are often used to cultivate mindfulness. These practices help individuals focus on the present rather than worrying about the past or future. Regular mindfulness practice has been linked to better mental health and increased emotional regulation.",
+        "teachPoint": "The benefits of mindfulness and techniques to practice it.",
+        "question": "How can practicing mindfulness positively impact mental health?"
+      },
+      {
+        "id": "Passage_5",
+        "text": "Renewable energy sources, like solar and wind power, are becoming increasingly important. They offer a sustainable and environmentally friendly alternative to fossil fuels. Unlike fossil fuels, renewable energy sources do not produce greenhouse gases. The transition to renewable energy is crucial in combating climate change. Governments and organizations worldwide are investing in renewable energy technologies. This shift not only helps the environment but also creates new economic opportunities.",
+        "teachPoint": "The importance of transitioning to renewable energy for environmental sustainability.",
+        "question": "Why is the shift to renewable energy sources important, and what benefits does it bring?"
+      },
+      {
+        "id": "Passage_6",
+        "text": "In the realm of technology, artificial intelligence has been making significant strides. It has permeated various industries, transforming how tasks are performed. In particular, AI has been instrumental in enhancing efficiency and productivity. For instance, in the field of medicine, AI algorithms are capable of analyzing complex medical data rapidly. This allows for more accurate diagnoses and personalized treatment plans. Moreover, AI-driven automation in manufacturing has led to higher quality products and reduced human error. Experts believe that the integration of AI will continue to evolve, potentially reshaping the future of work.",
+        "teachPoint": "The passage discusses the impact of artificial intelligence across different industries.",
+        "question": "Which sentence highlights the role of AI in the medical field?"
+      },
+      {
+        "id": "Passage_7",
+        "text": "The benefits of regular exercise extend beyond physical health. Engaging in physical activities can significantly improve mental well-being. Studies have shown that exercise can reduce symptoms of depression and anxiety. Additionally, it is known to boost mood and improve sleep. Regular exercise also enhances brain function by increasing blood flow to the brain. Furthermore, it aids in the release of endorphins, which are natural mood lifters. Consequently, incorporating exercise into daily routines can lead to a happier and more balanced life.",
+        "teachPoint": "The passage emphasizes the comprehensive benefits of exercise on mental health.",
+        "question": "What chemical in the brain is associated with improved mood due to exercise?"
+      },
+      {
+        "id": "Passage_8",
+        "text": "Climate change is one of the most pressing issues facing our planet today. The rise in global temperatures has been linked to human activities, particularly the emission of greenhouse gases. These gases trap heat in the atmosphere, leading to a variety of environmental changes. For instance, we are witnessing more frequent and severe weather events. Additionally, ice caps are melting, causing sea levels to rise and threatening coastal communities. The impact on biodiversity is significant as well, with many species facing the risk of extinction. It is imperative that global initiatives are undertaken to mitigate these effects and preserve our environment for future generations.",
+        "teachPoint": "The passage explains the causes and effects of climate change on the environment.",
+        "question": "What human activity is primarily responsible for the emission of greenhouse gases?"
+      }
+    ],
+    "teachPoints": [
+      "The importance of preparation and safety in mountaineering.",
+      "The ecological importance of honeybees and threats to their population.",
+      "The impact of digital technology on communication and social interaction.",
+      "The benefits of mindfulness and techniques to practice it.",
+      "The importance of transitioning to renewable energy for environmental sustainability.",
+      "The passage discusses the impact of artificial intelligence across different industries.",
+      "The passage emphasizes the comprehensive benefits of exercise on mental health.",
+      "The passage explains the causes and effects of climate change on the environment."
+    ],
+    "questions": [
+      "What are the essential aspects climbers must focus on for a successful and safe climb?",
+      "What are some reasons for the decline in bee populations, and why is it a concern?",
+      "What are some potential positive and negative effects of digital communication on society?",
+      "How can practicing mindfulness positively impact mental health?",
+      "Why is the shift to renewable energy sources important, and what benefits does it bring?",
+      "Which sentence highlights the role of AI in the medical field?",
+      "What chemical in the brain is associated with improved mood due to exercise?",
+      "What human activity is primarily responsible for the emission of greenhouse gases?"
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "script": [
+          "A: Hey, have you decided where to go for vacation this year?",
+          "B: Not yet. I’m thinking about either the beach or the mountains.",
+          "A: Both sound great. What do you prefer, relaxing on the sand or hiking?",
+          "B: I love both! But this time, I’m leaning towards the mountains.",
+          "A: That sounds exciting. Are you thinking of going alone or with friends?",
+          "B: I might go with a couple of friends. It’s always more fun to share the adventure."
+        ],
+        "question": "What is the main topic of the conversation?",
+        "choices": [
+          "A) Planning a vacation",
+          "B) Choosing a new hobby",
+          "C) Deciding on a birthday gift",
+          "D) Discussing work projects",
+          "E) Planning a party"
+        ],
+        "answer": "A"
+      },
+      {
+        "script": [
+          "A: Did you watch the soccer game last night?",
+          "B: No, I missed it. Was it good?",
+          "A: It was amazing! Our team won 3-1.",
+          "B: That’s awesome! Who scored the goals?",
+          "A: The first goal was by Smith, and then Johnson scored twice.",
+          "B: Johnson is on fire this season. I’ll catch the highlights later."
+        ],
+        "question": "What was the outcome of the soccer game?",
+        "choices": [
+          "A) The teams drew 1-1",
+          "B) The opponent won 3-1",
+          "C) Our team won 3-1",
+          "D) The game was postponed",
+          "E) Our team lost 2-1"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: I heard you got a new job. Congratulations!",
+          "B: Thanks! I’ll be starting next Monday.",
+          "A: That’s exciting. What will you be doing?",
+          "B: I’m joining the marketing department as a coordinator.",
+          "A: Sounds like a great opportunity. How do you feel about it?",
+          "B: I’m a bit nervous but mostly excited to learn new things."
+        ],
+        "question": "What is the new position B will be taking?",
+        "choices": [
+          "A) Sales manager",
+          "B) Marketing coordinator",
+          "C) HR assistant",
+          "D) Finance analyst",
+          "E) Project manager"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Have you seen the new movie that just came out?",
+          "B: Not yet. Is it any good?",
+          "A: I watched it last night, and it was fantastic!",
+          "B: Really? What’s it about?",
+          "A: It’s a sci-fi thriller with lots of twists and turns.",
+          "B: I love those kinds of movies. I’ll have to check it out soon."
+        ],
+        "question": "What is the genre of the movie they are discussing?",
+        "choices": [
+          "A) Comedy",
+          "B) Drama",
+          "C) Science Fiction Thriller",
+          "D) Romance",
+          "E) Documentary"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: Are you free this weekend to help me with my project?",
+          "B: Let me check... I think I should be free on Saturday afternoon.",
+          "A: That would be perfect. I really need some assistance with the presentation.",
+          "B: No problem. What’s the project about?",
+          "A: It’s about renewable energy sources and their impact on the environment.",
+          "B: Sounds interesting. I’d be happy to help."
+        ],
+        "question": "When is B available to help A with the project?",
+        "choices": [
+          "A) Saturday morning",
+          "B) Saturday afternoon",
+          "C) Sunday morning",
+          "D) Sunday afternoon",
+          "E) Friday evening"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: I can’t decide which book to read next. Any suggestions?",
+          "B: What genres do you like?",
+          "A: I enjoy mystery and historical fiction.",
+          "B: How about 'The Da Vinci Code'? It’s a mix of both.",
+          "A: I’ve heard about it. Isn’t it a bit long?",
+          "B: It is, but it’s quite a page-turner. You won’t be able to put it down."
+        ],
+        "question": "What type of book does B recommend to A?",
+        "choices": [
+          "A) A science fiction novel",
+          "B) A mystery and historical fiction",
+          "C) A romance novel",
+          "D) A biography",
+          "E) A self-help book"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Are you going to the concert next Friday?",
+          "B: I want to, but I haven’t bought tickets yet.",
+          "A: You should hurry. They’re selling out fast.",
+          "B: Really? I’ll get them online today.",
+          "A: Good idea. Who are you most excited to see?",
+          "B: I can’t wait to see the opening band. They’re amazing live."
+        ],
+        "question": "What is B planning to do regarding the concert?",
+        "choices": [
+          "A) Buy tickets at the venue",
+          "B) Miss the concert",
+          "C) Get tickets online",
+          "D) See only the main act",
+          "E) Volunteer at the concert"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: Did you hear about the new restaurant downtown?",
+          "B: Yes, I heard it’s really good.",
+          "A: I went there last night, and it was delicious!",
+          "B: What did you have?",
+          "A: I tried their signature pasta and a dessert. Both were amazing.",
+          "B: I’ll have to go there soon. Thanks for the recommendation."
+        ],
+        "question": "What did A have at the new restaurant?",
+        "choices": [
+          "A) A burger and fries",
+          "B) Steak and salad",
+          "C) Sushi and miso soup",
+          "D) Signature pasta and dessert",
+          "E) Pizza and ice cream"
+        ],
+        "answer": "D"
+      },
+      {
+        "script": [
+          "A: Are you ready for the presentation tomorrow?",
+          "B: Almost, I just need to finalize a few slides.",
+          "A: Do you need any help with it?",
+          "B: That would be great. Can you review my notes?",
+          "A: Sure, I’ll take a look after lunch.",
+          "B: Thanks, I really appreciate it. I want to make sure it’s perfect."
+        ],
+        "question": "What does B want A to help with?",
+        "choices": [
+          "A) Finalizing the slides",
+          "B) Preparing handouts",
+          "C) Reviewing notes",
+          "D) Setting up the projector",
+          "E) Practicing the speech"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: I’m thinking of adopting a pet. Do you have any advice?",
+          "B: Yes, make sure to consider your lifestyle and the pet’s needs.",
+          "A: I’ve been thinking about getting a dog. I love going for walks.",
+          "B: That’s great. Dogs are very loyal and love exercise.",
+          "A: I just want to make sure I can provide a good home.",
+          "B: I’m sure you will. Just take your time to choose the right one."
+        ],
+        "question": "What type of pet is A considering adopting?",
+        "choices": [
+          "A) A cat",
+          "B) A rabbit",
+          "C) A bird",
+          "D) A dog",
+          "E) A fish"
+        ],
+        "answer": "D"
+      }
+    ],
+    "timeline": [
+      "[0~3m] AudioItem_1",
+      "[3~6m] AudioItem_2",
+      "[6~9m] AudioItem_3",
+      "[9~12m] AudioItem_4",
+      "[12~15m] AudioItem_5",
+      "[15~18m] AudioItem_6",
+      "[18~21m] AudioItem_7",
+      "[21~24m] AudioItem_8",
+      "[24~27m] AudioItem_9",
+      "[27~30m] AudioItem_10"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "abate",
+        "meaning": "to become less intense or widespread",
+        "alt_meaning": "to diminish or reduce",
+        "example_sentence": "The storm began to abate after a few hours.",
+        "context_explain": "Used to describe a situation where something, often negative, is decreasing in intensity or severity."
+      },
+      {
+        "word": "belie",
+        "meaning": "to give a false impression",
+        "alt_meaning": "to contradict",
+        "example_sentence": "Her calm demeanor belied the anxiety she felt inside.",
+        "context_explain": "Describes the act of presenting something in a way that does not accurately reflect the truth."
+      },
+      {
+        "word": "cajole",
+        "meaning": "to persuade someone to do something by sustained coaxing or flattery",
+        "alt_meaning": "to entice or coax",
+        "example_sentence": "He managed to cajole her into agreeing to the trip.",
+        "context_explain": "Used to describe persuading someone through gentle and persistent efforts."
+      },
+      {
+        "word": "delineate",
+        "meaning": "to describe or portray something precisely",
+        "alt_meaning": "to outline or define",
+        "example_sentence": "The report clearly delineates the steps needed for improvement.",
+        "context_explain": "Involves providing a detailed and clear explanation or depiction."
+      },
+      {
+        "word": "equivocal",
+        "meaning": "open to more than one interpretation; ambiguous",
+        "alt_meaning": "uncertain or questionable in nature",
+        "example_sentence": "The politician's answer was equivocal, leaving the audience confused.",
+        "context_explain": "Describes statements or situations that are deliberately unclear or ambiguous."
+      },
+      {
+        "word": "fervent",
+        "meaning": "having or displaying a passionate intensity",
+        "alt_meaning": "intense or ardent",
+        "example_sentence": "She was a fervent supporter of the arts.",
+        "context_explain": "Describes a strong and passionate feeling towards something or someone."
+      },
+      {
+        "word": "garrulous",
+        "meaning": "excessively talkative, especially on trivial matters",
+        "alt_meaning": "chatty or verbose",
+        "example_sentence": "The garrulous old man was a fixture at the local coffee shop.",
+        "context_explain": "Used to describe someone who talks a lot, often about insignificant topics."
+      },
+      {
+        "word": "hapless",
+        "meaning": "unfortunate or unlucky",
+        "alt_meaning": "ill-fated or luckless",
+        "example_sentence": "The hapless traveler missed his flight due to a series of delays.",
+        "context_explain": "Describes someone who consistently seems to encounter bad luck or unfortunate situations."
+      },
+      {
+        "word": "incongruous",
+        "meaning": "not in harmony or keeping with the surroundings",
+        "alt_meaning": "inconsistent or inappropriate",
+        "example_sentence": "His cowboy hat looked incongruous with his formal suit.",
+        "context_explain": "Refers to something that does not fit well with its context or is out of place."
+      },
+      {
+        "word": "juxtapose",
+        "meaning": "to place different things side by side for comparison",
+        "alt_meaning": "to contrast or compare",
+        "example_sentence": "The exhibition juxtaposes modern art with classical pieces.",
+        "context_explain": "Used to highlight differences or similarities by positioning things close together."
+      },
+      {
+        "word": "kudos",
+        "meaning": "praise and honor received for an achievement",
+        "alt_meaning": "accolades or applause",
+        "example_sentence": "She received kudos for her innovative project.",
+        "context_explain": "Recognition and praise for a job well done or an achievement."
+      },
+      {
+        "word": "laconic",
+        "meaning": "using very few words",
+        "alt_meaning": "brief or concise",
+        "example_sentence": "His laconic reply suggested disinterest.",
+        "context_explain": "Describes speech that is short and to the point, often implying a lack of interest or emotion."
+      },
+      {
+        "word": "mendacious",
+        "meaning": "not telling the truth; lying",
+        "alt_meaning": "deceitful or dishonest",
+        "example_sentence": "The mendacious claims were quickly debunked.",
+        "context_explain": "Used to describe people or statements that are untruthful or deceiving."
+      },
+      {
+        "word": "nebulous",
+        "meaning": "in the form of a cloud or haze; unclear",
+        "alt_meaning": "vague or indistinct",
+        "example_sentence": "The plans for the project remained nebulous.",
+        "context_explain": "Describes something that is not clearly defined or lacks clear boundaries."
+      },
+      {
+        "word": "obfuscate",
+        "meaning": "to make something unclear or unintelligible",
+        "alt_meaning": "to obscure or confuse",
+        "example_sentence": "The instructions were obfuscated by technical jargon.",
+        "context_explain": "Intentionally making something difficult to understand or confusing."
+      },
+      {
+        "word": "palpable",
+        "meaning": "able to be touched or felt; tangible",
+        "alt_meaning": "noticeable or evident",
+        "example_sentence": "There was a palpable sense of relief after the decision was announced.",
+        "context_explain": "Refers to feelings or atmospheres that are so intense that they seem almost tangible."
+      },
+      {
+        "word": "quixotic",
+        "meaning": "exceedingly idealistic; unrealistic and impractical",
+        "alt_meaning": "romantic or visionary",
+        "example_sentence": "His quixotic quest for the perfect utopia was admirable but impractical.",
+        "context_explain": "Describes pursuits or ideas that are noble but impractical and unlikely to succeed."
+      },
+      {
+        "word": "recalcitrant",
+        "meaning": "having an obstinately uncooperative attitude",
+        "alt_meaning": "stubborn or defiant",
+        "example_sentence": "The recalcitrant student refused to follow the rules.",
+        "context_explain": "Describes someone who is resistant to authority or control, often in a rebellious manner."
+      },
+      {
+        "word": "sagacious",
+        "meaning": "having keen mental discernment; wise",
+        "alt_meaning": "shrewd or astute",
+        "example_sentence": "The sagacious leader was admired for her insightful decisions.",
+        "context_explain": "Describes someone with good judgment and wisdom, often in leadership or decision-making."
+      },
+      {
+        "word": "taciturn",
+        "meaning": "reserved or uncommunicative in speech",
+        "alt_meaning": "silent or reticent",
+        "example_sentence": "Despite his taciturn nature, he was well-respected by his peers.",
+        "context_explain": "Describes a person who is naturally quiet and not inclined to talk much."
+      }
+    ],
+    "venice": {
+      "time": "5분",
+      "theme": "Review",
+      "content": "Words"
+    },
+    "wordLearn": {
+      "time": "8분",
+      "content": "Learn"
+    },
+    "wordTest": {
+      "time": "5분",
+      "questionsCount": 12,
+      "questions": [
+        {
+          "question": "What does 'abate' mean?",
+          "choices": [
+            "to increase in intensity",
+            "to become less intense or widespread",
+            "to mislead",
+            "to praise highly"
+          ],
+          "answer": "to become less intense or widespread"
+        },
+        {
+          "question": "Choose the correct meaning of 'belie'.",
+          "choices": [
+            "to support with evidence",
+            "to give a false impression",
+            "to speak loudly",
+            "to reduce in size"
+          ],
+          "answer": "to give a false impression"
+        },
+        {
+          "question": "What is the meaning of 'cajole'?",
+          "choices": [
+            "to demand forcefully",
+            "to persuade by coaxing or flattery",
+            "to describe in detail",
+            "to avoid"
+          ],
+          "answer": "to persuade by coaxing or flattery"
+        },
+        {
+          "question": "Select the correct meaning for 'delineate'.",
+          "choices": [
+            "to obscure or hide",
+            "to describe or portray precisely",
+            "to criticize harshly",
+            "to scatter or disperse"
+          ],
+          "answer": "to describe or portray precisely"
+        },
+        {
+          "question": "What does 'equivocal' mean?",
+          "choices": [
+            "clear and straightforward",
+            "open to more than one interpretation",
+            "solid and unyielding",
+            "calm and peaceful"
+          ],
+          "answer": "open to more than one interpretation"
+        },
+        {
+          "question": "Choose the correct meaning of 'fervent'.",
+          "choices": [
+            "lacking interest",
+            "having a passionate intensity",
+            "slow and steady",
+            "light and airy"
+          ],
+          "answer": "having a passionate intensity"
+        },
+        {
+          "question": "What is the meaning of 'garrulous'?",
+          "choices": [
+            "quiet and reserved",
+            "excessively talkative",
+            "brave and bold",
+            "timid and shy"
+          ],
+          "answer": "excessively talkative"
+        },
+        {
+          "question": "Select the correct meaning for 'hapless'.",
+          "choices": [
+            "fortunate and lucky",
+            "unfortunate or unlucky",
+            "happy and content",
+            "confident and secure"
+          ],
+          "answer": "unfortunate or unlucky"
+        },
+        {
+          "question": "What does 'incongruous' mean?",
+          "choices": [
+            "consistent and fitting",
+            "not in harmony with the surroundings",
+            "conforming and orderly",
+            "predictable and routine"
+          ],
+          "answer": "not in harmony with the surroundings"
+        },
+        {
+          "question": "Choose the correct meaning of 'juxtapose'.",
+          "choices": [
+            "to separate",
+            "to place side by side for comparison",
+            "to mix thoroughly",
+            "to simplify"
+          ],
+          "answer": "to place side by side for comparison"
+        },
+        {
+          "question": "What is the meaning of 'laconic'?",
+          "choices": [
+            "using very few words",
+            "exaggerated and verbose",
+            "detailed and thorough",
+            "lengthy and comprehensive"
+          ],
+          "answer": "using very few words"
+        },
+        {
+          "question": "Select the correct meaning for 'mendacious'.",
+          "choices": [
+            "truthful and honest",
+            "not telling the truth; lying",
+            "modest and humble",
+            "brave and courageous"
+          ],
+          "answer": "not telling the truth; lying"
+        }
+      ],
+      "testType": "matching"
+    }
+  },
+  "homework": {
+    "title": "심층/하드코어 과제",
+    "items": [
+      {
+        "type": "reading",
+        "title": "8개 지문 풀이 분석"
+      },
+      {
+        "type": "listening",
+        "title": "7개 듣기 실전 딕테이션"
+      },
+      {
+        "type": "vocab",
+        "title": "20개 단어 완벽 암기"
+      }
+    ]
+  }
+}

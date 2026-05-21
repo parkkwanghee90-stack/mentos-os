@@ -1,0 +1,405 @@
+{
+  "title": "⭐ 직선의방정식 2단계",
+  "core": {
+    "description": "직선의방정식 개념 2단계 핵심",
+    "original_unit": "(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)",
+    "problem_image": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/001.webp",
+    "problems": [
+      {
+        "number": 1,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/001.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "기울기가 2이고 점 $(2, 1)$을 지나는 직선이 $x$축, $y$축과 만나는 점을 각각 $A$, $B$라 할 때, 선분 $AB$의 길이는? ① $\\frac{2\\sqrt{5}}{5}$ ② $\\frac{3\\sqrt{5}}{2}$ ③ $5$ ④ $3\\sqrt{5}$ ⑤ $6$"
+      },
+      {
+        "number": 2,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/002.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 3,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/003.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "점 $(-3, 5)$를 지나는 직선이 $x$절편과 $y$절편의 절댓값이 같고 부호가 반대일 때, 이 직선의 $x$절편을 구하시오."
+      },
+      {
+        "number": 4,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/004.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "$x$절편과 $y$절편의 절댓값이 같고 부호가 반대인 직선이 점 $(-3, 2)$를 지날 때, 이 직선의 $y$절편을 구하시오."
+      },
+      {
+        "number": 5,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/005.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "세 점 $A(-1, 1)$, $B(-k, 2)$, $C(k+1, 6)$이 같은 직선 위에 있을 때, 상수 $k$의 값은? ① $-\\frac{3}{4}$ ② $-\\frac{1}{2}$ ③ $-\\frac{1}{4}$ ④ $\\frac{1}{4}$ ⑤ $\\frac{1}{2}$"
+      },
+      {
+        "number": 6,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/006.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "세 점 $A(k, 5)$, $B(-4, 2)$, $C(-k, -6)$이 한 직선 위에 있을 때, 실수 $k$의 값은? ① $-\\frac{46}{5}$ ② $-\\frac{44}{5}$ ③ $-\\frac{42}{5}$ ④ $-8$ ⑤ $-\\frac{38}{5}$"
+      },
+      {
+        "number": 7,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/007.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "세 점 $O(0, 0)$, $A(-1, 1)$, $B(-3, -3)$을 꼭짓점으로 하는 $\\triangle OAB$가 있다. 원점을 지나며 $\\triangle OAB$의 넓이를 이등분하는 직선 $l$과 선분 $AB$의 교점의 좌표를 구하시오."
+      },
+      {
+        "number": 8,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/008.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "세 점 $O(0, 0, 0)$, $A(10, 1)$, $B(4, 3)$에 대하여 직선 $y = ax$가 삼각형 $OAB$의 넓이를 이등분할 때, 상수 $a$의 값을 구하세요."
+      },
+      {
+        "number": 9,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/009.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "원점을 지나고 그림과 같은 도형 $OABCDE$의 넓이를 이동분하는 직선의 방정식은? (단, 도형의 각 변은 $x$축, 또는 $y$축과 평행하다.) ① $y = \\frac{3}{5}x$ ② $y = \\frac{27}{10}x$ ③ $y = \\frac{6}{5}x$ ④ $y = \\frac{6}{7}x$ ⑤ $y = \\frac{5}{7}x$"
+      },
+      {
+        "number": 10,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/010.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "다음 그림과 같이 원점을 지나는 직선 $l$이 색칠한 부분의 넓이를 이등분할 때, 직선 $l$의 기울기를 구하시오."
+      },
+      {
+        "number": 11,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/011.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 직선 $ax + (a+2)y + 3 = 0$, $(a-5)x + ay - 3 = 0$의 교점과 원점을 지나는 직선의 기울기가 3일 때, 상수 $a$의 값을 구하시오."
+      },
+      {
+        "number": 12,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/012.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 직선 $ax + (a+3)y - 4 = 0$, $(a-4)x + ay + 4 = 0$의 교점과 원점을 지나는 직선의 기울기가 $-2$일 때, 상수 $a$의 값을 구하시오."
+      },
+      {
+        "number": 13,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/013.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 점 $A(1, 0)$, $B(-2, 4)$를 이은 선분 $AB$와 직선 $kx - y - 2k + 2 = 0$이 한 점에서 만날 때, 실수 $k$의 최댓값과 최솟값의 합을 구하시오."
+      },
+      {
+        "number": 14,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/014.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "직선 $y = mx + 2m$이 두 점 $A(2, 1)$, $B(0, 3)$을 이은 선분 $\\overline{AB}$와 만나기 위한 상수 $m$의 최댓값과 최솟값의 합을 구하시오."
+      },
+      {
+        "number": 15,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/015.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "직선 $mx - y + m + 4 = 0$이 세 점 $A(-4, 3)$, $B(-2, -1)$, $C(2, -2)$를 꼭짓점으로 하는 삼각형 $ABC$와 만나지 않도록 하는 실수 $m$의 값의 범위를 구하시오."
+      },
+      {
+        "number": 16,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/016.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "세 점 $A(2, 3)$, $B(-2, 2)$, $C(4, -1)$을 꼭짓점으로 하는 삼각형 $ABC$가 직선 $y = kx - 3k + 2$와 만나지 않도록 하는 실수 $k$의 값의 범위를 구하시오."
+      },
+      {
+        "number": 17,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/017.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 직선 $4x + 3y - 1 = 0$, $3x - 2y + 12 = 0$의 교점을 지나고 직선 $2x + 8y - 1 = 0$에 수직인 직선의 방정식을 구하시오."
+      },
+      {
+        "number": 18,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/018.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 직선 $x + 2y + 3 = 0$, $x + 5y - 11 = 0$의 교점을 지나고 직선 $x - y - 4 = 0$에 수직인 직선의 방정식은? ① $3x + 3y + 10 = 0$ ② $3x + 3y + 20 = 0$ ③ $3x + 3y + 23 = 0$ ④ $5x + 5y + 18 = 0$ ⑤ $5x + 5y + 23 = 0$"
+      },
+      {
+        "number": 19,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/019.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "세 직선 $x + 3y = 5$, $3x - y = 5$, $ax + y = 0$으로 둘러싸인 삼각형이 존재하지 않도록 하는 모든 상수 $a$의 값의 곱을 구하시오."
+      },
+      {
+        "number": 20,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/020.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "좌표평면 위의 세 직선 $$l: 5x - 2y + 7 = 0$$ $$m: x - y + 2 = 0$$ $$n: ax - y + 3 = 0$$ 이 있다. 세 직선 $l, m, n$으로 삼각형을 만들지 못하도록 하는 모든 상수 $a$의 값의 곱은? ① $\\frac{2}{5}$ ② $1$ ③ $\\frac{5}{2}$ ④ $5$ ⑤ $10$"
+      },
+      {
+        "number": 21,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/021.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 점 $A(5, 3)$, $B(a, b)$에 대하여 선분 $AB$의 수직이등분선의 방정식이 $2x - y - 1 = 0$일 때, $\\frac{b}{a}$의 값을 구하시오."
+      },
+      {
+        "number": 22,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/022.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 점 $A(2, 7)$, $B(a, b)$에 대하여 선분 $AB$의 수직이등분선의 방정식이 $3x + y + 2 = 0$일 때, $ab$의 값을 구하시오."
+      },
+      {
+        "number": 23,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/023.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "x, y에 관한 이차방정식 $$2x^2 - 3xy + ay^2 - 2x + 9y + b = 0$$이 직교하는 두 직선의 곱을 나타낼 때, 상수 $a$, $b$에 대하여 $ab$의 값은? ① 2 ② 4 ③ 6 ④ 8 ⑤ 10"
+      },
+      {
+        "number": 24,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/024.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "이차방정식 $9x^2 + 2axy + y^2 + 2(a^2 - 9)x - 1 = 0$이 두 직선을 나타낼 때, 모든 상수 $a$의 값의 곱을 구하시오."
+      },
+      {
+        "number": 25,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/025.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "점 $P(1, 2)$ 에서 직선 $2x + y - 3 = 0$ 에 내린 수선의 발을 $H$ 라 할 때, 수선 $PH$ 의 길이는? ① $\\frac{\\sqrt{5}}{5}$ ② $\\frac{\\sqrt{3}}{3}$ ③ $4\\sqrt{2}$ ④ 2 ⑤ 3"
+      },
+      {
+        "number": 26,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/026.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "좌표평면에서 두 점 $(1, 3)$, $(3, 1)$을 지나는 직선과 원점 사이의 거리는? ① 1 ② $\\sqrt{2}$ ③ $2\\sqrt{2}$ ④ 3 ⑤ $3\\sqrt{2}$"
+      },
+      {
+        "number": 27,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/027.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "[2019년 3월 고2 이과 17번 변형] 다음 그림과 같이 좌표평면 위의 점 $A(12, 5)$에서 $x$축에 내린 수선의 발을 $H$라 하고, 선분 $OH$ 위의 점 $B$에서 선분 $OA$에 내린 수선의 발을 $I$라 하자. $BH = BI$일 때, 직선 $AB$의 방정식은 $y = mx + n$이다. $2m + n$의 값은? (단, $O$는 원점이고, $m, n$은 상수이다.) ① $-13$ ② $-12$ ③ $-11$ ④ $-10$ ⑤ $-9$"
+      },
+      {
+        "number": 28,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/028.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "그림과 같이 좌표평면 위의 점 $A(8, 6)$에서 $x$축에 내린 수선의 발을 $H$라 하고, 선분 $OH$ 위의 점 $B$에서 선분 $OA$에 내린 수선의 발을 $I$라 하자. $\\overline{BH} = \\overline{BI}$일 때, 직선 $AB$의 방정식은 $y = mx + n$이다. $m + n$의 값은? (단, $O$는 원점이고, $m, n$은 상수이다.) ① $-10$ ② $-9$ ③ $-8$ ④ $-7$ ⑤ $-6$"
+      },
+      {
+        "number": 29,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/029.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "평행한 두 직선 $3x - 4y - 2 = 0$, $3x + 2ay + b = 0$ 사이의 거리가 $5$일 때, 상수 $a$, $b$의 값을 구하시오. (단, $b < 0$)"
+      },
+      {
+        "number": 30,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/030.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "평행한 두 직선 $12x + 5y - 10 = 0$, $12x + ay + b = 0$ 사이의 거리가 $3$일 때, 상수 $a$, $b$의 값을 구하시오. (단, $b < 0$)"
+      },
+      {
+        "number": 31,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/031.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 직선 $5x + 2y = 0$, $2x + 5y + 1 = 0$이 이루는 각 중에서 예각을 이등분하는 직선의 방정식을 구하시오."
+      },
+      {
+        "number": 32,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/032.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 직선 $3x - y + 3 = 0$, $x - 3y - 1 = 0$이 이루는 각 중에서 예각을 이등분하는 직선의 방정식을 구하시오."
+      },
+      {
+        "number": 33,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/033.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "원점에서 직선 $ax + by + 4 = 0$까지의 거리가 $\\sqrt{2}$일 때, $a^2 + b^2$의 값은? ① 4 ② 8 ③ 12 ④ 16 ⑤ 20"
+      },
+      {
+        "number": 34,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/034.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "제2사분면 위의 점 $(-1, a)$와 직선 $2x - y - 3 = 0$ 사이의 거리가 $2\\sqrt{5}$일 때, $a$의 값을 구하시오."
+      },
+      {
+        "number": 35,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/035.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "점 $(1, 2)$와 직선 $x + 2y - 1 + k(2x - y) = 0$ 사이의 거리를 $f(k)$라 할 때, $f(k)$의 최댓값은? ① $\\frac{\\sqrt{5}}{5}$ ② $\\frac{2\\sqrt{5}}{5}$ ③ $\\frac{3\\sqrt{5}}{5}$ ④ $\\frac{4\\sqrt{5}}{5}$ ⑤ $\\sqrt{5}$"
+      },
+      {
+        "number": 36,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/036.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "점 $(1, -3)$과 직선 $x - 3y - 5 + k(3x + y) = 0$ 사이의 거리를 $f(k)$라 할 때, $f(k)$의 최댓값을 구하시오. (단, $k$는 실수)"
+      },
+      {
+        "number": 37,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/037.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "△ABC의 세 변 $AB$, $BC$, $CA$의 중점을 각각 $P(3, 4)$, $Q(4, -1)$, $R(6, 1)$이라 할 때, △ABC의 넓이는? ① 18 ② 24 ③ 30 ④ 32 ⑤ 36"
+      },
+      {
+        "number": 38,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/038.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "세 점 $A(-4, -1)$, $B(-1, k)$, $C(3, 0)$을 꼭짓점으로 하는 삼각형 $ABC$의 넓이가 $5$일 때, 음수 $k$의 값을 구하시오."
+      },
+      {
+        "number": 39,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/039.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "세 직선 $x+y-4=0$, $x-y-2=0$, $x=0$로 둘러싸인 삼각형의 넓이는? ① 6 ② 7 ③ 8 ④ 9 ⑤ 10"
+      },
+      {
+        "number": 40,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/040.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "세 직선 $2x - y - 4 = 0$, $3x - 4y + 9 = 0$, $4x + 3y + 12 = 0$으로 둘러싸인 삼각형의 넓이는? ① 10 ② 15 ③ 20 ④ 25 ⑤ 30"
+      },
+      {
+        "number": 41,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/041.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 점 $A(1, 2)$, $B(3, 4)$로부터 같은 거리에 있는 점 $P$가 나타내는 직선의 $x$절편과 $y$절편의 합은? ① $-10$ ② $-4$ ③ $0$ ④ $5$ ⑤ $10$"
+      },
+      {
+        "number": 42,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/042.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 정점 $A(3, 1)$, $B(5, -3)$에서 같은 거리에 있는 점의 자취의 방정식을 구하시오."
+      },
+      {
+        "number": 43,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/043.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "점 $A(2, 5)$와 직선 $y = 2x - 1$ 위를 움직이는 점 $P$에 대하여 선분 $AP$를 $2 : 1$로 외분하는 점이 나타내는 도형의 방정식이 $x$축, $y$축과 만나는 점을 각각 $B$, $C$라 하자. 삼각형 $OBC$의 넓이는? (단, $O$는 원점이다.) ① $\\frac{7}{4}$ ② $2$ ③ $\\frac{9}{4}$ ④ $\\frac{5}{2}$ ⑤ $\\frac{11}{4}$"
+      },
+      {
+        "number": 44,
+        "questionImage": "/math_crops/(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)/044.webp",
+        "solutionText": "직선의방정식 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "점 $A(-4, 2)$와 직선 $2x + 3y - 4 = 0$ 위를 움직이는 점 $P$를 잇는 선분 $AP$를 $1 : 2$로 내분하는 점이 나타내는 도형의 방정식을 구하시오."
+      }
+    ]
+  }
+}

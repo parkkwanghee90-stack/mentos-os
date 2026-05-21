@@ -1,0 +1,74 @@
+[
+  {
+    "id": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)_p3_01",
+    "source_file": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)",
+    "source_page": 3,
+    "section_index": "01",
+    "section_title": "매개변수 미분법 (1)",
+    "card_index": "01",
+    "card_title": "음함수의 정의",
+    "y_start": 343,
+    "y_end": 1602,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)_p4_01",
+    "source_file": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)",
+    "source_page": 4,
+    "section_index": "01",
+    "section_title": "매개변수 미분법 (1)",
+    "card_index": "01",
+    "card_title": "음함수의 미분법",
+    "y_start": 283,
+    "y_end": 1602,
+    "file_png": "card_01_p4.webp"
+  },
+  {
+    "id": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)_p5_02",
+    "source_file": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)",
+    "source_page": 5,
+    "section_index": "01",
+    "section_title": "매개변수 미분법 (1)",
+    "card_index": "02",
+    "card_title": "몫의 미분법",
+    "y_start": 252,
+    "y_end": 1602,
+    "file_png": "card_02_p5.webp"
+  },
+  {
+    "id": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)_p6_03",
+    "source_file": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)",
+    "source_page": 6,
+    "section_index": "01",
+    "section_title": "매개변수 미분법 (1)",
+    "card_index": "03",
+    "card_title": "삼각함수의 뜻",
+    "y_start": 252,
+    "y_end": 1602,
+    "file_png": "card_03_p6.webp"
+  },
+  {
+    "id": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)_p7_03",
+    "source_file": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)",
+    "source_page": 7,
+    "section_index": "01",
+    "section_title": "매개변수 미분법 (1)",
+    "card_index": "03",
+    "card_title": "삼각함수의 미분법",
+    "y_start": 252,
+    "y_end": 1602,
+    "file_png": "card_03_p7.webp"
+  },
+  {
+    "id": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)_p8_04",
+    "source_file": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)",
+    "source_page": 8,
+    "section_index": "01",
+    "section_title": "매개변수 미분법 (1)",
+    "card_index": "04",
+    "card_title": "합성함수의 미분법",
+    "y_start": 252,
+    "y_end": 1602,
+    "file_png": "card_04_p8.webp"
+  }
+]

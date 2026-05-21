@@ -1,0 +1,50 @@
+[
+  {
+    "id": "[S.S.S note]_기하_이차곡선의접선(2)_초급단계(30)_p3_01",
+    "source_file": "[S.S.S note]_기하_이차곡선의접선(2)_초급단계(30)",
+    "source_page": 3,
+    "section_index": "",
+    "section_title": "",
+    "card_index": "01",
+    "card_title": "이차곡선과 직선의 위치관계",
+    "y_start": 281,
+    "y_end": 1602,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[S.S.S note]_기하_이차곡선의접선(2)_초급단계(30)_p4_02",
+    "source_file": "[S.S.S note]_기하_이차곡선의접선(2)_초급단계(30)",
+    "source_page": 4,
+    "section_index": "",
+    "section_title": "",
+    "card_index": "02",
+    "card_title": "포물선의 접선의 방정식",
+    "y_start": 283,
+    "y_end": 1602,
+    "file_png": "card_02_p4.webp"
+  },
+  {
+    "id": "[S.S.S note]_기하_이차곡선의접선(2)_초급단계(30)_p5_03",
+    "source_file": "[S.S.S note]_기하_이차곡선의접선(2)_초급단계(30)",
+    "source_page": 5,
+    "section_index": "",
+    "section_title": "",
+    "card_index": "03",
+    "card_title": "타원의 접선의 방정식",
+    "y_start": 283,
+    "y_end": 1602,
+    "file_png": "card_03_p5.webp"
+  },
+  {
+    "id": "[S.S.S note]_기하_이차곡선의접선(2)_초급단계(30)_p6_04",
+    "source_file": "[S.S.S note]_기하_이차곡선의접선(2)_초급단계(30)",
+    "source_page": 6,
+    "section_index": "",
+    "section_title": "",
+    "card_index": "04",
+    "card_title": "쌍곡선의 접선의 방정식",
+    "y_start": 283,
+    "y_end": 1602,
+    "file_png": "card_04_p6.webp"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "[SSS노트]04-2이항정리의 활용(13)_p3_01",
+    "source_file": "[SSS노트]04-2이항정리의 활용(13)",
+    "source_page": 3,
+    "section_index": "05",
+    "section_title": "이항정리의 활용",
+    "card_index": "01",
+    "card_title": "파스칼 삼각형",
+    "y_start": 342,
+    "y_end": 1602,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[SSS노트]04-2이항정리의 활용(13)_p4_02",
+    "source_file": "[SSS노트]04-2이항정리의 활용(13)",
+    "source_page": 4,
+    "section_index": "05",
+    "section_title": "이항정리의 활용",
+    "card_index": "02",
+    "card_title": "하키 스틱 패턴",
+    "y_start": 278,
+    "y_end": 1602,
+    "file_png": "card_02_p4.webp"
+  },
+  {
+    "id": "[SSS노트]04-2이항정리의 활용(13)_p5_03",
+    "source_file": "[SSS노트]04-2이항정리의 활용(13)",
+    "source_page": 5,
+    "section_index": "05",
+    "section_title": "이항정리의 활용",
+    "card_index": "03",
+    "card_title": "이항계수의 성질 (1)",
+    "y_start": 278,
+    "y_end": 1602,
+    "file_png": "card_03_p5.webp"
+  },
+  {
+    "id": "[SSS노트]04-2이항정리의 활용(13)_p7_04",
+    "source_file": "[SSS노트]04-2이항정리의 활용(13)",
+    "source_page": 7,
+    "section_index": "05",
+    "section_title": "이항정리의 활용",
+    "card_index": "04",
+    "card_title": "이항계수의 성질 (2)",
+    "y_start": 278,
+    "y_end": 1602,
+    "file_png": "card_04_p7.webp"
+  }
+]

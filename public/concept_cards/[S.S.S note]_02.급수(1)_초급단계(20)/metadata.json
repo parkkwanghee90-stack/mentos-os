@@ -1,0 +1,98 @@
+[
+  {
+    "id": "[S.S.S note]_02.급수(1)_초급단계(20)_p3_01",
+    "source_file": "[S.S.S note]_02.급수(1)_초급단계(20)",
+    "source_page": 3,
+    "section_index": "01",
+    "section_title": "급수",
+    "card_index": "01",
+    "card_title": "급수와 부분합",
+    "y_start": 343,
+    "y_end": 1602,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[S.S.S note]_02.급수(1)_초급단계(20)_p4_02",
+    "source_file": "[S.S.S note]_02.급수(1)_초급단계(20)",
+    "source_page": 4,
+    "section_index": "01",
+    "section_title": "급수",
+    "card_index": "02",
+    "card_title": "급수의 수렴과 발산",
+    "y_start": 252,
+    "y_end": 1602,
+    "file_png": "card_02_p4.webp"
+  },
+  {
+    "id": "[S.S.S note]_02.급수(1)_초급단계(20)_p6_03",
+    "source_file": "[S.S.S note]_02.급수(1)_초급단계(20)",
+    "source_page": 6,
+    "section_index": "01",
+    "section_title": "급수",
+    "card_index": "03",
+    "card_title": "급수의 중요 명제 ( 급수와 극한 관계",
+    "y_start": 281,
+    "y_end": 1602,
+    "file_png": "card_03_p6.webp"
+  },
+  {
+    "id": "[S.S.S note]_02.급수(1)_초급단계(20)_p7_04",
+    "source_file": "[S.S.S note]_02.급수(1)_초급단계(20)",
+    "source_page": 7,
+    "section_index": "01",
+    "section_title": "급수",
+    "card_index": "04",
+    "card_title": "급수의 성질",
+    "y_start": 278,
+    "y_end": 1602,
+    "file_png": "card_04_p7.webp"
+  },
+  {
+    "id": "[S.S.S note]_02.급수(1)_초급단계(20)_p8_01",
+    "source_file": "[S.S.S note]_02.급수(1)_초급단계(20)",
+    "source_page": 8,
+    "section_index": "02",
+    "section_title": "여러 가지 합",
+    "card_index": "01",
+    "card_title": "여러 가지 부분합 구하기",
+    "y_start": 392,
+    "y_end": 1602,
+    "file_png": "card_01_p8.webp"
+  },
+  {
+    "id": "[S.S.S note]_02.급수(1)_초급단계(20)_p10_02",
+    "source_file": "[S.S.S note]_02.급수(1)_초급단계(20)",
+    "source_page": 10,
+    "section_index": "02",
+    "section_title": "여러 가지 합",
+    "card_index": "02",
+    "card_title": "교대급수",
+    "y_start": 281,
+    "y_end": 1602,
+    "file_png": "card_02_p10.webp"
+  },
+  {
+    "id": "[S.S.S note]_02.급수(1)_초급단계(20)_p11_01",
+    "source_file": "[S.S.S note]_02.급수(1)_초급단계(20)",
+    "source_page": 11,
+    "section_index": "03",
+    "section_title": "등비급수",
+    "card_index": "01",
+    "card_title": "등비급수의 수렴과 발산",
+    "y_start": 343,
+    "y_end": 1602,
+    "file_png": "card_01_p11.webp"
+  },
+  {
+    "id": "[S.S.S note]_02.급수(1)_초급단계(20)_p13_02",
+    "source_file": "[S.S.S note]_02.급수(1)_초급단계(20)",
+    "source_page": 13,
+    "section_index": "03",
+    "section_title": "등비급수",
+    "card_index": "02",
+    "card_title": "등비급수의 활용 - 순환소수",
+    "y_start": 278,
+    "y_end": 1602,
+    "file_png": "card_02_p13.webp"
+  }
+]

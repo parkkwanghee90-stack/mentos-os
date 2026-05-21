@@ -1,0 +1,62 @@
+[
+  {
+    "id": "[SSS노트]04-1함수(11)_p3_01",
+    "source_file": "[SSS노트]04-1함수(11)",
+    "source_page": 3,
+    "section_index": "01",
+    "section_title": "함수",
+    "card_index": "01",
+    "card_title": "대응",
+    "y_start": 421,
+    "y_end": 760,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[SSS노트]04-1함수(11)_p3_02",
+    "source_file": "[SSS노트]04-1함수(11)",
+    "source_page": 3,
+    "section_index": "01",
+    "section_title": "함수",
+    "card_index": "02",
+    "card_title": "함수",
+    "y_start": 760,
+    "y_end": 1602,
+    "file_png": "card_02_p3.webp"
+  },
+  {
+    "id": "[SSS노트]04-1함수(11)_p4_03",
+    "source_file": "[SSS노트]04-1함수(11)",
+    "source_page": 4,
+    "section_index": "01",
+    "section_title": "함수",
+    "card_index": "03",
+    "card_title": "함숫값",
+    "y_start": 278,
+    "y_end": 527,
+    "file_png": "card_03_p4.webp"
+  },
+  {
+    "id": "[SSS노트]04-1함수(11)_p4_04",
+    "source_file": "[SSS노트]04-1함수(11)",
+    "source_page": 4,
+    "section_index": "01",
+    "section_title": "함수",
+    "card_index": "04",
+    "card_title": "정의역 , 공역 , 치역",
+    "y_start": 527,
+    "y_end": 855,
+    "file_png": "card_04_p4.webp"
+  },
+  {
+    "id": "[SSS노트]04-1함수(11)_p4_05",
+    "source_file": "[SSS노트]04-1함수(11)",
+    "source_page": 4,
+    "section_index": "01",
+    "section_title": "함수",
+    "card_index": "05",
+    "card_title": "서로 같은 함수",
+    "y_start": 855,
+    "y_end": 1602,
+    "file_png": "card_05_p4.webp"
+  }
+]

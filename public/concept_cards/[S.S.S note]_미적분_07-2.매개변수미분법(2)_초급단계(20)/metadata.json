@@ -1,0 +1,62 @@
+[
+  {
+    "id": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)_p3_01",
+    "source_file": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)",
+    "source_page": 3,
+    "section_index": "01",
+    "section_title": "매개변수 미분법과 접선",
+    "card_index": "01",
+    "card_title": "매개변수로 나타낸 함수",
+    "y_start": 343,
+    "y_end": 1602,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)_p4_02",
+    "source_file": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)",
+    "source_page": 4,
+    "section_index": "01",
+    "section_title": "매개변수 미분법과 접선",
+    "card_index": "02",
+    "card_title": "매개변수로 나타낸 곡선",
+    "y_start": 252,
+    "y_end": 1602,
+    "file_png": "card_02_p4.webp"
+  },
+  {
+    "id": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)_p5_03",
+    "source_file": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)",
+    "source_page": 5,
+    "section_index": "01",
+    "section_title": "매개변수 미분법과 접선",
+    "card_index": "03",
+    "card_title": "매개변수로 나타낸 함수의 미분",
+    "y_start": 252,
+    "y_end": 1602,
+    "file_png": "card_03_p5.webp"
+  },
+  {
+    "id": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)_p6_04",
+    "source_file": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)",
+    "source_page": 6,
+    "section_index": "01",
+    "section_title": "매개변수 미분법과 접선",
+    "card_index": "04",
+    "card_title": "매개변수로 나타내어진 함수",
+    "y_start": 252,
+    "y_end": 1602,
+    "file_png": "card_04_p6.webp"
+  },
+  {
+    "id": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)_p7_05",
+    "source_file": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)",
+    "source_page": 7,
+    "section_index": "01",
+    "section_title": "매개변수 미분법과 접선",
+    "card_index": "05",
+    "card_title": "매개변수로 나타낸 곡선의 접선의 방정식",
+    "y_start": 252,
+    "y_end": 1602,
+    "file_png": "card_05_p7.webp"
+  }
+]

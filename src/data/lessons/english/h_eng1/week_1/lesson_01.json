@@ -1,0 +1,509 @@
+{
+  "teacherId": "h_eng1",
+  "round": 1,
+  "title": "Curriculum Mode for 4~5등급",
+  "targetGrades": [
+    "고1",
+    "고2"
+  ],
+  "targetRanks": [
+    "4~5등급"
+  ],
+  "reading": {
+    "passageCount": 10,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "The art of cooking is not just about following recipes but understanding ingredients. A good cook knows how different flavors interact and complement each other to create a delicious dish. For instance, adding a pinch of salt can enhance sweetness, while a dash of lemon can elevate the taste of fish. Cooking is often described as both a science and an art because it requires precision and creativity. Ultimately, the best meals are those made with a touch of personal flair and love.",
+        "teachPoint": "Understanding how different flavors interact can enhance cooking skills.",
+        "question": "Why is cooking described as both a science and an art?"
+      },
+      {
+        "id": "Passage_2",
+        "text": "Rainforests are vital to the health of our planet, yet they are disappearing at an alarming rate. These lush ecosystems are home to an incredible diversity of plants and animals, many of which are found nowhere else on Earth. Rainforests also play a crucial role in regulating the Earth's climate by absorbing carbon dioxide. Despite their importance, deforestation continues due to logging and agricultural expansion. Protecting rainforests is essential to preserving biodiversity and combating climate change.",
+        "teachPoint": "Rainforests are crucial for biodiversity and climate regulation.",
+        "question": "What are the major threats to rainforests?"
+      },
+      {
+        "id": "Passage_3",
+        "text": "Music has the power to evoke a wide range of emotions and memories. A particular song can transport someone back to a specific moment in time, sparking nostalgia or joy. Studies have shown that music can also impact mood and even improve mental health. Listening to soothing music can reduce stress and anxiety, while upbeat tunes can energize and motivate. This powerful connection between music and emotion is why it plays such an integral role in many people's lives.",
+        "teachPoint": "Music can significantly influence emotions and mental well-being.",
+        "question": "How does music affect our emotions?"
+      },
+      {
+        "id": "Passage_4",
+        "text": "The invention of the printing press in the 15th century revolutionized the spread of information. Before its creation, books were laboriously copied by hand, making them rare and expensive. The printing press allowed for mass production of books, making them more accessible to the general public. This democratization of knowledge led to increased literacy rates and the rapid spread of new ideas. Today, the impact of the printing press is still felt, as it laid the foundation for our modern information age.",
+        "teachPoint": "The printing press significantly increased accessibility to books and knowledge.",
+        "question": "What were the effects of the invention of the printing press?"
+      },
+      {
+        "id": "Passage_5",
+        "text": "Exercise is not only beneficial for physical health but also for mental well-being. Regular physical activity can improve cardiovascular health, strengthen muscles, and enhance flexibility. Moreover, exercise is known to release endorphins, chemicals in the brain that act as natural painkillers and mood elevators. This is why people often feel happier and more relaxed after a good workout. Incorporating exercise into daily routines can lead to a healthier, more balanced life.",
+        "teachPoint": "Exercise benefits both physical and mental health by releasing endorphins.",
+        "question": "What are the mental benefits of regular exercise?"
+      },
+      {
+        "id": "Passage_6",
+        "text": "The butterfly garden was a place of magic and colors. Children and adults alike wandered through the paths, mesmerized by the fluttering wings. Each butterfly seemed to dance in the air, showcasing a spectrum of colors. The garden was also filled with fragrant flowers that attracted these delicate creatures. It was a perfect spot for anyone looking to escape the hustle and bustle of everyday life.",
+        "teachPoint": "The passage uses descriptive language to create imagery.",
+        "question": "What effect does the descriptive language have on the reader?"
+      },
+      {
+        "id": "Passage_7",
+        "text": "In the heart of the city, there was a small café known for its charm. The aroma of freshly brewed coffee filled the air, drawing in passersby. Patrons often found themselves lost in conversations or absorbed in a good book. The café’s warm ambiance was complemented by the soft music playing in the background. It was a haven for those seeking a moment of peace amidst the city's chaos.",
+        "teachPoint": "The passage highlights how sensory details create mood.",
+        "question": "How do sensory details contribute to the mood of the passage?"
+      },
+      {
+        "id": "Passage_8",
+        "text": "The old library stood tall, a testament to history and knowledge. Its shelves were lined with books that whispered stories of the past. Visitors could spend hours exploring different worlds within its walls. The library was a sanctuary for those who cherished the written word, offering a quiet escape from the modern world. Its timeless presence reminded everyone of the enduring power of literature.",
+        "teachPoint": "The passage illustrates the theme of appreciation for literature.",
+        "question": "What theme about literature does the passage convey?"
+      },
+      {
+        "id": "Passage_9",
+        "text": "Every autumn, the town held a harvest festival that brought the community together. Stalls filled with homemade goods lined the streets, and laughter echoed through the crisp air. Families gathered to enjoy games, music, and hearty meals. The festival was a celebration of abundance and togetherness, marking the changing of the seasons. It was a cherished tradition that strengthened the bond among residents.",
+        "teachPoint": "The passage emphasizes the importance of community traditions.",
+        "question": "What does the passage suggest about the role of community traditions?"
+      },
+      {
+        "id": "Passage_10",
+        "text": "The mountain trail was a challenge for even the most seasoned hikers. Steep inclines and rocky paths tested their endurance and determination. Along the way, hikers were rewarded with breathtaking views of the valley below. Each step taken was a testament to their perseverance and love for adventure. Reaching the summit offered a sense of accomplishment that was worth every effort.",
+        "teachPoint": "The passage demonstrates the theme of perseverance and reward.",
+        "question": "How does the passage illustrate the theme of perseverance?"
+      }
+    ],
+    "teachPoints": [
+      "Understanding how different flavors interact can enhance cooking skills.",
+      "Rainforests are crucial for biodiversity and climate regulation.",
+      "Music can significantly influence emotions and mental well-being.",
+      "The printing press significantly increased accessibility to books and knowledge.",
+      "Exercise benefits both physical and mental health by releasing endorphins.",
+      "The passage uses descriptive language to create imagery.",
+      "The passage highlights how sensory details create mood.",
+      "The passage illustrates the theme of appreciation for literature.",
+      "The passage emphasizes the importance of community traditions.",
+      "The passage demonstrates the theme of perseverance and reward."
+    ],
+    "questions": [
+      "Why is cooking described as both a science and an art?",
+      "What are the major threats to rainforests?",
+      "How does music affect our emotions?",
+      "What were the effects of the invention of the printing press?",
+      "What are the mental benefits of regular exercise?",
+      "What effect does the descriptive language have on the reader?",
+      "How do sensory details contribute to the mood of the passage?",
+      "What theme about literature does the passage convey?",
+      "What does the passage suggest about the role of community traditions?",
+      "How does the passage illustrate the theme of perseverance?"
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "id": "AudioItem_1",
+        "script": "M: Hi, Sarah! How was your weekend?\nW: Hey, Mike! It was great. I went to the new park with my family.\nM: That sounds fun. Did you try the new ice cream shop nearby?\nW: Yes, we did. Their chocolate flavor is amazing!\nM: I’ll have to check it out next time.\nW: You should! It’s really good.",
+        "question": "What did Sarah do over the weekend?",
+        "choices": [
+          "A: Went to a new park",
+          "B: Visited her grandparents",
+          "C: Stayed at home",
+          "D: Went to a movie",
+          "E: Studied for exams"
+        ],
+        "answer": "A",
+        "explanation": "Sarah mentioned she went to the new park with her family."
+      },
+      {
+        "id": "AudioItem_2",
+        "script": "M: Hey, are you ready for the science test tomorrow?\nW: I think so. I studied a lot yesterday.\nM: Me too, but I’m still a bit nervous.\nW: Don’t worry, we can review together at lunch.\nM: That sounds like a good idea. Let’s meet in the library.\nW: Perfect, see you there!",
+        "question": "What are they planning to do at lunch?",
+        "choices": [
+          "A: Play soccer",
+          "B: Review for a test",
+          "C: Eat together",
+          "D: Practice a presentation",
+          "E: Go shopping"
+        ],
+        "answer": "B",
+        "explanation": "They plan to review together for the science test at lunch."
+      },
+      {
+        "id": "AudioItem_3",
+        "script": "W: Do you have any plans for the weekend?\nM: Not really. I was thinking of watching a movie.\nW: Which one?\nM: I haven’t decided yet. Any recommendations?\nW: How about the new action film? I heard it’s really good.\nM: Sounds exciting. I might give it a try.",
+        "question": "What is the man planning to do over the weekend?",
+        "choices": [
+          "A: Visit friends",
+          "B: Watch a movie",
+          "C: Go hiking",
+          "D: Attend a concert",
+          "E: Read a book"
+        ],
+        "answer": "B",
+        "explanation": "The man is considering watching a movie over the weekend."
+      },
+      {
+        "id": "AudioItem_4",
+        "script": "W: What did you think of the math homework?\nM: It was tough! I couldn’t solve the last question.\nW: Same here. Maybe we can ask Mr. Smith for help after class.\nM: Good idea. I’m sure he’ll explain it well.\nW: Let’s do that. I don’t want to fall behind.\nM: Me neither. Let’s meet at his office after school.",
+        "question": "What are they planning to do after class?",
+        "choices": [
+          "A: Go home",
+          "B: Play sports",
+          "C: Ask the teacher for help",
+          "D: Study in the library",
+          "E: Work on a project"
+        ],
+        "answer": "C",
+        "explanation": "They plan to ask Mr. Smith for help with their math homework."
+      },
+      {
+        "id": "AudioItem_5",
+        "script": "M: Have you heard about the school dance next month?\nW: Yeah, are you going?\nM: I’m thinking about it. Have you decided?\nW: I might go if my friends are going too.\nM: It could be fun. I heard there will be a live band.\nW: That sounds promising. Let’s see how it goes.",
+        "question": "What event are they discussing?",
+        "choices": [
+          "A: A school play",
+          "B: A sports event",
+          "C: A school dance",
+          "D: A science fair",
+          "E: A field trip"
+        ],
+        "answer": "C",
+        "explanation": "They are discussing the school dance happening next month."
+      },
+      {
+        "id": "AudioItem_6",
+        "script": "W: Did you finish the book report for English class?\nM: Almost. I have to write the conclusion.\nW: What book did you choose?\nM: ‘The Great Gatsby’. It’s really interesting.\nW: That’s a classic! I’m sure you’ll do well.\nM: I hope so. I just need to wrap it up tonight.",
+        "question": "What task is the man working on?",
+        "choices": [
+          "A: A science project",
+          "B: A book report",
+          "C: A history essay",
+          "D: A math assignment",
+          "E: A presentation"
+        ],
+        "answer": "B",
+        "explanation": "The man is working on a book report for English class."
+      },
+      {
+        "id": "AudioItem_7",
+        "script": "M: Are you going to the art exhibition this weekend?\nW: I’m planning to. It’s at the city gallery, right?\nM: Yes, and I heard there’s a special section for student artwork.\nW: That sounds interesting. I’d love to see what other students have created.\nM: Me too. Let’s meet there on Saturday.\nW: Great, see you then!",
+        "question": "Where is the art exhibition taking place?",
+        "choices": [
+          "A: School auditorium",
+          "B: City gallery",
+          "C: Community center",
+          "D: Local museum",
+          "E: Art studio"
+        ],
+        "answer": "B",
+        "explanation": "The art exhibition is happening at the city gallery."
+      },
+      {
+        "id": "AudioItem_8",
+        "script": "W: Do you have any plans after graduation?\nM: I’m thinking of taking a gap year.\nW: That sounds exciting. Any idea what you’ll do?\nM: I’d like to travel and maybe volunteer abroad.\nW: That’s a great way to gain experience.\nM: I think it will be a valuable time before starting college.",
+        "question": "What does the man plan to do after graduation?",
+        "choices": [
+          "A: Start a job",
+          "B: Attend college",
+          "C: Take a gap year",
+          "D: Enroll in a course",
+          "E: Move abroad"
+        ],
+        "answer": "C",
+        "explanation": "The man plans to take a gap year after graduation to travel and volunteer."
+      },
+      {
+        "id": "AudioItem_9",
+        "script": "M: Did you hear about the new club starting next semester?\nW: No, what is it about?\nM: It’s a photography club. They’ll teach different techniques and organize photo walks.\nW: That sounds amazing. I’ve always wanted to learn photography.\nM: You should join. It’s a great opportunity.\nW: I think I will. Thanks for telling me!",
+        "question": "What is the new club about?",
+        "choices": [
+          "A: Cooking",
+          "B: Robotics",
+          "C: Photography",
+          "D: Music",
+          "E: Drama"
+        ],
+        "answer": "C",
+        "explanation": "The new club is focused on photography, teaching techniques, and organizing photo walks."
+      },
+      {
+        "id": "AudioItem_10",
+        "script": "W: Are you prepared for the history presentation next week?\nM: Almost. I’ve gathered all my research, just need to practice.\nW: What topic did you choose?\nM: The American Revolution. It’s fascinating.\nW: That’s a good choice. Let me know if you need a practice audience.\nM: Thanks, I’ll definitely take you up on that.",
+        "question": "What is the man’s presentation topic?",
+        "choices": [
+          "A: World War II",
+          "B: Industrial Revolution",
+          "C: American Revolution",
+          "D: Ancient Rome",
+          "E: The Renaissance"
+        ],
+        "answer": "C",
+        "explanation": "The man's presentation is about the American Revolution."
+      }
+    ],
+    "timeline": [
+      "[0~3m] AudioItem_1",
+      "[3~6m] AudioItem_2",
+      "[6~9m] AudioItem_3",
+      "[9~12m] AudioItem_4",
+      "[12~15m] AudioItem_5",
+      "[15~18m] AudioItem_6",
+      "[18~21m] AudioItem_7",
+      "[21~24m] AudioItem_8",
+      "[24~27m] AudioItem_9",
+      "[27~30m] AudioItem_10"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "increase",
+        "meaning": "to become larger in amount or size",
+        "alt_meaning": "to grow",
+        "example_sentence": "The number of students in the class will increase next year.",
+        "context_explain": "Used when talking about something getting bigger or more."
+      },
+      {
+        "word": "decrease",
+        "meaning": "to become smaller in amount or size",
+        "alt_meaning": "to reduce",
+        "example_sentence": "The store decreased the price of the shoes.",
+        "context_explain": "Used when talking about something getting smaller or less."
+      },
+      {
+        "word": "problem",
+        "meaning": "a situation that is difficult to deal with",
+        "alt_meaning": "an issue",
+        "example_sentence": "He had a problem with his computer.",
+        "context_explain": "Used when discussing a challenge or difficulty."
+      },
+      {
+        "word": "reason",
+        "meaning": "a cause or explanation for something",
+        "alt_meaning": "cause",
+        "example_sentence": "The reason for the delay was the traffic jam.",
+        "context_explain": "Used when explaining why something happens or is done."
+      },
+      {
+        "word": "result",
+        "meaning": "something that happens because of something else",
+        "alt_meaning": "outcome",
+        "example_sentence": "The result of the test was positive.",
+        "context_explain": "Used when talking about the outcome of an action or situation."
+      },
+      {
+        "word": "help",
+        "meaning": "to assist someone in doing something",
+        "alt_meaning": "aid",
+        "example_sentence": "She helped her friend with homework.",
+        "context_explain": "Used when providing support or assistance."
+      },
+      {
+        "word": "use",
+        "meaning": "to employ something for a purpose",
+        "alt_meaning": "utilize",
+        "example_sentence": "He used a pen to write the letter.",
+        "context_explain": "Used when talking about employing something to achieve a goal."
+      },
+      {
+        "word": "make",
+        "meaning": "to create or produce something",
+        "alt_meaning": "create",
+        "example_sentence": "She made a cake for the party.",
+        "context_explain": "Used when describing the act of creating or forming something."
+      },
+      {
+        "word": "find",
+        "meaning": "to discover something by searching",
+        "alt_meaning": "locate",
+        "example_sentence": "He found his lost keys under the sofa.",
+        "context_explain": "Used when talking about discovering or locating something."
+      },
+      {
+        "word": "change",
+        "meaning": "to make or become different",
+        "alt_meaning": "alter",
+        "example_sentence": "She changed her hairstyle.",
+        "context_explain": "Used when talking about something becoming different."
+      },
+      {
+        "word": "work",
+        "meaning": "to do a job or task",
+        "alt_meaning": "labor",
+        "example_sentence": "He works at a bank.",
+        "context_explain": "Used when talking about performing duties or tasks."
+      },
+      {
+        "word": "start",
+        "meaning": "to begin doing something",
+        "alt_meaning": "commence",
+        "example_sentence": "They started the meeting at 10 AM.",
+        "context_explain": "Used when something begins or commences."
+      },
+      {
+        "word": "stop",
+        "meaning": "to cease from doing something",
+        "alt_meaning": "halt",
+        "example_sentence": "The rain stopped suddenly.",
+        "context_explain": "Used when something ceases or comes to an end."
+      },
+      {
+        "word": "grow",
+        "meaning": "to increase in size or develop",
+        "alt_meaning": "expand",
+        "example_sentence": "The plant grows quickly in spring.",
+        "context_explain": "Used when something becomes bigger or progresses."
+      },
+      {
+        "word": "need",
+        "meaning": "to require something because it is essential",
+        "alt_meaning": "require",
+        "example_sentence": "She needs water to stay hydrated.",
+        "context_explain": "Used when something is necessary or essential."
+      }
+    ],
+    "venice": {
+      "time": "5분",
+      "theme": "SSOT Words",
+      "content": "Review Games"
+    },
+    "wordLearn": {
+      "time": "8분",
+      "content": "Learn basic meanings"
+    },
+    "wordTest": {
+      "questionsCount": 10,
+      "questions": [
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'increase'?",
+          "choices": [
+            "to become larger",
+            "to stop",
+            "to create",
+            "to assist"
+          ],
+          "answer": "to become larger"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'decrease'?",
+          "choices": [
+            "to grow",
+            "to make",
+            "to become smaller",
+            "to use"
+          ],
+          "answer": "to become smaller"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'problem'?",
+          "choices": [
+            "a solution",
+            "an issue",
+            "a tool",
+            "an outcome"
+          ],
+          "answer": "an issue"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'reason'?",
+          "choices": [
+            "a cause",
+            "a problem",
+            "a result",
+            "a task"
+          ],
+          "answer": "a cause"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'result'?",
+          "choices": [
+            "a task",
+            "an outcome",
+            "a tool",
+            "a cause"
+          ],
+          "answer": "an outcome"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'help'?",
+          "choices": [
+            "to stop",
+            "to assist",
+            "to create",
+            "to find"
+          ],
+          "answer": "to assist"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'use'?",
+          "choices": [
+            "to employ",
+            "to stop",
+            "to find",
+            "to grow"
+          ],
+          "answer": "to employ"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'make'?",
+          "choices": [
+            "to find",
+            "to grow",
+            "to create",
+            "to stop"
+          ],
+          "answer": "to create"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'find'?",
+          "choices": [
+            "to lose",
+            "to locate",
+            "to change",
+            "to stop"
+          ],
+          "answer": "to locate"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'change'?",
+          "choices": [
+            "to alter",
+            "to make",
+            "to decrease",
+            "to find"
+          ],
+          "answer": "to alter"
+        }
+      ],
+      "testType": "meaning_choice"
+    }
+  },
+  "homework": {
+    "title": "HW",
+    "items": [
+      {
+        "type": "reading",
+        "title": "10 items"
+      },
+      {
+        "type": "listening",
+        "title": "10 items"
+      },
+      {
+        "type": "vocab",
+        "title": "10 items"
+      }
+    ]
+  }
+}

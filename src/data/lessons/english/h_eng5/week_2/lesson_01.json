@@ -1,0 +1,686 @@
+{
+  "teacherId": "h_eng5",
+  "round": 1,
+  "title": "Curriculum Mode for 4~5등급",
+  "targetGrades": [
+    "고3"
+  ],
+  "targetRanks": [
+    "4~5등급"
+  ],
+  "reading": {
+    "passageCount": 5,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "Ben decided to start his day by making a to-do list. He believed that organizing tasks would help him manage his time better. As he wrote down his tasks, he prioritized them based on urgency. By the end of the day, he felt accomplished after completing most of his list.",
+        "teachPoint": "The importance of prioritizing tasks for effective time management.",
+        "question": "Why did Ben feel accomplished at the end of the day?"
+      },
+      {
+        "id": "Passage_2",
+        "text": "Emily loves to read, and she visits the library every weekend. This week, she discovered a new mystery novel. As she turned each page, she found herself lost in the story and couldn’t put it down until she finished.",
+        "teachPoint": "Reading can be an immersive and enjoyable experience.",
+        "question": "What activity does Emily enjoy doing every weekend?"
+      },
+      {
+        "id": "Passage_3",
+        "text": "Tom was excited about his first day at the new school. He prepared his uniform and packed his school bag the night before. On the way to school, he couldn't help but feel a mix of excitement and nervousness, wondering what new friends he would meet.",
+        "teachPoint": "Preparing for new experiences can help reduce anxiety.",
+        "question": "How did Tom prepare for his first day at the new school?"
+      },
+      {
+        "id": "Passage_4",
+        "text": "Sarah’s grandmother taught her how to bake cookies. They mixed flour, sugar, and chocolate chips together. As they placed the cookies in the oven, Sarah learned about patience while waiting for the cookies to bake.",
+        "teachPoint": "Cooking can teach important life skills such as patience.",
+        "question": "What lesson did Sarah learn while baking cookies?"
+      },
+      {
+        "id": "Passage_5",
+        "text": "Jack enjoys going for a run in the park every morning. He finds that exercising outdoors helps clear his mind and boosts his mood. With each run, he sets new personal goals to improve his stamina and speed.",
+        "teachPoint": "Regular exercise can improve mental health and physical fitness.",
+        "question": "Why does Jack enjoy running in the park every morning?"
+      }
+    ],
+    "teachPoints": [
+      "The importance of prioritizing tasks for effective time management.",
+      "Reading can be an immersive and enjoyable experience.",
+      "Preparing for new experiences can help reduce anxiety.",
+      "Cooking can teach important life skills such as patience.",
+      "Regular exercise can improve mental health and physical fitness."
+    ],
+    "questions": [
+      "Why did Ben feel accomplished at the end of the day?",
+      "What activity does Emily enjoy doing every weekend?",
+      "How did Tom prepare for his first day at the new school?",
+      "What lesson did Sarah learn while baking cookies?",
+      "Why does Jack enjoy running in the park every morning?"
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "script": [
+          {
+            "A": "Hey, did you finish the project report for science class?"
+          },
+          {
+            "B": "Not yet. I’m having trouble understanding the last section."
+          },
+          {
+            "A": "Which part are you struggling with? Maybe I can help."
+          },
+          {
+            "B": "The part about renewable energy sources. It’s a bit confusing."
+          },
+          {
+            "A": "Oh, I just read a great article on that. It explained it really well."
+          },
+          {
+            "B": "Really? Could you share some of the key points with me?"
+          },
+          {
+            "A": "Sure! Basically, it’s about how we can use natural resources like wind and solar power to generate energy."
+          }
+        ],
+        "question": "What is B having trouble with regarding their project?",
+        "choices": [
+          "Understanding the introduction",
+          "Completing the last section",
+          "Researching non-renewable resources",
+          "Writing the conclusion",
+          "Finding references"
+        ],
+        "answer": "Completing the last section"
+      },
+      {
+        "script": [
+          {
+            "A": "Do you want to go to the new restaurant downtown for dinner?"
+          },
+          {
+            "B": "I heard it’s really good, but isn’t it a bit expensive?"
+          },
+          {
+            "A": "They have a special discount this week, so it’s more affordable."
+          },
+          {
+            "B": "That sounds great. What type of cuisine do they serve?"
+          },
+          {
+            "A": "It’s Italian. They’re famous for their pasta and pizza."
+          },
+          {
+            "B": "I love Italian food. Let’s make a reservation then."
+          },
+          {
+            "A": "Perfect, I’ll call them now to book a table for us."
+          }
+        ],
+        "question": "Why does B agree to go to the restaurant?",
+        "choices": [
+          "They love Italian food",
+          "The restaurant is cheap",
+          "They want to try something new",
+          "They heard bad reviews",
+          "There is no other choice"
+        ],
+        "answer": "They love Italian food"
+      },
+      {
+        "script": [
+          {
+            "A": "Have you seen the latest superhero movie?"
+          },
+          {
+            "B": "No, not yet. Is it worth watching?"
+          },
+          {
+            "A": "Absolutely! The special effects were amazing."
+          },
+          {
+            "B": "I’ve heard the storyline is a bit weak, though."
+          },
+          {
+            "A": "That might be true, but the action scenes make up for it."
+          },
+          {
+            "B": "I do love a good action scene. Maybe I’ll go this weekend."
+          },
+          {
+            "A": "You should! Let me know what you think after you see it."
+          }
+        ],
+        "question": "What aspect of the movie does A highlight?",
+        "choices": [
+          "The storyline",
+          "The soundtrack",
+          "The cast",
+          "The special effects",
+          "The director's style"
+        ],
+        "answer": "The special effects"
+      },
+      {
+        "script": [
+          {
+            "A": "I’m thinking about starting a new hobby. Any suggestions?"
+          },
+          {
+            "B": "What about photography? It’s a lot of fun and creative."
+          },
+          {
+            "A": "That sounds interesting, but I don’t have a good camera."
+          },
+          {
+            "B": "You can start with your smartphone. They have decent cameras these days."
+          },
+          {
+            "A": "That’s a good point. Plus, I can learn editing too."
+          },
+          {
+            "B": "Exactly! There are lots of online tutorials to help you get started."
+          },
+          {
+            "A": "Thanks for the idea. I’ll look into it this weekend."
+          }
+        ],
+        "question": "Why does A hesitate to start photography initially?",
+        "choices": [
+          "They lack interest",
+          "They don't have a camera",
+          "They find it expensive",
+          "They prefer painting",
+          "They believe it is difficult"
+        ],
+        "answer": "They don't have a camera"
+      },
+      {
+        "script": [
+          {
+            "A": "I need to buy a gift for my sister’s birthday."
+          },
+          {
+            "B": "How about getting her a book? She loves reading."
+          },
+          {
+            "A": "That’s a good idea. Do you know any good titles?"
+          },
+          {
+            "B": "I recently read a mystery novel that was really gripping."
+          },
+          {
+            "A": "She does enjoy mysteries. What’s the name of the book?"
+          },
+          {
+            "B": "It’s called 'The Silent Patient'. I couldn’t put it down."
+          },
+          {
+            "A": "Perfect! I’ll get that for her. Thanks for the recommendation."
+          }
+        ],
+        "question": "What kind of book does B recommend?",
+        "choices": [
+          "A romance novel",
+          "A mystery novel",
+          "A science fiction novel",
+          "A fantasy novel",
+          "A historical novel"
+        ],
+        "answer": "A mystery novel"
+      },
+      {
+        "script": [
+          {
+            "A": "Are you going to the concert next weekend?"
+          },
+          {
+            "B": "I wish I could, but I already have plans."
+          },
+          {
+            "A": "What are you doing instead?"
+          },
+          {
+            "B": "I’m attending my cousin’s wedding."
+          },
+          {
+            "A": "That sounds important. You can always catch the concert another time."
+          },
+          {
+            "B": "True, but I’ll definitely miss out on the live experience."
+          },
+          {
+            "A": "Maybe they’ll have another tour soon. You might get another chance."
+          }
+        ],
+        "question": "Why is B unable to attend the concert?",
+        "choices": [
+          "They are not interested",
+          "They are attending a wedding",
+          "They forgot to buy tickets",
+          "They are traveling abroad",
+          "They have to work"
+        ],
+        "answer": "They are attending a wedding"
+      },
+      {
+        "script": [
+          {
+            "A": "How was your weekend camping trip?"
+          },
+          {
+            "B": "It was fantastic! The weather was perfect."
+          },
+          {
+            "A": "Did you get to go hiking?"
+          },
+          {
+            "B": "Yes, we hiked up to a beautiful lake in the mountains."
+          },
+          {
+            "A": "That sounds amazing. Did you take any pictures?"
+          },
+          {
+            "B": "I did! I’ll show them to you later."
+          },
+          {
+            "A": "I’d love to see them. Maybe I’ll join next time!"
+          }
+        ],
+        "question": "What activity did B do during the camping trip?",
+        "choices": [
+          "Fishing",
+          "Hiking",
+          "Swimming",
+          "Boating",
+          "Cycling"
+        ],
+        "answer": "Hiking"
+      },
+      {
+        "script": [
+          {
+            "A": "I’m thinking about getting a new laptop for school."
+          },
+          {
+            "B": "Any particular model you have in mind?"
+          },
+          {
+            "A": "I’m considering the one with a longer battery life."
+          },
+          {
+            "B": "That’s smart. It’s annoying to keep charging it all the time."
+          },
+          {
+            "A": "Exactly, plus I need it to run some heavy software."
+          },
+          {
+            "B": "Make sure it has a good processor and enough RAM then."
+          },
+          {
+            "A": "Thanks for the tips. I’ll keep that in mind while shopping."
+          }
+        ],
+        "question": "What feature is A particularly looking for in a new laptop?",
+        "choices": [
+          "Touchscreen display",
+          "Lightweight design",
+          "Longer battery life",
+          "High-resolution screen",
+          "Stylish appearance"
+        ],
+        "answer": "Longer battery life"
+      },
+      {
+        "script": [
+          {
+            "A": "Did you hear about the new art exhibit at the gallery?"
+          },
+          {
+            "B": "Yes, I did. It’s supposed to be really impressive."
+          },
+          {
+            "A": "I’m planning to go this weekend. Want to join?"
+          },
+          {
+            "B": "I’d love to. I’ve heard the sculptures are incredible."
+          },
+          {
+            "A": "Great! Let’s meet at the gallery entrance at 2 PM."
+          },
+          {
+            "B": "Sounds like a plan. I’ll see you there."
+          },
+          {
+            "A": "Looking forward to it. It should be a great experience."
+          }
+        ],
+        "question": "What aspect of the art exhibit interests B?",
+        "choices": [
+          "The paintings",
+          "The sculptures",
+          "The photographs",
+          "The performances",
+          "The installations"
+        ],
+        "answer": "The sculptures"
+      },
+      {
+        "script": [
+          {
+            "A": "I’ve been thinking about volunteering on weekends."
+          },
+          {
+            "B": "That’s a wonderful idea. Any particular cause you’re interested in?"
+          },
+          {
+            "A": "I’m passionate about animal welfare."
+          },
+          {
+            "B": "You could volunteer at the local animal shelter."
+          },
+          {
+            "A": "That’s what I was thinking too. I love working with animals."
+          },
+          {
+            "B": "It’s a rewarding experience, and they always need extra hands."
+          },
+          {
+            "A": "I’ll sign up this week. Thanks for your encouragement!"
+          }
+        ],
+        "question": "Where does A plan to volunteer?",
+        "choices": [
+          "At a soup kitchen",
+          "At a community garden",
+          "At a local school",
+          "At the animal shelter",
+          "At a hospital"
+        ],
+        "answer": "At the animal shelter"
+      }
+    ],
+    "timeline": [
+      "[0~3m] AudioItem_1",
+      "[3~6m] AudioItem_2",
+      "[6~9m] AudioItem_3",
+      "[9~12m] AudioItem_4",
+      "[12~15m] AudioItem_5",
+      "[15~18m] AudioItem_6",
+      "[18~21m] AudioItem_7",
+      "[21~24m] AudioItem_8",
+      "[24~27m] AudioItem_9",
+      "[27~30m] AudioItem_10"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "ambiguous",
+        "meaning": "open to more than one interpretation",
+        "alt_meaning": "unclear or inexact",
+        "example_sentence": "The instructions were ambiguous, leading to confusion.",
+        "context_explain": "In tests, 'ambiguous' often describes questions or statements that can be understood in different ways."
+      },
+      {
+        "word": "contemplate",
+        "meaning": "to think deeply about",
+        "alt_meaning": "to consider with attention",
+        "example_sentence": "She contemplated the possible outcomes before making a decision.",
+        "context_explain": "Students are often asked to contemplate various solutions to a problem."
+      },
+      {
+        "word": "diligent",
+        "meaning": "showing care and effort in one's work or duties",
+        "alt_meaning": "persevering in carrying out tasks",
+        "example_sentence": "He is a diligent student, always completing his assignments on time.",
+        "context_explain": "'Diligent' is used to describe someone who works hard and is dedicated."
+      },
+      {
+        "word": "elaborate",
+        "meaning": "to add details to; to expand",
+        "alt_meaning": "detailed and complicated in design",
+        "example_sentence": "The teacher asked him to elaborate on his answer.",
+        "context_explain": "In writing, to 'elaborate' means to explain more thoroughly."
+      },
+      {
+        "word": "feasible",
+        "meaning": "possible to do easily or conveniently",
+        "alt_meaning": "likely; probable",
+        "example_sentence": "The plan seemed feasible within the given budget.",
+        "context_explain": "'Feasible' is used to evaluate the practicality of a proposal or plan."
+      },
+      {
+        "word": "impartial",
+        "meaning": "treating all rivals or disputants equally; fair and just",
+        "alt_meaning": "not biased",
+        "example_sentence": "The judge remained impartial throughout the trial.",
+        "context_explain": "Being 'impartial' is crucial in situations requiring fairness."
+      },
+      {
+        "word": "intricate",
+        "meaning": "very complicated or detailed",
+        "alt_meaning": "having many interrelated parts",
+        "example_sentence": "The intricate design of the sculpture amazed everyone.",
+        "context_explain": "'Intricate' often describes complex designs or processes."
+      },
+      {
+        "word": "manifest",
+        "meaning": "clear or obvious to the eye or mind",
+        "alt_meaning": "to display or show a quality or feeling",
+        "example_sentence": "His happiness was manifest in the way he smiled.",
+        "context_explain": "'Manifest' can refer to something that is easily perceived or understood."
+      },
+      {
+        "word": "notorious",
+        "meaning": "famous or well known, typically for some bad quality or deed",
+        "alt_meaning": "infamous",
+        "example_sentence": "The area is notorious for its high crime rate.",
+        "context_explain": "'Notorious' describes someone or something known for negative reasons."
+      },
+      {
+        "word": "obsolete",
+        "meaning": "no longer produced or used; out of date",
+        "alt_meaning": "outmoded",
+        "example_sentence": "Many believe that CDs have become obsolete in the digital age.",
+        "context_explain": "Technology often becomes 'obsolete' as new innovations emerge."
+      },
+      {
+        "word": "paradox",
+        "meaning": "a statement that contradicts itself or a situation which seems to defy logic",
+        "alt_meaning": "an apparent contradiction",
+        "example_sentence": "The paradox of war is that it can lead to peace.",
+        "context_explain": "'Paradox' is common in discussions of logic, philosophy, and literature."
+      },
+      {
+        "word": "prudent",
+        "meaning": "acting with or showing care and thought for the future",
+        "alt_meaning": "wise or judicious",
+        "example_sentence": "It's prudent to save money for unexpected expenses.",
+        "context_explain": "Being 'prudent' involves careful planning and decision-making."
+      },
+      {
+        "word": "resilient",
+        "meaning": "able to withstand or recover quickly from difficult conditions",
+        "alt_meaning": "tough or hardy",
+        "example_sentence": "Children can be remarkably resilient to changes.",
+        "context_explain": "'Resilient' describes someone or something that can endure challenges."
+      },
+      {
+        "word": "scrutinize",
+        "meaning": "to examine or inspect closely and thoroughly",
+        "alt_meaning": "to observe carefully",
+        "example_sentence": "The scientist scrutinized the data before reaching a conclusion.",
+        "context_explain": "In research, 'scrutinize' implies a careful and detailed examination."
+      },
+      {
+        "word": "tedious",
+        "meaning": "too long, slow, or dull; tiresome or monotonous",
+        "alt_meaning": "boring or repetitive",
+        "example_sentence": "Filing paperwork can be a tedious task.",
+        "context_explain": "'Tedious' is often used to describe tasks that are boring and time-consuming."
+      },
+      {
+        "word": "vulnerable",
+        "meaning": "susceptible to physical or emotional attack or harm",
+        "alt_meaning": "defenseless or exposed",
+        "example_sentence": "Young animals are particularly vulnerable to predators.",
+        "context_explain": "'Vulnerable' is used to describe someone or something open to harm or attack."
+      }
+    ],
+    "venice": {
+      "time": "5분",
+      "theme": "Review",
+      "content": "Words"
+    },
+    "wordLearn": {
+      "time": "8분",
+      "content": "Learn"
+    },
+    "wordTest": {
+      "time": "5분",
+      "questionsCount": 12,
+      "questions": [
+        {
+          "question": "What does 'ambiguous' mean?",
+          "choices": [
+            "Clear and understandable",
+            "Open to more than one interpretation",
+            "Definite and explicit",
+            "Simple and straightforward"
+          ],
+          "answer": "Open to more than one interpretation"
+        },
+        {
+          "question": "Which word means 'to think deeply about'?",
+          "choices": [
+            "Contemplate",
+            "Ignore",
+            "Dismiss",
+            "Overlook"
+          ],
+          "answer": "Contemplate"
+        },
+        {
+          "question": "What is the meaning of 'diligent'?",
+          "choices": [
+            "Lazy and inattentive",
+            "Showing care and effort",
+            "Indifferent and apathetic",
+            "Neglectful and careless"
+          ],
+          "answer": "Showing care and effort"
+        },
+        {
+          "question": "If something is 'feasible', it is:",
+          "choices": [
+            "Impossible to achieve",
+            "Possible to do easily",
+            "Unlikely to happen",
+            "Inconvenient to manage"
+          ],
+          "answer": "Possible to do easily"
+        },
+        {
+          "question": "What does it mean if a judge is 'impartial'?",
+          "choices": [
+            "Biased and unfair",
+            "Treating all equally",
+            "Prejudiced and one-sided",
+            "Partial and subjective"
+          ],
+          "answer": "Treating all equally"
+        },
+        {
+          "question": "What does 'intricate' describe?",
+          "choices": [
+            "Simple and plain",
+            "Very complicated or detailed",
+            "Easy to understand",
+            "Straightforward and clear"
+          ],
+          "answer": "Very complicated or detailed"
+        },
+        {
+          "question": "Which word describes something 'clear or obvious to the eye or mind'?",
+          "choices": [
+            "Manifest",
+            "Hidden",
+            "Obscure",
+            "Ambiguous"
+          ],
+          "answer": "Manifest"
+        },
+        {
+          "question": "The word 'notorious' is best associated with:",
+          "choices": [
+            "Renowned for good deeds",
+            "Famous for bad quality",
+            "Unknown and obscure",
+            "Respected and honored"
+          ],
+          "answer": "Famous for bad quality"
+        },
+        {
+          "question": "What does 'obsolete' mean?",
+          "choices": [
+            "Modern and current",
+            "No longer in use",
+            "Cutting-edge",
+            "State-of-the-art"
+          ],
+          "answer": "No longer in use"
+        },
+        {
+          "question": "If someone is 'prudent', they are:",
+          "choices": [
+            "Reckless and rash",
+            "Careful and thoughtful",
+            "Impulsive and careless",
+            "Unwise and imprudent"
+          ],
+          "answer": "Careful and thoughtful"
+        },
+        {
+          "question": "What is the meaning of 'resilient'?",
+          "choices": [
+            "Easily broken",
+            "Able to recover quickly",
+            "Fragile and delicate",
+            "Weak and vulnerable"
+          ],
+          "answer": "Able to recover quickly"
+        },
+        {
+          "question": "What does 'tedious' mean?",
+          "choices": [
+            "Exciting and thrilling",
+            "Too long and dull",
+            "Short and sweet",
+            "Engaging and interesting"
+          ],
+          "answer": "Too long and dull"
+        }
+      ],
+      "testType": "matching"
+    }
+  },
+  "homework": {
+    "title": "기초/핵심 과제",
+    "items": [
+      {
+        "type": "reading",
+        "title": "5개 지문 풀이 분석"
+      },
+      {
+        "type": "listening",
+        "title": "6개 듣기 실전 딕테이션"
+      },
+      {
+        "type": "vocab",
+        "title": "10개 단어 완벽 암기"
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "[S.S.S note]_미적분_초급단계_04-1.지수로그함수의극한(23)_p3_01",
+    "source_file": "[S.S.S note]_미적분_초급단계_04-1.지수로그함수의극한(23)",
+    "source_page": 3,
+    "section_index": "",
+    "section_title": "",
+    "card_index": "01",
+    "card_title": "지수함수와 로그함수의 극한",
+    "y_start": 277,
+    "y_end": 1602,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_04-1.지수로그함수의극한(23)_p5_02",
+    "source_file": "[S.S.S note]_미적분_초급단계_04-1.지수로그함수의극한(23)",
+    "source_page": 5,
+    "section_index": "",
+    "section_title": "",
+    "card_index": "02",
+    "card_title": "무리수 e 와 자연로그",
+    "y_start": 277,
+    "y_end": 1602,
+    "file_png": "card_02_p5.webp"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_04-1.지수로그함수의극한(23)_p8_03",
+    "source_file": "[S.S.S note]_미적분_초급단계_04-1.지수로그함수의극한(23)",
+    "source_page": 8,
+    "section_index": "",
+    "section_title": "",
+    "card_index": "03",
+    "card_title": "e 의 정의를 이용한 로그함수와 지수함수의 극한",
+    "y_start": 277,
+    "y_end": 1602,
+    "file_png": "card_03_p8.webp"
+  }
+]

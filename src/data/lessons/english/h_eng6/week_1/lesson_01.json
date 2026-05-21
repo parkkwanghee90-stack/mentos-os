@@ -1,0 +1,539 @@
+{
+  "teacherId": "h_eng6",
+  "round": 1,
+  "title": "Curriculum Mode for 3등급",
+  "targetGrades": [
+    "고3"
+  ],
+  "targetRanks": [
+    "3등급"
+  ],
+  "reading": {
+    "passageCount": 10,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "The ancient city of Petra, located in modern-day Jordan, is a remarkable archaeological site. It was the capital of the Nabatean Kingdom and is famous for its rock-cut architecture. Visitors often marvel at the Treasury, an elaborate facade carved into sandstone cliffs. Petra's strategic location made it a significant center for trade in ancient times. Today, it is a UNESCO World Heritage Site and continues to attract tourists from around the world.",
+        "teachPoint": "Identify the historical significance of Petra and its role in trade.",
+        "question": "What makes Petra a significant archaeological site?"
+      },
+      {
+        "id": "Passage_2",
+        "text": "Photosynthesis is an essential process carried out by plants, algae, and some bacteria. It involves converting sunlight into chemical energy, which is stored in glucose. Chlorophyll, the green pigment in leaves, plays a crucial role in capturing light energy. This process not only provides energy for plant growth but also releases oxygen into the atmosphere. Understanding photosynthesis helps us appreciate the vital role plants play in sustaining life on Earth.",
+        "teachPoint": "Explain the process of photosynthesis and its importance.",
+        "question": "How does photosynthesis contribute to life on Earth?"
+      },
+      {
+        "id": "Passage_3",
+        "text": "The invention of the printing press by Johannes Gutenberg in the 15th century revolutionized the way information was disseminated. Before its invention, books were laboriously copied by hand, making them scarce and expensive. The printing press allowed for the mass production of books, increasing accessibility and literacy rates. This technological advancement played a pivotal role in the spread of knowledge during the Renaissance. It laid the foundation for the modern knowledge-based society.",
+        "teachPoint": "Discuss the impact of the printing press on society and education.",
+        "question": "What was the significance of Gutenberg's printing press?"
+      },
+      {
+        "id": "Passage_4",
+        "text": "The Great Barrier Reef, located off the coast of Australia, is the world's largest coral reef system. It is composed of over 2,900 individual reefs and 900 islands stretching over 2,300 kilometers. The reef is home to a diverse range of marine life, including many endangered species. However, climate change and human activities pose significant threats to its survival. Conservation efforts are crucial to protect this natural wonder for future generations.",
+        "teachPoint": "Highlight the environmental importance and threats to the Great Barrier Reef.",
+        "question": "Why is the Great Barrier Reef important to marine biodiversity?"
+      },
+      {
+        "id": "Passage_5",
+        "text": "The phenomenon of globalization has reshaped the world in various ways. It refers to the increasing interconnectedness of economies, cultures, and populations across the globe. Advances in technology and transportation have accelerated this process, making it easier for people and goods to move across borders. While globalization has led to economic growth and cultural exchange, it has also raised concerns about inequality and cultural homogenization. Balancing these effects is a challenge faced by many countries today.",
+        "teachPoint": "Analyze the effects of globalization on modern society.",
+        "question": "What are some positive and negative impacts of globalization?"
+      },
+      {
+        "id": "Passage_6",
+        "text": "The ancient city of Petra, located in modern-day Jordan, is renowned for its rock-cut architecture and water conduit system. This historical marvel was the capital of the Nabataean Kingdom and is a symbol of the incredible engineering skills of its builders. The city was strategically positioned at the crossroads of several trade routes, which contributed to its prosperity. Today, Petra is a UNESCO World Heritage Site and attracts thousands of tourists each year. Its most famous structure, the Treasury, is a testament to the artistry and craftsmanship of the Nabataeans.",
+        "teachPoint": "Identify the main idea of a passage.",
+        "question": "What is the main idea of the passage about Petra?"
+      },
+      {
+        "id": "Passage_7",
+        "text": "The process of photosynthesis is fundamental to life on Earth, allowing plants to convert sunlight into energy. This process not only provides food for the plants themselves but also produces oxygen, which is essential for most living organisms. During photosynthesis, plants absorb carbon dioxide and release oxygen, helping to maintain the balance of gases in the Earth's atmosphere. Furthermore, the glucose produced serves as a source of energy for various organisms. Understanding photosynthesis is crucial for advancements in agriculture and renewable energy.",
+        "teachPoint": "Explain the importance of photosynthesis.",
+        "question": "Why is photosynthesis considered fundamental to life on Earth?"
+      },
+      {
+        "id": "Passage_8",
+        "text": "In recent years, the concept of minimalism has gained popularity, encouraging individuals to live with less and focus on what truly matters. This lifestyle emphasizes the importance of reducing clutter, both physically and mentally, to achieve a more fulfilling life. Minimalists argue that owning fewer possessions can lead to increased happiness and reduced stress. Additionally, minimalism often promotes environmental sustainability by encouraging mindful consumption. As people embrace minimalism, they often find a greater sense of freedom and purpose.",
+        "teachPoint": "Summarize the benefits of minimalism.",
+        "question": "What are some benefits of adopting a minimalist lifestyle?"
+      },
+      {
+        "id": "Passage_9",
+        "text": "The discovery of antibiotics in the 20th century revolutionized medicine and has saved countless lives. These powerful medications can effectively treat bacterial infections that were once deadly. However, the overuse and misuse of antibiotics have led to the emergence of antibiotic-resistant bacteria. This resistance poses a significant threat to global health, as it can render treatments ineffective and lead to longer illnesses or increased mortality. Addressing this issue requires responsible prescribing practices and ongoing research to develop new antibiotics.",
+        "teachPoint": "Discuss the impact of antibiotic resistance.",
+        "question": "What are the consequences of antibiotic resistance?"
+      },
+      {
+        "id": "Passage_10",
+        "text": "The rise of remote work has transformed the traditional office environment, offering both challenges and opportunities. Many employees enjoy the flexibility and autonomy that remote work provides, allowing them to balance their personal and professional lives more effectively. However, remote work can also lead to feelings of isolation and difficulties in communication. Employers are tasked with finding ways to maintain team cohesion and productivity in a virtual setting. As technology continues to evolve, the future of work may further blend remote and in-person elements.",
+        "teachPoint": "Evaluate the pros and cons of remote work.",
+        "question": "What are some advantages and disadvantages of remote work?"
+      }
+    ],
+    "teachPoints": [
+      "Identify the historical significance of Petra and its role in trade.",
+      "Explain the process of photosynthesis and its importance.",
+      "Discuss the impact of the printing press on society and education.",
+      "Highlight the environmental importance and threats to the Great Barrier Reef.",
+      "Analyze the effects of globalization on modern society.",
+      "Identify the main idea of a passage.",
+      "Explain the importance of photosynthesis.",
+      "Summarize the benefits of minimalism.",
+      "Discuss the impact of antibiotic resistance.",
+      "Evaluate the pros and cons of remote work."
+    ],
+    "questions": [
+      "What makes Petra a significant archaeological site?",
+      "How does photosynthesis contribute to life on Earth?",
+      "What was the significance of Gutenberg's printing press?",
+      "Why is the Great Barrier Reef important to marine biodiversity?",
+      "What are some positive and negative impacts of globalization?",
+      "What is the main idea of the passage about Petra?",
+      "Why is photosynthesis considered fundamental to life on Earth?",
+      "What are some benefits of adopting a minimalist lifestyle?",
+      "What are the consequences of antibiotic resistance?",
+      "What are some advantages and disadvantages of remote work?"
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "id": "AudioItem_1",
+        "script": "M: Hey, did you hear about the new cafe that opened downtown?\nW: No, I haven't. What's it like?\nM: It's really cozy and they have great coffee. Plus, they offer live music on weekends.\nW: That sounds like a perfect place to relax. Do they have any special desserts?\nM: Yes, their chocolate cake is amazing. You should definitely try it.\nW: I'll make sure to visit this weekend. Thanks for the recommendation!",
+        "points": "Discussing a new cafe",
+        "choices": [
+          "A new movie",
+          "A new cafe",
+          "A new bookstore",
+          "A new gym",
+          "A new park"
+        ],
+        "answer": "A new cafe",
+        "explanation": "The conversation is about the new cafe and its features, such as coffee, live music, and desserts."
+      },
+      {
+        "id": "AudioItem_2",
+        "script": "W: Did you finish reading the book I lent you?\nM: Yes, I did. It was quite an interesting story.\nW: I'm glad you liked it. What did you think of the ending?\nM: I thought it was surprising but fitting for the plot.\nW: I agree. The author has a knack for unexpected twists.\nM: Do you have any other book recommendations by the same author?",
+        "points": "Discussing a book",
+        "choices": [
+          "Discussing a movie",
+          "Discussing a book",
+          "Discussing a game",
+          "Discussing a show",
+          "Discussing a trip"
+        ],
+        "answer": "Discussing a book",
+        "explanation": "The dialogue revolves around a book, its story, and the author's writing style."
+      },
+      {
+        "id": "AudioItem_3",
+        "script": "M: What are your plans for the holiday season?\nW: I'm thinking of visiting my family. We haven't spent much time together lately.\nM: That sounds wonderful. Do you have any special traditions?\nW: Yes, we usually bake cookies and decorate the tree together.\nM: That sounds like a lot of fun. I hope you have a great time.\nW: Thanks! I'm really looking forward to it.",
+        "points": "Discussing holiday plans",
+        "choices": [
+          "Discussing holiday plans",
+          "Discussing a business trip",
+          "Discussing a wedding",
+          "Discussing a conference",
+          "Discussing a festival"
+        ],
+        "answer": "Discussing holiday plans",
+        "explanation": "The conversation is about plans for the holiday season, including visiting family and traditions."
+      },
+      {
+        "id": "AudioItem_4",
+        "script": "W: Have you seen the latest episode of that TV series?\nM: Not yet, I'm waiting for the weekend to binge-watch it.\nW: It's so good! The plot twist in the last episode was mind-blowing.\nM: Really? Now I can't wait to watch it. Did it end on a cliffhanger?\nW: Yes, and it's driving me crazy! I need to know what happens next.\nM: I guess I need to catch up quickly then.",
+        "points": "Discussing a TV series",
+        "choices": [
+          "Discussing a book",
+          "Discussing a TV series",
+          "Discussing a game",
+          "Discussing a concert",
+          "Discussing a sports event"
+        ],
+        "answer": "Discussing a TV series",
+        "explanation": "The dialogue is focused on a TV series, mentioning episodes, plot twists, and cliffhangers."
+      },
+      {
+        "id": "AudioItem_5",
+        "script": "M: Are you going to the music festival this weekend?\nW: I am! I can't wait to see my favorite band perform live.\nM: Me too. I've heard their live performances are incredible.\nW: Do you know what time they're supposed to go on stage?\nM: I think they're scheduled for 8 PM, but it's always good to check the schedule online.\nW: Great, I'll make sure to do that. It's going to be an amazing night!",
+        "points": "Discussing a music festival",
+        "choices": [
+          "Discussing a music festival",
+          "Discussing a movie premiere",
+          "Discussing a sports match",
+          "Discussing a theater play",
+          "Discussing a workshop"
+        ],
+        "answer": "Discussing a music festival",
+        "explanation": "The conversation is about attending a music festival, with mentions of live performances and the schedule."
+      },
+      {
+        "id": "AudioItem_6",
+        "script": "M: Hi, Sarah. Have you started reading the book for our literature class?\nW: Yes, I just finished the first chapter. How about you?\nM: I'm still on the first few pages. It's quite interesting so far.\nW: I agree. The way the author describes the characters is fascinating.\nM: True. I especially like how detailed the settings are.\nW: Same here. It's like you can picture everything vividly in your mind.",
+        "points": "2",
+        "choices": [
+          "Sarah hasn't started reading the book.",
+          "Both have finished the entire book.",
+          "They are discussing a literature assignment.",
+          "They are planning to start a new book.",
+          "Sarah doesn't like the book."
+        ],
+        "answer": "They are discussing a literature assignment.",
+        "explanation": "The conversation is about their progress and opinions on a book they are reading for a literature class."
+      },
+      {
+        "id": "AudioItem_7",
+        "script": "M: Have you tried the new cafe downtown?\nW: Not yet. Is it any good?\nM: I went there last weekend, and the coffee was excellent.\nW: That's good to hear. How about the food?\nM: The pastries were delicious. You should try the croissants.\nW: I'll make sure to check it out soon. Thanks for the recommendation!",
+        "points": "2",
+        "choices": [
+          "W has already visited the cafe.",
+          "M didn't like the coffee.",
+          "They are planning to go to a restaurant.",
+          "M recommends trying the croissants.",
+          "W doesn't drink coffee."
+        ],
+        "answer": "M recommends trying the croissants.",
+        "explanation": "M shares his experience at the new cafe and specifically recommends the croissants."
+      },
+      {
+        "id": "AudioItem_8",
+        "script": "W: Are you going to the gym after work?\nM: Yes, I plan to. Do you want to join me?\nW: I would love to, but I have a meeting until late.\nM: That's too bad. Maybe next time?\nW: Definitely. I need to get back into my fitness routine.\nM: Let me know when you're available, and we can go together.",
+        "points": "2",
+        "choices": [
+          "W is free to go to the gym.",
+          "M doesn't like going to the gym.",
+          "W has a meeting that prevents her from going.",
+          "They are discussing a work project.",
+          "They plan to meet at a cafe."
+        ],
+        "answer": "W has a meeting that prevents her from going.",
+        "explanation": "W expresses her desire to join M but mentions a meeting that conflicts with going to the gym."
+      },
+      {
+        "id": "AudioItem_9",
+        "script": "M: Have you seen the latest movie by that director?\nW: Not yet, but I've heard it's amazing.\nM: I watched it last night, and it exceeded my expectations.\nW: Really? What did you like about it?\nM: The storyline was captivating, and the visuals were stunning.\nW: I'll have to see it soon, then. Thanks for the heads up!",
+        "points": "2",
+        "choices": [
+          "W has already watched the movie.",
+          "M didn't enjoy the movie.",
+          "They are discussing a book.",
+          "M praises the movie's storyline and visuals.",
+          "W thinks the movie is not worth watching."
+        ],
+        "answer": "M praises the movie's storyline and visuals.",
+        "explanation": "M shares his positive experience of the movie, highlighting both the storyline and the visuals."
+      },
+      {
+        "id": "AudioItem_10",
+        "script": "W: Are you attending the conference next week?\nM: Yes, I am. Are you going as well?\nW: I am, but I'm a bit nervous about my presentation.\nM: I'm sure you'll do great. Just remember to practice.\nW: Thanks, I will. Do you have a presentation too?\nM: No, I'm just attending the sessions. It'll be nice to learn from others.",
+        "points": "2",
+        "choices": [
+          "W is confident about her presentation.",
+          "M is giving a presentation at the conference.",
+          "M is attending sessions to learn.",
+          "W is not attending the conference.",
+          "They are talking about a workshop."
+        ],
+        "answer": "M is attending sessions to learn.",
+        "explanation": "M clarifies that he is attending the conference to learn from others and is not presenting."
+      }
+    ],
+    "points": [
+      "Discussing a new cafe",
+      "Discussing a book",
+      "Discussing holiday plans",
+      "Discussing a TV series",
+      "Discussing a music festival",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2"
+    ],
+    "timeline": [
+      "[0m] Audio",
+      "[1m] Audio",
+      "[2m] Audio",
+      "[3m] Audio",
+      "[4m] Audio",
+      "[5m] Audio",
+      "[6m] Audio",
+      "[7m] Audio",
+      "[8m] Audio",
+      "[9m] Audio"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "appreciate",
+        "meaning": "to recognize the value of something",
+        "alt_meaning": "to increase in value",
+        "example_sentence": "We appreciate your efforts in completing the project on time.",
+        "context_explain": "여기서는 상대방의 노고를 인정하고 감사하는 뜻으로 사용되었습니다."
+      },
+      {
+        "word": "compromise",
+        "meaning": "to settle a dispute by mutual concession",
+        "alt_meaning": "to weaken a principle",
+        "example_sentence": "They reached a compromise after hours of negotiation.",
+        "context_explain": "상호 양보를 통해 분쟁을 해결하는 것을 의미합니다."
+      },
+      {
+        "word": "address",
+        "meaning": "to speak to someone",
+        "alt_meaning": "to deal with a problem",
+        "example_sentence": "The manager will address the staff regarding the new policy changes.",
+        "context_explain": "청중에게 연설하거나 직접 문제를 다루는 상황을 나타냅니다."
+      },
+      {
+        "word": "subject",
+        "meaning": "a person or thing that is being discussed",
+        "alt_meaning": "to make someone experience something",
+        "example_sentence": "The subject of the meeting was the upcoming project deadline.",
+        "context_explain": "회의의 주제가 되는 것을 의미합니다."
+      },
+      {
+        "word": "yield",
+        "meaning": "to produce or provide",
+        "alt_meaning": "to give way to arguments or pressure",
+        "example_sentence": "The research yielded important findings.",
+        "context_explain": "연구를 통해 중요한 결과를 산출하는 것을 의미합니다."
+      },
+      {
+        "word": "observe",
+        "meaning": "to watch carefully",
+        "alt_meaning": "to follow a law or custom",
+        "example_sentence": "We should observe the rules of the community.",
+        "context_explain": "규칙이나 관습을 따르는 것을 의미합니다."
+      },
+      {
+        "word": "engage",
+        "meaning": "to participate or become involved in",
+        "alt_meaning": "to hire someone",
+        "example_sentence": "She was eager to engage in the discussion.",
+        "context_explain": "적극적으로 토론에 참여하고 싶은 상황을 나타냅니다."
+      },
+      {
+        "word": "secure",
+        "meaning": "to get something important",
+        "alt_meaning": "to make safe",
+        "example_sentence": "They managed to secure a contract with a major client.",
+        "context_explain": "중요한 계약을 체결하는 것을 의미합니다."
+      },
+      {
+        "word": "reflect",
+        "meaning": "to think carefully about something",
+        "alt_meaning": "to show an image",
+        "example_sentence": "He took some time to reflect on his career choices.",
+        "context_explain": "자신의 경력 선택에 대해 깊이 생각하는 것을 의미합니다."
+      },
+      {
+        "word": "commit",
+        "meaning": "to dedicate oneself to a cause",
+        "alt_meaning": "to perform a crime",
+        "example_sentence": "She decided to commit to the volunteer project.",
+        "context_explain": "자신을 자원 봉사 프로젝트에 헌신하기로 결정하는 것을 의미합니다."
+      },
+      {
+        "word": "challenge",
+        "meaning": "to invite someone to compete",
+        "alt_meaning": "to question the truth of something",
+        "example_sentence": "The athlete challenged his rival to a race.",
+        "context_explain": "경쟁자를 경주에 초대하여 도전하는 상황을 나타냅니다."
+      },
+      {
+        "word": "assume",
+        "meaning": "to take for granted without proof",
+        "alt_meaning": "to take on a responsibility",
+        "example_sentence": "He assumed the new role with confidence.",
+        "context_explain": "새로운 역할을 자신 있게 맡는 상황을 의미합니다."
+      },
+      {
+        "word": "conduct",
+        "meaning": "to organize and carry out",
+        "alt_meaning": "behavior, especially in a particular context",
+        "example_sentence": "The scientist conducted an experiment to test the hypothesis.",
+        "context_explain": "가설을 테스트하기 위한 실험을 수행하는 것을 의미합니다."
+      },
+      {
+        "word": "maintain",
+        "meaning": "to keep something in good condition",
+        "alt_meaning": "to state something strongly",
+        "example_sentence": "He maintained his innocence throughout the trial.",
+        "context_explain": "무죄를 강하게 주장하는 상황을 의미합니다."
+      },
+      {
+        "word": "indicate",
+        "meaning": "to point out or show",
+        "alt_meaning": "to be a sign of",
+        "example_sentence": "The report indicates a rise in temperatures.",
+        "context_explain": "온도가 상승하고 있음을 보여주는 것을 의미합니다."
+      },
+      {
+        "word": "generate",
+        "meaning": "to produce or create",
+        "alt_meaning": "to cause something to happen",
+        "example_sentence": "The new policy is expected to generate more jobs.",
+        "context_explain": "새로운 정책이 더 많은 일자리를 창출할 것으로 예상되는 상황을 의미합니다."
+      }
+    ],
+    "wordTest": {
+      "questionsCount": 12,
+      "questions": [
+        {
+          "type": "meaning_choice",
+          "question": "What does 'compromise' mean in the sentence 'They reached a compromise after hours of negotiation'?",
+          "choices": [
+            "to weaken a principle",
+            "to settle a dispute by mutual concession",
+            "to recognize the value of something",
+            "to increase in value"
+          ],
+          "answer": "to settle a dispute by mutual concession"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'reflect' mean in the sentence 'He took some time to reflect on his career choices'?",
+          "choices": [
+            "to show an image",
+            "to increase in value",
+            "to think carefully about something",
+            "to follow a law or custom"
+          ],
+          "answer": "to think carefully about something"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'engage' mean in the sentence 'She was eager to engage in the discussion'?",
+          "choices": [
+            "to participate or become involved in",
+            "to hire someone",
+            "to make safe",
+            "to perform a crime"
+          ],
+          "answer": "to participate or become involved in"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'yield' mean in the sentence 'The research yielded important findings'?",
+          "choices": [
+            "to give way to arguments or pressure",
+            "to produce or provide",
+            "to settle a dispute by mutual concession",
+            "to follow a law or custom"
+          ],
+          "answer": "to produce or provide"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'secure' mean in the sentence 'They managed to secure a contract with a major client'?",
+          "choices": [
+            "to get something important",
+            "to make safe",
+            "to hire someone",
+            "to dedicate oneself to a cause"
+          ],
+          "answer": "to get something important"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'commit' mean in the sentence 'She decided to commit to the volunteer project'?",
+          "choices": [
+            "to perform a crime",
+            "to dedicate oneself to a cause",
+            "to recognize the value of something",
+            "to make safe"
+          ],
+          "answer": "to dedicate oneself to a cause"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'conduct' mean in the sentence 'The scientist conducted an experiment to test the hypothesis'?",
+          "choices": [
+            "behavior, especially in a particular context",
+            "to organize and carry out",
+            "to recognize the value of something",
+            "to show an image"
+          ],
+          "answer": "to organize and carry out"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'address' mean in the sentence 'The manager will address the staff regarding the new policy changes'?",
+          "choices": [
+            "to speak to someone",
+            "to deal with a problem",
+            "to show an image",
+            "to increase in value"
+          ],
+          "answer": "to speak to someone"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'maintain' mean in the sentence 'He maintained his innocence throughout the trial'?",
+          "choices": [
+            "to keep something in good condition",
+            "to state something strongly",
+            "to point out or show",
+            "to increase in value"
+          ],
+          "answer": "to state something strongly"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'subject' mean in the sentence 'The subject of the meeting was the upcoming project deadline'?",
+          "choices": [
+            "to make someone experience something",
+            "a person or thing that is being discussed",
+            "to produce or create",
+            "to settle a dispute by mutual concession"
+          ],
+          "answer": "a person or thing that is being discussed"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'indicate' mean in the sentence 'The report indicates a rise in temperatures'?",
+          "choices": [
+            "to point out or show",
+            "to be a sign of",
+            "to dedicate oneself to a cause",
+            "to follow a law or custom"
+          ],
+          "answer": "to point out or show"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'generate' mean in the sentence 'The new policy is expected to generate more jobs'?",
+          "choices": [
+            "to cause something to happen",
+            "to produce or create",
+            "to participate or become involved in",
+            "to take for granted without proof"
+          ],
+          "answer": "to produce or create"
+        }
+      ]
+    }
+  },
+  "homework": {
+    "title": "HW",
+    "items": [
+      {
+        "type": "reading",
+        "title": "10 items"
+      },
+      {
+        "type": "listening",
+        "title": "10 items"
+      },
+      {
+        "type": "vocab",
+        "title": "10 items"
+      }
+    ]
+  }
+}

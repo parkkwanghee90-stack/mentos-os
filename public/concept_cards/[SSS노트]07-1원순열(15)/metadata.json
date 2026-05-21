@@ -1,0 +1,38 @@
+[
+  {
+    "id": "[SSS노트]07-1원순열(15)_p3_01",
+    "source_file": "[SSS노트]07-1원순열(15)",
+    "source_page": 3,
+    "section_index": "02",
+    "section_title": "원순열",
+    "card_index": "01",
+    "card_title": "원순열의 수",
+    "y_start": 342,
+    "y_end": 1602,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[SSS노트]07-1원순열(15)_p4_02",
+    "source_file": "[SSS노트]07-1원순열(15)",
+    "source_page": 4,
+    "section_index": "02",
+    "section_title": "원순열",
+    "card_index": "02",
+    "card_title": "이웃하는 또는 이웃하지 않게 하는 원순열의 수",
+    "y_start": 278,
+    "y_end": 1602,
+    "file_png": "card_02_p4.webp"
+  },
+  {
+    "id": "[SSS노트]07-1원순열(15)_p5_03",
+    "source_file": "[SSS노트]07-1원순열(15)",
+    "source_page": 5,
+    "section_index": "02",
+    "section_title": "원순열",
+    "card_index": "03",
+    "card_title": "원이 아닌 다른 도형 모양의 다각형 탁자에",
+    "y_start": 278,
+    "y_end": 1602,
+    "file_png": "card_03_p5.webp"
+  }
+]

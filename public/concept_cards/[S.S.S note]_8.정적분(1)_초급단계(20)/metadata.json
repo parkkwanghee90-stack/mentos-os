@@ -1,0 +1,98 @@
+[
+  {
+    "id": "[S.S.S note]_8.정적분(1)_초급단계(20)_p3_01",
+    "source_file": "[S.S.S note]_8.정적분(1)_초급단계(20)",
+    "source_page": 3,
+    "section_index": "01",
+    "section_title": "정적분의 정의",
+    "card_index": "01",
+    "card_title": "구분구적법",
+    "y_start": 343,
+    "y_end": 1602,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[S.S.S note]_8.정적분(1)_초급단계(20)_p6_02",
+    "source_file": "[S.S.S note]_8.정적분(1)_초급단계(20)",
+    "source_page": 6,
+    "section_index": "01",
+    "section_title": "정적분의 정의",
+    "card_index": "02",
+    "card_title": "정적분의 정의",
+    "y_start": 278,
+    "y_end": 1602,
+    "file_png": "card_02_p6.webp"
+  },
+  {
+    "id": "[S.S.S note]_8.정적분(1)_초급단계(20)_p7_03",
+    "source_file": "[S.S.S note]_8.정적분(1)_초급단계(20)",
+    "source_page": 7,
+    "section_index": "01",
+    "section_title": "정적분의 정의",
+    "card_index": "03",
+    "card_title": "미적분의 기본 정리",
+    "y_start": 277,
+    "y_end": 1602,
+    "file_png": "card_03_p7.webp"
+  },
+  {
+    "id": "[S.S.S note]_8.정적분(1)_초급단계(20)_p8_04",
+    "source_file": "[S.S.S note]_8.정적분(1)_초급단계(20)",
+    "source_page": 8,
+    "section_index": "01",
+    "section_title": "정적분의 정의",
+    "card_index": "04",
+    "card_title": "정적분과 미분의 관계",
+    "y_start": 277,
+    "y_end": 1602,
+    "file_png": "card_04_p8.webp"
+  },
+  {
+    "id": "[S.S.S note]_8.정적분(1)_초급단계(20)_p9_01",
+    "source_file": "[S.S.S note]_8.정적분(1)_초급단계(20)",
+    "source_page": 9,
+    "section_index": "02",
+    "section_title": "정적분의 계산",
+    "card_index": "01",
+    "card_title": "정적분의 성질",
+    "y_start": 342,
+    "y_end": 1602,
+    "file_png": "card_01_p9.webp"
+  },
+  {
+    "id": "[S.S.S note]_8.정적분(1)_초급단계(20)_p10_02",
+    "source_file": "[S.S.S note]_8.정적분(1)_초급단계(20)",
+    "source_page": 10,
+    "section_index": "02",
+    "section_title": "정적분의 계산",
+    "card_index": "02",
+    "card_title": "정적분의 부호",
+    "y_start": 280,
+    "y_end": 1602,
+    "file_png": "card_02_p10.webp"
+  },
+  {
+    "id": "[S.S.S note]_8.정적분(1)_초급단계(20)_p12_03",
+    "source_file": "[S.S.S note]_8.정적분(1)_초급단계(20)",
+    "source_page": 12,
+    "section_index": "02",
+    "section_title": "정적분의 계산",
+    "card_index": "03",
+    "card_title": "대칭성과 정적분",
+    "y_start": 280,
+    "y_end": 1602,
+    "file_png": "card_03_p12.webp"
+  },
+  {
+    "id": "[S.S.S note]_8.정적분(1)_초급단계(20)_p13_04",
+    "source_file": "[S.S.S note]_8.정적분(1)_초급단계(20)",
+    "source_page": 13,
+    "section_index": "02",
+    "section_title": "정적분의 계산",
+    "card_index": "04",
+    "card_title": "주기함수와 정적분",
+    "y_start": 280,
+    "y_end": 1602,
+    "file_png": "card_04_p13.webp"
+  }
+]

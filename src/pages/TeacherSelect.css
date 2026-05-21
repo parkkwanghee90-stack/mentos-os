@@ -1,0 +1,508 @@
+.megastudy-container {
+  font-family: 'Pretendard', 'Malgun Gothic', sans-serif;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  height: max-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+
+/* Header Navigation */
+.mega-nav {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0 2rem;
+}
+
+.mega-nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.mega-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  letter-spacing: -0.5px;
+}
+
+.mega-logo span {
+  color: #3b82f6;
+}
+
+.mega-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.mega-links span {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #4b5563;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.mega-links span:hover {
+  color: #2563eb;
+}
+
+/* Hero Section */
+.mega-hero {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.mega-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.mega-hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* Main Content */
+.mega-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+  border-left: 4px solid #2563eb;
+  padding-left: 0.8rem;
+}
+
+/* Tabs */
+.mega-tabs {
+  display: flex;
+  border-bottom: 2px solid #e5e7eb;
+  margin-bottom: 2rem;
+}
+
+.mega-tab-btn {
+  background: none;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.mega-tab-btn:hover {
+  color: #374151;
+}
+
+.mega-tab-btn.active {
+  color: #2563eb;
+}
+
+.mega-tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #2563eb;
+}
+
+/* Grid & Cards */
+.mega-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.mega-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.mega-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.mega-card-image-wrapper {
+  position: relative;
+  height: 320px;
+  background-color: #f3f4f6;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.mega-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom;
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
+.mega-card:hover .mega-card-image {
+  transform: scale(1.1);
+}
+
+.mega-target-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(30, 58, 138, 0.85);
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.mega-card-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.mega-card-subject {
+  font-size: 0.85rem;
+  color: #2563eb;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.mega-card-name {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.mega-card-name:hover {
+  text-decoration: underline;
+}
+
+.mega-card-tagline {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.mega-card-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.mega-btn-secondary {
+  flex: 1;
+  background: white;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  padding: 0.8rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.mega-btn-secondary:hover {
+  background: #f9fafb;
+}
+
+.mega-btn-primary {
+  flex: 1;
+  background: #2563eb;
+  border: 1px solid #2563eb;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.mega-btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.mega-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem;
+  background: white;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Modal Detail */
+.mega-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.mega-modal-content {
+  background: white;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+}
+
+.mega-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #9ca3af;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.mega-modal-close:hover {
+  color: #4b5563;
+}
+
+.mega-modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Desktop row removed to force mobile layout globally */
+
+.mega-modal-left {
+  background-color: #f3f4f6;
+  flex: 0 0 300px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 2rem;
+}
+
+.mega-modal-image {
+  width: 100%;
+  max-width: 280px;
+  object-fit: contain;
+  object-position: bottom;
+  display: block;
+}
+
+.mega-modal-right {
+  padding: 2.5rem;
+  flex: 1;
+}
+
+.mega-modal-subject {
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.mega-modal-name {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.mega-modal-tagline {
+  font-size: 1.1rem;
+  color: #374151;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.mega-modal-intro {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  background: #f9fafb;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.mega-modal-features h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.mega-modal-features ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.mega-modal-features li {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.mega-modal-target {
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 2rem;
+}
+
+.mega-btn-primary.large {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+}
+
+/* 📱 Mobile MVP Adjustments for Teacher Select Screen */
+@media (max-width: 768px) {
+  .megastudy-container {
+    padding-bottom: 2rem;
+  }
+  
+  /* Hide the desktop top nav */
+  .mega-nav {
+    display: none;
+  }
+
+  .mega-school-toggle {
+    flex-direction: column !important;
+    gap: 8px !important;
+    padding: 1rem !important;
+  }
+  
+  .mega-school-toggle button {
+    width: 100%;
+    padding: 10px !important;
+    font-size: 1rem;
+  }
+
+  .mega-hero {
+    padding: 2rem 1rem;
+  }
+
+  .mega-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .mega-hero p {
+    font-size: 0.95rem;
+  }
+
+  .mega-main {
+    padding: 1rem;
+  }
+
+  .mega-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .mega-tab-btn {
+    white-space: nowrap;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+
+  /* 2 columns for teacher cards looks better on mobile, or 1 column. 
+     Since it's a mobile MVP, 1 column shows the image clearly. */
+  .mega-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .mega-card-image-wrapper {
+    height: 250px;
+  }
+  
+  .mega-modal-overlay {
+    padding: 0;
+    align-items: flex-end;
+  }
+  
+  .mega-modal-content {
+    border-radius: 16px 16px 0 0;
+    max-height: 85vh; /* Slightly smaller to ensure buttons are visible */
+    overflow-y: auto;
+  }
+  
+  .mega-modal-left {
+    padding-top: 1rem;
+    height: 160px; /* Reduced image height to save space */
+  }
+  
+  .mega-modal-image {
+    max-width: 150px;
+  }
+  
+  .mega-modal-right {
+    padding: 1.2rem; /* Reduced padding */
+  }
+  
+  .mega-modal-name {
+    font-size: 1.3rem; /* Reduced font */
+  }
+
+  .mega-modal-tagline {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .mega-modal-intro {
+    font-size: 0.85rem;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .mega-btn-primary.large, .mega-btn-secondary.large {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+}
+

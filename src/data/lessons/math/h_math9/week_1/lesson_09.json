@@ -1,0 +1,51 @@
+{
+  "title": "⭐ 정적분 2단계",
+  "core": {
+    "description": "정적분 2단계 핵심",
+    "original_unit": "[2단계] 정적분",
+    "title": "정적분 2단계 - 필수 로직 훈련",
+    "problem_image": "/math_crops/미적분/2단계/calc8/001.webp",
+    "problems": [
+      {
+        "number": 1,
+        "questionImage": "/math_crops/미적분/2단계/calc8/001.webp",
+        "solutionText": "정적분 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 2,
+        "questionImage": "/math_crops/미적분/2단계/calc8/002.webp",
+        "solutionText": "정적분 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 3,
+        "questionImage": "/math_crops/미적분/2단계/calc8/003.webp",
+        "solutionText": "정적분 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 4,
+        "questionImage": "/math_crops/미적분/2단계/calc8/004.webp",
+        "solutionText": "정적분 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 5,
+        "questionImage": "/math_crops/미적분/2단계/calc8/005.webp",
+        "solutionText": "정적분 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      }
+    ]
+  }
+}

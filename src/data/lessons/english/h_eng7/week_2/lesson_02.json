@@ -1,0 +1,598 @@
+{
+  "teacherId": "h_eng7",
+  "round": 2,
+  "title": "SSOT Track: h_eng7 Week 2 Lesson 2",
+  "targetGrades": [
+    "고3"
+  ],
+  "targetRanks": [
+    "2~3등급"
+  ],
+  "reading": {
+    "passageCount": 8,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "In today's fast-paced world, stress management has become a necessity. People are constantly faced with numerous responsibilities and challenges. Consequently, learning effective stress management techniques can greatly enhance one's quality of life. For instance, regular exercise and meditation have proven to be beneficial. Moreover, maintaining a balanced diet and getting enough sleep are crucial components. By adopting these habits, individuals can better handle stress and improve their overall well-being.",
+        "teachPoint": "Understanding the importance of stress management techniques in enhancing quality of life.",
+        "question": "What are some effective stress management techniques mentioned in the passage?"
+      },
+      {
+        "id": "Passage_2",
+        "text": "The Great Wall of China is not just a wall but a symbol of Chinese strength and perseverance. Constructed over several dynasties, it stretches for thousands of miles. Originally built to protect against invasions, it now stands as a testament to the country's historical resilience. Tourists from all over the world visit to witness its grandeur. Despite its age, the Great Wall continues to captivate the hearts of many.",
+        "teachPoint": "Recognizing the historical and cultural significance of the Great Wall of China.",
+        "question": "What was the primary purpose of the Great Wall of China when it was built?"
+      },
+      {
+        "id": "Passage_3",
+        "text": "Social media has transformed the way people communicate. Platforms like Facebook, Instagram, and Twitter allow users to connect instantly with friends and family. This instant connectivity has its advantages, such as strengthening relationships and sharing experiences. However, it also presents challenges like privacy concerns and online harassment. Users must navigate these platforms carefully to maintain a positive online presence.",
+        "teachPoint": "Identifying the benefits and challenges of social media communication.",
+        "question": "What are some benefits and challenges of social media mentioned in the passage?"
+      },
+      {
+        "id": "Passage_4",
+        "text": "Renewable energy sources are becoming increasingly important in today's world. With the depletion of fossil fuels, alternatives like solar and wind energy are gaining popularity. These sources are not only sustainable but also environmentally friendly. Governments worldwide are investing in renewable technologies to reduce carbon emissions. This shift towards clean energy is crucial for combating climate change.",
+        "teachPoint": "Understanding the role of renewable energy in addressing climate change.",
+        "question": "Why are renewable energy sources gaining popularity according to the passage?"
+      },
+      {
+        "id": "Passage_5",
+        "text": "The art of storytelling has been a vital part of human culture. Stories have the power to entertain, educate, and inspire. They can convey complex ideas in a simple and relatable manner. Throughout history, storytelling has been a means to preserve culture and traditions. In today's digital age, storytelling continues to evolve through various media, reaching wider audiences.",
+        "teachPoint": "Appreciating the enduring impact of storytelling on culture and society.",
+        "question": "How has storytelling evolved in the digital age according to the passage?"
+      },
+      {
+        "id": "Passage_6",
+        "text": "The development of technology has significantly influenced the way people communicate. Over the past few decades, the introduction of the internet and mobile devices has revolutionized interaction. People can now connect instantly with others across the globe through social media and messaging apps. Additionally, video conferencing platforms have made remote work and learning possible, especially during the COVID-19 pandemic. However, this technological advancement also presents some challenges. For instance, the overuse of digital devices can lead to a decrease in face-to-face communication skills.",
+        "teachPoint": "Understanding the impact of technology on communication.",
+        "question": "What are some challenges that technological advancements have brought to communication?"
+      },
+      {
+        "id": "Passage_7",
+        "text": "Renewable energy sources are becoming increasingly important in the fight against climate change. Unlike fossil fuels, renewable energy is derived from natural processes that are constantly replenished, such as sunlight, wind, and water. Solar panels and wind turbines are commonly used to harness these energy sources. The shift towards renewable energy is crucial as it helps reduce greenhouse gas emissions and dependence on non-renewable resources. Although the initial costs of setting up renewable energy systems can be high, the long-term benefits, including sustainability and lower operational costs, are significant.",
+        "teachPoint": "The significance of transitioning to renewable energy.",
+        "question": "What are the long-term benefits of using renewable energy sources compared to fossil fuels?"
+      },
+      {
+        "id": "Passage_8",
+        "text": "In recent years, mindfulness and meditation have gained popularity as effective stress management techniques. Practicing mindfulness involves paying attention to the present moment without judgment, which can help reduce anxiety and improve mental clarity. Meditation, on the other hand, often involves specific practices such as focused breathing or visualization to calm the mind. Scientific studies have shown that regular practice of mindfulness and meditation can lead to physical and mental health benefits like lower blood pressure and enhanced emotional well-being. Despite these benefits, some people may find it challenging to incorporate these practices into their daily routine.",
+        "teachPoint": "Exploring the benefits of mindfulness and meditation.",
+        "question": "What obstacles might people face when trying to practice mindfulness and meditation regularly?"
+      }
+    ],
+    "teachPoints": [
+      "Understanding the importance of stress management techniques in enhancing quality of life.",
+      "Recognizing the historical and cultural significance of the Great Wall of China.",
+      "Identifying the benefits and challenges of social media communication.",
+      "Understanding the role of renewable energy in addressing climate change.",
+      "Appreciating the enduring impact of storytelling on culture and society.",
+      "Understanding the impact of technology on communication.",
+      "The significance of transitioning to renewable energy.",
+      "Exploring the benefits of mindfulness and meditation."
+    ],
+    "questions": [
+      "What are some effective stress management techniques mentioned in the passage?",
+      "What was the primary purpose of the Great Wall of China when it was built?",
+      "What are some benefits and challenges of social media mentioned in the passage?",
+      "Why are renewable energy sources gaining popularity according to the passage?",
+      "How has storytelling evolved in the digital age according to the passage?",
+      "What are some challenges that technological advancements have brought to communication?",
+      "What are the long-term benefits of using renewable energy sources compared to fossil fuels?",
+      "What obstacles might people face when trying to practice mindfulness and meditation regularly?"
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "script": [
+          "A: Hi, are you going to the meeting later?",
+          "B: Yeah, I am. What time does it start?",
+          "A: It starts at 3 PM.",
+          "B: Oh, I thought it started at 2 PM.",
+          "A: No, they changed it last week.",
+          "B: Thanks for letting me know. Do you know where it is?",
+          "A: It's in conference room B."
+        ],
+        "question": "What time does the meeting start?",
+        "choices": [
+          "2 PM",
+          "3 PM",
+          "4 PM",
+          "2:30 PM",
+          "3:30 PM"
+        ],
+        "answer": "3 PM"
+      },
+      {
+        "script": [
+          "A: Have you finished reading the book for class?",
+          "B: Not yet. I'm about halfway through.",
+          "A: It's really interesting, isn't it?",
+          "B: Yes, I love the part about the history of the city.",
+          "A: Me too! It was surprising to learn about the old traditions.",
+          "B: I hope we get to discuss it in class tomorrow.",
+          "A: I'm sure we will, the professor seemed excited about it."
+        ],
+        "question": "What part of the book does B find interesting?",
+        "choices": [
+          "The characters",
+          "The history of the city",
+          "The ending",
+          "The author's style",
+          "The old traditions"
+        ],
+        "answer": "The history of the city"
+      },
+      {
+        "script": [
+          "A: Do you want to go to the movies tonight?",
+          "B: I would love to, but I have a lot of work to do.",
+          "A: That's too bad. What are you working on?",
+          "B: I have to finish a report for my history class.",
+          "A: Can I help you with anything?",
+          "B: Thanks, but I think I need to do this on my own.",
+          "A: Alright, let me know if you change your mind."
+        ],
+        "question": "Why can't B go to the movies?",
+        "choices": [
+          "B is tired",
+          "B has work to do",
+          "B doesn't like movies",
+          "B is meeting someone",
+          "B is traveling"
+        ],
+        "answer": "B has work to do"
+      },
+      {
+        "script": [
+          "A: How was your weekend?",
+          "B: It was great! I went hiking in the mountains.",
+          "A: That sounds amazing. Was the weather good?",
+          "B: Yes, it was perfect. Sunny and not too hot.",
+          "A: Did you see any wildlife?",
+          "B: I saw a few deer and lots of birds.",
+          "A: I wish I could have gone with you."
+        ],
+        "question": "What wildlife did B see during the hike?",
+        "choices": [
+          "Bears",
+          "Deer",
+          "Wolves",
+          "Foxes",
+          "Rabbits"
+        ],
+        "answer": "Deer"
+      },
+      {
+        "script": [
+          "A: Have you decided on a restaurant for dinner?",
+          "B: Not yet. Do you have any suggestions?",
+          "A: How about the new Italian place downtown?",
+          "B: That sounds good, but I heard it's expensive.",
+          "A: We could try the Thai restaurant instead.",
+          "B: I love Thai food. Let's do that.",
+          "A: Great! I'll make a reservation."
+        ],
+        "question": "What type of restaurant do they decide to go to?",
+        "choices": [
+          "Italian",
+          "Thai",
+          "Mexican",
+          "Chinese",
+          "French"
+        ],
+        "answer": "Thai"
+      },
+      {
+        "script": [
+          "A: Did you watch the game last night?",
+          "B: No, I missed it. How was it?",
+          "A: It was incredible! Our team won in the last minute.",
+          "B: Really? Who scored the winning goal?",
+          "A: It was Johnson. He played really well.",
+          "B: I wish I had seen it. Was it a tough match?",
+          "A: Yes, both teams were very competitive."
+        ],
+        "question": "Who scored the winning goal?",
+        "choices": [
+          "Johnson",
+          "Smith",
+          "Brown",
+          "Williams",
+          "Taylor"
+        ],
+        "answer": "Johnson"
+      },
+      {
+        "script": [
+          "A: What are you doing this weekend?",
+          "B: I'm planning to visit my grandparents.",
+          "A: That sounds nice. How far do they live?",
+          "B: About an hour's drive from here.",
+          "A: Do you go there often?",
+          "B: I try to visit at least once a month.",
+          "A: That's really thoughtful of you."
+        ],
+        "question": "How often does B visit their grandparents?",
+        "choices": [
+          "Every week",
+          "Once a month",
+          "Twice a month",
+          "Every two months",
+          "Once a year"
+        ],
+        "answer": "Once a month"
+      },
+      {
+        "script": [
+          "A: Do you want to join the book club?",
+          "B: I'm not sure. What book are you reading now?",
+          "A: We just started 'The Great Gatsby.'",
+          "B: I've always wanted to read that!",
+          "A: You should join us then. We meet every Thursday.",
+          "B: That sounds perfect. Count me in!",
+          "A: Great! I'll send you the details."
+        ],
+        "question": "What book is the club currently reading?",
+        "choices": [
+          "1984",
+          "The Great Gatsby",
+          "Moby Dick",
+          "Pride and Prejudice",
+          "To Kill a Mockingbird"
+        ],
+        "answer": "The Great Gatsby"
+      },
+      {
+        "script": [
+          "A: Are you taking the bus to work tomorrow?",
+          "B: I usually do, but my car is fixed now.",
+          "A: That's good. Did it take long to fix?",
+          "B: Not really, just a couple of days.",
+          "A: It's nice to have your own car back.",
+          "B: Yes, it's much more convenient.",
+          "A: I agree. Public transport can be unpredictable."
+        ],
+        "question": "How long did it take to fix B's car?",
+        "choices": [
+          "One day",
+          "Two days",
+          "Three days",
+          "Four days",
+          "Five days"
+        ],
+        "answer": "Two days"
+      },
+      {
+        "script": [
+          "A: Are you going to the concert on Saturday?",
+          "B: I want to, but I haven't bought a ticket yet.",
+          "A: You should hurry. I heard they're almost sold out.",
+          "B: Really? I'll get one today then.",
+          "A: It's going to be a great show.",
+          "B: I can't wait. I've been looking forward to it for months.",
+          "A: Me too. See you there!"
+        ],
+        "question": "Why does B need to hurry to buy a ticket?",
+        "choices": [
+          "The price is increasing",
+          "They're almost sold out",
+          "The concert is tomorrow",
+          "B forgot about it",
+          "The venue is small"
+        ],
+        "answer": "They're almost sold out"
+      }
+    ],
+    "timeline": [
+      "[0~3m] AudioItem_1",
+      "[3~6m] AudioItem_2",
+      "[6~9m] AudioItem_3",
+      "[9~12m] AudioItem_4",
+      "[12~15m] AudioItem_5",
+      "[15~18m] AudioItem_6",
+      "[18~21m] AudioItem_7",
+      "[21~24m] AudioItem_8",
+      "[24~27m] AudioItem_9",
+      "[27~30m] AudioItem_10"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "ambiguous",
+        "meaning": "open to more than one interpretation",
+        "alt_meaning": "unclear or inexact",
+        "example_sentence": "The instructions were ambiguous, leading to confusion among the team.",
+        "context_explain": "Ambiguous is used when something is not clear or can be understood in different ways."
+      },
+      {
+        "word": "apprehensive",
+        "meaning": "anxious or fearful that something bad might happen",
+        "alt_meaning": "nervous or uneasy",
+        "example_sentence": "She was apprehensive about the job interview tomorrow.",
+        "context_explain": "Apprehensive describes a feeling of anxiety or fear regarding a future event."
+      },
+      {
+        "word": "candid",
+        "meaning": "truthful and straightforward",
+        "alt_meaning": "frank or honest",
+        "example_sentence": "His candid response surprised everyone in the meeting.",
+        "context_explain": "Candid is used to describe a person who speaks openly and honestly."
+      },
+      {
+        "word": "contemplate",
+        "meaning": "to think about something deeply",
+        "alt_meaning": "consider or ponder",
+        "example_sentence": "She spent hours contemplating the decision.",
+        "context_explain": "Contemplate is used when someone is considering or thinking about something seriously."
+      },
+      {
+        "word": "conventional",
+        "meaning": "based on or in accordance with what is generally done or believed",
+        "alt_meaning": "traditional or standard",
+        "example_sentence": "He prefers conventional methods of teaching.",
+        "context_explain": "Conventional refers to something that is usual or widely accepted."
+      },
+      {
+        "word": "elusive",
+        "meaning": "difficult to find, catch, or achieve",
+        "alt_meaning": "hard to grasp or attain",
+        "example_sentence": "The answer to the problem proved to be elusive.",
+        "context_explain": "Elusive is used to describe something that is hard to get or understand."
+      },
+      {
+        "word": "equivocal",
+        "meaning": "open to more than one interpretation; ambiguous",
+        "alt_meaning": "uncertain or questionable",
+        "example_sentence": "His equivocal answer left everyone confused.",
+        "context_explain": "Equivocal refers to statements or expressions that can be interpreted in multiple ways."
+      },
+      {
+        "word": "feasible",
+        "meaning": "possible to do easily or conveniently",
+        "alt_meaning": "practicable or achievable",
+        "example_sentence": "The plan was feasible given the budget and timeframe.",
+        "context_explain": "Feasible is used to describe something that can be easily accomplished."
+      },
+      {
+        "word": "imperative",
+        "meaning": "of vital importance; crucial",
+        "alt_meaning": "essential or urgent",
+        "example_sentence": "It is imperative to meet the deadline to ensure project success.",
+        "context_explain": "Imperative is used to describe something that is very important or necessary."
+      },
+      {
+        "word": "indispensable",
+        "meaning": "absolutely necessary",
+        "alt_meaning": "essential or vital",
+        "example_sentence": "Water is indispensable for life.",
+        "context_explain": "Indispensable is used to describe something that is essential and cannot be done without."
+      },
+      {
+        "word": "meticulous",
+        "meaning": "showing great attention to detail",
+        "alt_meaning": "careful or precise",
+        "example_sentence": "Her meticulous approach to the project ensured its success.",
+        "context_explain": "Meticulous is used to describe someone who is very careful about small details."
+      },
+      {
+        "word": "notorious",
+        "meaning": "famous or well-known, typically for some bad quality or deed",
+        "alt_meaning": "infamous or disreputable",
+        "example_sentence": "The criminal was notorious for his escape tactics.",
+        "context_explain": "Notorious is used for someone or something famous, usually for negative reasons."
+      },
+      {
+        "word": "obscure",
+        "meaning": "not discovered or known about; uncertain",
+        "alt_meaning": "vague or unclear",
+        "example_sentence": "The origins of the ritual are obscure.",
+        "context_explain": "Obscure is used to describe something that is not well known or clear."
+      },
+      {
+        "word": "plausible",
+        "meaning": "seeming reasonable or probable",
+        "alt_meaning": "believable or credible",
+        "example_sentence": "Her explanation seemed plausible to everyone.",
+        "context_explain": "Plausible is used when something appears to be believable or convincing."
+      },
+      {
+        "word": "profound",
+        "meaning": "very great or intense",
+        "alt_meaning": "deep or significant",
+        "example_sentence": "The speech had a profound impact on the audience.",
+        "context_explain": "Profound is used to describe something that has a deep or significant effect."
+      },
+      {
+        "word": "reconcile",
+        "meaning": "restore friendly relations between",
+        "alt_meaning": "resolve or harmonize",
+        "example_sentence": "The two countries were able to reconcile their differences.",
+        "context_explain": "Reconcile is used to describe the process of making peace or finding a solution between conflicting parties."
+      },
+      {
+        "word": "resilient",
+        "meaning": "able to withstand or recover quickly from difficult conditions",
+        "alt_meaning": "strong or flexible",
+        "example_sentence": "Children can be remarkably resilient to change.",
+        "context_explain": "Resilient is used to describe someone or something that can bounce back from challenges."
+      },
+      {
+        "word": "scrutinize",
+        "meaning": "examine or inspect closely and thoroughly",
+        "alt_meaning": "analyze or study",
+        "example_sentence": "The detective scrutinized the evidence carefully.",
+        "context_explain": "Scrutinize is used when something is being examined in great detail."
+      },
+      {
+        "word": "subtle",
+        "meaning": "so delicate or precise as to be difficult to analyze or describe",
+        "alt_meaning": "fine or understated",
+        "example_sentence": "There was a subtle change in her tone.",
+        "context_explain": "Subtle is used to describe something that is not immediately obvious or noticeable."
+      },
+      {
+        "word": "tentative",
+        "meaning": "not certain or fixed; provisional",
+        "alt_meaning": "hesitant or unsure",
+        "example_sentence": "They made a tentative plan to meet next week.",
+        "context_explain": "Tentative is used to describe something that is not yet finalized or is done with hesitation."
+      }
+    ],
+    "venice": {
+      "time": "5분",
+      "theme": "Review",
+      "content": "Words"
+    },
+    "wordLearn": {
+      "time": "8분",
+      "content": "Learn"
+    },
+    "wordTest": {
+      "time": "5분",
+      "questionsCount": 12,
+      "questions": [
+        {
+          "question": "What does 'ambiguous' mean?",
+          "choices": [
+            "clear",
+            "open to many interpretations",
+            "single-minded",
+            "definite"
+          ],
+          "answer": "open to many interpretations"
+        },
+        {
+          "question": "What is the meaning of 'apprehensive'?",
+          "choices": [
+            "confident",
+            "indifferent",
+            "anxious about the future",
+            "excited"
+          ],
+          "answer": "anxious about the future"
+        },
+        {
+          "question": "Choose the correct meaning of 'candid'.",
+          "choices": [
+            "deceptive",
+            "truthful and straightforward",
+            "reserved",
+            "indirect"
+          ],
+          "answer": "truthful and straightforward"
+        },
+        {
+          "question": "What does 'contemplate' mean?",
+          "choices": [
+            "dismiss",
+            "ignore",
+            "consider deeply",
+            "disregard"
+          ],
+          "answer": "consider deeply"
+        },
+        {
+          "question": "What is the alternative meaning of 'conventional'?",
+          "choices": [
+            "unusual",
+            "customary",
+            "innovative",
+            "unique"
+          ],
+          "answer": "customary"
+        },
+        {
+          "question": "What does 'elusive' mean?",
+          "choices": [
+            "easy to find",
+            "difficult to achieve",
+            "obvious",
+            "simple"
+          ],
+          "answer": "difficult to achieve"
+        },
+        {
+          "question": "Choose the correct meaning of 'equivocal'.",
+          "choices": [
+            "certain",
+            "ambiguous",
+            "clear",
+            "definite"
+          ],
+          "answer": "ambiguous"
+        },
+        {
+          "question": "What does 'feasible' mean?",
+          "choices": [
+            "impossible",
+            "achievable",
+            "unlikely",
+            "unpractical"
+          ],
+          "answer": "achievable"
+        },
+        {
+          "question": "What is the meaning of 'imperative'?",
+          "choices": [
+            "unimportant",
+            "crucial",
+            "optional",
+            "trivial"
+          ],
+          "answer": "crucial"
+        },
+        {
+          "question": "Choose the correct meaning of 'indispensable'.",
+          "choices": [
+            "replaceable",
+            "nonessential",
+            "absolutely necessary",
+            "unnecessary"
+          ],
+          "answer": "absolutely necessary"
+        },
+        {
+          "question": "What does 'meticulous' mean?",
+          "choices": [
+            "careless",
+            "reckless",
+            "detailed-oriented",
+            "hasty"
+          ],
+          "answer": "detailed-oriented"
+        },
+        {
+          "question": "What is the meaning of 'notorious'?",
+          "choices": [
+            "famous for good deeds",
+            "well-known for bad reasons",
+            "anonymous",
+            "unknown"
+          ],
+          "answer": "well-known for bad reasons"
+        }
+      ],
+      "testType": "matching"
+    }
+  },
+  "homework": {
+    "title": "심층/하드코어 과제",
+    "items": [
+      {
+        "type": "reading",
+        "title": "8개 지문 풀이 분석"
+      },
+      {
+        "type": "listening",
+        "title": "7개 듣기 실전 딕테이션"
+      },
+      {
+        "type": "vocab",
+        "title": "20개 단어 완벽 암기"
+      }
+    ]
+  }
+}

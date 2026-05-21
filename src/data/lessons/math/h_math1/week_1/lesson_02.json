@@ -1,0 +1,68 @@
+{
+  "title": "⭐ 점과좌표 3단계",
+  "core": {
+    "unit": "점과좌표 3단계",
+    "original_unit": "점과좌표3단계",
+    "problem_image": "/math_crops/(2)수학(상)기말/점과좌표3단계/001.webp",
+    "title": "점과좌표 3단계 심화",
+    "problems": [
+      {
+        "id": "l2_p1",
+        "number": 1,
+        "image": "/math_crops/(2)수학(상)기말/점과좌표3단계/001.webp",
+        "questionText": "세 점 $A(1, 1)$, $B(-3, -2)$, $C(4, -3)$을 꼭짓점으로 하는 삼각형 $ABC$는 어떤 삼각형인가? ① 정삼각형 ② $\\overline{BC} = \\overline{AB}$인 이등변삼각형 ③ $\\angle A = 90^\\circ$인 직각이등변삼각형 ④ $\\angle B = 90^\\circ$인 직각삼각형 ⑤ $\\angle C = 90^\\circ$인 직각삼각형"
+      },
+      {
+        "id": "l2_p2",
+        "number": 2,
+        "image": "/math_crops/(2)수학(상)기말/점과좌표3단계/002.webp",
+        "questionText": "세 점 $A(-1, -3)$, $B(1, 3)$, $C$를 꼭짓점으로 하는 삼각형 $ABC$가 정삼각형일 때, 점 $C$의 좌표는? (단, 점 $C$는 제2사분면 위의 점이다.) ① $(-3\\sqrt{3}, -\\sqrt{3})$ ② $(-3\\sqrt{3}, \\sqrt{3})$ ③ $(-3\\sqrt{3}, 3\\sqrt{3})$ ④ $(-\\sqrt{3}, \\sqrt{3})$ ⑤ $(-\\sqrt{3}, 3\\sqrt{3})$"
+      },
+      {
+        "id": "l2_p3",
+        "number": 3,
+        "image": "/math_crops/(2)수학(상)기말/점과좌표3단계/003.webp",
+        "questionText": "세 점 $A(-1, 1)$, $B(1, -1)$, $C(5, 3)$을 꼭짓점으로 하는 삼각형 $ABC$는 어떤 삼각형인가? ① 정삼각형 ② $\\overline{BC} = \\overline{CA}$인 이등변삼각형 ③ $\\angle A = 90^\\circ$인 직각삼각형 ④ $\\angle B = 90^\\circ$인 직각삼각형 ⑤ 둔각삼각형"
+      },
+      {
+        "id": "l2_p4",
+        "number": 4,
+        "image": "/math_crops/(2)수학(상)기말/점과좌표3단계/004.webp",
+        "questionText": "삼각형 $ABC$에서 세 변 $AB$, $BC$, $CA$의 중점의 좌표가 각각 $(1, 2)$, $(5, 3)$, $(3, 7)$이고 삼각형 $ABC$의 무게중심의 좌표가 $(a, b)$일 때, 상수 $a$, $b$의 합 $a+b$의 값을 구하시오."
+      },
+      {
+        "id": "l2_p5",
+        "number": 5,
+        "image": "/math_crops/(2)수학(상)기말/점과좌표3단계/005.webp",
+        "questionText": "세 점 $A(4, 10)$, $B(-2, 1)$, $C(7, -5)$를 꼭짓점으로 하는 삼각형 $ABC$에서 $\\overline{AB}$, $\\overline{BC}$, $\\overline{CA}$를 $2 : 1$로 내분하는 점을 각각 $D$, $E$, $F$라 할 때, 삼각형 $DEF$의 무게중심의 좌표를 구하면? ① $(1, 4)$ ② $(2, 3)$ ③ $(3, 2)$ ④ $(4, 1)$ ⑤ $(5, 0)$"
+      },
+      {
+        "id": "l2_p6",
+        "number": 6,
+        "image": "/math_crops/(2)수학(상)기말/점과좌표3단계/006.webp",
+        "questionText": "△ABC의 세 변 $AB$, $BC$, $CA$의 중점의 좌표가 각각 $(3, 3)$, $(4, 9)$, $(5, 6)$일 때 △ABC의 무게중심의 좌표는 $(a, b)$이다. 이때 $ab$의 값을 구하시오."
+      },
+      {
+        "id": "l2_p7",
+        "number": 7,
+        "image": "/math_crops/(2)수학(상)기말/점과좌표3단계/007.webp"
+      },
+      {
+        "id": "l2_p8",
+        "number": 8,
+        "image": "/math_crops/(2)수학(상)기말/점과좌표3단계/008.webp"
+      },
+      {
+        "id": "l2_p9",
+        "number": 9,
+        "image": "/math_crops/(2)수학(상)기말/점과좌표3단계/009.webp"
+      },
+      {
+        "id": "l2_p10",
+        "number": 10,
+        "image": "/math_crops/(2)수학(상)기말/점과좌표3단계/010.webp",
+        "questionText": "수직선 위의 세 점 $A(2)$, $B(3)$, $P(x)$에 대하여 $\\overline{AP} + \\overline{BP} = 7$을 만족하는 모든 $x$의 값의 합을 구하시오."
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "[SSS노트]2-3 상용로그(13)_p3_01",
+    "source_file": "[SSS노트]2-3 상용로그(13)",
+    "source_page": 3,
+    "section_index": "03",
+    "section_title": "상용로그",
+    "card_index": "01",
+    "card_title": "상용로그의 뜻",
+    "y_start": 482,
+    "y_end": 973,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[SSS노트]2-3 상용로그(13)_p3_02",
+    "source_file": "[SSS노트]2-3 상용로그(13)",
+    "source_page": 3,
+    "section_index": "03",
+    "section_title": "상용로그",
+    "card_index": "02",
+    "card_title": "상용로그표",
+    "y_start": 973,
+    "y_end": 1602,
+    "file_png": "card_02_p3.webp"
+  },
+  {
+    "id": "[SSS노트]2-3 상용로그(13)_p5_03",
+    "source_file": "[SSS노트]2-3 상용로그(13)",
+    "source_page": 5,
+    "section_index": "03",
+    "section_title": "상용로그",
+    "card_index": "03",
+    "card_title": "상용로그의 성질",
+    "y_start": 391,
+    "y_end": 1602,
+    "file_png": "card_03_p5.webp"
+  }
+]

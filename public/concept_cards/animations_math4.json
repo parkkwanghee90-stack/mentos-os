@@ -1,0 +1,559 @@
+{
+  "삼각함수의 활용_core": {
+    "shapes": [
+      {
+        "type": "polygon",
+        "points": [
+          [
+            -40,
+            -50
+          ],
+          [
+            -70,
+            50
+          ],
+          [
+            90,
+            50
+          ]
+        ],
+        "stroke": "#cbd5e1",
+        "stepIndex": 0
+      },
+      {
+        "type": "text",
+        "x": -50,
+        "y": -60,
+        "text": "A (60°)",
+        "color": "#f8fafc",
+        "size": 14,
+        "stepIndex": 0
+      },
+      {
+        "type": "text",
+        "x": -85,
+        "y": 60,
+        "text": "B (45°)",
+        "color": "#f8fafc",
+        "size": 14,
+        "stepIndex": 0
+      },
+      {
+        "type": "text",
+        "x": 100,
+        "y": 60,
+        "text": "C",
+        "color": "#f8fafc",
+        "size": 14,
+        "stepIndex": 0
+      },
+      {
+        "type": "text",
+        "x": 5,
+        "y": 70,
+        "text": "a = 10",
+        "color": "#fcd34d",
+        "size": 14,
+        "stepIndex": 1
+      },
+      {
+        "type": "line",
+        "points": [
+          [
+            -70,
+            50
+          ],
+          [
+            90,
+            50
+          ]
+        ],
+        "stroke": "#fcd34d",
+        "stepIndex": 1
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": -10,
+        "text": "b = ?",
+        "color": "#f87171",
+        "size": 16,
+        "stepIndex": 2
+      },
+      {
+        "type": "line",
+        "points": [
+          [
+            -40,
+            -50
+          ],
+          [
+            90,
+            50
+          ]
+        ],
+        "stroke": "#f87171",
+        "stepIndex": 2,
+        "style": "dashed"
+      },
+      {
+        "type": "text",
+        "x": -80,
+        "y": 90,
+        "text": "10 / sin(60°) = b / sin(45°)",
+        "color": "#34d399",
+        "size": 14,
+        "stepIndex": 3
+      },
+      {
+        "type": "text",
+        "x": -80,
+        "y": 110,
+        "text": "b = 10 × (√2/2) / (√3/2) = 10√6 / 3",
+        "color": "#34d399",
+        "size": 14,
+        "stepIndex": 4
+      }
+    ],
+    "steps": [
+      "각 A=60°, 각 B=45° 이고 마주보는 변 a=10이 주어졌으므로 외접원이 관여하는 사인법칙을 씁니다.",
+      "문제에서 밑변 a = 10을 먼저 확인합니다.",
+      "우리가 구해야 하는 것은 각 B의 대변인 b입니다.",
+      "사인법칙 공식 a/sinA = b/sinB 에 대입하여 계산합니다.",
+      "정답: 미지수 b는 10루트6 / 3 으로 계산됩니다."
+    ]
+  },
+  "삼각함수의 활용_mock": {
+    "shapes": [
+      {
+        "type": "polygon",
+        "points": [
+          [
+            -50,
+            0
+          ],
+          [
+            0,
+            -70
+          ],
+          [
+            80,
+            0
+          ],
+          [
+            40,
+            80
+          ]
+        ],
+        "stroke": "#34d399",
+        "stepIndex": 0
+      },
+      {
+        "type": "line",
+        "points": [
+          [
+            -50,
+            0
+          ],
+          [
+            80,
+            0
+          ]
+        ],
+        "stroke": "#60a5fa",
+        "style": "dashed",
+        "stepIndex": 1
+      },
+      {
+        "type": "text",
+        "x": -30,
+        "y": 15,
+        "text": "대각선 p = 8",
+        "color": "#60a5fa",
+        "size": 12,
+        "stepIndex": 1
+      },
+      {
+        "type": "line",
+        "points": [
+          [
+            0,
+            -70
+          ],
+          [
+            40,
+            80
+          ]
+        ],
+        "stroke": "#60a5fa",
+        "style": "dashed",
+        "stepIndex": 2
+      },
+      {
+        "type": "text",
+        "x": 10,
+        "y": -50,
+        "text": "q = 6",
+        "color": "#60a5fa",
+        "size": 12,
+        "stepIndex": 2
+      },
+      {
+        "type": "circle",
+        "cx": 25,
+        "cy": 10,
+        "r": 20,
+        "color": "#f87171",
+        "fill": "rgba(248,113,113,0.2)",
+        "stepIndex": 3
+      },
+      {
+        "type": "text",
+        "x": 5,
+        "y": 15,
+        "text": "30°",
+        "color": "#f8fafc",
+        "size": 14,
+        "stepIndex": 3
+      },
+      {
+        "type": "text",
+        "x": -60,
+        "y": 110,
+        "text": "S = ½ × p × q × sin(30°)",
+        "color": "#34d399",
+        "size": 14,
+        "stepIndex": 4
+      },
+      {
+        "type": "text",
+        "x": -60,
+        "y": 130,
+        "text": "S = ½ × 8 × 6 × ½ = 12",
+        "color": "#34d399",
+        "size": 14,
+        "stepIndex": 5
+      }
+    ],
+    "steps": [
+      "대각선이 주어진 일반 사각형 영역의 넓이를 구합니다.",
+      "문제 조건에서 첫 번째 대각선의 길이가 p = 8 입니다.",
+      "두 번째 대각선의 길이는 q = 6 입니다.",
+      "두 대각선이 이루는 교각이 30° 주어져 있습니다.",
+      "사각형 넓이 결정 공식인 S = ½ p q sin(θ) 로 식을 세우면 바로 풀립니다.",
+      "계산하면 S = 12 가 도출됩니다."
+    ]
+  },
+  "삼각함수의 활용_step": {
+    "pages": [
+      {
+        "shapes": [
+          {
+            "type": "circle",
+            "cx": 50,
+            "cy": 50,
+            "r": 50,
+            "stroke": "#cbd5e1",
+            "fill": "none",
+            "stepIndex": 0
+          },
+          {
+            "type": "line",
+            "points": [
+              [
+                -50,
+                50
+              ],
+              [
+                100,
+                50
+              ]
+            ],
+            "stroke": "#94a3b8",
+            "style": "dashed",
+            "stepIndex": 0
+          },
+          {
+            "type": "line",
+            "points": [
+              [
+                -50,
+                50
+              ],
+              [
+                67.3,
+                3.1
+              ]
+            ],
+            "stroke": "#f8fafc",
+            "stepIndex": 0
+          },
+          {
+            "type": "text",
+            "x": 45,
+            "y": 65,
+            "text": "O",
+            "color": "#fcd34d",
+            "size": 14,
+            "stepIndex": 0
+          },
+          {
+            "type": "text",
+            "x": -5,
+            "y": 65,
+            "text": "A",
+            "color": "#f8fafc",
+            "size": 14,
+            "stepIndex": 0
+          },
+          {
+            "type": "text",
+            "x": -55,
+            "y": 65,
+            "text": "C",
+            "color": "#f8fafc",
+            "size": 14,
+            "stepIndex": 0
+          },
+          {
+            "type": "text",
+            "x": 95,
+            "y": 65,
+            "text": "B",
+            "color": "#f8fafc",
+            "size": 14,
+            "stepIndex": 0
+          },
+          {
+            "type": "text",
+            "x": 0,
+            "y": 20,
+            "text": "P",
+            "color": "#f8fafc",
+            "size": 14,
+            "stepIndex": 0
+          },
+          {
+            "type": "text",
+            "x": 70,
+            "y": -5,
+            "text": "Q",
+            "color": "#f8fafc",
+            "size": 14,
+            "stepIndex": 0
+          },
+          {
+            "type": "line",
+            "points": [
+              [
+                50,
+                50
+              ],
+              [
+                5.1,
+                28
+              ]
+            ],
+            "stroke": "#475569",
+            "stepIndex": 0
+          },
+          {
+            "type": "text",
+            "x": 20,
+            "y": 38,
+            "text": "α",
+            "color": "#f8fafc",
+            "size": 14,
+            "stepIndex": 0
+          },
+          {
+            "type": "line",
+            "points": [
+              [
+                50,
+                50
+              ],
+              [
+                67.3,
+                3.1
+              ]
+            ],
+            "stroke": "#475569",
+            "stepIndex": 0
+          },
+          {
+            "type": "text",
+            "x": 75,
+            "y": 45,
+            "text": "β",
+            "color": "#f8fafc",
+            "size": 14,
+            "stepIndex": 0
+          },
+          {
+            "type": "line",
+            "points": [
+              [
+                0,
+                50
+              ],
+              [
+                67.3,
+                3.1
+              ]
+            ],
+            "stroke": "#60a5fa",
+            "stepIndex": 1
+          },
+          {
+            "type": "line",
+            "points": [
+              [
+                100,
+                50
+              ],
+              [
+                67.3,
+                3.1
+              ]
+            ],
+            "stroke": "#60a5fa",
+            "stepIndex": 1
+          },
+          {
+            "type": "polygon",
+            "points": [
+              [
+                50,
+                50
+              ],
+              [
+                100,
+                50
+              ],
+              [
+                67.3,
+                3.1
+              ]
+            ],
+            "fill": "rgba(248, 113, 113, 0.1)",
+            "stroke": "none",
+            "stepIndex": 2
+          },
+          {
+            "type": "text",
+            "x": 25,
+            "y": 45,
+            "text": "β/2",
+            "color": "#f87171",
+            "size": 14,
+            "stepIndex": 2
+          },
+          {
+            "type": "polygon",
+            "points": [
+              [
+                0,
+                50
+              ],
+              [
+                50,
+                50
+              ],
+              [
+                5.1,
+                28
+              ]
+            ],
+            "fill": "rgba(96, 165, 250, 0.1)",
+            "stroke": "none",
+            "stepIndex": 3
+          },
+          {
+            "type": "text",
+            "x": 40,
+            "y": 15,
+            "text": "α/2",
+            "color": "#60a5fa",
+            "size": 14,
+            "stepIndex": 3
+          },
+          {
+            "type": "polygon",
+            "points": [
+              [
+                -50,
+                50
+              ],
+              [
+                0,
+                50
+              ],
+              [
+                67.3,
+                3.1
+              ]
+            ],
+            "fill": "rgba(52, 211, 153, 0.1)",
+            "stroke": "#34d399",
+            "stepIndex": 4
+          },
+          {
+            "type": "text",
+            "x": -25,
+            "y": 65,
+            "text": "2",
+            "color": "#34d399",
+            "size": 14,
+            "stepIndex": 4
+          },
+          {
+            "type": "text",
+            "x": -10,
+            "y": 45,
+            "text": "π - β/2",
+            "color": "#34d399",
+            "size": 14,
+            "stepIndex": 4
+          },
+          {
+            "type": "text",
+            "x": -45,
+            "y": 100,
+            "text": "⊿ACQ 사인법칙:",
+            "color": "#34d399",
+            "size": 12,
+            "stepIndex": 5
+          },
+          {
+            "type": "text",
+            "x": -45,
+            "y": 120,
+            "text": "CQ / sin(π - β/2) = AC / sin(α/2)",
+            "color": "#34d399",
+            "size": 12,
+            "stepIndex": 6
+          },
+          {
+            "type": "text",
+            "x": -45,
+            "y": 140,
+            "text": "∴ CQ = 2sin(β/2) / sin(α/2)",
+            "color": "#34d399",
+            "size": 14,
+            "stepIndex": 7
+          }
+        ],
+        "steps": [
+          "보조선 AQ와 BQ를 긋습니다. 지름 AB에 대한 원주각이므로 ⊿ABQ는 직각삼각형입니다.",
+          "호 BQ에 대한 중심각이 β이므로, 원주각인 ∠QAB는 β/2 가 됩니다.",
+          "호 AP에 대한 중심각이 α이므로, 원주각인 ∠PQA는 α/2 가 됩니다.",
+          "이제 문제의 핵심인 ⊿ACQ에 집중합니다. 외각의 성질 및 원주각으로 세 각과 변을 알 수 있습니다.",
+          "∠CAQ = π - β/2 이고, ∠AQC = α/2, 그리고 변 AC = 2 입니다.",
+          "⊿ACQ에서 사인법칙을 적용하여 식을 세워줍니다.",
+          "sin(π - β/2) = sin(β/2) 이므로, 단 3줄 만에 정답 ①번이 우아하게 도출됩니다!"
+        ]
+      }
+    ]
+  }
+}

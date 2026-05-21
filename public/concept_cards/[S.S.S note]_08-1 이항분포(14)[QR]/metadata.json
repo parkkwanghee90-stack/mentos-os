@@ -1,0 +1,38 @@
+[
+  {
+    "id": "[S.S.S note]_08-1 이항분포(14)[QR]_p3_01",
+    "source_file": "[S.S.S note]_08-1 이항분포(14)[QR]",
+    "source_page": 3,
+    "section_index": "04",
+    "section_title": "이항분포",
+    "card_index": "01",
+    "card_title": "이항분포의 정의",
+    "y_start": 483,
+    "y_end": 1602,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[S.S.S note]_08-1 이항분포(14)[QR]_p4_02",
+    "source_file": "[S.S.S note]_08-1 이항분포(14)[QR]",
+    "source_page": 4,
+    "section_index": "04",
+    "section_title": "이항분포",
+    "card_index": "02",
+    "card_title": "이항분포의 평균과 표준편차",
+    "y_start": 392,
+    "y_end": 1602,
+    "file_png": "card_02_p4.webp"
+  },
+  {
+    "id": "[S.S.S note]_08-1 이항분포(14)[QR]_p6_03",
+    "source_file": "[S.S.S note]_08-1 이항분포(14)[QR]",
+    "source_page": 6,
+    "section_index": "04",
+    "section_title": "이항분포",
+    "card_index": "03",
+    "card_title": "이항분포의 B(n,p) 의 평균 분산 유도하기",
+    "y_start": 392,
+    "y_end": 1602,
+    "file_png": "card_03_p6.webp"
+  }
+]

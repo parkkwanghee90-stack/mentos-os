@@ -1,0 +1,22 @@
+import { lazy, Suspense, useEffect } from "react";
+import { BrowserRouter } from "react-router-dom";
+
+const LocalInspector = lazy(() => import("@/pages/LocalInspector"));
+
+import { initStudentProfile } from "@/engine/studentProfileEngine";
+
+export default function App() {
+  console.log("APP_RENDER: 로컬 검수 모드 진입");
+
+  useEffect(() => {
+    initStudentProfile();
+  }, []);
+
+  return (
+    <BrowserRouter>
+      <Suspense fallback={<div style={{ display: 'flex', height: '100vh', justifyContent: 'center', alignItems: 'center', background: '#09090b', color: '#fff' }}>로딩 중...</div>}>
+        <LocalInspector />
+      </Suspense>
+    </BrowserRouter>
+  );
+}

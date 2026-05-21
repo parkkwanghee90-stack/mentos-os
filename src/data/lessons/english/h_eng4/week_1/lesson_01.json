@@ -1,0 +1,722 @@
+{
+  "teacherId": "h_eng4",
+  "round": 1,
+  "title": "Curriculum Mode for 1등급 (Top Tier SSOT)",
+  "targetGrades": [
+    "고3"
+  ],
+  "targetRanks": [
+    "1등급"
+  ],
+  "reading": {
+    "passageCount": 7,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "Cognitive dissonance, a psychological phenomenon where individuals experience discomfort due to conflicting beliefs, significantly impacts decision-making processes. Consider a scenario where a person values environmental conservation yet drives a fuel-inefficient vehicle. To alleviate the dissonance, they might rationalize their behavior by emphasizing the car’s safety features. However, this rationalization often perpetuates a cycle of justifications rather than prompting behavioral change. Ultimately, understanding this concept is crucial as it highlights the inherent complexities of human rationality.",
+        "teachPoint": "Understanding the concept of cognitive dissonance and its implications on decision-making.",
+        "question": "What is the underlying reason for the individual's rationalization in the given scenario? ① Their genuine concern for safety. ② A desire to reduce guilt. ③ Lack of awareness about environmental issues. ④ Influence from peers. ⑤ Economic constraints.",
+        "questionType": "빈칸 추론",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_2",
+        "text": "In evolutionary biology, the concept of kin selection explains altruistic behavior towards related individuals. An example is seen in social insects like bees, where workers sacrifice their reproductive potential for the hive's benefit. This behavior ensures that genes shared with the queen are propagated. However, kin selection doesn't account for altruism towards non-relatives, prompting the exploration of reciprocal altruism. Thus, while kin selection provides a foundational understanding, it necessitates integration with broader evolutionary theories.",
+        "teachPoint": "Exploring the limitations of kin selection in explaining altruistic behavior.",
+        "question": "What does the concept of kin selection fail to fully explain? ① Cooperative behavior in bees. ② Altruistic actions toward unrelated individuals. ③ The propagation of genetic material. ④ Social structures in insects. ⑤ Genetic mutations.",
+        "questionType": "빈칸 추론",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_3",
+        "text": "Epistemology, the study of knowledge, questions the nature and scope of human understanding. For instance, the Gettier problem challenges the traditional definition of knowledge as justified true belief. By presenting scenarios where such conditions are met, yet knowledge seems absent, it unsettles foundational epistemic assumptions. On the other hand, pragmatism suggests knowledge is validated by practical consequences. Therefore, epistemology remains a dynamic field, continuously shaped by new philosophical inquiries.",
+        "teachPoint": "Understanding the evolving nature of epistemology through the examination of the Gettier problem.",
+        "question": "Summarize the challenge posed by the Gettier problem to traditional epistemic assumptions.",
+        "questionType": "주관식",
+        "format": "서술형"
+      },
+      {
+        "id": "Passage_4",
+        "text": "Behavioral economics integrates psychological insights into economic theory, redefining rationality assumptions. An example is the endowment effect, where individuals ascribe higher value to owned items. Unlike traditional economic models which assume consistent preferences, this effect reveals a bias towards loss aversion. However, it complicates market predictions as emotional factors heavily influence decisions. Thus, acknowledging these biases is vital for creating more accurate economic models.",
+        "teachPoint": "Examining the influence of psychological factors on economic decision-making.",
+        "question": "What does the endowment effect reveal about traditional economic assumptions? ① They accurately predict market behaviors. ② They overlook emotional influences. ③ They are based on loss aversion. ④ They account for irrational behaviors. ⑤ They integrate psychological insights.",
+        "questionType": "빈칸 추론",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_5",
+        "text": "Quantum mechanics fundamentally challenges classical conceptions of determinism with its probabilistic nature. In experiments like Schrödinger's cat, superposition illustrates the coexistence of multiple states until observation. This paradox contrasts with deterministic interpretations where outcomes are pre-determined. Consequently, quantum mechanics introduces profound philosophical implications, questioning the very fabric of reality and the limits of human perception.",
+        "teachPoint": "Understanding the implications of quantum mechanics on determinism.",
+        "question": "Where should the following sentence be inserted? 'Such uncertainties force a reevaluation of philosophical stances on reality.'",
+        "questionType": "문장 삽입",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_6",
+        "text": "Neuroplasticity illustrates the brain's remarkable ability to reorganize itself by forming new neural connections. This adaptability is crucial during learning processes, where repeated experiences forge stronger synaptic pathways. Conversely, it also underscores the potential for maladaptive changes following trauma or negative experiences. Understanding this duality is essential in therapeutic contexts, emphasizing the necessity for positive reinforcement in rehabilitation settings.",
+        "teachPoint": "Analyzing the dual nature of neuroplasticity in cognitive processes.",
+        "question": "Arrange the sentences to best convey the progression of ideas about neuroplasticity. ① Neuroplasticity allows the brain to adapt. ② Repetition strengthens synaptic pathways. ③ Maladaptive changes can occur after trauma. ④ Positive reinforcement aids rehabilitation. ⑤ It is pivotal during learning.",
+        "questionType": "단락 순서",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_7",
+        "text": "Emergent properties refer to unexpected phenomena that arise from complex systems, transcending individual component functions. For instance, consciousness cannot be fully understood by merely analyzing neuronal activity. This complexity presents a philosophical challenge, as it questions reductionist approaches typically employed in scientific inquiry. Awareness of emergent properties urges a holistic perspective, acknowledging that systems may exhibit behaviors irreducible to their parts.",
+        "teachPoint": "Exploring the philosophical implications of emergent properties in complex systems.",
+        "question": "Explain why emergent properties challenge reductionist scientific views.",
+        "questionType": "빈칸 혹은 단답형 이유 서술",
+        "format": "주관식"
+      }
+    ],
+    "teachPoints": [
+      "Understanding the concept of cognitive dissonance and its implications on decision-making.",
+      "Exploring the limitations of kin selection in explaining altruistic behavior.",
+      "Understanding the evolving nature of epistemology through the examination of the Gettier problem.",
+      "Examining the influence of psychological factors on economic decision-making.",
+      "Understanding the implications of quantum mechanics on determinism.",
+      "Analyzing the dual nature of neuroplasticity in cognitive processes.",
+      "Exploring the philosophical implications of emergent properties in complex systems."
+    ],
+    "questions": [
+      "What is the underlying reason for the individual's rationalization in the given scenario? ① Their genuine concern for safety. ② A desire to reduce guilt. ③ Lack of awareness about environmental issues. ④ Influence from peers. ⑤ Economic constraints.",
+      "What does the concept of kin selection fail to fully explain? ① Cooperative behavior in bees. ② Altruistic actions toward unrelated individuals. ③ The propagation of genetic material. ④ Social structures in insects. ⑤ Genetic mutations.",
+      "Summarize the challenge posed by the Gettier problem to traditional epistemic assumptions.",
+      "What does the endowment effect reveal about traditional economic assumptions? ① They accurately predict market behaviors. ② They overlook emotional influences. ③ They are based on loss aversion. ④ They account for irrational behaviors. ⑤ They integrate psychological insights.",
+      "Where should the following sentence be inserted? 'Such uncertainties force a reevaluation of philosophical stances on reality.'",
+      "Arrange the sentences to best convey the progression of ideas about neuroplasticity. ① Neuroplasticity allows the brain to adapt. ② Repetition strengthens synaptic pathways. ③ Maladaptive changes can occur after trauma. ④ Positive reinforcement aids rehabilitation. ⑤ It is pivotal during learning.",
+      "Explain why emergent properties challenge reductionist scientific views."
+    ]
+  },
+  "listening": {
+    "scriptCount": 15,
+    "items": [
+      {
+        "id": "AudioItem_1",
+        "script": "M: Good morning, everyone. Today, we'll be discussing the impact of climate change on agriculture.\nW: That's an important topic, especially considering recent weather patterns.\nM: Absolutely. The rising temperatures and changing precipitation patterns are affecting crop yields worldwide.\nW: I've read that some areas are experiencing droughts while others are facing floods.\nM: Exactly, and those extreme conditions can devastate crops, leading to food shortages.\nW: What about technological advancements? Are they helping mitigate these effects?\nM: Yes, technology like drought-resistant crops and precision agriculture is making a difference, but it's not a complete solution.\nW: So, collaboration between countries on climate policies is crucial?\nM: Indeed, international cooperation is essential to address the global nature of this issue.",
+        "points": "What is the main topic of the conversation?",
+        "choices": [
+          "The impact of climate change on technology",
+          "The effects of climate change on agriculture",
+          "Technological advancements in farming",
+          "International cooperation in technology",
+          "Food shortages due to natural disasters"
+        ],
+        "answer": "The effects of climate change on agriculture",
+        "explanation": "The conversation focuses on how climate change affects crop yields and the importance of technology and international cooperation in addressing these challenges."
+      },
+      {
+        "id": "AudioItem_2",
+        "script": "W: Did you watch the documentary on ocean conservation last night?\nM: Yes, it was really eye-opening. I hadn't realized how much plastic is in the ocean.\nW: And the impact on marine life is devastating.\nM: The footage of the turtles caught in plastic was heartbreaking.\nW: I know. It makes you think twice about using single-use plastics.\nM: Absolutely. I've started using reusable bags and bottles to do my part.\nW: That's great. If everyone makes small changes, it can lead to a big impact.\nM: I agree. Education and awareness are key to tackling this issue.",
+        "points": "What was the main focus of the documentary mentioned?",
+        "choices": [
+          "The history of marine life",
+          "Ocean currents and tides",
+          "Plastic pollution in the ocean",
+          "The benefits of reusable products",
+          "Technological advances in ocean exploration"
+        ],
+        "answer": "Plastic pollution in the ocean",
+        "explanation": "The conversation highlights the impact of plastic on marine life and the emphasis on reducing plastic use, which is the main focus of the documentary."
+      },
+      {
+        "id": "AudioItem_3",
+        "script": "M: Have you heard about the new policy at work regarding remote work?\nW: Yes, I received an email about it yesterday. They're allowing us to work from home two days a week.\nM: It's a great initiative. It should help improve work-life balance.\nW: Definitely, and it cuts down on commuting time, which is a huge plus.\nM: I agree. I spend almost two hours a day commuting.\nW: Plus, it could lead to increased productivity. People tend to work better in comfortable environments.\nM: That's true. I'm looking forward to setting up a home office.\nW: Me too. It'll be a nice change of pace.",
+        "points": "What is the new policy at work that the speakers are discussing?",
+        "choices": [
+          "A new vacation policy",
+          "Increased work hours",
+          "Remote work two days a week",
+          "Mandatory office meetings",
+          "Reduction in commuting costs"
+        ],
+        "answer": "Remote work two days a week",
+        "explanation": "The speakers discuss the benefits of being allowed to work from home two days a week, indicating that the new policy is about remote work."
+      },
+      {
+        "id": "AudioItem_4",
+        "script": "W: I'm curious about the upcoming art exhibition at the city gallery. Are you planning to go?\nM: Yes, I'm really excited about it. They have a section dedicated to contemporary installations.\nW: I heard they're featuring some local artists as well.\nM: That's right. It's a great opportunity to see new talent.\nW: The gallery is hosting some interactive workshops too, which sounds fun.\nM: I saw that. They have one on digital art techniques that I want to attend.\nW: It sounds like it'll be a comprehensive experience. Art in all its forms.\nM: Exactly, and it’s great that they’re making art more accessible to everyone.",
+        "points": "What aspect of the art exhibition excites the speakers?",
+        "choices": [
+          "Historical paintings",
+          "Interactive workshops",
+          "Classical sculptures",
+          "Art auctions",
+          "Photography exhibits"
+        ],
+        "answer": "Interactive workshops",
+        "explanation": "The speakers express interest in the interactive workshops and contemporary installations, showing excitement for these aspects of the exhibition."
+      },
+      {
+        "id": "AudioItem_5",
+        "script": "M: How was the seminar on renewable energy you attended?\nW: It was very informative. They talked about solar and wind energy developments.\nM: Those are crucial for reducing our carbon footprint.\nW: Absolutely. The advancements in solar panel efficiency were particularly impressive.\nM: Did they discuss any challenges or obstacles?\nW: Yes, the main issues are cost and storage. But they're working on innovative solutions.\nM: It's encouraging to see progress in this field. Renewable energy is the future.\nW: I agree. It's essential for sustainable development.",
+        "points": "What was a key topic discussed at the seminar?",
+        "choices": [
+          "Nuclear energy advancements",
+          "Solar and wind energy developments",
+          "Traditional fossil fuels",
+          "Hydroelectric power",
+          "Geothermal energy"
+        ],
+        "answer": "Solar and wind energy developments",
+        "explanation": "The seminar focused on developments in solar and wind energy, highlighting advancements and challenges in the field of renewable energy."
+      },
+      {
+        "id": "AudioItem_6",
+        "script": "M: Good morning, everyone. Today, we'll be discussing the impact of climate change on global agriculture. \nW: Isn't it true that some regions are actually benefiting from the warmer temperatures? \nM: Yes, certain areas may experience longer growing seasons, but the overall impact is negative. \nW: How so? \nM: Increased temperatures can lead to droughts, which are detrimental to crops. \nW: What about the precipitation patterns? \nM: That's another concern. Unpredictable rainfall can cause floods or leave areas too dry, further harming agriculture.",
+        "points": "6",
+        "choices": [
+          "A discussion about climate change's impact on agriculture.",
+          "A debate on whether climate change is real.",
+          "A lecture on global warming's effects on weather patterns.",
+          "A conversation about the benefits of climate change.",
+          "A seminar on sustainable farming techniques."
+        ],
+        "answer": "A discussion about climate change's impact on agriculture.",
+        "explanation": "The dialogue centers around the effects of climate change, particularly on agriculture, mentioning longer growing seasons, droughts, and precipitation patterns."
+      },
+      {
+        "id": "AudioItem_7",
+        "script": "W: Did you hear about the new museum exhibit? \nM: No, what's it about? \nW: It's an interactive display on the history of communication. \nM: Sounds intriguing. Does it cover recent developments? \nW: Indeed, it includes everything from ancient scripts to modern digital communication. \nM: Are there any hands-on activities? \nW: Yes, visitors can try out old telegraphs and experience VR simulations of historical events.",
+        "points": "7",
+        "choices": [
+          "A new art exhibit opening in town.",
+          "An interactive museum exhibit on communication history.",
+          "A lecture on modern digital communication.",
+          "A workshop on ancient scripts.",
+          "A VR experience in a science museum."
+        ],
+        "answer": "An interactive museum exhibit on communication history.",
+        "explanation": "The conversation describes an interactive museum exhibit that covers the history of communication, mentioning both ancient and modern elements."
+      },
+      {
+        "id": "AudioItem_8",
+        "script": "M: I'm planning a trip to Peru next month. \nW: That sounds amazing! Have you decided which cities you'll visit? \nM: I definitely want to see Machu Picchu and explore Lima. \nW: Are you going to try the local cuisine? \nM: Absolutely, I've heard Peruvian food is incredible. \nW: Don't miss out on ceviche and lomo saltado. \nM: I won't! I'm also considering a hike in the Andes.",
+        "points": "7",
+        "choices": [
+          "A trip to Peru focused on historical sites.",
+          "A culinary tour of South America.",
+          "A discussion on the best hiking trails in the Andes.",
+          "A travel itinerary including Machu Picchu and Lima.",
+          "A conversation about South American food."
+        ],
+        "answer": "A travel itinerary including Machu Picchu and Lima.",
+        "explanation": "The dialogue revolves around a planned trip to Peru, specifically mentioning visiting Machu Picchu and Lima, as well as trying local cuisine."
+      },
+      {
+        "id": "AudioItem_9",
+        "script": "W: I just finished reading a fascinating book on human psychology. \nM: Oh, really? What was it about? \nW: It delved into the reasons behind our biases and decision-making processes. \nM: Did it offer any solutions or strategies? \nW: Yes, it suggested mindfulness and critical thinking as ways to overcome biases. \nM: Were there any interesting case studies? \nW: Plenty, including experiments on group behavior and social influence.",
+        "points": "6",
+        "choices": [
+          "A book review on historical psychology.",
+          "A discussion on human biases and decision-making.",
+          "An analysis of group behavior in social settings.",
+          "A debate on the effectiveness of mindfulness.",
+          "A lecture on the science of critical thinking."
+        ],
+        "answer": "A discussion on human biases and decision-making.",
+        "explanation": "The conversation describes a book that explores human psychology, focusing on biases and decision-making, and mentions mindfulness and critical thinking as solutions."
+      },
+      {
+        "id": "AudioItem_10",
+        "script": "M: Have you ever attended a live orchestra performance? \nW: Yes, I went to one last month at the new concert hall. \nM: How was the experience? \nW: It was mesmerizing, the acoustics were perfect. \nM: Who was performing? \nW: The city symphony orchestra, they played a selection from Beethoven and Mozart. \nM: I’ve heard their conductor is quite talented. \nW: Indeed, he brought such energy to the performance.",
+        "points": "6",
+        "choices": [
+          "A review of a modern art exhibit.",
+          "A discussion about a new concert hall.",
+          "An account of attending a live orchestra performance.",
+          "A lecture on Beethoven and Mozart's compositions.",
+          "A debate on the importance of live music."
+        ],
+        "answer": "An account of attending a live orchestra performance.",
+        "explanation": "The conversation is about attending a live orchestra performance, highlighting the experience, the acoustics, the orchestra, and the conductor."
+      },
+      {
+        "id": "AudioItem_11",
+        "script": "M: Good morning, everyone. Today, we are going to discuss the impact of social media on mental health, a topic that's been gaining attention for quite some time now.\nW: That's certainly a relevant issue. Could you provide some examples of how social media might affect mental health?\nM: Absolutely. For instance, studies have shown that excessive use of social media can lead to increased feelings of anxiety and depression, particularly among teenagers.\nW: That makes sense. I imagine the constant comparison with others' seemingly perfect lives could contribute to these feelings.\nM: Exactly. Moreover, the addictive nature of these platforms can also lead to sleep deprivation, which further exacerbates mental health issues.\nW: I see. Are there any strategies or solutions being proposed to mitigate these negative effects?\nM: Yes, some experts suggest setting time limits on social media use and encouraging more offline interactions to promote a healthier balance.",
+        "points": "5",
+        "choices": [
+          "Social media has no impact on mental health.",
+          "Excessive social media use can lead to anxiety and depression.",
+          "Social media improves sleep quality.",
+          "There are no solutions to mitigate the effects of social media.",
+          "Offline interactions have no effect on mental health."
+        ],
+        "answer": "Excessive social media use can lead to anxiety and depression.",
+        "explanation": "The dialogue highlights that excessive use of social media can increase feelings of anxiety and depression and suggests solutions like setting time limits and encouraging offline interactions."
+      },
+      {
+        "id": "AudioItem_12",
+        "script": "W: Hi, James. I heard you went on a hiking trip last weekend. How was it?\nM: Oh, it was amazing! We went to the Blue Ridge Mountains, and the views were absolutely breathtaking.\nW: That sounds incredible. Did you hike the entire trail?\nM: We did. It was about 12 miles in total, and it took us a whole day to complete.\nW: Wow, that sounds intense. Were there any challenging parts of the hike?\nM: Definitely. There were a few steep inclines that were tough, but the scenery made it all worth it.\nW: I bet. Did you encounter any wildlife along the way?\nM: We did! We saw some deer and even a black bear from a distance. It was quite the adventure.",
+        "points": "5",
+        "choices": [
+          "James found the views unimpressive.",
+          "The hike was 8 miles long.",
+          "They didn't see any wildlife.",
+          "The hike was challenging but rewarding.",
+          "James regretted going on the hike."
+        ],
+        "answer": "The hike was challenging but rewarding.",
+        "explanation": "James describes the hike as amazing with breathtaking views, even though it was challenging due to steep inclines, thus making it rewarding."
+      },
+      {
+        "id": "AudioItem_13",
+        "script": "W: Welcome, everyone, to our workshop on improving workplace productivity. Today, we'll discuss some effective strategies.\nM: That sounds great. I've been struggling with staying focused at work lately.\nW: You're not alone. A common strategy is the Pomodoro Technique, where you work in blocks of time with short breaks in between.\nM: I've heard of that. It's supposed to help maintain concentration, right?\nW: Yes, exactly. Another tip is to prioritize tasks using a to-do list. It can help manage your time better.\nM: I often find my list becoming overwhelming. Any advice on that?\nW: Try breaking tasks into smaller, manageable parts and setting realistic goals. It can make everything feel more achievable.",
+        "points": "5",
+        "choices": [
+          "The Pomodoro Technique involves long, uninterrupted work hours.",
+          "A to-do list can help manage time better.",
+          "Breaking tasks into smaller parts is not recommended.",
+          "The workshop discourages using any lists.",
+          "Setting unrealistic goals is a key strategy."
+        ],
+        "answer": "A to-do list can help manage time better.",
+        "explanation": "The workshop suggests using a to-do list to prioritize tasks and manage time effectively, along with breaking tasks into smaller parts to avoid feeling overwhelmed."
+      },
+      {
+        "id": "AudioItem_14",
+        "script": "M: Excuse me, could you tell me how to get to the art museum from here?\nW: Sure, it's not too far. Head straight down this road for about 10 minutes.\nM: Okay, and then?\nW: You'll come to a large roundabout. Take the second exit onto Maple Avenue.\nM: Got it. Do I need to watch out for any landmarks?\nW: Yes, after you turn onto Maple Avenue, you'll pass a large bookstore on your left. The museum is just a block past that.\nM: Thanks for the help! Is there a fee to enter the museum?\nW: Yes, there's a small admission fee, but it's free on the first Sunday of every month.",
+        "points": "5",
+        "choices": [
+          "The art museum is directly on this road.",
+          "The second exit at the roundabout leads to Maple Avenue.",
+          "The museum is next to a large supermarket.",
+          "Admission to the museum is always free.",
+          "There's no roundabout on the way to the museum."
+        ],
+        "answer": "The second exit at the roundabout leads to Maple Avenue.",
+        "explanation": "The directions given include taking the second exit onto Maple Avenue at a roundabout, with a landmark being a bookstore before reaching the museum."
+      },
+      {
+        "id": "AudioItem_15",
+        "script": "W: Hello, everyone. Today, we're discussing the future of renewable energy. Our guest is Dr. Thompson, an expert in the field.\nM: Thank you for having me. Renewable energy is growing rapidly, with solar and wind leading the way.\nW: That's encouraging. What are the biggest challenges facing renewable energy?\nM: One of the main challenges is the storage of energy. While production is increasing, storage technology needs to catch up.\nW: I've heard that battery technology is improving, though. Is that true?\nM: Yes, advancements are being made, but there's still a long way to go before it can meet global demands effectively.\nW: What about government policies? Are they supportive?\nM: Many countries are implementing policies to promote renewables, but more cohesive international efforts are needed.",
+        "points": "5",
+        "choices": [
+          "Renewable energy is not growing.",
+          "Storage of energy is a major challenge.",
+          "Battery technology is declining.",
+          "No countries support renewable energy.",
+          "Solar and wind have no future."
+        ],
+        "answer": "Storage of energy is a major challenge.",
+        "explanation": "Dr. Thompson highlights that while renewable energy production is growing, storage technology is lagging, posing a significant challenge."
+      }
+    ],
+    "points": [
+      "What is the main topic of the conversation?",
+      "What was the main focus of the documentary mentioned?",
+      "What is the new policy at work that the speakers are discussing?",
+      "What aspect of the art exhibition excites the speakers?",
+      "What was a key topic discussed at the seminar?",
+      "6",
+      "7",
+      "7",
+      "6",
+      "6",
+      "5",
+      "5",
+      "5",
+      "5",
+      "5"
+    ],
+    "timeline": [
+      "[0m] Audio 1",
+      "[2m] Audio 2",
+      "[4m] Audio 3",
+      "[6m] Audio 4",
+      "[8m] Audio 5",
+      "[10m] Audio 6",
+      "[12m] Audio 7",
+      "[14m] Audio 8",
+      "[16m] Audio 9",
+      "[18m] Audio 10",
+      "[20m] Audio 11",
+      "[22m] Audio 12",
+      "[24m] Audio 13",
+      "[26m] Audio 14",
+      "[28m] Audio 15"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "derive",
+        "meaning": "to obtain something from a specified source",
+        "alt_meaning": "to deduce or infer",
+        "example_sentence": "The scientist was able to derive the formula from the experimental data.",
+        "context_explain": "In a scientific context, 'derive' is often used to describe the process of reaching a conclusion or obtaining a result from data or reasoning."
+      },
+      {
+        "word": "constrain",
+        "meaning": "to restrict or limit",
+        "alt_meaning": "to compel or force",
+        "example_sentence": "The design of the building is constrained by local regulations.",
+        "context_explain": "In engineering or planning contexts, 'constrain' refers to limitations or restrictions that must be considered."
+      },
+      {
+        "word": "justify",
+        "meaning": "to show or prove to be right or reasonable",
+        "alt_meaning": "to defend or uphold as warranted",
+        "example_sentence": "The student needed to justify his choice of research topic to the committee.",
+        "context_explain": "In academic writing, 'justify' is used to support arguments with evidence or reasoning."
+      },
+      {
+        "word": "interpret",
+        "meaning": "to explain the meaning of information or actions",
+        "alt_meaning": "to translate orally",
+        "example_sentence": "The historian interpreted the ancient texts to uncover their true meaning.",
+        "context_explain": "In literary or historical studies, 'interpret' involves analysis and explanation of textual material."
+      },
+      {
+        "word": "infer",
+        "meaning": "to deduce or conclude information from evidence",
+        "alt_meaning": "to imply or hint",
+        "example_sentence": "From the data, we can infer that climate change is accelerating.",
+        "context_explain": "In scientific research, 'infer' is used to draw conclusions based on data analysis."
+      },
+      {
+        "word": "approximate",
+        "meaning": "to come close to or be similar to something",
+        "alt_meaning": "to estimate or calculate roughly",
+        "example_sentence": "The engineer approximated the cost of the project to be around $1 million.",
+        "context_explain": "In mathematics and engineering, 'approximate' is used to give a near or estimated value."
+      },
+      {
+        "word": "attribute",
+        "meaning": "to regard something as being caused by",
+        "alt_meaning": "to ascribe a work or remark to someone",
+        "example_sentence": "The success of the campaign was attributed to effective marketing strategies.",
+        "context_explain": "In causal analysis, 'attribute' is used to identify the origin or cause of an effect."
+      },
+      {
+        "word": "regulate",
+        "meaning": "to control or maintain the rate or speed of a process",
+        "alt_meaning": "to set or adjust the amount or degree of something",
+        "example_sentence": "The government enacted laws to regulate emissions from factories.",
+        "context_explain": "In environmental and policy contexts, 'regulate' refers to the establishment of rules to control activities."
+      },
+      {
+        "word": "reinforce",
+        "meaning": "to strengthen or support",
+        "alt_meaning": "to make more pronounced or evident",
+        "example_sentence": "The teacher used additional exercises to reinforce the students' understanding of the concept.",
+        "context_explain": "In educational contexts, 'reinforce' is used to describe the process of strengthening knowledge or skills."
+      },
+      {
+        "word": "sustain",
+        "meaning": "to maintain or keep going over time",
+        "alt_meaning": "to support or uphold",
+        "example_sentence": "The ecosystem can sustain a diverse range of species.",
+        "context_explain": "In ecological and economic contexts, 'sustain' is about maintaining conditions or resources over time."
+      },
+      {
+        "word": "facilitate",
+        "meaning": "to make an action or process easier",
+        "alt_meaning": "to assist or help forward",
+        "example_sentence": "The new software was designed to facilitate communication between departments.",
+        "context_explain": "In business and technology, 'facilitate' is used to describe actions that ease or enhance processes."
+      },
+      {
+        "word": "inhibit",
+        "meaning": "to hinder or restrain",
+        "alt_meaning": "to prevent or prohibit",
+        "example_sentence": "The medication works to inhibit the growth of bacteria.",
+        "context_explain": "In biological and chemical contexts, 'inhibit' refers to the prevention or reduction of an action or process."
+      },
+      {
+        "word": "compensate",
+        "meaning": "to make up for something unwelcome or unpleasant",
+        "alt_meaning": "to pay or reward for services rendered",
+        "example_sentence": "The company offered a bonus to compensate for the overtime hours worked.",
+        "context_explain": "In legal and economic contexts, 'compensate' is used to describe actions taken to offset disadvantages or losses."
+      },
+      {
+        "word": "integrate",
+        "meaning": "to combine one thing with another to form a whole",
+        "alt_meaning": "to bring people or groups into equal participation",
+        "example_sentence": "The new policy aims to integrate renewable energy into the national grid.",
+        "context_explain": "In systems and organizational contexts, 'integrate' refers to combining elements to function as a unified whole."
+      },
+      {
+        "word": "synthesize",
+        "meaning": "to combine a number of things into a coherent whole",
+        "alt_meaning": "to produce a substance by chemical synthesis",
+        "example_sentence": "The chemist synthesized a new compound in the lab.",
+        "context_explain": "In scientific research, 'synthesize' is used to describe the creation of complex compounds or ideas from simpler components."
+      },
+      {
+        "word": "validate",
+        "meaning": "to check or prove the validity of something",
+        "alt_meaning": "to confirm or corroborate",
+        "example_sentence": "The findings of the study were validated by further experiments.",
+        "context_explain": "In research and data analysis, 'validate' refers to the process of confirming the accuracy or legitimacy of findings."
+      },
+      {
+        "word": "differentiate",
+        "meaning": "to recognize or ascertain what makes something different",
+        "alt_meaning": "to make or become different in the process of growth or development",
+        "example_sentence": "It is important to differentiate between fact and opinion in scientific reports.",
+        "context_explain": "In academic contexts, 'differentiate' involves distinguishing between distinct concepts or elements."
+      },
+      {
+        "word": "assess",
+        "meaning": "to evaluate or estimate the nature, ability, or quality of",
+        "alt_meaning": "to calculate or determine the value of",
+        "example_sentence": "The committee will assess the proposals before making a decision.",
+        "context_explain": "In educational and organizational settings, 'assess' refers to the evaluation of performance or quality."
+      },
+      {
+        "word": "prioritize",
+        "meaning": "to designate or treat something as more important",
+        "alt_meaning": "to arrange or deal with in order of importance",
+        "example_sentence": "The manager decided to prioritize the most urgent tasks first.",
+        "context_explain": "In project management, 'prioritize' involves ordering tasks or goals by their importance or urgency."
+      },
+      {
+        "word": "monitor",
+        "meaning": "to observe and check the progress or quality of something over a period of time",
+        "alt_meaning": "to keep under systematic review",
+        "example_sentence": "The doctor will monitor the patient's condition closely.",
+        "context_explain": "In health and technology, 'monitor' implies ongoing observation and tracking of a process or condition."
+      },
+      {
+        "word": "implement",
+        "meaning": "to put a decision, plan, or agreement into effect",
+        "alt_meaning": "to execute or carry out",
+        "example_sentence": "The company plans to implement new safety measures.",
+        "context_explain": "In business and policy, 'implement' refers to the action of putting plans or policies into action."
+      },
+      {
+        "word": "optimize",
+        "meaning": "to make the best or most effective use of a situation or resource",
+        "alt_meaning": "to improve or enhance",
+        "example_sentence": "The software was optimized to run faster on older hardware.",
+        "context_explain": "In technology and operations, 'optimize' means enhancing efficiency or performance."
+      },
+      {
+        "word": "allocate",
+        "meaning": "to distribute resources or duties for a particular purpose",
+        "alt_meaning": "to assign or allot",
+        "example_sentence": "The government allocated funds for the new infrastructure project.",
+        "context_explain": "In fiscal or resource management, 'allocate' refers to the distribution of resources or responsibilities."
+      },
+      {
+        "word": "articulate",
+        "meaning": "to express an idea or feeling fluently and coherently",
+        "alt_meaning": "to pronounce distinctly",
+        "example_sentence": "The speaker was able to articulate his thoughts clearly.",
+        "context_explain": "In communication, 'articulate' involves the clear and effective expression of ideas or information."
+      },
+      {
+        "word": "consolidate",
+        "meaning": "to make something physically stronger or more solid",
+        "alt_meaning": "to combine a number of things into a single, more effective whole",
+        "example_sentence": "The company decided to consolidate its operations to improve efficiency.",
+        "context_explain": "In business contexts, 'consolidate' refers to the process of unifying various elements to strengthen or enhance function."
+      },
+      {
+        "word": "anticipate",
+        "meaning": "to regard as probable; expect or predict",
+        "alt_meaning": "to act as a forerunner or precursor of",
+        "example_sentence": "The team anticipated the challenges they would face and prepared accordingly.",
+        "context_explain": "In strategic planning, 'anticipate' involves forecasting future events and preparing responses."
+      }
+    ],
+    "venice": {
+      "time": "5분",
+      "theme": "SSOT Words",
+      "content": "Review Games"
+    },
+    "wordLearn": {
+      "time": "8분",
+      "content": "Learn basic meanings"
+    },
+    "wordTest": {
+      "questionsCount": 15,
+      "questions": [
+        {
+          "type": "meaning_choice",
+          "question": "What does 'derive' mean?",
+          "choices": [
+            "to infer",
+            "to disrupt",
+            "to alter",
+            "to simplify"
+          ],
+          "answer": "to infer"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'constrain'?",
+          "choices": [
+            "to facilitate",
+            "to limit",
+            "to explore",
+            "to expand"
+          ],
+          "answer": "to limit"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "In what context would you use 'sustain'?",
+          "choices": [
+            "To end a process",
+            "To maintain over time",
+            "To decrease in size",
+            "To initiate a project"
+          ],
+          "answer": "To maintain over time"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Choose the correct meaning of 'validate'.",
+          "choices": [
+            "to dispute",
+            "to confirm",
+            "to ignore",
+            "to dismantle"
+          ],
+          "answer": "to confirm"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'synthesize' involve?",
+          "choices": [
+            "to break down",
+            "to combine into a whole",
+            "to nullify",
+            "to segregate"
+          ],
+          "answer": "to combine into a whole"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'allocate'?",
+          "choices": [
+            "to dispute",
+            "to gather",
+            "to assign resources",
+            "to isolate"
+          ],
+          "answer": "to assign resources"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "How would you define 'facilitate'?",
+          "choices": [
+            "to make harder",
+            "to assist",
+            "to control",
+            "to deter"
+          ],
+          "answer": "to assist"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'inhibit' mean?",
+          "choices": [
+            "to promote",
+            "to hinder",
+            "to release",
+            "to excite"
+          ],
+          "answer": "to hinder"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'integrate' entail?",
+          "choices": [
+            "to separate",
+            "to combine",
+            "to simplify",
+            "to confuse"
+          ],
+          "answer": "to combine"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'approximate'?",
+          "choices": [
+            "to differ significantly",
+            "to be exact",
+            "to be similar to",
+            "to conflict with"
+          ],
+          "answer": "to be similar to"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'reinforce' imply?",
+          "choices": [
+            "to weaken",
+            "to strengthen",
+            "to ignore",
+            "to dismiss"
+          ],
+          "answer": "to strengthen"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "How would you define 'optimize'?",
+          "choices": [
+            "to make worse",
+            "to improve efficiency",
+            "to abandon",
+            "to delay"
+          ],
+          "answer": "to improve efficiency"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Choose the correct meaning of 'differentiate'.",
+          "choices": [
+            "to confuse",
+            "to unify",
+            "to distinguish",
+            "to repeat"
+          ],
+          "answer": "to distinguish"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'justify' mean in a logical context?",
+          "choices": [
+            "to oppose",
+            "to prove right",
+            "to conceal",
+            "to contradict"
+          ],
+          "answer": "to prove right"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'articulate' mean?",
+          "choices": [
+            "to mumble",
+            "to express clearly",
+            "to obscure",
+            "to simplify"
+          ],
+          "answer": "to express clearly"
+        }
+      ],
+      "testType": "meaning_choice"
+    }
+  },
+  "homework": {
+    "title": "심화 모의고사",
+    "items": [
+      {
+        "type": "reading",
+        "title": "15지문"
+      },
+      {
+        "type": "listening",
+        "title": "15듣기"
+      },
+      {
+        "type": "vocab",
+        "title": "25단어"
+      }
+    ]
+  }
+}

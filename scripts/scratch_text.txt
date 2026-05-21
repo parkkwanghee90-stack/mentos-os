@@ -1,0 +1,10 @@
+002: 삼각형 ABC에서 a:b:c의 비율을 구합니다. A:B:C = 2:3:1 이고, 삼각형의 내각의 합은 180도입니다. 사인 법칙에 따라 a:b:c = sinA:sinB:sinC 입니다. 각 A, B, C를 구합니다.\ A + B + C = 180\ A = 2x, B =
+003: 삼각형 ABC에서 BD:DC의 비율을 구하라. 삼각형 ADB와 ADC의 각도, 변의 길이, 사인 법칙을 고려한다. 사인 법칙을 이용하여 두 변의 비율을 구하는 방법을 설정한다.\ BD:DC = \frac{AB \cdot \sin(\angle ADC)}{AC \cdot 
+004: 삼각형 ABC에서 각 B의 코사인 제곱값을 구해야 합니다. 주어진 값: \ a = 6, \ b = 8, \ A = 30° 사인 법칙에 따라: \ \frac{a}{\sin A} = \frac{b}{\sin B} \ \\ \sin B = \frac{b \cdot \sin 
+005: 삼각형 ABC에서 점 P에 대해 \( CP \)의 최소값을 구해야 합니다. 주어진 조건: \( AC = 6\sqrt{2}, \angle A = 30^{\circ}, \angle C = 105^{\circ} \) 각 B는 다음과 같이 구할 수 있습니다:\\ \angle 
+006: 사각형 ABCD에서 AC의 길이를 구하시오. ∠ABD = 50°, ∠ADB = 40°, ∠CBD = 70°, BD = 2√3 ∠A = 180° - ∠ABD - ∠ADB \\ ∠A = 180° - 50° - 40° \\ ∠A = 90° R = \frac{a}{2 \sin
+007: 삼각형 ABC의 둘레를 구합니다. 주어진 조건: \sin A + \sin B + \sin C = \frac{5}{2}, \text{ 반지름 } r = 2. 삼각형의 둘레는 다음과 같이 표현됩니다: \( a + b + c = 4(\sin A + \sin B + \sin 
+008: 삼각형 ABC의 외접원의 반지름 R을 구합니다. 주어진 조건: BC = 8, 9sin(B+C)sinA = 4\n\nBC = 8\n\n9sin(B+C)sinA = 4 사인 법칙에 따라 R = \frac{a}{2sinA} \n\n여기서 a는 BC의 길이입니다. 주어진 조건
+009: 삼각형 ABC에서 BC의 길이를 구해야 합니다. 반지름 R = 9, \ sin A = \frac{1}{6}입니다. 삼각형의 외접원의 성질과 사인 법칙을 사용합니다. BC / \sin A = 2R \ 
+ BC = 2R \cdot \sin A BC = 2 \cdot 9 \
+010: BD의 길이를 θ에 대한 식으로 나타내라. ∠B = ∠D = 90°, AC = 4, ∠A = θ 사인 법칙을 사용하여 BD의 길이를 구할 수 있다. R = \frac{AC}{2 \cdot \sin(\theta)} \\ R = \frac{4}{2 \cdot \sin(\t

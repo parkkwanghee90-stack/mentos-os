@@ -1,0 +1,537 @@
+{
+  "teacherId": "h_eng6",
+  "round": 2,
+  "title": "Curriculum Mode for 3등급",
+  "targetGrades": [
+    "고3"
+  ],
+  "targetRanks": [
+    "3등급"
+  ],
+  "reading": {
+    "passageCount": 6,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "The invention of the printing press in the 15th century drastically changed the way information was distributed. Before its invention, books were copied by hand, making them rare and expensive. With the printing press, books became more accessible, leading to an increase in literacy rates. This innovation also allowed for the spread of new ideas and knowledge at an unprecedented rate.",
+        "teachPoint": "Understanding the impact of the printing press on society and literacy.",
+        "question": "How did the invention of the printing press affect the availability of books?"
+      },
+      {
+        "id": "Passage_2",
+        "text": "Climate change poses a significant threat to marine life due to rising ocean temperatures and acidification. These changes disrupt marine ecosystems, affecting the food chain and habitat of many species. Coral reefs, in particular, are vulnerable, as they rely on specific conditions to thrive. Protecting these ecosystems is crucial to maintaining biodiversity and the health of our oceans.",
+        "teachPoint": "Recognizing the effects of climate change on marine ecosystems.",
+        "question": "What are two major changes in the ocean caused by climate change?"
+      },
+      {
+        "id": "Passage_3",
+        "text": "The Great Wall of China is one of the most famous landmarks in the world. It was built over several centuries to protect China from invasions by various nomadic groups. The wall stretches over 13,000 miles and showcases ancient engineering skills. Today, it serves as a symbol of China's historical strength and attracts millions of tourists each year.",
+        "teachPoint": "Exploring the historical significance of the Great Wall of China.",
+        "question": "Why was the Great Wall of China originally constructed?"
+      },
+      {
+        "id": "Passage_4",
+        "text": "Photosynthesis is a process by which plants, algae, and some bacteria convert sunlight into energy. This process takes place in the chloroplasts of plant cells and produces oxygen as a byproduct. Photosynthesis is vital for life on Earth, as it provides the oxygen we breathe and is the foundation of the food chain.",
+        "teachPoint": "Understanding the process and importance of photosynthesis.",
+        "question": "What is the primary purpose of photosynthesis in plants?"
+      },
+      {
+        "id": "Passage_5",
+        "text": "The Industrial Revolution, which began in the late 18th century, marked a significant turning point in history. It led to the development of new machines and industries, transforming economies from agrarian to industrial. Urbanization increased as people moved to cities for work, changing social structures and lifestyles. This era paved the way for modern technology and economic growth.",
+        "teachPoint": "Examining the effects of the Industrial Revolution on society and economy.",
+        "question": "How did the Industrial Revolution alter living conditions and job opportunities?"
+      },
+      {
+        "id": "Passage_6",
+        "text": "In the past, people used to write letters to communicate over long distances. This process took a lot of time as letters had to be delivered by mail. With the advent of technology, communication has become much faster. Email and instant messaging allow people to send messages in seconds. This has completely transformed the way we connect with others. However, some people feel that the personal touch of handwritten letters is lost in digital communication.",
+        "teachPoint": "The passage highlights the transition from traditional to digital communication methods and the impact of technology on the speed of communication.",
+        "question": "What is one disadvantage of digital communication mentioned in the passage?"
+      }
+    ],
+    "teachPoints": [
+      "Understanding the impact of the printing press on society and literacy.",
+      "Recognizing the effects of climate change on marine ecosystems.",
+      "Exploring the historical significance of the Great Wall of China.",
+      "Understanding the process and importance of photosynthesis.",
+      "Examining the effects of the Industrial Revolution on society and economy.",
+      "The passage highlights the transition from traditional to digital communication methods and the impact of technology on the speed of communication."
+    ],
+    "questions": [
+      "How did the invention of the printing press affect the availability of books?",
+      "What are two major changes in the ocean caused by climate change?",
+      "Why was the Great Wall of China originally constructed?",
+      "What is the primary purpose of photosynthesis in plants?",
+      "How did the Industrial Revolution alter living conditions and job opportunities?",
+      "What is one disadvantage of digital communication mentioned in the passage?"
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "script": [
+          "A: Hey, are you going to the concert this weekend?",
+          "B: I was thinking about it. Do you have tickets?",
+          "A: Yeah, I bought mine a month ago. They're selling out fast.",
+          "B: Really? I should probably get mine soon then.",
+          "A: Definitely. It's going to be a great show!",
+          "B: Who's playing again?"
+        ],
+        "question": "What are the speakers mainly discussing?",
+        "choices": [
+          "A: A movie they watched recently.",
+          "B: A concert happening this weekend.",
+          "C: A new restaurant in town.",
+          "D: Tickets for a play.",
+          "E: A sports event next month."
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Did you finish the report for Mr. Johnson?",
+          "B: Not yet, I'm still working on it.",
+          "A: You know it's due tomorrow, right?",
+          "B: Yes, I do. I'll make sure it's done by then.",
+          "A: Need any help with it?",
+          "B: Actually, that would be great. Can you check the data section for me?"
+        ],
+        "question": "What is B's main concern?",
+        "choices": [
+          "A: Finding a report.",
+          "B: Meeting a deadline.",
+          "C: Understanding the data section.",
+          "D: Getting help from A.",
+          "E: Completing the report for Mr. Johnson."
+        ],
+        "answer": "E"
+      },
+      {
+        "script": [
+          "A: Have you tried the new cafe on 5th street?",
+          "B: Not yet. Is it any good?",
+          "A: I loved their coffee. And the pastries are amazing!",
+          "B: That's great to hear. I might go there this afternoon.",
+          "A: You should. They also have a nice outdoor seating area.",
+          "B: Perfect for this weather!"
+        ],
+        "question": "What is the main topic of the conversation?",
+        "choices": [
+          "A: A new restaurant.",
+          "B: A new cafe.",
+          "C: An outdoor market.",
+          "D: The weather.",
+          "E: Coffee shops in town."
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Do you have any plans for the weekend?",
+          "B: I'm thinking about going hiking. Want to join?",
+          "A: Sounds fun! Where are you planning to go?",
+          "B: There's a trail near the lake I've been wanting to try.",
+          "A: I've heard it's beautiful this time of year.",
+          "B: Yeah, and the weather is supposed to be perfect."
+        ],
+        "question": "What are the speakers planning to do?",
+        "choices": [
+          "A: Visit a museum.",
+          "B: Go hiking.",
+          "C: Have a picnic.",
+          "D: Watch a movie.",
+          "E: Go shopping."
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: How was your vacation?",
+          "B: It was amazing! We went to the beach every day.",
+          "A: That sounds relaxing. Did you do anything else?",
+          "B: We also went snorkeling and took a boat tour.",
+          "A: I bet the views were incredible.",
+          "B: They really were. I took lots of pictures."
+        ],
+        "question": "What did B enjoy during the vacation?",
+        "choices": [
+          "A: Visiting museums.",
+          "B: Going to the beach.",
+          "C: Hiking in the mountains.",
+          "D: Exploring the city.",
+          "E: Shopping in markets."
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Have you completed the assignment for history class?",
+          "B: Yes, I finished it last night.",
+          "A: Great! I'm still working on mine.",
+          "B: Do you need any help?",
+          "A: Actually, could you explain the last part to me?",
+          "B: Sure, it's about the causes of the revolution."
+        ],
+        "question": "What is A's current status regarding the assignment?",
+        "choices": [
+          "A: Completed the assignment.",
+          "B: Yet to start the assignment.",
+          "C: Working on the assignment.",
+          "D: Needs help with the first part.",
+          "E: Needs help with the last part."
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: Are you going to the meeting later?",
+          "B: Yes, but I'm running a bit late.",
+          "A: No worries, it hasn't started yet.",
+          "B: Good to know. Could you save me a seat?",
+          "A: Of course. I'll see you there.",
+          "B: Thanks! I'll try to be there as soon as I can."
+        ],
+        "question": "What is B's concern about the meeting?",
+        "choices": [
+          "A: Arriving on time.",
+          "B: Finding a seat.",
+          "C: Missing the meeting.",
+          "D: Preparing for the meeting.",
+          "E: Having the meeting rescheduled."
+        ],
+        "answer": "A"
+      },
+      {
+        "script": [
+          "A: Have you seen the new art exhibit at the gallery?",
+          "B: Not yet. Is it worth checking out?",
+          "A: Definitely. The paintings are stunning.",
+          "B: I love art. I'll visit this weekend.",
+          "A: Make sure to give yourself enough time. It's quite large.",
+          "B: Thanks for the tip! I'm looking forward to it."
+        ],
+        "question": "What are the speakers discussing?",
+        "choices": [
+          "A: A new movie.",
+          "B: An art exhibit.",
+          "C: A music concert.",
+          "D: A theater play.",
+          "E: A photography show."
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Did you hear about the new policy at work?",
+          "B: Yes, I read the email about it.",
+          "A: What do you think?",
+          "B: It seems fair, but some people are not happy.",
+          "A: Change is always difficult.",
+          "B: True, but I think it will benefit us in the long run."
+        ],
+        "question": "What is B's opinion about the new policy?",
+        "choices": [
+          "A: It's unfair.",
+          "B: It's confusing.",
+          "C: It's beneficial.",
+          "D: It's unnecessary.",
+          "E: It's too strict."
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: Are you going to the team dinner tonight?",
+          "B: I can't make it. I have a prior commitment.",
+          "A: That's too bad. We'll miss you.",
+          "B: I know. I was looking forward to it.",
+          "A: Maybe next time.",
+          "B: Definitely. Have fun for me!"
+        ],
+        "question": "Why is B unable to attend the dinner?",
+        "choices": [
+          "A: Feeling unwell.",
+          "B: Forgot about the dinner.",
+          "C: Has another commitment.",
+          "D: Doesn't want to go.",
+          "E: Is out of town."
+        ],
+        "answer": "C"
+      }
+    ],
+    "timeline": [
+      "[0~3m] AudioItem_1",
+      "[3~6m] AudioItem_2",
+      "[6~9m] AudioItem_3",
+      "[9~12m] AudioItem_4",
+      "[12~15m] AudioItem_5",
+      "[15~18m] AudioItem_6",
+      "[18~21m] AudioItem_7",
+      "[21~24m] AudioItem_8",
+      "[24~27m] AudioItem_9",
+      "[27~30m] AudioItem_10"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "abrupt",
+        "meaning": "sudden and unexpected",
+        "alt_meaning": "curt and lacking in smoothness",
+        "example_sentence": "The meeting came to an abrupt end when the fire alarm went off.",
+        "context_explain": "In this context, 'abrupt' describes how quickly and unexpectedly the meeting ended."
+      },
+      {
+        "word": "contemplate",
+        "meaning": "to think deeply or carefully about",
+        "alt_meaning": "to consider as a possibility",
+        "example_sentence": "She spent the afternoon contemplating the meaning of life.",
+        "context_explain": "Here, 'contemplate' means to think deeply about existential questions."
+      },
+      {
+        "word": "diminish",
+        "meaning": "to make or become less",
+        "alt_meaning": "to reduce in importance",
+        "example_sentence": "The medicine helped diminish the pain.",
+        "context_explain": "In this sentence, 'diminish' refers to reducing the level of pain."
+      },
+      {
+        "word": "emphasize",
+        "meaning": "to give special importance to",
+        "alt_meaning": "to stress or highlight",
+        "example_sentence": "The teacher emphasized the importance of homework.",
+        "context_explain": "Here, 'emphasize' means the teacher highlighted the significance of doing homework."
+      },
+      {
+        "word": "feasible",
+        "meaning": "possible to do easily or conveniently",
+        "alt_meaning": "likely or probable",
+        "example_sentence": "The project seems feasible within the given timeline.",
+        "context_explain": "In this context, 'feasible' means the project can be completed as planned."
+      },
+      {
+        "word": "generate",
+        "meaning": "to produce or create",
+        "alt_meaning": "to bring into existence",
+        "example_sentence": "The new policy is expected to generate more jobs.",
+        "context_explain": "Here, 'generate' means to create or produce new employment opportunities."
+      },
+      {
+        "word": "hypothetical",
+        "meaning": "based on a suggested idea or theory",
+        "alt_meaning": "involving or being based on a hypothesis",
+        "example_sentence": "He discussed a hypothetical situation to explain his point.",
+        "context_explain": "In this sentence, 'hypothetical' refers to an imagined scenario used for illustration."
+      },
+      {
+        "word": "imminent",
+        "meaning": "about to happen",
+        "alt_meaning": "impending or forthcoming",
+        "example_sentence": "The storm is imminent, so we should seek shelter immediately.",
+        "context_explain": "Here, 'imminent' means the storm is expected to occur very soon."
+      },
+      {
+        "word": "justify",
+        "meaning": "to show or prove to be right or reasonable",
+        "alt_meaning": "to defend or uphold",
+        "example_sentence": "He tried to justify his actions by explaining his intentions.",
+        "context_explain": "In this context, 'justify' means to provide reasons for his actions to make them seem acceptable."
+      },
+      {
+        "word": "meticulous",
+        "meaning": "showing great attention to detail",
+        "alt_meaning": "very careful and precise",
+        "example_sentence": "She was meticulous in her work, leaving no detail overlooked.",
+        "context_explain": "Here, 'meticulous' describes someone who is very careful and attentive to details in their work."
+      },
+      {
+        "word": "notorious",
+        "meaning": "famous or well known for a bad quality or deed",
+        "alt_meaning": "infamous",
+        "example_sentence": "The city is notorious for its high crime rates.",
+        "context_explain": "In this context, 'notorious' describes the city as being well known for negative reasons."
+      },
+      {
+        "word": "obsolete",
+        "meaning": "no longer in use",
+        "alt_meaning": "outdated or old-fashioned",
+        "example_sentence": "With the advent of smartphones, pagers have become obsolete.",
+        "context_explain": "Here, 'obsolete' means that pagers are no longer needed due to newer technology."
+      },
+      {
+        "word": "plausible",
+        "meaning": "seeming reasonable or probable",
+        "alt_meaning": "believable or credible",
+        "example_sentence": "Her explanation for being late was plausible.",
+        "context_explain": "In this context, 'plausible' means her reason for being late seemed believable."
+      },
+      {
+        "word": "scrutinize",
+        "meaning": "to examine or inspect closely and thoroughly",
+        "alt_meaning": "to analyze in detail",
+        "example_sentence": "The detective scrutinized the evidence carefully.",
+        "context_explain": "Here, 'scrutinize' means to examine the evidence in great detail."
+      },
+      {
+        "word": "vulnerable",
+        "meaning": "open to attack or harm",
+        "alt_meaning": "susceptible to physical or emotional injury",
+        "example_sentence": "The small kitten was vulnerable without its mother.",
+        "context_explain": "In this sentence, 'vulnerable' describes the kitten as being at risk of harm because it lacks protection."
+      }
+    ],
+    "venice": {
+      "time": "5분",
+      "theme": "Review",
+      "content": "Words"
+    },
+    "wordLearn": {
+      "time": "8분",
+      "content": "Learn"
+    },
+    "wordTest": {
+      "time": "5분",
+      "questionsCount": 12,
+      "questions": [
+        {
+          "question": "What does 'abrupt' mean?",
+          "options": [
+            "gradual and expected",
+            "sudden and unexpected",
+            "slow and deliberate",
+            "calm and collected"
+          ],
+          "answer": "sudden and unexpected"
+        },
+        {
+          "question": "Which word means 'to think deeply or carefully about'?",
+          "options": [
+            "contemplate",
+            "generate",
+            "justify",
+            "diminish"
+          ],
+          "answer": "contemplate"
+        },
+        {
+          "question": "What is the meaning of 'diminish'?",
+          "options": [
+            "to increase in size",
+            "to make or become less",
+            "to create or produce",
+            "to highlight importance"
+          ],
+          "answer": "to make or become less"
+        },
+        {
+          "question": "Choose the correct meaning of 'emphasize'.",
+          "options": [
+            "to downplay",
+            "to give special importance to",
+            "to ignore",
+            "to simplify"
+          ],
+          "answer": "to give special importance to"
+        },
+        {
+          "question": "What does 'feasible' mean?",
+          "options": [
+            "impossible to do",
+            "outdated",
+            "possible to do easily or conveniently",
+            "hypothetical"
+          ],
+          "answer": "possible to do easily or conveniently"
+        },
+        {
+          "question": "Which word means 'based on a suggested idea or theory'?",
+          "options": [
+            "imminent",
+            "hypothetical",
+            "meticulous",
+            "plausible"
+          ],
+          "answer": "hypothetical"
+        },
+        {
+          "question": "What does 'imminent' mean?",
+          "options": [
+            "recently happened",
+            "ongoing",
+            "about to happen",
+            "never occurring"
+          ],
+          "answer": "about to happen"
+        },
+        {
+          "question": "Which word describes 'showing great attention to detail'?",
+          "options": [
+            "vulnerable",
+            "meticulous",
+            "obsolete",
+            "notorious"
+          ],
+          "answer": "meticulous"
+        },
+        {
+          "question": "What does 'notorious' mean?",
+          "options": [
+            "famous for a good quality",
+            "famous or well known for a bad quality or deed",
+            "unknown",
+            "outdated"
+          ],
+          "answer": "famous or well known for a bad quality or deed"
+        },
+        {
+          "question": "Choose the correct meaning of 'obsolete'.",
+          "options": [
+            "modern",
+            "innovative",
+            "no longer in use",
+            "futuristic"
+          ],
+          "answer": "no longer in use"
+        },
+        {
+          "question": "What is the meaning of 'scrutinize'?",
+          "options": [
+            "to glance quickly",
+            "to examine or inspect closely and thoroughly",
+            "to disregard",
+            "to dismiss"
+          ],
+          "answer": "to examine or inspect closely and thoroughly"
+        },
+        {
+          "question": "Which word means 'open to attack or harm'?",
+          "options": [
+            "vulnerable",
+            "feasible",
+            "plausible",
+            "hypothetical"
+          ],
+          "answer": "vulnerable"
+        }
+      ],
+      "testType": "matching"
+    }
+  },
+  "homework": {
+    "title": "기초/핵심 과제",
+    "items": [
+      {
+        "type": "reading",
+        "title": "6개 지문 풀이 분석"
+      },
+      {
+        "type": "listening",
+        "title": "6개 듣기 실전 딕테이션"
+      },
+      {
+        "type": "vocab",
+        "title": "15개 단어 완벽 암기"
+      }
+    ]
+  }
+}

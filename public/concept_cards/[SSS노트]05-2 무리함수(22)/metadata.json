@@ -1,0 +1,86 @@
+[
+  {
+    "id": "[SSS노트]05-2 무리함수(22)_p3_01",
+    "source_file": "[SSS노트]05-2 무리함수(22)",
+    "source_page": 3,
+    "section_index": "02",
+    "section_title": "무리함수",
+    "card_index": "01",
+    "card_title": "무리함수",
+    "y_start": 372,
+    "y_end": 947,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[SSS노트]05-2 무리함수(22)_p3_02",
+    "source_file": "[SSS노트]05-2 무리함수(22)",
+    "source_page": 3,
+    "section_index": "02",
+    "section_title": "무리함수",
+    "card_index": "02",
+    "card_title": "무리함수의 정의역",
+    "y_start": 947,
+    "y_end": 1602,
+    "file_png": "card_02_p3.webp"
+  },
+  {
+    "id": "[SSS노트]05-2 무리함수(22)_p4_03",
+    "source_file": "[SSS노트]05-2 무리함수(22)",
+    "source_page": 4,
+    "section_index": "02",
+    "section_title": "무리함수",
+    "card_index": "03",
+    "card_title": "함수   ±   ",
+    "y_start": 278,
+    "y_end": 1010,
+    "file_png": "card_03_p4.webp"
+  },
+  {
+    "id": "[SSS노트]05-2 무리함수(22)_p4_04",
+    "source_file": "[SSS노트]05-2 무리함수(22)",
+    "source_page": 4,
+    "section_index": "02",
+    "section_title": "무리함수",
+    "card_index": "04",
+    "card_title": "함수      ",
+    "y_start": 1010,
+    "y_end": 1602,
+    "file_png": "card_04_p4.webp"
+  },
+  {
+    "id": "[SSS노트]05-2 무리함수(22)_p5_05",
+    "source_file": "[SSS노트]05-2 무리함수(22)",
+    "source_page": 5,
+    "section_index": "02",
+    "section_title": "무리함수",
+    "card_index": "05",
+    "card_title": "함수      ",
+    "y_start": 278,
+    "y_end": 702,
+    "file_png": "card_05_p5.webp"
+  },
+  {
+    "id": "[SSS노트]05-2 무리함수(22)_p5_06",
+    "source_file": "[SSS노트]05-2 무리함수(22)",
+    "source_page": 5,
+    "section_index": "02",
+    "section_title": "무리함수",
+    "card_index": "06",
+    "card_title": "무리함수의 역함수 구하기",
+    "y_start": 702,
+    "y_end": 1134,
+    "file_png": "card_06_p5.webp"
+  },
+  {
+    "id": "[SSS노트]05-2 무리함수(22)_p5_07",
+    "source_file": "[SSS노트]05-2 무리함수(22)",
+    "source_page": 5,
+    "section_index": "02",
+    "section_title": "무리함수",
+    "card_index": "07",
+    "card_title": "무리함수의 역함수와 그래프의 성질",
+    "y_start": 1134,
+    "y_end": 1602,
+    "file_png": "card_07_p5.webp"
+  }
+]

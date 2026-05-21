@@ -1,0 +1,26 @@
+[
+  {
+    "id": "[SSS노트]10-1 자연수 거듭제곱의 합(14)_p3_01",
+    "source_file": "[SSS노트]10-1 자연수 거듭제곱의 합(14)",
+    "source_page": 3,
+    "section_index": "02",
+    "section_title": "자연수의 거듭제곱의 합",
+    "card_index": "01",
+    "card_title": "자연수의 거듭제곱의 합",
+    "y_start": 482,
+    "y_end": 1010,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[SSS노트]10-1 자연수 거듭제곱의 합(14)_p3_02",
+    "source_file": "[SSS노트]10-1 자연수 거듭제곱의 합(14)",
+    "source_page": 3,
+    "section_index": "02",
+    "section_title": "자연수의 거듭제곱의 합",
+    "card_index": "02",
+    "card_title": " 를 이용하여 수열의 합을 구하는 방법",
+    "y_start": 1010,
+    "y_end": 1602,
+    "file_png": "card_02_p3.webp"
+  }
+]

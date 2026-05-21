@@ -1,0 +1,4118 @@
+[
+  {
+    "id": "[S.S.S note]_01.수열의극한_초급단계(25)_p3_01",
+    "old_path": "[S.S.S note]_01.수열의극한_초급단계(25)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_01.수열의극한_초급단계(25)/무한수열의 수렴.webp",
+    "new_title": "무한수열의 수렴",
+    "old_title": "무한수열의 수렴"
+  },
+  {
+    "id": "[S.S.S note]_01.수열의극한_초급단계(25)_p4_02",
+    "old_path": "[S.S.S note]_01.수열의극한_초급단계(25)/card_02_p4.webp",
+    "new_path": "[S.S.S note]_01.수열의극한_초급단계(25)/극한의 수렴과 발산.webp",
+    "new_title": "극한의 수렴과 발산",
+    "old_title": "극한의 수렴과 발산"
+  },
+  {
+    "id": "[S.S.S note]_01.수열의극한_초급단계(25)_p5_03",
+    "old_path": "[S.S.S note]_01.수열의극한_초급단계(25)/card_03_p5.webp",
+    "new_path": "[S.S.S note]_01.수열의극한_초급단계(25)/무한수열의 수렴과 발산 ( 정리 ).webp",
+    "new_title": "무한수열의 수렴과 발산 ( 정리 )",
+    "old_title": "무한수열의 수렴과 발산 ( 정리 )"
+  },
+  {
+    "id": "[S.S.S note]_01.수열의극한_초급단계(25)_p6_01",
+    "old_path": "[S.S.S note]_01.수열의극한_초급단계(25)/card_01_p6.webp",
+    "new_path": "[S.S.S note]_01.수열의극한_초급단계(25)/극한값의 기본 성질.webp",
+    "new_title": "극한값의 기본 성질",
+    "old_title": "극한값의 기본 성질"
+  },
+  {
+    "id": "[S.S.S note]_01.수열의극한_초급단계(25)_p7_03",
+    "old_path": "[S.S.S note]_01.수열의극한_초급단계(25)/card_03_p7.webp",
+    "new_path": "[S.S.S note]_01.수열의극한_초급단계(25)/극한값의 성질을 이용한 극한 구하기.webp",
+    "new_title": "극한값의 성질을 이용한 극한 구하기",
+    "old_title": "극한값의 성질을 이용한 극한 구하기"
+  },
+  {
+    "id": "[S.S.S note]_01.수열의극한_초급단계(25)_p8_01",
+    "old_path": "[S.S.S note]_01.수열의극한_초급단계(25)/card_01_p8.webp",
+    "new_path": "[S.S.S note]_01.수열의극한_초급단계(25)/부정형의 극한이란.webp",
+    "new_title": "부정형의 극한이란",
+    "old_title": "부정형의 극한이란"
+  },
+  {
+    "id": "[S.S.S note]_01.수열의극한_초급단계(25)_p9_02",
+    "old_path": "[S.S.S note]_01.수열의극한_초급단계(25)/card_02_p9.webp",
+    "new_path": "[S.S.S note]_01.수열의극한_초급단계(25)/∞ 꼴의 부정형 극한.webp",
+    "new_title": "∞ 꼴의 부정형 극한",
+    "old_title": " ∞ 꼴의 부정형 극한"
+  },
+  {
+    "id": "[S.S.S note]_01.수열의극한_초급단계(25)_p10_03",
+    "old_path": "[S.S.S note]_01.수열의극한_초급단계(25)/card_03_p10.webp",
+    "new_path": "[S.S.S note]_01.수열의극한_초급단계(25)/∞ 꼴의 부정형 극한_2.webp",
+    "new_title": "∞ 꼴의 부정형 극한_2",
+    "old_title": " ∞ 꼴의 부정형 극한"
+  },
+  {
+    "id": "[S.S.S note]_01.수열의극한_초급단계(25)_p11_01",
+    "old_path": "[S.S.S note]_01.수열의극한_초급단계(25)/card_01_p11.webp",
+    "new_path": "[S.S.S note]_01.수열의극한_초급단계(25)/극한의 대소 관계.webp",
+    "new_title": "극한의 대소 관계",
+    "old_title": "극한의 대소 관계"
+  },
+  {
+    "id": "[S.S.S note]_01.수열의극한_초급단계(25)_p11_02",
+    "old_path": "[S.S.S note]_01.수열의극한_초급단계(25)/card_02_p11.webp",
+    "new_path": "[S.S.S note]_01.수열의극한_초급단계(25)/샌드위치 정리.webp",
+    "new_title": "샌드위치 정리",
+    "old_title": "샌드위치 정리"
+  },
+  {
+    "id": "[S.S.S note]_01.수열의극한_초급단계(25)_p12_01",
+    "old_path": "[S.S.S note]_01.수열의극한_초급단계(25)/card_01_p12.webp",
+    "new_path": "[S.S.S note]_01.수열의극한_초급단계(25)/무한등비수열의 수렴과 발산.webp",
+    "new_title": "무한등비수열의 수렴과 발산",
+    "old_title": "무한등비수열의 수렴과 발산"
+  },
+  {
+    "id": "[S.S.S note]_01.수열의극한_초급단계(25)_p14_02",
+    "old_path": "[S.S.S note]_01.수열의극한_초급단계(25)/card_02_p14.webp",
+    "new_path": "[S.S.S note]_01.수열의극한_초급단계(25)/꼴의 극한.webp",
+    "new_title": "꼴의 극한",
+    "old_title": "  꼴의 극한"
+  },
+  {
+    "id": "[S.S.S note]_01.함수의극한_초급단계(22)_p3_01",
+    "old_path": "[S.S.S note]_01.함수의극한_초급단계(22)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_01.함수의극한_초급단계(22)/함수의 극한의 정의.webp",
+    "new_title": "함수의 극한의 정의",
+    "old_title": "함수의 극한의 정의"
+  },
+  {
+    "id": "[S.S.S note]_01.함수의극한_초급단계(22)_p3_02",
+    "old_path": "[S.S.S note]_01.함수의극한_초급단계(22)/card_02_p3.webp",
+    "new_path": "[S.S.S note]_01.함수의극한_초급단계(22)/함수의 극한에 관한 성질.webp",
+    "new_title": "함수의 극한에 관한 성질",
+    "old_title": "함수의 극한에 관한 성질"
+  },
+  {
+    "id": "[S.S.S note]_01.함수의극한_초급단계(22)_p4_01",
+    "old_path": "[S.S.S note]_01.함수의극한_초급단계(22)/card_01_p4.webp",
+    "new_path": "[S.S.S note]_01.함수의극한_초급단계(22)/함수의 극한값 구하기.webp",
+    "new_title": "함수의 극한값 구하기",
+    "old_title": "함수의 극한값 구하기"
+  },
+  {
+    "id": "[S.S.S note]_01.함수의극한_초급단계(22)_p4_02",
+    "old_path": "[S.S.S note]_01.함수의극한_초급단계(22)/card_02_p4.webp",
+    "new_path": "[S.S.S note]_01.함수의극한_초급단계(22)/부정형의 함수의 극한.webp",
+    "new_title": "부정형의 함수의 극한",
+    "old_title": "부정형의 함수의 극한"
+  },
+  {
+    "id": "[S.S.S note]_01.함수의극한_초급단계(22)_p5_01",
+    "old_path": "[S.S.S note]_01.함수의극한_초급단계(22)/card_01_p5.webp",
+    "new_path": "[S.S.S note]_01.함수의극한_초급단계(22)/합성함수의 극한값 구하기.webp",
+    "new_title": "합성함수의 극한값 구하기",
+    "old_title": "합성함수의 극한값 구하기"
+  },
+  {
+    "id": "[S.S.S note]_01.함수의극한_초급단계(22)_p6_01",
+    "old_path": "[S.S.S note]_01.함수의극한_초급단계(22)/card_01_p6.webp",
+    "new_path": "[S.S.S note]_01.함수의극한_초급단계(22)/수렴하는 분수함수의 극한.webp",
+    "new_title": "수렴하는 분수함수의 극한",
+    "old_title": "수렴하는 분수함수의 극한"
+  },
+  {
+    "id": "[S.S.S note]_01.함수의극한_초급단계(22)_p7_02",
+    "old_path": "[S.S.S note]_01.함수의극한_초급단계(22)/card_02_p7.webp",
+    "new_path": "[S.S.S note]_01.함수의극한_초급단계(22)/미정계수의 결정.webp",
+    "new_title": "미정계수의 결정",
+    "old_title": "미정계수의 결정"
+  },
+  {
+    "id": "[S.S.S note]_01.함수의극한_초급단계(22)_p8_01",
+    "old_path": "[S.S.S note]_01.함수의극한_초급단계(22)/card_01_p8.webp",
+    "new_path": "[S.S.S note]_01.함수의극한_초급단계(22)/함수의 극한의 대소관계.webp",
+    "new_title": "함수의 극한의 대소관계",
+    "old_title": "함수의 극한의 대소관계"
+  },
+  {
+    "id": "[S.S.S note]_01.함수의극한_초급단계(22)_p8_02",
+    "old_path": "[S.S.S note]_01.함수의극한_초급단계(22)/card_02_p8.webp",
+    "new_path": "[S.S.S note]_01.함수의극한_초급단계(22)/샌드위치 정리_2.webp",
+    "new_title": "샌드위치 정리_2",
+    "old_title": "샌드위치 정리"
+  },
+  {
+    "id": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정_p3_01",
+    "old_path": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정/card_01_p3.webp",
+    "new_path": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정/함수의 극한의 정의_2.webp",
+    "new_title": "함수의 극한의 정의_2",
+    "old_title": "함수의 극한의 정의"
+  },
+  {
+    "id": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정_p3_02",
+    "old_path": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정/card_02_p3.webp",
+    "new_path": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정/함수의 극한에 관한 성질_2.webp",
+    "new_title": "함수의 극한에 관한 성질_2",
+    "old_title": "함수의 극한에 관한 성질"
+  },
+  {
+    "id": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정_p4_01",
+    "old_path": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정/card_01_p4.webp",
+    "new_path": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정/함수의 극한값 구하기_2.webp",
+    "new_title": "함수의 극한값 구하기_2",
+    "old_title": "함수의 극한값 구하기"
+  },
+  {
+    "id": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정_p4_02",
+    "old_path": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정/card_02_p4.webp",
+    "new_path": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정/부정형의 함수의 극한_2.webp",
+    "new_title": "부정형의 함수의 극한_2",
+    "old_title": "부정형의 함수의 극한"
+  },
+  {
+    "id": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정_p5_01",
+    "old_path": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정/card_01_p5.webp",
+    "new_path": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정/합성함수의 극한값 구하기_2.webp",
+    "new_title": "합성함수의 극한값 구하기_2",
+    "old_title": "합성함수의 극한값 구하기"
+  },
+  {
+    "id": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정_p6_01",
+    "old_path": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정/card_01_p6.webp",
+    "new_path": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정/수렴하는 분수함수의 극한_2.webp",
+    "new_title": "수렴하는 분수함수의 극한_2",
+    "old_title": "수렴하는 분수함수의 극한"
+  },
+  {
+    "id": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정_p7_02",
+    "old_path": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정/card_02_p7.webp",
+    "new_path": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정/미정계수의 결정_2.webp",
+    "new_title": "미정계수의 결정_2",
+    "old_title": "미정계수의 결정"
+  },
+  {
+    "id": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정_p8_01",
+    "old_path": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정/card_01_p8.webp",
+    "new_path": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정/함수의 극한의 대소관계_2.webp",
+    "new_title": "함수의 극한의 대소관계_2",
+    "old_title": "함수의 극한의 대소관계"
+  },
+  {
+    "id": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정_p8_02",
+    "old_path": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정/card_02_p8.webp",
+    "new_path": "[S.S.S note]_01.함수의극한_초급단계(22)개념강의쉽게수정/샌드위치 정리_3.webp",
+    "new_title": "샌드위치 정리_3",
+    "old_title": "샌드위치 정리"
+  },
+  {
+    "id": "[S.S.S note]_02.급수(1)_초급단계(20)_p3_01",
+    "old_path": "[S.S.S note]_02.급수(1)_초급단계(20)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_02.급수(1)_초급단계(20)/급수와 부분합.webp",
+    "new_title": "급수와 부분합",
+    "old_title": "급수와 부분합"
+  },
+  {
+    "id": "[S.S.S note]_02.급수(1)_초급단계(20)_p4_02",
+    "old_path": "[S.S.S note]_02.급수(1)_초급단계(20)/card_02_p4.webp",
+    "new_path": "[S.S.S note]_02.급수(1)_초급단계(20)/급수의 수렴과 발산.webp",
+    "new_title": "급수의 수렴과 발산",
+    "old_title": "급수의 수렴과 발산"
+  },
+  {
+    "id": "[S.S.S note]_02.급수(1)_초급단계(20)_p6_03",
+    "old_path": "[S.S.S note]_02.급수(1)_초급단계(20)/card_03_p6.webp",
+    "new_path": "[S.S.S note]_02.급수(1)_초급단계(20)/급수의 중요 명제 ( 급수와 극한 관계.webp",
+    "new_title": "급수의 중요 명제 ( 급수와 극한 관계",
+    "old_title": "급수의 중요 명제 ( 급수와 극한 관계"
+  },
+  {
+    "id": "[S.S.S note]_02.급수(1)_초급단계(20)_p7_04",
+    "old_path": "[S.S.S note]_02.급수(1)_초급단계(20)/card_04_p7.webp",
+    "new_path": "[S.S.S note]_02.급수(1)_초급단계(20)/급수의 성질.webp",
+    "new_title": "급수의 성질",
+    "old_title": "급수의 성질"
+  },
+  {
+    "id": "[S.S.S note]_02.급수(1)_초급단계(20)_p8_01",
+    "old_path": "[S.S.S note]_02.급수(1)_초급단계(20)/card_01_p8.webp",
+    "new_path": "[S.S.S note]_02.급수(1)_초급단계(20)/여러 가지 부분합 구하기.webp",
+    "new_title": "여러 가지 부분합 구하기",
+    "old_title": "여러 가지 부분합 구하기"
+  },
+  {
+    "id": "[S.S.S note]_02.급수(1)_초급단계(20)_p10_02",
+    "old_path": "[S.S.S note]_02.급수(1)_초급단계(20)/card_02_p10.webp",
+    "new_path": "[S.S.S note]_02.급수(1)_초급단계(20)/교대급수.webp",
+    "new_title": "교대급수",
+    "old_title": "교대급수"
+  },
+  {
+    "id": "[S.S.S note]_02.급수(1)_초급단계(20)_p11_01",
+    "old_path": "[S.S.S note]_02.급수(1)_초급단계(20)/card_01_p11.webp",
+    "new_path": "[S.S.S note]_02.급수(1)_초급단계(20)/등비급수의 수렴과 발산.webp",
+    "new_title": "등비급수의 수렴과 발산",
+    "old_title": "등비급수의 수렴과 발산"
+  },
+  {
+    "id": "[S.S.S note]_02.급수(1)_초급단계(20)_p13_02",
+    "old_path": "[S.S.S note]_02.급수(1)_초급단계(20)/card_02_p13.webp",
+    "new_path": "[S.S.S note]_02.급수(1)_초급단계(20)/등비급수의 활용 - 순환소수.webp",
+    "new_title": "등비급수의 활용 - 순환소수",
+    "old_title": "등비급수의 활용 - 순환소수"
+  },
+  {
+    "id": "[S.S.S note]_02.함수의연속(1)_초급단계(17)_p3_01",
+    "old_path": "[S.S.S note]_02.함수의연속(1)_초급단계(17)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_02.함수의연속(1)_초급단계(17)/연속의 정의.webp",
+    "new_title": "연속의 정의",
+    "old_title": "연속의 정의"
+  },
+  {
+    "id": "[S.S.S note]_02.함수의연속(1)_초급단계(17)_p4_02",
+    "old_path": "[S.S.S note]_02.함수의연속(1)_초급단계(17)/card_02_p4.webp",
+    "new_path": "[S.S.S note]_02.함수의연속(1)_초급단계(17)/여러 가지 함수의 연속성.webp",
+    "new_title": "여러 가지 함수의 연속성",
+    "old_title": "여러 가지 함수의 연속성"
+  },
+  {
+    "id": "[S.S.S note]_02.함수의연속(1)_초급단계(17)_p4_03",
+    "old_path": "[S.S.S note]_02.함수의연속(1)_초급단계(17)/card_03_p4.webp",
+    "new_path": "[S.S.S note]_02.함수의연속(1)_초급단계(17)/연속함수의 성질.webp",
+    "new_title": "연속함수의 성질",
+    "old_title": "연속함수의 성질"
+  },
+  {
+    "id": "[S.S.S note]_02.함수의연속(1)_초급단계(17)_p5_04",
+    "old_path": "[S.S.S note]_02.함수의연속(1)_초급단계(17)/card_04_p5.webp",
+    "new_path": "[S.S.S note]_02.함수의연속(1)_초급단계(17)/합성함수의 연속성.webp",
+    "new_title": "합성함수의 연속성",
+    "old_title": "합성함수의 연속성"
+  },
+  {
+    "id": "[S.S.S note]_02.함수의연속(1)_초급단계(17)_p5_05",
+    "old_path": "[S.S.S note]_02.함수의연속(1)_초급단계(17)/card_05_p5.webp",
+    "new_path": "[S.S.S note]_02.함수의연속(1)_초급단계(17)/함수의 연속 - 기초 풀이법.webp",
+    "new_title": "함수의 연속 - 기초 풀이법",
+    "old_title": "함수의 연속 - 기초 풀이법"
+  },
+  {
+    "id": "[S.S.S note]_02.함수의연속(1)_초급단계(17)_p6_01",
+    "old_path": "[S.S.S note]_02.함수의연속(1)_초급단계(17)/card_01_p6.webp",
+    "new_path": "[S.S.S note]_02.함수의연속(1)_초급단계(17)/분수꼴 함수의 연속성.webp",
+    "new_title": "분수꼴 함수의 연속성",
+    "old_title": "분수꼴 함수의 연속성"
+  },
+  {
+    "id": "[S.S.S note]_02.함수의연속(1)_초급단계(17)_p7_04",
+    "old_path": "[S.S.S note]_02.함수의연속(1)_초급단계(17)/card_04_p7.webp",
+    "new_path": "[S.S.S note]_02.함수의연속(1)_초급단계(17)/합성함수의 불연속점의 개수.webp",
+    "new_title": "합성함수의 불연속점의 개수",
+    "old_title": "합성함수의 불연속점의 개수"
+  },
+  {
+    "id": "[S.S.S note]_02.함수의연속(2)_초급단계(16)_p3_01",
+    "old_path": "[S.S.S note]_02.함수의연속(2)_초급단계(16)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_02.함수의연속(2)_초급단계(16)/최대 , 최소의 정리.webp",
+    "new_title": "최대 , 최소의 정리",
+    "old_title": "최대 , 최소의 정리"
+  },
+  {
+    "id": "[S.S.S note]_02.함수의연속(2)_초급단계(16)_p4_02",
+    "old_path": "[S.S.S note]_02.함수의연속(2)_초급단계(16)/card_02_p4.webp",
+    "new_path": "[S.S.S note]_02.함수의연속(2)_초급단계(16)/사이값의 정리 ( 구 중간값의 정리 ).webp",
+    "new_title": "사이값의 정리 ( 구 중간값의 정리 )",
+    "old_title": "사이값의 정리 ( 구 중간값의 정리 )"
+  },
+  {
+    "id": "[S.S.S note]_02.함수의연속(2)_초급단계(16)_p5_03",
+    "old_path": "[S.S.S note]_02.함수의연속(2)_초급단계(16)/card_03_p5.webp",
+    "new_path": "[S.S.S note]_02.함수의연속(2)_초급단계(16)/사이값의 정리의 활용 (2).webp",
+    "new_title": "사이값의 정리의 활용 (2)",
+    "old_title": "사이값의 정리의 활용 (2)"
+  },
+  {
+    "id": "[S.S.S note]_02.함수의연속(2)_초급단계(16)_p7_01",
+    "old_path": "[S.S.S note]_02.함수의연속(2)_초급단계(16)/card_01_p7.webp",
+    "new_path": "[S.S.S note]_02.함수의연속(2)_초급단계(16)/주기함수 표현.webp",
+    "new_title": "주기함수 표현",
+    "old_title": "주기함수 표현"
+  },
+  {
+    "id": "[S.S.S note]_02.함수의연속(2)_초급단계(16)_p7_02",
+    "old_path": "[S.S.S note]_02.함수의연속(2)_초급단계(16)/card_02_p7.webp",
+    "new_path": "[S.S.S note]_02.함수의연속(2)_초급단계(16)/주기함수의 연속성.webp",
+    "new_title": "주기함수의 연속성",
+    "old_title": "주기함수의 연속성"
+  },
+  {
+    "id": "[S.S.S note]_03.급수(2)_초급단계(20)_도형과급수_p3_01",
+    "old_path": "[S.S.S note]_03.급수(2)_초급단계(20)_도형과급수/card_01_p3.webp",
+    "new_path": "[S.S.S note]_03.급수(2)_초급단계(20)_도형과급수/급수와 도형의 개념.webp",
+    "new_title": "급수와 도형의 개념",
+    "old_title": "급수와 도형의 개념"
+  },
+  {
+    "id": "[S.S.S note]_03.급수(2)_초급단계(20)_도형과급수_p3_02",
+    "old_path": "[S.S.S note]_03.급수(2)_초급단계(20)_도형과급수/card_02_p3.webp",
+    "new_path": "[S.S.S note]_03.급수(2)_초급단계(20)_도형과급수/공비 구하기.webp",
+    "new_title": "공비 구하기",
+    "old_title": "공비 구하기"
+  },
+  {
+    "id": "[S.S.S note]_03.급수(2)_초급단계(20)_도형과급수_p6_03",
+    "old_path": "[S.S.S note]_03.급수(2)_초급단계(20)_도형과급수/card_03_p6.webp",
+    "new_path": "[S.S.S note]_03.급수(2)_초급단계(20)_도형과급수/도형 문제를 풀기 위한 기본.webp",
+    "new_title": "도형 문제를 풀기 위한 기본",
+    "old_title": "도형 문제를 풀기 위한 기본"
+  },
+  {
+    "id": "[S.S.S note]_03.미분계수와도함수_초급단계(20)_p3_01",
+    "old_path": "[S.S.S note]_03.미분계수와도함수_초급단계(20)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_03.미분계수와도함수_초급단계(20)/평균변화율과 순간변화율의 정의.webp",
+    "new_title": "평균변화율과 순간변화율의 정의",
+    "old_title": "평균변화율과 순간변화율의 정의"
+  },
+  {
+    "id": "[S.S.S note]_03.미분계수와도함수_초급단계(20)_p3_02",
+    "old_path": "[S.S.S note]_03.미분계수와도함수_초급단계(20)/card_02_p3.webp",
+    "new_path": "[S.S.S note]_03.미분계수와도함수_초급단계(20)/미분계수의 기하학적 의미.webp",
+    "new_title": "미분계수의 기하학적 의미",
+    "old_title": "미분계수의 기하학적 의미"
+  },
+  {
+    "id": "[S.S.S note]_03.미분계수와도함수_초급단계(20)_p4_03",
+    "old_path": "[S.S.S note]_03.미분계수와도함수_초급단계(20)/card_03_p4.webp",
+    "new_path": "[S.S.S note]_03.미분계수와도함수_초급단계(20)/미분계수를 이용한 극한 계산.webp",
+    "new_title": "미분계수를 이용한 극한 계산",
+    "old_title": "미분계수를 이용한 극한 계산"
+  },
+  {
+    "id": "[S.S.S note]_03.미분계수와도함수_초급단계(20)_p6_04",
+    "old_path": "[S.S.S note]_03.미분계수와도함수_초급단계(20)/card_04_p6.webp",
+    "new_path": "[S.S.S note]_03.미분계수와도함수_초급단계(20)/미분가능성과 연속성.webp",
+    "new_title": "미분가능성과 연속성",
+    "old_title": "미분가능성과 연속성"
+  },
+  {
+    "id": "[S.S.S note]_03.미분계수와도함수_초급단계(20)_p7_01",
+    "old_path": "[S.S.S note]_03.미분계수와도함수_초급단계(20)/card_01_p7.webp",
+    "new_path": "[S.S.S note]_03.미분계수와도함수_초급단계(20)/도함수의 정의.webp",
+    "new_title": "도함수의 정의",
+    "old_title": "도함수의 정의"
+  },
+  {
+    "id": "[S.S.S note]_03.미분계수와도함수_초급단계(20)_p8_02",
+    "old_path": "[S.S.S note]_03.미분계수와도함수_초급단계(20)/card_02_p8.webp",
+    "new_path": "[S.S.S note]_03.미분계수와도함수_초급단계(20)/미분법 공식.webp",
+    "new_title": "미분법 공식",
+    "old_title": "미분법 공식"
+  },
+  {
+    "id": "[S.S.S note]_03.미분계수와도함수_초급단계(20)_p9_03",
+    "old_path": "[S.S.S note]_03.미분계수와도함수_초급단계(20)/card_03_p9.webp",
+    "new_path": "[S.S.S note]_03.미분계수와도함수_초급단계(20)/미분법 공식 (2) - 곱의 미분법.webp",
+    "new_title": "미분법 공식 (2) - 곱의 미분법",
+    "old_title": "미분법 공식 (2) - 곱의 미분법"
+  },
+  {
+    "id": "[S.S.S note]_03.미분계수와도함수_초급단계(20)_p10_04",
+    "old_path": "[S.S.S note]_03.미분계수와도함수_초급단계(20)/card_04_p10.webp",
+    "new_path": "[S.S.S note]_03.미분계수와도함수_초급단계(20)/관계식이 주어질 때 도함수 구하기.webp",
+    "new_title": "관계식이 주어질 때 도함수 구하기",
+    "old_title": "관계식이 주어질 때 도함수 구하기"
+  },
+  {
+    "id": "[S.S.S note]_03.미분계수와도함수_초급단계(20)_p12_05",
+    "old_path": "[S.S.S note]_03.미분계수와도함수_초급단계(20)/card_05_p12.webp",
+    "new_path": "[S.S.S note]_03.미분계수와도함수_초급단계(20)/완전제곱식으로 나눌 때.webp",
+    "new_title": "완전제곱식으로 나눌 때",
+    "old_title": "완전제곱식으로 나눌 때"
+  },
+  {
+    "id": "[S.S.S note]_03.미분계수와도함수_초급단계(20)_p13_06",
+    "old_path": "[S.S.S note]_03.미분계수와도함수_초급단계(20)/card_06_p13.webp",
+    "new_path": "[S.S.S note]_03.미분계수와도함수_초급단계(20)/다항함수 또는 다항식이 주어질 때.webp",
+    "new_title": "다항함수 또는 다항식이 주어질 때",
+    "old_title": "다항함수 또는 다항식이 주어질 때"
+  },
+  {
+    "id": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)_p3_01",
+    "old_path": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)/직선의 방정식.webp",
+    "new_title": "직선의 방정식",
+    "old_title": "직선의 방정식"
+  },
+  {
+    "id": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)_p3_02",
+    "old_path": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)/card_02_p3.webp",
+    "new_path": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)/접점이 주어질 때 접선의 방정식.webp",
+    "new_title": "접점이 주어질 때 접선의 방정식",
+    "old_title": "접점이 주어질 때 접선의 방정식"
+  },
+  {
+    "id": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)_p4_03",
+    "old_path": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)/card_03_p4.webp",
+    "new_path": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)/기울기가 주어질 때 접선의 방정식.webp",
+    "new_title": "기울기가 주어질 때 접선의 방정식",
+    "old_title": "기울기가 주어질 때 접선의 방정식"
+  },
+  {
+    "id": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)_p4_04",
+    "old_path": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)/card_04_p4.webp",
+    "new_path": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)/곡선밖의 한 점에서 그은 접선.webp",
+    "new_title": "곡선밖의 한 점에서 그은 접선",
+    "old_title": "곡선밖의 한 점에서 그은 접선"
+  },
+  {
+    "id": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)_p5_05",
+    "old_path": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)/card_05_p5.webp",
+    "new_path": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)/곡선 밖의 한 점에서 그은 접선 (2).webp",
+    "new_title": "곡선 밖의 한 점에서 그은 접선 (2)",
+    "old_title": "곡선 밖의 한 점에서 그은 접선 (2)"
+  },
+  {
+    "id": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)_p6_06",
+    "old_path": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)/card_06_p6.webp",
+    "new_path": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)/공통 접선.webp",
+    "new_title": "공통 접선",
+    "old_title": "공통 접선"
+  },
+  {
+    "id": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)_p7_07",
+    "old_path": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)/card_07_p7.webp",
+    "new_path": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)/차의 함수.webp",
+    "new_title": "차의 함수",
+    "old_title": "차의 함수"
+  },
+  {
+    "id": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)_p8_08",
+    "old_path": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)/card_08_p8.webp",
+    "new_path": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)/원과 접할 때 - ☆★☆.webp",
+    "new_title": "원과 접할 때 - ☆★☆",
+    "old_title": "원과 접할 때 - ☆★☆"
+  },
+  {
+    "id": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)_p9_01",
+    "old_path": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)/card_01_p9.webp",
+    "new_path": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)/롤의 정리.webp",
+    "new_title": "롤의 정리",
+    "old_title": "롤의 정리"
+  },
+  {
+    "id": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)_p9_02",
+    "old_path": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)/card_02_p9.webp",
+    "new_path": "[S.S.S note]_04.도함수의활용(1)_초급단계(24)/평균값의 정리.webp",
+    "new_title": "평균값의 정리",
+    "old_title": "평균값의 정리"
+  },
+  {
+    "id": "[S.S.S note]_07-1 이산확률분포(10)[QR]_p3_01",
+    "old_path": "[S.S.S note]_07-1 이산확률분포(10)[QR]/card_01_p3.webp",
+    "new_path": "[S.S.S note]_07-1 이산확률분포(10)[QR]/확률변수와 확률분포.webp",
+    "new_title": "확률변수와 확률분포",
+    "old_title": "확률변수와 확률분포"
+  },
+  {
+    "id": "[S.S.S note]_07-1 이산확률분포(10)[QR]_p4_02",
+    "old_path": "[S.S.S note]_07-1 이산확률분포(10)[QR]/card_02_p4.webp",
+    "new_path": "[S.S.S note]_07-1 이산확률분포(10)[QR]/이산확률변수와 확률질량함수.webp",
+    "new_title": "이산확률변수와 확률질량함수",
+    "old_title": "이산확률변수와 확률질량함수"
+  },
+  {
+    "id": "[S.S.S note]_07-1 이산확률분포(10)[QR]_p5_03",
+    "old_path": "[S.S.S note]_07-1 이산확률분포(10)[QR]/card_03_p5.webp",
+    "new_path": "[S.S.S note]_07-1 이산확률분포(10)[QR]/확률질량함수의 성질.webp",
+    "new_title": "확률질량함수의 성질",
+    "old_title": "확률질량함수의 성질"
+  },
+  {
+    "id": "[S.S.S note]_07-2 기댓값과 표준편차(12)[QR]_p3_01",
+    "old_path": "[S.S.S note]_07-2 기댓값과 표준편차(12)[QR]/card_01_p3.webp",
+    "new_path": "[S.S.S note]_07-2 기댓값과 표준편차(12)[QR]/이산확률변수의 기댓값 ( 평균 ).webp",
+    "new_title": "이산확률변수의 기댓값 ( 평균 )",
+    "old_title": "이산확률변수의 기댓값 ( 평균 )"
+  },
+  {
+    "id": "[S.S.S note]_07-2 기댓값과 표준편차(12)[QR]_p4_02",
+    "old_path": "[S.S.S note]_07-2 기댓값과 표준편차(12)[QR]/card_02_p4.webp",
+    "new_path": "[S.S.S note]_07-2 기댓값과 표준편차(12)[QR]/이산확률변수의 분산과 표준편차.webp",
+    "new_title": "이산확률변수의 분산과 표준편차",
+    "old_title": "이산확률변수의 분산과 표준편차"
+  },
+  {
+    "id": "[S.S.S note]_07-3 aX+b의 성질(11)[QR]_p3_01",
+    "old_path": "[S.S.S note]_07-3 aX+b의 성질(11)[QR]/card_01_p3.webp",
+    "new_path": "[S.S.S note]_07-3 aX+b의 성질(11)[QR]/aX+b 의 평균 분산 표준편차.webp",
+    "new_title": "aX+b 의 평균 분산 표준편차",
+    "old_title": "aX+b 의 평균 분산 표준편차"
+  },
+  {
+    "id": "[S.S.S note]_07-3 aX+b의 성질(11)[QR]_p5_02",
+    "old_path": "[S.S.S note]_07-3 aX+b의 성질(11)[QR]/card_02_p5.webp",
+    "new_path": "[S.S.S note]_07-3 aX+b의 성질(11)[QR]/확률변수 X 의 표준화.webp",
+    "new_title": "확률변수 X 의 표준화",
+    "old_title": "확률변수 X 의 표준화"
+  },
+  {
+    "id": "[S.S.S note]_08-1 이항분포(14)[QR]_p3_01",
+    "old_path": "[S.S.S note]_08-1 이항분포(14)[QR]/card_01_p3.webp",
+    "new_path": "[S.S.S note]_08-1 이항분포(14)[QR]/이항분포의 정의.webp",
+    "new_title": "이항분포의 정의",
+    "old_title": "이항분포의 정의"
+  },
+  {
+    "id": "[S.S.S note]_08-1 이항분포(14)[QR]_p4_02",
+    "old_path": "[S.S.S note]_08-1 이항분포(14)[QR]/card_02_p4.webp",
+    "new_path": "[S.S.S note]_08-1 이항분포(14)[QR]/이항분포의 평균과 표준편차.webp",
+    "new_title": "이항분포의 평균과 표준편차",
+    "old_title": "이항분포의 평균과 표준편차"
+  },
+  {
+    "id": "[S.S.S note]_08-1 이항분포(14)[QR]_p6_03",
+    "old_path": "[S.S.S note]_08-1 이항분포(14)[QR]/card_03_p6.webp",
+    "new_path": "[S.S.S note]_08-1 이항분포(14)[QR]/이항분포의 B(n,p) 의 평균 분산 유도하기.webp",
+    "new_title": "이항분포의 B(n,p) 의 평균 분산 유도하기",
+    "old_title": "이항분포의 B(n,p) 의 평균 분산 유도하기"
+  },
+  {
+    "id": "[S.S.S note]_08-2 연속확률변수(7)[QR]_p3_01",
+    "old_path": "[S.S.S note]_08-2 연속확률변수(7)[QR]/card_01_p3.webp",
+    "new_path": "[S.S.S note]_08-2 연속확률변수(7)[QR]/연속확률변수와 확률밀도함수.webp",
+    "new_title": "연속확률변수와 확률밀도함수",
+    "old_title": "연속확률변수와 확률밀도함수"
+  },
+  {
+    "id": "[S.S.S note]_09-1 정규분포(36)[QR]_p3_01",
+    "old_path": "[S.S.S note]_09-1 정규분포(36)[QR]/card_01_p3.webp",
+    "new_path": "[S.S.S note]_09-1 정규분포(36)[QR]/정규분포와 확률밀도함수.webp",
+    "new_title": "정규분포와 확률밀도함수",
+    "old_title": "정규분포와 확률밀도함수"
+  },
+  {
+    "id": "[S.S.S note]_09-1 정규분포(36)[QR]_p4_02",
+    "old_path": "[S.S.S note]_09-1 정규분포(36)[QR]/card_02_p4.webp",
+    "new_path": "[S.S.S note]_09-1 정규분포(36)[QR]/정규분포곡선.webp",
+    "new_title": "정규분포곡선",
+    "old_title": "정규분포곡선      "
+  },
+  {
+    "id": "[S.S.S note]_09-1 정규분포(36)[QR]_p6_03",
+    "old_path": "[S.S.S note]_09-1 정규분포(36)[QR]/card_03_p6.webp",
+    "new_path": "[S.S.S note]_09-1 정규분포(36)[QR]/표준정규분포를 이용한 확률 구하기.webp",
+    "new_title": "표준정규분포를 이용한 확률 구하기",
+    "old_title": "표준정규분포를 이용한 확률 구하기"
+  },
+  {
+    "id": "[S.S.S note]_09-1 정규분포(36)[QR]_p8_04",
+    "old_path": "[S.S.S note]_09-1 정규분포(36)[QR]/card_04_p8.webp",
+    "new_path": "[S.S.S note]_09-1 정규분포(36)[QR]/정규분포의 표준화.webp",
+    "new_title": "정규분포의 표준화",
+    "old_title": "정규분포의 표준화"
+  },
+  {
+    "id": "[S.S.S note]_09-1 정규분포(36)[QR]_p10_05",
+    "old_path": "[S.S.S note]_09-1 정규분포(36)[QR]/card_05_p10.webp",
+    "new_path": "[S.S.S note]_09-1 정규분포(36)[QR]/정규분포에서 확률 구하기.webp",
+    "new_title": "정규분포에서 확률 구하기",
+    "old_title": "정규분포에서 확률 구하기"
+  },
+  {
+    "id": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)_p3_01",
+    "old_path": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)/증가상태와 감소상태의 정의.webp",
+    "new_title": "증가상태와 감소상태의 정의",
+    "old_title": "증가상태와 감소상태의 정의"
+  },
+  {
+    "id": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)_p3_02",
+    "old_path": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)/card_02_p3.webp",
+    "new_path": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)/증가와 감소의 정의.webp",
+    "new_title": "증가와 감소의 정의",
+    "old_title": "증가와 감소의 정의"
+  },
+  {
+    "id": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)_p3_03",
+    "old_path": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)/card_03_p3.webp",
+    "new_path": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)/미분계수와 증가 , 감소의 관계.webp",
+    "new_title": "미분계수와 증가 , 감소의 관계",
+    "old_title": "미분계수와 증가 , 감소의 관계"
+  },
+  {
+    "id": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)_p5_01",
+    "old_path": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)/card_01_p5.webp",
+    "new_path": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)/극대와 극소의 정의.webp",
+    "new_title": "극대와 극소의 정의",
+    "old_title": "극대와 극소의 정의"
+  },
+  {
+    "id": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)_p5_02",
+    "old_path": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)/card_02_p5.webp",
+    "new_path": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)/미분가능한 함수의 극대와 극소.webp",
+    "new_title": "미분가능한 함수의 극대와 극소",
+    "old_title": "미분가능한 함수의 극대와 극소"
+  },
+  {
+    "id": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)_p6_01",
+    "old_path": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)/card_01_p6.webp",
+    "new_path": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)/다항함수의 그래프 그리기.webp",
+    "new_title": "다항함수의 그래프 그리기",
+    "old_title": "다항함수의 그래프 그리기"
+  },
+  {
+    "id": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)_p7_02",
+    "old_path": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)/card_02_p7.webp",
+    "new_path": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)/차 , 4 차 함수의 그래프.webp",
+    "new_title": "차 , 4 차 함수의 그래프",
+    "old_title": "3 차 , 4 차 함수의 그래프"
+  },
+  {
+    "id": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)_p9_03",
+    "old_path": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)/card_03_p9.webp",
+    "new_path": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)/차 , 4 차 함수의 필수.webp",
+    "new_title": "차 , 4 차 함수의 필수",
+    "old_title": "3 차 , 4 차 함수의 필수"
+  },
+  {
+    "id": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)_p10_01",
+    "old_path": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)/card_01_p10.webp",
+    "new_path": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)/함수의 최대 , 최소.webp",
+    "new_title": "함수의 최대 , 최소",
+    "old_title": "함수의 최대 , 최소"
+  },
+  {
+    "id": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)_p11_02",
+    "old_path": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)/card_02_p11.webp",
+    "new_path": "[S.S.S note]_09.도함수의활용(2)_초급단계(20)/최대 , 최소의 활용.webp",
+    "new_title": "최대 , 최소의 활용",
+    "old_title": "최대 , 최소의 활용"
+  },
+  {
+    "id": "[S.S.S note]_10-1 이항분포와 정규분포(8)[QR]_p3_01",
+    "old_path": "[S.S.S note]_10-1 이항분포와 정규분포(8)[QR]/card_01_p3.webp",
+    "new_path": "[S.S.S note]_10-1 이항분포와 정규분포(8)[QR]/이항분포와 정규분포의 관계.webp",
+    "new_title": "이항분포와 정규분포의 관계",
+    "old_title": "이항분포와 정규분포의 관계"
+  },
+  {
+    "id": "[S.S.S note]_10-2 모집단과 표본(20)[QR]_p3_01",
+    "old_path": "[S.S.S note]_10-2 모집단과 표본(20)[QR]/card_01_p3.webp",
+    "new_path": "[S.S.S note]_10-2 모집단과 표본(20)[QR]/모집단과 표본.webp",
+    "new_title": "모집단과 표본",
+    "old_title": "모집단과 표본"
+  },
+  {
+    "id": "[S.S.S note]_10-2 모집단과 표본(20)[QR]_p4_02",
+    "old_path": "[S.S.S note]_10-2 모집단과 표본(20)[QR]/card_02_p4.webp",
+    "new_path": "[S.S.S note]_10-2 모집단과 표본(20)[QR]/모평균 모분산 모표준편차.webp",
+    "new_title": "모평균 모분산 모표준편차",
+    "old_title": "모평균 모분산 모표준편차"
+  },
+  {
+    "id": "[S.S.S note]_10-2 모집단과 표본(20)[QR]_p5_03",
+    "old_path": "[S.S.S note]_10-2 모집단과 표본(20)[QR]/card_03_p5.webp",
+    "new_path": "[S.S.S note]_10-2 모집단과 표본(20)[QR]/표본평균 의 분포.webp",
+    "new_title": "표본평균 의 분포",
+    "old_title": "표본평균   의 분포"
+  },
+  {
+    "id": "[S.S.S note]_10-2 모집단과 표본(20)[QR]_p10_04",
+    "old_path": "[S.S.S note]_10-2 모집단과 표본(20)[QR]/card_04_p10.webp",
+    "new_path": "[S.S.S note]_10-2 모집단과 표본(20)[QR]/표본평균 의 분포_2.webp",
+    "new_title": "표본평균 의 분포_2",
+    "old_title": "표본평균   의 분포"
+  },
+  {
+    "id": "[S.S.S note]_10-3 모평균의 추정(18)[QR]_p3_01",
+    "old_path": "[S.S.S note]_10-3 모평균의 추정(18)[QR]/card_01_p3.webp",
+    "new_path": "[S.S.S note]_10-3 모평균의 추정(18)[QR]/모평균의 신뢰구간.webp",
+    "new_title": "모평균의 신뢰구간",
+    "old_title": "모평균의 신뢰구간"
+  },
+  {
+    "id": "[S.S.S note]_10-3 모평균의 추정(18)[QR]_p6_02",
+    "old_path": "[S.S.S note]_10-3 모평균의 추정(18)[QR]/card_02_p6.webp",
+    "new_path": "[S.S.S note]_10-3 모평균의 추정(18)[QR]/모평균의 신뢰구간의 길이.webp",
+    "new_title": "모평균의 신뢰구간의 길이",
+    "old_title": "모평균의 신뢰구간의 길이"
+  },
+  {
+    "id": "[S.S.S note]_10.도함수의활용(3)_초급단계(24)_p3_01",
+    "old_path": "[S.S.S note]_10.도함수의활용(3)_초급단계(24)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_10.도함수의활용(3)_초급단계(24)/방정식과 미분.webp",
+    "new_title": "방정식과 미분",
+    "old_title": "방정식과 미분"
+  },
+  {
+    "id": "[S.S.S note]_10.도함수의활용(3)_초급단계(24)_p6_02",
+    "old_path": "[S.S.S note]_10.도함수의활용(3)_초급단계(24)/card_02_p6.webp",
+    "new_path": "[S.S.S note]_10.도함수의활용(3)_초급단계(24)/부등식과 미분.webp",
+    "new_title": "부등식과 미분",
+    "old_title": "부등식과 미분"
+  },
+  {
+    "id": "[S.S.S note]_10.도함수의활용(3)_초급단계(24)_p9_01",
+    "old_path": "[S.S.S note]_10.도함수의활용(3)_초급단계(24)/card_01_p9.webp",
+    "new_path": "[S.S.S note]_10.도함수의활용(3)_초급단계(24)/속도 , 가속도의 정의.webp",
+    "new_title": "속도 , 가속도의 정의",
+    "old_title": "속도 , 가속도의 정의"
+  },
+  {
+    "id": "[S.S.S note]_10.도함수의활용(3)_초급단계(24)_p13_01",
+    "old_path": "[S.S.S note]_10.도함수의활용(3)_초급단계(24)/card_01_p13.webp",
+    "new_path": "[S.S.S note]_10.도함수의활용(3)_초급단계(24)/변화율과 미분.webp",
+    "new_title": "변화율과 미분",
+    "old_title": "변화율과 미분"
+  },
+  {
+    "id": "[S.S.S note]_7.부정적분_초급단계(20)_p3_01",
+    "old_path": "[S.S.S note]_7.부정적분_초급단계(20)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_7.부정적분_초급단계(20)/부정적분의 정의.webp",
+    "new_title": "부정적분의 정의",
+    "old_title": "부정적분의 정의"
+  },
+  {
+    "id": "[S.S.S note]_7.부정적분_초급단계(20)_p4_02",
+    "old_path": "[S.S.S note]_7.부정적분_초급단계(20)/card_02_p4.webp",
+    "new_path": "[S.S.S note]_7.부정적분_초급단계(20)/부정적분과 미분의 관계.webp",
+    "new_title": "부정적분과 미분의 관계",
+    "old_title": "부정적분과 미분의 관계"
+  },
+  {
+    "id": "[S.S.S note]_7.부정적분_초급단계(20)_p5_03",
+    "old_path": "[S.S.S note]_7.부정적분_초급단계(20)/card_03_p5.webp",
+    "new_path": "[S.S.S note]_7.부정적분_초급단계(20)/부정적분의 계산.webp",
+    "new_title": "부정적분의 계산",
+    "old_title": "부정적분의 계산"
+  },
+  {
+    "id": "[S.S.S note]_8.정적분(1)_초급단계(17)구분구적법제외_p3_03",
+    "old_path": "[S.S.S note]_8.정적분(1)_초급단계(17)구분구적법제외/card_03_p3.webp",
+    "new_path": "[S.S.S note]_8.정적분(1)_초급단계(17)구분구적법제외/미적분의 기본 정리.webp",
+    "new_title": "미적분의 기본 정리",
+    "old_title": "미적분의 기본 정리"
+  },
+  {
+    "id": "[S.S.S note]_8.정적분(1)_초급단계(17)구분구적법제외_p4_04",
+    "old_path": "[S.S.S note]_8.정적분(1)_초급단계(17)구분구적법제외/card_04_p4.webp",
+    "new_path": "[S.S.S note]_8.정적분(1)_초급단계(17)구분구적법제외/정적분과 미분의 관계.webp",
+    "new_title": "정적분과 미분의 관계",
+    "old_title": "정적분과 미분의 관계"
+  },
+  {
+    "id": "[S.S.S note]_8.정적분(1)_초급단계(17)구분구적법제외_p5_01",
+    "old_path": "[S.S.S note]_8.정적분(1)_초급단계(17)구분구적법제외/card_01_p5.webp",
+    "new_path": "[S.S.S note]_8.정적분(1)_초급단계(17)구분구적법제외/정적분의 성질.webp",
+    "new_title": "정적분의 성질",
+    "old_title": "정적분의 성질"
+  },
+  {
+    "id": "[S.S.S note]_8.정적분(1)_초급단계(17)구분구적법제외_p6_02",
+    "old_path": "[S.S.S note]_8.정적분(1)_초급단계(17)구분구적법제외/card_02_p6.webp",
+    "new_path": "[S.S.S note]_8.정적분(1)_초급단계(17)구분구적법제외/정적분의 부호.webp",
+    "new_title": "정적분의 부호",
+    "old_title": "정적분의 부호"
+  },
+  {
+    "id": "[S.S.S note]_8.정적분(1)_초급단계(17)구분구적법제외_p8_03",
+    "old_path": "[S.S.S note]_8.정적분(1)_초급단계(17)구분구적법제외/card_03_p8.webp",
+    "new_path": "[S.S.S note]_8.정적분(1)_초급단계(17)구분구적법제외/대칭성과 정적분.webp",
+    "new_title": "대칭성과 정적분",
+    "old_title": "대칭성과 정적분"
+  },
+  {
+    "id": "[S.S.S note]_8.정적분(1)_초급단계(17)구분구적법제외_p9_04",
+    "old_path": "[S.S.S note]_8.정적분(1)_초급단계(17)구분구적법제외/card_04_p9.webp",
+    "new_path": "[S.S.S note]_8.정적분(1)_초급단계(17)구분구적법제외/주기함수와 정적분.webp",
+    "new_title": "주기함수와 정적분",
+    "old_title": "주기함수와 정적분"
+  },
+  {
+    "id": "[S.S.S note]_8.정적분(1)_초급단계(20)_p3_01",
+    "old_path": "[S.S.S note]_8.정적분(1)_초급단계(20)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_8.정적분(1)_초급단계(20)/구분구적법.webp",
+    "new_title": "구분구적법",
+    "old_title": "구분구적법"
+  },
+  {
+    "id": "[S.S.S note]_8.정적분(1)_초급단계(20)_p6_02",
+    "old_path": "[S.S.S note]_8.정적분(1)_초급단계(20)/card_02_p6.webp",
+    "new_path": "[S.S.S note]_8.정적분(1)_초급단계(20)/정적분의 정의.webp",
+    "new_title": "정적분의 정의",
+    "old_title": "정적분의 정의"
+  },
+  {
+    "id": "[S.S.S note]_8.정적분(1)_초급단계(20)_p7_03",
+    "old_path": "[S.S.S note]_8.정적분(1)_초급단계(20)/card_03_p7.webp",
+    "new_path": "[S.S.S note]_8.정적분(1)_초급단계(20)/미적분의 기본 정리_2.webp",
+    "new_title": "미적분의 기본 정리_2",
+    "old_title": "미적분의 기본 정리"
+  },
+  {
+    "id": "[S.S.S note]_8.정적분(1)_초급단계(20)_p8_04",
+    "old_path": "[S.S.S note]_8.정적분(1)_초급단계(20)/card_04_p8.webp",
+    "new_path": "[S.S.S note]_8.정적분(1)_초급단계(20)/정적분과 미분의 관계_2.webp",
+    "new_title": "정적분과 미분의 관계_2",
+    "old_title": "정적분과 미분의 관계"
+  },
+  {
+    "id": "[S.S.S note]_8.정적분(1)_초급단계(20)_p9_01",
+    "old_path": "[S.S.S note]_8.정적분(1)_초급단계(20)/card_01_p9.webp",
+    "new_path": "[S.S.S note]_8.정적분(1)_초급단계(20)/정적분의 성질_2.webp",
+    "new_title": "정적분의 성질_2",
+    "old_title": "정적분의 성질"
+  },
+  {
+    "id": "[S.S.S note]_8.정적분(1)_초급단계(20)_p10_02",
+    "old_path": "[S.S.S note]_8.정적분(1)_초급단계(20)/card_02_p10.webp",
+    "new_path": "[S.S.S note]_8.정적분(1)_초급단계(20)/정적분의 부호_2.webp",
+    "new_title": "정적분의 부호_2",
+    "old_title": "정적분의 부호"
+  },
+  {
+    "id": "[S.S.S note]_8.정적분(1)_초급단계(20)_p12_03",
+    "old_path": "[S.S.S note]_8.정적분(1)_초급단계(20)/card_03_p12.webp",
+    "new_path": "[S.S.S note]_8.정적분(1)_초급단계(20)/대칭성과 정적분_2.webp",
+    "new_title": "대칭성과 정적분_2",
+    "old_title": "대칭성과 정적분"
+  },
+  {
+    "id": "[S.S.S note]_8.정적분(1)_초급단계(20)_p13_04",
+    "old_path": "[S.S.S note]_8.정적분(1)_초급단계(20)/card_04_p13.webp",
+    "new_path": "[S.S.S note]_8.정적분(1)_초급단계(20)/주기함수와 정적분_2.webp",
+    "new_title": "주기함수와 정적분_2",
+    "old_title": "주기함수와 정적분"
+  },
+  {
+    "id": "[S.S.S note]_9.정적분(2)_초급단계(14)급수제외_p3_01",
+    "old_path": "[S.S.S note]_9.정적분(2)_초급단계(14)급수제외/card_01_p3.webp",
+    "new_path": "[S.S.S note]_9.정적분(2)_초급단계(14)급수제외/정적분으로 표현된 함수의 미분.webp",
+    "new_title": "정적분으로 표현된 함수의 미분",
+    "old_title": "정적분으로 표현된 함수의 미분"
+  },
+  {
+    "id": "[S.S.S note]_9.정적분(2)_초급단계(14)급수제외_p6_02",
+    "old_path": "[S.S.S note]_9.정적분(2)_초급단계(14)급수제외/card_02_p6.webp",
+    "new_path": "[S.S.S note]_9.정적분(2)_초급단계(14)급수제외/극한과 정적분.webp",
+    "new_title": "극한과 정적분",
+    "old_title": "극한과 정적분"
+  },
+  {
+    "id": "[S.S.S note]_9.정적분(2)_초급단계(20)_p3_01",
+    "old_path": "[S.S.S note]_9.정적분(2)_초급단계(20)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_9.정적분(2)_초급단계(20)/정적분으로 표현된 함수의 미분_2.webp",
+    "new_title": "정적분으로 표현된 함수의 미분_2",
+    "old_title": "정적분으로 표현된 함수의 미분"
+  },
+  {
+    "id": "[S.S.S note]_9.정적분(2)_초급단계(20)_p6_02",
+    "old_path": "[S.S.S note]_9.정적분(2)_초급단계(20)/card_02_p6.webp",
+    "new_path": "[S.S.S note]_9.정적분(2)_초급단계(20)/극한과 정적분_2.webp",
+    "new_title": "극한과 정적분_2",
+    "old_title": "극한과 정적분"
+  },
+  {
+    "id": "[S.S.S note]_기하_01-1.포물선(1)_초급단계(15)_p3_01",
+    "old_path": "[S.S.S note]_기하_01-1.포물선(1)_초급단계(15)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_기하_01-1.포물선(1)_초급단계(15)/포물선의 정의.webp",
+    "new_title": "포물선의 정의",
+    "old_title": "포물선의 정의"
+  },
+  {
+    "id": "[S.S.S note]_기하_01-1.포물선(1)_초급단계(15)_p4_02",
+    "old_path": "[S.S.S note]_기하_01-1.포물선(1)_초급단계(15)/card_02_p4.webp",
+    "new_path": "[S.S.S note]_기하_01-1.포물선(1)_초급단계(15)/포물선의 방정식.webp",
+    "new_title": "포물선의 방정식",
+    "old_title": "포물선의 방정식"
+  },
+  {
+    "id": "[S.S.S note]_기하_01-1.포물선(1)_초급단계(15)_p7_03",
+    "old_path": "[S.S.S note]_기하_01-1.포물선(1)_초급단계(15)/card_03_p7.webp",
+    "new_path": "[S.S.S note]_기하_01-1.포물선(1)_초급단계(15)/포물선의 평행이동.webp",
+    "new_title": "포물선의 평행이동",
+    "old_title": "포물선의 평행이동"
+  },
+  {
+    "id": "[S.S.S note]_기하_01-1.포물선(1)_초급단계(15)_p9_04",
+    "old_path": "[S.S.S note]_기하_01-1.포물선(1)_초급단계(15)/card_04_p9.webp",
+    "new_path": "[S.S.S note]_기하_01-1.포물선(1)_초급단계(15)/포물선의 방정식의 일반형.webp",
+    "new_title": "포물선의 방정식의 일반형",
+    "old_title": "포물선의 방정식의 일반형"
+  },
+  {
+    "id": "[S.S.S note]_기하_02-1.타원(1)_초급단계(20)_p3_01",
+    "old_path": "[S.S.S note]_기하_02-1.타원(1)_초급단계(20)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_기하_02-1.타원(1)_초급단계(20)/타원의 정의.webp",
+    "new_title": "타원의 정의",
+    "old_title": "타원의 정의"
+  },
+  {
+    "id": "[S.S.S note]_기하_02-1.타원(1)_초급단계(20)_p4_02",
+    "old_path": "[S.S.S note]_기하_02-1.타원(1)_초급단계(20)/card_02_p4.webp",
+    "new_path": "[S.S.S note]_기하_02-1.타원(1)_초급단계(20)/타원의 방정식.webp",
+    "new_title": "타원의 방정식",
+    "old_title": "타원의 방정식"
+  },
+  {
+    "id": "[S.S.S note]_기하_02-1.타원(1)_초급단계(20)_p7_03",
+    "old_path": "[S.S.S note]_기하_02-1.타원(1)_초급단계(20)/card_03_p7.webp",
+    "new_path": "[S.S.S note]_기하_02-1.타원(1)_초급단계(20)/타원의 평행이동.webp",
+    "new_title": "타원의 평행이동",
+    "old_title": "타원의 평행이동"
+  },
+  {
+    "id": "[S.S.S note]_기하_02-1.타원(1)_초급단계(20)_p9_04",
+    "old_path": "[S.S.S note]_기하_02-1.타원(1)_초급단계(20)/card_04_p9.webp",
+    "new_path": "[S.S.S note]_기하_02-1.타원(1)_초급단계(20)/타원의 방정식의 일반형.webp",
+    "new_title": "타원의 방정식의 일반형",
+    "old_title": "타원의 방정식의 일반형"
+  },
+  {
+    "id": "[S.S.S note]_기하_03-1.쌍곡선(1)_초급단계(22)_p3_01",
+    "old_path": "[S.S.S note]_기하_03-1.쌍곡선(1)_초급단계(22)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_기하_03-1.쌍곡선(1)_초급단계(22)/쌍곡선의 정의.webp",
+    "new_title": "쌍곡선의 정의",
+    "old_title": "쌍곡선의 정의"
+  },
+  {
+    "id": "[S.S.S note]_기하_03-1.쌍곡선(1)_초급단계(22)_p4_02",
+    "old_path": "[S.S.S note]_기하_03-1.쌍곡선(1)_초급단계(22)/card_02_p4.webp",
+    "new_path": "[S.S.S note]_기하_03-1.쌍곡선(1)_초급단계(22)/쌍곡선의 방정식.webp",
+    "new_title": "쌍곡선의 방정식",
+    "old_title": "쌍곡선의 방정식"
+  },
+  {
+    "id": "[S.S.S note]_기하_03-1.쌍곡선(1)_초급단계(22)_p7_03",
+    "old_path": "[S.S.S note]_기하_03-1.쌍곡선(1)_초급단계(22)/card_03_p7.webp",
+    "new_path": "[S.S.S note]_기하_03-1.쌍곡선(1)_초급단계(22)/쌍곡선의 평행이동.webp",
+    "new_title": "쌍곡선의 평행이동",
+    "old_title": "쌍곡선의 평행이동"
+  },
+  {
+    "id": "[S.S.S note]_기하_03-1.쌍곡선(1)_초급단계(22)_p9_04",
+    "old_path": "[S.S.S note]_기하_03-1.쌍곡선(1)_초급단계(22)/card_04_p9.webp",
+    "new_path": "[S.S.S note]_기하_03-1.쌍곡선(1)_초급단계(22)/쌍곡선의 방정식의 일반형.webp",
+    "new_title": "쌍곡선의 방정식의 일반형",
+    "old_title": "쌍곡선의 방정식의 일반형"
+  },
+  {
+    "id": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)_p3_01",
+    "old_path": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)/벡터의 정의.webp",
+    "new_title": "벡터의 정의",
+    "old_title": "벡터의 정의"
+  },
+  {
+    "id": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)_p3_02",
+    "old_path": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)/card_02_p3.webp",
+    "new_path": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)/벡터의 표현.webp",
+    "new_title": "벡터의 표현",
+    "old_title": "벡터의 표현"
+  },
+  {
+    "id": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)_p3_03",
+    "old_path": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)/card_03_p3.webp",
+    "new_path": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)/벡터의 크기.webp",
+    "new_title": "벡터의 크기",
+    "old_title": "벡터의 크기"
+  },
+  {
+    "id": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)_p3_04",
+    "old_path": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)/card_04_p3.webp",
+    "new_path": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)/단위벡터와 영벡터의 정의.webp",
+    "new_title": "단위벡터와 영벡터의 정의",
+    "old_title": "단위벡터와 영벡터의 정의"
+  },
+  {
+    "id": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)_p4_05",
+    "old_path": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)/card_05_p4.webp",
+    "new_path": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)/서로 같은 벡터.webp",
+    "new_title": "서로 같은 벡터",
+    "old_title": "서로 같은 벡터"
+  },
+  {
+    "id": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)_p4_06",
+    "old_path": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)/card_06_p4.webp",
+    "new_path": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)/역벡터.webp",
+    "new_title": "역벡터",
+    "old_title": "역벡터"
+  },
+  {
+    "id": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)_p4_07",
+    "old_path": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)/card_07_p4.webp",
+    "new_path": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)/벡터의 실수배.webp",
+    "new_title": "벡터의 실수배",
+    "old_title": "벡터의 실수배"
+  },
+  {
+    "id": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)_p6_08",
+    "old_path": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)/card_08_p6.webp",
+    "new_path": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)/벡터의 덧셈.webp",
+    "new_title": "벡터의 덧셈",
+    "old_title": "벡터의 덧셈"
+  },
+  {
+    "id": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)_p6_09",
+    "old_path": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)/card_09_p6.webp",
+    "new_path": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)/벡터의 덧셈에 대한 성질.webp",
+    "new_title": "벡터의 덧셈에 대한 성질",
+    "old_title": "벡터의 덧셈에 대한 성질"
+  },
+  {
+    "id": "[S.S.S note]_기하_05-1.평면벡터의 성분(1)_초급단계(20)_p3_01",
+    "old_path": "[S.S.S note]_기하_05-1.평면벡터의 성분(1)_초급단계(20)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_기하_05-1.평면벡터의 성분(1)_초급단계(20)/위치벡터.webp",
+    "new_title": "위치벡터",
+    "old_title": "위치벡터"
+  },
+  {
+    "id": "[S.S.S note]_기하_05-1.평면벡터의 성분(1)_초급단계(20)_p4_02",
+    "old_path": "[S.S.S note]_기하_05-1.평면벡터의 성분(1)_초급단계(20)/card_02_p4.webp",
+    "new_path": "[S.S.S note]_기하_05-1.평면벡터의 성분(1)_초급단계(20)/내분점과 외분점 벡터.webp",
+    "new_title": "내분점과 외분점 벡터",
+    "old_title": "내분점과 외분점 벡터"
+  },
+  {
+    "id": "[S.S.S note]_기하_05-1.평면벡터의 성분(1)_초급단계(20)_p5_03",
+    "old_path": "[S.S.S note]_기하_05-1.평면벡터의 성분(1)_초급단계(20)/card_03_p5.webp",
+    "new_path": "[S.S.S note]_기하_05-1.평면벡터의 성분(1)_초급단계(20)/삼각형의 무게중심 벡터.webp",
+    "new_title": "삼각형의 무게중심 벡터",
+    "old_title": "삼각형의 무게중심 벡터"
+  },
+  {
+    "id": "[S.S.S note]_기하_05-1.평면벡터의 성분(1)_초급단계(20)_p8_01",
+    "old_path": "[S.S.S note]_기하_05-1.평면벡터의 성분(1)_초급단계(20)/card_01_p8.webp",
+    "new_path": "[S.S.S note]_기하_05-1.평면벡터의 성분(1)_초급단계(20)/평면벡터의 성분.webp",
+    "new_title": "평면벡터의 성분",
+    "old_title": "평면벡터의 성분"
+  },
+  {
+    "id": "[S.S.S note]_기하_05-1.평면벡터의 성분(1)_초급단계(20)_p9_02",
+    "old_path": "[S.S.S note]_기하_05-1.평면벡터의 성분(1)_초급단계(20)/card_02_p9.webp",
+    "new_path": "[S.S.S note]_기하_05-1.평면벡터의 성분(1)_초급단계(20)/평면벡터의 크기 및 상등.webp",
+    "new_title": "평면벡터의 크기 및 상등",
+    "old_title": "평면벡터의 크기 및 상등"
+  },
+  {
+    "id": "[S.S.S note]_기하_05-1.평면벡터의 성분(1)_초급단계(20)_p9_03",
+    "old_path": "[S.S.S note]_기하_05-1.평면벡터의 성분(1)_초급단계(20)/card_03_p9.webp",
+    "new_path": "[S.S.S note]_기하_05-1.평면벡터의 성분(1)_초급단계(20)/평면벡터의 성분에 의한 연산.webp",
+    "new_title": "평면벡터의 성분에 의한 연산",
+    "old_title": "평면벡터의 성분에 의한 연산"
+  },
+  {
+    "id": "[S.S.S note]_기하_05-1.평면벡터의 성분(1)_초급단계(20)_p10_04",
+    "old_path": "[S.S.S note]_기하_05-1.평면벡터의 성분(1)_초급단계(20)/card_04_p10.webp",
+    "new_path": "[S.S.S note]_기하_05-1.평면벡터의 성분(1)_초급단계(20)/두 점에 의한 평면벡터의 성분과 크기.webp",
+    "new_title": "두 점에 의한 평면벡터의 성분과 크기",
+    "old_title": "두 점에 의한 평면벡터의 성분과 크기"
+  },
+  {
+    "id": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)_p3_01",
+    "old_path": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)/내적이란 무엇일까.webp",
+    "new_title": "내적이란 무엇일까",
+    "old_title": "내적이란 무엇일까 ?"
+  },
+  {
+    "id": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)_p4_02",
+    "old_path": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)/card_02_p4.webp",
+    "new_path": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)/내적의 정의.webp",
+    "new_title": "내적의 정의",
+    "old_title": "내적의 정의"
+  },
+  {
+    "id": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)_p4_03",
+    "old_path": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)/card_03_p4.webp",
+    "new_path": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)/내적의 기하학적 의미.webp",
+    "new_title": "내적의 기하학적 의미",
+    "old_title": "내적의 기하학적 의미"
+  },
+  {
+    "id": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)_p5_01",
+    "old_path": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)/card_01_p5.webp",
+    "new_path": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)/벡터의 내적의 성분 표시.webp",
+    "new_title": "벡터의 내적의 성분 표시",
+    "old_title": "벡터의 내적의 성분 표시"
+  },
+  {
+    "id": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)_p6_02",
+    "old_path": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)/card_02_p6.webp",
+    "new_path": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)/벡터의 내적의 연산 법칙.webp",
+    "new_title": "벡터의 내적의 연산 법칙",
+    "old_title": "벡터의 내적의 연산 법칙"
+  },
+  {
+    "id": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)_p7_03",
+    "old_path": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)/card_03_p7.webp",
+    "new_path": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)/두 벡터가 이루는 각의 크기.webp",
+    "new_title": "두 벡터가 이루는 각의 크기",
+    "old_title": "두 벡터가 이루는 각의 크기"
+  },
+  {
+    "id": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)_p7_04",
+    "old_path": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)/card_04_p7.webp",
+    "new_path": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)/벡터의 평행조건과 수직조건.webp",
+    "new_title": "벡터의 평행조건과 수직조건",
+    "old_title": "벡터의 평행조건과 수직조건"
+  },
+  {
+    "id": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)_p8_05",
+    "old_path": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)/card_05_p8.webp",
+    "new_path": "[S.S.S note]_기하_06-1.평면벡터의 내적_초급단계(20)/내적을 이용한 삼각형의 넓이.webp",
+    "new_title": "내적을 이용한 삼각형의 넓이",
+    "old_title": "내적을 이용한 삼각형의 넓이"
+  },
+  {
+    "id": "[S.S.S note]_기하_06-2.평면벡터와 도형의방정식_초급단계(20)_p3_01",
+    "old_path": "[S.S.S note]_기하_06-2.평면벡터와 도형의방정식_초급단계(20)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_기하_06-2.평면벡터와 도형의방정식_초급단계(20)/벡터 방정식 - 직선.webp",
+    "new_title": "벡터 방정식 - 직선",
+    "old_title": "벡터 방정식 - 직선"
+  },
+  {
+    "id": "[S.S.S note]_기하_06-2.평면벡터와 도형의방정식_초급단계(20)_p4_02",
+    "old_path": "[S.S.S note]_기하_06-2.평면벡터와 도형의방정식_초급단계(20)/card_02_p4.webp",
+    "new_path": "[S.S.S note]_기하_06-2.평면벡터와 도형의방정식_초급단계(20)/한 점을 지나고 벡터에 평행 한 직선의.webp",
+    "new_title": "한 점을 지나고 벡터에 평행 한 직선의",
+    "old_title": "한 점을 지나고 벡터에 평행 한 직선의"
+  },
+  {
+    "id": "[S.S.S note]_기하_06-2.평면벡터와 도형의방정식_초급단계(20)_p5_03",
+    "old_path": "[S.S.S note]_기하_06-2.평면벡터와 도형의방정식_초급단계(20)/card_03_p5.webp",
+    "new_path": "[S.S.S note]_기하_06-2.평면벡터와 도형의방정식_초급단계(20)/한 점을 지나고 벡터에 수직 인 직선의.webp",
+    "new_title": "한 점을 지나고 벡터에 수직 인 직선의",
+    "old_title": "한 점을 지나고 벡터에 수직 인 직선의"
+  },
+  {
+    "id": "[S.S.S note]_기하_06-2.평면벡터와 도형의방정식_초급단계(20)_p6_01",
+    "old_path": "[S.S.S note]_기하_06-2.평면벡터와 도형의방정식_초급단계(20)/card_01_p6.webp",
+    "new_path": "[S.S.S note]_기하_06-2.평면벡터와 도형의방정식_초급단계(20)/벡터방정식 - 원.webp",
+    "new_title": "벡터방정식 - 원",
+    "old_title": "벡터방정식 - 원"
+  },
+  {
+    "id": "[S.S.S note]_기하_06-2.평면벡터와 도형의방정식_초급단계(20)_p7_02",
+    "old_path": "[S.S.S note]_기하_06-2.평면벡터와 도형의방정식_초급단계(20)/card_02_p7.webp",
+    "new_path": "[S.S.S note]_기하_06-2.평면벡터와 도형의방정식_초급단계(20)/원과 직선의 방정식 ( 정리 ).webp",
+    "new_title": "원과 직선의 방정식 ( 정리 )",
+    "old_title": "원과 직선의 방정식 ( 정리 )"
+  },
+  {
+    "id": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)_p3_01",
+    "old_path": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)/공간도형의 기본성질.webp",
+    "new_title": "공간도형의 기본성질",
+    "old_title": "공간도형의 기본성질"
+  },
+  {
+    "id": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)_p3_02",
+    "old_path": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)/card_02_p3.webp",
+    "new_path": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)/평면의 결정조건.webp",
+    "new_title": "평면의 결정조건",
+    "old_title": "평면의 결정조건"
+  },
+  {
+    "id": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)_p4_03",
+    "old_path": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)/card_03_p4.webp",
+    "new_path": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)/두 직선의 위치관계.webp",
+    "new_title": "두 직선의 위치관계",
+    "old_title": "두 직선의 위치관계"
+  },
+  {
+    "id": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)_p4_04",
+    "old_path": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)/card_04_p4.webp",
+    "new_path": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)/공간에서의 두 직선이 이루는 각.webp",
+    "new_title": "공간에서의 두 직선이 이루는 각",
+    "old_title": "공간에서의 두 직선이 이루는 각"
+  },
+  {
+    "id": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)_p5_05",
+    "old_path": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)/card_05_p5.webp",
+    "new_path": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)/공간에서 직선과 평면의 위치관계.webp",
+    "new_title": "공간에서 직선과 평면의 위치관계",
+    "old_title": "공간에서 직선과 평면의 위치관계"
+  },
+  {
+    "id": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)_p5_06",
+    "old_path": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)/card_06_p5.webp",
+    "new_path": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)/공간에서 직선과 평면이 이루는 각.webp",
+    "new_title": "공간에서 직선과 평면이 이루는 각",
+    "old_title": "공간에서 직선과 평면이 이루는 각"
+  },
+  {
+    "id": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)_p6_07",
+    "old_path": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)/card_07_p6.webp",
+    "new_path": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)/공간에서 평면과 평면의 위치관계.webp",
+    "new_title": "공간에서 평면과 평면의 위치관계",
+    "old_title": "공간에서 평면과 평면의 위치관계"
+  },
+  {
+    "id": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)_p6_08",
+    "old_path": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)/card_08_p6.webp",
+    "new_path": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)/두 평면이 이루는 각 ( 이면각 ).webp",
+    "new_title": "두 평면이 이루는 각 ( 이면각 )",
+    "old_title": "두 평면이 이루는 각 ( 이면각 )"
+  },
+  {
+    "id": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)_p7_09",
+    "old_path": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)/card_09_p7.webp",
+    "new_path": "[S.S.S note]_기하_7.공간도형(1)_초급단계(20)/공간에서 직선과 평면의 수직.webp",
+    "new_title": "공간에서 직선과 평면의 수직",
+    "old_title": "공간에서 직선과 평면의 수직"
+  },
+  {
+    "id": "[S.S.S note]_기하_이차곡선의접선(2)_초급단계(30)_p3_01",
+    "old_path": "[S.S.S note]_기하_이차곡선의접선(2)_초급단계(30)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_기하_이차곡선의접선(2)_초급단계(30)/이차곡선과 직선의 위치관계.webp",
+    "new_title": "이차곡선과 직선의 위치관계",
+    "old_title": "이차곡선과 직선의 위치관계"
+  },
+  {
+    "id": "[S.S.S note]_기하_이차곡선의접선(2)_초급단계(30)_p4_02",
+    "old_path": "[S.S.S note]_기하_이차곡선의접선(2)_초급단계(30)/card_02_p4.webp",
+    "new_path": "[S.S.S note]_기하_이차곡선의접선(2)_초급단계(30)/포물선의 접선의 방정식.webp",
+    "new_title": "포물선의 접선의 방정식",
+    "old_title": "포물선의 접선의 방정식"
+  },
+  {
+    "id": "[S.S.S note]_기하_이차곡선의접선(2)_초급단계(30)_p5_03",
+    "old_path": "[S.S.S note]_기하_이차곡선의접선(2)_초급단계(30)/card_03_p5.webp",
+    "new_path": "[S.S.S note]_기하_이차곡선의접선(2)_초급단계(30)/타원의 접선의 방정식.webp",
+    "new_title": "타원의 접선의 방정식",
+    "old_title": "타원의 접선의 방정식"
+  },
+  {
+    "id": "[S.S.S note]_기하_이차곡선의접선(2)_초급단계(30)_p6_04",
+    "old_path": "[S.S.S note]_기하_이차곡선의접선(2)_초급단계(30)/card_04_p6.webp",
+    "new_path": "[S.S.S note]_기하_이차곡선의접선(2)_초급단계(30)/쌍곡선의 접선의 방정식.webp",
+    "new_title": "쌍곡선의 접선의 방정식",
+    "old_title": "쌍곡선의 접선의 방정식"
+  },
+  {
+    "id": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)_p3_01",
+    "old_path": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)/음함수의 정의.webp",
+    "new_title": "음함수의 정의",
+    "old_title": "음함수의 정의"
+  },
+  {
+    "id": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)_p4_01",
+    "old_path": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)/card_01_p4.webp",
+    "new_path": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)/음함수의 미분법.webp",
+    "new_title": "음함수의 미분법",
+    "old_title": "음함수의 미분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)_p5_02",
+    "old_path": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)/card_02_p5.webp",
+    "new_path": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)/몫의 미분법.webp",
+    "new_title": "몫의 미분법",
+    "old_title": "몫의 미분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)_p6_03",
+    "old_path": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)/card_03_p6.webp",
+    "new_path": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)/삼각함수의 뜻.webp",
+    "new_title": "삼각함수의 뜻",
+    "old_title": "삼각함수의 뜻"
+  },
+  {
+    "id": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)_p7_03",
+    "old_path": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)/card_03_p7.webp",
+    "new_path": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)/삼각함수의 미분법.webp",
+    "new_title": "삼각함수의 미분법",
+    "old_title": "삼각함수의 미분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)_p8_04",
+    "old_path": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)/card_04_p8.webp",
+    "new_path": "[S.S.S note]_미적분_07-1.매개변수미분법(1)_초급단계(11)/합성함수의 미분법.webp",
+    "new_title": "합성함수의 미분법",
+    "old_title": "합성함수의 미분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)_p3_01",
+    "old_path": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)/매개변수로 나타낸 함수.webp",
+    "new_title": "매개변수로 나타낸 함수",
+    "old_title": "매개변수로 나타낸 함수"
+  },
+  {
+    "id": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)_p4_02",
+    "old_path": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)/card_02_p4.webp",
+    "new_path": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)/매개변수로 나타낸 곡선.webp",
+    "new_title": "매개변수로 나타낸 곡선",
+    "old_title": "매개변수로 나타낸 곡선"
+  },
+  {
+    "id": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)_p5_03",
+    "old_path": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)/card_03_p5.webp",
+    "new_path": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)/매개변수로 나타낸 함수의 미분.webp",
+    "new_title": "매개변수로 나타낸 함수의 미분",
+    "old_title": "매개변수로 나타낸 함수의 미분"
+  },
+  {
+    "id": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)_p6_04",
+    "old_path": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)/card_04_p6.webp",
+    "new_path": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)/매개변수로 나타내어진 함수.webp",
+    "new_title": "매개변수로 나타내어진 함수",
+    "old_title": "매개변수로 나타내어진 함수"
+  },
+  {
+    "id": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)_p7_05",
+    "old_path": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)/card_05_p7.webp",
+    "new_path": "[S.S.S note]_미적분_07-2.매개변수미분법(2)_초급단계(20)/매개변수로 나타낸 곡선의 접선의 방정식.webp",
+    "new_title": "매개변수로 나타낸 곡선의 접선의 방정식",
+    "old_title": "매개변수로 나타낸 곡선의 접선의 방정식"
+  },
+  {
+    "id": "[S.S.S note]_미적분_14.평면운동_초급단계(15)_p3_01",
+    "old_path": "[S.S.S note]_미적분_14.평면운동_초급단계(15)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_미적분_14.평면운동_초급단계(15)/평면운동의 속도 , 가속도.webp",
+    "new_title": "평면운동의 속도 , 가속도",
+    "old_title": "평면운동의 속도 , 가속도"
+  },
+  {
+    "id": "[S.S.S note]_미적분_14.평면운동_초급단계(15)_p5_01",
+    "old_path": "[S.S.S note]_미적분_14.평면운동_초급단계(15)/card_01_p5.webp",
+    "new_path": "[S.S.S note]_미적분_14.평면운동_초급단계(15)/평면 위에서 점이 움직인 거리.webp",
+    "new_title": "평면 위에서 점이 움직인 거리",
+    "old_title": "평면 위에서 점이 움직인 거리"
+  },
+  {
+    "id": "[S.S.S note]_미적분_14.평면운동_초급단계(15)_p6_03",
+    "old_path": "[S.S.S note]_미적분_14.평면운동_초급단계(15)/card_03_p6.webp",
+    "new_path": "[S.S.S note]_미적분_14.평면운동_초급단계(15)/곡선의 길이.webp",
+    "new_title": "곡선의 길이",
+    "old_title": "곡선의 길이"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_04-1.지수로그함수의극한(23)_p3_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_04-1.지수로그함수의극한(23)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_04-1.지수로그함수의극한(23)/지수함수와 로그함수의 극한.webp",
+    "new_title": "지수함수와 로그함수의 극한",
+    "old_title": "지수함수와 로그함수의 극한"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_04-1.지수로그함수의극한(23)_p5_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_04-1.지수로그함수의극한(23)/card_02_p5.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_04-1.지수로그함수의극한(23)/무리수 e 와 자연로그.webp",
+    "new_title": "무리수 e 와 자연로그",
+    "old_title": "무리수 e 와 자연로그"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_04-1.지수로그함수의극한(23)_p8_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_04-1.지수로그함수의극한(23)/card_03_p8.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_04-1.지수로그함수의극한(23)/e 의 정의를 이용한 로그함수와 지수함수의 극한.webp",
+    "new_title": "e 의 정의를 이용한 로그함수와 지수함수의 극한",
+    "old_title": "e 의 정의를 이용한 로그함수와 지수함수의 극한"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_04-2.지수로그함수의도함수(8)_p3_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_04-2.지수로그함수의도함수(8)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_04-2.지수로그함수의도함수(8)/지수함수와 로그함수의 도함수.webp",
+    "new_title": "지수함수와 로그함수의 도함수",
+    "old_title": "지수함수와 로그함수의 도함수"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_04-2.지수로그함수의도함수(8)_p5_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_04-2.지수로그함수의도함수(8)/card_02_p5.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_04-2.지수로그함수의도함수(8)/지수함수와 로그함수의 도함수 계산.webp",
+    "new_title": "지수함수와 로그함수의 도함수 계산",
+    "old_title": "지수함수와 로그함수의 도함수 계산"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_04-2.지수로그함수의도함수(8)_p6_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_04-2.지수로그함수의도함수(8)/card_03_p6.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_04-2.지수로그함수의도함수(8)/미분계수를 이용한 극한값의 계산.webp",
+    "new_title": "미분계수를 이용한 극한값의 계산",
+    "old_title": "미분계수를 이용한 극한값의 계산"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)_p3_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/삼각함수의 덧셈정리.webp",
+    "new_title": "삼각함수의 덧셈정리",
+    "old_title": "삼각함수의 덧셈정리"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)_p4_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/card_01_p4.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/삼각함수의 덧셈정리_2.webp",
+    "new_title": "삼각함수의 덧셈정리_2",
+    "old_title": "삼각함수의 덧셈정리"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)_p5_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/card_01_p5.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/삼각함수의 덧셈정리_3.webp",
+    "new_title": "삼각함수의 덧셈정리_3",
+    "old_title": "삼각함수의 덧셈정리"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)_p6_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/card_01_p6.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/삼각함수의 덧셈정리_4.webp",
+    "new_title": "삼각함수의 덧셈정리_4",
+    "old_title": "삼각함수의 덧셈정리"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)_p7_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/card_02_p7.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/삼각함수의 합성.webp",
+    "new_title": "삼각함수의 합성",
+    "old_title": "삼각함수의 합성"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)_p8_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/card_02_p8.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/삼각함수의 합성_2.webp",
+    "new_title": "삼각함수의 합성_2",
+    "old_title": "삼각함수의 합성"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)_p9_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/card_03_p9.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/삼각함수의 배각 공식.webp",
+    "new_title": "삼각함수의 배각 공식",
+    "old_title": "삼각함수의 배각 공식"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)_p10_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/card_03_p10.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/삼각함수의 배각 공식_2.webp",
+    "new_title": "삼각함수의 배각 공식_2",
+    "old_title": "삼각함수의 배각 공식"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)_p11_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/card_04_p11.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/필수문제 - 사인함수와 코사인함수의 덧셈정리.webp",
+    "new_title": "필수문제 - 사인함수와 코사인함수의 덧셈정리",
+    "old_title": "필수문제 - 사인함수와 코사인함수의 덧셈정리"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)_p12_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/card_04_p12.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/필수문제 - 탄젠트함수의 덧셈정리.webp",
+    "new_title": "필수문제 - 탄젠트함수의 덧셈정리",
+    "old_title": "필수문제 - 탄젠트함수의 덧셈정리"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)_p13_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/card_04_p13.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/필수문제 - 삼각함수의 합성.webp",
+    "new_title": "필수문제 - 삼각함수의 합성",
+    "old_title": "필수문제 - 삼각함수의 합성"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)_p14_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/card_04_p14.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-1.삼각함수의덧셈정리(20)/필수문제 - 삼각함수의 덧셈정리 응용.webp",
+    "new_title": "필수문제 - 삼각함수의 덧셈정리 응용",
+    "old_title": "필수문제 - 삼각함수의 덧셈정리 응용"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)_p3_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/삼각함수의 극한.webp",
+    "new_title": "삼각함수의 극한",
+    "old_title": "삼각함수의 극한"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)_p4_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/card_01_p4.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/삼각함수의 극한_2.webp",
+    "new_title": "삼각함수의 극한_2",
+    "old_title": "삼각함수의 극한"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)_p5_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/card_02_p5.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/s i n 의.webp",
+    "new_title": "s i n 의",
+    "old_title": "  s i n  의"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)_p6_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/card_02_p6.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/s i n 의_2.webp",
+    "new_title": "s i n 의_2",
+    "old_title": "  s i n  의"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)_p7_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/card_02_p7.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/s i n 의_3.webp",
+    "new_title": "s i n 의_3",
+    "old_title": "  s i n  의"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)_p8_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/card_02_p8.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/s i n 의_4.webp",
+    "new_title": "s i n 의_4",
+    "old_title": "  s i n  의"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)_p9_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/card_03_p9.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/사인함수와 코사인함수의 도함수.webp",
+    "new_title": "사인함수와 코사인함수의 도함수",
+    "old_title": "사인함수와 코사인함수의 도함수"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)_p10_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/card_03_p10.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/사인함수와 코사인함수의 도함수_2.webp",
+    "new_title": "사인함수와 코사인함수의 도함수_2",
+    "old_title": "사인함수와 코사인함수의 도함수"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)_p11_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/card_04_p11.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/필수문제 - 삼각함수의 극한.webp",
+    "new_title": "필수문제 - 삼각함수의 극한",
+    "old_title": "필수문제 - 삼각함수의 극한"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)_p12_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/card_04_p12.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/필수문제 - s i n.webp",
+    "new_title": "필수문제 - s i n",
+    "old_title": "필수문제 -   s i n"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)_p13_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/card_04_p13.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/필수문제 - 삼각함수의 극한과 미정계수의 결정.webp",
+    "new_title": "필수문제 - 삼각함수의 극한과 미정계수의 결정",
+    "old_title": "필수문제 - 삼각함수의 극한과 미정계수의 결정"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)_p14_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/card_04_p14.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_05-2.삼각함수의미분(18)/필수문제 - 삼각함수의 도함수.webp",
+    "new_title": "필수문제 - 삼각함수의 도함수",
+    "old_title": "필수문제 - 삼각함수의 도함수"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)_p3_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)/몫의 미분법_2.webp",
+    "new_title": "몫의 미분법_2",
+    "old_title": "몫의 미분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)_p4_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)/card_01_p4.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)/몫의 미분법_3.webp",
+    "new_title": "몫의 미분법_3",
+    "old_title": "몫의 미분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)_p5_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)/card_02_p5.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)/합성함수의 미분법_2.webp",
+    "new_title": "합성함수의 미분법_2",
+    "old_title": "합성함수의 미분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)_p6_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)/card_02_p6.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)/합성함수의 미분법_3.webp",
+    "new_title": "합성함수의 미분법_3",
+    "old_title": "합성함수의 미분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)_p7_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)/card_03_p7.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)/로그함수의 미분법.webp",
+    "new_title": "로그함수의 미분법",
+    "old_title": "로그함수의 미분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)_p8_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)/card_03_p8.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)/로그함수의 미분법_2.webp",
+    "new_title": "로그함수의 미분법_2",
+    "old_title": "로그함수의 미분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)_p9_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)/card_04_p9.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)/필수문제 - 몫의 미분법.webp",
+    "new_title": "필수문제 - 몫의 미분법",
+    "old_title": "필수문제 - 몫의 미분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)_p10_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)/card_04_p10.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)/필수문제 - 삼각함수의 도함수_2.webp",
+    "new_title": "필수문제 - 삼각함수의 도함수_2",
+    "old_title": "필수문제 - 삼각함수의 도함수"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)_p11_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)/card_04_p11.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)/필수문제 - 합성함수의 미분법.webp",
+    "new_title": "필수문제 - 합성함수의 미분법",
+    "old_title": "필수문제 - 합성함수의 미분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)_p12_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)/card_04_p12.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_06-1.여러가지미분법(1)(20)/필수문제 - 로그함수의 미분법.webp",
+    "new_title": "필수문제 - 로그함수의 미분법",
+    "old_title": "필수문제 - 로그함수의 미분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)_p3_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)/역함수의 미분법.webp",
+    "new_title": "역함수의 미분법",
+    "old_title": "역함수의 미분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)_p4_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)/card_01_p4.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)/역함수의 미분법_2.webp",
+    "new_title": "역함수의 미분법_2",
+    "old_title": "역함수의 미분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)_p5_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)/card_02_p5.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)/이계도함수.webp",
+    "new_title": "이계도함수",
+    "old_title": "이계도함수"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)_p6_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)/card_02_p6.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)/이계도함수_2.webp",
+    "new_title": "이계도함수_2",
+    "old_title": "이계도함수"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)_p9_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)/card_04_p9.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)/필수문제 - 무리함수의 도함수.webp",
+    "new_title": "필수문제 - 무리함수의 도함수",
+    "old_title": "필수문제 - 무리함수의 도함수"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)_p10_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)/card_04_p10.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)/필수문제 - 역함수의 도함수.webp",
+    "new_title": "필수문제 - 역함수의 도함수",
+    "old_title": "필수문제 - 역함수의 도함수"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)_p11_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)/card_04_p11.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)/필수문제 - 역함수의 미분법과 미분계수.webp",
+    "new_title": "필수문제 - 역함수의 미분법과 미분계수",
+    "old_title": "필수문제 - 역함수의 미분법과 미분계수"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)_p12_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)/card_04_p12.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)/필수문제 - 이계도함수.webp",
+    "new_title": "필수문제 - 이계도함수",
+    "old_title": "필수문제 - 이계도함수"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)_p13_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)/card_04_p13.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_06-2.여러가지미분법(2)(15)/필수문제 - 이계도함수의 응용.webp",
+    "new_title": "필수문제 - 이계도함수의 응용",
+    "old_title": "필수문제 - 이계도함수의 응용"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_08-1.접선의방정식(16)_p3_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_08-1.접선의방정식(16)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_08-1.접선의방정식(16)/접선의 방정식.webp",
+    "new_title": "접선의 방정식",
+    "old_title": "접선의 방정식"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_08-1.접선의방정식(16)_p4_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_08-1.접선의방정식(16)/card_01_p4.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_08-1.접선의방정식(16)/접선의 방정식_2.webp",
+    "new_title": "접선의 방정식_2",
+    "old_title": "접선의 방정식"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_08-1.접선의방정식(16)_p5_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_08-1.접선의방정식(16)/card_02_p5.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_08-1.접선의방정식(16)/필수문제 - 접선의 방정식 (1).webp",
+    "new_title": "필수문제 - 접선의 방정식 (1)",
+    "old_title": "필수문제 - 접선의 방정식 (1)"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_08-1.접선의방정식(16)_p6_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_08-1.접선의방정식(16)/card_02_p6.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_08-1.접선의방정식(16)/필수문제 - 접선의 방정식 (2).webp",
+    "new_title": "필수문제 - 접선의 방정식 (2)",
+    "old_title": "필수문제 - 접선의 방정식 (2)"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_08-1.접선의방정식(16)_p7_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_08-1.접선의방정식(16)/card_02_p7.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_08-1.접선의방정식(16)/필수문제 - 역함수의 미분법과 접선의 방정식.webp",
+    "new_title": "필수문제 - 역함수의 미분법과 접선의 방정식",
+    "old_title": "필수문제 - 역함수의 미분법과 접선의 방정식"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_08-1.접선의방정식(16)_p8_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_08-1.접선의방정식(16)/card_02_p8.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_08-1.접선의방정식(16)/필수문제 - 접하는 두 곡선.webp",
+    "new_title": "필수문제 - 접하는 두 곡선",
+    "old_title": "필수문제 - 접하는 두 곡선"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_08-2.평균값정리(14)_p3_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_08-2.평균값정리(14)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_08-2.평균값정리(14)/평균값 정리.webp",
+    "new_title": "평균값 정리",
+    "old_title": "평균값 정리"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_08-2.평균값정리(14)_p4_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_08-2.평균값정리(14)/card_01_p4.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_08-2.평균값정리(14)/평균값 정리_2.webp",
+    "new_title": "평균값 정리_2",
+    "old_title": "평균값 정리"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_08-2.평균값정리(14)_p5_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_08-2.평균값정리(14)/card_02_p5.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_08-2.평균값정리(14)/평균값 정리와 극한값의 계산.webp",
+    "new_title": "평균값 정리와 극한값의 계산",
+    "old_title": "평균값 정리와 극한값의 계산"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_08-2.평균값정리(14)_p6_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_08-2.평균값정리(14)/card_02_p6.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_08-2.평균값정리(14)/평균값 정리와 극한값의 계산_2.webp",
+    "new_title": "평균값 정리와 극한값의 계산_2",
+    "old_title": "평균값 정리와 극한값의 계산"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_08-2.평균값정리(14)_p7_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_08-2.평균값정리(14)/card_03_p7.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_08-2.평균값정리(14)/필수문제 - 평균값 정리.webp",
+    "new_title": "필수문제 - 평균값 정리",
+    "old_title": "필수문제 - 평균값 정리"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_08-2.평균값정리(14)_p8_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_08-2.평균값정리(14)/card_04_p8.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_08-2.평균값정리(14)/필수문제 - 평균값의 정리를 이용한 부등식의 증명.webp",
+    "new_title": "필수문제 - 평균값의 정리를 이용한 부등식의 증명",
+    "old_title": "필수문제 - 평균값의 정리를 이용한 부등식의 증명"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)_p3_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/함수의 극대와 극소.webp",
+    "new_title": "함수의 극대와 극소",
+    "old_title": "함수의 극대와 극소"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)_p4_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/card_01_p4.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/함수의 극대와 극소_2.webp",
+    "new_title": "함수의 극대와 극소_2",
+    "old_title": "함수의 극대와 극소"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)_p5_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/card_02_p5.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/곡선의 오목과 볼록.webp",
+    "new_title": "곡선의 오목과 볼록",
+    "old_title": "곡선의 오목과 볼록"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)_p6_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/card_02_p6.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/곡선의 오목과 볼록_2.webp",
+    "new_title": "곡선의 오목과 볼록_2",
+    "old_title": "곡선의 오목과 볼록"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)_p7_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/card_03_p7.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/함수의 그래프.webp",
+    "new_title": "함수의 그래프",
+    "old_title": "함수의 그래프"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)_p8_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/card_03_p8.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/함수의 그래프_2.webp",
+    "new_title": "함수의 그래프_2",
+    "old_title": "함수의 그래프"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)_p9_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/card_04_p9.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/필수문제 - 함수의 극대와 극소.webp",
+    "new_title": "필수문제 - 함수의 극대와 극소",
+    "old_title": "필수문제 - 함수의 극대와 극소"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)_p10_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/card_04_p10.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/필수문제 - 극값이 존재할 조건.webp",
+    "new_title": "필수문제 - 극값이 존재할 조건",
+    "old_title": "필수문제 - 극값이 존재할 조건"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)_p11_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/card_04_p11.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/필수문제 - 곡선의 오목과 볼록.webp",
+    "new_title": "필수문제 - 곡선의 오목과 볼록",
+    "old_title": "필수문제 - 곡선의 오목과 볼록"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)_p12_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/card_04_p12.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/필수문제 - 도함수의 그래프와 함수의 해석.webp",
+    "new_title": "필수문제 - 도함수의 그래프와 함수의 해석",
+    "old_title": "필수문제 - 도함수의 그래프와 함수의 해석"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)_p13_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/card_04_p13.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/필수문제 - 함수의 그래프.webp",
+    "new_title": "필수문제 - 함수의 그래프",
+    "old_title": "필수문제 - 함수의 그래프"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)_p14_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/card_04_p14.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/필수문제 - 점근선을 갖는 함수의 그래프.webp",
+    "new_title": "필수문제 - 점근선을 갖는 함수의 그래프",
+    "old_title": "필수문제 - 점근선을 갖는 함수의 그래프"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)_p15_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/card_04_p15.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_09-1.함수의그래프(36)/필수문제 - 함수의 최대와 최소.webp",
+    "new_title": "필수문제 - 함수의 최대와 최소",
+    "old_title": "필수문제 - 함수의 최대와 최소"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_10-1.방정식과부등식에의활용(15)_p3_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_10-1.방정식과부등식에의활용(15)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_10-1.방정식과부등식에의활용(15)/방정식의 실근의 개수.webp",
+    "new_title": "방정식의 실근의 개수",
+    "old_title": "방정식의 실근의 개수"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_10-1.방정식과부등식에의활용(15)_p4_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_10-1.방정식과부등식에의활용(15)/card_01_p4.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_10-1.방정식과부등식에의활용(15)/방정식의 실근의 개수_2.webp",
+    "new_title": "방정식의 실근의 개수_2",
+    "old_title": "방정식의 실근의 개수"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_10-1.방정식과부등식에의활용(15)_p5_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_10-1.방정식과부등식에의활용(15)/card_02_p5.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_10-1.방정식과부등식에의활용(15)/부등식의 증명.webp",
+    "new_title": "부등식의 증명",
+    "old_title": "부등식의 증명"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_10-1.방정식과부등식에의활용(15)_p6_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_10-1.방정식과부등식에의활용(15)/card_02_p6.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_10-1.방정식과부등식에의활용(15)/부등식의 증명_2.webp",
+    "new_title": "부등식의 증명_2",
+    "old_title": "부등식의 증명"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_10-1.방정식과부등식에의활용(15)_p7_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_10-1.방정식과부등식에의활용(15)/card_03_p7.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_10-1.방정식과부등식에의활용(15)/필수문제 - 방정식의 실근의 개수.webp",
+    "new_title": "필수문제 - 방정식의 실근의 개수",
+    "old_title": "필수문제 - 방정식의 실근의 개수"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_10-1.방정식과부등식에의활용(15)_p8_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_10-1.방정식과부등식에의활용(15)/card_04_p8.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_10-1.방정식과부등식에의활용(15)/필수문제 - 부등식의 증명.webp",
+    "new_title": "필수문제 - 부등식의 증명",
+    "old_title": "필수문제 - 부등식의 증명"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)_p3_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)/의 부정적분.webp",
+    "new_title": "의 부정적분",
+    "old_title": "  의 부정적분"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)_p4_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)/card_02_p4.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)/지수함수의 부정적분.webp",
+    "new_title": "지수함수의 부정적분",
+    "old_title": "지수함수의 부정적분"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)_p5_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)/card_03_p5.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)/삼각함수의 부정적분.webp",
+    "new_title": "삼각함수의 부정적분",
+    "old_title": "삼각함수의 부정적분"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)_p6_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)/card_04_p6.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)/여러 가지 함수의 부정적분 정리.webp",
+    "new_title": "여러 가지 함수의 부정적분 정리",
+    "old_title": "여러 가지 함수의 부정적분 정리"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)_p7_05",
+    "old_path": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)/card_05_p7.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)/필수문제 - (n 은 실수.webp",
+    "new_title": "필수문제 - (n 은 실수",
+    "old_title": "필수문제 -   (n 은 실수"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)_p8_05",
+    "old_path": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)/card_05_p8.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)/필수문제 - 지수함수의 부정적분.webp",
+    "new_title": "필수문제 - 지수함수의 부정적분",
+    "old_title": "필수문제 - 지수함수의 부정적분"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)_p9_05",
+    "old_path": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)/card_05_p9.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)/필수문제 - 삼각함수의 부정적분.webp",
+    "new_title": "필수문제 - 삼각함수의 부정적분",
+    "old_title": "필수문제 - 삼각함수의 부정적분"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)_p10_05",
+    "old_path": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)/card_05_p10.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_10-2.여러가지함수의부정적분(17)/필수문제 - 부정적분과 미분의 관계.webp",
+    "new_title": "필수문제 - 부정적분과 미분의 관계",
+    "old_title": "필수문제 - 부정적분과 미분의 관계"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)_p3_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)/치환적분법.webp",
+    "new_title": "치환적분법",
+    "old_title": "치환적분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)_p4_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)/card_01_p4.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)/치환적분법_2.webp",
+    "new_title": "치환적분법_2",
+    "old_title": "치환적분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)_p5_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)/card_01_p5.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)/치환적분법_3.webp",
+    "new_title": "치환적분법_3",
+    "old_title": "치환적분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)_p6_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)/card_01_p6.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)/치환적분법_4.webp",
+    "new_title": "치환적분법_4",
+    "old_title": "치환적분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)_p7_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)/card_02_p7.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)/부분적분법.webp",
+    "new_title": "부분적분법",
+    "old_title": "부분적분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)_p8_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)/card_02_p8.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)/부분적분법_2.webp",
+    "new_title": "부분적분법_2",
+    "old_title": "부분적분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)_p9_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)/card_03_p9.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)/필수문제 - 치환적분법 (1).webp",
+    "new_title": "필수문제 - 치환적분법 (1)",
+    "old_title": "필수문제 - 치환적분법 (1)"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)_p10_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)/card_03_p10.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)/필수문제 - 치환적분법 (2).webp",
+    "new_title": "필수문제 - 치환적분법 (2)",
+    "old_title": "필수문제 - 치환적분법 (2)"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)_p11_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)/card_03_p11.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)/필수문제 - 유리함수의 부정적분 (1).webp",
+    "new_title": "필수문제 - 유리함수의 부정적분 (1)",
+    "old_title": "필수문제 - 유리함수의 부정적분 (1)"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)_p12_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)/card_03_p12.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)/필수문제 - 유리함수의 부정적분 (2).webp",
+    "new_title": "필수문제 - 유리함수의 부정적분 (2)",
+    "old_title": "필수문제 - 유리함수의 부정적분 (2)"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)_p13_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)/card_03_p13.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_11-1.여러가지적분법(28)/필수문제 - 부분적분법.webp",
+    "new_title": "필수문제 - 부분적분법",
+    "old_title": "필수문제 - 부분적분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_11-2.정적분의뜻과성질(14)_p3_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_11-2.정적분의뜻과성질(14)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_11-2.정적분의뜻과성질(14)/정적분의 뜻과 성질.webp",
+    "new_title": "정적분의 뜻과 성질",
+    "old_title": "정적분의 뜻과 성질"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_11-2.정적분의뜻과성질(14)_p4_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_11-2.정적분의뜻과성질(14)/card_01_p4.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_11-2.정적분의뜻과성질(14)/정적분의 뜻과 성질_2.webp",
+    "new_title": "정적분의 뜻과 성질_2",
+    "old_title": "정적분의 뜻과 성질"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_11-2.정적분의뜻과성질(14)_p5_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_11-2.정적분의뜻과성질(14)/card_02_p5.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_11-2.정적분의뜻과성질(14)/함수의 그래프와 정적분.webp",
+    "new_title": "함수의 그래프와 정적분",
+    "old_title": "함수의 그래프와 정적분"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_11-2.정적분의뜻과성질(14)_p6_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_11-2.정적분의뜻과성질(14)/card_02_p6.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_11-2.정적분의뜻과성질(14)/함수의 그래프와 정적분_2.webp",
+    "new_title": "함수의 그래프와 정적분_2",
+    "old_title": "함수의 그래프와 정적분"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_11-2.정적분의뜻과성질(14)_p7_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_11-2.정적분의뜻과성질(14)/card_03_p7.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_11-2.정적분의뜻과성질(14)/필수문제 - 여러 가지 함수의 정적분.webp",
+    "new_title": "필수문제 - 여러 가지 함수의 정적분",
+    "old_title": "필수문제 - 여러 가지 함수의 정적분"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_11-2.정적분의뜻과성질(14)_p8_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_11-2.정적분의뜻과성질(14)/card_03_p8.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_11-2.정적분의뜻과성질(14)/필수문제 - 함수의 그래프와 정적분.webp",
+    "new_title": "필수문제 - 함수의 그래프와 정적분",
+    "old_title": "필수문제 - 함수의 그래프와 정적분"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_11-2.정적분의뜻과성질(14)_p9_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_11-2.정적분의뜻과성질(14)/card_03_p9.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_11-2.정적분의뜻과성질(14)/필수문제 - 유리함수의 부정적분 (1)_2.webp",
+    "new_title": "필수문제 - 유리함수의 부정적분 (1)_2",
+    "old_title": "필수문제 - 유리함수의 부정적분 (1)"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)_p3_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)/정적분의 치환적분법.webp",
+    "new_title": "정적분의 치환적분법",
+    "old_title": "정적분의 치환적분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)_p4_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)/card_01_p4.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)/정적분의 치환적분법_2.webp",
+    "new_title": "정적분의 치환적분법_2",
+    "old_title": "정적분의 치환적분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)_p5_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)/card_02_p5.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)/정적분의 부분적분법.webp",
+    "new_title": "정적분의 부분적분법",
+    "old_title": "정적분의 부분적분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)_p6_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)/card_02_p6.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)/정적분의 부분적분법_2.webp",
+    "new_title": "정적분의 부분적분법_2",
+    "old_title": "정적분의 부분적분법"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)_p7_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)/card_03_p7.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)/삼각함수로의 치환적분.webp",
+    "new_title": "삼각함수로의 치환적분",
+    "old_title": "삼각함수로의 치환적분"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)_p8_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)/card_03_p8.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)/삼각함수로의 치환적분_2.webp",
+    "new_title": "삼각함수로의 치환적분_2",
+    "old_title": "삼각함수로의 치환적분"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)_p9_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)/card_04_p9.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)/필수문제 - 정적분의 치환적분법 (1).webp",
+    "new_title": "필수문제 - 정적분의 치환적분법 (1)",
+    "old_title": "필수문제 - 정적분의 치환적분법 (1)"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)_p10_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)/card_04_p10.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)/필수문제 - 정적분의 치환적분법 (2).webp",
+    "new_title": "필수문제 - 정적분의 치환적분법 (2)",
+    "old_title": "필수문제 - 정적분의 치환적분법 (2)"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)_p11_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)/card_04_p11.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)/필수문제 - 정적분의 부분적분법 (1).webp",
+    "new_title": "필수문제 - 정적분의 부분적분법 (1)",
+    "old_title": "필수문제 - 정적분의 부분적분법 (1)"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)_p12_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)/card_04_p12.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_12-1.정적분의치환적분법과부분적분법(18)/필수문제 - 정적분의 부분적분법 (2).webp",
+    "new_title": "필수문제 - 정적분의 부분적분법 (2)",
+    "old_title": "필수문제 - 정적분의 부분적분법 (2)"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_12-2.정적분과급수의관계(8)_p3_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_12-2.정적분과급수의관계(8)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_12-2.정적분과급수의관계(8)/정적분과 급수의 관계.webp",
+    "new_title": "정적분과 급수의 관계",
+    "old_title": "정적분과 급수의 관계"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_12-2.정적분과급수의관계(8)_p4_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_12-2.정적분과급수의관계(8)/card_01_p4.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_12-2.정적분과급수의관계(8)/정적분과 급수의 관계_2.webp",
+    "new_title": "정적분과 급수의 관계_2",
+    "old_title": "정적분과 급수의 관계"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_12-2.정적분과급수의관계(8)_p5_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_12-2.정적분과급수의관계(8)/card_02_p5.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_12-2.정적분과급수의관계(8)/필수문제 - 정적분과 급수의 관계.webp",
+    "new_title": "필수문제 - 정적분과 급수의 관계",
+    "old_title": "필수문제 - 정적분과 급수의 관계"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_12-2.정적분과급수의관계(8)_p6_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_12-2.정적분과급수의관계(8)/card_02_p6.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_12-2.정적분과급수의관계(8)/필수문제 - 정적분을 이용한 부등식의 증명.webp",
+    "new_title": "필수문제 - 정적분을 이용한 부등식의 증명",
+    "old_title": "필수문제 - 정적분을 이용한 부등식의 증명"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_13-1.정적분을포함한함수(14)_p3_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_13-1.정적분을포함한함수(14)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_13-1.정적분을포함한함수(14)/정적분을 포함한 함수.webp",
+    "new_title": "정적분을 포함한 함수",
+    "old_title": "정적분을 포함한 함수"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_13-1.정적분을포함한함수(14)_p4_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_13-1.정적분을포함한함수(14)/card_01_p4.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_13-1.정적분을포함한함수(14)/정적분을 포함한 함수_2.webp",
+    "new_title": "정적분을 포함한 함수_2",
+    "old_title": "정적분을 포함한 함수"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_13-1.정적분을포함한함수(14)_p5_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_13-1.정적분을포함한함수(14)/card_02_p5.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_13-1.정적분을포함한함수(14)/필수문제 - 적분 구간 상수.webp",
+    "new_title": "필수문제 - 적분 구간 상수",
+    "old_title": "필수문제 - 적분 구간 상수"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_13-1.정적분을포함한함수(14)_p6_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_13-1.정적분을포함한함수(14)/card_02_p6.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_13-1.정적분을포함한함수(14)/필수문제 - 적분 구간 변수.webp",
+    "new_title": "필수문제 - 적분 구간 변수",
+    "old_title": "필수문제 - 적분 구간 변수"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)_p3_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)/넓이와 정적분.webp",
+    "new_title": "넓이와 정적분",
+    "old_title": "넓이와 정적분"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)_p4_01",
+    "old_path": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)/card_01_p4.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)/넓이와 정적분_2.webp",
+    "new_title": "넓이와 정적분_2",
+    "old_title": "넓이와 정적분"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)_p5_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)/card_02_p5.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)/부피와 정적분.webp",
+    "new_title": "부피와 정적분",
+    "old_title": "부피와 정적분"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)_p6_02",
+    "old_path": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)/card_02_p6.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)/부피와 정적분_2.webp",
+    "new_title": "부피와 정적분_2",
+    "old_title": "부피와 정적분"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)_p7_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)/card_03_p7.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)/회전체의 부피.webp",
+    "new_title": "회전체의 부피",
+    "old_title": "회전체의 부피"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)_p8_03",
+    "old_path": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)/card_03_p8.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)/회전체의 부피_2.webp",
+    "new_title": "회전체의 부피_2",
+    "old_title": "회전체의 부피"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)_p9_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)/card_04_p9.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)/필수문제 - 곡선과 축으로 둘러싸인 도형의 넓이.webp",
+    "new_title": "필수문제 - 곡선과 축으로 둘러싸인 도형의 넓이",
+    "old_title": "필수문제 - 곡선과 축으로 둘러싸인 도형의 넓이"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)_p10_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)/card_04_p10.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)/필수문제 - 두 곡선으로 둘러싸인 도형의 넓이.webp",
+    "new_title": "필수문제 - 두 곡선으로 둘러싸인 도형의 넓이",
+    "old_title": "필수문제 - 두 곡선으로 둘러싸인 도형의 넓이"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)_p11_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)/card_04_p11.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)/필수문제 - 역함수와 도형의 넓이.webp",
+    "new_title": "필수문제 - 역함수와 도형의 넓이",
+    "old_title": "필수문제 - 역함수와 도형의 넓이"
+  },
+  {
+    "id": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)_p12_04",
+    "old_path": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)/card_04_p12.webp",
+    "new_path": "[S.S.S note]_미적분_초급단계_13-2.넓이부피와정적분(26)/필수문제 - 입체도형의 부피.webp",
+    "new_title": "필수문제 - 입체도형의 부피",
+    "old_title": "필수문제 - 입체도형의 부피"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_03-1.지수함수의그래프(14)_p3_01",
+    "old_path": "[S.S.S note]_수학1_초급단계_03-1.지수함수의그래프(14)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_03-1.지수함수의그래프(14)/지수함수의 정의.webp",
+    "new_title": "지수함수의 정의",
+    "old_title": "지수함수의 정의"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_03-1.지수함수의그래프(14)_p4_02",
+    "old_path": "[S.S.S note]_수학1_초급단계_03-1.지수함수의그래프(14)/card_02_p4.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_03-1.지수함수의그래프(14)/지수함수의 그래프.webp",
+    "new_title": "지수함수의 그래프",
+    "old_title": "지수함수의 그래프"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_03-1.지수함수의그래프(14)_p6_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_03-1.지수함수의그래프(14)/card_03_p6.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_03-1.지수함수의그래프(14)/지수함수의 그래프와 성질.webp",
+    "new_title": "지수함수의 그래프와 성질",
+    "old_title": "지수함수의 그래프와 성질"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_03-1.지수함수의그래프(14)_p7_04",
+    "old_path": "[S.S.S note]_수학1_초급단계_03-1.지수함수의그래프(14)/card_04_p7.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_03-1.지수함수의그래프(14)/지수함수의 그래프와 평행이동.webp",
+    "new_title": "지수함수의 그래프와 평행이동",
+    "old_title": "지수함수의 그래프와 평행이동"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_03-2.로그함수의그래프(13)_p3_01",
+    "old_path": "[S.S.S note]_수학1_초급단계_03-2.로그함수의그래프(13)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_03-2.로그함수의그래프(13)/로그함수의 그래프와 성질.webp",
+    "new_title": "로그함수의 그래프와 성질",
+    "old_title": "로그함수의 그래프와 성질"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_03-2.로그함수의그래프(13)_p4_02",
+    "old_path": "[S.S.S note]_수학1_초급단계_03-2.로그함수의그래프(13)/card_02_p4.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_03-2.로그함수의그래프(13)/로그함수의 그래프와 평행이동.webp",
+    "new_title": "로그함수의 그래프와 평행이동",
+    "old_title": "로그함수의 그래프와 평행이동"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_03-2.로그함수의그래프(13)_p5_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_03-2.로그함수의그래프(13)/card_03_p5.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_03-2.로그함수의그래프(13)/지수함수와 로그함수의 관계.webp",
+    "new_title": "지수함수와 로그함수의 관계",
+    "old_title": "지수함수와 로그함수의 관계"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_03-3.지수로그함수의최대최소(14)_p3_01",
+    "old_path": "[S.S.S note]_수학1_초급단계_03-3.지수로그함수의최대최소(14)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_03-3.지수로그함수의최대최소(14)/지수함수와 로그함수의 최대 최소.webp",
+    "new_title": "지수함수와 로그함수의 최대 최소",
+    "old_title": "지수함수와 로그함수의 최대 최소"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_03-3.지수로그함수의최대최소(14)_p5_02",
+    "old_path": "[S.S.S note]_수학1_초급단계_03-3.지수로그함수의최대최소(14)/card_02_p5.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_03-3.지수로그함수의최대최소(14)/기본개념 확인 문제.webp",
+    "new_title": "기본개념 확인 문제",
+    "old_title": "기본개념 확인 문제"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_03-3.지수로그함수의최대최소(14)_p6_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_03-3.지수로그함수의최대최소(14)/card_03_p6.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_03-3.지수로그함수의최대최소(14)/그래프을 이용한 최대 최소.webp",
+    "new_title": "그래프을 이용한 최대 최소",
+    "old_title": "그래프을 이용한 최대 최소"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_03-3.지수로그함수의최대최소(14)_p7_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_03-3.지수로그함수의최대최소(14)/card_03_p7.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_03-3.지수로그함수의최대최소(14)/치환을 이용한 최대 최소.webp",
+    "new_title": "치환을 이용한 최대 최소",
+    "old_title": "치환을 이용한 최대 최소"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_04-1.지수로그방정식(16)_p3_01",
+    "old_path": "[S.S.S note]_수학1_초급단계_04-1.지수로그방정식(16)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_04-1.지수로그방정식(16)/지수방정식과 로그방정식.webp",
+    "new_title": "지수방정식과 로그방정식",
+    "old_title": "지수방정식과 로그방정식"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_04-1.지수로그방정식(16)_p5_02",
+    "old_path": "[S.S.S note]_수학1_초급단계_04-1.지수로그방정식(16)/card_02_p5.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_04-1.지수로그방정식(16)/기본 개념 확인 문제.webp",
+    "new_title": "기본 개념 확인 문제",
+    "old_title": "기본 개념 확인 문제"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_04-1.지수로그방정식(16)_p6_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_04-1.지수로그방정식(16)/card_03_p6.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_04-1.지수로그방정식(16)/밑통일을 이용한 지수로그방정식.webp",
+    "new_title": "밑통일을 이용한 지수로그방정식",
+    "old_title": "밑통일을 이용한 지수로그방정식"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_04-1.지수로그방정식(16)_p7_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_04-1.지수로그방정식(16)/card_03_p7.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_04-1.지수로그방정식(16)/치환을 이용한 지수방정식.webp",
+    "new_title": "치환을 이용한 지수방정식",
+    "old_title": "치환을 이용한 지수방정식"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_04-1.지수로그방정식(16)_p8_04",
+    "old_path": "[S.S.S note]_수학1_초급단계_04-1.지수로그방정식(16)/card_04_p8.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_04-1.지수로그방정식(16)/치환을 이용한 로그방정식.webp",
+    "new_title": "치환을 이용한 로그방정식",
+    "old_title": "치환을 이용한 로그방정식"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_04-2.지수로그부등식(14)_p3_01",
+    "old_path": "[S.S.S note]_수학1_초급단계_04-2.지수로그부등식(14)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_04-2.지수로그부등식(14)/지수부등식과 로그부등식.webp",
+    "new_title": "지수부등식과 로그부등식",
+    "old_title": "지수부등식과 로그부등식"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_04-2.지수로그부등식(14)_p5_02",
+    "old_path": "[S.S.S note]_수학1_초급단계_04-2.지수로그부등식(14)/card_02_p5.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_04-2.지수로그부등식(14)/기본 개념 확인 문제_2.webp",
+    "new_title": "기본 개념 확인 문제_2",
+    "old_title": "기본 개념 확인 문제"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_04-2.지수로그부등식(14)_p6_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_04-2.지수로그부등식(14)/card_03_p6.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_04-2.지수로그부등식(14)/밑통일을 이용한 지수로그부등식.webp",
+    "new_title": "밑통일을 이용한 지수로그부등식",
+    "old_title": "밑통일을 이용한 지수로그부등식"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_04-2.지수로그부등식(14)_p7_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_04-2.지수로그부등식(14)/card_03_p7.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_04-2.지수로그부등식(14)/치환을 이용한 지수부등식.webp",
+    "new_title": "치환을 이용한 지수부등식",
+    "old_title": "치환을 이용한 지수부등식"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_04-2.지수로그부등식(14)_p8_04",
+    "old_path": "[S.S.S note]_수학1_초급단계_04-2.지수로그부등식(14)/card_04_p8.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_04-2.지수로그부등식(14)/치환을 이용한 로그부등식.webp",
+    "new_title": "치환을 이용한 로그부등식",
+    "old_title": "치환을 이용한 로그부등식"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)_p3_01",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)/일반각.webp",
+    "new_title": "일반각",
+    "old_title": "일반각"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)_p4_01",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)/card_01_p4.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)/일반각_2.webp",
+    "new_title": "일반각_2",
+    "old_title": "일반각"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)_p5_02",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)/card_02_p5.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)/호도법.webp",
+    "new_title": "호도법",
+    "old_title": "호도법"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)_p6_02",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)/card_02_p6.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)/호도법_2.webp",
+    "new_title": "호도법_2",
+    "old_title": "호도법"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)_p7_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)/card_03_p7.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)/호도법의 활용.webp",
+    "new_title": "호도법의 활용",
+    "old_title": "호도법의 활용"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)_p8_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)/card_03_p8.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)/호도법의 활용_2.webp",
+    "new_title": "호도법의 활용_2",
+    "old_title": "호도법의 활용"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)_p9_04",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)/card_04_p9.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)/두 동경의 위치 관계.webp",
+    "new_title": "두 동경의 위치 관계",
+    "old_title": "두 동경의 위치 관계"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)_p10_04",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)/card_04_p10.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)/두 둥경의 위치관계.webp",
+    "new_title": "두 둥경의 위치관계",
+    "old_title": "두 둥경의 위치관계"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)_p11_05",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)/card_05_p11.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)/필수문제 - 일반각.webp",
+    "new_title": "필수문제 - 일반각",
+    "old_title": "필수문제 - 일반각"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)_p12_05",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)/card_05_p12.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-1.일반각과호도법(18)/필수문제 - 부채꼴의 호의 길이와 넓이.webp",
+    "new_title": "필수문제 - 부채꼴의 호의 길이와 넓이",
+    "old_title": "필수문제 - 부채꼴의 호의 길이와 넓이"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)_p3_01",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/삼각함수의 뜻_2.webp",
+    "new_title": "삼각함수의 뜻_2",
+    "old_title": "삼각함수의 뜻"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)_p4_01",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/card_01_p4.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/삼각함수의 뜻_3.webp",
+    "new_title": "삼각함수의 뜻_3",
+    "old_title": "삼각함수의 뜻"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)_p5_02",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/card_02_p5.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/삼각함수 사이의 관계.webp",
+    "new_title": "삼각함수 사이의 관계",
+    "old_title": "삼각함수 사이의 관계"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)_p6_02",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/card_02_p6.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/삼각함수의 뜻_4.webp",
+    "new_title": "삼각함수의 뜻_4",
+    "old_title": "삼각함수의 뜻"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)_p7_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/card_03_p7.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/여러 가지 각의 삼각함수.webp",
+    "new_title": "여러 가지 각의 삼각함수",
+    "old_title": "여러 가지 각의 삼각함수"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)_p8_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/card_03_p8.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/여러 가지 각의 삼각함수_2.webp",
+    "new_title": "여러 가지 각의 삼각함수_2",
+    "old_title": "여러 가지 각의 삼각함수"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)_p9_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/card_03_p9.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/여러 가지 각의 삼각함수_3.webp",
+    "new_title": "여러 가지 각의 삼각함수_3",
+    "old_title": "여러 가지 각의 삼각함수"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)_p10_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/card_03_p10.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/여러 가지 각의 삼각함수_4.webp",
+    "new_title": "여러 가지 각의 삼각함수_4",
+    "old_title": "여러 가지 각의 삼각함수"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)_p11_04",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/card_04_p11.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/필수문제 - 삼각함수의 뜻.webp",
+    "new_title": "필수문제 - 삼각함수의 뜻",
+    "old_title": "필수문제 - 삼각함수의 뜻"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)_p12_04",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/card_04_p12.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/필수문제 - 삼각비와 삼각함수.webp",
+    "new_title": "필수문제 - 삼각비와 삼각함수",
+    "old_title": "필수문제 - 삼각비와 삼각함수"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)_p13_04",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/card_04_p13.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/필수문제 - 삼각함수의 부호.webp",
+    "new_title": "필수문제 - 삼각함수의 부호",
+    "old_title": "필수문제 - 삼각함수의 부호"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)_p14_04",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/card_04_p14.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/필수문제 - 삼각함수 사이의 관계.webp",
+    "new_title": "필수문제 - 삼각함수 사이의 관계",
+    "old_title": "필수문제 - 삼각함수 사이의 관계"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)_p15_04",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/card_04_p15.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/필수문제 - 여러 가지 각의 삼각함수.webp",
+    "new_title": "필수문제 - 여러 가지 각의 삼각함수",
+    "old_title": "필수문제 - 여러 가지 각의 삼각함수"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)_p16_04",
+    "old_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/card_04_p16.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_05-2.삼각함수의 뜻과 성질(20)/필수문제 - 여러 가지 각의 삼각함수의 응용.webp",
+    "new_title": "필수문제 - 여러 가지 각의 삼각함수의 응용",
+    "old_title": "필수문제 - 여러 가지 각의 삼각함수의 응용"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)_p3_01",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)/삼각함수의 그래프.webp",
+    "new_title": "삼각함수의 그래프",
+    "old_title": "삼각함수의 그래프"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)_p4_02",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)/card_02_p4.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)/삼각함수의 그래프_2.webp",
+    "new_title": "삼각함수의 그래프_2",
+    "old_title": "삼각함수의 그래프"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)_p5_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)/card_03_p5.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)/삼각함수의 그래프_3.webp",
+    "new_title": "삼각함수의 그래프_3",
+    "old_title": "삼각함수의 그래프"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)_p6_01",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)/card_01_p6.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)/삼각함수의 그래프_4.webp",
+    "new_title": "삼각함수의 그래프_4",
+    "old_title": "삼각함수의 그래프"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)_p7_02",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)/card_02_p7.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)/s i n.webp",
+    "new_title": "s i n",
+    "old_title": "   s i n "
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)_p8_02",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)/card_02_p8.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)/s i n_2.webp",
+    "new_title": "s i n_2",
+    "old_title": "   s i n "
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)_p9_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)/card_03_p9.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)/삼각함수 그래프의 대칭성.webp",
+    "new_title": "삼각함수 그래프의 대칭성",
+    "old_title": "삼각함수 그래프의 대칭성"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)_p10_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)/card_03_p10.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)/삼각함수 그래프의 대칭성_2.webp",
+    "new_title": "삼각함수 그래프의 대칭성_2",
+    "old_title": "삼각함수 그래프의 대칭성"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)_p11_04",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)/card_04_p11.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)/필수문제 - 사인함수와 코사인함수의 그래프.webp",
+    "new_title": "필수문제 - 사인함수와 코사인함수의 그래프",
+    "old_title": "필수문제 - 사인함수와 코사인함수의 그래프"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)_p12_04",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)/card_04_p12.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-1.삼각함수의그래프(16)/필수문제 - 탄젠트함수의 그래프.webp",
+    "new_title": "필수문제 - 탄젠트함수의 그래프",
+    "old_title": "필수문제 - 탄젠트함수의 그래프"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)_p3_01",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)/card_01_p3.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)/삼각함수의 최대와 최소.webp",
+    "new_title": "삼각함수의 최대와 최소",
+    "old_title": "삼각함수의 최대와 최소"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)_p4_01",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)/card_01_p4.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)/삼각함수의 최대와 최소_2.webp",
+    "new_title": "삼각함수의 최대와 최소_2",
+    "old_title": "삼각함수의 최대와 최소"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)_p5_02",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)/card_02_p5.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)/삼각방정식과 삼각부등식.webp",
+    "new_title": "삼각방정식과 삼각부등식",
+    "old_title": "삼각방정식과 삼각부등식"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)_p6_02",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)/card_02_p6.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)/삼각방정식과 삼각부등식_2.webp",
+    "new_title": "삼각방정식과 삼각부등식_2",
+    "old_title": "삼각방정식과 삼각부등식"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)_p7_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)/card_03_p7.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)/단위원을 이용한 삼각방정식 , 삼각부등식의 풀이.webp",
+    "new_title": "단위원을 이용한 삼각방정식 , 삼각부등식의 풀이",
+    "old_title": "단위원을 이용한 삼각방정식 , 삼각부등식의 풀이"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)_p8_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)/card_03_p8.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)/단위원을 이용한 삼각방정식 , 삼각부등식의 풀이_2.webp",
+    "new_title": "단위원을 이용한 삼각방정식 , 삼각부등식의 풀이_2",
+    "old_title": "단위원을 이용한 삼각방정식 , 삼각부등식의 풀이"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)_p9_04",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)/card_04_p9.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)/필수문제 - 삼각함수의 그래프와 미정계수의 결정.webp",
+    "new_title": "필수문제 - 삼각함수의 그래프와 미정계수의 결정",
+    "old_title": "필수문제 - 삼각함수의 그래프와 미정계수의 결정"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)_p10_04",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)/card_04_p10.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)/필수문제 - 식의 변형을 이용한 삼각함수의 최대와.webp",
+    "new_title": "필수문제 - 식의 변형을 이용한 삼각함수의 최대와",
+    "old_title": "필수문제 - 식의 변형을 이용한 삼각함수의 최대와"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)_p11_04",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)/card_04_p11.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)/필수문제 - 일차식 꼴의 삼각방정식.webp",
+    "new_title": "필수문제 - 일차식 꼴의 삼각방정식",
+    "old_title": "필수문제 - 일차식 꼴의 삼각방정식"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)_p12_04",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)/card_04_p12.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)/필수문제 - 이차식 꼴의 삼각방정식.webp",
+    "new_title": "필수문제 - 이차식 꼴의 삼각방정식",
+    "old_title": "필수문제 - 이차식 꼴의 삼각방정식"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)_p13_04",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)/card_04_p13.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의방정식과부등식(28)/필수문제 - 삼각부등식.webp",
+    "new_title": "필수문제 - 삼각부등식",
+    "old_title": "필수문제 - 삼각부등식"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성_p3_01",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/card_01_p3.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/사인법칙.webp",
+    "new_title": "사인법칙",
+    "old_title": "사인법칙"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성_p4_01",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/card_01_p4.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/사인법칙의 증명.webp",
+    "new_title": "사인법칙의 증명",
+    "old_title": "사인법칙의 증명"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성_p5_01",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/card_01_p5.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/사인법칙 연습 1.webp",
+    "new_title": "사인법칙 연습 1",
+    "old_title": "사인법칙 연습 1"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성_p6_01",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/card_01_p6.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/사인법칙 연습 2.webp",
+    "new_title": "사인법칙 연습 2",
+    "old_title": "사인법칙 연습 2"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성_p7_02",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/card_02_p7.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/코사인법칙.webp",
+    "new_title": "코사인법칙",
+    "old_title": "코사인법칙"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성_p8_02",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/card_02_p8.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/코사인 법칙의 증명.webp",
+    "new_title": "코사인 법칙의 증명",
+    "old_title": "코사인 법칙의 증명"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성_p9_02",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/card_02_p9.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/코사인 법칙 연습 1.webp",
+    "new_title": "코사인 법칙 연습 1",
+    "old_title": "코사인 법칙 연습 1"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성_p10_02",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/card_02_p10.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/코사인 법칙 연습 2.webp",
+    "new_title": "코사인 법칙 연습 2",
+    "old_title": "코사인 법칙 연습 2"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성_p11_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/card_03_p11.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/삼각형의 넓이.webp",
+    "new_title": "삼각형의 넓이",
+    "old_title": "삼각형의 넓이"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성_p12_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/card_03_p12.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/삼각형의 넓이 증명.webp",
+    "new_title": "삼각형의 넓이 증명",
+    "old_title": "삼각형의 넓이 증명"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성_p13_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/card_03_p13.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/삼각형의 넓이 연습 1.webp",
+    "new_title": "삼각형의 넓이 연습 1",
+    "old_title": "삼각형의 넓이 연습 1"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성_p14_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/card_03_p14.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/헤론의 공식.webp",
+    "new_title": "헤론의 공식",
+    "old_title": "헤론의 공식"
+  },
+  {
+    "id": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성_p15_03",
+    "old_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/card_03_p15.webp",
+    "new_path": "[S.S.S note]_수학1_초급단계_06-2.삼각함수의활용(50) 새로작성/헤론의 공식 연습.webp",
+    "new_title": "헤론의 공식 연습",
+    "old_title": "헤론의 공식 연습"
+  },
+  {
+    "id": "[SSS노트]01-1 거듭제곱근(12)_p3_01",
+    "old_path": "[SSS노트]01-1 거듭제곱근(12)/card_01_p3.webp",
+    "new_path": "[SSS노트]01-1 거듭제곱근(12)/거듭제곱.webp",
+    "new_title": "거듭제곱",
+    "old_title": "거듭제곱"
+  },
+  {
+    "id": "[SSS노트]01-1 거듭제곱근(12)_p3_02",
+    "old_path": "[SSS노트]01-1 거듭제곱근(12)/card_02_p3.webp",
+    "new_path": "[SSS노트]01-1 거듭제곱근(12)/지수법칙.webp",
+    "new_title": "지수법칙",
+    "old_title": "지수법칙"
+  },
+  {
+    "id": "[SSS노트]01-1 거듭제곱근(12)_p4_03",
+    "old_path": "[SSS노트]01-1 거듭제곱근(12)/card_03_p4.webp",
+    "new_path": "[SSS노트]01-1 거듭제곱근(12)/거듭제곱근.webp",
+    "new_title": "거듭제곱근",
+    "old_title": "거듭제곱근"
+  },
+  {
+    "id": "[SSS노트]01-1 거듭제곱근(12)_p4_04",
+    "old_path": "[SSS노트]01-1 거듭제곱근(12)/card_04_p4.webp",
+    "new_path": "[SSS노트]01-1 거듭제곱근(12)/의 정의.webp",
+    "new_title": "의 정의",
+    "old_title": "    의 정의"
+  },
+  {
+    "id": "[SSS노트]01-1 거듭제곱근(12)_p5_05",
+    "old_path": "[SSS노트]01-1 거듭제곱근(12)/card_05_p5.webp",
+    "new_path": "[SSS노트]01-1 거듭제곱근(12)/거듭제곱근의 성질.webp",
+    "new_title": "거듭제곱근의 성질",
+    "old_title": "거듭제곱근의 성질"
+  },
+  {
+    "id": "[SSS노트]01-1경우의수 초급(16)_p3_01",
+    "old_path": "[SSS노트]01-1경우의수 초급(16)/card_01_p3.webp",
+    "new_path": "[SSS노트]01-1경우의수 초급(16)/합의 법칙.webp",
+    "new_title": "합의 법칙",
+    "old_title": "합의 법칙"
+  },
+  {
+    "id": "[SSS노트]01-1경우의수 초급(16)_p4_02",
+    "old_path": "[SSS노트]01-1경우의수 초급(16)/card_02_p4.webp",
+    "new_path": "[SSS노트]01-1경우의수 초급(16)/곱의 법칙.webp",
+    "new_title": "곱의 법칙",
+    "old_title": "곱의 법칙"
+  },
+  {
+    "id": "[SSS노트]01-1집합과 원소 초급(12)표지_p3_01",
+    "old_path": "[SSS노트]01-1집합과 원소 초급(12)표지/card_01_p3.webp",
+    "new_path": "[SSS노트]01-1집합과 원소 초급(12)표지/집합과 원소.webp",
+    "new_title": "집합과 원소",
+    "old_title": "집합과 원소"
+  },
+  {
+    "id": "[SSS노트]01-1집합과 원소 초급(12)표지_p3_02",
+    "old_path": "[SSS노트]01-1집합과 원소 초급(12)표지/card_02_p3.webp",
+    "new_path": "[SSS노트]01-1집합과 원소 초급(12)표지/집합과 원소의 관계.webp",
+    "new_title": "집합과 원소의 관계",
+    "old_title": "집합과 원소의 관계"
+  },
+  {
+    "id": "[SSS노트]01-1집합과 원소 초급(12)표지_p3_03",
+    "old_path": "[SSS노트]01-1집합과 원소 초급(12)표지/card_03_p3.webp",
+    "new_path": "[SSS노트]01-1집합과 원소 초급(12)표지/집합을 나타내는 방법.webp",
+    "new_title": "집합을 나타내는 방법",
+    "old_title": "집합을 나타내는 방법"
+  },
+  {
+    "id": "[SSS노트]01-1집합과 원소 초급(12)표지_p3_04",
+    "old_path": "[SSS노트]01-1집합과 원소 초급(12)표지/card_04_p3.webp",
+    "new_path": "[SSS노트]01-1집합과 원소 초급(12)표지/공집합.webp",
+    "new_title": "공집합",
+    "old_title": "공집합"
+  },
+  {
+    "id": "[SSS노트]01-1집합과 원소 초급(12)표지_p4_01",
+    "old_path": "[SSS노트]01-1집합과 원소 초급(12)표지/card_01_p4.webp",
+    "new_path": "[SSS노트]01-1집합과 원소 초급(12)표지/부분집합.webp",
+    "new_title": "부분집합",
+    "old_title": "부분집합"
+  },
+  {
+    "id": "[SSS노트]01-1집합과 원소 초급(12)표지_p4_02",
+    "old_path": "[SSS노트]01-1집합과 원소 초급(12)표지/card_02_p4.webp",
+    "new_path": "[SSS노트]01-1집합과 원소 초급(12)표지/부분집합의 성질.webp",
+    "new_title": "부분집합의 성질",
+    "old_title": "부분집합의 성질"
+  },
+  {
+    "id": "[SSS노트]01-1집합과 원소 초급(12)표지_p5_03",
+    "old_path": "[SSS노트]01-1집합과 원소 초급(12)표지/card_03_p5.webp",
+    "new_path": "[SSS노트]01-1집합과 원소 초급(12)표지/진부분집합.webp",
+    "new_title": "진부분집합",
+    "old_title": "진부분집합"
+  },
+  {
+    "id": "[SSS노트]01-1집합과 원소 초급(12)표지_p5_04",
+    "old_path": "[SSS노트]01-1집합과 원소 초급(12)표지/card_04_p5.webp",
+    "new_path": "[SSS노트]01-1집합과 원소 초급(12)표지/두 기호 ∈ ⊂ 의 차이점.webp",
+    "new_title": "두 기호 ∈ ⊂ 의 차이점",
+    "old_title": "두 기호 ∈  ⊂ 의 차이점"
+  },
+  {
+    "id": "[SSS노트]01-2 지수의확장(16)_p3_01",
+    "old_path": "[SSS노트]01-2 지수의확장(16)/card_01_p3.webp",
+    "new_path": "[SSS노트]01-2 지수의확장(16)/정수 지수로의 확장.webp",
+    "new_title": "정수 지수로의 확장",
+    "old_title": "정수 지수로의 확장"
+  },
+  {
+    "id": "[SSS노트]01-2 지수의확장(16)_p4_02",
+    "old_path": "[SSS노트]01-2 지수의확장(16)/card_02_p4.webp",
+    "new_path": "[SSS노트]01-2 지수의확장(16)/유리수 지수로의 확장.webp",
+    "new_title": "유리수 지수로의 확장",
+    "old_title": "유리수 지수로의 확장"
+  },
+  {
+    "id": "[SSS노트]01-2 지수의확장(16)_p5_03",
+    "old_path": "[SSS노트]01-2 지수의확장(16)/card_03_p5.webp",
+    "new_path": "[SSS노트]01-2 지수의확장(16)/실수 지수로의 확장.webp",
+    "new_title": "실수 지수로의 확장",
+    "old_title": "실수 지수로의 확장"
+  },
+  {
+    "id": "[SSS노트]01-2부분집합 초급(12)표지_p3_01",
+    "old_path": "[SSS노트]01-2부분집합 초급(12)표지/card_01_p3.webp",
+    "new_path": "[SSS노트]01-2부분집합 초급(12)표지/부분집합의 개수.webp",
+    "new_title": "부분집합의 개수",
+    "old_title": "부분집합의 개수"
+  },
+  {
+    "id": "[SSS노트]01-2부분집합 초급(12)표지_p3_02",
+    "old_path": "[SSS노트]01-2부분집합 초급(12)표지/card_02_p3.webp",
+    "new_path": "[SSS노트]01-2부분집합 초급(12)표지/특정한 원소를 포함하거나 포함하지 않는 부분집합의 개수.webp",
+    "new_title": "특정한 원소를 포함하거나 포함하지 않는 부분집합의 개수",
+    "old_title": "특정한 원소를 포함하거나 포함하지 않는 부분집합의 개수"
+  },
+  {
+    "id": "[SSS노트]01-2순열(16)_p3_01",
+    "old_path": "[SSS노트]01-2순열(16)/card_01_p3.webp",
+    "new_path": "[SSS노트]01-2순열(16)/순열.webp",
+    "new_title": "순열",
+    "old_title": "순열"
+  },
+  {
+    "id": "[SSS노트]01-2순열(16)_p4_02",
+    "old_path": "[SSS노트]01-2순열(16)/card_02_p4.webp",
+    "new_path": "[SSS노트]01-2순열(16)/순열의 수.webp",
+    "new_title": "순열의 수",
+    "old_title": "순열의 수"
+  },
+  {
+    "id": "[SSS노트]01-2순열(16)_p5_03",
+    "old_path": "[SSS노트]01-2순열(16)/card_03_p5.webp",
+    "new_path": "[SSS노트]01-2순열(16)/n 의 계승.webp",
+    "new_title": "n 의 계승",
+    "old_title": "n 의 계승"
+  },
+  {
+    "id": "[SSS노트]01-2순열(16)_p6_04",
+    "old_path": "[SSS노트]01-2순열(16)/card_04_p6.webp",
+    "new_path": "[SSS노트]01-2순열(16)/특정 조건이 있는 순열.webp",
+    "new_title": "특정 조건이 있는 순열",
+    "old_title": "특정 조건이 있는 순열"
+  },
+  {
+    "id": "[SSS노트]01-3집합의연산 초급(8)표지_p3_01",
+    "old_path": "[SSS노트]01-3집합의연산 초급(8)표지/card_01_p3.webp",
+    "new_path": "[SSS노트]01-3집합의연산 초급(8)표지/합집합.webp",
+    "new_title": "합집합",
+    "old_title": "합집합"
+  },
+  {
+    "id": "[SSS노트]01-3집합의연산 초급(8)표지_p3_02",
+    "old_path": "[SSS노트]01-3집합의연산 초급(8)표지/card_02_p3.webp",
+    "new_path": "[SSS노트]01-3집합의연산 초급(8)표지/교집합.webp",
+    "new_title": "교집합",
+    "old_title": "교집합"
+  },
+  {
+    "id": "[SSS노트]01-3집합의연산 초급(8)표지_p3_03",
+    "old_path": "[SSS노트]01-3집합의연산 초급(8)표지/card_03_p3.webp",
+    "new_path": "[SSS노트]01-3집합의연산 초급(8)표지/서로소.webp",
+    "new_title": "서로소",
+    "old_title": "서로소"
+  },
+  {
+    "id": "[SSS노트]01-3집합의연산 초급(8)표지_p3_04",
+    "old_path": "[SSS노트]01-3집합의연산 초급(8)표지/card_04_p3.webp",
+    "new_path": "[SSS노트]01-3집합의연산 초급(8)표지/차집합.webp",
+    "new_title": "차집합",
+    "old_title": "차집합"
+  },
+  {
+    "id": "[SSS노트]01-3집합의연산 초급(8)표지_p4_05",
+    "old_path": "[SSS노트]01-3집합의연산 초급(8)표지/card_05_p4.webp",
+    "new_path": "[SSS노트]01-3집합의연산 초급(8)표지/여집합.webp",
+    "new_title": "여집합",
+    "old_title": "여집합"
+  },
+  {
+    "id": "[SSS노트]01-3집합의연산 초급(8)표지_p4_06",
+    "old_path": "[SSS노트]01-3집합의연산 초급(8)표지/card_06_p4.webp",
+    "new_path": "[SSS노트]01-3집합의연산 초급(8)표지/⊂ 의 변형.webp",
+    "new_title": "⊂ 의 변형",
+    "old_title": " ⊂  의 변형"
+  },
+  {
+    "id": "[SSS노트]01-4집합의연산법칙 초급(6)표지_p3_01",
+    "old_path": "[SSS노트]01-4집합의연산법칙 초급(6)표지/card_01_p3.webp",
+    "new_path": "[SSS노트]01-4집합의연산법칙 초급(6)표지/대 기본 법칙.webp",
+    "new_title": "대 기본 법칙",
+    "old_title": "3 대 기본 법칙"
+  },
+  {
+    "id": "[SSS노트]01-4집합의연산법칙 초급(6)표지_p3_02",
+    "old_path": "[SSS노트]01-4집합의연산법칙 초급(6)표지/card_02_p3.webp",
+    "new_path": "[SSS노트]01-4집합의연산법칙 초급(6)표지/대 중요 공식.webp",
+    "new_title": "대 중요 공식",
+    "old_title": " 대 중요 공식"
+  },
+  {
+    "id": "[SSS노트]01-4집합의연산법칙 초급(6)표지_p3_03",
+    "old_path": "[SSS노트]01-4집합의연산법칙 초급(6)표지/card_03_p3.webp",
+    "new_path": "[SSS노트]01-4집합의연산법칙 초급(6)표지/기타 공식.webp",
+    "new_title": "기타 공식",
+    "old_title": "기타 공식"
+  },
+  {
+    "id": "[SSS노트]02-1원순열(15)_p3_01",
+    "old_path": "[SSS노트]02-1원순열(15)/card_01_p3.webp",
+    "new_path": "[SSS노트]02-1원순열(15)/원순열의 수.webp",
+    "new_title": "원순열의 수",
+    "old_title": "원순열의 수"
+  },
+  {
+    "id": "[SSS노트]02-1원순열(15)_p4_02",
+    "old_path": "[SSS노트]02-1원순열(15)/card_02_p4.webp",
+    "new_path": "[SSS노트]02-1원순열(15)/이웃하는 또는 이웃하지 않게 하는 원순열의 수.webp",
+    "new_title": "이웃하는 또는 이웃하지 않게 하는 원순열의 수",
+    "old_title": "이웃하는 또는 이웃하지 않게 하는 원순열의 수"
+  },
+  {
+    "id": "[SSS노트]02-1원순열(15)_p5_03",
+    "old_path": "[SSS노트]02-1원순열(15)/card_03_p5.webp",
+    "new_path": "[SSS노트]02-1원순열(15)/원이 아닌 다른 도형 모양의 다각형 탁자에.webp",
+    "new_title": "원이 아닌 다른 도형 모양의 다각형 탁자에",
+    "old_title": "원이 아닌 다른 도형 모양의 다각형 탁자에"
+  },
+  {
+    "id": "[SSS노트]02-1집합의원소의개수 초급(12)표지_p3_01",
+    "old_path": "[SSS노트]02-1집합의원소의개수 초급(12)표지/card_01_p3.webp",
+    "new_path": "[SSS노트]02-1집합의원소의개수 초급(12)표지/원소의 개수.webp",
+    "new_title": "원소의 개수",
+    "old_title": "원소의 개수"
+  },
+  {
+    "id": "[SSS노트]02-1집합의원소의개수 초급(12)표지_p3_02",
+    "old_path": "[SSS노트]02-1집합의원소의개수 초급(12)표지/card_02_p3.webp",
+    "new_path": "[SSS노트]02-1집합의원소의개수 초급(12)표지/원소의 개수의 활용.webp",
+    "new_title": "원소의 개수의 활용",
+    "old_title": "원소의 개수의 활용"
+  },
+  {
+    "id": "[SSS노트]02-2명제의 참 거짓 초급(15)_p3_01",
+    "old_path": "[SSS노트]02-2명제의 참 거짓 초급(15)/card_01_p3.webp",
+    "new_path": "[SSS노트]02-2명제의 참 거짓 초급(15)/명제와 조건.webp",
+    "new_title": "명제와 조건",
+    "old_title": "명제와 조건"
+  },
+  {
+    "id": "[SSS노트]02-2명제의 참 거짓 초급(15)_p3_02",
+    "old_path": "[SSS노트]02-2명제의 참 거짓 초급(15)/card_02_p3.webp",
+    "new_path": "[SSS노트]02-2명제의 참 거짓 초급(15)/진리집합.webp",
+    "new_title": "진리집합",
+    "old_title": "진리집합"
+  },
+  {
+    "id": "[SSS노트]02-2명제의 참 거짓 초급(15)_p3_03",
+    "old_path": "[SSS노트]02-2명제의 참 거짓 초급(15)/card_03_p3.webp",
+    "new_path": "[SSS노트]02-2명제의 참 거짓 초급(15)/명제와 조건의 부정.webp",
+    "new_title": "명제와 조건의 부정",
+    "old_title": "명제와 조건의 부정"
+  },
+  {
+    "id": "[SSS노트]02-2명제의 참 거짓 초급(15)_p4_04",
+    "old_path": "[SSS노트]02-2명제의 참 거짓 초급(15)/card_04_p4.webp",
+    "new_path": "[SSS노트]02-2명제의 참 거짓 초급(15)/조건과 집합의 관계.webp",
+    "new_title": "조건과 집합의 관계",
+    "old_title": "조건과 집합의 관계"
+  },
+  {
+    "id": "[SSS노트]02-2명제의 참 거짓 초급(15)_p4_05",
+    "old_path": "[SSS노트]02-2명제의 참 거짓 초급(15)/card_05_p4.webp",
+    "new_path": "[SSS노트]02-2명제의 참 거짓 초급(15)/‘ 또는 ’ 과 ‘ 그리고 ’.webp",
+    "new_title": "‘ 또는 ’ 과 ‘ 그리고 ’",
+    "old_title": "‘ 또는 ’ 과 ‘ 그리고 ’"
+  },
+  {
+    "id": "[SSS노트]02-2명제의 참 거짓 초급(15)_p4_06",
+    "old_path": "[SSS노트]02-2명제의 참 거짓 초급(15)/card_06_p4.webp",
+    "new_path": "[SSS노트]02-2명제의 참 거짓 초급(15)/부등식의 부정.webp",
+    "new_title": "부등식의 부정",
+    "old_title": "부등식의 부정"
+  },
+  {
+    "id": "[SSS노트]02-2명제의 참 거짓 초급(15)_p5_01",
+    "old_path": "[SSS노트]02-2명제의 참 거짓 초급(15)/card_01_p5.webp",
+    "new_path": "[SSS노트]02-2명제의 참 거짓 초급(15)/명제.webp",
+    "new_title": "명제",
+    "old_title": "명제  "
+  },
+  {
+    "id": "[SSS노트]02-2명제의 참 거짓 초급(15)_p5_02",
+    "old_path": "[SSS노트]02-2명제의 참 거짓 초급(15)/card_02_p5.webp",
+    "new_path": "[SSS노트]02-2명제의 참 거짓 초급(15)/명제 → 의 참 ,.webp",
+    "new_title": "명제 → 의 참 ,",
+    "old_title": "명제  →  의 참 ,"
+  },
+  {
+    "id": "[SSS노트]02-2명제의 참 거짓 초급(15)_p5_03",
+    "old_path": "[SSS노트]02-2명제의 참 거짓 초급(15)/card_03_p5.webp",
+    "new_path": "[SSS노트]02-2명제의 참 거짓 초급(15)/명제 → 의 반례.webp",
+    "new_title": "명제 → 의 반례",
+    "old_title": "명제  →  의 반례"
+  },
+  {
+    "id": "[SSS노트]02-2명제의 참 거짓 초급(15)_p6_04",
+    "old_path": "[SSS노트]02-2명제의 참 거짓 초급(15)/card_04_p6.webp",
+    "new_path": "[SSS노트]02-2명제의 참 거짓 초급(15)/‘ 모든 ’ 또는 ‘ 어떤 ’.webp",
+    "new_title": "‘ 모든 ’ 또는 ‘ 어떤 ’",
+    "old_title": "‘ 모든 ’ 또는 ‘ 어떤 ’"
+  },
+  {
+    "id": "[SSS노트]02-2명제의 참 거짓 초급(15)_p6_05",
+    "old_path": "[SSS노트]02-2명제의 참 거짓 초급(15)/card_05_p6.webp",
+    "new_path": "[SSS노트]02-2명제의 참 거짓 초급(15)/‘ 모든 ’ 또는 ‘ 어떤 ’_2.webp",
+    "new_title": "‘ 모든 ’ 또는 ‘ 어떤 ’_2",
+    "old_title": "‘ 모든 ’ 또는 ‘ 어떤 ’"
+  },
+  {
+    "id": "[SSS노트]02-2중복순열(16)_p3_01",
+    "old_path": "[SSS노트]02-2중복순열(16)/card_01_p3.webp",
+    "new_path": "[SSS노트]02-2중복순열(16)/중복순열의 수.webp",
+    "new_title": "중복순열의 수",
+    "old_title": "중복순열의 수"
+  },
+  {
+    "id": "[SSS노트]02-2중복순열(16)_p5_02",
+    "old_path": "[SSS노트]02-2중복순열(16)/card_02_p5.webp",
+    "new_path": "[SSS노트]02-2중복순열(16)/함수의 개수.webp",
+    "new_title": "함수의 개수",
+    "old_title": "함수의 개수"
+  },
+  {
+    "id": "[SSS노트]02-3같은것이있는순열(18)_p3_01",
+    "old_path": "[SSS노트]02-3같은것이있는순열(18)/card_01_p3.webp",
+    "new_path": "[SSS노트]02-3같은것이있는순열(18)/같은 것이 있는 순열의 수.webp",
+    "new_title": "같은 것이 있는 순열의 수",
+    "old_title": "같은 것이 있는 순열의 수"
+  },
+  {
+    "id": "[SSS노트]02-3같은것이있는순열(18)_p5_02",
+    "old_path": "[SSS노트]02-3같은것이있는순열(18)/card_02_p5.webp",
+    "new_path": "[SSS노트]02-3같은것이있는순열(18)/특정한 나열에서 우선순위가 정해진 순열의 수.webp",
+    "new_title": "특정한 나열에서 우선순위가 정해진 순열의 수",
+    "old_title": "특정한 나열에서 우선순위가 정해진 순열의 수"
+  },
+  {
+    "id": "[SSS노트]02-3같은것이있는순열(18)_p6_03",
+    "old_path": "[SSS노트]02-3같은것이있는순열(18)/card_03_p6.webp",
+    "new_path": "[SSS노트]02-3같은것이있는순열(18)/최단 경로의 수.webp",
+    "new_title": "최단 경로의 수",
+    "old_title": "최단 경로의 수"
+  },
+  {
+    "id": "[SSS노트]02-3명제의 역과 대우 초급(8)_p3_01",
+    "old_path": "[SSS노트]02-3명제의 역과 대우 초급(8)/card_01_p3.webp",
+    "new_path": "[SSS노트]02-3명제의 역과 대우 초급(8)/명제의 역과 대우.webp",
+    "new_title": "명제의 역과 대우",
+    "old_title": "명제의 역과 대우"
+  },
+  {
+    "id": "[SSS노트]02-3명제의 역과 대우 초급(8)_p3_02",
+    "old_path": "[SSS노트]02-3명제의 역과 대우 초급(8)/card_02_p3.webp",
+    "new_path": "[SSS노트]02-3명제의 역과 대우 초급(8)/명제와 그 대우의 관계.webp",
+    "new_title": "명제와 그 대우의 관계",
+    "old_title": "명제와 그 대우의 관계"
+  },
+  {
+    "id": "[SSS노트]02-3명제의 역과 대우 초급(8)_p4_03",
+    "old_path": "[SSS노트]02-3명제의 역과 대우 초급(8)/card_03_p4.webp",
+    "new_path": "[SSS노트]02-3명제의 역과 대우 초급(8)/삼단논법.webp",
+    "new_title": "삼단논법",
+    "old_title": "삼단논법"
+  },
+  {
+    "id": "[SSS노트]03-1 필요조건과 충분조건 초급(16)_p3_01",
+    "old_path": "[SSS노트]03-1 필요조건과 충분조건 초급(16)/card_01_p3.webp",
+    "new_path": "[SSS노트]03-1 필요조건과 충분조건 초급(16)/대우를 이용한 증명법.webp",
+    "new_title": "대우를 이용한 증명법",
+    "old_title": "대우를 이용한 증명법"
+  },
+  {
+    "id": "[SSS노트]03-1 필요조건과 충분조건 초급(16)_p3_02",
+    "old_path": "[SSS노트]03-1 필요조건과 충분조건 초급(16)/card_02_p3.webp",
+    "new_path": "[SSS노트]03-1 필요조건과 충분조건 초급(16)/귀류법.webp",
+    "new_title": "귀류법",
+    "old_title": "귀류법"
+  },
+  {
+    "id": "[SSS노트]03-1 필요조건과 충분조건 초급(16)_p4_01",
+    "old_path": "[SSS노트]03-1 필요조건과 충분조건 초급(16)/card_01_p4.webp",
+    "new_path": "[SSS노트]03-1 필요조건과 충분조건 초급(16)/필요조건과 충분조건 , 필요충분조건.webp",
+    "new_title": "필요조건과 충분조건 , 필요충분조건",
+    "old_title": "필요조건과 충분조건 , 필요충분조건"
+  },
+  {
+    "id": "[SSS노트]03-1 필요조건과 충분조건 초급(16)_p4_02",
+    "old_path": "[SSS노트]03-1 필요조건과 충분조건 초급(16)/card_02_p4.webp",
+    "new_path": "[SSS노트]03-1 필요조건과 충분조건 초급(16)/필요조건 , 충분조건과 진리집합.webp",
+    "new_title": "필요조건 , 충분조건과 진리집합",
+    "old_title": "필요조건 , 충분조건과 진리집합"
+  },
+  {
+    "id": "[SSS노트]03-1조합(20)_p3_01",
+    "old_path": "[SSS노트]03-1조합(20)/card_01_p3.webp",
+    "new_path": "[SSS노트]03-1조합(20)/조합.webp",
+    "new_title": "조합",
+    "old_title": "조합"
+  },
+  {
+    "id": "[SSS노트]03-1조합(20)_p5_02",
+    "old_path": "[SSS노트]03-1조합(20)/card_02_p5.webp",
+    "new_path": "[SSS노트]03-1조합(20)/조합의 수.webp",
+    "new_title": "조합의 수",
+    "old_title": "조합의 수"
+  },
+  {
+    "id": "[SSS노트]03-2 절대부등식(20)_p3_01",
+    "old_path": "[SSS노트]03-2 절대부등식(20)/card_01_p3.webp",
+    "new_path": "[SSS노트]03-2 절대부등식(20)/절대부등식.webp",
+    "new_title": "절대부등식",
+    "old_title": "절대부등식"
+  },
+  {
+    "id": "[SSS노트]03-2 절대부등식(20)_p3_02",
+    "old_path": "[SSS노트]03-2 절대부등식(20)/card_02_p3.webp",
+    "new_path": "[SSS노트]03-2 절대부등식(20)/부등식의 증명에 자주 이용되는 실수의 성질.webp",
+    "new_title": "부등식의 증명에 자주 이용되는 실수의 성질",
+    "old_title": "부등식의 증명에 자주 이용되는 실수의 성질"
+  },
+  {
+    "id": "[SSS노트]03-2 절대부등식(20)_p3_03",
+    "old_path": "[SSS노트]03-2 절대부등식(20)/card_03_p3.webp",
+    "new_path": "[SSS노트]03-2 절대부등식(20)/기본적인 절대부등식.webp",
+    "new_title": "기본적인 절대부등식",
+    "old_title": "기본적인 절대부등식"
+  },
+  {
+    "id": "[SSS노트]03-2 절대부등식(20)_p5_04",
+    "old_path": "[SSS노트]03-2 절대부등식(20)/card_04_p5.webp",
+    "new_path": "[SSS노트]03-2 절대부등식(20)/산술평균 , 기하평균 , 조화평균의 관계.webp",
+    "new_title": "산술평균 , 기하평균 , 조화평균의 관계",
+    "old_title": "산술평균 , 기하평균 , 조화평균의 관계"
+  },
+  {
+    "id": "[SSS노트]03-2 절대부등식(20)_p5_05",
+    "old_path": "[SSS노트]03-2 절대부등식(20)/card_05_p5.webp",
+    "new_path": "[SSS노트]03-2 절대부등식(20)/코시 - 슈바르츠의 부등식.webp",
+    "new_title": "코시 - 슈바르츠의 부등식",
+    "old_title": "코시 - 슈바르츠의 부등식"
+  },
+  {
+    "id": "[SSS노트]03-2중복조합(15)_p3_01",
+    "old_path": "[SSS노트]03-2중복조합(15)/card_01_p3.webp",
+    "new_path": "[SSS노트]03-2중복조합(15)/중복조합.webp",
+    "new_title": "중복조합",
+    "old_title": "중복조합"
+  },
+  {
+    "id": "[SSS노트]03-2중복조합(15)_p5_02",
+    "old_path": "[SSS노트]03-2중복조합(15)/card_02_p5.webp",
+    "new_path": "[SSS노트]03-2중복조합(15)/중복조합의 대표적인 예.webp",
+    "new_title": "중복조합의 대표적인 예",
+    "old_title": "중복조합의 대표적인 예"
+  },
+  {
+    "id": "[SSS노트]03-2중복조합(15)_p6_03",
+    "old_path": "[SSS노트]03-2중복조합(15)/card_03_p6.webp",
+    "new_path": "[SSS노트]03-2중복조합(15)/중복조합을 이용하여 방정식의 해의 개수 구하기.webp",
+    "new_title": "중복조합을 이용하여 방정식의 해의 개수 구하기",
+    "old_title": "중복조합을 이용하여 방정식의 해의 개수 구하기"
+  },
+  {
+    "id": "[SSS노트]04-1이항정리(18)_p3_01",
+    "old_path": "[SSS노트]04-1이항정리(18)/card_01_p3.webp",
+    "new_path": "[SSS노트]04-1이항정리(18)/이항정리.webp",
+    "new_title": "이항정리",
+    "old_title": "이항정리"
+  },
+  {
+    "id": "[SSS노트]04-1함수(11)_p3_01",
+    "old_path": "[SSS노트]04-1함수(11)/card_01_p3.webp",
+    "new_path": "[SSS노트]04-1함수(11)/대응.webp",
+    "new_title": "대응",
+    "old_title": "대응"
+  },
+  {
+    "id": "[SSS노트]04-1함수(11)_p3_02",
+    "old_path": "[SSS노트]04-1함수(11)/card_02_p3.webp",
+    "new_path": "[SSS노트]04-1함수(11)/함수.webp",
+    "new_title": "함수",
+    "old_title": "함수"
+  },
+  {
+    "id": "[SSS노트]04-1함수(11)_p4_03",
+    "old_path": "[SSS노트]04-1함수(11)/card_03_p4.webp",
+    "new_path": "[SSS노트]04-1함수(11)/함숫값.webp",
+    "new_title": "함숫값",
+    "old_title": "함숫값"
+  },
+  {
+    "id": "[SSS노트]04-1함수(11)_p4_04",
+    "old_path": "[SSS노트]04-1함수(11)/card_04_p4.webp",
+    "new_path": "[SSS노트]04-1함수(11)/정의역 , 공역 , 치역.webp",
+    "new_title": "정의역 , 공역 , 치역",
+    "old_title": "정의역 , 공역 , 치역"
+  },
+  {
+    "id": "[SSS노트]04-1함수(11)_p4_05",
+    "old_path": "[SSS노트]04-1함수(11)/card_05_p4.webp",
+    "new_path": "[SSS노트]04-1함수(11)/서로 같은 함수.webp",
+    "new_title": "서로 같은 함수",
+    "old_title": "서로 같은 함수"
+  },
+  {
+    "id": "[SSS노트]04-2여러가지함수 초급(14)_p3_01",
+    "old_path": "[SSS노트]04-2여러가지함수 초급(14)/card_01_p3.webp",
+    "new_path": "[SSS노트]04-2여러가지함수 초급(14)/함수의 그래프_3.webp",
+    "new_title": "함수의 그래프_3",
+    "old_title": "함수의 그래프"
+  },
+  {
+    "id": "[SSS노트]04-2여러가지함수 초급(14)_p3_02",
+    "old_path": "[SSS노트]04-2여러가지함수 초급(14)/card_02_p3.webp",
+    "new_path": "[SSS노트]04-2여러가지함수 초급(14)/함수의 그래프의 성질.webp",
+    "new_title": "함수의 그래프의 성질",
+    "old_title": "함수의 그래프의 성질"
+  },
+  {
+    "id": "[SSS노트]04-2여러가지함수 초급(14)_p4_01",
+    "old_path": "[SSS노트]04-2여러가지함수 초급(14)/card_01_p4.webp",
+    "new_path": "[SSS노트]04-2여러가지함수 초급(14)/여러 가지 함수.webp",
+    "new_title": "여러 가지 함수",
+    "old_title": "여러 가지 함수"
+  },
+  {
+    "id": "[SSS노트]04-2여러가지함수 초급(14)_p4_02",
+    "old_path": "[SSS노트]04-2여러가지함수 초급(14)/card_02_p4.webp",
+    "new_path": "[SSS노트]04-2여러가지함수 초급(14)/일대일함수와 일대일대응의 기호에 의한 정의.webp",
+    "new_title": "일대일함수와 일대일대응의 기호에 의한 정의",
+    "old_title": "일대일함수와 일대일대응의 기호에 의한 정의"
+  },
+  {
+    "id": "[SSS노트]04-2여러가지함수 초급(14)_p4_03",
+    "old_path": "[SSS노트]04-2여러가지함수 초급(14)/card_03_p4.webp",
+    "new_path": "[SSS노트]04-2여러가지함수 초급(14)/일대일함수와 일대일대응의 그래프.webp",
+    "new_title": "일대일함수와 일대일대응의 그래프",
+    "old_title": "일대일함수와 일대일대응의 그래프"
+  },
+  {
+    "id": "[SSS노트]04-2이항정리의 활용(13)_p3_01",
+    "old_path": "[SSS노트]04-2이항정리의 활용(13)/card_01_p3.webp",
+    "new_path": "[SSS노트]04-2이항정리의 활용(13)/파스칼 삼각형.webp",
+    "new_title": "파스칼 삼각형",
+    "old_title": "파스칼 삼각형"
+  },
+  {
+    "id": "[SSS노트]04-2이항정리의 활용(13)_p4_02",
+    "old_path": "[SSS노트]04-2이항정리의 활용(13)/card_02_p4.webp",
+    "new_path": "[SSS노트]04-2이항정리의 활용(13)/하키 스틱 패턴.webp",
+    "new_title": "하키 스틱 패턴",
+    "old_title": "하키 스틱 패턴"
+  },
+  {
+    "id": "[SSS노트]04-2이항정리의 활용(13)_p5_03",
+    "old_path": "[SSS노트]04-2이항정리의 활용(13)/card_03_p5.webp",
+    "new_path": "[SSS노트]04-2이항정리의 활용(13)/이항계수의 성질 (1).webp",
+    "new_title": "이항계수의 성질 (1)",
+    "old_title": "이항계수의 성질 (1)"
+  },
+  {
+    "id": "[SSS노트]04-2이항정리의 활용(13)_p7_04",
+    "old_path": "[SSS노트]04-2이항정리의 활용(13)/card_04_p7.webp",
+    "new_path": "[SSS노트]04-2이항정리의 활용(13)/이항계수의 성질 (2).webp",
+    "new_title": "이항계수의 성질 (2)",
+    "old_title": "이항계수의 성질 (2)"
+  },
+  {
+    "id": "[SSS노트]04-3합성함수와 역함수 초급(13)(총p20)_p3_01",
+    "old_path": "[SSS노트]04-3합성함수와 역함수 초급(13)(총p20)/card_01_p3.webp",
+    "new_path": "[SSS노트]04-3합성함수와 역함수 초급(13)(총p20)/합성함수.webp",
+    "new_title": "합성함수",
+    "old_title": "합성함수"
+  },
+  {
+    "id": "[SSS노트]04-3합성함수와 역함수 초급(13)(총p20)_p3_02",
+    "old_path": "[SSS노트]04-3합성함수와 역함수 초급(13)(총p20)/card_02_p3.webp",
+    "new_path": "[SSS노트]04-3합성함수와 역함수 초급(13)(총p20)/합성함수의 성질.webp",
+    "new_title": "합성함수의 성질",
+    "old_title": "합성함수의 성질"
+  },
+  {
+    "id": "[SSS노트]04-3합성함수와 역함수 초급(13)(총p20)_p7_01",
+    "old_path": "[SSS노트]04-3합성함수와 역함수 초급(13)(총p20)/card_01_p7.webp",
+    "new_path": "[SSS노트]04-3합성함수와 역함수 초급(13)(총p20)/역함수.webp",
+    "new_title": "역함수",
+    "old_title": "역함수"
+  },
+  {
+    "id": "[SSS노트]04-3합성함수와 역함수 초급(13)(총p20)_p7_02",
+    "old_path": "[SSS노트]04-3합성함수와 역함수 초급(13)(총p20)/card_02_p7.webp",
+    "new_path": "[SSS노트]04-3합성함수와 역함수 초급(13)(총p20)/역함수를 구하는 방법.webp",
+    "new_title": "역함수를 구하는 방법",
+    "old_title": "역함수를 구하는 방법"
+  },
+  {
+    "id": "[SSS노트]04-3합성함수와 역함수 초급(13)(총p20)_p8_03",
+    "old_path": "[SSS노트]04-3합성함수와 역함수 초급(13)(총p20)/card_03_p8.webp",
+    "new_path": "[SSS노트]04-3합성함수와 역함수 초급(13)(총p20)/역함수의 성질.webp",
+    "new_title": "역함수의 성질",
+    "old_title": "역함수의 성질"
+  },
+  {
+    "id": "[SSS노트]04-3합성함수와 역함수 초급(13)(총p20)_p8_04",
+    "old_path": "[SSS노트]04-3합성함수와 역함수 초급(13)(총p20)/card_04_p8.webp",
+    "new_path": "[SSS노트]04-3합성함수와 역함수 초급(13)(총p20)/역함수의 그래프.webp",
+    "new_title": "역함수의 그래프",
+    "old_title": "역함수의 그래프"
+  },
+  {
+    "id": "[SSS노트]05-1 유리함수(20)_p3_01",
+    "old_path": "[SSS노트]05-1 유리함수(20)/card_01_p3.webp",
+    "new_path": "[SSS노트]05-1 유리함수(20)/유리함수.webp",
+    "new_title": "유리함수",
+    "old_title": "유리함수"
+  },
+  {
+    "id": "[SSS노트]05-1 유리함수(20)_p3_02",
+    "old_path": "[SSS노트]05-1 유리함수(20)/card_02_p3.webp",
+    "new_path": "[SSS노트]05-1 유리함수(20)/유리함수의 정의역.webp",
+    "new_title": "유리함수의 정의역",
+    "old_title": "유리함수의 정의역"
+  },
+  {
+    "id": "[SSS노트]05-1 유리함수(20)_p3_03",
+    "old_path": "[SSS노트]05-1 유리함수(20)/card_03_p3.webp",
+    "new_path": "[SSS노트]05-1 유리함수(20)/함수 (.webp",
+    "new_title": "함수 (",
+    "old_title": "함수      ("
+  },
+  {
+    "id": "[SSS노트]05-1 유리함수(20)_p4_04",
+    "old_path": "[SSS노트]05-1 유리함수(20)/card_04_p4.webp",
+    "new_path": "[SSS노트]05-1 유리함수(20)/함수_2.webp",
+    "new_title": "함수_2",
+    "old_title": "함수      "
+  },
+  {
+    "id": "[SSS노트]05-1 유리함수(20)_p4_05",
+    "old_path": "[SSS노트]05-1 유리함수(20)/card_05_p4.webp",
+    "new_path": "[SSS노트]05-1 유리함수(20)/함수_3.webp",
+    "new_title": "함수_3",
+    "old_title": "함수      "
+  },
+  {
+    "id": "[SSS노트]05-1 유리함수(20)_p4_06",
+    "old_path": "[SSS노트]05-1 유리함수(20)/card_06_p4.webp",
+    "new_path": "[SSS노트]05-1 유리함수(20)/함수_4.webp",
+    "new_title": "함수_4",
+    "old_title": "함수      "
+  },
+  {
+    "id": "[SSS노트]05-1확률의 뜻(18)_p3_01",
+    "old_path": "[SSS노트]05-1확률의 뜻(18)/card_01_p3.webp",
+    "new_path": "[SSS노트]05-1확률의 뜻(18)/시행과 사건.webp",
+    "new_title": "시행과 사건",
+    "old_title": "시행과 사건"
+  },
+  {
+    "id": "[SSS노트]05-1확률의 뜻(18)_p4_02",
+    "old_path": "[SSS노트]05-1확률의 뜻(18)/card_02_p4.webp",
+    "new_path": "[SSS노트]05-1확률의 뜻(18)/합사건과 곱사건.webp",
+    "new_title": "합사건과 곱사건",
+    "old_title": "합사건과 곱사건"
+  },
+  {
+    "id": "[SSS노트]05-1확률의 뜻(18)_p4_03",
+    "old_path": "[SSS노트]05-1확률의 뜻(18)/card_03_p4.webp",
+    "new_path": "[SSS노트]05-1확률의 뜻(18)/배반사건과 여사건.webp",
+    "new_title": "배반사건과 여사건",
+    "old_title": "배반사건과 여사건"
+  },
+  {
+    "id": "[SSS노트]05-1확률의 뜻(18)_p6_04",
+    "old_path": "[SSS노트]05-1확률의 뜻(18)/card_04_p6.webp",
+    "new_path": "[SSS노트]05-1확률의 뜻(18)/수학적 확률.webp",
+    "new_title": "수학적 확률",
+    "old_title": "수학적 확률"
+  },
+  {
+    "id": "[SSS노트]05-2 무리함수(22)_p3_01",
+    "old_path": "[SSS노트]05-2 무리함수(22)/card_01_p3.webp",
+    "new_path": "[SSS노트]05-2 무리함수(22)/무리함수.webp",
+    "new_title": "무리함수",
+    "old_title": "무리함수"
+  },
+  {
+    "id": "[SSS노트]05-2 무리함수(22)_p3_02",
+    "old_path": "[SSS노트]05-2 무리함수(22)/card_02_p3.webp",
+    "new_path": "[SSS노트]05-2 무리함수(22)/무리함수의 정의역.webp",
+    "new_title": "무리함수의 정의역",
+    "old_title": "무리함수의 정의역"
+  },
+  {
+    "id": "[SSS노트]05-2 무리함수(22)_p4_03",
+    "old_path": "[SSS노트]05-2 무리함수(22)/card_03_p4.webp",
+    "new_path": "[SSS노트]05-2 무리함수(22)/함수 ±.webp",
+    "new_title": "함수 ±",
+    "old_title": "함수   ±   "
+  },
+  {
+    "id": "[SSS노트]05-2 무리함수(22)_p4_04",
+    "old_path": "[SSS노트]05-2 무리함수(22)/card_04_p4.webp",
+    "new_path": "[SSS노트]05-2 무리함수(22)/함수_5.webp",
+    "new_title": "함수_5",
+    "old_title": "함수      "
+  },
+  {
+    "id": "[SSS노트]05-2 무리함수(22)_p5_05",
+    "old_path": "[SSS노트]05-2 무리함수(22)/card_05_p5.webp",
+    "new_path": "[SSS노트]05-2 무리함수(22)/함수_6.webp",
+    "new_title": "함수_6",
+    "old_title": "함수      "
+  },
+  {
+    "id": "[SSS노트]05-2 무리함수(22)_p5_06",
+    "old_path": "[SSS노트]05-2 무리함수(22)/card_06_p5.webp",
+    "new_path": "[SSS노트]05-2 무리함수(22)/무리함수의 역함수 구하기.webp",
+    "new_title": "무리함수의 역함수 구하기",
+    "old_title": "무리함수의 역함수 구하기"
+  },
+  {
+    "id": "[SSS노트]05-2 무리함수(22)_p5_07",
+    "old_path": "[SSS노트]05-2 무리함수(22)/card_07_p5.webp",
+    "new_path": "[SSS노트]05-2 무리함수(22)/무리함수의 역함수와 그래프의 성질.webp",
+    "new_title": "무리함수의 역함수와 그래프의 성질",
+    "old_title": "무리함수의 역함수와 그래프의 성질"
+  },
+  {
+    "id": "[SSS노트]05-2통계적확률과기하학적확률(9)_p3_01",
+    "old_path": "[SSS노트]05-2통계적확률과기하학적확률(9)/card_01_p3.webp",
+    "new_path": "[SSS노트]05-2통계적확률과기하학적확률(9)/통계적 확률.webp",
+    "new_title": "통계적 확률",
+    "old_title": "통계적 확률"
+  },
+  {
+    "id": "[SSS노트]05-2통계적확률과기하학적확률(9)_p5_02",
+    "old_path": "[SSS노트]05-2통계적확률과기하학적확률(9)/card_02_p5.webp",
+    "new_path": "[SSS노트]05-2통계적확률과기하학적확률(9)/기하학적 확률.webp",
+    "new_title": "기하학적 확률",
+    "old_title": "기하학적 확률"
+  },
+  {
+    "id": "[SSS노트]05-3확률의 덧셈정리(20)_p3_01",
+    "old_path": "[SSS노트]05-3확률의 덧셈정리(20)/card_01_p3.webp",
+    "new_path": "[SSS노트]05-3확률의 덧셈정리(20)/확률의 기본 성질.webp",
+    "new_title": "확률의 기본 성질",
+    "old_title": "확률의 기본 성질"
+  },
+  {
+    "id": "[SSS노트]05-3확률의 덧셈정리(20)_p4_02",
+    "old_path": "[SSS노트]05-3확률의 덧셈정리(20)/card_02_p4.webp",
+    "new_path": "[SSS노트]05-3확률의 덧셈정리(20)/확률의 덧셈정리.webp",
+    "new_title": "확률의 덧셈정리",
+    "old_title": "확률의 덧셈정리"
+  },
+  {
+    "id": "[SSS노트]05-3확률의 덧셈정리(20)_p6_03",
+    "old_path": "[SSS노트]05-3확률의 덧셈정리(20)/card_03_p6.webp",
+    "new_path": "[SSS노트]05-3확률의 덧셈정리(20)/여사건의 확률.webp",
+    "new_title": "여사건의 확률",
+    "old_title": "여사건의 확률"
+  },
+  {
+    "id": "[SSS노트]06-1경우의수 초급(16)_p3_01",
+    "old_path": "[SSS노트]06-1경우의수 초급(16)/card_01_p3.webp",
+    "new_path": "[SSS노트]06-1경우의수 초급(16)/합의 법칙_2.webp",
+    "new_title": "합의 법칙_2",
+    "old_title": "합의 법칙"
+  },
+  {
+    "id": "[SSS노트]06-1경우의수 초급(16)_p4_02",
+    "old_path": "[SSS노트]06-1경우의수 초급(16)/card_02_p4.webp",
+    "new_path": "[SSS노트]06-1경우의수 초급(16)/곱의 법칙_2.webp",
+    "new_title": "곱의 법칙_2",
+    "old_title": "곱의 법칙"
+  },
+  {
+    "id": "[SSS노트]06-1조건부확률(20)_p3_01",
+    "old_path": "[SSS노트]06-1조건부확률(20)/card_01_p3.webp",
+    "new_path": "[SSS노트]06-1조건부확률(20)/조건부확률.webp",
+    "new_title": "조건부확률",
+    "old_title": "조건부확률"
+  },
+  {
+    "id": "[SSS노트]06-1조건부확률(20)_p5_02",
+    "old_path": "[SSS노트]06-1조건부확률(20)/card_02_p5.webp",
+    "new_path": "[SSS노트]06-1조건부확률(20)/확률의 곱셈정리.webp",
+    "new_title": "확률의 곱셈정리",
+    "old_title": "확률의 곱셈정리"
+  },
+  {
+    "id": "[SSS노트]06-1조건부확률(20)_p8_03",
+    "old_path": "[SSS노트]06-1조건부확률(20)/card_03_p8.webp",
+    "new_path": "[SSS노트]06-1조건부확률(20)/곱셈정리를 이용한 조건부 확률.webp",
+    "new_title": "곱셈정리를 이용한 조건부 확률",
+    "old_title": "곱셈정리를 이용한 조건부 확률"
+  },
+  {
+    "id": "[SSS노트]06-2사건의 독립과 종속(13)_p3_01",
+    "old_path": "[SSS노트]06-2사건의 독립과 종속(13)/card_01_p3.webp",
+    "new_path": "[SSS노트]06-2사건의 독립과 종속(13)/사건의 독립과 종속.webp",
+    "new_title": "사건의 독립과 종속",
+    "old_title": "사건의 독립과 종속"
+  },
+  {
+    "id": "[SSS노트]06-2사건의 독립과 종속(13)_p5_02",
+    "old_path": "[SSS노트]06-2사건의 독립과 종속(13)/card_02_p5.webp",
+    "new_path": "[SSS노트]06-2사건의 독립과 종속(13)/두 사건이 독립일 필요충분조건.webp",
+    "new_title": "두 사건이 독립일 필요충분조건",
+    "old_title": "두 사건이 독립일 필요충분조건"
+  },
+  {
+    "id": "[SSS노트]06-2사건의 독립과 종속(13)_p6_03",
+    "old_path": "[SSS노트]06-2사건의 독립과 종속(13)/card_03_p6.webp",
+    "new_path": "[SSS노트]06-2사건의 독립과 종속(13)/두 사건이 독립일 때.webp",
+    "new_title": "두 사건이 독립일 때",
+    "old_title": "두 사건이 독립일 때"
+  },
+  {
+    "id": "[SSS노트]06-2순열(16)_p3_01",
+    "old_path": "[SSS노트]06-2순열(16)/card_01_p3.webp",
+    "new_path": "[SSS노트]06-2순열(16)/순열_2.webp",
+    "new_title": "순열_2",
+    "old_title": "순열"
+  },
+  {
+    "id": "[SSS노트]06-2순열(16)_p4_02",
+    "old_path": "[SSS노트]06-2순열(16)/card_02_p4.webp",
+    "new_path": "[SSS노트]06-2순열(16)/순열의 수_2.webp",
+    "new_title": "순열의 수_2",
+    "old_title": "순열의 수"
+  },
+  {
+    "id": "[SSS노트]06-2순열(16)_p5_03",
+    "old_path": "[SSS노트]06-2순열(16)/card_03_p5.webp",
+    "new_path": "[SSS노트]06-2순열(16)/n 의 계승_2.webp",
+    "new_title": "n 의 계승_2",
+    "old_title": "n 의 계승"
+  },
+  {
+    "id": "[SSS노트]06-2순열(16)_p6_04",
+    "old_path": "[SSS노트]06-2순열(16)/card_04_p6.webp",
+    "new_path": "[SSS노트]06-2순열(16)/특정 조건이 있는 순열_2.webp",
+    "new_title": "특정 조건이 있는 순열_2",
+    "old_title": "특정 조건이 있는 순열"
+  },
+  {
+    "id": "[SSS노트]06-3독립시행의 확률(10)_p3_01",
+    "old_path": "[SSS노트]06-3독립시행의 확률(10)/card_01_p3.webp",
+    "new_path": "[SSS노트]06-3독립시행의 확률(10)/독립시행의 확률.webp",
+    "new_title": "독립시행의 확률",
+    "old_title": "독립시행의 확률"
+  },
+  {
+    "id": "[SSS노트]07-1원순열(15)_p3_01",
+    "old_path": "[SSS노트]07-1원순열(15)/card_01_p3.webp",
+    "new_path": "[SSS노트]07-1원순열(15)/원순열의 수_2.webp",
+    "new_title": "원순열의 수_2",
+    "old_title": "원순열의 수"
+  },
+  {
+    "id": "[SSS노트]07-1원순열(15)_p4_02",
+    "old_path": "[SSS노트]07-1원순열(15)/card_02_p4.webp",
+    "new_path": "[SSS노트]07-1원순열(15)/이웃하는 또는 이웃하지 않게 하는 원순열의 수_2.webp",
+    "new_title": "이웃하는 또는 이웃하지 않게 하는 원순열의 수_2",
+    "old_title": "이웃하는 또는 이웃하지 않게 하는 원순열의 수"
+  },
+  {
+    "id": "[SSS노트]07-1원순열(15)_p5_03",
+    "old_path": "[SSS노트]07-1원순열(15)/card_03_p5.webp",
+    "new_path": "[SSS노트]07-1원순열(15)/원이 아닌 다른 도형 모양의 다각형 탁자에_2.webp",
+    "new_title": "원이 아닌 다른 도형 모양의 다각형 탁자에_2",
+    "old_title": "원이 아닌 다른 도형 모양의 다각형 탁자에"
+  },
+  {
+    "id": "[SSS노트]07-2중복순열(16)_p3_01",
+    "old_path": "[SSS노트]07-2중복순열(16)/card_01_p3.webp",
+    "new_path": "[SSS노트]07-2중복순열(16)/중복순열의 수_2.webp",
+    "new_title": "중복순열의 수_2",
+    "old_title": "중복순열의 수"
+  },
+  {
+    "id": "[SSS노트]07-2중복순열(16)_p5_02",
+    "old_path": "[SSS노트]07-2중복순열(16)/card_02_p5.webp",
+    "new_path": "[SSS노트]07-2중복순열(16)/함수의 개수_2.webp",
+    "new_title": "함수의 개수_2",
+    "old_title": "함수의 개수"
+  },
+  {
+    "id": "[SSS노트]07-3같은것이있는순열(18)_p3_01",
+    "old_path": "[SSS노트]07-3같은것이있는순열(18)/card_01_p3.webp",
+    "new_path": "[SSS노트]07-3같은것이있는순열(18)/같은 것이 있는 순열의 수_2.webp",
+    "new_title": "같은 것이 있는 순열의 수_2",
+    "old_title": "같은 것이 있는 순열의 수"
+  },
+  {
+    "id": "[SSS노트]07-3같은것이있는순열(18)_p5_02",
+    "old_path": "[SSS노트]07-3같은것이있는순열(18)/card_02_p5.webp",
+    "new_path": "[SSS노트]07-3같은것이있는순열(18)/특정한 나열에서 우선순위가 정해진 순열의 수_2.webp",
+    "new_title": "특정한 나열에서 우선순위가 정해진 순열의 수_2",
+    "old_title": "특정한 나열에서 우선순위가 정해진 순열의 수"
+  },
+  {
+    "id": "[SSS노트]07-3같은것이있는순열(18)_p6_03",
+    "old_path": "[SSS노트]07-3같은것이있는순열(18)/card_03_p6.webp",
+    "new_path": "[SSS노트]07-3같은것이있는순열(18)/최단 경로의 수_2.webp",
+    "new_title": "최단 경로의 수_2",
+    "old_title": "최단 경로의 수"
+  },
+  {
+    "id": "[SSS노트]08-1 등차 수열 초급(20)_p3_01",
+    "old_path": "[SSS노트]08-1 등차 수열 초급(20)/card_01_p3.webp",
+    "new_path": "[SSS노트]08-1 등차 수열 초급(20)/수열의 뜻.webp",
+    "new_title": "수열의 뜻",
+    "old_title": "수열의 뜻"
+  },
+  {
+    "id": "[SSS노트]08-1 등차 수열 초급(20)_p3_02",
+    "old_path": "[SSS노트]08-1 등차 수열 초급(20)/card_02_p3.webp",
+    "new_path": "[SSS노트]08-1 등차 수열 초급(20)/수열의 일반항.webp",
+    "new_title": "수열의 일반항",
+    "old_title": "수열의 일반항"
+  },
+  {
+    "id": "[SSS노트]08-1 등차 수열 초급(20)_p4_01",
+    "old_path": "[SSS노트]08-1 등차 수열 초급(20)/card_01_p4.webp",
+    "new_path": "[SSS노트]08-1 등차 수열 초급(20)/등차수열의 뜻.webp",
+    "new_title": "등차수열의 뜻",
+    "old_title": "등차수열의 뜻"
+  },
+  {
+    "id": "[SSS노트]08-1 등차 수열 초급(20)_p4_02",
+    "old_path": "[SSS노트]08-1 등차 수열 초급(20)/card_02_p4.webp",
+    "new_path": "[SSS노트]08-1 등차 수열 초급(20)/등차수열의 일반항.webp",
+    "new_title": "등차수열의 일반항",
+    "old_title": "등차수열의 일반항"
+  },
+  {
+    "id": "[SSS노트]08-1 등차 수열 초급(20)_p4_03",
+    "old_path": "[SSS노트]08-1 등차 수열 초급(20)/card_03_p4.webp",
+    "new_path": "[SSS노트]08-1 등차 수열 초급(20)/등차중항.webp",
+    "new_title": "등차중항",
+    "old_title": "등차중항"
+  },
+  {
+    "id": "[SSS노트]08-1조합(20)_p3_01",
+    "old_path": "[SSS노트]08-1조합(20)/card_01_p3.webp",
+    "new_path": "[SSS노트]08-1조합(20)/조합_2.webp",
+    "new_title": "조합_2",
+    "old_title": "조합"
+  },
+  {
+    "id": "[SSS노트]08-1조합(20)_p5_02",
+    "old_path": "[SSS노트]08-1조합(20)/card_02_p5.webp",
+    "new_path": "[SSS노트]08-1조합(20)/조합의 수_2.webp",
+    "new_title": "조합의 수_2",
+    "old_title": "조합의 수"
+  },
+  {
+    "id": "[SSS노트]08-2 등차 수열의 합 초급(16)_p3_01",
+    "old_path": "[SSS노트]08-2 등차 수열의 합 초급(16)/card_01_p3.webp",
+    "new_path": "[SSS노트]08-2 등차 수열의 합 초급(16)/등차수열의 합.webp",
+    "new_title": "등차수열의 합",
+    "old_title": "등차수열의 합"
+  },
+  {
+    "id": "[SSS노트]08-2 등차 수열의 합 초급(16)_p3_02",
+    "old_path": "[SSS노트]08-2 등차 수열의 합 초급(16)/card_02_p3.webp",
+    "new_path": "[SSS노트]08-2 등차 수열의 합 초급(16)/수열의 합과 일반항 사이의 관계.webp",
+    "new_title": "수열의 합과 일반항 사이의 관계",
+    "old_title": "수열의 합과 일반항 사이의 관계"
+  },
+  {
+    "id": "[SSS노트]08-2중복조합(15)_p3_01",
+    "old_path": "[SSS노트]08-2중복조합(15)/card_01_p3.webp",
+    "new_path": "[SSS노트]08-2중복조합(15)/중복조합_2.webp",
+    "new_title": "중복조합_2",
+    "old_title": "중복조합"
+  },
+  {
+    "id": "[SSS노트]08-2중복조합(15)_p5_02",
+    "old_path": "[SSS노트]08-2중복조합(15)/card_02_p5.webp",
+    "new_path": "[SSS노트]08-2중복조합(15)/중복조합의 대표적인 예_2.webp",
+    "new_title": "중복조합의 대표적인 예_2",
+    "old_title": "중복조합의 대표적인 예"
+  },
+  {
+    "id": "[SSS노트]08-2중복조합(15)_p6_03",
+    "old_path": "[SSS노트]08-2중복조합(15)/card_03_p6.webp",
+    "new_path": "[SSS노트]08-2중복조합(15)/중복조합을 이용하여 방정식의 해의 개수 구하기_2.webp",
+    "new_title": "중복조합을 이용하여 방정식의 해의 개수 구하기_2",
+    "old_title": "중복조합을 이용하여 방정식의 해의 개수 구하기"
+  },
+  {
+    "id": "[SSS노트]09-1 등비 수열 초급(17)_p3_01",
+    "old_path": "[SSS노트]09-1 등비 수열 초급(17)/card_01_p3.webp",
+    "new_path": "[SSS노트]09-1 등비 수열 초급(17)/등비수열의 뜻.webp",
+    "new_title": "등비수열의 뜻",
+    "old_title": "등비수열의 뜻"
+  },
+  {
+    "id": "[SSS노트]09-1 등비 수열 초급(17)_p3_02",
+    "old_path": "[SSS노트]09-1 등비 수열 초급(17)/card_02_p3.webp",
+    "new_path": "[SSS노트]09-1 등비 수열 초급(17)/등비수열의 일반항.webp",
+    "new_title": "등비수열의 일반항",
+    "old_title": "등비수열의 일반항"
+  },
+  {
+    "id": "[SSS노트]09-1 등비 수열 초급(17)_p3_03",
+    "old_path": "[SSS노트]09-1 등비 수열 초급(17)/card_03_p3.webp",
+    "new_path": "[SSS노트]09-1 등비 수열 초급(17)/등비중항.webp",
+    "new_title": "등비중항",
+    "old_title": "등비중항"
+  },
+  {
+    "id": "[SSS노트]09-2 등비 수열의 합 초급(12)_p3_01",
+    "old_path": "[SSS노트]09-2 등비 수열의 합 초급(12)/card_01_p3.webp",
+    "new_path": "[SSS노트]09-2 등비 수열의 합 초급(12)/등비수열의 합.webp",
+    "new_title": "등비수열의 합",
+    "old_title": "등비수열의 합"
+  },
+  {
+    "id": "[SSS노트]09-2 등비 수열의 합 초급(12)_p3_02",
+    "old_path": "[SSS노트]09-2 등비 수열의 합 초급(12)/card_02_p3.webp",
+    "new_path": "[SSS노트]09-2 등비 수열의 합 초급(12)/수열의 합과 일반항 사이의 관계_2.webp",
+    "new_title": "수열의 합과 일반항 사이의 관계_2",
+    "old_title": "수열의 합과 일반항 사이의 관계"
+  },
+  {
+    "id": "[SSS노트]09-3 시그마의 뜻과 성질(8)_p3_01",
+    "old_path": "[SSS노트]09-3 시그마의 뜻과 성질(8)/card_01_p3.webp",
+    "new_path": "[SSS노트]09-3 시그마의 뜻과 성질(8)/의 뜻.webp",
+    "new_title": "의 뜻",
+    "old_title": " 의 뜻"
+  },
+  {
+    "id": "[SSS노트]09-3 시그마의 뜻과 성질(8)_p3_02",
+    "old_path": "[SSS노트]09-3 시그마의 뜻과 성질(8)/card_02_p3.webp",
+    "new_path": "[SSS노트]09-3 시그마의 뜻과 성질(8)/의 기본 성질.webp",
+    "new_title": "의 기본 성질",
+    "old_title": " 의 기본 성질"
+  },
+  {
+    "id": "[SSS노트]10-1 자연수 거듭제곱의 합(14)_p3_01",
+    "old_path": "[SSS노트]10-1 자연수 거듭제곱의 합(14)/card_01_p3.webp",
+    "new_path": "[SSS노트]10-1 자연수 거듭제곱의 합(14)/자연수의 거듭제곱의 합.webp",
+    "new_title": "자연수의 거듭제곱의 합",
+    "old_title": "자연수의 거듭제곱의 합"
+  },
+  {
+    "id": "[SSS노트]10-1 자연수 거듭제곱의 합(14)_p3_02",
+    "old_path": "[SSS노트]10-1 자연수 거듭제곱의 합(14)/card_02_p3.webp",
+    "new_path": "[SSS노트]10-1 자연수 거듭제곱의 합(14)/를 이용하여 수열의 합을 구하는 방법.webp",
+    "new_title": "를 이용하여 수열의 합을 구하는 방법",
+    "old_title": " 를 이용하여 수열의 합을 구하는 방법"
+  },
+  {
+    "id": "[SSS노트]10-2 여러 가지 수열의 합(8)_p3_01",
+    "old_path": "[SSS노트]10-2 여러 가지 수열의 합(8)/card_01_p3.webp",
+    "new_path": "[SSS노트]10-2 여러 가지 수열의 합(8)/분수 꼴로 된 수열의 합.webp",
+    "new_title": "분수 꼴로 된 수열의 합",
+    "old_title": "분수 꼴로 된 수열의 합"
+  },
+  {
+    "id": "[SSS노트]10-2 여러 가지 수열의 합(8)_p3_02",
+    "old_path": "[SSS노트]10-2 여러 가지 수열의 합(8)/card_02_p3.webp",
+    "new_path": "[SSS노트]10-2 여러 가지 수열의 합(8)/분모에 근호가 있는 수열의 합.webp",
+    "new_title": "분모에 근호가 있는 수열의 합",
+    "old_title": "분모에 근호가 있는 수열의 합"
+  },
+  {
+    "id": "[SSS노트]10-2 여러 가지 수열의 합(8)_p3_03",
+    "old_path": "[SSS노트]10-2 여러 가지 수열의 합(8)/card_03_p3.webp",
+    "new_path": "[SSS노트]10-2 여러 가지 수열의 합(8)/( 등차수열 ) × ( 등비수열 ).webp",
+    "new_title": "( 등차수열 ) × ( 등비수열 )",
+    "old_title": "( 등차수열 ) × ( 등비수열 )"
+  },
+  {
+    "id": "[SSS노트]10-3 수열의 귀납적 정의(15)_p3_01",
+    "old_path": "[SSS노트]10-3 수열의 귀납적 정의(15)/card_01_p3.webp",
+    "new_path": "[SSS노트]10-3 수열의 귀납적 정의(15)/수열의 귀납적 정의.webp",
+    "new_title": "수열의 귀납적 정의",
+    "old_title": "수열의 귀납적 정의"
+  },
+  {
+    "id": "[SSS노트]10-3 수열의 귀납적 정의(15)_p4_02",
+    "old_path": "[SSS노트]10-3 수열의 귀납적 정의(15)/card_02_p4.webp",
+    "new_path": "[SSS노트]10-3 수열의 귀납적 정의(15)/등차수열과 등비수열의 귀납적 정의.webp",
+    "new_title": "등차수열과 등비수열의 귀납적 정의",
+    "old_title": "등차수열과 등비수열의 귀납적 정의"
+  },
+  {
+    "id": "[SSS노트]10-4 수학적 귀납법(4)_p3_01",
+    "old_path": "[SSS노트]10-4 수학적 귀납법(4)/card_01_p3.webp",
+    "new_path": "[SSS노트]10-4 수학적 귀납법(4)/수학적 귀납법.webp",
+    "new_title": "수학적 귀납법",
+    "old_title": "수학적 귀납법"
+  },
+  {
+    "id": "[SSS노트]2-1 로그의 정의(6)_p3_01",
+    "old_path": "[SSS노트]2-1 로그의 정의(6)/card_01_p3.webp",
+    "new_path": "[SSS노트]2-1 로그의 정의(6)/로그의 정의.webp",
+    "new_title": "로그의 정의",
+    "old_title": "로그의 정의"
+  },
+  {
+    "id": "[SSS노트]2-1 로그의 정의(6)_p4_02",
+    "old_path": "[SSS노트]2-1 로그의 정의(6)/card_02_p4.webp",
+    "new_path": "[SSS노트]2-1 로그의 정의(6)/로그의 밑과 진수의 조건.webp",
+    "new_title": "로그의 밑과 진수의 조건",
+    "old_title": "로그의 밑과 진수의 조건"
+  },
+  {
+    "id": "[SSS노트]2-2 로그의 기본성질(20)_p3_01",
+    "old_path": "[SSS노트]2-2 로그의 기본성질(20)/card_01_p3.webp",
+    "new_path": "[SSS노트]2-2 로그의 기본성질(20)/로그의 기본 성질.webp",
+    "new_title": "로그의 기본 성질",
+    "old_title": "로그의 기본 성질"
+  },
+  {
+    "id": "[SSS노트]2-2 로그의 기본성질(20)_p4_02",
+    "old_path": "[SSS노트]2-2 로그의 기본성질(20)/card_02_p4.webp",
+    "new_path": "[SSS노트]2-2 로그의 기본성질(20)/밑의 변환 공식.webp",
+    "new_title": "밑의 변환 공식",
+    "old_title": "밑의 변환 공식"
+  },
+  {
+    "id": "[SSS노트]2-2 로그의 기본성질(20)_p4_03",
+    "old_path": "[SSS노트]2-2 로그의 기본성질(20)/card_03_p4.webp",
+    "new_path": "[SSS노트]2-2 로그의 기본성질(20)/로그 지수 공식.webp",
+    "new_title": "로그 지수 공식",
+    "old_title": "로그 지수 공식"
+  },
+  {
+    "id": "[SSS노트]2-3 상용로그(13)_p3_01",
+    "old_path": "[SSS노트]2-3 상용로그(13)/card_01_p3.webp",
+    "new_path": "[SSS노트]2-3 상용로그(13)/상용로그의 뜻.webp",
+    "new_title": "상용로그의 뜻",
+    "old_title": "상용로그의 뜻"
+  },
+  {
+    "id": "[SSS노트]2-3 상용로그(13)_p3_02",
+    "old_path": "[SSS노트]2-3 상용로그(13)/card_02_p3.webp",
+    "new_path": "[SSS노트]2-3 상용로그(13)/상용로그표.webp",
+    "new_title": "상용로그표",
+    "old_title": "상용로그표"
+  },
+  {
+    "id": "[SSS노트]2-3 상용로그(13)_p5_03",
+    "old_path": "[SSS노트]2-3 상용로그(13)/card_03_p5.webp",
+    "new_path": "[SSS노트]2-3 상용로그(13)/상용로그의 성질.webp",
+    "new_title": "상용로그의 성질",
+    "old_title": "상용로그의 성질"
+  },
+  {
+    "id": "미적분 2회차 데일리테스트02_p3_01",
+    "old_path": "미적분 2회차 데일리테스트02/card_01_p3.webp",
+    "new_path": "미적분 2회차 데일리테스트02/] Daily Test.webp",
+    "new_title": "] Daily Test",
+    "old_title": "] Daily Test"
+  },
+  {
+    "id": "미적분 2회차 데일리테스트02_p4_01",
+    "old_path": "미적분 2회차 데일리테스트02/card_01_p4.webp",
+    "new_path": "미적분 2회차 데일리테스트02/] Daily Test_2.webp",
+    "new_title": "] Daily Test_2",
+    "old_title": "] Daily Test"
+  },
+  {
+    "id": "미적분 2회차 데일리테스트02_p5_01",
+    "old_path": "미적분 2회차 데일리테스트02/card_01_p5.webp",
+    "new_path": "미적분 2회차 데일리테스트02/] Daily Test_3.webp",
+    "new_title": "] Daily Test_3",
+    "old_title": "] Daily Test"
+  },
+  {
+    "id": "미적분 2회차 데일리테스트02_p6_01",
+    "old_path": "미적분 2회차 데일리테스트02/card_01_p6.webp",
+    "new_path": "미적분 2회차 데일리테스트02/] Daily Test_4.webp",
+    "new_title": "] Daily Test_4",
+    "old_title": "] Daily Test"
+  },
+  {
+    "id": "미적분 2회차 데일리테스트02_p7_01",
+    "old_path": "미적분 2회차 데일리테스트02/card_01_p7.webp",
+    "new_path": "미적분 2회차 데일리테스트02/] Daily Test_5.webp",
+    "new_title": "] Daily Test_5",
+    "old_title": "] Daily Test"
+  },
+  {
+    "id": "미적분 2회차 데일리테스트02_p8_01",
+    "old_path": "미적분 2회차 데일리테스트02/card_01_p8.webp",
+    "new_path": "미적분 2회차 데일리테스트02/] Daily Test_6.webp",
+    "new_title": "] Daily Test_6",
+    "old_title": "] Daily Test"
+  }
+]

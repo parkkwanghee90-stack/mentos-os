@@ -1,0 +1,591 @@
+{
+  "teacherId": "h_eng3",
+  "round": 2,
+  "title": "Curriculum Mode for 3등급",
+  "targetGrades": [
+    "고1",
+    "고2"
+  ],
+  "targetRanks": [
+    "3등급"
+  ],
+  "reading": {
+    "passageCount": 6,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "The Great Wall of China is one of the most remarkable structures in the world. Built over several centuries, it stretches across northern China and was designed to protect against invasions. Today, it is a popular tourist destination and a symbol of China's historical strength.",
+        "teachPoint": "Understanding historical structures and their significance",
+        "question": "What was the primary purpose of the Great Wall of China?"
+      },
+      {
+        "id": "Passage_2",
+        "text": "Photosynthesis is the process by which green plants and some other organisms use sunlight to synthesize foods with the help of chlorophyll. This process is crucial as it provides the oxygen we breathe and forms the base of the food chain.",
+        "teachPoint": "Basic concept of photosynthesis and its importance",
+        "question": "Why is photosynthesis essential for life on Earth?"
+      },
+      {
+        "id": "Passage_3",
+        "text": "William Shakespeare, an English playwright, is considered one of the greatest writers in the English language. His plays, such as 'Hamlet' and 'Romeo and Juliet', explore timeless themes like love, power, and betrayal, and are still studied and performed today.",
+        "teachPoint": "Introduction to Shakespeare and his literary contributions",
+        "question": "What themes are commonly found in Shakespeare's plays?"
+      },
+      {
+        "id": "Passage_4",
+        "text": "The Amazon rainforest is known as the 'lungs of the Earth' because it produces a significant amount of the world's oxygen. It is home to a diverse range of wildlife and plants. However, deforestation poses a serious threat to its existence and the global environment.",
+        "teachPoint": "The ecological significance of the Amazon rainforest",
+        "question": "Why is the Amazon rainforest referred to as the 'lungs of the Earth'?"
+      },
+      {
+        "id": "Passage_5",
+        "text": "Albert Einstein was a theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics. His famous equation, E=mc², explains how mass and energy are interchangeable, and it has had a significant impact on scientific understanding.",
+        "teachPoint": "Basic introduction to Einstein and the theory of relativity",
+        "question": "What does Einstein's equation E=mc² represent?"
+      },
+      {
+        "id": "Passage_6",
+        "text": "In the 21st century, technology has become an integral part of our daily lives. From smartphones to smart homes, we rely on various devices to communicate, work, and entertain ourselves. However, this increased reliance on technology has led to concerns about privacy and security. Many people worry that their personal information might be accessed or misused. To address these concerns, companies are continually working on improving security measures such as encryption and two-factor authentication.",
+        "teachPoint": "The passage discusses the impact of technology on daily life and the importance of security measures.",
+        "question": "What are some concerns that have arisen due to increased reliance on technology?"
+      }
+    ],
+    "teachPoints": [
+      "Understanding historical structures and their significance",
+      "Basic concept of photosynthesis and its importance",
+      "Introduction to Shakespeare and his literary contributions",
+      "The ecological significance of the Amazon rainforest",
+      "Basic introduction to Einstein and the theory of relativity",
+      "The passage discusses the impact of technology on daily life and the importance of security measures."
+    ],
+    "questions": [
+      "What was the primary purpose of the Great Wall of China?",
+      "Why is photosynthesis essential for life on Earth?",
+      "What themes are commonly found in Shakespeare's plays?",
+      "Why is the Amazon rainforest referred to as the 'lungs of the Earth'?",
+      "What does Einstein's equation E=mc² represent?",
+      "What are some concerns that have arisen due to increased reliance on technology?"
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "script": [
+          "A: Hey, did you finish the homework for math class?",
+          "B: Not yet. I got stuck on the last problem.",
+          "A: Which one? Maybe I can help.",
+          "B: It's the one about the quadratic equations.",
+          "A: Oh, that one! You need to use the quadratic formula.",
+          "B: Right, I always forget the formula. Can you walk me through it?"
+        ],
+        "question": "What topic are they discussing?",
+        "choices": [
+          "A) Geometry",
+          "B) Algebra",
+          "C) Calculus",
+          "D) Statistics",
+          "E) Trigonometry"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Have you decided where to go for vacation?",
+          "B: Yes, we're thinking about visiting Italy.",
+          "A: Italy sounds amazing! What cities do you plan to visit?",
+          "B: Definitely Rome and Venice, maybe Florence too.",
+          "A: Great choices! Make sure to try the local cuisine.",
+          "B: Absolutely, I've heard the pasta there is incredible."
+        ],
+        "question": "Which country is B planning to visit?",
+        "choices": [
+          "A) France",
+          "B) Spain",
+          "C) Italy",
+          "D) Greece",
+          "E) Germany"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: Did you watch the game last night?",
+          "B: I did! It was so intense.",
+          "A: I couldn't believe that last-minute goal.",
+          "B: I know, it was unbelievable. The striker was amazing.",
+          "A: Who do you think will win the championship?",
+          "B: It's hard to say, but I have a feeling our team might just make it."
+        ],
+        "question": "What event are they discussing?",
+        "choices": [
+          "A) A concert",
+          "B) A movie",
+          "C) A sports game",
+          "D) A play",
+          "E) A festival"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: I heard you moved to a new apartment. How is it?",
+          "B: It's really nice, actually. Much bigger than my old place.",
+          "A: That's great! What about the neighborhood?",
+          "B: Very quiet and lots of parks nearby, so I can walk my dog.",
+          "A: Sounds perfect. Have you met your neighbors yet?",
+          "B: Yes, they are very friendly and helpful."
+        ],
+        "question": "What is one feature B likes about the new apartment area?",
+        "choices": [
+          "A) It's noisy",
+          "B) There's a mall nearby",
+          "C) It's very quiet",
+          "D) It's close to work",
+          "E) It has a swimming pool"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: Are you going to the music festival this weekend?",
+          "B: I wish I could, but I have to work.",
+          "A: That's too bad. I heard it's going to be amazing.",
+          "B: I know, my favorite band is playing.",
+          "A: Maybe you can catch them next time.",
+          "B: Hopefully! I'll try to get time off for the next one."
+        ],
+        "question": "Why can't B go to the music festival?",
+        "choices": [
+          "A) B is sick",
+          "B) B has to work",
+          "C) B forgot to buy tickets",
+          "D) B is out of town",
+          "E) B has a family event"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Did you get the email about the meeting tomorrow?",
+          "B: Yes, I did. What time is it again?",
+          "A: It's at 10 AM in the main conference room.",
+          "B: Thanks for reminding me. I always mix up the times.",
+          "A: No problem. Do you know the agenda?",
+          "B: I think we're discussing the new project proposal."
+        ],
+        "question": "What will the meeting be about?",
+        "choices": [
+          "A) A team outing",
+          "B) A project proposal",
+          "C) Company policies",
+          "D) A product launch",
+          "E) Budget cuts"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: How's your new job going?",
+          "B: It's good, but there's a lot to learn.",
+          "A: I bet. What's the most challenging part?",
+          "B: Probably getting used to the new software.",
+          "A: That can be tough. Do they offer any training?",
+          "B: Yes, they do, and it's been really helpful."
+        ],
+        "question": "What is B finding challenging at the new job?",
+        "choices": [
+          "A) The commute",
+          "B) The workload",
+          "C) The new software",
+          "D) The office culture",
+          "E) The long hours"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: I heard you're volunteering at the animal shelter now.",
+          "B: Yes, I started last week.",
+          "A: That's wonderful. What do you do there?",
+          "B: I help take care of the dogs and cats.",
+          "A: That sounds like fun. Do you have a favorite animal?",
+          "B: I love them all, but there's this one puppy that's just adorable."
+        ],
+        "question": "Where is B volunteering?",
+        "choices": [
+          "A) A hospital",
+          "B) A library",
+          "C) An animal shelter",
+          "D) A school",
+          "E) A community center"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: What are you reading these days?",
+          "B: I'm really into mystery novels currently.",
+          "A: Any recommendations?",
+          "B: Yes, 'The Silent Patient' is a must-read.",
+          "A: I've heard of that one. What's it about?",
+          "B: It's about a woman who stops speaking after a traumatic event."
+        ],
+        "question": "What genre is B currently interested in?",
+        "choices": [
+          "A) Science fiction",
+          "B) Romance",
+          "C) Mystery",
+          "D) Biography",
+          "E) Fantasy"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: Have you tried that new restaurant downtown?",
+          "B: Not yet, but I've heard great things about it.",
+          "A: I went there last night. The food was fantastic!",
+          "B: What did you order?",
+          "A: I had the grilled salmon and it was delicious.",
+          "B: I'll have to check it out soon."
+        ],
+        "question": "What did A think of the new restaurant?",
+        "choices": [
+          "A) It was terrible",
+          "B) It was average",
+          "C) It was fantastic",
+          "D) It was overpriced",
+          "E) It was disappointing"
+        ],
+        "answer": "C"
+      }
+    ],
+    "timeline": [
+      "[0~3m] AudioItem_1",
+      "[3~6m] AudioItem_2",
+      "[6~9m] AudioItem_3",
+      "[9~12m] AudioItem_4",
+      "[12~15m] AudioItem_5",
+      "[15~18m] AudioItem_6",
+      "[18~21m] AudioItem_7",
+      "[21~24m] AudioItem_8",
+      "[24~27m] AudioItem_9",
+      "[27~30m] AudioItem_10"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "analyze",
+        "meaning": "to examine something in detail",
+        "alt_meaning": "to study or determine the nature of something",
+        "example_sentence": "The scientists analyze the data to find patterns.",
+        "context_explain": "In logic and problem-solving, analyzing is crucial for understanding complex issues."
+      },
+      {
+        "word": "interpret",
+        "meaning": "to explain the meaning of something",
+        "alt_meaning": "to understand something in a particular way",
+        "example_sentence": "He had to interpret the results of the experiment.",
+        "context_explain": "Interpretation involves making sense of information or data."
+      },
+      {
+        "word": "evaluate",
+        "meaning": "to judge or determine the significance or worth of something",
+        "alt_meaning": "to assess or appraise something",
+        "example_sentence": "The teacher will evaluate each student's performance.",
+        "context_explain": "Evaluation is key in decision-making and forming opinions."
+      },
+      {
+        "word": "predict",
+        "meaning": "to declare or indicate in advance",
+        "alt_meaning": "to forecast future events",
+        "example_sentence": "Meteorologists predict the weather for the upcoming week.",
+        "context_explain": "Prediction is used in logic to anticipate outcomes based on current information."
+      },
+      {
+        "word": "illustrate",
+        "meaning": "to explain or make something clear by using examples or pictures",
+        "alt_meaning": "to show the meaning or truth of something more clearly",
+        "example_sentence": "The professor used a diagram to illustrate the concept.",
+        "context_explain": "Illustration helps in clarifying complex ideas through visual or detailed description."
+      },
+      {
+        "word": "justify",
+        "meaning": "to show or prove to be right or reasonable",
+        "alt_meaning": "to give valid reasons or evidence to support an answer or conclusion",
+        "example_sentence": "You need to justify your decision with facts.",
+        "context_explain": "Justification is critical in supporting arguments and conclusions."
+      },
+      {
+        "word": "synthesize",
+        "meaning": "to combine different ideas or information to form a coherent whole",
+        "alt_meaning": "to merge various elements to produce something new",
+        "example_sentence": "The report synthesizes data from several sources.",
+        "context_explain": "Synthesis involves integrating diverse information to create a comprehensive understanding."
+      },
+      {
+        "word": "differentiate",
+        "meaning": "to recognize or ascertain what makes something different",
+        "alt_meaning": "to distinguish between two or more things",
+        "example_sentence": "It's important to differentiate between fact and opinion.",
+        "context_explain": "Differentiation is essential in identifying unique characteristics and making comparisons."
+      },
+      {
+        "word": "infer",
+        "meaning": "to deduce or conclude information from evidence and reasoning rather than from explicit statements",
+        "alt_meaning": "to derive as a conclusion from facts or premises",
+        "example_sentence": "From the data, we can infer that the policy was effective.",
+        "context_explain": "Inference is a logical process used to reach conclusions based on evidence."
+      },
+      {
+        "word": "summarize",
+        "meaning": "to give a brief statement of the main points",
+        "alt_meaning": "to condense information into a concise form",
+        "example_sentence": "The student summarized the article in a few sentences.",
+        "context_explain": "Summarization helps in distilling important information and understanding the gist of content."
+      },
+      {
+        "word": "determine",
+        "meaning": "to establish the exactness or validity of something",
+        "alt_meaning": "to decide or conclude something after thinking about it",
+        "example_sentence": "The jury will determine the verdict.",
+        "context_explain": "Determination involves decision-making based on evidence or criteria."
+      },
+      {
+        "word": "emphasize",
+        "meaning": "to give special importance or prominence to something in speaking or writing",
+        "alt_meaning": "to stress a particular point",
+        "example_sentence": "The speaker emphasized the importance of education.",
+        "context_explain": "Emphasis is used to highlight key points or ideas in communication."
+      },
+      {
+        "word": "clarify",
+        "meaning": "to make a statement or situation less confused and more comprehensible",
+        "alt_meaning": "to explain something in a way that makes it clear",
+        "example_sentence": "Could you clarify what you mean by that?",
+        "context_explain": "Clarification is important in ensuring that information is correctly understood."
+      },
+      {
+        "word": "reflect",
+        "meaning": "to think deeply or carefully about something",
+        "alt_meaning": "to contemplate or consider",
+        "example_sentence": "She took a moment to reflect on the problem before responding.",
+        "context_explain": "Reflection involves examining one's thoughts or experiences to gain insight."
+      },
+      {
+        "word": "distinguish",
+        "meaning": "to recognize or treat as different",
+        "alt_meaning": "to perceive or point out a difference",
+        "example_sentence": "It's important to distinguish between the two theories.",
+        "context_explain": "Distinguishing is key in analysis and understanding differences."
+      },
+      {
+        "word": "assess",
+        "meaning": "to evaluate or estimate the nature, ability, or quality of something",
+        "alt_meaning": "to appraise or judge",
+        "example_sentence": "The committee will assess the project's feasibility.",
+        "context_explain": "Assessment is crucial in making informed judgments and decisions."
+      },
+      {
+        "word": "correlate",
+        "meaning": "to have a mutual relationship or connection",
+        "alt_meaning": "to show or establish the relationship between two items",
+        "example_sentence": "The study found that stress levels correlate with lack of sleep.",
+        "context_explain": "Correlation is used to identify relationships between variables or factors."
+      },
+      {
+        "word": "articulate",
+        "meaning": "to express an idea or feeling fluently and coherently",
+        "alt_meaning": "to put into words",
+        "example_sentence": "She was able to articulate her thoughts clearly.",
+        "context_explain": "Articulation is vital in effectively communicating ideas and arguments."
+      },
+      {
+        "word": "illustrate",
+        "meaning": "to clarify a point by giving examples",
+        "alt_meaning": "to depict or make clear",
+        "example_sentence": "The teacher illustrated the concept with a real-world example.",
+        "context_explain": "Illustration helps in understanding by providing concrete examples or explanations."
+      },
+      {
+        "word": "hypothesize",
+        "meaning": "to propose a hypothesis",
+        "alt_meaning": "to make an educated guess based on evidence",
+        "example_sentence": "Researchers hypothesize that the new drug will be effective.",
+        "context_explain": "Hypothesizing is an essential part of scientific and logical reasoning."
+      },
+      {
+        "word": "attribute",
+        "meaning": "to regard something as being caused by someone or something",
+        "alt_meaning": "to ascribe a work or remark to someone",
+        "example_sentence": "She attributes her success to hard work and dedication.",
+        "context_explain": "Attributing involves identifying causes or sources of actions or events."
+      }
+    ],
+    "venice": {
+      "time": "5분",
+      "theme": "SSOT Words",
+      "content": "Review Games"
+    },
+    "wordLearn": {
+      "time": "8분",
+      "content": "Learn basic meanings"
+    },
+    "wordTest": {
+      "questionsCount": 12,
+      "questions": [
+        {
+          "type": "meaning_choice",
+          "question": "What does 'analyze' mean?",
+          "choices": [
+            "to paint",
+            "to examine in detail",
+            "to jump",
+            "to sing"
+          ],
+          "answer": "to examine in detail"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'interpret' mean?",
+          "choices": [
+            "to ignore",
+            "to explain the meaning",
+            "to climb",
+            "to paint"
+          ],
+          "answer": "to explain the meaning"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'evaluate' mean?",
+          "choices": [
+            "to judge the worth",
+            "to swim",
+            "to fly",
+            "to sleep"
+          ],
+          "answer": "to judge the worth"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'predict' mean?",
+          "choices": [
+            "to dance",
+            "to forecast future events",
+            "to eat",
+            "to smile"
+          ],
+          "answer": "to forecast future events"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'illustrate' mean?",
+          "choices": [
+            "to confuse",
+            "to explain with examples",
+            "to run",
+            "to cook"
+          ],
+          "answer": "to explain with examples"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'justify' mean?",
+          "choices": [
+            "to prove right",
+            "to hide",
+            "to laugh",
+            "to read"
+          ],
+          "answer": "to prove right"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'synthesize' mean?",
+          "choices": [
+            "to destroy",
+            "to combine ideas",
+            "to drive",
+            "to jump"
+          ],
+          "answer": "to combine ideas"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'differentiate' mean?",
+          "choices": [
+            "to distinguish",
+            "to sing",
+            "to cry",
+            "to sit"
+          ],
+          "answer": "to distinguish"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'infer' mean?",
+          "choices": [
+            "to conclude from evidence",
+            "to run",
+            "to swim",
+            "to sleep"
+          ],
+          "answer": "to conclude from evidence"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'summarize' mean?",
+          "choices": [
+            "to make a sandwich",
+            "to give a brief statement",
+            "to walk",
+            "to fly"
+          ],
+          "answer": "to give a brief statement"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'determine' mean?",
+          "choices": [
+            "to establish exactness",
+            "to jump",
+            "to eat",
+            "to hide"
+          ],
+          "answer": "to establish exactness"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'emphasize' mean?",
+          "choices": [
+            "to stress importance",
+            "to skip",
+            "to climb",
+            "to whisper"
+          ],
+          "answer": "to stress importance"
+        }
+      ],
+      "testType": "meaning_choice"
+    }
+  },
+  "homework": {
+    "title": "기초/핵심 과제",
+    "items": [
+      {
+        "type": "reading",
+        "title": "6개 지문 풀이 분석"
+      },
+      {
+        "type": "listening",
+        "title": "6개 듣기 실전 딕테이션"
+      },
+      {
+        "type": "vocab",
+        "title": "15개 단어 완벽 암기"
+      }
+    ]
+  }
+}

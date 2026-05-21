@@ -1,0 +1,38 @@
+[
+  {
+    "id": "[S.S.S note]_03.급수(2)_초급단계(20)_도형과급수_p3_01",
+    "source_file": "[S.S.S note]_03.급수(2)_초급단계(20)_도형과급수",
+    "source_page": 3,
+    "section_index": "01",
+    "section_title": "급수와 도형",
+    "card_index": "01",
+    "card_title": "급수와 도형의 개념",
+    "y_start": 343,
+    "y_end": 731,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[S.S.S note]_03.급수(2)_초급단계(20)_도형과급수_p3_02",
+    "source_file": "[S.S.S note]_03.급수(2)_초급단계(20)_도형과급수",
+    "source_page": 3,
+    "section_index": "01",
+    "section_title": "급수와 도형",
+    "card_index": "02",
+    "card_title": "공비 구하기",
+    "y_start": 731,
+    "y_end": 1602,
+    "file_png": "card_02_p3.webp"
+  },
+  {
+    "id": "[S.S.S note]_03.급수(2)_초급단계(20)_도형과급수_p6_03",
+    "source_file": "[S.S.S note]_03.급수(2)_초급단계(20)_도형과급수",
+    "source_page": 6,
+    "section_index": "01",
+    "section_title": "급수와 도형",
+    "card_index": "03",
+    "card_title": "도형 문제를 풀기 위한 기본",
+    "y_start": 251,
+    "y_end": 1602,
+    "file_png": "card_03_p6.webp"
+  }
+]

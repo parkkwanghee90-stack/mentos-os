@@ -1,0 +1,26 @@
+[
+  {
+    "id": "[S.S.S note]_07-3 aX+b의 성질(11)[QR]_p3_01",
+    "source_file": "[S.S.S note]_07-3 aX+b의 성질(11)[QR]",
+    "source_page": 3,
+    "section_index": "03",
+    "section_title": "aX+b 의 평균 분산",
+    "card_index": "01",
+    "card_title": "aX+b 의 평균 분산 표준편차",
+    "y_start": 483,
+    "y_end": 1602,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[S.S.S note]_07-3 aX+b의 성질(11)[QR]_p5_02",
+    "source_file": "[S.S.S note]_07-3 aX+b의 성질(11)[QR]",
+    "source_page": 5,
+    "section_index": "03",
+    "section_title": "aX+b 의 평균 분산",
+    "card_index": "02",
+    "card_title": "확률변수 X 의 표준화",
+    "y_start": 392,
+    "y_end": 1602,
+    "file_png": "card_02_p5.webp"
+  }
+]

@@ -1,0 +1,570 @@
+{
+  "teacherId": "h_eng2",
+  "round": 2,
+  "title": "SSOT Track: h_eng2 Week 2 Lesson 2",
+  "targetGrades": [
+    "고1",
+    "고2"
+  ],
+  "targetRanks": [
+    "1~2등급"
+  ],
+  "reading": {
+    "passageCount": 7,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "Cognitive dissonance, a psychological phenomenon where individuals experience discomfort due to conflicting beliefs, significantly impacts decision-making processes. Consider a scenario where a person values environmental conservation yet drives a fuel-inefficient vehicle. To alleviate the dissonance, they might rationalize their behavior by emphasizing the car’s safety features. However, this rationalization often perpetuates a cycle of justifications rather than prompting behavioral change. Ultimately, understanding this concept is crucial as it highlights the inherent complexities of human rationality.",
+        "teachPoint": "Understanding the concept of cognitive dissonance and its implications on decision-making.",
+        "question": "What is the underlying reason for the individual's rationalization in the given scenario? ① Their genuine concern for safety. ② A desire to reduce guilt. ③ Lack of awareness about environmental issues. ④ Influence from peers. ⑤ Economic constraints.",
+        "questionType": "빈칸 추론",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_2",
+        "text": "In evolutionary biology, the concept of kin selection explains altruistic behavior towards related individuals. An example is seen in social insects like bees, where workers sacrifice their reproductive potential for the hive's benefit. This behavior ensures that genes shared with the queen are propagated. However, kin selection doesn't account for altruism towards non-relatives, prompting the exploration of reciprocal altruism. Thus, while kin selection provides a foundational understanding, it necessitates integration with broader evolutionary theories.",
+        "teachPoint": "Exploring the limitations of kin selection in explaining altruistic behavior.",
+        "question": "What does the concept of kin selection fail to fully explain? ① Cooperative behavior in bees. ② Altruistic actions toward unrelated individuals. ③ The propagation of genetic material. ④ Social structures in insects. ⑤ Genetic mutations.",
+        "questionType": "빈칸 추론",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_3",
+        "text": "Epistemology, the study of knowledge, questions the nature and scope of human understanding. For instance, the Gettier problem challenges the traditional definition of knowledge as justified true belief. By presenting scenarios where such conditions are met, yet knowledge seems absent, it unsettles foundational epistemic assumptions. On the other hand, pragmatism suggests knowledge is validated by practical consequences. Therefore, epistemology remains a dynamic field, continuously shaped by new philosophical inquiries.",
+        "teachPoint": "Understanding the evolving nature of epistemology through the examination of the Gettier problem.",
+        "question": "Summarize the challenge posed by the Gettier problem to traditional epistemic assumptions.",
+        "questionType": "주관식",
+        "format": "서술형"
+      },
+      {
+        "id": "Passage_4",
+        "text": "Behavioral economics integrates psychological insights into economic theory, redefining rationality assumptions. An example is the endowment effect, where individuals ascribe higher value to owned items. Unlike traditional economic models which assume consistent preferences, this effect reveals a bias towards loss aversion. However, it complicates market predictions as emotional factors heavily influence decisions. Thus, acknowledging these biases is vital for creating more accurate economic models.",
+        "teachPoint": "Examining the influence of psychological factors on economic decision-making.",
+        "question": "What does the endowment effect reveal about traditional economic assumptions? ① They accurately predict market behaviors. ② They overlook emotional influences. ③ They are based on loss aversion. ④ They account for irrational behaviors. ⑤ They integrate psychological insights.",
+        "questionType": "빈칸 추론",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_5",
+        "text": "Quantum mechanics fundamentally challenges classical conceptions of determinism with its probabilistic nature. In experiments like Schrödinger's cat, superposition illustrates the coexistence of multiple states until observation. This paradox contrasts with deterministic interpretations where outcomes are pre-determined. Consequently, quantum mechanics introduces profound philosophical implications, questioning the very fabric of reality and the limits of human perception.",
+        "teachPoint": "Understanding the implications of quantum mechanics on determinism.",
+        "question": "Where should the following sentence be inserted? 'Such uncertainties force a reevaluation of philosophical stances on reality.'",
+        "questionType": "문장 삽입",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_6",
+        "text": "Neuroplasticity illustrates the brain's remarkable ability to reorganize itself by forming new neural connections. This adaptability is crucial during learning processes, where repeated experiences forge stronger synaptic pathways. Conversely, it also underscores the potential for maladaptive changes following trauma or negative experiences. Understanding this duality is essential in therapeutic contexts, emphasizing the necessity for positive reinforcement in rehabilitation settings.",
+        "teachPoint": "Analyzing the dual nature of neuroplasticity in cognitive processes.",
+        "question": "Arrange the sentences to best convey the progression of ideas about neuroplasticity. ① Neuroplasticity allows the brain to adapt. ② Repetition strengthens synaptic pathways. ③ Maladaptive changes can occur after trauma. ④ Positive reinforcement aids rehabilitation. ⑤ It is pivotal during learning.",
+        "questionType": "단락 순서",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_7",
+        "text": "Emergent properties refer to unexpected phenomena that arise from complex systems, transcending individual component functions. For instance, consciousness cannot be fully understood by merely analyzing neuronal activity. This complexity presents a philosophical challenge, as it questions reductionist approaches typically employed in scientific inquiry. Awareness of emergent properties urges a holistic perspective, acknowledging that systems may exhibit behaviors irreducible to their parts.",
+        "teachPoint": "Exploring the philosophical implications of emergent properties in complex systems.",
+        "question": "Explain why emergent properties challenge reductionist scientific views.",
+        "questionType": "빈칸 혹은 단답형 이유 서술",
+        "format": "주관식"
+      }
+    ],
+    "teachPoints": [
+      "Understanding the concept of cognitive dissonance and its implications on decision-making.",
+      "Exploring the limitations of kin selection in explaining altruistic behavior.",
+      "Understanding the evolving nature of epistemology through the examination of the Gettier problem.",
+      "Examining the influence of psychological factors on economic decision-making.",
+      "Understanding the implications of quantum mechanics on determinism.",
+      "Analyzing the dual nature of neuroplasticity in cognitive processes.",
+      "Exploring the philosophical implications of emergent properties in complex systems."
+    ],
+    "questions": [
+      "What is the underlying reason for the individual's rationalization in the given scenario? ① Their genuine concern for safety. ② A desire to reduce guilt. ③ Lack of awareness about environmental issues. ④ Influence from peers. ⑤ Economic constraints.",
+      "What does the concept of kin selection fail to fully explain? ① Cooperative behavior in bees. ② Altruistic actions toward unrelated individuals. ③ The propagation of genetic material. ④ Social structures in insects. ⑤ Genetic mutations.",
+      "Summarize the challenge posed by the Gettier problem to traditional epistemic assumptions.",
+      "What does the endowment effect reveal about traditional economic assumptions? ① They accurately predict market behaviors. ② They overlook emotional influences. ③ They are based on loss aversion. ④ They account for irrational behaviors. ⑤ They integrate psychological insights.",
+      "Where should the following sentence be inserted? 'Such uncertainties force a reevaluation of philosophical stances on reality.'",
+      "Arrange the sentences to best convey the progression of ideas about neuroplasticity. ① Neuroplasticity allows the brain to adapt. ② Repetition strengthens synaptic pathways. ③ Maladaptive changes can occur after trauma. ④ Positive reinforcement aids rehabilitation. ⑤ It is pivotal during learning.",
+      "Explain why emergent properties challenge reductionist scientific views."
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "script": [
+          "A: Hey, are you going to the concert this weekend?",
+          "B: I'm not sure yet. I heard it's going to be really crowded.",
+          "A: Yeah, but the band is amazing live. You shouldn't miss it.",
+          "B: True, but I also have a lot of work to catch up on.",
+          "A: What if you finish your work beforehand?",
+          "B: That could work. I'll try to get everything done by Friday."
+        ],
+        "question": "What are the speakers mainly discussing?",
+        "choices": [
+          "A) A work project deadline",
+          "B) Plans for the weekend",
+          "C) A band they both dislike",
+          "D) A recent concert they attended",
+          "E) The crowd size at events"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Did you see the new movie that came out last week?",
+          "B: No, I haven't had the chance. Was it any good?",
+          "A: It was fantastic! The storyline was so gripping.",
+          "B: That's great to hear. I love movies with good plots.",
+          "A: You should definitely watch it. Maybe we can go together?",
+          "B: Sure, let's plan for this weekend then."
+        ],
+        "question": "What are the speakers planning to do?",
+        "choices": [
+          "A) Read a book together",
+          "B) Watch a new movie",
+          "C) Attend a film festival",
+          "D) Go on a weekend trip",
+          "E) Write a movie script"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Have you finished the report for the meeting?",
+          "B: I'm almost done. Just need to add a few more details.",
+          "A: Do you need any help with it?",
+          "B: That would be great. Could you review the financial section?",
+          "A: Sure, I'll take a look and make some notes.",
+          "B: Thanks, that will really help me wrap things up."
+        ],
+        "question": "What is B's current task?",
+        "choices": [
+          "A) Finishing a presentation",
+          "B) Reviewing a financial report",
+          "C) Completing a meeting report",
+          "D) Preparing meeting notes",
+          "E) Writing a summary"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: How was your vacation to the mountains?",
+          "B: It was incredible! The views were breathtaking.",
+          "A: Did you go hiking?",
+          "B: Yes, every day. The trails were challenging but fun.",
+          "A: Sounds like a perfect getaway.",
+          "B: It really was. I'd love to go back next year."
+        ],
+        "question": "What activity did B enjoy during the vacation?",
+        "choices": [
+          "A) Skiing",
+          "B) Rock climbing",
+          "C) Hiking",
+          "D) Swimming",
+          "E) Camping"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: I heard you got a new job. Congratulations!",
+          "B: Thank you! I'm really excited about it.",
+          "A: What will you be doing?",
+          "B: I'll be working as a project manager for a tech company.",
+          "A: That sounds like a great opportunity.",
+          "B: It is, and I'm looking forward to the challenges ahead."
+        ],
+        "question": "What is B's new job role?",
+        "choices": [
+          "A) Software developer",
+          "B) Project assistant",
+          "C) Marketing coordinator",
+          "D) Project manager",
+          "E) Business analyst"
+        ],
+        "answer": "D"
+      },
+      {
+        "script": [
+          "A: Have you decided on a place for dinner tonight?",
+          "B: Not yet. Do you have any suggestions?",
+          "A: How about trying that new Italian restaurant?",
+          "B: I've heard good things about it. Let's give it a try.",
+          "A: Great! I'll make a reservation for 7 PM.",
+          "B: Sounds perfect. I'm looking forward to it."
+        ],
+        "question": "Where do the speakers plan to have dinner?",
+        "choices": [
+          "A) At home",
+          "B) At a friend's house",
+          "C) At an Italian restaurant",
+          "D) At a fast-food place",
+          "E) At a steakhouse"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: Have you heard about the new policy at work?",
+          "B: No, what's it about?",
+          "A: It's about the flexible working hours. We can start earlier or later now.",
+          "B: That's great news! It will really help with my commute.",
+          "A: Definitely, and it means we can manage our time better.",
+          "B: I agree. This policy is a positive change."
+        ],
+        "question": "What is the new policy about?",
+        "choices": [
+          "A) Dress code",
+          "B) Flexible working hours",
+          "C) Remote work",
+          "D) Salary adjustments",
+          "E) Office location"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Can you help me with my math homework?",
+          "B: Sure, what topic are you working on?",
+          "A: It's about quadratic equations.",
+          "B: I remember that. Let's go through it step by step.",
+          "A: Thanks, I always get confused by them.",
+          "B: Don't worry. Once you understand the process, it's much easier."
+        ],
+        "question": "What subject is A needing help with?",
+        "choices": [
+          "A) History",
+          "B) Science",
+          "C) Math",
+          "D) English",
+          "E) Geography"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: How's your new apartment?",
+          "B: It's great! I love the location and the view.",
+          "A: Do you have any plans for decorating?",
+          "B: Yes, I'm thinking of adding some plants and new furniture.",
+          "A: That sounds nice. Plants can really liven up a space.",
+          "B: I agree. They also make the air feel fresher."
+        ],
+        "question": "What does B plan to add to the apartment?",
+        "choices": [
+          "A) A home theater system",
+          "B) New curtains",
+          "C) Plants and furniture",
+          "D) A kitchen island",
+          "E) A carpet"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: Did you finish reading the book I lent you?",
+          "B: Yes, I finished it last night. It was amazing!",
+          "A: I'm glad you liked it. What was your favorite part?",
+          "B: I loved the twist at the end. It was unexpected.",
+          "A: I know, right? The author really knows how to keep readers hooked.",
+          "B: I couldn't agree more. Do you have any other recommendations?"
+        ],
+        "question": "What did B think about the book?",
+        "choices": [
+          "A) B found it boring",
+          "B) B is yet to finish it",
+          "C) B thought it was amazing",
+          "D) B disliked the ending",
+          "E) B didn't find it interesting"
+        ],
+        "answer": "C"
+      }
+    ],
+    "timeline": [
+      "[0~3m] AudioItem_1",
+      "[3~6m] AudioItem_2",
+      "[6~9m] AudioItem_3",
+      "[9~12m] AudioItem_4",
+      "[12~15m] AudioItem_5",
+      "[15~18m] AudioItem_6",
+      "[18~21m] AudioItem_7",
+      "[21~24m] AudioItem_8",
+      "[24~27m] AudioItem_9",
+      "[27~30m] AudioItem_10"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "maintain",
+        "meaning": "to keep something in good condition",
+        "alt_meaning": "to continue to have or do something",
+        "example_sentence": "She maintains her car very well.",
+        "context_explain": "In CSAT, 'maintain' is often used in passages related to habits or conditions that need to be preserved."
+      },
+      {
+        "word": "affect",
+        "meaning": "to influence or make a change in something",
+        "alt_meaning": "to have an emotional impact on someone",
+        "example_sentence": "The news deeply affected her emotions.",
+        "context_explain": "This word is frequently used in contexts discussing change or influence."
+      },
+      {
+        "word": "approach",
+        "meaning": "a way of dealing with something",
+        "alt_meaning": "to come near or nearer to something",
+        "example_sentence": "Her approach to solving the problem was effective.",
+        "context_explain": "In CSAT, 'approach' is often seen in problem-solving or strategy contexts."
+      },
+      {
+        "word": "respond",
+        "meaning": "to reply or react to something",
+        "alt_meaning": "to show a reaction to a stimulus",
+        "example_sentence": "He responded to the email promptly.",
+        "context_explain": "Commonly used in communication and reaction scenarios."
+      },
+      {
+        "word": "consider",
+        "meaning": "to think about something carefully",
+        "alt_meaning": "to regard someone or something in a specific way",
+        "example_sentence": "Consider all the options before making a decision.",
+        "context_explain": "Often used when weighing options or making decisions."
+      },
+      {
+        "word": "require",
+        "meaning": "to need something",
+        "alt_meaning": "to make it necessary for someone to do something",
+        "example_sentence": "The project requires careful planning.",
+        "context_explain": "Seen in contexts demanding certain actions or conditions."
+      },
+      {
+        "word": "involve",
+        "meaning": "to include someone or something in an activity",
+        "alt_meaning": "to make someone participate in something",
+        "example_sentence": "The experiment involves several steps.",
+        "context_explain": "Typically used when detailing processes or steps."
+      },
+      {
+        "word": "establish",
+        "meaning": "to set up or create something",
+        "alt_meaning": "to confirm or prove something",
+        "example_sentence": "The company was established in 1990.",
+        "context_explain": "Used in contexts involving creation or confirmation."
+      },
+      {
+        "word": "indicate",
+        "meaning": "to show or point out something",
+        "alt_meaning": "to be a sign of something",
+        "example_sentence": "The results indicate a need for change.",
+        "context_explain": "Commonly used in discussions about evidence or signs."
+      },
+      {
+        "word": "achieve",
+        "meaning": "to successfully complete something",
+        "alt_meaning": "to reach a desired goal or result",
+        "example_sentence": "She achieved her dream of becoming a doctor.",
+        "context_explain": "Often seen in contexts discussing goals or success."
+      },
+      {
+        "word": "analyze",
+        "meaning": "to examine something in detail",
+        "alt_meaning": "to break down into components for study",
+        "example_sentence": "The scientist analyzed the data carefully.",
+        "context_explain": "Frequently used in scientific and logical contexts."
+      },
+      {
+        "word": "assume",
+        "meaning": "to take for granted without proof",
+        "alt_meaning": "to suppose something is true",
+        "example_sentence": "I assumed he was coming with us.",
+        "context_explain": "Used when discussing beliefs or expectations without evidence."
+      },
+      {
+        "word": "contribute",
+        "meaning": "to give something in order to help achieve something",
+        "alt_meaning": "to play a part in something",
+        "example_sentence": "Everyone contributed to the success of the project.",
+        "context_explain": "Seen in contexts involving teamwork or shared efforts."
+      },
+      {
+        "word": "create",
+        "meaning": "to bring something into existence",
+        "alt_meaning": "to make something new",
+        "example_sentence": "The artist created a beautiful painting.",
+        "context_explain": "Common in artistic or innovative contexts."
+      },
+      {
+        "word": "define",
+        "meaning": "to explain the meaning of something",
+        "alt_meaning": "to determine the boundaries or extent of something",
+        "example_sentence": "The dictionary defines the word clearly.",
+        "context_explain": "Used in contexts involving explanation or clarification."
+      },
+      {
+        "word": "ensure",
+        "meaning": "to make sure or certain",
+        "alt_meaning": "to guarantee something",
+        "example_sentence": "Please ensure that all doors are locked.",
+        "context_explain": "Commonly used to discuss precautions or guarantees."
+      },
+      {
+        "word": "identify",
+        "meaning": "to recognize or name someone or something",
+        "alt_meaning": "to ascertain the origin or nature of something",
+        "example_sentence": "The witness identified the suspect in the lineup.",
+        "context_explain": "Used in contexts involving recognition or discovery."
+      },
+      {
+        "word": "interpret",
+        "meaning": "to explain the meaning of something",
+        "alt_meaning": "to understand something in a particular way",
+        "example_sentence": "She interpreted the poem beautifully.",
+        "context_explain": "Seen in contexts involving understanding or explanation of information."
+      }
+    ],
+    "venice": {
+      "time": "5분",
+      "theme": "SSOT Words",
+      "content": "Review Games"
+    },
+    "wordLearn": {
+      "time": "8분",
+      "content": "Learn basic meanings"
+    },
+    "wordTest": {
+      "questionsCount": 10,
+      "questions": [
+        {
+          "type": "meaning_choice",
+          "question": "What does the word 'maintain' mean?",
+          "choices": [
+            "to destroy",
+            "to ignore",
+            "to keep something in good condition",
+            "to alter"
+          ],
+          "answer": "to keep something in good condition"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'affect' mean in the context of emotions?",
+          "choices": [
+            "to change physically",
+            "to influence",
+            "to remain the same",
+            "to forget"
+          ],
+          "answer": "to influence"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "In problem-solving, what does 'approach' refer to?",
+          "choices": [
+            "a method",
+            "a conclusion",
+            "an error",
+            "a decision"
+          ],
+          "answer": "a method"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'respond' mean in communication?",
+          "choices": [
+            "to ignore",
+            "to reply",
+            "to question",
+            "to reject"
+          ],
+          "answer": "to reply"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does it mean to 'consider' something?",
+          "choices": [
+            "to ignore it",
+            "to think about it carefully",
+            "to dismiss it",
+            "to forget it"
+          ],
+          "answer": "to think about it carefully"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "In the context of needs, what does 'require' mean?",
+          "choices": [
+            "to avoid",
+            "to need",
+            "to reject",
+            "to forget"
+          ],
+          "answer": "to need"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'involve' mean in a process?",
+          "choices": [
+            "to exclude",
+            "to include",
+            "to ignore",
+            "to simplify"
+          ],
+          "answer": "to include"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'establish' mean when starting a company?",
+          "choices": [
+            "to destroy",
+            "to close",
+            "to set up",
+            "to ignore"
+          ],
+          "answer": "to set up"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'indicate' mean in terms of a sign?",
+          "choices": [
+            "to hide",
+            "to obscure",
+            "to show",
+            "to confuse"
+          ],
+          "answer": "to show"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'achieve' mean in the context of goals?",
+          "choices": [
+            "to attempt",
+            "to fail",
+            "to attain",
+            "to avoid"
+          ],
+          "answer": "to attain"
+        }
+      ],
+      "testType": "meaning_choice"
+    }
+  },
+  "homework": {
+    "title": "기초/핵심 과제",
+    "items": [
+      {
+        "type": "reading",
+        "title": "7개 지문 풀이 분석"
+      },
+      {
+        "type": "listening",
+        "title": "7개 듣기 실전 딕테이션"
+      },
+      {
+        "type": "vocab",
+        "title": "20개 단어 완벽 암기"
+      }
+    ]
+  }
+}

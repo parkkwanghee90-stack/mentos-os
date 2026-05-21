@@ -1,0 +1,651 @@
+{
+  "teacherId": "h_eng5",
+  "round": 1,
+  "title": "Curriculum Mode for 4~5등급",
+  "targetGrades": [
+    "고3"
+  ],
+  "targetRanks": [
+    "4~5등급"
+  ],
+  "reading": {
+    "passageCount": 5,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "Dear John, I hope this message finds you well. I wanted to remind you about our meeting scheduled for Thursday at 3 PM. Please let me know if the timing works for you. Looking forward to discussing our project progress. Best regards, Sarah",
+        "teachPoint": "Understanding and responding to formal emails.",
+        "question": "What is the purpose of Sarah's email to John?"
+      },
+      {
+        "id": "Passage_2",
+        "text": "Cleaning your room regularly is essential. Start by organizing your desk and putting away any loose papers. Always make your bed as it can make the entire room look tidier. Dust the surfaces and vacuum the floor to maintain cleanliness. This routine will help create a comfortable and inviting space.",
+        "teachPoint": "Following simple task instructions for personal organization.",
+        "question": "What are the steps mentioned for cleaning your room?"
+      },
+      {
+        "id": "Passage_3",
+        "text": "Eating a balanced diet is crucial for maintaining good health. Include a variety of fruits and vegetables in your meals. Don't forget to drink plenty of water throughout the day. Limiting sugar and processed foods can also contribute to better health. Remember, a healthy diet can improve your energy and mood.",
+        "teachPoint": "Recognizing the components of a healthy diet.",
+        "question": "What are some dietary practices mentioned that can improve health?"
+      },
+      {
+        "id": "Passage_4",
+        "text": "Hi Emma, just a quick note to say that the book you recommended is fantastic! I started reading it last night and couldn't put it down. Thank you for suggesting it. Let's talk more about it when we meet next week. Have a great day!",
+        "teachPoint": "Expressing gratitude and sharing experiences through informal messages.",
+        "question": "What is Emma's friend's opinion about the book recommendation?"
+      },
+      {
+        "id": "Passage_5",
+        "text": "Exercise is an important part of daily life. It helps in maintaining physical fitness and managing stress. You can start with simple activities like walking or cycling. Consistency is key, so try to exercise at least three times a week. Over time, you may notice improvements in your strength and endurance.",
+        "teachPoint": "Understanding the benefits of regular exercise.",
+        "question": "What are some benefits of regular exercise mentioned in the passage?"
+      }
+    ],
+    "teachPoints": [
+      "Understanding and responding to formal emails.",
+      "Following simple task instructions for personal organization.",
+      "Recognizing the components of a healthy diet.",
+      "Expressing gratitude and sharing experiences through informal messages.",
+      "Understanding the benefits of regular exercise."
+    ],
+    "questions": [
+      "What is the purpose of Sarah's email to John?",
+      "What are the steps mentioned for cleaning your room?",
+      "What are some dietary practices mentioned that can improve health?",
+      "What is Emma's friend's opinion about the book recommendation?",
+      "What are some benefits of regular exercise mentioned in the passage?"
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "script": [
+          "A: Hey, have you finished the report for the meeting tomorrow?",
+          "B: Almost, I just need to add some final touches. How about you?",
+          "A: I’m done with mine, but I’m a bit worried about the presentation.",
+          "B: Why? You always do great presentations.",
+          "A: Thanks, but I feel this one needs more data.",
+          "B: Do you want me to help you with it?",
+          "A: That would be great. Let’s meet after lunch then."
+        ],
+        "question": "What are they mainly discussing?",
+        "choices": [
+          "A. A report they need to submit",
+          "B. A presentation for a meeting",
+          "C. Lunch plans",
+          "D. Final touches on a document",
+          "E. Data analysis methods"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Did you catch the game last night?",
+          "B: No, I missed it. Was it any good?",
+          "A: It was amazing! The final score was really close.",
+          "B: Who won?",
+          "A: Our team did, in the last few seconds!",
+          "B: Sounds thrilling. I should watch the highlights."
+        ],
+        "question": "What are they talking about?",
+        "choices": [
+          "A. A movie they watched",
+          "B. A game they played",
+          "C. A sports game they watched",
+          "D. A concert they attended",
+          "E. A book they read"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: Are you going to the conference next week?",
+          "B: I’m not sure yet. I have a lot of work to finish.",
+          "A: It’s a great opportunity to network.",
+          "B: True, but deadlines are looming.",
+          "A: Maybe you can manage both?",
+          "B: I’ll try. I’ll decide by the end of the week."
+        ],
+        "question": "What is B uncertain about?",
+        "choices": [
+          "A. Attending a conference",
+          "B. Meeting deadlines",
+          "C. Networking opportunities",
+          "D. Managing work",
+          "E. Making a decision"
+        ],
+        "answer": "A"
+      },
+      {
+        "script": [
+          "A: Have you tried the new café that opened downtown?",
+          "B: Not yet. Is it any good?",
+          "A: I went there yesterday. The coffee is excellent.",
+          "B: How’s the atmosphere?",
+          "A: It’s cozy and perfect for reading a book.",
+          "B: I’ll check it out this weekend."
+        ],
+        "question": "What is being discussed?",
+        "choices": [
+          "A. A new restaurant",
+          "B. A new café",
+          "C. A book club",
+          "D. A weekend plan",
+          "E. A reading habit"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Do you have any plans for the holidays?",
+          "B: I’m thinking of visiting my family.",
+          "A: That sounds nice. Are they far away?",
+          "B: Not too far, just a couple of hours by train.",
+          "A: That’s convenient. I’m sure they’ll be happy to see you.",
+          "B: I hope so. It’s been a while since my last visit."
+        ],
+        "question": "What is B planning to do for the holidays?",
+        "choices": [
+          "A. Travel abroad",
+          "B. Visit family",
+          "C. Stay at home",
+          "D. Go to a festival",
+          "E. Host a party"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: How’s your new job going?",
+          "B: It’s going well. I’m learning a lot.",
+          "A: That’s great to hear. Any challenges?",
+          "B: The workload is heavier than I expected.",
+          "A: You’ll get used to it with time.",
+          "B: I hope so. I’m trying to manage my time better."
+        ],
+        "question": "What is B finding challenging?",
+        "choices": [
+          "A. Learning new skills",
+          "B. Managing the workload",
+          "C. Meeting new colleagues",
+          "D. Finding a new job",
+          "E. Managing time off"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: I heard you’re moving to a new apartment. Is that true?",
+          "B: Yes, I’m moving this weekend.",
+          "A: Do you need any help with the move?",
+          "B: That would be great, actually.",
+          "A: Just let me know what time, and I’ll be there.",
+          "B: Thank you so much. I really appreciate it."
+        ],
+        "question": "What is B planning to do this weekend?",
+        "choices": [
+          "A. Go on a trip",
+          "B. Move to a new apartment",
+          "C. Host a party",
+          "D. Start a new job",
+          "E. Visit a friend"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Have you decided on a major yet?",
+          "B: I’m still considering a few options.",
+          "A: What are you leaning towards?",
+          "B: Maybe psychology or sociology.",
+          "A: Both sound interesting. What about your minor?",
+          "B: I’m thinking of minoring in history."
+        ],
+        "question": "What is B considering as a major?",
+        "choices": [
+          "A. History",
+          "B. Psychology",
+          "C. Sociology",
+          "D. Both psychology and sociology",
+          "E. None of the above"
+        ],
+        "answer": "D"
+      },
+      {
+        "script": [
+          "A: Did you manage to finish the book I lent you?",
+          "B: Yes, I finished it last night.",
+          "A: What did you think of it?",
+          "B: It was fascinating, especially the plot twist at the end.",
+          "A: I know, right? It caught me by surprise too.",
+          "B: Thanks for recommending it. I really enjoyed it."
+        ],
+        "question": "What did B think of the book?",
+        "choices": [
+          "A. It was boring",
+          "B. It was confusing",
+          "C. It was fascinating",
+          "D. It was too long",
+          "E. It was predictable"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: I’m thinking of adopting a pet. Any advice?",
+          "B: That’s great! Do you know what kind of pet you want?",
+          "A: I’m considering a dog or a cat.",
+          "B: Both are wonderful choices. Do you have time for a dog?",
+          "A: I think I can manage. I’m leaning more towards a dog.",
+          "B: Just make sure to do some research on breeds."
+        ],
+        "question": "What is A thinking of doing?",
+        "choices": [
+          "A. Visiting a pet store",
+          "B. Adopting a pet",
+          "C. Researching pet breeds",
+          "D. Getting a cat",
+          "E. Getting a dog"
+        ],
+        "answer": "B"
+      }
+    ],
+    "timeline": [
+      "[0~3m] AudioItem_1",
+      "[3~6m] AudioItem_2",
+      "[6~9m] AudioItem_3",
+      "[9~12m] AudioItem_4",
+      "[12~15m] AudioItem_5",
+      "[15~18m] AudioItem_6",
+      "[18~21m] AudioItem_7",
+      "[21~24m] AudioItem_8",
+      "[24~27m] AudioItem_9",
+      "[27~30m] AudioItem_10"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "derive",
+        "meaning": "to obtain something from a specified source",
+        "alt_meaning": "to deduce or conclude from evidence",
+        "example_sentence": "The scientist was able to derive a formula from the experimental data.",
+        "context_explain": "In a scientific context, deriving often involves using mathematical or logical processes to arrive at a conclusion or result."
+      },
+      {
+        "word": "constrain",
+        "meaning": "to restrict or limit someone or something",
+        "alt_meaning": "to force someone towards a particular course of action",
+        "example_sentence": "The budget constraints limited the project's scope.",
+        "context_explain": "Constraints are often seen in contexts where resources, such as time or money, are limited, affecting the possible outcomes."
+      },
+      {
+        "word": "justify",
+        "meaning": "to show or prove to be right or reasonable",
+        "alt_meaning": "to provide valid reasons or evidence to support a decision or action",
+        "example_sentence": "The manager justified the decision to increase prices by showing the rising costs of production.",
+        "context_explain": "In logical reasoning, justifying involves providing a rationale that makes an argument valid or acceptable."
+      },
+      {
+        "word": "interpret",
+        "meaning": "to explain the meaning of information or actions",
+        "alt_meaning": "to translate orally",
+        "example_sentence": "The historian interpreted the ancient texts to gain insights into the culture.",
+        "context_explain": "Interpretation is crucial in understanding texts, data, or events, allowing us to grasp underlying meanings or intentions."
+      },
+      {
+        "word": "infer",
+        "meaning": "to deduce or conclude from evidence and reasoning rather than from explicit statements",
+        "alt_meaning": "to derive as a conclusion from facts or premises",
+        "example_sentence": "From the data, we can infer the trends in consumer behavior.",
+        "context_explain": "Inference is often used in scientific and logical reasoning where conclusions are drawn based on indirect evidence."
+      },
+      {
+        "word": "approximate",
+        "meaning": "to come close to or be nearly the same as",
+        "alt_meaning": "to estimate or calculate a value close to the actual one",
+        "example_sentence": "The architect needed to approximate the cost of the new building.",
+        "context_explain": "Approximation is used in calculations and measurements where exact values are difficult to obtain."
+      },
+      {
+        "word": "attribute",
+        "meaning": "to regard something as being caused by someone or something",
+        "alt_meaning": "to assign a characteristic or quality to something",
+        "example_sentence": "The success of the project was attributed to the team's dedication.",
+        "context_explain": "Attribution is the process of assigning a cause or reason for an event or outcome."
+      },
+      {
+        "word": "regulate",
+        "meaning": "to control or maintain the rate or speed of a machine or process so that it operates properly",
+        "alt_meaning": "to set or adjust the amount, degree, or rate of something",
+        "example_sentence": "The government regulates the pharmaceutical industry to ensure safety.",
+        "context_explain": "Regulation involves establishing rules or guidelines to ensure orderly and fair operations in various contexts."
+      },
+      {
+        "word": "reinforce",
+        "meaning": "to strengthen or support an object or substance",
+        "alt_meaning": "to make a feeling or idea stronger",
+        "example_sentence": "The teacher used examples to reinforce the lesson's key concepts.",
+        "context_explain": "Reinforcement is common in educational and psychological contexts, aimed at strengthening behaviors or understanding."
+      },
+      {
+        "word": "sustain",
+        "meaning": "to provide with the necessities for life or existence",
+        "alt_meaning": "to support physically or mentally",
+        "example_sentence": "The city's infrastructure was not able to sustain the growing population.",
+        "context_explain": "Sustainability is often discussed in environmental and economic contexts, focusing on maintaining balance over time."
+      },
+      {
+        "word": "facilitate",
+        "meaning": "to make an action or process easy or easier",
+        "alt_meaning": "to assist in the progress of something",
+        "example_sentence": "The new software was designed to facilitate project management.",
+        "context_explain": "Facilitation involves creating conditions or removing obstacles to enable efficient processes or activities."
+      },
+      {
+        "word": "inhibit",
+        "meaning": "to hinder, restrain, or prevent an action or process",
+        "alt_meaning": "to make someone self-conscious and unable to act in a relaxed and natural way",
+        "example_sentence": "The drug inhibits the growth of harmful bacteria.",
+        "context_explain": "Inhibition is often discussed in biological or psychological contexts, where it refers to suppression of functions or actions."
+      },
+      {
+        "word": "compensate",
+        "meaning": "to make up for something unwelcome or unpleasant by exerting an opposite force or effect",
+        "alt_meaning": "to give someone something, typically money, in recognition of loss, suffering, or injury",
+        "example_sentence": "The company had to compensate the workers for overtime work.",
+        "context_explain": "Compensation can involve financial or other means to balance out a deficit, damage, or effort."
+      },
+      {
+        "word": "evaluate",
+        "meaning": "to judge or determine the significance, worth, or quality of something",
+        "alt_meaning": "to form an idea of the amount, number, or value of something",
+        "example_sentence": "The committee will evaluate the proposals based on their feasibility and cost-effectiveness.",
+        "context_explain": "Evaluation is critical in decision-making processes, often involving systematic assessment to guide choices."
+      },
+      {
+        "word": "integrate",
+        "meaning": "to combine one thing with another to form a whole",
+        "alt_meaning": "to bring people or groups with particular characteristics or needs into equal participation in or membership of a social group or institution",
+        "example_sentence": "The software allows users to integrate various functionalities into one platform.",
+        "context_explain": "Integration is key in systems design and social contexts where diverse elements or groups are unified."
+      },
+      {
+        "word": "synthesize",
+        "meaning": "to combine a number of things into a coherent whole",
+        "alt_meaning": "to produce a substance by chemical synthesis",
+        "example_sentence": "The researcher synthesized information from multiple studies to reach a conclusion.",
+        "context_explain": "Synthesis is crucial in research and development, where new insights are formed by merging diverse data or concepts."
+      },
+      {
+        "word": "correlate",
+        "meaning": "to have a mutual relationship or connection, in which one thing affects or depends on another",
+        "alt_meaning": "to show a relationship between two things",
+        "example_sentence": "Studies have shown that high levels of stress correlate with increased risk of health issues.",
+        "context_explain": "Correlation is often used in data analysis and scientific studies to identify relationships between variables."
+      },
+      {
+        "word": "implement",
+        "meaning": "to put a decision, plan, agreement, etc., into effect",
+        "alt_meaning": "to execute a task or function",
+        "example_sentence": "The new policy was implemented to improve workplace safety.",
+        "context_explain": "Implementation involves executing strategies or solutions, transforming plans into action."
+      },
+      {
+        "word": "validate",
+        "meaning": "to check or prove the validity or accuracy of something",
+        "alt_meaning": "to confirm that something is legally or officially acceptable",
+        "example_sentence": "The data was validated through rigorous testing procedures.",
+        "context_explain": "Validation is critical in research and manufacturing to ensure accuracy and compliance with standards."
+      },
+      {
+        "word": "anticipate",
+        "meaning": "to regard as probable; expect or predict",
+        "alt_meaning": "to act as a forerunner or precursor of",
+        "example_sentence": "The team anticipated the challenges and prepared solutions in advance.",
+        "context_explain": "Anticipation plays a vital role in planning and risk management, allowing proactive measures."
+      },
+      {
+        "word": "articulate",
+        "meaning": "to express an idea or feeling fluently and coherently",
+        "alt_meaning": "to pronounce something clearly and distinctly",
+        "example_sentence": "The speaker was able to articulate complex ideas in a way that was easy to understand.",
+        "context_explain": "Articulation is essential in communication, ensuring clarity and understanding in the transmission of information."
+      },
+      {
+        "word": "moderate",
+        "meaning": "to make or become less extreme, intense, or severe",
+        "alt_meaning": "to preside over a discussion or debate",
+        "example_sentence": "The committee worked to moderate the effects of the policy changes on the community.",
+        "context_explain": "Moderation is often applied in contexts requiring balance and control over processes or discussions."
+      },
+      {
+        "word": "assess",
+        "meaning": "to evaluate or estimate the nature, ability, or quality of something",
+        "alt_meaning": "to calculate or determine the amount or value of something",
+        "example_sentence": "The teacher assessed the students' progress through regular quizzes and assignments.",
+        "context_explain": "Assessment is fundamental in educational and professional settings for measuring effectiveness and progress."
+      },
+      {
+        "word": "deduce",
+        "meaning": "to arrive at a fact or a conclusion by reasoning; draw as a logical conclusion",
+        "alt_meaning": "to trace the course or derivation of something",
+        "example_sentence": "From the clues, the detective deduced the identity of the perpetrator.",
+        "context_explain": "Deduction is used in logical reasoning and problem-solving to derive conclusions from available information."
+      },
+      {
+        "word": "speculate",
+        "meaning": "to form a theory or conjecture about a subject without firm evidence",
+        "alt_meaning": "to invest in stocks, property, or other ventures in the hope of gain but with the risk of loss",
+        "example_sentence": "Economists speculate about the future trends of the economy based on current data.",
+        "context_explain": "Speculation involves making educated guesses or predictions, often used in financial and research contexts."
+      },
+      {
+        "word": "accentuate",
+        "meaning": "to make more noticeable or prominent",
+        "alt_meaning": "to emphasize",
+        "example_sentence": "The lighting accentuated the colors in the artwork.",
+        "context_explain": "Accentuating is often used in design and communication to highlight certain features or aspects."
+      }
+    ],
+    "venice": {
+      "time": "5분",
+      "theme": "SSOT Words",
+      "content": "Review Games"
+    },
+    "wordLearn": {
+      "time": "8분",
+      "content": "Learn basic meanings"
+    },
+    "wordTest": {
+      "questionsCount": 15,
+      "questions": [
+        {
+          "type": "meaning_choice",
+          "question": "What does the word 'derive' mean?",
+          "choices": [
+            "to build something",
+            "to obtain from a source",
+            "to destroy",
+            "to invent"
+          ],
+          "answer": "to obtain from a source"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'constrain'?",
+          "choices": [
+            "to free",
+            "to limit",
+            "to expand",
+            "to ignore"
+          ],
+          "answer": "to limit"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Select the correct meaning for 'justify'.",
+          "choices": [
+            "to excuse",
+            "to show to be right",
+            "to deny",
+            "to question"
+          ],
+          "answer": "to show to be right"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'interpret'?",
+          "choices": [
+            "to confuse",
+            "to explain",
+            "to hide",
+            "to delete"
+          ],
+          "answer": "to explain"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Choose the correct meaning of 'infer'.",
+          "choices": [
+            "to imagine",
+            "to deduce",
+            "to forget",
+            "to invent"
+          ],
+          "answer": "to deduce"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'approximate' mean?",
+          "choices": [
+            "to reject",
+            "to come close to",
+            "to finalize",
+            "to skip"
+          ],
+          "answer": "to come close to"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is meant by 'attribute'?",
+          "choices": [
+            "to ignore",
+            "to regard as caused by",
+            "to separate",
+            "to complete"
+          ],
+          "answer": "to regard as caused by"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Select the correct meaning for 'regulate'.",
+          "choices": [
+            "to celebrate",
+            "to control",
+            "to abandon",
+            "to break"
+          ],
+          "answer": "to control"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'reinforce' mean?",
+          "choices": [
+            "to weaken",
+            "to strengthen",
+            "to ignore",
+            "to replace"
+          ],
+          "answer": "to strengthen"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Choose the correct meaning of 'sustain'.",
+          "choices": [
+            "to destroy",
+            "to support",
+            "to reduce",
+            "to forget"
+          ],
+          "answer": "to support"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'facilitate'?",
+          "choices": [
+            "to hinder",
+            "to make easier",
+            "to complicate",
+            "to slow down"
+          ],
+          "answer": "to make easier"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'inhibit' mean?",
+          "choices": [
+            "to promote",
+            "to prevent",
+            "to assist",
+            "to engage"
+          ],
+          "answer": "to prevent"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the correct meaning of 'compensate'?",
+          "choices": [
+            "to penalize",
+            "to make up for",
+            "to ignore",
+            "to dominate"
+          ],
+          "answer": "to make up for"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'evaluate' mean?",
+          "choices": [
+            "to guess",
+            "to judge or determine",
+            "to ignore",
+            "to assume"
+          ],
+          "answer": "to judge or determine"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Select the correct meaning of 'integrate'.",
+          "choices": [
+            "to separate",
+            "to combine",
+            "to destroy",
+            "to overlook"
+          ],
+          "answer": "to combine"
+        }
+      ],
+      "testType": "meaning_choice"
+    }
+  },
+  "homework": {
+    "title": "기초/핵심 과제",
+    "items": [
+      {
+        "type": "reading",
+        "title": "5개 지문 풀이 분석"
+      },
+      {
+        "type": "listening",
+        "title": "6개 듣기 실전 딕테이션"
+      },
+      {
+        "type": "vocab",
+        "title": "10개 단어 완벽 암기"
+      }
+    ]
+  }
+}

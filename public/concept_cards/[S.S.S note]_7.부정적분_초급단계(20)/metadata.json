@@ -1,0 +1,38 @@
+[
+  {
+    "id": "[S.S.S note]_7.부정적분_초급단계(20)_p3_01",
+    "source_file": "[S.S.S note]_7.부정적분_초급단계(20)",
+    "source_page": 3,
+    "section_index": "01",
+    "section_title": "부정적분",
+    "card_index": "01",
+    "card_title": "부정적분의 정의",
+    "y_start": 343,
+    "y_end": 1602,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[S.S.S note]_7.부정적분_초급단계(20)_p4_02",
+    "source_file": "[S.S.S note]_7.부정적분_초급단계(20)",
+    "source_page": 4,
+    "section_index": "01",
+    "section_title": "부정적분",
+    "card_index": "02",
+    "card_title": "부정적분과 미분의 관계",
+    "y_start": 281,
+    "y_end": 1602,
+    "file_png": "card_02_p4.webp"
+  },
+  {
+    "id": "[S.S.S note]_7.부정적분_초급단계(20)_p5_03",
+    "source_file": "[S.S.S note]_7.부정적분_초급단계(20)",
+    "source_page": 5,
+    "section_index": "01",
+    "section_title": "부정적분",
+    "card_index": "03",
+    "card_title": "부정적분의 계산",
+    "y_start": 280,
+    "y_end": 1602,
+    "file_png": "card_03_p5.webp"
+  }
+]

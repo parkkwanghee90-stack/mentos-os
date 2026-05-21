@@ -1,0 +1,539 @@
+{
+  "teacherId": "h_eng5",
+  "round": 2,
+  "title": "Curriculum Mode for 4~5등급",
+  "targetGrades": [
+    "고3"
+  ],
+  "targetRanks": [
+    "4~5등급"
+  ],
+  "reading": {
+    "passageCount": 10,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "The sun was setting over the horizon, painting the sky with hues of orange and pink. Birds were chirping as they flew back to their nests, and a gentle breeze rustled the leaves of the trees. Emily sat on a bench in the park, watching the day slowly turn into night. She found peace in these moments of transition, where the world seemed to pause and take a breath. It reminded her that change was a natural part of life.",
+        "teachPoint": "Descriptive language and imagery",
+        "question": "What is the main theme highlighted in the passage?"
+      },
+      {
+        "id": "Passage_2",
+        "text": "In recent years, the popularity of electric vehicles has surged. Many people are drawn to them because they are environmentally friendly and cost-effective in the long run. Governments worldwide are supporting this shift by providing incentives and building infrastructure for charging stations. However, some challenges still remain, such as the limited range of some models and the higher upfront costs. Despite these hurdles, the future of electric vehicles looks promising.",
+        "teachPoint": "Understanding cause and effect relationships",
+        "question": "What are some reasons for the increasing popularity of electric vehicles?"
+      },
+      {
+        "id": "Passage_3",
+        "text": "The ancient city of Pompeii is a fascinating archaeological site that provides insights into Roman life. Buried under volcanic ash after the eruption of Mount Vesuvius in 79 AD, it was preserved for centuries. Excavations have uncovered streets, homes, and public buildings, offering a glimpse into the past. Researchers have learned about the daily lives of its citizens, their culture, and even the foods they enjoyed. Pompeii remains a powerful reminder of nature's force and human resilience.",
+        "teachPoint": "Historical context and significance",
+        "question": "What can the ruins of Pompeii teach us about ancient Roman life?"
+      },
+      {
+        "id": "Passage_4",
+        "text": "Maria had always been passionate about cooking. From a young age, she watched her grandmother prepare family meals, learning the art of blending flavors and spices. As she grew older, Maria experimented with new recipes and ingredients, always seeking to create something unique. Her dream was to open her own restaurant one day, where she could share her culinary creations with the world. Cooking wasn’t just a hobby for Maria; it was a way of expressing her love and creativity.",
+        "teachPoint": "Personal narrative and ambition",
+        "question": "What inspired Maria’s passion for cooking?"
+      },
+      {
+        "id": "Passage_5",
+        "text": "The concept of time travel has always intrigued scientists and storytellers alike. While it remains a popular theme in science fiction, real-world physics presents significant challenges to its feasibility. According to Einstein's theory of relativity, traveling faster than light could theoretically allow for time travel. However, such speeds are currently beyond our technological capabilities. Moreover, the paradoxes associated with altering past events pose further complications. Despite these challenges, the idea continues to captivate imaginations.",
+        "teachPoint": "Exploration of scientific theories and imagination",
+        "question": "What are some challenges associated with the concept of time travel?"
+      },
+      {
+        "id": "Passage_6",
+        "text": "Wildlife conservation is an essential practice that aims to protect animal species and their habitats. Due to human activities such as deforestation, pollution, and urban sprawl, many species are at risk of extinction. Conservation efforts include creating protected areas, restoring habitats, and enforcing laws against poaching. Educating the public about the importance of biodiversity is also crucial. By understanding the value of each species, people can appreciate the interconnectedness of ecosystems.",
+        "teachPoint": "Discuss the importance of wildlife conservation and its methods.",
+        "question": "What are some human activities that threaten wildlife and how can we mitigate these threats?"
+      },
+      {
+        "id": "Passage_7",
+        "text": "The history of the internet dates back to the 1960s when the first concepts of electronic communication networks were developed. Initially, the internet was a military project known as ARPANET, designed to enable secure communication. Over the decades, it evolved into a global network connecting billions of devices. The introduction of the World Wide Web in the 1990s revolutionized how information is shared and accessed. Today, the internet is an integral part of daily life, influencing how we work, communicate, and entertain ourselves.",
+        "teachPoint": "Explore the evolution of the internet from its inception to modern times.",
+        "question": "How did the introduction of the World Wide Web change the use of the internet?"
+      },
+      {
+        "id": "Passage_8",
+        "text": "Renewable energy sources, such as solar, wind, and hydroelectric power, are becoming increasingly important in the fight against climate change. Unlike fossil fuels, renewable energy is sustainable and has a lower environmental impact. Many countries are investing in these technologies to reduce greenhouse gas emissions and transition to a greener economy. While there are challenges in terms of technology and infrastructure, the long-term benefits of renewable energy are undeniable. It not only helps preserve natural resources but also creates job opportunities in the emerging green sector.",
+        "teachPoint": "Examine the benefits and challenges of transitioning to renewable energy.",
+        "question": "Why is renewable energy considered crucial in combating climate change?"
+      },
+      {
+        "id": "Passage_9",
+        "text": "Learning a new language can be both challenging and rewarding. It opens up opportunities to connect with people from different cultures and enhances cognitive abilities. Studies have shown that bilingual individuals can multitask better and have improved memory and problem-solving skills. Language learning requires dedication, practice, and exposure to the language in various contexts. Whether through formal education, language apps, or immersion experiences, the journey of acquiring a new language can lead to personal and professional growth.",
+        "teachPoint": "Highlight the cognitive and social benefits of learning a new language.",
+        "question": "What are some effective methods for learning a new language, and how do they contribute to language acquisition?"
+      },
+      {
+        "id": "Passage_10",
+        "text": "The art of storytelling has been a vital part of human culture for thousands of years. Stories have the power to entertain, educate, and inspire, often reflecting the values and beliefs of a society. Whether through oral traditions, literature, or modern media, storytelling helps preserve history and convey complex ideas. It also fosters empathy by allowing people to see the world through different perspectives. In today's digital age, storytelling continues to evolve, incorporating new technologies to reach wider audiences.",
+        "teachPoint": "Discuss the role and evolution of storytelling in human society.",
+        "question": "How has storytelling adapted to changes in technology, and why is it still important today?"
+      }
+    ],
+    "teachPoints": [
+      "Descriptive language and imagery",
+      "Understanding cause and effect relationships",
+      "Historical context and significance",
+      "Personal narrative and ambition",
+      "Exploration of scientific theories and imagination",
+      "Discuss the importance of wildlife conservation and its methods.",
+      "Explore the evolution of the internet from its inception to modern times.",
+      "Examine the benefits and challenges of transitioning to renewable energy.",
+      "Highlight the cognitive and social benefits of learning a new language.",
+      "Discuss the role and evolution of storytelling in human society."
+    ],
+    "questions": [
+      "What is the main theme highlighted in the passage?",
+      "What are some reasons for the increasing popularity of electric vehicles?",
+      "What can the ruins of Pompeii teach us about ancient Roman life?",
+      "What inspired Maria’s passion for cooking?",
+      "What are some challenges associated with the concept of time travel?",
+      "What are some human activities that threaten wildlife and how can we mitigate these threats?",
+      "How did the introduction of the World Wide Web change the use of the internet?",
+      "Why is renewable energy considered crucial in combating climate change?",
+      "What are some effective methods for learning a new language, and how do they contribute to language acquisition?",
+      "How has storytelling adapted to changes in technology, and why is it still important today?"
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "id": "AudioItem_1",
+        "script": "M: Hi, Sarah! Have you finished the report for the meeting?\nW: Not yet, Mark. I'm still working on the final section.\nM: Do you need any help with that?\nW: Yes, actually. Could you review the financial data for me?\nM: Sure, I’ll check that. Do you want it by today?\nW: If possible, yes. The meeting is scheduled for tomorrow morning.",
+        "points": "Discussing a work report for an upcoming meeting.",
+        "choices": [
+          "Sarah has completed the report.",
+          "The meeting is today.",
+          "Mark will help with the financial data.",
+          "The meeting is about a project launch.",
+          "Sarah doesn't need any help."
+        ],
+        "answer": "Mark will help with the financial data.",
+        "explanation": "The conversation indicates that Mark offers to review the financial data for Sarah."
+      },
+      {
+        "id": "AudioItem_2",
+        "script": "M: What did you think of the movie we watched last night?\nW: I thought it was quite entertaining, especially the ending.\nM: Really? I found the plot a bit confusing.\nW: I can see why. There were a lot of unexpected twists.\nM: Do you want to watch another movie this weekend?\nW: Sure, let's pick a comedy this time.",
+        "points": "Discussing opinions about a movie they watched.",
+        "choices": [
+          "They both loved the movie.",
+          "They watched a comedy last night.",
+          "They both found the plot confusing.",
+          "They plan to watch another movie.",
+          "They disliked the ending."
+        ],
+        "answer": "They plan to watch another movie.",
+        "explanation": "The conversation ends with them agreeing to watch another movie this weekend."
+      },
+      {
+        "id": "AudioItem_3",
+        "script": "M: Have you heard about the new restaurant downtown?\nW: Yes, I heard it's really popular.\nM: I was thinking we could try it out this weekend.\nW: That sounds great. Do you know what kind of food they serve?\nM: I think it's a mix of Italian and American dishes.\nW: Perfect! I’ve been craving pasta.",
+        "points": "Planning to visit a new restaurant.",
+        "choices": [
+          "The restaurant serves only Italian food.",
+          "They have already visited the restaurant.",
+          "They plan to visit the restaurant this weekend.",
+          "The restaurant is not popular.",
+          "They dislike Italian food."
+        ],
+        "answer": "They plan to visit the restaurant this weekend.",
+        "explanation": "They are discussing trying the new restaurant out during the upcoming weekend."
+      },
+      {
+        "id": "AudioItem_4",
+        "script": "M: How was your trip to the mountains?\nW: It was amazing! The views were breathtaking.\nM: Did you go hiking while you were there?\nW: Yes, we hiked every day. The trails were well-marked and beautiful.\nM: I’d love to see some pictures.\nW: Sure, I'll send them to you later today.",
+        "points": "Discussing a recent mountain trip.",
+        "choices": [
+          "She didn't enjoy the trip.",
+          "She didn't go hiking.",
+          "The trails were difficult to find.",
+          "They hiked every day.",
+          "She will send the pictures next week."
+        ],
+        "answer": "They hiked every day.",
+        "explanation": "The woman mentions that they hiked every day during their trip."
+      },
+      {
+        "id": "AudioItem_5",
+        "script": "M: Did you hear about the art exhibition opening this weekend?\nW: Yes, I’m really excited about it. Are you planning to go?\nM: I am. I’ve heard it features some modern art pieces.\nW: I love modern art! Maybe we can go together.\nM: That sounds like a plan. What time should we meet?\nW: How about 2 PM on Saturday?",
+        "points": "Planning to attend an art exhibition.",
+        "choices": [
+          "The exhibition is next weekend.",
+          "They dislike modern art.",
+          "They plan to go together.",
+          "The exhibition features classical art.",
+          "They will meet at 10 AM."
+        ],
+        "answer": "They plan to go together.",
+        "explanation": "They agree to attend the art exhibition together at 2 PM on Saturday."
+      },
+      {
+        "id": "AudioItem_6",
+        "script": "M: Hi Sarah, have you heard about the new art exhibition downtown?\nW: No, I haven't. What's it about?\nM: It's a collection of modern art pieces from local artists.\nW: That sounds interesting! When is it open?\nM: It's open this weekend from 10 AM to 6 PM.\nW: Great! I'll definitely check it out.",
+        "points": "Discussing an art exhibition.",
+        "choices": [
+          "Music festival",
+          "Art exhibition",
+          "Food market",
+          "Theater play",
+          "Film screening"
+        ],
+        "answer": "Art exhibition",
+        "explanation": "The dialogue is about an art exhibition, as mentioned by the man."
+      },
+      {
+        "id": "AudioItem_7",
+        "script": "W: Have you finished the book I lent you?\nM: Yes, I finished it last night. It was fantastic!\nW: I'm glad you liked it. What was your favorite part?\nM: I really enjoyed the twist at the end.\nW: I thought it was quite unexpected too.\nM: Definitely! It kept me on the edge of my seat.",
+        "points": "Discussing a book.",
+        "choices": [
+          "A movie",
+          "A TV show",
+          "A play",
+          "A book",
+          "A concert"
+        ],
+        "answer": "A book",
+        "explanation": "The conversation revolves around a book the woman lent to the man."
+      },
+      {
+        "id": "AudioItem_8",
+        "script": "M: Did you see the game last night?\nW: Yes, it was intense! I can't believe our team won.\nM: The last-minute goal was incredible.\nW: I know! The striker played really well.\nM: I think they're going to have a great season.\nW: Let's hope they keep up the momentum.",
+        "points": "Discussing a sports game.",
+        "choices": [
+          "A concert",
+          "A sports game",
+          "A play",
+          "A festival",
+          "A movie"
+        ],
+        "answer": "A sports game",
+        "explanation": "The conversation is about a sports game, as indicated by terms like 'goal' and 'striker'."
+      },
+      {
+        "id": "AudioItem_9",
+        "script": "W: Do you have any plans for the weekend?\nM: I'm thinking about going hiking in the mountains.\nW: That sounds fun. Are you going alone?\nM: No, I'm going with a few friends.\nW: Make sure to pack enough water and snacks.\nM: Definitely. I want to be prepared for anything.",
+        "points": "Making weekend plans.",
+        "choices": [
+          "Going to a beach",
+          "Hiking",
+          "Attending a wedding",
+          "Visiting family",
+          "Going shopping"
+        ],
+        "answer": "Hiking",
+        "explanation": "The man mentions going hiking in the mountains, indicating the plan for the weekend."
+      },
+      {
+        "id": "AudioItem_10",
+        "script": "M: What did you think of the movie?\nW: I thought it was amazing, especially the special effects.\nM: The storyline was a bit confusing, though.\nW: True, but the visuals made up for it.\nM: I agree. The director did an excellent job.\nW: I would watch it again just for the action scenes.",
+        "points": "Reviewing a movie.",
+        "choices": [
+          "A concert",
+          "A book",
+          "A movie",
+          "A play",
+          "A documentary"
+        ],
+        "answer": "A movie",
+        "explanation": "The dialogue is about a movie, focusing on the special effects and storyline."
+      }
+    ],
+    "points": [
+      "Discussing a work report for an upcoming meeting.",
+      "Discussing opinions about a movie they watched.",
+      "Planning to visit a new restaurant.",
+      "Discussing a recent mountain trip.",
+      "Planning to attend an art exhibition.",
+      "Discussing an art exhibition.",
+      "Discussing a book.",
+      "Discussing a sports game.",
+      "Making weekend plans.",
+      "Reviewing a movie."
+    ],
+    "timeline": [
+      "[0m] Audio",
+      "[1m] Audio",
+      "[2m] Audio",
+      "[3m] Audio",
+      "[4m] Audio",
+      "[5m] Audio",
+      "[6m] Audio",
+      "[7m] Audio",
+      "[8m] Audio",
+      "[9m] Audio"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "appreciate",
+        "meaning": "to recognize the value of something",
+        "alt_meaning": "to increase in value",
+        "example_sentence": "We need to appreciate the efforts of our team.",
+        "context_explain": "여기서는 팀의 노력을 인식하고 가치를 인정하는 의미로 사용되었습니다."
+      },
+      {
+        "word": "compromise",
+        "meaning": "to settle a dispute by mutual concession",
+        "alt_meaning": "to weaken or reduce in quality",
+        "example_sentence": "They reached a compromise after a long discussion.",
+        "context_explain": "긴 논의 끝에 서로 양보하여 합의를 이루는 의미입니다."
+      },
+      {
+        "word": "address",
+        "meaning": "to deal with or discuss",
+        "alt_meaning": "to speak to an audience",
+        "example_sentence": "The mayor will address the issue at the meeting.",
+        "context_explain": "회의에서 문제를 다루거나 논의한다는 의미로 사용되었습니다."
+      },
+      {
+        "word": "subject",
+        "meaning": "the topic under discussion",
+        "alt_meaning": "to bring under control",
+        "example_sentence": "We need to stick to the subject during the debate.",
+        "context_explain": "토론 중에 논의 주제를 유지해야 한다는 의미로 사용되었습니다."
+      },
+      {
+        "word": "yield",
+        "meaning": "to produce or provide",
+        "alt_meaning": "to give way under pressure",
+        "example_sentence": "The farm yields a good harvest every year.",
+        "context_explain": "농장이 매년 좋은 수확을 제공한다는 의미로 사용되었습니다."
+      },
+      {
+        "word": "observe",
+        "meaning": "to watch carefully",
+        "alt_meaning": "to fulfill or comply with",
+        "example_sentence": "She observed the behavior of the animals in the wild.",
+        "context_explain": "야생에서 동물의 행동을 주의 깊게 살핀다는 의미로 사용되었습니다."
+      },
+      {
+        "word": "facilitate",
+        "meaning": "to make an action or process easier",
+        "alt_meaning": "to help bring about",
+        "example_sentence": "The new software will facilitate project management.",
+        "context_explain": "새로운 소프트웨어가 프로젝트 관리를 더 쉽게 만든다는 의미입니다."
+      },
+      {
+        "word": "commit",
+        "meaning": "to pledge or bind to a course of action",
+        "alt_meaning": "to perpetrate or carry out",
+        "example_sentence": "He committed to finishing the project by next week.",
+        "context_explain": "다음 주까지 프로젝트를 끝내기로 약속했다는 의미입니다."
+      },
+      {
+        "word": "attribute",
+        "meaning": "to regard something as being caused by",
+        "alt_meaning": "a quality or feature",
+        "example_sentence": "She attributes her success to hard work and dedication.",
+        "context_explain": "성공을 열심히 일하고 헌신한 덕분으로 본다는 의미입니다."
+      },
+      {
+        "word": "acknowledge",
+        "meaning": "to accept or admit the existence or truth of",
+        "alt_meaning": "to express gratitude for",
+        "example_sentence": "He acknowledged receiving the package.",
+        "context_explain": "소포를 받았음을 인정한다는 의미입니다."
+      },
+      {
+        "word": "implement",
+        "meaning": "to put into effect",
+        "alt_meaning": "a tool or instrument",
+        "example_sentence": "The new policy was implemented last month.",
+        "context_explain": "새로운 정책이 지난달에 시행되었다는 의���입니다."
+      },
+      {
+        "word": "resolve",
+        "meaning": "to find a solution to a problem",
+        "alt_meaning": "to make a firm decision",
+        "example_sentence": "They resolved the issue quickly.",
+        "context_explain": "문제를 신속하게 해결했다는 의미입니다."
+      },
+      {
+        "word": "anticipate",
+        "meaning": "to expect or predict",
+        "alt_meaning": "to act as a forerunner",
+        "example_sentence": "We anticipate a rise in sales this quarter.",
+        "context_explain": "이번 분기에 판매 증가를 예상한다는 의미입니다."
+      },
+      {
+        "word": "derive",
+        "meaning": "to obtain something from a specified source",
+        "alt_meaning": "to trace from a source or origin",
+        "example_sentence": "The scientist derived a new formula from his research.",
+        "context_explain": "연구를 통해 새로운 공식을 얻었다는 의미입니다."
+      },
+      {
+        "word": "sustain",
+        "meaning": "to support or keep something going",
+        "alt_meaning": "to undergo or suffer",
+        "example_sentence": "The organization aims to sustain its growth over the next decade.",
+        "context_explain": "단체가 향후 10년 동안 성장을 지속하고자 한다는 의미입니다."
+      },
+      {
+        "word": "retain",
+        "meaning": "to keep possession of",
+        "alt_meaning": "to continue to have",
+        "example_sentence": "The company retained its most talented employees.",
+        "context_explain": "회사가 가장 재능 있는 직원들을 계속 유지했다는 의미입니다."
+      }
+    ],
+    "wordTest": {
+      "questionsCount": 12,
+      "questions": [
+        {
+          "type": "meaning_choice",
+          "question": "What does 'appreciate' most likely mean in the sentence: 'We need to appreciate the efforts of our team'?",
+          "choices": [
+            "to recognize the value of",
+            "to increase in value",
+            "to decrease in value",
+            "to ignore"
+          ],
+          "answer": "to recognize the value of"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the best meaning of 'compromise' in the sentence: 'They reached a compromise after a long discussion'?",
+          "choices": [
+            "to make worse",
+            "to settle a dispute by mutual concession",
+            "to argue",
+            "to refuse"
+          ],
+          "answer": "to settle a dispute by mutual concession"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "In 'The mayor will address the issue at the meeting', what does 'address' mean?",
+          "choices": [
+            "to speak to an audience",
+            "to ignore",
+            "to deal with or discuss",
+            "to write a letter"
+          ],
+          "answer": "to deal with or discuss"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Choose the correct meaning of 'subject' in 'We need to stick to the subject during the debate'.",
+          "choices": [
+            "to bring under control",
+            "the topic under discussion",
+            "a person",
+            "a field of study"
+          ],
+          "answer": "the topic under discussion"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "In the sentence 'The farm yields a good harvest every year', what does 'yield' mean?",
+          "choices": [
+            "to produce or provide",
+            "to surrender",
+            "to break",
+            "to decrease"
+          ],
+          "answer": "to produce or provide"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "'She observed the behavior of the animals in the wild.' What does 'observe' mean here?",
+          "choices": [
+            "to celebrate",
+            "to ignore",
+            "to watch carefully",
+            "to miss"
+          ],
+          "answer": "to watch carefully"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Select the meaning of 'facilitate' in 'The new software will facilitate project management'.",
+          "choices": [
+            "to make easier",
+            "to complicate",
+            "to delay",
+            "to end"
+          ],
+          "answer": "to make easier"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'commit' mean in 'He committed to finishing the project by next week'?",
+          "choices": [
+            "to pledge or bind",
+            "to forget",
+            "to abandon",
+            "to delay"
+          ],
+          "answer": "to pledge or bind"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "In 'She attributes her success to hard work and dedication', what does 'attribute' mean?",
+          "choices": [
+            "to regard as caused by",
+            "to ignore",
+            "to doubt",
+            "to reject"
+          ],
+          "answer": "to regard as caused by"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'acknowledge' in 'He acknowledged receiving the package'?",
+          "choices": [
+            "to deny",
+            "to accept or admit",
+            "to forget",
+            "to lose"
+          ],
+          "answer": "to accept or admit"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Choose the meaning of 'implement' in 'The new policy was implemented last month'.",
+          "choices": [
+            "to put into effect",
+            "to ignore",
+            "to stop",
+            "to cancel"
+          ],
+          "answer": "to put into effect"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "'They resolved the issue quickly.' What does 'resolve' mean here?",
+          "choices": [
+            "to find a solution",
+            "to complicate",
+            "to create",
+            "to ignore"
+          ],
+          "answer": "to find a solution"
+        }
+      ]
+    }
+  },
+  "homework": {
+    "title": "HW",
+    "items": [
+      {
+        "type": "reading",
+        "title": "10 items"
+      },
+      {
+        "type": "listening",
+        "title": "10 items"
+      },
+      {
+        "type": "vocab",
+        "title": "10 items"
+      }
+    ]
+  }
+}

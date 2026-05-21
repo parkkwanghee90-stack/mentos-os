@@ -1,0 +1,16 @@
+{
+  "title": "⭐ 지수로그함수의극한 2단계",
+  "core": {
+    "description": "지수로그함수의극한 2단계 핵심",
+    "original_unit": "[2단계] 지수로그함수의극한",
+    "title": "지수로그함수의극한 2단계 - 필수 로직 훈련",
+    "problem_image": "/math_crops/미적분/2단계/calc3/001.webp",
+    "problems": [
+      {"number":1,"questionImage":"/math_crops/미적분/2단계/calc3/001.webp","solutionText":"지수로그함수의극한 2단계 해설","formulaLatex":[],"graphExpressions":[],"matchScore":1},
+      {"number":2,"questionImage":"/math_crops/미적분/2단계/calc3/002.webp","solutionText":"지수로그함수의극한 2단계 해설","formulaLatex":[],"graphExpressions":[],"matchScore":1},
+      {"number":3,"questionImage":"/math_crops/미적분/2단계/calc3/003.webp","solutionText":"지수로그함수의극한 2단계 해설","formulaLatex":[],"graphExpressions":[],"matchScore":1},
+      {"number":4,"questionImage":"/math_crops/미적분/2단계/calc3/004.webp","solutionText":"지수로그함수의극한 2단계 해설","formulaLatex":[],"graphExpressions":[],"matchScore":1},
+      {"number":5,"questionImage":"/math_crops/미적분/2단계/calc3/005.webp","solutionText":"지수로그함수의극한 2단계 해설","formulaLatex":[],"graphExpressions":[],"matchScore":1}
+    ]
+  }
+}

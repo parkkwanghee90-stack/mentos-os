@@ -1,0 +1,61 @@
+{
+  "title": "⭐ 이차부등식 3단계",
+  "core": {
+    "unit": "이차부등식 3단계",
+    "original_unit": "이차부등식3단계",
+    "problem_image": "/math_crops/(2)수학(상)기말/이차부등식3단계/001.webp",
+    "title": "이차부등식 3단계 심화",
+    "problems": [
+      {
+        "id": "l2_p1",
+        "number": 1,
+        "image": "/math_crops/(2)수학(상)기말/이차부등식3단계/001.webp"
+      },
+      {
+        "id": "l2_p2",
+        "number": 2,
+        "image": "/math_crops/(2)수학(상)기말/이차부등식3단계/002.webp"
+      },
+      {
+        "id": "l2_p3",
+        "number": 3,
+        "image": "/math_crops/(2)수학(상)기말/이차부등식3단계/003.webp"
+      },
+      {
+        "id": "l2_p4",
+        "number": 4,
+        "image": "/math_crops/(2)수학(상)기말/이차부등식3단계/004.webp"
+      },
+      {
+        "id": "l2_p5",
+        "number": 5,
+        "image": "/math_crops/(2)수학(상)기말/이차부등식3단계/005.webp"
+      },
+      {
+        "id": "l2_p6",
+        "number": 6,
+        "image": "/math_crops/(2)수학(상)기말/이차부등식3단계/006.webp"
+      },
+      {
+        "id": "l2_p7",
+        "number": 7,
+        "image": "/math_crops/(2)수학(상)기말/이차부등식3단계/007.webp"
+      },
+      {
+        "id": "l2_p8",
+        "number": 8,
+        "image": "/math_crops/(2)수학(상)기말/이차부등식3단계/008.webp"
+      },
+      {
+        "id": "l2_p9",
+        "number": 9,
+        "image": "/math_crops/(2)수학(상)기말/이차부등식3단계/009.webp"
+      },
+      {
+        "id": "l2_p10",
+        "number": 10,
+        "image": "/math_crops/(2)수학(상)기말/이차부등식3단계/010.webp"
+      }
+    ]
+  }
+}

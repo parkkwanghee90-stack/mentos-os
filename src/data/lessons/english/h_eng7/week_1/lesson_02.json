@@ -1,0 +1,588 @@
+{
+  "teacherId": "h_eng7",
+  "round": 2,
+  "title": "SSOT Track: h_eng7 Week 1 Lesson 2",
+  "targetGrades": [
+    "고3"
+  ],
+  "targetRanks": [
+    "2~3등급"
+  ],
+  "reading": {
+    "passageCount": 8,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "The process of photosynthesis is crucial for life on Earth. It allows plants to convert sunlight into energy, producing oxygen as a byproduct. This process not only provides food and energy for plants but also forms the base of the food chain for animals. Without photosynthesis, life as we know it could not exist. Furthermore, understanding this process can help us develop better agricultural practices. Modern technologies aim to enhance photosynthesis efficiency to increase crop yields.",
+        "teachPoint": "Understanding the importance and impact of photosynthesis on life and agriculture.",
+        "question": "What role does photosynthesis play in the ecosystem and agriculture?"
+      },
+      {
+        "id": "Passage_2",
+        "text": "The invention of the internet has revolutionized how we communicate. Unlike traditional methods such as letters and landline phones, the internet allows for instant communication across the globe. Social media platforms have further transformed personal and professional interactions. However, this rapid evolution also raises concerns about privacy and the spread of misinformation. Balancing the benefits of connectivity with these challenges is a key issue in today's digital age.",
+        "teachPoint": "Examining the impact of the internet on communication and its associated challenges.",
+        "question": "How has the internet changed communication, and what challenges arise from its use?"
+      },
+      {
+        "id": "Passage_3",
+        "text": "Climate change is one of the most pressing issues facing our planet. Rising global temperatures, melting ice caps, and extreme weather events are just a few of the symptoms. Governments and organizations worldwide are working to reduce carbon emissions and develop sustainable practices. Public awareness and individual actions also play significant roles in combating climate change. It's crucial for everyone to understand their impact on the environment and take steps to reduce it.",
+        "teachPoint": "Raising awareness about the effects of climate change and the importance of individual and collective action.",
+        "question": "What are the key causes and effects of climate change, and how can we address them?"
+      },
+      {
+        "id": "Passage_4",
+        "text": "The Renaissance was a period of great cultural growth in Europe. Spanning from the 14th to the 17th century, it marked a renewed interest in art, science, and the classics. Figures like Leonardo da Vinci and Michelangelo made significant contributions in their fields. This era laid the groundwork for the modern world, promoting humanism and questioning traditional authority. The Renaissance also saw the development of new technologies, such as the printing press, which facilitated the spread of knowledge.",
+        "teachPoint": "Understanding the cultural and historical significance of the Renaissance.",
+        "question": "How did the Renaissance contribute to cultural growth and the development of modern society?"
+      },
+      {
+        "id": "Passage_5",
+        "text": "Effective time management is essential for success in both academic and personal life. Prioritizing tasks and setting clear goals can help individuals make the most of their time. Techniques such as the Pomodoro Technique, which involves working in short, focused bursts, can increase productivity. Additionally, avoiding distractions and maintaining a healthy work-life balance are crucial. By mastering time management skills, individuals can reduce stress and achieve their objectives more efficiently.",
+        "teachPoint": "Highlighting the importance of time management and practical techniques to improve productivity.",
+        "question": "What strategies can individuals use to manage their time effectively and increase productivity?"
+      },
+      {
+        "id": "Passage_6",
+        "text": "The Amazon rainforest is home to an incredible diversity of wildlife. It covers over 5.5 million square kilometers, making it the largest tropical rainforest in the world. Many species found here are not seen anywhere else on Earth. This vast forest plays a crucial role in regulating the global climate. However, deforestation poses a significant threat to this delicate ecosystem. To protect it, various conservation efforts are being implemented by local and international organizations.",
+        "teachPoint": "Understanding the significance of the Amazon rainforest and the impact of deforestation.",
+        "question": "Which sentence best highlights the global importance of the Amazon rainforest?"
+      },
+      {
+        "id": "Passage_7",
+        "text": "Renewable energy sources are becoming increasingly popular as the world seeks sustainable solutions. Solar power, wind energy, and hydropower are leading the way as viable alternatives to fossil fuels. Not only do they help reduce carbon emissions, but they also promise energy security in the long term. Many countries are investing heavily in these technologies to transition to a cleaner future. Moreover, advancements in technology are making renewable energy more accessible and cost-effective.",
+        "teachPoint": "The growing importance and benefits of renewable energy sources.",
+        "question": "What sentence emphasizes the environmental benefit of using renewable energy?"
+      },
+      {
+        "id": "Passage_8",
+        "text": "Digital literacy has become an essential skill in today's technology-driven world. It encompasses the ability to find, evaluate, and communicate information using digital platforms. As more aspects of life move online, from education to shopping, digital literacy is crucial for navigating modern society. Schools and educational institutions are incorporating digital literacy into their curricula to prepare students for the future. Understanding how to use and create digital content responsibly is becoming increasingly important.",
+        "teachPoint": "The importance of digital literacy in contemporary life and education.",
+        "question": "Which sentence explains why digital literacy is essential in the modern world?"
+      }
+    ],
+    "teachPoints": [
+      "Understanding the importance and impact of photosynthesis on life and agriculture.",
+      "Examining the impact of the internet on communication and its associated challenges.",
+      "Raising awareness about the effects of climate change and the importance of individual and collective action.",
+      "Understanding the cultural and historical significance of the Renaissance.",
+      "Highlighting the importance of time management and practical techniques to improve productivity.",
+      "Understanding the significance of the Amazon rainforest and the impact of deforestation.",
+      "The growing importance and benefits of renewable energy sources.",
+      "The importance of digital literacy in contemporary life and education."
+    ],
+    "questions": [
+      "What role does photosynthesis play in the ecosystem and agriculture?",
+      "How has the internet changed communication, and what challenges arise from its use?",
+      "What are the key causes and effects of climate change, and how can we address them?",
+      "How did the Renaissance contribute to cultural growth and the development of modern society?",
+      "What strategies can individuals use to manage their time effectively and increase productivity?",
+      "Which sentence best highlights the global importance of the Amazon rainforest?",
+      "What sentence emphasizes the environmental benefit of using renewable energy?",
+      "Which sentence explains why digital literacy is essential in the modern world?"
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "script": [
+          "A: Hey, are you free this weekend?",
+          "B: I might be. What's up?",
+          "A: I was thinking about going hiking. Interested?",
+          "B: That sounds fun. Where were you thinking of going?",
+          "A: There's a great trail about an hour from here.",
+          "B: I'm in! What time should we leave?"
+        ],
+        "question": "What are the speakers planning to do this weekend?",
+        "choices": [
+          "Go to a movie",
+          "Visit a museum",
+          "Go hiking",
+          "Attend a concert",
+          "Have a picnic"
+        ],
+        "answer": "Go hiking"
+      },
+      {
+        "script": [
+          "A: Did you finish the book I lent you?",
+          "B: Not yet, I'm only halfway through.",
+          "A: How are you finding it so far?",
+          "B: It's really interesting, I love the characters.",
+          "A: I knew you'd enjoy it!",
+          "B: Thanks for recommending it."
+        ],
+        "question": "What is B's opinion about the book?",
+        "choices": [
+          "It's boring",
+          "It's too long",
+          "It's interesting",
+          "It's confusing",
+          "It's outdated"
+        ],
+        "answer": "It's interesting"
+      },
+      {
+        "script": [
+          "A: Have you seen the new art exhibit?",
+          "B: No, I haven't. Is it good?",
+          "A: It's amazing! You should definitely check it out.",
+          "B: Where is it being held?",
+          "A: At the downtown gallery.",
+          "B: I'll make sure to visit it this weekend."
+        ],
+        "question": "What are they talking about?",
+        "choices": [
+          "A new movie",
+          "An art exhibit",
+          "A concert",
+          "A book",
+          "A play"
+        ],
+        "answer": "An art exhibit"
+      },
+      {
+        "script": [
+          "A: Are you going to the team meeting tomorrow?",
+          "B: Yes, I am. What time does it start?",
+          "A: It starts at 10 AM.",
+          "B: Do you know the agenda?",
+          "A: We'll discuss the new project proposals.",
+          "B: Great, I have some ideas to share."
+        ],
+        "question": "What is the purpose of the team meeting?",
+        "choices": [
+          "Discussing project proposals",
+          "Team building activities",
+          "Performance reviews",
+          "Budget planning",
+          "Training session"
+        ],
+        "answer": "Discussing project proposals"
+      },
+      {
+        "script": [
+          "A: Did you watch the game last night?",
+          "B: Yes, it was so exciting!",
+          "A: I couldn't believe that final goal.",
+          "B: I know, it was incredible.",
+          "A: Who do you think will win the championship?",
+          "B: I think our team has a good chance."
+        ],
+        "question": "What are the speakers discussing?",
+        "choices": [
+          "A new movie",
+          "A sports game",
+          "A TV series",
+          "A music concert",
+          "A theater play"
+        ],
+        "answer": "A sports game"
+      },
+      {
+        "script": [
+          "A: How was your vacation?",
+          "B: It was amazing! I went to the beach every day.",
+          "A: That sounds wonderful. Where did you stay?",
+          "B: We rented a small cottage near the shore.",
+          "A: Did you try any local food?",
+          "B: Yes, and it was delicious!"
+        ],
+        "question": "Where did B spend most of their vacation time?",
+        "choices": [
+          "In the mountains",
+          "In the city",
+          "In the countryside",
+          "At the beach",
+          "At a theme park"
+        ],
+        "answer": "At the beach"
+      },
+      {
+        "script": [
+          "A: Are you ready for the presentation?",
+          "B: Almost, I just need to finalize my slides.",
+          "A: Do you need any help?",
+          "B: No, I think I've got it covered. Thanks though.",
+          "A: What's your presentation about?",
+          "B: It's about the latest marketing trends."
+        ],
+        "question": "What is B preparing for?",
+        "choices": [
+          "A job interview",
+          "A presentation",
+          "An exam",
+          "A meeting",
+          "A workshop"
+        ],
+        "answer": "A presentation"
+      },
+      {
+        "script": [
+          "A: Do you have any plans for dinner?",
+          "B: Not really, do you want to eat out?",
+          "A: Sure, what do you feel like eating?",
+          "B: How about Italian?",
+          "A: Sounds good. There's a new place that just opened.",
+          "B: Great, let's try it out."
+        ],
+        "question": "What type of food do they decide to eat?",
+        "choices": [
+          "Chinese",
+          "Mexican",
+          "Italian",
+          "Indian",
+          "Japanese"
+        ],
+        "answer": "Italian"
+      },
+      {
+        "script": [
+          "A: Have you completed the report?",
+          "B: Not yet, I'm still working on it.",
+          "A: When is the deadline?",
+          "B: It's due by the end of the week.",
+          "A: Do you need any assistance?",
+          "B: I might need some help with the data analysis."
+        ],
+        "question": "What does B need help with?",
+        "choices": [
+          "Writing the introduction",
+          "Designing the layout",
+          "Data analysis",
+          "Formatting the text",
+          "Proofreading the report"
+        ],
+        "answer": "Data analysis"
+      },
+      {
+        "script": [
+          "A: Did you hear about the new policy change?",
+          "B: No, what is it about?",
+          "A: They're implementing a work-from-home option.",
+          "B: Really? That sounds great!",
+          "A: Yes, it starts next month.",
+          "B: I'm definitely going to take advantage of that."
+        ],
+        "question": "What is the new policy about?",
+        "choices": [
+          "Extended work hours",
+          "Work-from-home option",
+          "Increased vacation days",
+          "New dress code",
+          "Mandatory meetings"
+        ],
+        "answer": "Work-from-home option"
+      }
+    ],
+    "timeline": [
+      "[0~3m] AudioItem_1",
+      "[3~6m] AudioItem_2",
+      "[6~9m] AudioItem_3",
+      "[9~12m] AudioItem_4",
+      "[12~15m] AudioItem_5",
+      "[15~18m] AudioItem_6",
+      "[18~21m] AudioItem_7",
+      "[21~24m] AudioItem_8",
+      "[24~27m] AudioItem_9",
+      "[27~30m] AudioItem_10"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "ambiguous",
+        "meaning": "having more than one possible meaning",
+        "alt_meaning": "unclear or uncertain",
+        "example_sentence": "The instructions were ambiguous, leading to confusion.",
+        "context_explain": "Used when something is not clearly defined and can be interpreted in multiple ways."
+      },
+      {
+        "word": "benevolent",
+        "meaning": "well-meaning and kindly",
+        "alt_meaning": "charitable",
+        "example_sentence": "The benevolent woman donated a large sum to the charity.",
+        "context_explain": "Describes a person or action that is generous and kind."
+      },
+      {
+        "word": "candid",
+        "meaning": "truthful and straightforward",
+        "alt_meaning": "frank",
+        "example_sentence": "He gave a candid account of the incident.",
+        "context_explain": "Used when someone is being open and honest, without hiding anything."
+      },
+      {
+        "word": "daunting",
+        "meaning": "seeming difficult to deal with in prospect",
+        "alt_meaning": "intimidating",
+        "example_sentence": "Climbing Mount Everest is a daunting challenge.",
+        "context_explain": "Describes a task or situation that appears difficult or intimidating."
+      },
+      {
+        "word": "eccentric",
+        "meaning": "unconventional and slightly strange",
+        "alt_meaning": "odd",
+        "example_sentence": "His eccentric behavior made him an interesting character.",
+        "context_explain": "Refers to someone or something that is unusual in a way that is interesting or amusing."
+      },
+      {
+        "word": "facilitate",
+        "meaning": "to make an action or process easier",
+        "alt_meaning": "assist",
+        "example_sentence": "The new software will facilitate online learning.",
+        "context_explain": "Used when something helps make a process or action go more smoothly."
+      },
+      {
+        "word": "gregarious",
+        "meaning": "fond of company; sociable",
+        "alt_meaning": "outgoing",
+        "example_sentence": "She is a gregarious person who enjoys parties.",
+        "context_explain": "Describes someone who is social and enjoys being around others."
+      },
+      {
+        "word": "hypothetical",
+        "meaning": "based on or serving as a hypothesis",
+        "alt_meaning": "theoretical",
+        "example_sentence": "His argument was purely hypothetical and lacked evidence.",
+        "context_explain": "Used when talking about something that is imagined or proposed but not necessarily real."
+      },
+      {
+        "word": "inadvertent",
+        "meaning": "not resulting from or achieved through deliberate planning",
+        "alt_meaning": "unintentional",
+        "example_sentence": "She made an inadvertent error in her calculations.",
+        "context_explain": "Refers to something done by accident or without intent."
+      },
+      {
+        "word": "juxtapose",
+        "meaning": "to place different things together to create an interesting effect or to show how they are the same or different",
+        "alt_meaning": "compare",
+        "example_sentence": "The artist juxtaposed light and dark colors to create contrast.",
+        "context_explain": "Used when two or more elements are placed close together for contrasting effect."
+      },
+      {
+        "word": "keen",
+        "meaning": "having or showing eagerness or enthusiasm",
+        "alt_meaning": "sharp",
+        "example_sentence": "She has a keen interest in art history.",
+        "context_explain": "Describes someone who is very interested or enthusiastic about something."
+      },
+      {
+        "word": "lucid",
+        "meaning": "expressed clearly; easy to understand",
+        "alt_meaning": "clear",
+        "example_sentence": "His explanation of the process was lucid and easy to follow.",
+        "context_explain": "Used when something is very clear and understandable."
+      },
+      {
+        "word": "meticulous",
+        "meaning": "showing great attention to detail",
+        "alt_meaning": "careful",
+        "example_sentence": "She is meticulous in her research, leaving no stone unturned.",
+        "context_explain": "Describes someone who pays close attention to detail and is very careful in their work."
+      },
+      {
+        "word": "nuance",
+        "meaning": "a subtle difference in meaning, expression, or sound",
+        "alt_meaning": "subtlety",
+        "example_sentence": "The nuance of her tone suggested she was not pleased.",
+        "context_explain": "Refers to a slight or subtle distinction or variation."
+      },
+      {
+        "word": "obsolete",
+        "meaning": "no longer produced or used; out of date",
+        "alt_meaning": "outdated",
+        "example_sentence": "The old computer was rendered obsolete by the new technology.",
+        "context_explain": "Used for things that are no longer in use because they have been replaced by newer versions."
+      },
+      {
+        "word": "pervasive",
+        "meaning": "spreading widely throughout an area or a group of people",
+        "alt_meaning": "widespread",
+        "example_sentence": "The pervasive influence of social media is evident in today's society.",
+        "context_explain": "Describes something that is widespread and commonly found or felt throughout a place or group."
+      },
+      {
+        "word": "quintessential",
+        "meaning": "representing the most perfect or typical example of a quality or class",
+        "alt_meaning": "typical",
+        "example_sentence": "He is the quintessential gentleman, always courteous and polite.",
+        "context_explain": "Used to describe something that is a perfect example of a particular quality."
+      },
+      {
+        "word": "resilient",
+        "meaning": "able to withstand or recover quickly from difficult conditions",
+        "alt_meaning": "strong",
+        "example_sentence": "Children are often more resilient than adults realize.",
+        "context_explain": "Describes someone or something that can recover quickly from setbacks or adversity."
+      },
+      {
+        "word": "scrutinize",
+        "meaning": "to examine or inspect closely and thoroughly",
+        "alt_meaning": "inspect",
+        "example_sentence": "The detective scrutinized the evidence before reaching a conclusion.",
+        "context_explain": "Used when someone examines something very carefully in order to understand it better."
+      },
+      {
+        "word": "tenacious",
+        "meaning": "tending to keep a firm hold of something; clinging or adhering closely",
+        "alt_meaning": "persistent",
+        "example_sentence": "Her tenacious spirit helped her overcome many obstacles.",
+        "context_explain": "Describes someone who is very determined and does not give up easily."
+      }
+    ],
+    "venice": {
+      "time": "5분",
+      "theme": "Review",
+      "content": "Words"
+    },
+    "wordLearn": {
+      "time": "8분",
+      "content": "Learn"
+    },
+    "wordTest": {
+      "time": "5분",
+      "questionsCount": 12,
+      "questions": [
+        {
+          "question": "What does 'ambiguous' mean?",
+          "options": [
+            "clear",
+            "confusing",
+            "having more than one possible meaning",
+            "simple"
+          ],
+          "answer": "having more than one possible meaning"
+        },
+        {
+          "question": "What is a synonym for 'benevolent'?",
+          "options": [
+            "cruel",
+            "charitable",
+            "selfish",
+            "apathetic"
+          ],
+          "answer": "charitable"
+        },
+        {
+          "question": "Which of the following describes 'candid'?",
+          "options": [
+            "deceptive",
+            "truthful and straightforward",
+            "indirect",
+            "ambiguous"
+          ],
+          "answer": "truthful and straightforward"
+        },
+        {
+          "question": "What does 'daunting' mean?",
+          "options": [
+            "easy",
+            "intimidating",
+            "simple",
+            "boring"
+          ],
+          "answer": "intimidating"
+        },
+        {
+          "question": "Which word means 'unconventional and slightly strange'?",
+          "options": [
+            "eccentric",
+            "ordinary",
+            "normal",
+            "typical"
+          ],
+          "answer": "eccentric"
+        },
+        {
+          "question": "What is the meaning of 'facilitate'?",
+          "options": [
+            "hinder",
+            "complicate",
+            "to make an action or process easier",
+            "delay"
+          ],
+          "answer": "to make an action or process easier"
+        },
+        {
+          "question": "What does 'gregarious' mean?",
+          "options": [
+            "introverted",
+            "sociable",
+            "shy",
+            "reserved"
+          ],
+          "answer": "sociable"
+        },
+        {
+          "question": "What is a synonym for 'hypothetical'?",
+          "options": [
+            "factual",
+            "imaginary",
+            "theoretical",
+            "actual"
+          ],
+          "answer": "theoretical"
+        },
+        {
+          "question": "What does 'inadvertent' mean?",
+          "options": [
+            "deliberate",
+            "intentional",
+            "unintentional",
+            "planned"
+          ],
+          "answer": "unintentional"
+        },
+        {
+          "question": "Which word means 'expressed clearly; easy to understand'?",
+          "options": [
+            "confusing",
+            "lucid",
+            "ambiguous",
+            "vague"
+          ],
+          "answer": "lucid"
+        },
+        {
+          "question": "What does 'meticulous' mean?",
+          "options": [
+            "careless",
+            "careful",
+            "reckless",
+            "haphazard"
+          ],
+          "answer": "careful"
+        },
+        {
+          "question": "What is the meaning of 'obsolete'?",
+          "options": [
+            "current",
+            "modern",
+            "outdated",
+            "new"
+          ],
+          "answer": "outdated"
+        }
+      ],
+      "testType": "matching"
+    }
+  },
+  "homework": {
+    "title": "심층/하드코어 과제",
+    "items": [
+      {
+        "type": "reading",
+        "title": "8개 지문 풀이 분석"
+      },
+      {
+        "type": "listening",
+        "title": "7개 듣기 실전 딕테이션"
+      },
+      {
+        "type": "vocab",
+        "title": "20개 단어 완벽 암기"
+      }
+    ]
+  }
+}

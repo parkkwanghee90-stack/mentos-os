@@ -1,0 +1,41 @@
+[
+  {
+    "subject": "수학1",
+    "unit": "지수함수",
+    "grade": "고1",
+    "semester": "2학기",
+    "examType": "기말",
+    "year": 2024,
+    "level": "2단계",
+    "questions": [
+      {
+        "id": 1,
+        "question": "지수함수 y = 2^x 의 그래프를 x축의 방향으로 a만큼, y축의 방향으로 b만큼 평행이동하였더니...",
+        "solutionVideo": "https://cafe.naver.com/subit/video/12345.m3u8",
+        "answer": "a=2, b=3",
+        "concept": "지수함수의 평형이동"
+      },
+      {
+        "id": 2,
+        "question": "함수 y = 3^(x-1) + 2의 점근선의 방정식을 구하시오.",
+        "solutionVideo": "https://cafe.naver.com/subit/video/12346.m3u8",
+        "answer": "y=2",
+        "concept": "지수함수의 점근선"
+      },
+      {
+        "id": 3,
+        "question": "f(x) = 2^x 에 대하여 f(2x) = 4f(x)를 만족하는 x의 값은?",
+        "solutionVideo": "https://cafe.naver.com/subit/video/12347.m3u8",
+        "answer": "x=2",
+        "concept": "지수법칙의 응용"
+      },
+      {
+        "id": 4,
+        "question": "지수함수 증가 감소 폭을 판단하시오. y = (1/2)^x",
+        "solutionVideo": "https://cafe.naver.com/subit/video/12348.m3u8",
+        "answer": "감소함수",
+        "concept": "지수함수 증가감소"
+      }
+    ]
+  }
+]

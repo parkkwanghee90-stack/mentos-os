@@ -1,0 +1,50 @@
+[
+  {
+    "id": "[S.S.S note]_10.도함수의활용(3)_초급단계(24)_p3_01",
+    "source_file": "[S.S.S note]_10.도함수의활용(3)_초급단계(24)",
+    "source_page": 3,
+    "section_index": "01",
+    "section_title": "방정식 , 부등식과 미분",
+    "card_index": "01",
+    "card_title": "방정식과 미분",
+    "y_start": 343,
+    "y_end": 1602,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[S.S.S note]_10.도함수의활용(3)_초급단계(24)_p6_02",
+    "source_file": "[S.S.S note]_10.도함수의활용(3)_초급단계(24)",
+    "source_page": 6,
+    "section_index": "01",
+    "section_title": "방정식 , 부등식과 미분",
+    "card_index": "02",
+    "card_title": "부등식과 미분",
+    "y_start": 281,
+    "y_end": 1602,
+    "file_png": "card_02_p6.webp"
+  },
+  {
+    "id": "[S.S.S note]_10.도함수의활용(3)_초급단계(24)_p9_01",
+    "source_file": "[S.S.S note]_10.도함수의활용(3)_초급단계(24)",
+    "source_page": 9,
+    "section_index": "02",
+    "section_title": "속도 , 가속도와 미분",
+    "card_index": "01",
+    "card_title": "속도 , 가속도의 정의",
+    "y_start": 343,
+    "y_end": 1602,
+    "file_png": "card_01_p9.webp"
+  },
+  {
+    "id": "[S.S.S note]_10.도함수의활용(3)_초급단계(24)_p13_01",
+    "source_file": "[S.S.S note]_10.도함수의활용(3)_초급단계(24)",
+    "source_page": 13,
+    "section_index": "03",
+    "section_title": "변화율과 미분",
+    "card_index": "01",
+    "card_title": "변화율과 미분",
+    "y_start": 343,
+    "y_end": 1602,
+    "file_png": "card_01_p13.webp"
+  }
+]

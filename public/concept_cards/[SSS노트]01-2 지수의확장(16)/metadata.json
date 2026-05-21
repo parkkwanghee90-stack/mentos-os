@@ -1,0 +1,38 @@
+[
+  {
+    "id": "[SSS노트]01-2 지수의확장(16)_p3_01",
+    "source_file": "[SSS노트]01-2 지수의확장(16)",
+    "source_page": 3,
+    "section_index": "02",
+    "section_title": "지수의 확장",
+    "card_index": "01",
+    "card_title": "정수 지수로의 확장",
+    "y_start": 481,
+    "y_end": 1602,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[SSS노트]01-2 지수의확장(16)_p4_02",
+    "source_file": "[SSS노트]01-2 지수의확장(16)",
+    "source_page": 4,
+    "section_index": "02",
+    "section_title": "지수의 확장",
+    "card_index": "02",
+    "card_title": "유리수 지수로의 확장",
+    "y_start": 391,
+    "y_end": 1602,
+    "file_png": "card_02_p4.webp"
+  },
+  {
+    "id": "[SSS노트]01-2 지수의확장(16)_p5_03",
+    "source_file": "[SSS노트]01-2 지수의확장(16)",
+    "source_page": 5,
+    "section_index": "02",
+    "section_title": "지수의 확장",
+    "card_index": "03",
+    "card_title": "실수 지수로의 확장",
+    "y_start": 391,
+    "y_end": 1602,
+    "file_png": "card_03_p5.webp"
+  }
+]

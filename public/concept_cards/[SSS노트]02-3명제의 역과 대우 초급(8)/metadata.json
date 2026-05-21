@@ -1,0 +1,38 @@
+[
+  {
+    "id": "[SSS노트]02-3명제의 역과 대우 초급(8)_p3_01",
+    "source_file": "[SSS노트]02-3명제의 역과 대우 초급(8)",
+    "source_page": 3,
+    "section_index": "03",
+    "section_title": "명제의 역과 대우",
+    "card_index": "01",
+    "card_title": "명제의 역과 대우",
+    "y_start": 368,
+    "y_end": 911,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[SSS노트]02-3명제의 역과 대우 초급(8)_p3_02",
+    "source_file": "[SSS노트]02-3명제의 역과 대우 초급(8)",
+    "source_page": 3,
+    "section_index": "03",
+    "section_title": "명제의 역과 대우",
+    "card_index": "02",
+    "card_title": "명제와 그 대우의 관계",
+    "y_start": 911,
+    "y_end": 1602,
+    "file_png": "card_02_p3.webp"
+  },
+  {
+    "id": "[SSS노트]02-3명제의 역과 대우 초급(8)_p4_03",
+    "source_file": "[SSS노트]02-3명제의 역과 대우 초급(8)",
+    "source_page": 4,
+    "section_index": "03",
+    "section_title": "명제의 역과 대우",
+    "card_index": "03",
+    "card_title": "삼단논법",
+    "y_start": 278,
+    "y_end": 1602,
+    "file_png": "card_03_p4.webp"
+  }
+]

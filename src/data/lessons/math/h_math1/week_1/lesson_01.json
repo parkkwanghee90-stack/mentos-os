@@ -1,0 +1,406 @@
+{
+  "title": "⭐ 점과좌표 2단계",
+  "core": {
+    "description": "점과좌표 개념 2단계 핵심",
+    "original_unit": "(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)",
+    "problem_image": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/001.webp",
+    "problems": [
+      {
+        "number": 1,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/001.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 점 $A(1, 3)$, $B(3, 5)$에서 같은 거리에 있는 점 $P$의 좌표가 $(a, 1)$이다.\n이 때, $a$의 값은?\n\n① $\\sqrt{2}$\n② $\\sqrt{5}$\n③ $2\\sqrt{2}$\n④ $4$\n⑤ $5$"
+      },
+      {
+        "number": 2,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/002.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "세 점 $A(4, 2)$, $B(8, 6)$, $C(a, 0)$에 대하여 삼각형 $ABC$가 이등변삼각형이 되도록 하는 정수 $a$의 값은?\n\n① 2\n② 4\n③ 6\n④ 8\n⑤ 10"
+      },
+      {
+        "number": 3,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/003.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "좌표평면 위를 움직이는 두 점 $P(a+1, -3)$, $Q(3, -a+1)$에 대하여 $P, Q$ 사이의 거리의 최소값은?\n\n① 1\n② $\\sqrt{2}$\n③ $\\sqrt{3}$\n④ 2\n⑤ $\\sqrt{5}$"
+      },
+      {
+        "number": 4,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/004.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 점 $A(t, -3)$, $B(1, 2t)$에 대하여 선분 $AB$의 길이의 최소값은?\n\n① 2\n② $\\sqrt{5}$\n③ $\\sqrt{7}$\n④ $2\\sqrt{2}$\n⑤ 3"
+      },
+      {
+        "number": 5,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/005.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 점 $A(-1, 2)$, $B(4, 5)$에서 같은 거리에 있는 $x$축 위의 점 $P$와 $y$축 위의 점 $Q$의 좌표를 구하면?\n\n① $P(2.4, -1), Q(0, 6)$\n② $P(3.6, 0), Q(-1, 6)$\n③ $P(3.6, 0), Q(0, 6)$\n④ $P(2.4, 0), Q(0, 5)$\n⑤ $P(3.6, 0), Q(-1, 2)$"
+      },
+      {
+        "number": 6,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/006.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 점 $A(-3, 4)$, $B(2, 6)$에서 같은 거리에 있는 $x$축 위의 점 $P$와 $y$축 위의 점 $Q$의 좌표는?\n\n① $P\\left(\\frac{3}{2}, 0\\right)$, $Q\\left(0, \\frac{15}{4}\\right)$\n② $P\\left(\\frac{1}{2}, 0\\right)$, $Q\\left(0, \\frac{15}{4}\\right)$\n③ $P\\left(-\\frac{3}{2}, 0\\right)$, $Q\\left(0, \\frac{1}{4}\\right)$\n④ $P\\left(\\frac{3}{2}, 0\\right)$, $Q\\left(0, \\frac{7}{4}\\right)$\n⑤ $P\\left(\\frac{5}{2}, 0\\right)$, $Q\\left(0, \\frac{15}{2}\\right)$"
+      },
+      {
+        "number": 7,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/007.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 점 $A(1, 1)$, $B(2, 8)$에서 같은 거리에 있는 점 $P$가 직선 $x + 2y = 8$ 위의 점일 때, 점 $P$의 좌표를 구하시오."
+      },
+      {
+        "number": 8,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/008.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 점 $A(8, -7)$, $B(12, 5)$에서 같은 거리에 점 $P$가 있다.\n점 $P$가 직선 $x + 2y = 3$ 위의 점일 때, 점 $P$의 좌표를 구하시오."
+      },
+      {
+        "number": 9,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/009.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "세 꼭짓점이 $A(1, 3)$, $B(p, 3)$, $C(1, q)$인 △ABC의 외심의 좌표가 $(2, 1)$일 때, $pq$의 값을 구하시오."
+      },
+      {
+        "number": 10,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/010.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "세 꼭짓점이 $A(2, -3)$, $B(p, -3)$, $C(2, q)$인 $\\triangle ABC$의 외심의 좌표가 $(4, -1)$일 때 $pq$의 값을 구하시오."
+      },
+      {
+        "number": 11,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/011.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 점 $O(0, 0)$, $A(-3, 4)$과 임의의 점 $P$에 대하여 $\\overline{OP} + \\overline{PA}$의 최소값을 구하시오."
+      },
+      {
+        "number": 12,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/012.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 점 $O(0, 0)$, $A(-8, 15)$와 임의의 점 $P$에 대하여 $OP + PA$의 최소값은?\n\n① 15\n② 16\n③ 17\n④ 18\n⑤ 19"
+      },
+      {
+        "number": 13,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/013.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "013\n\n$a,\\ b$가 실수일 때, \n$$\\sqrt{a^2 + b^2} + \\sqrt{(a-1)^2 + (b-3)^2}$$\n의 최소값은?\n\n① $2\\sqrt{2}$\n② $\\sqrt{10}$\n③ $2\\sqrt{3}$\n④ $\\sqrt{15}$\n⑤ $2\\sqrt{5}$"
+      },
+      {
+        "number": 14,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/014.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "실수 $x, y$에 대하여\n$$\\sqrt{(x-2)^2+(y+1)^2} + \\sqrt{(x+3)^2+(y-5)^2}$$\n의 최소값을 구하시오."
+      },
+      {
+        "number": 15,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/015.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 점 $A(2, -5)$, $B(6, k)$와 $x$축 위의 점 $P$에 대하여 $\\overline{AP}^2 + \\overline{BP}^2$의 최소값이 49일 때, 양수 $k$의 값은?\n\n① 1\n② 2\n③ 3\n④ 4\n⑤ 5"
+      },
+      {
+        "number": 16,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/016.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 점 $A(1, -1)$, $B(k, 5)$와 $y$축 위의 점 $P$에 대하여 $\\overline{AP}^2 + \\overline{BP}^2$의 최소값이 28일 때, 양수 $k$의 값은?\n\n① 1\n② 2\n③ 3\n④ 4\n⑤ 5"
+      },
+      {
+        "number": 17,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/017.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "세 점 $A(-4, 2)$, $B(4, -2)$, $C(a, b)$를 꼭짓점으로 하는 삼각형 $ABC$가 정삼각형일 때, $ab$의 값을 구하시오.\n(단, 점 $C$는 제1사분면 위의 점이다.)"
+      },
+      {
+        "number": 18,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/018.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "세 점 $A(-1, 1)$, $B(1, -1)$, $C(a, b)$를 꼭짓점으로 하는 삼각형 $ABC$가 정삼각형일 때, 상수 $a$, $b$의 곱 $ab$의 값을 구하시오."
+      },
+      {
+        "number": 19,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/019.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "다음 그림과 같이 삼각형 $ABC$에서 점 $M$은 변 $BC$의 중점이고 점 $G$는 무게중심이다. $\\overline{AB} = 6$, $\\overline{AC} = 9\\sqrt{2}$, $BM = 5$일 때, $GM$의 길이를 구하시오."
+      },
+      {
+        "number": 20,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/020.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "다음 그림과 같이 삼각형 $ABC$에서 점 $M$은 변 $BC$의 중점이고 점 $G$는 무게중심이다. $\\overline{AB} = 8$, $\\overline{AC} = 2\\sqrt{6}$, $\\overline{BM} = 4$일 때, $\\overline{GM}$의 길이를 구하시오."
+      },
+      {
+        "number": 21,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/021.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "다음 그림과 같이 $\\overline{AB} = 4$, $\\overline{AC} = 6$, $B(-2,\\ -1)$, $C(2,\\ -3)$이고 점 $A$에서 $\\overline{BC}$에 선을 그었을 때, $\\triangle ABC$의 넓이를 이등분하는 점을 $D$라 하자.\n선분 $AD$의 길이는?\n\n① 4\n② $\\sqrt{17}$\n③ $3\\sqrt{2}$\n④ $2\\sqrt{5}$\n⑤ $\\sqrt{21}$"
+      },
+      {
+        "number": 22,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/022.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "다음 그림과 같은 삼각형 $ABC$에서 $\\overline{AB} = 15$, $\\overline{BC} = 16$, $\\overline{CA} = 14$이고, 변 $BC$의 사등분점 중 점 $B$에 가까운 점부터 차례로 $P$, $Q$, $R$이라 하자.\n이때 $AP^2 + AR^2$의 값을 구하십시오.\n\n① 305\n② 306\n③ 307\n④ 308\n⑤ 309"
+      },
+      {
+        "number": 23,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/023.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "길이가 36인 선분 $AB$를 $3 : 1$로 내분하는 점을 $C$라 하고, 선분 $BC$를 $4 : 1$로 외분하는 점을 $D$라 할 때, 선분 $AD$의 길이를 구하시오."
+      },
+      {
+        "number": 24,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/024.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "수직선 위의 두 점 A, B에 대하여 선분 $AB$를 $1:2$로 내분하는 점이 $P(5)$, 선분 $AB$를 $1:2$로 외분하는 점이 $Q(-3)$이다.\n선분 $PQ$의 중점을 $M$이라 할 때, 선분 $AM$의 길이를 구하시오."
+      },
+      {
+        "number": 25,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/025.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 점 $A(-1, 5)$, $B(5, 2)$를 이은 선분 $AB$를 $2:1$로 내분하는 점을 $P$, 외분하는 점을 $Q$라 할 때, $PQ$의 중점의 좌표를 구하시오."
+      },
+      {
+        "number": 26,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/026.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 점 $A(10, -3)$, $B(5, 2)$를 이은 선분 $\\overline{AB}$를 $2:3$으로 내분하는 점 $P$와 외분하는 점 $Q$에 대하여 선분 $\\overline{PQ}$의 중점의 좌표를 구하시오."
+      },
+      {
+        "number": 27,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/027.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "삼각형 $ABC$에서 꼭짓점 $A$의 좌표가 $(1, 5)$이고,\\n변 $AB$, $AC$의 중점의 좌표가 각각 $(2, 6)$, $(-2, 7)$이다.\\n이때 삼각형 $ABC$의 무게중심의 좌표를 구하시오."
+      },
+      {
+        "number": 28,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/028.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "삼각형 $ABC$에서 꼭짓점 $A$의 좌표가 $(3, 4)$이고, 변 $AB$, $AC$의 중점의 좌표가 각각 $(-1, 5)$, $(4, -6)$이다.\n이때 삼각형 $ABC$의 무게중심의 좌표를 구하시오."
+      },
+      {
+        "number": 29,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/029.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "세 점 $A(-1, -3)$, $B(0, 6)$, $C(4, 3)$을 꼭짓점으로 하는 삼각형 $ABC$와 이 삼각형 내부의 임의의 점 $P$에 대하여 $\\overline{AP}^2 + \\overline{BP}^2 + \\overline{CP}^2$의 최소값과 그때의 점 $P$의 좌표를 구하시오."
+      },
+      {
+        "number": 30,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/030.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "세 점 $A(4, -5)$, $B(-1, 1)$, $C(3, 7)$을 꼭짓점으로 하는 삼각형 $ABC$와 이 삼각형 내부의 임의의 점 $P$에 대하여 $\\overline{AP}^2 + \\overline{BP}^2 + \\overline{CP}^2$의 최소값과 그때의 점 $P$의 좌표를 구하시오."
+      },
+      {
+        "number": 31,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/031.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "다음 그림과 같이 좌표평면 위의 세 점 $A(0, a)$, $B(-4, 0)$, $C(1, 0)$을 꼭짓점으로 하는 삼각형 $ABC$가 있다. \\( \\angle ABC \\)의 이등분선이 선분 $AC$와 수직일 때, 양수 $a$의 값은?\n\n① $\\sqrt{6}$\n② $\\sqrt{7}$\n③ $2\\sqrt{2}$\n④ $3$\n⑤ $\\sqrt{10}$"
+      },
+      {
+        "number": 32,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/032.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "그림과 같이 좌표평면 위의 세 점 $A(0, a)$, $B(-3, 0)$, $C(1, 0)$을 꼭짓점으로 하는 삼각형 $ABC$가 있다. \\( \\angle ABC \\)의 이등분선이 선분 $AC$의 중점을 지날 때, 양수 $a$의 값은?\n\n① $\\sqrt{5}$\n② $\\sqrt{6}$\n③ $\\sqrt{7}$\n④ $2\\sqrt{2}$\n⑤ 3"
+      },
+      {
+        "number": 33,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/033.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 점 $A(-2, -1)$, $B(4, 3)$에 대하여 선분 $AB$의 연장선 위에 $3\\overline{AB} = 2\\overline{BC}$를 만족시키는 점을 $C(a, b)$라 할 때, $a+b$의 값은? (단, $a > 0$)\n\n① 16\n② 18\n③ 20\n④ 22\n⑤ 24"
+      },
+      {
+        "number": 34,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/034.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "두 점 $A(2, 3)$, $B(-1, 6)$을 이은 선분 $\\overline{AB}$의 연장선 위에 $AB=3BC$가 되도록 점 $C$를 정할 때, 점 $C$의 좌표를 구하시오."
+      },
+      {
+        "number": 35,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/035.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "세 점 $A(a, b)$, $B(2, -6)$, $C(-1, 3)$에 대하여 선분 $AB$를 $m:n$으로 내분하는 점은 $x$축 위에 있고, 선분 $AC$를 $m:n$으로 내분하는 점은 $y$축 위에 있다. $a, b$가 20 이하의 자연수일 때, 세 점 $A, B, C$를 꼭짓점으로 하여 만들 수 있는 삼각형 $ABC$의 개수는? (단, $m > 0$, $n > 0$)\\n\n\n① 1\\n\n② 2\\n\n③ 3\\n\n④ 4\\n\n⑤ 5"
+      },
+      {
+        "number": 36,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/036.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "세 점 $A(a, b)$, $B(9, -16)$, $C(-2, 7)$에 대하여\n선분 $AB$를 $m : n$으로 내분하는 점은 $x$축 위에 있고,\n선분 $AC$를 $m : n$으로 내분하는 점은 $y$축 위에 있다.\n$a, b$가 30 이하의 자연수일 때, 세 점 $A, B, C$를\n꼭짓점으로 하여 만들 수 있는 삼각형 $ABC$의 개수는?\n(단, $m > 0$, $n > 0$)\n\n① 1\n② 2\n③ 3\n④ 4\n⑤ 5"
+      },
+      {
+        "number": 37,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/037.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "다음 그림과 같은 평행사변형 $ABCD$ 에서 네 꼭짓점의 좌표가 각각 $A(1, 5)$, $B(-1, 3)$, $C(-1, -1)$, $D(a, b)$ 일 때, 상수 $a, b$ 의 곱 $ab$의 값은?\n\n① $\\frac{1}{2}$\n② $\\frac{2}{3}$\n③ $\\frac{3}{4}$\n④ 1\n⑤ $\\frac{3}{2}$"
+      },
+      {
+        "number": 38,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/038.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "A(4, 7), B(3, 2), C(5, 3), D(x, y)에 대하여 사각형 ABCD가 평행사변형일 때, $y - x$의 값을 구하시오."
+      },
+      {
+        "number": 39,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/039.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "세 점 $A(-1, 1)$, $B(5, 3)$, $C(3, 6)$을 꼭짓점으로 하는 평행사변형 $ABCD$의 꼭짓점 $D$의 좌표를 구하면?\n\n① $(-3, 4)$\n② $(-2, 3)$\n③ $(1, -2)$\n④ $(3, 4)$\n⑤ $(4, 5)$"
+      },
+      {
+        "number": 40,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/040.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "평행사변형 $ABCD$에서 꼭짓점 $A(4, 2)$, $B(0, 3)$, $C(-2, -4)$일 때, 나머지 한 꼭짓점 $D$의 좌표를 구하면?\n\n① $D(1, 5)$\n② $D(2, 1)$\n③ $D(3, 2)$\n④ $D(2, -5)$\n⑤ $D(1, 3)$"
+      },
+      {
+        "number": 41,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/041.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "마름모 $ABCD$의 세 꼭짓점의 좌표가 각각 $A(1, 3)$, $B(7, 4)$, $D(a, b)$이고 대각선 $AC$의 중점의 좌표가 $$\\left( \\frac{9}{2}, \\frac{1}{2} \\right)$$일 때, $a-b$의 값을 구하시오."
+      },
+      {
+        "number": 42,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/042.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "마름모 $ABCD$의 세 꼭짓점의 좌표가 각각 $A(3, 3)$, $B(5, 9)$, $D(a, b)$이고 대각선 $AC$의 중점의 좌표가 $(7, 5)$일 때, $a+b$의 값을 구하시오."
+      },
+      {
+        "number": 43,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/043.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "세 점 $A(2, 1)$, $B(1, 3)$, $C(2, 0)$에 대하여 $2\\overline{AP}^2 + \\overline{BP}^2 = 3\\overline{CP}^2$을 만족시키는 점 $P$가 나타내는 도형의 방정식은?\n\n① $x-y+1=0$\n② $x-2y+3=0$\n③ $x-3y-2=0$\n④ $x-4y+5=0$\n⑤ $x-5y+4=0$"
+      },
+      {
+        "number": 44,
+        "questionImage": "/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/044.webp",
+        "solutionText": "점과좌표 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1,
+        "questionText": "세 점 $O(0,0)$, $A(3,0)$, $B(0,1)$에서 $2\\overline{OP}^2 = \\overline{AP}^2 + \\overline{BP}^2$를 만족하는 점 $P$의 자취의 방정식을 구하시오."
+      }
+    ]
+  }
+}

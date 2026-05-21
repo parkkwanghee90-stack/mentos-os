@@ -1,0 +1,605 @@
+{
+  "teacherId": "h_eng7",
+  "round": 1,
+  "title": "SSOT Track: h_eng7 Week 1 Lesson 1",
+  "targetGrades": [
+    "고3"
+  ],
+  "targetRanks": [
+    "2~3등급"
+  ],
+  "reading": {
+    "passageCount": 8,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "When we think of art, we often imagine paintings and sculptures displayed in galleries. However, art is not limited to these forms. Street art, for example, has become a significant cultural expression in many cities. Artists use walls, buildings, and sidewalks as their canvas, creating pieces that speak to social issues and community identity. Unlike traditional art, which is usually housed indoors, street art is accessible to everyone, making it a powerful tool for engagement. It challenges the conventional boundaries of where art can exist. Moreover, street art often sparks dialogue among viewers, encouraging them to see their environment in new ways.",
+        "teachPoint": "Understanding the diverse forms of art and their impact on society.",
+        "question": "What is one characteristic that distinguishes street art from traditional art?"
+      },
+      {
+        "id": "Passage_2",
+        "text": "The invention of the smartphone has drastically changed how we communicate. Before smartphones, people relied heavily on landlines and letters to keep in touch. This often led to delays in communication and limited connectivity. With smartphones, however, instant communication became the norm. People can now send messages, make video calls, and share updates wherever they are. The convenience of smartphones has also facilitated the growth of social media, connecting people across the globe. Nevertheless, this constant connectivity has its downsides, such as decreased face-to-face interactions and increased screen time. Balancing the benefits and drawbacks of smartphone use remains a challenge.",
+        "teachPoint": "Analyzing the impact of technological advancements on communication.",
+        "question": "What is a negative effect of smartphones mentioned in the passage?"
+      },
+      {
+        "id": "Passage_3",
+        "text": "Climate change is a pressing issue that affects the entire planet. Rising temperatures have led to severe weather patterns, impacting agriculture and food security. Many regions are experiencing prolonged droughts, which reduce crop yields and threaten livelihoods. In contrast, other areas face frequent flooding, damaging infrastructure and displacing communities. To combat these effects, governments and organizations worldwide are investing in sustainable practices. Renewable energy sources, such as solar and wind power, are being developed to reduce reliance on fossil fuels. Public awareness campaigns aim to encourage individuals to adopt eco-friendly habits. Collective efforts are crucial to mitigating the impacts of climate change.",
+        "teachPoint": "Understanding the consequences of climate change and the importance of sustainable practices.",
+        "question": "What is one way people are trying to combat climate change according to the passage?"
+      },
+      {
+        "id": "Passage_4",
+        "text": "Reading books has numerous benefits beyond gaining knowledge. One significant advantage is the improvement of empathy. When readers engage with stories, they often put themselves in the characters' shoes, gaining insight into different perspectives and emotions. This ability to understand and share the feelings of others can enhance social interactions and relationships. Additionally, reading can improve concentration and focus, skills that are valuable in today's fast-paced world. It also provides a form of relaxation, reducing stress and promoting mental well-being. As such, reading remains a valuable and enjoyable activity in the digital age.",
+        "teachPoint": "Exploring the cognitive and emotional benefits of reading.",
+        "question": "According to the passage, how does reading books improve empathy?"
+      },
+      {
+        "id": "Passage_5",
+        "text": "Traveling offers a unique opportunity to learn about different cultures and ways of life. When visiting a new country, travelers can experience local customs, try traditional foods, and learn about the region's history. Such experiences can broaden one's perspective and foster a greater appreciation for diversity. Moreover, travel can lead to personal growth by challenging individuals to step out of their comfort zones. Navigating unfamiliar environments and interacting with people from various backgrounds can boost confidence and adaptability. While travel can be enriching, it is important to approach it with respect and a willingness to learn from others.",
+        "teachPoint": "Highlighting the educational and personal benefits of traveling.",
+        "question": "What is one personal benefit of traveling mentioned in the passage?"
+      },
+      {
+        "id": "Passage_6",
+        "text": "In the modern world, the use of digital technology is prevalent in every aspect of life. As people become increasingly dependent on digital devices, there is a growing concern about the impact of screen time on mental health. Studies have shown that excessive screen time can lead to issues such as anxiety and depression. However, not all screen time is created equal, and it's important to consider the quality of digital interactions. Engaging in educational activities or connecting with others online can have positive effects. Therefore, it's essential to strike a balance and make conscious choices about how we use technology. Developing digital literacy skills can help individuals navigate the digital world more effectively.",
+        "teachPoint": "This passage highlights the importance of balancing screen time and emphasizes the role of digital literacy.",
+        "question": "Which sentence best illustrates the potential positive effects of screen time?"
+      },
+      {
+        "id": "Passage_7",
+        "text": "The concept of sustainable living is gaining popularity as more individuals recognize the impact of their lifestyle choices on the environment. One of the simplest ways to adopt a sustainable lifestyle is by reducing waste. For instance, opting for reusable products over single-use items can significantly decrease the amount of waste produced. Additionally, supporting local businesses and consuming seasonal foods can contribute to a lower carbon footprint. By making conscious choices about consumption, individuals can play a part in protecting the planet. Moreover, education about sustainability can empower communities to implement broader changes.",
+        "teachPoint": "The passage discusses the significance of sustainable living and practical steps to reduce environmental impact.",
+        "question": "What is one practical action mentioned in the passage that individuals can take to live more sustainably?"
+      },
+      {
+        "id": "Passage_8",
+        "text": "In recent years, remote work has transformed the traditional office environment. With advancements in communication technology, employees can now work from virtually anywhere. This shift has brought about numerous benefits, such as increased flexibility and reduced commuting time. However, it also presents challenges, particularly in maintaining work-life balance. Remote workers may struggle with setting boundaries between professional and personal life. To address this, it is crucial for individuals to establish a dedicated workspace and create a routine. Employers can also support remote workers by promoting a culture of trust and clear communication.",
+        "teachPoint": "This passage explores both the advantages and challenges of remote work, emphasizing the need for boundaries and employer support.",
+        "question": "What is one challenge of remote work mentioned in the passage?"
+      }
+    ],
+    "teachPoints": [
+      "Understanding the diverse forms of art and their impact on society.",
+      "Analyzing the impact of technological advancements on communication.",
+      "Understanding the consequences of climate change and the importance of sustainable practices.",
+      "Exploring the cognitive and emotional benefits of reading.",
+      "Highlighting the educational and personal benefits of traveling.",
+      "This passage highlights the importance of balancing screen time and emphasizes the role of digital literacy.",
+      "The passage discusses the significance of sustainable living and practical steps to reduce environmental impact.",
+      "This passage explores both the advantages and challenges of remote work, emphasizing the need for boundaries and employer support."
+    ],
+    "questions": [
+      "What is one characteristic that distinguishes street art from traditional art?",
+      "What is a negative effect of smartphones mentioned in the passage?",
+      "What is one way people are trying to combat climate change according to the passage?",
+      "According to the passage, how does reading books improve empathy?",
+      "What is one personal benefit of traveling mentioned in the passage?",
+      "Which sentence best illustrates the potential positive effects of screen time?",
+      "What is one practical action mentioned in the passage that individuals can take to live more sustainably?",
+      "What is one challenge of remote work mentioned in the passage?"
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "script": [
+          "A: Hey, did you catch the news last night?",
+          "B: No, I missed it. What happened?",
+          "A: There was a big story about a new scientific discovery.",
+          "B: Really? What was it about?",
+          "A: Scientists have discovered a new exoplanet that could potentially support life.",
+          "B: That's amazing! How far away is it?",
+          "A: It's about 300 light-years away from Earth."
+        ],
+        "question": "What was the main topic of the news story discussed?",
+        "choices": [
+          "A new government policy.",
+          "A celebrity scandal.",
+          "A scientific discovery.",
+          "A sports event.",
+          "A historical finding."
+        ],
+        "answer": "A scientific discovery."
+      },
+      {
+        "script": [
+          "A: Did you hear about the new café downtown?",
+          "B: No, I haven't. Is it any good?",
+          "A: Yeah, it has a great atmosphere and delicious coffee.",
+          "B: That sounds nice. Do they have any special drinks?",
+          "A: They have a signature latte that's really popular.",
+          "B: I should definitely check it out sometime.",
+          "A: Absolutely, let me know when you do!"
+        ],
+        "question": "What is notable about the new café?",
+        "choices": [
+          "It has a bad atmosphere.",
+          "It offers free drinks.",
+          "It has a signature latte.",
+          "It only serves tea.",
+          "It is very expensive."
+        ],
+        "answer": "It has a signature latte."
+      },
+      {
+        "script": [
+          "A: Are you going to the concert this weekend?",
+          "B: I want to, but I haven't bought a ticket yet.",
+          "A: You should hurry. I heard they're selling out fast.",
+          "B: Really? I thought it wouldn't be that popular.",
+          "A: It's a famous band, so everyone wants to see them.",
+          "B: You're right. I better get on it now.",
+          "A: Let me know if you get a ticket, maybe we can go together."
+        ],
+        "question": "Why should B hurry to buy a concert ticket?",
+        "choices": [
+          "The concert is tonight.",
+          "Tickets are very cheap.",
+          "The tickets are selling out fast.",
+          "B has already bought a ticket.",
+          "The concert is cancelled."
+        ],
+        "answer": "The tickets are selling out fast."
+      },
+      {
+        "script": [
+          "A: What are your plans for the holiday?",
+          "B: I'm thinking about visiting my grandparents.",
+          "A: That sounds nice. How long will you stay?",
+          "B: Probably for a week or so.",
+          "A: Are you going alone?",
+          "B: No, my sister will come with me.",
+          "A: It'll be great to spend some family time together."
+        ],
+        "question": "Who is B planning to visit during the holiday?",
+        "choices": [
+          "Friends from college.",
+          "His parents.",
+          "His grandparents.",
+          "His cousins.",
+          "His coworkers."
+        ],
+        "answer": "His grandparents."
+      },
+      {
+        "script": [
+          "A: Did you finish the book I lent you?",
+          "B: Yes, I did. It was really interesting.",
+          "A: I told you! What did you like most about it?",
+          "B: I loved the plot twists and the character development.",
+          "A: Same here. The author is really talented.",
+          "B: Do you have any more recommendations?",
+          "A: Sure, I've got a list of books you might enjoy."
+        ],
+        "question": "What aspect of the book did B enjoy the most?",
+        "choices": [
+          "The book cover.",
+          "The vocabulary.",
+          "The plot twists and character development.",
+          "The length of the book.",
+          "The price of the book."
+        ],
+        "answer": "The plot twists and character development."
+      },
+      {
+        "script": [
+          "A: Have you decided where to go for vacation?",
+          "B: I'm thinking about going to the beach.",
+          "A: That sounds relaxing. Which beach are you considering?",
+          "B: Maybe the one on the east coast.",
+          "A: I've heard it's beautiful there, with lots of activities.",
+          "B: Exactly, that's why I'm interested.",
+          "A: Don't forget to pack sunscreen!"
+        ],
+        "question": "Where is B considering going for vacation?",
+        "choices": [
+          "The mountains.",
+          "A city tour.",
+          "The beach.",
+          "A safari.",
+          "A cruise."
+        ],
+        "answer": "The beach."
+      },
+      {
+        "script": [
+          "A: Have you tried the new restaurant in town?",
+          "B: Not yet. Is it any good?",
+          "A: Yes, it's fantastic! The food is amazing.",
+          "B: What do they serve?",
+          "A: They specialize in Italian cuisine.",
+          "B: I love Italian food. I'll have to try it out soon.",
+          "A: You won't be disappointed."
+        ],
+        "question": "What type of cuisine does the new restaurant specialize in?",
+        "choices": [
+          "Mexican.",
+          "Chinese.",
+          "Italian.",
+          "Indian.",
+          "Thai."
+        ],
+        "answer": "Italian."
+      },
+      {
+        "script": [
+          "A: Are you coming to the gym tomorrow?",
+          "B: I might. What time are you going?",
+          "A: I'm planning to go early in the morning.",
+          "B: That sounds good. I prefer working out in the morning.",
+          "A: Great, we can motivate each other.",
+          "B: Exactly, it's always better to have a workout buddy.",
+          "A: I'll see you there then!"
+        ],
+        "question": "What time does A plan to go to the gym?",
+        "choices": [
+          "Late at night.",
+          "In the afternoon.",
+          "Early in the morning.",
+          "At noon.",
+          "In the evening."
+        ],
+        "answer": "Early in the morning."
+      },
+      {
+        "script": [
+          "A: Have you seen the latest movie in the theater?",
+          "B: No, I haven't had the chance yet.",
+          "A: You should. It's getting great reviews.",
+          "B: What's it about?",
+          "A: It's a mystery thriller with lots of suspense.",
+          "B: I love those kinds of movies. I'll try to watch it this weekend.",
+          "A: Let me know how you like it!"
+        ],
+        "question": "What genre is the latest movie in the theater?",
+        "choices": [
+          "Romantic comedy.",
+          "Action.",
+          "Mystery thriller.",
+          "Documentary.",
+          "Science fiction."
+        ],
+        "answer": "Mystery thriller."
+      },
+      {
+        "script": [
+          "A: Do you have any plans for this Saturday?",
+          "B: Not really. Do you have something in mind?",
+          "A: I thought we could go hiking if the weather is nice.",
+          "B: That sounds like a great idea. I could use some fresh air.",
+          "A: I agree. There's a trail I've been wanting to explore.",
+          "B: Perfect, let's check the weather forecast and plan accordingly.",
+          "A: Sounds good to me. I'll keep an eye on the weather updates."
+        ],
+        "question": "What activity is A suggesting for Saturday?",
+        "choices": [
+          "Going to a movie.",
+          "Attending a concert.",
+          "Hiking.",
+          "Visiting a museum.",
+          "Shopping."
+        ],
+        "answer": "Hiking."
+      }
+    ],
+    "timeline": [
+      "[0~3m] AudioItem_1",
+      "[3~6m] AudioItem_2",
+      "[6~9m] AudioItem_3",
+      "[9~12m] AudioItem_4",
+      "[12~15m] AudioItem_5",
+      "[15~18m] AudioItem_6",
+      "[18~21m] AudioItem_7",
+      "[21~24m] AudioItem_8",
+      "[24~27m] AudioItem_9",
+      "[27~30m] AudioItem_10"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "abate",
+        "meaning": "to reduce in degree or intensity",
+        "alt_meaning": "to decrease in amount or value",
+        "example_sentence": "The storm finally began to abate after several hours of heavy rain.",
+        "context_explain": "Used to describe a situation where something lessens or diminishes in strength or intensity."
+      },
+      {
+        "word": "candid",
+        "meaning": "expressing opinions and feelings in an honest and sincere way",
+        "alt_meaning": "free from bias or prejudice",
+        "example_sentence": "Her candid remarks about the project were well-received by the team.",
+        "context_explain": "Typically used when someone speaks openly and truthfully, without hiding their thoughts."
+      },
+      {
+        "word": "daunt",
+        "meaning": "to make someone feel intimidated or apprehensive",
+        "alt_meaning": "to discourage through fear",
+        "example_sentence": "The sheer size of the mountain did not daunt the experienced climber.",
+        "context_explain": "Often used to describe situations or challenges that might intimidate someone."
+      },
+      {
+        "word": "eccentric",
+        "meaning": "unconventional and slightly strange",
+        "alt_meaning": "deviating from the norm, especially in a whimsical way",
+        "example_sentence": "His eccentric style of dressing always made him stand out in a crowd.",
+        "context_explain": "Refers to behaviors or characteristics that are unusual or unconventional."
+      },
+      {
+        "word": "facilitate",
+        "meaning": "to make an action or process easier",
+        "alt_meaning": "to assist or help forward",
+        "example_sentence": "The new software will facilitate easier communication between departments.",
+        "context_explain": "Used when something is done to help or ease a process or activity."
+      },
+      {
+        "word": "garrulous",
+        "meaning": "excessively talkative, especially on trivial matters",
+        "alt_meaning": "prone to engaging in long conversations",
+        "example_sentence": "Her garrulous nature often kept meetings running longer than necessary.",
+        "context_explain": "Describes someone who talks a lot, often about unimportant things."
+      },
+      {
+        "word": "hamper",
+        "meaning": "to hinder or impede the movement or progress of",
+        "alt_meaning": "to obstruct or hold back",
+        "example_sentence": "The heavy snow will hamper our travel plans.",
+        "context_explain": "Used to describe something that creates obstacles or difficulties."
+      },
+      {
+        "word": "imminent",
+        "meaning": "about to happen",
+        "alt_meaning": "likely to occur at any moment",
+        "example_sentence": "The dark clouds signaled that a storm was imminent.",
+        "context_explain": "Used when something is expected to occur very soon."
+      },
+      {
+        "word": "juxtapose",
+        "meaning": "to place side by side for comparison or contrast",
+        "alt_meaning": "to set together to highlight differences",
+        "example_sentence": "The exhibition juxtaposes modern art with classical sculpture.",
+        "context_explain": "Typically used when comparing or contrasting two different things by placing them close together."
+      },
+      {
+        "word": "keen",
+        "meaning": "having or showing eagerness or enthusiasm",
+        "alt_meaning": "intellectually sharp or perceptive",
+        "example_sentence": "She was keen to start the new project as soon as possible.",
+        "context_explain": "Refers to someone eager or enthusiastic, or someone who is very perceptive."
+      },
+      {
+        "word": "lethargic",
+        "meaning": "affected by lethargy; sluggish and apathetic",
+        "alt_meaning": "lacking energy or enthusiasm",
+        "example_sentence": "After the long flight, I felt too lethargic to attend the meeting.",
+        "context_explain": "Describes a state of low energy or lack of interest in activities."
+      },
+      {
+        "word": "meticulous",
+        "meaning": "showing great attention to detail; very careful and precise",
+        "alt_meaning": "carefully attentive to every small detail",
+        "example_sentence": "Her meticulous nature ensured that the report was error-free.",
+        "context_explain": "Used when describing someone who pays close attention to detail in their work or activities."
+      },
+      {
+        "word": "nonchalant",
+        "meaning": "feeling or appearing casually calm and relaxed",
+        "alt_meaning": "not displaying anxiety, interest, or enthusiasm",
+        "example_sentence": "He gave a nonchalant shrug, as if the news didn't concern him.",
+        "context_explain": "Characterizes a person who is unconcerned or indifferent about something."
+      },
+      {
+        "word": "obsolete",
+        "meaning": "no longer produced or used; out of date",
+        "alt_meaning": "out of fashion or no longer in general use",
+        "example_sentence": "The rise of digital media has made many print publications obsolete.",
+        "context_explain": "Refers to things that are no longer in use or have been replaced by newer alternatives."
+      },
+      {
+        "word": "pragmatic",
+        "meaning": "dealing with things sensibly and realistically",
+        "alt_meaning": "focusing on practical results and facts",
+        "example_sentence": "His pragmatic approach to problem-solving often led to successful outcomes.",
+        "context_explain": "Used to describe actions or attitudes that are practical and focused on real-world outcomes."
+      },
+      {
+        "word": "quell",
+        "meaning": "to put an end to, usually by force",
+        "alt_meaning": "to suppress or pacify",
+        "example_sentence": "The government attempted to quell the rebellion swiftly.",
+        "context_explain": "Refers to stopping a disturbance or unrest, often using authority or force."
+      },
+      {
+        "word": "relinquish",
+        "meaning": "to voluntarily give up or let go",
+        "alt_meaning": "to surrender or release",
+        "example_sentence": "She was forced to relinquish control of the company after the takeover.",
+        "context_explain": "Used when someone gives up control or possession willingly or under pressure."
+      },
+      {
+        "word": "scrutinize",
+        "meaning": "to examine or inspect closely and thoroughly",
+        "alt_meaning": "to analyze in detail",
+        "example_sentence": "The detective scrutinized the evidence to find any overlooked clues.",
+        "context_explain": "Describes a detailed examination or inspection, often to find errors or hidden details."
+      },
+      {
+        "word": "taciturn",
+        "meaning": "reserved or uncommunicative in speech",
+        "alt_meaning": "saying little or tending to be silent",
+        "example_sentence": "Though he was taciturn, his few words carried significant weight.",
+        "context_explain": "Describes a person who is quiet and doesn't talk much."
+      },
+      {
+        "word": "usurp",
+        "meaning": "to take a position of power or importance illegally or by force",
+        "alt_meaning": "to seize and hold without right",
+        "example_sentence": "The general attempted to usurp the king's throne.",
+        "context_explain": "Used when someone takes control or power without authority."
+      },
+      {
+        "word": "vigilant",
+        "meaning": "keeping careful watch for possible danger or difficulties",
+        "alt_meaning": "alert and watchful, especially to avoid danger",
+        "example_sentence": "The guards remained vigilant throughout the night.",
+        "context_explain": "Describes being alert and observant, especially to detect and avoid potential threats."
+      }
+    ],
+    "venice": {
+      "time": "5분",
+      "theme": "Review",
+      "content": "Words"
+    },
+    "wordLearn": {
+      "time": "8분",
+      "content": "Learn"
+    },
+    "wordTest": {
+      "time": "5분",
+      "questionsCount": 12,
+      "questions": [
+        {
+          "question": "What does 'abate' mean?",
+          "choices": [
+            "to increase in intensity",
+            "to reduce in degree or intensity",
+            "to create a new trend",
+            "to stay the same"
+          ],
+          "correct_choice": "to reduce in degree or intensity"
+        },
+        {
+          "question": "If someone is 'candid', how are they expressing themselves?",
+          "choices": [
+            "in a dishonest way",
+            "in an unclear way",
+            "in an honest and sincere way",
+            "in a secretive way"
+          ],
+          "correct_choice": "in an honest and sincere way"
+        },
+        {
+          "question": "What does 'daunt' mean?",
+          "choices": [
+            "to encourage someone",
+            "to make someone feel intimidated",
+            "to congratulate someone",
+            "to make someone feel happy"
+          ],
+          "correct_choice": "to make someone feel intimidated"
+        },
+        {
+          "question": "What is an 'eccentric' person like?",
+          "choices": [
+            "conventional and ordinary",
+            "unconventional and slightly strange",
+            "extremely boring",
+            "very aggressive"
+          ],
+          "correct_choice": "unconventional and slightly strange"
+        },
+        {
+          "question": "What does it mean to 'facilitate' something?",
+          "choices": [
+            "to make it more difficult",
+            "to make it easier",
+            "to ignore it",
+            "to criticize it"
+          ],
+          "correct_choice": "to make it easier"
+        },
+        {
+          "question": "What is a 'garrulous' person likely to do?",
+          "choices": [
+            "remain silent",
+            "talk excessively",
+            "write short notes",
+            "sing quietly"
+          ],
+          "correct_choice": "talk excessively"
+        },
+        {
+          "question": "What does 'imminent' mean?",
+          "choices": [
+            "unlikely to happen",
+            "about to happen",
+            "happened in the past",
+            "happening now"
+          ],
+          "correct_choice": "about to happen"
+        },
+        {
+          "question": "What does 'juxtapose' mean?",
+          "choices": [
+            "to separate items",
+            "to place side by side for comparison",
+            "to ignore differences",
+            "to blend together"
+          ],
+          "correct_choice": "to place side by side for comparison"
+        },
+        {
+          "question": "What does 'lethargic' describe?",
+          "choices": [
+            "full of energy",
+            "lacking energy or enthusiasm",
+            "very enthusiastic",
+            "extremely happy"
+          ],
+          "correct_choice": "lacking energy or enthusiasm"
+        },
+        {
+          "question": "What does 'meticulous' mean?",
+          "choices": [
+            "careless and sloppy",
+            "very careful and precise",
+            "quick and hasty",
+            "easy-going and relaxed"
+          ],
+          "correct_choice": "very careful and precise"
+        },
+        {
+          "question": "What does 'obsolete' mean?",
+          "choices": [
+            "very popular",
+            "new and innovative",
+            "no longer produced or used",
+            "in frequent use"
+          ],
+          "correct_choice": "no longer produced or used"
+        },
+        {
+          "question": "What does 'scrutinize' mean?",
+          "choices": [
+            "to glance quickly",
+            "to examine closely and thoroughly",
+            "to ignore completely",
+            "to appreciate without question"
+          ],
+          "correct_choice": "to examine closely and thoroughly"
+        }
+      ],
+      "testType": "matching"
+    }
+  },
+  "homework": {
+    "title": "심층/하드코어 과제",
+    "items": [
+      {
+        "type": "reading",
+        "title": "8개 지문 풀이 분석"
+      },
+      {
+        "type": "listening",
+        "title": "7개 듣기 실전 딕테이션"
+      },
+      {
+        "type": "vocab",
+        "title": "20개 단어 완벽 암기"
+      }
+    ]
+  }
+}

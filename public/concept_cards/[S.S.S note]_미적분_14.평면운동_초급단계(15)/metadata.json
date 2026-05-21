@@ -1,0 +1,38 @@
+[
+  {
+    "id": "[S.S.S note]_미적분_14.평면운동_초급단계(15)_p3_01",
+    "source_file": "[S.S.S note]_미적분_14.평면운동_초급단계(15)",
+    "source_page": 3,
+    "section_index": "01",
+    "section_title": "속도와 가속도",
+    "card_index": "01",
+    "card_title": "평면운동의 속도 , 가속도",
+    "y_start": 343,
+    "y_end": 1602,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[S.S.S note]_미적분_14.평면운동_초급단계(15)_p5_01",
+    "source_file": "[S.S.S note]_미적분_14.평면운동_초급단계(15)",
+    "source_page": 5,
+    "section_index": "02",
+    "section_title": "속도와 거리",
+    "card_index": "01",
+    "card_title": "평면 위에서 점이 움직인 거리",
+    "y_start": 342,
+    "y_end": 1602,
+    "file_png": "card_01_p5.webp"
+  },
+  {
+    "id": "[S.S.S note]_미적분_14.평면운동_초급단계(15)_p6_03",
+    "source_file": "[S.S.S note]_미적분_14.평면운동_초급단계(15)",
+    "source_page": 6,
+    "section_index": "02",
+    "section_title": "속도와 거리",
+    "card_index": "03",
+    "card_title": "곡선의 길이",
+    "y_start": 281,
+    "y_end": 1602,
+    "file_png": "card_03_p6.webp"
+  }
+]

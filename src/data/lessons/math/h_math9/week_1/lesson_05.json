@@ -1,0 +1,51 @@
+{
+  "title": "⭐ 여러가지미분법2 2단계",
+  "core": {
+    "description": "여러가지미분법2 2단계 핵심",
+    "original_unit": "[2단계] 여러가지미분법2",
+    "title": "여러가지미분법2 2단계 - 필수 로직 훈련",
+    "problem_image": "/math_crops/미적분/2단계/calc5/001.webp",
+    "problems": [
+      {
+        "number": 1,
+        "questionImage": "/math_crops/미적분/2단계/calc5/001.webp",
+        "solutionText": "여러가지미분법2 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 2,
+        "questionImage": "/math_crops/미적분/2단계/calc5/002.webp",
+        "solutionText": "여러가지미분법2 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 3,
+        "questionImage": "/math_crops/미적분/2단계/calc5/003.webp",
+        "solutionText": "여러가지미분법2 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 4,
+        "questionImage": "/math_crops/미적분/2단계/calc5/004.webp",
+        "solutionText": "여러가지미분법2 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      },
+      {
+        "number": 5,
+        "questionImage": "/math_crops/미적분/2단계/calc5/005.webp",
+        "solutionText": "여러가지미분법2 2단계 해설",
+        "formulaLatex": [],
+        "graphExpressions": [],
+        "matchScore": 1
+      }
+    ]
+  }
+}

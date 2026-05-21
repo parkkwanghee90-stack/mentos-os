@@ -1,0 +1,673 @@
+{
+  "teacherId": "h_eng4",
+  "round": 2,
+  "title": "SSOT Track: h_eng4 Week 1 Lesson 2",
+  "targetGrades": [
+    "고3"
+  ],
+  "targetRanks": [
+    "1등급"
+  ],
+  "reading": {
+    "passageCount": 7,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "Cognitive dissonance, a psychological phenomenon where individuals experience discomfort due to conflicting beliefs, significantly impacts decision-making processes. Consider a scenario where a person values environmental conservation yet drives a fuel-inefficient vehicle. To alleviate the dissonance, they might rationalize their behavior by emphasizing the car’s safety features. However, this rationalization often perpetuates a cycle of justifications rather than prompting behavioral change. Ultimately, understanding this concept is crucial as it highlights the inherent complexities of human rationality.",
+        "teachPoint": "Understanding the concept of cognitive dissonance and its implications on decision-making.",
+        "question": "What is the underlying reason for the individual's rationalization in the given scenario? ① Their genuine concern for safety. ② A desire to reduce guilt. ③ Lack of awareness about environmental issues. ④ Influence from peers. ⑤ Economic constraints.",
+        "questionType": "빈칸 추론",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_2",
+        "text": "In evolutionary biology, the concept of kin selection explains altruistic behavior towards related individuals. An example is seen in social insects like bees, where workers sacrifice their reproductive potential for the hive's benefit. This behavior ensures that genes shared with the queen are propagated. However, kin selection doesn't account for altruism towards non-relatives, prompting the exploration of reciprocal altruism. Thus, while kin selection provides a foundational understanding, it necessitates integration with broader evolutionary theories.",
+        "teachPoint": "Exploring the limitations of kin selection in explaining altruistic behavior.",
+        "question": "What does the concept of kin selection fail to fully explain? ① Cooperative behavior in bees. ② Altruistic actions toward unrelated individuals. ③ The propagation of genetic material. ④ Social structures in insects. ⑤ Genetic mutations.",
+        "questionType": "빈칸 추론",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_3",
+        "text": "Epistemology, the study of knowledge, questions the nature and scope of human understanding. For instance, the Gettier problem challenges the traditional definition of knowledge as justified true belief. By presenting scenarios where such conditions are met, yet knowledge seems absent, it unsettles foundational epistemic assumptions. On the other hand, pragmatism suggests knowledge is validated by practical consequences. Therefore, epistemology remains a dynamic field, continuously shaped by new philosophical inquiries.",
+        "teachPoint": "Understanding the evolving nature of epistemology through the examination of the Gettier problem.",
+        "question": "Summarize the challenge posed by the Gettier problem to traditional epistemic assumptions.",
+        "questionType": "주관식",
+        "format": "서술형"
+      },
+      {
+        "id": "Passage_4",
+        "text": "Behavioral economics integrates psychological insights into economic theory, redefining rationality assumptions. An example is the endowment effect, where individuals ascribe higher value to owned items. Unlike traditional economic models which assume consistent preferences, this effect reveals a bias towards loss aversion. However, it complicates market predictions as emotional factors heavily influence decisions. Thus, acknowledging these biases is vital for creating more accurate economic models.",
+        "teachPoint": "Examining the influence of psychological factors on economic decision-making.",
+        "question": "What does the endowment effect reveal about traditional economic assumptions? ① They accurately predict market behaviors. ② They overlook emotional influences. ③ They are based on loss aversion. ④ They account for irrational behaviors. ⑤ They integrate psychological insights.",
+        "questionType": "빈칸 추론",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_5",
+        "text": "Quantum mechanics fundamentally challenges classical conceptions of determinism with its probabilistic nature. In experiments like Schrödinger's cat, superposition illustrates the coexistence of multiple states until observation. This paradox contrasts with deterministic interpretations where outcomes are pre-determined. Consequently, quantum mechanics introduces profound philosophical implications, questioning the very fabric of reality and the limits of human perception.",
+        "teachPoint": "Understanding the implications of quantum mechanics on determinism.",
+        "question": "Where should the following sentence be inserted? 'Such uncertainties force a reevaluation of philosophical stances on reality.'",
+        "questionType": "문장 삽입",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_6",
+        "text": "Neuroplasticity illustrates the brain's remarkable ability to reorganize itself by forming new neural connections. This adaptability is crucial during learning processes, where repeated experiences forge stronger synaptic pathways. Conversely, it also underscores the potential for maladaptive changes following trauma or negative experiences. Understanding this duality is essential in therapeutic contexts, emphasizing the necessity for positive reinforcement in rehabilitation settings.",
+        "teachPoint": "Analyzing the dual nature of neuroplasticity in cognitive processes.",
+        "question": "Arrange the sentences to best convey the progression of ideas about neuroplasticity. ① Neuroplasticity allows the brain to adapt. ② Repetition strengthens synaptic pathways. ③ Maladaptive changes can occur after trauma. ④ Positive reinforcement aids rehabilitation. ⑤ It is pivotal during learning.",
+        "questionType": "단락 순서",
+        "format": "객관식"
+      },
+      {
+        "id": "Passage_7",
+        "text": "Emergent properties refer to unexpected phenomena that arise from complex systems, transcending individual component functions. For instance, consciousness cannot be fully understood by merely analyzing neuronal activity. This complexity presents a philosophical challenge, as it questions reductionist approaches typically employed in scientific inquiry. Awareness of emergent properties urges a holistic perspective, acknowledging that systems may exhibit behaviors irreducible to their parts.",
+        "teachPoint": "Exploring the philosophical implications of emergent properties in complex systems.",
+        "question": "Explain why emergent properties challenge reductionist scientific views.",
+        "questionType": "빈칸 혹은 단답형 이유 서술",
+        "format": "주관식"
+      }
+    ],
+    "teachPoints": [
+      "Understanding the concept of cognitive dissonance and its implications on decision-making.",
+      "Exploring the limitations of kin selection in explaining altruistic behavior.",
+      "Understanding the evolving nature of epistemology through the examination of the Gettier problem.",
+      "Examining the influence of psychological factors on economic decision-making.",
+      "Understanding the implications of quantum mechanics on determinism.",
+      "Analyzing the dual nature of neuroplasticity in cognitive processes.",
+      "Exploring the philosophical implications of emergent properties in complex systems."
+    ],
+    "questions": [
+      "What is the underlying reason for the individual's rationalization in the given scenario? ① Their genuine concern for safety. ② A desire to reduce guilt. ③ Lack of awareness about environmental issues. ④ Influence from peers. ⑤ Economic constraints.",
+      "What does the concept of kin selection fail to fully explain? ① Cooperative behavior in bees. ② Altruistic actions toward unrelated individuals. ③ The propagation of genetic material. ④ Social structures in insects. ⑤ Genetic mutations.",
+      "Summarize the challenge posed by the Gettier problem to traditional epistemic assumptions.",
+      "What does the endowment effect reveal about traditional economic assumptions? ① They accurately predict market behaviors. ② They overlook emotional influences. ③ They are based on loss aversion. ④ They account for irrational behaviors. ⑤ They integrate psychological insights.",
+      "Where should the following sentence be inserted? 'Such uncertainties force a reevaluation of philosophical stances on reality.'",
+      "Arrange the sentences to best convey the progression of ideas about neuroplasticity. ① Neuroplasticity allows the brain to adapt. ② Repetition strengthens synaptic pathways. ③ Maladaptive changes can occur after trauma. ④ Positive reinforcement aids rehabilitation. ⑤ It is pivotal during learning.",
+      "Explain why emergent properties challenge reductionist scientific views."
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "script": [
+          "A: Hey, did you hear about the new cafe that just opened downtown?",
+          "B: Yeah, I heard it's got a really cozy atmosphere. Have you been there yet?",
+          "A: Not yet, but I'm planning to go this weekend. Do you want to join me?",
+          "B: Sure, that sounds great. What time were you thinking?",
+          "A: How about Saturday afternoon around 2 PM?",
+          "B: Perfect! I can't wait to try their famous lattes."
+        ],
+        "question": "What are the speakers planning to do?",
+        "choices": [
+          "A) Go shopping",
+          "B) Visit a new cafe",
+          "C) Watch a movie",
+          "D) Attend a concert",
+          "E) Go to a book signing"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Did you finish reading the book for our literature class?",
+          "B: I'm almost done. I have about two chapters left.",
+          "A: What do you think about it so far?",
+          "B: It's quite intriguing. The plot twists keep me on the edge of my seat.",
+          "A: I know, right? I can't wait to discuss it in class.",
+          "B: Me too. I have so many thoughts and theories!"
+        ],
+        "question": "What is the main topic of the conversation?",
+        "choices": [
+          "A) A science project",
+          "B) A book for literature class",
+          "C) A history assignment",
+          "D) A math exam",
+          "E) A group presentation"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: I heard you were looking for a new laptop. Did you find one yet?",
+          "B: Yes, I finally decided on one after comparing several models.",
+          "A: Which one did you choose?",
+          "B: I went with the one that has the best battery life and performance for my needs.",
+          "A: That sounds like a smart choice. Are you happy with it so far?",
+          "B: Absolutely! It's exceeded my expectations."
+        ],
+        "question": "What did the speaker recently purchase?",
+        "choices": [
+          "A) A smartphone",
+          "B) A tablet",
+          "C) A laptop",
+          "D) A camera",
+          "E) A printer"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: Did you hear about the upcoming music festival in the park?",
+          "B: Yes, I heard it's supposed to be really fun. Are you planning to go?",
+          "A: Definitely! I love live music.",
+          "B: Me too. Which bands are you most excited to see?",
+          "A: I'm really looking forward to seeing the headliner on Saturday.",
+          "B: Same here! It's going to be an amazing performance."
+        ],
+        "question": "What are the speakers discussing?",
+        "choices": [
+          "A) A new movie release",
+          "B) A sports event",
+          "C) A music festival",
+          "D) A theater play",
+          "E) A book launch"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: I heard you started a new job recently. How's it going?",
+          "B: It's going really well. The team is great, and I'm learning a lot.",
+          "A: That's awesome! What's your role there?",
+          "B: I'm working as a project manager in their IT department.",
+          "A: Sounds like a challenging position. Do you enjoy it?",
+          "B: Yes, it's challenging but also very rewarding."
+        ],
+        "question": "What is the speaker's new job?",
+        "choices": [
+          "A) Marketing Manager",
+          "B) Sales Associate",
+          "C) Project Manager",
+          "D) Software Developer",
+          "E) Financial Analyst"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: I can't believe how fast this semester is going by!",
+          "B: I know! It feels like we just started yesterday.",
+          "A: Have you started preparing for the final exams yet?",
+          "B: Not yet, but I plan to start next week.",
+          "A: That's a good idea. Do you want to study together sometime?",
+          "B: Sure, that would be helpful. Let's set up a schedule."
+        ],
+        "question": "What are the speakers talking about?",
+        "choices": [
+          "A) A vacation plan",
+          "B) A project deadline",
+          "C) A new hobby",
+          "D) Final exams preparation",
+          "E) A party invitation"
+        ],
+        "answer": "D"
+      },
+      {
+        "script": [
+          "A: Have you tried the new restaurant that opened near the office?",
+          "B: Not yet, but I've heard good things about it.",
+          "A: I went there last night, and the food was amazing.",
+          "B: Really? What did you order?",
+          "A: I had the grilled salmon, and it was cooked to perfection.",
+          "B: Sounds delicious. I'll have to check it out soon."
+        ],
+        "question": "What did the speaker think of the new restaurant?",
+        "choices": [
+          "A) It was too expensive",
+          "B) The food was amazing",
+          "C) The service was slow",
+          "D) It was crowded",
+          "E) It was difficult to find"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Are you going to the gym after work today?",
+          "B: Yes, I am. Do you want to join me?",
+          "A: I wish I could, but I have to finish a project at home.",
+          "B: That's too bad. Maybe next time?",
+          "A: Definitely. I'll try to wrap up my work quickly.",
+          "B: Sounds good. Let me know when you're free."
+        ],
+        "question": "Why can't the speaker join the gym session?",
+        "choices": [
+          "A) They have a meeting",
+          "B) They have to finish a project",
+          "C) They are feeling unwell",
+          "D) They have to babysit",
+          "E) They have a doctor's appointment"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "A: Have you seen the latest episode of the series we're watching?",
+          "B: No, not yet. I'm planning to watch it tonight.",
+          "A: It's a good one! Lots of surprises.",
+          "B: Really? Now I'm even more excited to see it.",
+          "A: Let me know what you think after you watch it.",
+          "B: I will! Thanks for not spoiling it for me."
+        ],
+        "question": "What is the main topic of their conversation?",
+        "choices": [
+          "A) A movie premiere",
+          "B) A new book",
+          "C) The latest episode of a series",
+          "D) A concert",
+          "E) A sports game"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "A: Have you decided on a destination for your vacation yet?",
+          "B: Yes, I'm thinking of going to Italy.",
+          "A: That sounds amazing! What made you choose Italy?",
+          "B: I've always wanted to see the historical sites and try the authentic cuisine.",
+          "A: You'll love it! Make sure to visit Rome and Florence.",
+          "B: Definitely! I'm already planning my itinerary."
+        ],
+        "question": "What is the speaker's vacation destination?",
+        "choices": [
+          "A) Spain",
+          "B) France",
+          "C) Greece",
+          "D) Italy",
+          "E) Portugal"
+        ],
+        "answer": "D"
+      }
+    ],
+    "timeline": [
+      "[0~3m] AudioItem_1",
+      "[3~6m] AudioItem_2",
+      "[6~9m] AudioItem_3",
+      "[9~12m] AudioItem_4",
+      "[12~15m] AudioItem_5",
+      "[15~18m] AudioItem_6",
+      "[18~21m] AudioItem_7",
+      "[21~24m] AudioItem_8",
+      "[24~27m] AudioItem_9",
+      "[27~30m] AudioItem_10"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "extrapolate",
+        "meaning": "to estimate or conclude something by extending known information",
+        "alt_meaning": "to predict by projecting past experience",
+        "example_sentence": "Scientists extrapolate future climate conditions from current data trends.",
+        "context_explain": "Used in contexts where predictions are made based on existing data."
+      },
+      {
+        "word": "substantiate",
+        "meaning": "to provide evidence to support or prove the truth of something",
+        "alt_meaning": "to verify or confirm with evidence",
+        "example_sentence": "The researcher had to substantiate her findings before publishing the paper.",
+        "context_explain": "Used when someone is required to back up claims with concrete evidence."
+      },
+      {
+        "word": "delineate",
+        "meaning": "to describe or portray something precisely",
+        "alt_meaning": "to depict with accuracy or in detail",
+        "example_sentence": "The report delineates the steps needed to improve efficiency.",
+        "context_explain": "Used in situations where clear and detailed explanations are necessary."
+      },
+      {
+        "word": "exemplify",
+        "meaning": "to show or illustrate by example",
+        "alt_meaning": "to be a typical example of something",
+        "example_sentence": "This painting exemplifies the artist's early style.",
+        "context_explain": "Used when something is used as a representative or typical example."
+      },
+      {
+        "word": "correlate",
+        "meaning": "to have a mutual relationship or connection in which one thing affects or depends on another",
+        "alt_meaning": "to correspond or be connected",
+        "example_sentence": "Studies show that exercise and health correlate strongly.",
+        "context_explain": "Used when discussing relationships between variables or facts."
+      },
+      {
+        "word": "mediate",
+        "meaning": "to intervene in a dispute in order to bring about an agreement",
+        "alt_meaning": "to act as a go-between in conflict resolution",
+        "example_sentence": "She was hired to mediate between the two parties.",
+        "context_explain": "Used in contexts involving conflict resolution or negotiation."
+      },
+      {
+        "word": "construe",
+        "meaning": "to interpret a word or action in a particular way",
+        "alt_meaning": "to understand or explain the meaning of something",
+        "example_sentence": "His silence was construed as agreement.",
+        "context_explain": "Used when interpreting the meaning or intent behind actions or words."
+      },
+      {
+        "word": "explicate",
+        "meaning": "to analyze and develop an idea or principle in detail",
+        "alt_meaning": "to explain or interpret something clearly",
+        "example_sentence": "The professor explicated the complex theory to the class.",
+        "context_explain": "Used in educational or analytical contexts where detailed explanation is required."
+      },
+      {
+        "word": "postulate",
+        "meaning": "to suggest or assume the existence or truth of something as a basis for reasoning",
+        "alt_meaning": "to claim or assume as true, especially as a basis for argument",
+        "example_sentence": "Scientists postulate that black holes can warp space-time.",
+        "context_explain": "Used in scientific or theoretical discussions as a basis for argument."
+      },
+      {
+        "word": "examine",
+        "meaning": "to inspect in detail to determine condition or quality",
+        "alt_meaning": "to investigate thoroughly",
+        "example_sentence": "The investigator examined the evidence carefully.",
+        "context_explain": "Used when detailed inspection or investigation is required."
+      },
+      {
+        "word": "evaluate",
+        "meaning": "to determine or calculate the value or amount of something",
+        "alt_meaning": "to judge or determine the significance or worth of something",
+        "example_sentence": "The committee will evaluate the proposals next week.",
+        "context_explain": "Used when assessing the value or effectiveness of something."
+      },
+      {
+        "word": "elucidate",
+        "meaning": "to make something clear, to explain",
+        "alt_meaning": "to clarify or shed light on something",
+        "example_sentence": "The teacher asked her to elucidate her point for the class.",
+        "context_explain": "Used when clarification or explanation is needed."
+      },
+      {
+        "word": "scrutinize",
+        "meaning": "to examine or inspect closely and thoroughly",
+        "alt_meaning": "to study or observe carefully",
+        "example_sentence": "The manager scrutinized the financial reports for any discrepancies.",
+        "context_explain": "Used when detailed and careful observation is required."
+      },
+      {
+        "word": "corroborate",
+        "meaning": "to confirm or give support to a statement, theory, or finding",
+        "alt_meaning": "to support with evidence or authority",
+        "example_sentence": "The witness corroborated the suspect's alibi.",
+        "context_explain": "Used when additional evidence is needed to support a claim."
+      },
+      {
+        "word": "contextualize",
+        "meaning": "to place in a particular context for purposes of study",
+        "alt_meaning": "to consider something in relation to the situation in which it occurs",
+        "example_sentence": "The book helps to contextualize the historical events of the era.",
+        "context_explain": "Used when understanding the full context of information or events."
+      },
+      {
+        "word": "deduce",
+        "meaning": "to arrive at a conclusion by reasoning",
+        "alt_meaning": "to infer or reason out from known facts",
+        "example_sentence": "From the evidence presented, the detective deduced the identity of the culprit.",
+        "context_explain": "Used when concluding based on logical reasoning or evidence."
+      },
+      {
+        "word": "formulate",
+        "meaning": "to create or devise methodically",
+        "alt_meaning": "to express in a systematic way",
+        "example_sentence": "The team formulated a plan to increase efficiency.",
+        "context_explain": "Used when creating a method or strategy."
+      },
+      {
+        "word": "propound",
+        "meaning": "to put forward an idea or theory for consideration by others",
+        "alt_meaning": "to propose or suggest for discussion",
+        "example_sentence": "The scientist propounded a new theory about the origins of the universe.",
+        "context_explain": "Used when proposing ideas for consideration or discussion."
+      },
+      {
+        "word": "speculate",
+        "meaning": "to form a theory without firm evidence",
+        "alt_meaning": "to think or reflect on possible outcomes",
+        "example_sentence": "Economists speculate on the future of the stock market.",
+        "context_explain": "Used when making predictions or assumptions without concrete evidence."
+      },
+      {
+        "word": "illuminate",
+        "meaning": "to clarify or explain something",
+        "alt_meaning": "to make something clear or easier to understand",
+        "example_sentence": "The expert was able to illuminate the complex subject for the audience.",
+        "context_explain": "Used when providing insight or making something easier to understand."
+      },
+      {
+        "word": "analyze",
+        "meaning": "to examine something methodically and in detail",
+        "alt_meaning": "to study the structure of something",
+        "example_sentence": "The scientist analyzed the data to find patterns.",
+        "context_explain": "Used when examining details to understand or explain something."
+      },
+      {
+        "word": "rationalize",
+        "meaning": "to attempt to explain or justify with logical reasons",
+        "alt_meaning": "to make a decision or a practice seem reasonable",
+        "example_sentence": "He tried to rationalize his decision to leave early.",
+        "context_explain": "Used when providing logical reasons for actions or decisions."
+      },
+      {
+        "word": "hypothesize",
+        "meaning": "to put forward a hypothesis",
+        "alt_meaning": "to speculate or guess based on limited evidence",
+        "example_sentence": "The researchers hypothesized that the drug would improve recovery times.",
+        "context_explain": "Used when forming an initial theory or assumption based on limited evidence."
+      },
+      {
+        "word": "contextualize",
+        "meaning": "to place or study in context",
+        "alt_meaning": "to consider within the circumstances or framework",
+        "example_sentence": "By contextualizing the event, the historian provided deeper insight.",
+        "context_explain": "Used when considering events within their full circumstances."
+      },
+      {
+        "word": "scrutinize",
+        "meaning": "to examine closely and critically",
+        "alt_meaning": "to inspect thoroughly for accuracy",
+        "example_sentence": "Regulators scrutinized the financial dealings of the corporation.",
+        "context_explain": "Used when a detailed and critical examination is needed."
+      }
+    ],
+    "venice": {
+      "time": "5분",
+      "theme": "SSOT Words",
+      "content": "Review Games"
+    },
+    "wordLearn": {
+      "time": "8분",
+      "content": "Learn basic meanings"
+    },
+    "wordTest": {
+      "questionsCount": 15,
+      "questions": [
+        {
+          "type": "meaning_choice",
+          "question": "What does 'extrapolate' mean?",
+          "choices": [
+            "to withdraw",
+            "to estimate by extending known information",
+            "to hinder progress",
+            "to reject an idea"
+          ],
+          "answer": "to estimate by extending known information"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Choose the correct meaning of 'substantiate'.",
+          "choices": [
+            "to guess",
+            "to oppose",
+            "to provide evidence",
+            "to diminish"
+          ],
+          "answer": "to provide evidence"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'delineate'?",
+          "choices": [
+            "to obscure",
+            "to describe precisely",
+            "to argue against",
+            "to complicate"
+          ],
+          "answer": "to describe precisely"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "The word 'exemplify' means:",
+          "choices": [
+            "to conceal",
+            "to show by example",
+            "to refute",
+            "to misinterpret"
+          ],
+          "answer": "to show by example"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'correlate' refer to?",
+          "choices": [
+            "to be unrelated",
+            "to have a mutual relationship",
+            "to act independently",
+            "to confuse"
+          ],
+          "answer": "to have a mutual relationship"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Select the meaning of 'mediate'.",
+          "choices": [
+            "to provoke",
+            "to intervene to resolve",
+            "to ignore",
+            "to separate"
+          ],
+          "answer": "to intervene to resolve"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'construe' mean?",
+          "choices": [
+            "to interpret in a specific way",
+            "to build",
+            "to destroy",
+            "to ignore"
+          ],
+          "answer": "to interpret in a specific way"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "The word 'explicate' refers to:",
+          "choices": [
+            "to complicate",
+            "to explain clearly",
+            "to obscure",
+            "to contradict"
+          ],
+          "answer": "to explain clearly"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Choose the correct meaning of 'postulate'.",
+          "choices": [
+            "to deny",
+            "to assume as a basis",
+            "to reject",
+            "to simplify"
+          ],
+          "answer": "to assume as a basis"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'examine'?",
+          "choices": [
+            "to ignore",
+            "to inspect in detail",
+            "to abandon",
+            "to neglect"
+          ],
+          "answer": "to inspect in detail"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "The word 'evaluate' means:",
+          "choices": [
+            "to destroy",
+            "to judge the value",
+            "to ignore",
+            "to create"
+          ],
+          "answer": "to judge the value"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'elucidate' refer to?",
+          "choices": [
+            "to confuse",
+            "to make clear",
+            "to hide",
+            "to complicate"
+          ],
+          "answer": "to make clear"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "Select the meaning of 'scrutinize'.",
+          "choices": [
+            "to glance",
+            "to examine closely",
+            "to overlook",
+            "to simplify"
+          ],
+          "answer": "to examine closely"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'corroborate' mean?",
+          "choices": [
+            "to disprove",
+            "to confirm with evidence",
+            "to weaken",
+            "to dismiss"
+          ],
+          "answer": "to confirm with evidence"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "The word 'contextualize' refers to:",
+          "choices": [
+            "to ignore",
+            "to place within context",
+            "to distort",
+            "to remove"
+          ],
+          "answer": "to place within context"
+        }
+      ],
+      "testType": "meaning_choice"
+    }
+  },
+  "homework": {
+    "title": "심층/하드코어 과제",
+    "items": [
+      {
+        "type": "reading",
+        "title": "10개 지문 풀이 분석"
+      },
+      {
+        "type": "listening",
+        "title": "8개 듣기 실전 딕테이션"
+      },
+      {
+        "type": "vocab",
+        "title": "25개 단어 완벽 암기"
+      }
+    ]
+  }
+}

@@ -1,0 +1,569 @@
+{
+  "teacherId": "h_eng1",
+  "round": 2,
+  "title": "Curriculum Mode for 4~5등급",
+  "targetGrades": [
+    "고1",
+    "고2"
+  ],
+  "targetRanks": [
+    "4~5등급"
+  ],
+  "reading": {
+    "passageCount": 10,
+    "passages": [
+      {
+        "id": "Passage_1",
+        "text": "Jane loves reading books. Every weekend, she visits the local library. Her favorite genre is mystery. She also enjoys discussing books with her friends. They often meet at a café to talk about their latest reads. Jane believes reading helps her relax and learn new things.",
+        "teachPoint": "Discussing hobbies and interests.",
+        "question": "What does Jane like to do on weekends?"
+      },
+      {
+        "id": "Passage_2",
+        "text": "Tom is a high school student. He wakes up early every morning. He has breakfast with his family before going to school. His favorite subject is math because he likes solving problems. After school, Tom plays soccer with his friends. He dreams of becoming a professional soccer player one day.",
+        "teachPoint": "Daily routines and future aspirations.",
+        "question": "What is Tom's favorite subject and why?"
+      },
+      {
+        "id": "Passage_3",
+        "text": "The weather is changing. It is getting colder as winter approaches. People start wearing warm clothes like coats and scarves. Many enjoy drinking hot chocolate to stay warm. Some families plan trips to the mountains for skiing. Winter is a time for fun activities in the snow.",
+        "teachPoint": "Describing seasonal changes and activities.",
+        "question": "What do people often do as winter approaches?"
+      },
+      {
+        "id": "Passage_4",
+        "text": "Anna is preparing for a big exam. She studies hard every night. She makes notes and reviews them regularly. Anna also practices past exam papers to improve her skills. She believes that consistent effort will lead to success. Her teachers are very supportive and encourage her.",
+        "teachPoint": "Study habits and preparation strategies.",
+        "question": "How does Anna prepare for her exam?"
+      },
+      {
+        "id": "Passage_5",
+        "text": "Mark and his family are planning a vacation. They want to visit a beach because they love the sea. They are looking for a place with nice hotels and activities for children. Mark is excited to try surfing. His parents enjoy relaxing and reading by the sea.",
+        "teachPoint": "Planning a family vacation.",
+        "question": "What activity is Mark excited to try on vacation?"
+      },
+      {
+        "id": "Passage_6",
+        "text": "Amy loves to cook. Every weekend, she tries a new recipe. Last weekend, she made a chocolate cake. She followed the recipe carefully and the cake was delicious. Her family enjoyed it very much and asked her to make it again.",
+        "teachPoint": "Sequencing events in a story",
+        "question": "What did Amy do last weekend?"
+      },
+      {
+        "id": "Passage_7",
+        "text": "Tom has a new hobby. He started collecting stamps. He enjoys finding different stamps from around the world. His favorite stamp so far is from Japan. He keeps his collection in a special album and looks at it every day.",
+        "teachPoint": "Identifying main idea and details",
+        "question": "What is Tom's new hobby?"
+      },
+      {
+        "id": "Passage_8",
+        "text": "Lisa walks to school every morning. She leaves her house at 7:30 AM. It takes her about 20 minutes to get to school. On her way, she enjoys listening to music and sometimes meets her friends. They chat and laugh together.",
+        "teachPoint": "Understanding daily routines",
+        "question": "How does Lisa get to school?"
+      },
+      {
+        "id": "Passage_9",
+        "text": "David likes to play soccer. He practices with his team twice a week. Last week, they had a big game. David scored two goals, and his team won. He was very happy and celebrated with his teammates after the match.",
+        "teachPoint": "Recognizing cause and effect",
+        "question": "Why was David happy last week?"
+      },
+      {
+        "id": "Passage_10",
+        "text": "Sarah went to the library yesterday. She needed to find some books for her history project. The library was quiet and there were many people reading. She found three books and borrowed them. Sarah plans to read them this weekend.",
+        "teachPoint": "Understanding purpose and intention",
+        "question": "Why did Sarah go to the library?"
+      }
+    ],
+    "teachPoints": [
+      "Discussing hobbies and interests.",
+      "Daily routines and future aspirations.",
+      "Describing seasonal changes and activities.",
+      "Study habits and preparation strategies.",
+      "Planning a family vacation.",
+      "Sequencing events in a story",
+      "Identifying main idea and details",
+      "Understanding daily routines",
+      "Recognizing cause and effect",
+      "Understanding purpose and intention"
+    ],
+    "questions": [
+      "What does Jane like to do on weekends?",
+      "What is Tom's favorite subject and why?",
+      "What do people often do as winter approaches?",
+      "How does Anna prepare for her exam?",
+      "What activity is Mark excited to try on vacation?",
+      "What did Amy do last weekend?",
+      "What is Tom's new hobby?",
+      "How does Lisa get to school?",
+      "Why was David happy last week?",
+      "Why did Sarah go to the library?"
+    ]
+  },
+  "listening": {
+    "scriptCount": 10,
+    "items": [
+      {
+        "script": [
+          "A: Hey, did you finish the history homework yet?",
+          "B: Not yet. I'm still working on the last question.",
+          "A: Oh, which one is that?",
+          "B: It's the one about the causes of World War II.",
+          "A: Oh, I found that one a bit tricky too.",
+          "B: Do you have any notes on it?",
+          "A: Yes, do you want to take a look at them?"
+        ],
+        "question": "What is the topic of the homework that A and B are discussing?",
+        "choices": [
+          "A) The American Revolution",
+          "B) The causes of World War II",
+          "C) The Industrial Revolution",
+          "D) The French Revolution",
+          "E) The Cold War"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "C: Have you tried the new restaurant downtown?",
+          "D: Not yet, but I've heard good things about it.",
+          "C: I went there last night. The pasta was amazing!",
+          "D: Really? I love pasta. What did you order?",
+          "C: I had the Alfredo. It was so creamy and delicious.",
+          "D: That sounds great. I'll have to check it out soon.",
+          "C: Let me know when you do! I'd love to go again."
+        ],
+        "question": "What dish did C order at the new restaurant?",
+        "choices": [
+          "A) Margherita Pizza",
+          "B) Caesar Salad",
+          "C) Alfredo Pasta",
+          "D) Grilled Salmon",
+          "E) Beef Tacos"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "E: Are you going to the concert this weekend?",
+          "F: Yes, I got my tickets already. Are you?",
+          "E: I haven't decided yet. Who's performing?",
+          "F: It's the new band everyone's been talking about, The Rising Stars.",
+          "E: Oh, I've heard their music is really good.",
+          "F: They are amazing live! You should definitely come.",
+          "E: I'll see if I can get a ticket then."
+        ],
+        "question": "What event are E and F discussing?",
+        "choices": [
+          "A) A movie premiere",
+          "B) A theater play",
+          "C) A concert",
+          "D) A sports game",
+          "E) A book signing"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "G: Have you seen the latest episode of that detective series?",
+          "H: Yes, I watched it last night. What a twist at the end!",
+          "G: I know, right? I didn't see that coming at all.",
+          "H: Do you think the detective will find the real culprit in the next episode?",
+          "G: I hope so. This show always keeps me guessing.",
+          "H: That's what I love about it. It's never predictable.",
+          "G: Exactly! Can't wait for the next episode."
+        ],
+        "question": "What is the main topic of G and H's conversation?",
+        "choices": [
+          "A) A documentary",
+          "B) A detective series",
+          "C) A cooking show",
+          "D) A reality show",
+          "E) A news report"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "I: Are you planning to travel anywhere this year?",
+          "J: Yes, I'm thinking of going to Japan in the spring.",
+          "I: That sounds exciting! Have you been there before?",
+          "J: No, this will be my first time. I'm really looking forward to it.",
+          "I: You should definitely check out the cherry blossoms.",
+          "J: That's what I've heard. They're supposed to be beautiful.",
+          "I: Make sure to take lots of pictures!"
+        ],
+        "question": "Where is J planning to travel?",
+        "choices": [
+          "A) France",
+          "B) Italy",
+          "C) Japan",
+          "D) Australia",
+          "E) Brazil"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "K: Did you hear about the new policy at work?",
+          "L: No, what is it about?",
+          "K: They're changing the work from home days.",
+          "L: Really? How so?",
+          "K: Instead of two days a week, we now only get one.",
+          "L: That's a bummer. I liked having more flexibility.",
+          "K: Me too. But they said it's for productivity reasons."
+        ],
+        "question": "What change is happening at K and L's workplace?",
+        "choices": [
+          "A) New office location",
+          "B) New dress code",
+          "C) Change in remote work policy",
+          "D) Salary increase",
+          "E) New manager"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "M: Did you watch the soccer match last night?",
+          "N: Yes, it was incredible! That last-minute goal was amazing.",
+          "M: I know! I was on the edge of my seat the whole time.",
+          "N: Who was your favorite player in the match?",
+          "M: Definitely the goalkeeper. He made some unbelievable saves.",
+          "N: Absolutely, he was the star of the match for sure.",
+          "M: I can't wait for the next game."
+        ],
+        "question": "Who was M's favorite player in the soccer match?",
+        "choices": [
+          "A) The striker",
+          "B) The midfielder",
+          "C) The goalkeeper",
+          "D) The coach",
+          "E) The defender"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "O: Are you going to the book club meeting on Friday?",
+          "P: I plan to. Have you finished the book yet?",
+          "O: Yes, I finished it over the weekend. It's quite a story!",
+          "P: I'm halfway through, and it's hard to put down.",
+          "O: I agree. The author has a way of keeping you hooked.",
+          "P: What did you think about the main character's decisions?",
+          "O: I found them really compelling and thought-provoking."
+        ],
+        "question": "What is the main topic of O and P's conversation?",
+        "choices": [
+          "A) A movie review",
+          "B) A book club discussion",
+          "C) A cooking class",
+          "D) A music concert",
+          "E) A sports event"
+        ],
+        "answer": "B"
+      },
+      {
+        "script": [
+          "Q: Have you decided on a venue for the wedding?",
+          "R: Not yet, but we're considering a vineyard.",
+          "Q: That sounds beautiful! Have you visited it yet?",
+          "R: Yes, we went last weekend. The view is stunning.",
+          "Q: I can imagine. Vineyards can be so picturesque.",
+          "R: Exactly. Plus, they have a great space for the reception.",
+          "Q: It sounds perfect for a wedding."
+        ],
+        "question": "What type of venue is R considering for the wedding?",
+        "choices": [
+          "A) A beach",
+          "B) A hotel ballroom",
+          "C) A vineyard",
+          "D) A city hall",
+          "E) A garden"
+        ],
+        "answer": "C"
+      },
+      {
+        "script": [
+          "S: Have you been following the news about the new smartphone release?",
+          "T: Yes, I've been eagerly waiting for it.",
+          "S: What feature are you most excited about?",
+          "T: Definitely the improved camera. I love taking photos.",
+          "S: I heard it's supposed to be much better than the previous model.",
+          "T: Yeah, the reviews are really positive so far.",
+          "S: I'm thinking of upgrading too. Maybe we can go check it out together."
+        ],
+        "question": "What feature of the new smartphone is T most excited about?",
+        "choices": [
+          "A) The battery life",
+          "B) The screen size",
+          "C) The improved camera",
+          "D) The software update",
+          "E) The design"
+        ],
+        "answer": "C"
+      }
+    ],
+    "timeline": [
+      "[0~3m] AudioItem_1",
+      "[3~6m] AudioItem_2",
+      "[6~9m] AudioItem_3",
+      "[9~12m] AudioItem_4",
+      "[12~15m] AudioItem_5",
+      "[15~18m] AudioItem_6",
+      "[18~21m] AudioItem_7",
+      "[21~24m] AudioItem_8",
+      "[24~27m] AudioItem_9",
+      "[27~30m] AudioItem_10"
+    ]
+  },
+  "vocab": {
+    "words": [
+      {
+        "word": "create",
+        "meaning": "to bring something into existence",
+        "alt_meaning": "produce",
+        "example_sentence": "She plans to create a new painting this weekend.",
+        "context_explain": "Often used when talking about making something new or original for the first time."
+      },
+      {
+        "word": "discover",
+        "meaning": "to find something for the first time",
+        "alt_meaning": "uncover",
+        "example_sentence": "He discovered a new species of bird.",
+        "context_explain": "Commonly used in scientific contexts or when talking about new information."
+      },
+      {
+        "word": "describe",
+        "meaning": "to give an account of something with words",
+        "alt_meaning": "explain",
+        "example_sentence": "Can you describe what happened at the event?",
+        "context_explain": "Used when explaining details or characteristics of something."
+      },
+      {
+        "word": "improve",
+        "meaning": "to make something better",
+        "alt_meaning": "enhance",
+        "example_sentence": "Studying regularly can improve your grades.",
+        "context_explain": "Often used when talking about progress or development."
+      },
+      {
+        "word": "provide",
+        "meaning": "to supply or make available",
+        "alt_meaning": "offer",
+        "example_sentence": "The company will provide lunch for the meeting.",
+        "context_explain": "Used when talking about giving resources or support."
+      },
+      {
+        "word": "include",
+        "meaning": "to contain as a part of something",
+        "alt_meaning": "comprise",
+        "example_sentence": "The package includes two manuals.",
+        "context_explain": "Commonly used when listing items or explaining what is part of something."
+      },
+      {
+        "word": "decide",
+        "meaning": "to make a choice or judgement",
+        "alt_meaning": "determine",
+        "example_sentence": "He decided to go abroad for his education.",
+        "context_explain": "Used when someone makes a choice after consideration."
+      },
+      {
+        "word": "follow",
+        "meaning": "to go or come after something",
+        "alt_meaning": "pursue",
+        "example_sentence": "Please follow the instructions carefully.",
+        "context_explain": "Often used in contexts where something is being adhered to or pursued."
+      },
+      {
+        "word": "explain",
+        "meaning": "to make something clear to someone",
+        "alt_meaning": "clarify",
+        "example_sentence": "The teacher will explain the new topic tomorrow.",
+        "context_explain": "Used when making something understandable or providing details."
+      },
+      {
+        "word": "listen",
+        "meaning": "to give attention to sound",
+        "alt_meaning": "hear",
+        "example_sentence": "Please listen to the announcement.",
+        "context_explain": "Used when directing someone to pay attention to auditory information."
+      },
+      {
+        "word": "prepare",
+        "meaning": "to make ready for use or consideration",
+        "alt_meaning": "get ready",
+        "example_sentence": "She had to prepare for the upcoming exam.",
+        "context_explain": "Used when talking about getting ready for an event or task."
+      },
+      {
+        "word": "develop",
+        "meaning": "to grow or cause to grow",
+        "alt_meaning": "evolve",
+        "example_sentence": "He is trying to develop his skills in programming.",
+        "context_explain": "Used when talking about progress, especially in skills or knowledge."
+      },
+      {
+        "word": "focus",
+        "meaning": "to concentrate attention on something",
+        "alt_meaning": "concentrate",
+        "example_sentence": "You need to focus on your homework.",
+        "context_explain": "Used in contexts where concentration is needed."
+      },
+      {
+        "word": "achieve",
+        "meaning": "to successfully reach a desired objective or result",
+        "alt_meaning": "accomplish",
+        "example_sentence": "She achieved her dream of becoming a doctor.",
+        "context_explain": "Often used when discussing goals or objectives."
+      },
+      {
+        "word": "connect",
+        "meaning": "to join together or make contact",
+        "alt_meaning": "link",
+        "example_sentence": "He needs to connect the wires to complete the circuit.",
+        "context_explain": "Used in both physical and abstract contexts where joining is involved."
+      }
+    ],
+    "venice": {
+      "time": "5분",
+      "theme": "SSOT Words",
+      "content": "Review Games"
+    },
+    "wordLearn": {
+      "time": "8분",
+      "content": "Learn basic meanings"
+    },
+    "wordTest": {
+      "questionsCount": 10,
+      "questions": [
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'include'?",
+          "choices": [
+            "exclude",
+            "contain",
+            "ignore",
+            "remove"
+          ],
+          "answer": "contain"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is an alternative meaning of 'create'?",
+          "choices": [
+            "destroy",
+            "produce",
+            "leave",
+            "forget"
+          ],
+          "answer": "produce"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'describe' mean?",
+          "choices": [
+            "to hide",
+            "to repair",
+            "to give an account",
+            "to run"
+          ],
+          "answer": "to give an account"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is a synonym for 'provide'?",
+          "choices": [
+            "offer",
+            "take",
+            "steal",
+            "destroy"
+          ],
+          "answer": "offer"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'decide' mean?",
+          "choices": [
+            "to choose",
+            "to run",
+            "to forget",
+            "to break"
+          ],
+          "answer": "to choose"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is the meaning of 'focus'?",
+          "choices": [
+            "to ignore",
+            "to relax",
+            "to concentrate",
+            "to sleep"
+          ],
+          "answer": "to concentrate"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'achieve' mean?",
+          "choices": [
+            "to fail",
+            "to accomplish",
+            "to fall",
+            "to stop"
+          ],
+          "answer": "to accomplish"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'follow' mean?",
+          "choices": [
+            "to lead",
+            "to ignore",
+            "to go after",
+            "to hide"
+          ],
+          "answer": "to go after"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What is a synonym for 'discover'?",
+          "choices": [
+            "lose",
+            "hide",
+            "uncover",
+            "forget"
+          ],
+          "answer": "uncover"
+        },
+        {
+          "type": "meaning_choice",
+          "question": "What does 'prepare' mean?",
+          "choices": [
+            "to get ready",
+            "to sleep",
+            "to ignore",
+            "to break"
+          ],
+          "answer": "to get ready"
+        }
+      ],
+      "testType": "meaning_choice"
+    }
+  },
+  "homework": {
+    "title": "Consolidation Practice",
+    "items": [
+      {
+        "type": "reading",
+        "title": "10개 지문 직독직해 완성하기"
+      },
+      {
+        "type": "listening",
+        "title": "15개 듣기 대본 빈칸 딕테이션 테스트"
+      },
+      {
+        "type": "vocab",
+        "title": "15개 단어 문맥 기반 영작"
+      }
+    ]
+  }
+}

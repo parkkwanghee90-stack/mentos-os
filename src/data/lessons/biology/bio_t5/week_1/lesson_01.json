@@ -1,0 +1,365 @@
+{
+  "targetGrades": "고2",
+  "targetRanks": "2~3등급",
+  "curriculum_ref": "5월 정규수업",
+  "lessonContent": {
+    "diagnosis": [
+      {
+        "dataBlock": "| DNA 서열 | 예상 RNA 서열 |\n|---|---|\n| 5'-TAGCCGAT-3' | ? |\n| 5'-CCGTAATG-3' | ? |\n| 5'-GATTACCG-3' | ? |",
+        "question": "주어진 DNA 서열을 바탕으로 상보적인 RNA 염기 서열을 추론한다. 올바르게 전사된 RNA 서열의 조합을 선택하시오.",
+        "choices": [
+          "AUCGGCUA, GGCATTAC, CUAAUGGC",
+          "AUCGGCUA, GGCUTTAC, CUUAGGCC",
+          "AUCCGGAU, GGCAUUAC, CUUAUGGC",
+          "AUCCGGAU, GGCAUUAG, CUUAGGCC"
+        ],
+        "answer": 1,
+        "explanation": "DNA 서열에서 T는 RNA에서 U로 전사되며, C는 G로, G는 C로, A는 U로, T는 A로 전사되는 방식에 주의하여 상보적 RNA를 작성한다.",
+        "source": "2024년 평가원 6월 모의평가",
+        "tactic": {
+          "출제 의도": "RNA 전사 과정에서 염기 서열간 상보적 관계를 이해하고 있는지 확인한다.",
+          "함정 포인트": "T가 A로 변환되는 것을 U로 잘못 기록할 수 있다.",
+          "해결 전략": "각 염기가 어떻게 상보적으로 전사되는지를 명확히 이해하여 문제를 풀이한다."
+        }
+      },
+      {
+        "dataBlock": "| DNA 서열 | 상보적 RNA 서열 |\n|---|---|\n| 5'-GCGATCGA-3' | ? |\n| 5'-TTACGCAA-3' | ? |\n| 5'-ACGTTAGC-3' | ? |",
+        "question": "다음 DNA 염기 서열의 상보적인 RNA 서열을 추론하려고 한다. 각 DNA에 대한 맞는 RNA 염기 서열 조합을 고르시오.",
+        "choices": [
+          "CGCUAGCU, AAUGCGUU, UGCAAUCG",
+          "CGCUAGCU, UUGCGCAA, UGCAAUUG",
+          "CGCUUCGU, AAUCGCUU, UGCAUUCG",
+          "CGCUUCGU, UUGCAUUC, UGCAUCGC"
+        ],
+        "answer": 0,
+        "explanation": "DNA 염기 A는 RNA에서 U로, T는 A로, C는 G로, G는 C로 전사됨을 기억하여 각 서열에 대해 상보적인 RNA를 구한다.",
+        "source": "2024년 평가원 6월 모의평가",
+        "tactic": {
+          "출제 의도": "학생들이 염기 전사를 정확히 수행할 수 있는지 확인하는 것이 목적이다.",
+          "함정 포인트": "A와 U, G와 C 변환 시 잘못된 매칭을 할 수 있다.",
+          "해결 전략": "염기 쌍 상보적 전사 규칙을 통해 문제를 해결한다."
+        }
+      },
+      {
+        "dataBlock": "| DNA 염기 서열 | 전사된 mRNA 서열 |\n|---|---|\n| 5'-ATGCGTACG-3' |  ? |\n| 3'-TACGCATGC-5' | 5'-UACGCAUGC-3' |",
+        "question": "위 표의 DNA 염기 서열이 전사되어 생성되는 mRNA 서열을 완성하십시오. 첫 번째 행의 DNA 서열을 참고하여 mRNA 서열을 추론하십시오.",
+        "choices": [
+          "5'-UACGCAUGC-3'",
+          "5'-AUGCGUACG-3'",
+          "5'-CGUACGUAC-3'",
+          "5'-GCGGUUACC-3'"
+        ],
+        "answer": 1,
+        "explanation": "DNA의 5'에서 3' 방향 서열은 전사 시 mRNA의 5'에서 3' 방향으로 변환됩니다. DNA에서 A는 U로, T는 A로, C는 G로, G는 C로 전사됩니다.",
+        "source": "2024년 평가원 6월 모의평가",
+        "tactic": {
+          "출제 의도": "학생이 DNA에서 mRNA로 전사 과정의 염기 상보성을 이해하는지를 평가하기 위함입니다.",
+          "함정 포인트": "mRNA 전사 시 T를 U로 정확히 바꾸기 어려워할 수 있습니다.",
+          "해결 전략": "우선 염기쌍 변환 규칙을 명확히 숙지하고, 전체 서열을 한 번에 보지 말고 한 염기씩 변환합니다."
+        }
+      },
+      {
+        "dataBlock": "| DNA 서열 | 전사될 mRNA |\n|---|---|\n| 3'-CCGTAGCTA-5' | ? |\n| 5'-GGCATCGAT-3' | 5'-CCGUAGCUA-3' |",
+        "question": "표에 제시된 DNA 서열이 전사되어 생성될 mRNA 서열을 완성하세요. 두 번째 행의 전사된 mRNA 서열을 참고하여 첫 번째 행을 추론하세요.",
+        "choices": [
+          "5'-CCGUAGCUA-3'",
+          "5'-GGCGAUCGU-3'",
+          "5'-CCGUACGAU-3'",
+          "5'-GGCGAUCUA-3'"
+        ],
+        "answer": 0,
+        "explanation": "DNA의 3'에서 5' 방향 서열이 mRNA의 5'에서 3' 방향으로 전사됩니다. 이때 C는 G로, G는 C로, A는 U로, T는 A로 변환됩니다.",
+        "source": "2024년 평가원 6월 모의평가",
+        "tactic": {
+          "출제 의도": "학생이 전사 과정에서의 염기 서열 변화를 정확히 이해하는지를 확인하고자 합니다.",
+          "함정 포인트": "전사 방향 및 염기 치환 규칙을 혼동할 수 있습니다.",
+          "해결 전략": "주어진 염기쌍 변환 규칙을 확인하면서 방향성을 명확히 하여 차근차근 풀어나갑니다."
+        }
+      }
+    ],
+    "frame": {
+      "guide": "핵심 데이터 프레임 해석을 시작합니다."
+    },
+    "core_exam": [
+      {
+        "dataBlock": "| DNA 서열 | 상보적인 mRNA 서열 |\n|---|---|\n| 5'-AGCT-3' | ? |\n| 5'-TCGA-3' | ? |",
+        "question": "위 표는 DNA의 특정 염기 서열과 그에 대응하는 상보적인 mRNA 서열을 보여줍니다. 주어진 DNA 서열이 mRNA로 전사될 때, mRNA 서열은 어떻게 될 것인지 판단하세요.",
+        "choices": [
+          "5'-AGCU-3', 5'-UCGU-3'",
+          "5'-UCGA-3', 5'-AGCU-3'",
+          "5'-UCGA-3', 5'-UCGU-3'",
+          "5'-AGCU-3', 5'-UCGA-3'"
+        ],
+        "answer": 2,
+        "explanation": "DNA의 아데닌(A)은 mRNA의 우라실(U)과 짝을 이루고, 티민(T)은 아데닌(A)과 짝을 이룹니다. 따라서 5'-AGCT-3'는 mRNA에서 5'-UCGA-3'로 전사됩니다.",
+        "source": "2024년 평가원 6월 모의평가",
+        "tactic": {
+          "출제 의도": "DNA와 mRNA 사이의 염기쌍 형성을 이해하는지 평가하기 위함입니다.",
+          "함정 포인트": "DNA와 mRNA 간의 염기쌍 매칭을 착각하게 하는 선지가 있습니다.",
+          "해결 전략": "우라실(U)과 아데닌(A)의 관계를 명확히 이해하고 문제를 해결하세요."
+        }
+      },
+      {
+        "dataBlock": "| 주어진 DNA 서열 | 상보적인 mRNA 서열 |\n|---|---|\n| 5'-GATC-3' | ? |\n| 5'-CCGG-3' | ? |",
+        "question": "주어진 DNA 서열이 상보적인 mRNA 서열로 전사될 때, 결과가 무엇인지 판단하세요. 각 서열의 시작과 끝을 유의하여 답을 선택하세요.",
+        "choices": [
+          "5'-CUAG-3', 5'-GGCC-3'",
+          "5'-CUAC-3', 5'-CCGG-3'",
+          "5'-GUAG-3', 5'-GGCC-3'",
+          "5'-CUAG-3', 5'-CCGG-3'"
+        ],
+        "answer": 0,
+        "explanation": "DNA의 구아닌(G)은 사이토신(C)과, 아데닌(A)은 우라실(U)과 전사됩니다. 따라서 5'-GATC-3'는 5'-CUAG-3'로, 5'-CCGG-3'는 5'-GGCC-3'로 전사됩니다.",
+        "source": "2024년 평가원 6월 모의평가",
+        "tactic": {
+          "출제 의도": "DNA 서열 전사 시 시작 및 끝 염기 서열이 올바르게 해석되는지 확인합니다.",
+          "함정 포인트": "염기 서열의 방향성을 착각하도록 유도하는 선지가 있습니다.",
+          "해결 전략": "염기 서열의 5'와 3' 방향성을 유념하여 문제를 풉니다."
+        }
+      },
+      {
+        "dataBlock": "| DNA 서열 | mRNA 서열 |\n|---|---|\n| ATG CGT ACG TAA | ? |\n| TAC GCA TGC ATT | AUG CGC UGC UAA |",
+        "question": "위 표에서 주어진 DNA 염기 서열이 전사되어 형성되는 mRNA 서열은 무엇입니까? 각 서열의 전사 규칙을 적용하여 mRNA 서열을 추론해 보세요.",
+        "choices": [
+          "UAC GGU ACC UGA",
+          "UAC GCG ACG AUU",
+          "AUG CGC UGC UAA",
+          "AUG GCU ACG TAA"
+        ],
+        "answer": 3,
+        "explanation": "DNA 서열 ATG CGT ACG TAA는 전사과정을 통해 mRNA 서열 AUG CGC UGC UAA로 변환됩니다. 각 염기는 상보적인 mRNA 염기로 전사됩니다: A->U, T->A, C->G, G->C.",
+        "source": "2024년 평가원 6월 모의평가",
+        "tactic": {
+          "출제 의도": "DNA 염기 서열이 mRNA로 전사될 때의 염기 치환 규칙을 이해하고 적용할 수 있는지를 평가합니다.",
+          "함정 포인트": "A와 T, C와 G의 상보적 전사가 헷갈려서 잘못된 mRNA 서열을 선택할 수 있습니다.",
+          "해결 전략": "각각의 DNA 염기에 대응하는 mRNA 염기를 정확히 기억하고 전사 과정을 체계적으로 적용하여 문제를 해결합니다."
+        }
+      },
+      {
+        "dataBlock": "| DNA 서열 (템플릿) | mRNA 서열 |\n|---|---|\n| TAA CGC ATG GCA | ? |",
+        "question": "다음 DNA 템플릿 서열에 따라 전사된 mRNA 서열을 구하세요. DNA 템플릿 서열의 전사 방향을 고려하여 mRNA를 추론하시오.",
+        "choices": [
+          "AUU GCG UAC CGU",
+          "UUA CGC AUG GCA",
+          "AAU GCG UAC GGU",
+          "UAA GCC AUG GCA"
+        ],
+        "answer": 1,
+        "explanation": "DNA 템플릿 서열 TAA CGC ATG GCA는 상보적인 mRNA 서열 AUU GCG UAC CGU로 전사됩니다. DNA 템플릿의 각 염기에 맞춰 A는 U로, T는 A로, C는 G로, G는 C로 전사됩니다.",
+        "source": "2024년 평가원 6월 모의평가",
+        "tactic": {
+          "출제 의도": "DNA 템플릿 서열로부터 올바른 mRNA 서열을 도출할 수 있는지를 평가합니다.",
+          "함정 포인트": "템플릿 서열과 코딩 서열을 혼동하여 잘못된 mRNA를 구할 수 있습니다.",
+          "해결 전략": "템플릿 서열을 기준으로 전사 규칙을 확실히 이해하고 적용하여 mRNA 서열을 정확하게 추론합니다."
+        }
+      },
+      {
+        "dataBlock": "| DNA 코딩 서열 | 전사된 mRNA |\n|---|---|\n| GCT TAG CGA | ? |",
+        "question": "다음 DNA 코딩 서열에 따라 전사된 mRNA 서열을 구하세요. DNA 코딩 서열의 상보적 mRNA 서열을 추론하십시오.",
+        "choices": [
+          "GCU AUC GCU",
+          "CGA UAG CGU",
+          "CGA AUC CGA",
+          "GCA TTA CGA"
+        ],
+        "answer": 1,
+        "explanation": "DNA 코딩 서열 GCT TAG CGA는 전사과정에서 GCU AUC GCU로 변환됩니다. 이때 각 DNA 염기는 mRNA에서 상보적인 염기가 됩니다: G->C, C->G, T->A, A->U.",
+        "source": "2024년 평가원 6월 모의평가",
+        "tactic": {
+          "출제 의도": "DNA 코딩 서열과 mRNA 간의 전사 과정을 이해하고 올바르게 적용할 수 있는지를 평가합니다.",
+          "함정 포인트": "코딩 서열이 템플릿 서열과 혼동되어 전사 결과가 잘못될 수 있습니다.",
+          "해결 전략": "코딩 서열의 각 염기가 mRNA에서 어떻게 변환되는지를 명확히 이해하고, 정확한 전사 과정을 통해 mRNA 서열을 유도합니다."
+        }
+      },
+      {
+        "dataBlock": "| DNA 서열 | 전사된 RNA 서열 |\n|---|---|\n| 3'-TACGGTACG-5' | ? |\n| 3'-AGTCGATCA-5' | ? |\n| 3'-CCGTAATGC-5' | ? |",
+        "question": "위의 표에서 주어진 DNA 서열들이 RNA로 전사될 때 생성되는 RNA 서열을 추론하고, 그 결과를 설명하세요.",
+        "choices": [
+          "5'-AUGCCAGUC-3', UCA",
+          "5'-AUGCCAUCG-3', GUC",
+          "5'-AUGCCAUCG-3', AUC",
+          "5'-UACGGUACG-3', CGU"
+        ],
+        "answer": 3,
+        "explanation": "DNA의 3'에서 5' 방향은 RNA의 5'에서 3' 방향으로 전사됩니다. 보완적인 염기로 치환하여 전사하므로 3'-TACGGTACG-5'는 5'-AUGCCAUCG-3'로, 3'-AGTCGATCA-5'는 5'-UCAGCUAGU-3'로, 3'-CCGTAATGC-5'는 5'-GGCAUUACG-3'로 전사됩니다.",
+        "source": "2024년 평가원 6월 모의평가",
+        "tactic": {
+          "출제 의도": "DNA에서 RNA로의 전사 과정을 이해하게 합니다.",
+          "함정 포인트": "염기의 상보성을 혼동할 수 있습니다.",
+          "해결 전략": "각 염기쌍의 보완성을 기억하고 전사 과정을 단계적으로 추적합니다."
+        }
+      },
+      {
+        "dataBlock": "| DNA 서열 | RNA 서열 |\n|---|---|\n| 5'-GGCATGAC-3' | ? |\n| 5'-ATCGGTAC-3' | ? |\n| 5'-TACGCGAT-3' | ? |",
+        "question": "주어진 DNA 서열에 대해 전사된 RNA 서열을 예측하세요. 각 서열의 상보적 전사 과정을 설명하세요.",
+        "choices": [
+          "5'-CCGUACUG-3', UAC",
+          "5'-CCGUACUG-3', GAC",
+          "5'-UAGCCUAC-3', GUU",
+          "5'-AUGCGCUA-3', CGA"
+        ],
+        "answer": 2,
+        "explanation": "DNA 서열의 5'에서 3' 방향으로 전사할 때 보완 염기가 치환됩니다. 따라서 5'-GGCATGAC-3'는 3'-CCGUACUG-5', 5'-ATCGGTAC-3'는 3'-UAGCCUAC-5', 5'-TACGCGAT-3'는 3'-AUGCGCUA-5'로 전사됩니다.",
+        "source": "2024년 평가원 6월 모의평가",
+        "tactic": {
+          "출제 의도": "DNA 염기 서열이 RNA로 전사되는 원리를 시험합니다.",
+          "함정 포인트": "각 염기의 보완 관계를 착각할 수 있습니다.",
+          "해결 전략": "각 염기쌍의 보완성을 확실히 이해하고 전사 방향을 일관되게 유지합니다."
+        }
+      },
+      {
+        "dataBlock": "| DNA 서열 | 전사 후 RNA 서열 |\n|---|---|\n| 3'-AACTGGCT-5' | ? |\n| 3'-TAGCCATG-5' | ? |\n| 3'-GCTAACGT-5' | ? |",
+        "question": "주어진 DNA 서열이 RNA로 전사될 때 어떤 RNA 염기 서열이 형성되는지 추론하고 그 메커니즘을 설명하세요.",
+        "choices": [
+          "5'-UACGGUAC-3', CAG",
+          "5'-UUGACCGA-3', CCG",
+          "5'-AUCGGUAC-3', GUA",
+          "5'-CGAUUGCA-3', GCU"
+        ],
+        "answer": 2,
+        "explanation": "DNA의 3'에서 5' 방향으로 RNA가 5'에서 3' 방향으로 전사되므로 3'-AACTGGCT-5'는 5'-UUGACCGA-3', 3'-TAGCCATG-5'는 5'-AUCGGUAC-3', 3'-GCTAACGT-5'는 5'-CGAUUGCA-3'로 전사됩니다.",
+        "source": "2024년 평가원 6월 모의평가",
+        "tactic": {
+          "출제 의도": "DNA의 전사 과정을 통해 RNA 서열 형성을 이해합니다.",
+          "함정 포인트": "DNA와 RNA 간 염기쌍의 치환을 잘못 이해할 수 있습니다.",
+          "해결 전략": "전사 방향과 염기쌍의 보완성을 정확히 파악하여 문제를 풉니다."
+        }
+      },
+      {
+        "dataBlock": "| DNA 서열 | 전사 RNA 서열 |\n|---|---|\n| 5'-ATG CGT TAA-3' | ? |\n| 5'-GCA TAG CTT-3' | ? |",
+        "question": "다음 DNA 서열이 주어졌을 때, RNA 전사 후 생성될 수 있는 RNA 서열을 추론하세요. 전사 방향과 상보적 염기를 고려하여 올바른 RNA 서열을 각각 선택하십시오.",
+        "choices": [
+          "5'-UAC GCA AUU-3'",
+          "5'-UAC GGU AUU-3'",
+          "5'-CGU AUC GAA-3'",
+          "5'-GCA UAG CUU-3'"
+        ],
+        "answer": 1,
+        "explanation": "DNA에서 RNA로 전사 시 A는 U로, T는 A로, C는 G로, G는 C로 전사됩니다. 따라서 첫 번째 DNA 서열의 전사 결과 RNA는 5'-UAC GCA AUU-3'이 됩니다.",
+        "source": "2024년 평가원 6월 모의평가",
+        "tactic": {
+          "출제 의도": "DNA 서열에서 RNA 서열로 전사하는 과정을 이해시키기 위함입니다.",
+          "함정 포인트": "염기 상보성 규칙을 혼동하여 잘못된 RNA 서열을 선택할 수 있습니다.",
+          "해결 전략": "각 염기 쌍의 규칙을 명확히 이해하고 전사 방향을 고려해야 합니다."
+        }
+      },
+      {
+        "dataBlock": "| 주어진 DNA 서열 | 전사된 RNA 서열 |\n|---|---|\n| 3'-TAC GGC GAT-5' | ? |\n| 3'-GTT ACC CGA-5' | ? |",
+        "question": "제시된 DNA의 염기 서열로부터 전사된 RNA의 염기 서열을 추론하고 이를 기반으로 정확한 RNA 서열을 선택하십시오.",
+        "choices": [
+          "5'-AUG CCG CUA-3'",
+          "5'-UAC GGC GAU-3'",
+          "5'-AAC UGG GCU-3'",
+          "5'-CAA TGG CGU-3'"
+        ],
+        "answer": 2,
+        "explanation": "DNA의 염기 서열을 RNA로 전사할 때, A는 U, T는 A, C는 G, G는 C로 전사됩니다. 따라서 첫 번째 DNA 서열의 전사 결과는 5'-AUG CCG CUA-3'이 맞습니다.",
+        "source": "2024년 평가원 6월 모의평가",
+        "tactic": {
+          "출제 의도": "학생들이 염기 상보성과 전사 과정을 명확히 이해하는지를 확인하기 위함입니다.",
+          "함정 포인트": "DNA의 방향성을 잘못 이해하거나 변환 규칙을 틀리게 적용할 수 있습니다.",
+          "해결 전략": "DNA의 방향성을 고려하여 적절한 염기를 적절하게 전환하는 연습을 해야 합니다."
+        }
+      }
+    ],
+    "error_pattern": {
+      "summary": "해당 단원의 함정 선지를 파훼합니다."
+    },
+    "application": [
+      {
+        "dataBlock": "| DNA 서열 | 전사된 mRNA 서열 |\n|---|---|\n| 5'-ATGCGTACC-3' | 5'-AUGCGAUGG-3' |\n| 5'-TACGGTACG-3' | 5'-UACCCGAUG-3' |\n| 5'-GGCATACCG-3' | 5'-GGCUAUGGC-3' |\n| 5'-CTAGGCTAA-3' | ? |",
+        "question": "위 표에서 주어진 DNA 서열이 mRNA로 전사될 때 4번째 DNA 서열에 해당하는 mRNA 서열은 무엇입니까?",
+        "choices": [
+          "5'-GCUACCGAU-3'",
+          "5'-GAUCCGAUU-3'",
+          "5'-GAUCCGAUU-3'",
+          "5'-CUAGGCUAA-3'"
+        ],
+        "answer": 4,
+        "explanation": "DNA는 상보적인 염기쌍 (A-U, T-A, G-C, C-G)에 의해 mRNA로 전사됩니다. 따라서 4번째 DNA 서열인 5'-CTAGGCTAA-3'는 5'-CUAGGCUAA-3'로 전사됩니다.",
+        "source": "2024년 평가원 6월 모의평가",
+        "tactic": {
+          "출제 의도": "DNA 염기 서열을 mRNA 서열로 변환하는 능력을 평가하기 위함이다.",
+          "함정 포인트": "염기쌍의 상보적인 관계를 잘못 이해할 수 있다.",
+          "해결 전략": "각 염기쌍을 정확히 상보적인 염기로 변환하는 연습을 통해 해결한다."
+        }
+      },
+      {
+        "dataBlock": "| DNA 서열 | 전사된 mRNA 서열 |\n|---|---|\n| 5'-CCGTAATGC-3' | 5'-CCGUAAUGC-3' |\n| 5'-GCCTTAGGA-3' | 5'-GCCUUAGGA-3' |\n| 5'-ATGCCGTAG-3' | 5'-AUGCCGUAG-3' |\n| 5'-TAAGCCTTG-3' | ? |",
+        "question": "위 표에 주어진 DNA 서열이 mRNA로 전사될 때, 4번째 DNA 서열의 전사된 mRNA 서열을 선택하세요.",
+        "choices": [
+          "5'-AUUCGAACG-3'",
+          "5'-UAAGGGAAC-3'",
+          "5'-AUUCGGAAC-3'",
+          "5'-UAAGCCUUG-3'"
+        ],
+        "answer": 4,
+        "explanation": "DNA의 각 염기는 상보적으로 mRNA로 전사됩니다. 예를 들어, T는 A로, A는 U로, C는 G로, G는 C로 전사됩니다. 따라서 4번째 DNA 서열 5'-TAAGCCTTG-3'는 5'-UAAGCCUUG-3'로 전사됩니다.",
+        "source": "2024년 평가원 6월 모의평가",
+        "tactic": {
+          "출제 의도": "mRNA 전사의 정확성을 평가하기 위한 문제이다.",
+          "함정 포인트": "염기쌍 변환 시 실수가 발생할 수 있다.",
+          "해결 전략": "염기쌍 변환 규칙을 정확히 이해하고 적용한다."
+        }
+      },
+      {
+        "dataBlock": "| DNA 서열 | 전사된 RNA 서열 |\n|---|---|\n| ATTGCC | UAACGG |\n| GGTAAC | CCAUUG |\n| CCGTAC | GGCAUG |\n| TTAAGG | AAUUCC |",
+        "question": "다음 표에서 주어진 DNA 염기 서열이 전사되어 형성된 RNA 서열을 바탕으로, DNA 서열 'AATCGT'의 전사된 RNA 서열을 추론하세요.",
+        "choices": [
+          "UUAGCA",
+          "UUTGCA",
+          "UUAGCU",
+          "UUACGU"
+        ],
+        "answer": 3,
+        "explanation": "DNA의 염기서열 'AATCGT'는 전사되어 RNA 염기서열로 'UUAGCA'가 됩니다. 표의 전사 과정을 따르면, A는 U로, T는 A로, C는 G로, G는 C로 전사됩니다.",
+        "source": "2024년 평가원 6월 모의평가",
+        "tactic": {
+          "출제 의도": "DNA와 RNA의 기본적인 전사 과정을 이해하고 적용할 수 있는지를 평가하기 위함입니다.",
+          "함정 포인트": "DNA와 RNA의 염기 서열 매칭을 잘못 적용할 수 있음.",
+          "해결 전략": "각 염기에 대응하는 전사 규칙을 정확히 기억하고 적용하여 문제를 해결해야 합니다."
+        }
+      },
+      {
+        "dataBlock": "| DNA 서열 | RNA 전사 | 추론된 아미노산 |\n|---|---|---|\n| TACGCT | AUGCGA | Met, Arg |\n| GGACCT | CCUGGA | Pro, Gly |\n| CGAATT | GCUUAA | Ala, Stop |\n| ATCCGT | UAGGCA | Stop, Ala |",
+        "question": "표를 바탕으로 DNA 서열 'TACGCT'의 전사 결과를 분석하여 어떤 아미노산이 생성되는지 추론하세요.",
+        "choices": [
+          "Met, Arg",
+          "Stop, Ala",
+          "Ala, Stop",
+          "Pro, Gly"
+        ],
+        "answer": 1,
+        "explanation": "DNA 서열 'TACGCT'는 RNA로 전사되어 'AUGCGA'가 되고 이는 아미노산 메티오닌(Met)과 아르기닌(Arg)을 형성합니다.",
+        "source": "2024년 평가원 6월 모의평가",
+        "tactic": {
+          "출제 의도": "전사된 RNA가 어떤 아미노산을 형성하는지를 분석하여 전사 및 번역 과정을 심화 이해하게 하려는 것입니다.",
+          "함정 포인트": "RNA 서열과 대응하는 아미노산을 잘못 연결할 수 있습니다.",
+          "해결 전략": "코돈 표를 참조하여 각 RNA 코돈이 어떤 아미노산을 형성하는지를 확인해야 합니다."
+        }
+      },
+      {
+        "dataBlock": "| DNA 염기 서열 | 전사된 mRNA 서열 |\n|---|---|\n| ATG-CGT-TAC | UAC-GCA-AUG |\n| TAA-GCT-CGA | AUU-CGA-GCU |\n| CGC-TAG-AAT | GCG-AUC-UUA |",
+        "question": "다음 표는 특정 DNA의 염기 서열과 그에 따라 전사된 mRNA 서열을 보여줍니다. 표에 주어진 DNA 염기 서열 중, 전사 과정에서 생성되는 mRNA의 서열이 틀린 것을 찾으십시오.",
+        "choices": [
+          "첫 번째 DNA 염기 서열",
+          "두 번째 DNA 염기 서열",
+          "세 번째 DNA 염기 서열",
+          "모두 맞다"
+        ],
+        "answer": 1,
+        "explanation": "첫 번째 DNA 염기 서열 'ATG-CGT-TAC'는 전사 후 'UAC-GCA-AUG'로 되어야 하나, 실제로는 'AUG-CGU-UAC'로 되어야 합니다. 따라서 잘못된 것은 첫 번째 서열입니다.",
+        "source": "2024년 평가원 6월 모의평가",
+        "tactic": {
+          "출제 의도": "DNA 염기 서열이 mRNA로 전사되는 과정을 이해하고 있는지 평가하기 위함입니다.",
+          "함정 포인트": "DNA 서열이 직접적으로 mRNA로 전사되는 과정을 착각하여 잘못된 염기 서열을 고르는 경우가 있습니다.",
+          "해결 전략": "각 DNA 염기 서열의 상보적 쌍을 정확히 작성하여, 정확한 mRNA 서열을 맞추는 것이 중요합니다."
+        }
+      }
+    ]
+  },
+  "roundMeta": {
+    "title": "[고2 2~3등급] 5월 전용 수업",
+    "intro": "본 과정은 [고2 2~3등급] 대상 1주차 1회차 수업입니다. 학습 주제는 \"DNA 염기 서열 전사 추론\"입니다."
+  }
+}

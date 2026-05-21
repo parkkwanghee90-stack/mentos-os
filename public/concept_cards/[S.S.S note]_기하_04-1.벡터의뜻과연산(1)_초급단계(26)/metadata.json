@@ -1,0 +1,110 @@
+[
+  {
+    "id": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)_p3_01",
+    "source_file": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)",
+    "source_page": 3,
+    "section_index": "01",
+    "section_title": "벡터의 뜻과 덧셈 ,",
+    "card_index": "01",
+    "card_title": "벡터의 정의",
+    "y_start": 344,
+    "y_end": 586,
+    "file_png": "card_01_p3.webp"
+  },
+  {
+    "id": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)_p3_02",
+    "source_file": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)",
+    "source_page": 3,
+    "section_index": "01",
+    "section_title": "벡터의 뜻과 덧셈 ,",
+    "card_index": "02",
+    "card_title": "벡터의 표현",
+    "y_start": 586,
+    "y_end": 1007,
+    "file_png": "card_02_p3.webp"
+  },
+  {
+    "id": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)_p3_03",
+    "source_file": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)",
+    "source_page": 3,
+    "section_index": "01",
+    "section_title": "벡터의 뜻과 덧셈 ,",
+    "card_index": "03",
+    "card_title": "벡터의 크기",
+    "y_start": 1007,
+    "y_end": 1262,
+    "file_png": "card_03_p3.webp"
+  },
+  {
+    "id": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)_p3_04",
+    "source_file": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)",
+    "source_page": 3,
+    "section_index": "01",
+    "section_title": "벡터의 뜻과 덧셈 ,",
+    "card_index": "04",
+    "card_title": "단위벡터와 영벡터의 정의",
+    "y_start": 1262,
+    "y_end": 1602,
+    "file_png": "card_04_p3.webp"
+  },
+  {
+    "id": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)_p4_05",
+    "source_file": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)",
+    "source_page": 4,
+    "section_index": "01",
+    "section_title": "벡터의 뜻과 덧셈 ,",
+    "card_index": "05",
+    "card_title": "서로 같은 벡터",
+    "y_start": 283,
+    "y_end": 728,
+    "file_png": "card_05_p4.webp"
+  },
+  {
+    "id": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)_p4_06",
+    "source_file": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)",
+    "source_page": 4,
+    "section_index": "01",
+    "section_title": "벡터의 뜻과 덧셈 ,",
+    "card_index": "06",
+    "card_title": "역벡터",
+    "y_start": 728,
+    "y_end": 962,
+    "file_png": "card_06_p4.webp"
+  },
+  {
+    "id": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)_p4_07",
+    "source_file": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)",
+    "source_page": 4,
+    "section_index": "01",
+    "section_title": "벡터의 뜻과 덧셈 ,",
+    "card_index": "07",
+    "card_title": "벡터의 실수배",
+    "y_start": 962,
+    "y_end": 1602,
+    "file_png": "card_07_p4.webp"
+  },
+  {
+    "id": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)_p6_08",
+    "source_file": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)",
+    "source_page": 6,
+    "section_index": "01",
+    "section_title": "벡터의 뜻과 덧셈 ,",
+    "card_index": "08",
+    "card_title": "벡터의 덧셈",
+    "y_start": 283,
+    "y_end": 727,
+    "file_png": "card_08_p6.webp"
+  },
+  {
+    "id": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)_p6_09",
+    "source_file": "[S.S.S note]_기하_04-1.벡터의뜻과연산(1)_초급단계(26)",
+    "source_page": 6,
+    "section_index": "01",
+    "section_title": "벡터의 뜻과 덧셈 ,",
+    "card_index": "09",
+    "card_title": "벡터의 덧셈에 대한 성질",
+    "y_start": 727,
+    "y_end": 1602,
+    "file_png": "card_09_p6.webp"
+  }
+]
