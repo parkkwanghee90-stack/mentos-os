@@ -210,13 +210,14 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="dashboard-container">
-      {/* ── Header ── */}
-      <div className="dash-header">
-        <button className="back-btn" onClick={handleLogout}><LogOut size={16}/> 로그아웃</button>
-        <h1 className="dash-title">Mentos AI Learning OS</h1>
-        <p className="dash-subtitle">AI가 분석한 나만의 학습 대시보드</p>
-      </div>
+    <div className="dashboard-page-wrapper">
+      <div className="dashboard-container">
+        {/* ── Header ── */}
+        <div className="dash-header">
+          <button className="back-btn" onClick={handleLogout}><LogOut size={16}/> 로그아웃</button>
+          <h1 className="dash-title">Mentos AI Learning OS</h1>
+          <p className="dash-subtitle">AI가 분석한 나만의 학습 대시보드</p>
+        </div>
 
       {/* ═══ 1. Hero — 오늘의 학습 ═══ */}
       <div className="hero-card animate-fade-in">
@@ -300,7 +301,7 @@ export default function Dashboard() {
             <div className="ai-metric-value accuracy-val">{accuracy}%</div>
           </div>
         </div>
-        <div style={{ fontSize: '0.78rem', color: '#94a3b8', marginBottom: '0.5rem', fontWeight: 600 }}>
+        <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginBottom: '0.5rem', fontWeight: 600 }}>
           <AlertTriangle size={14} style={{ verticalAlign: 'middle', marginRight: '4px', color: '#fca5a5' }} />
           취약 단원 TOP 3
         </div>
@@ -387,12 +388,13 @@ export default function Dashboard() {
         <div className="quest-item">
           <div className="quest-item-check">
             <CheckCircle size={16} color="#64748b" />
+            <CheckCircle size={16} color="var(--text-muted)" />
           </div>
           <span className="quest-item-text">AI 추천 문제 5개 풀기</span>
           <span className="quest-xp-badge">+100 XP</span>
         </div>
         <div style={{ marginTop: '0.4rem' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.72rem', color: '#94a3b8', marginBottom: '0.3rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.72rem', color: 'var(--text-muted)', marginBottom: '0.3rem' }}>
             <span>오늘의 진행률</span>
             <span>33%</span>
           </div>
@@ -408,7 +410,7 @@ export default function Dashboard() {
           <Target className="stat-icon purple" />
           <div className="stat-info">
             <h4>오늘 푼 문제</h4>
-            <div className="stat-value">{todayProblems} <span style={{fontSize: '0.75rem', color: '#94a3b8'}}>/ 60</span></div>
+            <div className="stat-value">{todayProblems} <span style={{fontSize: '0.75rem', color: 'var(--text-muted)'}}>/ 60</span></div>
           </div>
         </div>
         <div className="glass-panel stat-card">
@@ -443,7 +445,7 @@ export default function Dashboard() {
                 <Zap size={18} color="#10b981" /> 이어하기 — [V2] 수업
               </h3>
               <div className="session-meta">
-                <span><strong style={{color: '#e2e8f0'}}>{parseSubject(v2s.teacherObj.subject)}</strong></span>
+                <span><strong style={{color: 'var(--text-main)'}}>{parseSubject(v2s.teacherObj.subject)}</strong></span>
                 <span>•</span>
                 <span>{v2s.teacherObj.name} 선생님</span>
                 <span>•</span>
@@ -481,7 +483,7 @@ export default function Dashboard() {
                 <Zap size={18} color="#a855f7" /> 이어하기 — [V1] 수업
               </h3>
               <div className="session-meta">
-                <span><strong style={{color: '#e2e8f0'}}>{parseSubject(activeSessionV1.subject)}</strong> ({activeSessionV1.unit})</span>
+                <span><strong style={{color: 'var(--text-main)'}}>{parseSubject(activeSessionV1.subject)}</strong> ({activeSessionV1.unit})</span>
                 <span>•</span>
                 <span>{activeSessionV1.teacher} 선생님</span>
                 <span>•</span>
@@ -515,7 +517,7 @@ export default function Dashboard() {
 
       {/* ═══ 8. 월간 테스트 (기존 보존) ═══ */}
       <div className="glass-panel monthly-test-card animate-fade-in" style={{ background: daysUntilTest === 0 ? 'linear-gradient(135deg, rgba(239,68,68,0.12), rgba(245,158,11,0.12))' : 'var(--panel-bg)', border: daysUntilTest === 0 ? '1px solid rgba(239,68,68,0.3)' : '1px solid var(--panel-border)', animationDelay: '0.45s' }}>
-        <h3 style={{ color: daysUntilTest === 0 ? '#ef4444' : '#fff' }}>
+        <h3 style={{ color: daysUntilTest === 0 ? '#ef4444' : 'var(--text-main)' }}>
           <BookA size={20} color={daysUntilTest === 0 ? "#ef4444" : "#94a3b8"} /> 
           {daysUntilTest === 0 ? '오늘은 월간 등급 테스트 날입니다!' : '다음 월간 테스트 일정'}
         </h3>
@@ -560,12 +562,12 @@ export default function Dashboard() {
               <div key={r.id} className="lesson-item">
                 <div className="lesson-item-header">
                   <div>
-                    <div style={{ fontSize: '0.8rem', color: '#94a3b8' }}>{new Date(r.date).toLocaleDateString('ko-KR')} • {r.grade} {r.subject}</div>
-                    <div style={{ fontSize: '1.15rem', fontWeight: '900', color: '#fff', marginTop: '3px' }}>{r.unit}</div>
+                    <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{new Date(r.date).toLocaleDateString('ko-KR')} • {r.grade} {r.subject}</div>
+                    <div style={{ fontSize: '1.15rem', fontWeight: '900', color: 'var(--text-main)', marginTop: '3px' }}>{r.unit}</div>
                   </div>
                   <div style={{ textAlign: 'right' }}>
                     <div style={{ fontSize: '1.6rem', fontWeight: '900', color: r.accuracy >= 70 ? '#10b981' : '#ef4444' }}>{r.accuracy}%</div>
-                    <div style={{ fontSize: '0.78rem', color: '#94a3b8' }}>{r.correctCount}/{r.totalQuestions} 정답</div>
+                    <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>{r.correctCount}/{r.totalQuestions} 정답</div>
                   </div>
                 </div>
                 <div className="lesson-wrong-box">
@@ -659,9 +661,9 @@ export default function Dashboard() {
               <ResponsiveContainer width="100%" height={220}>
                 <LineChart data={weeklyData}>
                   <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.08)" vertical={false}/>
-                  <XAxis dataKey="day" stroke="#94a3b8" fontSize={12} />
-                  <YAxis stroke="#94a3b8" fontSize={11} />
-                  <Tooltip contentStyle={{ backgroundColor: 'rgba(10, 10, 15, 0.95)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '10px', fontSize: '0.8rem' }} />
+                  <XAxis dataKey="day" stroke="#64748b" fontSize={12} />
+                  <YAxis stroke="#64748b" fontSize={11} />
+                  <Tooltip contentStyle={{ backgroundColor: 'var(--panel-bg)', border: '1px solid var(--panel-border)', borderRadius: '10px', fontSize: '0.8rem', color: 'var(--text-main)' }} />
                   <Line type="monotone" dataKey="개념이해도" stroke="#a855f7" strokeWidth={2} dot={{r: 3}} />
                   <Line type="monotone" dataKey="정답률" stroke="#10b981" strokeWidth={2} dot={{r: 4}} />
                   <Line type="monotone" dataKey="오답률" stroke="#ef4444" strokeWidth={2} dot={{r: 3}} />
@@ -694,10 +696,10 @@ export default function Dashboard() {
                     </linearGradient>
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.08)" vertical={false}/>
-                  <XAxis dataKey="week" stroke="#94a3b8" fontSize={12} />
-                  <YAxis stroke="#94a3b8" yAxisId="left" fontSize={11} />
+                  <XAxis dataKey="week" stroke="#64748b" fontSize={12} />
+                  <YAxis stroke="#64748b" yAxisId="left" fontSize={11} />
                   <YAxis yAxisId="right" orientation="right" reversed stroke="#fbbf24" domain={[1, 5]} ticks={[1,2,3,4,5]} fontSize={11} />
-                  <Tooltip contentStyle={{ backgroundColor: 'rgba(10, 10, 15, 0.95)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '10px', fontSize: '0.8rem' }} />
+                  <Tooltip contentStyle={{ backgroundColor: 'var(--panel-bg)', border: '1px solid var(--panel-border)', borderRadius: '10px', fontSize: '0.8rem', color: 'var(--text-main)' }} />
                   <Area yAxisId="left" type="monotone" dataKey="개념" stroke="#14b8a6" fillOpacity={1} fill="url(#colorConcept)" strokeWidth={2}/>
                   <Line yAxisId="left" type="monotone" dataKey="적용" stroke="#3b82f6" strokeWidth={2} />
                   <Line yAxisId="left" type="monotone" dataKey="속도" stroke="#a855f7" strokeWidth={2} />
@@ -743,7 +745,7 @@ export default function Dashboard() {
                 className={`calendar-cell ${logEntry ? 'calendar-cell-active' : ''} ${isToday ? 'calendar-cell-today' : ''} ${isTestDate ? 'calendar-cell-test' : ''}`}
                 style={{ cursor: logEntry ? 'pointer' : 'default' }}
               >
-                <div className="calendar-day-num" style={{ color: isToday ? '#c084fc' : isTestDate ? '#ef4444' : '#e2e8f0' }}>
+                <div className="calendar-day-num" style={{ color: isToday ? '#c084fc' : isTestDate ? '#ef4444' : 'var(--text-main)' }}>
                   {item.day}
                   {isTestDate && <span style={{ fontSize: '0.55rem', background: '#ef4444', color: '#fff', padding: '0.05rem 0.2rem', borderRadius: '3px' }}>TEST</span>}
                 </div>
@@ -755,10 +757,10 @@ export default function Dashboard() {
                           <span className="calendar-subject-dot" style={{ background: SUBJECT_COLORS[sub.subject] || '#fff' }}></span>
                           <span style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', fontWeight: 'bold' }}>{sub.subject}</span>
                         </div>
-                        <div style={{ color: '#94a3b8', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{sub.unit}</div>
+                        <div style={{ color: 'var(--text-muted)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{sub.unit}</div>
                       </div>
                     ))}
-                    {logEntry.subjects.length > 2 && <div style={{ fontSize: '0.55rem', color: '#94a3b8', textAlign: 'right' }}>+{logEntry.subjects.length - 2}</div>}
+                    {logEntry.subjects.length > 2 && <div style={{ fontSize: '0.55rem', color: 'var(--text-muted)', textAlign: 'right' }}>+{logEntry.subjects.length - 2}</div>}
                   </div>
                 )}
               </div>
@@ -772,12 +774,12 @@ export default function Dashboard() {
         <div className="calendar-detail-modal animate-fade-in">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
             <h3 style={{ fontSize: '1rem', margin: 0 }}>{selectedDateKey} 학습 상세</h3>
-            <button onClick={() => setSelectedDateKey(null)} style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', color: '#94a3b8', cursor: 'pointer', padding: '0.3rem 0.7rem', borderRadius: '8px', fontSize: '0.8rem' }}>닫기 ✕</button>
+            <button onClick={() => setSelectedDateKey(null)} style={{ background: 'rgba(15, 23, 42, 0.05)', border: '1px solid rgba(15, 23, 42, 0.1)', color: 'var(--text-muted)', cursor: 'pointer', padding: '0.3rem 0.7rem', borderRadius: '8px', fontSize: '0.8rem' }}>닫기 ✕</button>
           </div>
           
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
             {studyLogs.find(l => l.date === selectedDateKey)?.subjects.map((sub, i) => (
-              <div key={i} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.8rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', gap: '0.8rem' }}>
+              <div key={i} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.8rem', background: 'rgba(15, 23, 42, 0.03)', borderRadius: '12px', gap: '0.8rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flex: 1, minWidth: 0 }}>
                   <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: SUBJECT_COLORS[sub.subject] || '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 'bold', fontSize: '0.7rem', flexShrink: 0 }}>
                     {sub.subject.substring(0, 2)}
@@ -797,6 +799,7 @@ export default function Dashboard() {
           </div>
         </div>
       )}
+    </div>
     </div>
   );
 }

@@ -18,6 +18,178 @@
   --radius-sm: 12px;
 }
 
+/* ── Premium White Theme Overrides (Segregated wrapper) ── */
+.dashboard-page-wrapper {
+  background-color: var(--dash-bg);
+  min-height: 100vh;
+  width: 100%;
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  /* CSS variables overridden for light mode */
+  --dash-bg: #f8fafc;
+  --panel-bg: rgba(255, 255, 255, 0.85);
+  --panel-border: rgba(15, 23, 42, 0.08);
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --accent-gradient: linear-gradient(135deg, #4f46e5, #7c3aed, #9333ea);
+  --glow-purple: rgba(139, 92, 246, 0.08);
+  --glow-blue: rgba(59, 130, 246, 0.06);
+  --glow-emerald: rgba(16, 185, 129, 0.06);
+}
+
+/* Light mode specific overrides under dashboard-page-wrapper */
+.dashboard-page-wrapper .glass-panel:hover {
+  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.dashboard-page-wrapper .hero-card {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #8b5cf6 100%);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+}
+
+.dashboard-page-wrapper .hero-title {
+  color: #ffffff;
+}
+
+.dashboard-page-wrapper .hero-subtitle {
+  color: #e0e7ff;
+}
+
+.dashboard-page-wrapper .hero-stat-chip {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.dashboard-page-wrapper .back-btn {
+  background: rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  color: var(--text-muted);
+}
+
+.dashboard-page-wrapper .back-btn:hover {
+  background: rgba(15, 23, 42, 0.08);
+  border-color: rgba(15, 23, 42, 0.15);
+  color: var(--text-main);
+}
+
+.dashboard-page-wrapper .course-card {
+  color: var(--text-main);
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+}
+
+.dashboard-page-wrapper .ai-metric {
+  background: rgba(15, 23, 42, 0.03);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.dashboard-page-wrapper .ai-metric-value {
+  color: var(--text-main);
+}
+
+.dashboard-page-wrapper .ai-metric-value.growth {
+  color: #10b981;
+}
+
+.dashboard-page-wrapper .ai-metric-value.accuracy-val {
+  color: #3b82f6;
+}
+
+.dashboard-page-wrapper .ai-comment {
+  background: rgba(99, 102, 241, 0.05);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  color: #334155;
+}
+
+.dashboard-page-wrapper .quest-stat {
+  background: rgba(15, 23, 42, 0.03);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.dashboard-page-wrapper .quest-stat-value {
+  color: var(--text-main);
+}
+
+.dashboard-page-wrapper .quest-item {
+  background: rgba(15, 23, 42, 0.03);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.dashboard-page-wrapper .quest-item-check {
+  border: 2px solid rgba(15, 23, 42, 0.15);
+  color: var(--text-muted);
+}
+
+.dashboard-page-wrapper .progress-bar-container {
+  background: rgba(15, 23, 42, 0.06);
+}
+
+.dashboard-page-wrapper .stat-icon {
+  background: rgba(15, 23, 42, 0.03);
+}
+
+.dashboard-page-wrapper .stat-icon.purple { background: rgba(168, 85, 247, 0.08); }
+.dashboard-page-wrapper .stat-icon.blue { background: rgba(59, 130, 246, 0.08); }
+.dashboard-page-wrapper .stat-icon.teal { background: rgba(20, 184, 166, 0.08); }
+.dashboard-page-wrapper .stat-icon.red { background: rgba(239, 68, 68, 0.08); }
+
+.dashboard-page-wrapper .lesson-item {
+  background: rgba(15, 23, 42, 0.02);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.dashboard-page-wrapper .lesson-wrong-box {
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.1);
+}
+
+.dashboard-page-wrapper .lesson-wrong-header {
+  color: #ef4444;
+}
+
+.dashboard-page-wrapper .lesson-ai-note {
+  color: #334155;
+}
+
+.dashboard-page-wrapper .auto-hw-item {
+  background: rgba(15, 23, 42, 0.02);
+  border: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+.dashboard-page-wrapper .auto-hw-title {
+  color: var(--text-main);
+}
+
+.dashboard-page-wrapper .calendar-cell {
+  background: rgba(15, 23, 42, 0.02);
+  border: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+.dashboard-page-wrapper .calendar-cell-active:hover {
+  background: rgba(15, 23, 42, 0.05);
+}
+
+.dashboard-page-wrapper .calendar-subject-entry {
+  background: rgba(15, 23, 42, 0.04);
+}
+
+.dashboard-page-wrapper .calendar-cell-today {
+  background: rgba(168, 85, 247, 0.08);
+  border-color: #a855f7;
+}
+
+.dashboard-page-wrapper .calendar-cell-test {
+  background: rgba(239, 68, 68, 0.08);
+  border-color: #ef4444;
+}
+
+.dashboard-page-wrapper .session-card h3 {
+  color: var(--text-main);
+}
+
 /* ── Keyframes ── */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(16px); }

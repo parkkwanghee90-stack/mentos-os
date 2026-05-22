@@ -427,6 +427,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
 
   // ── [슈퍼 관리자 검수용] 강제 스킵 ──
   const testAdvance = () => {
+    setMessages(prev => prev.map(m => m.dynamicData || m.hintPlayer ? { ...m, dynamicData: undefined, hintPlayer: undefined } : m));
     setTestProblemIdx(prev => prev + 1);
   };
 

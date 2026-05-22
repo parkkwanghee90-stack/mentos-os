@@ -224,6 +224,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
 
   // ── [슈퍼 관리자 검수용] 강제 스킵 ──
   const testAdvance = () => {
+    setMessages(prev => prev.map(m => m.dynamicData || m.hintPlayer ? { ...m, dynamicData: undefined, hintPlayer: undefined } : m));
     setTestProblemIdx(prev => prev + 1);
   };
 
@@ -715,6 +716,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.8rem', width: '100%' }}>
              <button 
                onClick={() => {
+                 setMessages(prev => prev.map(m => m.dynamicData || m.hintPlayer ? { ...m, dynamicData: undefined, hintPlayer: undefined } : m));
                  setTestProblemIdx(Math.max(1, testProblemIdx - 1));
                  setLearningStep('problem');
                }}
@@ -728,7 +730,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                  if (testProblemIdx >= 10) {
                    alert("단원 학습을 모두 완료했습니다!");
                  } else {
-                   setTestProblemIdx(testProblemIdx + 1);
+                   testAdvance();
                    setLearningStep('problem');
                  }
                }}
