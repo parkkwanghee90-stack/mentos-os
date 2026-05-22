@@ -8,6 +8,7 @@ import { getStudyMode } from '@/data/curriculumSSOT';
 import { updateSession, loadSession, SESSION_STATUS, formatTime, getDaysUntilTest, getNextTestDate, advanceRegistrationDateForDemo } from '@/engine/sessionEngine';
 import { HIGH_TEACHER_PROFILES } from '@/data/hTeacherProfiles';
 import { processHomeworkSubmission } from '@/engine/homeworkEngine';
+import { progressToNextUnit, initTrial, TEACHER_ASSIGNMENT } from '@/engine/gradeFlowSSOT';
 import '@/pages/Dashboard.css';
 
 const parseSubject = (subj) => {
@@ -15,9 +16,95 @@ const parseSubject = (subj) => {
   return map[subj] || subj;
 };
 
+const GRADE_PROGRESS_MAP = {
+  '고1': [
+    '다항식의 연산',
+    '항등식과 나머지정리',
+    '인수분해',
+    '복소수',
+    '이차방정식',
+    '이차방정식과 이차함수',
+    '고차방정식',
+    '일차부등식',
+    '이차부등식',
+    '행렬',
+    '점과좌표',
+    '직선의방정식',
+    '원의방정식',
+    '도형의이동'
+  ],
+  '고2': [
+    '지수',
+    '로그',
+    '지수함수',
+    '로그함수',
+    '삼각함수성질',
+    '삼각함수그래프',
+    '삼각함수활용',
+    '등차등비',
+    '시그마용법',
+    '귀납적정의'
+  ],
+  '고3': [
+    '수1',
+    '수2',
+    '미적분',
+    '확률과통계'
+  ]
+};
+
 export default function Dashboard() {
   console.log("DASHBOARD_RENDER");
   const navigate = useNavigate();
+  
+  // 퀵스타트 추천 진도 폼 상태
+  const [selectedGrade, setSelectedGrade] = React.useState('고1');
+  const [selectedProgress, setSelectedProgress] = React.useState('이차방정식과 이차함수');
+  const [selectedRank, setSelectedRank] = React.useState('4~5등급');
+
+  React.useEffect(() => {
+    const options = GRADE_PROGRESS_MAP[selectedGrade] || [];
+    if (options.length > 0) {
+      if (selectedGrade === '고1') {
+        setSelectedProgress('이차방정식과 이차함수');
+      } else if (selectedGrade === '고2') {
+        setSelectedProgress('지수함수');
+      } else {
+        setSelectedProgress('미적분');
+      }
+    }
+  }, [selectedGrade]);
+
+  const handleQuickStart = () => {
+    const nextUnit = progressToNextUnit(selectedGrade, selectedProgress);
+    
+    let phaseIndexOverride = 2; // 4~5등급 -> 2단계
+    if (selectedRank === '1~2등급') {
+      phaseIndexOverride = 3; // 1~2등급 -> 3단계
+    }
+    
+    const teacherAssignmentInfo = TEACHER_ASSIGNMENT[selectedRank];
+    if (!teacherAssignmentInfo) return;
+    const assignedTeacherId = teacherAssignmentInfo.defaultTeacherIds[selectedGrade];
+    const teacherObj = Object.values(HIGH_TEACHER_PROFILES).find(t => t.id === assignedTeacherId);
+    
+    if (!teacherObj) {
+      console.error('Teacher profile not found:', assignedTeacherId);
+      return;
+    }
+    
+    initTrial(selectedGrade, selectedRank);
+    
+    navigate(`/class/math/${assignedTeacherId}`, {
+      state: {
+        subject: 'math',
+        teacher: teacherObj,
+        unitOverride: nextUnit,
+        phaseIndexOverride: phaseIndexOverride,
+        v2Mode: true
+      }
+    });
+  };
   
   React.useEffect(() => {
     const originalBg = document.body.style.backgroundColor;
@@ -252,6 +339,72 @@ export default function Dashboard() {
           </div>
           <button className="hero-cta" onClick={() => navigate('/grade-select')}>
             학습 시작 →
+          </button>
+        </div>
+      </div>
+
+      {/* ═══ [신규] 오늘의 단원 퀵스타트 AI 매칭 폼 ═══ */}
+      <div className="quick-start-card glass-panel animate-fade-in" style={{ animationDelay: '0.02s' }}>
+        <div className="quick-start-header">
+          <BookOpen size={20} color="#fbbf24" style={{ flexShrink: 0, marginTop: '2px' }} />
+          <div>
+            <h3>오늘의 단원을 어디까지 배우셨나요? 🎯</h3>
+            <p>최근 배운 진도를 입력하면 AI 선생님이 다음 단원의 최적 맞춤 단계 문제를 즉시 출제합니다!</p>
+          </div>
+        </div>
+        <div className="quick-start-form">
+          <div className="form-group">
+            <label>학년 선택</label>
+            <div className="segmented-control">
+              {['고1', '고2', '고3'].map(g => (
+                <button
+                  key={g}
+                  type="button"
+                  className={`segment-btn ${selectedGrade === g ? 'active' : ''}`}
+                  onClick={() => setSelectedGrade(g)}
+                >
+                  {g}
+                </button>
+              ))}
+            </div>
+          </div>
+          
+          <div className="form-group">
+            <label>최근 배운 단원</label>
+            <select 
+              value={selectedProgress} 
+              onChange={e => setSelectedProgress(e.target.value)}
+              className="quick-select"
+            >
+              {(GRADE_PROGRESS_MAP[selectedGrade] || []).map(opt => (
+                <option key={opt} value={opt}>{opt}</option>
+              ))}
+            </select>
+          </div>
+          
+          <div className="form-group">
+            <label>목표/현재 등급</label>
+            <div className="segmented-control">
+              {['1~2등급', '3등급', '4~5등급'].map(r => (
+                <button
+                  key={r}
+                  type="button"
+                  className={`segment-btn ${selectedRank === r ? 'active' : ''}`}
+                  onClick={() => setSelectedRank(r)}
+                >
+                  {r}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+        
+        <div className="quick-start-footer">
+          <div className="matching-preview-badge">
+            ⚡ AI 추천 단계: {selectedRank === '1~2등급' ? '3단계 (심화)' : '2단계 (실전)'} 시작
+          </div>
+          <button className="quick-start-cta" onClick={handleQuickStart}>
+            맞춤 학습 즉시 시작 🚀
           </button>
         </div>
       </div>

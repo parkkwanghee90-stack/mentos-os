@@ -4,7 +4,7 @@ import { vol1_0011 } from '../data/mockExams/0011.js';
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { ChevronRight, Maximize2, Minimize2, PenTool, CheckCircle, Database, Play, Pause, Volume2 } from 'lucide-react';
+import { ChevronRight, Maximize2, Minimize2, PenTool, CheckCircle, Database, Play, Pause, Volume2, CreditCard } from 'lucide-react';
 import '@/pages/LessonTest.css';
 import HintPlayerRouter from '@/components/hints/HintPlayerRouter';
 import PaymentCheckoutModal from '@/components/PaymentCheckoutModal';
@@ -484,8 +484,18 @@ export default function MentosMockExam() {
   const [showAnalysis, setShowAnalysis] = useState(false);
   const [analysisData, setAnalysisData] = useState(null);
   const [viewingHint, setViewingHint] = useState(null); // 문항 ID 저장
+  const [isMobile, setIsMobile] = useState(false);
   const [playingAudioId, setPlayingAudioId] = useState(null);
   const [audioInstance, setAudioInstance] = useState(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   
   // Use state from navigation if available
   const [electiveMode, setElectiveMode] = useState(location.state?.elective || 'calculus'); // 'calculus' | 'statistics'
@@ -687,7 +697,7 @@ export default function MentosMockExam() {
         return {
             unit: wu.unit,
             subunit: wu.unit,
-            wrongProblems: [wu.wrong + '개 틀림 (오답률 ' + Math.round(wu.errorRate*100) + '%)'],
+            wrongProblems: wu.wrongQuestionNumbers || [],
             pcbs: { P: 0, C: 0, B: 0, S: 0 },
             reviewProblems
         };
@@ -811,9 +821,8 @@ export default function MentosMockExam() {
               width: '100%',
               maxWidth: '960px',
               padding: '3rem 4rem', 
-              transform: `scale(${zoomLevel})`,
-              transformOrigin: 'top center',
-              transition: 'transform 0.2s ease-out',
+              zoom: zoomLevel,
+              transition: 'zoom 0.2s ease-out',
               minHeight: '1360px', // A3 세로 비율 모방
               position: 'relative'
             }}>
@@ -1116,11 +1125,7 @@ export default function MentosMockExam() {
                       <button 
                         key={q.id}
                         onClick={() => {
-                          const isPaid = localStorage.getItem('mentos_is_paid') === 'true';
-                          if (!isPaid) {
-                            setShowPaywall(true);
-                            return;
-                          }
+                          // 🎁 1회 무료 혜택 및 킬러 문항 복습 개방으로 결제 상태 무관하게 해설 시청 가능
                           setViewingHint(q);
                         }}
                         style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: '#eff6ff', color: '#2563eb', border: 'none', padding: '0.6rem 1rem', borderRadius: '8px', fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.2s', boxShadow: '0 4px 6px -1px rgba(37,99,235,0.1)' }}
@@ -1345,10 +1350,22 @@ export default function MentosMockExam() {
                   const mappedUnit = examType === '수능' 
                     ? `CSAT_${year}수능_${subject}`
                     : `CSAT_${year}_6월_${subject}`;
+                  
+                  let unit = mappedUnit;
+                  let problemId = String(currentQ.id).padStart(3, '0');
+                  
+                  if (currentQ.tag && currentQ.tag.includes('/')) {
+                    const tagParts = currentQ.tag.split('/');
+                    unit = tagParts[0];
+                    problemId = tagParts[1];
+                  } else if (String(currentQ.id).startsWith('drill_') && currentQ.tag) {
+                    unit = currentQ.tag;
+                  }
+                  
                   return (
                     <HintPlayerRouter
-                      unit={mappedUnit}
-                      problemId={String(currentQ.id).padStart(3, '0')}
+                      unit={unit}
+                      problemId={problemId}
                       showQA={true}
                     />
                   );
@@ -1400,40 +1417,111 @@ export default function MentosMockExam() {
       {viewingHint && (
         <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: '#0f172a', zIndex: 9999, display: 'flex', flexDirection: 'column', color: '#f8fafc' }}>
           
-          <div style={{ padding: '1.5rem 2.5rem', background: '#1e293b', borderBottom: '1px solid #334155', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              <div style={{ background: '#3b82f6', color: '#fff', padding: '0.4rem 1rem', borderRadius: '20px', fontWeight: 'bold', fontSize: '1rem' }}>PCBS 멘토스 튜터링</div>
-              <h2 style={{ margin: 0, fontSize: '1.4rem', fontWeight: 'bold' }}>{viewingHint.id}번 문항 ({viewingHint.tag}) 힌트해설</h2>
+          <div style={{ 
+            padding: isMobile ? '0.8rem 1rem' : '1.5rem 2.5rem', 
+            background: '#1e293b', 
+            borderBottom: '1px solid #334155', 
+            display: 'flex', 
+            justifyContent: 'space-between', 
+            alignItems: 'center',
+            flexWrap: 'nowrap'
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '0.4rem' : '1rem', minWidth: 0, flex: 1 }}>
+              {!isMobile && (
+                <div style={{ background: '#3b82f6', color: '#fff', padding: '0.4rem 1rem', borderRadius: '20px', fontWeight: 'bold', fontSize: '1rem', flexShrink: 0 }}>
+                  PCBS 멘토스 튜터링
+                </div>
+              )}
+              <h2 style={{ 
+                margin: 0, 
+                fontSize: isMobile ? '0.95rem' : '1.4rem', 
+                fontWeight: 'bold',
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                color: '#f8fafc'
+              }}>
+                {viewingHint.id}번 문항 ({viewingHint.tag}) 힌트해설
+              </h2>
             </div>
-            <button onClick={() => setViewingHint(null)} style={{ background: 'transparent', color: '#94a3b8', border: 'none', fontSize: '1rem', cursor: 'pointer', padding: '0.5rem 1rem', borderRadius: '8px' }}>
+            <button 
+              onClick={() => setViewingHint(null)} 
+              style={{ 
+                background: '#ef4444', 
+                color: '#fff', 
+                border: 'none', 
+                fontSize: isMobile ? '0.75rem' : '1rem', 
+                cursor: 'pointer', 
+                padding: isMobile ? '0.3rem 0.6rem' : '0.5rem 1rem', 
+                borderRadius: '8px',
+                fontWeight: 'bold',
+                flexShrink: 0,
+                marginLeft: '0.5rem'
+              }}
+            >
               ✕ 닫기
             </button>
           </div>
           
-          <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
+          <div style={{ display: 'flex', flex: 1, flexDirection: isMobile ? 'column' : 'row', overflow: 'hidden' }}>
             {/* 좌측: 원본 문제 */}
-            <div style={{ width: '45%', padding: '3rem', borderRight: '1px solid #334155', background: '#1e293b', overflowY: 'auto' }}>
-              <h3 style={{ color: '#94a3b8', marginBottom: '2rem', fontSize: '1rem' }}>[문제 원본]</h3>
-              <div style={{ fontSize: '1.3rem', lineHeight: '2.0', color: '#e2e8f0', fontFamily: '"KoPub Batang", "Noto Serif KR", serif' }}>
+            <div style={{ 
+              width: isMobile ? '100%' : '45%', 
+              height: isMobile ? '180px' : 'auto',
+              padding: isMobile ? '1rem' : '3rem', 
+              borderRight: isMobile ? 'none' : '1px solid #334155', 
+              borderBottom: isMobile ? '1px solid #334155' : 'none',
+              background: '#1e293b', 
+              overflowY: 'auto',
+              flexShrink: 0
+            }}>
+              <h3 style={{ color: '#94a3b8', marginBottom: isMobile ? '0.5rem' : '2rem', fontSize: '0.9rem', marginTop: 0 }}>[문제 원본]</h3>
+              <div style={{ 
+                fontSize: isMobile ? '0.95rem' : '1.3rem', 
+                lineHeight: isMobile ? '1.5' : '2.0', 
+                color: '#e2e8f0', 
+                fontFamily: '"KoPub Batang", "Noto Serif KR", serif' 
+              }}>
                 {viewingHint.picture && (
-                    <img src={viewingHint.picture} alt={`Question ${viewingHint.id}`} style={{ width: '100%', borderRadius: '8px', marginBottom: '1rem', background: '#fff', padding: '1rem' }} />
+                    <img src={viewingHint.picture} alt={`Question ${viewingHint.id}`} style={{ width: '100%', borderRadius: '8px', marginBottom: '1rem', background: '#fff', padding: '0.5rem', maxHeight: isMobile ? '120px' : 'none', objectFit: 'contain' }} />
                 )}
                 {!viewingHint.picture && parseKaTeXText(viewingHint.text)}
               </div>
             </div>
 
             {/* 우측: 애니메이션 힌트 플레이어 & AI QA */}
-            <div style={{ flex: 1, padding: '2rem', background: '#0f172a', position: 'relative', overflowY: 'auto' }}>
-               {/* 
-                 unit 동적 할당: 수능 기출은 CSAT_[year]_[subject] 포맷
-               */}
-               <HintPlayerRouter 
-                  unit={viewingHint.tag && viewingHint.tag.startsWith('CSAT_') 
-                        ? viewingHint.tag
-                        : '삼각함수활용2단계'} 
-                  problemId={String(viewingHint.id).padStart(3, '0')} 
-                  showQA={true} 
-               />
+            <div style={{ 
+              flex: 1, 
+              width: '100%',
+              padding: isMobile ? '0.8rem' : '2rem', 
+              background: '#0f172a', 
+              position: 'relative', 
+              overflowY: 'auto' 
+            }}>
+               {(() => {
+                 let unit = '삼각함수활용2단계';
+                 let problemId = String(viewingHint.id).padStart(3, '0');
+                 if (viewingHint.tag) {
+                   if (viewingHint.tag.includes('/')) {
+                     const tagParts = viewingHint.tag.split('/');
+                     unit = tagParts[0];
+                     problemId = tagParts[1];
+                   } else {
+                     unit = viewingHint.tag;
+                   }
+                 } else {
+                   unit = viewingHint.tag && viewingHint.tag.startsWith('CSAT_') 
+                         ? viewingHint.tag
+                         : '삼각함수활용2단계';
+                 }
+                 return (
+                   <HintPlayerRouter 
+                      unit={unit} 
+                      problemId={problemId} 
+                      showQA={true} 
+                   />
+                 );
+               })()}
             </div>
           </div>
         </div>

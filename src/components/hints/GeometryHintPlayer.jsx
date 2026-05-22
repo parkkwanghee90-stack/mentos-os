@@ -32,8 +32,6 @@ import TTS_UNIT_MAP from '../../data/tts_map.json';
 import 'katex/dist/katex.min.css';
 import { BlockMath, InlineMath } from '@/components/KaTeXWrapper';
 
-// RichText: 한글+LaTeX 혼합 텍스트를 완벽하게 렌더링
-// $...$ → InlineMath, $$...$$ / \[...\] → BlockMath, 나머지 → 텍스트
 // ── 1. 수식/텍스트 공통 전처리 (정규화) ──
 function normalizeMathText(raw) {
   if (!raw) return '';
@@ -65,65 +63,113 @@ function normalizeMathText(raw) {
   return txt;
 }
 
-// 인라인 수식 $...$ 파서
-function InlineFrag({ text }) {
-  if (!text) return null;
-  const parts = [];
-  const reg = /\$((?:[^$\\]|\\[\s\S])+?)\$/g;
-  let last = 0, m, k = 0;
-  while ((m = reg.exec(text)) !== null) {
-    if (m.index > last) {
-      parts.push(<span key={k++}>{text.slice(last, m.index)}</span>);
+// preprocessLatexString: $ 기호가 명시적으로 없는 텍스트에서 생한글이 있거나 \text{...}가 포함되어 있으면
+// 수식 부분만 골라 $로 감싸며, 텍스트 부분은 평문으로 복구하여 모바일에서 자연스러운 줄바꿈을 지원합니다.
+// 한글이 아예 없는 순수 수식은 전체를 $$로 통감싸기 처리합니다.
+function preprocessLatexString(latex) {
+  if (!latex) return '';
+  let str = String(latex);
+  if (str.includes('$') || str.includes('\\[') || str.includes('\\(')) {
+    return str;
+  }
+
+  // 1. 생한글이 있거나, \text{...} 내부에 한글이 들어있는지 전체 검사
+  const hasKorean = /[ㄱ-ㅎㅏ-ㅣ가-힣]/.test(str);
+  
+  if (!hasKorean) {
+    // 한글이 하나도 없는 순수 수식은 전체를 $$로 묶어서 블록 수식으로 렌더링
+    return `$$${str}$$`;
+  }
+
+  // 2. 한글이 포함된 혼합형 텍스트인 경우:
+  // 줄바꿈 \\\\ 이나 \n 로 나누고, 각 파트별로 최적의 수식 여부를 판별합니다.
+  const parts = str.split(/\\\\|\n/);
+  const processedParts = parts.map(part => {
+    const trimmed = part.trim();
+    if (!trimmed) return part;
+
+    // 한글이 아예 없는가? -> 수식 블록
+    const partHasKorean = /[ㄱ-ㅎㅏ-ㅣ가-힣]/.test(trimmed);
+    if (!partHasKorean) {
+      return `$${trimmed}$`;
     }
-    const mFull = m[0];
-    const mMath = m[1];
-    parts.push(
-      <InlineMath key={k++} math={mMath} errorColor="#94a3b8"
-        renderError={() => <span style={{ color: '#94a3b8', fontFamily: 'monospace' }}>{mFull}</span>} />
-    );
-    last = m.index + mFull.length;
+
+    // 한글이 있지만, \text{ 가 포함되어 있는가? -> LaTeX 정형 수식 블록
+    if (trimmed.includes('\\text{')) {
+      return `$${trimmed}$`;
+    }
+
+    // 한글이 있고, \text{ 가 없는가? -> 100% 일반 평문 텍스트 (줄바꿈이 필요한 일반 문장 설명)
+    return part; // 평문 보존
+  });
+
+  // 원래 줄바꿈 기호를 복원하며 합침
+  let reassembled = '';
+  const separators = [...str.matchAll(/\\\\|\n/g)].map(m => m[0]);
+  
+  for (let i = 0; i < processedParts.length; i++) {
+    reassembled += processedParts[i];
+    if (i < separators.length) {
+      reassembled += separators[i];
+    }
   }
-  if (last < text.length) {
-    parts.push(<span key={k++}>{text.slice(last)}</span>);
-  }
-  return <>{parts}</>;
+  return reassembled;
 }
 
-// KaTeX 수식이 섞인 텍스트를 React 요소로 변환
-function MathText({ text }) {
+
+// MathText: 플레이스홀더가 포함된 텍스트를 받아서 원래 수식을 복원하며 렌더링
+function MathText({ text, mathBlocks }) {
   if (!text) return null;
-  const normalized = normalizeMathText(String(text));
   const parts = [];
+  const regex = /___MATH_BLOCK_(\d+)___/g;
+  let lastIdx = 0;
+  let match;
   let key = 0;
 
-  // $$...$$ 먼저 처리
-  const blockReg = /\$\$([\s\S]+?)\$\$/g;
-  let bMatch;
-  let lastIdx = 0;
-  blockReg.lastIndex = 0;
-  while ((bMatch = blockReg.exec(normalized)) !== null) {
-    if (bMatch.index > lastIdx) {
-      parts.push(<InlineFrag key={key++} text={normalized.slice(lastIdx, bMatch.index)} />);
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIdx) {
+      parts.push(<span key={key++}>{text.slice(lastIdx, match.index)}</span>);
     }
-    const bFull = bMatch[0];
-    const bMath = bMatch[1];
-    parts.push(
-      <div key={key++} style={{ margin: '0.5rem 0', overflowX: 'auto', maxWidth: '100%' }}>
-        <BlockMath math={bMath} errorColor="#94a3b8"
-          renderError={() => <span style={{ color: '#94a3b8', fontFamily: 'monospace' }}>{bFull}</span>} />
-      </div>
-    );
-    lastIdx = bMatch.index + bFull.length;
+
+    const idx = parseInt(match[1], 10);
+    const originalMath = mathBlocks[idx];
+
+    if (originalMath) {
+      const normalized = normalizeMathText(originalMath);
+
+      if (normalized.startsWith('$$') && normalized.endsWith('$$')) {
+        const mathContent = normalized.slice(2, -2);
+        parts.push(
+          <div key={key++} className="avs-katex-block" style={{ margin: '0.4rem 0', overflowX: 'auto', maxWidth: '100%' }}>
+            <BlockMath math={mathContent} errorColor="#94a3b8"
+              renderError={() => <span style={{ color: '#94a3b8', fontFamily: 'monospace' }}>{originalMath}</span>} />
+          </div>
+        );
+      } else if (normalized.startsWith('$') && normalized.endsWith('$')) {
+        const mathContent = normalized.slice(1, -1);
+        parts.push(
+          <InlineMath key={key++} math={mathContent} errorColor="#94a3b8"
+            renderError={() => <span style={{ color: '#94a3b8', fontFamily: 'monospace' }}>{originalMath}</span>} />
+        );
+      } else {
+        parts.push(<span key={key++}>{originalMath}</span>);
+      }
+    }
+
+    lastIdx = regex.lastIndex;
   }
-  if (lastIdx < normalized.length) {
-    parts.push(<InlineFrag key={key++} text={normalized.slice(lastIdx)} />);
+
+  if (lastIdx < text.length) {
+    parts.push(<span key={key++}>{text.slice(lastIdx)}</span>);
   }
+
   return <>{parts}</>;
 }
 
 // RichText: 한글+LaTeX 혼합 텍스트를 완벽하게 렌더링
-// $...$ → InlineMath, $$...$$ / \[...\] → BlockMath, 나머지 → 텍스트
-const RichText = ({ content }) => {
+// 수식 내 줄바꿈이나 기호가 split(/\n|\\\\/)으로 인해 깨지는 것을 완벽하게 예방하기 위해
+// 먼저 모든 LaTeX 수식 블록을 안전한 임시 플레이스홀더로 치환한 뒤 줄바꿈을 쪼개고, 렌더링 시점에 안전하게 복구합니다.
+const RichText = ({ content, isMobile = false }) => {
   if (typeof content !== 'string') return <span>{JSON.stringify(content)}</span>;
   if (!content.trim()) return null;
 
@@ -138,16 +184,54 @@ const RichText = ({ content }) => {
   // 2. 텍스트에서는 마크다운 이미지 구문을 완전히 제거
   const cleanContent = content.replace(imageRegex, '').trim();
 
-  // 줄바꿈(\n 또는 \\\\) 단위로 먼저 분리해서 각 줄을 처리
-  const lines = cleanContent.split(/\n|\\\\/);
+  // 3. LaTeX 수식 블록 추출 및 플레이스홀더 치환
+  const mathBlocks = [];
+  let tempContent = cleanContent;
+
+  // $$ ... $$ 패턴
+  tempContent = tempContent.replace(/\$\$([\s\S]+?)\$\$/g, (match) => {
+    const placeholder = `___MATH_BLOCK_${mathBlocks.length}___`;
+    mathBlocks.push(match);
+    return placeholder;
+  });
+
+  // \[ ... \] 패턴
+  tempContent = tempContent.replace(/\\\[([\s\S]+?)\\\]/g, (match) => {
+    const placeholder = `___MATH_BLOCK_${mathBlocks.length}___`;
+    mathBlocks.push(match);
+    return placeholder;
+  });
+
+  // \( ... \) 패턴
+  tempContent = tempContent.replace(/\\\(([\s\S]+?)\\\)/g, (match) => {
+    const placeholder = `___MATH_BLOCK_${mathBlocks.length}___`;
+    mathBlocks.push(match);
+    return placeholder;
+  });
+
+  // $ ... $ 패턴 (인라인 수식, 탈출된 백슬래시 $ 등 무시)
+  tempContent = tempContent.replace(/\$((?:[^$\\]|\\[\s\S])+?)\$/g, (match) => {
+    const placeholder = `___MATH_BLOCK_${mathBlocks.length}___`;
+    mathBlocks.push(match);
+    return placeholder;
+  });
+
+  // 4. 일반 텍스트 줄바꿈 분리
+  const lines = tempContent.split(/\n|\\\\/);
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
       {cleanContent ? (
-        <span style={{ fontSize: '1.3rem', lineHeight: '2.1', whiteSpace: 'pre-wrap', wordBreak: 'keep-all', color: '#f8fafc' }}>
+        <span className="avs-rich-text" style={{ 
+          fontSize: isMobile ? '0.8rem' : '1.3rem', 
+          lineHeight: isMobile ? '1.4' : '2.1', 
+          whiteSpace: 'pre-wrap', 
+          wordBreak: 'keep-all', 
+          color: '#f8fafc' 
+        }}>
           {lines.map((line, li) => (
             <span key={li}>
-              <MathText text={line} />
+              <MathText text={line} mathBlocks={mathBlocks} />
               {li < lines.length - 1 && <br />}
             </span>
           ))}
@@ -177,7 +261,7 @@ import katex from 'katex';
 
 function SvgLatex({ x, y, content, color = '#fcd34d', size = 11 }) {
   const safeColor = color || '#fcd34d';
-  const html = katex.renderToString(content, { throwOnError: false });
+  const html = katex.renderToString(content, { throwOnError: false, strict: 'ignore', trust: true });
   return (
     <foreignObject x={x - 5} y={y - size} width={130} height={size * 3.5}>
       <div xmlns="http://www.w3.org/1999/xhtml"
@@ -239,6 +323,16 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
   const [imgH, setImgH] = useState(0);
   const [ttsPlaying, setTtsPlaying] = useState(false);
   const [ttsAudio, setTtsAudio] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   if (!data?.steps && !data?.overlay_steps) return null;
   const isV3 = !!(data.overlay_steps || (data.base_figure && data.base_figure.preset === 'custom'));
@@ -290,18 +384,182 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
   const chalkYellow = '#fde047';
 
   return (
-    <div style={{
+    <div className="avs-container" style={{
       background: ebsGreen, padding: '1.5rem', borderRadius: 16,
       color: chalkWhite, border: '8px solid #475569', marginTop: '1rem',
-      boxShadow: 'inset 0 0 20px rgba(0,0,0,0.5)'
+      boxShadow: 'inset 0 0 20px rgba(0,0,0,0.5)',
+      position: 'relative'
     }}>
+      {/* 모바일 및 데스크톱 강제 반응형 스타일 시트 (Tailwind 비활성화 완벽 대처) */}
+      <style>{`
+        /* 공통 및 데스크톱 기본 레이아웃 */
+        .avs-body-wrapper {
+          display: flex !important;
+          flex-direction: row !important;
+          gap: 1.5rem !important;
+          align-items: flex-start !important;
+          width: 100% !important;
+        }
+        .avs-text-col {
+          width: 58% !important;
+          display: flex !important;
+          flex-direction: column !important;
+          gap: 0.6rem !important;
+          max-height: 500px !important;
+          overflow-y: auto !important;
+          padding-right: 10px !important;
+        }
+        .avs-text-col.w-full {
+          width: 100% !important;
+        }
+        .avs-canvas-col {
+          width: 40% !important;
+          background: #1e293b !important;
+          border-radius: 12px !important;
+          position: -webkit-sticky !important;
+          position: sticky !important;
+          top: 1.5rem !important;
+          display: flex !important;
+          justify-content: center !important;
+          align-items: center !important;
+          padding: 1rem !important;
+          margin-bottom: 1rem !important;
+          height: 480px !important;
+          overflow: hidden !important;
+        }
+        .avs-canvas-col.order-first {
+          order: -1 !important;
+        }
+        .avs-canvas-col.order-last {
+          order: 1 !important;
+        }
+
+        @media (max-width: 768px) {
+          .avs-container {
+            padding: 0.6rem !important;
+            border-width: 4px !important;
+          }
+          .avs-header {
+            flex-direction: column !important;
+            align-items: stretch !important;
+            gap: 8px !important;
+            display: flex !important;
+          }
+          .avs-title {
+            font-size: 0.82rem !important;
+            white-space: nowrap !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 4px !important;
+            width: 100% !important;
+            flex-shrink: 0 !important;
+          }
+          .avs-title span {
+            font-size: 0.62rem !important;
+            padding: 1px 4px !important;
+            flex-shrink: 0 !important;
+          }
+          .avs-btn-container {
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: wrap !important;
+            width: 100% !important;
+            gap: 4px !important;
+            justify-content: flex-end !important;
+          }
+          .avs-btn {
+            padding: 2px 6px !important;
+            font-size: 0.65rem !important;
+            justify-content: center !important;
+            align-items: center !important;
+            height: 28px !important;
+            width: auto !important;
+            min-width: 0 !important;
+            white-space: nowrap !important;
+            gap: 2px !important;
+            box-sizing: border-box !important;
+            border-radius: 6px !important;
+          }
+          .avs-btn svg {
+            width: 10px !important;
+            height: 10px !important;
+            flex-shrink: 0 !important;
+          }
+          .avs-body-wrapper {
+            flex-direction: column !important;
+            gap: 1rem !important;
+          }
+          .avs-text-col {
+            width: 100% !important;
+            max-height: none !important;
+            overflow-y: visible !important;
+            padding-right: 0 !important;
+            order: 2 !important;
+          }
+          .avs-canvas-col {
+            width: 100% !important;
+            position: relative !important;
+            top: 0 !important;
+            height: 280px !important;
+            order: 1 !important;
+          }
+          .avs-card-body {
+            font-size: 0.82rem !important;
+            line-height: 1.5 !important;
+            word-break: keep-all !important;
+            word-wrap: break-word !important;
+          }
+          .avs-rich-text {
+            font-size: 0.82rem !important;
+            line-height: 1.5 !important;
+            word-break: keep-all !important;
+            word-wrap: break-word !important;
+          }
+          .katex {
+            font-size: 0.85em !important;
+          }
+          .katex-display {
+            margin: 0.15em 0 !important;
+            overflow-x: auto !important;
+            overflow-y: hidden !important;
+          }
+        }
+      `}</style>
+
       {/* 헤더 */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-        <h3 style={{ margin: 0, color: chalkYellow, fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span style={{ background: '#2563eb', color: 'white', padding: '2px 6px', borderRadius: '4px', fontSize: '0.8rem', fontWeight: 'bold' }}>EBSi style</span>
+      <div className="avs-header" style={{ 
+        display: 'flex', 
+        flexDirection: isMobile ? 'column' : 'row',
+        justifyContent: 'space-between', 
+        alignItems: isMobile ? 'stretch' : 'center', 
+        marginBottom: '1rem',
+        gap: isMobile ? '8px' : '0'
+      }}>
+        <h3 className="avs-title" style={{ 
+          margin: 0, 
+          color: chalkYellow, 
+          fontSize: isMobile ? '0.85rem' : '1.1rem', 
+          display: 'flex', 
+          alignItems: 'center', 
+          gap: '6px',
+          flexWrap: 'nowrap',
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+          whiteSpace: 'nowrap'
+        }}>
+          <span style={{ background: '#2563eb', color: 'white', padding: '2px 6px', borderRadius: '4px', fontSize: '0.7rem', fontWeight: 'bold', flexShrink: 0 }}>EBSi style</span>
           📐 {data.title || '단계별 해설 특강'}
         </h3>
-        <div style={{ display: 'flex', gap: 6 }}>
+        <div className="avs-btn-container" style={{ 
+          display: 'flex', 
+          gap: 6,
+          flexWrap: isMobile ? 'nowrap' : 'wrap',
+          justifyContent: isMobile ? 'space-between' : 'flex-end',
+          width: isMobile ? '100%' : 'auto',
+          alignItems: 'center'
+        }}>
           {/* 🔊 TTS 음성 듣기 버튼 */}
           {ttsUnit && ttsProblemId && (() => {
             const NAVER_TTS_FOLDERS = [
@@ -346,22 +604,22 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
             };
 
             return (
-              <button onClick={handleTts} style={{
-                ...btn(ttsPlaying ? '#dc2626' : '#7c3aed'),
+              <button onClick={handleTts} className="avs-btn" style={{
+                ...btn(ttsPlaying ? '#dc2626' : '#7c3aed', isMobile),
                 display: 'flex', alignItems: 'center', gap: 4
               }}>
                 {ttsPlaying ? '⏹ 정지' : '🔊 음성'}
               </button>
             );
           })()}
-          <button onClick={() => { setStep(0); setIsPlaying(false); }} style={btn('#334155')}>
-            <RotateCcw size={15} />
+          <button onClick={() => { setStep(0); setIsPlaying(false); }} className="avs-btn" style={btn('#334155', isMobile)}>
+            <RotateCcw size={isMobile ? 12 : 15} />
           </button>
-          <button onClick={handlePlay} style={btn('#ea580c')}>
-            {isPlaying ? <><Pause size={15} /> 정지</> : <><Play size={15} /> 재생</>}
+          <button onClick={handlePlay} className="avs-btn" style={btn('#ea580c', isMobile)}>
+            {isPlaying ? <><Pause size={isMobile ? 12 : 15} /> 정지</> : <><Play size={isMobile ? 12 : 15} /> 재생</>}
           </button>
-          <button onClick={handleNext} style={btn('#334155')}>
-            다음 <StepForward size={15} />
+          <button onClick={handleNext} className="avs-btn" style={btn('#334155', isMobile)}>
+            {isMobile ? '다음' : '다음'} <StepForward size={isMobile ? 12 : 15} />
           </button>
         </div>
       </div>
@@ -376,10 +634,11 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
         ))}
       </div>
 
-      <div className="flex flex-col lg:flex-row" style={{ gap: '1.5rem', alignItems: 'flex-start' }}>
+      <div className="avs-body-wrapper">
         {/* 스텝 텍스트 영역 (5개 단위 페이징) - 상단/하단 배치 */}
-        <div className={`w-full ${((hasMath || hasShapes || cur?.picture || data.problem_image || data.diagramAsset || data.imageAsset || data.graphAsset || (isV3 && (data.base_figure?.objects||[]).some(o => ['polygon','circle','segment','line','point','drawSegment','drawCircle','drawInscribedQuadrilateral','triangle_angles','triangle'].includes(o.type))))) ? 'lg:w-7/12' : ''}`} style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', maxHeight: '500px', overflowY: 'auto', paddingRight: '10px' }}>
+        <div className={`avs-text-col ${!((hasMath || hasShapes || cur?.picture || data.problem_image || data.diagramAsset || data.imageAsset || data.graphAsset || (isV3 && (data.base_figure?.objects||[]).some(o => ['polygon','circle','segment','line','point','drawSegment','drawCircle','drawInscribedQuadrilateral','triangle_angles','triangle'].includes(o.type))))) ? 'w-full' : ''}`}>
           {stepsData.map((s, idx) => {
+            const stepLabel = s.label || [s.phase ? `[${s.phase}]` : '', s.title].filter(Boolean).join(' ') || `${idx + 1}단계 해설`;
             return (
               <div key={idx} onClick={() => setStep(idx)} style={{
               padding: '0.75rem 1rem', borderRadius: 10, cursor: 'pointer',
@@ -393,17 +652,18 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
                 marginBottom: idx <= step ? '0.3rem' : 0,
                 textTransform: 'uppercase', letterSpacing: '0.04em',
               }}>
-                {s.label}
+                {stepLabel}
               </div>
               {idx <= step && (
-                <div style={{ fontSize: '1.5rem', color: chalkWhite, lineHeight: 2.0 }}>
-                  {/* V5 Caption (Pure Text) */}
-                  {s.caption && <div style={{ marginBottom: '0.4rem', color: chalkWhite, fontWeight: 500, lineHeight: '2.0', whiteSpace: 'pre-wrap' }}><RichText content={s.caption} /></div>}
+                <div className="avs-card-body" style={{ fontSize: isMobile ? '0.85rem' : '1.5rem', color: chalkWhite, lineHeight: isMobile ? 1.4 : 2.0 }}>
+                  {/* V5 Caption (Pure Text) / CSAT content */}
+                  {s.caption && <div style={{ marginBottom: '0.4rem', color: chalkWhite, fontWeight: 500, lineHeight: isMobile ? '1.4' : '2.0', whiteSpace: 'pre-wrap' }}><RichText content={s.caption} isMobile={isMobile} /></div>}
+                  {s.content && <div style={{ marginBottom: '0.4rem', color: chalkWhite, fontWeight: 500, lineHeight: isMobile ? '1.4' : '2.0', whiteSpace: 'pre-wrap' }}><RichText content={s.content} isMobile={isMobile} /></div>}
 
                   {/* V5 Formula Raw (RichText) */}
                   {s.formula_raw && (
                     <div style={{ marginBottom: '0.5rem', padding: '0.2rem 0' }}>
-                       <RichText content={s.formula_raw} />
+                       <RichText content={s.formula_raw} isMobile={isMobile} />
                     </div>
                   )}
 
@@ -413,25 +673,25 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
                       {fline.formula_latex ? (
                         <BlockMath math={normalizeMathText(fline.formula_latex)} errorColor="#cbd5e1" />
                       ) : (
-                        <div style={{ color: '#cbd5e1' }}>{fline.formula_text}</div>
+                        <div style={{ color: '#cbd5e1', fontSize: isMobile ? '0.8rem' : '1.2rem' }}>{fline.formula_text}</div>
                       )}
                     </div>
                   ))}
 
                   {/* Legacy Support */}
-                  {s.text && <div><RichText content={s.text} /></div>}
+                  {s.text && <div><RichText content={s.text} isMobile={isMobile} /></div>}
                   {s.lines && s.lines.map((line, li) => {
                     const isLatex = line.type === 'latex';
                     const content = line.content || line;
                     return (
                       <div key={li} style={{ marginBottom: '0.2rem' }}>
-                        {isLatex ? <BlockMath math={normalizeMathText(content)} /> : <RichText content={content} />}
+                        {isLatex ? <BlockMath math={normalizeMathText(content)} /> : <RichText content={content} isMobile={isMobile} />}
                       </div>
                     );
                   })}
                   {s.latex && (
                     <div style={{ marginTop: '0.2rem' }}>
-                      <RichText content={(s.latex.includes('$') || s.latex.includes('\\[') || s.latex.includes('\\(')) ? s.latex : `$$${s.latex}$$`} />
+                      <RichText content={preprocessLatexString(s.latex)} isMobile={isMobile} />
                     </div>
                   )}
                 </div>
@@ -439,7 +699,7 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
               {/* 수식 추가 표시 (이전 하위 호환성 유지) */}
               {idx === step && s.math?.latex && (
                 <div style={{ marginTop: '0.4rem' }}>
-                  <RichText content={(s.math.latex.includes('$') || s.math.latex.includes('\\[') || s.math.latex.includes('\\(')) ? s.math.latex : `$$${s.math.latex}$$`} />
+                  <RichText content={preprocessLatexString(s.math.latex)} isMobile={isMobile} />
                 </div>
               )}
             </div>
@@ -449,12 +709,7 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
 
         {/* 그래프 영역: 기하(geometry) 도형이 있는 경우에만 렌더링 (단순 문제 이미지 fallback 제거) */}
         {(hasMath || hasShapes || cur?.picture || (isV3 && (data.base_figure?.objects||[]).some(o => ['polygon','circle','segment','line','point','drawSegment','drawCircle','drawInscribedQuadrilateral','triangle_angles','triangle', 'drawPolygon', 'markLength', 'markAngle'].includes(o.type)))) ? (
-          <div className="w-full lg:w-5/12 lg:sticky order-first lg:order-last" style={{
-            background: '#1e293b', borderRadius: 12, top: '1.5rem',
-            display: 'flex', justifyContent: 'center', alignItems: 'center',
-            padding: '1rem', marginBottom: '1rem',
-            height: '480px', overflow: 'hidden', position: 'relative'
-          }}>
+          <div className="avs-canvas-col order-first lg:order-last" style={{ position: 'relative' }}>
             {hasMath && <MathCanvas objects={accumulatedObjects} height={450} viewBox={isV3 ? data.viewBox : cur.math?.viewBox} />}
             {hasShapes && !isV3 && <LegacySvgCanvas shapes={cur.shapes} />}
           </div>
@@ -464,11 +719,11 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
   );
 }
 
-function btn(bg) {
+function btn(bg, isMobile = false) {
   return {
     background: bg, border: 'none', color: 'white',
-    padding: '0.4rem 0.8rem', borderRadius: 8, cursor: 'pointer',
-    display: 'flex', alignItems: 'center', gap: 5, fontSize: '0.85rem', fontWeight: 600,
-  }
-;
+    padding: isMobile ? '2px 4px' : '0.4rem 0.8rem', borderRadius: isMobile ? 6 : 8, cursor: 'pointer',
+    display: 'flex', alignItems: 'center', gap: isMobile ? 2 : 5, fontSize: isMobile ? '0.65rem' : '0.85rem', fontWeight: 600,
+    whiteSpace: 'nowrap', height: isMobile ? 28 : 'auto'
+  };
 }

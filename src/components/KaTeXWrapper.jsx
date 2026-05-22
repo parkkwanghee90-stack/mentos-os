@@ -13,7 +13,9 @@ export function InlineMath({ math, errorColor = '#ef4444', renderError }) {
       try {
         katex.render(math, containerRef.current, {
           displayMode: false,
-          throwOnError: true,
+          throwOnError: false,
+          strict: 'ignore',
+          trust: true,
         });
       } catch (err) {
         console.error("KaTeX Inline Error:", err, "Math string:", math);
@@ -51,7 +53,9 @@ export function BlockMath({ math, errorColor = '#ef4444', renderError }) {
       try {
         katex.render(math, containerRef.current, {
           displayMode: true,
-          throwOnError: true,
+          throwOnError: false,
+          strict: 'ignore',
+          trust: true,
         });
       } catch (err) {
         console.error("KaTeX Block Error:", err, "Math string:", math);

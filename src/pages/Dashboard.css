@@ -1732,3 +1732,183 @@
     grid-template-columns: repeat(6, 1fr);
   }
 }
+
+/* Quick Start Card Styling */
+.quick-start-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%) !important;
+  border: 2px solid rgba(251, 191, 36, 0.3) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), inset 0 0 24px rgba(255, 255, 255, 0.05) !important;
+  border-radius: 20px;
+  padding: 1.6rem;
+  margin-bottom: 1.8rem;
+  color: #f8fafc !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.quick-start-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 20px 40px rgba(251, 191, 36, 0.15), 0 15px 35px rgba(0, 0, 0, 0.4) !important;
+}
+
+.quick-start-header {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.quick-start-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #fbbf24 !important;
+}
+
+.quick-start-header p {
+  margin: 4px 0 0 0;
+  font-size: 0.85rem;
+  color: #cbd5e1 !important;
+  line-height: 1.4;
+}
+
+.quick-start-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #fbbf24 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Segmented Control */
+.segmented-control {
+  display: flex;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 3px;
+  gap: 4px;
+}
+
+.segment-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #94a3b8 !important;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.segment-btn:hover {
+  color: #f8fafc !important;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.segment-btn.active {
+  color: #0f172a !important;
+  background: #fbbf24 !important;
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.35) !important;
+}
+
+/* Quick Select Option */
+.quick-select {
+  background: rgba(15, 23, 42, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #f8fafc !important;
+  padding: 12px 14px !important;
+  border-radius: 12px !important;
+  font-size: 0.9rem !important;
+  font-weight: 700 !important;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.quick-select:focus {
+  border-color: #fbbf24 !important;
+  box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.2) !important;
+}
+
+.quick-select option {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+/* Footer Section */
+.quick-start-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.matching-preview-badge {
+  background: rgba(251, 191, 36, 0.12) !important;
+  border: 1px solid rgba(251, 191, 36, 0.25) !important;
+  color: #fbbf24 !important;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+
+.quick-start-cta {
+  background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%) !important;
+  border: none;
+  color: #0f172a !important;
+  padding: 14px 28px !important;
+  font-size: 0.92rem !important;
+  font-weight: 900 !important;
+  border-radius: 12px !important;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(251, 191, 36, 0.4) !important;
+  transition: all 0.25s !important;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.quick-start-cta:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(251, 191, 36, 0.5) !important;
+  background: linear-gradient(135deg, #fcd34d 0%, #d97706 100%) !important;
+}
+
+.quick-start-cta:active {
+  transform: translateY(0) !important;
+}
+
+@media (max-width: 640px) {
+  .quick-start-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .matching-preview-badge {
+    text-align: center;
+  }
+  .quick-start-cta {
+    justify-content: center;
+  }
+}
+

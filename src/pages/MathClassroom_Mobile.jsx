@@ -900,15 +900,8 @@ export default function MathClassroomScreen() {
     return '수1';
   });
 
-  useEffect(() => {
-    if (selectedCourse) {
-      localStorage.setItem(`last_course_${teacher?.id || 'default'}`, selectedCourse);
-    }
-  }, [selectedCourse, teacher]);
-
-  const toggleSection = (sec) => setOpenSections(prev => ({ ...prev, [sec]: !prev[sec] }));
-
-  const getSidebarData = () => {
+  // ── getSidebarData 함수 및 sidebarData 선언 (TDZ 방지 위해 일반 function 호이스팅 및 상단 배치) ──
+  function getSidebarData() {
     if (!session) return { title: '', sections: [] };
     const ranks = session.rank || [];
     const isTopRank = ranks.some(r => r.includes('1등급') || r.includes('2등급'));
@@ -1010,8 +1003,17 @@ export default function MathClassroomScreen() {
         { name: `귀납적정의`, items: levels.map(l => `귀납적정의${l}`) }
       ]
     };
-  };
+  }
+
   const sidebarData = getSidebarData();
+
+  useEffect(() => {
+    if (selectedCourse) {
+      localStorage.setItem(`last_course_${teacher?.id || 'default'}`, selectedCourse);
+    }
+  }, [selectedCourse, teacher]);
+
+  const toggleSection = (sec) => setOpenSections(prev => ({ ...prev, [sec]: !prev[sec] }));
 
   useEffect(() => {
     if (session) {
