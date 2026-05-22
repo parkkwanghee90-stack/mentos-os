@@ -2350,7 +2350,7 @@ function MathClassroomScreenContent() {
     }
   }, [isG1, isG2, isG3, teacher?.routeId]);
 
-  const getSidebarData = () => {
+  function getSidebarData() {
     if (!session) return { title: '', sections: [] };
     const ranks = session.rank || [];
     const isTopRank = ranks.some(r => r.includes('1등급') || r.includes('2등급'));
@@ -2469,7 +2469,7 @@ function MathClassroomScreenContent() {
         { name: '도형의이동', items: levels.map(l => `도형의이동${l}`) }
       ]
     };
-  };
+  }
   const sidebarData = getSidebarData();
 
   useEffect(() => {

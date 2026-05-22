@@ -227,10 +227,12 @@
    모바일 모의고사 긴급 반응형 스타일 오버라이드 (@media max-width: 768px)
    ========================================================================== */
 @media (max-width: 768px) {
-  /* 최상위 컨테이너 가로 유출 방지 */
+  /* 최상위 컨테이너 가로 유출 방지 및 세로 스크롤 정렬 복원 */
   .full-center {
     padding: 0 !important;
     overflow-x: hidden !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
   }
 
   /* 상단 탑 배너: 모바일에서는 absolute/fixed를 풀고 relative로 배치하여 자연스러운 세로 스크롤의 시발점으로 만듦 */
