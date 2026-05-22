@@ -1295,24 +1295,84 @@ export default function MentosMockExam() {
         return (
           <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: '#0f172a', zIndex: 9999, display: 'flex', flexDirection: 'column', color: '#f8fafc' }}>
             {/* 상단 헤더 */}
-            <div style={{ padding: '1rem 2rem', background: '#1e293b', borderBottom: '1px solid #334155', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <div style={{ background: '#3b82f6', color: '#fff', padding: '0.3rem 0.8rem', borderRadius: '20px', fontWeight: 'bold', fontSize: '0.9rem' }}>
+            <div style={{ 
+              padding: isMobile ? '0.8rem 1rem' : '1rem 2rem', 
+              background: '#1e293b', 
+              borderBottom: '1px solid #334155', 
+              display: 'flex', 
+              justifyContent: 'space-between', 
+              alignItems: 'center',
+              flexWrap: 'nowrap'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '0.4rem' : '1rem', minWidth: 0, flex: 1 }}>
+                <div style={{ background: '#3b82f6', color: '#fff', padding: isMobile ? '0.2rem 0.6rem' : '0.3rem 0.8rem', borderRadius: '20px', fontWeight: 'bold', fontSize: isMobile ? '0.75rem' : '0.9rem', flexShrink: 0 }}>
                   {reviewProblemIndex + 1} / {reviewMode.length}
                 </div>
-                <h2 style={{ margin: 0, fontSize: '1.3rem', fontWeight: 'bold' }}>{currentQ.id}번 문제 보강 ({currentQ.tag})</h2>
+                <h2 style={{ 
+                  margin: 0, 
+                  fontSize: isMobile ? '0.95rem' : '1.3rem', 
+                  fontWeight: 'bold',
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  color: '#f8fafc'
+                }}>
+                  {currentQ.id}번 문제 보강 ({currentQ.tag})
+                </h2>
               </div>
-              <button onClick={() => { setReviewMode(null); setReviewShowAnswer(false); }} style={{ background: 'transparent', color: '#94a3b8', border: 'none', fontSize: '1rem', cursor: 'pointer', padding: '0.5rem 1rem' }}>✕ 닫기</button>
+              <button 
+                onClick={() => { setReviewMode(null); setReviewShowAnswer(false); }} 
+                style={{ 
+                  background: 'transparent', 
+                  color: '#94a3b8', 
+                  border: 'none', 
+                  fontSize: isMobile ? '0.75rem' : '1rem', 
+                  cursor: 'pointer', 
+                  padding: isMobile ? '0.3rem 0.6rem' : '0.5rem 1rem',
+                  fontWeight: 'bold',
+                  flexShrink: 0
+                }}
+              >
+                ✕ 닫기
+              </button>
             </div>
 
             {/* 본문: 좌측 문제 + 정답 | 우측 PCBS 힌트 + 애니메이션 */}
-            <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
+            <div style={{ display: 'flex', flex: 1, flexDirection: isMobile ? 'column' : 'row', overflow: 'hidden' }}>
               {/* 좌측: 원본 문제 + 정답 */}
-              <div style={{ width: '45%', padding: '2rem', borderRight: '1px solid #334155', background: '#1e293b', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                <h3 style={{ color: '#94a3b8', margin: 0, fontSize: '1rem' }}>[문제 원본]</h3>
-                <div style={{ fontSize: '1.2rem', lineHeight: '2.0', color: '#e2e8f0', fontFamily: '"KoPub Batang", "Noto Serif KR", serif' }}>
+              <div style={{ 
+                width: isMobile ? '100%' : '45%', 
+                height: isMobile ? '180px' : 'auto',
+                padding: isMobile ? '1rem' : '2rem', 
+                borderRight: isMobile ? 'none' : '1px solid #334155', 
+                borderBottom: isMobile ? '1px solid #334155' : 'none',
+                background: '#1e293b', 
+                overflowY: 'auto',
+                display: 'flex', 
+                flexDirection: 'column', 
+                gap: isMobile ? '0.8rem' : '1.5rem',
+                flexShrink: 0
+              }}>
+                <h3 style={{ color: '#94a3b8', margin: 0, fontSize: '0.85rem' }}>[문제 원본]</h3>
+                <div style={{ 
+                  fontSize: isMobile ? '0.95rem' : '1.2rem', 
+                  lineHeight: isMobile ? '1.5' : '2.0', 
+                  color: '#e2e8f0', 
+                  fontFamily: '"KoPub Batang", "Noto Serif KR", serif' 
+                }}>
                   {currentQ.picture || currentQ.image ? (
-                    <img src={currentQ.picture || currentQ.image} alt={`Question ${currentQ.id}`} style={{ width: '100%', borderRadius: '8px', background: '#fff', padding: '1rem' }} />
+                    <img 
+                      src={currentQ.picture || currentQ.image} 
+                      alt={`Question ${currentQ.id}`} 
+                      style={{ 
+                        width: '100%', 
+                        borderRadius: '8px', 
+                        background: '#fff', 
+                        padding: isMobile ? '0.5rem' : '1rem', 
+                        maxHeight: isMobile ? '120px' : 'none', 
+                        objectFit: 'contain' 
+                      }} 
+                    />
                   ) : (
                     parseKaTeXText(currentQ.text || currentQ.questionText)
                   )}
@@ -1320,22 +1380,51 @@ export default function MentosMockExam() {
                 </div>
 
                 {/* 정답 확인 버튼 */}
-                <button
-                  onClick={() => setReviewShowAnswer(!reviewShowAnswer)}
-                  style={{ alignSelf: 'flex-start', background: reviewShowAnswer ? '#10b981' : '#334155', color: '#fff', border: 'none', padding: '0.7rem 1.5rem', borderRadius: '10px', fontWeight: 'bold', fontSize: '1rem', cursor: 'pointer', transition: 'all 0.2s' }}
-                >
-                  {reviewShowAnswer ? '정답 숨기기' : '정답 확인'}
-                </button>
-                {reviewShowAnswer && (
-                  <div style={{ background: '#0f172a', border: '2px solid #10b981', borderRadius: '12px', padding: '1.5rem', textAlign: 'center' }}>
-                    <span style={{ color: '#94a3b8', fontSize: '0.9rem' }}>정답</span>
-                    <div style={{ fontSize: '2rem', fontWeight: '900', color: '#10b981', marginTop: '0.3rem' }}>{answerDisplay}</div>
-                  </div>
-                )}
+                <div style={{ display: 'flex', flexDirection: isMobile ? 'row' : 'column', gap: '0.8rem', alignItems: 'center' }}>
+                  <button
+                    onClick={() => setReviewShowAnswer(!reviewShowAnswer)}
+                    style={{ 
+                      background: reviewShowAnswer ? '#10b981' : '#334155', 
+                      color: '#fff', 
+                      border: 'none', 
+                      padding: isMobile ? '0.4rem 1rem' : '0.7rem 1.5rem', 
+                      borderRadius: '8px', 
+                      fontWeight: 'bold', 
+                      fontSize: isMobile ? '0.8rem' : '1rem', 
+                      cursor: 'pointer', 
+                      transition: 'all 0.2s',
+                      whiteSpace: 'nowrap'
+                    }}
+                  >
+                    {reviewShowAnswer ? '정답 숨기기' : '정답 확인'}
+                  </button>
+                  {reviewShowAnswer && (
+                    <div style={{ 
+                      background: '#0f172a', 
+                      border: '1px solid #10b981', 
+                      borderRadius: '8px', 
+                      padding: isMobile ? '0.3rem 1rem' : '0.8rem 1.5rem', 
+                      textAlign: 'center',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '8px'
+                    }}>
+                      <span style={{ color: '#94a3b8', fontSize: '0.75rem' }}>정답:</span>
+                      <span style={{ fontSize: isMobile ? '1.1rem' : '1.4rem', fontWeight: '900', color: '#10b981' }}>{answerDisplay}</span>
+                    </div>
+                  )}
+                </div>
               </div>
 
               {/* 우측: PCBS Step 힌트 + 애니메이션 힌트 */}
-              <div style={{ flex: 1, padding: '2rem', background: '#0f172a', overflowY: 'auto' }}>
+              <div style={{ 
+                flex: 1, 
+                width: '100%',
+                padding: isMobile ? '0.8rem' : '2rem', 
+                background: '#0f172a', 
+                position: 'relative', 
+                overflowY: 'auto' 
+              }}>
                 {(() => {
                   let examType = '6월';
                   let year = '2024';

@@ -34,7 +34,7 @@ export default function LessonManualModal({ onClose, onStartLearning }) {
     {
       title: "3. 문제 풀이 방식",
       icon: Clock,
-      content: '모든 실전 문제는 '제한 시간'이 적용됩니다.\n\n- 2단계: 5분 | 3단계: 6분 | 4단계: 10분\n- 시간 내에 집중해서 문제를 풀고 하단 정답 입력란에 정답을 입력하세요.'
+      content: '모든 실전 문제는 \'제한 시간\'이 적용됩니다.\n\n- 2단계: 4분 | 3단계: 5분 | 4단계: 6분\n- 시간 내에 집중해서 문제를 풀고 하단 정답 입력란에 정답을 입력하세요.'
     },
     {
       title: "4. 정답 후 학습 흐름",
@@ -103,87 +103,64 @@ export default function LessonManualModal({ onClose, onStartLearning }) {
            </ManualPage>
         </div>
 
-        {/* 마지막 페이지용 정책 안내 블록 (버튼형) */}
-        {currentPage === pages.length - 1 && (
-          <div style={{
-            background: '#f8fafc',
-            borderTop: '1px solid #e2e8f0',
-            padding: '1.2rem 2.5rem',
-            textAlign: 'center'
-          }}>
-            <p style={{ margin: '0 0 0.4rem 0', fontSize: '0.88rem', color: '#64748b' }}>
-              멘토스 AI는 <strong style={{ color: '#3b82f6' }}>KS BrainTech</strong>에서 운영합니다. 아래 정책을 확인해주세요.
-            </p>
-            <div style={{ display: 'flex', gap: '8px', justifyContent: 'center', marginTop: '0.8rem' }}>
-              <Link to="/terms" target="_blank" style={{
-                flex: 1, padding: '0.5rem', borderRadius: '8px',
-                background: '#ffffff', border: '1px solid #e2e8f0',
-                color: '#475569', fontSize: '0.82rem', fontWeight: 'bold', textDecoration: 'none',
-                transition: 'background 0.2s', textAlign: 'center'
-              }}
-              onMouseEnter={e => e.currentTarget.style.background = '#f1f5f9'}
-              onMouseLeave={e => e.currentTarget.style.background = '#ffffff'}
-              >
-                이용약관
-              </Link>
-              <Link to="/refund" target="_blank" style={{
-                flex: 1, padding: '0.5rem', borderRadius: '8px',
-                background: '#ffffff', border: '1px solid #e2e8f0',
-                color: '#475569', fontSize: '0.82rem', fontWeight: 'bold', textDecoration: 'none',
-                transition: 'background 0.2s', textAlign: 'center'
-              }}
-              onMouseEnter={e => e.currentTarget.style.background = '#f1f5f9'}
-              onMouseLeave={e => e.currentTarget.style.background = '#ffffff'}
-              >
-                환불정책
-              </Link>
-              <Link to="/privacy" target="_blank" style={{
-                flex: 1, padding: '0.5rem', borderRadius: '8px',
-                background: '#ffffff', border: '1px solid #e2e8f0',
-                color: '#475569', fontSize: '0.82rem', fontWeight: 'bold', textDecoration: 'none',
-                transition: 'background 0.2s', textAlign: 'center'
-              }}
-              onMouseEnter={e => e.currentTarget.style.background = '#f1f5f9'}
-              onMouseLeave={e => e.currentTarget.style.background = '#ffffff'}
-              >
-                개인정보방침
-              </Link>
-            </div>
-          </div>
-        )}
-
         {/* Footer Navigation */}
-        <div style={{ padding: '1.5rem 2.5rem', background: '#f8fafc', borderTop: '1px solid #e2e8f0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <button 
-            onClick={handlePrev}
-            disabled={currentPage === 0}
-            style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '0.8rem 1.5rem', borderRadius: '12px', border: '1px solid #e2e8f0', background: '#ffffff', color: currentPage === 0 ? '#cbd5e1' : '#1e293b', cursor: currentPage === 0 ? 'default' : 'pointer', fontWeight: 'bold' }}
-          >
-            <ChevronLeft size={20} /> 이전
-          </button>
+        <div style={{ padding: '1.2rem 2.5rem', background: '#f8fafc', borderTop: '1px solid #e2e8f0', display: 'flex', flexDirection: 'column', gap: '0.8rem', alignItems: 'center' }}>
+          <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <button 
+              onClick={handlePrev}
+              disabled={currentPage === 0}
+              style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '0.8rem 1.5rem', borderRadius: '12px', border: '1px solid #e2e8f0', background: '#ffffff', color: currentPage === 0 ? '#cbd5e1' : '#1e293b', cursor: currentPage === 0 ? 'default' : 'pointer', fontWeight: 'bold' }}
+            >
+              <ChevronLeft size={20} /> 이전
+            </button>
 
-          {currentPage === pages.length - 1 ? (
-            <button 
-              onClick={() => {
-                if (onStartLearning) {
-                  onStartLearning();
-                } else {
-                  onClose();
-                }
-              }}
-              style={{ background: 'linear-gradient(135deg, #10b981, #059669)', color: 'white', padding: '1rem 3rem', borderRadius: '16px', border: 'none', fontWeight: '900', fontSize: '1.2rem', cursor: 'pointer', boxShadow: '0 10px 15px -3px rgba(16, 185, 129, 0.3)', transition: 'transform 0.2s' }}
-              onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05)'}
-              onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-            >
-              수업 시작하기
-            </button>
-          ) : (
-            <button 
-              onClick={handleNext}
-              style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '0.8rem 2rem', borderRadius: '12px', border: 'none', background: '#1e293b', color: 'white', cursor: 'pointer', fontWeight: 'bold' }}
-            >
-              다음 <ChevronRight size={20} />
-            </button>
+            {currentPage === pages.length - 1 ? (
+              <button 
+                onClick={() => {
+                  if (onStartLearning) {
+                    onStartLearning();
+                  } else {
+                    onClose();
+                  }
+                }}
+                style={{ background: 'linear-gradient(135deg, #10b981, #059669)', color: 'white', padding: '1rem 3rem', borderRadius: '16px', border: 'none', fontWeight: '900', fontSize: '1.2rem', cursor: 'pointer', boxShadow: '0 10px 15px -3px rgba(16, 185, 129, 0.3)', transition: 'transform 0.2s' }}
+                onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05)'}
+                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
+              >
+                수업 시작하기
+              </button>
+            ) : (
+              <button 
+                onClick={handleNext}
+                style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '0.8rem 2rem', borderRadius: '12px', border: 'none', background: '#1e293b', color: 'white', cursor: 'pointer', fontWeight: 'bold' }}
+              >
+                다음 <ChevronRight size={20} />
+              </button>
+            )}
+          </div>
+
+          {/* 마지막 페이지에서 시작 버튼 아래에 한 줄 가로 링크로 초소형 렌더링 */}
+          {currentPage === pages.length - 1 && (
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '4px',
+              fontSize: '0.72rem',
+              color: '#64748b',
+              marginTop: '4px'
+            }}>
+              <div>
+                멘토스 AI는 <strong style={{ color: '#3b82f6' }}>KS BrainTech</strong>에서 투명하게 운영합니다.
+              </div>
+              <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}>
+                <Link to="/terms" target="_blank" style={{ color: '#475569', textDecoration: 'none', fontWeight: 'bold' }}>이용약관</Link>
+                <span>|</span>
+                <Link to="/refund" target="_blank" style={{ color: '#475569', textDecoration: 'none', fontWeight: 'bold' }}>환불정책</Link>
+                <span>|</span>
+                <Link to="/privacy" target="_blank" style={{ color: '#475569', textDecoration: 'none', fontWeight: 'bold' }}>개인정보방침</Link>
+              </div>
+            </div>
           )}
         </div>
       </div>

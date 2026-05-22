@@ -839,6 +839,16 @@ export default function MathClassroomScreen() {
 
   const [timeLeft, setTimeLeft] = useState(120 * 60);
 
+  // 문제별 제한시간: 2단계=4분, 3단계=5분, 4단계=6분
+  const getProblemTimeLimit = (unitName) => {
+    if (!unitName) return 0;
+    if (unitName.includes('2단계')) return 4 * 60;
+    if (unitName.includes('3단계')) return 5 * 60;
+    if (unitName.includes('4단계')) return 6 * 60;
+    return 120; // default 2 minutes
+  };
+  const [problemTimeLeft, setProblemTimeLeft] = useState(0);
+
   useEffect(() => {
     console.log('[TIMER_START]');
     const t = setInterval(() => {
@@ -854,6 +864,7 @@ export default function MathClassroomScreen() {
         console.log(`[TIMER_TICK] ${mins}:${secs}`);
         return next;
       });
+      setProblemTimeLeft(prev => Math.max(0, prev - 1));
     }, 1000);
     return () => clearInterval(t);
   }, []);
@@ -886,6 +897,12 @@ export default function MathClassroomScreen() {
   const [openSections, setOpenSections] = useState({});
   const [selectedUnit, setSelectedUnit] = useState(null);
   const [testProblemIdx, setTestProblemIdx] = useState(1);
+
+  // 문제 전환 시 문제 타이머 리셋
+  useEffect(() => {
+    setProblemTimeLeft(getProblemTimeLimit(selectedUnit));
+  }, [testProblemIdx, selectedUnit]);
+
   const [selectedCourse, setSelectedCourse] = useState(() => {
     if (location.state?.elective) return location.state.elective;
     if (isG2Teacher) return '수1';
@@ -1030,10 +1047,61 @@ export default function MathClassroomScreen() {
   return (
     <div style={{ display: 'flex', height: '100vh', background: '#09090b', color: 'white', position: 'relative' }}>
       
-      {/* Global Timer Overlay */}
-      <div style={{ position: 'absolute', top: '15px', left: '50%', transform: 'translateX(-50%)', background: 'rgba(239, 68, 68, 0.9)', color: 'white', padding: '0.5rem 1.5rem', borderRadius: '30px', fontWeight: 'bold', zIndex: 10, display: 'flex', alignItems: 'center', gap: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.5)', fontFamily: 'monospace', fontSize: '1.2rem', letterSpacing: '1px' }}>
-        <Clock size={20} />
-        {String(Math.floor(timeLeft / 60)).padStart(2, '0')}:{String(timeLeft % 60).padStart(2, '0')}
+      {/* Dual Timer Overlay */}
+      <style>{`
+        @keyframes timerPulseMobile {
+          0% { transform: scale(1); box-shadow: 0 0 8px rgba(245, 158, 11, 0.4); }
+          100% { transform: scale(1.05); box-shadow: 0 0 20px rgba(245, 158, 11, 0.9); }
+        }
+      `}</style>
+      <div style={{ position: 'fixed', top: '15px', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '10px', zIndex: 99999, pointerEvents: 'none' }}>
+        {/* Global Session Timer */}
+        <div style={{
+          background: 'rgba(15, 23, 42, 0.75)',
+          backdropFilter: 'blur(12px)',
+          border: '1.5px solid rgba(239, 68, 68, 0.5)',
+          boxShadow: '0 8px 24px rgba(239, 68, 68, 0.25)',
+          color: '#fee2e2',
+          padding: '0.4rem 1.0rem',
+          borderRadius: '30px',
+          fontWeight: 'bold',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '6px',
+          fontFamily: 'monospace',
+          fontSize: '0.95rem',
+          letterSpacing: '0.5px',
+          textShadow: '0 0 6px rgba(239, 68, 68, 0.5)'
+        }}>
+          <Clock size={15} color="#f87171" />
+          {String(Math.floor(timeLeft / 60)).padStart(2, '0')}:{String(timeLeft % 60).padStart(2, '0')}
+        </div>
+        
+        {/* Problem Timer */}
+        {problemTimeLeft > 0 && (
+          <div style={{
+            background: problemTimeLeft <= 60 ? 'rgba(245, 158, 11, 0.85)' : 'rgba(15, 23, 42, 0.75)',
+            backdropFilter: 'blur(12px)',
+            border: problemTimeLeft <= 60 ? '1.5px solid rgba(245, 158, 11, 0.9)' : '1.5px solid rgba(59, 130, 246, 0.5)',
+            boxShadow: problemTimeLeft <= 60 ? '0 8px 24px rgba(245, 158, 11, 0.4)' : '0 8px 24px rgba(59, 130, 246, 0.25)',
+            color: problemTimeLeft <= 60 ? '#ffffff' : '#dbeafe',
+            padding: '0.4rem 1.0rem',
+            borderRadius: '30px',
+            fontWeight: 'bold',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '6px',
+            fontFamily: 'monospace',
+            fontSize: '0.95rem',
+            letterSpacing: '0.5px',
+            textShadow: problemTimeLeft <= 60 ? '0 0 6px rgba(255,255,255,0.6)' : '0 0 6px rgba(59, 130, 246, 0.5)',
+            animation: problemTimeLeft <= 60 ? 'timerPulseMobile 0.8s infinite alternate cubic-bezier(0.4, 0, 0.2, 1)' : 'none',
+            transition: 'all 0.3s ease'
+          }}>
+            <Clock size={15} color={problemTimeLeft <= 60 ? '#ffffff' : '#60a5fa'} />
+            {String(Math.floor(problemTimeLeft / 60)).padStart(2, '0')}:{String(problemTimeLeft % 60).padStart(2, '0')}
+          </div>
+        )}
       </div>
 
       <LessonRenderer 

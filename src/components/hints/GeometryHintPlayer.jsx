@@ -354,6 +354,7 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
   const [ttsPlaying, setTtsPlaying] = useState(false);
   const [ttsAudio, setTtsAudio] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [activeTab, setActiveTab] = useState('text');
 
   React.useEffect(() => {
     const handleResize = () => {
@@ -519,7 +520,7 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
           }
           .avs-body-wrapper {
             flex-direction: column !important;
-            gap: 1rem !important;
+            gap: 0.8rem !important;
           }
           .avs-text-col {
             width: 100% !important;
@@ -527,13 +528,18 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
             overflow-y: visible !important;
             padding-right: 0 !important;
             order: 2 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 0.5rem !important;
           }
           .avs-canvas-col {
             width: 100% !important;
             position: relative !important;
             top: 0 !important;
-            height: 280px !important;
+            height: 230px !important;
             order: 1 !important;
+            margin-bottom: 0.4rem !important;
+            padding: 0.6rem !important;
           }
           .avs-card-body {
             font-size: 0.82rem !important;
@@ -664,9 +670,72 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
         ))}
       </div>
 
+      {/* 모바일 세그먼트형 탭 버튼 바 (EBSi급 다크 글래스모피즘) */}
+      {isMobile && (
+        <div className="avs-tabs-bar" style={{
+          display: 'flex',
+          background: ebsDarkGreen,
+          borderRadius: '12px',
+          padding: '4px',
+          marginBottom: '1rem',
+          border: '1px solid rgba(255,255,255,0.08)',
+          boxShadow: '0 4px 15px rgba(0,0,0,0.2)'
+        }}>
+          <button 
+            onClick={() => setActiveTab('text')}
+            style={{
+              flex: 1,
+              padding: '8px 12px',
+              borderRadius: '8px',
+              border: 'none',
+              background: activeTab === 'text' ? 'linear-gradient(135deg, #10b981, #059669)' : 'transparent',
+              color: activeTab === 'text' ? '#ffffff' : '#94a3b8',
+              fontWeight: 'bold',
+              fontSize: '0.8rem',
+              cursor: 'pointer',
+              transition: 'all 0.2s ease',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '6px'
+            }}
+          >
+            📝 단계별 해설 ({stepsData.length}스텝)
+          </button>
+          {(hasMath || hasShapes || cur?.picture || (isV3 && (data.base_figure?.objects||[]).some(o => ['polygon','circle','segment','line','point','drawSegment','drawCircle','drawInscribedQuadrilateral','triangle_angles','triangle', 'drawPolygon', 'markLength', 'markAngle'].includes(o.type)))) && (
+            <button 
+              onClick={() => setActiveTab('graph')}
+              style={{
+                flex: 1,
+                padding: '8px 12px',
+                borderRadius: '8px',
+                border: 'none',
+                background: activeTab === 'graph' ? 'linear-gradient(135deg, #3b82f6, #2563eb)' : 'transparent',
+                color: activeTab === 'graph' ? '#ffffff' : '#94a3b8',
+                fontWeight: 'bold',
+                fontSize: '0.8rem',
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '6px'
+              }}
+            >
+              📊 기하 렌더링
+            </button>
+          )}
+        </div>
+      )}
+
       <div className="avs-body-wrapper">
         {/* 스텝 텍스트 영역 (5개 단위 페이징) - 상단/하단 배치 */}
-        <div className={`avs-text-col ${!((hasMath || hasShapes || cur?.picture || data.problem_image || data.diagramAsset || data.imageAsset || data.graphAsset || (isV3 && (data.base_figure?.objects||[]).some(o => ['polygon','circle','segment','line','point','drawSegment','drawCircle','drawInscribedQuadrilateral','triangle_angles','triangle'].includes(o.type))))) ? 'w-full' : ''}`}>
+        <div 
+          className={`avs-text-col ${!((hasMath || hasShapes || cur?.picture || data.problem_image || data.diagramAsset || data.imageAsset || data.graphAsset || (isV3 && (data.base_figure?.objects||[]).some(o => ['polygon','circle','segment','line','point','drawSegment','drawCircle','drawInscribedQuadrilateral','triangle_angles','triangle'].includes(o.type))))) ? 'w-full' : ''}`}
+          style={{
+            display: isMobile && activeTab !== 'text' ? 'none' : 'flex'
+          }}
+        >
           {stepsData.map((s, idx) => {
             const stepLabel = s.label || [s.phase ? `[${s.phase}]` : '', s.title].filter(Boolean).join(' ') || `${idx + 1}단계 해설`;
             return (
@@ -739,7 +808,13 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
 
         {/* 그래프 영역: 기하(geometry) 도형이 있는 경우에만 렌더링 (단순 문제 이미지 fallback 제거) */}
         {(hasMath || hasShapes || cur?.picture || (isV3 && (data.base_figure?.objects||[]).some(o => ['polygon','circle','segment','line','point','drawSegment','drawCircle','drawInscribedQuadrilateral','triangle_angles','triangle', 'drawPolygon', 'markLength', 'markAngle'].includes(o.type)))) ? (
-          <div className="avs-canvas-col order-first lg:order-last" style={{ position: 'relative' }}>
+          <div 
+            className="avs-canvas-col order-first lg:order-last" 
+            style={{ 
+              position: 'relative',
+              display: isMobile && activeTab !== 'graph' ? 'none' : 'flex'
+            }}
+          >
             {hasMath && <MathCanvas objects={accumulatedObjects} height={450} viewBox={isV3 ? data.viewBox : cur.math?.viewBox} />}
             {hasShapes && !isV3 && <LegacySvgCanvas shapes={cur.shapes} />}
           </div>

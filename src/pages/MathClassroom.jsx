@@ -2209,12 +2209,12 @@ function MathClassroomScreenContent() {
 
   const [timeLeft, setTimeLeft] = useState(120 * 60);
 
-  // 문제별 제한시간: 2단계=4분, 3단계=5분, 4단계=8분
+  // 문제별 제한시간: 2단계=4분, 3단계=5분, 4단계=6분
   const getProblemTimeLimit = (unitName) => {
     if (!unitName) return 0;
     if (unitName.includes('2단계')) return 4 * 60;
     if (unitName.includes('3단계')) return 5 * 60;
-    if (unitName.includes('4단계')) return 8 * 60;
+    if (unitName.includes('4단계')) return 6 * 60;
     return 120; // default 2 minutes
   };
   const [problemTimeLeft, setProblemTimeLeft] = useState(0);
@@ -2534,17 +2534,57 @@ function MathClassroomScreenContent() {
       <FreeTrialBanner gradeFlow={location.state?.gradeFlow || '고1'} />
       
       {/* Dual Timer Overlay */}
-      <div className="math-timer-overlay-desktop" style={{ position: 'absolute', top: '15px', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '15px', zIndex: 10 }}>
+      <style>{`
+        @keyframes timerPulse {
+          0% { transform: scale(1); box-shadow: 0 0 10px rgba(245, 158, 11, 0.4); }
+          100% { transform: scale(1.05); box-shadow: 0 0 24px rgba(245, 158, 11, 0.95); }
+        }
+      `}</style>
+      <div className="math-timer-overlay-desktop" style={{ position: 'fixed', top: '15px', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '15px', zIndex: 99999, pointerEvents: 'none' }}>
         {/* Global Session Timer */}
-        <div style={{ background: 'rgba(239, 68, 68, 0.9)', color: 'white', padding: '0.5rem 1.5rem', borderRadius: '30px', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.5)', fontFamily: 'monospace', fontSize: '1.2rem', letterSpacing: '1px' }}>
-          <Clock size={20} />
+        <div style={{
+          background: 'rgba(15, 23, 42, 0.75)',
+          backdropFilter: 'blur(12px)',
+          border: '1.5px solid rgba(239, 68, 68, 0.5)',
+          boxShadow: '0 8px 32px rgba(239, 68, 68, 0.25)',
+          color: '#fee2e2',
+          padding: '0.5rem 1.5rem',
+          borderRadius: '30px',
+          fontWeight: 'bold',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '8px',
+          fontFamily: 'monospace',
+          fontSize: '1.2rem',
+          letterSpacing: '1px',
+          textShadow: '0 0 6px rgba(239, 68, 68, 0.5)'
+        }}>
+          <Clock size={20} color="#f87171" />
           {String(Math.floor(timeLeft / 60)).padStart(2, '0')}:{String(timeLeft % 60).padStart(2, '0')}
         </div>
         
         {/* Problem Timer */}
         {problemTimeLeft > 0 && (
-          <div style={{ background: problemTimeLeft <= 60 ? 'rgba(245, 158, 11, 0.9)' : 'rgba(59, 130, 246, 0.9)', color: 'white', padding: '0.5rem 1.5rem', borderRadius: '30px', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.5)', fontFamily: 'monospace', fontSize: '1.2rem', letterSpacing: '1px', transition: 'background 0.3s' }}>
-            <Clock size={20} />
+          <div style={{
+            background: problemTimeLeft <= 60 ? 'rgba(245, 158, 11, 0.85)' : 'rgba(15, 23, 42, 0.75)',
+            backdropFilter: 'blur(12px)',
+            border: problemTimeLeft <= 60 ? '1.5px solid rgba(245, 158, 11, 0.9)' : '1.5px solid rgba(59, 130, 246, 0.5)',
+            boxShadow: problemTimeLeft <= 60 ? '0 8px 32px rgba(245, 158, 11, 0.4)' : '0 8px 32px rgba(59, 130, 246, 0.25)',
+            color: problemTimeLeft <= 60 ? '#ffffff' : '#dbeafe',
+            padding: '0.5rem 1.5rem',
+            borderRadius: '30px',
+            fontWeight: 'bold',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            fontFamily: 'monospace',
+            fontSize: '1.2rem',
+            letterSpacing: '1px',
+            textShadow: problemTimeLeft <= 60 ? '0 0 6px rgba(255,255,255,0.6)' : '0 0 6px rgba(59, 130, 246, 0.5)',
+            animation: problemTimeLeft <= 60 ? 'timerPulse 0.8s infinite alternate cubic-bezier(0.4, 0, 0.2, 1)' : 'none',
+            transition: 'all 0.3s ease'
+          }}>
+            <Clock size={20} color={problemTimeLeft <= 60 ? '#ffffff' : '#60a5fa'} />
             {String(Math.floor(problemTimeLeft / 60)).padStart(2, '0')}:{String(problemTimeLeft % 60).padStart(2, '0')}
           </div>
         )}
