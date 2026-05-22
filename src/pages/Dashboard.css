@@ -20,174 +20,452 @@
 
 /* ── Premium White Theme Overrides (Segregated wrapper) ── */
 .dashboard-page-wrapper {
-  background-color: var(--dash-bg);
+  background-color: #f8fafc !important;
   min-height: 100vh;
   width: 100%;
-  color: var(--text-main);
+  color: #0f172a !important;
   transition: background-color 0.3s ease, color 0.3s ease;
 
   /* CSS variables overridden for light mode */
   --dash-bg: #f8fafc;
-  --panel-bg: rgba(255, 255, 255, 0.85);
-  --panel-border: rgba(15, 23, 42, 0.08);
+  --panel-bg: #ffffff;
+  --panel-border: rgba(15, 23, 42, 0.06);
   --text-main: #0f172a;
   --text-muted: #64748b;
   --accent-gradient: linear-gradient(135deg, #4f46e5, #7c3aed, #9333ea);
-  --glow-purple: rgba(139, 92, 246, 0.08);
-  --glow-blue: rgba(59, 130, 246, 0.06);
-  --glow-emerald: rgba(16, 185, 129, 0.06);
+  --glow-purple: rgba(139, 92, 246, 0.05);
+  --glow-blue: rgba(59, 130, 246, 0.04);
+  --glow-emerald: rgba(16, 185, 129, 0.04);
 }
 
-/* Light mode specific overrides under dashboard-page-wrapper */
-.dashboard-page-wrapper .glass-panel:hover {
-  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+/* 1. All Card and Panel Backgrounds - Crisp Premium White + Subtle Elevation Shadow */
+.dashboard-page-wrapper .glass-panel,
+.dashboard-page-wrapper .chart-panel,
+.dashboard-page-wrapper .calendar-card,
+.dashboard-page-wrapper .quest-card,
+.dashboard-page-wrapper .ai-report-card,
+.dashboard-page-wrapper .avs-card,
+.dashboard-page-wrapper .homework-card,
+.dashboard-page-wrapper .auto-hw-card,
+.dashboard-page-wrapper .mistake-card,
+.dashboard-page-wrapper .calendar-detail-modal {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.06) !important;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03), 0 1px 3px rgba(15, 23, 42, 0.02) !important;
+  color: #0f172a !important;
 }
 
+/* Unified Card Hover Elevation */
+.dashboard-page-wrapper .glass-panel:hover,
+.dashboard-page-wrapper .chart-panel:hover,
+.dashboard-page-wrapper .calendar-card:hover,
+.dashboard-page-wrapper .quest-card:hover,
+.dashboard-page-wrapper .ai-report-card:hover,
+.dashboard-page-wrapper .avs-card:hover,
+.dashboard-page-wrapper .homework-card:hover,
+.dashboard-page-wrapper .auto-hw-card:hover,
+.dashboard-page-wrapper .mistake-card:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06), 0 2px 4px rgba(15, 23, 42, 0.03) !important;
+}
+
+/* 2. Hero "Today's Study" Card - Vivid Royal Purple-Indigo Gradient with Rich Depth */
 .dashboard-page-wrapper .hero-card {
-  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #8b5cf6 100%);
-  border: 1px solid rgba(139, 92, 246, 0.15);
-  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #8b5cf6 100%) !important;
+  border: 1px solid rgba(139, 92, 246, 0.15) !important;
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.15) !important;
 }
 
 .dashboard-page-wrapper .hero-title {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .dashboard-page-wrapper .hero-subtitle {
-  color: #e0e7ff;
+  color: #e0e7ff !important;
+}
+
+.dashboard-page-wrapper .hero-subtitle strong {
+  color: #ffffff !important;
 }
 
 .dashboard-page-wrapper .hero-stat-chip {
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* Header Text */
+.dashboard-page-wrapper .dash-title {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed, #9333ea) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.dashboard-page-wrapper .dash-subtitle {
+  color: #64748b !important;
 }
 
 .dashboard-page-wrapper .back-btn {
-  background: rgba(15, 23, 42, 0.04);
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  color: var(--text-muted);
+  background: rgba(15, 23, 42, 0.04) !important;
+  border: 1px solid rgba(15, 23, 42, 0.06) !important;
+  color: #64748b !important;
 }
 
 .dashboard-page-wrapper .back-btn:hover {
-  background: rgba(15, 23, 42, 0.08);
-  border-color: rgba(15, 23, 42, 0.15);
-  color: var(--text-main);
+  background: rgba(15, 23, 42, 0.08) !important;
+  border-color: rgba(15, 23, 42, 0.12) !important;
+  color: #0f172a !important;
 }
 
+/* 3. Course Selection Grid - Exquisite Pastel Tinted Blocks with Soft Border & High Contrast Text */
 .dashboard-page-wrapper .course-card {
-  color: var(--text-main);
-  background: var(--panel-bg);
-  border: 1px solid var(--panel-border);
+  color: #0f172a !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02) !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
+.dashboard-page-wrapper .course-card:hover {
+  transform: translateY(-4px) !important;
+}
+
+.dashboard-page-wrapper .course-name {
+  color: #0f172a !important;
+  font-weight: 800 !important;
+}
+
+.dashboard-page-wrapper .course-desc {
+  color: #64748b !important;
+}
+
+/* 4. AI Growth Report & Metrics */
 .dashboard-page-wrapper .ai-metric {
-  background: rgba(15, 23, 42, 0.03);
-  border: 1px solid rgba(15, 23, 42, 0.05);
+  background: #f8fafc !important;
+  border: 1px solid rgba(15, 23, 42, 0.04) !important;
+}
+
+.dashboard-page-wrapper .ai-metric-label {
+  color: #64748b !important;
 }
 
 .dashboard-page-wrapper .ai-metric-value {
-  color: var(--text-main);
+  color: #0f172a !important;
 }
 
 .dashboard-page-wrapper .ai-metric-value.growth {
-  color: #10b981;
+  color: #10b981 !important;
 }
 
 .dashboard-page-wrapper .ai-metric-value.accuracy-val {
-  color: #3b82f6;
+  color: #2563eb !important;
+}
+
+.dashboard-page-wrapper .ai-weak-tag {
+  background: rgba(239, 68, 68, 0.05) !important;
+  border: 1px solid rgba(239, 68, 68, 0.1) !important;
+  color: #ef4444 !important;
 }
 
 .dashboard-page-wrapper .ai-comment {
-  background: rgba(99, 102, 241, 0.05);
-  border: 1px solid rgba(99, 102, 241, 0.1);
-  color: #334155;
+  background: rgba(99, 102, 241, 0.04) !important;
+  border: 1px solid rgba(99, 102, 241, 0.08) !important;
+  color: #334155 !important;
+}
+
+.dashboard-page-wrapper .ai-comment strong {
+  color: #4f46e5 !important;
+}
+
+/* 5. AVS (AI Vision Solution) Recommendation Card */
+.dashboard-page-wrapper .avs-card {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.04) 0%, rgba(6, 182, 212, 0.02) 100%) !important;
+  border: 1px solid rgba(16, 185, 129, 0.12) !important;
+}
+
+.dashboard-page-wrapper .avs-header h3 {
+  color: #059669 !important;
+}
+
+.dashboard-page-wrapper .avs-desc {
+  color: #475569 !important;
+}
+
+.dashboard-page-wrapper .avs-type-tag {
+  background: rgba(16, 185, 129, 0.08) !important;
+  border: 1px solid rgba(16, 185, 129, 0.15) !important;
+  color: #059669 !important;
+}
+
+/* 6. Repetitive Mistake Pattern Card */
+.dashboard-page-wrapper .mistake-card {
+  border: 1px solid rgba(239, 68, 68, 0.12) !important;
+}
+
+.dashboard-page-wrapper .mistake-header h3 {
+  color: #0f172a !important;
+}
+
+.dashboard-page-wrapper .mistake-tag {
+  background: rgba(239, 68, 68, 0.05) !important;
+  border: 1px solid rgba(239, 68, 68, 0.12) !important;
+  color: #dc2626 !important;
+}
+
+/* 7. Quest & Attendance Gamification */
+.dashboard-page-wrapper .quest-header h3 {
+  color: #0f172a !important;
 }
 
 .dashboard-page-wrapper .quest-stat {
-  background: rgba(15, 23, 42, 0.03);
-  border: 1px solid rgba(15, 23, 42, 0.05);
+  background: #f8fafc !important;
+  border: 1px solid rgba(15, 23, 42, 0.04) !important;
 }
 
 .dashboard-page-wrapper .quest-stat-value {
-  color: var(--text-main);
+  color: #0f172a !important;
+}
+
+.dashboard-page-wrapper .quest-stat-label {
+  color: #64748b !important;
 }
 
 .dashboard-page-wrapper .quest-item {
-  background: rgba(15, 23, 42, 0.03);
-  border: 1px solid rgba(15, 23, 42, 0.05);
+  background: #f8fafc !important;
+  border: 1px solid rgba(15, 23, 42, 0.04) !important;
 }
 
 .dashboard-page-wrapper .quest-item-check {
-  border: 2px solid rgba(15, 23, 42, 0.15);
-  color: var(--text-muted);
+  border: 2px solid rgba(15, 23, 42, 0.1) !important;
+  color: #64748b !important;
+}
+
+.dashboard-page-wrapper .quest-item-text {
+  color: #334155 !important;
+}
+
+.dashboard-page-wrapper .quest-xp-badge {
+  background: rgba(245, 158, 11, 0.08) !important;
+  color: #d97706 !important;
 }
 
 .dashboard-page-wrapper .progress-bar-container {
-  background: rgba(15, 23, 42, 0.06);
+  background: #f1f5f9 !important;
 }
 
-.dashboard-page-wrapper .stat-icon {
-  background: rgba(15, 23, 42, 0.03);
+/* 8. Summary Stats Cards */
+.dashboard-page-wrapper .stat-card h4 {
+  color: #64748b !important;
 }
 
-.dashboard-page-wrapper .stat-icon.purple { background: rgba(168, 85, 247, 0.08); }
-.dashboard-page-wrapper .stat-icon.blue { background: rgba(59, 130, 246, 0.08); }
-.dashboard-page-wrapper .stat-icon.teal { background: rgba(20, 184, 166, 0.08); }
-.dashboard-page-wrapper .stat-icon.red { background: rgba(239, 68, 68, 0.08); }
-
-.dashboard-page-wrapper .lesson-item {
-  background: rgba(15, 23, 42, 0.02);
-  border: 1px solid rgba(15, 23, 42, 0.05);
+.dashboard-page-wrapper .stat-card .stat-value {
+  color: #0f172a !important;
 }
 
-.dashboard-page-wrapper .lesson-wrong-box {
-  background: rgba(239, 68, 68, 0.05);
-  border: 1px solid rgba(239, 68, 68, 0.1);
-}
+.dashboard-page-wrapper .stat-icon.purple { background: rgba(168, 85, 247, 0.08) !important; color: #8b5cf6 !important; }
+.dashboard-page-wrapper .stat-icon.blue { background: rgba(59, 130, 246, 0.08) !important; color: #2563eb !important; }
+.dashboard-page-wrapper .stat-icon.teal { background: rgba(20, 184, 166, 0.08) !important; color: #0d9488 !important; }
+.dashboard-page-wrapper .stat-icon.red { background: rgba(239, 68, 68, 0.08) !important; color: #dc2626 !important; }
 
-.dashboard-page-wrapper .lesson-wrong-header {
-  color: #ef4444;
-}
-
-.dashboard-page-wrapper .lesson-ai-note {
-  color: #334155;
-}
-
-.dashboard-page-wrapper .auto-hw-item {
-  background: rgba(15, 23, 42, 0.02);
-  border: 1px solid rgba(15, 23, 42, 0.04);
-}
-
-.dashboard-page-wrapper .auto-hw-title {
-  color: var(--text-main);
-}
-
-.dashboard-page-wrapper .calendar-cell {
-  background: rgba(15, 23, 42, 0.02);
-  border: 1px solid rgba(15, 23, 42, 0.04);
-}
-
-.dashboard-page-wrapper .calendar-cell-active:hover {
-  background: rgba(15, 23, 42, 0.05);
-}
-
-.dashboard-page-wrapper .calendar-subject-entry {
-  background: rgba(15, 23, 42, 0.04);
-}
-
-.dashboard-page-wrapper .calendar-cell-today {
-  background: rgba(168, 85, 247, 0.08);
-  border-color: #a855f7;
-}
-
-.dashboard-page-wrapper .calendar-cell-test {
-  background: rgba(239, 68, 68, 0.08);
-  border-color: #ef4444;
+/* 9. V1 & V2 Session Resume Cards */
+.dashboard-page-wrapper .session-card {
+  /* background와 border는 인라인 파스텔 그라데이션 노출을 위해 !important 강제를 제외합니다. */
+  color: #0f172a !important;
 }
 
 .dashboard-page-wrapper .session-card h3 {
-  color: var(--text-main);
+  color: #0f172a !important;
+}
+
+.dashboard-page-wrapper .session-meta {
+  color: #64748b !important;
+}
+
+/* 10. Monthly Test Card */
+.dashboard-page-wrapper .monthly-test-card {
+  /* background와 border는 D-Day 상황에 맞는 인라인 스타일을 노출하기 위해 !important 오버라이드를 하지 않습니다. */
+  color: #0f172a !important;
+}
+
+.dashboard-page-wrapper .monthly-test-card h3 {
+  color: #0f172a !important;
+}
+
+.dashboard-page-wrapper .monthly-test-meta {
+  color: #64748b !important;
+}
+
+.dashboard-page-wrapper .demo-btn {
+  color: #94a3b8 !important;
+}
+
+/* 11. Homework Section */
+.dashboard-page-wrapper .homework-card {
+  border: 1px dashed rgba(16, 185, 129, 0.25) !important;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.02), rgba(59, 130, 246, 0.02)) !important;
+}
+
+.dashboard-page-wrapper .homework-card h3 {
+  color: #059669 !important;
+}
+
+/* 12. Class Report Cards */
+.dashboard-page-wrapper .lesson-report-card {
+  /* background와 border는 인라인 파스텔 그라데이션 노출을 위해 !important 강제를 제외합니다. */
+  color: #0f172a !important;
+}
+
+.dashboard-page-wrapper .lesson-report-card h3 {
+  color: #7c3aed !important;
+}
+
+.dashboard-page-wrapper .lesson-item {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.05) !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.01) !important;
+}
+
+.dashboard-page-wrapper .lesson-item-header {
+  color: #0f172a !important;
+}
+
+.dashboard-page-wrapper .lesson-wrong-box {
+  background: rgba(239, 68, 68, 0.04) !important;
+  border: 1px solid rgba(239, 68, 68, 0.08) !important;
+}
+
+.dashboard-page-wrapper .lesson-wrong-header {
+  color: #dc2626 !important;
+}
+
+.dashboard-page-wrapper .lesson-wrong-tag {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+}
+
+.dashboard-page-wrapper .lesson-ai-note {
+  color: #475569 !important;
+}
+
+.dashboard-page-wrapper .lesson-ai-note strong {
+  color: #059669 !important;
+}
+
+.dashboard-page-wrapper .parent-notification {
+  background: linear-gradient(90deg, rgba(16, 185, 129, 0.04), rgba(59, 130, 246, 0.04)) !important;
+  border: 1px solid rgba(16, 185, 129, 0.12) !important;
+}
+
+.dashboard-page-wrapper .parent-notification h4 {
+  color: #059669 !important;
+}
+
+.dashboard-page-wrapper .parent-notification p {
+  color: #475569 !important;
+}
+
+/* 13. Auto-generated Homework Card */
+.dashboard-page-wrapper .auto-hw-card {
+  border: 1px solid rgba(16, 185, 129, 0.15) !important;
+}
+
+.dashboard-page-wrapper .auto-hw-card h3 {
+  color: #059669 !important;
+}
+
+.dashboard-page-wrapper .auto-hw-item {
+  background: #f8fafc !important;
+  border: 1px solid rgba(15, 23, 42, 0.04) !important;
+}
+
+.dashboard-page-wrapper .auto-hw-title {
+  color: #0f172a !important;
+}
+
+.dashboard-page-wrapper .auto-hw-meta {
+  color: #64748b !important;
+}
+
+/* 14. Chart Overrides */
+.dashboard-page-wrapper .chart-header h3 {
+  color: #0f172a !important;
+}
+
+.dashboard-page-wrapper .chart-desc {
+  color: #64748b !important;
+}
+
+.dashboard-page-wrapper .leg-item {
+  color: #475569 !important;
+}
+
+/* 15. Calendar Card Overrides */
+.dashboard-page-wrapper .calendar-card h3 {
+  color: #0f172a !important;
+}
+
+.dashboard-page-wrapper .calendar-cell {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.06) !important;
+  color: #0f172a !important;
+}
+
+.dashboard-page-wrapper .calendar-cell-active:hover {
+  background: #f1f5f9 !important;
+}
+
+.dashboard-page-wrapper .calendar-cell-today {
+  background: rgba(168, 85, 247, 0.06) !important;
+  border-color: #8b5cf6 !important;
+}
+
+.dashboard-page-wrapper .calendar-cell-test {
+  background: rgba(239, 68, 68, 0.06) !important;
+  border-color: #ef4444 !important;
+}
+
+.dashboard-page-wrapper .calendar-subject-entry {
+  background: #f8fafc !important;
+  border: 1px solid rgba(15, 23, 42, 0.04) !important;
+  color: #334155 !important;
+}
+
+.dashboard-page-wrapper .calendar-subject-entry span {
+  color: #334155 !important;
+}
+
+/* 16. Calendar Detail Modal */
+.dashboard-page-wrapper .calendar-detail-modal {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+}
+
+.dashboard-page-wrapper .calendar-detail-modal h3 {
+  color: #0f172a !important;
+}
+
+.dashboard-page-wrapper .calendar-detail-modal button {
+  background: rgba(15, 23, 42, 0.04) !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  color: #64748b !important;
+}
+
+.dashboard-page-wrapper .calendar-detail-modal button:hover {
+  background: rgba(15, 23, 42, 0.08) !important;
+  color: #0f172a !important;
+}
+
+.dashboard-page-wrapper .calendar-detail-modal > div > div {
+  background: #f8fafc !important;
+  border: 1px solid rgba(15, 23, 42, 0.04) !important;
+}
+
+.dashboard-page-wrapper .calendar-detail-modal > div > div div {
+  color: #0f172a !important;
+}
+
+.dashboard-page-wrapper .calendar-detail-modal > div > div div div {
+  color: #0f172a !important;
 }
 
 /* ── Keyframes ── */

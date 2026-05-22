@@ -18,6 +18,15 @@ const parseSubject = (subj) => {
 export default function Dashboard() {
   console.log("DASHBOARD_RENDER");
   const navigate = useNavigate();
+  
+  React.useEffect(() => {
+    const originalBg = document.body.style.backgroundColor;
+    document.body.style.backgroundColor = '#f8fafc';
+    return () => {
+      document.body.style.backgroundColor = originalBg;
+    };
+  }, []);
+
   const signOut = async () => { console.log('Mock signout'); };
   
   const handleLogout = async () => {
@@ -660,7 +669,7 @@ export default function Dashboard() {
             {weeklyData && weeklyData.length > 0 && (
               <ResponsiveContainer width="100%" height={220}>
                 <LineChart data={weeklyData}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.08)" vertical={false}/>
+                  <CartesianGrid strokeDasharray="3 3" stroke="var(--panel-border)" vertical={false}/>
                   <XAxis dataKey="day" stroke="#64748b" fontSize={12} />
                   <YAxis stroke="#64748b" fontSize={11} />
                   <Tooltip contentStyle={{ backgroundColor: 'var(--panel-bg)', border: '1px solid var(--panel-border)', borderRadius: '10px', fontSize: '0.8rem', color: 'var(--text-main)' }} />
@@ -695,7 +704,7 @@ export default function Dashboard() {
                       <stop offset="95%" stopColor="#14b8a6" stopOpacity={0}/>
                     </linearGradient>
                   </defs>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.08)" vertical={false}/>
+                  <CartesianGrid strokeDasharray="3 3" stroke="var(--panel-border)" vertical={false}/>
                   <XAxis dataKey="week" stroke="#64748b" fontSize={12} />
                   <YAxis stroke="#64748b" yAxisId="left" fontSize={11} />
                   <YAxis yAxisId="right" orientation="right" reversed stroke="#fbbf24" domain={[1, 5]} ticks={[1,2,3,4,5]} fontSize={11} />
