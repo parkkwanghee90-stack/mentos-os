@@ -56,7 +56,11 @@ export default function Login() {
       setSuccessMsg('Google 계정 로그인 페이지로 이동합니다...');
     } catch (err) {
       console.error(err);
-      setErrorMsg(err.message || 'Google 로그인 연동 중 오류가 발생했습니다.');
+      let localizedError = err.message || 'Google 로그인 연동 중 오류가 발생했습니다.';
+      if (localizedError.includes('provider is not enabled')) {
+        localizedError = '현재 Google 소셜 로그인이 비활성화되어 있습니다. 이메일 로그인을 이용해 주세요!';
+      }
+      setErrorMsg(localizedError);
       setIsLoading(false);
     }
   };

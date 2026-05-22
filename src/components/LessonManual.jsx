@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BookOpen, Zap, Clock, Target, CheckCircle, AlertTriangle, BarChart3, ChevronRight, MessageSquare, PlayCircle, Sparkles, Gift } from 'lucide-react';
-import { Link } from 'react-router-dom';
+
 
 const MANUAL_PAGES = [
   {
@@ -240,11 +240,11 @@ export default function LessonManual({ onComplete }) {
       onMouseEnter={e => e.currentTarget.style.opacity = 1}
       onMouseLeave={e => e.currentTarget.style.opacity = 0.6}
       >
-        <Link to="/terms" target="_blank" style={{ color: '#64748b', textDecoration: 'none' }}>이용약관</Link>
+        <a href="/terms" target="_blank" rel="noopener noreferrer" style={{ color: '#64748b', textDecoration: 'none' }}>이용약관</a>
         <span>|</span>
-        <Link to="/privacy" target="_blank" style={{ color: '#64748b', textDecoration: 'none' }}>개인정보처리방침</Link>
+        <a href="/privacy" target="_blank" rel="noopener noreferrer" style={{ color: '#64748b', textDecoration: 'none' }}>개인정보처리방침</a>
         <span>|</span>
-        <Link to="/refund" target="_blank" style={{ color: '#64748b', textDecoration: 'none' }}>환불정책</Link>
+        <a href="/refund" target="_blank" rel="noopener noreferrer" style={{ color: '#64748b', textDecoration: 'none' }}>환불정책</a>
         <span>|</span>
         <span>운영사: KS BrainTech</span>
       </div>
