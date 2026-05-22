@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { BookOpen, Zap, Clock, Target, CheckCircle, AlertTriangle, BarChart3, ChevronRight, MessageSquare, PlayCircle, Sparkles, Gift } from 'lucide-react';
 
 

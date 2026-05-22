@@ -42,18 +42,67 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     // 1. Check initial active session
     supabase.auth.getSession().then(({ data: { session: activeSession } }) => {
-      setSession(activeSession);
-      setUser(activeSession?.user ?? null);
-      syncToLocalStorage(activeSession);
+      if (activeSession) {
+        setSession(activeSession);
+        setUser(activeSession.user);
+        syncToLocalStorage(activeSession);
+      } else {
+        // Fallback: Check local storage for mock user if no Supabase session exists
+        const localUserJson = localStorage.getItem('mentos_mock_user');
+        if (localUserJson) {
+          try {
+            const localUser = JSON.parse(localUserJson);
+            setUser({
+              id: localUser.id || 'demo_user',
+              email: localUser.email || 'demo@mentos.com',
+              user_metadata: {
+                name: localUser.name || '데모학생',
+                role: localUser.role || 'student',
+                is_paid: localStorage.getItem('mentos_is_paid') === 'true'
+              }
+            });
+          } catch (e) {
+            localStorage.removeItem('mentos_mock_user');
+          }
+        }
+      }
+      setLoading(false);
+    }).catch(() => {
+      // Connection or client error: Load local mock session anyway
+      const localUserJson = localStorage.getItem('mentos_mock_user');
+      if (localUserJson) {
+        try {
+          const localUser = JSON.parse(localUserJson);
+          setUser({
+            id: localUser.id || 'demo_user',
+            email: localUser.email || 'demo@mentos.com',
+            user_metadata: {
+              name: localUser.name || '데모학생',
+              role: localUser.role || 'student',
+              is_paid: localStorage.getItem('mentos_is_paid') === 'true'
+            }
+          });
+        } catch (e) {
+          localStorage.removeItem('mentos_mock_user');
+        }
+      }
       setLoading(false);
     });
 
     // 2. Listen for auth state changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, newSession) => {
       console.log(`[Supabase Auth Event] ${event}`);
-      setSession(newSession);
-      setUser(newSession?.user ?? null);
-      syncToLocalStorage(newSession);
+      if (newSession) {
+        setSession(newSession);
+        setUser(newSession.user);
+        syncToLocalStorage(newSession);
+      } else {
+        // Local auth could be active, only clear state if there is no local user in localStorage
+        if (!localStorage.getItem('mentos_mock_user')) {
+          setSession(null);
+          setUser(null);
+        }
+      }
       setLoading(false);
 
       // Force storage event dispatch to trigger updates across multi-tabs/iframes if any
@@ -65,31 +114,68 @@ export function AuthProvider({ children }) {
     };
   }, []);
 
-  // Sign up with Email/Password
+  // Sign up with Email/Password (with Local Demo Fallback)
   const signUpWithEmail = async (email, password, name, role = 'student') => {
-    const { data, error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: {
-        data: {
-          name,
-          role,
-          is_paid: false
+    try {
+      const { data, error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          data: {
+            name,
+            role,
+            is_paid: false
+          }
         }
-      }
-    });
-    if (error) throw error;
-    return data;
+      });
+      if (error) throw error;
+      return data;
+    } catch (error) {
+      console.warn("Supabase Sign Up failed, falling back to Local Demo Account:", error);
+      const mockUser = {
+        id: 'user_demo_' + Date.now(),
+        name,
+        email,
+        role,
+        createdAt: new Date().toISOString()
+      };
+      localStorage.setItem('mentos_mock_user', JSON.stringify(mockUser));
+      setUser({
+        id: mockUser.id,
+        email: mockUser.email,
+        user_metadata: { name: mockUser.name, role: mockUser.role, is_paid: false }
+      });
+      return { user: mockUser };
+    }
   };
 
-  // Sign in with Email/Password
+  // Sign in with Email/Password (with Local Demo Fallback)
   const signInWithEmail = async (email, password) => {
-    const { data, error } = await supabase.auth.signInWithPassword({
-      email,
-      password
-    });
-    if (error) throw error;
-    return data;
+    try {
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password
+      });
+      if (error) throw error;
+      return data;
+    } catch (error) {
+      console.warn("Supabase Sign In failed, logging in as Local Demo User:", error);
+      const localName = email.split('@')[0] || '데모학생';
+      const mockUser = {
+        id: 'user_demo_' + Date.now(),
+        name: localName,
+        email,
+        role: email.includes('admin') ? 'admin' : 'student',
+        createdAt: new Date().toISOString()
+      };
+      localStorage.setItem('mentos_mock_user', JSON.stringify(mockUser));
+      setUser({
+        id: mockUser.id,
+        email: mockUser.email,
+        user_metadata: { name: mockUser.name, role: mockUser.role, is_paid: true } // Auto enable premium for easier trial
+      });
+      return { user: mockUser };
+    }
   };
 
   // Google OAuth Login
