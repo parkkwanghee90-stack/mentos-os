@@ -296,13 +296,19 @@
   /* 글로벌 html, body, #root 강제 반응형 및 가로 스크롤 완전 방지 */
   html, body, #root {
     width: 100% !important;
+    height: auto !important;
     min-height: 100% !important;
+    overflow-y: visible !important;
     overflow-x: hidden !important;
   }
 
   .classroom-layout {
     grid-template-columns: 1fr;
     padding: 0;
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
   }
 
   /* 수학 메인 반응형 래퍼 */
@@ -522,10 +528,22 @@
     font-size: 0.75rem !important;
   }
 
+  .chat-section {
+    height: auto !important;
+    overflow: visible !important;
+    flex: none !important;
+    padding-bottom: 120px !important;
+  }
+
   /* ─── Bottom Input Bar ─── */
   .math-input-bar {
     padding: 0.8rem 0.8rem 2.5rem 0.8rem !important;
     box-sizing: border-box !important;
+    position: sticky !important;
+    bottom: 0 !important;
+    z-index: 100 !important;
+    background: rgba(20, 20, 30, 0.98) !important;
+    border-top: 1px solid var(--border-glass) !important;
   }
 
   .math-input-bar .input-guide {

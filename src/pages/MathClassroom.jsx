@@ -1118,7 +1118,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
       </div>
       
       {/* 로컬 채점 시스템 */}
-      <div className="math-grading-area" style={{ padding: '1.5rem', borderTop: '1px solid #3f3f46', background: '#1e1e24' }}>
+      <div className="math-grading-area math-input-bar" style={{ padding: '1.5rem', borderTop: '1px solid #3f3f46', background: '#1e1e24' }}>
         <div className="math-grading-row-1" style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.8rem', flexWrap: 'wrap' }}>
           <strong style={{ color: '#fbbf24', fontSize: '1.1rem', whiteSpace: 'nowrap' }}>✅ 로컬 채점</strong>
           

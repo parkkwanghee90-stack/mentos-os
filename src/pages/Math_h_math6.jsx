@@ -888,7 +888,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, tes
       </div>
       
       {/* 하단 고정 입력 바 */}
-      <div style={{ padding: '1rem 1.5rem', borderTop: '1px solid #27272a', background: '#18181b' }}>
+      <div className="math-input-bar" style={{ padding: '1rem 1.5rem', borderTop: '1px solid #27272a', background: '#18181b' }}>
         <div style={{ marginBottom: '0.8rem', color: '#a1a1aa', fontSize: '0.85rem', display: 'flex', alignItems: 'center' }}>
           <BookOpen size={16} style={{ marginRight: '6px', color: '#3b82f6' }}/>
           <strong>안내:</strong> 현재 단계({currentPhaseFlow.title})의 문제를 확인하고 풀이 과정이나 단서를 질문(입력)하세요.
