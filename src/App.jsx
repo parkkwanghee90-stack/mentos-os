@@ -1,5 +1,5 @@
 import { useEffect, useState, Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AppProvider } from '@/context/AppContext';
 import { initStudentProfile } from '@/engine/studentProfileEngine';
 import { AuthProvider, useAuth } from '@/context/AuthContext';
@@ -32,6 +32,12 @@ const Refund = lazy(() => import("@/pages/Refund"));
 const Terms = lazy(() => import("@/pages/Terms"));
 const Privacy = lazy(() => import("@/pages/Privacy"));
 
+
+// 진입 플로우: 매뉴얼 미확인 → /grade-select, 확인 완료 → /dashboard
+function RootRedirect() {
+  const manualSeen = localStorage.getItem('mentos_manual_seen') === 'true';
+  return <Navigate to={manualSeen ? '/dashboard' : '/grade-select'} replace />;
+}
 
 export default function App() {
   return (
@@ -147,7 +153,7 @@ function AppContent() {
       <BrowserRouter>
         <Suspense fallback={<div style={{color:'white', padding:'2rem', background:'#09090b', height:'100vh'}}>Loading Mentos App...</div>}>
           <Routes>
-            <Route path="/" element={<GradeSelect />} />
+            <Route path="/" element={<RootRedirect />} />
             <Route path="/landing" element={<Landing />} />
             {/* <Route path="/diagnosis" element={<Diagnosis />} /> */}
             {/* <Route path="/teacher" element={<TeacherSelect />} /> */}

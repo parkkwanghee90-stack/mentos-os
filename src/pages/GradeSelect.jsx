@@ -12,7 +12,9 @@ const RANK_ICONS = { '4~5등급': '📖', '3등급': '⚡', '1~2등급': '🔥' 
 
 export default function GradeSelect() {
   const navigate = useNavigate();
-  const [step, setStep] = useState('manual'); // manual → grade → scope → rank → confirm
+  const [step, setStep] = useState(() => {
+    return localStorage.getItem('mentos_manual_seen') === 'true' ? 'grade' : 'manual';
+  }); // manual → grade → scope → rank → confirm
   const [selectedGrade, setSelectedGrade] = useState(null);
   const [selectedScope, setSelectedScope] = useState(null);
   const [selectedRank, setSelectedRank] = useState(null);
@@ -96,7 +98,10 @@ export default function GradeSelect() {
 
         {/* Step 0: Manual */}
         {step === 'manual' && (
-          <LessonManual onComplete={() => setStep('grade')} />
+          <LessonManual onComplete={() => {
+            localStorage.setItem('mentos_manual_seen', 'true');
+            navigate('/login');
+          }} />
         )}
 
         {/* Step 1: Grade Selection */}

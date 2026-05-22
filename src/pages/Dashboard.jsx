@@ -331,22 +331,43 @@ export default function Dashboard() {
       <div style={{ margin: '0 0.5rem', marginBottom: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
         
         {/* Start New Lesson Button */}
-        <div className="glass-panel animate-fade-in" style={{ padding: '1rem', display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center', textAlign: 'center', background: 'linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02))', border: '1px solid rgba(255,255,255,0.1)' }}>
+        <div className="glass-panel animate-fade-in" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1.2rem', background: 'linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02))', border: '1px solid rgba(255,255,255,0.1)' }}>
           <div>
             <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#fff' }}>
-              <BookOpen size={20} color="#3b82f6" /> 오늘 공부할 과목을 선택하세요
+              <BookOpen size={20} color="#3b82f6" /> 수학 클래스 선택
             </h3>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', margin: 0 }}>
-              AI 튜터와 함께 성적을 올릴 준비가 되셨나요?
+              AI 튜터와 함께 학습할 과목을 선택하세요
             </p>
           </div>
-          <button 
-            className="btn-primary"
-            style={{ borderRadius: '20px', padding: '0.6rem 1.5rem', fontWeight: 'bold', background: 'linear-gradient(135deg, #3b82f6, #2563eb)' , width: '100%'}}
-            onClick={() => navigate('/teacher')}
-          >
-            새로운 과목 학습 ➔
-          </button>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '0.8rem' }}>
+            {[
+              { name: '수학(상)', desc: '고1 수학(상/하)', icon: '📐', color: '#3b82f6' },
+              { name: '수학1', desc: '수학1 (대수)', icon: '📊', color: '#8b5cf6' },
+              { name: '수학2', desc: '미적분 기초', icon: '📈', color: '#06b6d4' },
+              { name: '미적분', desc: '미적분 (심화)', icon: '🔥', color: '#ef4444' },
+              { name: '확률과통계', desc: '확률과 통계', icon: '🎲', color: '#f59e0b' },
+            ].map(course => (
+              <button
+                key={course.name}
+                onClick={() => navigate('/grade-select')}
+                style={{
+                  display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem',
+                  padding: '1.2rem 0.8rem', borderRadius: '16px',
+                  background: `linear-gradient(135deg, ${course.color}15, ${course.color}08)`,
+                  border: `1px solid ${course.color}40`,
+                  color: 'white', cursor: 'pointer',
+                  transition: 'all 0.3s ease',
+                }}
+                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = `0 8px 20px ${course.color}30`; }}
+                onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; }}
+              >
+                <span style={{ fontSize: '1.8rem' }}>{course.icon}</span>
+                <span style={{ fontWeight: 'bold', fontSize: '0.95rem' }}>{course.name}</span>
+                <span style={{ fontSize: '0.72rem', color: '#94a3b8' }}>{course.desc}</span>
+              </button>
+            ))}
+          </div>
         </div>
 
         
