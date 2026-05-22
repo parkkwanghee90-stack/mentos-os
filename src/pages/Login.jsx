@@ -7,7 +7,7 @@ import './Login.css';
 export default function Login() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { signInWithEmail, signUpWithEmail, signInWithGoogle } = useAuth();
+  const { signInWithEmail, signUpWithEmail, signInWithGoogle, signInAsDemo } = useAuth();
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -16,6 +16,26 @@ export default function Login() {
   const [isSignUp, setIsSignUp] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
+
+  const handleDemoLogin = async () => {
+    setIsLoading(true);
+    setErrorMsg('');
+    setSuccessMsg('');
+    try {
+      await signInAsDemo(isAdmin ? 'admin' : 'student');
+      setSuccessMsg(`데모 ${isAdmin ? '관리자' : '학생'} 계정으로 1초 로그인 성공! 대시보드로 이동합니다.`);
+      setTimeout(() => {
+        const from = location.state?.from?.pathname || (isAdmin ? '/admin' : '/dashboard');
+        navigate(from, { replace: true });
+        window.location.reload();
+      }, 1000);
+    } catch (err) {
+      console.error(err);
+      setErrorMsg('데모 로그인 도중 오류가 발생했습니다.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -197,6 +217,16 @@ export default function Login() {
             {isLoading ? (isSignUp ? '가입 중...' : '로그인 중...') : (
               <>{isSignUp ? '회원가입 완료' : (isAdmin ? '관리자 모드 접속' : '이메일 로그인')} <ArrowRight size={20} /></>
             )}
+          </button>
+
+          <button 
+            type="button" 
+            className="btn-demo-glow"
+            onClick={handleDemoLogin}
+            disabled={isLoading}
+          >
+            <Sparkles size={20} color="#fff" />
+            체험용 데모 계정으로 1초만에 시작하기
           </button>
 
           {!isAdmin && !isSignUp && (

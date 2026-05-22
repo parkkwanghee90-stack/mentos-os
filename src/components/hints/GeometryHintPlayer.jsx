@@ -109,7 +109,7 @@ const RichLine = ({ content }) => {
     const token = m[0];
     
     // 이미 래퍼가 있는 경우
-    const hasWrapper = token.startsWith('$') || token.startsWith('\\[');
+    const hasWrapper = token.startsWith('$') || token.startsWith('\\[') || token.startsWith('\\(');
     if (hasWrapper) {
       const isBlock = token.startsWith('$$') || token.startsWith('\\[');
       const math = isBlock

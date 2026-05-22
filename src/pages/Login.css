@@ -258,3 +258,59 @@
     font-size: 2rem;
   }
 }
+
+/* Premium Demo Glow Button */
+.btn-demo-glow {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.5), inset 0 0 8px rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-demo-glow:hover {
+  transform: translateY(-2.5px);
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.5), inset 0 0 12px rgba(255, 255, 255, 0.4);
+}
+
+.btn-demo-glow::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 45%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 55%
+  );
+  transform: rotate(45deg);
+  animation: login-shine 3s infinite;
+}
+
+@keyframes login-shine {
+  0% {
+    left: -100%;
+    top: -100%;
+  }
+  100% {
+    left: 100%;
+    top: 100%;
+  }
+}
+

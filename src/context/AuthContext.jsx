@@ -114,68 +114,50 @@ export function AuthProvider({ children }) {
     };
   }, []);
 
-  // Sign up with Email/Password (with Local Demo Fallback)
+  // Sign up with Email/Password
   const signUpWithEmail = async (email, password, name, role = 'student') => {
-    try {
-      const { data, error } = await supabase.auth.signUp({
-        email,
-        password,
-        options: {
-          data: {
-            name,
-            role,
-            is_paid: false
-          }
+    const { data, error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        data: {
+          name,
+          role,
+          is_paid: false
         }
-      });
-      if (error) throw error;
-      return data;
-    } catch (error) {
-      console.warn("Supabase Sign Up failed, falling back to Local Demo Account:", error);
-      const mockUser = {
-        id: 'user_demo_' + Date.now(),
-        name,
-        email,
-        role,
-        createdAt: new Date().toISOString()
-      };
-      localStorage.setItem('mentos_mock_user', JSON.stringify(mockUser));
-      setUser({
-        id: mockUser.id,
-        email: mockUser.email,
-        user_metadata: { name: mockUser.name, role: mockUser.role, is_paid: false }
-      });
-      return { user: mockUser };
-    }
+      }
+    });
+    if (error) throw error;
+    return data;
   };
 
-  // Sign in with Email/Password (with Local Demo Fallback)
+  // Sign in with Email/Password
   const signInWithEmail = async (email, password) => {
-    try {
-      const { data, error } = await supabase.auth.signInWithPassword({
-        email,
-        password
-      });
-      if (error) throw error;
-      return data;
-    } catch (error) {
-      console.warn("Supabase Sign In failed, logging in as Local Demo User:", error);
-      const localName = email.split('@')[0] || '데모학생';
-      const mockUser = {
-        id: 'user_demo_' + Date.now(),
-        name: localName,
-        email,
-        role: email.includes('admin') ? 'admin' : 'student',
-        createdAt: new Date().toISOString()
-      };
-      localStorage.setItem('mentos_mock_user', JSON.stringify(mockUser));
-      setUser({
-        id: mockUser.id,
-        email: mockUser.email,
-        user_metadata: { name: mockUser.name, role: mockUser.role, is_paid: true } // Auto enable premium for easier trial
-      });
-      return { user: mockUser };
-    }
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email,
+      password
+    });
+    if (error) throw error;
+    return data;
+  };
+
+  // Sign in as Demo Bypass Button (Bypass Supabase)
+  const signInAsDemo = async (role = 'student', name = '데모학생', email = 'demo@mentos.com') => {
+    const mockUser = {
+      id: 'user_demo_' + Date.now(),
+      name: role === 'admin' ? '데모관리자' : name,
+      email: role === 'admin' ? 'admin_demo@mentos.com' : email,
+      role: role,
+      createdAt: new Date().toISOString()
+    };
+    localStorage.setItem('mentos_mock_user', JSON.stringify(mockUser));
+    localStorage.setItem('mentos_is_paid', 'true'); // Auto enable premium for easier trial
+    setUser({
+      id: mockUser.id,
+      email: mockUser.email,
+      user_metadata: { name: mockUser.name, role: mockUser.role, is_paid: true }
+    });
+    return { user: mockUser };
   };
 
   // Google OAuth Login
@@ -228,6 +210,7 @@ export function AuthProvider({ children }) {
       loading,
       signUpWithEmail,
       signInWithEmail,
+      signInAsDemo,
       signInWithGoogle,
       signOut,
       updatePremiumStatus

@@ -26,7 +26,7 @@ function normalizeMathText(raw) {
   txt = txt.replace(/\\\[([\s\S]*?)\\\]/g, '$$$$1$$$$');
 
   // 3. \( ... \) 를 $ ... $ 로 변환
-  txt = txt.replace(/\\\(([\\s\S]*?)\\\)/g, '$$$1$$');
+  txt = txt.replace(/\\\(([\s\S]*?)\\\)/g, '$$$1$$');
 
   // 4. $$ ... $$ 내부에 줄바꿈(\\)이 있으면 \begin{aligned} 로 자동 감싸기 (빨간 글씨 에러 방지)
   txt = txt.replace(/\$\$([\s\S]+?)\$\$/g, (match, inner) => {

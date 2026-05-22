@@ -368,6 +368,11 @@
     max-width: 100vw !important;
     box-sizing: border-box !important;
     overflow-x: hidden !important;
+    position: static !important;
+    margin-left: 0 !important;
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
   }
 
   .message-wrapper {
@@ -386,6 +391,10 @@
     padding: 0.2rem 0.8rem !important;
   }
 
+  .math-timer-overlay-desktop {
+    display: none !important;
+  }
+
   /* ─── Math Classroom Mobile Wrapper ─── */
   .math-classroom-root {
     width: 100vw !important;
@@ -400,6 +409,10 @@
     margin: 0 auto !important;
     padding: 0.8rem !important;
     box-sizing: border-box !important;
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
   }
 
   .math-problem-card img {
@@ -459,6 +472,11 @@
     padding: 1rem !important;
     width: 100% !important;
     box-sizing: border-box !important;
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    margin-left: 0 !important;
+    transform: none !important;
   }
 
   .math-grading-row-1 {
@@ -635,32 +653,35 @@
 /* ======================== */
 /* MathClassroom has a different child structure than English/Science classrooms.
    Override the 2-column grid with flex so sidebar + main content align properly. */
-.math-classroom-root {
-  display: flex !important;
-  flex-direction: row !important;
-  grid-template-columns: none !important;
-  height: 100vh;
-  overflow: hidden;
-  padding: 0 !important;
-  gap: 0 !important;
-}
+@media (min-width: 769px) {
+  .math-classroom-root {
+    display: flex !important;
+    flex-direction: row !important;
+    grid-template-columns: none !important;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0 !important;
+    gap: 0 !important;
+  }
 
-.math-classroom-root .classroom-sidebar {
-  width: 280px;
-  flex-shrink: 0;
-  overflow-y: auto;
-  height: 100vh;
-  border-right: 1px solid #27272a;
-}
+  .math-classroom-root .classroom-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    overflow-y: auto;
+    height: 100vh;
+    border-right: 1px solid #27272a;
+    display: block !important;
+  }
 
-.math-classroom-root .classroom-main {
-  flex: 1;
-  overflow-y: auto;
-  overflow-x: hidden;
-  height: 100vh;
-}
+  .math-classroom-root .classroom-main {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+  }
 
-.header-mobile {
-  display: none;
+  .header-mobile {
+    display: none;
+  }
 }
 

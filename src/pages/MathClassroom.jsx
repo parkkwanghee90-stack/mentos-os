@@ -2052,7 +2052,7 @@ function MathClassroomScreenContent() {
       <FreeTrialBanner gradeFlow={location.state?.gradeFlow || '고1'} />
       
       {/* Dual Timer Overlay */}
-      <div style={{ position: 'absolute', top: '15px', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '15px', zIndex: 10 }}>
+      <div className="math-timer-overlay-desktop" style={{ position: 'absolute', top: '15px', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '15px', zIndex: 10 }}>
         {/* Global Session Timer */}
         <div style={{ background: 'rgba(239, 68, 68, 0.9)', color: 'white', padding: '0.5rem 1.5rem', borderRadius: '30px', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.5)', fontFamily: 'monospace', fontSize: '1.2rem', letterSpacing: '1px' }}>
           <Clock size={20} />

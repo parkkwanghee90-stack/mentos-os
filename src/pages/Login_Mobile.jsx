@@ -7,7 +7,7 @@ import './Login.css';
 export default function Login() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { signInWithEmail, signInWithGoogle } = useAuth();
+  const { signInWithEmail, signInWithGoogle, signInAsDemo } = useAuth();
   
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -15,6 +15,26 @@ export default function Login() {
   const [isAdmin, setIsAdmin] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
+
+  const handleDemoLogin = async () => {
+    setIsLoading(true);
+    setErrorMsg('');
+    setSuccessMsg('');
+    try {
+      await signInAsDemo(isAdmin ? 'admin' : 'student');
+      setSuccessMsg(`데모 ${isAdmin ? '관리자' : '학생'} 계정으로 1초 로그인 성공! 대시보드로 이동합니다.`);
+      setTimeout(() => {
+        const from = location.state?.from?.pathname || (isAdmin ? '/admin' : '/dashboard');
+        navigate(from, { replace: true });
+        window.location.reload();
+      }, 1000);
+    } catch (err) {
+      console.error(err);
+      setErrorMsg('데모 로그인 도중 오류가 발생했습니다.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const handleLogin = async (e) => {
     e.preventDefault();
