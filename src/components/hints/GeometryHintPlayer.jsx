@@ -34,6 +34,95 @@ import { BlockMath, InlineMath } from '@/components/KaTeXWrapper';
 
 // RichText: 한글+LaTeX 혼합 텍스트를 완벽하게 렌더링
 // $...$ → InlineMath, $$...$$ / \[...\] → BlockMath, 나머지 → 텍스트
+// ── 1. 수식/텍스트 공통 전처리 (정규화) ──
+function normalizeMathText(raw) {
+  if (!raw) return '';
+  let txt = String(raw);
+
+  // 1. 역슬래시+n 문자열을 실제 줄바꿈으로 변환하되, LaTeX 명령어(\neq, \nabla 등)는 보호
+  txt = txt
+    .replace(/\n(?=eq|abla|u|otin|subseteq|supset|Rightarrow|Leftrightarrow|i|olimits|ormalfont|ewline|exists)/g, '\\n')
+    .replace(/\\\\n/g, '\n')
+    .replace(/\\n(?!eq|abla|u|otin|subseteq|supset|Rightarrow|Leftrightarrow|i|olimits|ormalfont|ewline|exists)/g, '\n');
+
+  // 2. \[ ... \] 를 $$ ... $$ 로 변환
+  txt = txt.replace(/\\\[([\s\S]*?)\\\]/g, '$$$$1$$$$');
+
+  // 3. \( ... \) 를 $ ... $ 로 변환
+  txt = txt.replace(/\\\(([\s\S]*?)\\\)/g, '$$$1$$');
+
+  // 4. $$ ... $$ 내부에 줄바꿈(\\)이 있으면 \begin{aligned} 로 자동 감싸기 (빨간 글씨 에러 방지)
+  txt = txt.replace(/\$\$([\s\S]+?)\$\$/g, (match, inner) => {
+    if (inner.includes('\\begin{aligned}') || inner.includes('\\begin{cases}') || inner.includes('\\begin{array}')) {
+      return match;
+    }
+    if (inner.includes('\\\\')) {
+      return `$$ \\begin{aligned} ${inner} \\end{aligned} $$`;
+    }
+    return match;
+  });
+
+  return txt;
+}
+
+// 인라인 수식 $...$ 파서
+function InlineFrag({ text }) {
+  if (!text) return null;
+  const parts = [];
+  const reg = /\$((?:[^$\\]|\\[\s\S])+?)\$/g;
+  let last = 0, m, k = 0;
+  while ((m = reg.exec(text)) !== null) {
+    if (m.index > last) {
+      parts.push(<span key={k++}>{text.slice(last, m.index)}</span>);
+    }
+    const mFull = m[0];
+    const mMath = m[1];
+    parts.push(
+      <InlineMath key={k++} math={mMath} errorColor="#94a3b8"
+        renderError={() => <span style={{ color: '#94a3b8', fontFamily: 'monospace' }}>{mFull}</span>} />
+    );
+    last = m.index + mFull.length;
+  }
+  if (last < text.length) {
+    parts.push(<span key={k++}>{text.slice(last)}</span>);
+  }
+  return <>{parts}</>;
+}
+
+// KaTeX 수식이 섞인 텍스트를 React 요소로 변환
+function MathText({ text }) {
+  if (!text) return null;
+  const normalized = normalizeMathText(String(text));
+  const parts = [];
+  let key = 0;
+
+  // $$...$$ 먼저 처리
+  const blockReg = /\$\$([\s\S]+?)\$\$/g;
+  let bMatch;
+  let lastIdx = 0;
+  blockReg.lastIndex = 0;
+  while ((bMatch = blockReg.exec(normalized)) !== null) {
+    if (bMatch.index > lastIdx) {
+      parts.push(<InlineFrag key={key++} text={normalized.slice(lastIdx, bMatch.index)} />);
+    }
+    const bFull = bMatch[0];
+    const bMath = bMatch[1];
+    parts.push(
+      <div key={key++} style={{ margin: '0.5rem 0', overflowX: 'auto', maxWidth: '100%' }}>
+        <BlockMath math={bMath} errorColor="#94a3b8"
+          renderError={() => <span style={{ color: '#94a3b8', fontFamily: 'monospace' }}>{bFull}</span>} />
+      </div>
+    );
+    lastIdx = bMatch.index + bFull.length;
+  }
+  if (lastIdx < normalized.length) {
+    parts.push(<InlineFrag key={key++} text={normalized.slice(lastIdx)} />);
+  }
+  return <>{parts}</>;
+}
+
+// RichText: 한글+LaTeX 혼합 텍스트를 완벽하게 렌더링
+// $...$ → InlineMath, $$...$$ / \[...\] → BlockMath, 나머지 → 텍스트
 const RichText = ({ content }) => {
   if (typeof content !== 'string') return <span>{JSON.stringify(content)}</span>;
   if (!content.trim()) return null;
@@ -58,7 +147,7 @@ const RichText = ({ content }) => {
         <span style={{ fontSize: '1.3rem', lineHeight: '2.1', whiteSpace: 'pre-wrap', wordBreak: 'keep-all', color: '#f8fafc' }}>
           {lines.map((line, li) => (
             <span key={li}>
-              <RichLine content={line} />
+              <MathText text={line} />
               {li < lines.length - 1 && <br />}
             </span>
           ))}
@@ -77,74 +166,6 @@ const RichText = ({ content }) => {
       ))}
     </div>
   );
-};
-
-// 한 줄을 $...$ $$...$$ \(...\) \[...\] 단위로 분리해 렌더링
-const RichLine = ({ content }) => {
-  if (!content.trim()) return <span> </span>;
-
-  // [핵심] \text{한글} 패턴이 포함된 순수 LaTeX 줄은 전체를 하나의 KaTeX 블록으로 렌더링
-  // 백업 PCBSA 파일들이 이 형식: \text{함수 } f(x) \text{ 가 주어지고}
-  const isPureLatex = /\\text\{/.test(content) && !content.startsWith('$');
-  if (isPureLatex) {
-    return (
-      <span style={{ fontSize: '1.3rem', lineHeight: '2.1' }}>
-        <InlineMath math={content} errorColor="#94a3b8"
-          renderError={() => <span style={{ color: '#f8fafc' }}>{content.replace(/\\text\{([^}]*)\}/g, '$1').replace(/\\/g, '')}</span>} />
-      </span>
-    );
-  }
-
-  // 1. 이미 감싸진 수식($$, $, \[, \() 먼저 분리
-  // 2. 감싸지지 않았더라도 \frac, \sin, \alpha 등 LaTeX 명령어가 포함된 부분을 찾아냄
-  const parts = [];
-  const reg = /(\$\$[\s\S]+?\$\$|\$(?:[^$\\]|\\[\s\S])+?\$|\\\[[\s\S]+?\\\]|\\\((?:[^)\\]|\\[\s\S])+?\\\)|\\(?:text|frac|sin|cos|tan|alpha|beta|gamma|theta|pi|triangle|angle|overline|sqrt|deg|circ|times|div|pm|mp|cdot|cdots|dots|sum|lim|log|ln|exp|arcsin|arccos|arctan|sec|csc|cot|inf|infty|partial|nabla|forall|exists|neg|wedge|vee|cap|cup|in|notin|subset|supset|subseteq|supseteq|equiv|approx|neq|le|ge|ll|gg|prec|succ|sim|perp|parallel|angle|measuredangle|sphericalangle|square|triangle|lozenge|diamond|bigcirc|dagger|ddagger|circ|bullet|centerdot|ast|star|smile|frown|dots|vdots|ddots|ldots|quad|;|begin|end)(?:\{[^{}]*\}|\[[^\[\]]*\]|\s|[a-zA-Z0-9]|$)+)/g;
-  
-  let last = 0, m, k = 0;
-
-  while ((m = reg.exec(content)) !== null) {
-    if (m.index > last) {
-      parts.push(<span key={k++}>{content.slice(last, m.index)}</span>);
-    }
-    const token = m[0];
-    
-    // 이미 래퍼가 있는 경우
-    const hasWrapper = token.startsWith('$') || token.startsWith('\\[') || token.startsWith('\\(');
-    if (hasWrapper) {
-      const isBlock = token.startsWith('$$') || token.startsWith('\\[');
-      const math = isBlock
-        ? token.replace(/^\$\$|\$\$$/g, '').replace(/^\\\[|\\\]$/g, '').trim()
-        : token.replace(/^\$|\$$/g, '').replace(/^\\\(|\\\)$/g, '').trim();
-
-      if (isBlock) {
-        parts.push(
-          <div key={k++} style={{ margin: '0.5rem 0', overflowX: 'auto' }}>
-            <BlockMath math={math} errorColor="#94a3b8"
-              renderError={() => <span style={{ color: '#94a3b8', fontFamily: 'monospace' }}>{math}</span>} />
-          </div>
-        );
-      } else {
-        parts.push(
-          <InlineMath key={k++} math={math} errorColor="#94a3b8"
-            renderError={() => <span style={{ color: '#94a3b8', fontFamily: 'monospace' }}>{math}</span>} />
-        );
-      }
-    } else {
-      // 래퍼 없이 명령어만 있는 경우 (\frac{...}{...} 등)
-      // 이 경우 무조건 InlineMath로 처리
-      parts.push(
-        <InlineMath key={k++} math={token} errorColor="#94a3b8"
-          renderError={() => <span style={{ color: '#94a3b8', fontFamily: 'monospace' }}>{token}</span>} />
-      );
-    }
-    last = m.index + token.length;
-  }
-
-  if (last < content.length) {
-    parts.push(<span key={k++}>{content.slice(last)}</span>);
-  }
-
-  return <>{parts}</>;
 };
 
 
@@ -390,7 +411,7 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
                   {s.formula_lines && s.formula_lines.map((fline, fi) => (
                     <div key={fi} style={{ marginBottom: '0.3rem', padding: '0.2rem 0' }}>
                       {fline.formula_latex ? (
-                        <BlockMath math={fline.formula_latex} errorColor="#cbd5e1" />
+                        <BlockMath math={normalizeMathText(fline.formula_latex)} errorColor="#cbd5e1" />
                       ) : (
                         <div style={{ color: '#cbd5e1' }}>{fline.formula_text}</div>
                       )}
@@ -404,7 +425,7 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
                     const content = line.content || line;
                     return (
                       <div key={li} style={{ marginBottom: '0.2rem' }}>
-                        {isLatex ? <BlockMath math={content} /> : <RichText content={content} />}
+                        {isLatex ? <BlockMath math={normalizeMathText(content)} /> : <RichText content={content} />}
                       </div>
                     );
                   })}
