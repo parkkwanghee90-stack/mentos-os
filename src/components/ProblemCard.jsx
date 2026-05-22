@@ -2,9 +2,51 @@ import React, { useState, useEffect } from 'react';
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
 
+function preprocessRawMath(text) {
+  if (!text) return '';
+  let str = String(text);
+  if (str.includes('$') || str.includes('\\[') || str.includes('\\(')) {
+    return str;
+  }
+  
+  const hasKorean = /[ㄱ-ㅎㅏ-ㅣ가-힣]/.test(str);
+  if (!hasKorean) {
+    return `$${str}$`;
+  }
+  
+  const mathCandidateRegex = /([a-zA-Z0-9\^_\+\-\*\/\=\<\>\(\)\\]+(?:\s*[a-zA-Z0-9\^_\+\-\*\/\=\<\>\(\)\\]+)*)/g;
+  
+  return str.replace(mathCandidateRegex, (match) => {
+    const trimmedMatch = match.trim();
+    if (!trimmedMatch) return match;
+    
+    if (/^[P|C|B|A|S]\s*:?$/.test(trimmedMatch)) {
+      return match;
+    }
+    
+    const hasMathSymbol = /[\^_\+\-\*\/\=\<\>\\()]/.test(trimmedMatch);
+    const hasNumber = /[0-9]/.test(trimmedMatch);
+    const isSingleVariable = /^[a-zA-Z]$/.test(trimmedMatch);
+    
+    if (hasMathSymbol || hasNumber || isSingleVariable) {
+      if (/^(EBSi|Vercel|Vite|React|HTML|CSS|JS|UI|AVS)$/i.test(trimmedMatch)) {
+        return match;
+      }
+      const leadingSpace = match.match(/^\s*/)[0];
+      const trailingSpace = match.match(/\s*$/)[0];
+      return `${leadingSpace}$${trimmedMatch}$${trailingSpace}`;
+    }
+    return match;
+  });
+}
+
 function renderMixed(text) {
   if (!text) return null;
-  const parts = text.split(/(\$\$[^$]+?\$\$|\$[^$]+?\$)/g);
+  
+  // 쌩 수식 텍스트들을 실시간 감지하여 $...$로 전처리 포장합니다.
+  const processedText = preprocessRawMath(text);
+  
+  const parts = processedText.split(/(\$\$[^$]+?\$\$|\$[^$]+?\$)/g);
   return parts.map((part, i) => {
     if (part.startsWith('$$') && part.endsWith('$$')) {
       try {

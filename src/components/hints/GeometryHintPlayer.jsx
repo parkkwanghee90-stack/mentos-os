@@ -99,8 +99,38 @@ function preprocessLatexString(latex) {
       return `$${trimmed}$`;
     }
 
-    // 한글이 있고, \text{ 가 없는가? -> 100% 일반 평문 텍스트 (줄바꿈이 필요한 일반 문장 설명)
-    return part; // 평문 보존
+    // 한글이 있고, \text{ 가 없는가? -> 일반 평문 텍스트 내에서 x^4 = 1 등 쌩 수식 감지하여 $...$로 감싸기
+    let result = part;
+    const mathCandidateRegex = /([a-zA-Z0-9\^_\+\-\*\/\=\<\>\(\)\\]+(?:\s*[a-zA-Z0-9\^_\+\-\*\/\=\<\>\(\)\\]+)*)/g;
+    
+    result = part.replace(mathCandidateRegex, (match) => {
+      const trimmedMatch = match.trim();
+      if (!trimmedMatch) return match;
+      
+      // 일반 대문자 라벨 명칭(예: P, C, B, A, S 단독 또는 P:, C: 등)은 제외
+      if (/^[P|C|B|A|S]\s*:?$/.test(trimmedMatch)) {
+        return match;
+      }
+      
+      const hasMathSymbol = /[\^_\+\-\*\/\=\<\>\\()]/.test(trimmedMatch);
+      const hasNumber = /[0-9]/.test(trimmedMatch);
+      const isSingleVariable = /^[a-zA-Z]$/.test(trimmedMatch);
+      
+      // 수학 기호가 있거나, 숫자가 있거나, 단일 영어 변수인 경우 수식으로 분류
+      if (hasMathSymbol || hasNumber || isSingleVariable) {
+        if (/^(EBSi|Vercel|Vite|React|HTML|CSS|JS|UI|AVS)$/i.test(trimmedMatch)) {
+          return match;
+        }
+        
+        const leadingSpace = match.match(/^\s*/)[0];
+        const trailingSpace = match.match(/\s*$/)[0];
+        return `${leadingSpace}$${trimmedMatch}$${trailingSpace}`;
+      }
+      
+      return match;
+    });
+
+    return result;
   });
 
   // 원래 줄바꿈 기호를 복원하며 합침
