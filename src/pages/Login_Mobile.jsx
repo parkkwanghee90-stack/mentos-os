@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { User, Shield, Lock, ArrowRight, Zap, Sparkles } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
 import './Login.css';
@@ -188,13 +188,26 @@ export default function Login() {
               Google 계정으로 로그인
             </button>
           )}
-
-          <div className="login-footer-links">
-            <button type="button" className="text-link">비밀번호 찾기</button>
-            <span className="divider">|</span>
-            <button type="button" className="text-link highlight">회원가입</button>
-          </div>
         </form>
+
+        {/* 하단 운영 정보 및 정책 푸터 */}
+        <div className="login-bottom-footer" style={{
+          marginTop: '2rem',
+          textAlign: 'center',
+          color: '#64748b',
+          fontSize: '0.8rem',
+          lineHeight: '1.6',
+          zIndex: 10
+        }}>
+          <p style={{ margin: '0 0 0.5rem 0' }}>© {new Date().getFullYear()} KS BrainTech. All rights reserved.</p>
+          <div style={{ display: 'flex', gap: '12px', justifyContent: 'center' }}>
+            <Link to="/terms" style={{ color: '#94a3b8', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = '#fff'} onMouseLeave={e => e.currentTarget.style.color = '#94a3b8'}>Terms</Link>
+            <span style={{ color: '#475569' }}>·</span>
+            <Link to="/privacy" style={{ color: '#94a3b8', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = '#fff'} onMouseLeave={e => e.currentTarget.style.color = '#94a3b8'}>Privacy</Link>
+            <span style={{ color: '#475569' }}>·</span>
+            <Link to="/refund" style={{ color: '#94a3b8', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = '#fff'} onMouseLeave={e => e.currentTarget.style.color = '#94a3b8'}>Refund</Link>
+          </div>
+        </div>
       </div>
     </div>
   );

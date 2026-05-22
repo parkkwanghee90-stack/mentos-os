@@ -27,6 +27,12 @@ const Checkout = lazy(() => import("@/pages/Checkout"));
 const Success = lazy(() => import("@/pages/Success"));
 const Fail = lazy(() => import("@/pages/Fail"));
 
+// 신규 법적 정책 페이지 추가
+const Refund = lazy(() => import("@/pages/Refund"));
+const Terms = lazy(() => import("@/pages/Terms"));
+const Privacy = lazy(() => import("@/pages/Privacy"));
+
+
 export default function App() {
   return (
     <AuthProvider>
@@ -172,6 +178,11 @@ function AppContent() {
             <Route path="/payment/checkout" element={<Checkout />} />
             <Route path="/payment/success" element={<Success />} />
             <Route path="/payment/fail" element={<Fail />} />
+
+            {/* 신규 정책 페이지 라우터 */}
+            <Route path="/refund" element={<Refund />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<Privacy />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { BookOpen, Monitor, PlayCircle, Clock, CheckCircle, HelpCircle, BarChart2, Layout, Home, AlertTriangle, Calendar, ChevronLeft, ChevronRight, X } from 'lucide-react';
 
 const ManualPage = ({ title, icon: Icon, children }) => (
@@ -103,6 +103,55 @@ export default function LessonManualModal({ onClose, onStartLearning }) {
            </ManualPage>
         </div>
 
+        {/* 마지막 페이지용 정책 안내 블록 (버튼형) */}
+        {currentPage === pages.length - 1 && (
+          <div style={{
+            background: '#f8fafc',
+            borderTop: '1px solid #e2e8f0',
+            padding: '1.2rem 2.5rem',
+            textAlign: 'center'
+          }}>
+            <p style={{ margin: '0 0 0.4rem 0', fontSize: '0.88rem', color: '#64748b' }}>
+              멘토스 AI는 <strong style={{ color: '#3b82f6' }}>KS BrainTech</strong>에서 운영합니다. 아래 정책을 확인해주세요.
+            </p>
+            <div style={{ display: 'flex', gap: '8px', justifyContent: 'center', marginTop: '0.8rem' }}>
+              <Link to="/terms" target="_blank" style={{
+                flex: 1, padding: '0.5rem', borderRadius: '8px',
+                background: '#ffffff', border: '1px solid #e2e8f0',
+                color: '#475569', fontSize: '0.82rem', fontWeight: 'bold', textDecoration: 'none',
+                transition: 'background 0.2s', textAlign: 'center'
+              }}
+              onMouseEnter={e => e.currentTarget.style.background = '#f1f5f9'}
+              onMouseLeave={e => e.currentTarget.style.background = '#ffffff'}
+              >
+                이용약관
+              </Link>
+              <Link to="/refund" target="_blank" style={{
+                flex: 1, padding: '0.5rem', borderRadius: '8px',
+                background: '#ffffff', border: '1px solid #e2e8f0',
+                color: '#475569', fontSize: '0.82rem', fontWeight: 'bold', textDecoration: 'none',
+                transition: 'background 0.2s', textAlign: 'center'
+              }}
+              onMouseEnter={e => e.currentTarget.style.background = '#f1f5f9'}
+              onMouseLeave={e => e.currentTarget.style.background = '#ffffff'}
+              >
+                환불정책
+              </Link>
+              <Link to="/privacy" target="_blank" style={{
+                flex: 1, padding: '0.5rem', borderRadius: '8px',
+                background: '#ffffff', border: '1px solid #e2e8f0',
+                color: '#475569', fontSize: '0.82rem', fontWeight: 'bold', textDecoration: 'none',
+                transition: 'background 0.2s', textAlign: 'center'
+              }}
+              onMouseEnter={e => e.currentTarget.style.background = '#f1f5f9'}
+              onMouseLeave={e => e.currentTarget.style.background = '#ffffff'}
+              >
+                개인정보방침
+              </Link>
+            </div>
+          </div>
+        )}
+
         {/* Footer Navigation */}
         <div style={{ padding: '1.5rem 2.5rem', background: '#f8fafc', borderTop: '1px solid #e2e8f0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <button 
@@ -137,6 +186,36 @@ export default function LessonManualModal({ onClose, onStartLearning }) {
             </button>
           )}
         </div>
+      </div>
+
+      {/* 모달 최하단 초소형 인라인 푸터 (빠른 몰입 저해 방지용) */}
+      <div style={{
+        position: 'absolute',
+        bottom: '1.5rem',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        textAlign: 'center',
+        color: '#94a3b8',
+        fontSize: '0.75rem',
+        display: 'flex',
+        gap: '8px',
+        alignItems: 'center',
+        whiteSpace: 'nowrap',
+        opacity: 0.6,
+        transition: 'opacity 0.2s',
+        pointerEvents: 'auto',
+        zIndex: 100001
+      }}
+      onMouseEnter={e => e.currentTarget.style.opacity = 1}
+      onMouseLeave={e => e.currentTarget.style.opacity = 0.6}
+      >
+        <Link to="/terms" target="_blank" style={{ color: '#cbd5e1', textDecoration: 'none' }}>이용약관</Link>
+        <span>|</span>
+        <Link to="/privacy" target="_blank" style={{ color: '#cbd5e1', textDecoration: 'none' }}>개인정보처리방침</Link>
+        <span>|</span>
+        <Link to="/refund" target="_blank" style={{ color: '#cbd5e1', textDecoration: 'none' }}>환불정책</Link>
+        <span>|</span>
+        <span>운영사: KS BrainTech</span>
       </div>
     </div>
   );

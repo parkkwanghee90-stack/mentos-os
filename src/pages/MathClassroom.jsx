@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import { Camera, Send, ChevronRight, CheckCircle, Smartphone, Mic, Volume2, Upload, Paperclip, Clock, BookOpen, X, ChevronDown, UploadCloud, Award, Target } from 'lucide-react';
+import { Camera, Send, ChevronRight, CheckCircle, Smartphone, Mic, Volume2, Upload, Paperclip, Clock, BookOpen, X, ChevronDown, UploadCloud, Award, Target, Menu } from 'lucide-react';
 import { getTeacherById } from '@/data/teacherProfiles';
 import { useMathLessonSession } from '@/hooks/useMathLessonSession';
 import { supabase } from '@/services/supabaseClient';
@@ -909,9 +909,9 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
   const isSenior = session?.grade?.some(g => g.includes('고3') || g.includes('N수'));
 
   return (
-    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', background: '#09090b', color: 'white' }}>
-      <div style={{ padding: '1rem', background: '#18181b', borderBottom: '1px solid #27272a', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+    <div className="classroom-main" style={{ flex: 1, display: 'flex', flexDirection: 'column', background: '#09090b', color: 'white' }}>
+      <div className="math-top-bar" style={{ padding: '1rem', background: '#18181b', borderBottom: '1px solid #27272a', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.8rem' }}>
+        <div className="math-top-info" style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
           <strong>단계: {currentPhaseFlow.title.toUpperCase()}</strong>
           <span style={{ fontSize: '0.85rem', color: '#a1a1aa' }}>({currentPhaseFlow.duration} 분)</span>
           {/* PCBS 단계 배지 — 수학 핵심 Phase에서만 표시 */}
@@ -925,14 +925,14 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             };
             const b = badgeMap[pcbsPhase];
             return (
-              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', background: b.bg + '22', border: '1px solid ${b.bg}', borderRadius: '20px', padding: '3px 12px' }}>
+              <div className="pcbs-badge" style={{ display: 'flex', alignItems: 'center', gap: '6px', background: b.bg + '22', border: `1px solid ${b.bg}`, borderRadius: '20px', padding: '3px 12px' }}>
                 <span style={{ color: b.bg, fontWeight: 'bold', fontSize: '0.8rem' }}>{b.label}</span>
                 <span style={{ color: '#a1a1aa', fontSize: '0.75rem' }}>— {b.desc}</span>
               </div>
             );
           })()}
         </div>
-        <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+        <div className="math-top-actions" style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
             {/* Ai Vision Solution 버튼 추가 */}
             {(['core', 'step', 'mock'].includes(currentPhaseFlow?.phase) || selectedUnit) && (
               <button 
@@ -1118,8 +1118,8 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
       </div>
       
       {/* 로컬 채점 시스템 */}
-      <div style={{ padding: '1.5rem', borderTop: '1px solid #3f3f46', background: '#1e1e24' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.8rem' }}>
+      <div className="math-grading-area" style={{ padding: '1.5rem', borderTop: '1px solid #3f3f46', background: '#1e1e24' }}>
+        <div className="math-grading-row-1" style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.8rem', flexWrap: 'wrap' }}>
           <strong style={{ color: '#fbbf24', fontSize: '1.1rem', whiteSpace: 'nowrap' }}>✅ 로컬 채점</strong>
           
           <div style={{ display: 'flex', gap: '0.5rem', marginRight: '0.5rem' }}>
@@ -1149,8 +1149,10 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             placeholder="주관식은 직접 입력" 
             value={userAnswer}
             onChange={(e) => { setUserAnswer(e.target.value); setSelectedAnswer(null); }}
-            style={{ padding: '0.8rem', borderRadius: '8px', border: '1px solid #52525b', background: '#27272a', color: '#fff', flex: 1 }}
+            style={{ padding: '0.8rem', borderRadius: '8px', border: '1px solid #52525b', background: '#27272a', color: '#fff', flex: 1, minWidth: '120px' }}
           />
+        </div>
+        <div className="math-grading-row-2" style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', flexWrap: 'wrap', width: '100%' }}>
           <button 
             onClick={() => {
               const targetUnitFolder = getHintFolder(selectedUnit || currentUnit);
@@ -1705,6 +1707,7 @@ class ErrorBoundary extends React.Component {
 
 function MathClassroomScreenContent() {
   const { user } = useAuth();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const location = useLocation();
   const { teacherId } = useParams();
   const rawTeacher = location.state?.teacher || (teacherId ? getTeacherById(teacherId) : null) || { id: 'h_math6', name: '윤수아 선생님', courseName: '수학2 (미적분 기초)', targetGrades: ['고2'], targetRanks: ['3등급'] };
@@ -2023,8 +2026,28 @@ function MathClassroomScreenContent() {
   const currentPhase = session.flow[session.currentPhaseIndex]?.phase;
   
   return (
-    <div style={{ display: 'flex', height: '100vh', background: '#09090b', color: 'white', position: 'relative' }}>
+    <div className="classroom-layout math-classroom-root" style={{ background: '#09090b', color: 'white', position: 'relative' }}>
       
+      {/* 모바일 상단 헤더바 */}
+      <div className="header-mobile">
+        <button 
+          onClick={() => setIsSidebarOpen(true)}
+          style={{ background: 'transparent', border: 'none', color: 'white', cursor: 'pointer', display: 'flex', alignItems: 'center', padding: '0.5rem' }}
+        >
+          <Menu size={24} style={{ marginRight: '8px' }} />
+          <span style={{ fontWeight: 'bold', fontSize: '1rem' }}>{teacher.name} 수업</span>
+        </button>
+        <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+          <Clock size={18} color="#ef4444" />
+          <span style={{ fontFamily: 'monospace', fontWeight: 'bold', fontSize: '1rem' }}>
+            {String(Math.floor(timeLeft / 60)).padStart(2, '0')}:{String(timeLeft % 60).padStart(2, '0')}
+          </span>
+        </div>
+      </div>
+
+      {/* 모바일 사이드바 오버레이 */}
+      {isSidebarOpen && <div className="sidebar-overlay" onClick={() => setIsSidebarOpen(false)}></div>}
+
       {/* Free Trial / Paywall Gate */}
       <FreeTrialBanner gradeFlow={location.state?.gradeFlow || '고1'} />
       
@@ -2046,7 +2069,7 @@ function MathClassroomScreenContent() {
       </div>
 
       {/* 사이드바 UI (옵션) */}
-      <div style={{ width: '250px', borderRight: '1px solid #27272a', padding: '1.5rem', overflowY: 'auto' }}>
+      <div className={`classroom-sidebar ${isSidebarOpen ? 'open' : ''}`} style={{ borderRight: '1px solid #27272a', padding: '1.5rem', overflowY: 'auto' }}>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '1.5rem' }}>
           <div style={{ width: '100px', height: '100px', borderRadius: '50%', overflow: 'hidden', border: '3px solid #10b981', marginBottom: '1rem', boxShadow: '0 4px 12px rgba(16, 185, 129, 0.3)' }}>
             <img 
