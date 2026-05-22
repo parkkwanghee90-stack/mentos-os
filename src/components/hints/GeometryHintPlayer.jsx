@@ -431,7 +431,7 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
                   })}
                   {s.latex && (
                     <div style={{ marginTop: '0.2rem' }}>
-                      <RichText content={s.latex} />
+                      <RichText content={(s.latex.includes('$') || s.latex.includes('\\[') || s.latex.includes('\\(')) ? s.latex : `$$${s.latex}$$`} />
                     </div>
                   )}
                 </div>
@@ -439,7 +439,7 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
               {/* 수식 추가 표시 (이전 하위 호환성 유지) */}
               {idx === step && s.math?.latex && (
                 <div style={{ marginTop: '0.4rem' }}>
-                  <RichText content={s.math.latex} />
+                  <RichText content={(s.math.latex.includes('$') || s.math.latex.includes('\\[') || s.math.latex.includes('\\(')) ? s.math.latex : `$$${s.math.latex}$$`} />
                 </div>
               )}
             </div>
