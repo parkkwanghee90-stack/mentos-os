@@ -630,6 +630,37 @@
   }
 }
 
+/* ======================== */
+/* Math Classroom PC Layout */
+/* ======================== */
+/* MathClassroom has a different child structure than English/Science classrooms.
+   Override the 2-column grid with flex so sidebar + main content align properly. */
+.math-classroom-root {
+  display: flex !important;
+  flex-direction: row !important;
+  grid-template-columns: none !important;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0 !important;
+  gap: 0 !important;
+}
+
+.math-classroom-root .classroom-sidebar {
+  width: 280px;
+  flex-shrink: 0;
+  overflow-y: auto;
+  height: 100vh;
+  border-right: 1px solid #27272a;
+}
+
+.math-classroom-root .classroom-main {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
 .header-mobile {
   display: none;
 }
+
