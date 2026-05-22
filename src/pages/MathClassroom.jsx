@@ -139,7 +139,7 @@ function useSTT(setInput) {
 
 
 
-function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, setSelectedUnit, testProblemIdx, setTestProblemIdx, selectedCourse, showReport, setShowReport }) {
+function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, setSelectedUnit, testProblemIdx, setTestProblemIdx, selectedCourse, showReport, setShowReport, getSidebarData }) {
   const location = useLocation();
   const currentPhaseFlow = session.flow[session.currentPhaseIndex];
   
@@ -2684,7 +2684,7 @@ function MathClassroomScreenContent() {
         </div>
       </div>
       
-      <LessonRenderer session={session} setSession={setSession} ssot={teacher} timeLeft={timeLeft} selectedUnit={selectedUnit} setSelectedUnit={setSelectedUnit} testProblemIdx={testProblemIdx} setTestProblemIdx={setTestProblemIdx} selectedCourse={selectedCourse} showReport={showReport} setShowReport={setShowReport} />
+      <LessonRenderer session={session} setSession={setSession} ssot={teacher} timeLeft={timeLeft} selectedUnit={selectedUnit} setSelectedUnit={setSelectedUnit} testProblemIdx={testProblemIdx} setTestProblemIdx={setTestProblemIdx} selectedCourse={selectedCourse} showReport={showReport} setShowReport={setShowReport} getSidebarData={getSidebarData} />
       <style>{katexStyle}</style>
     </div>
   );

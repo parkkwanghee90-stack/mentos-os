@@ -710,7 +710,7 @@ export default function MentosMockExam() {
   const killerIds = [10, 11, 12, 13, 14, 15, 21, 22, 27, 28, 29, 30];
 
   return (
-    <div className="full-center" style={{ background: '#e2e8f0', minHeight: '100vh', padding: '0', color: '#0f172a', display: 'flex', flexDirection: 'column' }}>
+    <div className="full-center" style={{ background: '#e2e8f0', minHeight: '100vh', padding: '0', color: '#0f172a', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'stretch' }}>
       
       {/* Top Banner (Fixed) */}
       <div className="mock-exam-header" style={{ position: 'fixed', top: 0, left: 0, width: '100%', background: '#fff', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)', zIndex: 100, display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.8rem 2rem' }}>
