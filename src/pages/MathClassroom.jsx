@@ -314,6 +314,268 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
     setGradingResult(null);
   }, [testProblemIdx, selectedUnit]);
 
+  // ── 모바일 상태 및 리스너 추가 ──
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [showAvsAccordion, setShowAvsAccordion] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    setShowAvsAccordion(false);
+  }, [testProblemIdx, selectedUnit]);
+
+  // AVS 아코디언 핸들러
+  const handleAvsClick = () => {
+    const targetUnit = selectedUnit || currentUnit;
+    if (targetUnit) {
+      setMessages(prev => {
+        const cleaned = prev.map(m => m.dynamicData || m.hintPlayer ? { ...m, dynamicData: undefined, hintPlayer: undefined } : m);
+        return [...cleaned, { role: 'user', content: `[${targetUnit}] Ai Vision Solution을 보여주세요!` }];
+      });
+      setTimeout(() => {
+        const pid = String(testProblemIdx).padStart(3, '0');
+        setMessages(prev => {
+          const cleaned = prev.map(m => m.dynamicData || m.hintPlayer ? { ...m, dynamicData: undefined, hintPlayer: undefined } : m);
+          return [...cleaned, { 
+            role: 'assistant', 
+            content: `[${targetUnit}] 문제 풀이가 막히셨나요? 걱정하지 마세요! Ai Vision Solution을 실행합니다.`,
+            hintPlayer: { unit: targetUnit, problemId: pid }
+          }];
+        });
+        setShowAvsAccordion(true);
+      }, 500);
+    } else {
+      alert("선택된 단원이 없습니다. 좌측 메뉴에서 세부 단원/단계를 선택해주세요.");
+    }
+  };
+
+  // 로컬 채점 핸들러 (PC & 모바일 공유)
+  const handleGradeAnswer = () => {
+    const targetUnitFolder = getHintFolder(selectedUnit || currentUnit);
+    const targetProblemNum = Number(testProblemIdx);
+    
+    // [데이터 확인용] 정답 연결 로그 출력
+    const stepStrLog = (selectedUnit || currentUnit || '').match(/(1|2|3|4|5)단계/)?.[0] || 'N/A';
+    console.log('--- Answer Lookup Key ---');
+    console.log('Subject/Course:', selectedCourse);
+    console.log('UnitName:', selectedUnit || currentUnit);
+    console.log('Stage/Level:', stepStrLog);
+    console.log('ProblemNumber:', testProblemIdx);
+    console.log('Generated AnswerKey:', targetUnitFolder);
+
+    const targetUnits = ['고차방정식', '이차부등식', '일차부등식', '도형', '원의', '삼각함수그래프', '삼각함수 그래프', '수열', '등차등비', '시그마', '귀납적', '삼각함수활용', '경우의수', '점과좌표', '직선의방정식', '행렬', '지수함수', '로그함수', '지수', '로그', '삼각함수성질', '삼각함수', '수학적귀납법', '지수로그', '극한', '연속', '미분', '도함수', '적분', '정적분', '급수', '확률', '통계', '조건부', '독립시행', '이항분포', '순열', '조합', '이항정리', '표본', '정규분포', '덧셈정리'];
+    const isTargetUnit = targetUnits.some(u => targetUnitFolder && targetUnitFolder.includes(u));
+
+    let rawAnswer = null;
+
+    if (isTargetUnit) {
+       // 1. 하드코딩된 정답 우선 (캐시 문제 방지)
+       if (TRIG_ANSWERS[targetUnitFolder] && TRIG_ANSWERS[targetUnitFolder][targetProblemNum]) {
+          rawAnswer = TRIG_ANSWERS[targetUnitFolder][targetProblemNum];
+       }
+       
+       // 2. 마스터 데이터 및 AVS 검색 (개선된 정규화/매핑 로직)
+       if (!rawAnswer) {
+         const normalizeUnitAndStage = (rawUnit) => {
+           if (!rawUnit) return { baseUnit: '', stage: null };
+           let clean = rawUnit.replace(/\s+/g, '');
+           if (clean.includes('/')) clean = clean.split('/').pop();
+           clean = clean.replace(/_/g, '');
+           let stage = null;
+           const sMatch = clean.match(/(1|2|3|4|5)단계/);
+           if (sMatch) {
+             stage = Number(sMatch[1]);
+             clean = clean.replace(sMatch[0], '');
+           }
+           clean = clean.replace(/\//g, '');
+           clean = clean.replace(/\([^)]*\)/g, '');
+           const aliasMap = {  };
+           if (aliasMap[clean]) clean = aliasMap[clean];
+           return { baseUnit: clean, stage };
+         };
+
+         const normalizeProblemNum = (n) => {
+           if (n == null) return null;
+           const match = String(n).match(/\d+/);
+           return match ? Number(match[0]) : null;
+         };
+
+         const tUnit = normalizeUnitAndStage(targetUnitFolder);
+         const tProb = normalizeProblemNum(targetProblemNum);
+         console.log('answers_master.json에서 찾는 key:', { baseUnit: tUnit.baseUnit, stage: tUnit.stage, problem: tProb });
+
+         // AVS 검색
+         const avsKeyConstructed = tUnit.stage ? `${tUnit.baseUnit}${tUnit.stage}단계` : tUnit.baseUnit;
+         const cleanTarget1 = avsKeyConstructed.replace(/\s+/g, '');
+         const cleanTarget2 = targetUnitFolder.replace(/\s+/g, '');
+         let avsUnitData = null;
+         if (avsAnswersData) {
+            const matchedKey = Object.keys(avsAnswersData).find(k => {
+               const cleanK = k.replace(/\s+/g, '').replace(/\//g, '');
+               return cleanK === cleanTarget1 || cleanK === cleanTarget2;
+            });
+            if (matchedKey) {
+               avsUnitData = avsAnswersData[matchedKey];
+            }
+         }
+         if (avsUnitData) {
+            const pKey1 = String(tProb);
+            const pKey2 = String(tProb).padStart(3, '0');
+            if (avsUnitData[pKey1] !== undefined || avsUnitData[pKey2] !== undefined) {
+               rawAnswer = avsUnitData[pKey1] !== undefined ? avsUnitData[pKey1] : avsUnitData[pKey2];
+            }
+         }
+
+         // 마스터 DB 검색
+         if (!rawAnswer) {
+           if (currentProblemRawData) {
+             rawAnswer = currentProblemRawData.correctAnswer || currentProblemRawData.A;
+           }
+         }
+
+         if (!rawAnswer) {
+            const masterItem = answersMasterData.find(m => {
+              const mUnit = normalizeUnitAndStage(m.unit);
+              const isUnitMatch = mUnit.baseUnit === tUnit.baseUnit || mUnit.baseUnit.includes(tUnit.baseUnit) || tUnit.baseUnit.includes(mUnit.baseUnit);
+              const isStageMatch = (tUnit.stage && mUnit.stage !== null) ? mUnit.stage === tUnit.stage : true;
+              const mProb = normalizeProblemNum(m.problem);
+              return isUnitMatch && isStageMatch && mProb === tProb;
+            });
+            if (masterItem) {
+               rawAnswer = masterItem.answer;
+            }
+          }
+       }
+    }
+    console.log('-------------------------');
+
+    if (!rawAnswer) {
+      if (currentProblemRawData) {
+         const d = currentProblemRawData;
+         rawAnswer = d.correctAnswer || d.answer || d.finalAnswer || d.solution?.finalAnswer || d.avs?.finalAnswer || d.problem_render?.answer;
+      }
+      if (!rawAnswer && session?.curriculumData?.lessonContent) {
+          const phaseKey = (currentPhaseFlow?.phase || 'core').toLowerCase();
+          const phaseProbs = session.curriculumData.lessonContent[phaseKey]?.problems;
+          if (phaseProbs && phaseProbs.length >= testProblemIdx) {
+              rawAnswer = phaseProbs[testProblemIdx - 1]?.answer || phaseProbs[testProblemIdx - 1]?.finalAnswer;
+          }
+      }
+    }
+
+    if (!rawAnswer) {
+      alert(`[데이터 확인용] 정답 데이터 없음: ${targetUnitFolder} / ${targetProblemNum}번`);
+      return;
+    }
+
+    const normalizeAnswer = (ans) => {
+      if (!ans) return '';
+      let clean = String(ans)
+        .replace(/\s+/g, '')
+        .replace(/\[|\{/g, '(')
+        .replace(/\]|\}/g, ')')
+        .replace(/\\pi/gi, 'π')
+        .replace(/\\sqrt/gi, '√')
+        .replace(/\\frac\{\s*([^}]+)\s*\}\{\s*([^}]+)\s*\}/g, '$1/$2')
+        .replace(/\^/g, '')
+        .replace(/,/g, '')
+        .replace(/\\/g, '')
+        .replace(/\$/g, '')
+        .replace(/①|②|③|④|⑤/, (match) => ({'①':'1','②':'2','③':'3','④':'4','⑤':'5'}[match]))
+        .toLowerCase();
+      
+      clean = clean.replace(/^[a-z]+[:=]/, '');
+      
+      if (!isNaN(clean) && clean.includes('.')) {
+          const num = parseFloat(clean);
+          if (Number.isInteger(num)) clean = String(num);
+      }
+
+      if (clean.startsWith('+') && !isNaN(clean.substring(1))) {
+          clean = clean.substring(1);
+      }
+
+      return clean;
+    };
+
+    const normUser = normalizeAnswer(userAnswer);
+    const normCorrect = normalizeAnswer(rawAnswer);
+
+    let optionValueMatch = false;
+    if (selectedAnswer !== null && currentProblemText) {
+        const mapCircle = { 1: '①', 2: '②', 3: '③', 4: '④', 5: '⑤', '1': '①', '2': '②', '3': '③', '4': '④', '5': '⑤' };
+        const selectedCircle = mapCircle[selectedAnswer] || selectedAnswer;
+        const regex = new RegExp(selectedCircle + '\\s*([^①②③④⑤\\n]+)');
+        const match = currentProblemText.match(regex);
+        if (match) {
+            const extracted = match[1].replace(/\\$/g, '').trim();
+            const normExtracted = normalizeAnswer(extracted);
+            if (normExtracted === normCorrect || normCorrect.includes(normExtracted)) {
+                optionValueMatch = true;
+            }
+        }
+    }
+
+    const isCorrect = (selectedAnswer !== null && normUser === normCorrect) || 
+                      (normUser === normCorrect) || 
+                      (normCorrect.includes(normUser) && normUser.length > 0) ||
+                      optionValueMatch;
+
+    setGradingResult(isCorrect ? 'correct' : 'incorrect');
+
+    if (selectedAnswer !== null || userAnswer.trim() !== '') {
+      console.log('\n[ANSWER]');
+      console.log(`problemId: ${targetUnitFolder}/${targetProblemNum}`);
+      console.log(`selected: ${normUser}`);
+      console.log(`correct: ${normCorrect}`);
+      console.log(`result: ${isCorrect ? 'correct' : 'incorrect'}\n`);
+
+      if (isCorrect) {
+        console.log(`[SUCCESS] 정답입니다. 다음 문제로 이동합니다.`);
+        console.log(`[HOMEWORK] Queue pushed: 1 problem for ${targetUnitFolder}/${targetProblemNum}`);
+        setTimeout(() => {
+          testAdvance();
+        }, 1000);
+      } else {
+        console.log(`[WRONG_ANSWER] 오답 기록: 학생 dashboard 데이터 저장 (${targetUnitFolder}/${targetProblemNum})`);
+        console.log(`[HOMEWORK] Queue pushed: 2 problems (similar type) for ${targetUnitFolder}/${targetProblemNum}`);
+      }
+    }
+
+    const resultToSave = {
+      problemId: testProblemIdx,
+      unit: selectedUnit || currentUnit,
+      userAnswer: userAnswer,
+      correctAnswer: rawAnswer,
+      isCorrect: isCorrect,
+      timestamp: Date.now()
+    };
+    
+    const history = JSON.parse(localStorage.getItem('localGradingHistory') || '[]');
+    history.push(resultToSave);
+    localStorage.setItem('localGradingHistory', JSON.stringify(history));
+
+    if (user) {
+      if (!isCorrect) {
+        console.log('[Supabase DB] Detected wrong answer. Saving to cloud database...');
+        supabase.from('wrong_answers').insert({
+          student_id: user.id,
+          subject: '수학',
+          unit_folder: targetUnitFolder || selectedUnit || currentUnit || '수학상',
+          problem_num: String(testProblemIdx).padStart(3, '0'),
+          wrong_answer_text: userAnswer
+        }).then(({ error }) => {
+          if (error) console.error('[Supabase DB] Failed to record wrong answer:', error);
+          else console.log('[Supabase DB] Wrong answer recorded successfully.');
+        });
+      }
+    }
+  };
+
   useEffect(() => {
     Promise.all([
       fetch(window.resolveAsset('/concept_cards/global_metadata.json')).then(res => res.json()).catch(() => []),
@@ -909,6 +1171,453 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
   const filteredCards = getFilteredCards();
   const isSenior = session?.grade?.some(g => g.includes('고3') || g.includes('N수'));
 
+  if (isMobile) {
+    const sidebarData = getSidebarData();
+    const formatTime = (seconds) => {
+      const m = Math.floor(seconds / 60);
+      const s = seconds % 60;
+      return `${m}:${s.toString().padStart(2, '0')}`;
+    };
+
+    return (
+      <div className="classroom-main-mobile" style={{ flex: 1, display: 'flex', flexDirection: 'column', background: '#09090b', color: 'white', overflowY: 'visible', overflowX: 'hidden' }}>
+        
+        {/* 1. 상단 수업 헤더 */}
+        <div style={{ padding: '0.8rem', background: '#18181b', borderBottom: '1px solid #27272a', display: 'flex', flexDirection: 'column', gap: '0.5rem', width: '100%', boxSizing: 'border-box' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <span style={{ fontSize: '0.85rem', color: '#fbbf24', fontWeight: 'bold' }}>
+              {currentPhaseFlow.title.toUpperCase()} ({currentPhaseFlow.duration}분)
+            </span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', background: '#27272a', padding: '2px 8px', borderRadius: '12px', fontSize: '0.8rem' }}>
+              <Clock size={12} color="#f59e0b" />
+              <span style={{ color: '#fbbf24', fontWeight: 'bold' }}>{formatTime(timeLeft)}</span>
+            </div>
+          </div>
+          
+          <div style={{ display: 'flex', gap: '0.4rem', width: '100%' }}>
+            <select
+              value={selectedUnit || ''}
+              onChange={(e) => {
+                setSelectedUnit(e.target.value);
+                setTestProblemIdx(1);
+              }}
+              style={{ flex: 1, background: '#27272a', border: '1px solid #3f3f46', color: 'white', padding: '0.5rem', borderRadius: '8px', fontSize: '0.85rem' }}
+            >
+              <option value="">단원 선택</option>
+              {sidebarData.sections.map(sec => (
+                <optgroup key={sec.name} label={sec.name}>
+                  {sec.items.map(item => (
+                    <option key={item} value={item}>{item}</option>
+                  ))}
+                </optgroup>
+              ))}
+            </select>
+
+            <select
+              value={testProblemIdx}
+              onChange={(e) => setTestProblemIdx(Number(e.target.value))}
+              style={{ width: '80px', background: '#27272a', border: '1px solid #3f3f46', color: 'white', padding: '0.5rem', borderRadius: '8px', fontSize: '0.85rem' }}
+            >
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map(n => (
+                <option key={n} value={n}>{n}번</option>
+              ))}
+            </select>
+          </div>
+
+          {/* PCBS 단계 배지 */}
+          {['core', 'step', 'mock'].includes(currentPhaseFlow.phase) && (() => {
+            const badgeMap = {
+              P:     { label: 'P — Problem',     bg: '#3b82f6', desc: '구하는 것?' },
+              C:     { label: 'C — Clue',         bg: '#8b5cf6', desc: '핵심 단서?' },
+              B:     { label: 'B — Background',   bg: '#f59e0b', desc: '필요 개념?' },
+              SOLVE: { label: '🔧 풀이 진행',      bg: '#10b981', desc: '구조 연결' },
+              S:     { label: 'S — Survey',        bg: '#ef4444', desc: '풀이 검토' },
+            };
+            const b = badgeMap[pcbsPhase];
+            if (!b) return null;
+            return (
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', background: b.bg + '22', border: `1px solid ${b.bg}`, borderRadius: '12px', padding: '2px 8px', fontSize: '0.75rem', width: 'fit-content' }}>
+                <span style={{ color: b.bg, fontWeight: 'bold' }}>{b.label}</span>
+                <span style={{ color: '#a1a1aa' }}>{b.desc}</span>
+              </div>
+            );
+          })()}
+        </div>
+
+        <div style={{ flex: 1, padding: '0.8rem', display: 'flex', flexDirection: 'column', gap: '1rem', boxSizing: 'border-box' }}>
+          
+          <FreeTrialBanner />
+
+          {/* 2. 문제 카드 크게 표시 & 3. 문제 이미지/KaTeX 전체 표시 */}
+          <div 
+            className="math-problem-card-mobile-container" 
+            style={{ 
+              width: 'calc(100% + 1.6rem)', 
+              marginLeft: '-0.8rem', 
+              marginRight: '-0.8rem',
+              boxSizing: 'border-box', 
+              height: '42vh', 
+              minHeight: '280px',
+              maxHeight: '45vh',
+              overflowY: 'auto', 
+              background: chalkboardData ? 'linear-gradient(145deg, #1a1a2e, #16213e, #0f3460)' : 'white', 
+              padding: chalkboardData ? '0' : '1.2rem 1rem', 
+              borderRadius: '0px', 
+              display: 'flex', 
+              flexDirection: 'column', 
+              alignItems: 'stretch', 
+              boxShadow: '0 8px 24px rgba(0,0,0,0.25)', 
+              color: chalkboardData ? 'white' : 'black',
+              borderBottom: '2px solid #27272a',
+              position: 'relative'
+            }}
+          >
+            {!chalkboardData && (
+              <h3 style={{ margin: '0 0 1rem 0', color: '#1e3a8a', width: '100%', textAlign: 'center', fontWeight: 'bold', fontSize: '1rem', flexShrink: 0 }}>
+                [{currentProblemTitle || '오늘의 실전 문제'}]
+              </h3>
+            )}
+            
+            {chalkboardData ? (
+              <ProblemCard data={chalkboardData} sourceImage={currentProblemImage} title={currentProblemTitle} fallbackText={currentProblemText} />
+            ) : currentProblemText ? (
+              <div style={{ width: '100%', overflowX: 'auto' }}>
+                <MathProblemRenderer 
+                  text={currentProblemText} 
+                  title={currentProblemTitle} 
+                  sourceImage={currentProblemImage} 
+                  choices={currentProblemRawData?.choices}
+                />
+              </div>
+            ) : currentProblemImage ? (
+              <img 
+                 key={currentProblemImage}
+                 src={currentProblemImage} 
+                 alt="오늘의 문제" 
+                 onClick={() => setExpandedProblemImage(currentProblemImage)}
+                 style={{ width: '100%', height: 'auto', maxHeight: '350px', objectFit: 'contain', borderRadius: '8px', cursor: 'zoom-in' }} 
+                 onError={(e) => { 
+                   e.target.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='200'><rect width='600' height='200' fill='%23f8fafc' rx='8' stroke='%23cbd5e1' stroke-width='2' stroke-dasharray='4'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%2364748b' font-family='sans-serif' font-size='14'>⚠ 문제 서버 준비 중</text></svg>";
+                   e.target.onclick = null;
+                 }}
+              />
+            ) : (
+              <div style={{ padding: '2rem', color: '#64748b', fontSize: '0.9rem', textAlign: 'center' }}>문제를 불러오는 중입니다...</div>
+            )}
+          </div>
+
+          {/* 4. 정답 선택/입력 & 5. 정답 제출 버튼 */}
+          <div style={{ padding: '1rem', background: '#18181b', borderRadius: '12px', border: '1px solid #27272a', display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+              <strong style={{ color: '#fbbf24', fontSize: '0.95rem' }}>✅ 정답 입력</strong>
+              <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
+                {[1, 2, 3, 4, 5].map(num => (
+                  <button
+                    key={num}
+                    onClick={() => {
+                      setSelectedAnswer(num);
+                      setUserAnswer(String(num));
+                    }}
+                    style={{
+                      width: '36px', height: '36px', borderRadius: '50%',
+                      background: selectedAnswer === num ? '#3b82f6' : '#27272a',
+                      color: 'white', border: '1px solid #52525b', cursor: 'pointer',
+                      fontWeight: 'bold', fontSize: '0.95rem',
+                      display: 'flex', alignItems: 'center', justifyContent: 'center'
+                    }}
+                  >
+                    {num}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <input 
+              type="text" 
+              placeholder="주관식 직접 입력" 
+              value={userAnswer}
+              onChange={(e) => { setUserAnswer(e.target.value); setSelectedAnswer(null); }}
+              style={{ width: '100%', padding: '0.6rem 0.8rem', borderRadius: '8px', border: '1px solid #52525b', background: '#27272a', color: '#fff', fontSize: '0.9rem', boxSizing: 'border-box' }}
+            />
+
+            <button 
+              onClick={handleGradeAnswer}
+              style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', background: '#10b981', color: 'white', border: 'none', fontWeight: 'bold', cursor: 'pointer', fontSize: '0.95rem' }}
+            >
+              정답 제출
+            </button>
+
+            {gradingResult === 'correct' && (
+              <div style={{ color: '#10b981', fontWeight: 'bold', fontSize: '0.85rem', textAlign: 'center', marginTop: '0.2rem' }}>
+                🎉 정답입니다! Ai Vision Solution으로 풀이 과정을 확인해보세요.
+              </div>
+            )}
+            {gradingResult === 'incorrect' && (
+              <div style={{ color: '#ef4444', fontWeight: 'bold', fontSize: '0.85rem', textAlign: 'center', marginTop: '0.2rem' }}>
+                ❌ 다시 풀어보세요. 필요하면 Ai Vision Solution을 확인하세요.
+              </div>
+            )}
+          </div>
+
+          {/* 6. AI Vision Solution 버튼 */}
+          {(['core', 'step', 'mock'].includes(currentPhaseFlow?.phase) || selectedUnit) && (
+            <button 
+              onClick={handleAvsClick}
+              style={{ width: '100%', background: 'linear-gradient(to right, #8b5cf6, #3b82f6)', border: 'none', padding: '0.9rem', borderRadius: '12px', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', cursor: 'pointer', fontWeight: 'bold', fontSize: '1rem', boxShadow: '0 4px 12px rgba(139, 92, 246, 0.3)' }}
+            >
+              ✨ AI Vision Solution
+            </button>
+          )}
+
+          {/* 7. AVS 클릭 시 문제 아래에 큰 AVS 영역 펼침 (아코디언 형태로) */}
+          {showAvsAccordion && (
+            <div style={{ padding: '0.8rem', background: '#18181b', borderRadius: '12px', border: '1px solid #8b5cf6', display: 'flex', flexDirection: 'column', gap: '1rem', width: '100%', boxSizing: 'border-box' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #3f3f46', paddingBottom: '0.4rem' }}>
+                <span style={{ fontWeight: 'bold', color: '#c084fc', fontSize: '0.9rem' }}>📺 AI Vision Solution 풀이 영역</span>
+                <button 
+                  onClick={() => setShowAvsAccordion(false)}
+                  style={{ background: 'transparent', border: 'none', color: '#a1a1aa', cursor: 'pointer', fontSize: '0.8rem' }}
+                >
+                  닫기
+                </button>
+              </div>
+              
+              <div style={{ color: 'white', fontSize: '0.9rem', lineHeight: '1.6' }}>
+                {messages
+                  .filter(m => m.role === 'assistant' && (m.hintPlayer || m.dynamicData || m.animationId))
+                  .slice(-1)
+                  .map((m, idx) => (
+                    <div key={idx} style={{ width: '100%' }}>
+                      <div style={{ marginBottom: '0.5rem', color: '#cbd5e1' }}>{m.content}</div>
+                      
+                      {m.animationId === 'sine_rule' && <div style={{width: '100%'}}><SineRuleAnimation /></div>}
+                      {m.animationId === 'cosine_rule' && <div style={{width: '100%'}}><CosineRuleAnimation /></div>}
+                      {m.animationId === 'triangle_area' && <div style={{width: '100%'}}><TriangleAreaAnimation /></div>}
+                      {m.dynamicData && <div style={{width: '100%'}}><DynamicProblemAnimation data={m.dynamicData} /></div>}
+                      {m.hintPlayer && (() => {
+                        let mappedU = m.hintPlayer.unit;
+                        const calcMapping = {
+                          '[2단계] 수열의극한': '1)극한2',
+                          '[4단계] 수열의극한': '1)극한4단계',
+                          '[2단계] 급수': '2)급수2',
+                          '[4단계] 급수': '2)급수4단계',
+                          '[2단계] 지수로그함수의극한': '3)지수로그함수의극한',
+                          '[2단계] 삼각함수합성과 여러 가지 공식': '4)삼각함수합성과미분',
+                          '[2단계] 삼각함수합성과미분': '4)삼각함수합성과미분',
+                          '[4단계] 지수로그삼각함수 미분': '3)지수로그삼각함수의 미분법 4단계',
+                          '[2단계] 여러가지미분법2': '5)여러가지미분법2',
+                          '[4단계] 여러가지 미분법': '4)여러가지 미분법 4단계',
+                          '[2단계] 도함수의활용1': '6)도함수의활용1',
+                          '[2단계] 도함수의활용2': '7)도함수의활용2',
+                          '[4단계] 도함수의 활용': '5)도함수의 활용 4단계',
+                          '[2단계] 여러가지 적분법': '7)여러가지적분',
+                          '[4단계] 여러가지 함수의 적분': '6)여러가지 함수의 적분4단계',
+                          '[2단계] 초월함수의 정적분': '8)정적분',
+                          '[4단계] 정적분의 활용': '7)정적분의 활용 4단계'
+                        };
+                        mappedU = calcMapping[mappedU] || mappedU;
+                        
+                        let msgProblemImage = null;
+                        if (['1)극한2', '2)급수2', '3)지수로그함수의극한', '4)삼각함수합성과미분', '5)여러가지미분법2', '6)도함수의활용1', '7)도함수의활용2', '7)여러가지적분', '8)정적분'].includes(mappedU)) {
+                           const calcSymlinksMsg = {
+                              '1)극한2': 'calc1',
+                              '2)급수2': 'calc2',
+                              '3)지수로그함수의극한': 'calc3',
+                              '4)삼각함수합성과미분': 'calc4',
+                              '5)여러가지미분법2': 'calc5',
+                              '6)도함수의활용1': 'calc6',
+                              '7)도함수의활용2': 'calc7_1',
+                              '7)여러가지적분': 'calc7_2',
+                              '8)정적분': 'calc8'
+                           };
+                           const imgF = calcSymlinksMsg[mappedU] || mappedU;
+                           msgProblemImage = window.resolveAsset(`/math_crops/미적분/2단계/${imgF}/${m.hintPlayer.problemId}.webp`)
+                        } else if (['1)극한4단계', '2)급수4단계', '3)지수로그삼각함수의 미분법 4단계', '4)여러가지 미분법 4단계', '5)도함수의 활용 4단계', '6)여러가지 함수의 적분4단계', '7)정적분의 활용 4단계'].includes(mappedU)) {
+                           msgProblemImage = window.resolveAsset(`/math_crops/미적분/4단계/${mappedU}/${m.hintPlayer.problemId}.webp`)
+                        } else if (mappedU && (mappedU.includes('등차') || mappedU.includes('등비'))) {
+                           msgProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/2단계/등차등비2단계/${m.hintPlayer.problemId}.webp`)
+                        } else if (['1)순열', '2)중복조합', '3)이항정리', '4)확률의뜻', '5)덧셈정리_조건부화률_독립시행', '6)확률변수와이항분포', '7)연속확률분포와정규분포', '8)표본평균과모평균'].includes(mappedU)) {
+                           msgProblemImage = window.resolveAsset(`/math_crops/확통수능/${mappedU}/${m.hintPlayer.problemId}.webp`)
+                        } else if (selectedCourse === `수2`) {
+                           msgProblemImage = window.resolveAsset(`/math_crops/(7)수학2/${mappedU}/${m.hintPlayer.problemId}.webp`)
+                        }
+
+                        return (
+                          <div style={{marginTop: '0.5rem', width: '100%'}}>
+                            <HintPlayerRouter unit={m.hintPlayer.unit} problemId={m.hintPlayer.problemId} problemImage={msgProblemImage} showQA={false} />
+                          </div>
+                        );
+                      })()}
+                    </div>
+                  ))}
+              </div>
+            </div>
+          )}
+
+          {/* 8. 다음 문제 버튼 */}
+          <button 
+            onClick={testAdvance}
+            style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', background: '#3b82f6', color: 'white', border: 'none', fontWeight: 'bold', cursor: 'pointer', fontSize: '0.95rem' }}
+          >
+            다음 문제
+          </button>
+
+          {/* 9. 질문 입력창 */}
+          <div style={{ padding: '0.8rem', background: '#18181b', borderRadius: '12px', border: '1px solid #27272a', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <div style={{ color: '#a1a1aa', fontSize: '0.8rem', display: 'flex', alignItems: 'center' }}>
+              <BookOpen size={14} style={{ marginRight: '4px', color: '#3b82f6' }}/>
+              <span>풀이 과정이나 단서를 AI 선생님에게 자유롭게 질문하세요.</span>
+            </div>
+            
+            <div style={{ display: 'flex', gap: '0.4rem', alignItems: 'center' }}>
+               <label style={{ cursor: 'pointer', padding: '0.6rem', borderRadius: '8px', background: '#27272a', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid #3f3f46' }} title="문제 올리기">
+                 <Paperclip size={18} color="#a1a1aa" />
+                 <input type="file" hidden accept="image/*,.pdf" onChange={handleProblemUpload} />
+               </label>
+               
+               <input 
+                  type="text" 
+                  placeholder="질문 또는 의견 입력..." 
+                  value={input}
+                  onChange={e => setInput(e.target.value)}
+                  onKeyDown={e => e.key === 'Enter' && handeSubmit()}
+                  style={{ flex: 1, padding: '0.6rem', borderRadius: '8px', border: '1px solid #3f3f46', background: '#27272a', color: '#fff', fontSize: '0.85rem' }} 
+               />
+               
+               <button 
+                  title="음성 입력"
+                  style={{ padding: '0.6rem', borderRadius: '8px', background: isRecording ? '#ef4444' : '#27272a', border: '1px solid #3f3f46', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                  onClick={toggleRecording}
+               >
+                 <Mic size={18} color={isRecording ? "white" : "#a1a1aa"} />
+               </button>
+
+               <button className="btn-primary" onClick={handeSubmit} disabled={loading} style={{ padding: '0 1rem', borderRadius: '8px', height: '36px', display: 'flex', alignItems: 'center', fontSize: '0.85rem' }}>
+                 {loading ? '...' : '전송'}
+               </button>
+            </div>
+          </div>
+
+          <button 
+            className="btn-primary" 
+            onClick={() => setShowPremiumLecture(true)}
+            style={{ background: 'linear-gradient(135deg, #f59e0b, #d97706)', border: 'none', padding: '0.8rem', borderRadius: '8px', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', cursor: 'pointer', fontWeight: 'bold', fontSize: '0.9rem', marginTop: '0.5rem' }}
+          >
+            👑 프리미엄 AI 강의 보기
+          </button>
+
+        </div>
+
+        {showConceptModal && (
+          <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.8)', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ background: '#18181b', borderRadius: '16px', width: '90%', height: '80vh', display: 'flex', flexDirection: 'column', border: '1px solid #3f3f46', overflow: 'hidden' }}>
+              <div style={{ padding: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #27272a', background: '#27272a' }}>
+                <h3 style={{ margin: 0, fontSize: '0.95rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <BookOpen size={16} color="#3b82f6" /> 
+                  [{isSenior ? '통합 수학' : currentUnit}] 개념카드
+                </h3>
+                <button onClick={() => setShowConceptModal(false)} style={{ background: 'transparent', border: 'none', color: '#a1a1aa' }}>
+                  <X size={20} />
+                </button>
+              </div>
+              <div style={{ flex: 1, padding: '1rem', overflowY: 'auto', display: 'grid', gridTemplateColumns: '1fr', gap: '1rem' }}>
+                {filteredCards.length > 0 ? (
+                  filteredCards.map((card, idx) => (
+                    <div 
+                      key={card.id || idx} 
+                      style={{ background: '#09090b', borderRadius: '12px', border: '1px solid #3f3f46', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}
+                      onClick={() => setSelectedExpandedCard(card)}
+                    >
+                      <div style={{ padding: '0.6rem', background: '#27272a', borderBottom: '1px solid #3f3f46', fontWeight: 'bold', fontSize: '0.8rem', textAlign: 'center' }}>
+                        [{card.unit || '공통'}] {card.title || card.card_title || '개념'}
+                      </div>
+                      <div style={{ background: 'white', padding: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'black' }}>
+                        {card.content ? (
+                          <div style={{ width: '100%', pointerEvents: 'none', fontSize: '0.8rem' }}>
+                            <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{card.content}</ReactMarkdown>
+                          </div>
+                        ) : (
+                          <img src={window.resolveAsset(`/concept_cards/${card.image_path}`)} alt={card.card_title} style={{ width: '100%', height: 'auto', maxHeight: '180px', objectFit: 'contain' }} />
+                        )}
+                      </div>
+                    </div>
+                  ))
+                ) : (
+                  <div style={{ textAlign: 'center', padding: '2rem', color: '#a1a1aa', fontSize: '0.85rem' }}>개념카드가 없습니다.</div>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {selectedExpandedCard && (
+          <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.95)', zIndex: 10000, display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={() => setSelectedExpandedCard(null)}>
+            <div style={{ background: 'white', padding: '1rem', borderRadius: '12px', width: '90%', maxHeight: '90vh', overflowY: 'auto', color: 'black' }} onClick={(e) => e.stopPropagation()}>
+              {selectedExpandedCard.content ? (
+                <div style={{ fontSize: '1rem', lineHeight: '1.6' }}>
+                  <h3>{selectedExpandedCard.title || selectedExpandedCard.card_title}</h3>
+                  <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{selectedExpandedCard.content}</ReactMarkdown>
+                </div>
+              ) : (
+                <img src={window.resolveAsset(`/concept_cards/${selectedExpandedCard.image_path}`)} alt={selectedExpandedCard.card_title} style={{ width: '100%', height: 'auto' }} />
+              )}
+            </div>
+          </div>
+        )}
+
+        {expandedProblemImage && (
+          <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.9)', zIndex: 3000, display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={() => setExpandedProblemImage(null)}>
+            <div style={{ background: 'white', padding: '0.5rem', borderRadius: '8px', maxWidth: '95vw', maxHeight: '95vh', overflowY: 'auto' }} onClick={(e) => e.stopPropagation()}>
+              <img src={expandedProblemImage} alt="확대" style={{ width: '100%', height: 'auto' }} />
+            </div>
+          </div>
+        )}
+
+        {showPremiumLecture && (
+          <PremiumLectureModal onClose={() => setShowPremiumLecture(false)} />
+        )}
+
+        {showReport && (() => {
+          const history = JSON.parse(localStorage.getItem('localGradingHistory') || '[]');
+          const correctCount = history.filter(h => h.isCorrect).length;
+          const totalCount = history.length;
+          const accuracy = totalCount > 0 ? Math.round((correctCount / totalCount) * 100) : 0;
+          
+          return (
+            <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.9)', zIndex: 20000, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ background: '#18181b', borderRadius: '16px', width: '90%', border: '1px solid #3f3f46', overflow: 'hidden' }}>
+                <div style={{ background: 'linear-gradient(135deg, #10b981, #059669)', padding: '1.2rem', textAlign: 'center', color: 'white' }}>
+                  <h3 style={{ margin: 0, fontSize: '1.2rem', fontWeight: 'bold' }}>오늘의 학습 리포트</h3>
+                </div>
+                <div style={{ padding: '1.2rem' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.8rem', marginBottom: '1.2rem' }}>
+                    <div style={{ background: 'rgba(255,255,255,0.03)', padding: '0.8rem', borderRadius: '12px', textAlign: 'center' }}>
+                      <div style={{ color: '#94a3b8', fontSize: '0.75rem' }}>푼 문제 / 정답</div>
+                      <div style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#10b981' }}>{totalCount} / {correctCount}</div>
+                    </div>
+                    <div style={{ background: 'rgba(255,255,255,0.03)', padding: '0.8rem', borderRadius: '12px', textAlign: 'center' }}>
+                      <div style={{ color: '#94a3b8', fontSize: '0.75rem' }}>정답률</div>
+                      <div style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#3b82f6' }}>{accuracy}%</div>
+                    </div>
+                  </div>
+                  <button 
+                    onClick={() => {
+                      setShowReport(false);
+                      navigate('/dashboard');
+                    }}
+                    style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: 'none', background: 'linear-gradient(135deg, #10b981, #059669)', color: 'white', fontWeight: 'bold', cursor: 'pointer' }}
+                  >
+                    수업 종료 및 대시보드로 이동
+                  </button>
+                </div>
+              </div>
+            </div>
+          );
+        })()}
+
+      </div>
+    );
+  }
+
   return (
     <div className="classroom-main" style={{ flex: 1, display: 'flex', flexDirection: 'column', background: '#09090b', color: 'white' }}>
       <div className="math-top-bar" style={{ padding: '1rem', background: '#18181b', borderBottom: '1px solid #27272a', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.8rem' }}>
@@ -1155,235 +1864,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
         </div>
         <div className="math-grading-row-2" style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', flexWrap: 'wrap', width: '100%' }}>
           <button 
-            onClick={() => {
-              const targetUnitFolder = getHintFolder(selectedUnit || currentUnit);
-              const targetProblemNum = Number(testProblemIdx);
-              
-              // [데이터 확인용] 정답 연결 로그 출력
-              const stepStrLog = (selectedUnit || currentUnit || '').match(/(1|2|3|4|5)단계/)?.[0] || 'N/A';
-              console.log('--- Answer Lookup Key ---');
-              console.log('Subject/Course:', selectedCourse);
-              console.log('UnitName:', selectedUnit || currentUnit);
-              console.log('Stage/Level:', stepStrLog);
-              console.log('ProblemNumber:', testProblemIdx);
-              console.log('Generated AnswerKey:', targetUnitFolder);
-
-              const targetUnits = ['고차방정식', '이차부등식', '일차부등식', '도형', '원의', '삼각함수그래프', '삼각함수 그래프', '수열', '등차등비', '시그마', '귀납적', '삼각함수활용', '경우의수', '점과좌표', '직선의방정식', '행렬', '지수함수', '로그함수', '지수', '로그', '삼각함수성질', '삼각함수', '수학적귀납법', '지수로그', '극한', '연속', '미분', '도함수', '적분', '정적분', '급수', '확률', '통계', '조건부', '독립시행', '이항분포', '순열', '조합', '이항정리', '표본', '정규분포', '덧셈정리'];
-              const isTargetUnit = targetUnits.some(u => targetUnitFolder && targetUnitFolder.includes(u));
-
-              let rawAnswer = null;
-
-              if (isTargetUnit) {
-                 // 1. 하드코딩된 정답 우선 (캐시 문제 방지)
-                 if (TRIG_ANSWERS[targetUnitFolder] && TRIG_ANSWERS[targetUnitFolder][targetProblemNum]) {
-                    rawAnswer = TRIG_ANSWERS[targetUnitFolder][targetProblemNum];
-                 }
-                 
-                 // 2. 마스터 데이터 및 AVS 검색 (개선된 정규화/매핑 로직)
-                 if (!rawAnswer) {
-                   const normalizeUnitAndStage = (rawUnit) => {
-                     if (!rawUnit) return { baseUnit: '', stage: null };
-                     let clean = rawUnit.replace(/\s+/g, '');
-                     if (clean.includes('/')) clean = clean.split('/').pop();
-                     clean = clean.replace(/_/g, '');
-                     let stage = null;
-                     const sMatch = clean.match(/(1|2|3|4|5)단계/);
-                     if (sMatch) {
-                       stage = Number(sMatch[1]);
-                       clean = clean.replace(sMatch[0], '');
-                     }
-                     // 슬래시 제거 (고차방정식/2단계 → 고차방정식)
-                     clean = clean.replace(/\//g, '');
-                     // 괄호 제거 (예: 삼각함수활용 4단계(68) -> 삼각함수활용)
-                     clean = clean.replace(/\([^)]*\)/g, '');
-                     const aliasMap = {  };
-                     if (aliasMap[clean]) clean = aliasMap[clean];
-                     return { baseUnit: clean, stage };
-                   };
-
-                   const normalizeProblemNum = (n) => {
-                     if (n == null) return null;
-                     const match = String(n).match(/\d+/);
-                     return match ? Number(match[0]) : null;
-                   };
-
-                   const tUnit = normalizeUnitAndStage(targetUnitFolder);
-                   const tProb = normalizeProblemNum(targetProblemNum);
-                   console.log('answers_master.json에서 찾는 key:', { baseUnit: tUnit.baseUnit, stage: tUnit.stage, problem: tProb });
-
-                   // AVS 검색
-                   const avsKeyConstructed = tUnit.stage ? `${tUnit.baseUnit}${tUnit.stage}단계` : tUnit.baseUnit;
-                   const cleanTarget1 = avsKeyConstructed.replace(/\s+/g, '');
-                   const cleanTarget2 = targetUnitFolder.replace(/\s+/g, '');
-                   let avsUnitData = null;
-                   if (avsAnswersData) {
-                      const matchedKey = Object.keys(avsAnswersData).find(k => {
-                         const cleanK = k.replace(/\s+/g, '').replace(/\//g, '');
-                         return cleanK === cleanTarget1 || cleanK === cleanTarget2;
-                      });
-                      if (matchedKey) {
-                         avsUnitData = avsAnswersData[matchedKey];
-                      }
-                   }
-                   if (avsUnitData) {
-                      const pKey1 = String(tProb);
-                      const pKey2 = String(tProb).padStart(3, '0');
-                      if (avsUnitData[pKey1] !== undefined || avsUnitData[pKey2] !== undefined) {
-                         rawAnswer = avsUnitData[pKey1] !== undefined ? avsUnitData[pKey1] : avsUnitData[pKey2];
-                      }
-                   }
-
-                   // 마스터 DB 검색
-                   if (!rawAnswer) {
-                    if (currentProblemRawData) {
-                      rawAnswer = currentProblemRawData.correctAnswer || currentProblemRawData.A;
-                    }
-                  }
-
-                  if (!rawAnswer) {
-                     const masterItem = answersMasterData.find(m => {
-                       const mUnit = normalizeUnitAndStage(m.unit);
-                       const isUnitMatch = mUnit.baseUnit === tUnit.baseUnit || mUnit.baseUnit.includes(tUnit.baseUnit) || tUnit.baseUnit.includes(mUnit.baseUnit);
-                       const isStageMatch = (tUnit.stage && mUnit.stage !== null) ? mUnit.stage === tUnit.stage : true;
-                       const mProb = normalizeProblemNum(m.problem);
-                       return isUnitMatch && isStageMatch && mProb === tProb;
-                     });
-                     if (masterItem) {
-                        rawAnswer = masterItem.answer;
-                     }
-                   }
-                 }
-              }
-              console.log('-------------------------');
-
-              if (!rawAnswer) {
-                if (currentProblemRawData) {
-                   const d = currentProblemRawData;
-                   rawAnswer = d.correctAnswer || d.answer || d.finalAnswer || d.solution?.finalAnswer || d.avs?.finalAnswer || d.problem_render?.answer;
-                }
-                if (!rawAnswer && session?.curriculumData?.lessonContent) {
-                    const phaseKey = (currentPhaseFlow?.phase || 'core').toLowerCase();
-                    const phaseProbs = session.curriculumData.lessonContent[phaseKey]?.problems;
-                    if (phaseProbs && phaseProbs.length >= testProblemIdx) {
-                        rawAnswer = phaseProbs[testProblemIdx - 1]?.answer || phaseProbs[testProblemIdx - 1]?.finalAnswer;
-                    }
-                }
-              }
-
-              if (!rawAnswer) {
-                alert(`[데이터 확인용] 정답 데이터 없음: ${targetUnitFolder} / ${targetProblemNum}번`);
-                return;
-              }
-
-              const normalizeAnswer = (ans) => {
-                if (!ans) return '';
-                let clean = String(ans)
-                  .replace(/\s+/g, '')
-                  .replace(/\[|\{/g, '(')
-                  .replace(/\]|\}/g, ')')
-                  .replace(/\\pi/gi, 'π')
-                  .replace(/\\sqrt/gi, '√')
-                  .replace(/\\frac\{\s*([^}]+)\s*\}\{\s*([^}]+)\s*\}/g, '$1/$2')
-                  .replace(/\^/g, '')
-                  .replace(/,/g, '')
-                  .replace(/\\/g, '')
-                  .replace(/\$/g, '')
-                  .replace(/①|②|③|④|⑤/, (match) => ({'①':'1','②':'2','③':'3','④':'4','⑤':'5'}[match]))
-                  .toLowerCase();
-                
-                // [추가] x=2, answer:2 -> 2
-                clean = clean.replace(/^[a-z]+[:=]/, '');
-                
-                // [추가] 2.0 -> 2 (정수인 경우만)
-                if (!isNaN(clean) && clean.includes('.')) {
-                    const num = parseFloat(clean);
-                    if (Number.isInteger(num)) clean = String(num);
-                }
-
-                // [추가] +2 -> 2
-                if (clean.startsWith('+') && !isNaN(clean.substring(1))) {
-                    clean = clean.substring(1);
-                }
-
-                return clean;
-              };
-
-              const normUser = normalizeAnswer(userAnswer);
-              const normCorrect = normalizeAnswer(rawAnswer);
-
-              // [새로 추가] 문제 텍스트(KaTeX)가 있고 객관식(①~⑤)을 눌렀을 때 텍스트에서 실제 값 추출 보완
-              let optionValueMatch = false;
-              if (selectedAnswer !== null && currentProblemText) {
-                  const mapCircle = { 1: '①', 2: '②', 3: '③', 4: '④', 5: '⑤', '1': '①', '2': '②', '3': '③', '4': '④', '5': '⑤' };
-                  const selectedCircle = mapCircle[selectedAnswer] || selectedAnswer;
-                  const regex = new RegExp(selectedCircle + '\\s*([^①②③④⑤\\n]+)');
-                  const match = currentProblemText.match(regex);
-                  if (match) {
-                      const extracted = match[1].replace(/\\$/g, '').trim();
-                      const normExtracted = normalizeAnswer(extracted);
-                      if (normExtracted === normCorrect || normCorrect.includes(normExtracted)) {
-                          optionValueMatch = true;
-                      }
-                  }
-              }
-
-              // 5지선다 버튼 선택 시 숫자 매칭 보강
-              const isCorrect = (selectedAnswer !== null && normUser === normCorrect) || 
-                                (normUser === normCorrect) || 
-                                (normCorrect.includes(normUser) && normUser.length > 0) ||
-                                optionValueMatch;
-
-              setGradingResult(isCorrect ? 'correct' : 'incorrect');
-
-              if (selectedAnswer !== null || userAnswer.trim() !== '') {
-                console.log('\n[ANSWER]');
-                console.log(`problemId: ${targetUnitFolder}/${targetProblemNum}`);
-                console.log(`selected: ${normUser}`);
-                console.log(`correct: ${normCorrect}`);
-                console.log(`result: ${isCorrect ? 'correct' : 'incorrect'}\n`);
-
-                if (isCorrect) {
-                  console.log(`[SUCCESS] 정답입니다. 다음 문제로 이동합니다.`);
-                  console.log(`[HOMEWORK] Queue pushed: 1 problem for ${targetUnitFolder}/${targetProblemNum}`);
-                  setTimeout(() => {
-                    testAdvance();
-                  }, 1000);
-                } else {
-                  console.log(`[WRONG_ANSWER] 오답 기록: 학생 dashboard 데이터 저장 (${targetUnitFolder}/${targetProblemNum})`);
-                  console.log('[HOMEWORK] Queue pushed: 2 problems (similar type) for ${targetUnitFolder}/${targetProblemNum}');
-                }
-              }
-
-              const resultToSave = {
-                problemId: testProblemIdx,
-                unit: selectedUnit || currentUnit,
-                userAnswer: userAnswer,
-                correctAnswer: rawAnswer,
-                isCorrect: isCorrect,
-                timestamp: Date.now()
-              };
-              
-              const history = JSON.parse(localStorage.getItem('localGradingHistory') || '[]');
-              history.push(resultToSave);
-              localStorage.setItem('localGradingHistory', JSON.stringify(history));
-
-              // Supabase Database 연동: 오답 발생 시 wrong_answers 테이블에 영구 적재
-              if (user) {
-                if (!isCorrect) {
-                  console.log('[Supabase DB] Detected wrong answer. Saving to cloud database...');
-                  supabase.from('wrong_answers').insert({
-                    student_id: user.id,
-                    subject: '수학',
-                    unit_folder: targetUnitFolder || selectedUnit || currentUnit || '수학상',
-                    problem_num: String(testProblemIdx).padStart(3, '0'),
-                    wrong_answer_text: userAnswer
-                  }).then(({ error }) => {
-                    if (error) console.error('[Supabase DB] Failed to record wrong answer:', error);
-                    else console.log('[Supabase DB] Wrong answer recorded successfully.');
-                  });
-                }
-              }
-            }}
+            onClick={handleGradeAnswer}
             style={{ padding: '0.8rem 1.5rem', borderRadius: '8px', background: '#10b981', color: 'white', border: 'none', fontWeight: 'bold', cursor: 'pointer', whiteSpace: 'nowrap' }}
           >
             정답 제출

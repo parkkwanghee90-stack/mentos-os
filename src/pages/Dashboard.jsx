@@ -21,7 +21,7 @@ export default function Dashboard() {
   
   React.useEffect(() => {
     const originalBg = document.body.style.backgroundColor;
-    document.body.style.backgroundColor = '#f8fafc';
+    document.body.style.backgroundColor = '#ffffff';
     return () => {
       document.body.style.backgroundColor = originalBg;
     };
@@ -448,7 +448,7 @@ export default function Dashboard() {
       {/* ═══ 7. V2/V1 세션 이어하기 (기존 보존) ═══ */}
       <div className="session-section">
         {v2Sessions.map((v2s, idx) => (
-          <div key={`v2-${v2s.teacherId}`} className="glass-panel session-card animate-fade-in" style={{ background: 'linear-gradient(135deg, rgba(16,185,129,0.08), rgba(59,130,246,0.08))', border: '1px solid rgba(16,185,129,0.25)', animationDelay: `${0.35 + 0.05 * idx}s` }}>
+          <div key={`v2-${v2s.teacherId}`} className="glass-panel session-card animate-fade-in" style={{ background: 'linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%)', border: '1px solid rgba(16, 185, 129, 0.15)', boxShadow: '0 10px 30px rgba(99, 102, 241, 0.05)', animationDelay: `${0.35 + 0.05 * idx}s` }}>
             <div>
               <h3>
                 <Zap size={18} color="#10b981" /> 이어하기 — [V2] 수업
@@ -486,7 +486,7 @@ export default function Dashboard() {
         ))}
 
         {hasActiveSessionV1 && (
-          <div className="glass-panel session-card animate-fade-in" style={{ background: 'linear-gradient(135deg, rgba(59,130,246,0.08), rgba(168,85,247,0.08))', border: '1px solid rgba(168,85,247,0.25)', animationDelay: '0.4s' }}>
+          <div className="glass-panel session-card animate-fade-in" style={{ background: 'linear-gradient(135deg, #f5f3ff 0%, #e0f2fe 100%)', border: '1px solid rgba(139, 92, 246, 0.15)', boxShadow: '0 10px 30px rgba(99, 102, 241, 0.05)', animationDelay: '0.4s' }}>
             <div>
               <h3>
                 <Zap size={18} color="#a855f7" /> 이어하기 — [V1] 수업
@@ -525,7 +525,7 @@ export default function Dashboard() {
       </div>
 
       {/* ═══ 8. 월간 테스트 (기존 보존) ═══ */}
-      <div className="glass-panel monthly-test-card animate-fade-in" style={{ background: daysUntilTest === 0 ? 'linear-gradient(135deg, rgba(239,68,68,0.12), rgba(245,158,11,0.12))' : 'var(--panel-bg)', border: daysUntilTest === 0 ? '1px solid rgba(239,68,68,0.3)' : '1px solid var(--panel-border)', animationDelay: '0.45s' }}>
+      <div className="glass-panel monthly-test-card animate-fade-in" style={{ background: daysUntilTest === 0 ? 'linear-gradient(135deg, #fee2e2 0%, #fef3c7 100%)' : 'linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%)', border: daysUntilTest === 0 ? '1px solid rgba(239, 68, 68, 0.25)' : '1px solid rgba(245, 158, 11, 0.2)', boxShadow: '0 10px 30px rgba(99, 102, 241, 0.05)', animationDelay: '0.45s' }}>
         <h3 style={{ color: daysUntilTest === 0 ? '#ef4444' : 'var(--text-main)' }}>
           <BookA size={20} color={daysUntilTest === 0 ? "#ef4444" : "#94a3b8"} /> 
           {daysUntilTest === 0 ? '오늘은 월간 등급 테스트 날입니다!' : '다음 월간 테스트 일정'}
@@ -564,7 +564,7 @@ export default function Dashboard() {
 
       {/* ═══ 10. 수업 현황 리포트 (기존 보존) ═══ */}
       {(lessonHistory.length > 0) && (
-        <div className="lesson-report-card glass-panel animate-fade-in" style={{ animationDelay: '0.55s' }}>
+        <div className="lesson-report-card glass-panel animate-fade-in" style={{ background: 'linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%)', border: '1px solid rgba(16, 185, 129, 0.15)', boxShadow: '0 10px 30px rgba(99, 102, 241, 0.05)', animationDelay: '0.55s' }}>
           <h3><BookOpen size={22} /> 1일차 수업 현황 (학습 리포트)</h3>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
             {lessonHistory.map(r => (

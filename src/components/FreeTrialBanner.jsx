@@ -13,6 +13,13 @@ export default function FreeTrialBanner({ gradeFlow }) {
   // Registration / Login input state inside the paywall
   const [emailInput, setEmailInput] = useState('');
   const [nameInput, setNameInput] = useState('');
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     // 1. Check paid state
@@ -278,17 +285,22 @@ export default function FreeTrialBanner({ gradeFlow }) {
   // ─── 2. Floating Timer Banner View ───
   return (
     <>
-      <div style={{
-        position: 'fixed', top: '70px', right: '20px',
+      <div className="free-trial-banner-container" style={{
+        position: isMobile ? 'static' : 'fixed',
+        top: isMobile ? 'auto' : '70px',
+        right: isMobile ? 'auto' : '20px',
+        width: isMobile ? '100%' : 'auto',
+        margin: isMobile ? '0.5rem 0 1rem 0' : '0',
         background: isUrgent ? 'rgba(239, 68, 68, 0.95)' : 'rgba(15, 23, 42, 0.85)',
         border: isUrgent ? '1px solid rgba(255,255,255,0.2)' : '1px solid rgba(255,255,255,0.08)',
-        color: 'white', padding: '0.6rem 1.3rem', borderRadius: '30px',
+        color: 'white', padding: '0.6rem 1.3rem', borderRadius: isMobile ? '16px' : '30px',
         fontWeight: 'bold', zIndex: 9999,
-        display: 'flex', alignItems: 'center', gap: '10px',
+        display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
         boxShadow: '0 8px 32px rgba(0,0,0,0.5)',
         backdropFilter: 'blur(12px)',
         fontSize: '0.88rem',
-        animation: isUrgent ? 'pulseAlert 1s infinite' : 'none'
+        animation: isUrgent ? 'pulseAlert 1s infinite' : 'none',
+        boxSizing: 'border-box'
       }}>
         <Clock size={16} color={isUrgent ? 'white' : '#60a5fa'} />
         <span style={{ color: isUrgent ? 'white' : '#94a3b8' }}>무료 체험 중</span>

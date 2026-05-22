@@ -713,18 +713,18 @@ export default function MentosMockExam() {
     <div className="full-center" style={{ background: '#e2e8f0', minHeight: '100vh', padding: '0', color: '#0f172a', display: 'flex', flexDirection: 'column' }}>
       
       {/* Top Banner (Fixed) */}
-      <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', background: '#fff', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)', zIndex: 100, display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.8rem 2rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
+      <div className="mock-exam-header" style={{ position: 'fixed', top: 0, left: 0, width: '100%', background: '#fff', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)', zIndex: 100, display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.8rem 2rem' }}>
+        <div className="mock-exam-header-left" style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
           <div>
-            <h1 style={{ margin: 0, fontSize: '1.4rem', fontWeight: '900', letterSpacing: '-0.5px' }}>{data.title}</h1>
+            <h1 className="mock-exam-title" style={{ margin: 0, fontSize: '1.4rem', fontWeight: '900', letterSpacing: '-0.5px' }}>{data.title}</h1>
             <p style={{ margin: 0, color: '#64748b', fontSize: '0.85rem' }}>{data.subtitle}</p>
           </div>
-          <div style={{ background: 'linear-gradient(to right, #f59e0b, #ef4444)', padding: '0.3rem 0.8rem', borderRadius: '20px', color: 'white', fontWeight: 'bold', fontSize: '0.8rem', display: 'flex', alignItems: 'center', gap: '4px', boxShadow: '0 2px 4px rgba(239, 68, 68, 0.3)' }}>
+          <div className="mock-exam-badge" style={{ background: 'linear-gradient(to right, #f59e0b, #ef4444)', padding: '0.3rem 0.8rem', borderRadius: '20px', color: 'white', fontWeight: 'bold', fontSize: '0.8rem', display: 'flex', alignItems: 'center', gap: '4px', boxShadow: '0 2px 4px rgba(239, 68, 68, 0.3)' }}>
             🔥 고3 3등급 이상 전용: 1회 무료 프리미엄 진단 진행중
           </div>
           
           {/* 선택과목 토글 탭 */}
-          <div style={{ display: 'flex', background: '#f1f5f9', padding: '0.3rem', borderRadius: '8px' }}>
+          <div className="mock-exam-elective-toggle" style={{ display: 'flex', background: '#f1f5f9', padding: '0.3rem', borderRadius: '8px' }}>
             <button 
               onClick={() => setElectiveMode('calculus')}
               style={{
@@ -750,10 +750,10 @@ export default function MentosMockExam() {
           </div>
         </div>
         
-        <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+        <div className="mock-exam-header-right" style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
           
           {/* 모의고사 10회차 선택 드롭다운 */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', background: '#f8fafc', padding: '0.4rem 1rem', borderRadius: '8px', border: '1px solid #cbd5e1' }}>
+          <div className="mock-volume-select-wrap" style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', background: '#f8fafc', padding: '0.4rem 1rem', borderRadius: '8px', border: '1px solid #cbd5e1' }}>
             <span style={{ fontWeight: 'bold', color: '#475569', fontSize: '0.9rem' }}>회차 선택</span>
             <select 
               value={currentVolume} 
@@ -789,23 +789,23 @@ export default function MentosMockExam() {
             </select>
           </div>
 
-          <div style={{ display: 'flex', background: '#f1f5f9', borderRadius: '8px', padding: '4px' }}>
+          <div className="mock-zoom-control" style={{ display: 'flex', background: '#f1f5f9', borderRadius: '8px', padding: '4px' }}>
             <button onClick={handleZoomOut} style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: '0.5rem', color: '#475569' }}><Minimize2 size={18} /></button>
             <span style={{ padding: '0.5rem', fontWeight: 'bold', color: '#334155', minWidth: '60px', textAlign: 'center' }}>{Math.round(zoomLevel * 100)}%</span>
             <button onClick={handleZoomIn} style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: '0.5rem', color: '#475569' }}><Maximize2 size={18} /></button>
           </div>
-          <button className="btn-primary" style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', padding: '0.8rem 1.5rem', borderRadius: '8px' }} onClick={submitExam}>
+          <button className="btn-primary mock-submit-btn-top" style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', padding: '0.8rem 1.5rem', borderRadius: '8px' }} onClick={submitExam}>
             <CheckCircle size={16} /> 최종 표기 제출
           </button>
         </div>
       </div>
 
-      <div style={{ display: 'flex', width: '100%', height: '100%', marginTop: '70px', padding: '2rem', gap: '2rem', alignItems: 'flex-start' }}>
+      <div className="mock-exam-body" style={{ display: 'flex', width: '100%', height: '100%', marginTop: '70px', padding: '2rem', gap: '2rem', alignItems: 'flex-start' }}>
         
         {/* Exam Papers Scroll Area */}
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '3rem', alignItems: 'center' }}>
+        <div className="exam-papers-area" style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '3rem', alignItems: 'center' }}>
           {pages.map((pageQuestions, pageIndex) => (
-            <div key={pageIndex} style={{ 
+            <div key={pageIndex} className="exam-paper-page" style={{ 
               background: '#fff', 
               boxShadow: '0 10px 40px rgba(0,0,0,0.1)', 
               width: '100%',
@@ -842,7 +842,7 @@ export default function MentosMockExam() {
               )}
 
               {/* 2단 다단 렌더링 엔진 (Grid 활용하여 완벽한 간격 분리) */}
-              <div style={{ 
+              <div className="exam-questions-grid" style={{ 
                 display: 'grid', 
                 gridTemplateColumns: pageQuestions.length > 1 ? '1fr 1fr' : '1fr', 
                 gap: '8rem 6rem', // 상하 늘리고 좌우 늘림
@@ -850,16 +850,16 @@ export default function MentosMockExam() {
                 alignContent: 'start'
               }}>
                 {pageQuestions.map((q) => (
-                  <div key={q.id} style={{ display: 'flex', flexDirection: 'column', gap: '1rem', minHeight: pageQuestions.length > 2 ? '450px' : 'auto' }}>
+                  <div key={q.id} className="mock-question-card" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', minHeight: pageQuestions.length > 2 ? '450px' : 'auto' }}>
                     <div style={{ display: 'flex', gap: '0.8rem' }}>
-                      <div style={{ fontSize: '1.6rem', fontWeight: '900', fontFamily: '"Noto Serif KR", serif', width: '30px' }}>
+                      <div className="mock-question-num" style={{ fontSize: '1.6rem', fontWeight: '900', fontFamily: '"Noto Serif KR", serif', width: '30px' }}>
                         {q.id}.
                       </div>
-                      <div style={{ flex: 1 }}>
+                      <div className="mock-question-content" style={{ flex: 1 }}>
                         <div style={{ fontSize: '1.1rem', lineHeight: '1.9', letterSpacing: '-0.3px', fontFamily: '"KoPub Batang", "Noto Serif KR", serif' }}>
                            {q.picture ? (
                                <div style={{ textAlign: 'center', width: '100%' }}>
-                                  <img src={q.picture} alt={`Question ${q.id}`} style={{ maxWidth: '600px', width: '100%', borderRadius: '8px', objectFit: 'contain' }} />
+                                  <img src={q.picture} alt={`Question ${q.id}`} className="mock-question-img" style={{ maxWidth: '600px', width: '100%', borderRadius: '8px', objectFit: 'contain' }} />
                                </div>
                            ) : (
                                <>
@@ -946,7 +946,7 @@ export default function MentosMockExam() {
                     {/* 객관식 - 3칸/2칸 그리드 정렬 (원장님 지시사항) */}
                     {q.options && q.options.length > 0 && (
                       <div style={{ marginTop: '1.5rem', paddingLeft: '2rem' }}>
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '1.5rem' }}>
+                        <div className="mock-options-grid-row" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '1.5rem' }}>
                           {q.options.slice(0, 3).map((opt, optIndex) => {
                             const isSelected = selectedAnswers[q.id] === optIndex;
                             return (
@@ -962,7 +962,7 @@ export default function MentosMockExam() {
                             )
                           })}
                         </div>
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
+                        <div className="mock-options-grid-row" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
                           {q.options.slice(3, 5).map((opt, optIndex) => {
                             const actualIdx = optIndex + 3;
                             const isSelected = selectedAnswers[q.id] === actualIdx;
@@ -984,7 +984,7 @@ export default function MentosMockExam() {
                     
                     {/* 주관식 단답형 입력 필드 */}
                     {(!q.options || q.options.length === 0) && (
-                      <div style={{ marginTop: '2rem', paddingLeft: '2.5rem' }}>
+                      <div className="mock-subjective-input-area" style={{ marginTop: '2rem', paddingLeft: '2.5rem' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                           <span style={{ fontWeight: 'bold', color: '#64748b' }}>정답 : </span>
                           <input 
@@ -1010,7 +1010,7 @@ export default function MentosMockExam() {
         </div>
 
         {/* Right Fixed OMR Answer Sheet Panel */}
-        <div style={{ 
+        <div className="mock-omr-panel" style={{ 
           position: 'sticky', top: '90px', width: '380px', background: '#fff', borderRadius: '16px', 
           boxShadow: '0 20px 40px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', overflow: 'hidden', border: '1px solid #cbd5e1' 
         }}>

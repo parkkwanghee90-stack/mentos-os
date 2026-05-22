@@ -222,3 +222,203 @@
   justify-content: center;
   gap: 0.5rem;
 }
+
+/* ==========================================================================
+   모바일 모의고사 긴급 반응형 스타일 오버라이드 (@media max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* 최상위 컨테이너 가로 유출 방지 */
+  .full-center {
+    padding: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  /* 상단 탑 배너: 모바일에서는 absolute/fixed를 풀고 relative로 배치하여 자연스러운 세로 스크롤의 시발점으로 만듦 */
+  .mock-exam-header {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 1.2rem 1rem !important;
+    gap: 1rem !important;
+    box-sizing: border-box !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+
+  /* 헤더 내부 좌측 정렬 */
+  .mock-exam-header-left {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.8rem !important;
+    width: 100% !important;
+  }
+
+  .mock-exam-title {
+    font-size: 1.25rem !important;
+    font-weight: 800 !important;
+    text-align: center !important;
+    line-height: 1.4 !important;
+    word-break: keep-all !important;
+  }
+
+  .mock-exam-badge {
+    font-size: 0.75rem !important;
+    padding: 0.3rem 0.6rem !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .mock-exam-elective-toggle {
+    width: 100% !important;
+    display: flex !important;
+    box-sizing: border-box !important;
+  }
+  
+  .mock-exam-elective-toggle button {
+    flex: 1 !important;
+    text-align: center !important;
+    font-size: 0.9rem !important;
+    padding: 0.6rem !important;
+  }
+
+  /* 헤더 내부 우측 정렬 */
+  .mock-exam-header-right {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.8rem !important;
+    width: 100% !important;
+    margin-top: 0.5rem !important;
+  }
+
+  .mock-volume-select-wrap {
+    width: 100% !important;
+    justify-content: space-between !important;
+    box-sizing: border-box !important;
+  }
+  
+  .mock-volume-select-wrap select {
+    flex: 1 !important;
+    width: 100% !important;
+    font-size: 0.9rem !important;
+    padding: 0.5rem !important;
+  }
+
+  /* 모바일에서 줌 컨트롤은 불필요하므로 깔끔히 숨김 */
+  .mock-zoom-control {
+    display: none !important;
+  }
+
+  /* 최상단 최종 표기 제출 버튼 */
+  .mock-submit-btn-top {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 0.8rem !important;
+    font-size: 1rem !important;
+    border-radius: 8px !important;
+  }
+
+  /* 메인 콘텐츠 바디 영역 */
+  .mock-exam-body {
+    flex-direction: column !important;
+    margin-top: 0 !important; /* 헤더 고정이 해제되었으므로 마진 탑 제거 */
+    padding: 1rem !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 시험지 영역 */
+  .exam-papers-area {
+    width: 100% !important;
+    gap: 1.5rem !important;
+  }
+
+  /* 시험지 카드 */
+  .exam-paper-page {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: auto !important; /* A3 강제 세로 비율 해제 */
+    padding: 1.8rem 1rem !important;
+    transform: none !important; /* transform scale 오버라이드 해제 */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06) !important;
+    border-radius: 12px !important;
+    box-sizing: border-box !important;
+  }
+  
+  .exam-paper-page h2 {
+    font-size: 1.5rem !important;
+    font-weight: 800 !important;
+  }
+
+  /* 시험지 내부 2단 다단 그리드를 1열로 오버라이드 */
+  .exam-questions-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem 0 !important;
+  }
+
+  .mock-question-card {
+    min-height: auto !important;
+  }
+
+  .mock-question-num {
+    font-size: 1.25rem !important;
+  }
+
+  .mock-question-content {
+    font-size: 0.95rem !important;
+    line-height: 1.7 !important;
+    word-break: break-all !important; /* 가로 넘침 방지 */
+  }
+
+  /* 문항 문제 이미지 100% 화면폭 축소 */
+  .mock-question-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 6px !important;
+  }
+
+  /* 객관식 보기 그리드: 모바일 좁은 폭 대응 1열 세로 정렬로 전면 개편 */
+  .mock-options-grid-row {
+    grid-template-columns: 1fr !important;
+    gap: 0.8rem !important;
+    margin-bottom: 0.8rem !important;
+  }
+  
+  .mock-options-grid-row:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /* 주관식 단답형 입력 */
+  .mock-subjective-input-area {
+    padding-left: 0.5rem !important;
+    margin-top: 1rem !important;
+  }
+  
+  .mock-subjective-input-area input {
+    width: 130px !important;
+    padding: 0.6rem !important;
+    font-size: 1.1rem !important;
+  }
+
+  /* 우측 OMR 판독기 패널: static 배치하여 시험지 맨 밑으로 보냄 */
+  .mock-omr-panel {
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06) !important;
+    margin-top: 1.5rem !important;
+    border-radius: 16px !important;
+    border: 1px solid #e2e8f0 !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* 모바일 OMR 내의 목록 영역 세로 스크롤 제거하여 한눈에 보이게 펼침 */
+  .mock-omr-panel > div:nth-child(2) {
+    max-height: none !important;
+    overflow-y: visible !important;
+  }
+}

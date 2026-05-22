@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
 
@@ -24,21 +24,32 @@ function renderMixed(text) {
 
 export default function ProblemCard({ data, sourceImage, title, fallbackText }) {
   const finalBody = data?.body?.trim() ? data.body : fallbackText;
-  const [showOriginal, setShowOriginal] = React.useState(!finalBody || finalBody.trim() === '');
+  const [showOriginal, setShowOriginal] = useState(!finalBody || finalBody.trim() === '');
+  const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth <= 768 : false);
   
-  React.useEffect(() => {
+  useEffect(() => {
     setShowOriginal(!finalBody || finalBody.trim() === '');
   }, [finalBody]);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   
   if (!data && !fallbackText) return null;
 
   return (
     <div style={{
-      background: 'linear-gradient(145deg, #1a1a2e, #16213e, #0f3460)',
-      borderRadius: '16px', padding: '2rem', color: '#e2e8f0',
-      border: '1px solid rgba(255,255,255,0.08)',
-      boxShadow: '0 20px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05)',
-      marginBottom: '2rem'
+      background: isMobile ? 'transparent' : 'linear-gradient(145deg, #1a1a2e, #16213e, #0f3460)',
+      borderRadius: isMobile ? '0px' : '16px',
+      padding: isMobile ? '1.2rem 1rem' : '2rem',
+      color: '#e2e8f0',
+      border: isMobile ? 'none' : '1px solid rgba(255,255,255,0.08)',
+      boxShadow: isMobile ? 'none' : '0 20px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05)',
+      marginBottom: isMobile ? '0px' : '1rem',
+      width: '100%',
+      boxSizing: 'border-box'
     }}>
       {/* Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center',
@@ -55,7 +66,7 @@ export default function ProblemCard({ data, sourceImage, title, fallbackText }) 
       </div>
 
       {/* Body */}
-      <div style={{ fontSize: '1.15rem', lineHeight: 1.9, marginBottom: '1.5rem', color: '#f1f5f9', whiteSpace: 'pre-wrap' }}>
+      <div style={{ fontSize: isMobile ? '1rem' : '1.15rem', lineHeight: 1.9, marginBottom: '1.5rem', color: '#f1f5f9', whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}>
         {renderMixed(finalBody)}
       </div>
 
@@ -65,7 +76,7 @@ export default function ProblemCard({ data, sourceImage, title, fallbackText }) 
           padding: '1.2rem', marginBottom: '1.5rem', border: '1px solid rgba(255,255,255,0.06)' }}>
           {data.formulas.map((f, i) => {
             try {
-              return <div key={i} style={{ textAlign: 'center', margin: '0.6rem 0', color: '#e2e8f0' }}
+              return <div key={i} style={{ textAlign: 'center', margin: '0.6rem 0', color: '#e2e8f0', overflowX: 'auto' }}
                 dangerouslySetInnerHTML={{ __html: katex.renderToString(f, { throwOnError: false, displayMode: true }) }} />;
             } catch { return <div key={i} style={{ textAlign: 'center', color: '#fbbf24' }}>{f}</div>; }
           })}
@@ -74,13 +85,13 @@ export default function ProblemCard({ data, sourceImage, title, fallbackText }) 
 
       {/* Choices */}
       {data.choices?.length > 0 && (
-        <div style={{ display: 'grid', gridTemplateColumns: data.choices.length === 5 || data.choices.length === 3 ? 'repeat(3, 1fr)' : 'repeat(2, 1fr)',
+        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : (data.choices.length === 5 || data.choices.length === 3 ? 'repeat(3, 1fr)' : 'repeat(2, 1fr)'),
           gap: '0.6rem', marginBottom: '1.5rem' }}>
           {data.choices.map((c, i) => (
             <div key={i} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: '10px',
               padding: '0.7rem 1rem', border: '1px solid rgba(255,255,255,0.06)',
               fontSize: '1rem', color: '#cbd5e1', cursor: 'pointer', transition: 'all 0.2s',
-              whiteSpace: 'pre-wrap' }}
+              whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}
               onMouseEnter={e => { e.currentTarget.style.background = 'rgba(99,102,241,0.15)'; }}
               onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.04)'; }}>
               {renderMixed(c)}
@@ -101,7 +112,7 @@ export default function ProblemCard({ data, sourceImage, title, fallbackText }) 
       {showOriginal && (sourceImage || data.source_image) && (
         <div style={{ marginTop: '1rem', background: 'white', borderRadius: '12px', padding: '1rem', textAlign: 'center' }}>
           <img src={sourceImage || data.source_image} alt="원본 문제"
-            style={{ width: '100%', height: '400px', objectFit: 'contain', borderRadius: '8px' }}
+            style={{ width: '100%', height: isMobile ? 'auto' : '400px', maxHeight: isMobile ? '320px' : 'none', objectFit: 'contain', borderRadius: '8px' }}
             onError={e => { e.target.style.display = 'none'; }} />
         </div>
       )}

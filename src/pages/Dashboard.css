@@ -20,16 +20,16 @@
 
 /* ── Premium White Theme Overrides (Segregated wrapper) ── */
 .dashboard-page-wrapper {
-  background-color: #f8fafc !important;
+  background-color: #ffffff !important;
   min-height: 100vh;
   width: 100%;
   color: #0f172a !important;
   transition: background-color 0.3s ease, color 0.3s ease;
 
   /* CSS variables overridden for light mode */
-  --dash-bg: #f8fafc;
+  --dash-bg: #ffffff;
   --panel-bg: #ffffff;
-  --panel-border: rgba(15, 23, 42, 0.06);
+  --panel-border: rgba(99, 102, 241, 0.08);
   --text-main: #0f172a;
   --text-muted: #64748b;
   --accent-gradient: linear-gradient(135deg, #4f46e5, #7c3aed, #9333ea);
@@ -50,8 +50,8 @@
 .dashboard-page-wrapper .mistake-card,
 .dashboard-page-wrapper .calendar-detail-modal {
   background: #ffffff !important;
-  border: 1px solid rgba(15, 23, 42, 0.06) !important;
-  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03), 0 1px 3px rgba(15, 23, 42, 0.02) !important;
+  border: 1px solid rgba(99, 102, 241, 0.08) !important;
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.05), 0 1px 3px rgba(99, 102, 241, 0.02) !important;
   color: #0f172a !important;
 }
 

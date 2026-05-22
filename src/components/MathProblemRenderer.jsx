@@ -136,6 +136,14 @@ function addSmartLineBreaks(body) {
 
 export default function MathProblemRenderer({ text, title, sourceImage, selectedAnswer, onOptionSelect, choices }) {
   const [showOriginal, setShowOriginal] = React.useState(false);
+  const [isMobile, setIsMobile] = React.useState(typeof window !== 'undefined' ? window.innerWidth <= 768 : false);
+
+  React.useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   if (!text) return null;
 
   // 1. 공통 전처리 적용
@@ -175,7 +183,7 @@ export default function MathProblemRenderer({ text, title, sourceImage, selected
   return (
     <div className="white-bg-katex math-problem-card" style={{ width: '100%', color: '#0f172a', boxSizing: 'border-box' }}>
       {/* 본문: 전체 단락 렌더링 (멀티라인 $$ 보존) */}
-      <div className="math-problem-body" style={{ fontSize: '1.15rem', lineHeight: 2.0, marginBottom: '1.2rem', wordBreak: 'keep-all', whiteSpace: 'pre-wrap', overflowWrap: 'anywhere', maxWidth: '100%' }}>
+      <div className="math-problem-body" style={{ fontSize: isMobile ? '1rem' : '1.15rem', lineHeight: 2.0, marginBottom: '1.2rem', wordBreak: 'keep-all', whiteSpace: 'pre-wrap', overflowWrap: 'anywhere', maxWidth: '100%' }}>
         <MathText text={body} />
       </div>
 
@@ -190,7 +198,10 @@ export default function MathProblemRenderer({ text, title, sourceImage, selected
             let gridCol = isLong ? '1fr' : 'repeat(auto-fill, minmax(140px, 1fr))';
             let gridGap = isLong ? '0.75rem' : '0.5rem';
             
-            if (isCalc19) {
+            if (isMobile) {
+              gridCol = '1fr';
+              gridGap = '0.6rem';
+            } else if (isCalc19) {
               gridCol = 'repeat(5, 1fr)'; // 오직 급수 19번만 가로 한 줄에 5개 다 배치
               gridGap = '0.85rem';       // 간격도 충분히 넓힘
             }
@@ -231,7 +242,7 @@ export default function MathProblemRenderer({ text, title, sourceImage, selected
           <img 
             src={sourceImage} 
             alt="원본 문제"
-            style={{ width: '100%', maxWidth: '100%', maxHeight: '500px', objectFit: 'contain', borderRadius: '8px' }}
+            style={{ width: '100%', maxWidth: '100%', maxHeight: isMobile ? '320px' : '500px', objectFit: 'contain', borderRadius: '8px' }}
             onError={e => { e.target.style.display = 'none'; }} 
           />
         </div>
