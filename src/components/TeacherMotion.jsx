@@ -20,14 +20,14 @@ export default function TeacherMotion({ teacher, teacherState }) {
 
   // ID 기반 경로. 최종 프로덕션에서는 .mp4를 사용합니다.
   const videoSrc = `/teachers/${subject}/${teacherId}.mp4`;
-  // 현재 Veo 3 생성 결과물인 PNG 포맷 폴백
-  const imageFallbackSrc = `/teachers/${subject}/${teacherId}.webp`;
+  // 강사 프로필 데이터에 등록된 정적 이미지(teacher.image) 우선 매핑, 없을 시 .webp 폴백
+  const imageFallbackSrc = teacher?.image || `/teachers/${subject}/${teacherId}.webp`;
 
-  // 선생님 변경 시 에러 상태 초기화
+  // 선생님 변경 시 에러 상태 초기화 (영어 외 과목은 애초에 비디오 에러 상태로 시작하여 비디오 로드 방지)
   useEffect(() => {
-    setHasVideoError(false);
+    setHasVideoError(subject !== 'english');
     setIsVideoLoaded(false);
-  }, [teacherId]);
+  }, [teacherId, subject]);
 
   // TTS 상태(speaking vs idle)와 비디오 재생 동기화
   useEffect(() => {
@@ -86,6 +86,9 @@ export default function TeacherMotion({ teacher, teacherState }) {
         <img
           src={imageFallbackSrc}
           alt={teacher?.name || 'Teacher'}
+          onError={(e) => {
+            e.currentTarget.src = '/icons/default-avatar.webp';
+          }}
           style={{
             width: '100%',
             height: '100%',

@@ -479,30 +479,31 @@ teacherSubject=${currentTeacher?.subject || currentSubject}`);
                 boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
                 zIndex: 20 
               }}>
-                <video 
-                  src={`/teachers/${currentTeacher?.subject || (currentSubject === `physics' || currentSubject === '물리' ? 'physics' : 'english`)}/${selectedTeacherId}.mp4`}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="teacher-video"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  onError={(e) => {
-                    const fallbackMap = {
-                      physics:     'physics1',
-                      chemistry:   'chemistry1',
-                      biology:     'bio1',
-                      earthScience:'earth1',
-                      math:        'math1',
-                      english:     'eng1'
-                    };
-                    const subString = currentTeacher?.subject || 'english';
-                    const fb = fallbackMap[subString] || 'eng1';
-                    if (!e.currentTarget.src.endsWith(`${fb}.mp4`)) {
-                      e.currentTarget.src = `/teachers/${subString}/${fb}.mp4`;
-                    }
-                  }}
-                />
+                {currentTeacher?.subject === 'english' ? (
+                  <video 
+                    src={`/teachers/${currentTeacher?.subject || 'english'}/${selectedTeacherId}.mp4`}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="teacher-video"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                ) : (
+                  <img
+                    src={currentTeacher?.image || `/hteachers/math/${selectedTeacherId}.webp`}
+                    alt={currentTeacher?.name || 'Teacher'}
+                    onError={(e) => {
+                      e.currentTarget.src = '/icons/default-avatar.webp';
+                    }}
+                    className="teacher-video"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover'
+                    }}
+                  />
+                )}
               </div>
               <div className="teacher-info text-center">
                 <h3>{currentTeacher.name}</h3>
