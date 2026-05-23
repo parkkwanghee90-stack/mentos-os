@@ -690,9 +690,6 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, tes
 
   // ── 개념카드 필터 로직 ──
   const getFilteredCards = () => {
-    const isSenior = session?.grade?.some(g => g.includes('고3') || g.includes('N수'));
-    if (isSenior) return globalCards;
-
     if (!currentUnit) return [];
     return globalCards.filter(card => {
       const overrideUnit = card.override?.unit;

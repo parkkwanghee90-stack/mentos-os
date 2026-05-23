@@ -608,6 +608,14 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
             ];
 
             const isNaverTts = NAVER_TTS_FOLDERS.includes(ttsUnit);
+            
+            // 1회 모의고사(20260504모의고사1회미적분/확통)의 1번~10번 문항(001~010)의 OpenAI Shimmer 음성 제거 (잡담 제거 요청 반영)
+            const isVolume1 = ttsUnit === '20260504모의고사1회미적분' || ttsUnit === '20260504모의고사1회확통';
+            const probNum = parseInt(ttsProblemId, 10);
+            if (isVolume1 && probNum >= 1 && probNum <= 10) {
+              return null;
+            }
+
             let audioUrl = '';
 
             if (isNaverTts) {

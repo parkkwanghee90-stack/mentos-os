@@ -109,35 +109,35 @@ const getMockExamData = (volumeIndex, electiveMode) => {
   }
 
   // 공통 및 6월 모평 정답 리스트
-  const june2025_common = [0, 4, 2, 1, 3, 2, 4, 3, 0, 0, 4, 1, 2, 3, 0, "3", "15", "11", "7", "39", "25", "16"];
-  const june2025_calculus = [0, 2, 3, 1, 2, 3, "109", "25"];
-  const june2025_stats = [2, 4, 0, 1, 0, 4, "44", "115"];
+  const june2025_common = [3, 2, 2, 2, 4, 0, 3, 0, 2, 4, 4, 2, 2, 3, 1, "7", "23", "2", "16", "24", "15", "231"];
+  const june2025_calculus = [1, 2, 2, 1, 1, 3, "55", "25"];
+  const june2025_stats = [2, 1, 3, 2, 0, 0, "6", "108"];
   const june2025 = [...june2025_common, ...(electiveMode === 'calculus' ? june2025_calculus : june2025_stats)];
 
-  const june2024_common = [3, 4, 2, 2, 4, 0, 3, 0, 2, 4, 4, 2, 2, 3, 1, "7", "23", "2", "16", "14", "15", "231"];
-  const june2024_calculus = [2, 0, 0, 2, 1, 3, "55", "25"];
-  const june2024_stats = [3, 2, 1, 2, 0, 0, "6", "108"];
+  const june2024_common = [4, 3, 1, 1, 0, 2, 4, 0, 1, 2, 3, 2, 2, 0, 2, "4", "5", "12", "5", "13", "20", "380"];
+  const june2024_calculus = [4, 3, 0, 2, 1, 3, "15", "22"];
+  const june2024_stats = [2, 1, 3, 0, 4, 1, "15", "70"];
   const june2024 = [...june2024_common, ...(electiveMode === 'calculus' ? june2024_calculus : june2024_stats)];
 
-  const june2023_common = [1, 3, 3, 1, 2, 4, 3, 2, 4, 2, 1, 3, 2, 0, 3, "3", "2", "4", "1", "13", "10", "19"];
-  const june2023_calculus = [0, 3, 1, 2, 4, 1, "15", "29"];
-  const june2023_stats = [1, 0, 3, 1, 2, 3, "12", "11"];
+  const june2023_common = [0, 1, 3, 1, 2, 3, 1, 2, 0, 4, 2, 0, 3, 1, 4, "4", "4", "3", "4", "2", "5", "33"];
+  const june2023_calculus = [0, 1, 4, 3, 4, 4, "11", "16"];
+  const june2023_stats = [1, 0, 3, 1, 2, 3, "20", "12"];
   const june2023 = [...june2023_common, ...(electiveMode === 'calculus' ? june2023_calculus : june2023_stats)];
 
   // 수능 정답표
-  const ans2025_common = [0, 3, 4, 2, 2, 1, 4, 0, 3, 2, 2, 1, 4, 3, 3, "9", "16", "12", "15", "130", "65", "457"];
-  const ans2025_calculus = [2, 3, 2, 0, 1, 4, "97", "11"];
-  const ans2025_stats = [2, 0, 1, 4, 3, 1, "977", "262"];
+  const ans2025_common = [4, 3, 4, 1, 3, 4, 2, 0, 3, 2, 1, 0, 4, 3, 1, "7", "3", "96", "41", "19", "17", "19"];
+  const ans2025_calculus = [2, 3, 2, 0, 0, 3, "225", "17"];
+  const ans2025_stats = [4, 2, 0, 2, 2, 1, "25", "19"];
   const ans2025 = [...ans2025_common, ...(electiveMode === 'calculus' ? ans2025_calculus : ans2025_stats)];
 
-  const ans2024_common = [4, 3, 4, 1, 3, 4, 2, 0, 3, 2, 1, 0, 4, 3, 1, "7", "33", "96", "41", "36", "16", "64"];
-  const ans2024_calculus = [2, 3, 1, 0, 0, 1, "25", "17"];
-  const ans2024_stats = [4, 2, 0, 2, 2, 1, "25", "19"];
+  const ans2024_common = [0, 3, 1, 3, 3, 3, 1, 0, 2, 1, 2, 2, 0, 0, 2, "7", "33", "96", "41", "36", "16", "64"];
+  const ans2024_calculus = [4, 3, 0, 2, 1, 3, "15", "22"];
+  const ans2024_stats = [2, 1, 3, 0, 4, 1, "15", "70"];
   const ans2024 = [...ans2024_common, ...(electiveMode === 'calculus' ? ans2024_calculus : ans2024_stats)];
 
-  const ans2023_common = [0, 3, 1, 0, 3, 3, 4, 1, 3, 1, 0, 2, 0, 0, 2, "2", "8", "9", "32", "25", "10", "483"];
-  const ans2023_calculus = [2, 1, 3, 2, 0, 1, "162", "125"];
-  const ans2023_stats = [2, 3, 4, 1, 1, 3, "196", "673"];
+  const ans2023_common = [0, 1, 2, 0, 4, 1, 3, 0, 3, 2, 1, 4, 3, 2, 4, "10", "15", "22", "7", "17", "33", "13"];
+  const ans2023_calculus = [2, 2, 1, 4, 3, 3, "54", "20"];
+  const ans2023_stats = [2, 1, 4, 2, 1, 0, "49", "100"];
   const ans2023 = [...ans2023_common, ...(electiveMode === 'calculus' ? ans2023_calculus : ans2023_stats)];
 
   if (volumeIndex >= 0 && volumeIndex <= 5) {
@@ -723,25 +723,25 @@ export default function MentosMockExam() {
     <div className="full-center" style={{ background: '#e2e8f0', minHeight: '100vh', padding: '0', color: '#0f172a', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'stretch' }}>
       
       {/* Top Banner (Fixed) */}
-      <div className="mock-exam-header" style={{ position: 'fixed', top: 0, left: 0, width: '100%', background: '#fff', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)', zIndex: 100, display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.8rem 2rem' }}>
-        <div className="mock-exam-header-left" style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
+      <div className="mock-exam-header" style={{ position: isMobile ? 'sticky' : 'fixed', top: 0, left: 0, width: '100%', background: '#fff', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)', zIndex: 100, display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'space-between', alignItems: 'center', padding: isMobile ? '0.5rem 1rem' : '0.8rem 2rem' }}>
+        <div className="mock-exam-header-left" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: isMobile ? '0.6rem' : '2rem' }}>
           <div>
-            <h1 className="mock-exam-title" style={{ margin: 0, fontSize: '1.4rem', fontWeight: '900', letterSpacing: '-0.5px' }}>{data.title}</h1>
+            <h1 className="mock-exam-title" style={{ margin: 0, fontSize: isMobile ? '1.1rem' : '1.4rem', fontWeight: '900', letterSpacing: '-0.5px' }}>{data.title}</h1>
             <p style={{ margin: 0, color: '#64748b', fontSize: '0.85rem' }}>{data.subtitle}</p>
           </div>
-          <div className="mock-exam-badge" style={{ background: 'linear-gradient(to right, #f59e0b, #ef4444)', padding: '0.3rem 0.8rem', borderRadius: '20px', color: 'white', fontWeight: 'bold', fontSize: '0.8rem', display: 'flex', alignItems: 'center', gap: '4px', boxShadow: '0 2px 4px rgba(239, 68, 68, 0.3)' }}>
-            🔥 고3 3등급 이상 전용: 1회 무료 프리미엄 진단 진행중
+          <div className="mock-exam-badge" style={{ background: 'linear-gradient(to right, #f59e0b, #ef4444)', padding: isMobile ? '0.2rem 0.6rem' : '0.3rem 0.8rem', borderRadius: '20px', color: 'white', fontWeight: 'bold', fontSize: isMobile ? '0.7rem' : '0.8rem', display: 'flex', alignItems: 'center', gap: '4px', boxShadow: '0 2px 4px rgba(239, 68, 68, 0.3)' }}>
+            {isMobile ? '🔥 고3: 1회 무료 진단 중' : '🔥 고3 3등급 이상 전용: 1회 무료 프리미엄 진단 진행중'}
           </div>
           
           {/* 선택과목 토글 탭 */}
-          <div className="mock-exam-elective-toggle" style={{ display: 'flex', background: '#f1f5f9', padding: '0.3rem', borderRadius: '8px' }}>
+          <div className="mock-exam-elective-toggle" style={{ display: 'flex', background: '#f1f5f9', padding: '0.2rem', borderRadius: '8px' }}>
             <button 
               onClick={() => setElectiveMode('calculus')}
               style={{
                 background: electiveMode === 'calculus' ? '#fff' : 'transparent',
                 color: electiveMode === 'calculus' ? '#0f172a' : '#64748b',
                 boxShadow: electiveMode === 'calculus' ? '0 2px 4px rgba(0,0,0,0.05)' : 'none',
-                border: 'none', padding: '0.5rem 1rem', borderRadius: '6px', fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.2s'
+                border: 'none', padding: isMobile ? '0.3rem 0.6rem' : '0.5rem 1rem', borderRadius: '6px', fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.2s', fontSize: isMobile ? '0.8rem' : '0.95rem'
               }}
             >
               미적분
@@ -752,7 +752,7 @@ export default function MentosMockExam() {
                 background: electiveMode === 'statistics' ? '#fff' : 'transparent',
                 color: electiveMode === 'statistics' ? '#0f172a' : '#64748b',
                 boxShadow: electiveMode === 'statistics' ? '0 2px 4px rgba(0,0,0,0.05)' : 'none',
-                border: 'none', padding: '0.5rem 1rem', borderRadius: '6px', fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.2s'
+                border: 'none', padding: isMobile ? '0.3rem 0.6rem' : '0.5rem 1rem', borderRadius: '6px', fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.2s', fontSize: isMobile ? '0.8rem' : '0.95rem'
               }}
             >
               확률과 통계
@@ -810,7 +810,7 @@ export default function MentosMockExam() {
         </div>
       </div>
 
-      <div className="mock-exam-body" style={{ display: 'flex', width: '100%', height: '100%', marginTop: '70px', padding: '2rem', gap: '2rem', alignItems: 'flex-start' }}>
+      <div className="mock-exam-body" style={{ display: 'flex', width: '100%', height: '100%', marginTop: isMobile ? '0' : '70px', padding: '2rem', gap: '2rem', alignItems: 'flex-start' }}>
         
         {/* Exam Papers Scroll Area */}
         <div className="exam-papers-area" style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '3rem', alignItems: 'center' }}>
@@ -1289,9 +1289,19 @@ export default function MentosMockExam() {
       {reviewMode && reviewMode.length > 0 && (() => {
         const currentQ = reviewMode[reviewProblemIndex];
         if (!currentQ) return null;
-        const answerDisplay = typeof currentQ.answer === 'number'
-          ? `${currentQ.answer + 1}번 (${['①','②','③','④','⑤'][currentQ.answer]})`
-          : String(currentQ.answer);
+        let answerDisplay = '';
+        if (String(currentQ.id).startsWith('drill_')) {
+          if (drillSteps && drillSteps.length > 0) {
+            const lastStep = drillSteps[drillSteps.length - 1];
+            answerDisplay = lastStep.latex || lastStep.formula_raw || lastStep.caption || lastStep.content || String(currentQ.answer);
+          } else {
+            answerDisplay = String(currentQ.answer);
+          }
+        } else {
+          answerDisplay = typeof currentQ.answer === 'number'
+            ? `${currentQ.answer + 1}번 (${['①','②','③','④','⑤'][currentQ.answer]})`
+            : String(currentQ.answer);
+        }
         return (
           <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: '#0f172a', zIndex: 9999, display: 'flex', flexDirection: 'column', color: '#f8fafc' }}>
             {/* 상단 헤더 */}
@@ -1360,7 +1370,20 @@ export default function MentosMockExam() {
                   color: '#e2e8f0', 
                   fontFamily: '"KoPub Batang", "Noto Serif KR", serif' 
                 }}>
-                  {currentQ.picture || currentQ.image ? (
+                  {String(currentQ.id).startsWith('drill_') && currentQ.tag ? (
+                    <img 
+                      src={`/math_hints/${currentQ.tag}.webp`} 
+                      alt={`Drill Question ${currentQ.id}`} 
+                      style={{ 
+                        width: '100%', 
+                        borderRadius: '8px', 
+                        background: '#fff', 
+                        padding: isMobile ? '0.5rem' : '1rem', 
+                        maxHeight: isMobile ? '350px' : 'none', 
+                        objectFit: 'contain' 
+                      }} 
+                    />
+                  ) : currentQ.picture || currentQ.image ? (
                     <img 
                       src={currentQ.picture || currentQ.image} 
                       alt={`Question ${currentQ.id}`} 
@@ -1410,7 +1433,7 @@ export default function MentosMockExam() {
                       gap: '8px'
                     }}>
                       <span style={{ color: '#94a3b8', fontSize: '0.75rem' }}>정답:</span>
-                      <span style={{ fontSize: isMobile ? '1.1rem' : '1.4rem', fontWeight: '900', color: '#10b981' }}>{answerDisplay}</span>
+                      <span style={{ fontSize: isMobile ? '1.1rem' : '1.4rem', fontWeight: '900', color: '#10b981' }}>{parseKaTeXText(answerDisplay)}</span>
                     </div>
                   )}
                 </div>
