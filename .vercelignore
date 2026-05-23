@@ -1,0 +1,87 @@
+# Ignore everything for Vercel deployment except what is needed for build
+node_modules/
+dist/
+.env
+.DS_Store
+
+# Temporary files and backups
+backups/
+_archive_unused/
+reports/
+scratch/
+backup/
+assets_backup/
+backup_*/
+DIAMOND_BOX_*/
+GOLD_BOX_*/
+math1_seq_backup/
+restore_test_*/
+android/
+
+# Large assets and temp data
+/public/math_images/
+/public/math_pngs/
+/public/math_crops/
+/public/premium_lectures/
+/public/teachers/
+/public/mteachers/
+/public/math_indexed/
+/public/math_pcbs_cache/
+/public/math_pdf_test/
+/public/math_hints_broken/
+/public/math_hints_*_backup_*/
+/temp_*/
+
+*백업/
+최신_완성품_*/
+최신_완성품_모의고사_수학_백업/
+
+# Large data files
+/src/data/DIAMOND_BOX_4.js
+/src/data/DIAMOND_BOX_4.json
+
+# Math Hints resource files
+/public/math_hints/
+
+# Root-level explicit backup & raw data directories
+/20260405삼각함수그래프3단계/
+/20260405삼각함수그래프4단계/
+/최신_완성품_최종_수_수/
+/backup_broken_math2_20260508/
+/backup_premium_lectures_may05/
+/DIAMOND_BOX_2/
+/DIAMOND_BOX_4/
+/DIAMOND_BOX_G1_2026_05_09/
+/GOLD_BOX_G1_2026_05_08_1844/
+/math1_seq_backup/
+/temp_math1_seq_backup/
+/temp_emergency_extract/
+/temp_emergency_pre_may8_restore/
+/temp_extract/
+/temp_extract2/
+/temp_final_extract/
+
+# Large zip and native build files
+*.zip
+*.apk
+*.bak
+artifacts/
+logs/
+
+# Large merged and temporary JSON files at root level
+merged_*.json
+missing_*.json
+temp.json
+upload_manifest*.json
+
+# Development and raw data folders
+data/
+docs/
+
+# Scripts
+*.cjs
+*.py
+*.ps1
+*.txt
+*.log
+*.png

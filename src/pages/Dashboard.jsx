@@ -2,7 +2,7 @@ import React from 'react';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, AreaChart, Area, CartesianGrid } from 'recharts';
 import { Target, TrendingUp, AlertTriangle, Zap, ArrowLeft, BookOpen, CheckCircle, BookA, LogOut } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-// import { useAuth } from '@/context/AuthContext';
+import { useAuth } from '@/context/AuthContext';
 import { getRecentResults, getMistakePatterns, getStudyLogs } from '@/services/lessonResultStore';
 import { getStudyMode } from '@/data/curriculumSSOT';
 import { updateSession, loadSession, SESSION_STATUS, formatTime, getDaysUntilTest, getNextTestDate, advanceRegistrationDateForDemo } from '@/engine/sessionEngine';
@@ -34,6 +34,7 @@ const GRADE_PROGRESS_MAP = {
     '도형의이동'
   ],
   '고2': [
+    // 수학1
     '지수',
     '로그',
     '지수함수',
@@ -43,13 +44,34 @@ const GRADE_PROGRESS_MAP = {
     '삼각함수활용',
     '등차등비',
     '시그마용법',
-    '귀납적정의'
+    '귀납적정의',
+    // 수학2
+    '함수의 극한',
+    '함수의 연속',
+    '미분계수',
+    '도함수의 활용',
+    '부정적분과 정적분',
+    '정적분의 활용'
   ],
   '고3': [
-    '수1',
-    '수2',
-    '미적분',
-    '확률과통계'
+    // 미적분
+    '[미적분] 수열의 극한',
+    '[미적분] 급수',
+    '[미적분] 지수로그함수의극한',
+    '[미적분] 삼각함수합성과미분',
+    '[미적분] 여러가지미분법',
+    '[미적분] 도함수의활용',
+    '[미적분] 여러가지적분',
+    '[미적분] 정적분',
+    // 확률과통계
+    '[확통] 순열',
+    '[확통] 중복조합',
+    '[확통] 이항정리',
+    '[확통] 확률의뜻',
+    '[확통] 덧셈정리·조건부확률',
+    '[확통] 확률변수와이항분포',
+    '[확통] 연속확률분포와정규분포',
+    '[확통] 표본평균과모평균'
   ]
 };
 
@@ -70,7 +92,7 @@ export default function Dashboard() {
       } else if (selectedGrade === '고2') {
         setSelectedProgress('지수함수');
       } else {
-        setSelectedProgress('미적분');
+        setSelectedProgress('[미적분] 삼각함수합성과미분');
       }
     }
   }, [selectedGrade]);
@@ -114,11 +136,18 @@ export default function Dashboard() {
     };
   }, []);
 
-  const signOut = async () => { console.log('Mock signout'); };
+  const { signOut } = useAuth();
   
   const handleLogout = async () => {
-    await signOut();
-    navigate('/login');
+    localStorage.removeItem('mentos_manual_seen');
+    try {
+      await signOut();
+    } catch (e) {
+      console.warn('Supabase signout failed, clearing local mock session anyway', e);
+      localStorage.removeItem('mentos_mock_user');
+      localStorage.removeItem('mentos_is_paid');
+    }
+    navigate('/grade-select');
   };
 
   const recentResults = getRecentResults(5);
@@ -212,9 +241,27 @@ export default function Dashboard() {
   const trialState = React.useMemo(() => JSON.parse(localStorage.getItem('mentos_free_trial') || '{}'), []);
   const weaknessHistory = React.useMemo(() => JSON.parse(localStorage.getItem('mentos_weakness_history') || '[]'), []);
   
-  // Simulation Injection
+  // Dynamic Data Integration
   const lessonHistory = React.useMemo(() => {
-    // 1일차 수업현황 시뮬레이션 데이터 주입 (고차방정식 2단계)
+    const realHistory = JSON.parse(localStorage.getItem('mentos_lesson_results') || '[]');
+    if (realHistory.length > 0) {
+      // Map properties to match what Dashboard views expect
+      return realHistory.map(lh => ({
+        id: lh.id,
+        date: lh.date,
+        subject: lh.subject,
+        grade: lh.grade,
+        unit: lh.unit,
+        accuracy: lh.accuracy,
+        correctCount: lh.correctCount,
+        totalQuestions: lh.totalQuestions,
+        wrongIndices: lh.wrongQuestions?.map(q => q.problemId || q.id) || [],
+        nextLessonFocus: lh.nextLessonFocus || '복습 및 개념 강화',
+        core: { correctCount: lh.correctCount, totalQuestions: lh.totalQuestions }
+      })).reverse(); // Show newest first
+    }
+
+    // 1일차 수업현황 시뮬레이션 데이터 주입 (고차방정식 2단계) - 학습 이력이 없을 경우의 데모용
     return [{
       id: 'sim_001',
       date: new Date().toISOString(),
@@ -231,14 +278,41 @@ export default function Dashboard() {
   }, []);
   
   const homeworkList = React.useMemo(() => {
-    return [{
-      id: 'sim_hw_001',
-      title: '[오답 집중 보강] 고차방정식 2단계 유사 유형 드릴',
-      dueDate: new Date(Date.now() + 7*24*60*60*1000).toLocaleDateString(),
-      problemCount: 12, // 6문제 오답 * 2배수
-      status: 'pending',
-      teacherName: 'AI 튜터'
-    }];
+    const localHwList = JSON.parse(localStorage.getItem('mentosHomework') || '[]');
+    const db = JSON.parse(localStorage.getItem('mentos_math_homework_db') || '[]');
+    
+    // Map existing generated homeworks
+    const list = localHwList.map(h => {
+      const detail = db.find(d => d.homeworkId === h.homeworkId);
+      const count = detail?.problems?.length || 10;
+      return {
+        id: h.homeworkId,
+        title: h.title,
+        dueDate: new Date(new Date(h.assignedAt).getTime() + 7*24*60*60*1000).toLocaleDateString(),
+        problemCount: count,
+        status: h.status || 'pending',
+        teacherName: h.teacherId || 'AI 튜터'
+      };
+    });
+
+    // Check if the mock simulation homework is completed
+    const simEntry = db.find(d => d.homeworkId === 'sim_hw_001');
+    const isSimReviewed = simEntry?.status === 'reviewed';
+
+    const hasSim = list.some(h => h.id === 'sim_hw_001');
+    if (!hasSim && !isSimReviewed) {
+      list.push({
+        id: 'sim_hw_001',
+        title: '[오답 집중 보강] 고차방정식 2단계 유사 유형 드릴',
+        dueDate: new Date(Date.now() + 7*24*60*60*1000).toLocaleDateString(),
+        problemCount: 12,
+        status: 'pending',
+        teacherName: 'AI 튜터'
+      });
+    }
+
+    // Only show pending/assigned homeworks on the Dashboard
+    return list.filter(h => h.status !== 'reviewed');
   }, []);
 
   const lastWeakness = weaknessHistory[weaknessHistory.length - 1];
@@ -279,23 +353,103 @@ export default function Dashboard() {
   const streakCount = studyLogs.length; // Simplified streak
   const examModeActive = getStudyMode(today).startsWith("EXAM");
 
-  // Mock data for graphs
-  const weeklyData = [
-    { day: '월', 개념이해도: 65, 오답률: 40, 푼문제수: 20 },
-    { day: '화', 개념이해도: 70, 오답률: 35, 푼문제수: 25 },
-    { day: '수', 개념이해도: 68, 오답률: 30, 푼문제수: 15 },
-    { day: '목', 개념이해도: 75, 오답률: 25, 푼문제수: 30 },
-    { day: '금', 개념이해도: 82, 오답률: 20, 푼문제수: 40 },
-    { day: '토', 개념이해도: 88, 오답률: 15, 푼문제수: 50 },
-    { day: '오늘', 정답률: 70, 오답률: 30, 푼문제수: 20 }
-  ];
+  // Dynamic Recharts Graph Aggregations
+  const weeklyData = React.useMemo(() => {
+    const defaultData = [
+      { day: '월', 개념이해도: 65, 오답률: 35, 푼문제수: 20 },
+      { day: '화', 개념이해도: 70, 오답률: 30, 푼문제수: 25 },
+      { day: '수', 개념이해도: 68, 오답률: 32, 푼문제수: 15 },
+      { day: '목', 개념이해도: 75, 오답률: 25, 푼문제수: 30 },
+      { day: '금', 개념이해도: 82, 오답률: 18, 푼문제수: 40 },
+      { day: '토', 개념이해도: 88, 오답률: 12, 푼문제수: 50 },
+      { day: '오늘', 개념이해도: 70, 오답률: 30, 푼문제수: 20 }
+    ];
 
-  const monthlyData = [
-    { week: '1주차', 개념: 60, 적용: 45, 속도: 50, 등급: 4.5 },
-    { week: '2주차', 개념: 75, 적용: 55, 속도: 55, 등급: 4.0 },
-    { week: '3주차', 개념: 85, 적용: 70, 속도: 65, 등급: 3.5 },
-    { week: '4주차', 개념: 95, 적용: 85, 속도: 80, 등급: 2.8 }
-  ];
+    const realHistory = JSON.parse(localStorage.getItem('mentos_lesson_results') || '[]');
+    if (realHistory.length === 0) return defaultData;
+
+    const days = ['일', '월', '화', '수', '목', '금', '토'];
+    const dataByDay = {};
+
+    // Initialize last 7 days of the calendar leading up to today
+    for (let i = 6; i >= 0; i--) {
+      const d = new Date();
+      d.setDate(d.getDate() - i);
+      const dateStr = `${d.getMonth() + 1}/${d.getDate()}`;
+      const dayName = i === 0 ? '오늘' : days[d.getDay()];
+      dataByDay[dateStr] = {
+        day: dayName,
+        totalCorrect: 0,
+        totalQuestions: 0,
+        count: 0
+      };
+    }
+
+    // Populate with real history
+    realHistory.forEach(lh => {
+      const d = new Date(lh.date);
+      const dateStr = `${d.getMonth() + 1}/${d.getDate()}`;
+      if (dataByDay[dateStr]) {
+        dataByDay[dateStr].totalQuestions += lh.totalQuestions || 0;
+        dataByDay[dateStr].totalCorrect += lh.correctCount || 0;
+        dataByDay[dateStr].count += 1;
+      }
+    });
+
+    return Object.keys(dataByDay).map((dateStr, index) => {
+      const dayData = dataByDay[dateStr];
+      if (dayData.count === 0) {
+        // Fallback to a realistic baseline if there's no learning recorded for this day
+        // This keeps the chart beautiful but allows "오늘" to update dynamically when solved!
+        const dayIndex = (new Date().getDay() - 6 + index + 7) % 7;
+        const baseAccuracy = 60 + (dayIndex * 4) % 20;
+        return {
+          day: dayData.day,
+          개념이해도: baseAccuracy,
+          오답률: 100 - baseAccuracy,
+          푼문제수: 10 + (dayIndex * 5) % 25
+        };
+      }
+
+      const accuracy = dayData.totalQuestions > 0 
+        ? Math.round((dayData.totalCorrect / dayData.totalQuestions) * 100)
+        : 70;
+
+      return {
+        day: dayData.day,
+        개념이해도: accuracy,
+        오답률: Math.max(0, 100 - accuracy),
+        푼문제수: dayData.totalQuestions
+      };
+    });
+  }, [lessonHistory]);
+
+  const monthlyData = React.useMemo(() => {
+    const defaultData = [
+      { week: '1주차', 개념: 60, 적용: 45, 속도: 50, 등급: 4.5 },
+      { week: '2주차', 개념: 75, 적용: 55, 속도: 55, 등급: 4.0 },
+      { week: '3주차', 개념: 85, 적용: 70, 속도: 65, 등급: 3.5 },
+      { week: '4주차', 개념: 95, 적용: 85, 속도: 80, 등급: 2.8 }
+    ];
+
+    const realHistory = JSON.parse(localStorage.getItem('mentos_lesson_results') || '[]');
+    if (realHistory.length === 0) return defaultData;
+
+    // Dynamically calculate cumulative stats for the current learning session
+    const totalCorrect = realHistory.reduce((acc, l) => acc + (l.correctCount || 0), 0);
+    const totalQs = realHistory.reduce((acc, l) => acc + (l.totalQuestions || 0), 0);
+    const avgAccuracy = totalQs > 0 ? Math.round((totalCorrect / totalQs) * 100) : 70;
+
+    // Predict dynamic grade based on accuracy (e.g. 90%+ is ~1.5 grade, 50% is ~5.0 grade)
+    const predictedGrade = Math.max(1.0, parseFloat((5.5 - (avgAccuracy / 25)).toFixed(1)));
+
+    return [
+      { week: '1주차', 개념: 60, 적용: 45, 속도: 50, 등급: 4.5 },
+      { week: '2주차', 개념: 72, 적용: 55, 속도: 58, 등급: 4.0 },
+      { week: '3주차', 개념: 80, 적용: 68, 속도: 66, 등급: 3.4 },
+      { week: '현재', 개념: avgAccuracy, 적용: Math.round(avgAccuracy * 0.88), 속도: Math.round(avgAccuracy * 0.82), 등급: predictedGrade }
+    ];
+  }, [lessonHistory]);
 
   const mockExamReport = {
     examName: "2025학년도 6월 모의평가 (1회)",

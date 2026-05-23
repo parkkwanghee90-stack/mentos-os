@@ -114,21 +114,25 @@ export function AuthProvider({ children }) {
     };
   }, []);
 
-  // Sign up with Email/Password
+  // Sign up with Email/Password (Admin Auth bypass with Auto-Confirm)
   const signUpWithEmail = async (email, password, name, role = 'student') => {
-    const { data, error } = await supabase.auth.signUp({
+    console.log(`[AuthContext] Creating auto-confirmed user via Admin API for ${email}...`);
+    const { data: adminData, error: adminError } = await supabase.auth.admin.createUser({
       email,
       password,
-      options: {
-        data: {
-          name,
-          role,
-          is_paid: false
-        }
+      email_confirm: true,
+      user_metadata: {
+        name,
+        role,
+        is_paid: false
       }
     });
-    if (error) throw error;
-    return data;
+    if (adminError) throw adminError;
+    
+    console.log(`[AuthContext] Successfully created user! Logging in...`);
+    // Immediately log the newly created confirmed user in
+    const signInData = await signInWithEmail(email, password);
+    return signInData;
   };
 
   // Sign in with Email/Password

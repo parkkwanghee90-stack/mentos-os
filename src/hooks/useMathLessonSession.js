@@ -144,7 +144,7 @@ export function useMathLessonSession(ssot, overrides) {
         }
 
         const mathFlow = [
-            { phase: 'core', title: '개필수 (명확한 정의)' },
+            { phase: 'core', title: '필수 유형 훈련' },
             { phase: 'step', title: '단계별 문제 풀이' },
             { phase: 'mock', title: '미니 모의고사' },
             { phase: 'homework', title: '과제 안내' },

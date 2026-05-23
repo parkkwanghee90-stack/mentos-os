@@ -2,13 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Shield, Bell, AlertTriangle, Users, ArrowLeft, TrendingDown, Clock } from 'lucide-react';
 import { processUnsubmittedHomework } from '@/engine/homeworkEngine';
-// import { useAuth } from '@/context/AuthContext';
+import { useAuth } from '@/context/AuthContext';
 import './Dashboard.css';
 
 export default function AdminDashboard() {
   const navigate = useNavigate();
-  // const { signOut } = useAuth();
-  const signOut = async () => { console.log('Mock signout'); };
+  const { signOut } = useAuth();
 
   // Mock Data for MVP
   const [students, setStudents] = useState([
@@ -46,8 +45,15 @@ export default function AdminDashboard() {
   };
 
   const handleLogout = async () => {
-    await signOut();
-    navigate('/login');
+    localStorage.removeItem('mentos_manual_seen');
+    try {
+      await signOut();
+    } catch (e) {
+      console.warn('Supabase signout failed, clearing local mock session anyway', e);
+      localStorage.removeItem('mentos_mock_user');
+      localStorage.removeItem('mentos_is_paid');
+    }
+    navigate('/grade-select');
   };
 
   return (

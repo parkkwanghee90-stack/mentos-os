@@ -11,30 +11,44 @@ export default function HomeworkList() {
   const currentTeacher = location.state?.teacher;
 
   useEffect(() => {
-    // Inject simulation data or read from localStorage if present
+    // Read generated homework metadata from localStorage
     const localHw = JSON.parse(localStorage.getItem('mentosHomework') || '[]');
-    if (localHw.length > 0) {
-      setHomeworks(localHw);
-      return;
-    }
+    
+    // Always make sure the simulation math homework is available
+    const hasSim = localHw.some(h => h.homeworkId === 'sim_hw_001');
+    const displayHw = [...localHw];
+    
+    // Get DB to check actual review status of sim_hw_001
+    const db = JSON.parse(localStorage.getItem('mentos_math_homework_db') || '[]');
+    const simEntry = db.find(d => d.homeworkId === 'sim_hw_001');
+    const isSimReviewed = simEntry?.status === 'reviewed';
 
-    if (!currentTeacher) {
-      // Allow viewing without a teacher in mock mode
-      const simHw = [{
+    if (!hasSim) {
+      displayHw.push({
         homeworkId: 'sim_hw_001',
         title: '[오답 집중 보강] 고차방정식 2단계 유사 유형 드릴',
         assignedAt: new Date().toISOString(),
-        status: 'assigned',
+        status: isSimReviewed ? 'reviewed' : 'assigned',
         subject: 'math',
         teacherId: 'AI 튜터'
-      }];
-      setHomeworks(simHw);
-      return;
+      });
+    } else {
+      // Sync status
+      displayHw.forEach(h => {
+        if (h.homeworkId === 'sim_hw_001') {
+          h.status = isSimReviewed ? 'reviewed' : h.status || 'assigned';
+        }
+      });
     }
-    
-    const studentId = localStorage.getItem('studentId') || 'student_test_h_eng8';
-    setHomeworks(getHomeworkByTeacher(studentId, currentTeacher.id).reverse());
-  }, [currentTeacher, navigate]);
+
+    if (currentTeacher) {
+      // Filter by teacher
+      const filtered = displayHw.filter(h => h.teacherId === currentTeacher.id || h.teacherId === currentTeacher.name);
+      setHomeworks(filtered);
+    } else {
+      setHomeworks(displayHw);
+    }
+  }, [currentTeacher]);
 
   return (
     <div style={{ padding: '2rem', background: '#09090b', color: 'white', minHeight: '100vh', boxSizing: 'border-box' }}>

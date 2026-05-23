@@ -130,3 +130,5 @@ android/
 # Development and raw data folders
 /data/
 /docs/
+
+.vercel

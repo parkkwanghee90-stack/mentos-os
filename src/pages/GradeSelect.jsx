@@ -83,6 +83,61 @@ export default function GradeSelect() {
     }});
   };
 
+  // scope 리스트에 섹션 구분 헤더를 삽입
+  const renderScopeList = () => {
+    const options = flow?.progressOptions || [];
+    const items = [];
+
+    options.forEach((scope, idx) => {
+      // 고2: 수학2 섹션 헤더
+      if (selectedGrade === '고2' && scope === '함수의 극한') {
+        items.push(
+          <div key="header-math2" style={{ padding: '0.6rem 1rem', color: '#60a5fa', fontSize: '0.85rem', fontWeight: '900', borderBottom: '1px solid rgba(96,165,250,0.2)', marginTop: '0.5rem' }}>
+            📈 수학2 단원
+          </div>
+        );
+      }
+      // 고3: 미적분/확통 헤더
+      if (selectedGrade === '고3' && scope === '[미적분] 수열의 극한') {
+        items.push(
+          <div key="header-calc" style={{ padding: '0.6rem 1rem', color: '#ef4444', fontSize: '0.85rem', fontWeight: '900', borderBottom: '1px solid rgba(239,68,68,0.2)', marginTop: '0.5rem' }}>
+            🔥 미적분 단원
+          </div>
+        );
+      }
+      if (selectedGrade === '고3' && scope === '[확통] 순열') {
+        items.push(
+          <div key="header-stat" style={{ padding: '0.6rem 1rem', color: '#f59e0b', fontSize: '0.85rem', fontWeight: '900', borderBottom: '1px solid rgba(245,158,11,0.2)', marginTop: '0.5rem' }}>
+            🎲 확률과통계 단원
+          </div>
+        );
+      }
+
+      // 표시 이름 정리 (대괄호 prefix 제거)
+      const displayName = scope.replace(/^\[(미적분|확통)\]\s*/, '');
+
+      items.push(
+        <button
+          key={scope}
+          onClick={() => handleScopeSelect(scope)}
+          style={{
+            display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+            padding: '1.2rem 1.5rem', borderRadius: '16px',
+            background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
+            color: 'white', cursor: 'pointer', transition: 'all 0.2s'
+          }}
+          onMouseEnter={e => { e.currentTarget.style.background = 'rgba(59,130,246,0.1)'; }}
+          onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; }}
+        >
+          <span style={{ fontWeight: 'bold', fontSize: '1.1rem' }}>{displayName}</span>
+          <ChevronRight size={20} color="#64748b" />
+        </button>
+      );
+    });
+
+    return items;
+  };
+
   return (
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0f172a, #1e1b4b)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <div style={{ width: '90%', maxWidth: '700px', animation: 'fadeIn 0.5s ease' }}>
@@ -144,26 +199,10 @@ export default function GradeSelect() {
           <div>
             <button onClick={() => setStep('grade')} style={{ background: 'transparent', border: 'none', color: '#64748b', cursor: 'pointer', marginBottom: '1rem' }}>← 학년 다시 선택</button>
             <h2 style={{ fontSize: '1.3rem', fontWeight: 'bold', marginBottom: '1.5rem', textAlign: 'center' }}>
-              {selectedGrade === '고3' ? '시험 범위를 선택하세요' : '학교에서 어디 단원까지 배웠습니까?'}
+              {selectedGrade === '고3' ? '학습할 단원을 선택하세요' : '학교에서 어디 단원까지 배웠습니까?'}
             </h2>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxHeight: '60vh', overflowY: 'auto', paddingRight: '10px' }}>
-              {flow.progressOptions?.map(scope => (
-                <button
-                  key={scope}
-                  onClick={() => handleScopeSelect(scope)}
-                  style={{
-                    display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                    padding: '1.2rem 1.5rem', borderRadius: '16px',
-                    background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
-                    color: 'white', cursor: 'pointer', transition: 'all 0.2s'
-                  }}
-                  onMouseEnter={e => { e.currentTarget.style.background = 'rgba(59,130,246,0.1)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; }}
-                >
-                  <span style={{ fontWeight: 'bold', fontSize: '1.1rem' }}>{scope}</span>
-                  <ChevronRight size={20} color="#64748b" />
-                </button>
-              ))}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', maxHeight: '60vh', overflowY: 'auto', paddingRight: '10px' }}>
+              {renderScopeList()}
             </div>
           </div>
         )}
@@ -239,15 +278,24 @@ export default function GradeSelect() {
               const mathTeachers = Object.values(HIGH_TEACHER_PROFILES).filter(t => t.subject === 'math' && t.targetGrades.includes(selectedGrade));
               const assignment = TEACHER_ASSIGNMENT[selectedRank];
               const recommendedId = assignment?.defaultTeacherIds?.[selectedGrade];
+              const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
 
               return (
                 <div style={{ animation: 'fadeIn 0.5s ease' }}>
-                  <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-                    <h2 style={{ fontSize: '2rem', fontWeight: '900', color: 'white', marginBottom: '0.5rem' }}>멘토스 수학 1타 라인업</h2>
-                    <p style={{ color: '#94a3b8' }}>{selectedGrade} {selectedRank} 수준에 최적화된 AI 선생님을 확인하세요</p>
+                  <div style={{ textAlign: 'center', marginBottom: isMobile ? '1.5rem' : '2.5rem' }}>
+                    <h2 style={{ fontSize: isMobile ? '1.3rem' : '2rem', fontWeight: '900', color: 'white', marginBottom: '0.5rem' }}>멘토스 수학 1타 라인업</h2>
+                    <p style={{ color: '#94a3b8', fontSize: isMobile ? '0.8rem' : '1rem' }}>{selectedGrade} {selectedRank} 수준에 최적화된 AI 선생님을 확인하세요</p>
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginBottom: '3rem' }}>
+                  <div style={{ 
+                    display: 'grid', 
+                    gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fit, minmax(280px, 1fr))', 
+                    gap: isMobile ? '1rem' : '1.5rem', 
+                    marginBottom: '3rem',
+                    maxHeight: isMobile ? '60vh' : 'none',
+                    overflowY: isMobile ? 'auto' : 'visible',
+                    paddingRight: isMobile ? '4px' : '0'
+                  }}>
                     {mathTeachers.map(teacher => {
                       const isRecommended = teacher.id === recommendedId;
                       return (
@@ -256,15 +304,18 @@ export default function GradeSelect() {
                           onClick={() => handleStart(teacher)}
                           style={{
                             background: isRecommended ? 'linear-gradient(145deg, #1e293b, #0f172a)' : 'rgba(255,255,255,0.05)',
-                            borderRadius: '24px', padding: '1.5rem',
+                            borderRadius: isMobile ? '16px' : '24px', 
+                            padding: isMobile ? '1rem' : '1.5rem',
                             border: isRecommended ? '2px solid #3b82f6' : '1px solid rgba(255,255,255,0.1)',
                             cursor: 'pointer', transition: 'all 0.3s',
                             position: 'relative', overflow: 'hidden',
                             boxShadow: isRecommended ? '0 10px 40px -10px rgba(59,130,246,0.4)' : 'none',
-                            display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center'
+                            display: 'flex', flexDirection: isMobile ? 'row' : 'column', 
+                            alignItems: 'center', textAlign: isMobile ? 'left' : 'center',
+                            gap: isMobile ? '1rem' : '0'
                           }}
                           onMouseEnter={e => {
-                            e.currentTarget.style.transform = 'translateY(-8px)';
+                            e.currentTarget.style.transform = 'translateY(-4px)';
                             if (!isRecommended) e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
                           }}
                           onMouseLeave={e => {
@@ -273,39 +324,53 @@ export default function GradeSelect() {
                           }}
                         >
                           {isRecommended && (
-                            <div style={{ position: 'absolute', top: '1rem', right: '1rem', background: '#3b82f6', color: 'white', padding: '4px 12px', borderRadius: '20px', fontSize: '0.75rem', fontWeight: '900' }}>
-                              추천 선생님
+                            <div style={{ position: 'absolute', top: isMobile ? '0.5rem' : '1rem', right: isMobile ? '0.5rem' : '1rem', background: '#3b82f6', color: 'white', padding: '3px 10px', borderRadius: '20px', fontSize: '0.7rem', fontWeight: '900' }}>
+                              추천
                             </div>
                           )}
                           <img 
                             src={teacher.image} 
                             alt={teacher.name} 
-                            style={{ width: '120px', height: '120px', borderRadius: '50%', border: isRecommended ? '4px solid #3b82f6' : '2px solid rgba(255,255,255,0.1)', marginBottom: '1rem', objectFit: 'cover' }} 
+                            style={{ 
+                              width: isMobile ? '64px' : '120px', 
+                              height: isMobile ? '64px' : '120px', 
+                              borderRadius: '50%', 
+                              border: isRecommended ? '3px solid #3b82f6' : '2px solid rgba(255,255,255,0.1)', 
+                              marginBottom: isMobile ? '0' : '1rem', 
+                              objectFit: 'cover',
+                              flexShrink: 0
+                            }} 
                             onError={(e) => { e.target.src = '/icons/default-avatar.webp'; }}
                           />
-                          <h3 style={{ fontSize: '1.3rem', fontWeight: '900', color: 'white', marginBottom: '0.3rem' }}>{teacher.name} 선생님</h3>
-                          <p style={{ color: isRecommended ? '#93c5fd' : '#94a3b8', fontSize: '0.85rem', fontWeight: 'bold', marginBottom: '1rem' }}>{teacher.tagline}</p>
-                          
-                          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px', justifyContent: 'center', marginBottom: '1.5rem' }}>
-                            {teacher.features?.slice(0, 2).map((feat, idx) => (
-                              <span key={idx} style={{ background: 'rgba(255,255,255,0.05)', color: '#cbd5e1', padding: '4px 8px', borderRadius: '6px', fontSize: '0.75rem' }}>#{feat}</span>
-                            ))}
-                          </div>
+                          <div style={{ flex: 1, minWidth: 0 }}>
+                            <h3 style={{ fontSize: isMobile ? '1rem' : '1.3rem', fontWeight: '900', color: 'white', marginBottom: '0.2rem' }}>{teacher.name} 선생님</h3>
+                            <p style={{ color: isRecommended ? '#93c5fd' : '#94a3b8', fontSize: isMobile ? '0.75rem' : '0.85rem', fontWeight: 'bold', marginBottom: isMobile ? '0.5rem' : '1rem' }}>{teacher.tagline}</p>
+                            
+                            {!isMobile && (
+                              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px', justifyContent: 'center', marginBottom: '1.5rem' }}>
+                                {teacher.features?.slice(0, 2).map((feat, idx) => (
+                                  <span key={idx} style={{ background: 'rgba(255,255,255,0.05)', color: '#cbd5e1', padding: '4px 8px', borderRadius: '6px', fontSize: '0.75rem' }}>#{feat}</span>
+                                ))}
+                              </div>
+                            )}
 
-                          <div style={{ marginTop: 'auto', width: '100%' }}>
-                            <div style={{ fontSize: '0.85rem', color: '#94a3b8', marginBottom: '1rem', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '1rem', textAlign: 'left' }}>
-                              <strong style={{ color: '#60a5fa', display: 'block', marginBottom: '4px' }}>[{teacher.routeTitle}]</strong>
-                              <span style={{ fontSize: '0.8rem', lineHeight: '1.4', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-                                {teacher.routeDescription}
-                              </span>
+                            <div style={{ marginTop: isMobile ? '0' : 'auto', width: '100%' }}>
+                              {!isMobile && (
+                                <div style={{ fontSize: '0.85rem', color: '#94a3b8', marginBottom: '1rem', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '1rem', textAlign: 'left' }}>
+                                  <strong style={{ color: '#60a5fa', display: 'block', marginBottom: '4px' }}>[{teacher.routeTitle}]</strong>
+                                  <span style={{ fontSize: '0.8rem', lineHeight: '1.4', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                                    {teacher.routeDescription}
+                                  </span>
+                                </div>
+                              )}
+                              <button style={{ 
+                                width: '100%', padding: isMobile ? '0.5rem' : '0.8rem', borderRadius: '12px', border: 'none', 
+                                background: isRecommended ? 'linear-gradient(135deg, #3b82f6, #2563eb)' : 'rgba(255,255,255,0.1)',
+                                color: 'white', fontWeight: 'bold', fontSize: isMobile ? '0.8rem' : '0.95rem', pointerEvents: 'none'
+                              }}>
+                                수업 시작하기
+                              </button>
                             </div>
-                            <button style={{ 
-                              width: '100%', padding: '0.8rem', borderRadius: '12px', border: 'none', 
-                              background: isRecommended ? 'linear-gradient(135deg, #3b82f6, #2563eb)' : 'rgba(255,255,255,0.1)',
-                              color: 'white', fontWeight: 'bold', fontSize: '0.95rem', pointerEvents: 'none'
-                            }}>
-                              수업 시작하기
-                            </button>
                           </div>
                         </div>
                       );

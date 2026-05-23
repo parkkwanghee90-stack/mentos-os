@@ -73,8 +73,83 @@ export default function PremiumLectureModal({ onClose, selectedUnit, selectedCou
   const categories = LECTURE_INDEX;
   const autoLecture = guessLectureId(selectedUnit);
   const [selectedLecture, setSelectedLecture] = useState(autoLecture);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const loading = false;
 
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Mobile: show either lecture list or player (not both)
+  if (isMobile) {
+    return (
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: '#ffffff', zIndex: 9999, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+        {selectedLecture ? (
+          // Mobile Player View
+          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+            <PremiumLecturePlayer 
+              lectureId={selectedLecture} 
+              onClose={() => setSelectedLecture(null)} 
+            />
+          </div>
+        ) : (
+          // Mobile Lecture List View
+          <>
+            <div style={{ padding: '1rem', background: 'linear-gradient(135deg, #3b82f6, #2563eb)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexShrink: 0 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <Sparkles size={18} />
+                <span style={{ fontWeight: '900', fontSize: '1.1rem' }}>AI PREMIUM</span>
+              </div>
+              <button onClick={onClose} style={{ background: 'rgba(255,255,255,0.2)', border: 'none', borderRadius: '8px', color: 'white', padding: '6px 14px', fontWeight: '700', fontSize: '0.85rem', cursor: 'pointer' }}>닫기</button>
+            </div>
+            <div style={{ flex: 1, overflowY: 'auto', padding: '1rem', minHeight: 0 }}>
+              {Object.entries(categories).map(([category, lectures]) => (
+                <div key={category} style={{ marginBottom: '1.5rem' }}>
+                  <h3 style={{ fontSize: '0.7rem', fontWeight: '800', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem', paddingLeft: '0.25rem' }}>
+                    {category}
+                  </h3>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                    {lectures.map(lec => (
+                      <button
+                        key={lec.id}
+                        onClick={() => setSelectedLecture(lec.id)}
+                        style={{
+                          padding: '0.85rem 1rem',
+                          textAlign: 'left',
+                          borderRadius: '10px',
+                          fontSize: '0.95rem',
+                          fontWeight: '600',
+                          background: '#f8fafc',
+                          color: '#475569',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'space-between',
+                          border: '1px solid #f1f5f9',
+                          cursor: 'pointer',
+                          touchAction: 'manipulation',
+                          WebkitTapHighlightColor: 'transparent'
+                        }}
+                      >
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                          <BookOpen size={16} style={{ opacity: 0.7 }} />
+                          {lec.title}
+                        </div>
+                        <ChevronRight size={16} style={{ color: '#94a3b8' }} />
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+    );
+  }
+
+  // Desktop: original two-panel layout
   return (
     <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(10px)', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <div style={{ background: '#ffffff', borderRadius: '24px', width: '96%', maxWidth: '1400px', height: '90vh', display: 'flex', border: '1px solid #e2e8f0', overflow: 'hidden', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)' }}>
@@ -164,3 +239,4 @@ export default function PremiumLectureModal({ onClose, selectedUnit, selectedCou
     </div>
   );
 }
+
