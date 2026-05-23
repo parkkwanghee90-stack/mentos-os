@@ -19,6 +19,9 @@ export function AuthProvider({ children }) {
         name: dbUser.user_metadata?.name || dbUser.email.split('@')[0],
         email: dbUser.email,
         role: dbUser.user_metadata?.role || 'student',
+        school: dbUser.user_metadata?.school || '',
+        grade: dbUser.user_metadata?.grade || '',
+        mathGrade: dbUser.user_metadata?.math_grade || '',
         createdAt: dbUser.created_at
       };
 
@@ -115,7 +118,7 @@ export function AuthProvider({ children }) {
   }, []);
 
   // Sign up with Email/Password (Admin Auth bypass with Auto-Confirm)
-  const signUpWithEmail = async (email, password, name, role = 'student') => {
+  const signUpWithEmail = async (email, password, name, role = 'student', school = '', grade = '', mathGrade = '') => {
     console.log(`[AuthContext] Creating auto-confirmed user via Admin API for ${email}...`);
     const { data: adminData, error: adminError } = await supabase.auth.admin.createUser({
       email,
@@ -124,7 +127,10 @@ export function AuthProvider({ children }) {
       user_metadata: {
         name,
         role,
-        is_paid: false
+        is_paid: false,
+        school,
+        grade,
+        math_grade: mathGrade
       }
     });
     if (adminError) throw adminError;
@@ -207,6 +213,45 @@ export function AuthProvider({ children }) {
     return data;
   };
 
+  // Update student school, grade, mathGrade
+  const updateStudentInfo = async (school, grade, mathGrade) => {
+    if (!user) return;
+    console.log(`[AuthContext] Updating user student metadata to: school=${school}, grade=${grade}, mathGrade=${mathGrade}...`);
+    
+    // 1. Supabase User Metadata Update
+    const { data, error } = await supabase.auth.updateUser({
+      data: { 
+        school, 
+        grade, 
+        math_grade: mathGrade 
+      }
+    });
+    
+    if (error) {
+      console.error("Failed to update student info in Supabase metadata:", error);
+      throw error;
+    } else {
+      console.log("Supabase student metadata successfully updated:", data);
+      
+      // 2. Local State & Local Storage Sync
+      setUser(data.user);
+      const localUserJson = localStorage.getItem('mentos_mock_user');
+      if (localUserJson) {
+        try {
+          const localUser = JSON.parse(localUserJson);
+          localUser.school = school;
+          localUser.grade = grade;
+          localUser.mathGrade = mathGrade;
+          localStorage.setItem('mentos_mock_user', JSON.stringify(localUser));
+        } catch (e) {
+          console.error("Failed to parse local user during updateStudentInfo:", e);
+        }
+      }
+      window.dispatchEvent(new Event('storage'));
+      return data;
+    }
+  };
+
   return (
     <AuthContext.Provider value={{
       user,
@@ -217,7 +262,8 @@ export function AuthProvider({ children }) {
       signInAsDemo,
       signInWithGoogle,
       signOut,
-      updatePremiumStatus
+      updatePremiumStatus,
+      updateStudentInfo
     }}>
       {children}
     </AuthContext.Provider>

@@ -3,50 +3,50 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #09090b; /* dark background */
+  background: linear-gradient(135deg, #f1f5f9 0%, #eff6ff 50%, #f5f3ff 100%); /* 화사한 라이트 파스텔 그라데이션 */
   position: relative;
   overflow: hidden;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* Background Gradients / Orbs */
 .login-bg-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
+  filter: blur(100px);
   z-index: 0;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .orb-1 {
-  width: 300px;
-  height: 300px;
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.4), rgba(59, 130, 246, 0.4));
-  top: -100px;
-  left: -100px;
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(59, 130, 246, 0.3));
+  top: -80px;
+  left: -80px;
   animation: float 8s ease-in-out infinite alternate;
 }
 
 .orb-2 {
-  width: 250px;
-  height: 250px;
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.3), rgba(236, 72, 153, 0.3));
-  bottom: -50px;
-  right: -50px;
+  width: 320px;
+  height: 320px;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(236, 72, 153, 0.25));
+  bottom: -60px;
+  right: -60px;
   animation: float 10s ease-in-out infinite alternate-reverse;
 }
 
 @keyframes float {
   0% { transform: translateY(0) scale(1); }
-  100% { transform: translateY(30px) scale(1.1); }
+  100% { transform: translateY(20px) scale(1.05); }
 }
 
 .login-content {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 400px;
-  padding: 2rem;
+  max-width: 420px;
+  padding: 1.2rem 1rem; /* 모바일 세로 길이 축소를 위한 컴팩트 패딩 */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,56 +54,61 @@
 
 .login-header {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.2rem; /* 세로 마진 축소 */
 }
 
 .login-logo-box {
-  width: 64px;
-  height: 64px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto 1rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  margin: 0 auto 0.6rem;
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.12);
 }
 
 .login-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #fff;
-  margin: 0 0 0.5rem;
-  letter-spacing: -1px;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #0f172a; /* 선명한 다크 네이비 텍스트 */
+  margin: 0 0 0.2rem;
+  letter-spacing: -1.2px;
+  background: linear-gradient(135deg, #1e1b4b, #312e81);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .login-subtitle {
-  color: #94a3b8;
-  font-size: 1rem;
+  color: #475569; /* 선명한 서브타이틀 */
+  font-size: 0.9rem;
+  font-weight: 500;
   margin: 0;
 }
 
 .login-form {
   width: 100%;
-  padding: 2.5rem 2rem;
+  padding: 1.6rem 1.4rem; /* 스크롤 락 차단을 위한 컴팩트 카드 내부 패딩 */
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  background: rgba(20, 20, 25, 0.6);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 24px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  gap: 0.75rem; /* 세로 요소 밀착 조정 */
+  background: rgba(255, 255, 255, 0.55); /* 극대화된 고급 화이트 글래스모피즘 */
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 26px;
+  box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.1), 0 0 30px rgba(255, 255, 255, 0.4) inset;
 }
 
 .form-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #f8fafc;
-  margin: 0 0 0.5rem 0;
-  text-align: left;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.2rem 0;
+  text-align: center;
+  letter-spacing: -0.5px;
 }
 
 .input-group {
@@ -122,48 +127,70 @@
 
 .input-group input {
   width: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 1rem 1rem 1rem 3rem;
-  color: #fff;
-  font-size: 1rem;
-  transition: all 0.2s ease;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  padding: 0.75rem 1rem 0.75rem 2.8rem;
+  color: #0f172a;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
 }
 
 .input-group input:focus {
-  border-color: #10b981;
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+  border-color: #3b82f6;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12);
 }
 
 .input-group input::placeholder {
-  color: #64748b;
+  color: #94a3b8;
+}
+
+/* 추가된 select(학년/등급) 스타일링 */
+.select-group select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  padding: 0.75rem 1rem;
+  color: #0f172a;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.25s;
+  outline: none;
+  cursor: pointer;
+}
+
+.select-group select:focus {
+  border-color: #3b82f6;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12);
 }
 
 .login-btn {
-  margin-top: 1rem;
+  margin-top: 0.3rem;
   width: 100%;
-  padding: 1.2rem;
-  border-radius: 16px;
-  font-size: 1.1rem;
-  font-weight: 700;
+  padding: 0.85rem; /* 세로 압축 */
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 800;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   background: linear-gradient(135deg, #10b981, #059669);
   border: none;
   color: white;
   cursor: pointer;
-  transition: all 0.2s;
-  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+  transition: all 0.25s;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.18);
 }
 
 .login-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(16, 185, 129, 0.4);
+  transform: translateY(-1.5px);
+  box-shadow: 0 12px 24px rgba(16, 185, 129, 0.28);
 }
 
 .login-btn.loading {
@@ -174,21 +201,22 @@
 
 .login-tabs {
   display: flex;
-  gap: 0.5rem;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 0.3rem;
+  gap: 0.35rem;
+  background: rgba(0, 0, 0, 0.04);
+  padding: 0.25rem;
   border-radius: 12px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
 }
 
 .login-tab {
   flex: 1;
   background: transparent;
   border: none;
-  color: #94a3b8;
-  padding: 0.6rem;
+  color: #475569;
+  padding: 0.5rem;
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 0.88rem;
   cursor: pointer;
   transition: all 0.2s;
 }
@@ -205,85 +233,91 @@
 
 .admin-btn {
   background: linear-gradient(135deg, #ef4444, #dc2626);
-  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.3);
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.18);
 }
 
 .admin-btn:hover {
-  box-shadow: 0 12px 24px rgba(239, 68, 68, 0.4);
+  box-shadow: 0 12px 24px rgba(239, 68, 68, 0.28);
 }
 
 .login-footer-links {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
+  gap: 0.8rem;
+  margin-top: 0.3rem;
 }
 
 .text-link {
   background: none;
   border: none;
-  color: #94a3b8;
-  font-size: 0.9rem;
+  color: #64748b;
+  font-size: 0.85rem;
+  font-weight: 600;
   cursor: pointer;
   padding: 0;
   transition: color 0.2s;
 }
 
 .text-link:hover {
-  color: #fff;
+  color: #1e293b;
 }
 
 .text-link.highlight {
-  color: #10b981;
-  font-weight: 600;
+  color: #3b82f6;
+  font-weight: 700;
 }
 
 .divider {
-  color: #334155;
+  color: #cbd5e1;
   font-size: 0.8rem;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 480px) {
   .login-content {
-    padding: 1rem;
+    padding: 0.5rem 0.5rem;
   }
   
   .login-form {
-    padding: 2rem 1.5rem;
+    padding: 1.2rem 1.1rem;
+    gap: 0.65rem;
   }
   
   .login-title {
-    font-size: 2rem;
+    font-size: 1.95rem;
+  }
+  
+  .login-subtitle {
+    font-size: 0.85rem;
   }
 }
 
-/* Premium Demo Glow Button */
+/* Premium Demo Glow Button (산뜻하게 밝아진 매직 버튼) */
 .btn-demo-glow {
-  margin-top: 0.5rem;
+  margin-top: 0.2rem;
   width: 100%;
-  padding: 1.2rem;
-  border-radius: 16px;
-  font-size: 1.1rem;
-  font-weight: 700;
+  padding: 0.85rem; /* 컴팩트화 */
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 800;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   background: linear-gradient(135deg, #8b5cf6, #3b82f6);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   color: white;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 15px rgba(139, 92, 246, 0.5), inset 0 0 8px rgba(255, 255, 255, 0.2);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.25), inset 0 0 6px rgba(255, 255, 255, 0.3);
   position: relative;
   overflow: hidden;
 }
 
 .btn-demo-glow:hover {
-  transform: translateY(-2.5px);
-  box-shadow: 0 0 25px rgba(139, 92, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.5), inset 0 0 12px rgba(255, 255, 255, 0.4);
+  transform: translateY(-1.5px);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4), 0 0 25px rgba(59, 130, 246, 0.25), inset 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .btn-demo-glow::before {
@@ -296,11 +330,11 @@
   background: linear-gradient(
     45deg,
     transparent 45%,
-    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.45) 50%,
     transparent 55%
   );
   transform: rotate(45deg);
-  animation: login-shine 3s infinite;
+  animation: login-shine 4.5s infinite;
 }
 
 @keyframes login-shine {

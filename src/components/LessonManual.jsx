@@ -133,7 +133,7 @@ export default function LessonManual({ onComplete }) {
                   display: 'flex', flexDirection: 'column', justifyContent: 'space-between'
                 }}>
                   <div style={{ fontSize: '0.7rem', color: '#94a3b8', lineHeight: '1.3' }}>
-                    <strong style={{ color: '#fff' }}>[Q.15]</strong> 다음 고차방정식 $x^4-3x^2+2=0$의 모든 실근의 곱을 구하시오.
+                    <strong style={{ color: '#fff' }}>[Q.15]</strong> 다음 고차방정식 x⁴ - 3x² + 2 = 0의 모든 실근의 곱을 구하시오.
                   </div>
                   
                   {/* Action Buttons inside mock */}
