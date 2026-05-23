@@ -75,7 +75,7 @@ temp.json
 upload_manifest*.json
 
 # Development and raw data folders
-data/
+/data/
 docs/
 
 # Scripts
