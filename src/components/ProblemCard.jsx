@@ -155,7 +155,10 @@ export default function ProblemCard({ data, sourceImage, title, fallbackText }) 
         <div style={{ marginTop: '1rem', background: 'white', borderRadius: '12px', padding: '1rem', textAlign: 'center' }}>
           <img src={sourceImage || data.source_image} alt="원본 문제"
             style={{ width: '100%', height: isMobile ? 'auto' : '400px', maxHeight: isMobile ? '320px' : 'none', objectFit: 'contain', borderRadius: '8px' }}
-            onError={e => { e.target.style.display = 'none'; }} />
+            onError={e => { 
+              e.target.style.display = 'none'; 
+              if (e.target.parentElement) e.target.parentElement.style.display = 'none';
+            }} />
         </div>
       )}
     </div>

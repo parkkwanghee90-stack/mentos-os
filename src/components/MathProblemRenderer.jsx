@@ -243,7 +243,10 @@ export default function MathProblemRenderer({ text, title, sourceImage, selected
             src={sourceImage} 
             alt="원본 문제"
             style={{ width: '100%', maxWidth: '100%', maxHeight: isMobile ? '320px' : '500px', objectFit: 'contain', borderRadius: '8px' }}
-            onError={e => { e.target.style.display = 'none'; }} 
+            onError={e => { 
+              e.target.style.display = 'none'; 
+              if (e.target.parentElement) e.target.parentElement.style.display = 'none';
+            }} 
           />
         </div>
       )}
