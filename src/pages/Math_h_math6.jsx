@@ -266,9 +266,15 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, tes
         else currentProblemImage = window.resolveAsset(`/math_crops/(2)수학(상)기말/도형의이동${stepStr}/${formattedIdx}.webp`)
      }
      else currentProblemImage = window.resolveAsset(`/math_crops/${currentUnit}/${formattedIdx}.webp`)
-     
-     currentProblemImage += `?v=20260429_v4`;
-     currentProblemTitle = `${currentUnit} [${testProblemIdx}번]`;
+      
+      if (currentProblemImage) {
+         if (!currentProblemImage.includes('?')) {
+            currentProblemImage += `?v=20260429_v4`;
+         }
+      } else {
+         currentProblemImage = null;
+      }
+      currentProblemTitle = `${currentUnit} [${testProblemIdx}번]`;
   }
 
   let currentProblemText = null;
@@ -708,25 +714,6 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, tes
     <div style={{ flex: 1, display: 'flex', flexDirection: 'column', background: '#09090b', color: 'white' }}>
       <div style={{ padding: '1rem', background: '#18181b', borderBottom: '1px solid #27272a', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <strong>단계: {currentPhaseFlow.title.toUpperCase()}</strong>
-          <span style={{ fontSize: '0.85rem', color: '#a1a1aa' }}>({currentPhaseFlow.duration} 분)</span>
-          {/* PCBS 단계 배지 — 수학 핵심 Phase에서만 표시 */}
-          {['core', 'step', 'mock'].includes(currentPhaseFlow.phase) && (() => {
-            const badgeMap = {
-              P:     { label: 'P — Problem',     bg: '#3b82f6', desc: '구하는 것이 무엇?' },
-              C:     { label: 'C — Clue',         bg: '#8b5cf6', desc: '핵심 단서는?' },
-              B:     { label: 'B — Background',   bg: '#f59e0b', desc: '필요한 개념은?' },
-              SOLVE: { label: '🔧 풀이 진행',      bg: '#10b981', desc: 'P+C+B 구조 연결' },
-              S:     { label: 'S — Survey',        bg: '#ef4444', desc: '왜 이렇게 풀었나?' },
-            };
-            const b = badgeMap[pcbsPhase];
-            return (
-              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', background: b.bg + '22', border: '1px solid ${b.bg}', borderRadius: '20px', padding: '3px 12px' }}>
-                <span style={{ color: b.bg, fontWeight: 'bold', fontSize: '0.8rem' }}>{b.label}</span>
-                <span style={{ color: '#a1a1aa', fontSize: '0.75rem' }}>— {b.desc}</span>
-              </div>
-            );
-          })()}
         </div>
         {/* 폭죽 이펙트 오버레이 */}
         {showFireworks && (
@@ -1162,8 +1149,9 @@ export default function MathClassroomScreen() {
     <div style={{ display: 'flex', height: '100vh', background: '#09090b', color: 'white', position: 'relative' }}>
       
       {/* Global Timer Overlay */}
-      <div style={{ position: 'absolute', top: '15px', left: '50%', transform: 'translateX(-50%)', background: 'rgba(239, 68, 68, 0.9)', color: 'white', padding: '0.5rem 1.5rem', borderRadius: '30px', fontWeight: 'bold', zIndex: 10, display: 'flex', alignItems: 'center', gap: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.5)', fontFamily: 'monospace', fontSize: '1.2rem', letterSpacing: '1px' }}>
+      <div style={{ position: 'absolute', top: '15px', left: '50%', transform: 'translateX(-50%)', background: 'rgba(239, 68, 68, 0.9)', color: 'white', padding: '0.5rem 2.2rem', borderRadius: '30px', fontWeight: 'bold', zIndex: 10, display: 'flex', alignItems: 'center', gap: '10px', boxShadow: '0 4px 12px rgba(0,0,0,0.5)', fontFamily: 'monospace', fontSize: '1.2rem', letterSpacing: '1px' }}>
         <Clock size={20} />
+        <span style={{ fontSize: '0.9rem', fontWeight: 'bold', color: '#fca5a5', fontFamily: 'sans-serif', marginRight: '4px', whiteSpace: 'nowrap' }}>수업시간</span>
         {String(Math.floor(timeLeft / 60)).padStart(2, '0')}:{String(timeLeft % 60).padStart(2, '0')}
       </div>
 

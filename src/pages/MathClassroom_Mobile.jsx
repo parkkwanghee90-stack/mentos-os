@@ -1059,18 +1059,19 @@ export default function MathClassroomScreen() {
           border: '1.5px solid rgba(239, 68, 68, 0.5)',
           boxShadow: '0 8px 24px rgba(239, 68, 68, 0.25)',
           color: '#fee2e2',
-          padding: '0.4rem 1.0rem',
+          padding: '0.4rem 1.6rem',
           borderRadius: '30px',
           fontWeight: 'bold',
           display: 'flex',
           alignItems: 'center',
-          gap: '6px',
+          gap: '8px',
           fontFamily: 'monospace',
           fontSize: '0.95rem',
           letterSpacing: '0.5px',
           textShadow: '0 0 6px rgba(239, 68, 68, 0.5)'
         }}>
           <Clock size={15} color="#f87171" />
+          <span style={{ fontSize: '0.8rem', fontWeight: 'bold', color: '#fca5a5', fontFamily: 'sans-serif', marginRight: '2px', whiteSpace: 'nowrap' }}>수업시간</span>
           {String(Math.floor(timeLeft / 60)).padStart(2, '0')}:{String(timeLeft % 60).padStart(2, '0')}
         </div>
         
@@ -1082,12 +1083,12 @@ export default function MathClassroomScreen() {
             border: problemTimeLeft <= 60 ? '1.5px solid rgba(245, 158, 11, 0.9)' : '1.5px solid rgba(59, 130, 246, 0.5)',
             boxShadow: problemTimeLeft <= 60 ? '0 8px 24px rgba(245, 158, 11, 0.4)' : '0 8px 24px rgba(59, 130, 246, 0.25)',
             color: problemTimeLeft <= 60 ? '#ffffff' : '#dbeafe',
-            padding: '0.4rem 1.0rem',
+            padding: '0.4rem 1.6rem',
             borderRadius: '30px',
             fontWeight: 'bold',
             display: 'flex',
             alignItems: 'center',
-            gap: '6px',
+            gap: '8px',
             fontFamily: 'monospace',
             fontSize: '0.95rem',
             letterSpacing: '0.5px',
@@ -1097,6 +1098,7 @@ export default function MathClassroomScreen() {
           }}>
             <Clock size={15} color={problemTimeLeft <= 60 ? '#ffffff' : '#60a5fa'} />
             {String(Math.floor(problemTimeLeft / 60)).padStart(2, '0')}:{String(problemTimeLeft % 60).padStart(2, '0')}
+            <span style={{ fontSize: '0.8rem', fontWeight: 'bold', color: problemTimeLeft <= 60 ? '#ffffff' : '#93c5fd', fontFamily: 'sans-serif', marginLeft: '4px', whiteSpace: 'nowrap' }}>(1문항)</span>
           </div>
         )}
       </div>

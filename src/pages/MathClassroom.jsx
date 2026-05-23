@@ -1053,7 +1053,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
      }
      else currentProblemImage = window.resolveAsset(`/math_crops/${currentUnit}/${formattedIdx}.webp`)
      
-     if (currentProblemImage) {
+     if (currentProblemImage && !currentProblemImage.startsWith('http') && !currentProblemImage.startsWith('data:')) {
         currentProblemImage = `${URL_PREFIX}${currentProblemImage}`;
      }
      // 강제 캐시 우회 (크롭 변경사항 반영)
@@ -1199,9 +1199,9 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
               }
               let displayTitle = currentPhaseFlow.title;
               if (displayTitle.includes('개필수') || displayTitle.includes('명확한')) {
-                displayTitle = '필수 유형 훈련';
+                displayTitle = '훈련 단계';
               }
-              const formattedTitle = stageText ? `${stageText} 필수 유형 (${limitText})` : (displayTitle + (currentPhaseFlow.duration ? ` (${currentPhaseFlow.duration}분)` : ''));
+              const formattedTitle = stageText ? `${stageText} 훈련 (${limitText})` : (displayTitle + (currentPhaseFlow.duration ? ` (${currentPhaseFlow.duration}분)` : ''));
               
               return (
                 <span style={{ fontSize: '0.82rem', color: '#fbbf24', fontWeight: 'bold' }}>
@@ -1212,8 +1212,9 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             
             <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
               {/* Global Session Timer */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: '4px', background: 'rgba(239, 68, 68, 0.2)', border: '1px solid rgba(239, 68, 68, 0.4)', padding: '2px 6px', borderRadius: '12px', fontSize: '0.75rem' }}>
-                <Clock size={10} color="#f87171" />
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', background: 'rgba(239, 68, 68, 0.2)', border: '1px solid rgba(239, 68, 68, 0.4)', padding: '4px 10px', borderRadius: '14px', fontSize: '0.78rem' }}>
+                <Clock size={12} color="#f87171" style={{ marginRight: '2px' }} />
+                <span style={{ fontSize: '0.72rem', color: '#fca5a5', marginRight: '4px', whiteSpace: 'nowrap', fontWeight: 'bold' }}>수업시간</span>
                 <span style={{ color: '#f87171', fontWeight: 'bold' }}>{formatTime(timeLeft)}</span>
               </div>
               {/* Problem Countdown Timer */}
@@ -1221,15 +1222,16 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                 <div style={{ 
                   display: 'flex', 
                   alignItems: 'center', 
-                  gap: '4px', 
+                  gap: '6px', 
                   background: problemTimeLeft <= 60 ? 'rgba(245, 158, 11, 0.25)' : 'rgba(59, 130, 246, 0.2)', 
                   border: problemTimeLeft <= 60 ? '1px solid rgba(245, 158, 11, 0.5)' : '1px solid rgba(59, 130, 246, 0.4)', 
-                  padding: '2px 6px', 
-                  borderRadius: '12px', 
-                  fontSize: '0.75rem' 
+                  padding: '4px 10px', 
+                  borderRadius: '14px', 
+                  fontSize: '0.78rem' 
                 }}>
-                  <Clock size={10} color={problemTimeLeft <= 60 ? '#f59e0b' : '#60a5fa'} />
+                  <Clock size={12} color={problemTimeLeft <= 60 ? '#f59e0b' : '#60a5fa'} />
                   <span style={{ color: problemTimeLeft <= 60 ? '#f59e0b' : '#60a5fa', fontWeight: 'bold' }}>{formatTime(problemTimeLeft)}</span>
+                  <span style={{ fontSize: '0.72rem', color: problemTimeLeft <= 60 ? '#ffffff' : '#93c5fd', marginLeft: '4px', whiteSpace: 'nowrap', fontWeight: 'bold' }}>(1문항)</span>
                 </div>
               )}
             </div>
@@ -1265,24 +1267,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             </select>
           </div>
 
-          {/* PCBS 단계 배지 */}
-          {['core', 'step', 'mock'].includes(currentPhaseFlow.phase) && (() => {
-            const badgeMap = {
-              P:     { label: 'P — Problem',     bg: '#3b82f6', desc: '구하는 것?' },
-              C:     { label: 'C — Clue',         bg: '#8b5cf6', desc: '핵심 단서?' },
-              B:     { label: 'B — Background',   bg: '#f59e0b', desc: '필요 개념?' },
-              SOLVE: { label: '🔧 풀이 진행',      bg: '#10b981', desc: '구조 연결' },
-              S:     { label: 'S — Survey',        bg: '#ef4444', desc: '풀이 검토' },
-            };
-            const b = badgeMap[pcbsPhase];
-            if (!b) return null;
-            return (
-              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', background: b.bg + '22', border: `1px solid ${b.bg}`, borderRadius: '12px', padding: '2px 8px', fontSize: '0.75rem', width: 'fit-content' }}>
-                <span style={{ color: b.bg, fontWeight: 'bold' }}>{b.label}</span>
-                <span style={{ color: '#a1a1aa' }}>{b.desc}</span>
-              </div>
-            );
-          })()}
+
         </div>
 
         <div style={{ flex: 1, padding: '0.8rem', display: 'flex', flexDirection: 'column', gap: '0.6rem', boxSizing: 'border-box' }}>
@@ -1658,25 +1643,6 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
     <div className="classroom-main" style={{ flex: 1, display: 'flex', flexDirection: 'column', background: '#09090b', color: 'white' }}>
       <div className="math-top-bar" style={{ padding: '1rem', background: '#18181b', borderBottom: '1px solid #27272a', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.8rem' }}>
         <div className="math-top-info" style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
-          <strong>단계: {currentPhaseFlow.title.toUpperCase()}</strong>
-          <span style={{ fontSize: '0.85rem', color: '#a1a1aa' }}>({currentPhaseFlow.duration} 분)</span>
-          {/* PCBS 단계 배지 — 수학 핵심 Phase에서만 표시 */}
-          {['core', 'step', 'mock'].includes(currentPhaseFlow.phase) && (() => {
-            const badgeMap = {
-              P:     { label: 'P — Problem',     bg: '#3b82f6', desc: '구하는 것이 무엇?' },
-              C:     { label: 'C — Clue',         bg: '#8b5cf6', desc: '핵심 단서는?' },
-              B:     { label: 'B — Background',   bg: '#f59e0b', desc: '필요한 개념은?' },
-              SOLVE: { label: '🔧 풀이 진행',      bg: '#10b981', desc: 'P+C+B 구조 연결' },
-              S:     { label: 'S — Survey',        bg: '#ef4444', desc: '왜 이렇게 풀었나?' },
-            };
-            const b = badgeMap[pcbsPhase];
-            return (
-              <div className="pcbs-badge" style={{ display: 'flex', alignItems: 'center', gap: '6px', background: b.bg + '22', border: `1px solid ${b.bg}`, borderRadius: '20px', padding: '3px 12px' }}>
-                <span style={{ color: b.bg, fontWeight: 'bold', fontSize: '0.8rem' }}>{b.label}</span>
-                <span style={{ color: '#a1a1aa', fontSize: '0.75rem' }}>— {b.desc}</span>
-              </div>
-            );
-          })()}
         </div>
         <div className="math-top-actions" style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
             {/* Ai Vision Solution 버튼 추가 */}
@@ -2584,18 +2550,19 @@ function MathClassroomScreenContent() {
           border: '1.5px solid rgba(239, 68, 68, 0.5)',
           boxShadow: '0 8px 32px rgba(239, 68, 68, 0.25)',
           color: '#fee2e2',
-          padding: '0.5rem 1.5rem',
+          padding: '0.5rem 2.2rem',
           borderRadius: '30px',
           fontWeight: 'bold',
           display: 'flex',
           alignItems: 'center',
-          gap: '8px',
+          gap: '10px',
           fontFamily: 'monospace',
           fontSize: '1.2rem',
           letterSpacing: '1px',
           textShadow: '0 0 6px rgba(239, 68, 68, 0.5)'
         }}>
           <Clock size={20} color="#f87171" />
+          <span style={{ fontSize: '0.9rem', fontWeight: 'bold', color: '#fca5a5', fontFamily: 'sans-serif', marginRight: '4px', whiteSpace: 'nowrap' }}>수업시간</span>
           {String(Math.floor(timeLeft / 60)).padStart(2, '0')}:{String(timeLeft % 60).padStart(2, '0')}
         </div>
         
@@ -2607,12 +2574,12 @@ function MathClassroomScreenContent() {
             border: problemTimeLeft <= 60 ? '1.5px solid rgba(245, 158, 11, 0.9)' : '1.5px solid rgba(59, 130, 246, 0.5)',
             boxShadow: problemTimeLeft <= 60 ? '0 8px 32px rgba(245, 158, 11, 0.4)' : '0 8px 32px rgba(59, 130, 246, 0.25)',
             color: problemTimeLeft <= 60 ? '#ffffff' : '#dbeafe',
-            padding: '0.5rem 1.5rem',
+            padding: '0.5rem 2.2rem',
             borderRadius: '30px',
             fontWeight: 'bold',
             display: 'flex',
             alignItems: 'center',
-            gap: '8px',
+            gap: '10px',
             fontFamily: 'monospace',
             fontSize: '1.2rem',
             letterSpacing: '1px',
@@ -2622,6 +2589,7 @@ function MathClassroomScreenContent() {
           }}>
             <Clock size={20} color={problemTimeLeft <= 60 ? '#ffffff' : '#60a5fa'} />
             {String(Math.floor(problemTimeLeft / 60)).padStart(2, '0')}:{String(problemTimeLeft % 60).padStart(2, '0')}
+            <span style={{ fontSize: '0.9rem', fontWeight: 'bold', color: problemTimeLeft <= 60 ? '#ffffff' : '#93c5fd', fontFamily: 'sans-serif', marginLeft: '6px', whiteSpace: 'nowrap' }}>(1문항)</span>
           </div>
         )}
       </div>
