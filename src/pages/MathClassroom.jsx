@@ -1246,9 +1246,9 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             >
               <option value="">단원 선택</option>
               {sidebarData.sections.map(sec => (
-                <optgroup key={sec.name} label={sec.name}>
+                <optgroup key={sec.name} label={sec.name} style={{ background: '#FFFFFF', color: '#1A1A1A', fontWeight: 'bold' }}>
                   {sec.items.map(item => (
-                    <option key={item} value={item}>{item}</option>
+                    <option key={item} value={item} style={{ background: '#FFFFFF', color: '#1A1A1A' }}>{item}</option>
                   ))}
                 </optgroup>
               ))}
@@ -1260,7 +1260,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
               style={{ width: '80px', background: 'var(--bg-base)', border: '1px solid var(--border-glass)', color: 'var(--text-main)', padding: '0.5rem', borderRadius: '8px', fontSize: '0.85rem' }}
             >
               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map(n => (
-                <option key={n} value={n}>{n}번</option>
+                <option key={n} value={n} style={{ background: '#FFFFFF', color: '#1A1A1A' }}>{n}번</option>
               ))}
             </select>
           </div>
@@ -2657,8 +2657,8 @@ function MathClassroomScreenContent() {
                 
                 {(isG2 || isG3) && (
                   <>
-                    <option value="수1">수학1 (대수)</option>
-                    <option value="수2">수학2 (미적분 기초)</option>
+                    <option value="수1" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>수학1 (대수)</option>
+                    <option value="수2" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>수학2 (미적분 기초)</option>
                     <option value="확률과통계">확률과 통계</option>
                   </>
                 )}
