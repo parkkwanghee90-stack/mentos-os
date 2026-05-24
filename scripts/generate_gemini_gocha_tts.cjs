@@ -2,6 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const dotenv = require('dotenv');
+const { execSync } = require('child_process');
 
 dotenv.config();
 
@@ -172,18 +173,40 @@ async function main() {
 
     try {
       // 1. Generate Voice Audio via Gemini 2.5 Voice API (Aoede)
-      const audioBuffer = await generateGeminiTTS(narrationText);
-      console.log(`✅ Generated Gemini 2.5 Voice (${(audioBuffer.length / 1024).toFixed(1)} KB)`);
+      const rawAudioBuffer = await generateGeminiTTS(narrationText);
+      console.log(`✅ Generated raw Gemini 2.5 Voice (${(rawAudioBuffer.length / 1024).toFixed(1)} KB)`);
+
+      // 1.5. Convert Raw PCM 16-bit 24kHz Mono to Genuine MP3 via ffmpeg for perfect compatibility across web, mobile, iOS, and Safari
+      const tempPcmPath = path.resolve(LOCAL_OUTPUT_DIR, `temp_${pid}.pcm`);
+      const tempMp3Path = path.resolve(LOCAL_OUTPUT_DIR, `temp_${pid}.mp3`);
+      fs.writeFileSync(tempPcmPath, rawAudioBuffer);
+      
+      try {
+        execSync(`ffmpeg -y -f s16le -ar 24000 -ac 1 -i "${tempPcmPath}" -codec:a libmp3lame -qscale:a 2 "${tempMp3Path}"`, { stdio: 'pipe' });
+      } catch (err) {
+        const stderr = err.stderr ? err.stderr.toString() : '';
+        throw new Error(`ffmpeg conversion failed: ${err.message}\nStderr: ${stderr}`);
+      }
+      
+      const mp3Buffer = fs.readFileSync(tempMp3Path);
+      
+      // Cleanup temp files
+      try {
+        fs.unlinkSync(tempPcmPath);
+        fs.unlinkSync(tempMp3Path);
+      } catch (e) {}
+
+      console.log(`✅ Converted to genuine MP3 via ffmpeg (${(mp3Buffer.length / 1024).toFixed(1)} KB)`);
 
       // 2. Save locally for fallback playing
       const localFileName = `hint_gocha_2_${String(i).padStart(2, '0')}.mp3`;
       const localFilePath = path.join(LOCAL_OUTPUT_DIR, localFileName);
-      fs.writeFileSync(localFilePath, audioBuffer);
+      fs.writeFileSync(localFilePath, mp3Buffer);
       console.log(`💾 Saved locally to: ${localFilePath}`);
 
       // 3. Upload to Supabase Storage math-tts bucket
       const remotePath = `${UNIT_EN}/${pid}.mp3`;
-      await uploadToSupabase(audioBuffer, remotePath);
+      await uploadToSupabase(mp3Buffer, remotePath);
       console.log(`☁️ Uploaded to Supabase: ${BUCKET}/${remotePath}`);
 
       // Small delay to prevent API rate limits (6.5s delay fits under 10 RPM)
