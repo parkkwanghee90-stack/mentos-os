@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import HintPlayerRouter from '@/components/hints/HintPlayerRouter';
+import { speakText, stopSpeaking } from '@/services/ttsService';
 
 const INSPECT_MENUS = [
   { id: 1, label: '1. 수원', unit: '수학1 기말 2023 1+1(쌍둥이)(54)', problemCount: 54 },
@@ -18,6 +19,10 @@ const INSPECT_MENUS = [
 export default function LocalInspector() {
   const [activeMenuId, setActiveMenuId] = useState(1);
   const [activeProblem, setActiveProblem] = useState('001');
+  const [geminiKey, setGeminiKey] = useState(localStorage.getItem('VITE_GEMINI_API_KEY') || '');
+  const [isSaved, setIsSaved] = useState(false);
+  const [isPlayingTest, setIsPlayingTest] = useState(false);
+  const [testText, setTestText] = useState('안녕하세요! 멘토스 AI 수학 교실에 오신 것을 환영해요. 제미나이 2.5 보이스가 완벽하게 준비되었습니다!');
 
   const activeMenu = INSPECT_MENUS.find(m => m.id === activeMenuId);
 
@@ -118,6 +123,147 @@ export default function LocalInspector() {
               {menu.label}
             </div>
           ))}
+        </div>
+
+        {/* Gemini 2.5 Voice Settings Card */}
+        <div style={{
+          padding: '1rem',
+          borderTop: '1px solid #334155',
+          background: 'linear-gradient(to top, #1e293b, #0f172a)',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '0.8rem'
+        }}>
+          <div style={{ fontSize: '0.85rem', fontWeight: 'bold', color: '#c084fc', display: 'flex', alignItems: 'center', gap: '4px' }}>
+            🔮 제미나이 2.5 보이스 설정
+          </div>
+          
+          <div>
+            <label style={{ fontSize: '0.72rem', color: '#94a3b8', display: 'block', marginBottom: '4px' }}>
+              Gemini API Key
+            </label>
+            <input 
+              type="password"
+              value={geminiKey}
+              onChange={e => {
+                setGeminiKey(e.target.value);
+                setIsSaved(false);
+              }}
+              placeholder="API 키를 입력하세요"
+              style={{
+                width: '100%',
+                background: '#0f172a',
+                border: '1px solid #334155',
+                color: 'white',
+                padding: '0.4rem',
+                borderRadius: '6px',
+                fontSize: '0.8rem',
+                boxSizing: 'border-box',
+                outline: 'none'
+              }}
+            />
+          </div>
+
+          <div style={{ display: 'flex', gap: '6px' }}>
+            <button
+              onClick={() => {
+                localStorage.setItem('VITE_GEMINI_API_KEY', geminiKey);
+                setIsSaved(true);
+                alert('API 키가 브라우저 환경에 저장되었습니다! 즉시 음성 재생에 반영됩니다.');
+              }}
+              style={{
+                flex: 1,
+                background: '#a855f7',
+                border: 'none',
+                color: 'white',
+                padding: '0.4rem',
+                borderRadius: '6px',
+                cursor: 'pointer',
+                fontSize: '0.8rem',
+                fontWeight: 'bold'
+              }}
+            >
+              키 저장하기
+            </button>
+            <button
+              onClick={() => {
+                localStorage.removeItem('VITE_GEMINI_API_KEY');
+                setGeminiKey('');
+                setIsSaved(false);
+                alert('API 키가 브라우저 환경에서 삭제되었습니다.');
+              }}
+              style={{
+                background: '#475569',
+                border: 'none',
+                color: 'white',
+                padding: '0.4rem 0.6rem',
+                borderRadius: '6px',
+                cursor: 'pointer',
+                fontSize: '0.8rem'
+              }}
+            >
+              초기화
+            </button>
+          </div>
+
+          {/* Test Voice Section */}
+          <div style={{
+            borderTop: '1px dashed #334155',
+            paddingTop: '0.6rem',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '0.5rem'
+          }}>
+            <textarea
+              value={testText}
+              onChange={e => setTestText(e.target.value)}
+              rows={2}
+              style={{
+                width: '100%',
+                background: '#0f172a',
+                border: '1px solid #334155',
+                color: '#cbd5e1',
+                padding: '0.4rem',
+                borderRadius: '6px',
+                fontSize: '0.75rem',
+                resize: 'none',
+                boxSizing: 'border-box',
+                outline: 'none'
+              }}
+            />
+            <button
+              onClick={async () => {
+                if (isPlayingTest) {
+                  stopSpeaking();
+                  setIsPlayingTest(false);
+                } else {
+                  setIsPlayingTest(true);
+                  await speakText(testText, {
+                    voice: 'nova',
+                    onEnd: () => setIsPlayingTest(false),
+                    onError: () => setIsPlayingTest(false),
+                    isReplay: true // skip 스킵 방지용
+                  });
+                }
+              }}
+              style={{
+                background: isPlayingTest ? '#ef4444' : '#10b981',
+                border: 'none',
+                color: 'white',
+                padding: '0.4rem',
+                borderRadius: '6px',
+                cursor: 'pointer',
+                fontSize: '0.8rem',
+                fontWeight: 'bold',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '4px'
+              }}
+            >
+              {isPlayingTest ? '⏹️ 테스트 중지' : '🔊 목소리 테스트'}
+            </button>
+          </div>
         </div>
       </div>
 

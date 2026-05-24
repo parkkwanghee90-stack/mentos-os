@@ -69,30 +69,102 @@ export const speakText = async (text, { voice, onStart, onEnd, onError, isReplay
 
   const selectedVoice = voice || VOICE_MAP.default;
 
+  // Gemini API Key 로드
+  const geminiApiKey = import.meta.env.VITE_GEMINI_API_KEY || (typeof window !== 'undefined' ? localStorage.getItem('VITE_GEMINI_API_KEY') : null);
+
   try {
     onStart?.();
 
-    const res = await fetch(`${BASE_URL()}/audio/speech`, {
-      method: `POST`,
-      headers: {
-        Authorization:  `Bearer ${API_KEY()}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'tts-1',
-        voice: selectedVoice,
-        input: filteredText,
-        // High quality setting if needed? Using mp3 format.
-        response_format: 'mp3',
-      }),
-    });
+    let blob = null;
 
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({}));
-      throw new Error(err?.error?.message || `TTS API ${res.status}`);
+    if (geminiApiKey) {
+      console.log('[TTS] Attempting Gemini 2.5 Voice API...');
+      try {
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${geminiApiKey}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            systemInstruction: {
+              parts: [{
+                text: "너는 수학 학습을 돕는 친절하고 활기찬 여자 대학생 선생님이야. 입력받은 한국어 수학 텍스트(수식 포함)를 자연스러운 한국어 구어로 낭독해줘. 절대로 인사말이나 해설, 추가 설명, 잡담을 덧붙이지 말고, 오직 주어진 텍스트 자체만 있는 그대로 읽어줘. 수식은 한국어 수학 읽기 표준에 맞춰 자연스럽게 읽어줘."
+              }]
+            },
+            contents: [{
+              parts: [{
+                text: filteredText
+              }]
+            }],
+            generationConfig: {
+              responseModalities: ["AUDIO"],
+              speechConfig: {
+                voiceConfig: {
+                  prebuiltVoiceConfig: {
+                    voiceName: "Aoede"
+                  }
+                }
+              }
+            }
+          })
+        });
+
+        if (!response.ok) {
+          const errorJson = await response.json().catch(() => ({}));
+          throw new Error(errorJson?.error?.message || `Gemini API HTTP ${response.status}`);
+        }
+
+        const data = await response.json();
+        const audioPart = data.candidates?.[0]?.content?.parts?.find(part => part.inlineData);
+
+        if (!audioPart || !audioPart.inlineData || !audioPart.inlineData.data) {
+          throw new Error("No audio data in Gemini response");
+        }
+
+        const base64Data = audioPart.inlineData.data;
+        const mimeType = audioPart.inlineData.mimeType || 'audio/ogg; codecs=opus';
+
+        // Base64 decoding
+        const byteCharacters = atob(base64Data);
+        const byteNumbers = new Array(byteCharacters.length);
+        for (let i = 0; i < byteCharacters.length; i++) {
+          byteNumbers[i] = byteCharacters.charCodeAt(i);
+        }
+        const byteArray = new Uint8Array(byteNumbers);
+        blob = new Blob([byteArray], { type: mimeType });
+        console.log('[TTS] Gemini 2.5 Voice generated successfully');
+      } catch (geminiError) {
+        console.warn('[TTS] Gemini 2.5 Voice failed, falling back to OpenAI:', geminiError.message);
+      }
+    } else {
+      console.log('[TTS] No Gemini API key found, skipping Gemini...');
     }
 
-    const blob = await res.blob();
+    // Gemini 실패 혹은 미설정 시 OpenAI 시도
+    if (!blob) {
+      console.log('[TTS] Attempting OpenAI TTS API...');
+      const res = await fetch(`${BASE_URL()}/audio/speech`, {
+        method: `POST`,
+        headers: {
+          Authorization:  `Bearer ${API_KEY()}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          model: 'tts-1',
+          voice: selectedVoice,
+          input: filteredText,
+          response_format: 'mp3',
+        }),
+      });
+
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err?.error?.message || `OpenAI TTS API HTTP ${res.status}`);
+      }
+
+      blob = await res.blob();
+      console.log('[TTS] OpenAI TTS generated successfully');
+    }
 
     if (currentObjectUrl) {
       URL.revokeObjectURL(currentObjectUrl);
@@ -108,7 +180,7 @@ export const speakText = async (text, { voice, onStart, onEnd, onError, isReplay
       onEnd?.();
     };
     currentAudio.onerror = (e) => {
-      console.error('[TTS] Audio error:', e);
+      console.error('[TTS] Audio playback error:', e);
       currentAudio = null;
       isAudioPlaying = false;
       onEnd?.();
@@ -118,7 +190,7 @@ export const speakText = async (text, { voice, onStart, onEnd, onError, isReplay
     await currentAudio.play();
 
   } catch (e) {
-    console.error('[TTS] speakText error:', e);
+    console.error('[TTS] speakText primary / secondary failure:', e);
     isAudioPlaying = false;
     _browserFallback(filteredText, onEnd);
     onError?.(e);

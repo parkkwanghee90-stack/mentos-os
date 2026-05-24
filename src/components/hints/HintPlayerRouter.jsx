@@ -232,15 +232,21 @@ function AudioHintControl({ unit, problemId }) {
         unitKey = 'trig';
       } else if (normalized.includes('원의방정식') && normalized.includes('2단계')) {
         unitKey = 'circle';
+      } else if (normalized.includes('고차방정식') && normalized.includes('2단계')) {
+        unitKey = 'gocha';
       } else if (normalized.includes('trig') && normalized.includes('2')) {
         unitKey = 'trig';
       } else if (normalized.includes('circle') && normalized.includes('2')) {
         unitKey = 'circle';
       }
 
-      if (unitKey && qNum >= 1 && qNum <= 10) {
-        const padQ = String(qNum).padStart(2, '0');
-        audioPath = `/audio/math_hints/hint_${unitKey}_2_${padQ}.mp3`;
+      if (unitKey) {
+        const isGocha = unitKey === 'gocha';
+        const maxQ = isGocha ? 20 : 10;
+        if (qNum >= 1 && qNum <= maxQ) {
+          const padQ = String(qNum).padStart(2, '0');
+          audioPath = `/audio/math_hints/hint_${unitKey}_2_${padQ}.mp3`;
+        }
       }
     }
 

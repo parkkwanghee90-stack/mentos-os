@@ -29,6 +29,7 @@ const Fail = lazy(() => import("@/pages/Fail"));
 
 // 신규 법적 정책 페이지 추가
 const Refund = lazy(() => import("@/pages/Refund"));
+const LocalInspector = lazy(() => import("@/pages/LocalInspector"));
 const Terms = lazy(() => import("@/pages/Terms"));
 const Privacy = lazy(() => import("@/pages/Privacy"));
 
@@ -189,6 +190,8 @@ function AppContent() {
             <Route path="/refund" element={<Refund />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
+            {/* 개발자 도구 및 힌트/보이스 검수용 라우트 */}
+            <Route path="/inspector" element={<LocalInspector />} />
           </Routes>
         </Suspense>
       </BrowserRouter>
