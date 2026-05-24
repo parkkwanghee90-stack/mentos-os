@@ -346,8 +346,8 @@
   .classroom-main-mobile {
     display: flex !important;
     flex-direction: column !important;
-    background: #09090b !important;
-    color: white !important;
+    background: var(--bg-base) !important;
+    color: var(--text-main) !important;
     width: 100% !important;
     height: auto !important;
     min-height: 100vh !important;
@@ -376,9 +376,10 @@
     width: 280px !important;
     height: 100vh !important;
     z-index: 1000 !important;
-    background: #0f172a !important;
+    background: var(--bg-glass) !important;
+    border-right: 1px solid var(--border-glass) !important;
     transition: left 0.3s ease !important;
-    box-shadow: 10px 0 30px rgba(0,0,0,0.5) !important;
+    box-shadow: 10px 0 30px rgba(0,0,0,0.1) !important;
     display: block !important;
     padding: 1.5rem !important;
   }
@@ -398,10 +399,10 @@
   .header-mobile {
     display: flex !important;
     padding: 10px 15px;
-    background: #1e293b;
+    background: var(--bg-glass);
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #334155;
+    border-bottom: 1px solid var(--border-glass);
     z-index: 100;
   }
 
@@ -610,7 +611,7 @@
     position: sticky !important;
     bottom: 0 !important;
     z-index: 100 !important;
-    background: rgba(20, 20, 30, 0.98) !important;
+    background: rgba(248, 250, 252, 0.98) !important;
     border-top: 1px solid var(--border-glass) !important;
   }
 
