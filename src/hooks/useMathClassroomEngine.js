@@ -14,6 +14,9 @@ const unitToEnglish = {
   '다항식2단계': 'polynomial_step2',
   '다항식3단계': 'polynomial_step3',
   '다항식4단계': 'polynomial_step4',
+  '항등식과나머지정리2단계': 'remainder_theorem_step2',
+  '항등식과나머지정리3단계': 'remainder_theorem_step3',
+  '항등식과나머지정리4단계': 'remainder_theorem_step4',
   '고차방정식2단계': 'higher_order_eqstep2',
   '고차방정식3단계': 'higher_order_eqstep3',
   '고차방정식4단계': 'higher_order_eqstep4',
@@ -160,6 +163,8 @@ export function resolveProblemImage(currentUnit, testProblemIdx, selectedCourse)
     img = stepStr === '4단계' ? window.resolveAsset(`/math_crops/(5)수학1 중간/4단계/지수로그4단계/${formattedIdx}.webp`) : window.resolveAsset(`/math_crops/(5)수학1 중간/${stepStr}/${currentUnit.includes('지수') ? '지수' : '로그'}${stepStr}/${formattedIdx}.webp`);
   } else if (currentUnit.includes('다항식')) {
     img = window.resolveAsset(`/math_crops/(001)다항식/${stepStr}/${formattedIdx}.webp`);
+  } else if (currentUnit.includes('항등식과나머지정리') || currentUnit.includes('항등식과 나머지정리')) {
+    img = window.resolveAsset(`/math_crops/(002)항등식과나머지정리/${stepStr}/${formattedIdx}.webp`);
   } else if (currentUnit.includes('고차방정식')) {
     img = window.resolveAsset(`/math_crops/(2)수학(상)기말/고차방정식${stepStr}/${formattedIdx}.webp`);
   } else if (currentUnit.includes('일차부등식')) {

@@ -215,7 +215,23 @@ async function main() {
       const hintFile = path.join(matchedFolder, `${pid}.json`);
       if (!fs.existsSync(hintFile)) continue;
       
-      const data = JSON.parse(fs.readFileSync(hintFile, 'utf8'));
+      let data;
+      try {
+        const rawText = fs.readFileSync(hintFile, 'utf8');
+        try {
+          data = JSON.parse(rawText);
+        } catch (e) {
+          // Attempt self-healing for common backslash/unescaped character bugs
+          const fixed = rawText
+            .replace(/(?<!\\)\\\\(?=[tbfn])/g, '\\\\\\\\')
+            .replace(/(?<!\\)\\(?!["\\\/bfnrtu\\])/g, '\\\\');
+          data = JSON.parse(fixed);
+        }
+      } catch (err) {
+        console.warn(`  - [Warning] Skipped invalid JSON for ${hintFile}: ${err.message}`);
+        continue;
+      }
+      
       const narration = createNarration(data);
       if (!narration) continue;
       
