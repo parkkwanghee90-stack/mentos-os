@@ -1280,9 +1280,9 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
               marginLeft: '-0.8rem', 
               marginRight: '-0.8rem',
               boxSizing: 'border-box', 
-              height: '32vh', 
-              minHeight: '200px',
-              maxHeight: '34vh',
+              height: 'auto', 
+              minHeight: '220px',
+              maxHeight: '46vh',
               overflowY: 'auto', 
               background: chalkboardData ? 'linear-gradient(145deg, #1C2B27, #141E1B)' : 'var(--bg-glass)', 
               padding: chalkboardData ? '0' : '1rem 0.8rem', 
@@ -1333,7 +1333,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
           {/* 4. 정답 선택/입력 & 5. 정답 제출 버튼 */}
           <div style={{ padding: '0.6rem 0.8rem', background: 'var(--bg-glass)', borderRadius: '12px', border: '1px solid var(--border-glass)', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-              <strong style={{ color: 'var(--accent-secondary)', fontSize: '0.9rem' }}>✅ 정답 입력</strong>
+              <strong style={{ color: 'var(--accent-secondary)', fontSize: '0.9rem' }}>✅ 정답 채점</strong>
               <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
                 {[1, 2, 3, 4, 5].map(num => (
                   <button
@@ -1343,10 +1343,12 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                       setUserAnswer(String(num));
                     }}
                     style={{
-                      width: '32px', height: '32px', borderRadius: '50%',
-                      background: selectedAnswer === num ? 'var(--accent-primary)' : 'var(--bg-base)',
-                      color: selectedAnswer === num ? '#141E1B' : 'var(--text-main)', 
-                      border: '1px solid var(--border-glass)', 
+                      width: '32px',
+                      height: '32px',
+                      borderRadius: '50%',
+                      background: selectedAnswer === num ? 'var(--accent-primary)' : '#FFFFFF',
+                      color: selectedAnswer === num ? '#FFFFFF' : 'var(--text-main)',
+                      border: selectedAnswer === num ? '1px solid var(--accent-primary)' : '1px solid var(--border-glass)', 
                       cursor: 'pointer',
                       fontWeight: 'bold', fontSize: '0.9rem',
                       display: 'flex', alignItems: 'center', justifyContent: 'center'
@@ -1711,7 +1713,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                  alt="오늘의 문제" 
                  onClick={() => setExpandedProblemImage(currentProblemImage)}
                  className="hover-scale"
-                 style={{ width: '100%', height: '300px', objectFit: 'contain', borderRadius: '8px', cursor: 'zoom-in', transition: 'transform 0.2s' }} 
+                 style={{ width: '100%', height: 'auto', maxHeight: '550px', objectFit: 'contain', borderRadius: '8px', cursor: 'zoom-in', transition: 'transform 0.2s', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }} 
                  onError={(e) => { 
                    e.target.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='200'><rect width='600' height='200' fill='%23f8fafc' rx='8' stroke='%23cbd5e1' stroke-width='2' stroke-dasharray='4'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%2364748b' font-family='sans-serif' font-size='16'>⚠ 해당 단계의 문제 이미지가 서버에 아직 업로드되지 않았습니다. (데이터 구축 예정)</text></svg>";
                    e.target.style.cursor = 'default';
@@ -1840,9 +1842,12 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                   setUserAnswer(String(num));
                 }}
                 style={{
-                  width: '40px', height: '40px', borderRadius: '50%',
-                  background: selectedAnswer === num ? 'var(--accent-primary)' : 'var(--bg-base)',
-                  color: 'white', border: '1px solid #52525b', cursor: 'pointer',
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '50%',
+                  background: selectedAnswer === num ? 'var(--accent-primary)' : '#FFFFFF',
+                  color: selectedAnswer === num ? '#FFFFFF' : 'var(--text-main)',
+                  border: selectedAnswer === num ? '1px solid var(--accent-primary)' : '1px solid var(--border-glass)', cursor: 'pointer',
                   fontWeight: 'bold', fontSize: '1.1rem',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   transition: '0.2s'
@@ -2666,7 +2671,7 @@ function MathClassroomScreenContent() {
                 )}
               </select>
             )}
-          <h3 style={{ fontSize: '1rem', color: '#f8fafc', marginBottom: '1rem', paddingBottom: '0.5rem', borderBottom: '1px solid #3f3f46' }}>
+          <h3 style={{ fontSize: '1rem', color: 'var(--text-main)', marginBottom: '1rem', paddingBottom: '0.5rem', borderBottom: '1px solid var(--border-glass)' }}>
             {sidebarData.title}
           </h3>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
@@ -2681,7 +2686,7 @@ function MathClassroomScreenContent() {
                     display: 'flex', alignItems: 'center', justifyContent: 'space-between', 
                     padding: '0.5rem 0.5rem', cursor: 'pointer', borderRadius: '4px',
                     background: selectedUnit === sec.name ? 'rgba(59, 130, 246, 0.2)' : (openSections[sec.name] ? 'rgba(59, 130, 246, 0.1)' : 'transparent'),
-                    color: selectedUnit === sec.name ? '#60a5fa' : (openSections[sec.name] ? '#93c5fd' : '#d4d4d8'),
+                    color: selectedUnit === sec.name ? '#3B82F6' : (openSections[sec.name] ? '#2563EB' : 'var(--text-main)'),
                     fontWeight: selectedUnit === sec.name ? 'bold' : 'normal'
                   }}
                 >
@@ -2693,7 +2698,7 @@ function MathClassroomScreenContent() {
                 
                 {/* 하위 레벨(Levels) 렌더링 */}
                 {sec.items.length > 0 && openSections[sec.name] && (
-                  <div style={{ marginLeft: '1rem', borderLeft: '1px solid #3f3f46', paddingLeft: '0.5rem', marginTop: '0.2rem', display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
+                  <div style={{ marginLeft: '1rem', borderLeft: '1px solid var(--border-glass)', paddingLeft: '0.5rem', marginTop: '0.2rem', display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
                     {sec.items.map((subLevel, j) => (
                       <div 
                         key={j}
@@ -2707,7 +2712,7 @@ function MathClassroomScreenContent() {
                         }}
                         style={{
                           fontSize: '0.85rem', padding: '0.4rem 0.5rem', cursor: 'pointer', borderRadius: '4px',
-                          color: selectedUnit === subLevel ? '#3b82f6' : '#a1a1aa',
+                          color: selectedUnit === subLevel ? '#3B82F6' : 'var(--text-muted)',
                           background: selectedUnit === subLevel ? 'rgba(59, 130, 246, 0.1)' : 'transparent',
                           fontWeight: selectedUnit === subLevel ? 'bold' : 'normal'
                         }}
