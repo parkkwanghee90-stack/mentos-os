@@ -618,6 +618,7 @@ export default function HintPlayerRouter({ unit, problemId, data: propData, show
         else if (clean.includes('지수')) fetchUnit = `지수${stepStr}`;
         else fetchUnit = `로그${stepStr}`;
     }
+    else if (clean.includes('다항식')) { fetchUnit = `다항식${stepStr}`; }
     else if (clean.includes('고차방정식')) { fetchUnit = `고차방정식${stepStr}`; }
     else if (clean.includes('일차부등식')) { fetchUnit = `일차부등식${stepStr}`; }
     else if (clean.includes('이차부등식')) { fetchUnit = `이차부등식${stepStr}`; }

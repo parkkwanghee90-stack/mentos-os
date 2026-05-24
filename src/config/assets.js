@@ -33,7 +33,10 @@ export function resolveAsset(localPath) {
     // 로컬 환경의 평탄화(flat)된 math_crops 폴더 구조 및 명칭에 맞게 동적 재매핑
     if (pathPart.includes('math_crops')) {
       pathPart = pathPart.replace(/\(2\)수학\(상\)기말\//g, '');
-      if (pathPart.includes('고차방정식2단계')) pathPart = pathPart.replace('고차방정식2단계', 'higher_order_eqstep2');
+      if (pathPart.includes('다항식2단계')) pathPart = pathPart.replace('다항식2단계', 'polynomial_step2');
+      else if (pathPart.includes('다항식3단계')) pathPart = pathPart.replace('다항식3단계', 'polynomial_step3');
+      else if (pathPart.includes('다항식4단계')) pathPart = pathPart.replace('다항식4단계', 'polynomial_step4');
+      else if (pathPart.includes('고차방정식2단계')) pathPart = pathPart.replace('고차방정식2단계', 'higher_order_eqstep2');
       else if (pathPart.includes('고차방정식3단계')) pathPart = pathPart.replace('고차방정식3단계', 'higher_order_eqstep3');
       else if (pathPart.includes('고차방정식4단계')) pathPart = pathPart.replace('고차방정식4단계', 'higher_order_eqstep4');
       else if (pathPart.includes('일차부등식3단계')) pathPart = pathPart.replace('일차부등식3단계', 'linear_ineq_step3');
