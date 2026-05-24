@@ -1346,9 +1346,9 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                       width: '32px',
                       height: '32px',
                       borderRadius: '50%',
-                      background: selectedAnswer === num ? 'var(--accent-primary)' : '#FFFFFF',
-                      color: selectedAnswer === num ? '#FFFFFF' : 'var(--text-main)',
-                      border: selectedAnswer === num ? '1px solid var(--accent-primary)' : '1px solid var(--border-glass)', 
+                      background: '#FFFFFF',
+                      color: '#000000',
+                      border: selectedAnswer === num ? '2px solid var(--accent-primary)' : '1px solid var(--border-glass)', 
                       cursor: 'pointer',
                       fontWeight: 'bold', fontSize: '0.9rem',
                       display: 'flex', alignItems: 'center', justifyContent: 'center'
@@ -1845,9 +1845,9 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                   width: '40px',
                   height: '40px',
                   borderRadius: '50%',
-                  background: selectedAnswer === num ? 'var(--accent-primary)' : '#FFFFFF',
-                  color: selectedAnswer === num ? '#FFFFFF' : 'var(--text-main)',
-                  border: selectedAnswer === num ? '1px solid var(--accent-primary)' : '1px solid var(--border-glass)', cursor: 'pointer',
+                  background: '#FFFFFF',
+                  color: '#000000',
+                  border: selectedAnswer === num ? '2.5px solid var(--accent-primary)' : '1px solid var(--border-glass)', cursor: 'pointer',
                   fontWeight: 'bold', fontSize: '1.1rem',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   transition: '0.2s'
@@ -2686,11 +2686,11 @@ function MathClassroomScreenContent() {
                     display: 'flex', alignItems: 'center', justifyContent: 'space-between', 
                     padding: '0.5rem 0.5rem', cursor: 'pointer', borderRadius: '4px',
                     background: selectedUnit === sec.name ? 'rgba(59, 130, 246, 0.2)' : (openSections[sec.name] ? 'rgba(59, 130, 246, 0.1)' : 'transparent'),
-                    color: selectedUnit === sec.name ? '#3B82F6' : (openSections[sec.name] ? '#2563EB' : 'var(--text-main)'),
+                    color: selectedUnit === sec.name ? '#3B82F6' : (openSections[sec.name] ? '#2563EB' : '#000000'),
                     fontWeight: selectedUnit === sec.name ? 'bold' : 'normal'
                   }}
                 >
-                  <span style={{ fontSize: '0.9rem' }}>{sec.name}</span>
+                  <span style={{ fontSize: '0.9rem', color: '#000000', fontWeight: 'bold' }}>{sec.name}</span>
                   {sec.items.length > 0 && (
                     <ChevronDown size={14} style={{ transform: openSections[sec.name] ? 'rotate(0deg)' : 'rotate(-90deg)', transition: '0.2s' }} />
                   )}
@@ -2712,9 +2712,9 @@ function MathClassroomScreenContent() {
                         }}
                         style={{
                           fontSize: '0.85rem', padding: '0.4rem 0.5rem', cursor: 'pointer', borderRadius: '4px',
-                          color: selectedUnit === subLevel ? '#3B82F6' : 'var(--text-muted)',
+                          color: selectedUnit === subLevel ? '#3B82F6' : '#000000',
                           background: selectedUnit === subLevel ? 'rgba(59, 130, 246, 0.1)' : 'transparent',
-                          fontWeight: selectedUnit === subLevel ? 'bold' : 'normal'
+                          fontWeight: 'bold'
                         }}
                       >
                         - {subLevel}
