@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --bg-base: #0a0a0f;
-  --bg-glass: rgba(255, 255, 255, 0.03);
-  --bg-glass-hover: rgba(255, 255, 255, 0.08);
-  --border-glass: rgba(255, 255, 255, 0.1);
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --accent-primary: #6366f1;
-  --accent-secondary: #a855f7;
+  --bg-base: #f8fafc;
+  --bg-glass: #ffffff;
+  --bg-glass-hover: #f1f5f9;
+  --border-glass: rgba(0, 0, 0, 0.06);
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --accent-primary: #3b82f6;
+  --accent-secondary: #8b5cf6;
   --accent-gradient: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
   --font-family: 'Pretendard', sans-serif;
 }
@@ -54,7 +54,7 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 
@@ -160,7 +160,7 @@ body {
     z-index: 50;
     padding: 0.5rem !important;
     border-radius: 0 0 16px 16px !important;
-    background: rgba(20,20,30,0.95) !important;
+    background: rgba(248, 250, 252, 0.95) !important;
     border-bottom: 1px solid var(--border-glass) !important;
   }
   .teacher-panel .teacher-visual {
@@ -187,7 +187,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(20,20,30,0.98) !important;
+    background: rgba(248, 250, 252, 0.98) !important;
     backdrop-filter: blur(10px) !important;
     padding: 1rem !important;
     z-index: 100;
