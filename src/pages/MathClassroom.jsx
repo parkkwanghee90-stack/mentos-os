@@ -84,8 +84,8 @@ const formatQuestionText = (text) => {
   return `${body}\n\n${optionsStr}`;
 };
 
-const ErrorComponent = ({ text }) => <div style={{ color: 'red', padding: '2rem', background: '#09090b', height: '100vh' }}>🚨 {text}</div>;
-const Loading = () => <div style={{ color: 'white', padding: '2rem', background: '#09090b', height: '100vh' }}>Loading V2 Engine...</div>;
+const ErrorComponent = ({ text }) => <div style={{ color: 'red', padding: '2rem', background: 'var(--bg-base)', color: 'var(--text-main)', height: '100vh' }}>🚨 {text}</div>;
+const Loading = () => <div style={{ color: 'var(--text-main)', padding: '2rem', background: 'var(--bg-base)', height: '100vh' }}>Loading V2 Engine...</div>;
 
 function useSTT(setInput) {
   const [isRecording, setIsRecording] = useState(false);
@@ -1177,10 +1177,10 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
     };
 
     return (
-      <div className="classroom-main-mobile" style={{ flex: 1, display: 'flex', flexDirection: 'column', background: '#09090b', color: 'white', overflowY: 'visible', overflowX: 'hidden' }}>
+      <div className="classroom-main-mobile" style={{ flex: 1, display: 'flex', flexDirection: 'column', background: 'var(--bg-base)', color: 'var(--text-main)', overflowY: 'visible', overflowX: 'hidden' }}>
         
         {/* 1. 상단 수업 헤더 */}
-        <div style={{ padding: '0.8rem', background: '#18181b', borderBottom: '1px solid #27272a', display: 'flex', flexDirection: 'column', gap: '0.5rem', width: '100%', boxSizing: 'border-box' }}>
+        <div style={{ padding: '0.8rem', background: 'var(--bg-glass)', borderBottom: '1px solid var(--border-glass)', display: 'flex', flexDirection: 'column', gap: '0.5rem', width: '100%', boxSizing: 'border-box' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             {(() => {
               let stageText = '';
@@ -1545,10 +1545,10 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                   filteredCards.map((card, idx) => (
                     <div 
                       key={card.id || idx} 
-                      style={{ background: '#09090b', borderRadius: '12px', border: '1px solid #3f3f46', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}
+                      style={{ background: 'var(--bg-glass)', borderRadius: '12px', border: '1px solid var(--border-glass)', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}
                       onClick={() => setSelectedExpandedCard(card)}
                     >
-                      <div style={{ padding: '0.6rem', background: '#27272a', borderBottom: '1px solid #3f3f46', fontWeight: 'bold', fontSize: '0.8rem', textAlign: 'center' }}>
+                      <div style={{ padding: '0.6rem', background: 'var(--bg-glass)', borderBottom: '1px solid var(--border-glass)', fontWeight: 'bold', fontSize: '0.8rem', textAlign: 'center', color: 'var(--text-main)' }}>
                         [{card.unit || '공통'}] {card.title || card.card_title || '개념'}
                       </div>
                       <div style={{ background: 'white', padding: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'black' }}>
@@ -1640,8 +1640,8 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
   }
 
   return (
-    <div className="classroom-main" style={{ flex: 1, display: 'flex', flexDirection: 'column', background: '#09090b', color: 'white' }}>
-      <div className="math-top-bar" style={{ padding: '1rem', background: '#18181b', borderBottom: '1px solid #27272a', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.8rem' }}>
+    <div className="classroom-main" style={{ flex: 1, display: 'flex', flexDirection: 'column', background: 'var(--bg-base)', color: 'var(--text-main)' }}>
+      <div className="math-top-bar" style={{ padding: '1rem', background: 'var(--bg-glass)', borderBottom: '1px solid var(--border-glass)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.8rem', color: 'var(--text-main)' }}>
         <div className="math-top-info" style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
         </div>
         <div className="math-top-actions" style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
@@ -2503,14 +2503,14 @@ function MathClassroomScreenContent() {
     }
   }, [!!session]);
 
-  if (!session) return <div style={{ color: 'white', padding: '2rem', background: '#09090b', height: '100vh' }}>Loading V2 Engine... (Session is null). Teacher: {JSON.stringify(teacher)}</div>;
-  if (session.flow.length === 0) return <div style={{ color: 'white', padding: '2rem', background: '#09090b', height: '100vh' }}>Loading V2 Engine... (Flow is 0). Teacher ID: {teacher?.id}. ssot.id: {teacher?.id}</div>;
-
+  if (!session) return <div style={{ color: 'var(--text-main)', padding: '2rem', background: 'var(--bg-base)', height: '100vh' }}>Loading V2 Engine... (Session is null). Teacher: {JSON.stringify(teacher)}</div>;
+  if (session.flow.length === 0) return <div style={{ color: 'var(--text-main)', padding: '2rem', background: 'var(--bg-base)', height: '100vh' }}>Loading V2 Engine... (Flow is 0). Teacher ID: {teacher?.id}. ssot.id: {teacher?.id}</div>;
+  
   // 1. flow의 첫 단계 상태가 homework_gate 이면 Gate UI 렌더
   const currentPhase = session.flow[session.currentPhaseIndex]?.phase;
   
   return (
-    <div className="classroom-layout math-classroom-root" style={{ background: '#09090b', color: 'white', position: 'relative' }}>
+    <div className="classroom-layout math-classroom-root" style={{ background: 'var(--bg-base)', color: 'var(--text-main)', position: 'relative' }}>
       
       {/* 모바일 상단 헤더바 */}
       <div className="header-mobile">

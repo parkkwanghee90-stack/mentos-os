@@ -22,8 +22,8 @@ import DynamicProblemAnimation from '@/components/DynamicProblemAnimation';
 import HintPlayerRouter from '@/components/hints/HintPlayerRouter';
 import PremiumLecturePlayer from '@/components/lectures/PremiumLecturePlayer';
 
-const ErrorComponent = ({ text }) => <div style={{ color: 'red', padding: '2rem', background: '#09090b', height: '100vh' }}>🚨 {text}</div>;
-const Loading = () => <div style={{ color: 'white', padding: '2rem', background: '#09090b', height: '100vh' }}>Loading V2 Engine...</div>;
+const ErrorComponent = ({ text }) => <div style={{ color: 'red', padding: '2rem', background: 'var(--bg-base)', color: 'var(--text-main)', height: '100vh' }}>🚨 {text}</div>;
+const Loading = () => <div style={{ color: 'var(--text-main)', padding: '2rem', background: 'var(--bg-base)', height: '100vh' }}>Loading V2 Engine...</div>;
 
 function useSTT(setInput) {
   const [isRecording, setIsRecording] = useState(false);
@@ -559,14 +559,14 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
   const isSenior = session?.grade?.some(g => g.includes('고3') || g.includes('N수'));
 
       return (
-    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', height: '100%', maxHeight: '100%', overflow: 'hidden', background: '#09090b', color: 'white', position: 'relative' }}>
+    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', height: '100%', maxHeight: '100%', overflow: 'hidden', background: 'var(--bg-base)', color: 'var(--text-main)', position: 'relative' }}>
       
       {/* 1. Header & Main Content (상단/중앙) - Scrollable */}
-      <div style={{ flex: 1, overflowY: 'auto', display: 'flex', flexDirection: 'column', position: 'relative', background: '#000', padding: '1rem' }}>
+      <div style={{ flex: 1, overflowY: 'auto', display: 'flex', flexDirection: 'column', position: 'relative', background: 'var(--bg-base)', padding: '1rem' }}>
         
         {/* ── 모바일 코스/단원 선택 카드 ── */}
         {selectedCourse !== undefined && sidebarData && (
-          <div style={{ marginBottom: '1rem', background: 'rgba(30,30,40,0.85)', backdropFilter: 'blur(12px)', borderRadius: '14px', border: '1px solid rgba(99,102,241,0.25)', padding: '0.8rem', boxShadow: '0 4px 20px rgba(0,0,0,0.4)' }}>
+          <div style={{ marginBottom: '1rem', background: 'var(--bg-glass)', backdropFilter: 'blur(12px)', borderRadius: '14px', border: '1px solid var(--border-glass)', padding: '0.8rem', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
             {/* 코스 선택 */}
             {isG1Teacher ? (
               <div style={{ textAlign: 'center', color: '#10b981', fontWeight: 'bold', fontSize: '0.85rem', padding: '0.3rem 0' }}>📐 고1 수학(상/하) 전용</div>
@@ -666,10 +666,11 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                   <div key={idx} style={{ textAlign: m.role === 'user' ? 'right' : 'left', marginBottom: '1.5rem', width: '100%' }}>
                     <div style={{ 
                       display: 'inline-block', padding: '1rem', borderRadius: '12px', 
-                      background: m.role === 'user' ? '#3b82f6' : '#18181b', 
-                      border: m.role === 'assistant' ? '1px solid #27272a' : 'none',
+                      background: m.role === 'user' ? '#3b82f6' : 'var(--bg-glass)', 
+                      border: m.role === 'assistant' ? '1px solid var(--border-glass)' : 'none',
                       maxWidth: '90%', textAlign: 'left', lineHeight: '1.6',
-                      overflowWrap: 'break-word', wordBreak: 'break-word'
+                      overflowWrap: 'break-word', wordBreak: 'break-word',
+                      color: m.role === 'user' ? 'white' : 'var(--text-main)'
                     }}>
                       <div className="math-content">
                         <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{m.content}</ReactMarkdown>
@@ -706,7 +707,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
       </div>
 
       {/* 3. 핵심 버튼 영역 & 하단 입력 영역 (하단 고정) */}
-      <div style={{ background: '#18181b', borderTop: '1px solid #27272a', padding: '1rem', flexShrink: 0 }}>
+      <div style={{ background: 'var(--bg-glass)', borderTop: '1px solid var(--border-glass)', padding: '1rem', flexShrink: 0 }}>
         
         {/* 이전 문제 / 다음 문제 네비게이션 */}
         {(learningStep === 'problem' || learningStep === 'solve') && (
@@ -1042,7 +1043,7 @@ export default function MathClassroomScreen() {
   const currentPhase = session.flow[session.currentPhaseIndex]?.phase;
   
   return (
-    <div style={{ display: 'flex', height: '100vh', background: '#09090b', color: 'white', position: 'relative' }}>
+    <div style={{ display: 'flex', height: '100vh', background: 'var(--bg-base)', color: 'var(--text-main)', position: 'relative' }}>
       
       {/* Dual Timer Overlay */}
       <style>{`
