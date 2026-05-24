@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --bg-base: #141E1B;
-  --bg-glass: #1C2B27;
-  --bg-glass-hover: #243732;
-  --border-glass: rgba(255, 255, 255, 0.08);
-  --text-main: #E6ECE9;
-  --text-muted: #7E8F8A;
-  --accent-primary: #A7F3D0;
-  --accent-secondary: #FBBF24;
+  --bg-base: #FFFFFF;
+  --bg-glass: #FFFFFF;
+  --bg-glass-hover: #F8FAFC;
+  --border-glass: #CBD5E1;
+  --text-main: #1A1A1A;
+  --text-muted: #64748B;
+  --accent-primary: #3B82F6;
+  --accent-secondary: #10B981;
   --accent-gradient: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
   --font-family: 'Pretendard', sans-serif;
 }
@@ -54,7 +54,7 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 
@@ -76,7 +76,7 @@ body {
 
 .btn-primary {
   background: var(--accent-gradient);
-  color: #141E1B;
+  color: white;
   border: none;
   border-radius: 12px;
   padding: 14px 28px;
@@ -84,7 +84,7 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(167, 243, 208, 0.2);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
 }
 
 .btn-primary:hover {

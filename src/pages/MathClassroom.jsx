@@ -1366,8 +1366,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             />
 
             <button 
-              onClick={handleGradeAnswer}
-              style={{ width: '100%', padding: '0.6rem', borderRadius: '8px', background: 'var(--accent-primary)', color: '#141E1B', border: 'none', fontWeight: 'bold', cursor: 'pointer', fontSize: '0.9rem' }}
+              onClick={handleGradeAnswer} style={{ width: '100%', padding: '0.6rem', borderRadius: '8px', background: '#FFFFFF', color: '#1A1A1A', border: '2px solid #10B981', fontWeight: 'bold', cursor: 'pointer', fontSize: '0.9rem', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}
             >
               정답 제출
             </button>
@@ -1387,8 +1386,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
           {/* 6. AI Vision Solution 버튼 */}
           {(['core', 'step', 'mock'].includes(currentPhaseFlow?.phase) || selectedUnit) && (
             <button 
-              onClick={handleAvsClick}
-              style={{ width: '100%', background: 'var(--bg-glass)', border: '1px solid var(--accent-primary)', padding: '0.65rem', borderRadius: '12px', color: 'var(--accent-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', cursor: 'pointer', fontWeight: 'bold', fontSize: '0.9rem', boxShadow: '0 4px 12px rgba(167, 243, 208, 0.1)' }}
+              onClick={handleAvsClick} style={{ width: '100%', background: '#FFFFFF', border: '2px solid #8B5CF6', padding: '0.65rem', borderRadius: '12px', color: '#1A1A1A', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', cursor: 'pointer', fontWeight: 'bold', fontSize: '0.9rem', boxShadow: '0 2px 8px rgba(139,92,246,0.1)' }}
             >
               ✨ AI Vision Solution
             </button>
@@ -1481,8 +1479,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
 
           {/* 8. 다음 문제 버튼 */}
           <button 
-            onClick={testAdvance}
-            style={{ width: '100%', padding: '0.65rem', borderRadius: '8px', background: 'rgba(59, 130, 246, 0.15)', border: '1px solid rgba(59, 130, 246, 0.3)', color: '#93c5fd', fontWeight: 'bold', cursor: 'pointer', fontSize: '0.9rem' }}
+            onClick={testAdvance} style={{ width: '100%', padding: '0.65rem', borderRadius: '8px', background: '#FFFFFF', border: '2px solid #3B82F6', color: '#1A1A1A', fontWeight: 'bold', cursor: 'pointer', fontSize: '0.9rem', boxShadow: '0 2px 8px rgba(59,130,246,0.08)' }}
           >
             다음 문제
           </button>
@@ -1512,7 +1509,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                  <Mic size={16} color={isRecording ? "white" : "var(--text-muted)"} />
                </button>
 
-               <button className="btn-primary" onClick={handeSubmit} disabled={loading} style={{ padding: '0 0.8rem', borderRadius: '8px', height: '32px', display: 'flex', alignItems: 'center', fontSize: '0.82rem', background: 'var(--accent-primary)', color: '#141E1B', border: 'none', fontWeight: 'bold', cursor: 'pointer' }}>
+               <button onClick={handeSubmit} disabled={loading} style={{ padding: '0 0.8rem', borderRadius: '8px', height: '32px', display: 'flex', alignItems: 'center', fontSize: '0.82rem', background: '#FFFFFF', color: '#1A1A1A', border: '2px solid #10B981', fontWeight: 'bold', cursor: 'pointer', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }}>
                  {loading ? '...' : '전송'}
                </button>
             </div>
@@ -1866,8 +1863,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
         </div>
         <div className="math-grading-row-2" style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', flexWrap: 'wrap', width: '100%' }}>
           <button 
-            onClick={handleGradeAnswer}
-            style={{ padding: '0.8rem 1.5rem', borderRadius: '8px', background: '#10b981', color: 'white', border: 'none', fontWeight: 'bold', cursor: 'pointer', whiteSpace: 'nowrap' }}
+            onClick={handleGradeAnswer} style={{ padding: '0.8rem 1.5rem', borderRadius: '8px', background: '#FFFFFF', color: '#1A1A1A', border: '2px solid #10B981', fontWeight: 'bold', cursor: 'pointer', whiteSpace: 'nowrap', boxShadow: '0 2px 8px rgba(16,185,129,0.08)' }}
           >
             정답 제출
           </button>
@@ -1894,13 +1890,12 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                 alert("선택된 단원이 없습니다.");
               }
             }}
-            style={{ padding: '0.8rem 1.5rem', borderRadius: '8px', background: '#8b5cf6', color: 'white', border: 'none', fontWeight: 'bold', cursor: 'pointer', whiteSpace: 'nowrap' }}
+            style={{ padding: '0.8rem 1.5rem', borderRadius: '8px', background: '#FFFFFF', color: '#1A1A1A', border: '2px solid #8B5CF6', fontWeight: 'bold', cursor: 'pointer', whiteSpace: 'nowrap', boxShadow: '0 2px 8px rgba(139,92,246,0.1)' }}
           >
             Ai Vision Solution으로 풀이 확인
           </button>
           <button 
-            onClick={testAdvance}
-            style={{ padding: '0.8rem 1.5rem', borderRadius: '8px', background: '#3b82f6', color: 'white', border: 'none', fontWeight: 'bold', cursor: 'pointer', whiteSpace: 'nowrap' }}
+            onClick={testAdvance} style={{ padding: '0.8rem 1.5rem', borderRadius: '8px', background: '#FFFFFF', color: '#1A1A1A', border: '2px solid #3B82F6', fontWeight: 'bold', cursor: 'pointer', whiteSpace: 'nowrap', boxShadow: '0 2px 8px rgba(59,130,246,0.08)' }}
           >
             다음 문제
           </button>
@@ -1941,7 +1936,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
            
            <button 
               title="음성 입력 마이크"
-              style={{ padding: '0.8rem', borderRadius: '12px', background: isRecording ? '#ef4444' : 'var(--bg-base)', border: isRecording ? 'none' : '1px solid var(--border-glass)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: '0.2s' }}
+              style={{ padding: '0.8rem', borderRadius: '12px', background: isRecording ? '#ef4444' : '#FFFFFF', border: isRecording ? 'none' : '1px solid var(--border-glass)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: '0.2s', boxShadow: '0 2px 4px rgba(0,0,0,0.03)' }}
               onClick={toggleRecording}
            >
              <Mic size={20} color={isRecording ? "white" : "#a1a1aa"} />
