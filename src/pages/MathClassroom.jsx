@@ -1210,28 +1210,26 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
               );
             })()}
             
-            <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
+            <div style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
               {/* Global Session Timer */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', background: 'rgba(239, 68, 68, 0.2)', border: '1px solid rgba(239, 68, 68, 0.4)', padding: '4px 10px', borderRadius: '14px', fontSize: '0.78rem' }}>
-                <Clock size={12} color="#f87171" style={{ marginRight: '2px' }} />
-                <span style={{ fontSize: '0.72rem', color: '#fca5a5', marginRight: '4px', whiteSpace: 'nowrap', fontWeight: 'bold' }}>수업시간</span>
-                <span style={{ color: '#f87171', fontWeight: 'bold' }}>{formatTime(timeLeft)}</span>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '4px', background: 'rgba(239, 68, 68, 0.15)', border: '1px solid rgba(239, 68, 68, 0.3)', padding: '3px 8px', borderRadius: '12px' }}>
+                <Clock size={11} color="#f87171" />
+                <span style={{ fontSize: '0.68rem', color: '#fca5a5', whiteSpace: 'nowrap', fontWeight: 'bold' }}>수업 {formatTime(timeLeft)}</span>
               </div>
               {/* Problem Countdown Timer */}
               {problemTimeLeft > 0 && (
                 <div style={{ 
                   display: 'flex', 
                   alignItems: 'center', 
-                  gap: '6px', 
-                  background: problemTimeLeft <= 60 ? 'rgba(245, 158, 11, 0.25)' : 'rgba(59, 130, 246, 0.2)', 
-                  border: problemTimeLeft <= 60 ? '1px solid rgba(245, 158, 11, 0.5)' : '1px solid rgba(59, 130, 246, 0.4)', 
-                  padding: '4px 10px', 
-                  borderRadius: '14px', 
-                  fontSize: '0.78rem' 
+                  gap: '4px', 
+                  background: problemTimeLeft <= 60 ? 'rgba(245, 158, 11, 0.2)' : 'rgba(59, 130, 246, 0.15)', 
+                  border: problemTimeLeft <= 60 ? '1px solid rgba(245, 158, 11, 0.4)' : '1px solid rgba(59, 130, 246, 0.3)', 
+                  padding: '3px 8px', 
+                  borderRadius: '12px' 
                 }}>
-                  <Clock size={12} color={problemTimeLeft <= 60 ? '#f59e0b' : '#60a5fa'} />
-                  <span style={{ color: problemTimeLeft <= 60 ? '#f59e0b' : '#60a5fa', fontWeight: 'bold' }}>{formatTime(problemTimeLeft)}</span>
-                  <span style={{ fontSize: '0.72rem', color: problemTimeLeft <= 60 ? '#ffffff' : '#93c5fd', marginLeft: '4px', whiteSpace: 'nowrap', fontWeight: 'bold' }}>(1문항)</span>
+                  <Clock size={11} color={problemTimeLeft <= 60 ? '#f59e0b' : '#60a5fa'} />
+                  <span style={{ color: problemTimeLeft <= 60 ? '#f59e0b' : '#60a5fa', fontWeight: 'bold', fontSize: '0.68rem' }}>{formatTime(problemTimeLeft)}</span>
+                  <span style={{ fontSize: '0.65rem', color: problemTimeLeft <= 60 ? '#ffffff' : '#93c5fd', whiteSpace: 'nowrap', fontWeight: 'bold' }}>(1문)</span>
                 </div>
               )}
             </div>
@@ -1244,7 +1242,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                 setSelectedUnit(e.target.value);
                 setTestProblemIdx(1);
               }}
-              style={{ flex: 1, background: '#27272a', border: '1px solid #3f3f46', color: 'white', padding: '0.5rem', borderRadius: '8px', fontSize: '0.85rem' }}
+              style={{ flex: 1, background: 'var(--bg-base)', border: '1px solid var(--border-glass)', color: 'var(--text-main)', padding: '0.5rem', borderRadius: '8px', fontSize: '0.85rem' }}
             >
               <option value="">단원 선택</option>
               {sidebarData.sections.map(sec => (
@@ -1259,7 +1257,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             <select
               value={testProblemIdx}
               onChange={(e) => setTestProblemIdx(Number(e.target.value))}
-              style={{ width: '80px', background: '#27272a', border: '1px solid #3f3f46', color: 'white', padding: '0.5rem', borderRadius: '8px', fontSize: '0.85rem' }}
+              style={{ width: '80px', background: 'var(--bg-base)', border: '1px solid var(--border-glass)', color: 'var(--text-main)', padding: '0.5rem', borderRadius: '8px', fontSize: '0.85rem' }}
             >
               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map(n => (
                 <option key={n} value={n}>{n}번</option>
@@ -1286,20 +1284,20 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
               minHeight: '200px',
               maxHeight: '34vh',
               overflowY: 'auto', 
-              background: chalkboardData ? 'linear-gradient(145deg, #1a1a2e, #16213e, #0f3460)' : 'white', 
+              background: chalkboardData ? 'linear-gradient(145deg, #1C2B27, #141E1B)' : 'var(--bg-glass)', 
               padding: chalkboardData ? '0' : '1rem 0.8rem', 
               borderRadius: '0px', 
               display: 'flex', 
               flexDirection: 'column', 
               alignItems: 'stretch', 
-              boxShadow: '0 8px 24px rgba(0,0,0,0.25)', 
-              color: chalkboardData ? 'white' : 'black',
-              borderBottom: '2px solid #27272a',
+              boxShadow: '0 8px 24px rgba(0,0,0,0.1)', 
+              color: 'var(--text-main)',
+              borderBottom: '2px solid var(--border-glass)',
               position: 'relative'
             }}
           >
             {!chalkboardData && (
-              <h3 style={{ margin: '0 0 0.6rem 0', color: '#1e3a8a', width: '100%', textAlign: 'center', fontWeight: 'bold', fontSize: '0.95rem', flexShrink: 0 }}>
+              <h3 style={{ margin: '0 0 0.6rem 0', color: 'var(--accent-primary)', width: '100%', textAlign: 'center', fontWeight: 'bold', fontSize: '0.95rem', flexShrink: 0 }}>
                 [{currentProblemTitle || '오늘의 실전 문제'}]
               </h3>
             )}
@@ -1323,19 +1321,19 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                  onClick={() => setExpandedProblemImage(currentProblemImage)}
                  style={{ width: '100%', height: 'auto', maxHeight: '350px', objectFit: 'contain', borderRadius: '8px', cursor: 'zoom-in' }} 
                  onError={(e) => { 
-                   e.target.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='200'><rect width='600' height='200' fill='%23f8fafc' rx='8' stroke='%23cbd5e1' stroke-width='2' stroke-dasharray='4'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%2364748b' font-family='sans-serif' font-size='14'>⚠ 문제 서버 준비 중</text></svg>";
+                   e.target.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='200'><rect width='600' height='200' fill='%231c2b27' rx='8' stroke='%237e8f8a' stroke-width='2' stroke-dasharray='4'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%237e8f8a' font-family='sans-serif' font-size='14'>⚠ 문제 서버 준비 중</text></svg>";
                    e.target.onclick = null;
                  }}
               />
             ) : (
-              <div style={{ padding: '2rem', color: '#64748b', fontSize: '0.9rem', textAlign: 'center' }}>문제를 불러오는 중입니다...</div>
+              <div style={{ padding: '2rem', color: 'var(--text-muted)', fontSize: '0.9rem', textAlign: 'center' }}>문제를 불러오는 중입니다...</div>
             )}
           </div>
 
           {/* 4. 정답 선택/입력 & 5. 정답 제출 버튼 */}
-          <div style={{ padding: '0.6rem 0.8rem', background: '#18181b', borderRadius: '12px', border: '1px solid #27272a', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+          <div style={{ padding: '0.6rem 0.8rem', background: 'var(--bg-glass)', borderRadius: '12px', border: '1px solid var(--border-glass)', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-              <strong style={{ color: '#fbbf24', fontSize: '0.9rem' }}>✅ 정답 입력</strong>
+              <strong style={{ color: 'var(--accent-secondary)', fontSize: '0.9rem' }}>✅ 정답 입력</strong>
               <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
                 {[1, 2, 3, 4, 5].map(num => (
                   <button
@@ -1346,8 +1344,10 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                     }}
                     style={{
                       width: '32px', height: '32px', borderRadius: '50%',
-                      background: selectedAnswer === num ? '#3b82f6' : '#27272a',
-                      color: 'white', border: '1px solid #52525b', cursor: 'pointer',
+                      background: selectedAnswer === num ? 'var(--accent-primary)' : 'var(--bg-base)',
+                      color: selectedAnswer === num ? '#141E1B' : 'var(--text-main)', 
+                      border: '1px solid var(--border-glass)', 
+                      cursor: 'pointer',
                       fontWeight: 'bold', fontSize: '0.9rem',
                       display: 'flex', alignItems: 'center', justifyContent: 'center'
                     }}
@@ -1362,23 +1362,23 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
               placeholder="주관식 직접 입력" 
               value={userAnswer}
               onChange={(e) => { setUserAnswer(e.target.value); setSelectedAnswer(null); }}
-              style={{ width: '100%', padding: '0.5rem 0.7rem', borderRadius: '8px', border: '1px solid #52525b', background: '#27272a', color: '#fff', fontSize: '0.85rem', boxSizing: 'border-box' }}
+              style={{ width: '100%', padding: '0.5rem 0.7rem', borderRadius: '8px', border: '1px solid var(--border-glass)', background: 'var(--bg-base)', color: 'var(--text-main)', fontSize: '0.85rem', boxSizing: 'border-box' }}
             />
 
             <button 
               onClick={handleGradeAnswer}
-              style={{ width: '100%', padding: '0.6rem', borderRadius: '8px', background: '#10b981', color: 'white', border: 'none', fontWeight: 'bold', cursor: 'pointer', fontSize: '0.9rem' }}
+              style={{ width: '100%', padding: '0.6rem', borderRadius: '8px', background: 'var(--accent-primary)', color: '#141E1B', border: 'none', fontWeight: 'bold', cursor: 'pointer', fontSize: '0.9rem' }}
             >
               정답 제출
             </button>
 
             {gradingResult === 'correct' && (
-              <div style={{ color: '#10b981', fontWeight: 'bold', fontSize: '0.85rem', textAlign: 'center', marginTop: '0.2rem' }}>
+              <div style={{ color: 'var(--accent-primary)', fontWeight: 'bold', fontSize: '0.85rem', textAlign: 'center', marginTop: '0.2rem' }}>
                 🎉 정답입니다! Ai Vision Solution으로 풀이 과정을 확인해보세요.
               </div>
             )}
             {gradingResult === 'incorrect' && (
-              <div style={{ color: '#ef4444', fontWeight: 'bold', fontSize: '0.85rem', textAlign: 'center', marginTop: '0.2rem' }}>
+              <div style={{ color: '#fca5a5', fontWeight: 'bold', fontSize: '0.85rem', textAlign: 'center', marginTop: '0.2rem' }}>
                 ❌ 다시 풀어보세요. 필요하면 Ai Vision Solution을 확인하세요.
               </div>
             )}
@@ -1388,7 +1388,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
           {(['core', 'step', 'mock'].includes(currentPhaseFlow?.phase) || selectedUnit) && (
             <button 
               onClick={handleAvsClick}
-              style={{ width: '100%', background: 'linear-gradient(to right, #8b5cf6, #3b82f6)', border: 'none', padding: '0.65rem', borderRadius: '12px', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', cursor: 'pointer', fontWeight: 'bold', fontSize: '0.9rem', boxShadow: '0 4px 12px rgba(139, 92, 246, 0.3)' }}
+              style={{ width: '100%', background: 'var(--bg-glass)', border: '1px solid var(--accent-primary)', padding: '0.65rem', borderRadius: '12px', color: 'var(--accent-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', cursor: 'pointer', fontWeight: 'bold', fontSize: '0.9rem', boxShadow: '0 4px 12px rgba(167, 243, 208, 0.1)' }}
             >
               ✨ AI Vision Solution
             </button>
@@ -1396,9 +1396,9 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
 
           {/* 7. AVS 클릭 시 문제 아래에 큰 AVS 영역 펼침 (아코디언 형태로) */}
           {showAvsAccordion && (
-            <div style={{ padding: '0.8rem', background: '#18181b', borderRadius: '12px', border: '1px solid #8b5cf6', display: 'flex', flexDirection: 'column', gap: '1rem', width: '100%', boxSizing: 'border-box' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #3f3f46', paddingBottom: '0.4rem' }}>
-                <span style={{ fontWeight: 'bold', color: '#c084fc', fontSize: '0.9rem' }}>📺 AI Vision Solution 풀이 영역</span>
+            <div style={{ padding: '0.8rem', background: 'var(--bg-glass)', borderRadius: '12px', border: '1px solid var(--accent-primary)', display: 'flex', flexDirection: 'column', gap: '1rem', width: '100%', boxSizing: 'border-box' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--border-glass)', paddingBottom: '0.4rem' }}>
+                <span style={{ fontWeight: 'bold', color: 'var(--accent-primary)', fontSize: '0.9rem' }}>📺 AI Vision Solution 풀이 영역</span>
                 <button 
                   onClick={() => setShowAvsAccordion(false)}
                   style={{ background: 'transparent', border: 'none', color: '#a1a1aa', cursor: 'pointer', fontSize: '0.8rem' }}
@@ -1482,16 +1482,16 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
           {/* 8. 다음 문제 버튼 */}
           <button 
             onClick={testAdvance}
-            style={{ width: '100%', padding: '0.65rem', borderRadius: '8px', background: '#3b82f6', color: 'white', border: 'none', fontWeight: 'bold', cursor: 'pointer', fontSize: '0.9rem' }}
+            style={{ width: '100%', padding: '0.65rem', borderRadius: '8px', background: 'rgba(59, 130, 246, 0.15)', border: '1px solid rgba(59, 130, 246, 0.3)', color: '#93c5fd', fontWeight: 'bold', cursor: 'pointer', fontSize: '0.9rem' }}
           >
             다음 문제
           </button>
 
           {/* 9. 질문 입력창 */}
-          <div style={{ padding: '0.5rem 0.7rem', background: '#18181b', borderRadius: '12px', border: '1px solid #27272a', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+          <div style={{ padding: '0.5rem 0.7rem', background: 'var(--bg-glass)', borderRadius: '12px', border: '1px solid var(--border-glass)', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
             <div style={{ display: 'flex', gap: '0.4rem', alignItems: 'center' }}>
-               <label style={{ cursor: 'pointer', padding: '0.5rem', borderRadius: '8px', background: '#27272a', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid #3f3f46' }} title="문제 올리기">
-                 <Paperclip size={16} color="#a1a1aa" />
+               <label style={{ cursor: 'pointer', padding: '0.5rem', borderRadius: '8px', background: 'var(--bg-base)', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--border-glass)' }} title="문제 올리기">
+                 <Paperclip size={16} color="var(--text-muted)" />
                  <input type="file" hidden accept="image/*,.pdf" onChange={handleProblemUpload} />
                </label>
                
@@ -1501,18 +1501,18 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                   value={input}
                   onChange={e => setInput(e.target.value)}
                   onKeyDown={e => e.key === 'Enter' && handeSubmit()}
-                  style={{ flex: 1, padding: '0.55rem', borderRadius: '8px', border: '1px solid #3f3f46', background: '#27272a', color: '#fff', fontSize: '0.82rem' }} 
+                  style={{ flex: 1, padding: '0.55rem', borderRadius: '8px', border: '1px solid var(--border-glass)', background: 'var(--bg-base)', color: 'var(--text-main)', fontSize: '0.82rem' }} 
                />
                
                <button 
                   title="음성 입력"
-                  style={{ padding: '0.5rem', borderRadius: '8px', background: isRecording ? '#ef4444' : '#27272a', border: '1px solid #3f3f46', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                  style={{ padding: '0.5rem', borderRadius: '8px', background: isRecording ? '#ef4444' : 'var(--bg-base)', border: '1px solid var(--border-glass)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                   onClick={toggleRecording}
                >
-                 <Mic size={16} color={isRecording ? "white" : "#a1a1aa"} />
+                 <Mic size={16} color={isRecording ? "white" : "var(--text-muted)"} />
                </button>
 
-               <button className="btn-primary" onClick={handeSubmit} disabled={loading} style={{ padding: '0 0.8rem', borderRadius: '8px', height: '32px', display: 'flex', alignItems: 'center', fontSize: '0.82rem', background: '#3b82f6', color: 'white', border: 'none', fontWeight: 'bold', cursor: 'pointer' }}>
+               <button className="btn-primary" onClick={handeSubmit} disabled={loading} style={{ padding: '0 0.8rem', borderRadius: '8px', height: '32px', display: 'flex', alignItems: 'center', fontSize: '0.82rem', background: 'var(--accent-primary)', color: '#141E1B', border: 'none', fontWeight: 'bold', cursor: 'pointer' }}>
                  {loading ? '...' : '전송'}
                </button>
             </div>
@@ -1530,8 +1530,8 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
 
         {showConceptModal && (
           <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.8)', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <div style={{ background: '#18181b', borderRadius: '16px', width: '90%', height: '80vh', display: 'flex', flexDirection: 'column', border: '1px solid #3f3f46', overflow: 'hidden' }}>
-              <div style={{ padding: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #27272a', background: '#27272a' }}>
+            <div style={{ background: 'var(--bg-glass)', borderRadius: '16px', width: '90%', height: '80vh', display: 'flex', flexDirection: 'column', border: '1px solid var(--border-glass)', overflow: 'hidden' }}>
+              <div style={{ padding: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--border-glass)', background: 'var(--bg-base)' }}>
                 <h3 style={{ margin: 0, fontSize: '0.95rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
                   <BookOpen size={16} color="#3b82f6" /> 
                   [{isSenior ? '통합 수학' : currentUnit}] 개념카드
@@ -1605,8 +1605,8 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
           
           return (
             <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.9)', zIndex: 20000, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <div style={{ background: '#18181b', borderRadius: '16px', width: '90%', border: '1px solid #3f3f46', overflow: 'hidden' }}>
-                <div style={{ background: 'linear-gradient(135deg, #10b981, #059669)', padding: '1.2rem', textAlign: 'center', color: 'white' }}>
+              <div style={{ background: 'var(--bg-glass)', borderRadius: '16px', width: '90%', border: '1px solid var(--border-glass)', overflow: 'hidden' }}>
+                <div style={{ background: 'linear-gradient(135deg, var(--accent-primary), #059669)', padding: '1.2rem', textAlign: 'center', color: '#141E1B' }}>
                   <h3 style={{ margin: 0, fontSize: '1.2rem', fontWeight: 'bold' }}>오늘의 학습 리포트</h3>
                 </div>
                 <div style={{ padding: '1.2rem' }}>
@@ -1753,7 +1753,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                 display: 'inline-block', 
                 padding: '1rem 1.5rem', 
                 borderRadius: '12px', 
-                background: m.role === 'user' ? '#3b82f6' : '#27272a', 
+                background: m.role === 'user' ? '#3b82f6' : 'var(--bg-glass)', 
                 maxWidth: (m.animationId || m.dynamicData || m.hintPlayer) ? '100%' : '80%', 
                 width: (m.animationId || m.dynamicData || m.hintPlayer) ? '100%' : 'auto',
                 lineHeight: '1.5',
@@ -1844,7 +1844,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                 }}
                 style={{
                   width: '40px', height: '40px', borderRadius: '50%',
-                  background: selectedAnswer === num ? '#3b82f6' : '#27272a',
+                  background: selectedAnswer === num ? 'var(--accent-primary)' : 'var(--bg-base)',
                   color: 'white', border: '1px solid #52525b', cursor: 'pointer',
                   fontWeight: 'bold', fontSize: '1.1rem',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -1861,7 +1861,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             placeholder="주관식은 직접 입력" 
             value={userAnswer}
             onChange={(e) => { setUserAnswer(e.target.value); setSelectedAnswer(null); }}
-            style={{ padding: '0.8rem', borderRadius: '8px', border: '1px solid #52525b', background: '#27272a', color: '#fff', flex: 1, minWidth: '120px' }}
+            style={{ padding: '0.8rem', borderRadius: '8px', border: '1px solid #52525b', background: 'var(--bg-base)', color: 'var(--text-main)', flex: 1, minWidth: '120px' }}
           />
         </div>
         <div className="math-grading-row-2" style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', flexWrap: 'wrap', width: '100%' }}>
@@ -1918,7 +1918,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
       </div>
 
       {/* 하단 고정 입력 바 */}
-      <div style={{ padding: '1rem 1.5rem', borderTop: '1px solid #27272a', background: '#18181b' }}>
+      <div style={{ padding: '1rem 1.5rem', borderTop: '1px solid var(--border-glass)', background: 'var(--bg-glass)' }}>
         <div style={{ marginBottom: '0.8rem', color: '#a1a1aa', fontSize: '0.85rem', display: 'flex', alignItems: 'center' }}>
           <BookOpen size={16} style={{ marginRight: '6px', color: '#3b82f6' }}/>
           <strong>안내:</strong> 현재 단계({currentPhaseFlow.title})의 문제를 확인하고 풀이 과정이나 단서를 질문(입력)하세요.
@@ -1936,12 +1936,12 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
               value={input}
               onChange={e => setInput(e.target.value)}
               onKeyDown={e => e.key === 'Enter' && handeSubmit()}
-              style={{ flex: 1, padding: '1rem', borderRadius: '12px', border: '1px solid #3f3f46', background: '#27272a', color: '#fff' }} 
+              style={{ flex: 1, padding: '1rem', borderRadius: '12px', border: '1px solid var(--border-glass)', background: 'var(--bg-base)', color: 'var(--text-main)' }} 
            />
            
            <button 
               title="음성 입력 마이크"
-              style={{ padding: '0.8rem', borderRadius: '12px', background: isRecording ? '#ef4444' : '#27272a', border: isRecording ? 'none' : '1px solid #3f3f46', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: '0.2s' }}
+              style={{ padding: '0.8rem', borderRadius: '12px', background: isRecording ? '#ef4444' : 'var(--bg-base)', border: isRecording ? 'none' : '1px solid var(--border-glass)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: '0.2s' }}
               onClick={toggleRecording}
            >
              <Mic size={20} color={isRecording ? "white" : "#a1a1aa"} />
@@ -1956,8 +1956,8 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
       {/* ── 개념카드 전용 오버레이 모달 ── */}
       {showConceptModal && (
         <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.8)', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <div style={{ background: '#18181b', borderRadius: '16px', width: '80%', maxWidth: '900px', height: '80vh', display: 'flex', flexDirection: 'column', border: '1px solid #3f3f46', overflow: 'hidden' }}>
-            <div style={{ padding: '1.2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #27272a', background: '#27272a' }}>
+          <div style={{ background: 'var(--bg-glass)', borderRadius: '16px', width: '80%', maxWidth: '900px', height: '80vh', display: 'flex', flexDirection: 'column', border: '1px solid #3f3f46', overflow: 'hidden' }}>
+            <div style={{ padding: '1.2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--border-glass)', background: '#27272a' }}>
               <h3 style={{ margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <BookOpen size={20} color="#3b82f6" /> 
                 [{isSenior ? '통합 수학 전체' : currentUnit}] 개념카드
@@ -2089,7 +2089,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
         
         return (
           <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.9)', zIndex: 20000, display: 'flex', alignItems: 'center', justifyContent: 'center', animation: 'fadeIn 0.5s ease' }}>
-            <div style={{ background: '#18181b', borderRadius: '24px', width: '90%', maxWidth: '600px', border: '1px solid #3f3f46', overflow: 'hidden', boxShadow: '0 25px 50px -12px rgba(0,0,0,0.5)' }}>
+            <div style={{ background: 'var(--bg-glass)', borderRadius: '24px', width: '90%', maxWidth: '600px', border: '1px solid #3f3f46', overflow: 'hidden', boxShadow: '0 25px 50px -12px rgba(0,0,0,0.5)' }}>
               <div style={{ background: 'linear-gradient(135deg, #10b981, #059669)', padding: '2rem', textAlign: 'center', color: 'white' }}>
                 <div style={{ background: 'rgba(255,255,255,0.2)', width: '60px', height: '60px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem' }}>
                   <Award size={32} />
@@ -2595,7 +2595,7 @@ function MathClassroomScreenContent() {
       </div>
 
       {/* 사이드바 UI (옵션) */}
-      <div className={`classroom-sidebar ${isSidebarOpen ? 'open' : ''}`} style={{ borderRight: '1px solid #27272a', padding: '1.5rem', overflowY: 'auto' }}>
+      <div className={`classroom-sidebar ${isSidebarOpen ? 'open' : ''}`} style={{ borderRight: '1px solid var(--border-glass)', padding: '1.5rem', overflowY: 'auto' }}>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '1.5rem' }}>
           <div style={{ width: '100px', height: '100px', borderRadius: '50%', overflow: 'hidden', border: '3px solid #10b981', marginBottom: '1rem', boxShadow: '0 4px 12px rgba(16, 185, 129, 0.3)' }}>
             <img 

@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --bg-base: #f8fafc;
-  --bg-glass: #ffffff;
-  --bg-glass-hover: #f1f5f9;
-  --border-glass: rgba(0, 0, 0, 0.06);
-  --text-main: #1e293b;
-  --text-muted: #64748b;
-  --accent-primary: #3b82f6;
-  --accent-secondary: #8b5cf6;
+  --bg-base: #141E1B;
+  --bg-glass: #1C2B27;
+  --bg-glass-hover: #243732;
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --text-main: #E6ECE9;
+  --text-muted: #7E8F8A;
+  --accent-primary: #A7F3D0;
+  --accent-secondary: #FBBF24;
   --accent-gradient: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
   --font-family: 'Pretendard', sans-serif;
 }
@@ -54,7 +54,7 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 4px;
 }
 
@@ -76,7 +76,7 @@ body {
 
 .btn-primary {
   background: var(--accent-gradient);
-  color: white;
+  color: #141E1B;
   border: none;
   border-radius: 12px;
   padding: 14px 28px;
@@ -84,7 +84,7 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 4px 15px rgba(167, 243, 208, 0.2);
 }
 
 .btn-primary:hover {
@@ -160,7 +160,7 @@ body {
     z-index: 50;
     padding: 0.5rem !important;
     border-radius: 0 0 16px 16px !important;
-    background: rgba(248, 250, 252, 0.95) !important;
+    background: var(--bg-glass) !important;
     border-bottom: 1px solid var(--border-glass) !important;
   }
   .teacher-panel .teacher-visual {
@@ -187,7 +187,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(248, 250, 252, 0.98) !important;
+    background: var(--bg-glass) !important;
     backdrop-filter: blur(10px) !important;
     padding: 1rem !important;
     z-index: 100;
