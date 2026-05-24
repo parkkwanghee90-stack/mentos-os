@@ -165,7 +165,7 @@ ${text}`;
 
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${GEMINI_API_KEY}`, {
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-tts-preview:generateContent?key=${GEMINI_API_KEY}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -228,7 +228,7 @@ async function uploadToSupabase(buffer, remotePath, retries = 3) {
   }
 }
 
-async function processStage(stageSpec) {
+async function processStage(stageSpec, force = false) {
   const { num, localDir, remoteDir, localAudioPrefix } = stageSpec;
   console.log(`\n======================================================`);
   console.log(`🔷 [Stage ${num}] Directory: "${localDir}" -> Supabase: "${remoteDir}"`);
@@ -243,6 +243,15 @@ async function processStage(stageSpec) {
 
     if (!fs.existsSync(jsonPath)) {
       console.warn(`⚠️ File missing: ${jsonPath} (skipping)`);
+      continue;
+    }
+
+    const localFileName = `${localAudioPrefix}${String(i).padStart(2, '0')}.mp3`;
+    const localFilePath = path.join(LOCAL_OUTPUT_DIR, localFileName);
+
+    if (!force && fs.existsSync(localFilePath) && fs.statSync(localFilePath).size > 10240) {
+      console.log(`⏭️ Skipping ${localDir}/${pid} (already exists, size: ${(fs.statSync(localFilePath).size / 1024).toFixed(1)} KB)`);
+      successCount++;
       continue;
     }
 
@@ -290,8 +299,6 @@ async function processStage(stageSpec) {
       console.log(`✅ Converted to genuine MP3 via ffmpeg (${(mp3Buffer.length / 1024).toFixed(1)} KB)`);
 
       // 3. Save locally
-      const localFileName = `${localAudioPrefix}${String(i).padStart(2, '0')}.mp3`;
-      const localFilePath = path.join(LOCAL_OUTPUT_DIR, localFileName);
       fs.writeFileSync(localFilePath, mp3Buffer);
       console.log(`💾 Saved locally to: ${localFilePath}`);
 
@@ -318,6 +325,7 @@ async function processStage(stageSpec) {
 async function main() {
   const args = process.argv.slice(2);
   const chapterArg = args[0];
+  const force = args.includes('--force');
 
   if (!chapterArg || !CHAPTER_MAP[chapterArg]) {
     console.error(`❌ Error: Please specify a valid chapter key.`);
@@ -340,10 +348,11 @@ async function main() {
       continue;
     }
 
-    const result = await processStage(stageSpec);
+    const result = await processStage(stageSpec, force);
     totalSuccess += result.successCount;
     totalFail += result.failCount;
   }
+
 
   console.log(`\n✨======================================================`);
   console.log(`🏆 Chapter "${spec.name}" batch process successfully finished!`);
