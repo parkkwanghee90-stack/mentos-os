@@ -16,7 +16,7 @@ export default function Privacy() {
       flexDirection: 'column',
       alignItems: 'center',
       position: 'relative',
-      overflow: 'hidden'
+      overflowY: 'auto'
     }}>
       {/* Background Orbs */}
       <div style={{ position: 'absolute', width: '400px', height: '400px', background: 'rgba(99, 102, 241, 0.1)', filter: 'blur(100px)', top: '-10%', left: '10%', pointerEvents: 'none' }} />
