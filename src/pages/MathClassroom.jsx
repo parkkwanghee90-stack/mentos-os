@@ -994,7 +994,13 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
      }
      
      // [수학상 매핑]
-     else if (currentUnit.includes(`고차방정식`)) currentProblemImage = window.resolveAsset(`/math_crops/(2)수학(상)기말/고차방정식${stepStr}/${formattedIdx}.webp`)
+     else if (currentUnit.includes('다항식')) currentProblemImage = window.resolveAsset(`/math_crops/(001)다항식/${stepStr}/${formattedIdx}.webp`)
+      else if (currentUnit.includes('항등식') || currentUnit.includes('나머지정리')) currentProblemImage = window.resolveAsset(`/math_crops/(002)항등식과나머지정리/${stepStr}/${formattedIdx}.webp`)
+      else if (currentUnit.includes('인수분해')) currentProblemImage = window.resolveAsset(`/math_crops/(003)인수분해/${stepStr}/${formattedIdx}.webp`)
+      else if (currentUnit.includes('복소수')) currentProblemImage = window.resolveAsset(`/math_crops/(004)복소수/${stepStr}/${formattedIdx}.webp`)
+      else if (currentUnit.includes('이차방정식과이차함수') || currentUnit.includes('이차방정식과 이차함수')) currentProblemImage = window.resolveAsset(`/math_crops/(006)이차방정식과이차함수/${stepStr}/${formattedIdx}.webp`)
+      else if (currentUnit.includes('이차방정식')) currentProblemImage = window.resolveAsset(`/math_crops/(005)이차방정식/${stepStr}/${formattedIdx}.webp`)
+      else if (currentUnit.includes(`고차방정식`)) currentProblemImage = window.resolveAsset(`/math_crops/(2)수학(상)기말/고차방정식${stepStr}/${formattedIdx}.webp`)
      else if (currentUnit.includes('일차부등식')) {
         if (stepStr === '2단계') currentProblemImage = window.resolveAsset(`/math_crops/(2)수학(상)기말/(1)일차부등식 개념2단계(26) 1+1(쌍둥이)/${formattedIdx}.webp`)
         else currentProblemImage = window.resolveAsset(`/math_crops/(2)수학(상)기말/일차부등식${stepStr}/${formattedIdx}.webp`)
@@ -2423,6 +2429,12 @@ function MathClassroomScreenContent() {
       return {
         title: '고1 수학(상) 전체',
         sections: [
+          { name: '다항식', items: levels.map(l => `다항식${l}`) },
+          { name: '항등식과 나머지정리', items: levels.map(l => `항등식과나머지정리${l}`) },
+          { name: '인수분해', items: levels.map(l => `인수분해${l}`) },
+          { name: '복소수', items: levels.map(l => `복소수${l}`) },
+          { name: '이차방정식', items: levels.map(l => `이차방정식${l}`) },
+          { name: '이차방정식과 이차함수', items: levels.map(l => `이차방정식과이차함수${l}`) },
           { name: '고차방정식', items: levels.map(l => `고차방정식${l}`) },
           { name: `일차부등식`, items: levels.map(l => `일차부등식${l}`) },
           { name: `이차부등식`, items: levels.map(l => `이차부등식${l}`) },
@@ -2458,6 +2470,12 @@ function MathClassroomScreenContent() {
     return {
       title: teacher.courseName || '수학(상)(1학기 기말)',
       sections: [
+        { name: '다항식', items: levels.map(l => `다항식${l}`) },
+        { name: '항등식과 나머지정리', items: levels.map(l => `항등식과나머지정리${l}`) },
+        { name: '인수분해', items: levels.map(l => `인수분해${l}`) },
+        { name: '복소수', items: levels.map(l => `복소수${l}`) },
+        { name: '이차방정식', items: levels.map(l => `이차방정식${l}`) },
+        { name: '이차방정식과 이차함수', items: levels.map(l => `이차방정식과이차함수${l}`) },
         { name: '고차방정식', items: levels.map(l => `고차방정식${l}`) },
         { name: `일차부등식`, items: levels.map(l => `일차부등식${l}`) },
         { name: `이차부등식`, items: levels.map(l => `이차부등식${l}`) },
