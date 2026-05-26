@@ -296,8 +296,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, tes
     const folder = getHintFolder(targetUnit);
     if (!folder) { setChalkboardData(null); return; }
     const pid = String(testProblemIdx).padStart(3, '0');
-    const encodedFolder = encodeURIComponent(folder);
-    fetch(window.resolveAsset(`/math_hints/${encodedFolder}/${pid}.json?v=cb_${Date.now()}`))
+    fetch(window.resolveAsset(`/math_hints/${folder}/${pid}.json?v=cb_${Date.now()}`))
       .then(r => { if (!r.ok) throw new Error('no'); return r.json(); })
       .then(d => setChalkboardData(d.problem_render || null))
       .catch(() => setChalkboardData(null));

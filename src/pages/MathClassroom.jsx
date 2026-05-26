@@ -288,9 +288,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
     if (!folder) { setChalkboardData(null); return; }
     
     const pid = String(testProblemIdx).padStart(3, '0');
-    // Build URL directly without resolveAsset to prevent double-encoding
-    const encodedFolder = folder.split('/').map(part => encodeURIComponent(part)).join('/');
-    const directUrl = `/math_hints/${encodedFolder}/${pid}.json?v=cb_${Date.now()}`;
+    const directUrl = window.resolveAsset(`/math_hints/${folder}/${pid}.json?v=cb_${Date.now()}`);
 
     fetch(directUrl)
       .then(r => { 
