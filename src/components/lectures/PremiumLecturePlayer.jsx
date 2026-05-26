@@ -29,14 +29,29 @@ export default function PremiumLecturePlayer({ lectureId, onClose }) {
   const [loading, setLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   
+  // --- [수학상, 수학1 완수 후 Gemini 3.1 자연스러운 음성 개편 예약용 스위치] ---
+  const USE_GEMINI_AUDIO = false; // 완료 시 true로 변경하여 전면 적용 가능
+
   const synthRef = useRef(window.speechSynthesis);
   const utteranceRef = useRef(null);
+  const audioRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  // 오디오/TTS 상태 정리를 위한 헬퍼
+  const stopAllAudio = () => {
+    if (synthRef.current && synthRef.current.speaking) {
+      synthRef.current.cancel();
+    }
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+  };
 
   useEffect(() => {
     const fetchLecture = async () => {
@@ -131,29 +146,102 @@ export default function PremiumLecturePlayer({ lectureId, onClose }) {
       }
     };
     fetchLecture();
-    return () => { if (synthRef.current) synthRef.current.cancel(); };
+    return () => { stopAllAudio(); };
   }, [lectureId]);
 
   useEffect(() => {
     if (!lectureData || !isPlaying) return;
     const step = lectureData.steps[currentStep];
     if (step && step.narration) {
-      if (synthRef.current.speaking) synthRef.current.cancel();
-      const cleanText = step.narration.replace(/<\/?(blue|green|yellow|red)>/g, '');
-      utteranceRef.current = new SpeechSynthesisUtterance(cleanText);
-      utteranceRef.current.lang = 'ko-KR';
-      utteranceRef.current.rate = 0.9;
-      utteranceRef.current.onend = () => {
-        if (currentStep < (lectureData?.steps?.length || 0) - 1) setCurrentStep(prev => prev + 1);
-        else setIsPlaying(false);
-      };
-      synthRef.current.speak(utteranceRef.current);
+      stopAllAudio();
+
+      if (USE_GEMINI_AUDIO) {
+        // --- Gemini 3.1 Premium High-Fidelity Audio Playback ---
+        let baseId = lectureData.id;
+        // Apply identical baseId mapping used above
+        if (baseId.includes('고차방정식')) baseId = '고차방정식';
+        else if (baseId.includes('직선의방정식') || baseId.includes('직선의 방정식')) baseId = '직선의방정식';
+        else if (baseId.includes('원의방정식') || baseId.includes('원의 방정식')) baseId = '원의방정식';
+        else if (baseId.includes('도형의이동') || baseId.includes('도형의 이동')) baseId = '도형의이동';
+        else if (baseId.includes('경우의수') || baseId.includes('경우의 수')) baseId = '경우의수';
+        else if (baseId.includes('행렬')) baseId = '행렬';
+        else if (baseId.includes('점과좌표') || baseId.includes('점과 좌표')) baseId = '점과좌표';
+        else if (baseId.includes('일차부등식')) baseId = '일차부등식';
+        else if (baseId.includes('이차부등식')) baseId = '이차부등식';
+        else if (baseId.replace(/\s/g, '').includes('삼각함수그래프')) baseId = '삼각함수그래프';
+        else if (baseId.includes('여러가지수열') || baseId.includes('여러 가지 수열')) baseId = '여러가지수열';
+        else if (baseId.includes('점화식')) baseId = '점화식';
+        else if (baseId.includes('수학적귀납법') || baseId.includes('귀납법')) baseId = '수학적귀납법';
+        else if (baseId.includes('등차')) baseId = '등차수열';
+        else if (baseId.includes('등비')) baseId = '등비수열';
+        else if (baseId.includes('수열의합') || baseId.includes('수열의 합') || baseId.includes('시그마')) baseId = '수열의합';
+
+        const stepNum = step.step;
+        // Resolve Supabase or local public audio directory
+        const audioUrl = window.resolveAsset(`/audio/premium_lectures/${encodeURIComponent(baseId)}/step_${stepNum}.mp3`);
+        
+        const audio = new Audio(audioUrl);
+        audioRef.current = audio;
+        
+        audio.onended = () => {
+          if (currentStep < (lectureData?.steps?.length || 0) - 1) {
+            setCurrentStep(prev => prev + 1);
+          } else {
+            setIsPlaying(false);
+          }
+        };
+        
+        audio.onerror = (e) => {
+          console.warn('Gemini audio not found or error occurred, falling back to Web Speech API:', e);
+          // Fallback to basic TTS
+          playWebSpeechTTS(step.narration);
+        };
+        
+        audio.play().catch(err => {
+          console.warn('Autoplay prevented or playback error:', err);
+          setIsPlaying(false);
+        });
+      } else {
+        // --- Web Speech API (Robotic basic TTS) ---
+        playWebSpeechTTS(step.narration);
+      }
     }
   }, [currentStep, isPlaying, lectureData]);
 
+  const playWebSpeechTTS = (text) => {
+    const cleanText = text.replace(/<\/?(blue|green|yellow|red)>/g, '');
+    utteranceRef.current = new SpeechSynthesisUtterance(cleanText);
+    utteranceRef.current.lang = 'ko-KR';
+    utteranceRef.current.rate = 0.9;
+    utteranceRef.current.onend = () => {
+      if (currentStep < (lectureData?.steps?.length || 0) - 1) setCurrentStep(prev => prev + 1);
+      else setIsPlaying(false);
+    };
+    synthRef.current.speak(utteranceRef.current);
+  };
+
   const handlePlayPause = () => {
-    if (isPlaying) { synthRef.current.pause(); setIsPlaying(false); }
-    else { if (synthRef.current.paused) synthRef.current.resume(); setIsPlaying(true); }
+    if (isPlaying) {
+      if (USE_GEMINI_AUDIO) {
+        if (audioRef.current) audioRef.current.pause();
+      } else {
+        synthRef.current.pause();
+      }
+      setIsPlaying(false);
+    } else {
+      if (USE_GEMINI_AUDIO) {
+        if (audioRef.current) {
+          audioRef.current.play().catch(() => {});
+        } else {
+          // Trigger effect to instantiate
+          setIsPlaying(true);
+          return;
+        }
+      } else {
+        if (synthRef.current.paused) synthRef.current.resume();
+      }
+      setIsPlaying(true);
+    }
   };
 
   const nextStep = () => { if (currentStep < (lectureData?.steps?.length || 0) - 1) setCurrentStep(prev => prev + 1); };

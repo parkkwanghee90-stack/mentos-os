@@ -17,6 +17,9 @@ const unitToEnglish = {
   '항등식과나머지정리2단계': 'remainder_theorem_step2',
   '항등식과나머지정리3단계': 'remainder_theorem_step3',
   '항등식과나머지정리4단계': 'remainder_theorem_step4',
+  '인수분해2단계': 'factorization_step2',
+  '인수분해3단계': 'factorization_step3',
+  '인수분해4단계': 'factorization_step4',
   '고차방정식2단계': 'higher_order_eqstep2',
   '고차방정식3단계': 'higher_order_eqstep3',
   '고차방정식4단계': 'higher_order_eqstep4',
@@ -165,6 +168,8 @@ export function resolveProblemImage(currentUnit, testProblemIdx, selectedCourse)
     img = window.resolveAsset(`/math_crops/(001)다항식/${stepStr}/${formattedIdx}.webp`);
   } else if (currentUnit.includes('항등식과나머지정리') || currentUnit.includes('항등식과 나머지정리')) {
     img = window.resolveAsset(`/math_crops/(002)항등식과나머지정리/${stepStr}/${formattedIdx}.webp`);
+  } else if (currentUnit.includes('인수분해')) {
+    img = window.resolveAsset(`/math_crops/(003)인수분해/${stepStr}/${formattedIdx}.webp`);
   } else if (currentUnit.includes('고차방정식')) {
     img = window.resolveAsset(`/math_crops/(2)수학(상)기말/고차방정식${stepStr}/${formattedIdx}.webp`);
   } else if (currentUnit.includes('일차부등식')) {

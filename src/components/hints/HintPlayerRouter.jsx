@@ -620,6 +620,7 @@ export default function HintPlayerRouter({ unit, problemId, data: propData, show
     }
     else if (clean.includes('다항식')) { fetchUnit = `다항식${stepStr}`; }
     else if (clean.includes('항등식과나머지정리') || clean.includes('항등식과 나머지정리')) { fetchUnit = `항등식과나머지정리${stepStr}`; }
+    else if (clean.includes('인수분해')) { fetchUnit = `인수분해${stepStr}`; }
     else if (clean.includes('고차방정식')) { fetchUnit = `고차방정식${stepStr}`; }
     else if (clean.includes('일차부등식')) { fetchUnit = `일차부등식${stepStr}`; }
     else if (clean.includes('이차부등식')) { fetchUnit = `이차부등식${stepStr}`; }
