@@ -1,87 +1,129 @@
-# Ignore everything for Vercel deployment except what is needed for build
+# ============================================================
+# Vercel Deployment Ignore
+# Goal: Only upload source code + minimal static assets for build
+# Everything else (audio, hints, crops) is served from Supabase
+# ============================================================
+
+# --- Core build artifacts (rebuilt on Vercel) ---
 node_modules/
 dist/
 .env
+.env.*
 .DS_Store
 
-# Temporary files and backups
+# --- Backup directories (ALL patterns) ---
 backups/
-_archive_unused/
-reports/
-scratch/
 backup/
-assets_backup/
 backup_*/
+assets_backup/
+_archive_unused/
 DIAMOND_BOX_*/
 GOLD_BOX_*/
 math1_seq_backup/
 restore_test_*/
-android/
+scratch/
+reports/
+logs/
+artifacts/
+docs/
 
-# Large assets and temp data
-/public/math_images/
-/public/math_pngs/
-/public/math_crops/
-/public/premium_lectures/
-/public/teachers/
-/public/mteachers/
-/public/math_indexed/
-/public/math_pcbs_cache/
-/public/math_pdf_test/
-/public/math_hints_broken/
-/public/math_hints_*_backup_*/
-/temp_*/
-
-*백업/
-최신_완성품_*/
-최신_완성품_모의고사_수학_백업/
-
-# Large data files
-/src/data/DIAMOND_BOX_4.js
-/src/data/DIAMOND_BOX_4.json
-
-# Math Hints resource files
-/public/math_hints/
-
-# Root-level explicit backup & raw data directories
-/20260405삼각함수그래프3단계/
-/20260405삼각함수그래프4단계/
-/최신_완성품_최종_수_수/
+# --- Explicit named backup directories ---
 /backup_broken_math2_20260508/
 /backup_premium_lectures_may05/
 /DIAMOND_BOX_2/
 /DIAMOND_BOX_4/
 /DIAMOND_BOX_G1_2026_05_09/
 /GOLD_BOX_G1_2026_05_08_1844/
-/math1_seq_backup/
-/temp_math1_seq_backup/
-/temp_emergency_extract/
 /temp_emergency_pre_may8_restore/
 /temp_extract/
 /temp_extract2/
 /temp_final_extract/
+/temp_math1_seq_backup/
+/math1_seq_backup/
 
-# Large zip and native build files
+# --- Korean-named backup directories ---
+*백업/
+*_백업_완료/
+최신_완성품_*/
+/최신_완성품_모의고사_수학_백업/
+/최신_완성품_최종_수_수/
+
+# --- Temp directories ---
+/temp_*/
+temp_*/
+
+# --- Native/Mobile builds ---
+android/
+
+# --- Root-level misc directories ---
+/20260405삼각함수그래프3단계/
+/20260405삼각함수그래프4단계/
+/data/
+/pipeline_input/
+
+# ============================================================
+# PUBLIC ASSETS - Served from Supabase Storage, NOT Vercel
+# These are the biggest file count offenders
+# ============================================================
+/public/math_crops/
+/public/math_hints/
+/public/math_images/
+/public/math_pngs/
+/public/math_indexed/
+/public/math_pcbs_cache/
+/public/math_pdf_test/
+/public/math_hints_broken/
+/public/math_hints_*_backup_*/
+/public/premium_lectures/
+/public/teachers/
+/public/mteachers/
+/public/hteachers/
+/public/audio/
+
+# ============================================================
+# Only keep in public/: concept_cards/, data/, icons/
+# These are small and needed for the build
+# ============================================================
+
+# --- Large data files ---
+/src/data/DIAMOND_BOX_4.js
+/src/data/DIAMOND_BOX_4.json
+
+# --- Script files (not needed for build) ---
+*.cjs
+*.py
+*.ps1
+*.log
+*.bak
+/scripts/
+
+# --- Large binary files ---
 *.zip
 *.apk
-*.bak
-artifacts/
-logs/
 
-# Large merged and temporary JSON files at root level
+# --- Root-level temp/merged data ---
 merged_*.json
 missing_*.json
 temp.json
 upload_manifest*.json
 
-# Development and raw data folders
-/data/
-docs/
-
-# Scripts
-*.cjs
-*.py
-*.ps1
+# --- Root-level non-essential files ---
 *.txt
-*.log
 *.png
+
+# --- Forceful global media & asset block for "code-only" Vercel upload ---
+**/*.mp3
+**/*.webp
+**/*.wav
+**/*.mp4
+**/*.pdf
+**/*.zip
+**/*.apk
+public/audio/**
+public/math_crops/**
+public/math_hints/**
+public/math_images/**
+public/math_pngs/**
+public/math_indexed/**
+public/math_pcbs_cache/**
+public/premium_lectures/**

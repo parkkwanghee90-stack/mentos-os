@@ -1,4 +1,6 @@
-import { mathTextsData } from './mathDataLoader';
+import { mathTextsData, avsAnswersData } from './mathDataLoader';
+import { HOMEWORK_UNITS } from '../data/homeworkSSOT';
+
 
 /**
  * Scrambles and clones a math problem based on its type.
@@ -244,97 +246,144 @@ export function scrambleMathProblem(originalText, originalAnswer, twinIndex) {
  * Main Homework Generator function.
  * Called at the end of classroom sessions.
  */
-export function generateMathHomework(sessionHistory, courseName, teacherName) {
-  if (!sessionHistory || sessionHistory.length === 0) {
-    console.log("[HOMEWORK GENERATOR] No session history found. Skipping homework assignment.");
+export function generateMathHomework(sessionHistory, courseName, teacherName, options = {}) {
+  let assignedAt = new Date().toISOString();
+  let homeworkId = `math_hw_${Date.now()}`;
+  let shortDateStr = new Date().toLocaleDateString('ko-KR', { year: 'numeric', month: 'numeric', day: 'numeric' });
+
+  // 1. Resolve unit name to target from solved history or earlyExit options
+  let solvedHistory = sessionHistory || [];
+  let currentUnitName = options.currentUnit;
+
+  if (!currentUnitName && solvedHistory.length > 0) {
+    currentUnitName = solvedHistory[0].unit;
+  }
+
+  if (!currentUnitName) {
+    console.log("[HOMEWORK GENERATOR] No unit info found. Skipping homework assignment.");
     return null;
   }
 
-  console.log(`[HOMEWORK GENERATOR] Generating personalized homework for ${courseName} under ${teacherName}.`);
+  console.log(`[HOMEWORK GENERATOR] Generating unified homework for ${currentUnitName} (Course: ${courseName}, Teacher: ${teacherName}).`);
 
-  const assignedAt = new Date().toISOString();
-  const homeworkId = `math_hw_${Date.now()}`;
-  const shortDateStr = new Date().toLocaleDateString('ko-KR', { year: 'numeric', month: 'numeric', day: 'numeric' });
-
-  const homeworkProblems = [];
-  let twinCount = 0;
-
-  sessionHistory.forEach((solvedItem) => {
-    const isCorrect = solvedItem.isCorrect;
-    const repeatCount = isCorrect ? 1 : 2; // Correct answers get 1 twin, incorrect get 2 twins
-    const problemIndex = solvedItem.problemId;
-    const unitName = solvedItem.unit;
-
-    // Pad problem index to match database format, e.g. 2 -> "002"
-    const formattedIdx = String(problemIndex).padStart(3, '0');
-
-    // Find original question text inside global mathTextsData
-    let originalQuestionText = null;
-    if (mathTextsData) {
-      const cleanUnit = unitName ? unitName.replace(/\s+/g, '').replace(/[(]\d+[)]/g, '').replace(/개념/g, '') : '';
-      
-      // Look up key
-      const matchedKey = Object.keys(mathTextsData).find(k => {
-        const kDecoded = decodeURIComponent(k);
-        const cleanK = kDecoded.replace(/\s+/g, '').replace(/[(]\d+[)]/g, '').replace(/개념/g, '');
-        return cleanK.includes(cleanUnit) && kDecoded.endsWith(`/${formattedIdx}.webp`);
-      });
-
-      if (matchedKey) {
-        originalQuestionText = mathTextsData[matchedKey];
-      }
+  // 2. Identify matching homework unit inside homeworkSSOT.js
+  const cleanUnitName = currentUnitName.replace(/\s+/g, '').replace(/[(]/g, '').replace(/[)]/g, '').replace(/단계/g, '').replace(/[\[\]\·]/g, '').replace(/개념/g, '');
+  
+  let matchedUnit = HOMEWORK_UNITS.find(u => {
+    let courseMatch = true;
+    if (courseName) {
+      const cleanCourse = courseName.replace(/\s+/g, '').toLowerCase();
+      const cleanSubj = (u.subject || '수학상').replace(/\s+/g, '').toLowerCase();
+      if (cleanCourse.includes('미적분')) courseMatch = cleanSubj.includes('미적분');
+      else if (cleanCourse.includes('수학1') || cleanCourse.includes('수1') || cleanCourse.includes('대수')) courseMatch = cleanSubj.includes('수학1');
+      else if (cleanCourse.includes('수학2') || cleanCourse.includes('수2')) courseMatch = cleanSubj.includes('수학2');
+      else if (cleanCourse.includes('상') || cleanCourse.includes('하')) courseMatch = cleanSubj.includes('수학상') || !u.subject;
     }
+    if (!courseMatch) return false;
 
-    // Fallback if question text not found in local JSON database
-    if (!originalQuestionText) {
-      originalQuestionText = `다음 문제를 해결하고 올바른 정답을 기입하시오.\n\n$$x^2 - 4x + 3 = 0$$의 실근을 구하시오.\n(원본 문항 ${problemIndex}번 - ${unitName})`;
-    }
-
-    const originalAnswer = String(solvedItem.correctAnswer || '3');
-
-    // Generate twin problems
-    for (let t = 0; t < repeatCount; t++) {
-      const twin = scrambleMathProblem(originalQuestionText, originalAnswer, t);
-      homeworkProblems.push({
-        problemId: `${homeworkId}_p_${twinCount++}`,
-        unit: unitName,
-        questionText: twin.questionText + `\n\n*(쌍둥이 유사 문제 ${t + 1} - ${isCorrect ? '개념 다지기' : '오답 클리닉'})*`,
-        answer: twin.answer,
-        sourceProblemId: problemIndex
-      });
-    }
+    const cleanRel = (u.relatedUnit || '').replace(/\s+/g, '');
+    const cleanTitle = (u.title || '').replace(/\s+/g, '');
+    const cleanFolder = (u.folderName || '').replace(/\s+/g, '');
+    return cleanRel.includes(cleanUnitName) || cleanUnitName.includes(cleanRel) ||
+           cleanTitle.includes(cleanUnitName) || cleanUnitName.includes(cleanTitle) ||
+           cleanFolder.includes(cleanUnitName) || cleanUnitName.includes(cleanFolder);
   });
+
+  // Secondary fallback matching by course subject
+  if (!matchedUnit && courseName) {
+    const cleanCourse = courseName.replace(/\s+/g, '').toLowerCase();
+    matchedUnit = HOMEWORK_UNITS.find(u => {
+      const cleanSubj = (u.subject || '수학상').replace(/\s+/g, '').toLowerCase();
+      if (cleanCourse.includes('미적분')) return cleanSubj.includes('미적분');
+      if (cleanCourse.includes('수학1') || cleanCourse.includes('수1') || cleanCourse.includes('대수')) return cleanSubj.includes('수학1');
+      if (cleanCourse.includes('수학2') || cleanCourse.includes('수2')) return cleanSubj.includes('수학2');
+      return cleanSubj.includes('수학상') || !u.subject;
+    });
+  }
+
+  // Ultimate fallback
+  if (!matchedUnit) {
+    matchedUnit = HOMEWORK_UNITS[0];
+  }
+
+  // 3. Determine problem range based on student rank stage configs
+  const studentLevel = localStorage.getItem('studentLevel') || '4~5등급';
+  const range = getHomeworkRange(matchedUnit, studentLevel);
+  const startIdx = range.start;
+  const endIdx = range.end;
+
+  const answerKey = matchedUnit.answerKey;
+  let ansMap = avsAnswersData ? avsAnswersData[answerKey] : null;
+
+  if (!ansMap) {
+    const cachedAnswers = JSON.parse(localStorage.getItem('avs_answers_cache') || '{}');
+    ansMap = cachedAnswers[answerKey];
+  }
+
+  if (!ansMap) {
+    ansMap = {};
+    for (let i = 1; i <= (matchedUnit.problemCount || 50); i++) {
+      ansMap[String(i).padStart(3, '0')] = "3";
+    }
+  }
+
+  // 4. Generate package problems
+  const homeworkProblems = [];
+  let problemCount = 0;
+
+  for (let idx = startIdx; idx <= endIdx; idx++) {
+    const keyStr = String(idx).padStart(3, '0');
+    const subjFolder = matchedUnit.subject === '미적분' ? '미적분' :
+                       matchedUnit.subject === '수학1' ? '수학1' :
+                       matchedUnit.subject === '수학2' ? '수학2' : '수학상';
+    const problemImage = `/math_crops/숙제/${subjFolder}/${matchedUnit.folderName}/${keyStr}.webp`;
+
+    homeworkProblems.push({
+      problemId: `${homeworkId}_p_${problemCount++}`,
+      unit: answerKey,
+      questionText: `[${courseName} 핵심 보강] 다음 문제 이미지를 분석하고 정확한 정답을 입력하시오.`,
+      problemImage: problemImage,
+      answer: ansMap[keyStr] || "3",
+      sourceProblemId: idx,
+      isHomework: true
+    });
+  }
 
   if (homeworkProblems.length === 0) return null;
 
-  // 1. Save homework metadata inside 'mentosHomework'
+  const cleanTitleName = (matchedUnit.relatedUnit || matchedUnit.title || '수학').replace(/[0-9]/g, '').trim();
+  const homeworkTitle = `[개인 맞춤 보강] ${courseName} ${cleanTitleName} 핵심 과제`;
+
+  // 5. Update local mentosHomework list
   const localHwList = JSON.parse(localStorage.getItem('mentosHomework') || '[]');
   const newHwMetadata = {
     homeworkId: homeworkId,
-    title: `[오답 분석 클리닉] ${courseName} 핵심 복습 과제`,
+    title: homeworkTitle,
     assignedAt: assignedAt,
     status: 'assigned',
     subject: 'math',
-    teacherId: teacherName || 'AI 튜터'
+    teacherId: teacherName || 'AI 튜터',
+    unitKey: answerKey
   };
   localHwList.unshift(newHwMetadata);
   localStorage.setItem('mentosHomework', JSON.stringify(localHwList));
 
-  // 2. Save homework problems details inside 'mentos_math_homework_db'
+  // 6. Update local mentos_math_homework_db details
   const localHwDb = JSON.parse(localStorage.getItem('mentos_math_homework_db') || '[]');
   const newHwDbEntry = {
     homeworkId: homeworkId,
-    title: `[오답 분석 클리닉] ${courseName} 핵심 복습 과제`,
+    title: homeworkTitle,
     date: shortDateStr,
     problems: homeworkProblems
   };
   localHwDb.push(newHwDbEntry);
   localStorage.setItem('mentos_math_homework_db', JSON.stringify(localHwDb));
 
-  console.log(`[HOMEWORK GENERATOR SUCCESS] Personalized homework created: ${homeworkId} with ${homeworkProblems.length} twin problems.`);
+  console.log(`[HOMEWORK GENERATOR SUCCESS] Unified Homework created: ${homeworkId} with ${homeworkProblems.length} custom package problems.`);
 
   return {
     homeworkId,
     problemsCount: homeworkProblems.length
   };
 }
+

@@ -634,6 +634,20 @@ export default function MentosMockExam() {
     });
   };
 
+  const handleSubjectiveChange = (qId, val) => {
+    // 오직 숫자(자연수)만 입력받도록 강제 필터링하여 문자 입력 오류 차단
+    const filteredVal = val.replace(/[^0-9]/g, '');
+    setSelectedAnswers(prev => {
+      const newAnswers = { ...prev };
+      if (filteredVal === '') {
+        delete newAnswers[qId];
+      } else {
+        newAnswers[qId] = filteredVal;
+      }
+      return newAnswers;
+    });
+  };
+
   const submitExam = async () => {
     let score = 0;
     const wrongIds = [];
@@ -998,9 +1012,11 @@ export default function MentosMockExam() {
                           <span style={{ fontWeight: 'bold', color: '#64748b' }}>정답 : </span>
                           <input 
                             type="text" 
+                            inputMode="numeric"
+                            pattern="[0-9]*"
                             placeholder="단답형 입력"
                             value={selectedAnswers[q.id] || ''}
-                            onChange={(e) => toggleAnswer(q.id, e.target.value)}
+                            onChange={(e) => handleSubjectiveChange(q.id, e.target.value)}
                             style={{ 
                               padding: '0.8rem 1.5rem', fontSize: '1.2rem', 
                               border: '0', borderBottom: '2px solid #334155',
@@ -1060,9 +1076,11 @@ export default function MentosMockExam() {
                     <div style={{ width: '100%', padding: '0 1rem' }}>
                       <input 
                         type="text" 
+                        inputMode="numeric"
+                        pattern="[0-9]*"
                         placeholder="..." 
                         value={selectedAnswers[q.id] || ''}
-                        onChange={(e) => toggleAnswer(q.id, e.target.value)}
+                        onChange={(e) => handleSubjectiveChange(q.id, e.target.value)}
                         style={{ width: '100%', height: '24px', border: '1px solid #cbd5e1', borderRadius: '4px', textAlign: 'center', fontSize: '0.9rem', background: '#f8fafc' }}
                       />
                     </div>
