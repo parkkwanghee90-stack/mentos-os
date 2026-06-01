@@ -150,14 +150,17 @@ export default function AlgebraHintPlayer({ data }) {
         /* 이미지가 없는 텍스트/LaTeX 형식 해설(type:'algebra')은 단계별 수식 카드로 렌더 */
         <div style={{ margin: '0.5rem', background: darkCard, borderRadius: 8, border: '1px solid #334155', padding: '1.1rem 1.2rem', minHeight: 220, color: '#e2e8f0', maxWidth: '100%', overflowX: 'hidden', overflowWrap: 'anywhere', wordBreak: 'break-word' }}>
           {steps[step]?.label && (
-            <div style={{ color: chalkYellow, fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.8rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '7px', color: chalkYellow, fontWeight: 700, fontSize: '0.98rem', marginBottom: '0.7rem' }}>
+              <span style={{ color: chalkYellow, fontSize: '0.95em' }}>✦</span>
               {steps[step].label}
             </div>
           )}
-          {steps[step]?.latex && <RichSolutionText text={steps[step].latex} />}
-          {steps[step]?.lines?.map((ln, i) => (
-            <RichSolutionText key={i} text={typeof ln === 'string' ? ln : (ln?.content || '')} />
-          ))}
+          <div style={{ border: '1px solid rgba(253,224,71,0.28)', borderRadius: '12px', padding: '0.9rem 1.1rem', background: 'rgba(0,0,0,0.18)', color: '#f8fafc', lineHeight: 1.9 }}>
+            {steps[step]?.latex && <RichSolutionText text={steps[step].latex} />}
+            {steps[step]?.lines?.map((ln, i) => (
+              <RichSolutionText key={i} text={typeof ln === 'string' ? ln : (ln?.content || '')} />
+            ))}
+          </div>
           {step === totalSteps - 1 && data.finalAnswer && (
             <div style={{ marginTop: '1.1rem', padding: '0.7rem 1rem', background: '#0a0f1a', borderRadius: 8, border: `1px solid ${chalkYellow}55`, display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
               <span style={{ color: chalkYellow, fontWeight: 700 }}>정답</span>
