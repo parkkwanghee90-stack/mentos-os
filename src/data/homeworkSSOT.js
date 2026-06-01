@@ -409,12 +409,12 @@ export const HOMEWORK_UNITS = [
   //  정답: avs_answers.json 내 미적분_XX_통합숙제 키
   // ════════════════════════════════════════════════════════
 
-  // ── 01. 수열의 극한 (98문제) ──
+  // ── 01. 수열의 극한 (97문제) ──
   {
     id: 'hw_cal_01a', title: '수열의 극한 ①', subject: '미적분',
     folderName: '01수열의극한', hintKey: '미적분_01수열의극한_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/01수열의극한2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/01수열의극한3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/01수열의극한4단계/정답및해설.html' },
-    answerKey: '미적분_01수열의극한_통합숙제', problemCount: 98,
+    answerKey: '미적분_01수열의극한_통합숙제', problemCount: 97,
     imagePath: '/math_crops/숙제/미적분/01수열의극한/',
     relatedUnit: '수열의 극한',
     stages: { '2단계': { start: 1, end: 20 }, '3단계': { start: 21, end: 40 } },
@@ -423,7 +423,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_01b', title: '수열의 극한 ②', subject: '미적분',
     folderName: '01수열의극한', hintKey: '미적분_01수열의극한_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/01수열의극한2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/01수열의극한3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/01수열의극한4단계/정답및해설.html' },
-    answerKey: '미적분_01수열의극한_통합숙제', problemCount: 98,
+    answerKey: '미적분_01수열의극한_통합숙제', problemCount: 97,
     imagePath: '/math_crops/숙제/미적분/01수열의극한/',
     relatedUnit: '수열의 극한',
     stages: { '2단계': { start: 1, end: 20 }, '3단계': { start: 41, end: 63 } },
@@ -432,7 +432,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_01c', title: '수열의 극한 ③ (심화)', subject: '미적분',
     folderName: '01수열의극한', hintKey: '미적분_01수열의극한_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/01수열의극한2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/01수열의극한3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/01수열의극한4단계/정답및해설.html' },
-    answerKey: '미적분_01수열의극한_통합숙제', problemCount: 98,
+    answerKey: '미적분_01수열의극한_통합숙제', problemCount: 97,
     imagePath: '/math_crops/숙제/미적분/01수열의극한/',
     relatedUnit: '수열의 극한',
     stages: { '4단계': { start: 64, end: 83 } },
@@ -441,10 +441,10 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_01d', title: '수열의 극한 ④ (심화)', subject: '미적분',
     folderName: '01수열의극한', hintKey: '미적분_01수열의극한_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/01수열의극한2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/01수열의극한3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/01수열의극한4단계/정답및해설.html' },
-    answerKey: '미적분_01수열의극한_통합숙제', problemCount: 98,
+    answerKey: '미적분_01수열의극한_통합숙제', problemCount: 97,
     imagePath: '/math_crops/숙제/미적분/01수열의극한/',
     relatedUnit: '수열의 극한',
-    stages: { '4단계': { start: 84, end: 98 } },
+    stages: { '4단계': { start: 84, end: 97 } },
   },
 
   // ── 02. 급수 (134문제) ──
