@@ -840,3 +840,11 @@ export function getHomeworkProgress(hwId) {
 export function saveHomeworkProgress(hwId, progress) {
   localStorage.setItem(`hw_progress_${hwId}`, JSON.stringify(progress));
 }
+
+/** 오답 복습 노트(특수 숙제) 식별자 */
+export const WRONG_REVIEW_ID = 'wrong_review';
+
+/** hwId(예: 'hw_01')로 단원 메타 조회 (오답노트 문제 재구성용) */
+export function getUnitById(hwId) {
+  return HOMEWORK_UNITS.find(u => u.id === hwId) || null;
+}
