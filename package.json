@@ -13,7 +13,8 @@
     "patch:rounds": "node scripts/run_patch_rounds.js",
     "deploy": "node scripts/build_vercel_prebuilt.cjs && npx vercel --prebuilt --prod --yes",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "check:homework": "node scripts/validate_homework_integrity.cjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.3.4",
