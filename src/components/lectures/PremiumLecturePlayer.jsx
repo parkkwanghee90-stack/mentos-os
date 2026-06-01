@@ -178,7 +178,7 @@ export default function PremiumLecturePlayer({ lectureId, onClose }) {
 
         const stepNum = step.step;
         // Resolve Supabase or local public audio directory
-        const audioUrl = window.resolveAsset(`/audio/premium_lectures/${encodeURIComponent(baseId)}/step_${stepNum}.mp3`);
+        const audioUrl = window.resolveAsset(`/audio/premium_lectures/${baseId}/step_${stepNum}.mp3`);
         
         const audio = new Audio(audioUrl);
         audioRef.current = audio;
