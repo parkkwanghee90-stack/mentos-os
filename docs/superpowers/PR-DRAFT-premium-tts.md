@@ -63,16 +63,19 @@ synthesis was attempted for intra-lecture timbre, but silence-splitting proved u
 7 segments vs 6 steps on the first lecture — so per-step with the unified config is used.)
 
 ### Status (generation)
-Code is complete and verified. Audio generation is **partial** — the Gemini free-tier quota
-for the preview TTS model was exhausted after ~11 calls:
-- ✅ Complete: 고차방정식, 경우의수, 도형의이동, 도함수의활용, 직선의방정식
-- 🟡 Partial: 일차부등식 (4/5)
-- ⛔ Pending quota: ~28 lectures (~275 steps)
+Code is complete and verified. Audio generation is **partial (15/34 lectures complete)**.
+Hard limit hit: `gemini-3.1-flash-tts` is capped at **100 requests/day/model even with
+billing enabled** (it's a preview model).
+- ✅ Complete (15): 고차방정식, 일차부등식, 이차부등식, 경우의수, 행렬, 점과좌표,
+  직선의방정식, 원의방정식, 도형의이동, 지수, 로그, 지수함수, 로그함수, 등차등비, 도함수의활용
+- ⛔ Pending (19 lectures, ~179 steps): 시그마용법, 수학적귀납법, 함수의극한, 함수의연속,
+  미분계수, 부정적분과정적분, 정적분의활용, 미적분_수열의극한/급수/삼각함수극한/삼각함수공식/
+  도함수활용/적분법/정적분/정적분활용, 순열, 조합, 이항정리, 조건부확률
 
-The generator is idempotent, so re-running with a billing-enabled key (or multiple rotating
-keys via `VITE_GEMINI_API_KEY_2/3`) resumes exactly where it stopped. Run
-`node scripts/audit_premium_tts.cjs` to see live coverage, then
-`node scripts/generate_premium_gemini_tts.cjs --per-step`.
+The generator is idempotent + resumable. To finish, either run on subsequent days after the
+daily quota resets, or add more keys/projects via `VITE_GEMINI_API_KEY_2/3` (generator
+rotates → 100×N/day). Each run: `node scripts/generate_premium_gemini_tts.cjs --per-step`
+then `node scripts/audit_premium_tts.cjs` to confirm. `TTS_STEP_DELAY_MS` tunes spacing.
 
 ### Test plan / evidence
 - [x] `npm test` → 20/20 passing (premiumLectureMap, premiumAudioPath, premiumLectures,
