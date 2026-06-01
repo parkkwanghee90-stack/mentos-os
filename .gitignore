@@ -133,3 +133,8 @@ android/
 
 .vercel
 /public/audio/
+
+# Claude Code 자동 생성 파일 (충돌 방지)
+.claude/context/
+.claude/settings.json
+.claude/settings.local.json
