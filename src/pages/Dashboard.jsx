@@ -12,6 +12,7 @@ import { HIGH_TEACHER_PROFILES } from '@/data/hTeacherProfiles';
 import { processHomeworkSubmission } from '@/engine/homeworkEngine';
 import { progressToNextUnit, initTrial, TEACHER_ASSIGNMENT } from '@/engine/gradeFlowSSOT';
 import { analyzeMathWeakness, generateFortnightlyTestProblems, gradeFortnightlyTest, sendFortnightlyParentPush } from '@/engine/math/mathWeaknessReporter';
+import { getCompletions } from '@/services/homeworkCompletion';
 import '@/pages/Dashboard.css';
 
 const parseSubject = (subj) => {
@@ -263,6 +264,7 @@ export default function Dashboard() {
     () => getActiveWrongAnswers().filter(e => !e.resolved).length,
     []
   );
+  const completionEvents = React.useMemo(() => getCompletions(), []);
   const trialState = React.useMemo(() => JSON.parse(localStorage.getItem('mentos_free_trial') || '{}'), []);
   const weaknessHistory = React.useMemo(() => JSON.parse(localStorage.getItem('mentos_weakness_history') || '[]'), []);
   
@@ -1133,7 +1135,7 @@ export default function Dashboard() {
       {/* ═══ 10-2. 숙제 완료 현황 (학습 리포트) ═══ */}
       {completedHomeworkList.length > 0 && (
         <div className="lesson-report-card glass-panel animate-fade-in" style={{ background: 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)', border: '1px solid rgba(59, 130, 246, 0.15)', boxShadow: '0 10px 30px rgba(59, 130, 246, 0.05)', animationDelay: '0.58s', marginTop: '1.5rem' }}>
-          <h3><CheckCircle size={22} color="#3b82f6" /> 숙제 완료 현황 (오답 분석 리포트)</h3>
+          <h3><CheckCircle size={22} color="#3b82f6" /> 숙제 완료 현황 (오답 분석 리포트) · 누적 {completionEvents.length}건</h3>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
             {completedHomeworkList.map(hw => (
               <div key={hw.id} className="lesson-item" style={{ borderLeft: '4px solid #3b82f6' }}>
