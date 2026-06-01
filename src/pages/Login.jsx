@@ -34,8 +34,11 @@ export default function Login() {
   const [superPassInput, setSuperPassInput] = useState('');
   const [superPassError, setSuperPassError] = useState('');
 
+  // 통합관리자 슈퍼패스 — 개발 환경에서만 활성화(프로덕션 번들에 백도어 미노출).
+  const SUPERPASS_ENABLED = import.meta.env.DEV;
   const handleSuperPass = (e) => {
     e.preventDefault();
+    if (!SUPERPASS_ENABLED) { setSuperPassError('사용할 수 없는 기능입니다.'); return; }
     if (superPassInput.trim() === '1234') {
       localStorage.setItem('mentos_super_pass', 'true');
       localStorage.setItem('mentos_mock_user', JSON.stringify({
@@ -399,36 +402,36 @@ export default function Login() {
           <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
             <div style={{ position: 'relative' }}>
               <Mail size={18} color="#94a3b8" style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)' }} />
-              <input className="lsplit-input" type="text" placeholder="이메일 또는 아이디" value={username} onChange={(e) => setUsername(e.target.value)} required />
+              <input className="lsplit-input" aria-label="이메일 또는 아이디" type="text" placeholder="이메일 또는 아이디" value={username} onChange={(e) => setUsername(e.target.value)} required />
             </div>
             <div style={{ position: 'relative' }}>
               <Lock size={18} color="#94a3b8" style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)' }} />
-              <input className="lsplit-input" type="password" placeholder={isSignUp ? '비밀번호 (8자리 이상)' : '비밀번호'} value={password} onChange={(e) => setPassword(e.target.value)} required />
+              <input className="lsplit-input" aria-label="비밀번호" type="password" placeholder={isSignUp ? '비밀번호 (8자리 이상)' : '비밀번호'} value={password} onChange={(e) => setPassword(e.target.value)} required />
             </div>
             {isSignUp && (
               <div style={{ position: 'relative' }}>
                 <Lock size={18} color="#94a3b8" style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)' }} />
-                <input className="lsplit-input" type="password" placeholder="비밀번호 확인" value={passwordConfirm} onChange={(e) => setPasswordConfirm(e.target.value)} required />
+                <input className="lsplit-input" aria-label="비밀번호 확인" type="password" placeholder="비밀번호 확인" value={passwordConfirm} onChange={(e) => setPasswordConfirm(e.target.value)} required />
               </div>
             )}
             {isAdmin && (
               <div style={{ position: 'relative' }}>
                 <Key size={18} color="#7c3aed" style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)' }} />
-                <input className="lsplit-input" type="password" placeholder="관리자 인증코드" value={adminCode} onChange={(e) => setAdminCode(e.target.value)} />
+                <input className="lsplit-input" aria-label="관리자 인증코드" type="password" placeholder="관리자 인증코드" value={adminCode} onChange={(e) => setAdminCode(e.target.value)} />
               </div>
             )}
             {isSignUp && !isAdmin && (
               <>
                 <div style={{ position: 'relative' }}>
                   <User size={18} color="#94a3b8" style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)' }} />
-                  <input className="lsplit-input" type="text" placeholder="학교명 (예: 서울고등학교)" value={school} onChange={(e) => setSchool(e.target.value)} required />
+                  <input className="lsplit-input" aria-label="학교명" type="text" placeholder="학교명 (예: 서울고등학교)" value={school} onChange={(e) => setSchool(e.target.value)} required />
                 </div>
-                <input className="lsplit-input" style={{ paddingLeft: '0.95rem' }} type="tel" placeholder="학부모 전화번호 (010-0000-0000)" value={parentPhone} onChange={(e) => setParentPhone(e.target.value)} />
-                <select value={grade} onChange={(e) => setGrade(e.target.value)} className="lsplit-input" style={{ paddingLeft: '0.95rem', cursor: 'pointer' }}>
+                <input className="lsplit-input" style={{ paddingLeft: '0.95rem' }} type="tel" aria-label="학부모 전화번호" placeholder="학부모 전화번호 (010-0000-0000)" value={parentPhone} onChange={(e) => setParentPhone(e.target.value)} />
+                <select value={grade} aria-label="학년" onChange={(e) => setGrade(e.target.value)} className="lsplit-input" style={{ paddingLeft: '0.95rem', cursor: 'pointer' }}>
                   <option value="중학교 1학년">중학교 1학년</option><option value="중학교 2학년">중학교 2학년</option><option value="중학교 3학년">중학교 3학년</option>
                   <option value="고등학교 1학년">고등학교 1학년</option><option value="고등학교 2학년">고등학교 2학년</option><option value="고등학교 3학년">고등학교 3학년</option>
                 </select>
-                <select value={mathGrade} onChange={(e) => setMathGrade(e.target.value)} className="lsplit-input" style={{ paddingLeft: '0.95rem', cursor: 'pointer' }}>
+                <select value={mathGrade} aria-label="수학 등급" onChange={(e) => setMathGrade(e.target.value)} className="lsplit-input" style={{ paddingLeft: '0.95rem', cursor: 'pointer' }}>
                   <option value="1등급">1등급 (최상위권)</option><option value="2등급">2등급 (상위권)</option><option value="3등급">3등급 (중상위권)</option><option value="4등급">4등급 (중위권)</option><option value="5등급">5등급 (중하위권)</option><option value="6등급">6등급</option><option value="7등급">7등급</option><option value="8등급">8등급</option><option value="9등급">9등급</option>
                 </select>
               </>
@@ -472,12 +475,13 @@ export default function Login() {
             </button>
           </div>
 
+          {SUPERPASS_ENABLED && (
           <div style={{ textAlign: 'center', marginTop: '1rem' }}>
             {!showSuperPass ? (
               <button type="button" onClick={() => setShowSuperPass(true)} style={{ background: 'transparent', border: '1px dashed #d4d9e3', color: '#94a3b8', padding: '0.4rem 0.9rem', borderRadius: 10, cursor: 'pointer', fontSize: '0.74rem' }}>통합관리자 모드</button>
             ) : (
               <form onSubmit={handleSuperPass} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', background: '#f5f3fe', border: '1px solid #ddd6fe', borderRadius: 12, padding: '0.9rem' }}>
-                <input type="password" placeholder="관리자 인증번호" value={superPassInput} onChange={(e) => setSuperPassInput(e.target.value)} autoFocus className="lsplit-input" style={{ paddingLeft: '0.95rem' }} />
+                <input type="password" aria-label="관리자 인증번호" placeholder="관리자 인증번호" value={superPassInput} onChange={(e) => setSuperPassInput(e.target.value)} autoFocus className="lsplit-input" style={{ paddingLeft: '0.95rem' }} />
                 {superPassError && <div style={{ color: '#dc2626', fontSize: '0.78rem' }}>{superPassError}</div>}
                 <div style={{ display: 'flex', gap: 6 }}>
                   <button type="submit" className="lsplit-btn lsplit-btn--primary" style={{ flex: 1, padding: '0.6rem', fontSize: '0.82rem' }}>잠금 해제</button>
@@ -486,6 +490,7 @@ export default function Login() {
               </form>
             )}
           </div>
+          )}
 
           <div style={{ marginTop: '1.5rem', textAlign: 'center', color: '#94a3b8', fontSize: '0.74rem' }}>
             <p style={{ margin: '0 0 0.4rem' }}>© {new Date().getFullYear()} Mentos AI. All rights reserved.</p>

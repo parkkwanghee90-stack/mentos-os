@@ -39,7 +39,7 @@ export default function DesignCheck() {
         display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap',
         padding: '0.85rem 1.25rem', background: '#141d33', borderBottom: '1px solid rgba(148,163,184,0.2)',
       }}>
-        <strong style={{ fontSize: '1.05rem', whiteSpace: 'nowrap' }}>🎯 디자인 검증</strong>
+        <strong style={{ fontSize: '1.05rem', whiteSpace: 'nowrap' }}>디자인 검증</strong>
         <span style={{ fontSize: '0.8rem', color: '#98a7c6' }}>lecture.png ↔ 실제 구현</span>
 
         <div style={{ display: 'flex', gap: '0.5rem', marginLeft: '0.5rem' }}>
@@ -95,6 +95,7 @@ export default function DesignCheck() {
               <iframe
                 key={iframeKey}
                 title="live"
+              sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
                 src={target}
                 style={{ position: 'absolute', top: 0, left: 0, width: `${CANVAS_W}px`, height: `${CANVAS_H}px`, border: 'none', transform: 'scale(var(--scale))', transformOrigin: 'top left' }}
                 ref={(el) => {
@@ -115,6 +116,7 @@ export default function DesignCheck() {
             <iframe
               key={iframeKey}
               title="live-overlay"
+              sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
               src={target}
               style={{ position: 'absolute', top: 0, left: 0, width: `${CANVAS_W}px`, height: `${CANVAS_H}px`, border: 'none', transform: 'scale(var(--oscale))', transformOrigin: 'top left' }}
               ref={(el) => {
