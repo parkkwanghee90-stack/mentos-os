@@ -21,7 +21,7 @@ function cleanNarration(text) {
   return text
     .replace(/<\/?(blue|green|yellow|red)>/g, '')
     .replace(/\$([^$]*)\$/g, '$1')
-    .replace(/\\frac\{([^}]*)\}\{([^}]*)\}/g, '$2 분의 $1')
+    .replace(/\\frac\{([^}]*)\}\{([^}]*)\}/g, '$2 분의 $1') // single-pass: nested \frac not fully resolved
     .replace(/\\sqrt\{([^}]*)\}/g, '루트 $1')
     .replace(/\\pm/g, '플러스 마이너스')
     .replace(/\\times/g, ' 곱하기 ')
@@ -40,4 +40,4 @@ function cleanNarration(text) {
     .trim();
 }
 
-module.exports = { MODEL, VOICE, STYLE_INSTRUCTION, buildPrompt, SPEECH_CONFIG, cleanNarration };
+module.exports = { MODEL, VOICE, buildPrompt, SPEECH_CONFIG, cleanNarration };

@@ -18,4 +18,13 @@ describe('ttsConfig', () => {
   it('returns empty string for falsy input', () => {
     expect(cleanNarration('')).toBe('');
   });
+  it('converts operator and symbol macros', () => {
+    expect(cleanNarration('a \\pm b')).toBe('a 플러스 마이너스 b');
+    expect(cleanNarration('2 \\times 3')).toBe('2 곱하기 3');
+    expect(cleanNarration('\\alpha + \\beta')).toBe('알파 + 베타');
+  });
+  it('reads permutation notation and strips carets', () => {
+    expect(cleanNarration('$_n\\mathrm{P}_r$')).toBe('n 피 알');
+    expect(cleanNarration('x^2')).toBe('x2');
+  });
 });

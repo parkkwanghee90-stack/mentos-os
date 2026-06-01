@@ -27,7 +27,12 @@ async function generatePCM(text, pool, retries = 3) {
         const j = await res.json().catch(() => ({}));
         const msg = j?.error?.message || `Gemini HTTP ${res.status}`;
         if (res.status === 429 || /quota|QUOTA|RESOURCE_EXHAUSTED/.test(msg)) {
-          if (pool.i < pool.keys.length - 1) { pool.i++; attempt = 0; continue; }
+          if (pool.i < pool.keys.length - 1) {
+            pool.i++;
+            attempt = 0;
+            await new Promise((r) => setTimeout(r, 2000));
+            continue;
+          }
         }
         throw new Error(msg);
       }
