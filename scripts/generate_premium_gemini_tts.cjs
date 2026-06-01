@@ -266,47 +266,53 @@ async function main() {
       console.log(`  - Step ${stepNum}: Processing Gemini 3.1 Audio...`);
       console.log(`    Script: "${cleanedText.substring(0, 60)}..."`);
 
-      try {
-        let mp3Buffer = null;
+      let success = false;
+      while (!success) {
+        try {
+          let mp3Buffer = null;
 
-        if (!force && existsLocally) {
-          mp3Buffer = fs.readFileSync(localFilePath);
-          console.log(`    -> Loaded from local cache.`);
-        } else {
-          // 1. Generate Voice Audio via Gemini 3.1 Voice API (Aoede)
-          const rawAudioBuffer = await generateGeminiTTS(cleanedText);
-          console.log(`    -> Generated raw Gemini Voice (${(rawAudioBuffer.length / 1024).toFixed(1)} KB)`);
+          if (!force && existsLocally) {
+            mp3Buffer = fs.readFileSync(localFilePath);
+            console.log(`    -> Loaded from local cache.`);
+          } else {
+            // 1. Generate Voice Audio via Gemini 3.1 Voice API (Aoede)
+            const rawAudioBuffer = await generateGeminiTTS(cleanedText);
+            console.log(`    -> Generated raw Gemini Voice (${(rawAudioBuffer.length / 1024).toFixed(1)} KB)`);
 
-          // 2. Decode raw PCM and encode to genuine MP3 via ffmpeg (perfect browser/mobile compatibility)
-          const tempPcmPath = path.resolve(lectureOutputDir, `temp_${stepNum}.pcm`);
-          const tempMp3Path = path.resolve(lectureOutputDir, `temp_${stepNum}.mp3`);
-          fs.writeFileSync(tempPcmPath, rawAudioBuffer);
+            // 2. Decode raw PCM and encode to genuine MP3 via ffmpeg (perfect browser/mobile compatibility)
+            const tempPcmPath = path.resolve(lectureOutputDir, `temp_${stepNum}.pcm`);
+            const tempMp3Path = path.resolve(lectureOutputDir, `temp_${stepNum}.mp3`);
+            fs.writeFileSync(tempPcmPath, rawAudioBuffer);
 
-          try {
-            execSync(`ffmpeg -y -f s16le -ar 24000 -ac 1 -i "${tempPcmPath}" -codec:a libmp3lame -qscale:a 2 "${tempMp3Path}"`, { stdio: 'pipe' });
-            mp3Buffer = fs.readFileSync(tempMp3Path);
-          } catch (err) {
-            const stderr = err.stderr ? err.stderr.toString() : '';
-            throw new Error(`ffmpeg conversion failed: ${err.message}\nStderr: ${stderr}`);
-          } finally {
             try {
-              if (fs.existsSync(tempPcmPath)) fs.unlinkSync(tempPcmPath);
-              if (fs.existsSync(tempMp3Path)) fs.unlinkSync(tempMp3Path);
-            } catch (e) {}
+              execSync(`ffmpeg -y -f s16le -ar 24000 -ac 1 -i "${tempPcmPath}" -codec:a libmp3lame -qscale:a 2 "${tempMp3Path}"`, { stdio: 'pipe' });
+              mp3Buffer = fs.readFileSync(tempMp3Path);
+            } catch (err) {
+              const stderr = err.stderr ? err.stderr.toString() : '';
+              throw new Error(`ffmpeg conversion failed: ${err.message}\nStderr: ${stderr}`);
+            } finally {
+              try {
+                if (fs.existsSync(tempPcmPath)) fs.unlinkSync(tempPcmPath);
+                if (fs.existsSync(tempMp3Path)) fs.unlinkSync(tempMp3Path);
+              } catch (e) {}
+            }
+
+            // Save local cache
+            fs.writeFileSync(localFilePath, mp3Buffer);
+            console.log(`    -> Saved genuine MP3 local cache.`);
           }
 
-          // Save local cache
-          fs.writeFileSync(localFilePath, mp3Buffer);
-          console.log(`    -> Saved genuine MP3 local cache.`);
+          // 3. Upload to Supabase storage if missing or force enabled
+          if (force || !existsRemotely) {
+            await uploadToSupabase(mp3Buffer, remotePath);
+            console.log(`    -> Uploaded to Supabase storage [${BUCKET}/${remotePath}].`);
+          }
+          success = true;
+        } catch (err) {
+          console.error(`  ❌ Failed to generate/upload audio for Step ${stepNum}: ${err.message}`);
+          console.log(`  ⏳ Waiting 65 seconds for API quota recovery before retrying Step ${stepNum}...`);
+          await new Promise(resolve => setTimeout(resolve, 65000));
         }
-
-        // 3. Upload to Supabase storage if missing or force enabled
-        if (force || !existsRemotely) {
-          await uploadToSupabase(mp3Buffer, remotePath);
-          console.log(`    -> Uploaded to Supabase storage [${BUCKET}/${remotePath}].`);
-        }
-      } catch (err) {
-        console.error(`  ❌ Failed to generate/upload audio for Step ${stepNum}: ${err.message}`);
       }
 
       // Add a slight delay to respect API rate limits (8.5s delay keeps us safely under 7 RPM)
