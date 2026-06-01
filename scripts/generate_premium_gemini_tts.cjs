@@ -28,6 +28,7 @@ const LOCAL_DIR = path.join('public', 'audio', 'premium_lectures');
 const JSON_DIR = path.join('public', 'premium_lectures');
 const PAUSE_MARKER = '\n\n.\n\n'; // a clear spoken pause between steps for silence detection
 const MAX_CHARS_SINGLE_CALL = 2800; // above this, force per-step (avoids long-call drift/timeouts)
+const STEP_DELAY_MS = parseInt(process.env.TTS_STEP_DELAY_MS, 10) || 8500; // inter-call spacing (paid tier can lower this)
 // Extra Gemini keys from env only (never hardcode secrets):
 const POOL_EXTRA = [process.env.VITE_GEMINI_API_KEY_2, process.env.VITE_GEMINI_API_KEY_3].filter(Boolean);
 
@@ -95,7 +96,7 @@ async function generatePerStep(voiced, slug, dir, pool, force) {
     const mp3 = pcmToMp3(pcm, path.join(dir, `step_${step.step}.mp3`));
     await uploadBuffer(mp3, `audio/premium_lectures/${slug}/step_${step.step}.mp3`, 'audio/mpeg');
     console.log(`    step ${step.step}: uploaded (per-step)`);
-    await new Promise((r) => setTimeout(r, 8500));
+    await new Promise((r) => setTimeout(r, STEP_DELAY_MS));
   }
 }
 
@@ -167,7 +168,7 @@ async function main() {
       if (!perStepOnly && !force) done = await generateSingleCall(voiced, t.slug, dir, pool);
       if (!done) await generatePerStep(voiced, t.slug, dir, pool, force);
     } catch (e) { console.error(`  ❌ ${t.lectureId}: ${e.message}`); }
-    await new Promise((r) => setTimeout(r, 8500));
+    await new Promise((r) => setTimeout(r, STEP_DELAY_MS));
   }
   console.log('\n🎉 Done. Re-run scripts/audit_premium_tts.cjs to confirm coverage.');
 }
