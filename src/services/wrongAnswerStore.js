@@ -65,3 +65,8 @@ export function getActiveWrongAnswers(now = Date.now()) {
   write(active); // 만료분 영구 제거
   return active;
 }
+
+/** 활성 오답 중 미해결(resolved=false)만 반환 — 오답복습 목록용 */
+export function getActiveUnresolvedWrongAnswers(now = Date.now()) {
+  return getActiveWrongAnswers(now).filter(e => !e.resolved);
+}
