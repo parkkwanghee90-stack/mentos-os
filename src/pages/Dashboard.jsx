@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { HOMEWORK_UNITS, getHomeworkRange, getHomeworkProgress, STAGE_ACCESS } from '@/data/homeworkSSOT';
+import { HOMEWORK_UNITS, getHomeworkRange, getHomeworkProgress, STAGE_ACCESS, WRONG_REVIEW_ID } from '@/data/homeworkSSOT';
+import { getActiveWrongAnswers } from '@/services/wrongAnswerStore';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, AreaChart, Area, CartesianGrid } from 'recharts';
-import { Target, TrendingUp, AlertTriangle, Zap, ArrowLeft, BookOpen, CheckCircle, BookA, LogOut, ChevronRight } from 'lucide-react';
+import { Target, TrendingUp, AlertTriangle, Zap, ArrowLeft, BookOpen, CheckCircle, BookA, LogOut, ChevronRight, Flame } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/context/AuthContext';
 import { getRecentResults, getMistakePatterns, getStudyLogs } from '@/services/lessonResultStore';
@@ -11,6 +12,8 @@ import { HIGH_TEACHER_PROFILES } from '@/data/hTeacherProfiles';
 import { processHomeworkSubmission } from '@/engine/homeworkEngine';
 import { progressToNextUnit, initTrial, TEACHER_ASSIGNMENT } from '@/engine/gradeFlowSSOT';
 import { analyzeMathWeakness, generateFortnightlyTestProblems, gradeFortnightlyTest, sendFortnightlyParentPush } from '@/engine/math/mathWeaknessReporter';
+import { generateMonthlyTestProblems, gradeMonthlyTest, sendMonthlyParentPush } from '@/engine/math/monthlyTest';
+import { getCompletions } from '@/services/homeworkCompletion';
 import '@/pages/Dashboard.css';
 
 const parseSubject = (subj) => {
@@ -258,6 +261,11 @@ export default function Dashboard() {
   };
 
   // ── [Real Data Integration with Simulation Fallback] ──
+  const wrongReviewCount = React.useMemo(
+    () => getActiveWrongAnswers().filter(e => !e.resolved).length,
+    []
+  );
+  const completionEvents = React.useMemo(() => getCompletions(), []);
   const trialState = React.useMemo(() => JSON.parse(localStorage.getItem('mentos_free_trial') || '{}'), []);
   const weaknessHistory = React.useMemo(() => JSON.parse(localStorage.getItem('mentos_weakness_history') || '[]'), []);
   
@@ -454,6 +462,19 @@ export default function Dashboard() {
     localStorage.setItem('fortnightly_test_status', fortnightlyTestStatus);
   }, [fortnightlyTestStatus]);
 
+  const [monthlyTestStatus, setMonthlyTestStatus] = React.useState(() => {
+    return localStorage.getItem('monthly_test_status') || 'pending'; // 'pending' | 'active' | 'completed'
+  });
+  const [assignedMonthlyProblems, setAssignedMonthlyProblems] = React.useState(() => {
+    try { return JSON.parse(localStorage.getItem('monthly_assigned_problems') || '[]'); }
+    catch { return []; }
+  });
+  const [monthlyAnswers, setMonthlyAnswers] = React.useState({});
+
+  React.useEffect(() => {
+    localStorage.setItem('monthly_test_status', monthlyTestStatus);
+  }, [monthlyTestStatus]);
+
   React.useEffect(() => {
     // 13일째 예약 시점: 자동으로 문제 5개 선정하여 로컬 저장
     if (fortnightlyDays === 13 && fortnightlyTestStatus === 'pending') {
@@ -492,6 +513,24 @@ export default function Dashboard() {
     }
   };
   
+  const startMonthlyTest = React.useCallback(() => {
+    const problems = generateMonthlyTestProblems(studentLevel);
+    setAssignedMonthlyProblems(problems);
+    localStorage.setItem('monthly_assigned_problems', JSON.stringify(problems));
+    setMonthlyTestStatus('active');
+  }, [studentLevel]);
+
+  const submitMonthlyTest = React.useCallback(() => {
+    const grading = gradeMonthlyTest(monthlyAnswers, assignedMonthlyProblems);
+    const studentName = JSON.parse(localStorage.getItem('mentos_mock_user') || '{}')?.name || '멘토스 학생';
+    sendMonthlyParentPush(studentName, grading);
+    const results = JSON.parse(localStorage.getItem('monthly_test_results') || '[]');
+    results.unshift({ ...grading, date: new Date().toISOString() });
+    localStorage.setItem('monthly_test_results', JSON.stringify(results));
+    setMonthlyTestStatus('completed');
+    alert(`월간 테스트 제출 완료! 정답률 ${grading.accuracy}%`);
+  }, [monthlyAnswers, assignedMonthlyProblems]);
+
   const todayProblems = trialState.problemsSolvedToday || 20; // 시뮬레이션용 20개
   const accuracy = React.useMemo(() => {
     if (lessonHistory.length === 0) return 0;
@@ -1038,6 +1077,30 @@ export default function Dashboard() {
         </div>
       </div>
 
+      {/* 오답 복습 노트 */}
+      <div className="glass-panel homework-card animate-fade-in" style={{ animationDelay: '0.48s' }}>
+        <h3><AlertTriangle size={20} color="#ef4444" /> 오답 복습 노트</h3>
+        <p>최근 30일간 틀린 문제 <strong>{wrongReviewCount}</strong>개가 누적되어 있습니다. 푼 문제도 한 달간 다시 노출됩니다.</p>
+        <button className="btn-primary" onClick={() => navigate(`/homework/math/${WRONG_REVIEW_ID}`)}>
+          오답 복습 시작 →
+        </button>
+      </div>
+
+      {/* 월간 종합테스트 */}
+      <div className="glass-panel monthly-test-card animate-fade-in" style={{ animationDelay: '0.5s' }}>
+        <h3><Flame size={20} color="#f59e0b" /> 수학 월간 종합테스트</h3>
+        {monthlyTestStatus === 'completed' ? (
+          <p>이번 달 월간 테스트를 완료했습니다. 다음 달에 다시 응시할 수 있습니다.</p>
+        ) : monthlyTestStatus === 'active' ? (
+          <button className="btn-primary" onClick={submitMonthlyTest}>월간 테스트 제출하기</button>
+        ) : (
+          <>
+            <p>최근 30일 누적 오답과 취약단원에서 40문항이 출제됩니다.</p>
+            <button className="btn-primary" onClick={startMonthlyTest}>월간 테스트 시작 →</button>
+          </>
+        )}
+      </div>
+
       {/* ═══ 9. 조교 숙제 검사함 (기존 보존) ═══ */}
       <div className="glass-panel homework-card animate-fade-in" style={{ animationDelay: '0.5s' }}>
         <h3><CheckCircle size={20} /> 조교 숙제 검사함</h3>
@@ -1119,7 +1182,7 @@ export default function Dashboard() {
       {/* ═══ 10-2. 숙제 완료 현황 (학습 리포트) ═══ */}
       {completedHomeworkList.length > 0 && (
         <div className="lesson-report-card glass-panel animate-fade-in" style={{ background: 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)', border: '1px solid rgba(59, 130, 246, 0.15)', boxShadow: '0 10px 30px rgba(59, 130, 246, 0.05)', animationDelay: '0.58s', marginTop: '1.5rem' }}>
-          <h3><CheckCircle size={22} color="#3b82f6" /> 숙제 완료 현황 (오답 분석 리포트)</h3>
+          <h3><CheckCircle size={22} color="#3b82f6" /> 숙제 완료 현황 (오답 분석 리포트) · 누적 {completionEvents.length}건</h3>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
             {completedHomeworkList.map(hw => (
               <div key={hw.id} className="lesson-item" style={{ borderLeft: '4px solid #3b82f6' }}>
