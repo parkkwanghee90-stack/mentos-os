@@ -7,7 +7,8 @@ import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import MathProblemRenderer from '@/components/MathProblemRenderer';
 import HintPlayerRouter from '@/components/hints/HintPlayerRouter';
-import { HOMEWORK_UNITS, getHomeworkRange, padProblemNum, getHomeworkProgress, saveHomeworkProgress, markSequenceComplete } from '@/data/homeworkSSOT';
+import { HOMEWORK_UNITS, getHomeworkRange, padProblemNum, getHomeworkProgress, saveHomeworkProgress, markSequenceComplete, WRONG_REVIEW_ID } from '@/data/homeworkSSOT';
+import { addWrong, markResolved } from '@/services/wrongAnswerStore';
 import avsAnswersData from '@/data/avs_answers.json';
 
 export default function HomeworkMathBox() {
@@ -58,6 +59,8 @@ export default function HomeworkMathBox() {
     }
     return HOMEWORK_UNITS.find(u => u.id === homeworkId);
   }, [homeworkId, dynamicDbEntry]);
+
+  const isWrongReview = homeworkId === WRONG_REVIEW_ID;
 
   const studentLevel = location.state?.studentLevel || localStorage.getItem('studentLevel') || '4~5등급';
 
@@ -185,6 +188,9 @@ export default function HomeworkMathBox() {
       saveHomeworkProgress(homeworkId, newStatus);
       setGradingResult('avs_penalty');
       setToast('⚠️ 정답 입력 전 힌트 조회 → 오답 처리');
+      if (!isWrongReview && currentProblem && !currentProblem.isDynamic) {
+        addWrong({ hwId: hwUnit.id, num: parseInt(currentProblem.keyStr, 10), unit: hwUnit.relatedUnit || hwUnit.title, answerKey: hwUnit.answerKey });
+      }
     }
 
     setShowAVS(true);
@@ -216,6 +222,16 @@ export default function HomeworkMathBox() {
     setSolvedStatus(newStatus);
     saveHomeworkProgress(homeworkId, newStatus);
     setGradingResult(isCorrect ? 'correct' : 'incorrect');
+
+    // 오답노트 수집 (오답노트 자체 풀이 중에는 재수집 안 함)
+    if (!isWrongReview && currentProblem && !currentProblem.isDynamic) {
+      const numVal = parseInt(currentProblem.keyStr, 10);
+      if (isCorrect) {
+        markResolved(hwUnit.id, numVal);
+      } else {
+        addWrong({ hwId: hwUnit.id, num: numVal, unit: hwUnit.relatedUnit || hwUnit.title, answerKey: hwUnit.answerKey });
+      }
+    }
 
     // 오답이면 해설+AVS 자동 표시
     if (!isCorrect) {
