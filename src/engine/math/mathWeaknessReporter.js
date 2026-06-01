@@ -77,7 +77,7 @@ export function analyzeMathWeakness() {
     console.warn('[analyzeMathWeakness] 오답스토어 집계 실패:', err.message);
   }
 
-  // C. 취약성 데이터 정렬 및 유형화
+  // D. 취약성 데이터 정렬 및 유형화
   const weaknessList = Object.entries(unitStats).map(([unit, stat]) => {
     const total = stat.totalQuestions;
     const wrong = stat.wrongCount;

@@ -19,12 +19,15 @@ describe('analyzeMathWeakness 입력 C (오답스토어)', () => {
     expect(w.wrong).toBeGreaterThanOrEqual(1);
   });
 
-  it('숙제+모의고사 동일 (hwId,num) 오답은 중복 계상하지 않는다', () => {
+  it('숙제와 겹치는 (hwId,num)은 1회만, 모의고사 전용은 추가로 계상한다', () => {
     localStorage.setItem('hw_progress_hw_01', JSON.stringify({ '005': { isCorrect: false } }));
-    seedStore([{ hwId: 'hw_01', num: 5, unit: '다항식의 연산', answerKey: '수학상_01다항식_통합숙제' }]);
+    seedStore([
+      { hwId: 'hw_01', num: 5, unit: '다항식의 연산', answerKey: '수학상_01다항식_통합숙제' },
+      { hwId: 'hw_01', num: 6, unit: '다항식의 연산', answerKey: '수학상_01다항식_통합숙제' },
+    ]);
     const { allWeakness } = analyzeMathWeakness();
     const w = allWeakness.find(x => x.unit === '다항식의 연산');
-    expect(w.wrong).toBe(1);
+    expect(w.wrong).toBe(2);
   });
 
   it('resolved(극복) 오답은 취약단원에 포함하지 않는다', () => {
