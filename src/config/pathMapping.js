@@ -276,6 +276,8 @@ const PATH_MAP = {
   // Others
   '월별모의고사': 'monthly_mock',
   '6월': 'june',
+  '9월': 'sept',
+  '3월': 'march',
   '수능': 'csat',
   '쌍둥이': 'twin',
   '중간고사': 'midterm',
