@@ -30,6 +30,7 @@ export default function PremiumLecturePlayer({ lectureId, onClose }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [loading, setLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [audioUnavailable, setAudioUnavailable] = useState(false);
   
   // --- [수학상, 수학1 완수 후 Gemini 3.1 자연스러운 음성 개편 예약용 스위치] ---
   const USE_GEMINI_AUDIO = true; // 완료 시 true로 변경하여 전면 적용 가능
@@ -76,6 +77,7 @@ export default function PremiumLecturePlayer({ lectureId, onClose }) {
 
   useEffect(() => {
     if (!lectureData || !isPlaying) return;
+    setAudioUnavailable(false);
     const step = lectureData.steps[currentStep];
     if (step && step.narration) {
       stopAllAudio();
@@ -97,54 +99,31 @@ export default function PremiumLecturePlayer({ lectureId, onClose }) {
           }
         };
         
-        audio.onerror = (e) => {
-          console.warn('Gemini audio not found or error occurred, falling back to Web Speech API:', e);
-          // Fallback to basic TTS
-          playWebSpeechTTS(step.narration);
+        audio.onerror = () => {
+          console.warn('[PremiumTTS] audio missing', { baseId, step: stepNum });
+          setIsPlaying(false);
+          setAudioUnavailable(true);
         };
         
         audio.play().catch(err => {
           console.warn('Autoplay prevented or playback error:', err);
           setIsPlaying(false);
         });
-      } else {
-        // --- Web Speech API (Robotic basic TTS) ---
-        playWebSpeechTTS(step.narration);
       }
     }
   }, [currentStep, isPlaying, lectureData]);
 
-  const playWebSpeechTTS = (text) => {
-    const cleanText = text.replace(/<\/?(blue|green|yellow|red)>/g, '');
-    utteranceRef.current = new SpeechSynthesisUtterance(cleanText);
-    utteranceRef.current.lang = 'ko-KR';
-    utteranceRef.current.rate = 0.9;
-    utteranceRef.current.onend = () => {
-      if (currentStep < (lectureData?.steps?.length || 0) - 1) setCurrentStep(prev => prev + 1);
-      else setIsPlaying(false);
-    };
-    synthRef.current.speak(utteranceRef.current);
-  };
-
   const handlePlayPause = () => {
     if (isPlaying) {
-      if (USE_GEMINI_AUDIO) {
-        if (audioRef.current) audioRef.current.pause();
-      } else {
-        synthRef.current.pause();
-      }
+      if (audioRef.current) audioRef.current.pause();
       setIsPlaying(false);
     } else {
-      if (USE_GEMINI_AUDIO) {
-        if (audioRef.current) {
-          audioRef.current.play().catch(() => {});
-        } else {
-          // Trigger effect to instantiate
-          setIsPlaying(true);
-          return;
-        }
+      if (audioRef.current) {
+        audioRef.current.play().catch(() => {});
       } else {
-        if (synthRef.current.paused) synthRef.current.resume();
+        // Trigger effect to instantiate
+        setIsPlaying(true);
+        return;
       }
       setIsPlaying(true);
     }
@@ -286,6 +265,11 @@ export default function PremiumLecturePlayer({ lectureId, onClose }) {
               <Volume2 style={{ color: '#2563eb', flexShrink: 0, marginTop: isMobile ? '4px' : 0 }} size={isMobile ? 20 : 32} />
               <span>{renderNarration(stepData.narration)}</span>
             </p>
+            {audioUnavailable && (
+              <div style={{ marginTop: '0.5rem', fontSize: '0.85rem', fontWeight: 700, color: '#d97706', textAlign: 'center' }}>
+                🔊 이 단계의 음성을 준비 중입니다. 다음 단계로 진행하실 수 있어요.
+              </div>
+            )}
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '1.5rem' : '3rem' }}>
