@@ -7,7 +7,7 @@ import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import MathProblemRenderer from '@/components/MathProblemRenderer';
 import HintPlayerRouter from '@/components/hints/HintPlayerRouter';
-import { HOMEWORK_UNITS, getHomeworkRange, padProblemNum, getHomeworkProgress, saveHomeworkProgress, markSequenceComplete, WRONG_REVIEW_ID, getUnitById } from '@/data/homeworkSSOT';
+import { HOMEWORK_UNITS, getHomeworkRange, padProblemNum, getHomeworkProgress, saveHomeworkProgress, markSequenceComplete, WRONG_REVIEW_ID, getUnitById, buildSolutionSrc } from '@/data/homeworkSSOT';
 import { addWrong, markResolved, getActiveWrongAnswers } from '@/services/wrongAnswerStore';
 import { resolveAnswer } from '@/services/answerResolver';
 import { recordCompletion, buildSummaryMessage } from '@/services/homeworkCompletion';
@@ -91,7 +91,7 @@ export default function HomeworkMathBox() {
           num: idx + 1,
           keyStr,
           imageSrc: `${imgBase}${keyStr}.webp`,
-          solutionSrc: `${imgBase}${keyStr}a.webp`,
+          solutionSrc: buildSolutionSrc(imgBase, e.num),
           isDynamic: true,
           _wr: e,
         };
@@ -101,13 +101,14 @@ export default function HomeworkMathBox() {
       return (dynamicDbEntry.problems || []).map((p, idx) => {
         const sourceIdx = p.sourceProblemId !== undefined ? p.sourceProblemId : (idx + 1);
         const keyStr = String(sourceIdx).padStart(3, '0');
-        
+        const imgDir = p.problemImage.replace(/[^/]+$/, ''); // 파일명 제거 → 폴더 경로
+
         return {
           problemId: p.problemId,
           num: idx + 1,
           keyStr: keyStr,
           imageSrc: p.problemImage,
-          solutionSrc: p.problemImage.replace('.webp', 'a.webp'),
+          solutionSrc: buildSolutionSrc(imgDir, sourceIdx),
           isDynamic: true,
         };
       });
@@ -122,7 +123,7 @@ export default function HomeworkMathBox() {
         num: i,
         keyStr: pid,
         imageSrc: `${hwUnit.imagePath}${pid}.webp`,
-        solutionSrc: `${hwUnit.imagePath}${pid}a.webp`,
+        solutionSrc: buildSolutionSrc(hwUnit.imagePath, i),
         isDynamic: false,
       });
     }
