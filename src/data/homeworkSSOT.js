@@ -447,12 +447,12 @@ export const HOMEWORK_UNITS = [
     stages: { '4단계': { start: 84, end: 97 } },
   },
 
-  // ── 02. 급수 (134문제) ──
+  // ── 02. 급수 (133문제) ──
   {
     id: 'hw_cal_02a', title: '급수 ①', subject: '미적분',
     folderName: '02급수', hintKey: '미적분_02급수_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/02급수2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/02급수3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/02급수4단계/정답및해설.html' },
-    answerKey: '미적분_02급수_통합숙제', problemCount: 134,
+    answerKey: '미적분_02급수_통합숙제', problemCount: 133,
     imagePath: '/math_crops/숙제/미적분/02급수/',
     relatedUnit: '급수',
     stages: { '2단계': { start: 1, end: 20 } },
@@ -461,7 +461,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_02b', title: '급수 ②', subject: '미적분',
     folderName: '02급수', hintKey: '미적분_02급수_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/02급수2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/02급수3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/02급수4단계/정답및해설.html' },
-    answerKey: '미적분_02급수_통합숙제', problemCount: 134,
+    answerKey: '미적분_02급수_통합숙제', problemCount: 133,
     imagePath: '/math_crops/숙제/미적분/02급수/',
     relatedUnit: '급수',
     stages: { '2단계': { start: 21, end: 46 } },
@@ -470,7 +470,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_02c', title: '급수 ③', subject: '미적분',
     folderName: '02급수', hintKey: '미적분_02급수_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/02급수2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/02급수3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/02급수4단계/정답및해설.html' },
-    answerKey: '미적분_02급수_통합숙제', problemCount: 134,
+    answerKey: '미적분_02급수_통합숙제', problemCount: 133,
     imagePath: '/math_crops/숙제/미적분/02급수/',
     relatedUnit: '급수',
     stages: { '3단계': { start: 47, end: 66 } },
@@ -479,7 +479,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_02d', title: '급수 ④', subject: '미적분',
     folderName: '02급수', hintKey: '미적분_02급수_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/02급수2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/02급수3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/02급수4단계/정답및해설.html' },
-    answerKey: '미적분_02급수_통합숙제', problemCount: 134,
+    answerKey: '미적분_02급수_통합숙제', problemCount: 133,
     imagePath: '/math_crops/숙제/미적분/02급수/',
     relatedUnit: '급수',
     stages: { '3단계': { start: 67, end: 86 } },
@@ -488,7 +488,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_02e', title: '급수 ⑤', subject: '미적분',
     folderName: '02급수', hintKey: '미적분_02급수_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/02급수2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/02급수3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/02급수4단계/정답및해설.html' },
-    answerKey: '미적분_02급수_통합숙제', problemCount: 134,
+    answerKey: '미적분_02급수_통합숙제', problemCount: 133,
     imagePath: '/math_crops/숙제/미적분/02급수/',
     relatedUnit: '급수',
     stages: { '3단계': { start: 87, end: 99 }, '4단계': { start: 100, end: 114 } },
@@ -497,10 +497,10 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_02f', title: '급수 ⑥ (심화)', subject: '미적분',
     folderName: '02급수', hintKey: '미적분_02급수_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/02급수2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/02급수3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/02급수4단계/정답및해설.html' },
-    answerKey: '미적분_02급수_통합숙제', problemCount: 134,
+    answerKey: '미적분_02급수_통합숙제', problemCount: 133,
     imagePath: '/math_crops/숙제/미적분/02급수/',
     relatedUnit: '급수',
-    stages: { '4단계': { start: 115, end: 134 } },
+    stages: { '4단계': { start: 115, end: 133 } },
   },
 
   // ── 03. 지수로그함수의 미분 (37문제) ──
