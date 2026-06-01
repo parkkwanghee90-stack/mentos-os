@@ -1000,10 +1000,46 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
          currentProblemTitle = phaseData.title;
       }
       
-      // 유닛 추출 로직 개선: math_indexed 뿐만 아니라 math_crops 경로에서도 추출 시도
+      // 유닛 추출 로직 개선: 구조적 경로 분리/추출 알고리즘 적용 (정규식 엣지케이스 우회)
+      let extractedUnit = null;
       const strData = JSON.stringify(phaseData);
-      const match = strData.match(/math_(?:indexed|crops)\/.*?\/(?:2단계|3단계|4단계)?\/?([^/]+)/);
-      if (match) currentUnit = match[1];
+      const pathMatch = strData.match(/math_(?:indexed|crops)\/[^"']+/);
+      if (pathMatch) {
+        const fullPath = pathMatch[0];
+        const parts = fullPath.split('/');
+        let targetIndex = parts.length - 1;
+        
+        // 파일명 세그먼트 스킵 (확장자 존재하거나 순수 숫자명인 경우)
+        if (targetIndex >= 0 && (
+          parts[targetIndex].endsWith('.webp') || 
+          parts[targetIndex].endsWith('.png') || 
+          parts[targetIndex].endsWith('.jpg') || 
+          parts[targetIndex].endsWith('.json') || 
+          /^\d+$/.test(parts[targetIndex])
+        )) {
+          targetIndex--;
+        }
+        
+        // 단독 단계명 세그먼트 스킵 (2단계, 3단계, 4단계 등)
+        if (targetIndex >= 0) {
+          const seg = parts[targetIndex].trim();
+          if (seg === '2단계' || seg === '3단계' || seg === '4단계' || seg === '개념2단계') {
+            targetIndex--;
+          }
+        }
+        
+        if (targetIndex >= 1) {
+          extractedUnit = parts[targetIndex];
+        }
+      }
+      
+      if (extractedUnit) {
+        currentUnit = extractedUnit;
+      } else {
+        // 기존 정규식 Fallback
+        const match = strData.match(/math_(?:indexed|crops)\/.*?\/(?:2단계|3단계|4단계)?\/?([^/]+)/);
+        if (match) currentUnit = match[1];
+      }
       
       // 만약 동적으로 overrides에서 넘겨받은 원본 유닛 이름이 있다면 그걸 우선 사용!
       if (phaseData.original_unit) {

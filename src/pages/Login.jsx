@@ -392,7 +392,7 @@ export default function Login() {
             <div className="input-icon">
               <Mail size={20} color="#94a3b8" />
             </div>
-            <input type="email" placeholder="이메일 주소" value={username} onChange={(e) => setUsername(e.target.value)} required />
+            <input type="text" placeholder="이메일 주소 또는 아이디" value={username} onChange={(e) => setUsername(e.target.value)} required />
           </div>
 
           {/* 비밀번호 */}

@@ -217,6 +217,9 @@ function createNarration(data) {
 }
 
 async function generateGeminiTTS(text, retries = 3) {
+  // Reset key index to start with the primary key for each new narration generation
+  currentKeyIndex = 0;
+
   const promptText = `너는 고등학생들의 수학 학습을 돕는 친절하고 활기찬 대학생 여자 선생님이야. 입력받은 한국어 수학 텍스트(수식 포함)를 친절하고 자연스러운 구어체로 상냥하게 읽어줘. 절대로 추가적인 인사말, 해설, 격려 등 잡담을 전혀 덧붙이지 말고, 오직 아래에 주어진 대본 텍스트 자체만 있는 그대로 읽어줘:
 
 ${text}`;
@@ -228,21 +231,30 @@ ${text}`;
         throw new Error("No Gemini API keys available");
       }
 
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-tts-preview:generateContent?key=${currentKey}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          contents: [{ parts: [{ text: promptText }] }],
-          generationConfig: {
-            responseModalities: ["AUDIO"],
-            speechConfig: {
-              voiceConfig: {
-                prebuiltVoiceConfig: { voiceName: "Aoede" }
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 180000);
+
+      let response;
+      try {
+        response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${currentKey}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          signal: controller.signal,
+          body: JSON.stringify({
+            contents: [{ parts: [{ text: promptText }] }],
+            generationConfig: {
+              responseModalities: ["AUDIO"],
+              speechConfig: {
+                voiceConfig: {
+                  prebuiltVoiceConfig: { voiceName: "Aoede" }
+                }
               }
             }
-          }
-        })
-      });
+          })
+        });
+      } finally {
+        clearTimeout(timeoutId);
+      }
 
       if (!response.ok) {
         const errorJson = await response.json().catch(() => ({}));
@@ -274,7 +286,9 @@ ${text}`;
       return Buffer.from(audioPart.inlineData.data, 'base64');
     } catch (err) {
       console.warn(`⚠️ Gemini API attempt ${attempt} failed: ${err.message}`);
-      if (attempt === retries) throw err;
+      if (attempt === retries || err.message.includes('quota') || err.message.includes('QUOTA') || err.message.includes('limit') || err.message.includes('exceeded') || err.message.includes('RESOURCE_EXHAUSTED')) {
+        throw err;
+      }
       await new Promise(resolve => setTimeout(resolve, 3000));
     }
   }
@@ -306,11 +320,35 @@ async function uploadToSupabase(buffer, remotePath, retries = 3) {
   }
 }
 
+async function getRemoteExistingFiles(remoteDir) {
+  if (!SUPABASE_URL || !SUPABASE_KEY) return new Set();
+  const url = `${SUPABASE_URL}/storage/v1/object/list/${BUCKET}`;
+  try {
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${SUPABASE_KEY}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ prefix: `${remoteDir}/`, limit: 100 })
+    });
+    if (!res.ok) return new Set();
+    const files = await res.json().catch(() => []);
+    const filenames = new Set(files.map(f => f.name));
+    return filenames;
+  } catch (e) {
+    return new Set();
+  }
+}
+
 async function processStage(stageSpec, force = false) {
   const { num, localDir, remoteDir, localAudioPrefix } = stageSpec;
   console.log(`\n======================================================`);
   console.log(`🔷 [Stage ${num}] Directory: "${localDir}" -> Supabase: "${remoteDir}"`);
   console.log(`======================================================`);
+
+  const remoteFiles = await getRemoteExistingFiles(remoteDir);
+  console.log(`☁️ Found ${remoteFiles.size} existing files on Supabase storage for "${remoteDir}".`);
 
   const stageDirPath = path.join('public', 'math_hints', localDir);
   if (!fs.existsSync(stageDirPath)) {
@@ -338,8 +376,11 @@ async function processStage(stageSpec, force = false) {
     const localFileName = `${localAudioPrefix}${String(i).padStart(2, '0')}.mp3`;
     const localFilePath = path.join(LOCAL_OUTPUT_DIR, localFileName);
 
-    if (!force && fs.existsSync(localFilePath) && fs.statSync(localFilePath).size > 10240) {
-      console.log(`⏭️ Skipping ${localDir}/${pid} (already exists, size: ${(fs.statSync(localFilePath).size / 1024).toFixed(1)} KB)`);
+    const existsLocally = fs.existsSync(localFilePath) && fs.statSync(localFilePath).size > 10240;
+    const existsRemotely = remoteFiles.has(`${pid}.mp3`);
+
+    if (!force && (existsLocally || existsRemotely)) {
+      console.log(`⏭️ Skipping ${localDir}/${pid} (already exists, locally: ${existsLocally}, remotely: ${existsRemotely})`);
       successCount++;
       continue;
     }
@@ -355,55 +396,60 @@ async function processStage(stageSpec, force = false) {
     console.log(`\n--- [${i}/20] Processing ${localDir}/${pid}.json ---`);
     console.log(`Script: "${narrationText.substring(0, 100)}..."`);
 
-    try {
-      // 1. Generate Voice Audio via Gemini 2.5 Voice API (Aoede)
-      const rawAudioBuffer = await generateGeminiTTS(narrationText);
-      console.log(`✅ Generated raw Gemini 2.5 PCM (${(rawAudioBuffer.length / 1024).toFixed(1)} KB)`);
-
-      // 2. Decode raw PCM and encode to genuine MP3 via ffmpeg (iOS/Safari highly compatible)
-      const tempPcmPath = path.resolve(LOCAL_OUTPUT_DIR, `temp_${localAudioPrefix}${pid}.pcm`);
-      const tempMp3Path = path.resolve(LOCAL_OUTPUT_DIR, `temp_${localAudioPrefix}${pid}.mp3`);
-      fs.writeFileSync(tempPcmPath, rawAudioBuffer);
-
+    let success = false;
+    while (!success) {
       try {
-        execSync(`ffmpeg -y -f s16le -ar 24000 -ac 1 -i "${tempPcmPath}" -codec:a libmp3lame -qscale:a 2 "${tempMp3Path}"`, { stdio: 'pipe' });
+        // 1. Generate Voice Audio via Gemini 2.5 Voice API (Aoede)
+        const rawAudioBuffer = await generateGeminiTTS(narrationText);
+        console.log(`✅ Generated raw Gemini 2.5 PCM (${(rawAudioBuffer.length / 1024).toFixed(1)} KB)`);
+
+        // 2. Decode raw PCM and encode to genuine MP3 via ffmpeg (iOS/Safari highly compatible)
+        const tempPcmPath = path.resolve(LOCAL_OUTPUT_DIR, `temp_${localAudioPrefix}${pid}.pcm`);
+        const tempMp3Path = path.resolve(LOCAL_OUTPUT_DIR, `temp_${localAudioPrefix}${pid}.mp3`);
+        fs.writeFileSync(tempPcmPath, rawAudioBuffer);
+
+        try {
+          execSync(`ffmpeg -y -f s16le -ar 24000 -ac 1 -i "${tempPcmPath}" -codec:a libmp3lame -qscale:a 2 "${tempMp3Path}"`, { stdio: 'pipe' });
+        } catch (err) {
+          const stderr = err.stderr ? err.stderr.toString() : '';
+          throw new Error(`ffmpeg conversion failed: ${err.message}\nStderr: ${stderr}`);
+        }
+
+        const mp3Buffer = fs.readFileSync(tempMp3Path);
+
+        // Clean temp files
+        try {
+          fs.unlinkSync(tempPcmPath);
+          fs.unlinkSync(tempMp3Path);
+        } catch (e) {}
+
+        // Size verification check (>10KB)
+        if (mp3Buffer.length < 10240) {
+          throw new Error(`Generated MP3 file is suspiciously small: ${mp3Buffer.length} bytes`);
+        }
+
+        console.log(`✅ Converted to genuine MP3 via ffmpeg (${(mp3Buffer.length / 1024).toFixed(1)} KB)`);
+
+        // 3. Save locally
+        fs.writeFileSync(localFilePath, mp3Buffer);
+        console.log(`💾 Saved locally to: ${localFilePath}`);
+
+        // 4. Upload to Supabase Storage math-tts bucket
+        const remotePath = `${remoteDir}/${pid}.mp3`;
+        await uploadToSupabase(mp3Buffer, remotePath);
+        console.log(`☁️ Uploaded to Supabase: ${BUCKET}/${remotePath}`);
+
+        successCount++;
+        success = true;
+
+        // Quota delay: 6.5 seconds delay keeps us safely under 10 RPM (RPM=9.2)
+        await new Promise(resolve => setTimeout(resolve, 6500));
+
       } catch (err) {
-        const stderr = err.stderr ? err.stderr.toString() : '';
-        throw new Error(`ffmpeg conversion failed: ${err.message}\nStderr: ${stderr}`);
+        console.error(`❌ Failed to process ${pid}:`, err.message);
+        console.log(`⏳ Waiting 65 seconds for API quota recovery before retrying ${pid}...`);
+        await new Promise(resolve => setTimeout(resolve, 65000));
       }
-
-      const mp3Buffer = fs.readFileSync(tempMp3Path);
-
-      // Clean temp files
-      try {
-        fs.unlinkSync(tempPcmPath);
-        fs.unlinkSync(tempMp3Path);
-      } catch (e) {}
-
-      // Size verification check (>10KB)
-      if (mp3Buffer.length < 10240) {
-        throw new Error(`Generated MP3 file is suspiciously small: ${mp3Buffer.length} bytes`);
-      }
-
-      console.log(`✅ Converted to genuine MP3 via ffmpeg (${(mp3Buffer.length / 1024).toFixed(1)} KB)`);
-
-      // 3. Save locally
-      fs.writeFileSync(localFilePath, mp3Buffer);
-      console.log(`💾 Saved locally to: ${localFilePath}`);
-
-      // 4. Upload to Supabase Storage math-tts bucket
-      const remotePath = `${remoteDir}/${pid}.mp3`;
-      await uploadToSupabase(mp3Buffer, remotePath);
-      console.log(`☁️ Uploaded to Supabase: ${BUCKET}/${remotePath}`);
-
-      successCount++;
-
-      // Quota delay: 6.5 seconds delay keeps us safely under 10 RPM (RPM=9.2)
-      await new Promise(resolve => setTimeout(resolve, 6500));
-
-    } catch (err) {
-      console.error(`❌ Failed to process ${pid}:`, err.message);
-      failCount++;
     }
   }
 
