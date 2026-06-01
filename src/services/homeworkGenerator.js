@@ -1,5 +1,6 @@
 import { mathTextsData, avsAnswersData } from './mathDataLoader.js';
 import { HOMEWORK_UNITS, getHomeworkRange } from '../data/homeworkSSOT.js';
+import { resolveAnswer } from './answerResolver.js';
 
 
 /**
@@ -320,13 +321,6 @@ export function generateMathHomework(sessionHistory, courseName, teacherName, op
     ansMap = cachedAnswers[answerKey];
   }
 
-  if (!ansMap) {
-    ansMap = {};
-    for (let i = 1; i <= (matchedUnit.problemCount || 50); i++) {
-      ansMap[String(i).padStart(3, '0')] = "3";
-    }
-  }
-
   // 4. Generate package problems
   const homeworkProblems = [];
   let problemCount = 0;
@@ -343,7 +337,7 @@ export function generateMathHomework(sessionHistory, courseName, teacherName, op
       unit: answerKey,
       questionText: `[${courseName} 핵심 보강] 다음 문제 이미지를 분석하고 정확한 정답을 입력하시오.`,
       problemImage: problemImage,
-      answer: ansMap[keyStr] || "3",
+      answer: (ansMap && ansMap[keyStr] != null) ? ansMap[keyStr] : resolveAnswer(matchedUnit.answerKey, idx),
       sourceProblemId: idx,
       isHomework: true
     });

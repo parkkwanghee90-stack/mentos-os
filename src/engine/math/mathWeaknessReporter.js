@@ -4,7 +4,7 @@
  */
 
 import { HOMEWORK_UNITS, getHomeworkRange } from '@/data/homeworkSSOT';
-import avsAnswersData from '@/data/avs_answers.json';
+import { resolveAnswer } from '@/services/answerResolver';
 import { queueParentPush } from '@/services/pushService';
 
 /**
@@ -146,7 +146,8 @@ export function generateFortnightlyTestProblems(studentLevel = '4~5등급') {
       
       const pNumStr = String(candidate.num).padStart(3, '0');
       const ansKey = hwUnit.answerKey;
-      const rawAnswer = avsAnswersData[ansKey]?.[pNumStr] || '3';
+      const rawAnswer = resolveAnswer(ansKey, candidate.num);
+      if (rawAnswer === null) return; // 정답 없으면 출제 제외
 
       assignedProblems.push({
         id: `fort_${hwUnit.id}_${pNumStr}_${Date.now()}`,
@@ -177,7 +178,8 @@ export function generateFortnightlyTestProblems(studentLevel = '4~5등급') {
         const isAlreadyAdded = assignedProblems.some(p => p.hwId === fillUnit.id && p.numStr === pNumStr);
         if (isAlreadyAdded) continue;
 
-        const rawAnswer = avsAnswersData[fillUnit.answerKey]?.[pNumStr] || '3';
+        const rawAnswer = resolveAnswer(fillUnit.answerKey, num);
+        if (rawAnswer === null) continue; // 정답 없으면 출제 제외
         assignedProblems.push({
           id: `fort_${fillUnit.id}_${pNumStr}_${Date.now()}`,
           hwId: fillUnit.id,
