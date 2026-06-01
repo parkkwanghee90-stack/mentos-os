@@ -588,12 +588,12 @@ export const HOMEWORK_UNITS = [
     stages: { '4단계': { start: 138, end: 155 } },
   },
 
-  // ── 05. 여러가지 미분법 (83문제) ──
+  // ── 05. 여러가지 미분법 (82문제) ──
   {
     id: 'hw_cal_05a', title: '여러가지 미분법 ①', subject: '미적분',
     folderName: '05여러가지미분법', hintKey: '미적분_05여러가지미분법_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/05여러가지미분법2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/05여러가지미분법3.4단계/정답및해설.html' },
-    answerKey: '미적분_05여러가지미분법_통합숙제', problemCount: 83,
+    answerKey: '미적분_05여러가지미분법_통합숙제', problemCount: 82,
     imagePath: '/math_crops/숙제/미적분/05여러가지미분법/',
     relatedUnit: '여러가지 미분법',
     stages: { '2단계': { start: 1, end: 20 } },
@@ -602,7 +602,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_05b', title: '여러가지 미분법 ②', subject: '미적분',
     folderName: '05여러가지미분법', hintKey: '미적분_05여러가지미분법_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/05여러가지미분법2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/05여러가지미분법3.4단계/정답및해설.html' },
-    answerKey: '미적분_05여러가지미분법_통합숙제', problemCount: 83,
+    answerKey: '미적분_05여러가지미분법_통합숙제', problemCount: 82,
     imagePath: '/math_crops/숙제/미적분/05여러가지미분법/',
     relatedUnit: '여러가지 미분법',
     stages: { '2단계': { start: 21, end: 40 } },
@@ -611,7 +611,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_05c', title: '여러가지 미분법 ③', subject: '미적분',
     folderName: '05여러가지미분법', hintKey: '미적분_05여러가지미분법_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/05여러가지미분법2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/05여러가지미분법3.4단계/정답및해설.html' },
-    answerKey: '미적분_05여러가지미분법_통합숙제', problemCount: 83,
+    answerKey: '미적분_05여러가지미분법_통합숙제', problemCount: 82,
     imagePath: '/math_crops/숙제/미적분/05여러가지미분법/',
     relatedUnit: '여러가지 미분법',
     stages: { '2단계': { start: 41, end: 56 }, '3·4단계': { start: 57, end: 63 } },
@@ -620,10 +620,10 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_05d', title: '여러가지 미분법 ④ (심화)', subject: '미적분',
     folderName: '05여러가지미분법', hintKey: '미적분_05여러가지미분법_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/05여러가지미분법2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/05여러가지미분법3.4단계/정답및해설.html' },
-    answerKey: '미적분_05여러가지미분법_통합숙제', problemCount: 83,
+    answerKey: '미적분_05여러가지미분법_통합숙제', problemCount: 82,
     imagePath: '/math_crops/숙제/미적분/05여러가지미분법/',
     relatedUnit: '여러가지 미분법',
-    stages: { '3·4단계': { start: 64, end: 83 } },
+    stages: { '3·4단계': { start: 64, end: 82 } },
   },
 
   // ── 06. 도함수의 활용 1 (80문제) ──
