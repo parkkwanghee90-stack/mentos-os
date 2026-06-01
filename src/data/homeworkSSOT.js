@@ -664,12 +664,12 @@ export const HOMEWORK_UNITS = [
     stages: { '3·4단계': { start: 72, end: 81 } },
   },
 
-  // ── 07. 도함수의 활용 2 (40문제) ──
+  // ── 07. 도함수의 활용 2 (39문제) ──
   {
     id: 'hw_cal_07a', title: '도함수의 활용 2 ①', subject: '미적분',
     folderName: '07도함수활용2', hintKey: '미적분_07도함수활용2_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/07도함수의활용2/2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/07도함수의활용2/3.4단계/정답및해설.html' },
-    answerKey: '미적분_07도함수활용2_통합숙제', problemCount: 40,
+    answerKey: '미적분_07도함수활용2_통합숙제', problemCount: 39,
     imagePath: '/math_crops/숙제/미적분/07도함수활용2/',
     relatedUnit: '도함수의 활용 2',
     stages: { '2단계': { start: 1, end: 13 }, '3·4단계': { start: 14, end: 20 } },
@@ -678,10 +678,10 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_07b', title: '도함수의 활용 2 ②', subject: '미적분',
     folderName: '07도함수활용2', hintKey: '미적분_07도함수활용2_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/07도함수의활용2/2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/07도함수의활용2/3.4단계/정답및해설.html' },
-    answerKey: '미적분_07도함수활용2_통합숙제', problemCount: 40,
+    answerKey: '미적분_07도함수활용2_통합숙제', problemCount: 39,
     imagePath: '/math_crops/숙제/미적분/07도함수활용2/',
     relatedUnit: '도함수의 활용 2',
-    stages: { '3·4단계': { start: 21, end: 40 } },
+    stages: { '3·4단계': { start: 21, end: 39 } },
   },
 
   // ── 08. 여러가지 적분법 (18문제) ──
