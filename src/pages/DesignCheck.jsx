@@ -6,12 +6,17 @@ import React, { useState } from 'react';
  *   라우트: /design-check
  */
 export default function DesignCheck() {
+  const VIEWS = {
+    classroom: { ref: '/lecture.png', route: '/class/math/h_math3', label: '교실 (lecture.png)' },
+    login: { ref: '/login.png', route: '/login', label: '로그인 (login.png)' },
+  };
+  const [view, setView] = useState('classroom');   // 'classroom' | 'login'
   const [mode, setMode] = useState('side');        // 'side' | 'overlay'
   const [opacity, setOpacity] = useState(0.5);     // overlay 모드에서 레퍼런스 투명도
-  const [target, setTarget] = useState('/class/math/h_math3');
   const [iframeKey, setIframeKey] = useState(0);    // 새로고침용
 
-  const REF = '/lecture.png';
+  const REF = VIEWS[view].ref;
+  const target = VIEWS[view].route;
   const CANVAS_W = 1536;   // 레퍼런스 원본 폭(px)
   const CANVAS_H = 1024;
 
@@ -57,13 +62,13 @@ export default function DesignCheck() {
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginLeft: 'auto' }}>
           <select
-            value={target}
-            onChange={(e) => { setTarget(e.target.value); setIframeKey(k => k + 1); }}
+            value={view}
+            onChange={(e) => { setView(e.target.value); setIframeKey(k => k + 1); }}
             style={{ padding: '0.45rem 0.6rem', borderRadius: 8, border: '1px solid #d4d9e3', background: '#ffffff', color: '#1a1a1a', fontWeight: 600, fontSize: '0.8rem' }}
           >
-            <option value="/class/math/h_math3">h_math3 (수학상)</option>
-            <option value="/class/math/h_math1">h_math1</option>
-            <option value="/class/math/h_math2">h_math2</option>
+            {Object.entries(VIEWS).map(([k, v]) => (
+              <option key={k} value={k}>{v.label}</option>
+            ))}
           </select>
           <button onClick={() => setIframeKey(k => k + 1)} style={tabBtn(false)}>새로고침</button>
           <a href={target} target="_blank" rel="noreferrer" style={{ ...tabBtn(false), textDecoration: 'none', display: 'inline-block' }}>새 탭 ↗</a>
