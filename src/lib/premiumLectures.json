@@ -1,0 +1,40 @@
+{
+  "고차방정식":        { "slug": "higher_order_eq",       "sourceJson": "higher_order_eq.json" },
+  "일차부등식":        { "slug": "linear_ineq",           "sourceJson": "linear_ineq.json" },
+  "이차부등식":        { "slug": "quad_ineq",             "sourceJson": "quad_ineq.json" },
+  "경우의수":          { "slug": "prob_cases",            "sourceJson": "prob_cases.json" },
+  "행렬":             { "slug": "matrix",                "sourceJson": "matrix.json" },
+  "점과좌표":          { "slug": "points_coord",          "sourceJson": "points_coord.json" },
+  "직선의방정식":       { "slug": "line_eq",               "sourceJson": "line_eq.json" },
+  "원의방정식":        { "slug": "circle_eq",             "sourceJson": "circle_eq.json" },
+  "도형의이동":        { "slug": "geom_transform",        "sourceJson": "geom_transform.json" },
+
+  "지수":             { "slug": "exponent",              "sourceJson": "exponent.json" },
+  "로그":             { "slug": "logarithm",             "sourceJson": "logarithm.json" },
+  "지수함수":          { "slug": "exp_func",              "sourceJson": "exponent_.json" },
+  "로그함수":          { "slug": "log_func",              "sourceJson": "logarithm_.json" },
+  "등차등비":          { "slug": "arith_geom_seq",        "sourceJson": "arith_geom_seq.json" },
+  "시그마용법":         { "slug": "sigma",                 "sourceJson": "sigma.json" },
+  "수학적귀납법":       { "slug": "math_induction",        "sourceJson": "math_induction.json" },
+
+  "함수의극한":        { "slug": "limit",                 "sourceJson": "limit.json" },
+  "함수의연속":        { "slug": "continuity",            "sourceJson": ".json" },
+  "미분계수":          { "slug": "derivative_coeff_full", "sourceJson": "derivative_coeff_.json" },
+  "도함수의활용":       { "slug": "derivative_app_1",      "sourceJson": "derivative_app_1.json" },
+  "부정적분과정적분":    { "slug": "indef_def_integral",    "sourceJson": "def_integral_def_integral.json" },
+  "정적분의활용":       { "slug": "def_integral_util",     "sourceJson": "def_integral_.json" },
+
+  "미적분_수열의극한":   { "slug": "calc_seq_limit",        "sourceJson": "calculus_sequence_limit.json" },
+  "미적분_급수":        { "slug": "calc_series",           "sourceJson": "calculus_series.json" },
+  "미적분_삼각함수극한": { "slug": "calc_trig_limit",       "sourceJson": "calculus_trig_funclimit.json" },
+  "미적분_삼각함수공식": { "slug": "calc_trig_formula",     "sourceJson": "calculus_trig_func_.json" },
+  "미적분_도함수활용":   { "slug": "calc_deriv_app",        "sourceJson": "calculus_.json" },
+  "미적분_적분법":      { "slug": "calc_integration",      "sourceJson": "various_integral_.json" },
+  "미적분_정적분":      { "slug": "calc_def_integral",     "sourceJson": "calculus_def_integral.json" },
+  "미적분_정적분활용":   { "slug": "calc_def_integral_util","sourceJson": "calculus_def_integral_.json" },
+
+  "순열":             { "slug": "permutation",           "sourceJson": "permutation.json" },
+  "조합":             { "slug": "combination",           "sourceJson": "combination.json" },
+  "이항정리":          { "slug": "binomial_thm",          "sourceJson": "binomial_thm.json" },
+  "조건부확률":        { "slug": "conditional_prob",      "sourceJson": "conditional_prob_.json" }
+}
