@@ -542,6 +542,14 @@ export default function HintPlayerRouter({ unit, problemId, data: propData, show
                 fetchUnit = '20260504모의고사1회확통';
             }
         }
+        // 7~12회 등 다른 회차 확통: 공통문항(1~22)은 미적분 폴더에만 존재 → 폴백
+        if (unit.endsWith('_확통') && unit !== 'CSAT_2025_6월_확통') {
+            const numPid = parseInt(problemId, 10);
+            if (!isNaN(numPid) && numPid <= 22) {
+                fetchUnit = unit.replace(/_확통$/, '_미적분');
+            }
+            // 선택문항(23~30)은 확통 폴더 그대로 유지
+        }
     } else {
     // === 미적분 (고3 전용) 힌트 라우팅 예외 처리 ===
     const calcMapping = {
