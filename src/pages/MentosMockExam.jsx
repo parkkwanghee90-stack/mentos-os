@@ -1467,19 +1467,25 @@ export default function MentosMockExam() {
                 overflowY: 'auto' 
               }}>
                 {(() => {
+                  const cv = currentVolume;
                   let examType = '6월';
                   let year = '2024';
-                  if (currentVolume >= 0 && currentVolume <= 2) {
+                  if (cv <= 2) {
                       examType = '6월';
-                      year = currentVolume === 0 ? '2025' : currentVolume === 1 ? '2024' : '2023';
-                  } else if (currentVolume >= 3 && currentVolume <= 5) {
+                      year = cv === 0 ? '2025' : cv === 1 ? '2024' : '2023';
+                  } else if (cv <= 5) {
                       examType = '수능';
-                      year = currentVolume === 3 ? '2025' : currentVolume === 4 ? '2024' : '2023';
-                  }
+                      year = cv === 3 ? '2025' : cv === 4 ? '2024' : '2023';
+                  } else if (cv === 6) { examType = '9월'; year = '2025'; } // 7회: 2025 9월모평
+                  else if (cv === 7) { examType = '6월'; year = '2025'; }   // 8회: 2025 6월모평(1회 해설 공유)
+                  else if (cv === 8) { examType = '9월'; year = '2023'; }   // 9회: 2023 9월모평
+                  else if (cv === 9) { examType = '3월'; year = '2026'; }   // 10회: 2026 3월학평
+                  else if (cv === 10) { examType = '3월'; year = '2025'; }  // 11회: 2025 3월학평
+                  else if (cv === 11) { examType = '3월'; year = '2024'; }  // 12회: 2024 3월학평
                   const subject = electiveMode === 'calculus' ? '미적분' : '확통';
-                  const mappedUnit = examType === '수능' 
+                  const mappedUnit = examType === '수능'
                     ? `CSAT_${year}수능_${subject}`
-                    : `CSAT_${year}_6월_${subject}`;
+                    : `CSAT_${year}_${examType}_${subject}`;
                   
                   let unit = mappedUnit;
                   let problemId = String(currentQ.id).padStart(3, '0');
