@@ -48,37 +48,43 @@ export function AuthProvider({ children }) {
   };
 
   useEffect(() => {
-    // 1. Check initial active session
-    supabase.auth.getSession().then(({ data: { session: activeSession } }) => {
-      if (activeSession) {
-        setSession(activeSession);
-        setUser(activeSession.user);
-        syncToLocalStorage(activeSession);
-      }
-      setLoading(false);
-    }).catch(() => {
-      setLoading(false);
-    });
+    try {
+      // 1. Check initial active session
+      supabase.auth.getSession().then(({ data: { session: activeSession } }) => {
+        if (activeSession) {
+          setSession(activeSession);
+          setUser(activeSession.user);
+          syncToLocalStorage(activeSession);
+        }
+        setLoading(false);
+      }).catch((err) => {
+        console.error('[AuthContext] getSession error:', err);
+        setLoading(false);
+      });
 
-    // 2. Listen for auth state changes
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, newSession) => {
-      console.log(`[Supabase Auth Event] ${event}`);
-      if (newSession) {
-        setSession(newSession);
-        setUser(newSession.user);
-        syncToLocalStorage(newSession);
-      } else {
-        setSession(null);
-        setUser(null);
-        localStorage.removeItem('mentos_mock_user');
-      }
-      setLoading(false);
-      window.dispatchEvent(new Event('storage'));
-    });
+      // 2. Listen for auth state changes
+      const { data: { subscription } } = supabase.auth.onAuthStateChange((event, newSession) => {
+        console.log(`[Supabase Auth Event] ${event}`);
+        if (newSession) {
+          setSession(newSession);
+          setUser(newSession.user);
+          syncToLocalStorage(newSession);
+        } else {
+          setSession(null);
+          setUser(null);
+          localStorage.removeItem('mentos_mock_user');
+        }
+        setLoading(false);
+        window.dispatchEvent(new Event('storage'));
+      });
 
-    return () => {
-      subscription.unsubscribe();
-    };
+      return () => {
+        if (subscription) subscription.unsubscribe();
+      };
+    } catch (err) {
+      console.error('[AuthContext] Supabase initialization crashed synchronously:', err);
+      setLoading(false);
+    }
   }, []);
 
   // Sign up with Email/Password — Supabase 표준 방식 (이메일 확인 링크 전송)
