@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import {
   upsertWrong, applyResolved, computeActive, RETENTION_MS,
+  getActiveUnresolvedWrongAnswers,
 } from '@/services/wrongAnswerStore';
 
 const T0 = 1_000_000_000_000; // 고정 기준 시각
@@ -43,5 +44,28 @@ describe('wrongAnswerStore 순수 헬퍼', () => {
 
   it('RETENTION_MS는 30일', () => {
     expect(RETENTION_MS).toBe(30 * 24 * 60 * 60 * 1000);
+  });
+});
+
+describe('getActiveUnresolvedWrongAnswers', () => {
+  beforeEach(() => localStorage.clear());
+
+  it('resolved 항목은 제외하고 미해결만 반환한다', () => {
+    const now = Date.now();
+    localStorage.setItem('mentos_wrong_answers', JSON.stringify([
+      { hwId: 'hw_01', num: 1, unit: 'u', answerKey: 'k', firstWrongAt: now, lastSeenAt: now, resolved: false, resolvedAt: null },
+      { hwId: 'hw_01', num: 2, unit: 'u', answerKey: 'k', firstWrongAt: now, lastSeenAt: now, resolved: true, resolvedAt: now },
+    ]));
+    const r = getActiveUnresolvedWrongAnswers();
+    expect(r).toHaveLength(1);
+    expect(r[0].num).toBe(1);
+  });
+
+  it('30일 초과 만료 항목은 제외한다', () => {
+    const now = Date.now();
+    localStorage.setItem('mentos_wrong_answers', JSON.stringify([
+      { hwId: 'hw_01', num: 1, unit: 'u', answerKey: 'k', firstWrongAt: now - 31 * 24 * 60 * 60 * 1000, lastSeenAt: now, resolved: false, resolvedAt: null },
+    ]));
+    expect(getActiveUnresolvedWrongAnswers(now)).toHaveLength(0);
   });
 });

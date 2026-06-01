@@ -8,7 +8,7 @@ import 'katex/dist/katex.min.css';
 import MathProblemRenderer from '@/components/MathProblemRenderer';
 import HintPlayerRouter from '@/components/hints/HintPlayerRouter';
 import { HOMEWORK_UNITS, getHomeworkRange, padProblemNum, getHomeworkProgress, saveHomeworkProgress, markSequenceComplete, WRONG_REVIEW_ID, getUnitById, buildSolutionSrc } from '@/data/homeworkSSOT';
-import { addWrong, markResolved, getActiveWrongAnswers } from '@/services/wrongAnswerStore';
+import { addWrong, markResolved, getActiveUnresolvedWrongAnswers } from '@/services/wrongAnswerStore';
 import { resolveAnswer } from '@/services/answerResolver';
 import { recordCompletion, buildSummaryMessage } from '@/services/homeworkCompletion';
 import { computeSolvedCounts } from '@/services/progressCounts';
@@ -81,7 +81,7 @@ export default function HomeworkMathBox() {
   // 문제 목록 생성 (동적 숙제 대응)
   const problems = useMemo(() => {
     if (homeworkId === WRONG_REVIEW_ID) {
-      const actives = getActiveWrongAnswers();
+      const actives = getActiveUnresolvedWrongAnswers();
       return actives.map((e, idx) => {
         const unit = getUnitById(e.hwId);
         const keyStr = String(e.num).padStart(3, '0');
@@ -134,7 +134,7 @@ export default function HomeworkMathBox() {
   const answers = useMemo(() => {
     if (homeworkId === WRONG_REVIEW_ID) {
       const ansMap = {};
-      const actives = getActiveWrongAnswers();
+      const actives = getActiveUnresolvedWrongAnswers();
       actives.forEach((e) => {
         const keyStr = String(e.num).padStart(3, '0');
         const ans = resolveAnswer(e.answerKey, e.num);

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Shield, Bell, AlertTriangle, Users, ArrowLeft, TrendingDown, Clock } from 'lucide-react';
 import { processUnsubmittedHomework } from '@/engine/homeworkEngine';
 import { useAuth } from '@/context/AuthContext';
+import { isSuperPassMatch } from '@/services/superPass';
 import './Dashboard.css';
 
 export default function AdminDashboard() {
@@ -88,10 +89,12 @@ export default function AdminDashboard() {
     navigate('/grade-select');
   };
 
+  // 관리자 인증번호는 환경변수(VITE_SUPER_PASS)에서만 주입한다. 코드에 하드코딩 금지.
+  const SUPER_PASS = import.meta.env.VITE_SUPER_PASS;
+
   const handleVerifyCode = (e) => {
     e.preventDefault();
-    const cleanCode = adminCodeInput.trim().toUpperCase();
-    if (cleanCode === '1234' || cleanCode === 'MENTOS_ADMIN_777') {
+    if (isSuperPassMatch(SUPER_PASS, adminCodeInput)) {
       localStorage.setItem('mentos_admin_verified', 'true');
       setIsAdminVerified(true);
       setAuthError('');
@@ -157,7 +160,7 @@ export default function AdminDashboard() {
               </label>
               <input
                 type="password"
-                placeholder="인증코드를 입력하세요 (예: 1234)"
+                placeholder="관리자 인증코드를 입력하세요"
                 value={adminCodeInput}
                 onChange={(e) => setAdminCodeInput(e.target.value)}
                 style={{

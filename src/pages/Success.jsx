@@ -16,14 +16,25 @@ export default function Success() {
 
   useEffect(() => {
     const confirmPaymentAndUpgrade = async () => {
-      if (!paymentKey || !orderId || !amount) {
+      const payappSuccess = searchParams.get('payapp_success') === 'true';
+      const payappAmount = searchParams.get('amount') || '49000';
+      const payappOrderId = searchParams.get('orderId') || `payapp_${Date.now()}`;
+
+      // Toss Payments 또는 PayApp 성공 둘 다 지원
+      const isSuccess = (paymentKey && orderId && amount) || payappSuccess;
+
+      if (!isSuccess) {
         console.error("Missing payment parameters!");
         setStatus('error');
         return;
       }
 
       try {
-        console.log('[PaymentSuccess] Confirming payment with parameters:', { paymentKey, orderId, amount });
+        const finalAmount = amount || payappAmount;
+        const finalOrderId = orderId || payappOrderId;
+        const finalPaymentKey = paymentKey || `payapp_key_${Date.now()}`;
+
+        console.log('[PaymentSuccess] Confirming payment with parameters:', { finalPaymentKey, finalOrderId, finalAmount });
         
         // 1. Supabase Database `payments` 테이블에 승인 성공 기록 삽입 (Upsert)
         if (user) {
@@ -32,9 +43,9 @@ export default function Success() {
             .from('payments')
             .upsert({
               user_id: user.id,
-              payment_key: paymentKey,
-              order_id: orderId,
-              amount: parseFloat(amount),
+              payment_key: finalPaymentKey,
+              order_id: finalOrderId,
+              amount: parseFloat(finalAmount),
               status: 'success',
               approved_at: new Date().toISOString()
             });
@@ -43,12 +54,13 @@ export default function Success() {
             console.error('[PaymentSuccess] Failed to save invoice to Supabase DB:', dbError);
           }
 
-          // 2. AuthContext의 프리미엄 업데이트 호출 (Profiles 테이블의 is_paid 및 로컬 캐싱 자동 동기화)
+          // 2. AuthContext의 프리미엄 업데이트 호출 (Profiles/Users 테이블 premium=true, paid_at 자동 설정)
           console.log('[PaymentSuccess] Elevating user profile to Premium Status...');
           await updatePremiumStatus(true);
         } else {
           // 비회원 결제 시나리오 fallback (테스트 목적)
           localStorage.setItem('mentos_is_paid', 'true');
+          localStorage.setItem('mentos_premium', 'true');
         }
 
         setStatus('success');
@@ -59,7 +71,7 @@ export default function Success() {
     };
 
     confirmPaymentAndUpgrade();
-  }, [paymentKey, orderId, amount, user]);
+  }, [paymentKey, orderId, amount, user, searchParams]);
 
   if (status === 'processing') {
     return (

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { User, Shield, Lock, ArrowRight, Zap, Sparkles, Mail, Key } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
+import { isSuperPassMatch } from '@/services/superPass';
 import './Login.css';
 
 export default function Login() {
@@ -34,12 +35,14 @@ export default function Login() {
   const [superPassInput, setSuperPassInput] = useState('');
   const [superPassError, setSuperPassError] = useState('');
 
-  // 통합관리자 슈퍼패스 — 개발 환경에서만 활성화(프로덕션 번들에 백도어 미노출).
-  const SUPERPASS_ENABLED = import.meta.env.DEV;
+  // 슈퍼패스 인증번호는 환경변수(VITE_SUPER_PASS)에서만 주입한다. 코드에 하드코딩 금지. (main #5)
+  // 환경변수가 설정된 경우에만 UI 노출 → 미설정 시 백도어 자체가 렌더되지 않음(프로덕션 기본 미노출).
+  const SUPER_PASS = import.meta.env.VITE_SUPER_PASS;
+  const SUPERPASS_ENABLED = !!SUPER_PASS;
+
   const handleSuperPass = (e) => {
     e.preventDefault();
-    if (!SUPERPASS_ENABLED) { setSuperPassError('사용할 수 없는 기능입니다.'); return; }
-    if (superPassInput.trim() === '1234') {
+    if (isSuperPassMatch(SUPER_PASS, superPassInput)) {
       localStorage.setItem('mentos_super_pass', 'true');
       localStorage.setItem('mentos_mock_user', JSON.stringify({
         id: 'super_admin_pass',

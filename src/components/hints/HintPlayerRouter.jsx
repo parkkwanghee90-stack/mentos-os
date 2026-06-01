@@ -532,14 +532,19 @@ export default function HintPlayerRouter({ unit, problemId, data: propData, show
         fetchUnit = unit;
         if (unit === 'CSAT_2025_6월_미적분') {
             fetchUnit = '20260504모의고사1회미적분';
-        }
-        if (unit === 'CSAT_2025_6월_확통') {
+        } else if (unit === 'CSAT_2025_6월_확통') {
             const numPid = parseInt(problemId, 10);
             if (!isNaN(numPid) && numPid <= 22) {
                 // Common questions 1-22 are in the 미적분 folder
                 fetchUnit = '20260504모의고사1회미적분';
             } else {
                 fetchUnit = '20260504모의고사1회확통';
+            }
+        } else if (unit.endsWith('_확통')) {
+            const numPid = parseInt(problemId, 10);
+            if (!isNaN(numPid) && numPid <= 22) {
+                // 1~22번 공통 문항은 확통 폴더 대신 미적분 폴더에서 조회하도록 동적 리다이렉션
+                fetchUnit = unit.replace('_확통', '_미적분');
             }
         }
     } else {
@@ -732,7 +737,8 @@ export default function HintPlayerRouter({ unit, problemId, data: propData, show
   const b = data.b || data.B || (data.pcbs_model && data.pcbs_model.find(x => x.stage === 'B')) || (data.steps && data.steps.find(x => x.phase === 'B' || x.stage === 'B'));
   const isGeometryV3 = data.type === 'geometry' || data.overlay_steps || (data.base_figure && data.base_figure.objects);
 
-  if (!isGeometryV3 && (!p || !c || !b)) {
+  const hasSteps = Array.isArray(data.steps) && data.steps.length > 0;
+  if (!isGeometryV3 && !hasSteps && (!p || !c || !b)) {
     console.warn(`[HintRouter] Incomplete PCBS data for ${unit}/${problemId}:`, { P: !!p, C: !!c, B: !!b });
     console.log("[HintRouter] Attempting graceful render with available data:", JSON.stringify(data).substring(0, 300));
     // Don't crash — render whatever we have
@@ -875,8 +881,12 @@ export default function HintPlayerRouter({ unit, problemId, data: propData, show
   const isV3 = !!(renderData.overlay_steps || hasBaseFigureObjects);
   const geoDetected = isV3 || hasRealGeometry(renderData) || valid_pcbsa;
   
-  // [강제 규칙] geometry 타입이거나 기하 요소가 감지되면 무조건 GeometryHintPlayer 사용
-  const useGeometry = isGeometryType || geoDetected;
+  // 해설 이미지(a.webp)의 유무를 안전하게 체크 (a.webp 이미지가 없으면 AlgebraHintPlayer가 작동하지 않음)
+  const stepsToCheck = renderData.overlay_steps || renderData.steps || renderData.hints || [];
+  const hasSolutionImage = stepsToCheck.some(s => s && s.picture && typeof s.picture === 'string' && s.picture.endsWith('a.webp'));
+
+  // [강제 규칙] geometry 타입이거나 기하 요소가 감지되거나, 또는 실제 해설 이미지(a.webp)가 존재하지 않는 순수 텍스트 힌트인 경우 무조건 GeometryHintPlayer 사용
+  const useGeometry = isGeometryType || geoDetected || !hasSolutionImage;
   const Player = useGeometry ? GeometryHintPlayer : AlgebraHintPlayer;
 
   // [검증 로그]

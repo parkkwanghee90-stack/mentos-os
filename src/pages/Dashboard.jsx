@@ -12,7 +12,7 @@ import { HIGH_TEACHER_PROFILES } from '@/data/hTeacherProfiles';
 import { processHomeworkSubmission } from '@/engine/homeworkEngine';
 import { progressToNextUnit, initTrial, TEACHER_ASSIGNMENT } from '@/engine/gradeFlowSSOT';
 import { analyzeMathWeakness, generateFortnightlyTestProblems, gradeFortnightlyTest, sendFortnightlyParentPush } from '@/engine/math/mathWeaknessReporter';
-import { generateMonthlyTestProblems, gradeMonthlyTest, sendMonthlyParentPush } from '@/engine/math/monthlyTest';
+import { generateMonthlyTestProblems, gradeMonthlyTest, sendMonthlyParentPush, recordMonthlyTestWrongs } from '@/engine/math/monthlyTest';
 import { getCompletions } from '@/services/homeworkCompletion';
 import '@/pages/Dashboard.css';
 
@@ -522,6 +522,7 @@ export default function Dashboard() {
 
   const submitMonthlyTest = React.useCallback(() => {
     const grading = gradeMonthlyTest(monthlyAnswers, assignedMonthlyProblems);
+    recordMonthlyTestWrongs(grading);
     const studentName = JSON.parse(localStorage.getItem('mentos_mock_user') || '{}')?.name || '멘토스 학생';
     sendMonthlyParentPush(studentName, grading);
     const results = JSON.parse(localStorage.getItem('monthly_test_results') || '[]');
