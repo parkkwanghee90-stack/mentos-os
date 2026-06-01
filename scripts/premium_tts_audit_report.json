@@ -1,6 +1,5 @@
 {
-  "generatedFor": "premium_lectures",
-  "orphans": [
+  "orphanFiles": [
     "step_1.mp3",
     "step_10.mp3",
     "step_11.mp3",
@@ -17,17 +16,29 @@
     "step_8.mp3",
     "step_9.mp3"
   ],
+  "junkFolders": [
+    "1",
+    "2",
+    "3",
+    "derivative_01",
+    "derivative_app_2",
+    "derivative_app_3",
+    "independent_trials",
+    "recursive_def"
+  ],
   "report": [
     {
-      "baseId": "고차방정식",
-      "safeFolder": "audio/premium_lectures/higher_order_eq",
+      "lectureId": "고차방정식",
+      "slug": "higher_order_eq",
+      "sourceJson": "higher_order_eq.json",
       "status": "COMPLETE",
       "missing": [],
       "total": 6
     },
     {
-      "baseId": "일차부등식",
-      "safeFolder": "audio/premium_lectures/linear_ineq",
+      "lectureId": "일차부등식",
+      "slug": "linear_ineq",
+      "sourceJson": "linear_ineq.json",
       "status": "GAP",
       "missing": [
         1,
@@ -39,8 +50,9 @@
       "total": 5
     },
     {
-      "baseId": "이차부등식",
-      "safeFolder": "audio/premium_lectures/quad_ineq",
+      "lectureId": "이차부등식",
+      "slug": "quad_ineq",
+      "sourceJson": "quad_ineq.json",
       "status": "GAP",
       "missing": [
         1,
@@ -51,15 +63,17 @@
       "total": 4
     },
     {
-      "baseId": "경우의수",
-      "safeFolder": "audio/premium_lectures/prob_cases",
+      "lectureId": "경우의수",
+      "slug": "prob_cases",
+      "sourceJson": "prob_cases.json",
       "status": "COMPLETE",
       "missing": [],
       "total": 4
     },
     {
-      "baseId": "행렬",
-      "safeFolder": "audio/premium_lectures/matrix",
+      "lectureId": "행렬",
+      "slug": "matrix",
+      "sourceJson": "matrix.json",
       "status": "GAP",
       "missing": [
         1,
@@ -72,8 +86,9 @@
       "total": 6
     },
     {
-      "baseId": "점과좌표",
-      "safeFolder": "audio/premium_lectures/points_coord",
+      "lectureId": "점과좌표",
+      "slug": "points_coord",
+      "sourceJson": "points_coord.json",
       "status": "GAP",
       "missing": [
         1,
@@ -86,8 +101,9 @@
       "total": 6
     },
     {
-      "baseId": "직선의방정식",
-      "safeFolder": "audio/premium_lectures/line_eq",
+      "lectureId": "직선의방정식",
+      "slug": "line_eq",
+      "sourceJson": "line_eq.json",
       "status": "GAP",
       "missing": [
         1,
@@ -100,8 +116,9 @@
       "total": 6
     },
     {
-      "baseId": "원의방정식",
-      "safeFolder": "audio/premium_lectures/circle_eq",
+      "lectureId": "원의방정식",
+      "slug": "circle_eq",
+      "sourceJson": "circle_eq.json",
       "status": "GAP",
       "missing": [
         1,
@@ -118,15 +135,17 @@
       "total": 10
     },
     {
-      "baseId": "도형의이동",
-      "safeFolder": "audio/premium_lectures/geom_transform",
+      "lectureId": "도형의이동",
+      "slug": "geom_transform",
+      "sourceJson": "geom_transform.json",
       "status": "COMPLETE",
       "missing": [],
       "total": 7
     },
     {
-      "baseId": "지수",
-      "safeFolder": "audio/premium_lectures/exponent",
+      "lectureId": "지수",
+      "slug": "exponent",
+      "sourceJson": "exponent.json",
       "status": "GAP",
       "missing": [
         1,
@@ -138,8 +157,9 @@
       "total": 5
     },
     {
-      "baseId": "로그",
-      "safeFolder": "audio/premium_lectures/logarithm",
+      "lectureId": "로그",
+      "slug": "logarithm",
+      "sourceJson": "logarithm.json",
       "status": "GAP",
       "missing": [
         1,
@@ -153,8 +173,9 @@
       "total": 7
     },
     {
-      "baseId": "지수함수",
-      "safeFolder": "audio/premium_lectures/exp_func",
+      "lectureId": "지수함수",
+      "slug": "exp_func",
+      "sourceJson": "exponent_.json",
       "status": "GAP",
       "missing": [
         1,
@@ -183,8 +204,9 @@
       "total": 22
     },
     {
-      "baseId": "로그함수",
-      "safeFolder": "audio/premium_lectures/log_func",
+      "lectureId": "로그함수",
+      "slug": "log_func",
+      "sourceJson": "logarithm_.json",
       "status": "GAP",
       "missing": [
         1,
@@ -213,50 +235,9 @@
       "total": 22
     },
     {
-      "baseId": "삼각함수성질",
-      "safeFolder": "audio/premium_lectures/trig_props",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "total": 10
-    },
-    {
-      "baseId": "삼각함수그래프",
-      "status": "NO_JSON",
-      "missing": [],
-      "total": 0
-    },
-    {
-      "baseId": "삼각함수의 활용",
-      "safeFolder": "audio/premium_lectures/trig_func",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "total": 10
-    },
-    {
-      "baseId": "등차등비",
-      "safeFolder": "audio/premium_lectures/arith_geom_seq",
+      "lectureId": "등차등비",
+      "slug": "arith_geom_seq",
+      "sourceJson": "arith_geom_seq.json",
       "status": "GAP",
       "missing": [
         1,
@@ -274,8 +255,9 @@
       "total": 11
     },
     {
-      "baseId": "시그마용법",
-      "safeFolder": "audio/premium_lectures/sigma",
+      "lectureId": "시그마용법",
+      "slug": "sigma",
+      "sourceJson": "sigma.json",
       "status": "GAP",
       "missing": [
         1,
@@ -287,8 +269,9 @@
       "total": 5
     },
     {
-      "baseId": "수학적귀납법",
-      "safeFolder": "audio/premium_lectures/math_induction",
+      "lectureId": "수학적귀납법",
+      "slug": "math_induction",
+      "sourceJson": "math_induction.json",
       "status": "GAP",
       "missing": [
         1,
@@ -302,8 +285,9 @@
       "total": 7
     },
     {
-      "baseId": "함수의극한",
-      "safeFolder": "audio/premium_lectures/limit",
+      "lectureId": "함수의극한",
+      "slug": "limit",
+      "sourceJson": "limit.json",
       "status": "GAP",
       "missing": [
         1,
@@ -319,14 +303,9 @@
       "total": 9
     },
     {
-      "baseId": "함수의연속",
-      "status": "NO_JSON",
-      "missing": [],
-      "total": 0
-    },
-    {
-      "baseId": "미분계수",
-      "safeFolder": "audio/premium_lectures/derivative_coeff",
+      "lectureId": "함수의연속",
+      "slug": "continuity",
+      "sourceJson": ".json",
       "status": "GAP",
       "missing": [
         1,
@@ -334,23 +313,46 @@
         3,
         4,
         5,
-        6,
-        7,
-        8,
-        9
+        6
       ],
-      "total": 9
-    },
-    {
-      "baseId": "도함수의활용",
-      "safeFolder": "audio/premium_lectures/",
-      "status": "COMPLETE",
-      "missing": [],
       "total": 6
     },
     {
-      "baseId": "부정적분과정적분",
-      "safeFolder": "audio/premium_lectures/def_integral_def_integral",
+      "lectureId": "미분계수",
+      "slug": "derivative_coeff_full",
+      "sourceJson": "derivative_coeff_.json",
+      "status": "GAP",
+      "missing": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "total": 15
+    },
+    {
+      "lectureId": "도함수의활용",
+      "slug": "derivative_app_1",
+      "sourceJson": "derivative_app_1.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 5
+    },
+    {
+      "lectureId": "부정적분과정적분",
+      "slug": "indef_def_integral",
+      "sourceJson": "def_integral_def_integral.json",
       "status": "GAP",
       "missing": [
         1,
@@ -365,8 +367,9 @@
       "total": 8
     },
     {
-      "baseId": "정적분의활용",
-      "safeFolder": "audio/premium_lectures/def_integral",
+      "lectureId": "정적분의활용",
+      "slug": "def_integral_util",
+      "sourceJson": "def_integral_.json",
       "status": "GAP",
       "missing": [
         1,
@@ -383,8 +386,9 @@
       "total": 10
     },
     {
-      "baseId": "미적분_수열의극한",
-      "safeFolder": "audio/premium_lectures/calculus_sequence_limit",
+      "lectureId": "미적분_수열의극한",
+      "slug": "calc_seq_limit",
+      "sourceJson": "calculus_sequence_limit.json",
       "status": "GAP",
       "missing": [
         1,
@@ -401,8 +405,9 @@
       "total": 10
     },
     {
-      "baseId": "미적분_급수",
-      "safeFolder": "audio/premium_lectures/calculus_series",
+      "lectureId": "미적분_급수",
+      "slug": "calc_series",
+      "sourceJson": "calculus_series.json",
       "status": "GAP",
       "missing": [
         1,
@@ -419,8 +424,9 @@
       "total": 10
     },
     {
-      "baseId": "미적분_삼각함수극한",
-      "safeFolder": "audio/premium_lectures/calculus_trig_funclimit",
+      "lectureId": "미적분_삼각함수극한",
+      "slug": "calc_trig_limit",
+      "sourceJson": "calculus_trig_funclimit.json",
       "status": "GAP",
       "missing": [
         1,
@@ -437,8 +443,9 @@
       "total": 10
     },
     {
-      "baseId": "미적분_삼각함수공식",
-      "safeFolder": "audio/premium_lectures/calculus_trig_func",
+      "lectureId": "미적분_삼각함수공식",
+      "slug": "calc_trig_formula",
+      "sourceJson": "calculus_trig_func_.json",
       "status": "GAP",
       "missing": [
         1,
@@ -460,8 +467,9 @@
       "total": 15
     },
     {
-      "baseId": "미적분_미분법",
-      "safeFolder": "audio/premium_lectures/calculus",
+      "lectureId": "미적분_도함수활용",
+      "slug": "calc_deriv_app",
+      "sourceJson": "calculus_.json",
       "status": "GAP",
       "missing": [
         1,
@@ -478,44 +486,9 @@
       "total": 10
     },
     {
-      "baseId": "미적분_도함수활용",
-      "safeFolder": "audio/premium_lectures/calculus",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "total": 10
-    },
-    {
-      "baseId": "미적분_적분법",
-      "safeFolder": "audio/premium_lectures/calculus",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "total": 10
-    },
-    {
-      "baseId": "미적분_정적분",
-      "safeFolder": "audio/premium_lectures/calculus_def_integral",
+      "lectureId": "미적분_적분법",
+      "slug": "calc_integration",
+      "sourceJson": "various_integral_.json",
       "status": "GAP",
       "missing": [
         1,
@@ -537,8 +510,33 @@
       "total": 15
     },
     {
-      "baseId": "미적분_정적분활용",
-      "safeFolder": "audio/premium_lectures/calculus_def_integral",
+      "lectureId": "미적분_정적분",
+      "slug": "calc_def_integral",
+      "sourceJson": "calculus_def_integral.json",
+      "status": "GAP",
+      "missing": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "total": 15
+    },
+    {
+      "lectureId": "미적분_정적분활용",
+      "slug": "calc_def_integral_util",
+      "sourceJson": "calculus_def_integral_.json",
       "status": "GAP",
       "missing": [
         1,
@@ -555,8 +553,9 @@
       "total": 10
     },
     {
-      "baseId": "순열",
-      "safeFolder": "audio/premium_lectures/permutation",
+      "lectureId": "순열",
+      "slug": "permutation",
+      "sourceJson": "permutation.json",
       "status": "GAP",
       "missing": [
         1,
@@ -567,8 +566,9 @@
       "total": 4
     },
     {
-      "baseId": "조합",
-      "safeFolder": "audio/premium_lectures/combination",
+      "lectureId": "조합",
+      "slug": "combination",
+      "sourceJson": "combination.json",
       "status": "GAP",
       "missing": [
         1,
@@ -583,8 +583,9 @@
       "total": 8
     },
     {
-      "baseId": "이항정리",
-      "safeFolder": "audio/premium_lectures/binomial_thm",
+      "lectureId": "이항정리",
+      "slug": "binomial_thm",
+      "sourceJson": "binomial_thm.json",
       "status": "GAP",
       "missing": [
         1,
@@ -603,15 +604,9 @@
       "total": 12
     },
     {
-      "baseId": "확률의 뜻",
-      "safeFolder": "audio/premium_lectures/",
-      "status": "COMPLETE",
-      "missing": [],
-      "total": 6
-    },
-    {
-      "baseId": "조건부확률",
-      "safeFolder": "audio/premium_lectures/conditional_prob",
+      "lectureId": "조건부확률",
+      "slug": "conditional_prob",
+      "sourceJson": "conditional_prob_.json",
       "status": "GAP",
       "missing": [
         1,
@@ -625,20 +620,6 @@
         9
       ],
       "total": 9
-    },
-    {
-      "baseId": "정규분포",
-      "safeFolder": "audio/premium_lectures/",
-      "status": "COMPLETE",
-      "missing": [],
-      "total": 6
-    },
-    {
-      "baseId": "통계적 추정",
-      "safeFolder": "audio/premium_lectures/",
-      "status": "COMPLETE",
-      "missing": [],
-      "total": 6
     }
   ]
 }
