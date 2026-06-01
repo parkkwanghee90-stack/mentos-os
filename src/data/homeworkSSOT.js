@@ -503,12 +503,12 @@ export const HOMEWORK_UNITS = [
     stages: { '4단계': { start: 115, end: 134 } },
   },
 
-  // ── 03. 지수로그함수의 미분 (38문제) ──
+  // ── 03. 지수로그함수의 미분 (37문제) ──
   {
     id: 'hw_cal_03a', title: '지수로그함수의 미분 ①', subject: '미적분',
     folderName: '03지수로그함수미분', hintKey: '미적분_03지수로그함수미분_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/03지수로그함수의미분2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/03지수로그함수의미분3.4단계/정답및해설.html' },
-    answerKey: '미적분_03지수로그함수미분_통합숙제', problemCount: 38,
+    answerKey: '미적분_03지수로그함수미분_통합숙제', problemCount: 37,
     imagePath: '/math_crops/숙제/미적분/03지수로그함수미분/',
     relatedUnit: '지수로그함수의 미분',
     stages: { '2단계': { start: 1, end: 21 } },
@@ -517,10 +517,10 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_03b', title: '지수로그함수의 미분 ②', subject: '미적분',
     folderName: '03지수로그함수미분', hintKey: '미적분_03지수로그함수미분_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/03지수로그함수의미분2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/03지수로그함수의미분3.4단계/정답및해설.html' },
-    answerKey: '미적분_03지수로그함수미분_통합숙제', problemCount: 38,
+    answerKey: '미적분_03지수로그함수미분_통합숙제', problemCount: 37,
     imagePath: '/math_crops/숙제/미적분/03지수로그함수미분/',
     relatedUnit: '지수로그함수의 미분',
-    stages: { '3·4단계': { start: 22, end: 38 } },
+    stages: { '3·4단계': { start: 22, end: 37 } },
   },
 
   // ── 04. 삼각함수의 미분 (155문제) ──
