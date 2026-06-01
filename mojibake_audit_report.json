@@ -1,0 +1,1198 @@
+[
+  {
+    "folder": "(3)경우의수2단계",
+    "totalFiles": 43,
+    "corruptedFiles": 1,
+    "corruptedRatio": "2.3%",
+    "samples": [
+      "043.json"
+    ]
+  },
+  {
+    "folder": "(3)점과좌표 개념2단계(44)p17 1+1(쌍둥이)",
+    "totalFiles": 44,
+    "corruptedFiles": 41,
+    "corruptedRatio": "93.2%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "(4)행렬2단계",
+    "totalFiles": 23,
+    "corruptedFiles": 1,
+    "corruptedRatio": "4.3%",
+    "samples": [
+      "023.json"
+    ]
+  },
+  {
+    "folder": "(5)원의방정식 개념2단계(54)p24 1+1(쌍둥이)",
+    "totalFiles": 52,
+    "corruptedFiles": 48,
+    "corruptedRatio": "92.3%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)",
+    "totalFiles": 44,
+    "corruptedFiles": 41,
+    "corruptedRatio": "93.2%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "(6)도형의이동 개념2단계(46)p21 1+1(쌍둥이)",
+    "totalFiles": 46,
+    "corruptedFiles": 46,
+    "corruptedRatio": "100.0%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)",
+    "totalFiles": 40,
+    "corruptedFiles": 38,
+    "corruptedRatio": "95.0%",
+    "samples": [
+      "002.json",
+      "003.json",
+      "004.json"
+    ]
+  },
+  {
+    "folder": "(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)",
+    "totalFiles": 53,
+    "corruptedFiles": 2,
+    "corruptedRatio": "3.8%",
+    "samples": [
+      "002.json",
+      "037.json"
+    ]
+  },
+  {
+    "folder": "(8)도형의이동 개념2단계(46)p21 1+1(쌍둥이)",
+    "totalFiles": 46,
+    "corruptedFiles": 46,
+    "corruptedRatio": "100.0%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "001순열2단계",
+    "totalFiles": 64,
+    "corruptedFiles": 10,
+    "corruptedRatio": "15.6%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "003이항정리2단계",
+    "totalFiles": 25,
+    "corruptedFiles": 4,
+    "corruptedRatio": "16.0%",
+    "samples": [
+      "003.json",
+      "005.json",
+      "007.json"
+    ]
+  },
+  {
+    "folder": "004조건부+독립시행 2단계",
+    "totalFiles": 60,
+    "corruptedFiles": 6,
+    "corruptedRatio": "10.0%",
+    "samples": [
+      "013.json",
+      "019.json",
+      "021.json"
+    ]
+  },
+  {
+    "folder": "005확률의뜻과덧셈정리2단계",
+    "totalFiles": 72,
+    "corruptedFiles": 15,
+    "corruptedRatio": "20.8%",
+    "samples": [
+      "003.json",
+      "007.json",
+      "010.json"
+    ]
+  },
+  {
+    "folder": "006확률변수와확률분포",
+    "totalFiles": 59,
+    "corruptedFiles": 2,
+    "corruptedRatio": "3.4%",
+    "samples": [
+      "011.json",
+      "026.json"
+    ]
+  },
+  {
+    "folder": "007이항분포와정규분포",
+    "totalFiles": 40,
+    "corruptedFiles": 2,
+    "corruptedRatio": "5.0%",
+    "samples": [
+      "005.json",
+      "036.json"
+    ]
+  },
+  {
+    "folder": "2024060504미적분2회",
+    "totalFiles": 12,
+    "corruptedFiles": 1,
+    "corruptedRatio": "8.3%",
+    "samples": [
+      "010.json"
+    ]
+  },
+  {
+    "folder": "2024060504확통2회모의고사",
+    "totalFiles": 12,
+    "corruptedFiles": 1,
+    "corruptedRatio": "8.3%",
+    "samples": [
+      "010.json"
+    ]
+  },
+  {
+    "folder": "20260504모의고사1회미적분",
+    "totalFiles": 30,
+    "corruptedFiles": 1,
+    "corruptedRatio": "3.3%",
+    "samples": [
+      "015.json"
+    ]
+  },
+  {
+    "folder": "2단계 (1)집합p33(127)",
+    "totalFiles": 127,
+    "corruptedFiles": 122,
+    "corruptedRatio": "96.1%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "2단계 (2)명제p25(97)",
+    "totalFiles": 38,
+    "corruptedFiles": 38,
+    "corruptedRatio": "100.0%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "4)삼각함수합성과미분",
+    "totalFiles": 50,
+    "corruptedFiles": 3,
+    "corruptedRatio": "6.0%",
+    "samples": [
+      "003.json",
+      "007.json",
+      "045.json"
+    ]
+  },
+  {
+    "folder": "6)도함수의활용1",
+    "totalFiles": 71,
+    "corruptedFiles": 10,
+    "corruptedRatio": "14.1%",
+    "samples": [
+      "001.json",
+      "019.json",
+      "021.json"
+    ]
+  },
+  {
+    "folder": "7)도함수의활용2",
+    "totalFiles": 32,
+    "corruptedFiles": 4,
+    "corruptedRatio": "12.5%",
+    "samples": [
+      "001.json",
+      "004.json",
+      "007.json"
+    ]
+  },
+  {
+    "folder": "8)정적분",
+    "totalFiles": 38,
+    "corruptedFiles": 3,
+    "corruptedRatio": "7.9%",
+    "samples": [
+      "004.json",
+      "009.json",
+      "036.json"
+    ]
+  },
+  {
+    "folder": "cases_step2",
+    "totalFiles": 43,
+    "corruptedFiles": 1,
+    "corruptedRatio": "2.3%",
+    "samples": [
+      "043.json"
+    ]
+  },
+  {
+    "folder": "cases_step3",
+    "totalFiles": 48,
+    "corruptedFiles": 1,
+    "corruptedRatio": "2.1%",
+    "samples": [
+      "048.json"
+    ]
+  },
+  {
+    "folder": "cases_step4",
+    "totalFiles": 33,
+    "corruptedFiles": 1,
+    "corruptedRatio": "3.0%",
+    "samples": [
+      "033.json"
+    ]
+  },
+  {
+    "folder": "circle_eq_step2",
+    "totalFiles": 54,
+    "corruptedFiles": 29,
+    "corruptedRatio": "53.7%",
+    "samples": [
+      "007.json",
+      "009.json",
+      "010.json"
+    ]
+  },
+  {
+    "folder": "circle_eq_step3",
+    "totalFiles": 28,
+    "corruptedFiles": 10,
+    "corruptedRatio": "35.7%",
+    "samples": [
+      "017.json",
+      "018.json",
+      "019.json"
+    ]
+  },
+  {
+    "folder": "circle_eq_step4",
+    "totalFiles": 92,
+    "corruptedFiles": 1,
+    "corruptedRatio": "1.1%",
+    "samples": [
+      "092.json"
+    ]
+  },
+  {
+    "folder": "CSAT_2024_6월_미적분",
+    "totalFiles": 12,
+    "corruptedFiles": 1,
+    "corruptedRatio": "8.3%",
+    "samples": [
+      "010.json"
+    ]
+  },
+  {
+    "folder": "CSAT_2024_6월_확통",
+    "totalFiles": 12,
+    "corruptedFiles": 1,
+    "corruptedRatio": "8.3%",
+    "samples": [
+      "010.json"
+    ]
+  },
+  {
+    "folder": "induction_def_step2",
+    "totalFiles": 53,
+    "corruptedFiles": 53,
+    "corruptedRatio": "100.0%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "induction_step3",
+    "totalFiles": 42,
+    "corruptedFiles": 42,
+    "corruptedRatio": "100.0%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "induction_step4",
+    "totalFiles": 82,
+    "corruptedFiles": 65,
+    "corruptedRatio": "79.3%",
+    "samples": [
+      "002.json",
+      "003.json",
+      "004.json"
+    ]
+  },
+  {
+    "folder": "line_eq_step3",
+    "totalFiles": 31,
+    "corruptedFiles": 1,
+    "corruptedRatio": "3.2%",
+    "samples": [
+      "031.json"
+    ]
+  },
+  {
+    "folder": "matrix_step2",
+    "totalFiles": 23,
+    "corruptedFiles": 1,
+    "corruptedRatio": "4.3%",
+    "samples": [
+      "023.json"
+    ]
+  },
+  {
+    "folder": "matrix_step3",
+    "totalFiles": 23,
+    "corruptedFiles": 1,
+    "corruptedRatio": "4.3%",
+    "samples": [
+      "023.json"
+    ]
+  },
+  {
+    "folder": "matrix_step4",
+    "totalFiles": 22,
+    "corruptedFiles": 21,
+    "corruptedRatio": "95.5%",
+    "samples": [
+      "002.json",
+      "003.json",
+      "004.json"
+    ]
+  },
+  {
+    "folder": "point_coord_step2",
+    "totalFiles": 44,
+    "corruptedFiles": 41,
+    "corruptedRatio": "93.2%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "point_coord_step3",
+    "totalFiles": 21,
+    "corruptedFiles": 1,
+    "corruptedRatio": "4.8%",
+    "samples": [
+      "021.json"
+    ]
+  },
+  {
+    "folder": "point_coord_step4",
+    "totalFiles": 32,
+    "corruptedFiles": 6,
+    "corruptedRatio": "18.8%",
+    "samples": [
+      "027.json",
+      "028.json",
+      "029.json"
+    ]
+  },
+  {
+    "folder": "seq_apgp_step2",
+    "totalFiles": 100,
+    "corruptedFiles": 7,
+    "corruptedRatio": "7.0%",
+    "samples": [
+      "001.json",
+      "004.json",
+      "006.json"
+    ]
+  },
+  {
+    "folder": "seq_apgp_step4",
+    "totalFiles": 78,
+    "corruptedFiles": 8,
+    "corruptedRatio": "10.3%",
+    "samples": [
+      "010.json",
+      "013.json",
+      "017.json"
+    ]
+  },
+  {
+    "folder": "seq_misc_step3",
+    "totalFiles": 48,
+    "corruptedFiles": 15,
+    "corruptedRatio": "31.3%",
+    "samples": [
+      "002.json",
+      "007.json",
+      "008.json"
+    ]
+  },
+  {
+    "folder": "seq_sum_step4",
+    "totalFiles": 96,
+    "corruptedFiles": 73,
+    "corruptedRatio": "76.0%",
+    "samples": [
+      "001.json",
+      "003.json",
+      "004.json"
+    ]
+  },
+  {
+    "folder": "shape_move_step2",
+    "totalFiles": 46,
+    "corruptedFiles": 26,
+    "corruptedRatio": "56.5%",
+    "samples": [
+      "006.json",
+      "008.json",
+      "009.json"
+    ]
+  },
+  {
+    "folder": "shape_move_step3",
+    "totalFiles": 29,
+    "corruptedFiles": 24,
+    "corruptedRatio": "82.8%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "shape_move_step4",
+    "totalFiles": 47,
+    "corruptedFiles": 43,
+    "corruptedRatio": "91.5%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "sigma_step2",
+    "totalFiles": 64,
+    "corruptedFiles": 10,
+    "corruptedRatio": "15.6%",
+    "samples": [
+      "004.json",
+      "016.json",
+      "020.json"
+    ]
+  },
+  {
+    "folder": "trig_graph_step2",
+    "totalFiles": 134,
+    "corruptedFiles": 60,
+    "corruptedRatio": "44.8%",
+    "samples": [
+      "012.json",
+      "016.json",
+      "017.json"
+    ]
+  },
+  {
+    "folder": "trig_graph_step3",
+    "totalFiles": 62,
+    "corruptedFiles": 9,
+    "corruptedRatio": "14.5%",
+    "samples": [
+      "043.json",
+      "044.json",
+      "047.json"
+    ]
+  },
+  {
+    "folder": "trig_prop_step2",
+    "totalFiles": 57,
+    "corruptedFiles": 31,
+    "corruptedRatio": "54.4%",
+    "samples": [
+      "021.json",
+      "022.json",
+      "023.json"
+    ]
+  },
+  {
+    "folder": "trig_step3",
+    "totalFiles": 31,
+    "corruptedFiles": 11,
+    "corruptedRatio": "35.5%",
+    "samples": [
+      "021.json",
+      "022.json",
+      "023.json"
+    ]
+  },
+  {
+    "folder": "trig_util_step3",
+    "totalFiles": 51,
+    "corruptedFiles": 18,
+    "corruptedRatio": "35.3%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "007.json"
+    ]
+  },
+  {
+    "folder": "trig_util_step4",
+    "totalFiles": 68,
+    "corruptedFiles": 17,
+    "corruptedRatio": "25.0%",
+    "samples": [
+      "001.json",
+      "003.json",
+      "004.json"
+    ]
+  },
+  {
+    "folder": "경우의수2단계",
+    "totalFiles": 43,
+    "corruptedFiles": 1,
+    "corruptedRatio": "2.3%",
+    "samples": [
+      "043.json"
+    ]
+  },
+  {
+    "folder": "경우의수3단계",
+    "totalFiles": 48,
+    "corruptedFiles": 1,
+    "corruptedRatio": "2.1%",
+    "samples": [
+      "048.json"
+    ]
+  },
+  {
+    "folder": "경우의수4단계",
+    "totalFiles": 33,
+    "corruptedFiles": 1,
+    "corruptedRatio": "3.0%",
+    "samples": [
+      "033.json"
+    ]
+  },
+  {
+    "folder": "고등수학(상)기말 2021 1+1(쌍둥이)(28)",
+    "totalFiles": 28,
+    "corruptedFiles": 26,
+    "corruptedRatio": "92.9%",
+    "samples": [
+      "001.json",
+      "003.json",
+      "004.json"
+    ]
+  },
+  {
+    "folder": "고등수학(상)기말 2022 1+1(쌍둥이)(38)",
+    "totalFiles": 38,
+    "corruptedFiles": 38,
+    "corruptedRatio": "100.0%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "고등수학(상)기말 2023 1+1(쌍둥이)(34)",
+    "totalFiles": 34,
+    "corruptedFiles": 33,
+    "corruptedRatio": "97.1%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "004.json"
+    ]
+  },
+  {
+    "folder": "고등수학(상)중간고사 2020 1+1(쌍둥이)p21",
+    "totalFiles": 42,
+    "corruptedFiles": 40,
+    "corruptedRatio": "95.2%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "고등수학(상)중간고사 2021 1+1(쌍둥이)p23",
+    "totalFiles": 46,
+    "corruptedFiles": 42,
+    "corruptedRatio": "91.3%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "고등수학(상)중간고사 2022 1+1(쌍둥이)p22",
+    "totalFiles": 44,
+    "corruptedFiles": 43,
+    "corruptedRatio": "97.7%",
+    "samples": [
+      "002.json",
+      "003.json",
+      "004.json"
+    ]
+  },
+  {
+    "folder": "고등수학(상)중간고사 2023 1+1(쌍둥이)p23",
+    "totalFiles": 45,
+    "corruptedFiles": 43,
+    "corruptedRatio": "95.6%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "004.json"
+    ]
+  },
+  {
+    "folder": "귀납적정의2단계",
+    "totalFiles": 53,
+    "corruptedFiles": 53,
+    "corruptedRatio": "100.0%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "귀납적정의2단계_백업_완료",
+    "totalFiles": 53,
+    "corruptedFiles": 53,
+    "corruptedRatio": "100.0%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "다항식2단계",
+    "totalFiles": 39,
+    "corruptedFiles": 2,
+    "corruptedRatio": "5.1%",
+    "samples": [
+      "006.json",
+      "039.json"
+    ]
+  },
+  {
+    "folder": "도형의이동2단계",
+    "totalFiles": 46,
+    "corruptedFiles": 26,
+    "corruptedRatio": "56.5%",
+    "samples": [
+      "006.json",
+      "008.json",
+      "009.json"
+    ]
+  },
+  {
+    "folder": "도형의이동3단계",
+    "totalFiles": 29,
+    "corruptedFiles": 24,
+    "corruptedRatio": "82.8%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "도형의이동4단계",
+    "totalFiles": 47,
+    "corruptedFiles": 43,
+    "corruptedRatio": "91.5%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "등차등비2단계",
+    "totalFiles": 100,
+    "corruptedFiles": 49,
+    "corruptedRatio": "49.0%",
+    "samples": [
+      "001.json",
+      "004.json",
+      "006.json"
+    ]
+  },
+  {
+    "folder": "등차등비2단계_백업_완료",
+    "totalFiles": 99,
+    "corruptedFiles": 6,
+    "corruptedRatio": "6.1%",
+    "samples": [
+      "001.json",
+      "004.json",
+      "006.json"
+    ]
+  },
+  {
+    "folder": "등차등비3단계",
+    "totalFiles": 34,
+    "corruptedFiles": 12,
+    "corruptedRatio": "35.3%",
+    "samples": [
+      "003.json",
+      "005.json",
+      "006.json"
+    ]
+  },
+  {
+    "folder": "등차등비수열4단계",
+    "totalFiles": 78,
+    "corruptedFiles": 23,
+    "corruptedRatio": "29.5%",
+    "samples": [
+      "002.json",
+      "003.json",
+      "005.json"
+    ]
+  },
+  {
+    "folder": "등차등비수열4단계_백업_완료",
+    "totalFiles": 78,
+    "corruptedFiles": 8,
+    "corruptedRatio": "10.3%",
+    "samples": [
+      "010.json",
+      "013.json",
+      "017.json"
+    ]
+  },
+  {
+    "folder": "복소수4단계",
+    "totalFiles": 34,
+    "corruptedFiles": 1,
+    "corruptedRatio": "2.9%",
+    "samples": [
+      "006.json"
+    ]
+  },
+  {
+    "folder": "삼각함수3단계",
+    "totalFiles": 31,
+    "corruptedFiles": 11,
+    "corruptedRatio": "35.5%",
+    "samples": [
+      "021.json",
+      "022.json",
+      "023.json"
+    ]
+  },
+  {
+    "folder": "삼각함수그래프",
+    "totalFiles": 134,
+    "corruptedFiles": 43,
+    "corruptedRatio": "32.1%",
+    "samples": [
+      "043.json",
+      "044.json",
+      "045.json"
+    ]
+  },
+  {
+    "folder": "삼각함수그래프2단계",
+    "totalFiles": 93,
+    "corruptedFiles": 38,
+    "corruptedRatio": "40.9%",
+    "samples": [
+      "012.json",
+      "016.json",
+      "017.json"
+    ]
+  },
+  {
+    "folder": "삼각함수그래프3단계",
+    "totalFiles": 62,
+    "corruptedFiles": 9,
+    "corruptedRatio": "14.5%",
+    "samples": [
+      "043.json",
+      "044.json",
+      "047.json"
+    ]
+  },
+  {
+    "folder": "삼각함수성질2단계",
+    "totalFiles": 57,
+    "corruptedFiles": 31,
+    "corruptedRatio": "54.4%",
+    "samples": [
+      "021.json",
+      "022.json",
+      "023.json"
+    ]
+  },
+  {
+    "folder": "삼각함수활용 4단계(68)",
+    "totalFiles": 106,
+    "corruptedFiles": 28,
+    "corruptedRatio": "26.4%",
+    "samples": [
+      "001.json",
+      "001_v2.json",
+      "002_v2.json"
+    ]
+  },
+  {
+    "folder": "삼각함수활용2단계",
+    "totalFiles": 189,
+    "corruptedFiles": 3,
+    "corruptedRatio": "1.6%",
+    "samples": [
+      "003_v6.json",
+      "006_v2.json",
+      "006_v7.json"
+    ]
+  },
+  {
+    "folder": "삼각함수활용3단계",
+    "totalFiles": 102,
+    "corruptedFiles": 19,
+    "corruptedRatio": "18.6%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "007.json"
+    ]
+  },
+  {
+    "folder": "수열의합4단계",
+    "totalFiles": 96,
+    "corruptedFiles": 73,
+    "corruptedRatio": "76.0%",
+    "samples": [
+      "001.json",
+      "003.json",
+      "004.json"
+    ]
+  },
+  {
+    "folder": "수열의합4단계_백업_완료",
+    "totalFiles": 96,
+    "corruptedFiles": 16,
+    "corruptedRatio": "16.7%",
+    "samples": [
+      "012.json",
+      "019.json",
+      "025.json"
+    ]
+  },
+  {
+    "folder": "수학1 기말 2020 1+1(쌍둥이)(56)",
+    "totalFiles": 56,
+    "corruptedFiles": 56,
+    "corruptedRatio": "100.0%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "수학1 기말 2021 1+1(쌍둥이)(50)",
+    "totalFiles": 50,
+    "corruptedFiles": 50,
+    "corruptedRatio": "100.0%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "수학1 기말 2022 1+1(쌍둥이)(48)",
+    "totalFiles": 48,
+    "corruptedFiles": 48,
+    "corruptedRatio": "100.0%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "수학1 기말 2023 1+1(쌍둥이)(54)",
+    "totalFiles": 54,
+    "corruptedFiles": 54,
+    "corruptedRatio": "100.0%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "수학적귀납법3단계",
+    "totalFiles": 42,
+    "corruptedFiles": 42,
+    "corruptedRatio": "100.0%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "수학적귀납법3단계_백업_완료",
+    "totalFiles": 42,
+    "corruptedFiles": 42,
+    "corruptedRatio": "100.0%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "수학적귀납법4단계",
+    "totalFiles": 82,
+    "corruptedFiles": 65,
+    "corruptedRatio": "79.3%",
+    "samples": [
+      "002.json",
+      "003.json",
+      "004.json"
+    ]
+  },
+  {
+    "folder": "수학적귀납법4단계_백업_완료",
+    "totalFiles": 82,
+    "corruptedFiles": 82,
+    "corruptedRatio": "100.0%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "시그마용법2단계",
+    "totalFiles": 64,
+    "corruptedFiles": 25,
+    "corruptedRatio": "39.1%",
+    "samples": [
+      "003.json",
+      "004.json",
+      "009.json"
+    ]
+  },
+  {
+    "folder": "시그마용법2단계_백업_완료",
+    "totalFiles": 64,
+    "corruptedFiles": 10,
+    "corruptedRatio": "15.6%",
+    "samples": [
+      "004.json",
+      "016.json",
+      "020.json"
+    ]
+  },
+  {
+    "folder": "여러가지수열3단계",
+    "totalFiles": 48,
+    "corruptedFiles": 15,
+    "corruptedRatio": "31.3%",
+    "samples": [
+      "002.json",
+      "007.json",
+      "008.json"
+    ]
+  },
+  {
+    "folder": "여러가지수열3단계_백업_완료",
+    "totalFiles": 48,
+    "corruptedFiles": 8,
+    "corruptedRatio": "16.7%",
+    "samples": [
+      "002.json",
+      "008.json",
+      "009.json"
+    ]
+  },
+  {
+    "folder": "원의방정식2단계",
+    "totalFiles": 52,
+    "corruptedFiles": 29,
+    "corruptedRatio": "55.8%",
+    "samples": [
+      "007.json",
+      "009.json",
+      "010.json"
+    ]
+  },
+  {
+    "folder": "원의방정식3단계",
+    "totalFiles": 28,
+    "corruptedFiles": 10,
+    "corruptedRatio": "35.7%",
+    "samples": [
+      "017.json",
+      "018.json",
+      "019.json"
+    ]
+  },
+  {
+    "folder": "원의방정식4단계",
+    "totalFiles": 92,
+    "corruptedFiles": 1,
+    "corruptedRatio": "1.1%",
+    "samples": [
+      "092.json"
+    ]
+  },
+  {
+    "folder": "이차방정식2단계",
+    "totalFiles": 55,
+    "corruptedFiles": 1,
+    "corruptedRatio": "1.8%",
+    "samples": [
+      "019.json"
+    ]
+  },
+  {
+    "folder": "이차방정식과이차함수2단계",
+    "totalFiles": 48,
+    "corruptedFiles": 1,
+    "corruptedRatio": "2.1%",
+    "samples": [
+      "001.json"
+    ]
+  },
+  {
+    "folder": "인수분해2단계",
+    "totalFiles": 59,
+    "corruptedFiles": 4,
+    "corruptedRatio": "6.8%",
+    "samples": [
+      "004.json",
+      "006.json",
+      "047.json"
+    ]
+  },
+  {
+    "folder": "인수분해4단계",
+    "totalFiles": 43,
+    "corruptedFiles": 1,
+    "corruptedRatio": "2.3%",
+    "samples": [
+      "034.json"
+    ]
+  },
+  {
+    "folder": "점과좌표2단계",
+    "totalFiles": 44,
+    "corruptedFiles": 41,
+    "corruptedRatio": "93.2%",
+    "samples": [
+      "001.json",
+      "002.json",
+      "003.json"
+    ]
+  },
+  {
+    "folder": "점과좌표3단계",
+    "totalFiles": 21,
+    "corruptedFiles": 1,
+    "corruptedRatio": "4.8%",
+    "samples": [
+      "021.json"
+    ]
+  },
+  {
+    "folder": "점과좌표4단계",
+    "totalFiles": 32,
+    "corruptedFiles": 6,
+    "corruptedRatio": "18.8%",
+    "samples": [
+      "027.json",
+      "028.json",
+      "029.json"
+    ]
+  },
+  {
+    "folder": "직선의방정식3단계",
+    "totalFiles": 31,
+    "corruptedFiles": 1,
+    "corruptedRatio": "3.2%",
+    "samples": [
+      "031.json"
+    ]
+  },
+  {
+    "folder": "행렬2단계",
+    "totalFiles": 23,
+    "corruptedFiles": 1,
+    "corruptedRatio": "4.3%",
+    "samples": [
+      "023.json"
+    ]
+  },
+  {
+    "folder": "행렬3단계",
+    "totalFiles": 23,
+    "corruptedFiles": 1,
+    "corruptedRatio": "4.3%",
+    "samples": [
+      "023.json"
+    ]
+  },
+  {
+    "folder": "행렬4단계",
+    "totalFiles": 22,
+    "corruptedFiles": 21,
+    "corruptedRatio": "95.5%",
+    "samples": [
+      "002.json",
+      "003.json",
+      "004.json"
+    ]
+  }
+]

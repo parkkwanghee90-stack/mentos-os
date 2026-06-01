@@ -13,7 +13,7 @@ export function InlineMath({ math, errorColor = '#ef4444', renderError }) {
       try {
         katex.render(math, containerRef.current, {
           displayMode: false,
-          throwOnError: false,
+          throwOnError: true,
           strict: 'ignore',
           trust: true,
         });
@@ -33,7 +33,7 @@ export function InlineMath({ math, errorColor = '#ef4444', renderError }) {
           }
         } else {
           containerRef.current.textContent = math;
-          containerRef.current.style.color = errorColor;
+          containerRef.current.style.color = 'inherit';
         }
       }
     }
@@ -53,7 +53,7 @@ export function BlockMath({ math, errorColor = '#ef4444', renderError }) {
       try {
         katex.render(math, containerRef.current, {
           displayMode: true,
-          throwOnError: false,
+          throwOnError: true,
           strict: 'ignore',
           trust: true,
         });
@@ -73,7 +73,7 @@ export function BlockMath({ math, errorColor = '#ef4444', renderError }) {
           }
         } else {
           containerRef.current.textContent = math;
-          containerRef.current.style.color = errorColor;
+          containerRef.current.style.color = 'inherit';
         }
       }
     }

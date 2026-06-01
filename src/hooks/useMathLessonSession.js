@@ -45,6 +45,22 @@ export function useMathLessonSession(ssot, overrides) {
         let lessonContent = {};
 
         // 만약 넘겨받은 overrides가 있다면(진단/모의고사 보강에서 넘어온 경우), 파일 대신 동적으로 문제 구조를 생성!
+        const makeFallbackProblems = (unitName) => {
+          const probs = [];
+          for (let i = 1; i <= 45; i++) {
+            probs.push({
+              number: i,
+              questionImage: "", // Dynamically resolved by MathClassroom via asset crops
+              questionText: "",
+              solutionText: `${unitName} ${i}번 문제 해설`,
+              formulaLatex: [],
+              graphExpressions: [],
+              matchScore: 1
+            });
+          }
+          return probs;
+        };
+
         if (overrides && (overrides.unitOverride || overrides.remediation)) {
           const unit = overrides.unitOverride;
           const remediation = overrides.remediation; // { score, unit, levels: [2,2,2,3,3] }
@@ -99,15 +115,18 @@ export function useMathLessonSession(ssot, overrides) {
             };
             const p = prefixMapping[unit] ? prefixMapping[unit] + '_' : '';
 
+            const unitWithLevel = unit.includes('단계') ? unit : `${unit}${phaseLevel}단계`;
+            const probs = makeFallbackProblems(unitWithLevel);
+
             lessonContent = {
-              core: { title: `${unit} ${phaseLevel}단계 - 필수 로직 훈련` },
-              step: { title: `${unit} ${phaseLevel}단계 - 실전 응용 문제` },
-              mock: { title: `${unit} ${phaseLevel}단계 - 미니 모의고사` }
+              core: { original_unit: unitWithLevel, title: `${unit} ${phaseLevel}단계 - 필수 로직 훈련`, problems: probs },
+              step: { original_unit: unitWithLevel, title: `${unit} ${phaseLevel}단계 - 실전 응용 문제`, problems: probs },
+              mock: { original_unit: unitWithLevel, title: `${unit} ${phaseLevel}단계 - 미니 모의고사`, problems: probs }
             };
           }
         } else {
           // 기존 정적 로딩 방식 폴백
-        // 기존 정적 로딩 방식
+          // 기존 정적 로딩 방식
           const modules = import.meta.glob('/src/data/lessons/math/**/*.json');
           const targetPath = `/src/data/lessons/math/${ssot.id}/week_${weekNum}/lesson_0${lessonNum}.json`;
           
@@ -122,22 +141,28 @@ export function useMathLessonSession(ssot, overrides) {
             const isGrade2Fallback = ssot.targetGrades?.some(g => g.includes('고2')) || ssot.courseName?.includes('대수');
             
             if (isGrade3) {
+               const defaultUnit = '[2단계] 지수로그함수의극한';
+               const probs = makeFallbackProblems(defaultUnit);
                lessonContent = {
-                 core: { original_unit: '[2단계] 지수로그함수의극한', title: '지수로그함수의극한 2단계 - 필수 로직 훈련' },
-                 step: { original_unit: '[2단계] 지수로그함수의극한', title: '지수로그함수의극한 2단계 - 실전 응용 문제' },
-                 mock: { original_unit: '[2단계] 지수로그함수의극한', title: '지수로그함수의극한 2단계 - 미니 모의고사' }
+                 core: { original_unit: defaultUnit, title: '지수로그함수의극한 2단계 - 필수 로직 훈련', problems: probs },
+                 step: { original_unit: defaultUnit, title: '지수로그함수의극한 2단계 - 실전 응용 문제', problems: probs },
+                 mock: { original_unit: defaultUnit, title: '지수로그함수의극한 2단계 - 미니 모의고사', problems: probs }
                };
             } else if (isGrade2Fallback) {
+               const defaultUnit = '삼각함수활용2단계';
+               const probs = makeFallbackProblems(defaultUnit);
                lessonContent = {
-                 core: { original_unit: '삼각함수활용2단계', title: '삼각함수활용 2단계 - 필수 로직 훈련' },
-                 step: { original_unit: '삼각함수활용2단계', title: '삼각함수활용 2단계 - 실전 응용 문제' },
-                 mock: { original_unit: '삼각함수활용2단계', title: '삼각함수활용 2단계 - 미니 모의고사' }
+                 core: { original_unit: defaultUnit, title: '삼각함수활용 2단계 - 필수 로직 훈련', problems: probs },
+                 step: { original_unit: defaultUnit, title: '삼각함수활용 2단계 - 실전 응용 문제', problems: probs },
+                 mock: { original_unit: defaultUnit, title: '삼각함수활용 2단계 - 미니 모의고사', problems: probs }
                };
             } else {
+               const defaultUnit = '점과좌표2단계';
+               const probs = makeFallbackProblems(defaultUnit);
                lessonContent = {
-                 core: { original_unit: '점과좌표2단계', title: '점과좌표 2단계 - 필수 로직 훈련' },
-                 step: { original_unit: '점과좌표2단계', title: '점과좌표 2단계 - 실전 응용 문제' },
-                 mock: { original_unit: '점과좌표2단계', title: '점과좌표 2단계 - 미니 모의고사' }
+                 core: { original_unit: defaultUnit, title: '점과좌표 2단계 - 필수 로직 훈련', problems: probs },
+                 step: { original_unit: defaultUnit, title: '점과좌표 2단계 - 실전 응용 문제', problems: probs },
+                 mock: { original_unit: defaultUnit, title: '점과좌표 2단계 - 미니 모의고사', problems: probs }
                };
             }
           }

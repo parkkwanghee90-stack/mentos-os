@@ -203,16 +203,19 @@ const RichText = ({ content, isMobile = false }) => {
   if (typeof content !== 'string') return <span>{JSON.stringify(content)}</span>;
   if (!content.trim()) return null;
 
+  // Auto-preprocess unescaped LaTeX strings
+  const preprocessed = preprocessLatexString(content);
+
   // 1. 마크다운 이미지 정규식: !\[(.*?)\]\((.*?)\)
   const imageRegex = /!\[(.*?)\]\((.*?)\)/g;
   let images = [];
   let m;
-  while ((m = imageRegex.exec(content)) !== null) {
+  while ((m = imageRegex.exec(preprocessed)) !== null) {
     images.push({ alt: m[1], src: m[2] });
   }
 
   // 2. 텍스트에서는 마크다운 이미지 구문을 완전히 제거
-  const cleanContent = content.replace(imageRegex, '').trim();
+  const cleanContent = preprocessed.replace(imageRegex, '').trim();
 
   // 3. LaTeX 수식 블록 추출 및 플레이스홀더 치환
   const mathBlocks = [];

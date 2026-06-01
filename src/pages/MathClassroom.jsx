@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import { Camera, Send, ChevronRight, CheckCircle, Smartphone, Mic, Volume2, Upload, Paperclip, Clock, BookOpen, X, ChevronDown, UploadCloud, Award, Target, Menu } from 'lucide-react';
+import { Camera, Send, ChevronRight, CheckCircle, Smartphone, Mic, Volume2, Upload, Paperclip, Clock, BookOpen, X as CloseIcon, ChevronDown, UploadCloud, Award, Target, Menu, LogOut } from 'lucide-react';
 import { getTeacherById } from '@/data/teacherProfiles';
 import { useMathLessonSession } from '@/hooks/useMathLessonSession';
 import { supabase } from '@/services/supabaseClient';
@@ -141,6 +141,22 @@ function useSTT(setInput) {
 
 function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, setSelectedUnit, testProblemIdx, setTestProblemIdx, selectedCourse, showReport, setShowReport, getSidebarData, problemTimeLeft }) {
   const location = useLocation();
+  
+  // 고1 선생님들(1,2,3번) 강제 고정 여부 확인
+  const isG1Teacher = (ssot?.id === 'h_math1' || ssot?.id === 'h_math2' || ssot?.id === 'h_math3' || ssot?.id === 'math1' || ssot?.id === 'math2' || ssot?.id === 'math3') || 
+                      (ssot?.targetGrades?.some(g => g.includes('고1')));
+
+  // 고2 선생님들(4,5,6번) 확인 (h_math_calc 제외하여 고3 락 격리)
+  const isG2Teacher = (ssot?.id === 'h_math4' || ssot?.id === 'h_math5' || ssot?.id === 'h_math6' || ssot?.id === 'math4' || ssot?.id === 'math5' || ssot?.id === 'math6') || 
+                      (ssot?.targetGrades?.some(g => g.includes('고2')) && !ssot?.id?.includes('calc') && !ssot?.targetGrades?.some(g => g.includes('고3'))) ||
+                      (ssot?.courseName?.includes('대수') && !ssot?.id?.includes('calc'));
+  
+  // ── 현재 단원명(unit) 및 문제 에셋 선언부 (TDZ 에러 방지를 위해 컴포넌트 최상단 호이스팅 선언) ──
+  let currentUnit = null;
+  let currentProblemImage = null;
+  let currentProblemTitle = null;
+  let currentProblemText = null;
+
   const currentPhaseFlow = session.flow[session.currentPhaseIndex];
   
   const [readingState, setReadingState] = useState({
@@ -216,6 +232,10 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
         return subject === '미적분' ? 'CSAT_2023_6월_미적분' : 'CSAT_2023_6월_확통';
       }
       
+      // 수능은 폴더명에 언더스코어 없음: CSAT_YYYY수능_과목
+      if (examType === '수능') {
+        return `CSAT_${year}수능_${subject}`;
+      }
       return `CSAT_${year}_${examType}_${subject}`;
     }
 
@@ -224,8 +244,37 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
     const stepStr = stepMatch ? stepMatch[0] : '2단계';
     const stepNum = stepMatch ? stepMatch[1] : '2';
 
-    // 고2 (수학2) 처리
+    // 고2 (수학2) 처리 — 폴더명의 공백이 정확해야 하므로 명시적 매핑
     if (selectedCourse === '수2' || selectedCourse === '수학2') {
+      if (clean.includes('함수의극한')) {
+        if (stepStr === '2단계') return '(7)수학2/함수의 극한 2단계';
+        return `(7)수학2/함수의극한${stepStr}`;
+      }
+      if (clean.includes('함수의연속')) {
+        if (stepStr === '2단계') return '(7)수학2/함수의 연속 2단계';
+        return `(7)수학2/함수의연속${stepStr}`;
+      }
+      if (clean.includes('미분계수')) {
+        if (stepStr === '2단계') return '(7)수학2/미분계수 2단계';
+        return `(7)수학2/미분계수${stepStr}`;
+      }
+      if (clean.includes('미분의활용') || clean.includes('미분활용')) return '(7)수학2/미분의활용 2단계';
+      if (clean.includes('도함수의활용')) {
+        if (stepStr === '4단계') return '(7)수학2/도함수의 활용 4단계';
+        if (clean.includes('활용1')) return '(7)수학2/도함수의 활용1 2단계';
+        if (clean.includes('활용2')) return '(7)수학2/도함수의활용2 2단계';
+        if (stepStr === '3단계') return '(7)수학2/도함수의활용3단계';
+        return `(7)수학2/도함수의활용${stepStr}`;
+      }
+      if (clean.includes('부정적분') || clean.includes('정적분과')) {
+        return `(7)수학2/부정적분과 정적분 ${stepStr}`;
+      }
+      if (clean.includes('정적분의활용') || clean.includes('정적분활용')) {
+        return `(7)수학2/정적분의 활용 ${stepStr}`;
+      }
+      if (clean.includes('정적분')) {
+        return '(7)수학2/정적분 2단계';
+      }
       return `(7)수학2/${unitName}`;
     }
 
@@ -247,48 +296,91 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
       if (clean.includes('정적분의활용')) return '7)정적분의 활용 4단계';
     }
 
-    // 확통수능 처리 (단계 없이 단원명만 사용)
+    // 확통수능 처리 — 확통수능/ 서브폴더 아래에 있음
     if (selectedCourse === '확률과통계' || selectedCourse === '확통수능' || selectedCourse === '확통') {
-      if (clean.includes('순열')) return '1)순열';
-      if (clean.includes('중복조합') || clean.includes('중복') && clean.includes('조합')) return '2)중복조합';
-      if (clean.includes('이항정리')) return '3)이항정리';
-      if (clean.includes('확률의뜻') || clean.includes('확률') && !clean.includes('변수') && !clean.includes('분포') && !clean.includes('조건부') && !clean.includes('덧셈')) return '4)확률의뜻';
-      if (clean.includes('덧셈정리') || clean.includes('조건부확률') || clean.includes('조건부') || clean.includes('독립시행')) return '5)덧셈정리_조건부확률_독립시행';
-      if (clean.includes('확률변수') || clean.includes('이항분포')) return '6)확률변수와이항분포';
-      if (clean.includes('연속확률') || clean.includes('정규분포')) return '7)연속확률분포와정규분포';
-      if (clean.includes('표본평균') || clean.includes('모평균')) return '8)표본평균과모평균';
+      if (clean.includes('순열')) return '확통수능/1)순열';
+      if (clean.includes('중복조합') || (clean.includes('중복') && clean.includes('조합'))) return '확통수능/2)중복조합';
+      if (clean.includes('이항정리')) return '확통수능/3)이항정리';
+      if (clean.includes('확률의뜻') || (clean.includes('확률') && !clean.includes('변수') && !clean.includes('분포') && !clean.includes('조건부') && !clean.includes('덧셈'))) return '확통수능/4)확률의뜻';
+      if (clean.includes('덧셈정리') || clean.includes('조건부확률') || clean.includes('조건부') || clean.includes('독립시행')) return '확통수능/5)덧셈정리_조건부확률_독립시행';
+      if (clean.includes('확률변수') || clean.includes('이항분포')) return '확통수능/6)확률변수와이항분포';
+      if (clean.includes('연속확률') || clean.includes('정규분포')) return '확통수능/7)연속확률분포와정규분포';
+      if (clean.includes('표본평균') || clean.includes('모평균')) return '확통수능/8)표본평균과모평균';
     }
 
-    // 기존 고1 및 공통 매핑
+    // ── 수학(상) 신규 챕터 (한글 폴더명) ──
+    if (clean.includes('다항식')) return `다항식${stepStr}`;
+    if (clean.includes('항등식') || clean.includes('나머지정리')) return `항등식과나머지정리${stepStr}`;
+    if (clean.includes('인수분해')) return `인수분해${stepStr}`;
+    if (clean.includes('복소수')) return `복소수${stepStr}`;
+    if (clean.includes('이차방정식과이차함수') || clean.includes('이차방정식과 이차함수')) return `이차방정식과이차함수${stepStr}`;
+    if (clean.includes('이차방정식')) return `이차방정식${stepStr}`;
+
+    // ── 수학(상) 기존 챕터 ──
+    if (clean.includes('고차방정식')) return `고차방정식${stepStr}`;
+    if (clean.includes('일차부등식')) {
+      if (stepStr === '2단계') return '(2)수학(상)기말/(1)일차부등식 개념2단계(26) 1+1(쌍둥이)';
+      return `일차부등식${stepStr}`;
+    }
+    if (clean.includes('이차부등식')) {
+      if (stepStr === '2단계') return '(2)수학(상)기말/(2)이차부등식 개념2단계(42)p21 1+1(쌍둥이)';
+      return `이차부등식${stepStr}`;
+    }
+    if (clean.includes('경우의수')) {
+      if (stepStr === '2단계') return 'cases_step2';
+      if (stepStr === '3단계') return 'cases_step3';
+      if (stepStr === '4단계') return 'cases_step4';
+      return `경우의수${stepStr}`;
+    }
+    if (clean.includes('행렬')) {
+      if (stepStr === '2단계') return '(2)수학(상)기말/(4)행렬2단계';
+      return `행렬${stepStr}`;
+    }
+    if (clean.includes('점과좌표')) {
+      if (stepStr === '2단계') return '(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)';
+      return `점과좌표${stepStr}`;
+    }
+    if (clean.includes('직선의방정식') || clean.includes('직선의 방정식')) {
+      if (stepStr === '2단계') return '(2)수학(상)기말/(6)직선의방정식 개념2단계(44)p19 1+1(쌍둥이)';
+      return `직선의방정식${stepStr}`;
+    }
+    if (clean.includes('원의방정식') || clean.includes('원의 방정식')) {
+      if (stepStr === '2단계') return '(2)수학(상)기말/(7)원의방정식 개념2단계(54)p24 1+1(쌍둥이)';
+      return `원의방정식${stepStr}`;
+    }
+    if (clean.includes('도형의이동') || clean.includes('도형의 이동')) {
+      if (stepStr === '2단계') return '(2)수학(상)기말/(8)도형의이동 개념2단계(46)p21 1+1(쌍둥이)';
+      return `도형의이동${stepStr}`;
+    }
+
+    // ── 수학1 (삼각함수, 수열, 지수/로그) ──
     if (clean.includes('삼각함수') && clean.includes('활용')) return stepStr === '4단계' ? '삼각함수활용 4단계(68)' : `삼각함수활용${stepStr}`;
     if (clean.includes('삼각함수') && clean.includes('그래프')) return stepStr === '4단계' ? '삼각함수그래프' : `삼각함수그래프${stepStr}`;
     if (clean.includes('삼각함수') && (clean.includes('정의') || clean.includes('성질'))) return stepStr !== '2단계' ? `삼각함수${stepStr}` : `삼각함수성질${stepStr}`;
     if (clean.includes('등차') || clean.includes('등비')) return stepStr === '4단계' ? '등차등비수열4단계' : `등차등비${stepStr}`;
     if (clean.includes('시그마')) { if (stepStr === '3단계') return '여러가지수열3단계'; if (stepStr === '4단계') return '수열의합4단계'; return `시그마용법${stepStr}`; }
     if (clean.includes('귀납적')) return stepStr === '2단계' ? '귀납적정의2단계' : `수학적귀납법${stepStr}`;
-    if (clean.includes(`지수함수`)) return `지수함수${stepStr}`;
-    if (clean.includes(`로그함수`)) return `로그함수${stepStr}`;
-    
-    if (clean.includes(`행렬`)) return `행렬${stepStr}`;
-    if (clean.includes(`고차방정식`)) return `고차방정식${stepStr}`;
-    if (clean.includes(`일차부등식`)) return `일차부등식${stepStr}`;
-    if (clean.includes(`이차부등식`)) return `이차부등식${stepStr}`;
-    if (clean.includes(`경우의수`)) return `경우의수${stepStr}`;
-    if (clean.includes(`점과좌표`)) return `점과좌표${stepStr}`;
-    if (clean.includes(`직선의방정식`)) return `직선의방정식${stepStr}`;
-    if (clean.includes('원의방정식')) return `원의방정식${stepStr}`;
-    if (clean.includes('도형의이동')) return `도형의이동${stepStr}`;
+    if (clean.includes('지수함수')) return `지수함수${stepStr}`;
+    if (clean.includes('로그함수')) return `로그함수${stepStr}`;
+    if (clean.includes('지수')) return `지수${stepStr}`;
+    if (clean.includes('로그')) return `로그${stepStr}`;
     
     return unitName;
   }
 
   useEffect(() => {
-    if (!selectedUnit || !testProblemIdx) { setChalkboardData(null); return; }
-    const folder = getHintFolder(selectedUnit);
+    const targetUnit = selectedUnit || currentUnit;
+    if (!targetUnit || !testProblemIdx) { setChalkboardData(null); return; }
+    const folder = getHintFolder(targetUnit);
     if (!folder) { setChalkboardData(null); return; }
     
     const pid = String(testProblemIdx).padStart(3, '0');
-    const directUrl = window.resolveAsset(`/math_hints/${folder}/${pid}.json?v=cb_${Date.now()}`);
+    // Hybrid path resolution: Local uses direct path, Production resolves to Supabase public storage
+    const isLocal = typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+    const encodedFolder = folder.split('/').map(part => encodeURIComponent(part)).join('/');
+    const directUrl = isLocal 
+      ? `/math_hints/${encodedFolder}/${pid}.json?v=cb_${Date.now()}`
+      : window.resolveAsset(`/math_hints/${folder}/${pid}.json?v=cb_${Date.now()}`);
 
     fetch(directUrl)
       .then(r => { 
@@ -296,7 +388,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
         return r.json(); 
       })
       .then(d => {
-        setChalkboardData(d.problem_render || null);
+        setChalkboardData(null); // Force White KaTeX Card Mode always to prevent broken dark chalkboard layout
         setCurrentProblemRawData(d);
       })
       .catch(err => {
@@ -304,13 +396,13 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
         setChalkboardData(null);
         setCurrentProblemRawData(null);
       });
-  }, [selectedUnit, testProblemIdx]);
+  }, [selectedUnit, currentUnit, testProblemIdx]);
 
   useEffect(() => {
     setUserAnswer('');
     setSelectedAnswer(null);
     setGradingResult(null);
-  }, [testProblemIdx, selectedUnit]);
+  }, [testProblemIdx, selectedUnit, session?.currentPhaseIndex]);
 
   // ── 모바일 상태 및 리스너 추가 ──
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -365,7 +457,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
     console.log('ProblemNumber:', testProblemIdx);
     console.log('Generated AnswerKey:', targetUnitFolder);
 
-    const targetUnits = ['고차방정식', '이차부등식', '일차부등식', '도형', '원의', '삼각함수그래프', '삼각함수 그래프', '수열', '등차등비', '시그마', '귀납적', '삼각함수활용', '경우의수', '점과좌표', '직선의방정식', '행렬', '지수함수', '로그함수', '지수', '로그', '삼각함수성질', '삼각함수', '수학적귀납법', '지수로그', '극한', '연속', '미분', '도함수', '적분', '정적분', '급수', '확률', '통계', '조건부', '독립시행', '이항분포', '순열', '조합', '이항정리', '표본', '정규분포', '덧셈정리'];
+    const targetUnits = ['다항식', '항등식', '인수분해', '복소수', '이차방정식', '이차함수', 'higher_order', 'linear_ineq', 'quadratic_ineq', 'cases_step', 'matrix_step', 'point_coord', 'line_eq', 'circle_eq', 'shape_move', '고차방정식', '이차부등식', '일차부등식', '도형', '원의', '삼각함수그래프', '삼각함수 그래프', '수열', '등차등비', '시그마', '귀납적', '삼각함수활용', '경우의수', '점과좌표', '직선의방정식', '행렬', '지수함수', '로그함수', '지수', '로그', '삼각함수성질', '삼각함수', '수학적귀납법', '지수로그', '극한', '연속', '미분', '도함수', '적분', '정적분', '급수', '확률', '통계', '조건부', '독립시행', '이항분포', '순열', '조합', '이항정리', '표본', '정규분포', '덧셈정리'];
     const isTargetUnit = targetUnits.some(u => targetUnitFolder && targetUnitFolder.includes(u));
 
     let rawAnswer = null;
@@ -642,18 +734,42 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
     if (phaseName === 'finalize') {
       setLoading(true);
       
-      // Supabase Database 연동: 학습 이력(study_logs) 영구 적재
+      // 학습 이력 집계 및 적재 (로컬 스토리지 및 Supabase)
+      const history = JSON.parse(localStorage.getItem('localGradingHistory') || '[]');
+      const correctCount = history.filter(h => h.isCorrect).length;
+      const totalCount = history.length;
+      const accuracy = totalCount > 0 ? Math.round((correctCount / totalCount) * 100) : 0;
+      const unitName = selectedUnit || currentUnit || '수학상';
+
+      if (totalCount > 0) {
+        const results = JSON.parse(localStorage.getItem('mentos_lesson_results') || '[]');
+        const isAlreadyAdded = results.some(r => r.unit === unitName && Math.abs(Date.now() - new Date(r.date).getTime()) < 10000);
+        if (!isAlreadyAdded) {
+          results.push({
+            id: 'session_' + Date.now(),
+            date: new Date().toISOString(),
+            subject: '수학',
+            grade: teacher?.targetGrades?.[0] || '고1',
+            unit: unitName,
+            totalQuestions: totalCount,
+            correctCount: correctCount,
+            accuracy: accuracy,
+            duration: Math.max(1, Math.round((Date.now() - (window.__mentosSessionStart || Date.now())) / 60000)) || 120,
+            endedEarly: false,
+            wrongQuestions: history.filter(h => !h.isCorrect).map(h => ({ problemId: h.problemId, id: h.problemId, isCorrect: false })),
+            nextLessonFocus: '개념 강화 및 맞춤 숙제 풀이 진행'
+          });
+          localStorage.setItem('mentos_lesson_results', JSON.stringify(results));
+          console.log('[LessonResult] Saved normal lesson result:', results[results.length - 1]);
+        }
+      }
+
       if (user) {
-        const history = JSON.parse(localStorage.getItem('localGradingHistory') || '[]');
-        const correctCount = history.filter(h => h.isCorrect).length;
-        const totalCount = history.length;
-        const accuracy = totalCount > 0 ? Math.round((correctCount / totalCount) * 100) : 0;
-        
         console.log('[Supabase DB] Saving study log record to cloud database...');
         supabase.from('study_logs').insert({
           student_id: user.id,
           subject: '수학',
-          unit: selectedUnit || currentUnit || '수학상',
+          unit: unitName,
           duration_minutes: 120,
           score: accuracy
         }).then(({ error }) => {
@@ -721,7 +837,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
     }
   };
 
-  const handeSubmit = async () => {
+  const handleSubmit = async () => {
     if (!input.trim() && !isRecording) return;
     if (loading) return;
 
@@ -870,11 +986,11 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
     }
   };
 
-  // ── 현재 단원명(unit) 추출 로직 ──
-  let currentUnit = null;
-  let currentProblemImage = null;
-  let currentProblemTitle = null;
-  let currentProblemText = null;
+  // ── 현재 단원명(unit) 추출 로직 (선언부는 컴포넌트 최상단으로 호이스팅 완료) ──
+  currentUnit = null;
+  currentProblemImage = null;
+  currentProblemTitle = null;
+  currentProblemText = null;
 
   if (session.curriculumData?.lessonContent) {
     const phaseKey = currentPhaseFlow?.phase?.toLowerCase();
@@ -899,9 +1015,10 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
     }
   }
 
-  // 사용자가 사이드바에서 특정 단원을 강제로 선택한 경우 이미지 파싱
-  if (selectedUnit) {
-     currentUnit = selectedUnit;
+  // 사용자가 사이드바에서 특정 단원을 강제로 선택하거나 세션에서 단원이 감지된 경우 이미지 및 텍스트 매핑
+  const activeUnit = selectedUnit || currentUnit;
+  if (activeUnit) {
+     currentUnit = activeUnit;
      const formattedIdx = String(testProblemIdx).padStart(3, '0');
      
      // 단계 추출 (예: '삼각함수활용4단계' -> '4단계'). 없으면 기본 '2단계'
@@ -955,42 +1072,42 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
      }
      // [대수 매핑]
      else if (mappedUnit.includes('등차') || mappedUnit.includes('등비')) {
-        if (stepStr === '4단계') currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/4단계/등차등비수열4단계/${formattedIdx}.webp`)
-        else currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/${stepStr}/등차등비${stepStr}/${formattedIdx}.webp`)
+        if (stepStr === '4단계') currentProblemImage = window.resolveAsset(`/math_crops/수학1 중간/4단계/등차등비수열4단계/${formattedIdx}.webp`)
+        else currentProblemImage = window.resolveAsset(`/math_crops/수학1 중간/${stepStr}/등차등비${stepStr}/${formattedIdx}.webp`)
      }
      else if (currentUnit.includes('시그마')) {
-        if (stepStr === '3단계') currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/3단계/여러가지수열3단계/${formattedIdx}.webp`)
-        else if (stepStr === `4단계`) currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/4단계/수열의합4단계/${formattedIdx}.webp`)
-        else currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/2단계/시그마용법2단계/${formattedIdx}.webp`)
+        if (stepStr === '3단계') currentProblemImage = window.resolveAsset(`/math_crops/수학1 중간/3단계/여러가지수열3단계/${formattedIdx}.webp`)
+        else if (stepStr === `4단계`) currentProblemImage = window.resolveAsset(`/math_crops/수학1 중간/4단계/수열의합4단계/${formattedIdx}.webp`)
+        else currentProblemImage = window.resolveAsset(`/math_crops/수학1 중간/2단계/시그마용법2단계/${formattedIdx}.webp`)
      }
      else if (currentUnit.includes('귀납적')) {
-        if (stepStr === '2단계') currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/2단계/귀납적정의2단계/${formattedIdx}.webp`)
-        else currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/${stepStr}/수학적귀납법${stepStr}/${formattedIdx}.webp`)
+        if (stepStr === '2단계') currentProblemImage = window.resolveAsset(`/math_crops/수학1 중간/2단계/귀납적정의2단계/${formattedIdx}.webp`)
+        else currentProblemImage = window.resolveAsset(`/math_crops/수학1 중간/${stepStr}/수학적귀납법${stepStr}/${formattedIdx}.webp`)
      }
      else if (currentUnit.includes('삼각함수') && currentUnit.includes('활용')) {
-        if (stepStr === '4단계') currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/4단계/삼각함수활용 4단계(68)/${formattedIdx}.webp`)
-        else currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/${stepStr}/삼각함수활용${stepStr}/${formattedIdx}.webp`)
+        if (stepStr === '4단계') currentProblemImage = window.resolveAsset(`/math_crops/수학1 중간/4단계/삼각함수활용 4단계(68)/${formattedIdx}.webp`)
+        else currentProblemImage = window.resolveAsset(`/math_crops/수학1 중간/${stepStr}/삼각함수활용${stepStr}/${formattedIdx}.webp`)
       }
      else if (currentUnit.includes('삼각함수') && currentUnit.includes('그래프')) {
-        if (stepStr === '4단계') currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/4단계/삼각함수그래프/${formattedIdx}.webp`)
-        else currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/${stepStr}/삼각함수그래프${stepStr}/${formattedIdx}.webp`)
+        if (stepStr === '4단계') currentProblemImage = window.resolveAsset(`/math_crops/수학1 중간/4단계/삼각함수그래프/${formattedIdx}.webp`)
+        else currentProblemImage = window.resolveAsset(`/math_crops/수학1 중간/${stepStr}/삼각함수그래프${stepStr}/${formattedIdx}.webp`)
      }
-     else if (currentUnit.includes('삼각함수') && (currentUnit.includes('정의') || currentUnit.includes('성질'))) currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/${stepStr}/삼각함수성질${stepStr}/${formattedIdx}.webp`)
+     else if (currentUnit.includes('삼각함수') && (currentUnit.includes('정의') || currentUnit.includes('성질'))) currentProblemImage = window.resolveAsset(`/math_crops/수학1 중간/${stepStr}/삼각함수성질${stepStr}/${formattedIdx}.webp`)
      else if (currentUnit.includes('지수함수')) {
-        if (stepStr === '4단계') currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/4단계/지수로그함수4단계/${formattedIdx}.webp`)
-        else currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/${stepStr}/지수함수${stepStr}/${formattedIdx}.webp`)
+        if (stepStr === '4단계') currentProblemImage = window.resolveAsset(`/math_crops/수학1 중간/4단계/지수로그함수4단계/${formattedIdx}.webp`)
+        else currentProblemImage = window.resolveAsset(`/math_crops/수학1 중간/${stepStr}/지수함수${stepStr}/${formattedIdx}.webp`)
      }
      else if (currentUnit.includes('로그함수')) {
-        if (stepStr === '4단계') currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/4단계/지수로그함수4단계/${formattedIdx}.webp`)
-        else currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/${stepStr}/로그함수${stepStr}/${formattedIdx}.webp`)
+        if (stepStr === '4단계') currentProblemImage = window.resolveAsset(`/math_crops/수학1 중간/4단계/지수로그함수4단계/${formattedIdx}.webp`)
+        else currentProblemImage = window.resolveAsset(`/math_crops/수학1 중간/${stepStr}/로그함수${stepStr}/${formattedIdx}.webp`)
      }
      else if (currentUnit.includes('지수')) {
-        if (stepStr === '4단계') currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/4단계/지수로그4단계/${formattedIdx}.webp`)
-        else currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/${stepStr}/지수${stepStr}/${formattedIdx}.webp`)
+        if (stepStr === '4단계') currentProblemImage = window.resolveAsset(`/math_crops/수학1 중간/4단계/지수로그4단계/${formattedIdx}.webp`)
+        else currentProblemImage = window.resolveAsset(`/math_crops/수학1 중간/${stepStr}/지수${stepStr}/${formattedIdx}.webp`)
      }
      else if (currentUnit.includes('로그')) {
-        if (stepStr === '4단계') currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/4단계/지수로그4단계/${formattedIdx}.webp`)
-        else currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/${stepStr}/로그${stepStr}/${formattedIdx}.webp`)
+        if (stepStr === '4단계') currentProblemImage = window.resolveAsset(`/math_crops/수학1 중간/4단계/지수로그4단계/${formattedIdx}.webp`)
+        else currentProblemImage = window.resolveAsset(`/math_crops/수학1 중간/${stepStr}/로그${stepStr}/${formattedIdx}.webp`)
      }
      
      // [수학상 매핑]
@@ -1079,46 +1196,56 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
           let imgKey = currentProblemImage;
           if (imgKey.includes('?')) imgKey = imgKey.split('?')[0];
           const parts = imgKey.split('/');
+          
           if (parts.length >= 2) {
-              const rawKey = parts[parts.length - 2] + '/' + parts[parts.length - 1];
-              try {
-                  const decodedKey = decodeURIComponent(rawKey);
-                  if (mathTextsData && mathTextsData[decodedKey]) {
-                      currentProblemText = mathTextsData[decodedKey];
-                  } else if (mathTextsData && mathTextsData[rawKey]) {
-                      currentProblemText = mathTextsData[rawKey];
-                  }
-              } catch (e) {
-                  if (mathTextsData && mathTextsData[rawKey]) {
-                      currentProblemText = mathTextsData[rawKey];
-                  }
+              const dirName = parts[parts.length - 2];
+              const fileName = parts[parts.length - 1]; // e.g. "001.webp" or "001.png"
+              const cleanDirName = decodeURIComponent(dirName).replace(/\s+/g, '');
+              
+              // 1. koToEng 테이블을 사용하여 디렉토리명을 영어 키로 변환 시도
+              const koToEngDict = {
+                '지수2단계':'exp_step2','지수3단계':'exp_step3','지수4단계':'explog_step4',
+                '지수로그4단계':'explog_step4','지수함수2단계':'exp_func_step2','지수함수3단계':'exp_func_step3','지수함수4단계':'log_func_step4',
+                '로그2단계':'log_step2','로그3단계':'log_step3','로그4단계':'explog_step4',
+                '로그함수2단계':'log_func_step2','로그함수3단계':'log_func_step3','로그함수4단계':'log_func_step4',
+                '삼각함수성질2단계':'trig_prop_step2','삼각함수3단계':'trig_step3','삼각함수성질3단계':'trig_step3','삼각함수그래프2단계':'trig_graph_step2',
+                '삼각함수그래프3단계':'trig_graph_step3','삼각함수그래프4단계':'trig_graph',
+                '삼각함수활용2단계':'trig_util_step2','삼각함수활용3단계':'trig_util_step3','삼각함수활용4단계':'trig_util_step4','삼각함수활용4단계(68)':'trig_util_step4',
+                '등차등비2단계':'seq_apgp_step2','등차등비3단계':'seq_misc_step3','등차등비4단계':'seq_sum_step4','등차등비수열4단계':'seq_sum_step4',
+                '시그마용법2단계':'seq_apgp_step2','시그마용법3단계':'seq_misc_step3','여러가지수열3단계':'seq_misc_step3','시그마용법4단계':'seq_sum_step4','수열의합4단계':'seq_sum_step4',
+                '귀납적정의2단계':'induction_def_step2','귀납적정의3단계':'induction_step3','수학적귀납법3단계':'induction_step3','귀납적정의4단계':'induction_step4','수학적귀납법4단계':'induction_step4',
+                '다항식2단계':'poly_s2','다항식3단계':'poly_s3','다항식4단계':'poly_s4',
+                '항등식과나머지정리2단계':'remain_s2','항등식과나머지정리3단계':'remain_s3','항등식과나머지정리4단계':'remain_s4',
+                '인수분해2단계':'factor_s2','인수분해3단계':'factor_s3','인수분해4단계':'factor_s4',
+                '복소수2단계':'complex_s2','복소수3단계':'complex_s3','복소수4단계':'complex_s4',
+                '이차방정식2단계':'quad_eq_s2','이차방정식3단계':'quad_eq_s3','이차방정식4단계':'quad_eq_s4',
+                '이차방정식과이차함수2단계':'quad_func_s2','이차방정식과이차함수3단계':'quad_func_s3','이차방정식과이차함수4단계':'quad_func_s4'
+              };
+              
+              const matchedEngDirKey = Object.keys(koToEngDict).find(k => k.replace(/\s+/g, '') === cleanDirName);
+              const engDirName = matchedEngDirKey ? koToEngDict[matchedEngDirKey] : cleanDirName;
+              
+              const tryKey1 = `${engDirName}/${fileName}`;
+              const tryKey2 = `${engDirName}/${fileName.replace(/\.webp$/, '.png')}`;
+              const tryKey3 = `${engDirName}/${fileName.replace(/\.png$/, '.webp')}`;
+              
+              if (mathTextsData && mathTextsData[tryKey1]) {
+                currentProblemText = mathTextsData[tryKey1];
+              } else if (mathTextsData && mathTextsData[tryKey2]) {
+                currentProblemText = mathTextsData[tryKey2];
+              } else if (mathTextsData && mathTextsData[tryKey3]) {
+                currentProblemText = mathTextsData[tryKey3];
               }
           }
-          // [FALLBACK] resolveAsset이 한글→영어 변환하여 키가 안 맞는 경우,
-          // 원본 단원명(currentUnit)으로 직접 lookup
-          if (!currentProblemText && mathTextsData && currentUnit) {
-              const directKey = `${currentUnit}/${formattedIdx}.webp`;
-              if (mathTextsData[directKey]) {
-                  currentProblemText = mathTextsData[directKey];
-              }
-              if (!currentProblemText) {
-                  const koToEng = {'고차방정식2단계':'higher_order_eqstep2','고차방정식3단계':'higher_order_eqstep3','고차방정식4단계':'higher_order_eqstep4','일차부등식2단계':'linear_ineq_step2','일차부등식3단계':'linear_ineq_step3','일차부등식4단계':'linear_ineq_step4','이차부등식2단계':'quadratic_ineq_step2','이차부등식3단계':'quadratic_ineq_step3','이차부등식4단계':'quadratic_ineq_step4','경우의수2단계':'cases_step2','경우의수3단계':'cases_step3','경우의수4단계':'cases_step4','행렬2단계':'matrix_step2','행렬3단계':'matrix_step3','행렬4단계':'matrix_step4','점과좌표2단계':'point_coord_step2','점과좌표3단계':'point_coord_step3','점과좌표4단계':'point_coord_step4','직선의방정식2단계':'line_eq_step2','직선의방정식3단계':'line_eq_step3','직선의방정식4단계':'line_eq_step4','원의방정식2단계':'circle_eq_step2','원의방정식3단계':'circle_eq_step3','원의방정식4단계':'circle_eq_step4','도형의이동2단계':'shape_move_step2','도형의이동3단계':'shape_move_step3','도형의이동4단계':'shape_move_step4','지수2단계':'exp_step2','지수3단계':'exp_step3','지수4단계':'exp_step4','지수로그4단계':'explog_step4','지수함수2단계':'exp_func_step2','지수함수3단계':'exp_func_step3','지수함수4단계':'exp_func_step4','로그2단계':'log_step2','로그3단계':'log_step3','로그4단계':'log_step4','로그함수2단계':'log_func_step2','로그함수3단계':'log_func_step3','로그함수4단계':'log_func_step4','삼각함수성질2단계':'trig_prop_step2','삼각함수3단계':'trig_step3','삼각함수그래프2단계':'trig_graph_step2','삼각함수그래프3단계':'trig_graph_step3','삼각함수그래프4단계':'trig_graph','삼각함수활용2단계':'trig_util_step2','삼각함수활용3단계':'trig_util_step3','삼각함수활용 4단계(68)':'trig_util_step4','등차등비2단계':'seq_apgp_step2','등차등비3단계':'seq_apgp_step3','등차등비수열4단계':'seq_apgp_step4','시그마용법2단계':'sigma_step2','여러가지수열3단계':'seq_misc_step3','수열의합4단계':'seq_sum_step4','귀납적정의2단계':'induction_def_step2','수학적귀납법3단계':'induction_step3','수학적귀납법4단계':'induction_step4'};
-                  const engUnit = koToEng[currentUnit];
-                  if (engUnit) {
-                      const ek = `${engUnit}/${formattedIdx}.webp`;
-                      const ep = `${engUnit}/${formattedIdx}.png`;
-                      if (mathTextsData[ek]) currentProblemText = mathTextsData[ek];
-                      else if (mathTextsData[ep]) currentProblemText = mathTextsData[ep];
-                  }
-              }
-          }
+
           // [FALLBACK] 만약 여전히 매핑에 실패했다면, mathTextsData의 모든 키들을 뒤져서 
           // 현재 formattedIdx가 매칭되고, 폴더명이 cleanCurrent를 포함하는 키를 동적으로 찾아낸다!
           if (!currentProblemText && mathTextsData) {
               const matchedKey = Object.keys(mathTextsData).find(k => {
                   const kDecoded = decodeURIComponent(k);
                   const cleanK = kDecoded.replace(/\s+/g, '').replace(/[(]\d+[)]/g, '').replace(/개념/g, '');
-                  return cleanK.includes(cleanCurrent) && kDecoded.endsWith(`/${formattedIdx}.webp`);
+                  return cleanK.includes(cleanCurrent) && 
+                         (kDecoded.endsWith(`/${formattedIdx}.webp`) || kDecoded.endsWith(`/${formattedIdx}.png`));
               });
               if (matchedKey) {
                   currentProblemText = mathTextsData[matchedKey];
@@ -1239,6 +1366,40 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             </div>
           </div>
           
+          {/* 모바일용 과목(selectedCourse) 변경 드롭다운 추가 */}
+          <div style={{ fontSize: '0.72rem', fontWeight: 'bold', color: '#60a5fa', marginBottom: '0.15rem', marginTop: '0.2rem' }}>📚 과목 선택</div>
+          {isG1Teacher ? (
+            <select 
+              value={selectedCourse} 
+              onChange={(e) => setSelectedCourse(e.target.value)}
+              style={{ width: '100%', background: 'var(--bg-base)', border: '1px solid var(--border-glass)', color: 'var(--text-main)', padding: '0.5rem', borderRadius: '8px', fontSize: '0.85rem', marginBottom: '0.3rem' }}
+            >
+              <option value="수학상">고1 수학(상/하)</option>
+            </select>
+          ) : isG2Teacher ? (
+            <select 
+              value={selectedCourse} 
+              onChange={(e) => setSelectedCourse(e.target.value)}
+              style={{ width: '100%', background: 'var(--bg-base)', border: '1px solid var(--border-glass)', color: 'var(--text-main)', padding: '0.5rem', borderRadius: '8px', fontSize: '0.85rem', marginBottom: '0.3rem' }}
+            >
+              <option value="수학1" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>수학1 (대수)</option>
+              <option value="수2" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>수학2</option>
+            </select>
+          ) : (
+            <select 
+              value={selectedCourse} 
+              onChange={(e) => setSelectedCourse(e.target.value)}
+              style={{ width: '100%', background: 'var(--bg-base)', border: '1px solid var(--border-glass)', color: 'var(--text-main)', padding: '0.5rem', borderRadius: '8px', fontSize: '0.85rem', marginBottom: '0.3rem' }}
+            >
+              <option value="수학1" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>수학1 (대수)</option>
+              <option value="수2" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>수학2</option>
+              <option value="미적분">미적분 (심화)</option>
+              <option value="확률과통계">확률과 통계 (수능)</option>
+              <option value="모의고사">멘토스 모의고사</option>
+            </select>
+          )}
+
+          <div style={{ fontSize: '0.72rem', fontWeight: 'bold', color: '#60a5fa', marginBottom: '0.15rem', marginTop: '0.3rem' }}>📖 단원 · 문제번호</div>
           <div style={{ display: 'flex', gap: '0.4rem', width: '100%' }}>
             <select
               value={selectedUnit || ''}
@@ -1288,8 +1449,8 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
               minHeight: '220px',
               maxHeight: '46vh',
               overflowY: 'auto', 
-              background: chalkboardData ? 'linear-gradient(145deg, #1C2B27, #141E1B)' : 'var(--bg-glass)', 
-              padding: chalkboardData ? '0' : '1rem 0.8rem', 
+              background: 'var(--bg-glass)', 
+              padding: '1rem 0.8rem', 
               borderRadius: '0px', 
               display: 'flex', 
               flexDirection: 'column', 
@@ -1325,7 +1486,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                  onClick={() => setExpandedProblemImage(currentProblemImage)}
                  style={{ width: '100%', height: 'auto', maxHeight: '350px', objectFit: 'contain', borderRadius: '8px', cursor: 'zoom-in' }} 
                  onError={(e) => { 
-                   e.target.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='200'><rect width='600' height='200' fill='%231c2b27' rx='8' stroke='%237e8f8a' stroke-width='2' stroke-dasharray='4'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%237e8f8a' font-family='sans-serif' font-size='14'>⚠ 문제 서버 준비 중</text></svg>";
+                   e.target.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='200'><rect width='600' height='200' fill='%23f8fafc' rx='8' stroke='%23cbd5e1' stroke-width='2' stroke-dasharray='4'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%2364748b' font-family='sans-serif' font-size='14'>⚠ 문제 서버 준비 중</text></svg>";
                    e.target.onclick = null;
                  }}
               />
@@ -1365,9 +1526,15 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             </div>
             <input 
               type="text" 
+              inputMode="numeric"
+              pattern="[0-9]*"
               placeholder="주관식 직접 입력" 
               value={userAnswer}
-              onChange={(e) => { setUserAnswer(e.target.value); setSelectedAnswer(null); }}
+              onChange={(e) => { 
+                const filtered = e.target.value.replace(/[^0-9]/g, '');
+                setUserAnswer(filtered); 
+                setSelectedAnswer(null); 
+              }}
               style={{ width: '100%', padding: '0.5rem 0.7rem', borderRadius: '8px', border: '1px solid var(--border-glass)', background: 'var(--bg-base)', color: 'var(--text-main)', fontSize: '0.85rem', boxSizing: 'border-box' }}
             />
 
@@ -1464,8 +1631,8 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                         } else if (['1)극한4단계', '2)급수4단계', '3)지수로그삼각함수의 미분법 4단계', '4)여러가지 미분법 4단계', '5)도함수의 활용 4단계', '6)여러가지 함수의 적분4단계', '7)정적분의 활용 4단계'].includes(mappedU)) {
                            msgProblemImage = window.resolveAsset(`/math_crops/미적분/4단계/${mappedU}/${m.hintPlayer.problemId}.webp`)
                         } else if (mappedU && (mappedU.includes('등차') || mappedU.includes('등비'))) {
-                           msgProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/2단계/등차등비2단계/${m.hintPlayer.problemId}.webp`)
-                        } else if (['1)순열', '2)중복조합', '3)이항정리', '4)확률의뜻', '5)덧셈정리_조건부화률_독립시행', '6)확률변수와이항분포', '7)연속확률분포와정규분포', '8)표본평균과모평균'].includes(mappedU)) {
+                           msgProblemImage = window.resolveAsset(`/math_crops/수학1 중간/2단계/등차등비2단계/${m.hintPlayer.problemId}.webp`)
+                        } else if (['1)순열', '2)중복조합', '3)이항정리', '4)확률의뜻', '5)덧셈정리_조건부확률_독립시행', '6)확률변수와이항분포', '7)연속확률분포와정규분포', '8)표본평균과모평균'].includes(mappedU)) {
                            msgProblemImage = window.resolveAsset(`/math_crops/확통수능/${mappedU}/${m.hintPlayer.problemId}.webp`)
                         } else if (selectedCourse === `수2`) {
                            msgProblemImage = window.resolveAsset(`/math_crops/(7)수학2/${mappedU}/${m.hintPlayer.problemId}.webp`)
@@ -1503,7 +1670,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                   placeholder="질문 또는 의견 입력..." 
                   value={input}
                   onChange={e => setInput(e.target.value)}
-                  onKeyDown={e => e.key === 'Enter' && handeSubmit()}
+                  onKeyDown={e => e.key === 'Enter' && handleSubmit()}
                   style={{ flex: 1, padding: '0.55rem', borderRadius: '8px', border: '1px solid var(--border-glass)', background: 'var(--bg-base)', color: 'var(--text-main)', fontSize: '0.82rem' }} 
                />
                
@@ -1515,7 +1682,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                  <Mic size={16} color={isRecording ? "white" : "var(--text-muted)"} />
                </button>
 
-               <button onClick={handeSubmit} disabled={loading} style={{ padding: '0 0.8rem', borderRadius: '8px', height: '32px', display: 'flex', alignItems: 'center', fontSize: '0.82rem', background: '#FFFFFF', color: '#1A1A1A', border: '2px solid #10B981', fontWeight: 'bold', cursor: 'pointer', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }}>
+               <button onClick={handleSubmit} disabled={loading} style={{ padding: '0 0.8rem', borderRadius: '8px', height: '32px', display: 'flex', alignItems: 'center', fontSize: '0.82rem', background: '#FFFFFF', color: '#1A1A1A', border: '2px solid #10B981', fontWeight: 'bold', cursor: 'pointer', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }}>
                  {loading ? '...' : '전송'}
                </button>
             </div>
@@ -1540,7 +1707,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                   [{isSenior ? '통합 수학' : currentUnit}] 개념카드
                 </h3>
                 <button onClick={() => setShowConceptModal(false)} style={{ background: 'transparent', border: 'none', color: '#a1a1aa' }}>
-                  <X size={20} />
+                  <CloseIcon size={20} />
                 </button>
               </div>
               <div style={{ flex: 1, padding: '1rem', overflowY: 'auto', display: 'grid', gridTemplateColumns: '1fr', gap: '1rem' }}>
@@ -1687,6 +1854,44 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             >
               👑 프리미엄 AI 강의
             </button>
+
+            {/* 여기까지 끝내기 버튼 */}
+            <button
+              className="hover-scale"
+              onClick={() => {
+                const history = JSON.parse(localStorage.getItem('localGradingHistory') || '[]');
+                const totalQ = history.length;
+                const correctQ = history.filter(h => h.isCorrect).length;
+                const acc = totalQ > 0 ? Math.round((correctQ / totalQ) * 100) : 0;
+                const elapsed = Math.max(1, Math.round((Date.now() - (session?.startedAt || Date.now())) / 60000));
+                const unitName = selectedUnit || currentUnit || '수학';
+                const confirmed = window.confirm(
+                  `수업을 종료합니다.\n\n📐 ${unitName}\n⏱️ 총 학습시간: ${elapsed}분\n📊 정답률: ${acc}% (${correctQ}/${totalQ})\n\n숙제가 자동 배정됩니다.`
+                );
+                if (confirmed) {
+                  const results = JSON.parse(localStorage.getItem('mentos_lesson_results') || '[]');
+                  results.push({
+                    id: 'session_' + Date.now(),
+                    date: new Date().toISOString(),
+                    subject: '수학',
+                    grade: teacher?.targetGrades?.[0] || '고1',
+                    unit: unitName,
+                    totalQuestions: totalQ,
+                    correctCount: correctQ,
+                    accuracy: acc,
+                    duration: elapsed,
+                    endedEarly: true,
+                    wrongQuestions: history.filter(h => !h.isCorrect).map(h => ({ problemId: h.problemId, id: h.problemId, isCorrect: false })),
+                    nextLessonFocus: '조기 종료 단원 복습 및 오답 정리'
+                  });
+                  localStorage.setItem('mentos_lesson_results', JSON.stringify(results));
+                  navigate('/dashboard');
+                }
+              }}
+              style={{ background: 'rgba(245,158,11,0.15)', border: '1px solid rgba(245,158,11,0.3)', padding: '0.5rem 1rem', borderRadius: '8px', color: '#fbbf24', display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer', fontWeight: 'bold', fontSize: '0.85rem' }}
+            >
+              ⏹ 여기까지 끝내기
+            </button>
         </div>
       </div>
 
@@ -1812,8 +2017,8 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                   } else if (['1)극한4단계', '2)급수4단계', '3)지수로그삼각함수의 미분법 4단계', '4)여러가지 미분법 4단계', '5)도함수의 활용 4단계', '6)여러가지 함수의 적분4단계', '7)정적분의 활용 4단계'].includes(mappedU)) {
                      msgProblemImage = window.resolveAsset(`/math_crops/미적분/4단계/${mappedU}/${m.hintPlayer.problemId}.webp`)
                   } else if (mappedU && (mappedU.includes('등차') || mappedU.includes('등비'))) {
-                     msgProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/2단계/등차등비2단계/${m.hintPlayer.problemId}.webp`) // fallback
-                  } else if (['1)순열', '2)중복조합', '3)이항정리', '4)확률의뜻', '5)덧셈정리_조건부화률_독립시행', '6)확률변수와이항분포', '7)연속확률분포와정규분포', '8)표본평균과모평균'].includes(mappedU)) {
+                     msgProblemImage = window.resolveAsset(`/math_crops/수학1 중간/2단계/등차등비2단계/${m.hintPlayer.problemId}.webp`) // fallback
+                  } else if (['1)순열', '2)중복조합', '3)이항정리', '4)확률의뜻', '5)덧셈정리_조건부확률_독립시행', '6)확률변수와이항분포', '7)연속확률분포와정규분포', '8)표본평균과모평균'].includes(mappedU)) {
                      msgProblemImage = window.resolveAsset(`/math_crops/확통수능/${mappedU}/${m.hintPlayer.problemId}.webp`)
                   } else if (selectedCourse === `수2`) {
                      msgProblemImage = window.resolveAsset(`/math_crops/(7)수학2/${mappedU}/${m.hintPlayer.problemId}.webp`)
@@ -1864,9 +2069,15 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
 
           <input 
             type="text" 
+            inputMode="numeric"
+            pattern="[0-9]*"
             placeholder="주관식은 직접 입력" 
             value={userAnswer}
-            onChange={(e) => { setUserAnswer(e.target.value); setSelectedAnswer(null); }}
+            onChange={(e) => { 
+              const filtered = e.target.value.replace(/[^0-9]/g, '');
+              setUserAnswer(filtered); 
+              setSelectedAnswer(null); 
+            }}
             style={{ padding: '0.8rem', borderRadius: '8px', border: '1px solid #52525b', background: 'var(--bg-base)', color: 'var(--text-main)', flex: 1, minWidth: '120px' }}
           />
         </div>
@@ -1939,7 +2150,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
               placeholder="답변을 입력하세요..." 
               value={input}
               onChange={e => setInput(e.target.value)}
-              onKeyDown={e => e.key === 'Enter' && handeSubmit()}
+              onKeyDown={e => e.key === 'Enter' && handleSubmit()}
               style={{ flex: 1, padding: '1rem', borderRadius: '12px', border: '1px solid var(--border-glass)', background: 'var(--bg-base)', color: 'var(--text-main)' }} 
            />
            
@@ -1951,7 +2162,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
              <Mic size={20} color={isRecording ? "white" : "#a1a1aa"} />
            </button>
 
-            <button className="btn-primary" onClick={handeSubmit} disabled={loading} style={{ padding: '0 1.5rem', borderRadius: '12px', height: '100%', display: 'flex', alignItems: 'center' }}>
+            <button className="btn-primary" onClick={handleSubmit} disabled={loading} style={{ padding: '0 1.5rem', borderRadius: '12px', height: '100%', display: 'flex', alignItems: 'center' }}>
              {loading ? '...' : <><Send size={18} style={{marginRight: '6px'}}/> 전송</>}
            </button>
         </div>
@@ -1970,7 +2181,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                 onClick={() => setShowConceptModal(false)}
                 style={{ background: 'transparent', border: 'none', color: '#a1a1aa', cursor: 'pointer' }}
               >
-                <X size={24} />
+                <CloseIcon size={24} />
               </button>
             </div>
             
@@ -2046,7 +2257,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             onClick={(e) => { e.stopPropagation(); setSelectedExpandedCard(null); }}
             title="닫기"
           >
-            <X size={36} />
+            <CloseIcon size={36} />
           </button>
         </div>
       )}
@@ -2071,9 +2282,9 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             style={{ position: 'absolute', top: '2rem', right: '2rem', background: 'rgba(255,255,255,0.1)', border: 'none', color: 'white', borderRadius: '50%', width: '60px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', transition: 'background 0.2s' }}
             onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.2)'}
             onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'}
-            onClick={() => setExpandedProblemImage(null)}
+             onClick={() => setExpandedProblemImage(null)}
           >
-            <X size={32} />
+            <CloseIcon size={32} />
           </button>
         </div>
       )}
@@ -2194,6 +2405,8 @@ class ErrorBoundary extends React.Component {
 }
 
 function MathClassroomScreenContent() {
+  // 세션 시작 시간 기록 (학습시간 계산용)
+  if (!window.__mentosSessionStart) window.__mentosSessionStart = Date.now();
   const { user } = useAuth();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const location = useLocation();
@@ -2201,11 +2414,13 @@ function MathClassroomScreenContent() {
   const rawTeacher = location.state?.teacher || (teacherId ? getTeacherById(teacherId) : null) || { id: 'h_math6', name: '윤수아 선생님', courseName: '수학2 (미적분 기초)', targetGrades: ['고2'], targetRanks: ['3등급'] };
   const teacher = rawTeacher.id ? getTeacherById(rawTeacher.id) : rawTeacher;
 
-  // Hook 내부는 SSOT 객체를 받음
-  const { session, setSession } = useMathLessonSession(teacher, {
+  const overrides = useMemo(() => ({
     unitOverride: location.state?.unitOverride,
     phaseIndexOverride: location.state?.phaseIndexOverride
-  });
+  }), [location.state?.unitOverride, location.state?.phaseIndexOverride]);
+
+  // Hook 내부는 SSOT 객체를 받음
+  const { session, setSession } = useMathLessonSession(teacher, overrides);
 
   const navigate = useNavigate();
 
@@ -2226,6 +2441,8 @@ function MathClassroomScreenContent() {
   const [problemTimeLeft, setProblemTimeLeft] = useState(0);
 
   const [showReport, setShowReport] = useState(false); // 리포트 표시 상태 추가
+  const [sessionStartTime] = useState(() => Date.now());
+  const [showEndEarlyModal, setShowEndEarlyModal] = useState(false);
 
   useEffect(() => {
     console.log('[TIMER_START]');
@@ -2268,13 +2485,13 @@ function MathClassroomScreenContent() {
   const isG1Teacher = (teacher?.id === 'h_math1' || teacher?.id === 'h_math2' || teacher?.id === 'h_math3' || teacher?.id === 'math1' || teacher?.id === 'math2' || teacher?.id === 'math3') || 
                       (teacher?.targetGrades?.some(g => g.includes('고1')));
 
-  // 고2 선생님들(4,5,6번) 강제 고정 여부 확인 (ID 매칭 및 학년 매칭 강화)
-  const isG2Teacher = (teacher?.id === 'h_math4' || teacher?.id === 'h_math5' || teacher?.id === 'h_math6' || teacher?.id === 'h_math_calc' || teacher?.id === 'math4' || teacher?.id === 'math5' || teacher?.id === 'math6') || 
-                      (teacher?.targetGrades?.some(g => g.includes('고2'))) ||
-                      (teacher?.courseName?.includes('대수'));
+  // 고2 선생님들(4,5,6번) 확인 (h_math_calc 제외하여 고3 락 격리)
+  const isG2Teacher = (teacher?.id === 'h_math4' || teacher?.id === 'h_math5' || teacher?.id === 'h_math6' || teacher?.id === 'math4' || teacher?.id === 'math5' || teacher?.id === 'math6') || 
+                      (teacher?.targetGrades?.some(g => g.includes('고2')) && !teacher?.id?.includes('calc') && !teacher?.targetGrades?.some(g => g.includes('고3'))) ||
+                      (teacher?.courseName?.includes('대수') && !teacher?.id?.includes('calc'));
 
-  // 고3 선생님들(7,8,9번) 확인
-  const isG3Teacher = (teacher?.id === 'h_math7' || teacher?.id === 'h_math8' || teacher?.id === 'h_math9' || teacher?.id === 'math7' || teacher?.id === 'math8' || teacher?.id === 'math9') || 
+  // 고3 선생님들(7,8,9번 및 h_math_calc) 확인
+  const isG3Teacher = (teacher?.id === 'h_math7' || teacher?.id === 'h_math8' || teacher?.id === 'h_math9' || teacher?.id === 'h_math_calc' || teacher?.id === 'math7' || teacher?.id === 'math8' || teacher?.id === 'math9') || 
                       (teacher?.targetGrades?.some(g => g.includes('고3') || g.includes('N수')));
 
   const [openSections, setOpenSections] = useState({});
@@ -2291,28 +2508,36 @@ function MathClassroomScreenContent() {
   const [selectedCourse, setSelectedCourse] = useState(() => {
     if (location.state?.elective) return location.state.elective;
     
-    // [STRICT RULE] 고2 선생님들(4,5,6번)은 로컬 스토리지보다 우선하여 수1 대수 커리큘럼이 나오도록 강제
-    if (isG2Teacher) return '수학1';
-    
-    // [STRICT RULE] 고1 선생님들(1,2,3번)은 로컬 스토리지보다 우선하여 수학상 커리큘럼이 나오도록 강제
+    // [STRICT RULE] 고1 선생님들(1,2,3번) → 수학상
     if (isG1Teacher) return '수학상';
 
-    // [STRICT RULE] 고3 선생님들(7,8,9번)은 수2 커리큘럼이 나오도록 강제
+    // [STRICT RULE] 고2 선생님들(4,5,6번) → unitOverride로 수학1/수2 판별
+    if (isG2Teacher) {
+      const uo = location.state?.unitOverride || '';
+      // 수2 단원명이면 수2, 아니면 수학1
+      const math2Units = ['함수의 극한', '함수의 연속', '함수의극한', '함수의연속', '미분계수', '도함수', '부정적분', '정적분'];
+      if (math2Units.some(u => uo.includes(u))) return '수2';
+      const saved = localStorage.getItem(`last_course_${teacher?.id || 'default'}`);
+      if (saved) return saved;
+      return '수학1';
+    }
+
+    // [STRICT RULE] 고3 선생님들(7,8,9번) → 미적분 (고3 선택과목, 수2는 고2 2학기)
     if (isG3Teacher) {
       const saved = localStorage.getItem(`last_course_${teacher?.id || 'default'}`);
       if (saved) return saved;
-      return '수2';
+      return '미적분';
     }
 
     const saved = localStorage.getItem(`last_course_${teacher?.id || 'default'}`);
     if (saved) return saved;
 
     const tId = teacher?.id || '';
-    if (tId === 'h_math7' || tId === 'h_math8' || tId === 'h_math9') return '수2';
+    if (tId === 'h_math7' || tId === 'h_math8' || tId === 'h_math9') return '미적분';
     if (tId === 'h_math1' || tId === 'h_math2' || tId === 'h_math3' || tId === 'math1' || tId === 'math2' || tId === 'math3') return '수학상';
     
     // 학년 정보가 있을 경우 우선 순위
-    if (teacher?.targetGrades?.some(g => g.includes('고3') || g.includes('N수'))) return '수2';
+    if (teacher?.targetGrades?.some(g => g.includes('고3') || g.includes('N수'))) return '미적분';
     if (teacher?.targetGrades?.some(g => g.includes('고1'))) return '수학상';
 
     return '수학상'; 
@@ -2322,19 +2547,35 @@ function MathClassroomScreenContent() {
   useEffect(() => {
     if (location.state?.unitOverride) {
       const u = location.state.unitOverride;
-      // unit이 속한 section을 찾아서 열어준다
+      
+      const cleanStr = (s) => {
+        if (!s) return '';
+        return String(s)
+          .replace(/^\d{2}\./, '')
+          .replace(/^\d+\)/, '')
+          .replace(/\d+단계/, '')
+          .replace(/\[\d+단계\]/, '')
+          .replace(/\[(미적분|확통)\]/, '')
+          .replace(/\s+/g, '')
+          .replace(/\//g, '')
+          .replace(/\d+/, '');
+      };
+
+      const targetClean = cleanStr(u);
       const sb = getSidebarData();
-      const sec = sb.sections.find(s => s.items.some(i => typeof i === 'string' && i.includes(u)));
+      const sec = sb.sections.find(s => 
+        s.items.some(i => typeof i === 'string' && (cleanStr(i).includes(targetClean) || targetClean.includes(cleanStr(i))))
+      );
       if (sec) {
         setOpenSections(prev => ({ ...prev, [sec.name]: true }));
-        const item = sec.items.find(i => typeof i === 'string' && i.includes(u));
+        const item = sec.items.find(i => typeof i === 'string' && (cleanStr(i).includes(targetClean) || targetClean.includes(cleanStr(i))));
         if (item) {
            setSelectedUnit(item);
-           // phaseIndexOverride 도 있다면 해당 탭을 열기 위해 추가 처리 가능 (현재는 setSelectedUnit으로 일단이동)
+           setTestProblemIdx(1);
         }
       }
     }
-  }, [location.state?.unitOverride, session?.curriculumData]);
+  }, [location.state?.unitOverride, session?.curriculumData, selectedCourse]);
 
 
 
@@ -2345,16 +2586,22 @@ function MathClassroomScreenContent() {
   useEffect(() => {
     if (isG3) {
       if (teacher?.routeId === 'h_math_calc') {
-         setSelectedCourse('수2');
-      } else if (!selectedCourse) {
-         setSelectedCourse('수2');
+         setSelectedCourse('미적분');
+      } else if (!selectedCourse || selectedCourse === '수학상') {
+         const saved = localStorage.getItem(`last_course_${teacher?.id || 'default'}`);
+         setSelectedCourse(saved || '미적분');
       }
     } else if (isG2) {
-      if (!selectedCourse) setSelectedCourse('수학1');
+      if (!selectedCourse || selectedCourse === '수학상') {
+         const saved = localStorage.getItem(`last_course_${teacher?.id || 'default'}`);
+         setSelectedCourse(saved || '수학1');
+      }
     } else if (isG1) {
-      if (!selectedCourse) setSelectedCourse('수학상');
+      if (!selectedCourse || selectedCourse !== '수학상') {
+         setSelectedCourse('수학상');
+      }
     }
-  }, [isG1, isG2, isG3, teacher?.routeId]);
+  }, [isG1, isG2, isG3, teacher?.id, teacher?.routeId]);
 
   function getSidebarData() {
     if (!session) return { title: '', sections: [] };
@@ -2498,7 +2745,9 @@ function MathClassroomScreenContent() {
 
   // 코스(selectedCourse) 변경 시 해당 코스의 첫 번째 단원으로 자동으로 selectedUnit을 변경해주는 반응형 로직 추가
   useEffect(() => {
-    if (!selectedCourse) return;
+    if (!selectedCourse || !session) return;
+    // unitOverride가 있으면 코스 변경 시 첫 단원 리셋 건너뜀 (진도 선택이 의미있게 작동)
+    if (location.state?.unitOverride) return;
     const sb = getSidebarData();
     if (sb && sb.sections && sb.sections.length > 0) {
       const firstSection = sb.sections[0];
@@ -2511,7 +2760,7 @@ function MathClassroomScreenContent() {
         }
       }
     }
-  }, [selectedCourse]);
+  }, [selectedCourse, !!session]);
 
   useEffect(() => {
     if (session) {
@@ -2610,6 +2859,81 @@ function MathClassroomScreenContent() {
         )}
       </div>
 
+      {/* 여기까지 끝내기 버튼 */}
+      <button
+        onClick={() => setShowEndEarlyModal(true)}
+        style={{ position: 'fixed', top: '15px', right: '20px', background: 'rgba(245, 158, 11, 0.15)', border: '1px solid rgba(245, 158, 11, 0.4)', padding: '0.45rem 1rem', borderRadius: '20px', color: '#f59e0b', cursor: 'pointer', zIndex: 99999, display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', fontWeight: '600', backdropFilter: 'blur(8px)', transition: 'all 0.2s', pointerEvents: 'auto' }}
+        onMouseEnter={e => { e.currentTarget.style.background = 'rgba(245, 158, 11, 0.3)'; }}
+        onMouseLeave={e => { e.currentTarget.style.background = 'rgba(245, 158, 11, 0.15)'; }}
+      >
+        <LogOut size={16} /> 여기까지 끝내기
+      </button>
+
+      {/* 여기까지 끝내기 확인 모달 */}
+      {showEndEarlyModal && (() => {
+        const elapsedMs = Date.now() - sessionStartTime;
+        const elapsedMin = Math.round(elapsedMs / 60000);
+        const history = JSON.parse(localStorage.getItem('localGradingHistory') || '[]');
+        const totalSolved = history.length;
+        const correctCount = history.filter(h => h.isCorrect).length;
+        const accuracy = totalSolved > 0 ? Math.round((correctCount / totalSolved) * 100) : 0;
+        const unitName = selectedUnit || '수학 수업';
+        const problemNum = testProblemIdx;
+        return (
+          <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.7)', zIndex: 999999, display: 'flex', alignItems: 'center', justifyContent: 'center', backdropFilter: 'blur(4px)' }} onClick={() => setShowEndEarlyModal(false)}>
+            <div style={{ background: '#0f172a', border: '1px solid #334155', borderRadius: '16px', padding: '2rem', maxWidth: '420px', width: '90%', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }} onClick={e => e.stopPropagation()}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
+                <h3 style={{ margin: 0, color: '#f59e0b', fontSize: '1.2rem' }}>📋 수업 종료 확인</h3>
+                <button onClick={() => setShowEndEarlyModal(false)} style={{ background: 'transparent', border: 'none', color: '#64748b', cursor: 'pointer' }}><CloseIcon size={20} /></button>
+              </div>
+              <div style={{ background: '#1e293b', borderRadius: '12px', padding: '1.2rem', marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', color: '#cbd5e1', fontSize: '0.9rem' }}><span>📖 단원</span><span style={{ color: '#f1f5f9', fontWeight: '600' }}>{unitName}</span></div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', color: '#cbd5e1', fontSize: '0.9rem' }}><span>📝 현재 문제</span><span style={{ color: '#f1f5f9', fontWeight: '600' }}>{problemNum}번까지 풀었음</span></div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', color: '#cbd5e1', fontSize: '0.9rem' }}><span>⏱️ 총 학습시간</span><span style={{ color: '#f1f5f9', fontWeight: '600' }}>{elapsedMin}분</span></div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', color: '#cbd5e1', fontSize: '0.9rem' }}><span>🎯 정답률</span><span style={{ color: accuracy >= 70 ? '#4ade80' : accuracy >= 40 ? '#fbbf24' : '#f87171', fontWeight: '700' }}>{correctCount}/{totalSolved} ({accuracy}%)</span></div>
+              </div>
+              <div style={{ display: 'flex', gap: '0.8rem' }}>
+                <button onClick={() => setShowEndEarlyModal(false)} style={{ flex: 1, padding: '0.8rem', background: 'transparent', border: '1px solid #475569', borderRadius: '10px', color: '#94a3b8', cursor: 'pointer', fontWeight: '600', fontSize: '0.95rem' }}>계속하기</button>
+                <button onClick={() => {
+                  const record = { 
+                    id: 'session_' + Date.now(), 
+                    date: new Date().toISOString(), 
+                    subject: '수학', 
+                    grade: teacher?.targetGrades?.[0] || '고1',
+                    unit: unitName, 
+                    totalQuestions: totalSolved, 
+                    correctCount: correctCount, 
+                    accuracy: accuracy, 
+                    duration: elapsedMin, 
+                    endedEarly: true,
+                    wrongQuestions: history.filter(h => !h.isCorrect).map(h => ({ problemId: h.problemId, id: h.problemId, isCorrect: false })),
+                    nextLessonFocus: '조기 종료 단원 복습 및 오답 정리'
+                  };
+                  const prev = JSON.parse(localStorage.getItem('mentos_lesson_results') || '[]');
+                  prev.push(record);
+                  localStorage.setItem('mentos_lesson_results', JSON.stringify(prev));
+
+                  // 조기 종료 맞춤 숙제 생성 (15~20문항)
+                  const courseName = teacher?.courseName || '고등 수학';
+                  const teacherName = teacher?.name || 'AI 튜터';
+                  const sessionRoundKey = `hw_generated_flag_${teacher?.id || 'default'}_${session?.round || 1}`;
+                  const isAlreadyGenerated = localStorage.getItem(sessionRoundKey);
+                  if (!isAlreadyGenerated) {
+                    const result = generateMathHomework(history, courseName, teacherName, { earlyExit: true, currentUnit: selectedUnit });
+                    if (result) {
+                      console.log(`[MATH HOMEWORK DISPATCHED - EARLY EXIT] Assigned ${result.problemsCount} questions under ID ${result.homeworkId}`);
+                      localStorage.setItem(sessionRoundKey, 'true');
+                    }
+                  }
+
+                  navigate('/dashboard');
+                }} style={{ flex: 1, padding: '0.8rem', background: 'linear-gradient(135deg, #f59e0b, #d97706)', border: 'none', borderRadius: '10px', color: 'white', cursor: 'pointer', fontWeight: '700', fontSize: '0.95rem', boxShadow: '0 4px 12px rgba(245, 158, 11, 0.3)' }}>수업 종료</button>
+              </div>
+            </div>
+          </div>
+        );
+      })()}
+
       {/* 사이드바 UI (옵션) */}
       <div className={`classroom-sidebar ${isSidebarOpen ? 'open' : ''}`} style={{ borderRight: '1px solid var(--border-glass)', padding: '1.5rem', overflowY: 'auto' }}>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '1.5rem' }}>
@@ -2642,51 +2966,37 @@ function MathClassroomScreenContent() {
 
         {/* 커리큘럼 아코디언 드롭다운 (학생/강사 네비게이션) */}
         <div>
-            {/* [STRICT RULE] 고1, 고2 전용 선생님들은 다른 과정 선택을 막고 강제 고정 UI를 보여줌 */}
             {isG1Teacher ? (
-              <div style={{ width: '100%', padding: '0.5rem', marginBottom: '1rem', background: '#27272a', color: '#10b981', border: '1px solid #10b981', borderRadius: '4px', fontWeight: 'bold', textAlign: 'center' }}>
-                📐 고1 수학(상/하) 전용
-              </div>
-            ) : isG2Teacher ? (
-              <div style={{ width: '100%', padding: '0.5rem', marginBottom: '1rem', background: '#27272a', color: '#10b981', border: '1px solid #10b981', borderRadius: '4px', fontWeight: 'bold', textAlign: 'center' }}>
-                📐 수학1 (대수) 전용
-              </div>
-            ) : isG3Teacher ? (
               <select 
                 value={selectedCourse} 
                 onChange={(e) => setSelectedCourse(e.target.value)}
-                style={{ width: '100%', padding: '0.5rem', marginBottom: '1rem', background: '#27272a', color: 'white', border: '1px solid #3f3f46', borderRadius: '4px' }}
+                style={{ width: '100%', padding: '0.5rem', marginBottom: '1rem', background: '#FFFFFF', color: '#1A1A1A', border: '1px solid #3f3f46', borderRadius: '4px', fontWeight: 'bold' }}
               >
-                <option value="수2">수2</option>
-                <option value="미적분">미적분</option>
-                <option value="확률과통계">수능확통</option>
-                <option value="모의고사">모의고사</option>
-                <option value="수1">수1</option>
+                <option value="수학상">고1 수학(상/하)</option>
+              </select>
+            ) : isG2Teacher ? (
+              <select 
+                value={selectedCourse} 
+                onChange={(e) => setSelectedCourse(e.target.value)}
+                style={{ width: '100%', padding: '0.5rem', marginBottom: '1rem', background: '#FFFFFF', color: '#1A1A1A', border: '1px solid #3f3f46', borderRadius: '4px', fontWeight: 'bold' }}
+              >
+                <option value="수학1" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>수학1 (대수)</option>
+                <option value="수2" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>수학2</option>
               </select>
             ) : (
               <select 
                 value={selectedCourse} 
                 onChange={(e) => setSelectedCourse(e.target.value)}
-                style={{ width: '100%', padding: '0.5rem', marginBottom: '1rem', background: '#27272a', color: 'white', border: '1px solid #3f3f46', borderRadius: '4px' }}
+                style={{ width: '100%', padding: '0.5rem', marginBottom: '1rem', background: '#FFFFFF', color: '#1A1A1A', border: '1px solid #3f3f46', borderRadius: '4px', fontWeight: 'bold' }}
               >
-                {isG1 && <option value="수학상">고1 수학(상/하)</option>}
-                
-                {(isG2 || isG3) && (
-                  <>
-                    <option value="수1" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>수학1 (대수)</option>
-                    <option value="수2" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>수학2 (미적분 기초)</option>
-                    <option value="확률과통계">확률과 통계</option>
-                  </>
-                )}
-
-                {isG3 && (
-                  <>
-                    <option value="미적분">미적분 (심화)</option>
-                    <option value="모의고사">고3 모의고사</option>
-                  </>
-                )}
+                <option value="수학1" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>수학1 (대수)</option>
+                <option value="수2" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>수학2</option>
+                <option value="미적분">미적분 (심화)</option>
+                <option value="확률과통계">확률과 통계 (수능)</option>
+                <option value="모의고사">멘토스 모의고사</option>
               </select>
             )}
+
           <h3 style={{ fontSize: '1rem', color: 'var(--text-main)', marginBottom: '1rem', paddingBottom: '0.5rem', borderBottom: '1px solid var(--border-glass)' }}>
             {sidebarData.title}
           </h3>

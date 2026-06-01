@@ -377,6 +377,7 @@ export default function HomeworkMathBox() {
   const renderAnswerArea = () => {
     const isAnswered = currentSolved?.userAnswer !== undefined;
     const isPenalized = currentSolved?.avsBeforeAnswer;
+    const isLocked = isPenalized || (isAnswered && currentSolved?.isCorrect);
 
     return (
       <div style={{
@@ -398,26 +399,26 @@ export default function HomeworkMathBox() {
         <div style={{ display: 'flex', gap: '0.5rem' }}>
           <input
             type="text"
-            placeholder={isPenalized ? "오답 처리됨" : "정답 입력"}
+            placeholder={isLocked ? (isPenalized ? "오답 처리됨" : "정답 완료") : "정답 입력"}
             value={userAnswer}
             onChange={(e) => setUserAnswer(e.target.value)}
-            disabled={isPenalized || isAnswered}
+            disabled={isLocked}
             onKeyDown={(e) => { if (e.key === 'Enter') handleGrade(); }}
             style={{
               flex: 1, padding: isMobile ? '0.6rem' : '0.8rem',
               background: '#09090b', border: '1px solid #3f3f46',
               borderRadius: '8px', color: 'white', fontSize: isMobile ? '0.9rem' : '1rem',
-              opacity: (isPenalized || isAnswered) ? 0.5 : 1,
+              opacity: isLocked ? 0.5 : 1,
             }}
           />
           <button
             onClick={handleGrade}
-            disabled={isPenalized || isAnswered || !userAnswer.trim()}
+            disabled={isLocked || !userAnswer.trim()}
             style={{
               padding: `0 ${isMobile ? '1rem' : '1.5rem'}`,
-              background: (isPenalized || isAnswered) ? '#3f3f46' : '#10b981',
+              background: isLocked ? '#3f3f46' : '#10b981',
               color: 'white', border: 'none', borderRadius: '8px',
-              fontWeight: 'bold', cursor: (isPenalized || isAnswered) ? 'not-allowed' : 'pointer',
+              fontWeight: 'bold', cursor: isLocked ? 'not-allowed' : 'pointer',
               fontSize: '0.85rem',
             }}
           >

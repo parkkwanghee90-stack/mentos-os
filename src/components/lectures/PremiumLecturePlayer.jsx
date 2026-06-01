@@ -30,7 +30,7 @@ export default function PremiumLecturePlayer({ lectureId, onClose }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   
   // --- [수학상, 수학1 완수 후 Gemini 3.1 자연스러운 음성 개편 예약용 스위치] ---
-  const USE_GEMINI_AUDIO = false; // 완료 시 true로 변경하여 전면 적용 가능
+  const USE_GEMINI_AUDIO = true; // 완료 시 true로 변경하여 전면 적용 가능
 
   const synthRef = useRef(window.speechSynthesis);
   const utteranceRef = useRef(null);

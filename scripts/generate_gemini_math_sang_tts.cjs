@@ -6,14 +6,24 @@ const { execSync } = require('child_process');
 
 dotenv.config();
 
-const GEMINI_API_KEY = process.env.VITE_GEMINI_API_KEY;
+const GEMINI_API_KEYS = [
+  process.env.VITE_GEMINI_API_KEY,
+  "AIzaSyATuwWx35ho0HovQ1915tY_tbvpzZAKlgw" // User's second key (20 calls)
+].filter(Boolean);
+
+let currentKeyIndex = 0;
+
+function getCurrentKey() {
+  return GEMINI_API_KEYS[currentKeyIndex];
+}
+
 const SUPABASE_URL = process.env.VITE_SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const BUCKET = 'math-tts';
 const LOCAL_OUTPUT_DIR = path.join('public', 'audio', 'math_hints');
 
-if (!GEMINI_API_KEY) {
-  console.error('❌ Error: VITE_GEMINI_API_KEY is not defined in .env');
+if (GEMINI_API_KEYS.length === 0) {
+  console.error('❌ Error: No Gemini API keys are defined');
   process.exit(1);
 }
 if (!SUPABASE_URL || !SUPABASE_KEY) {
@@ -27,6 +37,30 @@ if (!fs.existsSync(LOCAL_OUTPUT_DIR)) {
 
 // Chapter specifications mapping for 수학 상
 const CHAPTER_MAP = {
+  poly: {
+    name: '다항식',
+    stages: [
+      { num: 2, localDir: '다항식2단계', remoteDir: 'poly_s2', localAudioPrefix: 'hint_poly_2_' },
+      { num: 3, localDir: '다항식3단계', remoteDir: 'poly_s3', localAudioPrefix: 'hint_poly_3_' },
+      { num: 4, localDir: '다항식4단계', remoteDir: 'poly_s4', localAudioPrefix: 'hint_poly_4_' }
+    ]
+  },
+  remain: {
+    name: '항등식과나머지정리',
+    stages: [
+      { num: 2, localDir: '항등식과나머지정리2단계', remoteDir: 'remain_s2', localAudioPrefix: 'hint_remain_2_' },
+      { num: 3, localDir: '항등식과나머지정리3단계', remoteDir: 'remain_s3', localAudioPrefix: 'hint_remain_3_' },
+      { num: 4, localDir: '항등식과나머지정리4단계', remoteDir: 'remain_s4', localAudioPrefix: 'hint_remain_4_' }
+    ]
+  },
+  factor: {
+    name: '인수분해',
+    stages: [
+      { num: 2, localDir: '인수분해2단계', remoteDir: 'factor_s2', localAudioPrefix: 'hint_factor_2_' },
+      { num: 3, localDir: '인수분해3단계', remoteDir: 'factor_s3', localAudioPrefix: 'hint_factor_3_' },
+      { num: 4, localDir: '인수분해4단계', remoteDir: 'factor_s4', localAudioPrefix: 'hint_factor_4_' }
+    ]
+  },
   gocha: {
     name: '고차방정식',
     stages: [
@@ -98,6 +132,30 @@ const CHAPTER_MAP = {
       { num: 3, localDir: '도형의이동3단계', remoteDir: 'shape_move_s3', localAudioPrefix: 'hint_shape_move_3_' },
       { num: 4, localDir: '도형의이동4단계', remoteDir: 'shape_move_s4', localAudioPrefix: 'hint_shape_move_4_' }
     ]
+  },
+  complex: {
+    name: '복소수',
+    stages: [
+      { num: 2, localDir: '복소수2단계', remoteDir: 'complex_s2', localAudioPrefix: 'hint_complex_2_' },
+      { num: 3, localDir: '복소수3단계', remoteDir: 'complex_s3', localAudioPrefix: 'hint_complex_3_' },
+      { num: 4, localDir: '복소수4단계', remoteDir: 'complex_s4', localAudioPrefix: 'hint_complex_4_' }
+    ]
+  },
+  quad_eq: {
+    name: '이차방정식',
+    stages: [
+      { num: 2, localDir: '이차방정식2단계', remoteDir: 'quad_eq_s2', localAudioPrefix: 'hint_quad_eq_2_' },
+      { num: 3, localDir: '이차방정식3단계', remoteDir: 'quad_eq_s3', localAudioPrefix: 'hint_quad_eq_3_' },
+      { num: 4, localDir: '이차방정식4단계', remoteDir: 'quad_eq_s4', localAudioPrefix: 'hint_quad_eq_4_' }
+    ]
+  },
+  quad_func: {
+    name: '이차방정식과이차함수',
+    stages: [
+      { num: 2, localDir: '이차방정식과이차함수2단계', remoteDir: 'quad_func_s2', localAudioPrefix: 'hint_quad_func_2_' },
+      { num: 3, localDir: '이차방정식과이차함수3단계', remoteDir: 'quad_func_s3', localAudioPrefix: 'hint_quad_func_3_' },
+      { num: 4, localDir: '이차방정식과이차함수4단계', remoteDir: 'quad_func_s4', localAudioPrefix: 'hint_quad_func_4_' }
+    ]
   }
 };
 
@@ -165,7 +223,12 @@ ${text}`;
 
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-tts-preview:generateContent?key=${GEMINI_API_KEY}`, {
+      const currentKey = getCurrentKey();
+      if (!currentKey) {
+        throw new Error("No Gemini API keys available");
+      }
+
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-tts-preview:generateContent?key=${currentKey}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -183,7 +246,22 @@ ${text}`;
 
       if (!response.ok) {
         const errorJson = await response.json().catch(() => ({}));
-        throw new Error(errorJson?.error?.message || `Gemini API HTTP ${response.status}`);
+        const errMsg = errorJson?.error?.message || `Gemini API HTTP ${response.status}`;
+        
+        // If it's a quota error (429 or containing quota/RESOURCE_EXHAUSTED)
+        if (response.status === 429 || errMsg.includes('quota') || errMsg.includes('QUOTA') || errMsg.includes('RESOURCE_EXHAUSTED')) {
+          console.warn(`\n⚠️ API Key ${currentKeyIndex + 1}/${GEMINI_API_KEYS.length} exhausted! Error: ${errMsg}`);
+          if (currentKeyIndex < GEMINI_API_KEYS.length - 1) {
+            currentKeyIndex++;
+            console.log(`🔄 Rotating to API Key ${currentKeyIndex + 1}/${GEMINI_API_KEYS.length}: ${getCurrentKey().substring(0, 10)}...`);
+            // Reset attempt counter and retry immediately with the new key
+            attempt = 0; 
+            continue;
+          } else {
+            console.error("❌ All Gemini API keys in the pool are exhausted!");
+          }
+        }
+        throw new Error(errMsg);
       }
 
       const data = await response.json();
@@ -234,12 +312,23 @@ async function processStage(stageSpec, force = false) {
   console.log(`🔷 [Stage ${num}] Directory: "${localDir}" -> Supabase: "${remoteDir}"`);
   console.log(`======================================================`);
 
+  const stageDirPath = path.join('public', 'math_hints', localDir);
+  if (!fs.existsSync(stageDirPath)) {
+    console.warn(`⚠️ Directory missing: ${stageDirPath}`);
+    return { successCount: 0, failCount: 0 };
+  }
+
+  const files = fs.readdirSync(stageDirPath).filter(f => f.endsWith('.json')).sort();
+  const fileCount = files.length;
+  const targetCount = Math.min(20, fileCount);
+  console.log(`📁 Found ${fileCount} JSON files. Processing first ${targetCount} files (001~020 limit).`);
+
   let successCount = 0;
   let failCount = 0;
 
-  for (let i = 1; i <= 20; i++) {
+  for (let i = 1; i <= targetCount; i++) {
     const pid = String(i).padStart(3, '0');
-    const jsonPath = path.join('public', 'math_hints', localDir, `${pid}.json`);
+    const jsonPath = path.join(stageDirPath, `${pid}.json`);
 
     if (!fs.existsSync(jsonPath)) {
       console.warn(`⚠️ File missing: ${jsonPath} (skipping)`);

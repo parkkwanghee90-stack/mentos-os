@@ -177,7 +177,15 @@ export function resolveProblemImage(currentUnit, testProblemIdx, selectedCourse)
   } else if (currentUnit.includes('이차부등식')) {
     img = stepStr === '2단계' ? window.resolveAsset(`/math_crops/(2)수학(상)기말/(2)이차부등식 개념2단계(42)p21 1+1(쌍둥이)/${formattedIdx}.webp`) : window.resolveAsset(`/math_crops/(2)수학(상)기말/이차부등식${stepStr}/${formattedIdx}.webp`);
   } else if (currentUnit.includes('경우의수') || currentUnit.includes('경우의 수')) {
-    img = stepStr === '2단계' ? window.resolveAsset(`/math_crops/(2)수학(상)기말/(3)경우의수2단계/${formattedIdx}.webp`) : window.resolveAsset(`/math_crops/(2)수학(상)기말/경우의수${stepStr}/${formattedIdx}.webp`);
+    if (stepStr === '2단계') {
+      img = window.resolveAsset(`/math_crops/cases_step2/${formattedIdx}.webp`);
+    } else if (stepStr === '3단계') {
+      img = window.resolveAsset(`/math_crops/cases_step3/${formattedIdx}.webp`);
+    } else if (stepStr === '4단계') {
+      img = window.resolveAsset(`/math_crops/cases_step4/${formattedIdx}.webp`);
+    } else {
+      img = window.resolveAsset(`/math_crops/cases_step2/${formattedIdx}.webp`);
+    }
   } else if (currentUnit.includes('점과좌표')) {
     img = stepStr === '2단계' ? window.resolveAsset(`/math_crops/(2)수학(상)기말/(5)점과좌표 개념2단계(44)p17 1+1(쌍둥이)/${formattedIdx}.webp`) : window.resolveAsset(`/math_crops/(2)수학(상)기말/점과좌표${stepStr}/${formattedIdx}.webp`);
   } else if (currentUnit.includes('직선의방정식') || currentUnit.includes('직선의 방정식')) {

@@ -51,9 +51,23 @@ export default function HomeworkList() {
     return () => window.removeEventListener('storage', loadDynamicHomeworks);
   }, [studentLevel]);
 
+  const studentGrade = useMemo(() => {
+    return localStorage.getItem('studentGrade') || '고1';
+  }, []);
+
   // 2. 정적 단원별 코스 진행도 계산
   const staticHomeworkStatus = useMemo(() => {
-    return HOMEWORK_UNITS.map(hw => {
+    return HOMEWORK_UNITS.filter(hw => {
+      const subject = hw.subject || '수학상';
+      if (studentGrade === '고1') {
+        return subject === '수학상';
+      } else if (studentGrade === '고2') {
+        return subject === '수학1' || subject === '수학2';
+      } else if (studentGrade === '고3') {
+        return subject === '미적분' || subject === '확률과통계';
+      }
+      return true;
+    }).map(hw => {
       const range = getHomeworkRange(hw, studentLevel);
       const totalProblems = range.end - range.start + 1;
       const progress = getHomeworkProgress(hw.id);
@@ -75,7 +89,7 @@ export default function HomeworkList() {
         isDynamic: false,
       };
     });
-  }, [studentLevel]);
+  }, [studentLevel, studentGrade]);
 
   // 필터링 적용
   const filteredDynamicList = useMemo(() => {

@@ -6,6 +6,7 @@ import { AuthProvider, useAuth } from '@/context/AuthContext';
 
 const Landing = lazy(() => import("@/pages/Landing"));
 const Diagnosis = lazy(() => import("@/pages/Diagnosis"));
+const PushSettings = lazy(() => import("@/pages/PushSettings"));
 const TeacherSelect = lazy(() => import("@/pages/TeacherSelect"));
 const GradeSelect = lazy(() => import("@/pages/GradeSelect"));
 const EnglishClassroomScreen = lazy(() => import("@/pages/EnglishClassroom"));
@@ -34,10 +35,24 @@ const Terms = lazy(() => import("@/pages/Terms"));
 const Privacy = lazy(() => import("@/pages/Privacy"));
 
 
-// 진입 플로우: 매뉴얼 미확인 → /grade-select, 확인 완료 → /dashboard
+// 진입 플로우: 매뉴얼 미확인 → /grade-select(매뉴얼) → /login → /dashboard
 function RootRedirect() {
   const manualSeen = localStorage.getItem('mentos_manual_seen') === 'true';
-  return <Navigate to={manualSeen ? '/dashboard' : '/grade-select'} replace />;
+  const isSuperPass = localStorage.getItem('mentos_super_pass') === 'true';
+
+  if (!manualSeen) {
+    // 1단계: 매뉴얼을 아직 안 봤으면 매뉴얼부터
+    return <Navigate to="/grade-select" replace />;
+  }
+
+  // 2단계: 매뉴얼은 봤지만 로그인 안 됐으면 → 로그인으로
+  // 3단계: 매뉴얼 봤고 로그인도 됐으면 → 대시보드로
+  // (LoginGate가 /dashboard에서 로그인 여부를 체크하므로 /dashboard로 보내면 됨)
+  if (isSuperPass) {
+    return <Navigate to="/dashboard" replace />;
+  }
+
+  return <Navigate to="/dashboard" replace />;
 }
 
 export default function App() {
@@ -156,7 +171,8 @@ function AppContent() {
           <Routes>
             <Route path="/" element={<RootRedirect />} />
             <Route path="/landing" element={<Landing />} />
-            {/* <Route path="/diagnosis" element={<Diagnosis />} /> */}
+            <Route path="/diagnosis" element={<Diagnosis />} />
+            <Route path="/push-settings" element={<PushSettings />} />
             {/* <Route path="/teacher" element={<TeacherSelect />} /> */}
             <Route path="/grade-select" element={<GradeSelect />} />
             
@@ -171,7 +187,7 @@ function AppContent() {
             <Route path="/class/mock-exam" element={<MentosMockExam />} />
             
             <Route path="/login" element={<Login />} />
-            <Route path="/admin" element={<LoginGate required={true}><AdminDashboard /></LoginGate>} />
+            <Route path="/admin" element={<AdminDashboard />} />
             
             {/* 로그인 필수 라우트: LoginGate 적용 */}
             <Route path="/dashboard" element={<LoginGate required={true}><Dashboard /></LoginGate>} />

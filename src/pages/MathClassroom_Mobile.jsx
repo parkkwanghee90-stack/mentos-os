@@ -258,7 +258,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
     }
   };
 
-  const handeSubmit = async () => {
+  const handleSubmit = async () => {
     if (!input.trim() && !isRecording) return;
     if (loading) return;
 

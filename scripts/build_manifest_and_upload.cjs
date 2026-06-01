@@ -162,8 +162,16 @@ function buildManifest() {
       '04.복소수', '05.이차방정식', '06.이차방정식과이차함수',
       '07.여러가지 방정식', '08.여러가지 부등식'
     ];
-    addDir(cropsRoot, 'math_crops', activeExamDirs);
   }
+
+  // ── 5a. Math crops (images) from active project public/math_crops/숙제 ──
+  console.log('\n── Math Crops: Homework images from active public/math_crops/숙제 ──');
+  const hwCropsRoot = path.join(ROOT, 'public', 'math_crops', '숙제');
+  if (fs.existsSync(hwCropsRoot)) {
+    const hwSubdirs = fs.readdirSync(hwCropsRoot).filter(d => fs.statSync(path.join(hwCropsRoot, d)).isDirectory());
+    addDir(path.join(ROOT, 'public', 'math_crops'), 'math_crops', hwSubdirs.map(sub => `숙제/${sub}`));
+  }
+
 
   // ── 6. Teacher images ──
   console.log('\n── Teacher Images ──');

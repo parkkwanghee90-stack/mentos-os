@@ -22,6 +22,7 @@ export function AuthProvider({ children }) {
         school: dbUser.user_metadata?.school || '',
         grade: dbUser.user_metadata?.grade || '',
         mathGrade: dbUser.user_metadata?.math_grade || '',
+        parentPhone: dbUser.user_metadata?.parent_phone || '',
         createdAt: dbUser.created_at
       };
 
@@ -29,10 +30,8 @@ export function AuthProvider({ children }) {
       if (isPaid) {
         localStorage.setItem('mentos_is_paid', 'true');
       } else {
-        // Keep existing payment status from local storage if any, otherwise default to false
         const localPaid = localStorage.getItem('mentos_is_paid') === 'true';
         if (localPaid) {
-          // Sync existing payment back to Supabase metadata in background
           updatePremiumStatus(true);
         }
       }
@@ -49,46 +48,9 @@ export function AuthProvider({ children }) {
         setSession(activeSession);
         setUser(activeSession.user);
         syncToLocalStorage(activeSession);
-      } else {
-        // Fallback: Check local storage for mock user if no Supabase session exists
-        const localUserJson = localStorage.getItem('mentos_mock_user');
-        if (localUserJson) {
-          try {
-            const localUser = JSON.parse(localUserJson);
-            setUser({
-              id: localUser.id || 'demo_user',
-              email: localUser.email || 'demo@mentos.com',
-              user_metadata: {
-                name: localUser.name || '데모학생',
-                role: localUser.role || 'student',
-                is_paid: localStorage.getItem('mentos_is_paid') === 'true'
-              }
-            });
-          } catch (e) {
-            localStorage.removeItem('mentos_mock_user');
-          }
-        }
       }
       setLoading(false);
     }).catch(() => {
-      // Connection or client error: Load local mock session anyway
-      const localUserJson = localStorage.getItem('mentos_mock_user');
-      if (localUserJson) {
-        try {
-          const localUser = JSON.parse(localUserJson);
-          setUser({
-            id: localUser.id || 'demo_user',
-            email: localUser.email || 'demo@mentos.com',
-            user_metadata: {
-              name: localUser.name || '데모학생',
-              role: localUser.role || 'student',
-              is_paid: localStorage.getItem('mentos_is_paid') === 'true'
-            }
-          });
-        } catch (e) {
-          localStorage.removeItem('mentos_mock_user');
-        }
-      }
       setLoading(false);
     });
 
@@ -100,15 +62,11 @@ export function AuthProvider({ children }) {
         setUser(newSession.user);
         syncToLocalStorage(newSession);
       } else {
-        // Local auth could be active, only clear state if there is no local user in localStorage
-        if (!localStorage.getItem('mentos_mock_user')) {
-          setSession(null);
-          setUser(null);
-        }
+        setSession(null);
+        setUser(null);
+        localStorage.removeItem('mentos_mock_user');
       }
       setLoading(false);
-
-      // Force storage event dispatch to trigger updates across multi-tabs/iframes if any
       window.dispatchEvent(new Event('storage'));
     });
 
@@ -117,28 +75,27 @@ export function AuthProvider({ children }) {
     };
   }, []);
 
-  // Sign up with Email/Password (Admin Auth bypass with Auto-Confirm)
-  const signUpWithEmail = async (email, password, name, role = 'student', school = '', grade = '', mathGrade = '') => {
-    console.log(`[AuthContext] Creating auto-confirmed user via Admin API for ${email}...`);
-    const { data: adminData, error: adminError } = await supabase.auth.admin.createUser({
+  // Sign up with Email/Password — Supabase 표준 방식 (이메일 확인 링크 전송)
+  const signUpWithEmail = async (email, password, name, role = 'student', school = '', grade = '', mathGrade = '', parentPhone = '') => {
+    console.log(`[AuthContext] Signing up user via standard Supabase Auth: ${email}`);
+    const { data, error } = await supabase.auth.signUp({
       email,
       password,
-      email_confirm: true,
-      user_metadata: {
-        name,
-        role,
-        is_paid: false,
-        school,
-        grade,
-        math_grade: mathGrade
+      options: {
+        data: {
+          name,
+          role,
+          is_paid: false,
+          school,
+          grade,
+          math_grade: mathGrade,
+          parent_phone: parentPhone
+        },
+        emailRedirectTo: `${window.location.origin}/login?verified=true`
       }
     });
-    if (adminError) throw adminError;
-    
-    console.log(`[AuthContext] Successfully created user! Logging in...`);
-    // Immediately log the newly created confirmed user in
-    const signInData = await signInWithEmail(email, password);
-    return signInData;
+    if (error) throw error;
+    return data;
   };
 
   // Sign in with Email/Password
@@ -151,25 +108,6 @@ export function AuthProvider({ children }) {
     return data;
   };
 
-  // Sign in as Demo Bypass Button (Bypass Supabase)
-  const signInAsDemo = async (role = 'student', name = '데모학생', email = 'demo@mentos.com') => {
-    const mockUser = {
-      id: 'user_demo_' + Date.now(),
-      name: role === 'admin' ? '데모관리자' : name,
-      email: role === 'admin' ? 'admin_demo@mentos.com' : email,
-      role: role,
-      createdAt: new Date().toISOString()
-    };
-    localStorage.setItem('mentos_mock_user', JSON.stringify(mockUser));
-    localStorage.setItem('mentos_is_paid', 'true'); // Auto enable premium for easier trial
-    setUser({
-      id: mockUser.id,
-      email: mockUser.email,
-      user_metadata: { name: mockUser.name, role: mockUser.role, is_paid: true }
-    });
-    return { user: mockUser };
-  };
-
   // Google OAuth Login
   const signInWithGoogle = async () => {
     const { data, error } = await supabase.auth.signInWithOAuth({
@@ -180,6 +118,32 @@ export function AuthProvider({ children }) {
     });
     if (error) throw error;
     return data;
+  };
+
+  // 비밀번호 재설정 이메일 전송
+  const resetPassword = async (email) => {
+    const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/login?reset=true`
+    });
+    if (error) throw error;
+    return data;
+  };
+
+  // 관리자 코드 검증 → role 업데이트
+  const verifyAdminCode = async (code) => {
+    const adminSecret = import.meta.env.VITE_ADMIN_SECRET;
+    if (!adminSecret || code !== adminSecret) return false;
+    const { error } = await supabase.auth.updateUser({
+      data: { role: 'admin' }
+    });
+    if (error) {
+      console.error('[AuthContext] Admin role update failed:', error);
+      return false;
+    }
+    // Refresh user state
+    const { data } = await supabase.auth.getUser();
+    if (data?.user) setUser(data.user);
+    return true;
   };
 
   // Sign Out
@@ -216,24 +180,16 @@ export function AuthProvider({ children }) {
   // Update student school, grade, mathGrade
   const updateStudentInfo = async (school, grade, mathGrade) => {
     if (!user) return;
-    console.log(`[AuthContext] Updating user student metadata to: school=${school}, grade=${grade}, mathGrade=${mathGrade}...`);
+    console.log(`[AuthContext] Updating user student metadata...`);
     
-    // 1. Supabase User Metadata Update
     const { data, error } = await supabase.auth.updateUser({
-      data: { 
-        school, 
-        grade, 
-        math_grade: mathGrade 
-      }
+      data: { school, grade, math_grade: mathGrade }
     });
     
     if (error) {
-      console.error("Failed to update student info in Supabase metadata:", error);
+      console.error("Failed to update student info:", error);
       throw error;
     } else {
-      console.log("Supabase student metadata successfully updated:", data);
-      
-      // 2. Local State & Local Storage Sync
       setUser(data.user);
       const localUserJson = localStorage.getItem('mentos_mock_user');
       if (localUserJson) {
@@ -243,9 +199,7 @@ export function AuthProvider({ children }) {
           localUser.grade = grade;
           localUser.mathGrade = mathGrade;
           localStorage.setItem('mentos_mock_user', JSON.stringify(localUser));
-        } catch (e) {
-          console.error("Failed to parse local user during updateStudentInfo:", e);
-        }
+        } catch (e) { /* ignore */ }
       }
       window.dispatchEvent(new Event('storage'));
       return data;
@@ -259,9 +213,10 @@ export function AuthProvider({ children }) {
       loading,
       signUpWithEmail,
       signInWithEmail,
-      signInAsDemo,
       signInWithGoogle,
       signOut,
+      resetPassword,
+      verifyAdminCode,
       updatePremiumStatus,
       updateStudentInfo
     }}>

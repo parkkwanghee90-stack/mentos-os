@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { GRADE_FLOWS, TEACHER_ASSIGNMENT, initTrial, progressToNextUnit, getStartLevel } from '@/engine/gradeFlowSSOT';
 import { getTeacherById } from '@/data/teacherProfiles';
 import { HIGH_TEACHER_PROFILES } from '@/data/hTeacherProfiles';
@@ -12,12 +12,36 @@ const RANK_ICONS = { '4~5등급': '📖', '3등급': '⚡', '1~2등급': '🔥' 
 
 export default function GradeSelect() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const subjectOverride = location.state?.subjectOverride;
   const [step, setStep] = useState(() => {
     return localStorage.getItem('mentos_manual_seen') === 'true' ? 'grade' : 'manual';
   }); // manual → grade → scope → rank → confirm
   const [selectedGrade, setSelectedGrade] = useState(null);
   const [selectedScope, setSelectedScope] = useState(null);
   const [selectedRank, setSelectedRank] = useState(null);
+
+  // Dashboard에서 과목 선택 후 진입 시 자동 학년+과목 프리셋
+  useEffect(() => {
+    if (!subjectOverride) return;
+    const SUBJECT_GRADE_MAP = {
+      '수학(상)': { grade: '고1', scope: null },
+      '수학1':   { grade: '고2', scope: null },
+      '수학2':   { grade: '고2', scope: '함수의 극한' },
+      '미적분':  { grade: '고3', scope: '[미적분] 수열의 극한' },
+      '확률과통계': { grade: '고3', scope: '[확통] 순열' },
+    };
+    const preset = SUBJECT_GRADE_MAP[subjectOverride];
+    if (preset) {
+      setSelectedGrade(preset.grade);
+      if (preset.scope) {
+        // 과목이 특정되면 바로 scope 선택 화면으로
+        setStep('scope');
+      } else {
+        setStep('scope');
+      }
+    }
+  }, [subjectOverride]);
 
   const flow = selectedGrade ? GRADE_FLOWS[selectedGrade] : null;
 
@@ -71,6 +95,14 @@ export default function GradeSelect() {
     const hasNumberedPrefix = /^\d{2}\./.test(startUnit);
     const unitOverride = hasNumberedPrefix ? startUnit : `${startUnit}/${startLevel}단계`;
 
+    // subjectOverride 또는 selectedScope에서 elective 결정
+    const electiveMap = {
+      '수1': '수1', '수학1': '수학1', '수학(상)': '수학상',
+      '수2': '수2', '수학2': '수2',
+      '미적분': '미적분', '확률과통계': '확률과통계', '모의고사': '모의고사',
+    };
+    const electiveValue = electiveMap[subjectOverride] || electiveMap[selectedScope] || undefined;
+
     navigate('/class/math/' + teacher.id, { state: {
       teacher,
       isFreeTrial: true,
@@ -79,13 +111,14 @@ export default function GradeSelect() {
       rank: selectedRank,
       scope: selectedScope,
       unitOverride: unitOverride,
-      elective: selectedScope === '수1' ? '수1' : selectedScope === '수2' ? '수2' : undefined
+      elective: electiveValue
     }});
   };
 
   // scope 리스트에 섹션 구분 헤더를 삽입
   const renderScopeList = () => {
     const options = flow?.progressOptions || [];
+    console.log("📊 [DEBUG] GradeSelect Scope Render. Grade:", selectedGrade, "Options:", options);
     const items = [];
 
     options.forEach((scope, idx) => {
@@ -122,7 +155,7 @@ export default function GradeSelect() {
           onClick={() => handleScopeSelect(scope)}
           style={{
             display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-            padding: '1.2rem 1.5rem', borderRadius: '16px',
+            padding: '0.9rem 1.2rem', borderRadius: '14px',
             background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
             color: 'white', cursor: 'pointer', transition: 'all 0.2s'
           }}
@@ -155,7 +188,7 @@ export default function GradeSelect() {
         {step === 'manual' && (
           <LessonManual onComplete={() => {
             localStorage.setItem('mentos_manual_seen', 'true');
-            navigate('/login');
+            navigate('/login', { state: { from: { pathname: '/dashboard' } } });
           }} />
         )}
 

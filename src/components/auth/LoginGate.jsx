@@ -8,30 +8,27 @@ import { useAuth } from '@/context/AuthContext';
  * - 비로그인 상태에서도 특정 기능(체험 수업 등)은 허용
  * - 기록 저장, 대시보드 등 개인화 기능 진입 시 로그인 유도
  */
-export default function LoginGate({ children, required = false, fallback = null }) {
-  const { user: authUser, loading: authLoading, signInWithEmail } = useAuth();
-  const [user, setUser] = useState(null);
-  const [showModal, setShowModal] = useState(false);
+export default function LoginGate({ children, required = false, requiredRole = null, fallback = null }) {
+  const { user: authUser, loading: authLoading } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
 
-  useEffect(() => {
-    if (authUser) {
-      setUser({
-        id: authUser.id,
-        name: authUser.user_metadata?.name || authUser.email.split('@')[0],
-        email: authUser.email,
-        role: authUser.user_metadata?.role || 'student'
-      });
-    } else {
-      const savedUser = localStorage.getItem('mentos_mock_user');
-      if (savedUser) {
-        setUser(JSON.parse(savedUser));
-      } else {
-        setUser(null);
-      }
-    }
-  }, [authUser]);
+  // 🔑 슈퍼패스: localStorage에 mentos_super_pass가 있으면 가짜 유저로 모든 게이트 통과
+  const isSuperPass = localStorage.getItem('mentos_super_pass') === 'true';
+
+  const user = isSuperPass ? {
+    id: 'super_admin_pass',
+    name: '통합관리자',
+    email: 'super@mentos.ai',
+    role: 'admin'
+  } : authUser ? {
+    id: authUser.id,
+    name: authUser.user_metadata?.name || authUser.email?.split('@')[0],
+    email: authUser.email,
+    role: authUser.user_metadata?.role || 'student'
+  } : null;
+
+  const [showModal, setShowModal] = useState(false);
 
   const handleMockLogin = async (role = 'student') => {
     // Quick developer mock login using Supabase demo account if registered,
@@ -49,15 +46,41 @@ export default function LoginGate({ children, required = false, fallback = null 
         </div>
         <h3 style={{ fontSize: '1.5rem', fontWeight: '900', marginBottom: '0.8rem', letterSpacing: '-0.5px' }}>로그인이 필요한 기능입니다</h3>
         <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '2rem' }}>
-          실시간 학습 기록 저장, 대시보드 맞춤 분석 및
-          <br />
-          개인 학습 포트폴리오를 구성하기 위해 로그인이 필요합니다.
+          학습 기록 저장 및 맞춤 분석을 위해<br />로그인이 필요합니다.
         </p>
         <button 
           onClick={() => navigate('/login', { state: { from: location } })}
           style={{ background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', color: 'white', padding: '1rem 2.5rem', borderRadius: '14px', border: 'none', fontWeight: 'bold', fontSize: '1rem', cursor: 'pointer', boxShadow: '0 4px 15px rgba(59,130,246,0.3)', width: '100%' }}
         >
-          실데이터 간편 로그인 하기
+          로그인 하기
+        </button>
+      </div>
+    );
+  }
+
+  // 마스터 관리자 인증 우회 체크
+  const isMasterAdmin = localStorage.getItem('mentos_admin_verified') === 'true';
+
+  if (requiredRole === 'admin' && isMasterAdmin) {
+    return <>{children}</>;
+  }
+
+  // 관리자 권한 체크
+  if (requiredRole === 'admin' && user && user.role !== 'admin') {
+    return (
+      <div style={{ padding: '3rem 2rem', textAlign: 'center', background: '#0f172a', borderRadius: '24px', border: '1px solid rgba(239,68,68,0.2)', color: 'white', maxWidth: '500px', margin: '2rem auto', boxShadow: '0 20px 40px -15px rgba(0,0,0,0.7)' }}>
+        <div style={{ width: '64px', height: '64px', background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.2)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem' }}>
+          <ShieldAlert size={32} color="#ef4444" />
+        </div>
+        <h3 style={{ fontSize: '1.5rem', fontWeight: '900', marginBottom: '0.8rem' }}>접근 권한이 없습니다</h3>
+        <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '2rem' }}>
+          관리자 전용 페이지입니다.<br />관리자 계정으로 로그인해 주세요.
+        </p>
+        <button 
+          onClick={() => navigate('/login', { state: { from: location, tab: 'admin' } })}
+          style={{ background: 'linear-gradient(135deg, #8b5cf6, #6d28d9)', color: 'white', padding: '1rem 2.5rem', borderRadius: '14px', border: 'none', fontWeight: 'bold', fontSize: '1rem', cursor: 'pointer', width: '100%' }}
+        >
+          관리자 로그인
         </button>
       </div>
     );

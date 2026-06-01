@@ -574,9 +574,13 @@ export default function HintPlayerRouter({ unit, problemId, data: propData, show
       '1)순열', '2)중복조합', '3)이항정리', '4)확률의뜻', '5)덧셈정리_조건부확률_독립시행', '6)확률변수와이항분포', '7)연속확률분포와정규분포', '8)표본평균과모평균'
     ];
 
-    if (calculusUnits.includes(mappedUnit)) {
+    if (clean.includes('통합숙제')) {
+        fetchUnit = unit;
+    }
+    else if (calculusUnits.includes(mappedUnit)) {
        fetchUnit = mappedUnit; // 미적분은 원본 unit 그대로 사용 (하이재킹 방지)
     }
+
     else if (hwaktongUnits.includes(mappedUnit)) {
        fetchUnit = `확통수능/${mappedUnit}`;
     }
@@ -619,6 +623,11 @@ export default function HintPlayerRouter({ unit, problemId, data: propData, show
         else fetchUnit = `로그${stepStr}`;
     }
     else if (clean.includes('다항식')) { fetchUnit = `다항식${stepStr}`; }
+    else if (clean.includes('항등식과나머지정리') || clean.includes('항등식과 나머지정리')) { fetchUnit = `항등식과나머지정리${stepStr}`; }
+    else if (clean.includes('인수분해')) { fetchUnit = `인수분해${stepStr}`; }
+    else if (clean.includes('복소수')) { fetchUnit = `복소수${stepStr}`; }
+    else if (clean.includes('이차방정식과이차함수') || clean.includes('이차방정식과 이차함수')) { fetchUnit = `이차방정식과이차함수${stepStr}`; }
+    else if (clean.includes('이차방정식')) { fetchUnit = `이차방정식${stepStr}`; }
     else if (clean.includes('고차방정식')) { fetchUnit = `고차방정식${stepStr}`; }
     else if (clean.includes('일차부등식')) { fetchUnit = `일차부등식${stepStr}`; }
     else if (clean.includes('이차부등식')) { fetchUnit = `이차부등식${stepStr}`; }
@@ -677,7 +686,14 @@ export default function HintPlayerRouter({ unit, problemId, data: propData, show
       ? String(numPid).padStart(3, '0') : String(problemId);
 
     // [SSOT 연동] window.resolveAsset를 활용해 로컬/배포 영어 경로 완벽 번역 및 URL_PREFIX 동적 자동 적용
+    // 통합숙제 힌트는 Supabase 미업로드 상태이므로 로컬 public/ 경로에서 직접 fetch
+    const isHomeworkHint = fetchUnit && fetchUnit.includes('통합숙제');
     const mkUrl = (uid, pid, v2 = false) => {
+      if (isHomeworkHint) {
+        // 통합숙제: Supabase에 없음 → 로컬 public 경로를 한글 인코딩하여 직접 사용
+        const segments = `math_hints/${uid}/${pid}${v2 ? '_v2' : ''}.json`.split('/').map(s => encodeURIComponent(s)).join('/');
+        return `/${segments}`;
+      }
       return window.resolveAsset(`/math_hints/${uid}/${pid}${v2 ? '_v2' : ''}.json`);
     };
 

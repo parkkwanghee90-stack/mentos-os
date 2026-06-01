@@ -20,7 +20,10 @@ const SCOPE_OPTIONS = {
   '고1': [
     { id: '이차방정식과 이차함수', label: '이차함수까지 쳤어요', nextUnit: '고차방정식' },
     { id: '여러가지 방정식', label: '고차방정식까지 쳤어요', nextUnit: '일차부등식' },
-    { id: '부등식', label: '부등식까지 쳤어요', nextUnit: '점과좌표' },
+    { id: '일차부등식', label: '일차부등식까지 쳤어요', nextUnit: '이차부등식' },
+    { id: '이차부등식', label: '이차부등식까지 쳤어요', nextUnit: '경우의수' },
+    { id: '경우의수', label: '경우의 수까지 쳤어요', nextUnit: '행렬' },
+    { id: '행렬', label: '행렬까지 쳤어요', nextUnit: '점과좌표' },
     { id: '점과좌표', label: '점과 좌표까지 쳤어요', nextUnit: '직선의방정식' },
     { id: '직선의방정식', label: '직선의 방정식까지 쳤어요', nextUnit: '원의방정식' },
     { id: '원의방정식', label: '원의 방정식까지 쳤어요', nextUnit: '도형의이동' }

@@ -9,6 +9,13 @@ export default function AdminDashboard() {
   const navigate = useNavigate();
   const { signOut } = useAuth();
 
+  // 관리자 마스터 인증 상태
+  const [isAdminVerified, setIsAdminVerified] = useState(
+    localStorage.getItem('mentos_admin_verified') === 'true'
+  );
+  const [adminCodeInput, setAdminCodeInput] = useState('');
+  const [authError, setAuthError] = useState('');
+
   // Mock Data for MVP
   const [students, setStudents] = useState([
     { id: 'std01', name: '김멘토', grade: '고2', weakPoint: '삼각함수 활용 (사인법칙 응용)', recentScore: 75, lastClass: '2026-04-27' },
@@ -17,12 +24,36 @@ export default function AdminDashboard() {
   ]);
 
   const [pushLogs, setPushLogs] = useState([]);
+  const [submittedHws, setSubmittedHws] = useState([]);
 
   useEffect(() => {
     // Load push logs from localStorage
     const logs = JSON.parse(localStorage.getItem('admin_push_logs') || '[]');
     setPushLogs(logs);
+
+    // Load homeworks pending teacher/assistant review
+    const db = JSON.parse(localStorage.getItem('mentos_math_homework_db') || '[]');
+    const localHws = JSON.parse(localStorage.getItem('mentosHomework') || '[]');
+    
+    // Pick homeworks marked as submitted
+    const submitted = db.filter(h => h.status === 'submitted' || localHws.some(lh => lh.homeworkId === h.homeworkId && lh.status === 'submitted'));
+    setSubmittedHws(submitted);
   }, []);
+
+  const approveHomework = (hwId) => {
+    // 1. Update DB to reviewed
+    const db = JSON.parse(localStorage.getItem('mentos_math_homework_db') || '[]');
+    const updatedDb = db.map(h => h.homeworkId === hwId ? { ...h, status: 'reviewed', reviewedAt: Date.now() } : h);
+    localStorage.setItem('mentos_math_homework_db', JSON.stringify(updatedDb));
+
+    // 2. Update metadata list
+    const localHwList = JSON.parse(localStorage.getItem('mentosHomework') || '[]');
+    const updatedList = localHwList.map(h => h.homeworkId === hwId ? { ...h, status: 'reviewed' } : h);
+    localStorage.setItem('mentosHomework', JSON.stringify(updatedList));
+
+    alert("🎉 조교 검수 및 채점 최종 승인 완료되었습니다! 학생 대시보드에 반영됩니다.");
+    setSubmittedHws(prev => prev.filter(h => h.homeworkId !== hwId));
+  };
 
   const triggerMidnightAudit = () => {
     if(window.confirm("자정(00:00) 기준 과제 미제출자 자동 결산을 시뮬레이션 하시겠습니까?")) {
@@ -46,6 +77,7 @@ export default function AdminDashboard() {
 
   const handleLogout = async () => {
     localStorage.removeItem('mentos_manual_seen');
+    localStorage.removeItem('mentos_admin_verified');
     try {
       await signOut();
     } catch (e) {
@@ -55,6 +87,140 @@ export default function AdminDashboard() {
     }
     navigate('/grade-select');
   };
+
+  const handleVerifyCode = (e) => {
+    e.preventDefault();
+    const cleanCode = adminCodeInput.trim().toUpperCase();
+    if (cleanCode === '1234' || cleanCode === 'MENTOS_ADMIN_777') {
+      localStorage.setItem('mentos_admin_verified', 'true');
+      setIsAdminVerified(true);
+      setAuthError('');
+      // Trigger storage event to sync other gateways
+      window.dispatchEvent(new Event('storage'));
+    } else {
+      setAuthError('❌ 올바르지 않은 인증 코드입니다. 다시 입력해 주세요.');
+    }
+  };
+
+  if (!isAdminVerified) {
+    return (
+      <div style={{
+        minHeight: '100vh',
+        background: '#09090b',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '1.5rem',
+        color: 'white',
+        fontFamily: 'system-ui, sans-serif'
+      }}>
+        {/* Glow */}
+        <div style={{ position: 'absolute', width: '300px', height: '300px', background: 'rgba(239, 68, 68, 0.15)', filter: 'blur(100px)', pointerEvents: 'none' }} />
+        
+        <div className="glass-panel" style={{
+          width: '100%',
+          maxWidth: '420px',
+          padding: '2.5rem',
+          borderRadius: '24px',
+          border: '1px solid rgba(239, 68, 68, 0.25)',
+          background: 'rgba(15, 23, 42, 0.95)',
+          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.8)',
+          textAlign: 'center',
+          position: 'relative',
+          zIndex: 10
+        }}>
+          <div style={{
+            width: '64px',
+            height: '64px',
+            background: 'rgba(239, 68, 68, 0.1)',
+            border: '1px solid rgba(239, 68, 68, 0.3)',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: '0 auto 1.5rem'
+          }}>
+            <Shield size={32} color="#ef4444" />
+          </div>
+
+          <h2 style={{ fontSize: '1.5rem', fontWeight: '900', color: 'white', marginBottom: '0.5rem' }}>
+            관리자 보안 인증
+          </h2>
+          <p style={{ color: '#94a3b8', fontSize: '0.9rem', marginBottom: '2rem', lineHeight: '1.5' }}>
+            멘토스 OS 관리자(원장) 대시보드 진입을 위해<br />보안 인증 코드를 입력해 주세요.
+          </p>
+
+          <form onSubmit={handleVerifyCode} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
+            <div style={{ textAlign: 'left' }}>
+              <label style={{ fontSize: '0.8rem', color: '#94a3b8', display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>
+                인증 코드 입력
+              </label>
+              <input
+                type="password"
+                placeholder="인증코드를 입력하세요 (예: 1234)"
+                value={adminCodeInput}
+                onChange={(e) => setAdminCodeInput(e.target.value)}
+                style={{
+                  width: '100%',
+                  padding: '0.9rem 1.2rem',
+                  borderRadius: '12px',
+                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                  background: 'rgba(0, 0, 0, 0.4)',
+                  color: 'white',
+                  fontSize: '1rem',
+                  outline: 'none',
+                  boxSizing: 'border-box'
+                }}
+                autoFocus
+              />
+            </div>
+
+            {authError && (
+              <div style={{ color: '#ef4444', fontSize: '0.85rem', fontWeight: 'bold' }}>
+                {authError}
+              </div>
+            )}
+
+            <button
+              type="submit"
+              style={{
+                width: '100%',
+                padding: '1rem',
+                borderRadius: '12px',
+                border: 'none',
+                background: 'linear-gradient(135deg, #ef4444, #b91c1c)',
+                color: 'white',
+                fontSize: '1rem',
+                fontWeight: 'bold',
+                cursor: 'pointer',
+                boxShadow: '0 4px 15px rgba(239, 68, 68, 0.25)',
+                transition: 'all 0.2s'
+              }}
+            >
+              대시보드 잠금 해제
+            </button>
+
+            <button
+              type="button"
+              onClick={() => navigate('/grade-select')}
+              style={{
+                width: '100%',
+                padding: '0.8rem',
+                borderRadius: '12px',
+                border: '1px solid rgba(255,255,255,0.08)',
+                background: 'transparent',
+                color: '#a1a1aa',
+                fontSize: '0.9rem',
+                cursor: 'pointer'
+              }}
+            >
+              홈으로 돌아가기
+            </button>
+          </form>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="dashboard-container">
@@ -168,6 +334,49 @@ export default function AdminDashboard() {
           <button style={{ padding: '0.5rem 1rem', background: '#27272a', border: 'none', color: 'white', borderRadius: '4px' }}>1,245</button>
           <button style={{ padding: '0.5rem 1rem', background: '#27272a', border: 'none', color: 'white', borderRadius: '4px' }}>&gt;</button>
         </div>
+      </div>
+
+      {/* [NEW] Assistant Homework Audit Panel */}
+      <div className="glass-panel animate-fade-in" style={{ margin: '0 0.5rem', padding: '1.5rem', marginBottom: '2rem', borderColor: 'rgba(16, 185, 129, 0.3)', background: 'linear-gradient(135deg, rgba(16,185,129,0.05), rgba(0,0,0,0))' }}>
+        <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#10b981' }}>
+          <Shield size={20} /> 실시간 원생 숙제 검수 및 채점 연동 센터
+        </h3>
+        <p style={{ fontSize: '0.88rem', color: '#94a3b8', marginBottom: '1.5rem' }}>원생들이 제출한 3,4단계 통합 숙제 및 2단계 변형 숙제의 오답 문항과 성취도를 검사하고 채점을 최종 승인합니다.</p>
+        
+        {submittedHws.length === 0 ? (
+          <div style={{ textAlign: 'center', padding: '2rem', background: 'rgba(255,255,255,0.02)', borderRadius: '12px', border: '1px dashed rgba(255,255,255,0.1)' }}>
+            <span style={{ color: '#94a3b8', fontSize: '0.9rem' }}>💬 현재 검수 대기 중인 원생 숙제가 없습니다.</span>
+          </div>
+        ) : (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            {submittedHws.map(hw => (
+              <div key={hw.homeworkId} style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center', textAlign: 'center', padding: '1.2rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(16,185,129,0.2)' }}>
+                <div style={{ flex: 1, textAlign: 'left' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '0.4rem' }}>
+                    <span style={{ fontSize: '1.05rem', fontWeight: 'bold', color: '#e2e8f0' }}>{hw.title}</span>
+                    <span style={{ fontSize: '0.75rem', background: '#10b981', color: 'white', padding: '2px 8px', borderRadius: '12px', fontWeight: 'bold' }}>제출완료</span>
+                  </div>
+                  <div style={{ fontSize: '0.85rem', color: '#94a3b8' }}>
+                    과제 고유 ID: {hw.homeworkId} | 문항 수: {hw.problems?.length || 0}문제
+                  </div>
+                </div>
+                
+                <div style={{ flex: 1, display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                  <div style={{ padding: '0.5rem 1rem', background: 'rgba(16,185,129,0.1)', borderRadius: '8px', color: '#10b981', fontWeight: 'bold', fontSize: '0.9rem' }}>
+                    자동 채점 완료
+                  </div>
+                  <button 
+                    onClick={() => approveHomework(hw.homeworkId)}
+                    className="btn-primary" 
+                    style={{ background: '#10b981', color: 'white', padding: '0.5rem 1.2rem', fontSize: '0.88rem', fontWeight: 'bold', border: 'none', borderRadius: '8px', cursor: 'pointer' }}
+                  >
+                    조교 검사 및 채점 최종 승인
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Parent Push Log Panel */}

@@ -7,6 +7,12 @@ export default function Checkout() {
   const navigate = useNavigate();
   const { user } = useAuth();
   const [loading, setLoading] = useState(false);
+  const [parentPhone, setParentPhone] = useState(() => {
+    try {
+      const u = JSON.parse(localStorage.getItem('mentos_mock_user') || '{}');
+      return u.parentPhone || '';
+    } catch { return ''; }
+  });
 
   useEffect(() => {
     // 1. Toss Payments SDK 동적 주입
@@ -37,6 +43,20 @@ export default function Checkout() {
 
       const orderId = `order_${Date.now()}`;
       const amount = 39000; // 프리미엄 멤버십 39,000원
+
+      // 학부모 번호 저장 (결제 전)
+      if (parentPhone.trim()) {
+        try {
+          const u = JSON.parse(localStorage.getItem('mentos_mock_user') || '{}');
+          u.parentPhone = parentPhone.trim();
+          localStorage.setItem('mentos_mock_user', JSON.stringify(u));
+          // pushService의 config에도 자동 등록
+          const { getPushConfig, savePushConfig } = await import('@/services/pushService');
+          const config = getPushConfig() || { sms: {}, kakao: {}, parentPhones: {} };
+          config.parentPhones[u.name || '학생'] = parentPhone.trim();
+          savePushConfig(config);
+        } catch (e) { console.warn('[Checkout] parentPhone save error:', e); }
+      }
 
       // 토스 결제 요청창 띄우기
       await tossPayments.requestPayment('카드', {
@@ -101,6 +121,23 @@ export default function Checkout() {
           <div style={{ fontSize: '0.9rem', color: '#a1a1aa', marginBottom: '4px' }}>매월 자동 결제</div>
           <div style={{ fontSize: '2.2rem', fontWeight: '900', color: '#ffffff' }}>
             39,000 <span style={{ fontSize: '1.2rem', fontWeight: '700', color: '#a1a1aa' }}>원</span>
+          </div>
+        </div>
+
+        {/* 학부모 알림 전화번호 */}
+        <div style={{ marginBottom: '1.5rem', textAlign: 'left' }}>
+          <div style={{ fontSize: '0.85rem', color: '#a1a1aa', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <Zap size={14} color="#6366f1" /> 학부모 알림 수신 번호
+          </div>
+          <input
+            type="tel"
+            value={parentPhone}
+            onChange={(e) => setParentPhone(e.target.value)}
+            placeholder="010-0000-0000"
+            style={{ width: '100%', padding: '0.8rem 1rem', background: '#27272a', border: '1px solid #3f3f46', borderRadius: '10px', color: '#f4f4f5', fontSize: '1rem', outline: 'none', boxSizing: 'border-box' }}
+          />
+          <div style={{ fontSize: '0.72rem', color: '#71717a', marginTop: '6px' }}>
+            수업 종료 시 학부모님께 학습 결과가 자동 전송됩니다
           </div>
         </div>
 

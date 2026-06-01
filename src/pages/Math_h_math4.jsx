@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Camera, Send, ChevronRight, CheckCircle, Smartphone, Mic, Volume2, Upload, Paperclip, Clock, BookOpen, X } from 'lucide-react';
 import { getTeacherById } from '@/data/teacherProfiles';
@@ -399,7 +399,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit }) {
     loadPcbs();
   }, [testProblemIdx, currentPhaseFlow?.phase, currentUnit]);
 
-  const handeSubmit = async () => {
+  const handleSubmit = async () => {
     if (!input.trim() && !isRecording) return;
     if (loading) return;
 
@@ -784,7 +784,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit }) {
               placeholder="답변을 입력하세요..." 
               value={input}
               onChange={e => setInput(e.target.value)}
-              onKeyDown={e => e.key === 'Enter' && handeSubmit()}
+              onKeyDown={e => e.key === 'Enter' && handleSubmit()}
               style={{ flex: 1, padding: '1rem', borderRadius: '12px', border: '1px solid #3f3f46', background: '#27272a', color: '#fff' }} 
            />
            
@@ -796,7 +796,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit }) {
              <Mic size={20} color={isRecording ? "white" : "#a1a1aa"} />
            </button>
 
-            <button className="btn-primary" onClick={handeSubmit} disabled={loading} style={{ padding: '0 1.5rem', borderRadius: '12px', height: '100%', display: 'flex', alignItems: 'center' }}>
+            <button className="btn-primary" onClick={handleSubmit} disabled={loading} style={{ padding: '0 1.5rem', borderRadius: '12px', height: '100%', display: 'flex', alignItems: 'center' }}>
              {loading ? '...' : <><Send size={18} style={{marginRight: '6px'}}/> 전송</>}
            </button>
         </div>
@@ -964,11 +964,13 @@ export default function MathClassroomScreen() {
     return <ErrorScreen text="선생님(teacher) 세션 정보가 없습니다. 정상적인 경로로 진입해주세요." />;
   }
 
-  // Hook 내부는 SSOT 객체를 받음
-  const { session, setSession } = useMathLessonSession(teacher, {
+  const overrides = useMemo(() => ({
     unitOverride: location.state?.unitOverride,
     phaseIndexOverride: location.state?.phaseIndexOverride
-  });
+  }), [location.state?.unitOverride, location.state?.phaseIndexOverride]);
+
+  // Hook 내부는 SSOT 객체를 받음
+  const { session, setSession } = useMathLessonSession(teacher, overrides);
   const navigate = useNavigate();
 
   // 사이드바 구조 관리를 위한 UI State

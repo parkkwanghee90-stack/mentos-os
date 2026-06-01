@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { Camera, Send, ChevronRight, CheckCircle, Smartphone, Mic, Volume2, Upload, Paperclip, Clock } from 'lucide-react';
+import { Camera, Send, ChevronRight, CheckCircle, Smartphone, Mic, Volume2, Upload, Paperclip, Clock, LogOut, X as XIcon } from 'lucide-react';
 import { getTeacherById } from '@/data/teacherProfiles';
 import { useEnglishLessonSession } from '@/hooks/useEnglishLessonSession';
 import { getPendingEnglishHomework, getEnglishAssistantFeedbackForNextClass } from '@/engine/english/assistantReviewEngine';
@@ -204,7 +204,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft }) {
     setSession({ ...session, currentPhaseIndex: session.currentPhaseIndex + 1, vocabSubPhaseIndex: 0 });
   };
 
-  const handeSubmit = async () => {
+  const handleSubmit = async () => {
     if (!input.trim() && !isRecording) return;
     if (loading) return;
 
@@ -529,7 +529,7 @@ ${ssot.contentRules ? ssot.contentRules.join('\n') : '규칙 없음'}
               placeholder="답변을 입력하세요..." 
               value={input}
               onChange={e => setInput(e.target.value)}
-              onKeyDown={e => e.key === 'Enter' && handeSubmit()}
+              onKeyDown={e => e.key === 'Enter' && handleSubmit()}
               disabled={loading}
               style={{ flex: 1, padding: '1rem', borderRadius: '12px', border: '1px solid #3f3f46', background: '#27272a', color: '#fff' }} 
            />
@@ -542,7 +542,7 @@ ${ssot.contentRules ? ssot.contentRules.join('\n') : '규칙 없음'}
              <Mic size={20} color={isRecording ? "white" : "#a1a1aa"} />
            </button>
 
-           <button className="btn-primary" onClick={handeSubmit} disabled={loading} style={{ padding: '0 1.5rem', borderRadius: '12px', height: '100%', display: 'flex', alignItems: 'center' }}>
+           <button className="btn-primary" onClick={handleSubmit} disabled={loading} style={{ padding: '0 1.5rem', borderRadius: '12px', height: '100%', display: 'flex', alignItems: 'center' }}>
              {loading ? '...' : <><Send size={18} style={{marginRight: '6px'}}/> 전송</>}
            </button>
         </div>
@@ -561,6 +561,8 @@ export default function EnglishClassroomScreen() {
   }, []);
 
   const [timeLeft, setTimeLeft] = useState(60 * 60);
+  const [sessionStartTime] = useState(() => Date.now());
+  const [showEndEarlyModal, setShowEndEarlyModal] = useState(false);
 
   useEffect(() => {
     console.log('[TIMER_START]');
@@ -613,6 +615,51 @@ export default function EnglishClassroomScreen() {
         <span style={{ fontSize: '0.9rem', fontWeight: 'bold', color: '#fca5a5', fontFamily: 'sans-serif', marginRight: '4px', whiteSpace: 'nowrap' }}>수업시간</span>
         {String(Math.floor(timeLeft / 60)).padStart(2, '0')}:{String(timeLeft % 60).padStart(2, '0')}
       </div>
+
+      {/* 여기까지 끝내기 버튼 */}
+      <button
+        onClick={() => setShowEndEarlyModal(true)}
+        style={{ position: 'absolute', top: '15px', right: '20px', background: 'rgba(245, 158, 11, 0.15)', border: '1px solid rgba(245, 158, 11, 0.4)', padding: '0.45rem 1rem', borderRadius: '20px', color: '#f59e0b', cursor: 'pointer', zIndex: 10, display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', fontWeight: '600', backdropFilter: 'blur(8px)', transition: 'all 0.2s' }}
+        onMouseEnter={e => { e.currentTarget.style.background = 'rgba(245, 158, 11, 0.3)'; }}
+        onMouseLeave={e => { e.currentTarget.style.background = 'rgba(245, 158, 11, 0.15)'; }}
+      >
+        <LogOut size={16} /> 여기까지 끝내기
+      </button>
+
+      {/* 여기까지 끝내기 확인 모달 */}
+      {showEndEarlyModal && (() => {
+        const elapsedMs = Date.now() - sessionStartTime;
+        const elapsedMin = Math.round(elapsedMs / 60000);
+        const currentPhaseName = session.flow[session.currentPhaseIndex]?.title || '진행 중';
+        const currentPhaseIndex = session.currentPhaseIndex + 1;
+        const totalPhases = session.flow.length;
+        const roundTitle = session.curriculumData?.roundMeta?.title || `${session.round}회차 수업`;
+        return (
+          <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.7)', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center', backdropFilter: 'blur(4px)' }} onClick={() => setShowEndEarlyModal(false)}>
+            <div style={{ background: '#0f172a', border: '1px solid #334155', borderRadius: '16px', padding: '2rem', maxWidth: '420px', width: '90%', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }} onClick={e => e.stopPropagation()}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
+                <h3 style={{ margin: 0, color: '#f59e0b', fontSize: '1.2rem' }}>📋 수업 종료 확인</h3>
+                <button onClick={() => setShowEndEarlyModal(false)} style={{ background: 'transparent', border: 'none', color: '#64748b', cursor: 'pointer' }}><XIcon size={20} /></button>
+              </div>
+              <div style={{ background: '#1e293b', borderRadius: '12px', padding: '1.2rem', marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', color: '#cbd5e1', fontSize: '0.9rem' }}><span>📖 단원</span><span style={{ color: '#f1f5f9', fontWeight: '600' }}>{roundTitle}</span></div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', color: '#cbd5e1', fontSize: '0.9rem' }}><span>📝 진행 단계</span><span style={{ color: '#f1f5f9', fontWeight: '600' }}>{currentPhaseIndex} / {totalPhases} ({currentPhaseName})</span></div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', color: '#cbd5e1', fontSize: '0.9rem' }}><span>⏱️ 총 학습시간</span><span style={{ color: '#f1f5f9', fontWeight: '600' }}>{elapsedMin}분</span></div>
+              </div>
+              <div style={{ display: 'flex', gap: '0.8rem' }}>
+                <button onClick={() => setShowEndEarlyModal(false)} style={{ flex: 1, padding: '0.8rem', background: 'transparent', border: '1px solid #475569', borderRadius: '10px', color: '#94a3b8', cursor: 'pointer', fontWeight: '600', fontSize: '0.95rem' }}>계속하기</button>
+                <button onClick={() => {
+                  const record = { id: 'session_' + Date.now(), date: new Date().toISOString(), subject: '영어', unit: roundTitle, totalQuestions: currentPhaseIndex, correctCount: 0, accuracy: 0, duration: elapsedMin, endedEarly: true };
+                  const prev = JSON.parse(localStorage.getItem('mentos_lesson_results') || '[]');
+                  prev.push(record);
+                  localStorage.setItem('mentos_lesson_results', JSON.stringify(prev));
+                  navigate('/dashboard');
+                }} style={{ flex: 1, padding: '0.8rem', background: 'linear-gradient(135deg, #f59e0b, #d97706)', border: 'none', borderRadius: '10px', color: 'white', cursor: 'pointer', fontWeight: '700', fontSize: '0.95rem', boxShadow: '0 4px 12px rgba(245, 158, 11, 0.3)' }}>수업 종료</button>
+              </div>
+            </div>
+          </div>
+        );
+      })()}
 
       {/* 사이드바 UI (옵션) */}
       <div style={{ width: '250px', borderRight: '1px solid #27272a', padding: '1.5rem' }}>

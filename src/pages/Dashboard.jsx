@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { HOMEWORK_UNITS, getHomeworkRange, getHomeworkProgress, STAGE_ACCESS } from '@/data/homeworkSSOT';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, AreaChart, Area, CartesianGrid } from 'recharts';
-import { Target, TrendingUp, AlertTriangle, Zap, ArrowLeft, BookOpen, CheckCircle, BookA, LogOut } from 'lucide-react';
+import { Target, TrendingUp, AlertTriangle, Zap, ArrowLeft, BookOpen, CheckCircle, BookA, LogOut, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/context/AuthContext';
 import { getRecentResults, getMistakePatterns, getStudyLogs } from '@/services/lessonResultStore';
@@ -9,6 +10,7 @@ import { updateSession, loadSession, SESSION_STATUS, formatTime, getDaysUntilTes
 import { HIGH_TEACHER_PROFILES } from '@/data/hTeacherProfiles';
 import { processHomeworkSubmission } from '@/engine/homeworkEngine';
 import { progressToNextUnit, initTrial, TEACHER_ASSIGNMENT } from '@/engine/gradeFlowSSOT';
+import { analyzeMathWeakness, generateFortnightlyTestProblems, gradeFortnightlyTest, sendFortnightlyParentPush } from '@/engine/math/mathWeaknessReporter';
 import '@/pages/Dashboard.css';
 
 const parseSubject = (subj) => {
@@ -27,6 +29,7 @@ const GRADE_PROGRESS_MAP = {
     '고차방정식',
     '일차부등식',
     '이차부등식',
+    '경우의 수',
     '행렬',
     '점과좌표',
     '직선의방정식',
@@ -80,13 +83,25 @@ export default function Dashboard() {
   const navigate = useNavigate();
   
   // 퀵스타트 추천 진도 폼 상태
-  const [selectedGrade, setSelectedGrade] = React.useState('고1');
-  const [selectedProgress, setSelectedProgress] = React.useState('이차방정식과 이차함수');
-  const [selectedRank, setSelectedRank] = React.useState('4~5등급');
+  const [selectedGrade, setSelectedGrade] = React.useState(() => {
+    return localStorage.getItem('studentGrade') || '고1';
+  });
+  const [selectedProgress, setSelectedProgress] = React.useState(() => {
+    return localStorage.getItem('studentProgress') || '이차방정식과 이차함수';
+  });
+  const [selectedRank, setSelectedRank] = React.useState(() => {
+    return localStorage.getItem('studentLevel') || '4~5등급';
+  });
 
   React.useEffect(() => {
+    // 학년 변경 시 → localStorage에 저장된 진도가 해당 학년 것이면 유지, 아니면 기본값
+    const savedGrade = localStorage.getItem('studentGrade');
+    const savedProgress = localStorage.getItem('studentProgress');
     const options = GRADE_PROGRESS_MAP[selectedGrade] || [];
-    if (options.length > 0) {
+
+    if (savedGrade === selectedGrade && savedProgress && options.includes(savedProgress)) {
+      setSelectedProgress(savedProgress);
+    } else if (options.length > 0) {
       if (selectedGrade === '고1') {
         setSelectedProgress('이차방정식과 이차함수');
       } else if (selectedGrade === '고2') {
@@ -116,6 +131,11 @@ export default function Dashboard() {
     }
     
     initTrial(selectedGrade, selectedRank);
+
+    // 선택한 진도를 localStorage에 저장 (GradeSelect과 동기화)
+    localStorage.setItem('studentGrade', selectedGrade);
+    localStorage.setItem('studentProgress', selectedProgress);
+    localStorage.setItem('studentLevel', selectedRank);
     
     navigate(`/class/math/${assignedTeacherId}`, {
       state: {
@@ -139,7 +159,7 @@ export default function Dashboard() {
   const { signOut } = useAuth();
   
   const handleLogout = async () => {
-    localStorage.removeItem('mentos_manual_seen');
+    // mentos_manual_seen은 유지 — 매뉴얼은 최초 1회만 표시
     try {
       await signOut();
     } catch (e) {
@@ -147,7 +167,7 @@ export default function Dashboard() {
       localStorage.removeItem('mentos_mock_user');
       localStorage.removeItem('mentos_is_paid');
     }
-    navigate('/grade-select');
+    navigate('/login');
   };
 
   const recentResults = getRecentResults(5);
@@ -277,46 +297,200 @@ export default function Dashboard() {
     }];
   }, []);
   
+  // SSOT 기반 숙제 목록 (학생 등급별 필터)
+  const studentLevel = localStorage.getItem('studentLevel') || '4~5등급';
   const homeworkList = React.useMemo(() => {
-    const localHwList = JSON.parse(localStorage.getItem('mentosHomework') || '[]');
-    const db = JSON.parse(localStorage.getItem('mentos_math_homework_db') || '[]');
-    
-    // Map existing generated homeworks
-    const list = localHwList.map(h => {
-      const detail = db.find(d => d.homeworkId === h.homeworkId);
-      const count = detail?.problems?.length || 10;
+    const progressList = GRADE_PROGRESS_MAP[selectedGrade] || [];
+    const currentIdx = progressList.indexOf(selectedProgress);
+
+    return HOMEWORK_UNITS.filter(hw => {
+      const subject = hw.subject || '수학상';
+      if (selectedGrade === '고1') {
+        return subject === '수학상';
+      } else if (selectedGrade === '고2') {
+        return subject === '수학1' || subject === '수학2';
+      } else if (selectedGrade === '고3') {
+        return subject === '미적분' || subject === '확률과통계';
+      }
+      return true;
+    }).map(hw => {
+      const range = getHomeworkRange(hw, studentLevel);
+      const totalProblems = range.end - range.start + 1;
+      const progress = getHomeworkProgress(hw.id);
+      const answeredCount = Object.keys(progress).length;
+      const isComplete = answeredCount >= totalProblems;
+      const progressPercent = totalProblems > 0 ? Math.round((answeredCount / totalProblems) * 100) : 0;
+      
+      // Calculate closeness index to current progress
+      let hwIdx = -1;
+      const candidates = [hw.relatedUnit, hw.parentUnit, hw.title];
+      for (const cand of candidates) {
+        if (!cand) continue;
+        const idx = progressList.indexOf(cand);
+        if (idx !== -1) {
+          hwIdx = idx;
+          break;
+        }
+      }
+      
+      // Perform partial matching if direct match fails
+      if (hwIdx === -1) {
+        candidates.forEach(cand => {
+          if (!cand || hwIdx !== -1) return;
+          const matchedIdx = progressList.findIndex(p => cand.includes(p) || p.includes(cand));
+          if (matchedIdx !== -1) {
+            hwIdx = matchedIdx;
+          }
+        });
+      }
+
+      // Calculate distance weight
+      let distance = 999;
+      if (currentIdx !== -1 && hwIdx !== -1) {
+        if (hwIdx === currentIdx) {
+          distance = 0; // Current unit has priority
+        } else if (hwIdx > currentIdx) {
+          distance = hwIdx - currentIdx; // Future units are prioritized in chronological order
+        } else {
+          distance = 100 + (currentIdx - hwIdx); // Past units are pushed to the back
+        }
+      } else if (hwIdx !== -1) {
+        distance = hwIdx;
+      }
+
       return {
-        id: h.homeworkId,
-        title: h.title,
-        dueDate: new Date(new Date(h.assignedAt).getTime() + 7*24*60*60*1000).toLocaleDateString(),
-        problemCount: count,
-        status: h.status || 'pending',
-        teacherName: h.teacherId || 'AI 튜터'
+        id: hw.id,
+        title: hw.title,
+        problemCount: totalProblems,
+        isComplete,
+        progressPercent,
+        answeredCount,
+        sequence: hw.sequence,
+        distance,
       };
-    });
+    })
+    .filter(hw => !hw.isComplete)
+    .sort((a, b) => a.distance - b.distance) // Sort by proximity (current/future progress first)
+    .slice(0, 5); // Show top 5 incomplete homeworks
+  }, [studentLevel, selectedGrade, selectedProgress]);
 
-    // Check if the mock simulation homework is completed
-    const simEntry = db.find(d => d.homeworkId === 'sim_hw_001');
-    const isSimReviewed = simEntry?.status === 'reviewed';
+  // 완료된 숙제 목록 (정답률 및 오답 번호 집계)
+  const completedHomeworkList = React.useMemo(() => {
+    return HOMEWORK_UNITS.filter(hw => {
+      const subject = hw.subject || '수학상';
+      if (selectedGrade === '고1') {
+        return subject === '수학상';
+      } else if (selectedGrade === '고2') {
+        return subject === '수학1' || subject === '수학2';
+      } else if (selectedGrade === '고3') {
+        return subject === '미적분' || subject === '확률과통계';
+      }
+      return true;
+    }).map(hw => {
+      const range = getHomeworkRange(hw, studentLevel);
+      const totalProblems = range.end - range.start + 1;
+      const progress = getHomeworkProgress(hw.id);
+      const answeredCount = Object.keys(progress).length;
+      const isComplete = answeredCount >= totalProblems && totalProblems > 0;
+      
+      const correctCount = Object.values(progress).filter(p => p.isCorrect).length;
+      const accuracy = totalProblems > 0 ? Math.round((correctCount / totalProblems) * 100) : 0;
+      
+      // 오답 문항 번호 추출 ("001" -> 1)
+      const wrongIndices = Object.entries(progress)
+        .filter(([pid, data]) => !data.isCorrect)
+        .map(([pid]) => parseInt(pid, 10))
+        .sort((a, b) => a - b);
 
-    const hasSim = list.some(h => h.id === 'sim_hw_001');
-    if (!hasSim && !isSimReviewed) {
-      list.push({
-        id: 'sim_hw_001',
-        title: '[오답 집중 보강] 고차방정식 2단계 유사 유형 드릴',
-        dueDate: new Date(Date.now() + 7*24*60*60*1000).toLocaleDateString(),
-        problemCount: 12,
-        status: 'pending',
-        teacherName: 'AI 튜터'
-      });
+      return {
+        id: hw.id,
+        title: hw.title,
+        problemCount: totalProblems,
+        isComplete,
+        accuracy,
+        correctCount,
+        wrongIndices,
+        sequence: hw.sequence,
+      };
+    }).filter(hw => hw.isComplete);
+  }, [studentLevel]);
+
+  const mathWeakness = React.useMemo(() => analyzeMathWeakness(), [lessonHistory, completedHomeworkList]);
+  const topWeakUnits = mathWeakness.top3.length > 0 
+    ? mathWeakness.top3.map(w => `${w.unit} (${w.tag})`)
+    : ["이차함수와 이차방정식 (개념 결손)", "다항식의 연산 (연산 실수)", "항등식과 나머지정리 (응용 부족)"];
+
+  // 격주 테스트 시간 제어 상태 변수 정의
+  const [fortnightlyDays, setFortnightlyDays] = React.useState(() => {
+    return parseInt(localStorage.getItem('fortnightly_days_elapsed') || '0', 10);
+  });
+
+  const [fortnightlyTestStatus, setFortnightlyTestStatus] = React.useState(() => {
+    return localStorage.getItem('fortnightly_test_status') || 'pending'; // 'pending' | 'pre_assigned' | 'active' | 'completed'
+  });
+
+  const [assignedFortProblems, setAssignedFortProblems] = React.useState(() => {
+    try {
+      return JSON.parse(localStorage.getItem('fortnightly_assigned_problems') || '[]');
+    } catch { return []; }
+  });
+
+  const [fortTestResults, setFortTestResults] = React.useState(() => {
+    try {
+      return JSON.parse(localStorage.getItem('fortnightly_test_results') || '[]');
+    } catch { return []; }
+  });
+
+  const [activeReportTab, setActiveReportTab] = React.useState('weekly');
+  const [showFortTestModal, setShowFortTestModal] = React.useState(false);
+  const [fortAnswers, setFortAnswers] = React.useState({});
+  const [fortGradingResult, setFortGradingResult] = React.useState(null);
+
+  React.useEffect(() => {
+    localStorage.setItem('fortnightly_days_elapsed', String(fortnightlyDays));
+  }, [fortnightlyDays]);
+
+  React.useEffect(() => {
+    localStorage.setItem('fortnightly_test_status', fortnightlyTestStatus);
+  }, [fortnightlyTestStatus]);
+
+  React.useEffect(() => {
+    // 13일째 예약 시점: 자동으로 문제 5개 선정하여 로컬 저장
+    if (fortnightlyDays === 13 && fortnightlyTestStatus === 'pending') {
+      const problems = generateFortnightlyTestProblems(studentLevel);
+      setAssignedFortProblems(problems);
+      localStorage.setItem('fortnightly_assigned_problems', JSON.stringify(problems));
+      setFortnightlyTestStatus('pre_assigned');
+      console.log('[Fortnightly Test] Problems pre-assigned for Day 13:', problems);
     }
+    // 14일째 활성화 시점
+    if (fortnightlyDays >= 14 && (fortnightlyTestStatus === 'pending' || fortnightlyTestStatus === 'pre_assigned')) {
+      let problems = assignedFortProblems;
+      if (problems.length === 0) {
+        problems = generateFortnightlyTestProblems(studentLevel);
+        setAssignedFortProblems(problems);
+        localStorage.setItem('fortnightly_assigned_problems', JSON.stringify(problems));
+      }
+      setFortnightlyTestStatus('active');
+    }
+  }, [fortnightlyDays, fortnightlyTestStatus, studentLevel]);
 
-    // Only show pending/assigned homeworks on the Dashboard
-    return list.filter(h => h.status !== 'reviewed');
-  }, []);
-
-  const lastWeakness = weaknessHistory[weaknessHistory.length - 1];
-  const topWeakUnits = lastWeakness ? lastWeakness.top3 : ["고차방정식 (인수분해)", "복이차식의 풀이", "방정식의 근과 계수"];
+  const handleFortDayJump = (days) => {
+    setFortnightlyDays(days);
+    if (days === 13) {
+      setFortnightlyTestStatus('pending'); // 리셋하여 13일차 예약 가동 유도
+      setAssignedFortProblems([]);
+      localStorage.removeItem('fortnightly_assigned_problems');
+    } else if (days === 14) {
+      setFortnightlyTestStatus('pending');
+      setAssignedFortProblems([]);
+      localStorage.removeItem('fortnightly_assigned_problems');
+    } else {
+      setFortnightlyTestStatus('pending');
+      setAssignedFortProblems([]);
+      localStorage.removeItem('fortnightly_assigned_problems');
+    }
+  };
   
   const todayProblems = trialState.problemsSolvedToday || 20; // 시뮬레이션용 20개
   const accuracy = React.useMemo(() => {
@@ -584,7 +758,13 @@ export default function Dashboard() {
             <button
               key={course.name}
               className="course-card"
-              onClick={() => navigate('/grade-select')}
+              onClick={() => {
+                if (course.name === '모의고사') {
+                  navigate('/grade-select', { state: { subjectOverride: '모의고사' } });
+                } else {
+                  navigate('/grade-select', { state: { subjectOverride: course.name } });
+                }
+              }}
               style={{
                 background: `linear-gradient(135deg, ${course.color}12, ${course.color}06)`,
                 borderColor: `${course.color}30`,
@@ -903,31 +1083,300 @@ export default function Dashboard() {
             ))}
           </div>
           <div className="parent-notification">
-            <h4><Zap size={16} /> 학부모 실시간 알림 (Push)</h4>
-            <p>
-              "자녀분이 방금 <b>고차방정식 2단계</b> 수업을 마쳤습니다. 20문제 중 14문제를 맞혔으며(정답률 70%), 틀린 6문제(1, 5, 8, 12, 15, 17번)를 기반으로 맞춤형 숙제가 자동 배정되었습니다." 
-              <span style={{ color: '#10b981', marginLeft: '6px' }}>[전송 완료]</span>
-            </p>
+            <h4 style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <span><Zap size={16} /> 학부모 실시간 알림 (Push)</span>
+              <button onClick={() => navigate('/push-settings')} style={{ background: 'none', border: '1px solid #d1d5db', borderRadius: '6px', padding: '0.2rem 0.5rem', fontSize: '0.7rem', color: '#6b7280', cursor: 'pointer' }}>⚙️ 설정</button>
+            </h4>
+            {(() => {
+              const pushQueue = JSON.parse(localStorage.getItem('pushQueue') || '[]');
+              const recentPushes = pushQueue.slice(-3).reverse();
+              const latestLesson = lessonHistory[lessonHistory.length - 1];
+              if (recentPushes.length > 0) {
+                return recentPushes.map((p, i) => (
+                  <p key={i} style={{ fontSize: '0.82rem', marginBottom: '0.4rem', padding: '0.4rem 0.6rem', background: '#f0fdf4', borderRadius: '6px', borderLeft: '3px solid #10b981' }}>
+                    {p.message?.substring(0, 150)}{p.message?.length > 150 ? '...' : ''}
+                    <span style={{ color: p.status === 'sent' ? '#10b981' : '#f59e0b', marginLeft: '6px', fontSize: '0.72rem', fontWeight: 'bold' }}>
+                      [{p.status === 'sent' ? '전송 완료' : p.status === 'failed' ? '전송 실패' : '대기 중'}]
+                    </span>
+                    <span style={{ color: '#9ca3af', fontSize: '0.68rem', marginLeft: '4px' }}>{new Date(p.timestamp).toLocaleTimeString('ko-KR')}</span>
+                  </p>
+                ));
+              } else if (latestLesson) {
+                return (
+                  <p style={{ fontSize: '0.82rem', padding: '0.4rem 0.6rem', background: '#f8fafc', borderRadius: '6px', color: '#64748b' }}>
+                    최근 수업: <b>{latestLesson.unit}</b> (정답률 {latestLesson.accuracy}%) — 수업 종료 시 자동 발송됩니다.
+                    <span style={{ color: '#94a3b8', marginLeft: '6px' }}>[설정에서 SMS/카카오톡 연동 가능]</span>
+                  </p>
+                );
+              } else {
+                return <p style={{ color: '#94a3b8', fontSize: '0.82rem' }}>아직 발송된 알림이 없습니다. 수업/테스트 완료 시 자동 발송됩니다.</p>;
+              }
+            })()}
           </div>
         </div>
       )}
 
+      {/* ═══ 10-2. 숙제 완료 현황 (학습 리포트) ═══ */}
+      {completedHomeworkList.length > 0 && (
+        <div className="lesson-report-card glass-panel animate-fade-in" style={{ background: 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)', border: '1px solid rgba(59, 130, 246, 0.15)', boxShadow: '0 10px 30px rgba(59, 130, 246, 0.05)', animationDelay: '0.58s', marginTop: '1.5rem' }}>
+          <h3><CheckCircle size={22} color="#3b82f6" /> 숙제 완료 현황 (오답 분석 리포트)</h3>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+            {completedHomeworkList.map(hw => (
+              <div key={hw.id} className="lesson-item" style={{ borderLeft: '4px solid #3b82f6' }}>
+                <div className="lesson-item-header">
+                  <div>
+                    <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>통합 숙제 완료 세션 • {studentLevel}</div>
+                    <div style={{ fontSize: '1.15rem', fontWeight: '900', color: 'var(--text-main)', marginTop: '3px' }}>{hw.title}</div>
+                  </div>
+                  <div style={{ textAlign: 'right' }}>
+                    <div style={{ fontSize: '1.6rem', fontWeight: '900', color: hw.accuracy >= 70 ? '#10b981' : hw.accuracy >= 40 ? '#f59e0b' : '#ef4444' }}>{hw.accuracy}%</div>
+                    <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>{hw.correctCount}/{hw.problemCount} 정답</div>
+                  </div>
+                </div>
+                {hw.wrongIndices.length > 0 ? (
+                  <div className="lesson-wrong-box" style={{ background: 'rgba(59, 130, 246, 0.05)', border: '1px solid rgba(59, 130, 246, 0.1)' }}>
+                    <div className="lesson-wrong-header" style={{ color: '#2563eb' }}>
+                      <AlertTriangle size={14} color="#3b82f6" /> 숙제 오답 발생 문항 (복습 권장)
+                    </div>
+                    <div className="lesson-wrong-tags">
+                      {hw.wrongIndices.map(idx => (
+                        <span key={idx} className="lesson-wrong-tag" style={{ background: 'rgba(59, 130, 246, 0.1)', color: '#2563eb', border: '1px solid rgba(59, 130, 246, 0.15)' }}>{idx}번</span>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <div className="lesson-ai-note" style={{ background: 'rgba(16, 185, 129, 0.05)', color: '#065f46', border: '1px solid rgba(16, 185, 129, 0.1)', padding: '0.6rem 0.8rem', borderRadius: '8px', fontSize: '0.8rem', marginTop: '0.5rem' }}>
+                    🎉 <strong>퍼펙트!</strong> 오답 없이 모든 문제를 완벽하게 맞혔습니다.
+                  </div>
+                )}
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '0.8rem' }}>
+                  <div className="lesson-ai-note" style={{ margin: 0, flex: 1 }}>
+                    <strong>AI 처방: </strong>{hw.wrongIndices.length > 0 ? '틀린 문제를 다시 풀어보고 해설 동영상(AVS)을 재시청하는 것을 권장합니다.' : '해당 단원의 개념을 완벽하게 마스터했습니다. 다음 단계로 나아가세요!'}
+                  </div>
+                  {hw.wrongIndices.length > 0 && (
+                    <button 
+                      onClick={() => navigate(`/homework/math/${hw.id}`, { state: { studentLevel } })}
+                      style={{ padding: '0.4rem 0.8rem', background: '#3b82f6', color: 'white', border: 'none', borderRadius: '6px', fontSize: '0.75rem', fontWeight: 'bold', cursor: 'pointer', marginLeft: '10px', boxShadow: '0 2px 6px rgba(59, 130, 246, 0.3)' }}
+                    >
+                      오답 노트 풀기
+                    </button>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* ═══ 10-3. 주간 & 월간 성취도 분석 리포트 (수학 전용 신설) ═══ */}
+      <div className="lesson-report-card glass-panel animate-fade-in" style={{ background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)', border: '1px solid rgba(148, 163, 184, 0.15)', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.03)', animationDelay: '0.59s', marginTop: '1.5rem', padding: '1.8rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.2rem', borderBottom: '1px solid #e2e8f0', paddingBottom: '0.8rem' }}>
+          <h3 style={{ margin: 0, display: 'flex', alignItems: 'center', gap: '8px', color: '#1e293b' }}>
+            <TrendingUp size={22} color="#4f46e5" /> 수학 주간 & 월간 성취도 분석 리포트
+          </h3>
+          <div style={{ display: 'flex', background: '#cbd5e1', padding: '2px', borderRadius: '8px', gap: '2px' }}>
+            <button 
+              onClick={() => setActiveReportTab('weekly')}
+              style={{ padding: '0.4rem 0.8rem', border: 'none', background: activeReportTab === 'weekly' ? '#fff' : 'transparent', color: activeReportTab === 'weekly' ? '#1e293b' : '#64748b', borderRadius: '6px', fontSize: '0.8rem', fontWeight: 'bold', cursor: 'pointer', transition: '0.2s' }}
+            >
+              주간 리포트
+            </button>
+            <button 
+              onClick={() => setActiveReportTab('monthly')}
+              style={{ padding: '0.4rem 0.8rem', border: 'none', background: activeReportTab === 'monthly' ? '#fff' : 'transparent', color: activeReportTab === 'monthly' ? '#1e293b' : '#64748b', borderRadius: '6px', fontSize: '0.8rem', fontWeight: 'bold', cursor: 'pointer', transition: '0.2s' }}
+            >
+              월간 리포트
+            </button>
+          </div>
+        </div>
+
+        {activeReportTab === 'weekly' ? (
+          <div>
+            <p style={{ fontSize: '0.85rem', color: '#475569', margin: '0 0 1.2rem 0', lineHeight: 1.5 }}>
+              최근 1주일간의 수업과 숙제 데이터를 정밀 스캔하여 <strong>가장 취약한 취약단원 TOP 3</strong>를 실시간으로 노출합니다.
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+              {mathWeakness.top3.length > 0 ? (
+                mathWeakness.top3.map((w, idx) => (
+                  <div key={w.unit} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1rem', background: '#fff', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                      <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '26px', height: '26px', borderRadius: '50%', background: '#fee2e2', color: '#ef4444', fontWeight: 'bold', fontSize: '0.8rem' }}>{idx + 1}</span>
+                      <div>
+                        <div style={{ fontWeight: '800', fontSize: '0.92rem', color: '#1e293b' }}>{w.unit}</div>
+                        <div style={{ fontSize: '0.75rem', color: '#ef4444', marginTop: '2px', fontWeight: '600' }}>⚠️ 발견된 취약점: {w.tag}</div>
+                      </div>
+                    </div>
+                    <div style={{ textAlign: 'right' }}>
+                      <div style={{ fontSize: '0.72rem', color: '#64748b' }}>오답 빈도</div>
+                      <div style={{ fontSize: '1.2rem', fontWeight: '900', color: '#ef4444' }}>{w.wrong}회 <span style={{ fontSize: '0.78rem', fontWeight: 'normal', color: '#94a3b8' }}>({w.errorRate}%)</span></div>
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <div style={{ padding: '2rem', textAlign: 'center', background: '#fff', borderRadius: '12px', border: '1px dashed #cbd5e1', color: '#64748b' }}>
+                  🎉 최근 7일 동안 발생한 수학 오답이 전혀 없습니다! 개념을 훌륭히 마스터하고 있습니다.
+                </div>
+              )}
+            </div>
+            <div style={{ marginTop: '1.2rem', padding: '0.8rem 1rem', background: 'rgba(79, 70, 229, 0.05)', border: '1px solid rgba(79, 70, 229, 0.1)', borderRadius: '10px', fontSize: '0.82rem', color: '#4338ca', lineHeight: 1.5 }}>
+              💡 <strong>AI 처방전:</strong> 취약 단원 TOP 3에 대해 매주 개인 보강용 2배수 변형 드릴 문항을 정밀 배포 중입니다. 꾸준히 오답 노트를 학습해 주십시오.
+            </div>
+          </div>
+        ) : (
+          <div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.2rem' }}>
+              <div style={{ padding: '1rem', background: '#fff', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+                <h4 style={{ margin: '0 0 0.6rem 0', color: '#1e293b', fontSize: '0.85rem' }}>종합 성취 개선 통계</h4>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
+                  <span style={{ fontSize: '1.8rem', fontWeight: '900', color: '#10b981' }}>+15%</span>
+                  <span style={{ fontSize: '0.75rem', color: '#64748b' }}>이해도 상승</span>
+                </div>
+                <div style={{ fontSize: '0.72rem', color: '#94a3b8', marginTop: '4px' }}>지난 30일 대비 오답률 30% 감소 추세</div>
+              </div>
+              <div style={{ padding: '1rem', background: '#fff', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+                <h4 style={{ margin: '0 0 0.6rem 0', color: '#1e293b', fontSize: '0.85rem' }}>격주 단원테스트 극복률</h4>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
+                  <span style={{ fontSize: '1.8rem', fontWeight: '900', color: '#4f46e5' }}>80%</span>
+                  <span style={{ fontSize: '0.75rem', color: '#64748b' }}>취약 단원 격파율</span>
+                </div>
+                <div style={{ fontSize: '0.72rem', color: '#94a3b8', marginTop: '4px' }}>테스트 완료 단원의 4/5 개선 성공</div>
+              </div>
+            </div>
+            
+            <h4 style={{ margin: '0 0 0.6rem 0', color: '#1e293b', fontSize: '0.88rem', fontWeight: '800' }}>격주 단원점검테스트 이력 (실력 극복 기록)</h4>
+            <div style={{ background: '#fff', borderRadius: '12px', border: '1px solid #e2e8f0', overflow: 'hidden' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.82rem' }}>
+                <thead>
+                  <tr style={{ background: '#f8fafc', borderBottom: '1px solid #e2e8f0', color: '#475569', fontWeight: '700' }}>
+                    <th style={{ padding: '0.8rem 1rem' }}>점검 단원</th>
+                    <th style={{ padding: '0.8rem 1rem' }}>격주 테스트 점수</th>
+                    <th style={{ padding: '0.8rem 1rem' }}>극복 여부 진단</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {fortTestResults.length > 0 ? (
+                    fortTestResults.map((res, i) => (
+                      <tr key={i} style={{ borderBottom: i === fortTestResults.length - 1 ? 'none' : '1px solid #f1f5f9' }}>
+                        <td style={{ padding: '0.8rem 1rem', fontWeight: '700', color: '#1e293b' }}>{res.unitDiagnoses?.[0]?.unit || '수학 핵심 단원'}</td>
+                        <td style={{ padding: '0.8rem 1rem', fontWeight: '800', color: '#4f46e5' }}>{res.accuracy}% ({res.correctCount}/{res.totalCount})</td>
+                        <td style={{ padding: '0.8rem 1rem' }}>
+                          <span style={{ padding: '0.2rem 0.5rem', borderRadius: '6px', fontSize: '0.72rem', fontWeight: 'bold', background: res.accuracy >= 80 ? '#d1fae5' : '#fef3c7', color: res.accuracy >= 80 ? '#065f46' : '#92400e' }}>
+                            {res.accuracy >= 80 ? '실력 개선됨 (나아짐! ✅)' : '개념 보강 필요 (그대로임 ⚠️)'}
+                          </span>
+                        </td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr>
+                      <td colSpan="3" style={{ padding: '2rem', textAlign: 'center', color: '#94a3b8' }}>
+                        수행 완료된 격주 단원점검테스트가 없습니다.
+                      </td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* ═══ 10-4. 격주 2주 단원점검테스트 (수학 전용 신설) ═══ */}
+      <div className="lesson-report-card glass-panel animate-fade-in" style={{ background: 'linear-gradient(135deg, #fafaf9 0%, #f5f5f4 100%)', border: '1px solid rgba(168, 162, 158, 0.2)', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.03)', animationDelay: '0.6s', marginTop: '1.5rem', padding: '1.8rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+          <h3 style={{ margin: 0, display: 'flex', alignItems: 'center', gap: '8px', color: '#1c1917' }}>
+            <Target size={22} color="#d97706" /> 2주 수학 단원점검테스트 (격주 오답 완벽 격파)
+          </h3>
+          <span style={{ fontSize: '0.78rem', fontWeight: 'bold', padding: '0.2rem 0.6rem', borderRadius: '12px', background: fortnightlyDays >= 14 ? '#fef3c7' : '#e7e5e4', color: fortnightlyDays >= 14 ? '#b45309' : '#57534e' }}>
+            {fortnightlyDays >= 14 ? '🔥 테스트 개시됨' : `D-${Math.max(1, 14 - fortnightlyDays)}일 후 생성`}
+          </span>
+        </div>
+        <p style={{ fontSize: '0.85rem', color: '#44403c', margin: '0 0 1.2rem 0', lineHeight: 1.5 }}>
+          최근 2주간 틀렸던 수학 오답 문항 및 미풀이 개념들을 분석 스캔하여 <strong>하루 전에 20문항 시험지가 백그라운드 예약 출제</strong>되며, 14일째에 정식으로 활성화됩니다.
+        </p>
+
+        {/* 현재 상태 정보 패널 */}
+        <div style={{ background: '#fff', borderRadius: '12px', padding: '1.2rem', border: '1px solid #e7e5e4', marginBottom: '1.2rem', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem' }}>
+            <span style={{ color: '#57534e' }}>진행 경과일</span>
+            <strong style={{ color: '#1c1917' }}>{fortnightlyDays}일 / 14일</strong>
+          </div>
+          <div style={{ width: '100%', height: '8px', background: '#e7e5e4', borderRadius: '4px', overflow: 'hidden' }}>
+            <div style={{ width: `${Math.min(100, Math.round((fortnightlyDays / 14) * 100))}%`, height: '100%', background: fortnightlyDays >= 14 ? '#f59e0b' : '#78716c', transition: 'width 0.4s ease' }} />
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', background: fortnightlyDays === 13 ? 'rgba(217, 119, 6, 0.05)' : '#fcfcfb', border: fortnightlyDays === 13 ? '1px solid rgba(217, 119, 6, 0.2)' : '1px solid #f5f5f4', padding: '0.8rem', borderRadius: '8px', fontSize: '0.8rem', color: '#57534e', marginTop: '0.3rem' }}>
+            {fortnightlyDays < 13 && (
+              <span>📝 최근 오답 단원을 스캔하여 2주 단위 오답 극복 시험을 준비하고 있습니다.</span>
+            )}
+            {fortnightlyDays === 13 && (
+              <span style={{ color: '#b45309' }}>
+                📢 <strong>시험 하루 전 출제 예약 완료!</strong> 최근 오답인 <strong>{assignedFortProblems.map(p => p.unit).filter((v, i, self) => self.indexOf(v) === i).join(', ')}</strong> 단원에서 기출 20문항 배정 완료. 내일 정식으로 테스트가 개시됩니다.
+              </span>
+            )}
+            {fortnightlyDays >= 14 && (
+              <span style={{ color: '#166534', fontWeight: 'bold' }}>
+                ✅ <strong>테스트 활성화 완료!</strong> 검증된 기출 20문항 출제되었습니다. 오답을 완벽 격파하여 학부모 알림 보고서를 발송하세요!
+              </span>
+            )}
+          </div>
+        </div>
+
+        {/* 조작 버튼 영역 */}
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+          <button 
+            disabled={fortnightlyDays < 14}
+            onClick={() => {
+              setFortAnswers({});
+              setFortGradingResult(null);
+              setShowFortTestModal(true);
+            }}
+            style={{
+              flex: 1, padding: '0.9rem',
+              background: fortnightlyDays >= 14 ? 'linear-gradient(135deg, #d97706, #b45309)' : '#e7e5e4',
+              color: fortnightlyDays >= 14 ? '#white' : '#a8a29e',
+              border: 'none', borderRadius: '10px',
+              fontWeight: 'bold', fontSize: '0.95rem',
+              cursor: fortnightlyDays >= 14 ? 'pointer' : 'not-allowed',
+              boxShadow: fortnightlyDays >= 14 ? '0 4px 14px rgba(217, 119, 6, 0.3)' : 'none',
+              transition: 'all 0.2s', color: '#fff'
+            }}
+          >
+            {fortnightlyDays >= 14 ? '🔥 단원점검테스트 시작하기 →' : '⏱️ 대기 중 (14일차 활성화)'}
+          </button>
+
+          {/* 개발자용 데모 타임워프 판넬 */}
+          <div style={{ display: 'flex', background: '#e7e5e4', borderRadius: '10px', padding: '3px', gap: '3px' }}>
+            <button onClick={() => handleFortDayJump(13)} style={{ padding: '0.35rem 0.6rem', border: 'none', background: fortnightlyDays === 13 ? '#fff' : 'transparent', color: '#44403c', borderRadius: '6px', fontSize: '0.72rem', fontWeight: 'bold', cursor: 'pointer' }} title="13일차 점프 (예고 상태)">[데모] 13일</button>
+            <button onClick={() => handleFortDayJump(14)} style={{ padding: '0.35rem 0.6rem', border: 'none', background: fortnightlyDays === 14 ? '#fff' : 'transparent', color: '#44403c', borderRadius: '6px', fontSize: '0.72rem', fontWeight: 'bold', cursor: 'pointer' }} title="14일차 점프 (테스트 활성화)">[데모] 14일</button>
+            <button onClick={() => handleFortDayJump(0)} style={{ padding: '0.35rem 0.6rem', border: 'none', background: fortnightlyDays === 0 ? '#fff' : 'transparent', color: '#44403c', borderRadius: '6px', fontSize: '0.72rem', fontWeight: 'bold', cursor: 'pointer' }} title="경과일 초기화">초기화</button>
+          </div>
+        </div>
+      </div>
+
       {/* ═══ 11. 자동 생성 숙제 (기존 보존) ═══ */}
       <div className="auto-hw-card glass-panel animate-fade-in" style={{ animationDelay: '0.6s' }}>
-        <h3><CheckCircle size={20} /> 자동 생성된 맞춤 숙제</h3>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-          {homeworkList.map(hw => (
-            <div key={hw.id} className="auto-hw-item">
-              <div className="auto-hw-item-info">
-                <div className="auto-hw-title">{hw.title}</div>
-                <div className="auto-hw-meta">기한: {hw.dueDate} | {hw.problemCount}문제 | {hw.teacherName}</div>
+        <h3><CheckCircle size={20} /> 통합 숙제 ({STAGE_ACCESS[studentLevel] || '2단계'})</h3>
+        {homeworkList.length === 0 ? (
+          <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>🎉 모든 숙제를 완료했습니다!</p>
+        ) : (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+            {homeworkList.map(hw => (
+              <div key={hw.id} className="auto-hw-item">
+                <div className="auto-hw-item-info">
+                  <div className="auto-hw-title">{hw.title} {hw.sequence ? `(${hw.sequence}회차)` : ''}</div>
+                  <div className="auto-hw-meta">
+                    {hw.problemCount}문제 | 진행률 {hw.progressPercent}% ({hw.answeredCount}/{hw.problemCount})
+                  </div>
+                </div>
+                <button className="auto-hw-btn" onClick={() => navigate(`/homework/math/${hw.id}`, { state: { studentLevel } })}>
+                  {hw.answeredCount > 0 ? '이어풀기' : '풀기 시작'}
+                </button>
               </div>
-              <button className="auto-hw-btn" onClick={() => navigate(`/homework/math/${hw.id}`)}>
-                풀기 시작
-              </button>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
+        <button className="btn-primary" style={{ marginTop: '0.8rem', width: '100%' }} onClick={() => navigate('/homework')}>
+          전체 숙제함 보기 →
+        </button>
       </div>
 
       {/* ═══ Mock Exam Analysis (Hidden) ═══ */}
@@ -1112,6 +1561,169 @@ export default function Dashboard() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      )}
+
+      {/* ═══ 10-5. 수학 격주 단원점검테스트 풀이 모달 보드 (신설) ═══ */}
+      {showFortTestModal && (
+        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(15, 23, 42, 0.85)', backdropFilter: 'blur(8px)', zIndex: 999999, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem' }}>
+          <div style={{ background: '#0f172a', border: '1px solid #334155', borderRadius: '24px', maxWidth: '1000px', width: '95%', height: '85vh', display: 'flex', flexDirection: 'column', boxShadow: '0 25px 50px -12px rgba(0,0,0,0.5)', overflow: 'hidden' }}>
+            
+            {/* 모달 헤더 */}
+            <div style={{ padding: '1.2rem 2rem', background: '#1e293b', borderBottom: '1px solid #334155', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <Target size={22} color="#fbbf24" />
+                <h3 style={{ margin: 0, color: '#fff', fontSize: '1.2rem', fontWeight: '800' }}>
+                  2주 수학 단원점검테스트 (실시간 오답 격파 클리닉)
+                </h3>
+              </div>
+              {!fortGradingResult && (
+                <button 
+                  onClick={() => setShowFortTestModal(false)}
+                  style={{ background: 'transparent', border: 'none', color: '#94a3b8', cursor: 'pointer', fontSize: '1.2rem', fontWeight: 'bold' }}
+                >
+                  ✕
+                </button>
+              )}
+            </div>
+
+            {/* 모달 본문 (좌측 시험지, 우측 OMR 보드) */}
+            <div style={{ flex: 1, display: 'flex', overflow: 'hidden' }}>
+              
+              {!fortGradingResult ? (
+                <>
+                  {/* 좌측: 기출 시험지 뷰어 */}
+                  <div style={{ flex: 1, padding: '2rem', overflowY: 'auto', background: '#f8fafc', borderRight: '1px solid #334155' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+                      {assignedFortProblems.map((prob, idx) => (
+                        <div key={prob.id} style={{ background: '#fff', padding: '1.5rem', borderRadius: '16px', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
+                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem', borderBottom: '1px solid #f1f5f9', paddingBottom: '0.5rem' }}>
+                            <span style={{ fontWeight: '900', color: '#4f46e5', fontSize: '1.1rem' }}>Q{idx + 1}. {prob.unit}</span>
+                            <span style={{ fontSize: '0.72rem', background: prob.isWrongHistory ? '#fee2e2' : '#eff6ff', color: prob.isWrongHistory ? '#ef4444' : '#2563eb', padding: '0.2rem 0.5rem', borderRadius: '6px', fontWeight: 'bold' }}>
+                              {prob.isWrongHistory ? '⚠️ 오답 극복 대상' : '기출 변형 검증'}
+                            </span>
+                          </div>
+                          <div style={{ display: 'flex', justifyContent: 'center', padding: '1rem 0' }}>
+                            <img 
+                              src={prob.imagePath} 
+                              alt={`문제 ${prob.numStr}`}
+                              style={{ maxWidth: '100%', maxHeight: '250px', objectFit: 'contain', borderRadius: '8px' }}
+                              onError={(e) => {
+                                e.target.src = '/icons/default-math-problem.webp';
+                              }}
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* 우측: OMR 정답 기입 및 마킹 판넬 */}
+                  <div style={{ width: '320px', background: '#0f172a', padding: '2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                    <div>
+                      <h4 style={{ margin: '0 0 1rem 0', color: '#cbd5e1', fontSize: '0.95rem', borderBottom: '1px solid #334155', paddingBottom: '0.5rem' }}>🎯 OMR 마킹 보드</h4>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', maxHeight: 'calc(85vh - 240px)', overflowY: 'auto', paddingRight: '0.5rem' }}>
+                        {assignedFortProblems.map((prob, idx) => (
+                          <div key={prob.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                            <span style={{ color: '#94a3b8', fontWeight: 'bold', fontSize: '0.9rem' }}>Q{idx + 1}번 정답</span>
+                            <input 
+                              type="text" 
+                              placeholder="번호 또는 정답"
+                              value={fortAnswers[prob.id] || ''}
+                              onChange={(e) => setFortAnswers({ ...fortAnswers, [prob.id]: e.target.value })}
+                              style={{ width: '120px', padding: '0.6rem', background: '#1e293b', border: '1px solid #334155', borderRadius: '8px', color: '#fff', textAlign: 'center', fontWeight: 'bold', fontSize: '0.9rem' }}
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <button
+                      onClick={() => {
+                        const grading = gradeFortnightlyTest(fortAnswers, assignedFortProblems);
+                        setFortGradingResult(grading);
+                        
+                        const prevResults = JSON.parse(localStorage.getItem('fortnightly_test_results') || '[]');
+                        prevResults.push(grading);
+                        localStorage.setItem('fortnightly_test_results', JSON.stringify(prevResults));
+                        setFortTestResults(prevResults);
+
+                        sendFortnightlyParentPush('멘토스 학생', grading);
+                      }}
+                      style={{
+                        width: '100%', padding: '1rem',
+                        background: 'linear-gradient(135deg, #10b981, #059669)',
+                        color: 'white', border: 'none', borderRadius: '12px',
+                        fontWeight: '900', fontSize: '1rem', cursor: 'pointer',
+                        boxShadow: '0 4px 14px rgba(16, 185, 129, 0.3)',
+                        marginTop: '2rem'
+                      }}
+                    >
+                      🗳️ 마킹 제출 및 채점하기
+                    </button>
+                  </div>
+                </>
+              ) : (
+                /* 제출 결과 화면 */
+                <div style={{ flex: 1, padding: '3rem', background: '#090d16', color: '#fff', overflowY: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }} className="animate-fade-in">
+                  <div style={{ width: '100%', maxWidth: '600px', textAlign: 'center' }}>
+                    <span style={{ fontSize: '3rem' }}>🎉</span>
+                    <h2 style={{ fontSize: '2rem', fontWeight: '900', color: '#10b981', margin: '1rem 0 0.5rem 0' }}>오답 완벽 격파!</h2>
+                    <p style={{ color: '#94a3b8', fontSize: '0.95rem', margin: '0 0 2rem 0' }}>2주 단원점검테스트 완료 및 실시간 분석이 종료되었습니다.</p>
+
+                    {/* 성적 보드 */}
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '2rem' }}>
+                      <div style={{ background: '#1e293b', border: '1px solid #334155', borderRadius: '16px', padding: '1.5rem' }}>
+                        <div style={{ fontSize: '0.8rem', color: '#94a3b8' }}>종합 성취도 점수</div>
+                        <div style={{ fontSize: '2.2rem', fontWeight: '900', color: '#fbbf24', marginTop: '0.5rem' }}>{fortGradingResult.accuracy}%</div>
+                        <div style={{ fontSize: '0.8rem', color: '#cbd5e1', marginTop: '0.3rem' }}>{fortGradingResult.correctCount} / {fortGradingResult.totalCount} 문제 정답</div>
+                      </div>
+                      <div style={{ background: '#1e293b', border: '1px solid #334155', borderRadius: '16px', padding: '1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                        <div style={{ fontSize: '0.8rem', color: '#94a3b8', marginBottom: '0.5rem' }}>학부모 실시간 알림</div>
+                        <span style={{ background: 'rgba(16, 185, 129, 0.15)', color: '#4ade80', padding: '0.4rem 0.8rem', borderRadius: '20px', fontSize: '0.82rem', fontWeight: 'bold', border: '1px solid rgba(16, 185, 129, 0.3)' }}>
+                          📬 Push 전송 완료
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* 세부 단원 극복 진단 */}
+                    <h4 style={{ color: '#cbd5e1', textAlign: 'left', margin: '0 0 0.8rem 0', fontWeight: '800' }}>📈 단원별 실력 극복 상태 진단</h4>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', marginBottom: '2.5rem' }}>
+                      {fortGradingResult.unitDiagnoses.map(diag => (
+                        <div key={diag.unit} style={{ background: '#111827', border: '1px solid #1f2937', borderRadius: '12px', padding: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                          <div style={{ textAlign: 'left' }}>
+                            <div style={{ fontWeight: 'bold', fontSize: '0.95rem' }}>{diag.unit}</div>
+                            <div style={{ fontSize: '0.75rem', color: '#94a3b8', marginTop: '2px' }}>이전 오답률: {diag.prevErrorRate}% → 이번 테스트 성취도: {diag.testAccuracy}%</div>
+                          </div>
+                          <span style={{ padding: '0.3rem 0.6rem', borderRadius: '8px', fontSize: '0.75rem', fontWeight: 'bold', background: diag.isImproved ? 'rgba(16, 185, 129, 0.15)' : 'rgba(217, 119, 6, 0.15)', color: diag.isImproved ? '#4ade80' : '#fbbf24', border: diag.isImproved ? '1px solid rgba(16, 185, 129, 0.3)' : '1px solid rgba(217, 119, 6, 0.3)' }}>
+                            {diag.desc}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <button
+                      onClick={() => {
+                        setShowFortTestModal(false);
+                        setFortGradingResult(null);
+                        setFortnightlyTestStatus('completed');
+                        setFortnightlyDays(0);
+                      }}
+                      style={{
+                        padding: '1rem 3rem', background: '#4f46e5', color: '#white',
+                        border: 'none', borderRadius: '12px', fontWeight: 'bold',
+                        fontSize: '1rem', cursor: 'pointer', boxShadow: '0 4px 14px rgba(79, 70, 229, 0.3)',
+                        transition: '0.2s', color: '#fff'
+                      }}
+                    >
+                      확인 및 대시보드로 복귀
+                    </button>
+                  </div>
+                </div>
+              )}
+
+            </div>
           </div>
         </div>
       )}
