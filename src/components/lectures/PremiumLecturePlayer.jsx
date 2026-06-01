@@ -36,7 +36,6 @@ export default function PremiumLecturePlayer({ lectureId, onClose }) {
   const USE_GEMINI_AUDIO = true; // 완료 시 true로 변경하여 전면 적용 가능
 
   const synthRef = useRef(window.speechSynthesis);
-  const utteranceRef = useRef(null);
   const audioRef = useRef(null);
 
   useEffect(() => {
