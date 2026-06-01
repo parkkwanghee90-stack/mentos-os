@@ -39,27 +39,16 @@
       "lectureId": "일차부등식",
       "slug": "linear_ineq",
       "sourceJson": "linear_ineq.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 5
     },
     {
       "lectureId": "이차부등식",
       "slug": "quad_ineq",
       "sourceJson": "quad_ineq.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 4
     },
     {
@@ -74,64 +63,32 @@
       "lectureId": "행렬",
       "slug": "matrix",
       "sourceJson": "matrix.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 6
     },
     {
       "lectureId": "점과좌표",
       "slug": "points_coord",
       "sourceJson": "points_coord.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 6
     },
     {
       "lectureId": "직선의방정식",
       "slug": "line_eq",
       "sourceJson": "line_eq.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 6
     },
     {
       "lectureId": "원의방정식",
       "slug": "circle_eq",
       "sourceJson": "circle_eq.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 10
     },
     {
@@ -146,112 +103,40 @@
       "lectureId": "지수",
       "slug": "exponent",
       "sourceJson": "exponent.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 5
     },
     {
       "lectureId": "로그",
       "slug": "logarithm",
       "sourceJson": "logarithm.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 7
     },
     {
       "lectureId": "지수함수",
       "slug": "exp_func",
       "sourceJson": "exponent_.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 22
     },
     {
       "lectureId": "로그함수",
       "slug": "log_func",
       "sourceJson": "logarithm_.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 22
     },
     {
       "lectureId": "등차등비",
       "slug": "arith_geom_seq",
       "sourceJson": "arith_geom_seq.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 11
     },
     {
@@ -260,7 +145,6 @@
       "sourceJson": "sigma.json",
       "status": "GAP",
       "missing": [
-        1,
         2,
         3,
         4,
@@ -290,13 +174,6 @@
       "sourceJson": "limit.json",
       "status": "GAP",
       "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
         8,
         9
       ],
@@ -308,7 +185,6 @@
       "sourceJson": ".json",
       "status": "GAP",
       "missing": [
-        1,
         2,
         3,
         4,
