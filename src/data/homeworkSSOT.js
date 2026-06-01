@@ -784,6 +784,20 @@ export function padProblemNum(num) {
 }
 
 /**
+ * 해설 이미지 경로 생성.
+ * 미적분 통합숙제 9개 폴더는 해설 이미지가 한 칸 밀려 저장돼 있어
+ * (문제 N의 해설 = {N+1}a.webp), 해당 폴더만 +1 시프트한다.
+ * 그 외 과목 숙제 폴더는 정렬 정상이라 {N}a.webp 그대로 사용한다.
+ * @param {string} imagePath 문제 이미지 폴더 경로 (끝에 '/')
+ * @param {number} problemNum 문제 번호 (1부터)
+ */
+export function buildSolutionSrc(imagePath, problemNum) {
+  if (!imagePath) return '';
+  const shift = imagePath.includes('숙제/미적분/') ? 1 : 0;
+  return `${imagePath}${padProblemNum(problemNum + shift)}a.webp`;
+}
+
+/**
  * 이차함수 회차 숙제 해금 여부 확인
  */
 export function isSequenceUnlocked(hwUnit) {
