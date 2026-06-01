@@ -1841,8 +1841,16 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             )}
           </div>
         </div>
-        {/* Right: actions (session/problem timer floats in the centered gap) */}
+        {/* Right: timer chip + actions */}
         <div className="math-top-actions" style={{ display: 'flex', gap: '0.55rem', alignItems: 'center', flexWrap: 'wrap' }}>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '0.5rem 0.9rem', background: 'var(--mc-surface-sunken)', border: '1px solid var(--mc-border)', borderRadius: 'var(--mc-r-pill)', fontWeight: 700, fontSize: '0.85rem', color: 'var(--mc-text)', whiteSpace: 'nowrap' }}>
+              <Clock size={15} color="var(--mc-danger)" />
+              <span style={{ color: 'var(--mc-text-subtle)', fontSize: '0.72rem', fontWeight: 600 }}>수업 시간</span>
+              <span style={{ fontFamily: 'monospace' }}>{String(Math.floor(timeLeft / 60)).padStart(2, '0')}:{String(timeLeft % 60).padStart(2, '0')}</span>
+              {problemTimeLeft > 0 && (
+                <span style={{ color: problemTimeLeft <= 60 ? '#D97706' : 'var(--mc-primary)', fontFamily: 'monospace', fontWeight: 700, paddingLeft: '6px', marginLeft: '2px', borderLeft: '1px solid var(--mc-border)' }}>{String(Math.floor(problemTimeLeft / 60)).padStart(2, '0')}:{String(problemTimeLeft % 60).padStart(2, '0')}</span>
+              )}
+            </span>
             {/* AVS풀이 버튼 추가 */}
             {(['core', 'step', 'mock'].includes(currentPhaseFlow?.phase) || selectedUnit) && (
               <motion.button
@@ -1945,6 +1953,18 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             )}
           </div>
         ) : null}
+
+        {/* 상시 노출 AVS 풀이 보드 (레퍼런스 lecture.png — 중앙 고정 패널). 사용자가 AVS풀이를 눌러 스레드에 띄우면 중복 방지를 위해 숨김 */}
+        {(selectedUnit || currentUnit) && !messages.some(m => m.hintPlayer) && (
+          <div className="mc-animate-in" style={{ width: '100%' }}>
+            <HintPlayerRouter
+              unit={selectedUnit || currentUnit}
+              problemId={String(testProblemIdx).padStart(3, '0')}
+              problemImage={null}
+              showQA={false}
+            />
+          </div>
+        )}
 
         {uploadedProblem && (
           <div style={{ padding: '1rem', background: 'var(--mc-primary-weak)', border: '1px dashed var(--mc-primary)', borderRadius: 'var(--mc-r-md)', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>

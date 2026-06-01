@@ -966,10 +966,10 @@
     border-top: 1px solid var(--mc-border) !important;
   }
 
-  /* The end action now lives in the top bar; hide the fixed pill on  */
-  /* desktop so it doesn't overlap the top-bar actions. The floating   */
-  /* timer (session + problem countdown) stays in the centered gap.   */
+  /* End action + timers now live in the top bar (per lecture.png), so */
+  /* hide the floating overlays on desktop to keep the bar clean.       */
   .math-classroom-root .mc-endpill-fixed { display: none !important; }
+  .math-classroom-root .math-timer-overlay-desktop { display: none !important; }
 }
 
 @media (min-width: 769px) and (prefers-reduced-motion: reduce) {
