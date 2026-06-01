@@ -695,12 +695,12 @@ export const HOMEWORK_UNITS = [
     stages: { '2단계': { start: 1, end: 10 }, '3·4단계': { start: 11, end: 18 } },
   },
 
-  // ── 09. 정적분 (115문제) ──
+  // ── 09. 정적분 (114문제) ──
   {
     id: 'hw_cal_09a', title: '정적분 ①', subject: '미적분',
     folderName: '09정적분', hintKey: '미적분_09정적분_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/09정적분/2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/09정적분/3.4단계/정답및해설.html' },
-    answerKey: '미적분_09정적분_통합숙제', problemCount: 115,
+    answerKey: '미적분_09정적분_통합숙제', problemCount: 114,
     imagePath: '/math_crops/숙제/미적분/09정적분/',
     relatedUnit: '정적분',
     stages: { '2단계': { start: 1, end: 20 } },
@@ -709,7 +709,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_09b', title: '정적분 ②', subject: '미적분',
     folderName: '09정적분', hintKey: '미적분_09정적분_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/09정적분/2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/09정적분/3.4단계/정답및해설.html' },
-    answerKey: '미적분_09정적분_통합숙제', problemCount: 115,
+    answerKey: '미적분_09정적분_통합숙제', problemCount: 114,
     imagePath: '/math_crops/숙제/미적분/09정적분/',
     relatedUnit: '정적분',
     stages: { '2단계': { start: 21, end: 40 } },
@@ -718,7 +718,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_09c', title: '정적분 ③', subject: '미적분',
     folderName: '09정적분', hintKey: '미적분_09정적분_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/09정적분/2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/09정적분/3.4단계/정답및해설.html' },
-    answerKey: '미적분_09정적분_통합숙제', problemCount: 115,
+    answerKey: '미적분_09정적분_통합숙제', problemCount: 114,
     imagePath: '/math_crops/숙제/미적분/09정적분/',
     relatedUnit: '정적분',
     stages: { '2단계': { start: 41, end: 53 }, '3·4단계': { start: 54, end: 73 } },
@@ -727,7 +727,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_09d', title: '정적분 ④', subject: '미적분',
     folderName: '09정적분', hintKey: '미적분_09정적분_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/09정적분/2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/09정적분/3.4단계/정답및해설.html' },
-    answerKey: '미적분_09정적분_통합숙제', problemCount: 115,
+    answerKey: '미적분_09정적분_통합숙제', problemCount: 114,
     imagePath: '/math_crops/숙제/미적분/09정적분/',
     relatedUnit: '정적분',
     stages: { '3·4단계': { start: 74, end: 93 } },
@@ -736,10 +736,10 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_09e', title: '정적분 ⑤ (심화)', subject: '미적분',
     folderName: '09정적분', hintKey: '미적분_09정적분_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/09정적분/2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/09정적분/3.4단계/정답및해설.html' },
-    answerKey: '미적분_09정적분_통합숙제', problemCount: 115,
+    answerKey: '미적분_09정적분_통합숙제', problemCount: 114,
     imagePath: '/math_crops/숙제/미적분/09정적분/',
     relatedUnit: '정적분',
-    stages: { '3·4단계': { start: 94, end: 115 } },
+    stages: { '3·4단계': { start: 94, end: 114 } },
   },
 ];
 
