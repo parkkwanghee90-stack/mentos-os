@@ -1,5 +1,5 @@
 import { mathTextsData, avsAnswersData } from './mathDataLoader.js';
-import { HOMEWORK_UNITS } from '../data/homeworkSSOT.js';
+import { HOMEWORK_UNITS, getHomeworkRange } from '../data/homeworkSSOT.js';
 
 
 /**
