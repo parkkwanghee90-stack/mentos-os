@@ -7,8 +7,9 @@ import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import MathProblemRenderer from '@/components/MathProblemRenderer';
 import HintPlayerRouter from '@/components/hints/HintPlayerRouter';
-import { HOMEWORK_UNITS, getHomeworkRange, padProblemNum, getHomeworkProgress, saveHomeworkProgress, markSequenceComplete, WRONG_REVIEW_ID } from '@/data/homeworkSSOT';
-import { addWrong, markResolved } from '@/services/wrongAnswerStore';
+import { HOMEWORK_UNITS, getHomeworkRange, padProblemNum, getHomeworkProgress, saveHomeworkProgress, markSequenceComplete, WRONG_REVIEW_ID, getUnitById } from '@/data/homeworkSSOT';
+import { addWrong, markResolved, getActiveWrongAnswers } from '@/services/wrongAnswerStore';
+import { resolveAnswer } from '@/services/answerResolver';
 import avsAnswersData from '@/data/avs_answers.json';
 
 export default function HomeworkMathBox() {
@@ -46,6 +47,9 @@ export default function HomeworkMathBox() {
 
   // ── 단원 정보 로드 (동적 숙제 우선, 없으면 SSOT) ──
   const hwUnit = useMemo(() => {
+    if (homeworkId === WRONG_REVIEW_ID) {
+      return { id: WRONG_REVIEW_ID, title: '오답 복습 노트', isWrongReview: true, isDynamic: true };
+    }
     if (dynamicDbEntry) {
       const firstProb = dynamicDbEntry.problems?.[0];
       return {
@@ -72,6 +76,23 @@ export default function HomeworkMathBox() {
 
   // 문제 목록 생성 (동적 숙제 대응)
   const problems = useMemo(() => {
+    if (homeworkId === WRONG_REVIEW_ID) {
+      const actives = getActiveWrongAnswers();
+      return actives.map((e, idx) => {
+        const unit = getUnitById(e.hwId);
+        const keyStr = String(e.num).padStart(3, '0');
+        const imgBase = unit ? unit.imagePath : '';
+        return {
+          problemId: `${e.hwId}_${keyStr}`,
+          num: idx + 1,
+          keyStr,
+          imageSrc: `${imgBase}${keyStr}.webp`,
+          solutionSrc: `${imgBase}${keyStr}a.webp`,
+          isDynamic: true,
+          _wr: e,
+        };
+      });
+    }
     if (dynamicDbEntry) {
       return (dynamicDbEntry.problems || []).map((p, idx) => {
         const sourceIdx = p.sourceProblemId !== undefined ? p.sourceProblemId : (idx + 1);
@@ -106,6 +127,16 @@ export default function HomeworkMathBox() {
 
   // 정답 데이터 로드 (동적 숙제 대응)
   const answers = useMemo(() => {
+    if (homeworkId === WRONG_REVIEW_ID) {
+      const ansMap = {};
+      const actives = getActiveWrongAnswers();
+      actives.forEach((e) => {
+        const keyStr = String(e.num).padStart(3, '0');
+        const ans = resolveAnswer(e.answerKey, e.num);
+        if (ans !== null) ansMap[`${e.hwId}_${keyStr}`] = ans;
+      });
+      return ansMap;
+    }
     if (dynamicDbEntry) {
       const ansMap = {};
       (dynamicDbEntry.problems || []).forEach(p => {
