@@ -18,7 +18,7 @@ export function AuthProvider({ children }) {
 
       const legacyUser = {
         id: dbUser.id,
-        name: dbUser.user_metadata?.name || dbUser.email.split('@')[0],
+        name: dbUser.user_metadata?.name || dbUser.email?.split('@')[0] || '사용자',
         email: dbUser.email,
         role: dbUser.user_metadata?.role || 'student',
         school: dbUser.user_metadata?.school || '',
@@ -144,7 +144,11 @@ export function AuthProvider({ children }) {
   // 관리자 코드 검증 → role 업데이트
   const verifyAdminCode = async (code) => {
     const adminSecret = import.meta.env.VITE_ADMIN_SECRET;
-    if (!adminSecret || code !== adminSecret) return false;
+    if (!adminSecret) {
+      console.warn('[AuthContext] VITE_ADMIN_SECRET가 설정되지 않아 관리자 코드 인증이 비활성화되어 있습니다. .env에 값을 설정하세요.');
+      return false;
+    }
+    if (code !== adminSecret) return false;
     const { error } = await supabase.auth.updateUser({
       data: { role: 'admin' }
     });

@@ -1,13 +1,17 @@
 import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://trvqgqvwhqvlgqzlsxbu.supabase.co';
-let supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-const VALID_FALLBACK_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRydnFncXZ3aHF2bGdxemxzeGJ1Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3ODY1NzA1MywiZXhwIjoyMDk0MjMzMDUzfQ.a76V1LYSItB48fXQN2in-rXfy8oD4o7KJteAMCyX9so';
-
-if (!supabaseAnonKey || supabaseAnonKey.startsWith('sb_publishable') || supabaseAnonKey.includes('invalid') || supabaseAnonKey.length < 50) {
-  console.warn('[SupabaseClient] Warning: Invalid or CLI key detected in environment. Using verified service fallback key.');
-  supabaseAnonKey = VALID_FALLBACK_KEY;
+// 보안 원칙: 클라이언트에는 RLS 보호를 받는 anon(public) 키만 사용한다.
+// service_role 등 권한 키를 하드코딩하면 모든 RLS가 우회되어 DB 전체가 노출되므로 절대 금지.
+// 키는 환경변수에서만 주입하며, 누락 시 위험한 fallback 대신 즉시 실패시킨다(fail-fast).
+if (!supabaseAnonKey) {
+  throw new Error(
+    '[SupabaseClient] VITE_SUPABASE_ANON_KEY가 설정되지 않았습니다. ' +
+    '.env에 Supabase anon(public) 키를 설정하세요. ' +
+    'service_role 등 권한 키는 클라이언트에서 절대 사용하지 마세요(RLS 우회 → DB 전체 노출).'
+  );
 }
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);

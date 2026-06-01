@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { User, Shield, Lock, ArrowRight, Zap, Sparkles, Mail, Key } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
+import { isSuperPassMatch } from '@/services/superPass';
 import './Login.css';
 
 export default function Login() {
@@ -33,9 +34,12 @@ export default function Login() {
   const [superPassInput, setSuperPassInput] = useState('');
   const [superPassError, setSuperPassError] = useState('');
 
+  // 슈퍼패스 인증번호는 환경변수(VITE_SUPER_PASS)에서만 주입한다. 코드에 하드코딩 금지.
+  const SUPER_PASS = import.meta.env.VITE_SUPER_PASS;
+
   const handleSuperPass = (e) => {
     e.preventDefault();
-    if (superPassInput.trim() === '1234') {
+    if (isSuperPassMatch(SUPER_PASS, superPassInput)) {
       localStorage.setItem('mentos_super_pass', 'true');
       localStorage.setItem('mentos_mock_user', JSON.stringify({
         id: 'super_admin_pass',
