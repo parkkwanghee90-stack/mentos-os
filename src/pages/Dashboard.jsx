@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { HOMEWORK_UNITS, getHomeworkRange, getHomeworkProgress, STAGE_ACCESS } from '@/data/homeworkSSOT';
+import { HOMEWORK_UNITS, getHomeworkRange, getHomeworkProgress, STAGE_ACCESS, WRONG_REVIEW_ID } from '@/data/homeworkSSOT';
+import { getActiveWrongAnswers } from '@/services/wrongAnswerStore';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, AreaChart, Area, CartesianGrid } from 'recharts';
 import { Target, TrendingUp, AlertTriangle, Zap, ArrowLeft, BookOpen, CheckCircle, BookA, LogOut, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -258,6 +259,10 @@ export default function Dashboard() {
   };
 
   // ── [Real Data Integration with Simulation Fallback] ──
+  const wrongReviewCount = React.useMemo(
+    () => getActiveWrongAnswers().filter(e => !e.resolved).length,
+    []
+  );
   const trialState = React.useMemo(() => JSON.parse(localStorage.getItem('mentos_free_trial') || '{}'), []);
   const weaknessHistory = React.useMemo(() => JSON.parse(localStorage.getItem('mentos_weakness_history') || '[]'), []);
   
@@ -1036,6 +1041,15 @@ export default function Dashboard() {
             등급 테스트 시작 →
           </button>
         </div>
+      </div>
+
+      {/* 오답 복습 노트 */}
+      <div className="glass-panel homework-card animate-fade-in" style={{ animationDelay: '0.48s' }}>
+        <h3><AlertTriangle size={20} color="#ef4444" /> 오답 복습 노트</h3>
+        <p>최근 30일간 틀린 문제 <strong>{wrongReviewCount}</strong>개가 누적되어 있습니다. 푼 문제도 한 달간 다시 노출됩니다.</p>
+        <button className="btn-primary" onClick={() => navigate(`/homework/math/${WRONG_REVIEW_ID}`)}>
+          오답 복습 시작 →
+        </button>
       </div>
 
       {/* ═══ 9. 조교 숙제 검사함 (기존 보존) ═══ */}
