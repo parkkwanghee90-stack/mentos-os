@@ -684,15 +684,15 @@ export const HOMEWORK_UNITS = [
     stages: { '3·4단계': { start: 21, end: 40 } },
   },
 
-  // ── 08. 여러가지 적분법 (19문제) ──
+  // ── 08. 여러가지 적분법 (18문제) ──
   {
     id: 'hw_cal_08', title: '여러가지 적분법', subject: '미적분',
     folderName: '08여러가지적분법', hintKey: '미적분_08여러가지적분법_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/08여러가지적분법/2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/08여러가지적분법/3.4단계/정답및해설.html' },
-    answerKey: '미적분_08여러가지적분법_통합숙제', problemCount: 19,
+    answerKey: '미적분_08여러가지적분법_통합숙제', problemCount: 18,
     imagePath: '/math_crops/숙제/미적분/08여러가지적분법/',
     relatedUnit: '여러가지 적분법',
-    stages: { '2단계': { start: 1, end: 10 }, '3·4단계': { start: 11, end: 19 } },
+    stages: { '2단계': { start: 1, end: 10 }, '3·4단계': { start: 11, end: 18 } },
   },
 
   // ── 09. 정적분 (115문제) ──
