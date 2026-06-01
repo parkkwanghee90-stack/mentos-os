@@ -1,6 +1,6 @@
 import { HOMEWORK_UNITS, getHomeworkRange, getUnitById } from '@/data/homeworkSSOT';
 import { resolveAnswer } from '@/services/answerResolver';
-import { getActiveWrongAnswers } from '@/services/wrongAnswerStore';
+import { getActiveWrongAnswers, addWrong, markResolved } from '@/services/wrongAnswerStore';
 import { analyzeMathWeakness } from '@/engine/math/mathWeaknessReporter';
 import { queueParentPush } from '@/services/pushService';
 
@@ -32,6 +32,7 @@ export function generateMonthlyTestProblems(studentLevel = '4~5등급') {
       solutionPath: `${hwUnit.imagePath}${numStr}a.webp`,
       hintKey: hwUnit.hintKey,
       correctAnswer: ans,
+      answerKey: hwUnit.answerKey,
     });
   };
 
@@ -86,6 +87,26 @@ export function gradeMonthlyTest(userAnswers, assignedProblems) {
     testAccuracy: Math.round((s.correct / s.total) * 100),
   }));
   return { accuracy, correctCount, totalCount, problemDetails, unitDiagnoses };
+}
+
+/**
+ * 채점 결과를 오답스토어에 동기화.
+ * 오답 → addWrong, 정답 → markResolved. hw_progress(숙제 진도)는 건드리지 않는다.
+ */
+export function recordMonthlyTestWrongs(grading) {
+  if (!grading || !Array.isArray(grading.problemDetails)) return;
+  try {
+    grading.problemDetails.forEach(p => {
+      if (!p || !p.hwId || p.num == null) return;
+      if (p.isCorrect) {
+        markResolved(p.hwId, p.num);
+      } else if (p.answerKey) {
+        addWrong({ hwId: p.hwId, num: p.num, unit: p.unit, answerKey: p.answerKey });
+      }
+    });
+  } catch (err) {
+    console.warn('[monthlyTest] 오답스토어 동기화 실패:', err.message);
+  }
 }
 
 /** 학부모 월간 리포트 메시지 */
