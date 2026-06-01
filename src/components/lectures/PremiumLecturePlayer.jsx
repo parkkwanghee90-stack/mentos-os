@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { BlockMath, InlineMath } from '@/components/KaTeXWrapper';
 import { toBaseId } from '@/lib/premiumLectureMap';
 import { audioRelPath } from '@/lib/premiumAudioPath';
+import { slugForLecture } from '@/lib/premiumLectures';
 import { Play, Pause, ChevronRight, ChevronLeft, Volume2, X } from 'lucide-react';
 import 'katex/dist/katex.min.css';
 import SineRuleAnimation from '../SineRuleAnimation';
@@ -58,9 +59,8 @@ export default function PremiumLecturePlayer({ lectureId, onClose }) {
   useEffect(() => {
     const fetchLecture = async () => {
       try {
-        const baseId = toBaseId(lectureId);
-
-        const fetchUrl = window.resolveAsset(`/premium_lectures/${baseId}.json`);
+        const slug = slugForLecture(lectureId) || toBaseId(lectureId);
+        const fetchUrl = window.resolveAsset(`/premium_lectures/${slug}.json`);
         const res = await fetch(fetchUrl);
         if (!res.ok) throw new Error('Lecture not found');
         const data = await res.json();
@@ -83,13 +83,13 @@ export default function PremiumLecturePlayer({ lectureId, onClose }) {
 
       if (USE_GEMINI_AUDIO) {
         // --- Gemini 3.1 Premium High-Fidelity Audio Playback ---
-        const baseId = toBaseId(lectureData.id);
+        const slug = slugForLecture(lectureId) || toBaseId(lectureData.id);
         const stepNum = step.step;
-        const audioUrl = window.resolveAsset(audioRelPath(baseId, stepNum));
-        
+        const audioUrl = window.resolveAsset(audioRelPath(slug, stepNum));
+
         const audio = new Audio(audioUrl);
         audioRef.current = audio;
-        
+
         audio.onended = () => {
           if (currentStep < (lectureData?.steps?.length || 0) - 1) {
             setCurrentStep(prev => prev + 1);
@@ -97,9 +97,9 @@ export default function PremiumLecturePlayer({ lectureId, onClose }) {
             setIsPlaying(false);
           }
         };
-        
+
         audio.onerror = () => {
-          console.warn('[PremiumTTS] audio missing', { baseId, step: stepNum });
+          console.warn('[PremiumTTS] audio missing', { slug, step: stepNum });
           setIsPlaying(false);
           setAudioUnavailable(true);
         };
