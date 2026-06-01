@@ -6,6 +6,7 @@
  */
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Play, Pause, RotateCcw, ChevronLeft, ChevronRight } from 'lucide-react';
+import { InlineMath } from '@/components/KaTeXWrapper';
 
 export default function AlgebraHintPlayer({ data }) {
   const [step, setStep] = useState(0);
@@ -144,6 +145,25 @@ export default function AlgebraHintPlayer({ data }) {
             {step + 1}단계
           </div>
         </div>
+      ) : (steps[step]?.latex || steps[step]?.lines?.length) ? (
+        /* 이미지가 없는 텍스트/LaTeX 형식 해설(type:'algebra')은 단계별 수식 카드로 렌더 */
+        <div style={{ margin: '0.5rem', background: darkCard, borderRadius: 8, border: '1px solid #334155', padding: '1.1rem 1.2rem', minHeight: 220, color: '#e2e8f0' }}>
+          {steps[step]?.label && (
+            <div style={{ color: chalkYellow, fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.8rem' }}>
+              {steps[step].label}
+            </div>
+          )}
+          {steps[step]?.latex && <RichSolutionText text={steps[step].latex} />}
+          {steps[step]?.lines?.map((ln, i) => (
+            <RichSolutionText key={i} text={typeof ln === 'string' ? ln : (ln?.content || '')} />
+          ))}
+          {step === totalSteps - 1 && data.finalAnswer && (
+            <div style={{ marginTop: '1.1rem', padding: '0.7rem 1rem', background: '#0a0f1a', borderRadius: 8, border: `1px solid ${chalkYellow}55`, display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
+              <span style={{ color: chalkYellow, fontWeight: 700 }}>정답</span>
+              <RichSolutionText text={data.finalAnswer} />
+            </div>
+          )}
+        </div>
       ) : (
         <div style={{ padding: '2rem', textAlign: 'center', color: '#94a3b8' }}>
           해설 이미지를 불러오는 중...
@@ -168,6 +188,46 @@ export default function AlgebraHintPlayer({ data }) {
           </button>
         ))}
       </div>
+    </div>
+  );
+}
+
+/**
+ * 텍스트 + 인라인 LaTeX($...$) + LaTeX 줄바꿈(\\)이 섞인 해설 문자열을 토큰 배열로 파싱.
+ * 수식($...$)을 먼저 분리하므로 수식 내부의 백슬래시는 보존된다.
+ * 반환: [{ type: 'text'|'math'|'br', value? }]
+ */
+export function parseRichSolution(text) {
+  if (!text) return [];
+  const parts = String(text).split(/\$([^$]+)\$/); // 홀수 인덱스 = 수식
+  const tokens = [];
+  parts.forEach((part, i) => {
+    if (i % 2 === 1) {
+      tokens.push({ type: 'math', value: part });
+      return;
+    }
+    if (!part) return;
+    part.split(/\\\\/).forEach((line, j) => { // LaTeX 줄바꿈
+      if (j > 0) tokens.push({ type: 'br' });
+      if (line) tokens.push({ type: 'text', value: line });
+    });
+  });
+  return tokens;
+}
+
+/**
+ * parseRichSolution 토큰을 텍스트/인라인수식/줄바꿈으로 렌더.
+ */
+function RichSolutionText({ text }) {
+  const tokens = parseRichSolution(text);
+  if (tokens.length === 0) return null;
+  return (
+    <div style={{ lineHeight: 1.8, fontSize: '0.95rem', wordBreak: 'break-word' }}>
+      {tokens.map((t, i) => {
+        if (t.type === 'br') return <br key={i} />;
+        if (t.type === 'math') return <InlineMath key={i} math={t.value} errorColor="#94a3b8" />;
+        return <span key={i}>{t.value}</span>;
+      })}
     </div>
   );
 }

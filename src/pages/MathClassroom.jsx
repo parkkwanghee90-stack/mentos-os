@@ -375,12 +375,9 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
     if (!folder) { setChalkboardData(null); return; }
     
     const pid = String(testProblemIdx).padStart(3, '0');
-    // Hybrid path resolution: Local uses direct path, Production resolves to Supabase public storage
-    const isLocal = typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
-    const encodedFolder = folder.split('/').map(part => encodeURIComponent(part)).join('/');
-    const directUrl = isLocal 
-      ? `/math_hints/${encodedFolder}/${pid}.json?v=cb_${Date.now()}`
-      : window.resolveAsset(`/math_hints/${folder}/${pid}.json?v=cb_${Date.now()}`);
+    // 힌트 JSON은 로컬/배포 모두 Supabase 공개 버킷에서 서빙된다(public/math_hints 는 비어 있음).
+    // 한글 폴더명은 resolveAsset 내부의 getSafePath 가 영문/숫자 경로로 변환한다.
+    const directUrl = window.resolveAsset(`/math_hints/${folder}/${pid}.json?v=cb_${Date.now()}`);
 
     fetch(directUrl)
       .then(r => { 
