@@ -10,6 +10,8 @@ import HintPlayerRouter from '@/components/hints/HintPlayerRouter';
 import { HOMEWORK_UNITS, getHomeworkRange, padProblemNum, getHomeworkProgress, saveHomeworkProgress, markSequenceComplete, WRONG_REVIEW_ID, getUnitById } from '@/data/homeworkSSOT';
 import { addWrong, markResolved, getActiveWrongAnswers } from '@/services/wrongAnswerStore';
 import { resolveAnswer } from '@/services/answerResolver';
+import { recordCompletion, buildSummaryMessage } from '@/services/homeworkCompletion';
+import { queueParentPush } from '@/services/pushService';
 import avsAnswersData from '@/data/avs_answers.json';
 
 export default function HomeworkMathBox() {
@@ -299,6 +301,18 @@ export default function HomeworkMathBox() {
 
     // 진행도 최종 저장
     saveHomeworkProgress(homeworkId, solvedStatus);
+
+    // 완료 기록 + 학부모 푸시 (전 문항 완료 시 최초 1회)
+    if (isAllSolved) {
+      const accuracy = totalProblems > 0 ? Math.round((correctCount / totalProblems) * 100) : 0;
+      const minutes = Math.round((Date.now() - startTime) / 60000);
+      const summary = { title: hwUnit.title, accuracy, correct: correctCount, total: totalProblems, wrong: wrongCount, minutes };
+      const { shouldPush } = recordCompletion(homeworkId, summary);
+      if (shouldPush) {
+        const studentName = JSON.parse(localStorage.getItem('mentos_mock_user') || '{}')?.name || '멘토스 학생';
+        queueParentPush(buildSummaryMessage(studentName, summary));
+      }
+    }
 
     const elapsed = Math.round((Date.now() - startTime) / 60000);
     alert(
