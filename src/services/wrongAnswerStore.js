@@ -38,7 +38,11 @@ function read() {
   catch { return []; }
 }
 function write(entries) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+  } catch (err) {
+    console.warn('[wrongAnswerStore] 저장 실패:', err.message);
+  }
 }
 
 /** 오답 1건 기록 */

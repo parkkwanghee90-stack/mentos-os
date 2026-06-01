@@ -5,7 +5,11 @@ function read() {
   catch { return []; }
 }
 function write(list) {
-  localStorage.setItem(COMPLETIONS_KEY, JSON.stringify(list));
+  try {
+    localStorage.setItem(COMPLETIONS_KEY, JSON.stringify(list));
+  } catch (err) {
+    console.warn('[homeworkCompletion] 저장 실패:', err.message);
+  }
 }
 
 /** 학부모 푸시 메시지 생성 */

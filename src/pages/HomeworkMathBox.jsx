@@ -11,6 +11,7 @@ import { HOMEWORK_UNITS, getHomeworkRange, padProblemNum, getHomeworkProgress, s
 import { addWrong, markResolved, getActiveWrongAnswers } from '@/services/wrongAnswerStore';
 import { resolveAnswer } from '@/services/answerResolver';
 import { recordCompletion, buildSummaryMessage } from '@/services/homeworkCompletion';
+import { computeSolvedCounts } from '@/services/progressCounts';
 import { queueParentPush } from '@/services/pushService';
 import { mirrorProgress } from '@/services/syncService';
 import avsAnswersData from '@/data/avs_answers.json';
@@ -175,10 +176,7 @@ export default function HomeworkMathBox() {
 
   const currentProblem = problems[currentProblemIdx];
   const totalProblems = problems.length;
-  const answeredCount = Object.keys(solvedStatus).length;
-  const correctCount = Object.values(solvedStatus).filter(s => s.isCorrect).length;
-  const wrongCount = Object.values(solvedStatus).filter(s => s.isCorrect === false).length;
-  const isAllSolved = answeredCount >= totalProblems;
+  const { answeredCount, correctCount, wrongCount, isAllSolved } = computeSolvedCounts(problems, solvedStatus);
   const currentSolved = currentProblem ? solvedStatus[currentProblem.problemId] : null;
 
   // ── 토스트 자동 숨김 ──
@@ -309,7 +307,8 @@ export default function HomeworkMathBox() {
       const accuracy = totalProblems > 0 ? Math.round((correctCount / totalProblems) * 100) : 0;
       const minutes = Math.round((Date.now() - startTime) / 60000);
       const summary = { title: hwUnit.title, accuracy, correct: correctCount, total: totalProblems, wrong: wrongCount, minutes };
-      const { shouldPush } = recordCompletion(homeworkId, summary);
+      const completionKey = isWrongReview ? `${homeworkId}_${new Date().toISOString().slice(0, 10)}` : homeworkId;
+      const { shouldPush } = recordCompletion(completionKey, summary);
       if (shouldPush) {
         const studentName = JSON.parse(localStorage.getItem('mentos_mock_user') || '{}')?.name || '멘토스 학생';
         queueParentPush(buildSummaryMessage(studentName, summary));
