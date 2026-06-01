@@ -11,7 +11,9 @@
     "preview": "vite preview",
     "check:math-latex": "node scripts/validate_math_latex.js",
     "patch:rounds": "node scripts/run_patch_rounds.js",
-    "deploy": "node scripts/build_vercel_prebuilt.cjs && npx vercel --prebuilt --prod --yes"
+    "deploy": "node scripts/build_vercel_prebuilt.cjs && npx vercel --prebuilt --prod --yes",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@capacitor/android": "^8.3.4",
@@ -27,6 +29,7 @@
     "mafs": "^0.21.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+    "react-is": "^19.2.6",
     "react-katex": "^3.1.0",
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.14.0",
@@ -44,7 +47,9 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.4.0",
+    "jsdom": "^25.0.1",
     "pptxgenjs": "^4.0.1",
-    "vite": "^8.0.10"
+    "vite": "^8.0.10",
+    "vitest": "^3.2.4"
   }
 }
