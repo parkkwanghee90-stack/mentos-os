@@ -11,6 +11,7 @@ import { InlineMath } from '@/components/KaTeXWrapper';
 export default function AlgebraHintPlayer({ data }) {
   const [step, setStep] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [playbackSpeed, setPlaybackSpeed] = useState(1);
   const [imgNaturalH, setImgNaturalH] = useState(0);
   const containerRef = useRef(null);
   const imgRef = useRef(null);
@@ -43,9 +44,9 @@ export default function AlgebraHintPlayer({ data }) {
     const t = setTimeout(() => {
       if (step < totalSteps - 1) setStep(s => s + 1);
       else { setIsPlaying(false); }
-    }, 3000);
+    }, 3000 / playbackSpeed);
     return () => clearTimeout(t);
-  }, [isPlaying, step, totalSteps]);
+  }, [isPlaying, step, totalSteps, playbackSpeed]);
 
   const handlePlay = () => {
     if (step >= totalSteps - 1) { setStep(0); setIsPlaying(true); }
@@ -66,12 +67,7 @@ export default function AlgebraHintPlayer({ data }) {
           <span style={{ background: 'rgba(52,211,153,0.18)', color: '#6ee7b7', padding: '2px 8px', borderRadius: '6px', fontSize: '0.62rem', fontWeight: 'bold', border: '1px solid rgba(52,211,153,0.4)', letterSpacing: '0.5px' }}>Beta</span>
         </div>
         <div style={{ display: 'flex', gap: 5 }}>
-          <button onClick={() => { setStep(0); setIsPlaying(false); }} style={btnS('#334155')}><RotateCcw size={13} /></button>
-          <button onClick={() => step > 0 && setStep(s => s - 1)} style={btnS('#334155')} disabled={step === 0}><ChevronLeft size={13} /> 이전</button>
-          <button onClick={handlePlay} style={btnS(isPlaying ? '#7c3aed' : '#dc2626')}>
-            {isPlaying ? <><Pause size={13} /> 정지</> : <><Play size={13} /> 재생</>}
-          </button>
-          <button onClick={() => step < totalSteps - 1 && setStep(s => s + 1)} style={btnS('#334155')} disabled={step === totalSteps - 1}>다음 <ChevronRight size={13} /></button>
+          <button onClick={() => { setStep(0); setIsPlaying(false); }} style={btnS('#334155')}><RotateCcw size={13} /> 다시 보기</button>
         </div>
       </div>
 
@@ -174,23 +170,24 @@ export default function AlgebraHintPlayer({ data }) {
         </div>
       )}
 
-      {/* 단계 버튼 그리드 */}
-      <div style={{ padding: '0.6rem 0.8rem 0.8rem', display: 'flex', flexWrap: 'wrap', gap: '0.3rem' }}>
-        {steps.map((_, i) => (
-          <button key={i} onClick={() => setStep(i)} style={{
-            background: i === step ? '#dc2626' : i < step ? '#1e3a5f' : '#1e293b',
-            border: `1px solid ${i === step ? '#dc2626' : '#334155'}`,
-            color: i <= step ? '#fff' : '#64748b',
-            padding: '0.3rem 0.7rem',
-            borderRadius: 6,
-            fontSize: '0.78rem',
-            fontWeight: i === step ? 700 : 400,
-            cursor: 'pointer',
-            transition: 'all 0.2s',
-          }}>
-            {i + 1}
+      {/* 하단 컨트롤 바: 단계 이동 · 풀이 컨트롤 (lecture.png 정합) */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', flexWrap: 'wrap', padding: '0.8rem 1rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+          <span style={{ fontSize: '0.72rem', color: '#94a3b8', fontWeight: 600, whiteSpace: 'nowrap' }}>단계 이동</span>
+          <button onClick={() => { setStep(0); setIsPlaying(false); }} style={btnS('#334155')}>처음</button>
+          <button onClick={() => step > 0 && setStep(s => s - 1)} style={btnS('#334155')} disabled={step === 0}><ChevronLeft size={13} /> 이전</button>
+          <span style={{ fontFamily: 'monospace', fontWeight: 700, color: '#fde047', fontSize: '0.85rem', minWidth: 56, textAlign: 'center' }}>STEP {step + 1} / {totalSteps}</span>
+          <button onClick={() => step < totalSteps - 1 && setStep(s => s + 1)} style={btnS('#334155')} disabled={step === totalSteps - 1}>다음 <ChevronRight size={13} /></button>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginLeft: 'auto', flexWrap: 'wrap' }}>
+          <span style={{ fontSize: '0.72rem', color: '#94a3b8', fontWeight: 600, whiteSpace: 'nowrap' }}>풀이 컨트롤</span>
+          <button onClick={handlePlay} style={btnS(isPlaying ? '#7c3aed' : '#7c3aed')}>
+            {isPlaying ? <><Pause size={13} /> 정지</> : <><Play size={13} /> 재생</>}
           </button>
-        ))}
+          <button onClick={() => setPlaybackSpeed(s => (s === 1 ? 1.5 : s === 1.5 ? 2 : 1))} style={btnS('#334155')} title="재생 속도">
+            {playbackSpeed.toFixed(1)}x
+          </button>
+        </div>
       </div>
     </div>
   );
