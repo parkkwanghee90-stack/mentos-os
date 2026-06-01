@@ -53,16 +53,17 @@ export default function AlgebraHintPlayer({ data }) {
   };
 
   const chalkYellow = '#fde047';
-  const dark = '#0f172a';
-  const darkCard = '#1e293b';
+  const dark = '#11402e';
+  const darkCard = '#1c5640';
 
   return (
-    <div style={{ background: dark, borderRadius: 14, overflow: 'hidden', border: '1px solid #334155' }}>
+    <div style={{ background: dark, borderRadius: 16, overflow: 'hidden', border: '6px solid #475569', boxShadow: 'inset 0 0 24px rgba(0,0,0,0.45)' }}>
 
       {/* 헤더 */}
-      <div style={{ background: darkCard, padding: '0.7rem 1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #334155' }}>
-        <div style={{ color: chalkYellow, fontWeight: 700, fontSize: '1rem' }}>
-          📋 {data.problem_id?.replace(/^0+/, '')}번 — 단계별 해설 스크롤
+      <div style={{ background: darkCard, padding: '0.7rem 1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <span style={{ color: '#f8fafc', fontWeight: 800, fontSize: '1.15rem' }}>AVS 풀이</span>
+          <span style={{ background: 'rgba(52,211,153,0.18)', color: '#6ee7b7', padding: '2px 8px', borderRadius: '6px', fontSize: '0.62rem', fontWeight: 'bold', border: '1px solid rgba(52,211,153,0.4)', letterSpacing: '0.5px' }}>Beta</span>
         </div>
         <div style={{ display: 'flex', gap: 5 }}>
           <button onClick={() => { setStep(0); setIsPlaying(false); }} style={btnS('#334155')}><RotateCcw size={13} /></button>
@@ -147,7 +148,7 @@ export default function AlgebraHintPlayer({ data }) {
         </div>
       ) : (steps[step]?.latex || steps[step]?.lines?.length) ? (
         /* 이미지가 없는 텍스트/LaTeX 형식 해설(type:'algebra')은 단계별 수식 카드로 렌더 */
-        <div style={{ margin: '0.5rem', background: darkCard, borderRadius: 8, border: '1px solid #334155', padding: '1.1rem 1.2rem', minHeight: 220, color: '#e2e8f0' }}>
+        <div style={{ margin: '0.5rem', background: darkCard, borderRadius: 8, border: '1px solid #334155', padding: '1.1rem 1.2rem', minHeight: 220, color: '#e2e8f0', maxWidth: '100%', overflowX: 'hidden', overflowWrap: 'anywhere', wordBreak: 'break-word' }}>
           {steps[step]?.label && (
             <div style={{ color: chalkYellow, fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.8rem' }}>
               {steps[step].label}

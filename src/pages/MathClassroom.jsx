@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import { Camera, Send, ChevronRight, CheckCircle, Smartphone, Mic, Volume2, Upload, Paperclip, Clock, BookOpen, X as CloseIcon, ChevronDown, UploadCloud, Award, Target, Menu, LogOut } from 'lucide-react';
+import { Camera, Send, ChevronRight, CheckCircle, Smartphone, Mic, Volume2, Upload, Paperclip, Clock, BookOpen, X as CloseIcon, ChevronDown, UploadCloud, Award, Target, Menu, LogOut, Sparkles, Crown, XCircle, Hash } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { getTeacherById } from '@/data/teacherProfiles';
 import { useMathLessonSession } from '@/hooks/useMathLessonSession';
 import { supabase } from '@/services/supabaseClient';
@@ -139,7 +140,7 @@ function useSTT(setInput) {
 
 
 
-function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, setSelectedUnit, testProblemIdx, setTestProblemIdx, selectedCourse, showReport, setShowReport, getSidebarData, problemTimeLeft }) {
+function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, setSelectedUnit, testProblemIdx, setTestProblemIdx, selectedCourse, showReport, setShowReport, getSidebarData, problemTimeLeft, setShowEndEarlyModal }) {
   const location = useLocation();
   
   // 고1 선생님들(1,2,3번) 강제 고정 여부 확인
@@ -421,7 +422,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
     if (targetUnit) {
       setMessages(prev => {
         const cleaned = prev.map(m => m.dynamicData || m.hintPlayer ? { ...m, dynamicData: undefined, hintPlayer: undefined } : m);
-        return [...cleaned, { role: 'user', content: `[${targetUnit}] Ai Vision Solution을 보여주세요!` }];
+        return [...cleaned, { role: 'user', content: `[${targetUnit}] AVS풀이를 보여주세요!` }];
       });
       setTimeout(() => {
         const pid = String(testProblemIdx).padStart(3, '0');
@@ -429,7 +430,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
           const cleaned = prev.map(m => m.dynamicData || m.hintPlayer ? { ...m, dynamicData: undefined, hintPlayer: undefined } : m);
           return [...cleaned, { 
             role: 'assistant', 
-            content: `[${targetUnit}] 문제 풀이가 막히셨나요? 걱정하지 마세요! Ai Vision Solution을 실행합니다.`,
+            content: `[${targetUnit}] 문제 풀이가 막히셨나요? 걱정하지 마세요! AVS풀이를 실행합니다.`,
             hintPlayer: { unit: targetUnit, problemId: pid }
           }];
         });
@@ -714,7 +715,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
       const phaseLabel = phaseName === 'core' ? '핵심 개념' : phaseName === 'step' ? '단계별 문제 풀이' : '미니 모의고사';
       initialMessages.push({
         role: 'assistant',
-        content: `[${phaseLabel}] 새 문제를 시작합니다.\n\n이 문제에서 구하고자 하는 것이 무엇인지, 주어진 단서가 무엇인지, 어떤 배경 개념이 필요한지 한 번 생각해볼까?\n생각해본 바탕으로 스스로 풀이를 진행해보고, 모르겠다면 우측의 [Ai Vision Solution]을 시청해봐!`,
+        content: `[${phaseLabel}] 새 문제를 시작합니다.\n\n이 문제에서 구하고자 하는 것이 무엇인지, 주어진 단서가 무엇인지, 어떤 배경 개념이 필요한지 한 번 생각해볼까?\n생각해본 바탕으로 스스로 풀이를 진행해보고, 모르겠다면 우측의 [AVS풀이]를 시청해봐!`,
       });
     } else if (phaseName === 'homework') {
       initialMessages.push({ role: 'assistant', content: '[과제 안내]\n오늘 배운 단원의 복습 과제를 안내합니다.' });
@@ -902,11 +903,11 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
       const animKey = precomputedAnims[specificAnimKey] ? specificAnimKey : genericAnimKey;
 
       if (precomputedAnims[animKey]) {
-        setMessages(prev => [...prev, { role: 'user', content: '[시스템 호출] Ai Vision Solution 요청' }]);
+        setMessages(prev => [...prev, { role: 'user', content: '[시스템 호출] AVS풀이 요청' }]);
         setTimeout(() => {
           setMessages(prev => [...prev, { 
             role: 'assistant', 
-            content: '문제 풀이가 막히셨나요? 걱정하지 마세요! AI가 방금 회원님이 푸시는 문제에 맞춰 **라이브 다이내믹 Ai Vision Solution**을 준비해 두었습니다. 영상을 통해 돌파구를 찾아보세요!',
+            content: '문제 풀이가 막히셨나요? 걱정하지 마세요! AI가 방금 회원님이 푸시는 문제에 맞춰 **라이브 다이내믹 AVS풀이**를 준비해 두었습니다. 영상을 통해 돌파구를 찾아보세요!',
             dynamicData: precomputedAnims[animKey]
           }]);
         }, 500);
@@ -932,7 +933,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
         setTimeout(() => {
           setMessages(prev => [...prev, { 
             role: 'assistant', 
-            content: '문제 풀이가 막히셨나요? 전혀 걱정하지 마세요! AI가 이 실전 문제의 해설지 흐름을 **라이브 다이내믹 Ai Vision Solution**으로 준비해 두었습니다. 시각적 풀이 과정을 보며 힌트를 얻어보세요!',
+            content: '문제 풀이가 막히셨나요? 전혀 걱정하지 마세요! AI가 이 실전 문제의 해설지 흐름을 **라이브 다이내믹 AVS풀이**로 준비해 두었습니다. 시각적 풀이 과정을 보며 힌트를 얻어보세요!',
             dynamicData: precomputedAnims[animKey]
           }]);
           setLoading(false);
@@ -1305,10 +1306,10 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
     };
 
     return (
-      <div className="classroom-main-mobile" style={{ flex: 1, display: 'flex', flexDirection: 'column', background: 'var(--bg-base)', color: 'var(--text-main)', overflowY: 'visible', overflowX: 'hidden' }}>
+      <div className="classroom-main-mobile" style={{ flex: 1, display: 'flex', flexDirection: 'column', background: 'transparent', color: 'var(--mc-text)', overflowY: 'visible', overflowX: 'hidden' }}>
         
         {/* 1. 상단 수업 헤더 */}
-        <div style={{ padding: '0.8rem', background: 'var(--bg-glass)', borderBottom: '1px solid var(--border-glass)', display: 'flex', flexDirection: 'column', gap: '0.5rem', width: '100%', boxSizing: 'border-box' }}>
+        <div style={{ padding: '0.8rem', background: 'var(--mc-surface)', borderBottom: '1px solid var(--mc-border)', display: 'flex', flexDirection: 'column', gap: '0.5rem', width: '100%', boxSizing: 'border-box' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             {(() => {
               let stageText = '';
@@ -1332,7 +1333,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
               const formattedTitle = stageText ? `${stageText} 훈련 (${limitText})` : (displayTitle + (currentPhaseFlow.duration ? ` (${currentPhaseFlow.duration}분)` : ''));
               
               return (
-                <span style={{ fontSize: '0.82rem', color: '#fbbf24', fontWeight: 'bold' }}>
+                <span style={{ fontSize: '0.8rem', color: 'var(--mc-primary)', fontWeight: 'bold', letterSpacing: '0.3px' }}>
                   {formattedTitle.toUpperCase()}
                 </span>
               );
@@ -1341,8 +1342,8 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             <div style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
               {/* Global Session Timer */}
               <div style={{ display: 'flex', alignItems: 'center', gap: '4px', background: 'rgba(239, 68, 68, 0.15)', border: '1px solid rgba(239, 68, 68, 0.3)', padding: '3px 8px', borderRadius: '12px' }}>
-                <Clock size={11} color="#f87171" />
-                <span style={{ fontSize: '0.68rem', color: '#fca5a5', whiteSpace: 'nowrap', fontWeight: 'bold' }}>수업 {formatTime(timeLeft)}</span>
+                <Clock size={11} color="var(--mc-danger)" />
+                <span style={{ fontSize: '0.68rem', color: 'var(--mc-danger)', whiteSpace: 'nowrap', fontWeight: 'bold' }}>수업 {formatTime(timeLeft)}</span>
               </div>
               {/* Problem Countdown Timer */}
               {problemTimeLeft > 0 && (
@@ -1355,21 +1356,21 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                   padding: '3px 8px', 
                   borderRadius: '12px' 
                 }}>
-                  <Clock size={11} color={problemTimeLeft <= 60 ? '#f59e0b' : '#60a5fa'} />
-                  <span style={{ color: problemTimeLeft <= 60 ? '#f59e0b' : '#60a5fa', fontWeight: 'bold', fontSize: '0.68rem' }}>{formatTime(problemTimeLeft)}</span>
-                  <span style={{ fontSize: '0.65rem', color: problemTimeLeft <= 60 ? '#ffffff' : '#93c5fd', whiteSpace: 'nowrap', fontWeight: 'bold' }}>(1문)</span>
+                  <Clock size={11} color={problemTimeLeft <= 60 ? '#D97706' : 'var(--mc-primary)'} />
+                  <span style={{ color: problemTimeLeft <= 60 ? '#D97706' : 'var(--mc-primary)', fontWeight: 'bold', fontSize: '0.68rem' }}>{formatTime(problemTimeLeft)}</span>
+                  <span style={{ fontSize: '0.65rem', color: problemTimeLeft <= 60 ? '#D97706' : 'var(--mc-primary)', whiteSpace: 'nowrap', fontWeight: 'bold', opacity: 0.8 }}>(1문)</span>
                 </div>
               )}
             </div>
           </div>
           
           {/* 모바일용 과목(selectedCourse) 변경 드롭다운 추가 */}
-          <div style={{ fontSize: '0.72rem', fontWeight: 'bold', color: '#60a5fa', marginBottom: '0.15rem', marginTop: '0.2rem' }}>📚 과목 선택</div>
+          <div style={{ fontSize: '0.72rem', fontWeight: 'bold', color: 'var(--mc-text-muted)', marginBottom: '0.2rem', marginTop: '0.2rem', display: 'flex', alignItems: 'center', gap: '5px' }}><BookOpen size={13} /> 과목 선택</div>
           {isG1Teacher ? (
             <select 
               value={selectedCourse} 
               onChange={(e) => setSelectedCourse(e.target.value)}
-              style={{ width: '100%', background: 'var(--bg-base)', border: '1px solid var(--border-glass)', color: 'var(--text-main)', padding: '0.5rem', borderRadius: '8px', fontSize: '0.85rem', marginBottom: '0.3rem' }}
+              style={{ width: '100%', background: 'var(--mc-surface)', border: '1px solid var(--mc-border-strong)', color: 'var(--mc-text)', padding: '0.5rem', borderRadius: '8px', fontSize: '0.85rem', marginBottom: '0.3rem' }}
             >
               <option value="수학상">고1 수학(상/하)</option>
             </select>
@@ -1377,7 +1378,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             <select 
               value={selectedCourse} 
               onChange={(e) => setSelectedCourse(e.target.value)}
-              style={{ width: '100%', background: 'var(--bg-base)', border: '1px solid var(--border-glass)', color: 'var(--text-main)', padding: '0.5rem', borderRadius: '8px', fontSize: '0.85rem', marginBottom: '0.3rem' }}
+              style={{ width: '100%', background: 'var(--mc-surface)', border: '1px solid var(--mc-border-strong)', color: 'var(--mc-text)', padding: '0.5rem', borderRadius: '8px', fontSize: '0.85rem', marginBottom: '0.3rem' }}
             >
               <option value="수학1" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>수학1 (대수)</option>
               <option value="수2" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>수학2</option>
@@ -1386,7 +1387,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             <select 
               value={selectedCourse} 
               onChange={(e) => setSelectedCourse(e.target.value)}
-              style={{ width: '100%', background: 'var(--bg-base)', border: '1px solid var(--border-glass)', color: 'var(--text-main)', padding: '0.5rem', borderRadius: '8px', fontSize: '0.85rem', marginBottom: '0.3rem' }}
+              style={{ width: '100%', background: 'var(--mc-surface)', border: '1px solid var(--mc-border-strong)', color: 'var(--mc-text)', padding: '0.5rem', borderRadius: '8px', fontSize: '0.85rem', marginBottom: '0.3rem' }}
             >
               <option value="수학1" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>수학1 (대수)</option>
               <option value="수2" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>수학2</option>
@@ -1396,7 +1397,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             </select>
           )}
 
-          <div style={{ fontSize: '0.72rem', fontWeight: 'bold', color: '#60a5fa', marginBottom: '0.15rem', marginTop: '0.3rem' }}>📖 단원 · 문제번호</div>
+          <div style={{ fontSize: '0.72rem', fontWeight: 'bold', color: 'var(--mc-text-muted)', marginBottom: '0.2rem', marginTop: '0.3rem', display: 'flex', alignItems: 'center', gap: '5px' }}><Hash size={13} /> 단원 · 문제번호</div>
           <div style={{ display: 'flex', gap: '0.4rem', width: '100%' }}>
             <select
               value={selectedUnit || ''}
@@ -1404,7 +1405,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                 setSelectedUnit(e.target.value);
                 setTestProblemIdx(1);
               }}
-              style={{ flex: 1, background: 'var(--bg-base)', border: '1px solid var(--border-glass)', color: 'var(--text-main)', padding: '0.5rem', borderRadius: '8px', fontSize: '0.85rem' }}
+              style={{ flex: 1, background: 'var(--mc-surface)', border: '1px solid var(--mc-border-strong)', color: 'var(--mc-text)', padding: '0.5rem', borderRadius: '8px', fontSize: '0.85rem' }}
             >
               <option value="">단원 선택</option>
               {sidebarData.sections.map(sec => (
@@ -1419,7 +1420,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             <select
               value={testProblemIdx}
               onChange={(e) => setTestProblemIdx(Number(e.target.value))}
-              style={{ width: '80px', background: 'var(--bg-base)', border: '1px solid var(--border-glass)', color: 'var(--text-main)', padding: '0.5rem', borderRadius: '8px', fontSize: '0.85rem' }}
+              style={{ width: '80px', background: 'var(--mc-surface)', border: '1px solid var(--mc-border-strong)', color: 'var(--mc-text)', padding: '0.5rem', borderRadius: '8px', fontSize: '0.85rem' }}
             >
               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map(n => (
                 <option key={n} value={n} style={{ background: '#FFFFFF', color: '#1A1A1A' }}>{n}번</option>
@@ -1435,8 +1436,8 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
           <FreeTrialBanner />
 
           {/* 2. 문제 카드 크게 표시 & 3. 문제 이미지/KaTeX 전체 표시 */}
-          <div 
-            className="math-problem-card-mobile-container" 
+          <div
+            className="math-problem-card-mobile-container mc-animate-in"
             style={{ 
               width: 'calc(100% + 1.6rem)', 
               marginLeft: '-0.8rem', 
@@ -1493,10 +1494,10 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
           </div>
 
           {/* 4. 정답 선택/입력 & 5. 정답 제출 버튼 */}
-          <div style={{ padding: '0.6rem 0.8rem', background: 'var(--bg-glass)', borderRadius: '12px', border: '1px solid var(--border-glass)', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+          <div style={{ padding: '0.7rem 0.8rem', background: 'var(--mc-surface-sunken)', borderRadius: 'var(--mc-r-md)', border: '1px solid var(--mc-border)', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-              <strong style={{ color: 'var(--accent-secondary)', fontSize: '0.9rem' }}>✅ 정답 채점</strong>
-              <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
+              <strong style={{ color: 'var(--mc-secondary)', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '5px' }}><CheckCircle size={15} /> 정답 채점</strong>
+              <div style={{ display: 'flex', gap: '6px', flex: '1 1 100%', marginTop: '0.15rem' }}>
                 {[1, 2, 3, 4, 5].map(num => (
                   <button
                     key={num}
@@ -1505,15 +1506,16 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                       setUserAnswer(String(num));
                     }}
                     style={{
-                      width: '32px',
-                      height: '32px',
-                      borderRadius: '50%',
-                      background: '#FFFFFF',
-                      color: '#000000',
-                      border: selectedAnswer === num ? '2px solid var(--accent-primary)' : '1px solid var(--border-glass)', 
+                      flex: 1,
+                      height: '44px',
+                      borderRadius: 'var(--mc-r-md)',
+                      background: selectedAnswer === num ? 'var(--mc-primary)' : 'var(--mc-surface)',
+                      color: selectedAnswer === num ? '#FFFFFF' : 'var(--mc-text)',
+                      border: selectedAnswer === num ? '2px solid var(--mc-primary)' : '1px solid var(--mc-border-strong)',
                       cursor: 'pointer',
-                      fontWeight: 'bold', fontSize: '0.9rem',
-                      display: 'flex', alignItems: 'center', justifyContent: 'center'
+                      fontWeight: 'bold', fontSize: '1.05rem',
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      transition: 'background .15s ease, border-color .15s ease, transform .12s ease'
                     }}
                   >
                     {num}
@@ -1532,56 +1534,60 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                 setUserAnswer(filtered); 
                 setSelectedAnswer(null); 
               }}
-              style={{ width: '100%', padding: '0.5rem 0.7rem', borderRadius: '8px', border: '1px solid var(--border-glass)', background: 'var(--bg-base)', color: 'var(--text-main)', fontSize: '0.85rem', boxSizing: 'border-box' }}
+              style={{ width: '100%', padding: '0.6rem 0.7rem', borderRadius: 'var(--mc-r-sm)', border: '1px solid var(--mc-border-strong)', background: 'var(--mc-surface)', color: 'var(--mc-text)', fontSize: '0.85rem', boxSizing: 'border-box' }}
             />
 
-            <button 
-              onClick={handleGradeAnswer} style={{ width: '100%', padding: '0.6rem', borderRadius: '8px', background: '#FFFFFF', color: '#1A1A1A', border: '2px solid #10B981', fontWeight: 'bold', cursor: 'pointer', fontSize: '0.9rem', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}
+            <button
+              className="mc-btn mc-btn--success"
+              onClick={handleGradeAnswer} style={{ width: '100%', fontSize: '0.9rem' }}
             >
-              정답 제출
+              <CheckCircle size={16} /> 정답 제출
             </button>
 
             {gradingResult === 'correct' && (
-              <div style={{ color: 'var(--accent-primary)', fontWeight: 'bold', fontSize: '0.85rem', textAlign: 'center', marginTop: '0.2rem' }}>
-                🎉 정답입니다! Ai Vision Solution으로 풀이 과정을 확인해보세요.
+              <div style={{ color: 'var(--mc-secondary)', fontWeight: 'bold', fontSize: '0.85rem', textAlign: 'center', marginTop: '0.2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>
+                <CheckCircle size={15} /> 정답입니다! AVS풀이로 풀이 과정을 확인해보세요.
               </div>
             )}
             {gradingResult === 'incorrect' && (
-              <div style={{ color: '#fca5a5', fontWeight: 'bold', fontSize: '0.85rem', textAlign: 'center', marginTop: '0.2rem' }}>
-                ❌ 다시 풀어보세요. 필요하면 Ai Vision Solution을 확인하세요.
+              <div style={{ color: 'var(--mc-danger)', fontWeight: 'bold', fontSize: '0.85rem', textAlign: 'center', marginTop: '0.2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>
+                <XCircle size={15} /> 다시 풀어보세요. 필요하면 AVS풀이를 확인하세요.
               </div>
             )}
           </div>
 
-          {/* 6. AI Vision Solution 버튼 */}
+          {/* 6. AVS풀이 버튼 */}
           {(['core', 'step', 'mock'].includes(currentPhaseFlow?.phase) || selectedUnit) && (
-            <button 
-              onClick={handleAvsClick} style={{ width: '100%', background: '#FFFFFF', border: '2px solid #8B5CF6', padding: '0.65rem', borderRadius: '12px', color: '#1A1A1A', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', cursor: 'pointer', fontWeight: 'bold', fontSize: '0.9rem', boxShadow: '0 2px 8px rgba(139,92,246,0.1)' }}
+            <motion.button
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 22 }}
+              className="mc-btn mc-btn--avs"
+              onClick={handleAvsClick} style={{ width: '100%', fontSize: '0.95rem' }}
             >
-              ✨ AI Vision Solution
-            </button>
+              <Sparkles size={17} /> AVS풀이
+            </motion.button>
           )}
 
           {/* 7. AVS 클릭 시 문제 아래에 큰 AVS 영역 펼침 (아코디언 형태로) */}
           {showAvsAccordion && (
-            <div style={{ padding: '0.8rem', background: 'var(--bg-glass)', borderRadius: '12px', border: '1px solid var(--accent-primary)', display: 'flex', flexDirection: 'column', gap: '1rem', width: '100%', boxSizing: 'border-box' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--border-glass)', paddingBottom: '0.4rem' }}>
-                <span style={{ fontWeight: 'bold', color: 'var(--accent-primary)', fontSize: '0.9rem' }}>📺 AI Vision Solution 풀이 영역</span>
-                <button 
+            <div style={{ padding: '0.8rem', background: 'var(--mc-avs-weak)', borderRadius: 'var(--mc-r-md)', border: '1px solid var(--mc-avs)', display: 'flex', flexDirection: 'column', gap: '1rem', width: '100%', boxSizing: 'border-box' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--mc-border)', paddingBottom: '0.4rem' }}>
+                <span style={{ fontWeight: 'bold', color: 'var(--mc-avs)', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '6px' }}><Sparkles size={15} /> AVS풀이 영역</span>
+                <button
                   onClick={() => setShowAvsAccordion(false)}
-                  style={{ background: 'transparent', border: 'none', color: '#a1a1aa', cursor: 'pointer', fontSize: '0.8rem' }}
+                  style={{ background: 'transparent', border: 'none', color: 'var(--mc-text-muted)', cursor: 'pointer', fontSize: '0.8rem' }}
                 >
                   닫기
                 </button>
               </div>
-              
-              <div style={{ color: 'white', fontSize: '0.9rem', lineHeight: '1.6' }}>
+
+              <div style={{ color: 'var(--mc-text)', fontSize: '0.9rem', lineHeight: '1.6' }}>
                 {messages
                   .filter(m => m.role === 'assistant' && (m.hintPlayer || m.dynamicData || m.animationId))
                   .slice(-1)
                   .map((m, idx) => (
                     <div key={idx} style={{ width: '100%' }}>
-                      <div style={{ marginBottom: '0.5rem', color: '#cbd5e1' }}>{m.content}</div>
+                      <div style={{ marginBottom: '0.5rem', color: 'var(--mc-text-muted)' }}>{m.content}</div>
                       
                       {m.animationId === 'sine_rule' && <div style={{width: '100%'}}><SineRuleAnimation /></div>}
                       {m.animationId === 'cosine_rule' && <div style={{width: '100%'}}><CosineRuleAnimation /></div>}
@@ -1647,51 +1653,53 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             </div>
           )}
 
-          {/* 8. 다음 문제 버튼 */}
-          <button 
-            onClick={testAdvance} style={{ width: '100%', padding: '0.65rem', borderRadius: '8px', background: '#FFFFFF', border: '2px solid #3B82F6', color: '#1A1A1A', fontWeight: 'bold', cursor: 'pointer', fontSize: '0.9rem', boxShadow: '0 2px 8px rgba(59,130,246,0.08)' }}
-          >
-            다음 문제
-          </button>
+          {/* 8. 보조 액션 (다음 문제 · 프리미엄) 2열 그룹 */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem' }}>
+            <button
+              className="mc-btn mc-btn--ghost"
+              onClick={testAdvance} style={{ width: '100%', fontSize: '0.88rem' }}
+            >
+              다음 문제 <ChevronRight size={16} />
+            </button>
+            <button
+              className="mc-btn mc-btn--ghost"
+              onClick={() => setShowPremiumLecture(true)}
+              style={{ width: '100%', fontSize: '0.88rem' }}
+            >
+              <Crown size={16} color="var(--mc-secondary)" /> 프리미엄 강의
+            </button>
+          </div>
 
-          {/* 9. 질문 입력창 */}
-          <div style={{ padding: '0.5rem 0.7rem', background: 'var(--bg-glass)', borderRadius: '12px', border: '1px solid var(--border-glass)', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+          {/* 9. 질문 입력창 (화면 하단 = 엄지 도달 영역) */}
+          <div style={{ padding: '0.55rem 0.7rem', background: 'var(--mc-surface)', borderRadius: 'var(--mc-r-md)', border: '1px solid var(--mc-border)', display: 'flex', flexDirection: 'column', gap: '0.4rem', boxShadow: 'var(--mc-shadow-sm)' }}>
             <div style={{ display: 'flex', gap: '0.4rem', alignItems: 'center' }}>
-               <label style={{ cursor: 'pointer', padding: '0.5rem', borderRadius: '8px', background: 'var(--bg-base)', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--border-glass)' }} title="문제 올리기">
-                 <Paperclip size={16} color="var(--text-muted)" />
+               <label style={{ cursor: 'pointer', padding: '0.55rem', borderRadius: 'var(--mc-r-sm)', background: 'var(--mc-surface-sunken)', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--mc-border)' }} title="문제 올리기">
+                 <Paperclip size={16} color="var(--mc-text-muted)" />
                  <input type="file" hidden accept="image/*,.pdf" onChange={handleProblemUpload} />
                </label>
-               
-               <input 
-                  type="text" 
-                  placeholder="질문 또는 의견 입력..." 
+
+               <input
+                  type="text"
+                  placeholder="질문 또는 의견 입력..."
                   value={input}
                   onChange={e => setInput(e.target.value)}
                   onKeyDown={e => e.key === 'Enter' && handleSubmit()}
-                  style={{ flex: 1, padding: '0.55rem', borderRadius: '8px', border: '1px solid var(--border-glass)', background: 'var(--bg-base)', color: 'var(--text-main)', fontSize: '0.82rem' }} 
+                  style={{ flex: 1, minWidth: 0, padding: '0.6rem 0.7rem', borderRadius: 'var(--mc-r-sm)', border: '1px solid var(--mc-border-strong)', background: 'var(--mc-surface)', color: 'var(--mc-text)', fontSize: '0.85rem' }}
                />
-               
-               <button 
+
+               <button
                   title="음성 입력"
-                  style={{ padding: '0.5rem', borderRadius: '8px', background: isRecording ? '#ef4444' : 'var(--bg-base)', border: '1px solid var(--border-glass)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                  style={{ padding: '0.55rem', borderRadius: 'var(--mc-r-sm)', background: isRecording ? 'var(--mc-danger)' : 'var(--mc-surface)', border: isRecording ? 'none' : '1px solid var(--mc-border-strong)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                   onClick={toggleRecording}
                >
-                 <Mic size={16} color={isRecording ? "white" : "var(--text-muted)"} />
+                 <Mic size={16} color={isRecording ? "white" : "var(--mc-text-muted)"} />
                </button>
 
-               <button onClick={handleSubmit} disabled={loading} style={{ padding: '0 0.8rem', borderRadius: '8px', height: '32px', display: 'flex', alignItems: 'center', fontSize: '0.82rem', background: '#FFFFFF', color: '#1A1A1A', border: '2px solid #10B981', fontWeight: 'bold', cursor: 'pointer', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }}>
+               <button onClick={handleSubmit} disabled={loading} style={{ padding: '0 1rem', borderRadius: 'var(--mc-r-sm)', height: '40px', display: 'flex', alignItems: 'center', fontSize: '0.85rem', background: 'var(--mc-primary)', color: '#fff', border: 'none', fontWeight: 'bold', cursor: 'pointer', opacity: loading ? 0.6 : 1 }}>
                  {loading ? '...' : '전송'}
                </button>
             </div>
           </div>
-
-          <button 
-            className="btn-primary" 
-            onClick={() => setShowPremiumLecture(true)}
-            style={{ background: 'linear-gradient(135deg, #f59e0b, #d97706)', border: 'none', padding: '0.8rem', borderRadius: '8px', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', cursor: 'pointer', fontWeight: 'bold', fontSize: '0.9rem', marginTop: '0.5rem' }}
-          >
-            👑 프리미엄 AI 강의 보기
-          </button>
 
         </div>
 
@@ -1703,7 +1711,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                   <BookOpen size={16} color="#3b82f6" /> 
                   [{isSenior ? '통합 수학' : currentUnit}] 개념카드
                 </h3>
-                <button onClick={() => setShowConceptModal(false)} style={{ background: 'transparent', border: 'none', color: '#a1a1aa' }}>
+                <button onClick={() => setShowConceptModal(false)} style={{ background: 'transparent', border: 'none', color: 'var(--mc-text-muted)' }}>
                   <CloseIcon size={20} />
                 </button>
               </div>
@@ -1730,7 +1738,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                     </div>
                   ))
                 ) : (
-                  <div style={{ textAlign: 'center', padding: '2rem', color: '#a1a1aa', fontSize: '0.85rem' }}>개념카드가 없습니다.</div>
+                  <div style={{ textAlign: 'center', padding: '2rem', color: 'var(--mc-text-muted)', fontSize: '0.85rem' }}>개념카드가 없습니다.</div>
                 )}
               </div>
             </div>
@@ -1772,27 +1780,28 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
           
           return (
             <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.9)', zIndex: 20000, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <div style={{ background: 'var(--bg-glass)', borderRadius: '16px', width: '90%', border: '1px solid var(--border-glass)', overflow: 'hidden' }}>
-                <div style={{ background: 'linear-gradient(135deg, var(--accent-primary), #059669)', padding: '1.2rem', textAlign: 'center', color: '#141E1B' }}>
+              <div style={{ background: 'var(--mc-surface)', borderRadius: 'var(--mc-r-lg)', width: '90%', maxWidth: '420px', border: '1px solid var(--mc-border)', overflow: 'hidden', boxShadow: 'var(--mc-shadow-lg)' }}>
+                <div style={{ background: 'linear-gradient(135deg, var(--accent-primary), #059669)', padding: '1.2rem', textAlign: 'center', color: '#FFFFFF' }}>
                   <h3 style={{ margin: 0, fontSize: '1.2rem', fontWeight: 'bold' }}>오늘의 학습 리포트</h3>
                 </div>
                 <div style={{ padding: '1.2rem' }}>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.8rem', marginBottom: '1.2rem' }}>
-                    <div style={{ background: 'rgba(255,255,255,0.03)', padding: '0.8rem', borderRadius: '12px', textAlign: 'center' }}>
-                      <div style={{ color: '#94a3b8', fontSize: '0.75rem' }}>푼 문제 / 정답</div>
-                      <div style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#10b981' }}>{totalCount} / {correctCount}</div>
+                    <div style={{ background: 'var(--mc-surface-sunken)', border: '1px solid var(--mc-border)', padding: '0.8rem', borderRadius: 'var(--mc-r-md)', textAlign: 'center' }}>
+                      <div style={{ color: 'var(--mc-text-muted)', fontSize: '0.75rem' }}>푼 문제 / 정답</div>
+                      <div style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--mc-secondary)' }}>{totalCount} / {correctCount}</div>
                     </div>
-                    <div style={{ background: 'rgba(255,255,255,0.03)', padding: '0.8rem', borderRadius: '12px', textAlign: 'center' }}>
-                      <div style={{ color: '#94a3b8', fontSize: '0.75rem' }}>정답률</div>
-                      <div style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#3b82f6' }}>{accuracy}%</div>
+                    <div style={{ background: 'var(--mc-surface-sunken)', border: '1px solid var(--mc-border)', padding: '0.8rem', borderRadius: 'var(--mc-r-md)', textAlign: 'center' }}>
+                      <div style={{ color: 'var(--mc-text-muted)', fontSize: '0.75rem' }}>정답률</div>
+                      <div style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--mc-primary)' }}>{accuracy}%</div>
                     </div>
                   </div>
-                  <button 
+                  <button
+                    className="mc-btn mc-btn--success"
                     onClick={() => {
                       setShowReport(false);
                       navigate('/dashboard');
                     }}
-                    style={{ width: '100%', padding: '0.8rem', borderRadius: '8px', border: 'none', background: 'linear-gradient(135deg, #10b981, #059669)', color: 'white', fontWeight: 'bold', cursor: 'pointer' }}
+                    style={{ width: '100%' }}
                   >
                     수업 종료 및 대시보드로 이동
                   </button>
@@ -1808,19 +1817,44 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
 
   return (
     <div className="classroom-main" style={{ flex: 1, display: 'flex', flexDirection: 'column', background: 'var(--bg-base)', color: 'var(--text-main)' }}>
-      <div className="math-top-bar" style={{ padding: '1rem', background: 'var(--bg-glass)', borderBottom: '1px solid var(--border-glass)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.8rem', color: 'var(--text-main)' }}>
-        <div className="math-top-info" style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
+      <div className="math-top-bar" style={{ padding: '0.7rem 1.25rem', background: 'var(--mc-surface)', borderBottom: '1px solid var(--mc-border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.8rem', color: 'var(--mc-text)' }}>
+        {/* Left: brand + breadcrumb */}
+        <div className="math-top-info" style={{ display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap', minWidth: 0 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '11px', minWidth: 0 }}>
+            <div style={{ width: 38, height: 38, borderRadius: '11px', background: 'linear-gradient(135deg, #7c3aed, #a78bfa)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(124,58,237,0.32)', flexShrink: 0 }}>
+              <Sparkles size={20} color="#fff" />
+            </div>
+            <div style={{ minWidth: 0, lineHeight: 1.15 }}>
+              <div style={{ fontWeight: 800, fontSize: '1.02rem', color: 'var(--mc-text)' }}>AVS 풀이</div>
+              <div style={{ fontSize: '0.71rem', color: 'var(--mc-text-subtle)', fontWeight: 600, letterSpacing: '0.3px' }}>AI Math Tutor</div>
+            </div>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '7px', color: 'var(--mc-text-muted)', fontSize: '0.84rem', fontWeight: 600, minWidth: 0, paddingLeft: '4px', borderLeft: '1px solid var(--mc-border)', marginLeft: '2px' }}>
+            <span style={{ whiteSpace: 'nowrap', paddingLeft: '10px' }}>{selectedCourse || '수학'}</span>
+            <ChevronRight size={13} color="var(--mc-text-subtle)" />
+            <span style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '230px' }}>{selectedUnit || currentUnit || '단원 선택'}</span>
+            {currentPhaseFlow?.title && (
+              <>
+                <ChevronRight size={13} color="var(--mc-text-subtle)" />
+                <span style={{ color: 'var(--mc-primary)', whiteSpace: 'nowrap', fontWeight: 700 }}>{currentPhaseFlow.title}</span>
+              </>
+            )}
+          </div>
         </div>
-        <div className="math-top-actions" style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
-            {/* Ai Vision Solution 버튼 추가 */}
+        {/* Right: actions (session/problem timer floats in the centered gap) */}
+        <div className="math-top-actions" style={{ display: 'flex', gap: '0.55rem', alignItems: 'center', flexWrap: 'wrap' }}>
+            {/* AVS풀이 버튼 추가 */}
             {(['core', 'step', 'mock'].includes(currentPhaseFlow?.phase) || selectedUnit) && (
-              <button 
+              <motion.button
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 22 }}
                 onClick={() => {
                   const targetUnit = selectedUnit || currentUnit;
                   if (targetUnit) {
                     setMessages(prev => {
                       const cleaned = prev.map(m => m.dynamicData || m.hintPlayer ? { ...m, dynamicData: undefined, hintPlayer: undefined } : m);
-                      return [...cleaned, { role: 'user', content: `[${targetUnit}] Ai Vision Solution을 보여주세요!` }];
+                      return [...cleaned, { role: 'user', content: `[${targetUnit}] AVS풀이를 보여주세요!` }];
                     });
                     setTimeout(() => {
                       const pid = String(testProblemIdx).padStart(3, '0');
@@ -1828,7 +1862,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                         const cleaned = prev.map(m => m.dynamicData || m.hintPlayer ? { ...m, dynamicData: undefined, hintPlayer: undefined } : m);
                         return [...cleaned, { 
                           role: 'assistant', 
-                          content: `[${targetUnit}] 문제 풀이가 막히셨나요? 걱정하지 마세요! Ai Vision Solution을 실행합니다.`,
+                          content: `[${targetUnit}] 문제 풀이가 막히셨나요? 걱정하지 마세요! AVS풀이를 실행합니다.`,
                           hintPlayer: { unit: targetUnit, problemId: pid }
                         }];
                       });
@@ -1837,71 +1871,53 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                     alert("선택된 단원이 없습니다. 좌측 메뉴에서 세부 단원/단계를 선택해주세요.");
                   }
                 }}
-                className="hover-scale"
-                style={{ background: 'linear-gradient(to right, #8b5cf6, #3b82f6)', border: 'none', padding: '0.8rem 2rem', borderRadius: '12px', color: 'white', display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontWeight: '900', fontSize: '1.2rem', letterSpacing: '1px', whiteSpace: 'nowrap', boxShadow: '0 4px 15px rgba(139, 92, 246, 0.4)' }}
+                className="mc-btn mc-btn--avs"
+                style={{ padding: '0.78rem 1.6rem', fontSize: '1.02rem', letterSpacing: '0.2px' }}
               >
-                ✨ AI Vision Solution
-              </button>
+                <Sparkles size={18} /> AVS풀이
+              </motion.button>
             )}
 
-            <button 
-              className="btn-primary hover-scale" 
-              onClick={() => setShowPremiumLecture(true)}
-              style={{ background: 'linear-gradient(135deg, #f59e0b, #d97706)', border: 'none', padding: '0.5rem 1rem', borderRadius: '8px', color: 'white', display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer', fontWeight: 'bold' }}
-            >
-              👑 프리미엄 AI 강의
-            </button>
-
-            {/* 여기까지 끝내기 버튼 */}
             <button
-              className="hover-scale"
-              onClick={() => {
-                const history = JSON.parse(localStorage.getItem('localGradingHistory') || '[]');
-                const totalQ = history.length;
-                const correctQ = history.filter(h => h.isCorrect).length;
-                const acc = totalQ > 0 ? Math.round((correctQ / totalQ) * 100) : 0;
-                const elapsed = Math.max(1, Math.round((Date.now() - (session?.startedAt || Date.now())) / 60000));
-                const unitName = selectedUnit || currentUnit || '수학';
-                const confirmed = window.confirm(
-                  `수업을 종료합니다.\n\n📐 ${unitName}\n⏱️ 총 학습시간: ${elapsed}분\n📊 정답률: ${acc}% (${correctQ}/${totalQ})\n\n숙제가 자동 배정됩니다.`
-                );
-                if (confirmed) {
-                  const results = JSON.parse(localStorage.getItem('mentos_lesson_results') || '[]');
-                  results.push({
-                    id: 'session_' + Date.now(),
-                    date: new Date().toISOString(),
-                    subject: '수학',
-                    grade: teacher?.targetGrades?.[0] || '고1',
-                    unit: unitName,
-                    totalQuestions: totalQ,
-                    correctCount: correctQ,
-                    accuracy: acc,
-                    duration: elapsed,
-                    endedEarly: true,
-                    wrongQuestions: history.filter(h => !h.isCorrect).map(h => ({ problemId: h.problemId, id: h.problemId, isCorrect: false })),
-                    nextLessonFocus: '조기 종료 단원 복습 및 오답 정리'
-                  });
-                  localStorage.setItem('mentos_lesson_results', JSON.stringify(results));
-                  navigate('/dashboard');
-                }
-              }}
-              style={{ background: 'rgba(245,158,11,0.15)', border: '1px solid rgba(245,158,11,0.3)', padding: '0.5rem 1rem', borderRadius: '8px', color: '#fbbf24', display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer', fontWeight: 'bold', fontSize: '0.85rem' }}
+              className="mc-btn mc-btn--ghost"
+              onClick={() => setShowPremiumLecture(true)}
             >
-              ⏹ 여기까지 끝내기
+              <Crown size={16} color="var(--mc-secondary)" /> 프리미엄
+            </button>
+            <button
+              className="mc-btn mc-btn--ghost"
+              onClick={() => setShowEndEarlyModal && setShowEndEarlyModal(true)}
+              title="수업 종료"
+              style={{ padding: '0.72rem 0.85rem' }}
+            >
+              <LogOut size={16} />
             </button>
         </div>
       </div>
 
-      <div style={{ flex: 1, padding: '2rem', overflowY: 'auto' }}>
+      <motion.div
+        className="mc-stage-scroll"
+        style={{ flex: 1, padding: '2rem', overflowY: 'auto' }}
+        initial={{ opacity: 0, y: 14 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+      >
         {/* ── 칠판형 문제 카드 (problem_render가 있으면 우선) ── */}
         {chalkboardData ? (
           <ProblemCard data={chalkboardData} sourceImage={currentProblemImage} title={currentProblemTitle} fallbackText={currentProblemText} />
         ) : (currentProblemImage || currentProblemTitle) ? (
-          <div style={{ padding: '1.5rem', background: 'white', borderRadius: '12px', marginBottom: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}>
-            <h3 style={{ margin: '0 0 1rem 0', color: '#1e3a8a', width: '100%', textAlign: 'center', fontWeight: 'bold' }}>
-              [{currentProblemTitle || '오늘의 실전 문제'}]
-            </h3>
-            
+          <div className="mc-animate-in" style={{ padding: '1.25rem 1.5rem', background: 'var(--mc-surface)', border: '1px solid var(--mc-border)', borderRadius: 'var(--mc-r-lg)', marginBottom: '0', display: 'flex', flexDirection: 'column', alignItems: 'stretch', boxShadow: 'var(--mc-shadow-sm)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '10px', marginBottom: '0.9rem', flexWrap: 'wrap' }}>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '7px', padding: '0.35rem 0.85rem', background: 'var(--mc-primary-weak)', color: 'var(--mc-primary)', borderRadius: 'var(--mc-r-pill)', fontWeight: 700, fontSize: '0.8rem' }}>
+                <BookOpen size={14} /> {currentProblemTitle || '오늘의 실전 문제'}
+              </span>
+              {currentProblemImage && (
+                <button onClick={() => setExpandedProblemImage(currentProblemImage)} className="mc-btn mc-btn--ghost" style={{ padding: '0.45rem 0.85rem', fontSize: '0.8rem' }}>
+                  <Camera size={15} /> 원본 이미지 보기
+                </button>
+              )}
+            </div>
+
             {/* KaTeX 수식 기반 문제 텍스트 렌더링 (우선순위) - MathProblemRenderer 전용 컴포넌트 */}
             {currentProblemText ? (
               <div style={{ width: '100%', padding: '0.5rem 1rem' }}>
@@ -1931,11 +1947,11 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
         ) : null}
 
         {uploadedProblem && (
-          <div style={{ padding: '1rem', background: '#1e1b4b', border: '1px dashed #6366f1', borderRadius: '8px', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <img src={uploadedProblem} alt="Upload Preview" style={{ height: '80px', borderRadius: '4px' }} />
+          <div style={{ padding: '1rem', background: 'var(--mc-primary-weak)', border: '1px dashed var(--mc-primary)', borderRadius: 'var(--mc-r-md)', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <img src={uploadedProblem} alt="Upload Preview" style={{ height: '80px', borderRadius: 'var(--mc-r-sm)' }} />
             <div>
-              <p style={{ color: '#818cf8', fontWeight: 'bold', margin: '0 0 0.5rem 0' }}>📤 외부 문제 업로드 대기중</p>
-              <p style={{ fontSize: '0.85rem', color: '#a5b4fc', margin: 0 }}>메시지를 전송하면 선생님이 해당 문제를 기준으로 해설을 시작합니다.</p>
+              <p style={{ color: 'var(--mc-primary)', fontWeight: 'bold', margin: '0 0 0.4rem 0', display: 'flex', alignItems: 'center', gap: '6px' }}><Upload size={16} /> 외부 문제 업로드 대기중</p>
+              <p style={{ fontSize: '0.85rem', color: 'var(--mc-text-muted)', margin: 0 }}>메시지를 전송하면 선생님이 해당 문제를 기준으로 해설을 시작합니다.</p>
             </div>
           </div>
         )}
@@ -1950,23 +1966,26 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
           })
           .map((m, idx) => {
           if (m.role === 'system') {
-             return <div key={idx} style={{ textAlign: 'center', color: '#818cf8', fontSize: '0.85rem', margin: '1rem 0' }}>{m.content}</div>;
+             return <div key={idx} style={{ textAlign: 'center', color: 'var(--mc-text-muted)', fontSize: '0.85rem', margin: '1rem 0' }}>{m.content}</div>;
           }
           return (
-            <div key={idx} style={{ textAlign: m.role === 'user' ? 'right' : 'left', marginBottom: '1.5rem', width: '100%' }}>
-              <div style={{ 
-                display: 'inline-block', 
-                padding: '1rem 1.5rem', 
-                borderRadius: '12px', 
-                background: m.role === 'user' ? '#3b82f6' : 'var(--bg-glass)', 
-                maxWidth: (m.animationId || m.dynamicData || m.hintPlayer) ? '100%' : '80%', 
+            <div key={idx} className="mc-animate-in" style={{ textAlign: m.role === 'user' ? 'right' : 'left', marginBottom: '1.5rem', width: '100%' }}>
+              <div style={{
+                display: 'inline-block',
+                padding: '1rem 1.5rem',
+                borderRadius: 'var(--mc-r-md)',
+                background: m.role === 'user' ? 'var(--mc-primary)' : 'var(--mc-surface)',
+                color: m.role === 'user' ? '#fff' : 'var(--mc-text)',
+                border: m.role === 'user' ? 'none' : '1px solid var(--mc-border)',
+                boxShadow: (m.animationId || m.dynamicData || m.hintPlayer) ? 'none' : 'var(--mc-shadow-sm)',
+                maxWidth: (m.animationId || m.dynamicData || m.hintPlayer) ? '100%' : '80%',
                 width: (m.animationId || m.dynamicData || m.hintPlayer) ? '100%' : 'auto',
-                lineHeight: '1.5',
+                lineHeight: '1.55',
                 whiteSpace: 'pre-wrap',
                 textAlign: 'left',
                 boxSizing: 'border-box'
               }}>
-                <strong>{m.role === 'user' ? '나' : ssot.name}:</strong><br/>
+                <strong style={{ color: m.role === 'user' ? 'rgba(255,255,255,0.85)' : 'var(--mc-primary)' }}>{m.role === 'user' ? '나' : ssot.name}:</strong><br/>
                 {m.content}
                 {m.animationId === 'sine_rule' && <div style={{marginTop: '1.5rem', width: '100%'}}><SineRuleAnimation /></div>}
                 {m.animationId === 'cosine_rule' && <div style={{marginTop: '1.5rem', width: '100%'}}><CosineRuleAnimation /></div>}
@@ -2032,31 +2051,32 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
           );
         })}
         <div ref={messagesEndRef} />
-      </div>
-      
+      </motion.div>
+
       {/* 로컬 채점 시스템 */}
-      <div className="math-grading-area math-input-bar" style={{ padding: '1.5rem', borderTop: '1px solid #3f3f46', background: '#1e1e24' }}>
-        <div className="math-grading-row-1" style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.8rem', flexWrap: 'wrap' }}>
-          <strong style={{ color: '#fbbf24', fontSize: '1.1rem', whiteSpace: 'nowrap' }}>✅ 로컬 채점</strong>
-          
+      <div className="math-grading-area math-input-bar mc-tray" style={{ padding: '1.25rem 1.5rem' }}>
+        <div className="math-grading-row-1" style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.85rem', flexWrap: 'wrap' }}>
+          <strong style={{ color: 'var(--mc-secondary)', fontSize: '1rem', whiteSpace: 'nowrap', display: 'inline-flex', alignItems: 'center', gap: '7px' }}><CheckCircle size={18} /> 정답 채점</strong>
+
           <div style={{ display: 'flex', gap: '0.5rem', marginRight: '0.5rem' }}>
             {[1, 2, 3, 4, 5].map(num => (
               <button
                 key={num}
+                className="mc-lift"
                 onClick={() => {
                   setSelectedAnswer(num);
                   setUserAnswer(String(num));
                 }}
                 style={{
-                  width: '40px',
-                  height: '40px',
-                  borderRadius: '50%',
-                  background: '#FFFFFF',
-                  color: '#000000',
-                  border: selectedAnswer === num ? '2.5px solid var(--accent-primary)' : '1px solid var(--border-glass)', cursor: 'pointer',
-                  fontWeight: 'bold', fontSize: '1.1rem',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  transition: '0.2s'
+                  width: '42px',
+                  height: '42px',
+                  borderRadius: 'var(--mc-r-pill)',
+                  background: selectedAnswer === num ? 'var(--mc-primary)' : 'var(--mc-surface)',
+                  color: selectedAnswer === num ? '#FFFFFF' : 'var(--mc-text)',
+                  border: selectedAnswer === num ? '2px solid var(--mc-primary)' : '1px solid var(--mc-border-strong)',
+                  cursor: 'pointer',
+                  fontWeight: 'bold', fontSize: '1.05rem',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center'
                 }}
               >
                 {num}
@@ -2064,41 +2084,43 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             ))}
           </div>
 
-          <input 
-            type="text" 
+          <input
+            type="text"
             inputMode="numeric"
             pattern="[0-9]*"
-            placeholder="주관식은 직접 입력" 
+            placeholder="주관식은 직접 입력"
             value={userAnswer}
-            onChange={(e) => { 
+            onChange={(e) => {
               const filtered = e.target.value.replace(/[^0-9]/g, '');
-              setUserAnswer(filtered); 
-              setSelectedAnswer(null); 
+              setUserAnswer(filtered);
+              setSelectedAnswer(null);
             }}
-            style={{ padding: '0.8rem', borderRadius: '8px', border: '1px solid #52525b', background: 'var(--bg-base)', color: 'var(--text-main)', flex: 1, minWidth: '120px' }}
+            style={{ padding: '0.78rem 0.9rem', borderRadius: 'var(--mc-r-sm)', border: '1px solid var(--mc-border-strong)', background: 'var(--mc-surface)', color: 'var(--mc-text)', flex: 1, minWidth: '120px', fontSize: '0.95rem' }}
           />
         </div>
-        <div className="math-grading-row-2" style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', flexWrap: 'wrap', width: '100%' }}>
-          <button 
-            onClick={handleGradeAnswer} style={{ padding: '0.8rem 1.5rem', borderRadius: '8px', background: '#FFFFFF', color: '#1A1A1A', border: '2px solid #10B981', fontWeight: 'bold', cursor: 'pointer', whiteSpace: 'nowrap', boxShadow: '0 2px 8px rgba(16,185,129,0.08)' }}
+        <div className="math-grading-row-2" style={{ display: 'flex', alignItems: 'center', gap: '0.7rem', flexWrap: 'wrap', width: '100%' }}>
+          <button
+            className="mc-btn mc-btn--success"
+            onClick={handleGradeAnswer}
           >
-            정답 제출
+            <CheckCircle size={17} /> 정답 제출
           </button>
-          <button 
+          <button
+            className="mc-btn mc-btn--avs"
             onClick={() => {
               const targetUnit = selectedUnit || currentUnit;
               if (targetUnit) {
                 setMessages(prev => {
                   const cleaned = prev.map(m => m.dynamicData || m.hintPlayer ? { ...m, dynamicData: undefined, hintPlayer: undefined } : m);
-                  return [...cleaned, { role: 'user', content: `[${targetUnit}] Ai Vision Solution을 보여주세요!` }];
+                  return [...cleaned, { role: 'user', content: `[${targetUnit}] AVS풀이를 보여주세요!` }];
                 });
                 setTimeout(() => {
                   const pid = String(testProblemIdx).padStart(3, '0');
                   setMessages(prev => {
                     const cleaned = prev.map(m => m.dynamicData || m.hintPlayer ? { ...m, dynamicData: undefined, hintPlayer: undefined } : m);
-                    return [...cleaned, { 
-                      role: 'assistant', 
-                      content: `[${targetUnit}] 문제 풀이가 막히셨나요? 걱정하지 마세요! Ai Vision Solution을 실행합니다.`,
+                    return [...cleaned, {
+                      role: 'assistant',
+                      content: `[${targetUnit}] 문제 풀이가 막히셨나요? 걱정하지 마세요! AVS풀이를 실행합니다.`,
                       hintPlayer: { unit: targetUnit, problemId: pid }
                     }];
                   });
@@ -2107,60 +2129,61 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                 alert("선택된 단원이 없습니다.");
               }
             }}
-            style={{ padding: '0.8rem 1.5rem', borderRadius: '8px', background: '#FFFFFF', color: '#1A1A1A', border: '2px solid #8B5CF6', fontWeight: 'bold', cursor: 'pointer', whiteSpace: 'nowrap', boxShadow: '0 2px 8px rgba(139,92,246,0.1)' }}
           >
-            Ai Vision Solution으로 풀이 확인
+            <Sparkles size={17} /> AVS풀이 보기
           </button>
-          <button 
-            onClick={testAdvance} style={{ padding: '0.8rem 1.5rem', borderRadius: '8px', background: '#FFFFFF', color: '#1A1A1A', border: '2px solid #3B82F6', fontWeight: 'bold', cursor: 'pointer', whiteSpace: 'nowrap', boxShadow: '0 2px 8px rgba(59,130,246,0.08)' }}
+          <button
+            className="mc-btn mc-btn--ghost"
+            onClick={testAdvance}
           >
-            다음 문제
+            다음 문제 <ChevronRight size={17} />
           </button>
         </div>
         {gradingResult === 'correct' && (
-          <div style={{ color: '#10b981', fontWeight: 'bold', marginTop: '0.5rem', marginLeft: '0.5rem' }}>
-            🎉 정답입니다. Ai Vision Solution으로 풀이 과정을 확인해보세요.
+          <div style={{ color: 'var(--mc-secondary)', fontWeight: 'bold', marginTop: '0.7rem', marginLeft: '0.25rem', display: 'flex', alignItems: 'center', gap: '7px' }}>
+            <CheckCircle size={17} /> 정답입니다. AVS풀이로 풀이 과정을 확인해보세요.
           </div>
         )}
         {gradingResult === 'incorrect' && (
-          <div style={{ color: '#ef4444', fontWeight: 'bold', marginTop: '0.5rem', marginLeft: '0.5rem' }}>
-            ❌ 다시 풀어보세요. 필요하면 Ai Vision Solution을 확인하세요.
+          <div style={{ color: 'var(--mc-danger)', fontWeight: 'bold', marginTop: '0.7rem', marginLeft: '0.25rem', display: 'flex', alignItems: 'center', gap: '7px' }}>
+            <XCircle size={17} /> 다시 풀어보세요. 필요하면 AVS풀이를 확인하세요.
           </div>
         )}
       </div>
 
       {/* 하단 고정 입력 바 */}
-      <div style={{ padding: '1rem 1.5rem', borderTop: '1px solid var(--border-glass)', background: 'var(--bg-glass)' }}>
-        <div style={{ marginBottom: '0.8rem', color: '#a1a1aa', fontSize: '0.85rem', display: 'flex', alignItems: 'center' }}>
-          <BookOpen size={16} style={{ marginRight: '6px', color: '#3b82f6' }}/>
-          <strong>안내:</strong> 현재 단계({currentPhaseFlow.title})의 문제를 확인하고 풀이 과정이나 단서를 질문(입력)하세요.
+      <div style={{ padding: '1rem 1.5rem', borderTop: '1px solid var(--mc-border)', background: 'var(--mc-surface)' }}>
+        <div style={{ marginBottom: '0.8rem', color: 'var(--mc-text-muted)', fontSize: '0.85rem', display: 'flex', alignItems: 'center' }}>
+          <BookOpen size={16} style={{ marginRight: '6px', color: 'var(--mc-primary)' }}/>
+          <strong style={{ color: 'var(--mc-text)', marginRight: '4px' }}>안내:</strong> 현재 단계({currentPhaseFlow.title})의 문제를 확인하고 풀이 과정이나 단서를 질문(입력)하세요.
         </div>
-        
-        <div style={{ display: 'flex', gap: '0.8rem', alignItems: 'center' }}>
-           <label style={{ cursor: 'pointer', padding: '0.8rem', borderRadius: '12px', background: '#27272a', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: '0.2s', border: '1px solid transparent' }} title="문제 올리기">
-             <Paperclip size={20} color="#a1a1aa" />
+
+        <div style={{ display: 'flex', gap: '0.7rem', alignItems: 'center' }}>
+           <label className="mc-lift" style={{ cursor: 'pointer', padding: '0.8rem', borderRadius: 'var(--mc-r-md)', background: 'var(--mc-surface-sunken)', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--mc-border)' }} title="문제 올리기">
+             <Paperclip size={20} color="var(--mc-text-muted)" />
              <input type="file" hidden accept="image/*,.pdf" onChange={handleProblemUpload} />
            </label>
-           
-           <input 
-              type="text" 
-              placeholder="답변을 입력하세요..." 
+
+           <input
+              type="text"
+              placeholder="답변을 입력하세요..."
               value={input}
               onChange={e => setInput(e.target.value)}
               onKeyDown={e => e.key === 'Enter' && handleSubmit()}
-              style={{ flex: 1, padding: '1rem', borderRadius: '12px', border: '1px solid var(--border-glass)', background: 'var(--bg-base)', color: 'var(--text-main)' }} 
+              style={{ flex: 1, padding: '0.95rem 1rem', borderRadius: 'var(--mc-r-md)', border: '1px solid var(--mc-border-strong)', background: 'var(--mc-surface)', color: 'var(--mc-text)', fontSize: '0.95rem' }}
            />
-           
-           <button 
+
+           <button
               title="음성 입력 마이크"
-              style={{ padding: '0.8rem', borderRadius: '12px', background: isRecording ? '#ef4444' : '#FFFFFF', border: isRecording ? 'none' : '1px solid var(--border-glass)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: '0.2s', boxShadow: '0 2px 4px rgba(0,0,0,0.03)' }}
+              className="mc-lift"
+              style={{ padding: '0.8rem', borderRadius: 'var(--mc-r-md)', background: isRecording ? 'var(--mc-danger)' : 'var(--mc-surface)', border: isRecording ? 'none' : '1px solid var(--mc-border-strong)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
               onClick={toggleRecording}
            >
-             <Mic size={20} color={isRecording ? "white" : "#a1a1aa"} />
+             <Mic size={20} color={isRecording ? "white" : "var(--mc-text-muted)"} />
            </button>
 
-            <button className="btn-primary" onClick={handleSubmit} disabled={loading} style={{ padding: '0 1.5rem', borderRadius: '12px', height: '100%', display: 'flex', alignItems: 'center' }}>
-             {loading ? '...' : <><Send size={18} style={{marginRight: '6px'}}/> 전송</>}
+            <button className="mc-btn mc-btn--primary" onClick={handleSubmit} disabled={loading} style={{ padding: '0 1.5rem', alignSelf: 'stretch', opacity: loading ? 0.6 : 1 }}>
+             {loading ? '전송 중…' : <><Send size={18} /> 전송</>}
            </button>
         </div>
       </div>
@@ -2168,15 +2191,15 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
       {/* ── 개념카드 전용 오버레이 모달 ── */}
       {showConceptModal && (
         <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.8)', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <div style={{ background: 'var(--bg-glass)', borderRadius: '16px', width: '80%', maxWidth: '900px', height: '80vh', display: 'flex', flexDirection: 'column', border: '1px solid #3f3f46', overflow: 'hidden' }}>
-            <div style={{ padding: '1.2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--border-glass)', background: '#27272a' }}>
-              <h3 style={{ margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <BookOpen size={20} color="#3b82f6" /> 
+          <div style={{ background: 'var(--mc-surface)', borderRadius: 'var(--mc-r-lg)', width: '80%', maxWidth: '900px', height: '80vh', display: 'flex', flexDirection: 'column', border: '1px solid var(--mc-border)', overflow: 'hidden', boxShadow: 'var(--mc-shadow-lg)' }}>
+            <div style={{ padding: '1.1rem 1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--mc-border)', background: 'var(--mc-surface-2)' }}>
+              <h3 style={{ margin: 0, display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--mc-text)', fontSize: '1.1rem' }}>
+                <BookOpen size={20} color="var(--mc-primary)" />
                 [{isSenior ? '통합 수학 전체' : currentUnit}] 개념카드
               </h3>
               <button 
                 onClick={() => setShowConceptModal(false)}
-                style={{ background: 'transparent', border: 'none', color: '#a1a1aa', cursor: 'pointer' }}
+                style={{ background: 'transparent', border: 'none', color: 'var(--mc-text-muted)', cursor: 'pointer' }}
               >
                 <CloseIcon size={24} />
               </button>
@@ -2187,12 +2210,11 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                 filteredCards.map((card, idx) => (
                   <div 
                     key={card.id || idx} 
-                    style={{ background: '#09090b', borderRadius: '12px', border: '1px solid #3f3f46', overflow: 'hidden', display: 'flex', flexDirection: 'column', cursor: 'zoom-in', transition: 'all 0.2s', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }}
-                    onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-4px)'}
-                    onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+                    className="mc-lift"
+                    style={{ background: 'var(--mc-surface)', borderRadius: 'var(--mc-r-md)', border: '1px solid var(--mc-border)', overflow: 'hidden', display: 'flex', flexDirection: 'column', cursor: 'zoom-in', boxShadow: 'var(--mc-shadow-sm)' }}
                     onClick={() => setSelectedExpandedCard(card)}
                   >
-                    <div style={{ padding: '0.8rem', background: '#27272a', borderBottom: '1px solid #3f3f46', fontWeight: 'bold', fontSize: '0.9rem', textAlign: 'center' }}>
+                    <div style={{ padding: '0.7rem 0.8rem', background: 'var(--mc-surface-2)', borderBottom: '1px solid var(--mc-border)', color: 'var(--mc-text)', fontWeight: 'bold', fontSize: '0.9rem', textAlign: 'center' }}>
                       [{card.unit || '공통'}] {card.title || card.card_title || '무제 개념'}
                     </div>
                     <div style={{ flex: 1, background: 'white', padding: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'black', fontSize: '0.9rem', overflow: 'hidden' }}>
@@ -2212,7 +2234,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                   </div>
                 ))
               ) : (
-                <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '3rem', color: '#a1a1aa' }}>
+                <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '3rem', color: 'var(--mc-text-muted)' }}>
                   현재 단원({currentUnit})에 매칭되는 개념카드가 없습니다.
                 </div>
               )}
@@ -2301,7 +2323,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
         
         return (
           <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.9)', zIndex: 20000, display: 'flex', alignItems: 'center', justifyContent: 'center', animation: 'fadeIn 0.5s ease' }}>
-            <div style={{ background: 'var(--bg-glass)', borderRadius: '24px', width: '90%', maxWidth: '600px', border: '1px solid #3f3f46', overflow: 'hidden', boxShadow: '0 25px 50px -12px rgba(0,0,0,0.5)' }}>
+            <div style={{ background: 'var(--mc-surface)', borderRadius: 'var(--mc-r-lg)', width: '90%', maxWidth: '600px', border: '1px solid var(--mc-border)', overflow: 'hidden', boxShadow: 'var(--mc-shadow-lg)' }}>
               <div style={{ background: 'linear-gradient(135deg, #10b981, #059669)', padding: '2rem', textAlign: 'center', color: 'white' }}>
                 <div style={{ background: 'rgba(255,255,255,0.2)', width: '60px', height: '60px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem' }}>
                   <Award size={32} />
@@ -2312,32 +2334,32 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
 
               <div style={{ padding: '2rem' }}>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '2rem' }}>
-                  <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1.2rem', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.05)', textAlign: 'center' }}>
-                    <div style={{ color: '#94a3b8', fontSize: '0.8rem', marginBottom: '4px' }}>푼 문제 / 정답</div>
-                    <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#10b981' }}>{totalCount} / {correctCount}</div>
+                  <div style={{ background: 'var(--mc-surface-sunken)', padding: '1.2rem', borderRadius: 'var(--mc-r-md)', border: '1px solid var(--mc-border)', textAlign: 'center' }}>
+                    <div style={{ color: 'var(--mc-text-muted)', fontSize: '0.8rem', marginBottom: '4px' }}>푼 문제 / 정답</div>
+                    <div style={{ fontSize: '1.5rem', fontWeight: '900', color: 'var(--mc-secondary)' }}>{totalCount} / {correctCount}</div>
                   </div>
-                  <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1.2rem', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.05)', textAlign: 'center' }}>
-                    <div style={{ color: '#94a3b8', fontSize: '0.8rem', marginBottom: '4px' }}>정답률</div>
-                    <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#3b82f6' }}>{accuracy}%</div>
+                  <div style={{ background: 'var(--mc-surface-sunken)', padding: '1.2rem', borderRadius: 'var(--mc-r-md)', border: '1px solid var(--mc-border)', textAlign: 'center' }}>
+                    <div style={{ color: 'var(--mc-text-muted)', fontSize: '0.8rem', marginBottom: '4px' }}>정답률</div>
+                    <div style={{ fontSize: '1.5rem', fontWeight: '900', color: 'var(--mc-primary)' }}>{accuracy}%</div>
                   </div>
                 </div>
 
                 <div style={{ marginBottom: '2rem' }}>
-                  <h4 style={{ color: '#f8fafc', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <Target size={18} color="#10b981" /> 실시간 기록 데이터 (Dashboard)
+                  <h4 style={{ color: 'var(--mc-text)', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <Target size={18} color="var(--mc-secondary)" /> 실시간 기록 데이터 (Dashboard)
                   </h4>
                   <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                    <li style={{ display: 'flex', justifyContent: 'space-between', color: '#cbd5e1', fontSize: '0.95rem' }}>
+                    <li style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--mc-text-muted)', fontSize: '0.95rem' }}>
                       <span>학습 단원</span>
-                      <span style={{ fontWeight: 'bold' }}>{selectedUnit || '수학 전범위'}</span>
+                      <span style={{ fontWeight: 'bold', color: 'var(--mc-text)' }}>{selectedUnit || '수학 전범위'}</span>
                     </li>
-                    <li style={{ display: 'flex', justifyContent: 'space-between', color: '#cbd5e1', fontSize: '0.95rem' }}>
-                      <span>AI Vision Solution 활용</span>
-                      <span style={{ fontWeight: 'bold' }}>{avsCount}회</span>
+                    <li style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--mc-text-muted)', fontSize: '0.95rem' }}>
+                      <span>AVS풀이 활용</span>
+                      <span style={{ fontWeight: 'bold', color: 'var(--mc-text)' }}>{avsCount}회</span>
                     </li>
-                    <li style={{ display: 'flex', justifyContent: 'space-between', color: '#cbd5e1', fontSize: '0.95rem' }}>
+                    <li style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--mc-text-muted)', fontSize: '0.95rem' }}>
                       <span>취약 개념 추출</span>
-                      <span style={{ color: '#fbbf24', fontWeight: 'bold' }}>{totalCount - correctCount > 0 ? '집중 보강 필요' : '매우 양호'}</span>
+                      <span style={{ color: totalCount - correctCount > 0 ? '#D97706' : 'var(--mc-secondary)', fontWeight: 'bold' }}>{totalCount - correctCount > 0 ? '집중 보강 필요' : '매우 양호'}</span>
                     </li>
                   </ul>
                 </div>
@@ -2348,21 +2370,22 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                   const totalHwCount = (correctHwCount * 1) + (incorrectHwCount * 2);
 
                   return (
-                    <div style={{ background: 'rgba(59, 130, 246, 0.05)', padding: '1.5rem', borderRadius: '16px', border: '1px solid rgba(59, 130, 246, 0.2)' }}>
-                      <h4 style={{ color: '#60a5fa', marginTop: 0, marginBottom: '0.5rem', fontSize: '1rem' }}>📦 자동 배정된 개인 복습 숙제 ({totalHwCount}문제)</h4>
-                      <p style={{ color: '#94a3b8', fontSize: '0.85rem', margin: 0, lineHeight: '1.6' }}>
+                    <div style={{ background: 'var(--mc-primary-weak)', padding: '1.4rem', borderRadius: 'var(--mc-r-md)', border: '1px solid rgba(37, 99, 235, 0.2)' }}>
+                      <h4 style={{ color: 'var(--mc-primary)', marginTop: 0, marginBottom: '0.5rem', fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '7px' }}><BookOpen size={17} /> 자동 배정된 개인 복습 숙제 ({totalHwCount}문제)</h4>
+                      <p style={{ color: 'var(--mc-text-muted)', fontSize: '0.85rem', margin: 0, lineHeight: '1.6' }}>
                         수업 데이터 분석 결과, 틀린 문제는 <b>쌍둥이 문제 2개씩</b>, 맞춘 문제는 <b>쌍둥이 문제 1개씩</b> 자동 변형되어 숙제함에 전송되었습니다. 대시보드의 숙제함에서 복습 과제를 해결해보세요!
                       </p>
                     </div>
                   );
                 })()}
 
-                <button 
+                <button
+                  className="mc-btn mc-btn--success"
                   onClick={() => {
                     setShowReport(false);
                     navigate('/dashboard');
                   }}
-                  style={{ width: '100%', marginTop: '2rem', padding: '1rem', borderRadius: '12px', border: 'none', background: 'linear-gradient(135deg, #10b981, #059669)', color: 'white', fontWeight: 'bold', cursor: 'pointer', boxShadow: '0 4px 10px rgba(16, 185, 129, 0.3)' }}
+                  style={{ width: '100%', marginTop: '2rem', padding: '1rem' }}
                 >
                   수업 종료 및 대시보드로 이동
                 </button>
@@ -2776,15 +2799,15 @@ function MathClassroomScreenContent() {
       
       {/* 모바일 상단 헤더바 */}
       <div className="header-mobile">
-        <button 
+        <button
           onClick={() => setIsSidebarOpen(true)}
-          style={{ background: 'transparent', border: 'none', color: 'white', cursor: 'pointer', display: 'flex', alignItems: 'center', padding: '0.5rem' }}
+          style={{ background: 'transparent', border: 'none', color: 'var(--mc-text)', cursor: 'pointer', display: 'flex', alignItems: 'center', padding: '0.5rem' }}
         >
           <Menu size={24} style={{ marginRight: '8px' }} />
           <span style={{ fontWeight: 'bold', fontSize: '1rem' }}>{teacher.name} 수업</span>
         </button>
-        <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-          <Clock size={18} color="#ef4444" />
+        <div style={{ display: 'flex', gap: '8px', alignItems: 'center', color: 'var(--mc-text)' }}>
+          <Clock size={18} color="var(--mc-danger)" />
           <span style={{ fontFamily: 'monospace', fontWeight: 'bold', fontSize: '1rem' }}>
             {String(Math.floor(timeLeft / 60)).padStart(2, '0')}:{String(timeLeft % 60).padStart(2, '0')}
           </span>
@@ -2856,12 +2879,13 @@ function MathClassroomScreenContent() {
         )}
       </div>
 
-      {/* 여기까지 끝내기 버튼 */}
+      {/* 여기까지 끝내기 버튼 (모바일 전용 — 데스크톱은 상단바로 이동) */}
       <button
+        className="mc-endpill-fixed"
         onClick={() => setShowEndEarlyModal(true)}
-        style={{ position: 'fixed', top: '15px', right: '20px', background: 'rgba(245, 158, 11, 0.15)', border: '1px solid rgba(245, 158, 11, 0.4)', padding: '0.45rem 1rem', borderRadius: '20px', color: '#f59e0b', cursor: 'pointer', zIndex: 99999, display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', fontWeight: '600', backdropFilter: 'blur(8px)', transition: 'all 0.2s', pointerEvents: 'auto' }}
-        onMouseEnter={e => { e.currentTarget.style.background = 'rgba(245, 158, 11, 0.3)'; }}
-        onMouseLeave={e => { e.currentTarget.style.background = 'rgba(245, 158, 11, 0.15)'; }}
+        style={{ position: 'fixed', top: '15px', right: '20px', background: 'var(--mc-surface)', border: '1px solid var(--mc-border-strong)', padding: '0.45rem 1rem', borderRadius: 'var(--mc-r-pill)', color: 'var(--mc-text-muted)', cursor: 'pointer', zIndex: 99999, display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', fontWeight: '600', backdropFilter: 'blur(8px)', boxShadow: 'var(--mc-shadow-sm)', transition: 'all 0.2s', pointerEvents: 'auto' }}
+        onMouseEnter={e => { e.currentTarget.style.background = 'var(--mc-danger-weak)'; e.currentTarget.style.color = 'var(--mc-danger)'; e.currentTarget.style.borderColor = 'rgba(220,38,38,0.25)'; }}
+        onMouseLeave={e => { e.currentTarget.style.background = 'var(--mc-surface)'; e.currentTarget.style.color = 'var(--mc-text-muted)'; e.currentTarget.style.borderColor = 'var(--mc-border-strong)'; }}
       >
         <LogOut size={16} /> 여기까지 끝내기
       </button>
@@ -2878,19 +2902,19 @@ function MathClassroomScreenContent() {
         const problemNum = testProblemIdx;
         return (
           <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.7)', zIndex: 999999, display: 'flex', alignItems: 'center', justifyContent: 'center', backdropFilter: 'blur(4px)' }} onClick={() => setShowEndEarlyModal(false)}>
-            <div style={{ background: '#0f172a', border: '1px solid #334155', borderRadius: '16px', padding: '2rem', maxWidth: '420px', width: '90%', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }} onClick={e => e.stopPropagation()}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-                <h3 style={{ margin: 0, color: '#f59e0b', fontSize: '1.2rem' }}>📋 수업 종료 확인</h3>
-                <button onClick={() => setShowEndEarlyModal(false)} style={{ background: 'transparent', border: 'none', color: '#64748b', cursor: 'pointer' }}><CloseIcon size={20} /></button>
+            <div style={{ background: 'var(--mc-surface)', border: '1px solid var(--mc-border)', borderRadius: 'var(--mc-r-lg)', padding: '1.75rem', maxWidth: '420px', width: '90%', boxShadow: 'var(--mc-shadow-lg)' }} onClick={e => e.stopPropagation()}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>
+                <h3 style={{ margin: 0, color: 'var(--mc-text)', fontSize: '1.15rem', display: 'flex', alignItems: 'center', gap: '8px' }}><LogOut size={18} color="var(--mc-text-muted)" /> 수업 종료 확인</h3>
+                <button onClick={() => setShowEndEarlyModal(false)} style={{ background: 'transparent', border: 'none', color: 'var(--mc-text-subtle)', cursor: 'pointer' }}><CloseIcon size={20} /></button>
               </div>
-              <div style={{ background: '#1e293b', borderRadius: '12px', padding: '1.2rem', marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', color: '#cbd5e1', fontSize: '0.9rem' }}><span>📖 단원</span><span style={{ color: '#f1f5f9', fontWeight: '600' }}>{unitName}</span></div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', color: '#cbd5e1', fontSize: '0.9rem' }}><span>📝 현재 문제</span><span style={{ color: '#f1f5f9', fontWeight: '600' }}>{problemNum}번까지 풀었음</span></div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', color: '#cbd5e1', fontSize: '0.9rem' }}><span>⏱️ 총 학습시간</span><span style={{ color: '#f1f5f9', fontWeight: '600' }}>{elapsedMin}분</span></div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', color: '#cbd5e1', fontSize: '0.9rem' }}><span>🎯 정답률</span><span style={{ color: accuracy >= 70 ? '#4ade80' : accuracy >= 40 ? '#fbbf24' : '#f87171', fontWeight: '700' }}>{correctCount}/{totalSolved} ({accuracy}%)</span></div>
+              <div style={{ background: 'var(--mc-surface-sunken)', borderRadius: 'var(--mc-r-md)', padding: '1.1rem 1.2rem', marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--mc-text-muted)', fontSize: '0.9rem' }}><span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}><BookOpen size={14} /> 단원</span><span style={{ color: 'var(--mc-text)', fontWeight: '600' }}>{unitName}</span></div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--mc-text-muted)', fontSize: '0.9rem' }}><span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}><Hash size={14} /> 현재 문제</span><span style={{ color: 'var(--mc-text)', fontWeight: '600' }}>{problemNum}번까지 풀었음</span></div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--mc-text-muted)', fontSize: '0.9rem' }}><span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}><Clock size={14} /> 총 학습시간</span><span style={{ color: 'var(--mc-text)', fontWeight: '600' }}>{elapsedMin}분</span></div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--mc-text-muted)', fontSize: '0.9rem' }}><span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}><Target size={14} /> 정답률</span><span style={{ color: accuracy >= 70 ? 'var(--mc-secondary)' : accuracy >= 40 ? '#D97706' : 'var(--mc-danger)', fontWeight: '700' }}>{correctCount}/{totalSolved} ({accuracy}%)</span></div>
               </div>
               <div style={{ display: 'flex', gap: '0.8rem' }}>
-                <button onClick={() => setShowEndEarlyModal(false)} style={{ flex: 1, padding: '0.8rem', background: 'transparent', border: '1px solid #475569', borderRadius: '10px', color: '#94a3b8', cursor: 'pointer', fontWeight: '600', fontSize: '0.95rem' }}>계속하기</button>
+                <button className="mc-btn mc-btn--ghost" onClick={() => setShowEndEarlyModal(false)} style={{ flex: 1 }}>계속하기</button>
                 <button onClick={() => {
                   const record = { 
                     id: 'session_' + Date.now(), 
@@ -2924,7 +2948,7 @@ function MathClassroomScreenContent() {
                   }
 
                   navigate('/dashboard');
-                }} style={{ flex: 1, padding: '0.8rem', background: 'linear-gradient(135deg, #f59e0b, #d97706)', border: 'none', borderRadius: '10px', color: 'white', cursor: 'pointer', fontWeight: '700', fontSize: '0.95rem', boxShadow: '0 4px 12px rgba(245, 158, 11, 0.3)' }}>수업 종료</button>
+                }} className="mc-btn mc-btn--primary" style={{ flex: 1 }}>수업 종료</button>
               </div>
             </div>
           </div>
@@ -2932,42 +2956,57 @@ function MathClassroomScreenContent() {
       })()}
 
       {/* 사이드바 UI (옵션) */}
-      <div className={`classroom-sidebar ${isSidebarOpen ? 'open' : ''}`} style={{ borderRight: '1px solid var(--border-glass)', padding: '1.5rem', overflowY: 'auto' }}>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '1.5rem' }}>
-          <div style={{ width: '100px', height: '100px', borderRadius: '50%', overflow: 'hidden', border: '3px solid #10b981', marginBottom: '1rem', boxShadow: '0 4px 12px rgba(16, 185, 129, 0.3)' }}>
-            <img 
-              src={teacher.image} 
-              alt={teacher.name} 
-              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} 
+      <div className={`classroom-sidebar ${isSidebarOpen ? 'open' : ''}`} style={{ borderRight: '1px solid var(--mc-border)', padding: '1.5rem', overflowY: 'auto' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '1.4rem' }}>
+          <div style={{ width: '92px', height: '92px', borderRadius: '50%', overflow: 'hidden', border: '3px solid var(--mc-primary)', marginBottom: '0.8rem', boxShadow: '0 4px 16px rgba(167, 139, 250, 0.35)' }}>
+            <img
+              src={teacher.image}
+              alt={teacher.name}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
               onError={(e) => { e.target.src = '/icons/default-avatar.webp'; }}
             />
           </div>
-          <h2 style={{ color: '#10b981', margin: 0, fontSize: '1.4rem', fontWeight: '900' }}>{teacher.name} 선생님</h2>
-          <div style={{ fontSize: '0.8rem', color: '#10b981', marginTop: '4px', opacity: 0.8 }}>Mentos AI Partner</div>
-        </div>
-        <p style={{ fontSize: '0.85rem', color: '#a1a1aa', marginBottom: '0.3rem' }}><strong>Target Grades:</strong> {session.grade?.join(', ')}</p>
-        <p style={{ fontSize: '0.85rem', color: '#a1a1aa', marginBottom: '1rem' }}><strong>Target Ranks:</strong> {session.rank?.join(', ')}</p>
-        
-        <div style={{ background: 'rgba(255,255,255,0.05)', padding: '1rem', borderRadius: '8px', marginBottom: '1.5rem' }}>
-          <p style={{ color: '#f3f4f6', fontWeight: 'bold' }}>Session Info</p>
-          <hr style={{ borderColor: '#3f3f46', margin: '0.5rem 0' }} />
-          <p style={{ fontSize: '0.85rem', color: '#a1a1aa' }}>Round: <strong style={{color:'#3b82f6'}}>{session.round}회차</strong></p>
+          <h2 style={{ color: 'var(--mc-text)', margin: 0, fontSize: '1.2rem', fontWeight: '800' }}>{teacher.name} 선생님</h2>
+          <div style={{ fontSize: '0.74rem', color: 'var(--mc-primary)', marginTop: '4px', fontWeight: 600, letterSpacing: '0.3px' }}>Mentos AI Partner</div>
         </div>
 
-        <button 
-          onClick={() => navigate('/homework', { state: { teacher } })} 
-          style={{ width: '100%', padding: '0.8rem', background: '#10b981', color: 'white', border: 'none', borderRadius: '8px', fontWeight: 'bold', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', marginBottom: '2rem' }}
+        {/* 현재 학습 정보 */}
+        <div style={{ marginBottom: '1.4rem' }}>
+          <div style={{ fontSize: '0.7rem', fontWeight: 700, color: 'var(--mc-text-subtle)', letterSpacing: '0.5px', marginBottom: '0.55rem' }}>현재 학습 정보</div>
+          <div style={{ background: 'var(--mc-surface)', border: '1px solid var(--mc-border)', borderRadius: 'var(--mc-r-md)', padding: '0.85rem 0.95rem', display: 'flex', flexDirection: 'column', gap: '0.55rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.82rem', gap: '8px' }}>
+              <span style={{ color: 'var(--mc-text-muted)', whiteSpace: 'nowrap' }}>대단원</span>
+              <span style={{ color: 'var(--mc-text)', fontWeight: 700, textAlign: 'right' }}>{session.grade?.[0] || '고1'} {({ '수학상': '수학(상/하)', '수학1': '수학1', '수2': '수학2', '미적분': '미적분', '확률과통계': '확률과 통계', '모의고사': '모의고사' }[selectedCourse] || selectedCourse || '수학')}</span>
+            </div>
+            <div style={{ height: 1, background: 'var(--mc-border)' }} />
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.82rem', gap: '8px' }}>
+              <span style={{ color: 'var(--mc-text-muted)', whiteSpace: 'nowrap' }}>학습 단원</span>
+              <span style={{ color: 'var(--mc-text)', fontWeight: 700, textAlign: 'right', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '135px' }}>{selectedUnit || '미선택'}</span>
+            </div>
+            <div style={{ height: 1, background: 'var(--mc-border)' }} />
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.82rem' }}>
+              <span style={{ color: 'var(--mc-text-muted)' }}>학습 진도</span>
+              <span style={{ color: 'var(--mc-primary)', fontWeight: 700 }}>{session.round}회차</span>
+            </div>
+          </div>
+        </div>
+
+        <button
+          className="mc-btn mc-btn--success"
+          onClick={() => navigate('/homework', { state: { teacher } })}
+          style={{ width: '100%', marginBottom: '2rem' }}
         >
           <CheckCircle size={18} /> 숙제함 가기
         </button>
 
         {/* 커리큘럼 아코디언 드롭다운 (학생/강사 네비게이션) */}
         <div>
+            <div style={{ fontSize: '0.7rem', fontWeight: 700, color: 'var(--mc-text-subtle)', letterSpacing: '0.5px', marginBottom: '0.55rem' }}>학습 목차</div>
             {isG1Teacher ? (
               <select 
                 value={selectedCourse} 
                 onChange={(e) => setSelectedCourse(e.target.value)}
-                style={{ width: '100%', padding: '0.5rem', marginBottom: '1rem', background: '#FFFFFF', color: '#1A1A1A', border: '1px solid #3f3f46', borderRadius: '4px', fontWeight: 'bold' }}
+                style={{ width: '100%', padding: '0.6rem 0.7rem', marginBottom: '1rem', background: 'var(--mc-surface)', color: 'var(--mc-text)', border: '1px solid var(--mc-border-strong)', borderRadius: 'var(--mc-r-sm)', fontWeight: 'bold' }}
               >
                 <option value="수학상">고1 수학(상/하)</option>
               </select>
@@ -2975,7 +3014,7 @@ function MathClassroomScreenContent() {
               <select 
                 value={selectedCourse} 
                 onChange={(e) => setSelectedCourse(e.target.value)}
-                style={{ width: '100%', padding: '0.5rem', marginBottom: '1rem', background: '#FFFFFF', color: '#1A1A1A', border: '1px solid #3f3f46', borderRadius: '4px', fontWeight: 'bold' }}
+                style={{ width: '100%', padding: '0.6rem 0.7rem', marginBottom: '1rem', background: 'var(--mc-surface)', color: 'var(--mc-text)', border: '1px solid var(--mc-border-strong)', borderRadius: 'var(--mc-r-sm)', fontWeight: 'bold' }}
               >
                 <option value="수학1" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>수학1 (대수)</option>
                 <option value="수2" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>수학2</option>
@@ -2984,7 +3023,7 @@ function MathClassroomScreenContent() {
               <select 
                 value={selectedCourse} 
                 onChange={(e) => setSelectedCourse(e.target.value)}
-                style={{ width: '100%', padding: '0.5rem', marginBottom: '1rem', background: '#FFFFFF', color: '#1A1A1A', border: '1px solid #3f3f46', borderRadius: '4px', fontWeight: 'bold' }}
+                style={{ width: '100%', padding: '0.6rem 0.7rem', marginBottom: '1rem', background: 'var(--mc-surface)', color: 'var(--mc-text)', border: '1px solid var(--mc-border-strong)', borderRadius: 'var(--mc-r-sm)', fontWeight: 'bold' }}
               >
                 <option value="수학1" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>수학1 (대수)</option>
                 <option value="수2" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>수학2</option>
@@ -2994,50 +3033,51 @@ function MathClassroomScreenContent() {
               </select>
             )}
 
-          <h3 style={{ fontSize: '1rem', color: 'var(--text-main)', marginBottom: '1rem', paddingBottom: '0.5rem', borderBottom: '1px solid var(--border-glass)' }}>
+          <h3 style={{ fontSize: '0.95rem', color: 'var(--mc-text)', marginBottom: '1rem', paddingBottom: '0.5rem', borderBottom: '1px solid var(--mc-border)' }}>
             {sidebarData.title}
           </h3>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
             {sidebarData.sections.map((sec, i) => (
               <div key={i}>
-                <div 
+                <div
                   onClick={() => {
                     if (sec.items.length === 0) setSelectedUnit(sec.name);
                     else toggleSection(sec.name);
                   }}
-                  style={{ 
-                    display: 'flex', alignItems: 'center', justifyContent: 'space-between', 
-                    padding: '0.5rem 0.5rem', cursor: 'pointer', borderRadius: '4px',
-                    background: selectedUnit === sec.name ? 'rgba(59, 130, 246, 0.2)' : (openSections[sec.name] ? 'rgba(59, 130, 246, 0.1)' : 'transparent'),
-                    color: selectedUnit === sec.name ? '#3B82F6' : (openSections[sec.name] ? '#2563EB' : '#000000'),
-                    fontWeight: selectedUnit === sec.name ? 'bold' : 'normal'
+                  style={{
+                    display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                    padding: '0.55rem 0.6rem', cursor: 'pointer', borderRadius: 'var(--mc-r-sm)',
+                    background: selectedUnit === sec.name ? 'var(--mc-primary-weak)' : (openSections[sec.name] ? 'var(--mc-primary-weak)' : 'transparent'),
+                    color: (selectedUnit === sec.name || openSections[sec.name]) ? 'var(--mc-primary)' : 'var(--mc-text)',
+                    transition: 'background .15s ease, color .15s ease'
                   }}
                 >
-                  <span style={{ fontSize: '0.9rem', color: '#000000', fontWeight: 'bold' }}>{sec.name}</span>
+                  <span style={{ fontSize: '0.9rem', color: 'inherit', fontWeight: 'bold' }}>{sec.name}</span>
                   {sec.items.length > 0 && (
                     <ChevronDown size={14} style={{ transform: openSections[sec.name] ? 'rotate(0deg)' : 'rotate(-90deg)', transition: '0.2s' }} />
                   )}
                 </div>
-                
+
                 {/* 하위 레벨(Levels) 렌더링 */}
                 {sec.items.length > 0 && openSections[sec.name] && (
-                  <div style={{ marginLeft: '1rem', borderLeft: '1px solid var(--border-glass)', paddingLeft: '0.5rem', marginTop: '0.2rem', display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
+                  <div style={{ marginLeft: '0.85rem', borderLeft: '1px solid var(--mc-border)', paddingLeft: '0.6rem', marginTop: '0.25rem', display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
                     {sec.items.map((subLevel, j) => (
-                      <div 
+                      <div
                         key={j}
                         onClick={() => {
                           if (selectedCourse === '모의고사') {
                              navigate('/class/mock-exam', { state: { title: subLevel, elective: localStorage.getItem('last_math_elective') || 'calculus' } });
                           } else {
                              setSelectedUnit(subLevel);
-                             setTestProblemIdx(1); 
+                             setTestProblemIdx(1);
                           }
                         }}
                         style={{
-                          fontSize: '0.85rem', padding: '0.4rem 0.5rem', cursor: 'pointer', borderRadius: '4px',
-                          color: selectedUnit === subLevel ? '#3B82F6' : '#000000',
-                          background: selectedUnit === subLevel ? 'rgba(59, 130, 246, 0.1)' : 'transparent',
-                          fontWeight: 'bold'
+                          fontSize: '0.85rem', padding: '0.42rem 0.55rem', cursor: 'pointer', borderRadius: 'var(--mc-r-sm)',
+                          color: selectedUnit === subLevel ? 'var(--mc-primary)' : 'var(--mc-text-muted)',
+                          background: selectedUnit === subLevel ? 'var(--mc-primary-weak)' : 'transparent',
+                          fontWeight: selectedUnit === subLevel ? 'bold' : 500,
+                          transition: 'background .15s ease, color .15s ease'
                         }}
                       >
                         - {subLevel}
@@ -3051,7 +3091,7 @@ function MathClassroomScreenContent() {
         </div>
       </div>
       
-      <LessonRenderer session={session} setSession={setSession} ssot={teacher} timeLeft={timeLeft} selectedUnit={selectedUnit} setSelectedUnit={setSelectedUnit} testProblemIdx={testProblemIdx} setTestProblemIdx={setTestProblemIdx} selectedCourse={selectedCourse} showReport={showReport} setShowReport={setShowReport} getSidebarData={getSidebarData} problemTimeLeft={problemTimeLeft} />
+      <LessonRenderer session={session} setSession={setSession} ssot={teacher} timeLeft={timeLeft} selectedUnit={selectedUnit} setSelectedUnit={setSelectedUnit} testProblemIdx={testProblemIdx} setTestProblemIdx={setTestProblemIdx} selectedCourse={selectedCourse} showReport={showReport} setShowReport={setShowReport} getSidebarData={getSidebarData} problemTimeLeft={problemTimeLeft} setShowEndEarlyModal={setShowEndEarlyModal} />
       <style>{katexStyle}</style>
     </div>
   );
