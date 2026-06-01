@@ -65,6 +65,9 @@ function cleanNarration(text) {
 }
 
 async function generateGeminiTTS(text, retries = 3) {
+  // Reset key index to start with the primary key for each new narration generation
+  currentKeyIndex = 0;
+
   const promptText = `너는 고등학생들의 수학 학습을 돕는 친절하고 활기찬 대학생 여자 선생님이야. 입력받은 한국어 수학 텍스트(수식 포함)를 친절하고 자연스러운 구어체로 상냥하게 읽어줘. 절대로 추가적인 인사말, 해설, 격려 등 잡담을 전혀 덧붙이지 말고, 오직 아래에 주어진 대본 텍스트 자체만 있는 그대로 읽어줘:
 
 ${text}`;
@@ -121,7 +124,9 @@ ${text}`;
       return Buffer.from(audioPart.inlineData.data, 'base64');
     } catch (err) {
       console.warn(`⚠️ Gemini API attempt ${attempt} failed: ${err.message}`);
-      if (attempt === retries) throw err;
+      if (attempt === retries || err.message.includes('quota') || err.message.includes('QUOTA') || err.message.includes('limit') || err.message.includes('exceeded') || err.message.includes('RESOURCE_EXHAUSTED')) {
+        throw err;
+      }
       await new Promise(resolve => setTimeout(resolve, 3000));
     }
   }

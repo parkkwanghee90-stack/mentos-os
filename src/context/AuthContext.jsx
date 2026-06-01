@@ -12,7 +12,9 @@ export function AuthProvider({ children }) {
   const syncToLocalStorage = (currentSession) => {
     if (currentSession?.user) {
       const dbUser = currentSession.user;
-      const isPaid = dbUser.user_metadata?.is_paid === true;
+      const isPaid = dbUser.user_metadata?.is_paid === true || dbUser.user_metadata?.premium === true;
+      const isPremium = dbUser.user_metadata?.premium === true;
+      const paidAt = dbUser.user_metadata?.paid_at || null;
 
       const legacyUser = {
         id: dbUser.id,
@@ -29,6 +31,8 @@ export function AuthProvider({ children }) {
       localStorage.setItem('mentos_mock_user', JSON.stringify(legacyUser));
       if (isPaid) {
         localStorage.setItem('mentos_is_paid', 'true');
+        localStorage.setItem('mentos_premium', isPremium ? 'true' : 'false');
+        if (paidAt) localStorage.setItem('mentos_paid_at', paidAt);
       } else {
         const localPaid = localStorage.getItem('mentos_is_paid') === 'true';
         if (localPaid) {
@@ -38,6 +42,8 @@ export function AuthProvider({ children }) {
     } else {
       localStorage.removeItem('mentos_mock_user');
       localStorage.removeItem('mentos_is_paid');
+      localStorage.removeItem('mentos_premium');
+      localStorage.removeItem('mentos_paid_at');
     }
   };
 
@@ -157,22 +163,47 @@ export function AuthProvider({ children }) {
     window.dispatchEvent(new Event('storage'));
   };
 
-  // Update Premium Status in Supabase User Metadata
+  // Update Premium Status in Supabase User Metadata (premium=true & paid_at=현재시간)
   const updatePremiumStatus = async (status) => {
     if (!user) return;
+    const now = new Date().toISOString();
+    
+    // 원장님 요청: premium=true 및 paid_at=현재시간 자동 업데이트
     const { data, error } = await supabase.auth.updateUser({
-      data: { is_paid: status }
+      data: { 
+        is_paid: status,
+        premium: status,
+        paid_at: status ? now : null
+      }
     });
+
     if (error) {
       console.error("Failed to sync premium status to Supabase metadata:", error);
     } else {
       console.log("Supabase premium status metadata synchronized:", status);
       if (status) {
         localStorage.setItem('mentos_is_paid', 'true');
+        localStorage.setItem('mentos_premium', 'true');
+        localStorage.setItem('mentos_paid_at', now);
       } else {
         localStorage.removeItem('mentos_is_paid');
+        localStorage.removeItem('mentos_premium');
+        localStorage.removeItem('mentos_paid_at');
       }
       window.dispatchEvent(new Event('storage'));
+
+      // Profiles 테이블도 동시 반영 승인 (존재한다면)
+      try {
+        const { error: profileErr } = await supabase
+          .from('profiles')
+          .update({ 
+            is_paid: status,
+            premium: status,
+            paid_at: status ? now : null
+          })
+          .eq('id', user.id);
+        if (profileErr) console.warn("Optional profiles update bypassed:", profileErr.message);
+      } catch (e) { /* ignore if profiles schema doesn't match */ }
     }
     return data;
   };

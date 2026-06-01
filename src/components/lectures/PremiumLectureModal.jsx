@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { X, BookOpen, ChevronRight, Sparkles } from 'lucide-react';
+import { X, BookOpen, ChevronRight, Sparkles, CreditCard, ShieldCheck, Lock } from 'lucide-react';
 import PremiumLecturePlayer from './PremiumLecturePlayer';
+import { supabase } from '@/services/supabaseClient';
+import { useAuth } from '@/context/AuthContext';
 
 // 실제 public/premium_lectures/ 디렉토리의 파일 기반 인덱스
 const LECTURE_INDEX = {
@@ -70,17 +72,121 @@ function guessLectureId(selectedUnit) {
 }
 
 export default function PremiumLectureModal({ onClose, selectedUnit, selectedCourse }) {
+  const { user } = useAuth();
   const categories = LECTURE_INDEX;
   const autoLecture = guessLectureId(selectedUnit);
   const [selectedLecture, setSelectedLecture] = useState(autoLecture);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const loading = false;
 
+  // 원장님 요청: 100원 테스트 상품과 49,000원 상품 결제 전환이 가능하도록 변수로 정의
+  // 100원 테스트 상품 결제 링크가 완성되면 아래 주소를 교체해주시면 됩니다!
+  const PAYAPP_TEST_100W_LINK = 'https://www.payapp.kr/L/z4ePI1'; // 현재는 임시로 기존 링크 지정
+  const PAYAPP_PROD_49000_LINK = 'https://www.payapp.kr/L/z4ePI1';
+
+  // 100원 테스트 여부 플래그 (true면 100원 링크로 동작, false면 49,000원 프로덕션 링크로 동작)
+  const IS_TEST_MODE = true; 
+
+  const activePayappLink = IS_TEST_MODE ? PAYAPP_TEST_100W_LINK : PAYAPP_PROD_49000_LINK;
+  const activeAmount = IS_TEST_MODE ? '100' : '49000';
+
+  const isPaid = localStorage.getItem('mentos_is_paid') === 'true' || localStorage.getItem('mentos_premium') === 'true';
+
+  const handlePayAppRedirect = () => {
+    // 결제 완료 후 멘토스 OS로 100% 자동 리다이렉션하여 premium=true 및 paid_at 승인 처리를 하도록 returnurl 파라미터 결합
+    const returnUrl = encodeURIComponent(`${window.location.origin}/success?payapp_success=true&amount=${activeAmount}&orderId=payapp_${Date.now()}`);
+    const checkoutUrl = `${activePayappLink}?returnurl=${returnUrl}`;
+    window.open(checkoutUrl, '_blank');
+    onClose();
+  };
+
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  // 🔒 비결제 사용자를 위한 프리미엄 페이월 화면 렌더링
+  if (!isPaid) {
+    return (
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(5, 5, 8, 0.94)', backdropFilter: 'blur(16px)', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem' }}>
+        <div style={{ position: 'absolute', width: '300px', height: '300px', background: 'rgba(139, 92, 246, 0.15)', filter: 'blur(80px)', top: '20%', pointerEvents: 'none' }} />
+        
+        <div style={{
+          background: 'rgba(15, 23, 42, 0.96)',
+          width: '100%', maxWidth: '520px',
+          borderRadius: '32px',
+          border: '1px solid rgba(255, 255, 255, 0.08)',
+          padding: '2.5rem',
+          textAlign: 'center',
+          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.8)',
+          color: 'white',
+          position: 'relative'
+        }}>
+          {/* Close Button */}
+          <button 
+            onClick={onClose} 
+            style={{ position: 'absolute', top: '1.5rem', right: '1.5rem', background: 'transparent', border: 'none', color: '#64748b', cursor: 'pointer' }}
+          >
+            <X size={20} />
+          </button>
+
+          <div style={{
+            width: '70px', height: '70px', borderRadius: '50%',
+            background: 'rgba(239, 68, 68, 0.1)', border: '1px solid rgba(239, 68, 68, 0.2)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem'
+          }}>
+            <Lock size={32} color="#f87171" />
+          </div>
+
+          <h2 style={{ fontSize: '1.5rem', fontWeight: '900', color: 'white', marginBottom: '0.8rem', letterSpacing: '-0.5px' }}>
+            👑 프리미엄 AI 강의 락(Lock) 활성화됨
+          </h2>
+          
+          <p style={{ color: '#94a3b8', fontSize: '0.88rem', lineHeight: '1.6', marginBottom: '2rem' }}>
+            이 기능은 멘토스 AI 프리미엄 수강생 전용 특별 기능입니다.
+            <br />
+            대치동 1타 강사진의 핵심 개념 노하우 특강과
+            <br />
+            실시간 AVS 해설 시청 권한을 즉시 열어보세요.
+          </p>
+
+          <div style={{
+            background: 'linear-gradient(135deg, rgba(59,130,246,0.1), rgba(124,58,237,0.15))',
+            border: '1px solid rgba(124,58,237,0.25)',
+            padding: '1.2rem', borderRadius: '20px', marginBottom: '2rem', textAlign: 'center'
+          }}>
+            <span style={{ fontSize: '0.72rem', color: '#c084fc', fontWeight: 'bold', display: 'block', marginBottom: '4px' }}>
+              {IS_TEST_MODE ? '⚡ 100원 간편 검증 테스트 모드 동작 중' : '⚡ 선착순 1,000명 초특가 즉시 적용'}
+            </span>
+            <span style={{ fontSize: '1.8rem', fontWeight: '900', background: 'linear-gradient(to right, #60a5fa, #c084fc, #f472b6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+              {IS_TEST_MODE ? '100 원' : '월 45,000원'}
+            </span>
+          </div>
+
+          <button
+            onClick={handlePayAppRedirect}
+            style={{
+              width: '100%', padding: '1.1rem', borderRadius: '16px', border: 'none',
+              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899)',
+              color: 'white', fontSize: '1.05rem', fontWeight: 'bold', cursor: 'pointer',
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
+              boxShadow: '0 8px 20px rgba(139,92,246,0.3)', transition: 'transform 0.2s'
+            }}
+            onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.02)'}
+            onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
+          >
+            <CreditCard size={18} /> {IS_TEST_MODE ? '100원 테스트 결제창 열기' : '프리미엄 혜택 즉시 결제하기'}
+          </button>
+
+          <div style={{ textAlign: 'center', marginTop: '1rem', fontSize: '0.75rem', color: '#475569', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '4px' }}>
+            <ShieldCheck size={14} color="#10b981" />
+            <span>PayApp 연동 자동 권한 부여 모듈 가동됨</span>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   // Mobile: show either lecture list or player (not both)
   if (isMobile) {
