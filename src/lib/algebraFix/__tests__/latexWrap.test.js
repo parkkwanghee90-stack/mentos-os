@@ -36,4 +36,11 @@ describe('wrapPlainLatex', () => {
     expect(r.output).toBe('① $3$\\sqrt{3}$ ② 2'); // 변경 없음
     expect(r.output).not.toContain('$$$');
   });
+  it('un-wrapped + $짝깨짐이 섞인 항목은 손대지 않는다($$$ 생성 금지)', () => {
+    const raw = '다음 $\\triangle ABC$에서? ① $3:2 ② 2:1 ③ 3:1 ④ 3$\\sqrt{2}$ : 2$\\sqrt{3}$';
+    const r = wrapPlainLatex(raw);
+    expect(r.output).not.toContain('$$$');
+    // 안전: 깨끗하게 못 고치면 원본 유지
+    expect(r.output).toBe(raw);
+  });
 });
