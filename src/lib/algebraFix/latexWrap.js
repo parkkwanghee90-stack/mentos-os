@@ -22,6 +22,18 @@ const KOREAN_CHAR = /[가-힣ㄱ-ㆎ]/;
 const TRIPLE_DOLLAR = /\$\$\$/;
 
 /**
+ * Count consecutive double-dollar (`$$`) sequences — proxy for display-math
+ * delimiters. Used to reject candidates that introduce NEW `$$` (inline → display
+ * corruption) that the original part did not have.
+ *
+ * @param {string} s
+ * @returns {number}
+ */
+function countDoubleDollar(s) {
+  return (s.match(/\$\$/g) || []).length;
+}
+
+/**
  * Post-validation net: a candidate string is "clean" only if its $ structure
  * is well-formed and every span's inner content renders under katex.
  * 1. No `$$$` (3+ consecutive dollars).
@@ -216,6 +228,13 @@ function processPart(part) {
   // Post-validation net: adopt candidate only if it is structurally clean and
   // does not worsen detectIssues vs. the original.
   if (!partIsClean(candidate)) {
+    return { result: part, wrapped: 0, skipped: candidateSkipped };
+  }
+  // No-new-$$ invariant: wrapping must only insert single $…$ delimiters.
+  // If the candidate has more consecutive `$$` than the original, a mis-paired
+  // stray $ turned an inline span into display math (e.g. `3$\sqrt2$` →
+  // `3$$\sqrt2$$`) — semantic corruption that partIsClean/detectIssues miss.
+  if (countDoubleDollar(candidate) > countDoubleDollar(part)) {
     return { result: part, wrapped: 0, skipped: candidateSkipped };
   }
   if (detectIssues(candidate).length > detectIssues(part).length) {

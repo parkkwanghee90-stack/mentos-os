@@ -43,4 +43,12 @@ describe('wrapPlainLatex', () => {
     // 안전: 깨끗하게 못 고치면 원본 유지
     expect(r.output).toBe(raw);
   });
+  it('인라인을 디스플레이로 바꾸는(새 $$ 생성) 변환은 거부하고 원본 유지', () => {
+    // 실데이터 삼각함수활용2단계/003.webp: stray $ 짝이 어긋나 인라인 $..$ → $$..$$ 로 오염되던 케이스
+    const raw =
+      '다음 그림과 같은 $\\triangle ABC$에서 $\\overline{BD} : \\overline{DC}$는? ① $3:2 ② 2:1 ③ 3:1 ④ 3$\\sqrt{2}$ : 2$\\sqrt{3}$ ⑤ 3$\\sqrt{3}$ : 2$\\sqrt{2}';
+    const r = wrapPlainLatex(raw);
+    expect(r.output).toBe(raw);          // 변경 없음
+    expect(r.output).not.toMatch(/\$\$/); // 새 $$ 없음
+  });
 });
