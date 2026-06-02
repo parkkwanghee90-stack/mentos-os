@@ -23,4 +23,10 @@ describe('algebraUnits', () => {
     expect(isAlgebraKey('등차등비2단계')).toBe(true);
     expect(isAlgebraKey('(2)이차부등식 개념2단계(42)p21 1+1(쌍둥이)')).toBe(false);
   });
+
+  it('미적분 단원은 대수 토큰을 부분 포함해도 제외한다', () => {
+    expect(isAlgebraKey('3)지수로그삼각함수의 미분법 4단계')).toBe(false);
+    expect(isAlgebraKey('4)삼각함수합성과미분')).toBe(false);
+    expect(isAlgebraKey('3)지수로그함수의극한')).toBe(false);
+  });
 });

@@ -25,10 +25,16 @@ export function normalizeUnitKey(key) {
   return { root: cleaned, stage: null };
 }
 
+// 미적분 단원 배제 토큰 — '지수로그삼각함수의 미분법', '합성과미분' 등은 대수가 아니라 미적분.
+// 대수 토큰('지수','로그','삼각함수')을 substring으로 포함하므로 명시적으로 제외한다.
+const CALCULUS_DENY_TOKENS = ['미분', '적분', '극한', '합성과미분'];
+
 // 키가 대수 단원에 속하는지(하드코딩+SSOT 합집합 루트 기준).
 // JSON 키는 compact('삼각함수성질'), SSOT 루트는 공백/가운뎃점 포함('삼각함수 성질·정의')이라 양방향 포함을 확인.
+// 단, 미적분 단원(미분/적분/극한 포함)은 대수 토큰을 부분 포함해도 제외.
 export function isAlgebraKey(key) {
   const { root } = normalizeUnitKey(key);
   if (!root) return false;
+  if (CALCULUS_DENY_TOKENS.some((t) => root.includes(t))) return false;
   return getAlgebraUnitRoots().some((t) => root.includes(t) || t.includes(root));
 }
