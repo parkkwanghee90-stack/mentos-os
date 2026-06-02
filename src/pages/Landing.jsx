@@ -6,6 +6,7 @@ import Empathy from "@/components/home/Empathy";
 import HowItWorks from "@/components/home/HowItWorks";
 import AiDemo from "@/components/home/AiDemo";
 import ParentsReport from "@/components/home/ParentsReport";
+import Pricing from "@/components/home/Pricing";
 
 export default function Landing() {
   return (
@@ -18,6 +19,7 @@ export default function Landing() {
         <HowItWorks />
         <AiDemo />
         <ParentsReport />
+        <Pricing />
       </main>
     </div>
   );
