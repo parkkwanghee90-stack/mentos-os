@@ -169,8 +169,9 @@ function AppContent() {
       <BrowserRouter>
         <Suspense fallback={<div style={{color:'white', padding:'2rem', background:'#09090b', height:'100vh'}}>Loading Mentos App...</div>}>
           <Routes>
-            <Route path="/" element={<RootRedirect />} />
+            <Route path="/" element={<Landing />} />
             <Route path="/landing" element={<Landing />} />
+            <Route path="/start" element={<RootRedirect />} />
             <Route path="/diagnosis" element={<Diagnosis />} />
             <Route path="/push-settings" element={<PushSettings />} />
             {/* <Route path="/teacher" element={<TeacherSelect />} /> */}

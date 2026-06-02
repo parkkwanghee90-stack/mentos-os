@@ -17,7 +17,7 @@ export default function ChalkHeader() {
         <Link to="/" className="chalk-brand" aria-label="매스멘토스 홈"
           style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
           <span style={{ display: "grid", placeItems: "center", width: 34, height: 34, borderRadius: 9,
-            background: "var(--mint)", color: "#06140d", fontWeight: 800, fontFamily: "var(--mono)" }}>ƒ</span>
+            background: "linear-gradient(135deg,#10b981,#059669)", color: "#ffffff", fontWeight: 800, fontFamily: "var(--mono)" }}>ƒ</span>
           <span style={{ color: "var(--title-on-dark)", fontWeight: 800, fontSize: "1.15rem" }}>매스멘토스</span>
         </Link>
 
@@ -28,8 +28,8 @@ export default function ChalkHeader() {
 
         <button className="chalk-burger" aria-label={open ? "메뉴 닫기" : "메뉴 열기"} aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          style={{ display: "flex", background: "rgba(124,255,176,0.1)", border: "none", borderRadius: 10,
-            width: 40, height: 40, alignItems: "center", justifyContent: "center", color: "var(--mint)", cursor: "pointer" }}>
+          style={{ display: "flex", background: "rgba(16,185,129,0.12)", border: "none", borderRadius: 10,
+            width: 40, height: 40, alignItems: "center", justifyContent: "center", color: "var(--mint-deep)", cursor: "pointer" }}>
           {open ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
         </button>
       </div>

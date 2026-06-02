@@ -31,8 +31,8 @@ export default function AiDemo() {
             maxWidth: 420, margin: "28px auto 0" }}>
             {FEATURES.map(({ Icon, label }) => (
               <div key={label} style={{ display: "flex", alignItems: "center", gap: 10, padding: "12px 14px",
-                background: "rgba(255,255,255,0.04)", border: "1px solid var(--bb-line)", borderRadius: 14 }}>
-                <Icon size={18} color="var(--mint)" aria-hidden="true" />
+                background: "rgba(255,255,255,0.65)", border: "1px solid var(--bb-line)", borderRadius: 14 }}>
+                <Icon size={18} color="var(--mint-deep)" aria-hidden="true" />
                 <span style={{ color: "var(--title-on-dark)", fontWeight: 600, fontSize: "0.92rem" }}>{label}</span>
               </div>
             ))}
@@ -48,8 +48,8 @@ export default function AiDemo() {
                   maxWidth: "84%", padding: "11px 15px", fontSize: "0.92rem", lineHeight: 1.5,
                   borderRadius: 16,
                   alignSelf: b.who === "me" ? "flex-end" : "flex-start",
-                  background: b.who === "me" ? "var(--mint)" : "rgba(255,255,255,0.05)",
-                  color: b.who === "me" ? "#06140d" : "#eafff1",
+                  background: b.who === "me" ? "linear-gradient(135deg,#10b981,#059669)" : "rgba(255,255,255,0.78)",
+                  color: b.who === "me" ? "#ffffff" : "#0f172a",
                   border: b.who === "me" ? "none" : "1px solid var(--bb-line)",
                   borderBottomRightRadius: b.who === "me" ? 5 : 16,
                   borderBottomLeftRadius: b.who === "me" ? 16 : 5,
@@ -58,9 +58,9 @@ export default function AiDemo() {
               </motion.div>
             ))}
             <motion.div variants={fadeUp} style={{ display: "flex", alignItems: "center", gap: 8, alignSelf: "flex-start",
-              padding: "10px 14px", borderRadius: 16, background: "rgba(124,255,176,0.1)", border: "1px solid var(--bb-line)" }}>
+              padding: "10px 14px", borderRadius: 16, background: "rgba(16,185,129,0.12)", border: "1px solid var(--bb-line)" }}>
               <span className="chalk-live" style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--mint)", display: "inline-block" }} />
-              <span style={{ color: "var(--mint)", fontSize: "0.82rem" }}>AI 누리가 분필 드는 중…</span>
+              <span style={{ color: "var(--mint-deep)", fontSize: "0.82rem" }}>AI 누리가 분필 드는 중…</span>
             </motion.div>
           </div>
         </motion.div>
