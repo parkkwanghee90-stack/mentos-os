@@ -13,8 +13,9 @@
 - [x] vitest 전체 통과(21 files / 84 tests), 회귀 테스트 포함
 
 ## 배포 시 수동 작업(사용자 권한 필요)
-- [ ] Supabase Storage `mentos-assets/data/math_problem_texts.json` 업로드(최신 public 버전)
-- [ ] Supabase Storage `mentos-assets/data/avs_answers.json` 업로드(최신 public 버전)
+- [x] Supabase Storage `mentos-assets/data/math_problem_texts.json` 업로드 완료(CLI, sha256 검증)
+- [x] Supabase Storage `mentos-assets/data/avs_answers.json` 업로드 완료(CLI, sha256 검증)
+- [x] Supabase Storage `mentos-assets/data/problems_index.json` 업로드 완료(일관성, sha256 검증)
 - [ ] 배포 후 실기기/브라우저에서 대수 단원 렌더 스팟체크:
   - 삼각함수활용2단계(객관식 보기 $ 정상), 지수2단계/로그함수2단계(본문 수식), 삼각함수그래프2단계
   - AVS 해설(삼각함수합성과미분 등) 수식 렌더
