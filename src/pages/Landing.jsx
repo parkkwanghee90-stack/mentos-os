@@ -1,6 +1,7 @@
 // 매스멘토스 홈 V3 — 칠판 다크테크
 import "@/styles/chalkboard.css";
 import ChalkHeader from "@/components/home/ChalkHeader";
+import Hero from "@/components/home/Hero";
 
 export default function Landing() {
   return (
@@ -8,7 +9,7 @@ export default function Landing() {
       <a href="#main" className="chalk-skip">본문 바로가기</a>
       <ChalkHeader />
       <main id="main">
-        {/* 섹션은 후속 태스크에서 추가 */}
+        <Hero />
       </main>
     </div>
   );
