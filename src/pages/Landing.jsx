@@ -7,6 +7,9 @@ import HowItWorks from "@/components/home/HowItWorks";
 import AiDemo from "@/components/home/AiDemo";
 import ParentsReport from "@/components/home/ParentsReport";
 import Pricing from "@/components/home/Pricing";
+import FinalCta from "@/components/home/FinalCta";
+import Faq from "@/components/home/Faq";
+import ChalkFooter from "@/components/home/ChalkFooter";
 
 export default function Landing() {
   return (
@@ -20,7 +23,10 @@ export default function Landing() {
         <AiDemo />
         <ParentsReport />
         <Pricing />
+        <FinalCta />
+        <Faq />
       </main>
+      <ChalkFooter />
     </div>
   );
 }
