@@ -204,3 +204,10 @@
   background: var(--mint); color: #06140d; padding: 0.75rem 1rem; font-weight: 700; text-decoration: none;
 }
 .chalk-root .chalk-skip:focus { top: 0; }
+
+/* 헤더 반응형 nav */
+@media (min-width: 1024px) {
+  .chalk-root .chalk-nav-desktop { display: flex !important; }
+  .chalk-root .chalk-burger { display: none !important; }
+}
+.chalk-root .chalk-underline path { will-change: stroke-dashoffset; }
