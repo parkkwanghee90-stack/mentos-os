@@ -1,13 +1,12 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://trvqgqvwhqvlgqzlsxbu.supabase.co';
-let supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-const VALID_FALLBACK_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRydnFncXZ3aHF2bGdxemxzeGJ1Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3ODY1NzA1MywiZXhwIjoyMDk0MjMzMDUzfQ.a76V1LYSItB48fXQN2in-rXfy8oD4o7KJteAMCyX9so';
-
-if (!supabaseAnonKey || supabaseAnonKey.startsWith('sb_publishable') || supabaseAnonKey.includes('invalid') || supabaseAnonKey.length < 50) {
-  console.warn('[SupabaseClient] Warning: Invalid or CLI key detected in environment. Using verified service fallback key.');
-  supabaseAnonKey = VALID_FALLBACK_KEY;
+if (!supabaseUrl || !supabaseAnonKey) {
+  throw new Error(
+    '[SupabaseClient] VITE_SUPABASE_URL / VITE_SUPABASE_ANON_KEY 가 설정되지 않았습니다. .env 를 확인하세요. (service_role 키는 절대 클라이언트에 두지 않습니다)'
+  );
 }
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
