@@ -903,3 +903,25 @@ git commit -m "chore(algebra-fix): public→src 대수키 동기화 + 배포 체
 - **플레이스홀더:** TBD/TODO 없음. 각 코드 스텝은 실제 동작 코드. Task 5/9의 승인 JSON 예시값은 사용자가 audit 결과로 채우는 입력 양식임을 명시.
 - **타입 일관성:** `isAlgebraKey`/`normalizeUnitKey`(Task1), `detectIssues`(Task2), `auditMapping`(Task3), `autoFix`(Task6) 시그니처가 러너(Task4/7/8/11)에서 동일하게 사용됨. `applied`/`skipped`/`output` 필드명 일관.
 - **주의:** Task 5/9는 사용자 승인 게이트(코드 아님). 승인 파일이 비어 있으면 자동 변환분만 적용되고 REVIEW/이동건은 보류된다.
+
+---
+
+## REVISED SCOPE (post-audit, 2026-06-02) — T5 게이트 결과 반영
+
+audit 실행(T1~T4) 후 사용자 검토에서 다음이 확정되어 T6~T8 범위를 조정한다.
+
+### 발견 1 — 성질3↔활용3 가설 불성립
+활용3단계 읽을 수 있는 문제(001~032) 전수 분석 결과 **모두 진짜 활용**(사인·코사인법칙/넓이/외접·내접원/입체), 성질 유형 0건. 033~051은 미OCR placeholder. → **성질3는 활용3에 섞인 게 아니라 애초 로드된 적 없음.** 이동(move) 불필요.
+- **조치:** 매핑 수정은 '이동'이 아니라 **'삭제'**. `삼각함수성질3단계` 빈 키 + `_백업_완료`/`_완료백업` 잔재 키 제거. 실제 성질3 문제는 추후 소스 확보 시 별도 로드.
+
+### 발견 2 — LaTeX 깨짐 실수치는 ~795가 아니라 ~82
+앱 렌더러 `MathProblemRenderer.jsx`의 `normalizeMathText`가 출력 전 **리터럴 `\n`(역슬래시+n)을 줄바꿈으로 변환**하고 `\neq`/`\leq`/`\newline` 등은 보호한다. 검출기(T2)가 이 전처리를 안 거쳐 700여 건을 헛집계. **정규화 적용 시 전체 322건 / 대수 단원 실제 깨짐 ≈ 82건(AUTO 18 + REVIEW 64).**
+- **AUTO 2규칙(검증됨):** ① APPEND-CLOSE — 보기줄(`①~⑤`)에 `$` 1개이고 줄 끝이 아니며 `$` 뒤 중괄호 균형이면 끝에 `$` 보강 (`① $1`→`① $1$`). ② REMOVE-STRAY — 보기줄에 `$` 1개이고 줄 끝이면 그 `$` 제거 (`⑤ 3$`→`⑤ 3`). 적용 후 각 `$…$` katex 재렌더 통과 필수.
+- REVIEW(~64): stem-옵션 미분리(C), 해설 수식 절단(D), 인접 span 내부 stray `$`(E) — 자동 금지, 배치로 사용자 확정.
+- AVS 해설 B(84건, `frac34` 류 plaintext)는 별도 — 대부분 REVIEW.
+
+### 조정된 태스크
+- **T6(개정):** `src/lib/algebraFix/normalize.js`(렌더러 `normalizeMathText` 미러) 신설 + 테스트. `latexDetect`/`latexFix`가 normalize 선적용. `latexFix.autoFix`는 APPEND-CLOSE/REMOVE-STRAY 2규칙(보기줄 한정, brace 균형 가드, katex 재렌더 채택).
+- **T7(개정):** latex 적용 러너 — normalize 인지, AUTO 18 적용 + REVIEW 목록 산출(배치 확정용), AVS B 84 별도 섹션.
+- **T8(개정):** 매핑 **삭제** 러너 — `scripts/approvals/mapping_deletes.json` 기반 키 삭제. problems_index 백업키는 **비접미 base 단원이 동일 파일에 존재할 때만** 삭제(데이터 손실 가드). 백업 먼저.
+- 삭제 목록: problems_index 10키 + avs_answers 8키(성질3 포함). answers_master 해당 없음.
