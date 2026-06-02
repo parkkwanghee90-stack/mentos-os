@@ -6,8 +6,8 @@ import { fadeUp, stagger } from "./_motion";
 const PLANS = [
   { name: "Free", tag: "체험", hi: false, desc: "부담 없이 단계 코칭을 먼저 경험하세요.",
     features: ["단계별 힌트 체험", "기본 AI 풀이 보기", "학습 기록 미리보기"], cta: "무료로 시작" },
-  { name: "Premium", tag: "AI 코칭", hi: true, desc: "막히는 순간 끝까지, 12명 AI 선생님과 함께.",
-    features: ["무제한 단계 코칭", "12명 과목별 AI 선생님", "AVS 애니메이션 힌트", "학습 리포트 & 오답 분석"], cta: "30일 무료 체험" },
+  { name: "Premium", tag: "AI 코칭", hi: true, desc: "막히는 순간 끝까지, 단원별 코치 12명과 함께.",
+    features: ["무제한 단계 코칭", "단원별 코치 12명", "AVS 애니메이션 힌트", "학습 리포트 & 오답 분석"], cta: "30일 무료 체험" },
 ];
 
 export default function Pricing() {
