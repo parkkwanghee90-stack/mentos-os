@@ -26,4 +26,14 @@ describe('wrapPlainLatex', () => {
     expect(r.output).toBe('① $a^2$\\n② $\\sqrt{3}$');
     expect(r.wrapped).toBe(2);
   });
+  it('$$…$$ 디스플레이 수식을 보존하고 $$$를 만들지 않는다', () => {
+    const r = wrapPlainLatex('식 $$a^2 = b$$ 그리고 c^2 임');
+    expect(r.output).toBe('식 $$a^2 = b$$ 그리고 $c^2$ 임');
+    expect(r.output).not.toContain('$$$');
+  });
+  it('기존 $ 구조가 불균형이면(홀수/stray) 그 부분은 래핑하지 않는다', () => {
+    const r = wrapPlainLatex('① $3$\\sqrt{3}$ ② 2');
+    expect(r.output).toBe('① $3$\\sqrt{3}$ ② 2'); // 변경 없음
+    expect(r.output).not.toContain('$$$');
+  });
 });

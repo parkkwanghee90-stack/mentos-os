@@ -3,8 +3,12 @@ import katex from 'katex';
 // Matches LaTeX commands or superscript/subscript — signals math content
 const MATH_SIGNAL = /\\[a-zA-Z]+|[\^_]/;
 
-// Regex to find existing $…$ spans (non-greedy, respects escaped \$)
-const EXISTING_DOLLAR_RE = /(?<!\\)\$(?:[^$\\]|\\[\s\S])*?\$/g;
+// Regex to find existing spans: $$…$$ display math FIRST, then $…$ inline.
+// Display math must be matched first so its inner content is never treated as a gap.
+const SPAN_RE_SRC = /\$\$[\s\S]*?\$\$|(?<!\\)\$(?:[^$\\]|\\[\s\S])*?\$/.source;
+
+// Detects an unescaped $ (used by the imbalance guard on residual gap text)
+const UNESCAPED_DOLLAR = /(?<!\\)\$/;
 
 // Regex to find runs that contain no Korean syllables/jamo, no newlines, no option markers
 const NON_KOREAN_RUN_RE = /[^가-힣ㄱ-ㆎ\n①②③④⑤]+/g;
@@ -27,7 +31,7 @@ function tryWrap(trimmed) {
 }
 
 /**
- * Process a single gap (text outside existing $…$ spans) and wrap math runs.
+ * Process a single gap (text outside existing $$…$$ / $…$ spans) and wrap math runs.
  *
  * @param {string} gap
  * @returns {{ result: string, wrapped: number, skipped: Array<{run:string,error:string}> }}
@@ -87,41 +91,64 @@ function processGap(gap) {
 }
 
 /**
+ * Tokenize a part into existing spans ($$…$$ / $…$, kept verbatim) and gaps
+ * (text between/around spans, candidates for wrapping).
+ *
+ * @param {string} part
+ * @returns {{ spans: string[], gaps: string[] }}
+ *   spans[i] is the i-th existing span; gaps[i] is the text before spans[i],
+ *   with gaps[spans.length] being the trailing text. (gaps.length === spans.length + 1)
+ */
+function tokenize(part) {
+  const spans = [];
+  const gaps = [];
+  const spanRe = new RegExp(SPAN_RE_SRC, 'g');
+  let lastIndex = 0;
+  let match;
+
+  while ((match = spanRe.exec(part)) !== null) {
+    gaps.push(part.slice(lastIndex, match.index));
+    spans.push(match[0]);
+    lastIndex = match.index + match[0].length;
+  }
+  gaps.push(part.slice(lastIndex));
+
+  return { spans, gaps };
+}
+
+/**
  * Process a single even-index part (not a separator) by:
- * 1. Finding existing $…$ spans (leave verbatim)
- * 2. Processing gaps between/around them with processGap()
+ * 1. Tokenizing into existing $$…$$ / $…$ spans (verbatim) and gaps.
+ * 2. Imbalance guard: if any residual gap still contains an unescaped $, the
+ *    $ structure is broken — leave the entire part untouched (REVIEW domain).
+ * 3. Otherwise wrap plain un-wrapped math runs inside each gap.
  *
  * @param {string} part
  * @returns {{ result: string, wrapped: number, skipped: Array<{run:string,error:string}> }}
  */
 function processPart(part) {
+  const { spans, gaps } = tokenize(part);
+
+  // Imbalance guard: a clean part has no stray unescaped $ left in any gap.
+  if (gaps.some((gap) => UNESCAPED_DOLLAR.test(gap))) {
+    return { result: part, wrapped: 0, skipped: [] };
+  }
+
   let totalWrapped = 0;
   const totalSkipped = [];
   let result = '';
-  let lastIndex = 0;
 
-  const dollarRe = new RegExp(EXISTING_DOLLAR_RE.source, 'g');
-  let match;
-
-  while ((match = dollarRe.exec(part)) !== null) {
-    // Gap before this existing $…$ span
-    const gap = part.slice(lastIndex, match.index);
-    const gapResult = processGap(gap);
+  for (let i = 0; i < gaps.length; i++) {
+    const gapResult = processGap(gaps[i]);
     result += gapResult.result;
     totalWrapped += gapResult.wrapped;
     totalSkipped.push(...gapResult.skipped);
 
-    // Keep existing $…$ verbatim
-    result += match[0];
-    lastIndex = match.index + match[0].length;
+    if (i < spans.length) {
+      // Keep existing span verbatim
+      result += spans[i];
+    }
   }
-
-  // Trailing gap after last $…$ span (or the whole part if none found)
-  const trailingGap = part.slice(lastIndex);
-  const trailingResult = processGap(trailingGap);
-  result += trailingResult.result;
-  totalWrapped += trailingResult.wrapped;
-  totalSkipped.push(...trailingResult.skipped);
 
   return { result, wrapped: totalWrapped, skipped: totalSkipped };
 }
