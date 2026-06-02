@@ -138,3 +138,6 @@ android/
 .claude/context/
 .claude/settings.json
 .claude/settings.local.json
+
+# 백업 파일(마이그레이션 러너 생성, 어느 경로든)
+**/*.bak
