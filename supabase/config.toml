@@ -1,0 +1,6 @@
+project_id = "trvqgqvwhqvlgqzlsxbu"
+
+# PayApp 결제 통보(feedbackurl)는 Supabase JWT를 보내지 않으므로 JWT 검증을 끈다.
+# 인증은 함수 내부에서 userid/linkkey/linkval/price 대조로 수행한다.
+[functions.payapp-feedback]
+verify_jwt = false
