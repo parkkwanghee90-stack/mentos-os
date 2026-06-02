@@ -1,4 +1,5 @@
 import katex from 'katex';
+import { normalizeMathText } from './normalize.js';
 
 // $…$ 단위로 KaTeX 검증, + 정규식 패턴(P1,P3,P5) 검출. 각 finding에 안전등급 부여.
 // P1: 줄 단위 $ 홀수(짝 불균형) — AUTO 후보(줄 끝 댕글링 보정 가능 시)
@@ -10,8 +11,11 @@ export function detectIssues(text) {
   if (!text || typeof text !== 'string') return [];
   const issues = [];
 
+  // 렌더러와 동일하게 정규화한 뒤 실제 깨짐 여부를 검출
+  const t = normalizeMathText(text);
+
   // P1: 줄 단위 $ 개수 홀수
-  text.split('\n').forEach((line, idx) => {
+  t.split('\n').forEach((line, idx) => {
     const dollars = (line.match(/(?<!\\)\$/g) || []).length;
     if (dollars % 2 === 1) {
       issues.push({ code: 'P1', grade: 'AUTO', line: idx, snippet: line.trim() });
@@ -19,7 +23,7 @@ export function detectIssues(text) {
   });
 
   // P3: $ 구간을 제거한 잔여 텍스트에서 plaintext 수식 토큰
-  const outside = text.replace(/(?<!\\)\$[^$]*\$/g, ' ');
+  const outside = t.replace(/(?<!\\)\$[^$]*\$/g, ' ');
   if (PLAINTEXT_MATH.test(outside)) {
     issues.push({ code: 'P3', grade: 'REVIEW', snippet: outside.trim().slice(0, 120) });
   }
@@ -27,7 +31,7 @@ export function detectIssues(text) {
   // P5: $…$ 내부 KaTeX 검증
   const inline = /(?<!\\)\$((?:[^$\\]|\\[\s\S])+?)\$/g;
   let m;
-  while ((m = inline.exec(text)) !== null) {
+  while ((m = inline.exec(t)) !== null) {
     try {
       katex.renderToString(m[1], { throwOnError: true });
     } catch (e) {
