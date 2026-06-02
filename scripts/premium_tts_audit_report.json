@@ -143,76 +143,40 @@
       "lectureId": "시그마용법",
       "slug": "sigma",
       "sourceJson": "sigma.json",
-      "status": "GAP",
-      "missing": [
-        4,
-        5
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 5
     },
     {
       "lectureId": "수학적귀납법",
       "slug": "math_induction",
       "sourceJson": "math_induction.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 7
     },
     {
       "lectureId": "함수의극한",
       "slug": "limit",
       "sourceJson": "limit.json",
-      "status": "GAP",
-      "missing": [
-        8,
-        9
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 9
     },
     {
       "lectureId": "함수의연속",
       "slug": "continuity",
       "sourceJson": ".json",
-      "status": "GAP",
-      "missing": [
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 6
     },
     {
       "lectureId": "미분계수",
       "slug": "derivative_coeff_full",
       "sourceJson": "derivative_coeff_.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 15
     },
     {
@@ -227,93 +191,40 @@
       "lectureId": "부정적분과정적분",
       "slug": "indef_def_integral",
       "sourceJson": "def_integral_def_integral.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 8
     },
     {
       "lectureId": "정적분의활용",
       "slug": "def_integral_util",
       "sourceJson": "def_integral_.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 10
     },
     {
       "lectureId": "미적분_수열의극한",
       "slug": "calc_seq_limit",
       "sourceJson": "calculus_sequence_limit.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 10
     },
     {
       "lectureId": "미적분_급수",
       "slug": "calc_series",
       "sourceJson": "calculus_series.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 10
     },
     {
       "lectureId": "미적분_삼각함수극한",
       "slug": "calc_trig_limit",
       "sourceJson": "calculus_trig_funclimit.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 10
     },
     {
@@ -322,19 +233,6 @@
       "sourceJson": "calculus_trig_func_.json",
       "status": "GAP",
       "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
         14,
         15
       ],
@@ -483,12 +381,6 @@
       "sourceJson": "conditional_prob_.json",
       "status": "GAP",
       "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
         7,
         8,
         9
