@@ -5,6 +5,7 @@ import Hero from "@/components/home/Hero";
 import Empathy from "@/components/home/Empathy";
 import HowItWorks from "@/components/home/HowItWorks";
 import AiDemo from "@/components/home/AiDemo";
+import ParentsReport from "@/components/home/ParentsReport";
 
 export default function Landing() {
   return (
@@ -16,6 +17,7 @@ export default function Landing() {
         <Empathy />
         <HowItWorks />
         <AiDemo />
+        <ParentsReport />
       </main>
     </div>
   );
