@@ -4,6 +4,7 @@ import ChalkHeader from "@/components/home/ChalkHeader";
 import Hero from "@/components/home/Hero";
 import Empathy from "@/components/home/Empathy";
 import HowItWorks from "@/components/home/HowItWorks";
+import AiDemo from "@/components/home/AiDemo";
 
 export default function Landing() {
   return (
@@ -14,6 +15,7 @@ export default function Landing() {
         <Hero />
         <Empathy />
         <HowItWorks />
+        <AiDemo />
       </main>
     </div>
   );
