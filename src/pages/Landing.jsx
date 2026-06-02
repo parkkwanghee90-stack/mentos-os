@@ -3,6 +3,7 @@ import "@/styles/chalkboard.css";
 import ChalkHeader from "@/components/home/ChalkHeader";
 import Hero from "@/components/home/Hero";
 import Empathy from "@/components/home/Empathy";
+import HowItWorks from "@/components/home/HowItWorks";
 
 export default function Landing() {
   return (
@@ -12,6 +13,7 @@ export default function Landing() {
       <main id="main">
         <Hero />
         <Empathy />
+        <HowItWorks />
       </main>
     </div>
   );
