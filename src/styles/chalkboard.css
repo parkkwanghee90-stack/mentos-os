@@ -1,0 +1,206 @@
+/* ============================================================
+   매스멘토스 홈 V3 — "칠판 다크테크" 디자인 시스템
+   전부 .chalk-root 스코프 → 앱 타 페이지에 영향 없음. Tailwind 미사용.
+   ============================================================ */
+
+.chalk-root {
+  /* 다크 칠판 */
+  --bb: #0b1410;          /* board base */
+  --bb-elev: #0f1a14;     /* elevated */
+  --bb-line: rgba(124, 255, 176, 0.15);
+  --ink-on-dark: #b9c7bf;
+  --title-on-dark: #f3fff8;
+  /* 밝은 분필가루 종이 */
+  --paper: #f2f4f1;
+  --ink: #0b1410;
+  --ink-soft: #5a6b61;
+  --paper-line: #e2e8e2;
+  /* 컬러 분필 */
+  --mint: #7cffb0;
+  --yellow: #f2e9b8;
+  --coral: #ff9e80;
+  --green-solid: #0b6b3a;
+  /* 폰트 */
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- 섹션 / 레이아웃 ---------- */
+.chalk-root .chalk-section {
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 0;
+}
+@media (min-width: 1024px) {
+  .chalk-root .chalk-section { padding: 8.5rem 0; }
+}
+.chalk-root .chalk-section--dark { background: var(--bb); color: var(--ink-on-dark); }
+.chalk-root .chalk-section--light { background: var(--paper); color: var(--ink); }
+.chalk-root .chalk-wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+@media (min-width: 1024px) {
+  .chalk-root .chalk-wrap { padding: 0 2.5rem; }
+}
+
+/* ---------- 텍스처 (다크) ---------- */
+.chalk-root .chalk-grain::before {
+  content: "";
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+.chalk-root .chalk-grid::after {
+  content: "";
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    linear-gradient(var(--bb-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bb-line) 1px, transparent 1px);
+  background-size: 40px 40px;
+  -webkit-mask-image: radial-gradient(ellipse 75% 70% at 50% 35%, #000 0%, transparent 78%);
+  mask-image: radial-gradient(ellipse 75% 70% at 50% 35%, #000 0%, transparent 78%);
+  opacity: 0.6;
+}
+
+/* ---------- 타이포 ---------- */
+.chalk-root .chalk-kicker {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  color: var(--mint);
+  text-transform: uppercase;
+}
+.chalk-root .chalk-section--light .chalk-kicker { color: var(--green-solid); }
+.chalk-root .chalk-h1 {
+  font-size: clamp(2.4rem, 7vw, 3.6rem);
+  font-weight: 850;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+.chalk-root .chalk-h2 {
+  font-size: clamp(1.75rem, 4.5vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+.chalk-root .chalk-section--dark .chalk-h1,
+.chalk-root .chalk-section--dark .chalk-h2 { color: var(--title-on-dark); }
+.chalk-root .chalk-lead {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  max-width: 44ch;
+}
+.chalk-root .chalk-num {
+  font-family: var(--mono);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--mint);
+  opacity: 0.8;
+}
+
+/* 컬러 분필 */
+.chalk-root .chalk-mint { color: var(--mint); }
+.chalk-root .chalk-yellow { color: var(--yellow); }
+.chalk-root .chalk-coral { color: var(--coral); }
+.chalk-root .chalk-glow { text-shadow: 0 0 22px rgba(124, 255, 176, 0.5); }
+
+/* 수식 (모노) */
+.chalk-root .chalk-eq {
+  font-family: var(--mono);
+  line-height: 1.9;
+  color: var(--title-on-dark);
+}
+
+/* ---------- 버튼 ---------- */
+.chalk-root .chalk-btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-weight: 800; font-size: 1rem;
+  padding: 0.85rem 1.4rem; border-radius: 8px;
+  background: var(--mint); color: #06140d;
+  box-shadow: 0 0 24px rgba(124, 255, 176, 0.35);
+  text-decoration: none; border: none; cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.chalk-root .chalk-btn:hover { transform: translateY(-2px); box-shadow: 0 0 34px rgba(124, 255, 176, 0.55); }
+.chalk-root .chalk-btn--ghost {
+  background: transparent; color: var(--title-on-dark);
+  border: 1px solid var(--bb-line); box-shadow: none; font-weight: 700;
+}
+.chalk-root .chalk-section--light .chalk-btn--ghost { color: var(--ink); border-color: #cdd6cf; }
+
+/* ---------- 카드 ---------- */
+.chalk-root .chalk-card {
+  background: #fff;
+  border: 1px solid var(--paper-line);
+  border-radius: 18px;
+  padding: 1.6rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.chalk-root .chalk-card:hover { transform: translateY(-4px); box-shadow: 0 18px 44px -18px rgba(11, 20, 16, 0.2); }
+.chalk-root .chalk-card--memo {
+  background: #fcfbf4;
+  border: 1px solid #e9e6d2;
+  border-radius: 6px;
+  box-shadow: 0 8px 22px -12px rgba(11, 20, 16, 0.25);
+}
+.chalk-root .chalk-card--memo:nth-child(odd) { transform: rotate(-1.2deg); }
+.chalk-root .chalk-card--memo:nth-child(even) { transform: rotate(1deg); }
+.chalk-root .chalk-card--dark {
+  background: var(--bb-elev);
+  border: 1px solid var(--bb-line);
+  border-radius: 16px;
+  padding: 1.4rem;
+}
+
+/* ---------- 분필 트레이 / 칩 ---------- */
+.chalk-root .chalk-tray {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 12px;
+  background: linear-gradient(#3a2a1c, #241a11); z-index: 3;
+}
+.chalk-root .chalk-chip {
+  position: absolute; bottom: 12px; height: 8px; border-radius: 4px; z-index: 4; opacity: 0.85;
+}
+
+/* ---------- 헤더 ---------- */
+.chalk-root .chalk-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(11, 20, 16, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--bb-line);
+}
+.chalk-root .chalk-header-inner {
+  max-width: 1180px; margin: 0 auto; padding: 0.85rem 1.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.chalk-root .chalk-navlink {
+  color: var(--ink-on-dark); text-decoration: none; font-size: 0.92rem; font-weight: 500;
+  transition: color 0.2s;
+}
+.chalk-root .chalk-navlink:hover { color: var(--mint); }
+
+/* ---------- 접근성 / 모션 ---------- */
+.chalk-root :focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; border-radius: 4px; }
+@keyframes chalk-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(124, 255, 176, 0.4); }
+  50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(124, 255, 176, 0); }
+}
+.chalk-root .chalk-live { animation: chalk-pulse 2.4s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .chalk-root .chalk-live { animation: none; }
+}
+
+/* ---------- skip link ---------- */
+.chalk-root .chalk-skip {
+  position: absolute; top: -100px; left: 0; z-index: 100;
+  background: var(--mint); color: #06140d; padding: 0.75rem 1rem; font-weight: 700; text-decoration: none;
+}
+.chalk-root .chalk-skip:focus { top: 0; }
