@@ -3,6 +3,7 @@ import path from 'path';
 import { detectIssues } from '../src/lib/algebraFix/latexDetect.js';
 import { auditMapping } from '../src/lib/algebraFix/mappingAudit.js';
 import { isAlgebraKey } from '../src/lib/algebraFix/algebraUnits.js';
+import { adaptAnswersMaster } from '../src/lib/algebraFix/answersMasterAdapter.js';
 
 const ROOT = process.cwd();
 const readJson = (p) => JSON.parse(fs.readFileSync(path.join(ROOT, p), 'utf8'));
@@ -11,6 +12,7 @@ const readJson = (p) => JSON.parse(fs.readFileSync(path.join(ROOT, p), 'utf8'));
 const mathTexts = readJson('public/data/math_problem_texts.json');
 const avs = readJson('public/data/avs_answers.json');
 const answersMaster = readJson('public/data/answers_master.json');
+const answersMasterMap = adaptAnswersMaster(answersMaster);
 const problemsIndex = readJson('public/problems_index.json');
 
 const ccDir = path.join(ROOT, 'public/concept_cards');
@@ -23,7 +25,7 @@ const MAPPING_REPORT = path.join(REPORT_DIR, '2026-06-02-mapping-audit.md');
 const LATEX_REPORT = path.join(REPORT_DIR, '2026-06-02-latex-audit.md');
 
 // ---- 매핑 audit ----
-const mappingIssues = auditMapping({ problemsIndex, avsAnswers: avs, answersMaster, diskFolders });
+const mappingIssues = auditMapping({ problemsIndex, avsAnswers: avs, answersMaster: answersMasterMap, diskFolders });
 
 // ---- LaTeX audit: A(문제 본문 math_problem_texts) ----
 const latexA = [];
