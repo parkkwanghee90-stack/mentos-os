@@ -145,8 +145,6 @@
       "sourceJson": "sigma.json",
       "status": "GAP",
       "missing": [
-        2,
-        3,
         4,
         5
       ],
