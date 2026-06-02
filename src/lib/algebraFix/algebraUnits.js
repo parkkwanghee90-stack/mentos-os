@@ -25,8 +25,10 @@ export function normalizeUnitKey(key) {
   return { root: cleaned, stage: null };
 }
 
-// 키가 대수 단원에 속하는지(루트 토큰 포함 여부)
+// 키가 대수 단원에 속하는지(하드코딩+SSOT 합집합 루트 기준).
+// JSON 키는 compact('삼각함수성질'), SSOT 루트는 공백/가운뎃점 포함('삼각함수 성질·정의')이라 양방향 포함을 확인.
 export function isAlgebraKey(key) {
   const { root } = normalizeUnitKey(key);
-  return ALGEBRA_ROOT_TOKENS.some((t) => root.includes(t));
+  if (!root) return false;
+  return getAlgebraUnitRoots().some((t) => root.includes(t) || t.includes(root));
 }

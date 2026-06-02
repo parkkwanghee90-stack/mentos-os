@@ -19,5 +19,8 @@ describe('algebraUnits', () => {
   it('대수 단원 키 여부를 판정한다', () => {
     expect(isAlgebraKey('삼각함수활용3단계')).toBe(true);
     expect(isAlgebraKey('(1)일차부등식 개념2단계(26) 1+1(쌍둥이)')).toBe(false);
+    expect(isAlgebraKey('지수로그함수활용3단계')).toBe(true);
+    expect(isAlgebraKey('등차등비2단계')).toBe(true);
+    expect(isAlgebraKey('(2)이차부등식 개념2단계(42)p21 1+1(쌍둥이)')).toBe(false);
   });
 });
