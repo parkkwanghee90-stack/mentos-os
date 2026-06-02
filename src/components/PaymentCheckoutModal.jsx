@@ -1,41 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { X, CreditCard, Gift, ShieldCheck, HelpCircle, ChevronDown, Clock, BookOpen, AlertCircle } from 'lucide-react';
-
-// Dynamic SDK loader for Toss Payments V1
-const loadTossSdk = () => {
-  return new Promise((resolve, reject) => {
-    if (window.TossPayments) return resolve(window.TossPayments);
-    const script = document.createElement('script');
-    script.src = 'https://js.tosspayments.com/v1/payment';
-    script.async = true;
-    script.onload = () => resolve(window.TossPayments);
-    script.onerror = () => reject(new Error('토스페이먼츠 SDK 로딩에 실패했습니다.'));
-    document.body.appendChild(script);
-  });
-};
+import { useAuth } from '@/context/AuthContext';
+import { startPayappCheckout } from '@/services/payappCheckout';
 
 export default function PaymentCheckoutModal({ onClose }) {
+  const { user } = useAuth();
   const [loading, setLoading] = useState(false);
   const [showRefundDetail, setShowRefundDetail] = useState(false);
 
-  // 100원 테스트 상품과 49,000원 상품 결제링크 정의 (상수 분리)
-  const PAYAPP_TEST_100W_LINK = 'https://www.payapp.kr/L/z4ePI1'; // 100원 테스트 시 이 링크에 100원 연동 필요
-  const PAYAPP_PROD_49000_LINK = 'https://www.payapp.kr/L/z4ePI1';
-
-  // 100원 테스트 모드 플래그 (true면 100원, false면 49,000원)
-  const IS_TEST_MODE = true; 
-
-  const activePayappLink = IS_TEST_MODE ? PAYAPP_TEST_100W_LINK : PAYAPP_PROD_49000_LINK;
-  const activeAmount = IS_TEST_MODE ? '100' : '49000';
-
-  const handlePayment = () => {
+  const handlePayment = async () => {
+    if (loading) return;
     setLoading(true);
     try {
-      // 결제 성공 후 멘토스 OS /success로 자동 복귀하여 premium=true, paid_at 자동 설정하도록 returnurl을 동적으로 붙여 띄움
-      const returnUrl = encodeURIComponent(`${window.location.origin}/success?payapp_success=true&amount=${activeAmount}&orderId=payapp_${Date.now()}`);
-      const checkoutUrl = `${activePayappLink}?returnurl=${returnUrl}`;
-      
-      window.open(checkoutUrl, '_blank');
+      if (!user?.id) {
+        alert('로그인 후 결제할 수 있습니다.');
+        return;
+      }
+      // 결제 결과 기록·프리미엄 승인은 Supabase edge function(feedbackurl)에서만 처리한다.
+      await startPayappCheckout({ userId: user.id });
       onClose();
     } catch (err) {
       console.error('[PAYAPP_PAYMENT_ERROR]', err);
@@ -139,22 +121,16 @@ export default function PaymentCheckoutModal({ onClose }) {
           marginBottom: '1.5rem'
         }}>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
-            <span style={{ fontSize: '0.85rem', color: '#94a3b8', textDecoration: IS_TEST_MODE ? 'none' : 'line-through' }}>
-              {IS_TEST_MODE ? '테스트 결제 진행' : '월 99,000원'}
-            </span>
-            <span style={{ fontSize: '0.8rem', color: '#f87171', fontWeight: '900', background: 'rgba(239,68,68,0.15)', padding: '2px 6px', borderRadius: '4px' }}>
-              {IS_TEST_MODE ? '간편 검증' : '54% 특별할인'}
-            </span>
+            <span style={{ fontSize: '0.85rem', color: '#94a3b8' }}>테스트 결제 진행</span>
+            <span style={{ fontSize: '0.8rem', color: '#f87171', fontWeight: '900', background: 'rgba(239,68,68,0.15)', padding: '2px 6px', borderRadius: '4px' }}>간편 검증</span>
           </div>
-          
+
           <div style={{ fontSize: '2.2rem', fontWeight: '900', background: 'linear-gradient(to right, #60a5fa, #c084fc, #f472b6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '-1px' }}>
-            {IS_TEST_MODE ? '100원' : '월 45,000원'}
+            1,000원
           </div>
-          
+
           <div style={{ fontSize: '0.8rem', color: '#c084fc', fontWeight: 'bold', marginTop: '4px' }}>
-            {IS_TEST_MODE 
-              ? '* 100원 결제 완료 즉시 프리미엄 승인 자동 흐름이 실행됩니다.' 
-              : '* 3개월간 이벤트 특가 혜택 제공 후 정상가 월 99,000원으로 조정됩니다.'}
+            * 결제 완료 후 PayApp 통보가 확인되면 프리미엄이 자동 승인됩니다.
           </div>
         </div>
 

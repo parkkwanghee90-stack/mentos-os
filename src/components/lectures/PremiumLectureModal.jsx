@@ -3,6 +3,7 @@ import { X, BookOpen, ChevronRight, Sparkles, CreditCard, ShieldCheck, Lock } fr
 import PremiumLecturePlayer from './PremiumLecturePlayer';
 import { supabase } from '@/services/supabaseClient';
 import { useAuth } from '@/context/AuthContext';
+import { startPayappCheckout } from '@/services/payappCheckout';
 
 // 실제 public/premium_lectures/ 디렉토리의 파일 기반 인덱스
 const LECTURE_INDEX = {
@@ -79,25 +80,21 @@ export default function PremiumLectureModal({ onClose, selectedUnit, selectedCou
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const loading = false;
 
-  // 원장님 요청: 100원 테스트 상품과 49,000원 상품 결제 전환이 가능하도록 변수로 정의
-  // 100원 테스트 상품 결제 링크가 완성되면 아래 주소를 교체해주시면 됩니다!
-  const PAYAPP_TEST_100W_LINK = 'https://www.payapp.kr/L/z4ePI1'; // 현재는 임시로 기존 링크 지정
-  const PAYAPP_PROD_49000_LINK = 'https://www.payapp.kr/L/z4ePI1';
-
-  // 100원 테스트 여부 플래그 (true면 100원 링크로 동작, false면 49,000원 프로덕션 링크로 동작)
-  const IS_TEST_MODE = true; 
-
-  const activePayappLink = IS_TEST_MODE ? PAYAPP_TEST_100W_LINK : PAYAPP_PROD_49000_LINK;
-  const activeAmount = IS_TEST_MODE ? '100' : '49000';
-
   const isPaid = localStorage.getItem('mentos_is_paid') === 'true' || localStorage.getItem('mentos_premium') === 'true';
 
-  const handlePayAppRedirect = () => {
-    // 결제 완료 후 멘토스 OS로 100% 자동 리다이렉션하여 premium=true 및 paid_at 승인 처리를 하도록 returnurl 파라미터 결합
-    const returnUrl = encodeURIComponent(`${window.location.origin}/success?payapp_success=true&amount=${activeAmount}&orderId=payapp_${Date.now()}`);
-    const checkoutUrl = `${activePayappLink}?returnurl=${returnUrl}`;
-    window.open(checkoutUrl, '_blank');
-    onClose();
+  const handlePayAppRedirect = async () => {
+    try {
+      if (!user?.id) {
+        alert('로그인 후 결제할 수 있습니다.');
+        return;
+      }
+      // 결제 결과 기록·프리미엄 승인은 Supabase edge function(feedbackurl)에서만 처리한다.
+      await startPayappCheckout({ userId: user.id });
+      onClose();
+    } catch (err) {
+      console.error('[PAYAPP_PAYMENT_ERROR]', err);
+      alert(`결제창 호출에 실패했습니다: ${err.message}`);
+    }
   };
 
   useEffect(() => {

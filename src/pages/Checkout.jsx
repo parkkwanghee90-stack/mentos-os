@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CreditCard, ShieldCheck, Zap, Sparkles, ArrowLeft } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
+import { startPayappCheckout } from '@/services/payappCheckout';
 
 export default function Checkout() {
   const navigate = useNavigate();
@@ -14,43 +15,21 @@ export default function Checkout() {
     } catch { return ''; }
   });
 
-  useEffect(() => {
-    // 1. Toss Payments SDK 동적 주입
-    const script = document.createElement('script');
-    script.src = 'https://js.tosspayments.com/v1';
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   const handlePayment = async () => {
     if (loading) return;
     setLoading(true);
-
     try {
-      if (!window.TossPayments) {
-        alert("Toss 결제 모듈을 불러오는 중입니다. 잠시 후 다시 시도해 주세요.");
-        setLoading(false);
+      if (!user?.id) {
+        alert('로그인 후 결제할 수 있습니다.');
         return;
       }
 
-      // 토스페이먼츠 테스트 클라이언트 키
-      const clientKey = 'test_ck_D5aZzN3E3Q19NL1al0W8g9YqrzOp';
-      const tossPayments = window.TossPayments(clientKey);
-
-      const orderId = `order_${Date.now()}`;
-      const amount = 39000; // 프리미엄 멤버십 39,000원
-
-      // 학부모 번호 저장 (결제 전)
+      // 학부모 알림 번호 저장 (결제와 독립적으로 보존)
       if (parentPhone.trim()) {
         try {
           const u = JSON.parse(localStorage.getItem('mentos_mock_user') || '{}');
           u.parentPhone = parentPhone.trim();
           localStorage.setItem('mentos_mock_user', JSON.stringify(u));
-          // pushService의 config에도 자동 등록
           const { getPushConfig, savePushConfig } = await import('@/services/pushService');
           const config = getPushConfig() || { sms: {}, kakao: {}, parentPhones: {} };
           config.parentPhones[u.name || '학생'] = parentPhone.trim();
@@ -58,17 +37,12 @@ export default function Checkout() {
         } catch (e) { console.warn('[Checkout] parentPhone save error:', e); }
       }
 
-      // 토스 결제 요청창 띄우기
-      await tossPayments.requestPayment('카드', {
-        amount: amount,
-        orderId: orderId,
-        orderName: '멘토스 OS 프리미엄 무제한 안심패스 (1개월)',
-        customerName: user?.email ? user.email.split('@')[0] : '멘토스회원',
-        successUrl: `${window.location.origin}/payment/success`,
-        failUrl: `${window.location.origin}/payment/fail`,
-      });
+      // 결제 결과 기록·프리미엄 승인은 Supabase edge function(feedbackurl)에서만 처리한다.
+      await startPayappCheckout({ userId: user.id });
     } catch (err) {
-      console.error("Toss Payment request failed:", err);
+      console.error('[PAYAPP_PAYMENT_ERROR]', err);
+      alert(`결제창 호출에 실패했습니다: ${err.message}`);
+    } finally {
       setLoading(false);
     }
   };
@@ -118,9 +92,9 @@ export default function Checkout() {
 
         {/* 금액 */}
         <div style={{ marginBottom: '2rem' }}>
-          <div style={{ fontSize: '0.9rem', color: '#a1a1aa', marginBottom: '4px' }}>매월 자동 결제</div>
+          <div style={{ fontSize: '0.9rem', color: '#a1a1aa', marginBottom: '4px' }}>테스트 결제</div>
           <div style={{ fontSize: '2.2rem', fontWeight: '900', color: '#ffffff' }}>
-            39,000 <span style={{ fontSize: '1.2rem', fontWeight: '700', color: '#a1a1aa' }}>원</span>
+            1,000 <span style={{ fontSize: '1.2rem', fontWeight: '700', color: '#a1a1aa' }}>원</span>
           </div>
         </div>
 
@@ -150,11 +124,11 @@ export default function Checkout() {
           onMouseLeave={(e) => !loading && (e.currentTarget.style.transform = 'scale(1)')}
         >
           <CreditCard size={20} />
-          {loading ? '결제창 로딩 중...' : 'Toss Payments로 결제하기'}
+          {loading ? '결제창 로딩 중...' : 'PayApp으로 결제하기'}
         </button>
 
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '6px', fontSize: '0.75rem', color: '#71717a', marginTop: '1.2rem' }}>
-          <ShieldCheck size={14} /> 안전한 토스페이먼츠 결제 시스템을 이용합니다.
+          <ShieldCheck size={14} /> PayApp 안전 결제 시스템을 이용합니다.
         </div>
 
       </div>

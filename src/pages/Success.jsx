@@ -1,77 +1,60 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { CheckCircle, Award, ArrowRight, Loader } from 'lucide-react';
+import { CheckCircle, ArrowRight, Loader } from 'lucide-react';
 import { supabase } from '@/services/supabaseClient';
-import { useAuth } from '@/context/AuthContext';
 
 export default function Success() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const { user, updatePremiumStatus } = useAuth();
-  const [status, setStatus] = useState('processing'); // 'processing' | 'success' | 'error'
+  const [status, setStatus] = useState('processing'); // processing | success | pending | error
+  const [receipt, setReceipt] = useState(null);
 
-  const paymentKey = searchParams.get('paymentKey');
   const orderId = searchParams.get('orderId');
-  const amount = searchParams.get('amount');
 
   useEffect(() => {
-    const confirmPaymentAndUpgrade = async () => {
-      const payappSuccess = searchParams.get('payapp_success') === 'true';
-      const payappAmount = searchParams.get('amount') || '49000';
-      const payappOrderId = searchParams.get('orderId') || `payapp_${Date.now()}`;
+    if (!orderId) {
+      setStatus('error');
+      return;
+    }
 
-      // Toss Payments 또는 PayApp 성공 둘 다 지원
-      const isSuccess = (paymentKey && orderId && amount) || payappSuccess;
+    let cancelled = false;
+    let tries = 0;
+    const maxTries = 14; // 약 21초 (1.5초 간격)
 
-      if (!isSuccess) {
-        console.error("Missing payment parameters!");
-        setStatus('error');
+    const poll = async () => {
+      tries += 1;
+      try {
+        // 결제 기록은 Supabase edge function(feedbackurl)이 작성한다. 여기서는 조회만 한다.
+        const { data } = await supabase
+          .from('payments')
+          .select('status, amount, order_id, mul_no')
+          .eq('order_id', orderId)
+          .maybeSingle();
+
+        if (cancelled) return;
+
+        if (data && data.status === 'success') {
+          // 프리미엄 메타데이터가 edge function에서 갱신됐으므로 세션 갱신으로 반영
+          await supabase.auth.refreshSession();
+          setReceipt(data);
+          setStatus('success');
+          return;
+        }
+      } catch (err) {
+        console.error('[PaymentSuccess] polling error:', err);
+      }
+
+      if (cancelled) return;
+      if (tries >= maxTries) {
+        setStatus('pending');
         return;
       }
-
-      try {
-        const finalAmount = amount || payappAmount;
-        const finalOrderId = orderId || payappOrderId;
-        const finalPaymentKey = paymentKey || `payapp_key_${Date.now()}`;
-
-        console.log('[PaymentSuccess] Confirming payment with parameters:', { finalPaymentKey, finalOrderId, finalAmount });
-        
-        // 1. Supabase Database `payments` 테이블에 승인 성공 기록 삽입 (Upsert)
-        if (user) {
-          console.log('[PaymentSuccess] Recording payment invoice inside Supabase DB...');
-          const { error: dbError } = await supabase
-            .from('payments')
-            .upsert({
-              user_id: user.id,
-              payment_key: finalPaymentKey,
-              order_id: finalOrderId,
-              amount: parseFloat(finalAmount),
-              status: 'success',
-              approved_at: new Date().toISOString()
-            });
-
-          if (dbError) {
-            console.error('[PaymentSuccess] Failed to save invoice to Supabase DB:', dbError);
-          }
-
-          // 2. AuthContext의 프리미엄 업데이트 호출 (Profiles/Users 테이블 premium=true, paid_at 자동 설정)
-          console.log('[PaymentSuccess] Elevating user profile to Premium Status...');
-          await updatePremiumStatus(true);
-        } else {
-          // 비회원 결제 시나리오 fallback (테스트 목적)
-          localStorage.setItem('mentos_is_paid', 'true');
-          localStorage.setItem('mentos_premium', 'true');
-        }
-
-        setStatus('success');
-      } catch (err) {
-        console.error('[PaymentSuccess] Confirmatory workflow crashed:', err);
-        setStatus('error');
-      }
+      setTimeout(poll, 1500);
     };
 
-    confirmPaymentAndUpgrade();
-  }, [paymentKey, orderId, amount, user, searchParams]);
+    poll();
+    return () => { cancelled = true; };
+  }, [orderId]);
 
   if (status === 'processing') {
     return (
@@ -79,6 +62,24 @@ export default function Success() {
         <Loader size={44} color="#6366f1" className="animate-spin" />
         <h2 style={{ marginTop: '1.5rem', fontWeight: 'bold' }}>결제 승인 데이터를 검증 중입니다...</h2>
         <p style={{ color: '#71717a', fontSize: '0.9rem', marginTop: '0.5rem' }}>안전한 암호화 채널을 통해 연동을 처리하고 있습니다.</p>
+      </div>
+    );
+  }
+
+  if (status === 'pending') {
+    return (
+      <div style={{ minHeight: '100vh', background: '#09090b', color: '#f4f4f5', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '2rem' }}>
+        <Loader size={44} color="#f59e0b" className="animate-spin" />
+        <h2 style={{ marginTop: '1.5rem', fontWeight: 'bold' }}>결제 확인 중입니다</h2>
+        <p style={{ color: '#a1a1aa', textAlign: 'center', maxWidth: '380px', marginTop: '0.5rem', fontSize: '0.9rem', lineHeight: '1.5' }}>
+          결제 통보를 기다리고 있습니다. 잠시 후 대시보드에서 프리미엄 상태가 반영됩니다. (가상계좌는 입금 후 반영)
+        </p>
+        <button
+          onClick={() => navigate('/dashboard')}
+          style={{ marginTop: '2rem', padding: '0.8rem 2rem', background: '#27272a', border: '1px solid #3f3f46', borderRadius: '8px', color: 'white', fontWeight: 'bold', cursor: 'pointer' }}
+        >
+          대시보드로 가기
+        </button>
       </div>
     );
   }
@@ -125,11 +126,11 @@ export default function Success() {
           </div>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <span style={{ color: '#71717a' }}>주문 번호</span>
-            <span style={{ fontFamily: 'monospace', color: '#a1a1aa' }}>{orderId}</span>
+            <span style={{ fontFamily: 'monospace', color: '#a1a1aa' }}>{receipt?.order_id || orderId}</span>
           </div>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <span style={{ color: '#71717a' }}>결제 금액</span>
-            <span style={{ color: '#10b981', fontWeight: 'bold' }}>{parseFloat(amount || '0').toLocaleString()} 원</span>
+            <span style={{ color: '#10b981', fontWeight: 'bold' }}>{(receipt?.amount ?? 0).toLocaleString()} 원</span>
           </div>
         </div>
 
