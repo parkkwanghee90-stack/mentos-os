@@ -758,7 +758,7 @@ const LOCAL_DIR = path.join('public', 'audio', 'premium_lectures');
 const JSON_DIR = path.join('public', 'premium_lectures');
 const PAUSE_MARKER = '\n\n…\n\n'; // long pause between steps for silence detection
 const MAX_CHARS_SINGLE_CALL = 3000; // above this, force per-step
-const POOL_EXTRA = ['AIzaSyATuwWx35ho0HovQ1915tY_tbvpzZAKlgw'];
+const POOL_EXTRA = [process.env.VITE_GEMINI_API_KEY_2, process.env.VITE_GEMINI_API_KEY_3].filter(Boolean); // never hardcode keys
 
 if (!SUPABASE_URL || !SERVICE_KEY) { console.error('Missing Supabase env'); process.exit(1); }
 fs.mkdirSync(LOCAL_DIR, { recursive: true });
