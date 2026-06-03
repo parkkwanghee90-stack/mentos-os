@@ -180,11 +180,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
     if (phaseName === 'core' || phaseName === 'step' || phaseName === 'mock') {
       setPcbsPhase('P');
       setPcbsTurnCount(0);
-      const phaseLabel = phaseName === 'core' ? '핵심 개념' : phaseName === 'step' ? '단계별 문제 풀이' : '미니 모의고사';
-      initialMessages.push({
-        role: 'assistant',
-        content: `[${phaseLabel}] 새 문제를 시작합니다.\n\n구하고자 하는 것과 단서와 배경단원을 생각하면서 문제를 풀어볼래.\n모르면 아래 개념강의를 듣거나 힌트를 눌러봐.\n모르는 부분은 힌트에서 스텝 어디를 모르는지 질문하면 돼.`,
-      });
+      // 인트로 안내 메시지 제거 (사용자 요청) — 채팅은 빈 상태로 시작
     } else if (phaseName === 'homework') {
       initialMessages.push({ role: 'assistant', content: '[과제 안내]\n오늘 배운 단원의 복습 과제를 안내합니다.' });
     } else if (phaseName === 'finalize') {
