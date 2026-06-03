@@ -180,11 +180,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
     if (phaseName === 'core' || phaseName === 'step' || phaseName === 'mock') {
       setPcbsPhase('P');
       setPcbsTurnCount(0);
-      const phaseLabel = phaseName === 'core' ? '핵심 개념' : phaseName === 'step' ? '단계별 문제 풀이' : '미니 모의고사';
-      initialMessages.push({
-        role: 'assistant',
-        content: `[${phaseLabel}] 새 문제를 시작합니다.\n\n구하고자 하는 것과 단서와 배경단원을 생각하면서 문제를 풀어볼래.\n모르면 아래 개념강의를 듣거나 힌트를 눌러봐.\n모르는 부분은 힌트에서 스텝 어디를 모르는지 질문하면 돼.`,
-      });
+      // 인트로 안내 메시지 제거 (사용자 요청) — 채팅은 빈 상태로 시작
     } else if (phaseName === 'homework') {
       initialMessages.push({ role: 'assistant', content: '[과제 안내]\n오늘 배운 단원의 복습 과제를 안내합니다.' });
     } else if (phaseName === 'finalize') {
@@ -667,8 +663,8 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                   setLearningStep('solve');
                   setMessages(prev => {
                     return [...prev, { 
-                      role: 'assistant', 
-                      content: `[${targetUnit}] 문제 풀이가 막히셨나요? 걱정하지 마세요! Ai Vision Solution을 실행합니다.`,
+                      role: 'assistant',
+                      content: '',
                       hintPlayer: { unit: targetUnit, problemId: pid }
                     }];
                   });
@@ -705,6 +701,8 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
               {messages.map((m, idx) => {
                 if (m.role === 'system') return null;
+                // 내용·애니메이션이 없는 메시지(예: AVS 안내 제거분)는 빈 버블 방지로 건너뜀
+                if (!m.content && !m.animationId && !m.dynamicData) return null;
                 return (
                   <div key={idx} style={{ textAlign: m.role === 'user' ? 'right' : 'left', marginBottom: '1.5rem', width: '100%' }}>
                     <div style={{ 

@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AppProvider } from '@/context/AppContext';
 import { initStudentProfile } from '@/engine/studentProfileEngine';
 import { AuthProvider, useAuth } from '@/context/AuthContext';
+import ErrorBoundary from '@/components/ErrorBoundary';
 
 const Landing = lazy(() => import("@/pages/Landing"));
 const Diagnosis = lazy(() => import("@/pages/Diagnosis"));
@@ -54,6 +55,15 @@ function RootRedirect() {
   }
 
   return <Navigate to="/dashboard" replace />;
+}
+
+// 홈("/") 진입 게이트: 비회원 → 랜딩 먼저, 회원 → 대시보드
+function RootGate() {
+  const { user, loading } = useAuth();
+  const isSuperPass = localStorage.getItem('mentos_super_pass') === 'true';
+  if (loading) return null; // 인증 확인 중 깜빡임 방지
+  if (user || isSuperPass) return <Navigate to="/dashboard" replace />;
+  return <Landing />;
 }
 
 export default function App() {
@@ -168,10 +178,12 @@ function AppContent() {
       )}
 
       <BrowserRouter>
+        <ErrorBoundary>
         <Suspense fallback={<div style={{color:'white', padding:'2rem', background:'#09090b', height:'100vh'}}>Loading Mentos App...</div>}>
           <Routes>
-            <Route path="/" element={<RootRedirect />} />
+            <Route path="/" element={<RootGate />} />
             <Route path="/landing" element={<Landing />} />
+            <Route path="/start" element={<RootRedirect />} />
             <Route path="/diagnosis" element={<Diagnosis />} />
             <Route path="/push-settings" element={<PushSettings />} />
             {/* <Route path="/teacher" element={<TeacherSelect />} /> */}
@@ -212,6 +224,7 @@ function AppContent() {
             <Route path="/design-check" element={<DesignCheck />} />
           </Routes>
         </Suspense>
+        </ErrorBoundary>
       </BrowserRouter>
     </AppProvider>
   );

@@ -65,7 +65,7 @@ const triggerPush = (entry) => {
     ? `🎉 오늘 ${entry.subject} 수업 완료! 정확도 ${accuracy}%. 잘 했어요!`
     : `📚 오늘 ${entry.subject} 수업 완료. 정확도 ${accuracy}%. ${entry.nextLessonFocus || '다음 수업 전 복습 추천'}`;
 
-  const parentMsg = `[멘토스 학습 리포트] ${entry.grade} ${entry.subject} 수업 완료. 정확도: ${accuracy}%, 틀린 유형: ${entry.mistakeTags.join(', ') || '없음'}`;
+  const parentMsg = `[멘토스 학습 리포트] ${entry.grade} ${entry.subject} 수업 완료. 정확도: ${accuracy}%, 틀린 유형: ${(entry.mistakeTags || []).join(', ') || '없음'}`;
 
   // 현재는 콘솔에 출력 (실제 서비스에서는 API 호출로 교체)
   console.log('[PUSH → 학생]', studentMsg);
@@ -82,7 +82,7 @@ export const getMistakePatterns = () => {
   const results = getResults();
   const tagMap = {};
   results.forEach(r => {
-    r.mistakeTags.forEach(tag => {
+    (r.mistakeTags || []).forEach(tag => {
       tagMap[tag] = (tagMap[tag] || 0) + 1;
     });
   });

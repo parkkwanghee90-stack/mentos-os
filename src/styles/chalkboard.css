@@ -1,0 +1,240 @@
+/* ============================================================
+   매스멘토스 홈 — "Login Light-Glass" 디자인 시스템
+   mathmentos.com/login 테마(파스텔 그라데이션 + 화이트 글래스모피즘)에 정렬.
+   전부 .chalk-root 스코프 → 앱 타 페이지에 영향 없음. Tailwind 미사용.
+   (클래스명은 호환을 위해 유지, 값만 라이트 글래스로 재정의)
+   ============================================================ */
+
+.chalk-root {
+  /* 베이스(라이트) — 과거 'dark' 토큰을 라이트로 재매핑 */
+  --bb: #f4f7fc;          /* page/footer base (light) */
+  --bb-elev: rgba(255, 255, 255, 0.7); /* glass surface */
+  --bb-line: rgba(15, 23, 42, 0.08);   /* hairline border */
+  --ink-on-dark: #475569; /* 본문(이전 'on dark' → 이제 라이트 위) */
+  --title-on-dark: #0f172a; /* 제목 */
+  /* 라이트 종이/표면 */
+  --paper: #f8fafc;
+  --ink: #0f172a;
+  --ink-soft: #64748b;
+  --paper-line: rgba(15, 23, 42, 0.08);
+  /* 액센트(로그인 팔레트) */
+  --mint: #10b981;        /* primary emerald (CTA/액센트) */
+  --mint-deep: #059669;
+  --yellow: #8b5cf6;      /* violet accent (밑줄 등) */
+  --coral: #ec4899;       /* pink accent */
+  --blue: #3b82f6;        /* focus/secondary */
+  --green-solid: #059669; /* 라이트 섹션 액센트 */
+  --indigo: #312e81;      /* 딥 인디고(제목 그라데이션용) */
+  /* 폰트 */
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- 섹션 / 레이아웃 ---------- */
+.chalk-root .chalk-section {
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 0;
+}
+@media (min-width: 1024px) {
+  .chalk-root .chalk-section { padding: 8.5rem 0; }
+}
+/* 이전 'dark' 섹션 → 로그인 시그니처 파스텔 그라데이션 (히어로/데모/CTA/FAQ) */
+.chalk-root .chalk-section--dark {
+  background: linear-gradient(135deg, #f1f5f9 0%, #eff6ff 50%, #f5f3ff 100%);
+  color: var(--ink-on-dark);
+}
+/* 'light' 섹션 → 차분한 화이트 (리듬용 대비) */
+.chalk-root .chalk-section--light { background: #ffffff; color: var(--ink); }
+
+.chalk-root .chalk-wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+@media (min-width: 1024px) {
+  .chalk-root .chalk-wrap { padding: 0 2.5rem; }
+}
+
+/* ---------- 플로팅 오브 (로그인 스타일) ----------
+   기존 .chalk-grain / .chalk-grid 데코 훅을 오브로 재활용해
+   컴포넌트 수정 없이 그라데이션 섹션에 부드러운 빛 번짐을 준다. */
+.chalk-root .chalk-grain::before {
+  content: "";
+  position: absolute; z-index: 0; pointer-events: none;
+  top: -120px; right: -80px; width: 420px; height: 420px; border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(16, 185, 129, 0.28), rgba(59, 130, 246, 0.22) 45%, transparent 70%);
+  filter: blur(40px);
+}
+.chalk-root .chalk-grid::after {
+  content: "";
+  position: absolute; z-index: 0; pointer-events: none;
+  bottom: -140px; left: -90px; width: 460px; height: 460px; border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(168, 85, 247, 0.24), rgba(236, 72, 153, 0.2) 45%, transparent 70%);
+  filter: blur(46px);
+}
+
+/* ---------- 타이포 ---------- */
+.chalk-root .chalk-kicker {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  color: var(--green-solid);
+  text-transform: uppercase;
+}
+.chalk-root .chalk-section--light .chalk-kicker { color: var(--green-solid); }
+.chalk-root .chalk-h1 {
+  font-size: clamp(2.4rem, 7vw, 3.6rem);
+  font-weight: 850;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+.chalk-root .chalk-h2 {
+  font-size: clamp(1.75rem, 4.5vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+.chalk-root .chalk-section--dark .chalk-h1,
+.chalk-root .chalk-section--dark .chalk-h2 { color: var(--title-on-dark); }
+.chalk-root .chalk-lead {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  max-width: 44ch;
+}
+.chalk-root .chalk-num {
+  font-family: var(--mono);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--mint), var(--blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 액센트 컬러 */
+.chalk-root .chalk-mint { color: var(--mint-deep); }
+.chalk-root .chalk-yellow { color: var(--yellow); }
+.chalk-root .chalk-coral { color: var(--coral); }
+/* 라이트 테마에선 네온 글로우 대신 그라데이션 텍스트 — 가독성 우선 */
+.chalk-root .chalk-glow {
+  background: linear-gradient(135deg, var(--mint-deep), var(--blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+/* 수식 (모노) */
+.chalk-root .chalk-eq {
+  font-family: var(--mono);
+  line-height: 1.9;
+  color: var(--title-on-dark);
+}
+
+/* ---------- 버튼 (로그인 에메랄드 CTA) ---------- */
+.chalk-root .chalk-btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-weight: 800; font-size: 1rem;
+  padding: 0.85rem 1.4rem; border-radius: 12px;
+  background: linear-gradient(135deg, #10b981, #059669); color: #ffffff;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.22);
+  text-decoration: none; border: none; cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.chalk-root .chalk-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(16, 185, 129, 0.32); }
+.chalk-root .chalk-btn--ghost {
+  background: rgba(255, 255, 255, 0.75); color: var(--ink);
+  border: 1px solid var(--bb-line); box-shadow: 0 4px 14px rgba(99, 102, 241, 0.08); font-weight: 700;
+}
+.chalk-root .chalk-section--light .chalk-btn--ghost { color: var(--ink); border-color: var(--paper-line); }
+
+/* ---------- 카드 (화이트 글래스모피즘) ---------- */
+.chalk-root .chalk-card {
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 1.6rem;
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.chalk-root .chalk-card:hover { transform: translateY(-4px); box-shadow: 0 18px 44px -16px rgba(99, 102, 241, 0.22); }
+.chalk-root .chalk-card--memo {
+  background: rgba(255, 255, 255, 0.66);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 14px;
+  box-shadow: 0 10px 26px -12px rgba(99, 102, 241, 0.2);
+}
+.chalk-root .chalk-card--memo:nth-child(odd) { transform: rotate(-1deg); }
+.chalk-root .chalk-card--memo:nth-child(even) { transform: rotate(0.8deg); }
+/* 이전 'dark' 카드 → 라이트 글래스 */
+.chalk-root .chalk-card--dark {
+  background: rgba(255, 255, 255, 0.62);
+  -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 18px;
+  box-shadow: 0 14px 40px -16px rgba(99, 102, 241, 0.2);
+  padding: 1.4rem;
+}
+
+/* ---------- 액센트 도트(이전 분필 트레이/칩 재활용) ---------- */
+/* 나무 트레이 대신 부드러운 하단 컬러 페이드 + 브랜드 3색 도트 */
+.chalk-root .chalk-tray {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 4px;
+  background: linear-gradient(90deg, transparent, rgba(16,185,129,0.4), rgba(59,130,246,0.4), rgba(139,92,246,0.4), transparent);
+  z-index: 3;
+}
+.chalk-root .chalk-chip {
+  position: absolute; bottom: 16px; height: 8px; width: 8px !important; border-radius: 50%; z-index: 4; opacity: 0.9;
+}
+
+/* ---------- 헤더 (라이트 글래스) ---------- */
+.chalk-root .chalk-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(255, 255, 255, 0.72);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--bb-line);
+}
+.chalk-root .chalk-header-inner {
+  max-width: 1180px; margin: 0 auto; padding: 0.85rem 1.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.chalk-root .chalk-navlink {
+  color: var(--ink-soft); text-decoration: none; font-size: 0.92rem; font-weight: 500;
+  transition: color 0.2s;
+}
+.chalk-root .chalk-navlink:hover { color: var(--mint-deep); }
+
+/* ---------- 접근성 / 모션 ---------- */
+.chalk-root :focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; border-radius: 4px; }
+@keyframes chalk-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+  50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+}
+.chalk-root .chalk-live { animation: chalk-pulse 2.4s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .chalk-root .chalk-live { animation: none; }
+}
+
+/* ---------- skip link ---------- */
+.chalk-root .chalk-skip {
+  position: absolute; top: -100px; left: 0; z-index: 100;
+  background: var(--mint-deep); color: #ffffff; padding: 0.75rem 1rem; font-weight: 700; text-decoration: none;
+}
+.chalk-root .chalk-skip:focus { top: 0; }
+
+/* 헤더 반응형 nav */
+@media (min-width: 1024px) {
+  .chalk-root .chalk-nav-desktop { display: flex !important; }
+  .chalk-root .chalk-burger { display: none !important; }
+}
+.chalk-root .chalk-underline path { will-change: stroke-dashoffset; }
