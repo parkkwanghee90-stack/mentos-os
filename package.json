@@ -12,7 +12,9 @@
     "check:math-latex": "node scripts/validate_math_latex.js",
     "patch:rounds": "node scripts/run_patch_rounds.js",
     "deploy": "node scripts/build_vercel_prebuilt.cjs && npx vercel --prebuilt --prod --yes",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check:homework": "node scripts/validate_homework_integrity.cjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.3.4",
@@ -46,8 +48,9 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.4.0",
+    "jsdom": "^25.0.1",
     "pptxgenjs": "^4.0.1",
     "vite": "^8.0.10",
-    "vitest": "^2.1.9"
+    "vitest": "^3.2.4"
   }
 }

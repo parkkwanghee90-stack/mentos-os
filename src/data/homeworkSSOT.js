@@ -409,12 +409,12 @@ export const HOMEWORK_UNITS = [
   //  정답: avs_answers.json 내 미적분_XX_통합숙제 키
   // ════════════════════════════════════════════════════════
 
-  // ── 01. 수열의 극한 (98문제) ──
+  // ── 01. 수열의 극한 (97문제) ──
   {
     id: 'hw_cal_01a', title: '수열의 극한 ①', subject: '미적분',
     folderName: '01수열의극한', hintKey: '미적분_01수열의극한_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/01수열의극한2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/01수열의극한3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/01수열의극한4단계/정답및해설.html' },
-    answerKey: '미적분_01수열의극한_통합숙제', problemCount: 98,
+    answerKey: '미적분_01수열의극한_통합숙제', problemCount: 97,
     imagePath: '/math_crops/숙제/미적분/01수열의극한/',
     relatedUnit: '수열의 극한',
     stages: { '2단계': { start: 1, end: 20 }, '3단계': { start: 21, end: 40 } },
@@ -423,7 +423,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_01b', title: '수열의 극한 ②', subject: '미적분',
     folderName: '01수열의극한', hintKey: '미적분_01수열의극한_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/01수열의극한2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/01수열의극한3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/01수열의극한4단계/정답및해설.html' },
-    answerKey: '미적분_01수열의극한_통합숙제', problemCount: 98,
+    answerKey: '미적분_01수열의극한_통합숙제', problemCount: 97,
     imagePath: '/math_crops/숙제/미적분/01수열의극한/',
     relatedUnit: '수열의 극한',
     stages: { '2단계': { start: 1, end: 20 }, '3단계': { start: 41, end: 63 } },
@@ -432,7 +432,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_01c', title: '수열의 극한 ③ (심화)', subject: '미적분',
     folderName: '01수열의극한', hintKey: '미적분_01수열의극한_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/01수열의극한2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/01수열의극한3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/01수열의극한4단계/정답및해설.html' },
-    answerKey: '미적분_01수열의극한_통합숙제', problemCount: 98,
+    answerKey: '미적분_01수열의극한_통합숙제', problemCount: 97,
     imagePath: '/math_crops/숙제/미적분/01수열의극한/',
     relatedUnit: '수열의 극한',
     stages: { '4단계': { start: 64, end: 83 } },
@@ -441,18 +441,18 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_01d', title: '수열의 극한 ④ (심화)', subject: '미적분',
     folderName: '01수열의극한', hintKey: '미적분_01수열의극한_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/01수열의극한2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/01수열의극한3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/01수열의극한4단계/정답및해설.html' },
-    answerKey: '미적분_01수열의극한_통합숙제', problemCount: 98,
+    answerKey: '미적분_01수열의극한_통합숙제', problemCount: 97,
     imagePath: '/math_crops/숙제/미적분/01수열의극한/',
     relatedUnit: '수열의 극한',
-    stages: { '4단계': { start: 84, end: 98 } },
+    stages: { '4단계': { start: 84, end: 97 } },
   },
 
-  // ── 02. 급수 (134문제) ──
+  // ── 02. 급수 (133문제) ──
   {
     id: 'hw_cal_02a', title: '급수 ①', subject: '미적분',
     folderName: '02급수', hintKey: '미적분_02급수_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/02급수2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/02급수3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/02급수4단계/정답및해설.html' },
-    answerKey: '미적분_02급수_통합숙제', problemCount: 134,
+    answerKey: '미적분_02급수_통합숙제', problemCount: 133,
     imagePath: '/math_crops/숙제/미적분/02급수/',
     relatedUnit: '급수',
     stages: { '2단계': { start: 1, end: 20 } },
@@ -461,7 +461,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_02b', title: '급수 ②', subject: '미적분',
     folderName: '02급수', hintKey: '미적분_02급수_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/02급수2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/02급수3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/02급수4단계/정답및해설.html' },
-    answerKey: '미적분_02급수_통합숙제', problemCount: 134,
+    answerKey: '미적분_02급수_통합숙제', problemCount: 133,
     imagePath: '/math_crops/숙제/미적분/02급수/',
     relatedUnit: '급수',
     stages: { '2단계': { start: 21, end: 46 } },
@@ -470,7 +470,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_02c', title: '급수 ③', subject: '미적분',
     folderName: '02급수', hintKey: '미적분_02급수_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/02급수2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/02급수3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/02급수4단계/정답및해설.html' },
-    answerKey: '미적분_02급수_통합숙제', problemCount: 134,
+    answerKey: '미적분_02급수_통합숙제', problemCount: 133,
     imagePath: '/math_crops/숙제/미적분/02급수/',
     relatedUnit: '급수',
     stages: { '3단계': { start: 47, end: 66 } },
@@ -479,7 +479,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_02d', title: '급수 ④', subject: '미적분',
     folderName: '02급수', hintKey: '미적분_02급수_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/02급수2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/02급수3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/02급수4단계/정답및해설.html' },
-    answerKey: '미적분_02급수_통합숙제', problemCount: 134,
+    answerKey: '미적분_02급수_통합숙제', problemCount: 133,
     imagePath: '/math_crops/숙제/미적분/02급수/',
     relatedUnit: '급수',
     stages: { '3단계': { start: 67, end: 86 } },
@@ -488,7 +488,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_02e', title: '급수 ⑤', subject: '미적분',
     folderName: '02급수', hintKey: '미적분_02급수_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/02급수2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/02급수3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/02급수4단계/정답및해설.html' },
-    answerKey: '미적분_02급수_통합숙제', problemCount: 134,
+    answerKey: '미적분_02급수_통합숙제', problemCount: 133,
     imagePath: '/math_crops/숙제/미적분/02급수/',
     relatedUnit: '급수',
     stages: { '3단계': { start: 87, end: 99 }, '4단계': { start: 100, end: 114 } },
@@ -497,18 +497,18 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_02f', title: '급수 ⑥ (심화)', subject: '미적분',
     folderName: '02급수', hintKey: '미적분_02급수_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/02급수2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/02급수3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/02급수4단계/정답및해설.html' },
-    answerKey: '미적분_02급수_통합숙제', problemCount: 134,
+    answerKey: '미적분_02급수_통합숙제', problemCount: 133,
     imagePath: '/math_crops/숙제/미적분/02급수/',
     relatedUnit: '급수',
-    stages: { '4단계': { start: 115, end: 134 } },
+    stages: { '4단계': { start: 115, end: 133 } },
   },
 
-  // ── 03. 지수로그함수의 미분 (38문제) ──
+  // ── 03. 지수로그함수의 미분 (37문제) ──
   {
     id: 'hw_cal_03a', title: '지수로그함수의 미분 ①', subject: '미적분',
     folderName: '03지수로그함수미분', hintKey: '미적분_03지수로그함수미분_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/03지수로그함수의미분2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/03지수로그함수의미분3.4단계/정답및해설.html' },
-    answerKey: '미적분_03지수로그함수미분_통합숙제', problemCount: 38,
+    answerKey: '미적분_03지수로그함수미분_통합숙제', problemCount: 37,
     imagePath: '/math_crops/숙제/미적분/03지수로그함수미분/',
     relatedUnit: '지수로그함수의 미분',
     stages: { '2단계': { start: 1, end: 21 } },
@@ -517,18 +517,18 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_03b', title: '지수로그함수의 미분 ②', subject: '미적분',
     folderName: '03지수로그함수미분', hintKey: '미적분_03지수로그함수미분_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/03지수로그함수의미분2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/03지수로그함수의미분3.4단계/정답및해설.html' },
-    answerKey: '미적분_03지수로그함수미분_통합숙제', problemCount: 38,
+    answerKey: '미적분_03지수로그함수미분_통합숙제', problemCount: 37,
     imagePath: '/math_crops/숙제/미적분/03지수로그함수미분/',
     relatedUnit: '지수로그함수의 미분',
-    stages: { '3·4단계': { start: 22, end: 38 } },
+    stages: { '3·4단계': { start: 22, end: 37 } },
   },
 
-  // ── 04. 삼각함수의 미분 (156문제) ──
+  // ── 04. 삼각함수의 미분 (155문제) ──
   {
     id: 'hw_cal_04a', title: '삼각함수의 미분 ①', subject: '미적분',
     folderName: '04삼각함수미분', hintKey: '미적분_04삼각함수미분_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/04삼각함수의미분2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/04삼각함수의미분3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/04삼각함수의미분4단계/정답및해설.html' },
-    answerKey: '미적분_04삼각함수미분_통합숙제', problemCount: 156,
+    answerKey: '미적분_04삼각함수미분_통합숙제', problemCount: 155,
     imagePath: '/math_crops/숙제/미적분/04삼각함수미분/',
     relatedUnit: '삼각함수의 미분',
     stages: { '2단계': { start: 1, end: 20 } },
@@ -537,7 +537,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_04b', title: '삼각함수의 미분 ②', subject: '미적분',
     folderName: '04삼각함수미분', hintKey: '미적분_04삼각함수미분_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/04삼각함수의미분2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/04삼각함수의미분3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/04삼각함수의미분4단계/정답및해설.html' },
-    answerKey: '미적분_04삼각함수미분_통합숙제', problemCount: 156,
+    answerKey: '미적분_04삼각함수미분_통합숙제', problemCount: 155,
     imagePath: '/math_crops/숙제/미적분/04삼각함수미분/',
     relatedUnit: '삼각함수의 미분',
     stages: { '2단계': { start: 21, end: 40 } },
@@ -546,7 +546,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_04c', title: '삼각함수의 미분 ③', subject: '미적분',
     folderName: '04삼각함수미분', hintKey: '미적분_04삼각함수미분_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/04삼각함수의미분2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/04삼각함수의미분3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/04삼각함수의미분4단계/정답및해설.html' },
-    answerKey: '미적분_04삼각함수미분_통합숙제', problemCount: 156,
+    answerKey: '미적분_04삼각함수미분_통합숙제', problemCount: 155,
     imagePath: '/math_crops/숙제/미적분/04삼각함수미분/',
     relatedUnit: '삼각함수의 미분',
     stages: { '2단계': { start: 41, end: 60 } },
@@ -555,7 +555,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_04d', title: '삼각함수의 미분 ④', subject: '미적분',
     folderName: '04삼각함수미분', hintKey: '미적분_04삼각함수미분_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/04삼각함수의미분2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/04삼각함수의미분3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/04삼각함수의미분4단계/정답및해설.html' },
-    answerKey: '미적분_04삼각함수미분_통합숙제', problemCount: 156,
+    answerKey: '미적분_04삼각함수미분_통합숙제', problemCount: 155,
     imagePath: '/math_crops/숙제/미적분/04삼각함수미분/',
     relatedUnit: '삼각함수의 미분',
     stages: { '2단계': { start: 61, end: 87 } },
@@ -564,7 +564,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_04e', title: '삼각함수의 미분 ⑤', subject: '미적분',
     folderName: '04삼각함수미분', hintKey: '미적분_04삼각함수미분_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/04삼각함수의미분2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/04삼각함수의미분3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/04삼각함수의미분4단계/정답및해설.html' },
-    answerKey: '미적분_04삼각함수미분_통합숙제', problemCount: 156,
+    answerKey: '미적분_04삼각함수미분_통합숙제', problemCount: 155,
     imagePath: '/math_crops/숙제/미적분/04삼각함수미분/',
     relatedUnit: '삼각함수의 미분',
     stages: { '3단계': { start: 88, end: 107 } },
@@ -573,7 +573,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_04f', title: '삼각함수의 미분 ⑥', subject: '미적분',
     folderName: '04삼각함수미분', hintKey: '미적분_04삼각함수미분_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/04삼각함수의미분2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/04삼각함수의미분3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/04삼각함수의미분4단계/정답및해설.html' },
-    answerKey: '미적분_04삼각함수미분_통합숙제', problemCount: 156,
+    answerKey: '미적분_04삼각함수미분_통합숙제', problemCount: 155,
     imagePath: '/math_crops/숙제/미적분/04삼각함수미분/',
     relatedUnit: '삼각함수의 미분',
     stages: { '3단계': { start: 108, end: 117 }, '4단계': { start: 118, end: 137 } },
@@ -582,18 +582,18 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_04g', title: '삼각함수의 미분 ⑦ (심화)', subject: '미적분',
     folderName: '04삼각함수미분', hintKey: '미적분_04삼각함수미분_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/04삼각함수의미분2단계/정답및해설.html', '3단계': '/math_crops/숙제/미적분심화/04삼각함수의미분3단계/정답및해설.html', '4단계': '/math_crops/숙제/미적분심화/04삼각함수의미분4단계/정답및해설.html' },
-    answerKey: '미적분_04삼각함수미분_통합숙제', problemCount: 156,
+    answerKey: '미적분_04삼각함수미분_통합숙제', problemCount: 155,
     imagePath: '/math_crops/숙제/미적분/04삼각함수미분/',
     relatedUnit: '삼각함수의 미분',
-    stages: { '4단계': { start: 138, end: 156 } },
+    stages: { '4단계': { start: 138, end: 155 } },
   },
 
-  // ── 05. 여러가지 미분법 (83문제) ──
+  // ── 05. 여러가지 미분법 (82문제) ──
   {
     id: 'hw_cal_05a', title: '여러가지 미분법 ①', subject: '미적분',
     folderName: '05여러가지미분법', hintKey: '미적분_05여러가지미분법_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/05여러가지미분법2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/05여러가지미분법3.4단계/정답및해설.html' },
-    answerKey: '미적분_05여러가지미분법_통합숙제', problemCount: 83,
+    answerKey: '미적분_05여러가지미분법_통합숙제', problemCount: 82,
     imagePath: '/math_crops/숙제/미적분/05여러가지미분법/',
     relatedUnit: '여러가지 미분법',
     stages: { '2단계': { start: 1, end: 20 } },
@@ -602,7 +602,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_05b', title: '여러가지 미분법 ②', subject: '미적분',
     folderName: '05여러가지미분법', hintKey: '미적분_05여러가지미분법_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/05여러가지미분법2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/05여러가지미분법3.4단계/정답및해설.html' },
-    answerKey: '미적분_05여러가지미분법_통합숙제', problemCount: 83,
+    answerKey: '미적분_05여러가지미분법_통합숙제', problemCount: 82,
     imagePath: '/math_crops/숙제/미적분/05여러가지미분법/',
     relatedUnit: '여러가지 미분법',
     stages: { '2단계': { start: 21, end: 40 } },
@@ -611,7 +611,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_05c', title: '여러가지 미분법 ③', subject: '미적분',
     folderName: '05여러가지미분법', hintKey: '미적분_05여러가지미분법_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/05여러가지미분법2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/05여러가지미분법3.4단계/정답및해설.html' },
-    answerKey: '미적분_05여러가지미분법_통합숙제', problemCount: 83,
+    answerKey: '미적분_05여러가지미분법_통합숙제', problemCount: 82,
     imagePath: '/math_crops/숙제/미적분/05여러가지미분법/',
     relatedUnit: '여러가지 미분법',
     stages: { '2단계': { start: 41, end: 56 }, '3·4단계': { start: 57, end: 63 } },
@@ -620,18 +620,18 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_05d', title: '여러가지 미분법 ④ (심화)', subject: '미적분',
     folderName: '05여러가지미분법', hintKey: '미적분_05여러가지미분법_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/05여러가지미분법2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/05여러가지미분법3.4단계/정답및해설.html' },
-    answerKey: '미적분_05여러가지미분법_통합숙제', problemCount: 83,
+    answerKey: '미적분_05여러가지미분법_통합숙제', problemCount: 82,
     imagePath: '/math_crops/숙제/미적분/05여러가지미분법/',
     relatedUnit: '여러가지 미분법',
-    stages: { '3·4단계': { start: 64, end: 83 } },
+    stages: { '3·4단계': { start: 64, end: 82 } },
   },
 
-  // ── 06. 도함수의 활용 1 (81문제) ──
+  // ── 06. 도함수의 활용 1 (80문제) ──
   {
     id: 'hw_cal_06a', title: '도함수의 활용 1 ①', subject: '미적분',
     folderName: '06도함수활용1', hintKey: '미적분_06도함수활용1_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/06도함수의활용1/2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/06도함수의활용1/3.4단계/정답및해설.html' },
-    answerKey: '미적분_06도함수활용1_통합숙제', problemCount: 81,
+    answerKey: '미적분_06도함수활용1_통합숙제', problemCount: 80,
     imagePath: '/math_crops/숙제/미적분/06도함수활용1/',
     relatedUnit: '도함수의 활용 1',
     stages: { '2단계': { start: 1, end: 20 } },
@@ -640,7 +640,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_06b', title: '도함수의 활용 1 ②', subject: '미적분',
     folderName: '06도함수활용1', hintKey: '미적분_06도함수활용1_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/06도함수의활용1/2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/06도함수의활용1/3.4단계/정답및해설.html' },
-    answerKey: '미적분_06도함수활용1_통합숙제', problemCount: 81,
+    answerKey: '미적분_06도함수활용1_통합숙제', problemCount: 80,
     imagePath: '/math_crops/숙제/미적분/06도함수활용1/',
     relatedUnit: '도함수의 활용 1',
     stages: { '2단계': { start: 21, end: 31 }, '3·4단계': { start: 32, end: 51 } },
@@ -649,7 +649,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_06c', title: '도함수의 활용 1 ③', subject: '미적분',
     folderName: '06도함수활용1', hintKey: '미적분_06도함수활용1_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/06도함수의활용1/2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/06도함수의활용1/3.4단계/정답및해설.html' },
-    answerKey: '미적분_06도함수활용1_통합숙제', problemCount: 81,
+    answerKey: '미적분_06도함수활용1_통합숙제', problemCount: 80,
     imagePath: '/math_crops/숙제/미적분/06도함수활용1/',
     relatedUnit: '도함수의 활용 1',
     stages: { '3·4단계': { start: 52, end: 71 } },
@@ -658,18 +658,18 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_06d', title: '도함수의 활용 1 ④ (심화)', subject: '미적분',
     folderName: '06도함수활용1', hintKey: '미적분_06도함수활용1_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/06도함수의활용1/2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/06도함수의활용1/3.4단계/정답및해설.html' },
-    answerKey: '미적분_06도함수활용1_통합숙제', problemCount: 81,
+    answerKey: '미적분_06도함수활용1_통합숙제', problemCount: 80,
     imagePath: '/math_crops/숙제/미적분/06도함수활용1/',
     relatedUnit: '도함수의 활용 1',
-    stages: { '3·4단계': { start: 72, end: 81 } },
+    stages: { '3·4단계': { start: 72, end: 80 } },
   },
 
-  // ── 07. 도함수의 활용 2 (40문제) ──
+  // ── 07. 도함수의 활용 2 (39문제) ──
   {
     id: 'hw_cal_07a', title: '도함수의 활용 2 ①', subject: '미적분',
     folderName: '07도함수활용2', hintKey: '미적분_07도함수활용2_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/07도함수의활용2/2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/07도함수의활용2/3.4단계/정답및해설.html' },
-    answerKey: '미적분_07도함수활용2_통합숙제', problemCount: 40,
+    answerKey: '미적분_07도함수활용2_통합숙제', problemCount: 39,
     imagePath: '/math_crops/숙제/미적분/07도함수활용2/',
     relatedUnit: '도함수의 활용 2',
     stages: { '2단계': { start: 1, end: 13 }, '3·4단계': { start: 14, end: 20 } },
@@ -678,29 +678,29 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_07b', title: '도함수의 활용 2 ②', subject: '미적분',
     folderName: '07도함수활용2', hintKey: '미적분_07도함수활용2_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/07도함수의활용2/2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/07도함수의활용2/3.4단계/정답및해설.html' },
-    answerKey: '미적분_07도함수활용2_통합숙제', problemCount: 40,
+    answerKey: '미적분_07도함수활용2_통합숙제', problemCount: 39,
     imagePath: '/math_crops/숙제/미적분/07도함수활용2/',
     relatedUnit: '도함수의 활용 2',
-    stages: { '3·4단계': { start: 21, end: 40 } },
+    stages: { '3·4단계': { start: 21, end: 39 } },
   },
 
-  // ── 08. 여러가지 적분법 (19문제) ──
+  // ── 08. 여러가지 적분법 (18문제) ──
   {
     id: 'hw_cal_08', title: '여러가지 적분법', subject: '미적분',
     folderName: '08여러가지적분법', hintKey: '미적분_08여러가지적분법_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/08여러가지적분법/2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/08여러가지적분법/3.4단계/정답및해설.html' },
-    answerKey: '미적분_08여러가지적분법_통합숙제', problemCount: 19,
+    answerKey: '미적분_08여러가지적분법_통합숙제', problemCount: 18,
     imagePath: '/math_crops/숙제/미적분/08여러가지적분법/',
     relatedUnit: '여러가지 적분법',
-    stages: { '2단계': { start: 1, end: 10 }, '3·4단계': { start: 11, end: 19 } },
+    stages: { '2단계': { start: 1, end: 10 }, '3·4단계': { start: 11, end: 18 } },
   },
 
-  // ── 09. 정적분 (115문제) ──
+  // ── 09. 정적분 (114문제) ──
   {
     id: 'hw_cal_09a', title: '정적분 ①', subject: '미적분',
     folderName: '09정적분', hintKey: '미적분_09정적분_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/09정적분/2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/09정적분/3.4단계/정답및해설.html' },
-    answerKey: '미적분_09정적분_통합숙제', problemCount: 115,
+    answerKey: '미적분_09정적분_통합숙제', problemCount: 114,
     imagePath: '/math_crops/숙제/미적분/09정적분/',
     relatedUnit: '정적분',
     stages: { '2단계': { start: 1, end: 20 } },
@@ -709,7 +709,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_09b', title: '정적분 ②', subject: '미적분',
     folderName: '09정적분', hintKey: '미적분_09정적분_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/09정적분/2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/09정적분/3.4단계/정답및해설.html' },
-    answerKey: '미적분_09정적분_통합숙제', problemCount: 115,
+    answerKey: '미적분_09정적분_통합숙제', problemCount: 114,
     imagePath: '/math_crops/숙제/미적분/09정적분/',
     relatedUnit: '정적분',
     stages: { '2단계': { start: 21, end: 40 } },
@@ -718,7 +718,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_09c', title: '정적분 ③', subject: '미적분',
     folderName: '09정적분', hintKey: '미적분_09정적분_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/09정적분/2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/09정적분/3.4단계/정답및해설.html' },
-    answerKey: '미적분_09정적분_통합숙제', problemCount: 115,
+    answerKey: '미적분_09정적분_통합숙제', problemCount: 114,
     imagePath: '/math_crops/숙제/미적분/09정적분/',
     relatedUnit: '정적분',
     stages: { '2단계': { start: 41, end: 53 }, '3·4단계': { start: 54, end: 73 } },
@@ -727,7 +727,7 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_09d', title: '정적분 ④', subject: '미적분',
     folderName: '09정적분', hintKey: '미적분_09정적분_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/09정적분/2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/09정적분/3.4단계/정답및해설.html' },
-    answerKey: '미적분_09정적분_통합숙제', problemCount: 115,
+    answerKey: '미적분_09정적분_통합숙제', problemCount: 114,
     imagePath: '/math_crops/숙제/미적분/09정적분/',
     relatedUnit: '정적분',
     stages: { '3·4단계': { start: 74, end: 93 } },
@@ -736,10 +736,10 @@ export const HOMEWORK_UNITS = [
     id: 'hw_cal_09e', title: '정적분 ⑤ (심화)', subject: '미적분',
     folderName: '09정적분', hintKey: '미적분_09정적분_통합숙제',
     solutionHtmlPath: { '2단계': '/math_crops/숙제/미적분심화/09정적분/2단계/정답및해설.html', '3·4단계': '/math_crops/숙제/미적분심화/09정적분/3.4단계/정답및해설.html' },
-    answerKey: '미적분_09정적분_통합숙제', problemCount: 115,
+    answerKey: '미적분_09정적분_통합숙제', problemCount: 114,
     imagePath: '/math_crops/숙제/미적분/09정적분/',
     relatedUnit: '정적분',
-    stages: { '3·4단계': { start: 94, end: 115 } },
+    stages: { '3·4단계': { start: 94, end: 114 } },
   },
 ];
 
@@ -781,6 +781,20 @@ export function getHomeworkRange(hwUnit, studentLevel) {
  */
 export function padProblemNum(num) {
   return String(num).padStart(3, '0');
+}
+
+/**
+ * 해설 이미지 경로 생성.
+ * 미적분 통합숙제 9개 폴더는 해설 이미지가 한 칸 밀려 저장돼 있어
+ * (문제 N의 해설 = {N+1}a.webp), 해당 폴더만 +1 시프트한다.
+ * 그 외 과목 숙제 폴더는 정렬 정상이라 {N}a.webp 그대로 사용한다.
+ * @param {string} imagePath 문제 이미지 폴더 경로 (끝에 '/')
+ * @param {number} problemNum 문제 번호 (1부터)
+ */
+export function buildSolutionSrc(imagePath, problemNum) {
+  if (!imagePath) return '';
+  const shift = imagePath.includes('숙제/미적분/') ? 1 : 0;
+  return `${imagePath}${padProblemNum(problemNum + shift)}a.webp`;
 }
 
 /**
@@ -839,4 +853,12 @@ export function getHomeworkProgress(hwId) {
  */
 export function saveHomeworkProgress(hwId, progress) {
   localStorage.setItem(`hw_progress_${hwId}`, JSON.stringify(progress));
+}
+
+/** 오답 복습 노트(특수 숙제) 식별자 */
+export const WRONG_REVIEW_ID = 'wrong_review';
+
+/** hwId(예: 'hw_01')로 단원 메타 조회 (오답노트 문제 재구성용) */
+export function getUnitById(hwId) {
+  return HOMEWORK_UNITS.find(u => u.id === hwId) || null;
 }

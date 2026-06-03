@@ -4,8 +4,9 @@
  */
 
 import { HOMEWORK_UNITS, getHomeworkRange } from '@/data/homeworkSSOT';
-import avsAnswersData from '@/data/avs_answers.json';
+import { resolveAnswer } from '@/services/answerResolver';
 import { queueParentPush } from '@/services/pushService';
+import { getActiveWrongAnswers } from '@/services/wrongAnswerStore';
 
 /**
  * 1. 최근 학습 오답 데이터 취합 및 단원별 취약성 분석
@@ -13,6 +14,7 @@ import { queueParentPush } from '@/services/pushService';
 export function analyzeMathWeakness() {
   const lessonHistory = JSON.parse(localStorage.getItem('mentos_lesson_results') || '[]');
   const unitStats = {};
+  const countedKeys = new Set(); // 소스 B에서 센 (hwId:num) — 입력 C 중복 방지
 
   // A. 수업 오답 집계 (수학 + 미적분 + 확통 + 기하 과목 포함)
   const MATH_SUBJECTS = ['수학', '미적분', '확률과통계', '기하', '수학(상)', '수학1', '수학2'];
@@ -50,12 +52,32 @@ export function analyzeMathWeakness() {
       } else {
         unitStats[unit].wrongCount++;
         unitStats[unit].wrongIndices.push(parseInt(pid, 10));
+        countedKeys.add(`${hw.id}:${parseInt(pid, 10)}`);
       }
     });
     unitStats[unit].wrongIndices = [...new Set(unitStats[unit].wrongIndices)];
   });
 
-  // C. 취약성 데이터 정렬 및 유형화
+  // C. 시험(모의고사) 오답 집계 — 오답스토어. 숙제에서 이미 센 (hwId,num)은 제외.
+  try {
+    for (const e of getActiveWrongAnswers()) {
+      if (e.resolved) continue;
+      const key = `${e.hwId}:${e.num}`;
+      if (countedKeys.has(key)) continue;
+      countedKeys.add(key);
+      const unit = e.unit || '공통수학';
+      if (!unitStats[unit]) {
+        unitStats[unit] = { totalQuestions: 0, correctCount: 0, wrongCount: 0, wrongIndices: [] };
+      }
+      unitStats[unit].totalQuestions++;
+      unitStats[unit].wrongCount++;
+      unitStats[unit].wrongIndices.push(e.num);
+    }
+  } catch (err) {
+    console.warn('[analyzeMathWeakness] 오답스토어 집계 실패:', err.message);
+  }
+
+  // D. 취약성 데이터 정렬 및 유형화
   const weaknessList = Object.entries(unitStats).map(([unit, stat]) => {
     const total = stat.totalQuestions;
     const wrong = stat.wrongCount;
@@ -146,7 +168,8 @@ export function generateFortnightlyTestProblems(studentLevel = '4~5등급') {
       
       const pNumStr = String(candidate.num).padStart(3, '0');
       const ansKey = hwUnit.answerKey;
-      const rawAnswer = avsAnswersData[ansKey]?.[pNumStr] || '3';
+      const rawAnswer = resolveAnswer(ansKey, candidate.num);
+      if (rawAnswer === null) return; // 정답 없으면 출제 제외
 
       assignedProblems.push({
         id: `fort_${hwUnit.id}_${pNumStr}_${Date.now()}`,
@@ -177,7 +200,8 @@ export function generateFortnightlyTestProblems(studentLevel = '4~5등급') {
         const isAlreadyAdded = assignedProblems.some(p => p.hwId === fillUnit.id && p.numStr === pNumStr);
         if (isAlreadyAdded) continue;
 
-        const rawAnswer = avsAnswersData[fillUnit.answerKey]?.[pNumStr] || '3';
+        const rawAnswer = resolveAnswer(fillUnit.answerKey, num);
+        if (rawAnswer === null) continue; // 정답 없으면 출제 제외
         assignedProblems.push({
           id: `fort_${fillUnit.id}_${pNumStr}_${Date.now()}`,
           hwId: fillUnit.id,

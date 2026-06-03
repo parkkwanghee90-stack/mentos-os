@@ -18,28 +18,27 @@ export default function PaymentCheckoutModal({ onClose }) {
   const [loading, setLoading] = useState(false);
   const [showRefundDetail, setShowRefundDetail] = useState(false);
 
-  const handlePayment = async () => {
+  // 100원 테스트 상품과 49,000원 상품 결제링크 정의 (상수 분리)
+  const PAYAPP_TEST_100W_LINK = 'https://www.payapp.kr/L/z4ePI1'; // 100원 테스트 시 이 링크에 100원 연동 필요
+  const PAYAPP_PROD_49000_LINK = 'https://www.payapp.kr/L/z4ePI1';
+
+  // 100원 테스트 모드 플래그 (true면 100원, false면 49,000원)
+  const IS_TEST_MODE = true; 
+
+  const activePayappLink = IS_TEST_MODE ? PAYAPP_TEST_100W_LINK : PAYAPP_PROD_49000_LINK;
+  const activeAmount = IS_TEST_MODE ? '100' : '49000';
+
+  const handlePayment = () => {
     setLoading(true);
     try {
-      const TossPayments = await loadTossSdk();
+      // 결제 성공 후 멘토스 OS /success로 자동 복귀하여 premium=true, paid_at 자동 설정하도록 returnurl을 동적으로 붙여 띄움
+      const returnUrl = encodeURIComponent(`${window.location.origin}/success?payapp_success=true&amount=${activeAmount}&orderId=payapp_${Date.now()}`);
+      const checkoutUrl = `${activePayappLink}?returnurl=${returnUrl}`;
       
-      // Toss sandbox key as fallback, plug-and-play setup
-      const clientKey = import.meta.env.VITE_TOSS_CLIENT_KEY || 'test_ck_D5aZzN3E3a19Bo1a8bDX3ak90Y3c';
-      const toss = TossPayments(clientKey);
-
-      // Unique order ID to avoid duplicates
-      const orderId = `mentos_${Date.now()}`;
-      
-      await toss.requestPayment('카드', {
-        amount: 45000,
-        orderId: orderId,
-        orderName: '멘토스 AI 프리미엄 1개월 이용권 (선착순 1000명 특가)',
-        customerName: '멘토스 체험학생',
-        successUrl: window.location.origin + window.location.pathname + '?payment_success=true',
-        failUrl: window.location.origin + window.location.pathname + '?payment_fail=true',
-      });
+      window.open(checkoutUrl, '_blank');
+      onClose();
     } catch (err) {
-      console.error('[TOSS_PAYMENT_ERROR]', err);
+      console.error('[PAYAPP_PAYMENT_ERROR]', err);
       alert(`결제창 호출에 실패했습니다: ${err.message}`);
     } finally {
       setLoading(false);
@@ -140,16 +139,22 @@ export default function PaymentCheckoutModal({ onClose }) {
           marginBottom: '1.5rem'
         }}>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
-            <span style={{ fontSize: '0.85rem', color: '#94a3b8', textDecoration: 'line-through' }}>월 99,000원</span>
-            <span style={{ fontSize: '0.8rem', color: '#f87171', fontWeight: '900', background: 'rgba(239,68,68,0.15)', padding: '2px 6px', borderRadius: '4px' }}>54% 특별할인</span>
+            <span style={{ fontSize: '0.85rem', color: '#94a3b8', textDecoration: IS_TEST_MODE ? 'none' : 'line-through' }}>
+              {IS_TEST_MODE ? '테스트 결제 진행' : '월 99,000원'}
+            </span>
+            <span style={{ fontSize: '0.8rem', color: '#f87171', fontWeight: '900', background: 'rgba(239,68,68,0.15)', padding: '2px 6px', borderRadius: '4px' }}>
+              {IS_TEST_MODE ? '간편 검증' : '54% 특별할인'}
+            </span>
           </div>
           
           <div style={{ fontSize: '2.2rem', fontWeight: '900', background: 'linear-gradient(to right, #60a5fa, #c084fc, #f472b6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '-1px' }}>
-            월 45,000원
+            {IS_TEST_MODE ? '100원' : '월 45,000원'}
           </div>
           
           <div style={{ fontSize: '0.8rem', color: '#c084fc', fontWeight: 'bold', marginTop: '4px' }}>
-            * 3개월간 이벤트 특가 혜택 제공 후 정상가 월 99,000원으로 조정됩니다.
+            {IS_TEST_MODE 
+              ? '* 100원 결제 완료 즉시 프리미엄 승인 자동 흐름이 실행됩니다.' 
+              : '* 3개월간 이벤트 특가 혜택 제공 후 정상가 월 99,000원으로 조정됩니다.'}
           </div>
         </div>
 
@@ -211,12 +216,12 @@ export default function PaymentCheckoutModal({ onClose }) {
           onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
         >
           <CreditCard size={20} />
-          {loading ? '결제창 여는 중...' : '토스페이로 즉시 결제하기'}
+          {loading ? '결제창 여는 중...' : '프리미엄 혜택 즉시 결제하기'}
         </button>
-
+ 
         <div style={{ textAlign: 'center', marginTop: '1rem', fontSize: '0.78rem', color: '#475569', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '4px' }}>
           <ShieldCheck size={14} color="#10b981" />
-          <span>Toss Payments 안전 결제 보안 모듈 적용됨</span>
+          <span>PayApp 안전 결제 보안 규정 적용됨</span>
         </div>
       </div>
 

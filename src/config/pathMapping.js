@@ -123,6 +123,15 @@ const PATH_MAP = {
   '고3수능및모의고사': 'csat_mock',
 
   // Explicit Step Mappings for Supabase Storage Alignment
+  '이차방정식과이차함수2단계': '06_quad_eq_funcstep2',
+  '이차방정식과이차함수3단계': '06_quad_eq_funcstep3',
+  '이차방정식과이차함수4단계': '06_quad_eq_funcstep4',
+  '이차방정식2단계': '05_quad_eqstep2',
+  '이차방정식3단계': '05_quad_eqstep3',
+  '이차방정식4단계': '05_quad_eqstep4',
+  '복소수2단계': '04_complex_numstep2',
+  '복소수3단계': '04_complex_numstep3',
+  '복소수4단계': '04_complex_numstep4',
   '고차방정식2단계': 'higher_order_eqstep2',
   '고차방정식3단계': 'higher_order_eqstep3',
   '고차방정식4단계': 'higher_order_eqstep4',
@@ -188,6 +197,14 @@ const PATH_MAP = {
   '수학적귀납법3단계': 'induction_step3',
   '수학적귀납법4단계': 'induction_step4',
 
+  // Parent folder exact mappings for Math Sang crops
+  '(001)다항식': '001_polynomial',
+  '(002)항등식과나머지정리': '002_remainder',
+  '(003)인수분해': '003_factorization',
+  '(004)복소수': '004_complex_num',
+  '(005)이차방정식': '005_quad_eq',
+  '(006)이차방정식과이차함수': '006_quad_eq_func',
+
   // Units (Math Sang/Ha)
   '01.다항식의 연산': '01_poly_ops',
   '02.항등식과 나머지정리': '02_ident_rem',
@@ -206,6 +223,18 @@ const PATH_MAP = {
   '인수분해2단계': 'factorization_step2',
   '인수분해3단계': 'factorization_step3',
   '인수분해4단계': 'factorization_step4',
+  // 복소수~2차함수: 명시 단계 매핑(충돌 방지). sanitizePart 가 exact match 를 최우선으로
+  // 처리하므로, '이차방정식'이 '이차방정식과이차함수'의 부분문자열로 먼저 치환되던 버그를 차단.
+  // '이차방정식과이차함수'는 전용 네임스페이스(06_quad_eq_func*)로 직결 → 중복 업로드 의존 제거.
+  '복소수2단계': '04_complex_numstep2',
+  '복소수3단계': '04_complex_numstep3',
+  '복소수4단계': '04_complex_numstep4',
+  '이차방정식2단계': '05_quad_eqstep2',
+  '이차방정식3단계': '05_quad_eqstep3',
+  '이차방정식4단계': '05_quad_eqstep4',
+  '이차방정식과이차함수2단계': '06_quad_eq_funcstep2',
+  '이차방정식과이차함수3단계': '06_quad_eq_funcstep3',
+  '이차방정식과이차함수4단계': '06_quad_eq_funcstep4',
   '고차방정식': 'higher_order_eq',
   '이차부등식': 'quad_ineq',
   '일차부등식': 'linear_ineq',
@@ -276,6 +305,8 @@ const PATH_MAP = {
   // Others
   '월별모의고사': 'monthly_mock',
   '6월': 'june',
+  '3월': 'march',
+  '9월': 'sept',
   '수능': 'csat',
   '쌍둥이': 'twin',
   '중간고사': 'midterm',

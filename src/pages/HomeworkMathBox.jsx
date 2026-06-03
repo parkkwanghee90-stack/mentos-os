@@ -7,7 +7,13 @@ import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import MathProblemRenderer from '@/components/MathProblemRenderer';
 import HintPlayerRouter from '@/components/hints/HintPlayerRouter';
-import { HOMEWORK_UNITS, getHomeworkRange, padProblemNum, getHomeworkProgress, saveHomeworkProgress, markSequenceComplete } from '@/data/homeworkSSOT';
+import { HOMEWORK_UNITS, getHomeworkRange, padProblemNum, getHomeworkProgress, saveHomeworkProgress, markSequenceComplete, WRONG_REVIEW_ID, getUnitById, buildSolutionSrc } from '@/data/homeworkSSOT';
+import { addWrong, markResolved, getActiveUnresolvedWrongAnswers } from '@/services/wrongAnswerStore';
+import { resolveAnswer } from '@/services/answerResolver';
+import { recordCompletion, buildSummaryMessage } from '@/services/homeworkCompletion';
+import { computeSolvedCounts } from '@/services/progressCounts';
+import { queueParentPush } from '@/services/pushService';
+import { mirrorProgress } from '@/services/syncService';
 import avsAnswersData from '@/data/avs_answers.json';
 
 export default function HomeworkMathBox() {
@@ -45,6 +51,9 @@ export default function HomeworkMathBox() {
 
   // ── 단원 정보 로드 (동적 숙제 우선, 없으면 SSOT) ──
   const hwUnit = useMemo(() => {
+    if (homeworkId === WRONG_REVIEW_ID) {
+      return { id: WRONG_REVIEW_ID, title: '오답 복습 노트', isWrongReview: true, isDynamic: true };
+    }
     if (dynamicDbEntry) {
       const firstProb = dynamicDbEntry.problems?.[0];
       return {
@@ -59,6 +68,8 @@ export default function HomeworkMathBox() {
     return HOMEWORK_UNITS.find(u => u.id === homeworkId);
   }, [homeworkId, dynamicDbEntry]);
 
+  const isWrongReview = homeworkId === WRONG_REVIEW_ID;
+
   const studentLevel = location.state?.studentLevel || localStorage.getItem('studentLevel') || '4~5등급';
 
   // 문제 범위 계산 (정적 숙제 전용)
@@ -69,17 +80,35 @@ export default function HomeworkMathBox() {
 
   // 문제 목록 생성 (동적 숙제 대응)
   const problems = useMemo(() => {
+    if (homeworkId === WRONG_REVIEW_ID) {
+      const actives = getActiveUnresolvedWrongAnswers();
+      return actives.map((e, idx) => {
+        const unit = getUnitById(e.hwId);
+        const keyStr = String(e.num).padStart(3, '0');
+        const imgBase = unit ? unit.imagePath : '';
+        return {
+          problemId: `${e.hwId}_${keyStr}`,
+          num: idx + 1,
+          keyStr,
+          imageSrc: `${imgBase}${keyStr}.webp`,
+          solutionSrc: buildSolutionSrc(imgBase, e.num),
+          isDynamic: true,
+          _wr: e,
+        };
+      });
+    }
     if (dynamicDbEntry) {
       return (dynamicDbEntry.problems || []).map((p, idx) => {
         const sourceIdx = p.sourceProblemId !== undefined ? p.sourceProblemId : (idx + 1);
         const keyStr = String(sourceIdx).padStart(3, '0');
-        
+        const imgDir = p.problemImage.replace(/[^/]+$/, ''); // 파일명 제거 → 폴더 경로
+
         return {
           problemId: p.problemId,
           num: idx + 1,
           keyStr: keyStr,
           imageSrc: p.problemImage,
-          solutionSrc: p.problemImage.replace('.webp', 'a.webp'),
+          solutionSrc: buildSolutionSrc(imgDir, sourceIdx),
           isDynamic: true,
         };
       });
@@ -94,7 +123,7 @@ export default function HomeworkMathBox() {
         num: i,
         keyStr: pid,
         imageSrc: `${hwUnit.imagePath}${pid}.webp`,
-        solutionSrc: `${hwUnit.imagePath}${pid}a.webp`,
+        solutionSrc: buildSolutionSrc(hwUnit.imagePath, i),
         isDynamic: false,
       });
     }
@@ -103,6 +132,16 @@ export default function HomeworkMathBox() {
 
   // 정답 데이터 로드 (동적 숙제 대응)
   const answers = useMemo(() => {
+    if (homeworkId === WRONG_REVIEW_ID) {
+      const ansMap = {};
+      const actives = getActiveUnresolvedWrongAnswers();
+      actives.forEach((e) => {
+        const keyStr = String(e.num).padStart(3, '0');
+        const ans = resolveAnswer(e.answerKey, e.num);
+        if (ans !== null) ansMap[`${e.hwId}_${keyStr}`] = ans;
+      });
+      return ansMap;
+    }
     if (dynamicDbEntry) {
       const ansMap = {};
       (dynamicDbEntry.problems || []).forEach(p => {
@@ -138,10 +177,7 @@ export default function HomeworkMathBox() {
 
   const currentProblem = problems[currentProblemIdx];
   const totalProblems = problems.length;
-  const answeredCount = Object.keys(solvedStatus).length;
-  const correctCount = Object.values(solvedStatus).filter(s => s.isCorrect).length;
-  const wrongCount = Object.values(solvedStatus).filter(s => s.isCorrect === false).length;
-  const isAllSolved = answeredCount >= totalProblems;
+  const { answeredCount, correctCount, wrongCount, isAllSolved } = computeSolvedCounts(problems, solvedStatus);
   const currentSolved = currentProblem ? solvedStatus[currentProblem.problemId] : null;
 
   // ── 토스트 자동 숨김 ──
@@ -185,6 +221,9 @@ export default function HomeworkMathBox() {
       saveHomeworkProgress(homeworkId, newStatus);
       setGradingResult('avs_penalty');
       setToast('⚠️ 정답 입력 전 힌트 조회 → 오답 처리');
+      if (!isWrongReview && currentProblem && !currentProblem.isDynamic) {
+        addWrong({ hwId: hwUnit.id, num: parseInt(currentProblem.keyStr, 10), unit: hwUnit.relatedUnit || hwUnit.title, answerKey: hwUnit.answerKey });
+      }
     }
 
     setShowAVS(true);
@@ -215,7 +254,18 @@ export default function HomeworkMathBox() {
     };
     setSolvedStatus(newStatus);
     saveHomeworkProgress(homeworkId, newStatus);
+    mirrorProgress({ homeworkId, problemId: pid, isCorrect, userAnswer, avsViewed: newStatus[pid]?.avsViewed || false });
     setGradingResult(isCorrect ? 'correct' : 'incorrect');
+
+    // 오답노트 수집 (오답노트 자체 풀이 중에는 재수집 안 함)
+    if (!isWrongReview && currentProblem && !currentProblem.isDynamic) {
+      const numVal = parseInt(currentProblem.keyStr, 10);
+      if (isCorrect) {
+        markResolved(hwUnit.id, numVal);
+      } else {
+        addWrong({ hwId: hwUnit.id, num: numVal, unit: hwUnit.relatedUnit || hwUnit.title, answerKey: hwUnit.answerKey });
+      }
+    }
 
     // 오답이면 해설+AVS 자동 표시
     if (!isCorrect) {
@@ -252,6 +302,19 @@ export default function HomeworkMathBox() {
 
     // 진행도 최종 저장
     saveHomeworkProgress(homeworkId, solvedStatus);
+
+    // 완료 기록 + 학부모 푸시 (전 문항 완료 시 최초 1회)
+    if (isAllSolved) {
+      const accuracy = totalProblems > 0 ? Math.round((correctCount / totalProblems) * 100) : 0;
+      const minutes = Math.round((Date.now() - startTime) / 60000);
+      const summary = { title: hwUnit.title, accuracy, correct: correctCount, total: totalProblems, wrong: wrongCount, minutes };
+      const completionKey = isWrongReview ? `${homeworkId}_${new Date().toISOString().slice(0, 10)}` : homeworkId;
+      const { shouldPush } = recordCompletion(completionKey, summary);
+      if (shouldPush) {
+        const studentName = JSON.parse(localStorage.getItem('mentos_mock_user') || '{}')?.name || '멘토스 학생';
+        queueParentPush(buildSummaryMessage(studentName, summary));
+      }
+    }
 
     const elapsed = Math.round((Date.now() - startTime) / 60000);
     alert(

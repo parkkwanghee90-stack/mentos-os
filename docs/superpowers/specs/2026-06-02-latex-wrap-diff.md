@@ -1,0 +1,309 @@
+# auto-wrap 적용 diff (2026-06-02)
+
+A(문제본문) 51건, B(AVS해설) 46건 적용 / anomaly skip 0건
+
+- [A] `삼각함수활용2단계/057.webp` (wrapped 5)
+  - B: `그림은 선분 $\overline{AB}$를 지름으로 하는 원 $O$에 내접하는 사각형 $APBQ$를 나타낸 것이다. $\overline{AP} = 4 \text{cm}$, $\overline{BP}`
+  - A: `그림은 선분 $\overline{AB}$를 지름으로 하는 원 $O$에 내접하는 사각형 $APBQ$를 나타낸 것이다. $\overline{AP} = 4 \text{cm}$, $\overline{BP}`
+- [A] `삼각함수활용2단계/003a.webp` (wrapped 2)
+  - B: `∠ADB = \theta 라 하면 ∠ADC = 180^\circ - \theta 이므로 △ABC는 다음 그림과 같다. 이때 △ABD에서 사인법칙에 의하여 $$\frac{BD}{\sin 60^\cir`
+  - A: `$∠ADB = \theta$ 라 하면 $∠ADC = 180^\circ - \theta$ 이므로 △ABC는 다음 그림과 같다. 이때 △ABD에서 사인법칙에 의하여 $$\frac{BD}{\sin 60^`
+- [A] `삼각함수활용2단계/054a.webp` (wrapped 3)
+  - B: `△ABC에서 ∠ACB = 90^\circ, ∠ABC = 60^\circ 인 직각삼각형이므로 $BC = 6, AB = 12$  △ABD에서 ∠ADB = 90^\circ 인 직각이등변삼각형이므로 $BD`
+  - A: `△ABC에서 $∠ACB = 90^\circ, ∠ABC = 60^\circ$ 인 직각삼각형이므로 $BC = 6, AB = 12$  △ABD에서 $∠ADB = 90^\circ$ 인 직각이등변삼각형이므로`
+- [A] `삼각함수활용2단계/063a.webp` (wrapped 1)
+  - B: `∠APB = \theta 라 하면 △ABP에서 코사인법칙에 의하여 $$\cos \theta = \frac{2^2 + 6^2 - 6^2}{2 \cdot 2 \cdot 6} = \frac{1}{6}$$`
+  - A: `$∠APB = \theta$ 라 하면 △ABP에서 코사인법칙에 의하여 $$\cos \theta = \frac{2^2 + 6^2 - 6^2}{2 \cdot 2 \cdot 6} = \frac{1}{6}`
+- [A] `지수2단계/018a.webp` (wrapped 7)
+  - B: `A-B=(\sqrt[6]{2}+\sqrt[8]{3})-2\sqrt[3]{3}=\sqrt[6]{2}-\sqrt[8]{3}\n=\sqrt[24]{2^4}-\sqrt[24]{3^3}=\sqrt[24]{1`
+  - A: `$A-B=(\sqrt[6]{2}+\sqrt[8]{3})-2\sqrt[3]{3}=\sqrt[6]{2}-\sqrt[8]{3}$\n$=\sqrt[24]{2^4}-\sqrt[24]{3^3}=\sqrt[24`
+- [A] `지수2단계/028.webp` (wrapped 4)
+  - B: `$\sqrt{2 \times 3^3} \times \sqrt{3^4} \times \sqrt[4]{4} \times \sqrt[6]{6} = 2^a \times 3^b$일 때 \n$a + b$의 값`
+  - A: `$\sqrt{2 \times 3^3} \times \sqrt{3^4} \times \sqrt[4]{4} \times \sqrt[6]{6} = 2^a \times 3^b$일 때 \n$a + b$의 값`
+- [A] `지수2단계/038a.webp` (wrapped 1)
+  - B: `해설  \(a = \sqrt[4]{2}, b = \sqrt[7]{3}\)에서 \(a^4 = 2, b^7 = 3\)이므로\n\n\[\n\sqrt[28]{6^5} = \sqrt[28]{(2 \cdot `
+  - A: `해설  \(a = \sqrt[4]{2}, b = \sqrt[7]{3}\)에서 \(a^4 = 2, b^7 = 3\)이므로\n\n\[\n$\sqrt[28]{6^5} = \sqrt[28]{(2 \cdot`
+- [A] `지수2단계/043.webp` (wrapped 2)
+  - B: `43. \(a = \sqrt{3}, \ b = \sqrt{5}\)일 때\n\(\left(a^{\frac{1}{8}} - b^{\frac{1}{8}}\right)\n\left(a^{\frac{1}{8`
+  - A: `43. \(a = \sqrt{3}, \ b = \sqrt{5}\)일 때\n\(\left(a^{\frac{1}{8}} - b^{\frac{1}{8}}\right)\n$\left(a^{\frac{1}{`
+- [A] `지수2단계/044a.webp` (wrapped 6)
+  - B: `x = 2^{$\frac{1}{3}$} + 2^{-$\frac{1}{3}$}의 양변을 세제곱하면\nx^3 = 2 + $\frac{1}{2}$ + 3\left(2^{$\frac{1}{3}$} + 2^`
+  - A: `x = 2^{$\frac{1}{3}$} + 2^{-$\frac{1}{3}$}의 양변을 세제곱하면\n$x^3 = 2 +$ $\frac{1}{2}$ + 3\left(2^{$\frac{1}{3}$} + `
+- [A] `로그2단계/014a.webp` (wrapped 3)
+  - B: `(\log_3 $\sqrt{27}$ + 4 \log_7 $\sqrt{3}$) \cdot \log_{27} 49 \n\n= \left( \log_3 3^{$\frac{5}{2}$} + 4 \log_7`
+  - A: `(\log_3 $\sqrt{27}$ + 4 \log_7 $\sqrt{3}$) \cdot \log_{27} 49 \n\n= \left( \log_3 3^{$\frac{5}{2}$} + 4 \log_7`
+- [A] `로그2단계/051.webp` (wrapped 1)
+  - B: `10 < x < 100이고 \log $\sqrt{x}$ 와 \log x^2의 차가 정수일 때, \log x의 값을 구하시오.`
+  - A: `10 < x < 100이고 $\log$ $\sqrt{x}$ 와 \log x^2의 차가 정수일 때, \log x의 값을 구하시오.`
+- [A] `지수함수2단계/023.webp` (wrapped 5)
+  - B: `$a > 1$일 때, 세 수 $a$, $a^a$, $a^{a^a}$의 대소 관계는? ① a < a^a < a^{a^a} ② a < a^{a^a} < a^a ③ a^a < a < a^{a^a} ④ a`
+  - A: `$a > 1$일 때, 세 수 $a$, $a^a$, $a^{a^a}$의 대소 관계는? ① $a < a^a < a^{a^a}$ ② $a < a^{a^a} < a^a$ ③ $a^a < a < a^{a^a`
+- [A] `로그함수2단계/022a.webp` (wrapped 5)
+  - B: `해설 (삼각형 ACB의 넓이) = $\frac{1}{2}$ \cdot (3p-p) \cdot \log_3 p = p \cdot \log_3 p (삼각형 BCD의 넓이) = $\frac{1}{2}$ `
+  - A: `해설 (삼각형 ACB의 넓이) = $\frac{1}{2}$ \cdot (3p-p) \cdot \log_3 p = p \cdot \log_3 p (삼각형 BCD의 넓이) = $\frac{1}{2}$ `
+- [A] `로그함수2단계/057.webp` (wrapped 4)
+  - B: `방정식 $100x^{\log x} = x^3$의 모든 근의 곱은? ① 10 ② 10^2 ③ 10^3 ④ 10^4 ⑤ 10^5`
+  - A: `방정식 $100x^{\log x} = x^3$의 모든 근의 곱은? ① 10 ② $10^2$ ③ $10^3$ ④ $10^4$ ⑤ $10^5$`
+- [A] `로그함수2단계/057a.webp` (wrapped 5)
+  - B: `100^{x^{\log x}} = x^3의 양변에 상용로그를 취하면\n\log 100^{x^{\log x}} = \log x^3\n\log 100 + \log x^{\log x} = 3 \log x`
+  - A: `100^{x^{\log x}} = x^3의 양변에 상용로그를 취하면\n$\log 100^{x^{\log x}} = \log x^3$\n$\log 100 + \log x^{\log x} = 3 \lo`
+- [A] `로그함수2단계/078a.webp` (wrapped 7)
+  - B: `(\log_2 x)^2 \geq \log_2 $\frac{x^6}{a}$ \text{에서} \n(\log_2 x)^2 \geq 6\log_2 x - \log_2 a \n\log_2 x = t \te`
+  - A: `$(\log_2 x)^2 \geq \log_2$ $\frac{x^6}{a}$ \text{에서} \n$(\log_2 x)^2 \geq 6\log_2 x - \log_2 a$ \n\log_2 x = t`
+- [A] `로그함수2단계/080a.webp` (wrapped 3)
+  - B: `(\log_4 x)^2 + \log_4 16x^2 - \log_2 k \geq 0 \text{에서} \n(\log_4 x)^2 + 2\log_4 x + 2 - \log_2 k \geq 0 \n\lo`
+  - A: `(\log_4 x)^2 + \log_4 16x^2 - \log_2 k \geq 0 \text{에서} \n$(\log_4 x)^2 + 2\log_4 x + 2 - \log_2 k \geq 0$ \n\`
+- [A] `삼각함수성질2단계/013.webp` (wrapped 9)
+  - B: `0 < \theta < \pi 일 때, $\frac{1}{2}$ \theta 와 3\theta 의 동경이 같은 직선 위에 있도록 하는 모든 \theta 의 값의 합은? ① $\frac{9}{10}$`
+  - A: `$0 < \theta < \pi$ 일 때, $\frac{1}{2}$ $\theta$ 와 $3\theta$ 의 동경이 같은 직선 위에 있도록 하는 모든 $\theta$ 의 값의 합은? ① $\frac`
+- [A] `삼각함수성질2단계/020a.webp` (wrapped 8)
+  - B: `OP = x라 하면 150^\circ = $\frac{5}{6}$\pi이므로 와이퍼의 블레이드로 닦은 부분의 넓이는 $\frac{1}{2}$ \cdot 50^2 \cdot $\frac{5}{6}$ `
+  - A: `OP = x라 하면 $150^\circ =$ $\frac{5}{6}$\pi이므로 와이퍼의 블레이드로 닦은 부분의 넓이는 $\frac{1}{2}$ $\cdot 50^2 \cdot$ $\frac{5}{`
+- [A] `삼각함수성질2단계/043.webp` (wrapped 4)
+  - B: `$\sqrt{1+2\sin\theta\cos\theta} + \sqrt{1-2\sin\theta\cos\theta}$ 를 간단히 하면? (단, \sin\theta < \cos\theta < 0) ①`
+  - A: `$\sqrt{1+2\sin\theta\cos\theta} + \sqrt{1-2\sin\theta\cos\theta}$ 를 간단히 하면? (단, \sin\theta < \cos\theta < 0) ①`
+- [A] `삼각함수성질2단계/050.webp` (wrapped 1)
+  - B: `sin\theta + \cos\theta = $\frac{1}{3}$ 일 때, \tan\theta + $\frac{1}{\tan\theta}$ 의 값을 구하시오.`
+  - A: `$sin\theta + \cos\theta =$ $\frac{1}{3}$ 일 때, \tan\theta + $\frac{1}{\tan\theta}$ 의 값을 구하시오.`
+- [A] `삼각함수성질2단계/053a.webp` (wrapped 1)
+  - B: `해설 $(\nsin\theta - \ncos\theta)^2 = sin^2\theta - 2sin\theta cos\theta + cos^2\theta$ \n\n$$= 1 - 2 \cdot \lef`
+  - A: `해설 $(\n$sin\theta -$ \ncos\theta)^2 = sin^2\theta - 2sin\theta cos\theta + cos^2\theta$ \n\n$$= 1 - 2 \cdot \l`
+- [A] `삼각함수그래프2단계/006.webp` (wrapped 1)
+  - B: `0 < \theta < $\frac{\pi}{4}$인 \theta에 대하여 <보기>에서 옳은 것만을 있는 대로 고른 것은?\n\n<보기>\nㄱ. $0 < \sin \theta < \cos \thet`
+  - A: `$0 < \theta <$ $\frac{\pi}{4}$인 \theta에 대하여 <보기>에서 옳은 것만을 있는 대로 고른 것은?\n\n<보기>\nㄱ. $0 < \sin \theta < \cos \th`
+- [A] `삼각함수그래프2단계/011a.webp` (wrapped 2)
+  - B: `ㄱ. 두 함수의 주기는 모두 $\frac{2}{3}\pi$로 같다. (참)\nㄴ. $g(-x) = \cos(-3x) = \cos 3x$이고 $-g(x) = -\cos 3x$이므로 $g(-x) \ne`
+  - A: `ㄱ. 두 함수의 주기는 모두 $\frac{2}{3}\pi$로 같다. (참)\nㄴ. $g(-x) = \cos(-3x) = \cos 3x$이고 $-g(x) = -\cos 3x$이므로 $g(-x) \ne`
+- [A] `삼각함수그래프2단계/039.webp` (wrapped 1)
+  - B: `cos(\pi + \theta) + \sin(\pi - \theta) = $\frac{2}{3}$ 일 때, \sin \theta \cos \theta의 값은? ① $\frac{5}{18}$ ② $\`
+  - A: `$cos(\pi + \theta) + \sin(\pi - \theta) =$ $\frac{2}{3}$ 일 때, \sin \theta \cos \theta의 값은? ① $\frac{5}{18}$ ② `
+- [A] `삼각함수그래프2단계/043.webp` (wrapped 2)
+  - B: `cos^{2} 3^{\circ} + cos^{2} 6^{\circ} + cos^{2} 9^{\circ} + $\cdots$ + cos^{2} 87^{\circ} 의 값을 구하는 과정이다. \[ \c`
+  - A: `$cos^{2} 3^{\circ} + cos^{2} 6^{\circ} + cos^{2} 9^{\circ} +$ $\cdots$ $+ cos^{2} 87^{\circ}$ 의 값을 구하는 과정이다. \`
+- [A] `삼각함수그래프2단계/063.webp` (wrapped 1)
+  - B: `0 < \theta < $\frac{\pi}{2}$일 때, $$\log(\sin\theta) - \log(\cos\theta) = -\frac{1}{2}\log3$$을 만족시키는 \theta에 대하`
+  - A: `$0 < \theta <$ $\frac{\pi}{2}$일 때, $$\log(\sin\theta) - \log(\cos\theta) = -\frac{1}{2}\log3$$을 만족시키는 \theta에 `
+- [A] `삼각함수그래프2단계/064.webp` (wrapped 1)
+  - B: `0 \leq \theta \leq 2\pi 에서 방정식 $\sin\left(\frac{\pi}{2} - \theta\right) + \sin(\pi + \theta)$ $$= \sin\left(\f`
+  - A: `$0 \leq \theta \leq 2\pi$ 에서 방정식 $\sin\left(\frac{\pi}{2} - \theta\right) + \sin(\pi + \theta)$ $$= \sin\left(`
+- [A] `삼각함수그래프2단계/066.webp` (wrapped 1)
+  - B: `0 \leq \theta \leq 2\pi 에서 방정식 $\sin\left(\frac{\pi}{2} + \theta\right) + \sin(\pi - \theta)$ $$= \sin\left(\f`
+  - A: `$0 \leq \theta \leq 2\pi$ 에서 방정식 $\sin\left(\frac{\pi}{2} + \theta\right) + \sin(\pi - \theta)$ $$= \sin\left(`
+- [A] `삼각함수그래프2단계/068.webp` (wrapped 1)
+  - B: `0 \leq x < 3\pi 에서 방정식 $3\sin^2 x - 7\sin x + 2 = 0$의 서로 다른 네 실근을 작은 것부터 차례대로 $\alpha, \beta, \gamma, \delta$라`
+  - A: `$0 \leq x < 3\pi$ 에서 방정식 $3\sin^2 x - 7\sin x + 2 = 0$의 서로 다른 네 실근을 작은 것부터 차례대로 $\alpha, \beta, \gamma, \delta`
+- [A] `삼각함수그래프2단계/073.webp` (wrapped 1)
+  - B: `0 \leq x < 2\pi 에서 방정식 $3\sin^2 x - 1 = 0$의 모든 실근의 합은? ① $2\pi$ ② $\frac{5\pi}{2}$ ③ $3\pi$ ④ $\frac{7\pi}{2}$`
+  - A: `$0 \leq x < 2\pi$ 에서 방정식 $3\sin^2 x - 1 = 0$의 모든 실근의 합은? ① $2\pi$ ② $\frac{5\pi}{2}$ ③ $3\pi$ ④ $\frac{7\pi}{2`
+- [A] `삼각함수그래프2단계/084.webp` (wrapped 1)
+  - B: `0 < x \leq 2\pi 일 때, 방정식 $\sin^2 x = \cos^2 x + \cos x$와 부등식 $\sin x > \cos x$를 동시에 만족시키는 모든 $x$의 값의 합은? ① $\f`
+  - A: `$0 < x \leq 2\pi$ 일 때, 방정식 $\sin^2 x = \cos^2 x + \cos x$와 부등식 $\sin x > \cos x$를 동시에 만족시키는 모든 $x$의 값의 합은? ① $`
+- [A] `삼각함수3단계/015.webp` (wrapped 1)
+  - B: `sin\theta + cos\theta = $\sqrt{2}$일 때, $\frac{1}{sin^6\theta}$ + $\frac{1}{cos^6\theta}$의 값을 구하시오.`
+  - A: `$sin\theta + cos\theta =$ $\sqrt{2}$일 때, $\frac{1}{sin^6\theta}$ + $\frac{1}{cos^6\theta}$의 값을 구하시오.`
+- [A] `삼각함수3단계/018.webp` (wrapped 5)
+  - B: `0 < \theta < \pi일 때, $\frac{1}{2}$ \theta와 3 \theta의 동경이 같은 직선 위에 있도록 하는 모든 \theta의 값의 합은? ① $\frac{9}{10}$ \p`
+  - A: `0 < \theta < \pi일 때, $\frac{1}{2}$ \theta와 3 \theta의 동경이 같은 직선 위에 있도록 하는 모든 \theta의 값의 합은? ① $\frac{9}{10}$ $\`
+- [A] `삼각함수그래프3단계/027.webp` (wrapped 1)
+  - B: `0 \leq x \leq 2\pi 일 때,
+방정식 $4\sin^2 x - 2\cos x = k$의 서로 다른 실근의 개수가 3이다.
+이 세 실근 중 가장 큰 실근을 $\alpha$라 할 때,
+$k\`
+  - A: `$0 \leq x \leq 2\pi$ 일 때,
+방정식 $4\sin^2 x - 2\cos x = k$의 서로 다른 실근의 개수가 3이다.
+이 세 실근 중 가장 큰 실근을 $\alpha$라 할 때,
+$`
+- [A] `삼각함수그래프3단계/046.webp` (wrapped 16)
+  - B: `해설 0 < \theta < $\frac{\pi}{4}$ 에서 y = \sin\theta,
+y = \cos\theta 의 그래프는 그림과 같다.
+따라서 0 < \sin\theta < \cos\the`
+  - A: `해설 $0 < \theta <$ $\frac{\pi}{4}$ 에서 $y = \sin\theta,$
+$y = \cos\theta$ 의 그래프는 그림과 같다.
+따라서 $0 < \sin\theta < \`
+- [A] `삼각함수그래프3단계/059.webp` (wrapped 9)
+  - B: `cos\left(\theta + $\frac{3}{2}$\pi\right) = \sin\theta,
+\sin\left(\theta + $\frac{3}{2}$\pi\right) = -\cos\the`
+  - A: `cos\left(\theta + $\frac{3}{2}$\pi\right) = \sin\theta,
+\sin\left(\theta + $\frac{3}{2}$\pi\right) = -\cos\the`
+- [A] `삼각함수그래프3단계/060.webp` (wrapped 8)
+  - B: `cos\left(\theta + $\frac{\pi}{2}$\right) = -\sin\theta,
+\sin\left(\theta + $\frac{\pi}{2}$\right) = \cos\theta`
+  - A: `cos\left(\theta + $\frac{\pi}{2}$\right) = -\sin\theta,
+\sin\left(\theta + $\frac{\pi}{2}$\right) = \cos\theta`
+- [A] `지수로그4단계/005.webp` (wrapped 2)
+  - B: `두 집합 $A = \{3, 4\}, B = \{-9, -3, 3, 9\}$에 대하여 집합 $X$를 $X = \{x \mid x^a = b, a \in A, b \in B, x \text{는 실수}\`
+  - A: `두 집합 $A = \{3, 4\}, B = \{-9, -3, 3, 9\}$에 대하여 집합 $X$를 $X = \{x \mid x^a = b, a \in A, b \in B, x \text{는 실수}\`
+- [A] `지수로그4단계/051.webp` (wrapped 2)
+  - B: `log_{4} 2n^2 - $\frac{1}{2}$ \log_{2} $\sqrt{n}$의 값이 40 이하의 자연수가 되도록 하는 자연수 n의 개수를 구하시오.`
+  - A: `$log_{4} 2n^2 -$ $\frac{1}{2}$ $\log_{2}$ $\sqrt{n}$의 값이 40 이하의 자연수가 되도록 하는 자연수 n의 개수를 구하시오.`
+- [A] `지수로그4단계/057.webp` (wrapped 1)
+  - B: `1보다 큰 두 실수 $a$, $b$에 대하여 $$\n\log_a a^2 b^3 = 3\n$$ 이 성립할 때, $\log_b a$의 값은? ① $2 ② $\frac{5}{2}$ ③ 3 ④ $\frac`
+  - A: `1보다 큰 두 실수 $a$, $b$에 대하여 $$\n$\log_a a^2 b^3 = 3$\n$$ 이 성립할 때, $\log_b a$의 값은? ① $2 ② $\frac{5}{2}$ ③ 3 ④ $\fr`
+- [A] `지수로그함수4단계/023.webp` (wrapped 3)
+  - B: `그림과 같이 두 곡선 $y = 2^{-x+a}, y = 2^x - 1$이 만나는 점을 A, 곡선 $y = 2^{-x+a}$이 $y$축과 만나는 점을 B라 하자. 점 A에서 $y$축에 내린 수선의 발`
+  - A: `그림과 같이 두 곡선 $y = 2^{-x+a}, y = 2^x - 1$이 만나는 점을 A, 곡선 $y = 2^{-x+a}$이 $y$축과 만나는 점을 B라 하자. 점 A에서 $y$축에 내린 수선의 발`
+- [A] `삼각함수그래프/046.webp` (wrapped 1)
+  - B: `0 \leq x < 2\pi 일 때, 곡선 $y = |4\sin 3x + 2|$와 직선 $y = 2$가 만나는 서로 다른 점의 개수는? ① 3 ② 6 ③ 9 ④ 12 ⑤ 15`
+  - A: `$0 \leq x < 2\pi$ 일 때, 곡선 $y = |4\sin 3x + 2|$와 직선 $y = 2$가 만나는 서로 다른 점의 개수는? ① 3 ② 6 ③ 9 ④ 12 ⑤ 15`
+- [A] `삼각함수그래프/053.webp` (wrapped 4)
+  - B: `중심이 $O$이고 길이가 $10$인 선분 $AB$를 지름으로 하는 반원의 호 위에 점 $P$가 있다. 그림과 같이 선분 $PB$의 연장선 위에 $PA = PC$인 점 $C$를 잡고, 선분 $PO$의`
+  - A: `중심이 $O$이고 길이가 $10$인 선분 $AB$를 지름으로 하는 반원의 호 위에 점 $P$가 있다. 그림과 같이 선분 $PB$의 연장선 위에 $PA = PC$인 점 $C$를 잡고, 선분 $PO$의`
+- [A] `삼각함수그래프/062.webp` (wrapped 1)
+  - B: `0 \leq x \leq \pi 일 때, 방정식 $$2\cos^2x + (2 + \sqrt{3})\sin x - (2 + \sqrt{3}) = 0$$ 의 모든 해의 합은? ① $\frac{3}{4}`
+  - A: `$0 \leq x \leq \pi$ 일 때, 방정식 $$2\cos^2x + (2 + \sqrt{3})\sin x - (2 + \sqrt{3}) = 0$$ 의 모든 해의 합은? ① $\frac{3}{`
+- [A] `삼각함수그래프/065.webp` (wrapped 1)
+  - B: `0 \leq x < 2\pi 일 때, 방정식 $3\cos^2 x + 5\sin x - 1 = 0$의 모든 해의 합은? ① $\pi$ ② $\frac{3}{2}\pi$ ③ $2\pi$ ④ $\frac`
+  - A: `$0 \leq x < 2\pi$ 일 때, 방정식 $3\cos^2 x + 5\sin x - 1 = 0$의 모든 해의 합은? ① $\pi$ ② $\frac{3}{2}\pi$ ③ $2\pi$ ④ $\fr`
+- [A] `삼각함수그래프/069a.webp` (wrapped 1)
+  - B: `해설 삼각함수의 그래프와 직선의 위치 관계를 찾는 문제 해결하기 $y = \tan \frac{\n \times}{\n}$의 주기는 $\frac{\n}{\n} = 1$이다. 위의 그림과 같이 $0 \`
+  - A: `해설 삼각함수의 그래프와 직선의 위치 관계를 찾는 문제 해결하기 $y = \tan \frac{\n \times}{\n}$의 주기는 $\frac{\n}{\n} = 1$이다. 위의 그림과 같이 $0 \`
+- [A] `삼각함수그래프/076.webp` (wrapped 1)
+  - B: `0 \leq x \leq \pi 일 때, 2 이상의 자연수 $n$에 대하여 두 곡선 $y = \sin x$와 $y = \sin (nx)$의 교점의 개수를 $a_n$이라 하자. $a_3 + a_5$의`
+  - A: `$0 \leq x \leq \pi$ 일 때, 2 이상의 자연수 $n$에 대하여 두 곡선 $y = \sin x$와 $y = \sin (nx)$의 교점의 개수를 $a_n$이라 하자. $a_3 + a_5`
+- [A] `삼각함수그래프/080.webp` (wrapped 1)
+  - B: `0 \leq x \leq 2\pi 일 때, 방정식 $2\sin^2x - 3\cos x = k$의 서로 다른 실근의 개수가 3이다. 이 세 실근 중 가장 큰 실근을 $\alpha$라 할 때, $k\a`
+  - A: `$0 \leq x \leq 2\pi$ 일 때, 방정식 $2\sin^2x - 3\cos x = k$의 서로 다른 실근의 개수가 3이다. 이 세 실근 중 가장 큰 실근을 $\alpha$라 할 때, $k`
+- [A] `삼각함수그래프/083a.webp` (wrapped 1)
+  - B: `삼각함수의 정의를 이용하여 삼각함수의 값 구하는 문제 해결하기\n\n\( \angle APB = \frac{\pi}{2} \) 이므로 \( \angle PBA = \frac{\pi}{2} - \th`
+  - A: `삼각함수의 정의를 이용하여 삼각함수의 값 구하는 문제 해결하기\n\n\( \angle APB = \frac{\pi}{2} \) 이므로 \( \angle PBA = \frac{\pi}{2} - \th`
+- [A] `삼각함수그래프/088.webp` (wrapped 1)
+  - B: `0 \leq \theta < 2\pi 일 때, \( x \)에 대한 이차방정식 $$x^2 - (2\sin\theta)x - 3\cos^2\theta - 5\sin\theta + 5 = 0$$이 실근`
+  - A: `$0 \leq \theta < 2\pi$ 일 때, \( x \)에 대한 이차방정식 $$x^2 - (2\sin\theta)x - 3\cos^2\theta - 5\sin\theta + 5 = 0$$이 `
+- [B] `3)지수로그삼각함수의 미분법 4단계/002` (wrapped 1)
+  - B: `\lim_{t \to 0^+} f(t) = \lim_{t \to 0^+} 2 \ln \frac{6t}{e^{3t} - 1} = 2 \ln 2 =`
+  - A: `$\lim_{t \to 0^+} f(t) = \lim_{t \to 0^+} 2 \ln \frac{6t}{e^{3t} - 1} = 2 \ln 2 =$`
+- [B] `3)지수로그삼각함수의 미분법 4단계/004` (wrapped 1)
+  - B: `2/\ln 2`
+  - A: `$2/\ln 2$`
+- [B] `3)지수로그삼각함수의 미분법 4단계/011` (wrapped 1)
+  - B: `\pi^2/2`
+  - A: `$\pi^2/2$`
+- [B] `3)지수로그삼각함수의 미분법 4단계/023` (wrapped 1)
+  - B: `a + b = \frac{15}{2} \pi`
+  - A: `$a + b = \frac{15}{2} \pi$`
+- [B] `3)지수로그삼각함수의 미분법 4단계/025` (wrapped 1)
+  - B: `= \frac{\sqrt{2} - 1}{2}`
+  - A: `$= \frac{\sqrt{2} - 1}{2}$`
+- [B] `등차등비2단계/017` (wrapped 1)
+  - B: `\frac{11}{21}`
+  - A: `$\frac{11}{21}$`
+- [B] `등차등비2단계/025` (wrapped 1)
+  - B: `\frac{640}{9}`
+  - A: `$\frac{640}{9}$`
+- [B] `등차등비2단계/065` (wrapped 1)
+  - B: `\frac{1}{3}`
+  - A: `$\frac{1}{3}$`
+- [B] `등차등비2단계/078` (wrapped 1)
+  - B: `-\frac{\sqrt{5}}{2}`
+  - A: `$-\frac{\sqrt{5}}{2}$`
+- [B] `등차등비2단계/079` (wrapped 1)
+  - B: `-\frac{1}{8}`
+  - A: `$-\frac{1}{8}$`
+- [B] `등차등비2단계/086` (wrapped 1)
+  - B: `\frac{1}{8}(3^{20} - 1)`
+  - A: `$\frac{1}{8}(3^{20} - 1)$`
+- [B] `등차등비2단계/099` (wrapped 1)
+  - B: `16 \left\{ 1 - \left(\frac{3}{4}\right)^{10} \right\}`
+  - A: `$16 \left\{ 1 - \left(\frac{3}{4}\right)^{10} \right\}$`
+- [B] `등차등비3단계/016` (wrapped 1)
+  - B: `3^{11}`
+  - A: `$3^{11}$`
+- [B] `등차등비3단계/026` (wrapped 1)
+  - B: `\frac{1}{512}`
+  - A: `$\frac{1}{512}$`
+- [B] `등차등비3단계/032` (wrapped 1)
+  - B: `\frac{1}{2^3}`
+  - A: `$\frac{1}{2^3}$`
+- [B] `삼각함수활용 4단계(68)/089_v2` (wrapped 1)
+  - B: `2cdotoverlineQR^2`
+  - A: `$2cdotoverlineQR^2$`
+- [B] `삼각함수활용 4단계(68)/097_v2` (wrapped 1)
+  - B: `frac15r^2`
+  - A: `$frac15r^2$`
+- [B] `삼각함수활용2단계/017_v3` (wrapped 1)
+  - B: `ACcdotfracsin20^circsin45^circ`
+  - A: `$ACcdotfracsin20^circsin45^circ$`
+- [B] `삼각함수활용2단계/018_v3` (wrapped 1)
+  - B: `900pi(m^2)`
+  - A: `$900pi(m^2)$`
+- [B] `삼각함수활용2단계/018_v4` (wrapped 1)
+  - B: `900pi(m^2)`
+  - A: `$900pi(m^2)$`
+- [B] `삼각함수활용2단계/055_v2` (wrapped 1)
+  - B: `1800(m^2)`
+  - A: `$1800(m^2)$`
+- [B] `지수함수3단계/9` (wrapped 1)
+  - B: `2^{3/4}`
+  - A: `$2^{3/4}$`
+- [B] `지수함수3단계/009` (wrapped 1)
+  - B: `2^{3/4}`
+  - A: `$2^{3/4}$`
+- [B] `수학적귀납법4단계/003` (wrapped 1)
+  - B: `\frac{9}{2}`
+  - A: `$\frac{9}{2}$`
+- [B] `3)지수로그함수의극한/002` (wrapped 1)
+  - B: `_x  0 e^4x - 12x = 2`
+  - A: `$_x  0 e^4x - 12x = 2$`
+- [B] `3)지수로그함수의극한/004` (wrapped 1)
+  - B: `e^9/2`
+  - A: `$e^9/2$`
+- [B] `3)지수로그함수의극한/005` (wrapped 1)
+  - B: `_x  0 e^3x - 12x = 3/2`
+  - A: `$_x  0 e^3x - 12x = 3/2$`
+- [B] `3)지수로그함수의극한/006` (wrapped 1)
+  - B: `_x  0 e^2x - 1x^2 - x = -2`
+  - A: `$_x  0 e^2x - 1x^2 - x = -2$`
+- [B] `3)지수로그함수의극한/008` (wrapped 1)
+  - B: `_x  1 f(x)-6/x-1 = 10`
+  - A: `$_x  1 f(x)-6/x-1 = 10$`
+- [B] `3)지수로그함수의극한/010` (wrapped 1)
+  - B: `_x  0 _3(1 + 4x)/2x = 2/3`
+  - A: `$_x  0 _3(1 + 4x)/2x = 2/3$`
+- [B] `3)지수로그함수의극한/012` (wrapped 1)
+  - B: `_x  0 e^4x - e^-5x-x = -9`
+  - A: `$_x  0 e^4x - e^-5x-x = -9$`
+- [B] `3)지수로그함수의극한/016` (wrapped 1)
+  - B: `_x  0 (1 + 3x)/(1 + 2x) = 3/2`
+  - A: `$_x  0 (1 + 3x)/(1 + 2x) = 3/2$`
+- [B] `3)지수로그함수의극한/023` (wrapped 1)
+  - B: `_t  0 S(t)/t^2 = 1/2`
+  - A: `$_t  0 S(t)/t^2 = 1/2$`
+- [B] `3)지수로그함수의극한/027` (wrapped 1)
+  - B: `_x  0 (1 + ax)^b/x`
+  - A: `$_x  0 (1 + ax)^b/x$`
+- [B] `4)삼각함수합성과미분/013` (wrapped 1)
+  - B: `_x  0  4x/e^2x - 1 = 2`
+  - A: `$_x  0  4x/e^2x - 1 = 2$`
+- [B] `4)삼각함수합성과미분/014` (wrapped 1)
+  - B: `_x  0 e^4x - 1 \, 2x = 2`
+  - A: `$_x  0 e^4x - 1 \, 2x = 2$`
+- [B] `4)삼각함수합성과미분/017` (wrapped 1)
+  - B: `_x  0  2x/x = 2`
+  - A: `$_x  0  2x/x = 2$`
+- [B] `4)삼각함수합성과미분/020` (wrapped 1)
+  - B: `_x  0 ( 2x)/x = 2`
+  - A: `$_x  0 ( 2x)/x = 2$`
+- [B] `4)삼각함수합성과미분/024` (wrapped 1)
+  - B: `g(0) = 0  _x   g(x)/x^2 = 1`
+  - A: `$g(0) = 0  _x   g(x)/x^2 = 1$`
+- [B] `4)삼각함수합성과미분/031` (wrapped 1)
+  - B: `_k   / = 1/2`
+  - A: `$_k   / = 1/2$`
+- [B] `4)삼각함수합성과미분/033` (wrapped 1)
+  - B: `a^2 + b^2 = 65`
+  - A: `$a^2 + b^2 = 65$`
+- [B] `4)삼각함수합성과미분/035` (wrapped 1)
+  - B: `r()/^2 = ^2   /^2(1 +   +  )`
+  - A: `$r()/^2 = ^2   /^2(1 +   +  )$`
+- [B] `4)삼각함수합성과미분/037` (wrapped 1)
+  - B: `_  0^+ g()/^4  f() = 2`
+  - A: `$_  0^+ g()/^4  f() = 2$`
+- [B] `4)삼각함수합성과미분/040` (wrapped 1)
+  - B: `_  0^+ g()/^2  f() = 1/4`
+  - A: `$_  0^+ g()/^2  f() = 1/4$`
+- [B] `4)삼각함수합성과미분/044` (wrapped 1)
+  - B: `_  0^+ S()/ = 3`
+  - A: `$_  0^+ S()/ = 3$`
+- [B] `4)삼각함수합성과미분/049` (wrapped 1)
+  - B: `f'(/2) = -^3/8`
+  - A: `$f'(/2) = -^3/8$`

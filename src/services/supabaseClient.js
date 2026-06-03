@@ -3,8 +3,15 @@ import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://trvqgqvwhqvlgqzlsxbu.supabase.co';
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-if (!supabaseAnonKey || supabaseAnonKey.length < 50) {
-  console.error('[SupabaseClient] ⛔ VITE_SUPABASE_ANON_KEY가 설정되지 않았습니다. .env 파일을 확인하세요.');
+// 보안 원칙: 클라이언트에는 RLS 보호를 받는 anon(public) 키만 사용한다.
+// service_role 등 권한 키를 하드코딩하면 모든 RLS가 우회되어 DB 전체가 노출되므로 절대 금지.
+// 키는 환경변수에서만 주입하며, 누락 시 위험한 fallback 대신 즉시 실패시킨다(fail-fast).
+if (!supabaseAnonKey) {
+  throw new Error(
+    '[SupabaseClient] VITE_SUPABASE_ANON_KEY가 설정되지 않았습니다. ' +
+    '.env에 Supabase anon(public) 키를 설정하세요. ' +
+    'service_role 등 권한 키는 클라이언트에서 절대 사용하지 마세요(RLS 우회 → DB 전체 노출).'
+  );
 }
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
