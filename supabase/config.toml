@@ -4,3 +4,8 @@ project_id = "trvqgqvwhqvlgqzlsxbu"
 # 인증은 함수 내부에서 userid/linkkey/linkval/price 대조로 수행한다.
 [functions.payapp-feedback]
 verify_jwt = false
+
+# 결제요청 생성(payurl 발급)은 프론트(브라우저)에서 직접 호출하므로 JWT 검증을 끈다.
+# 입력 검증은 함수 내부(userId/orderId/phone)에서 수행한다.
+[functions.payapp-create]
+verify_jwt = false

@@ -1,17 +1,4 @@
-const SDK_SRC = 'https://lite.payapp.kr/public/api/v2/payapp-lite.js';
 const PHONE_PROMPT = '결제 승인 통보를 받을 휴대폰 번호를 입력해주세요 (예: 010-1234-5678)';
-
-function loadPayappSdk() {
-  return new Promise((resolve, reject) => {
-    if (window.PayApp) return resolve(window.PayApp);
-    const script = document.createElement('script');
-    script.src = SDK_SRC;
-    script.async = true;
-    script.onload = () => resolve(window.PayApp);
-    script.onerror = () => reject(new Error('PayApp SDK 로딩에 실패했습니다.'));
-    document.body.appendChild(script);
-  });
-}
 
 export function buildOrderId() {
   return `mentos_${Date.now()}`;
@@ -44,24 +31,55 @@ function resolveStoredPhone(explicit) {
   return '';
 }
 
-export function buildPayappParams({ userId, orderId, recvphone }) {
-  return {
-    userid: import.meta.env.VITE_PAYAPP_USERID,
-    goodname: 'Mentos AI 프리미엄 (테스트 1,000원)',
-    price: '1000',
-    recvphone,
-    smsuse: 'n',
-    var1: userId,
-    var2: orderId,
-    feedbackurl: import.meta.env.VITE_PAYAPP_FEEDBACK_URL,
-    returnurl: `${window.location.origin}/success?orderId=${orderId}`,
-    checkretry: 'y',
-  };
+/** prompt로 휴대폰 번호를 입력받아 정규화한다. 유효하지 않으면 throw. */
+function askPhone() {
+  const entered =
+    typeof window !== 'undefined' && typeof window.prompt === 'function'
+      ? window.prompt(PHONE_PROMPT, '')
+      : '';
+  if (!isValidPhone(entered)) {
+    throw new Error('결제를 진행하려면 올바른 휴대폰 번호(예: 010-1234-5678)가 필요합니다.');
+  }
+  return normalizePhone(entered);
 }
 
 /**
- * PayApp 결제창을 띄운다. 결제 결과 기록은 Supabase edge function(feedbackurl)에서만 처리한다.
- * recvphone은 PayApp 필수 파라미터이므로 저장된 번호 우선, 없으면 입력을 요청한다.
+ * Supabase Edge Function(payapp-create)에 결제요청을 만들어 PayApp 결제URL을 받는다.
+ * @returns {Promise<{ payurl: string, orderId: string }>}
+ */
+export async function requestPayurl({ userId, recvphone, orderId }) {
+  const createUrl = import.meta.env.VITE_PAYAPP_CREATE_URL;
+  const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+  if (!createUrl) {
+    throw new Error('결제 설정이 누락되었습니다. (VITE_PAYAPP_CREATE_URL)');
+  }
+
+  const res = await fetch(createUrl, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+      apikey: anonKey,
+      authorization: `Bearer ${anonKey}`,
+    },
+    body: JSON.stringify({ userId, phone: recvphone, orderId }),
+  });
+
+  let data = {};
+  try {
+    data = await res.json();
+  } catch {
+    throw new Error('결제 서버 응답을 처리하지 못했습니다.');
+  }
+
+  if (!res.ok || !data.payurl) {
+    throw new Error(data.error || '결제 요청에 실패했습니다.');
+  }
+  return { payurl: data.payurl, orderId };
+}
+
+/**
+ * PayApp 결제를 시작한다. 서버(payapp-create)에서 발급한 결제URL로 이동한다.
+ * 결제 결과 기록·프리미엄 승인은 Supabase edge function(payapp-feedback)에서만 처리한다.
  * @param {{ userId: string, phone?: string }} args
  * @returns {Promise<string>} 생성된 orderId
  */
@@ -70,19 +88,10 @@ export async function startPayappCheckout({ userId, phone }) {
     throw new Error('로그인 후 결제할 수 있습니다.');
   }
 
-  let recvphone = resolveStoredPhone(phone);
-  if (!recvphone) {
-    const entered = typeof window !== 'undefined' && typeof window.prompt === 'function'
-      ? window.prompt(PHONE_PROMPT, '')
-      : '';
-    if (!isValidPhone(entered)) {
-      throw new Error('결제를 진행하려면 올바른 휴대폰 번호(예: 010-1234-5678)가 필요합니다.');
-    }
-    recvphone = normalizePhone(entered);
-  }
-
+  const recvphone = resolveStoredPhone(phone) || askPhone();
   const orderId = buildOrderId();
-  const PayApp = await loadPayappSdk();
-  PayApp.payrequest(buildPayappParams({ userId, orderId, recvphone }));
+
+  const { payurl } = await requestPayurl({ userId, recvphone, orderId });
+  window.location.href = payurl;
   return orderId;
 }
