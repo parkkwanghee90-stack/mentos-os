@@ -34,6 +34,7 @@ const Refund = lazy(() => import("@/pages/Refund"));
 const LocalInspector = lazy(() => import("@/pages/LocalInspector"));
 const Terms = lazy(() => import("@/pages/Terms"));
 const Privacy = lazy(() => import("@/pages/Privacy"));
+const DesignCheck = lazy(() => import("@/pages/DesignCheck"));
 
 
 // 진입 플로우: 매뉴얼 미확인 → /grade-select(매뉴얼) → /login → /dashboard
@@ -220,6 +221,7 @@ function AppContent() {
             <Route path="/privacy" element={<Privacy />} />
             {/* 개발자 도구 및 힌트/보이스 검수용 라우트 */}
             <Route path="/inspector" element={<LocalInspector />} />
+            <Route path="/design-check" element={<DesignCheck />} />
           </Routes>
         </Suspense>
         </ErrorBoundary>

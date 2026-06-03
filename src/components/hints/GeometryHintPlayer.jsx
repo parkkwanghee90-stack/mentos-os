@@ -353,6 +353,7 @@ const SUPABASE_TTS_BASE = (import.meta.env.VITE_SUPABASE_URL || '') + '/storage/
 export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
   const [step, setStep]       = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [playbackSpeed, setPlaybackSpeed] = useState(1);
   const [imgH, setImgH] = useState(0);
   const [ttsPlaying, setTtsPlaying] = useState(false);
   const [ttsAudio, setTtsAudio] = useState(null);
@@ -380,15 +381,16 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
     if (step < stepsData.length - 1) setStep(s => s + 1);
     else setIsPlaying(false);
   };
+  const handlePrev = () => setStep(s => Math.max(0, s - 1));
 
   React.useEffect(() => {
     if (!isPlaying) return;
     const t = setTimeout(() => {
       if (step < stepsData.length - 1) setStep(s => s + 1);
       else setIsPlaying(false);
-    }, 4000);
+    }, 4000 / playbackSpeed);
     return () => clearTimeout(t);
-  }, [isPlaying, step, stepsData.length]);
+  }, [isPlaying, step, stepsData.length, playbackSpeed]);
 
   const cur = stepsData[step];
   
@@ -426,6 +428,23 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
     }}>
       {/* 모바일 및 데스크톱 강제 반응형 스타일 시트 (Tailwind 비활성화 완벽 대처) */}
       <style>{`
+        /* ── 가로 스크롤 방지: 보드/열/수식이 절대로 가로폭을 넘기지 않도록 봉쇄 ── */
+        .avs-container, .avs-container * { box-sizing: border-box; }
+        .avs-container { max-width: 100% !important; overflow-x: hidden !important; }
+        .avs-body-wrapper { min-width: 0 !important; max-width: 100% !important; }
+        .avs-text-col { min-width: 0 !important; }
+        .avs-card-body, .avs-rich-text {
+          min-width: 0 !important; max-width: 100% !important;
+          overflow-wrap: anywhere !important; word-break: break-word !important;
+        }
+        /* 한 개의 초장문 수식만 그 블록 내부에서 스크롤(보드 자체는 안 늘어남) */
+        .avs-katex-block, .avs-text-col .katex-display {
+          max-width: 100% !important;
+          overflow-x: auto !important;
+          overflow-y: hidden !important;
+          -webkit-overflow-scrolling: touch;
+        }
+
         /* 공통 및 데스크톱 기본 레이아웃 */
         .avs-body-wrapper {
           display: flex !important;
@@ -439,8 +458,10 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
           display: flex !important;
           flex-direction: column !important;
           gap: 0.6rem !important;
-          max-height: 500px !important;
-          overflow-y: auto !important;
+          /* 단계가 늘어나면 칠판이 아래로 확장되도록 내부 스크롤 제거 */
+          max-height: none !important;
+          overflow-y: visible !important;
+          overflow-x: hidden !important;
           padding-right: 10px !important;
         }
         .avs-text-col.w-full {
@@ -588,8 +609,8 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
           textOverflow: 'ellipsis',
           whiteSpace: 'nowrap'
         }}>
-          <span style={{ background: '#2563eb', color: 'white', padding: '2px 6px', borderRadius: '4px', fontSize: '0.7rem', fontWeight: 'bold', flexShrink: 0 }}>EBSi style</span>
-          📐 {data.title || '단계별 해설 특강'}
+          <span style={{ fontWeight: 800, color: chalkWhite, fontSize: isMobile ? '0.98rem' : '1.18rem', letterSpacing: '0.2px' }}>AVS 풀이</span>
+          <span style={{ background: 'rgba(52,211,153,0.18)', color: '#6ee7b7', padding: '2px 8px', borderRadius: '6px', fontSize: '0.62rem', fontWeight: 'bold', flexShrink: 0, border: '1px solid rgba(52,211,153,0.4)', letterSpacing: '0.5px' }}>Beta</span>
         </h3>
         <div className="avs-btn-container" style={{ 
           display: 'flex', 
@@ -655,30 +676,14 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
                 ...btn(ttsPlaying ? '#dc2626' : '#7c3aed', isMobile),
                 display: 'flex', alignItems: 'center', gap: 4
               }}>
-                {ttsPlaying ? '⏹ 정지' : '🔊 음성'}
+                {ttsPlaying ? '정지' : '음성 설명'}
               </button>
             );
           })()}
-          <button onClick={() => { setStep(0); setIsPlaying(false); }} className="avs-btn" style={btn('#334155', isMobile)}>
-            <RotateCcw size={isMobile ? 12 : 15} />
-          </button>
-          <button onClick={handlePlay} className="avs-btn" style={btn('#ea580c', isMobile)}>
-            {isPlaying ? <><Pause size={isMobile ? 12 : 15} /> 정지</> : <><Play size={isMobile ? 12 : 15} /> 재생</>}
-          </button>
-          <button onClick={handleNext} className="avs-btn" style={btn('#334155', isMobile)}>
-            {isMobile ? '다음' : '다음'} <StepForward size={isMobile ? 12 : 15} />
+          <button onClick={() => { setStep(0); setIsPlaying(false); }} className="avs-btn" style={{ ...btn('#334155', isMobile), display: 'flex', alignItems: 'center', gap: 4 }}>
+            <RotateCcw size={isMobile ? 12 : 15} /> {isMobile ? '' : '다시 보기'}
           </button>
         </div>
-      </div>
-
-      {/* 진행 바 */}
-      <div style={{ display: 'flex', gap: 5, marginBottom: '1rem' }}>
-        {stepsData.map((_, i) => (
-          <div key={i} onClick={() => setStep(i)} style={{
-            flex: 1, height: 4, borderRadius: 4, cursor: 'pointer',
-            background: i <= step ? chalkYellow : ebsDarkGreen, transition: 'background 0.3s',
-          }} />
-        ))}
       </div>
 
       {/* 모바일 세그먼트형 탭 버튼 바 (EBSi급 다크 글래스모피즘) */}
@@ -740,8 +745,30 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
       )}
 
       <div className="avs-body-wrapper">
+        {/* 좌측 세로 단계 레일 (1~N) */}
+        {!isMobile && (
+          <div className="avs-step-rail" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px', flexShrink: 0, paddingTop: '4px' }}>
+            {stepsData.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setStep(i)}
+                title={`${i + 1}단계`}
+                style={{
+                  width: 30, height: 30, borderRadius: '50%', flexShrink: 0, cursor: 'pointer',
+                  border: i === step ? '2px solid #fde047' : '1px solid rgba(255,255,255,0.18)',
+                  background: i === step ? 'rgba(253,224,71,0.18)' : i < step ? 'rgba(255,255,255,0.06)' : 'transparent',
+                  color: i <= step ? '#fde047' : '#94a3b8',
+                  fontWeight: 700, fontSize: '0.8rem', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  transition: 'all 0.2s'
+                }}
+              >
+                {i + 1}
+              </button>
+            ))}
+          </div>
+        )}
         {/* 스텝 텍스트 영역 (5개 단위 페이징) - 상단/하단 배치 */}
-        <div 
+        <div
           className={`avs-text-col ${!((hasMath || hasShapes || cur?.picture || data.problem_image || data.diagramAsset || data.imageAsset || data.graphAsset || (isV3 && (data.base_figure?.objects||[]).some(o => ['polygon','circle','segment','line','point','drawSegment','drawCircle','drawInscribedQuadrilateral','triangle_angles','triangle'].includes(o.type))))) ? 'w-full' : ''}`}
           style={{
             display: isMobile && activeTab !== 'text' ? 'none' : 'flex'
@@ -757,15 +784,17 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
               opacity: idx <= step ? 1 : 0.35, transition: 'all 0.3s',
             }}>
               <div style={{
-                fontSize: '0.78rem', fontWeight: 700,
-                color: idx === step ? chalkYellow : '#94a3b8',
-                marginBottom: idx <= step ? '0.3rem' : 0,
-                textTransform: 'uppercase', letterSpacing: '0.04em',
+                display: 'flex', alignItems: 'center', gap: '7px',
+                fontSize: isMobile ? '0.85rem' : '0.98rem', fontWeight: 700,
+                color: idx <= step ? chalkYellow : '#94a3b8',
+                marginBottom: idx <= step ? '0.5rem' : 0,
+                letterSpacing: '0.01em',
               }}>
+                <span style={{ color: chalkYellow, fontSize: '0.95em', flexShrink: 0 }}>✦</span>
                 {stepLabel}
               </div>
               {idx <= step && (
-                <div className="avs-card-body" style={{ fontSize: isMobile ? '0.85rem' : '1.5rem', color: chalkWhite, lineHeight: isMobile ? 1.4 : 2.0 }}>
+                <div className="avs-card-body" style={{ fontSize: isMobile ? '0.85rem' : '1.5rem', color: chalkWhite, lineHeight: isMobile ? 1.4 : 2.0, border: '1px solid rgba(253, 224, 71, 0.28)', borderRadius: '12px', padding: isMobile ? '0.6rem 0.8rem' : '0.9rem 1.15rem', background: 'rgba(0, 0, 0, 0.18)' }}>
                   {/* V5 Caption (Pure Text) / CSAT content */}
                   {s.caption && <div style={{ marginBottom: '0.4rem', color: chalkWhite, fontWeight: 500, lineHeight: isMobile ? '1.4' : '2.0', whiteSpace: 'pre-wrap' }}><RichText content={s.caption} isMobile={isMobile} /></div>}
                   {s.content && <div style={{ marginBottom: '0.4rem', color: chalkWhite, fontWeight: 500, lineHeight: isMobile ? '1.4' : '2.0', whiteSpace: 'pre-wrap' }}><RichText content={s.content} isMobile={isMobile} /></div>}
@@ -830,6 +859,26 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
             {hasShapes && !isV3 && <LegacySvgCanvas shapes={cur.shapes} />}
           </div>
         ) : null}
+      </div>
+
+      {/* 하단 컨트롤 바: 단계 이동 · 풀이 컨트롤 */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '10px' : '1.5rem', flexWrap: 'wrap', marginTop: '1.1rem', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+          <span style={{ fontSize: '0.72rem', color: '#94a3b8', fontWeight: 600, whiteSpace: 'nowrap' }}>단계 이동</span>
+          <button onClick={() => { setStep(0); setIsPlaying(false); }} className="avs-btn" style={btn('#334155', isMobile)}>처음</button>
+          <button onClick={handlePrev} className="avs-btn" style={btn('#334155', isMobile)}>이전</button>
+          <span style={{ fontFamily: 'monospace', fontWeight: 700, color: '#fde047', fontSize: '0.85rem', minWidth: 56, textAlign: 'center' }}>STEP {step + 1} / {stepsData.length}</span>
+          <button onClick={handleNext} className="avs-btn" style={btn('#334155', isMobile)}>다음 <StepForward size={isMobile ? 12 : 15} /></button>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginLeft: isMobile ? 0 : 'auto', flexWrap: 'wrap' }}>
+          <span style={{ fontSize: '0.72rem', color: '#94a3b8', fontWeight: 600, whiteSpace: 'nowrap' }}>풀이 컨트롤</span>
+          <button onClick={handlePlay} className="avs-btn" style={btn('#7c3aed', isMobile)}>
+            {isPlaying ? <><Pause size={isMobile ? 12 : 15} /> 정지</> : <><Play size={isMobile ? 12 : 15} /> 재생</>}
+          </button>
+          <button onClick={() => setPlaybackSpeed(s => (s === 1 ? 1.5 : s === 1.5 ? 2 : 1))} className="avs-btn" style={btn('#334155', isMobile)} title="재생 속도">
+            {playbackSpeed.toFixed(1)}x
+          </button>
+        </div>
       </div>
     </div>
   );
