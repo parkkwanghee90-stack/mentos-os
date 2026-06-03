@@ -231,160 +231,72 @@
       "lectureId": "미적분_삼각함수공식",
       "slug": "calc_trig_formula",
       "sourceJson": "calculus_trig_func_.json",
-      "status": "GAP",
-      "missing": [
-        14,
-        15
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 15
     },
     {
       "lectureId": "미적분_도함수활용",
       "slug": "calc_deriv_app",
       "sourceJson": "calculus_.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 10
     },
     {
       "lectureId": "미적분_적분법",
       "slug": "calc_integration",
       "sourceJson": "various_integral_.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 15
     },
     {
       "lectureId": "미적분_정적분",
       "slug": "calc_def_integral",
       "sourceJson": "calculus_def_integral.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 15
     },
     {
       "lectureId": "미적분_정적분활용",
       "slug": "calc_def_integral_util",
       "sourceJson": "calculus_def_integral_.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 10
     },
     {
       "lectureId": "순열",
       "slug": "permutation",
       "sourceJson": "permutation.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 4
     },
     {
       "lectureId": "조합",
       "slug": "combination",
       "sourceJson": "combination.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 8
     },
     {
       "lectureId": "이항정리",
       "slug": "binomial_thm",
       "sourceJson": "binomial_thm.json",
-      "status": "GAP",
-      "missing": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 12
     },
     {
       "lectureId": "조건부확률",
       "slug": "conditional_prob",
       "sourceJson": "conditional_prob_.json",
-      "status": "GAP",
-      "missing": [
-        7,
-        8,
-        9
-      ],
+      "status": "COMPLETE",
+      "missing": [],
       "total": 9
     }
   ]
