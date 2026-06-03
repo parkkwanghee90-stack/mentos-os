@@ -55,6 +55,15 @@ function RootRedirect() {
   return <Navigate to="/dashboard" replace />;
 }
 
+// 홈("/") 진입 게이트: 비회원 → 랜딩 먼저, 회원 → 대시보드
+function RootGate() {
+  const { user, loading } = useAuth();
+  const isSuperPass = localStorage.getItem('mentos_super_pass') === 'true';
+  if (loading) return null; // 인증 확인 중 깜빡임 방지
+  if (user || isSuperPass) return <Navigate to="/dashboard" replace />;
+  return <Landing />;
+}
+
 export default function App() {
   return (
     <AuthProvider>
@@ -169,7 +178,7 @@ function AppContent() {
       <BrowserRouter>
         <Suspense fallback={<div style={{color:'white', padding:'2rem', background:'#09090b', height:'100vh'}}>Loading Mentos App...</div>}>
           <Routes>
-            <Route path="/" element={<Landing />} />
+            <Route path="/" element={<RootGate />} />
             <Route path="/landing" element={<Landing />} />
             <Route path="/start" element={<RootRedirect />} />
             <Route path="/diagnosis" element={<Diagnosis />} />
