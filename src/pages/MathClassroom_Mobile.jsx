@@ -663,8 +663,8 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                   setLearningStep('solve');
                   setMessages(prev => {
                     return [...prev, { 
-                      role: 'assistant', 
-                      content: `[${targetUnit}] 문제 풀이가 막히셨나요? 걱정하지 마세요! Ai Vision Solution을 실행합니다.`,
+                      role: 'assistant',
+                      content: '',
                       hintPlayer: { unit: targetUnit, problemId: pid }
                     }];
                   });
@@ -701,6 +701,8 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
               {messages.map((m, idx) => {
                 if (m.role === 'system') return null;
+                // 내용·애니메이션이 없는 메시지(예: AVS 안내 제거분)는 빈 버블 방지로 건너뜀
+                if (!m.content && !m.animationId && !m.dynamicData) return null;
                 return (
                   <div key={idx} style={{ textAlign: m.role === 'user' ? 'right' : 'left', marginBottom: '1.5rem', width: '100%' }}>
                     <div style={{ 

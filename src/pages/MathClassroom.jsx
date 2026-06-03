@@ -429,7 +429,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
           const cleaned = prev.map(m => m.dynamicData || m.hintPlayer ? { ...m, dynamicData: undefined, hintPlayer: undefined } : m);
           return [...cleaned, { 
             role: 'assistant', 
-            content: `[${targetUnit}] 문제 풀이가 막히셨나요? 걱정하지 마세요! Ai Vision Solution을 실행합니다.`,
+            content: '',
             hintPlayer: { unit: targetUnit, problemId: pid }
           }];
         });
@@ -1857,7 +1857,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                         const cleaned = prev.map(m => m.dynamicData || m.hintPlayer ? { ...m, dynamicData: undefined, hintPlayer: undefined } : m);
                         return [...cleaned, { 
                           role: 'assistant', 
-                          content: `[${targetUnit}] 문제 풀이가 막히셨나요? 걱정하지 마세요! Ai Vision Solution을 실행합니다.`,
+                          content: '',
                           hintPlayer: { unit: targetUnit, problemId: pid }
                         }];
                       });
@@ -1995,8 +1995,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                 textAlign: 'left',
                 boxSizing: 'border-box'
               }}>
-                <strong>{m.role === 'user' ? '나' : ssot.name}:</strong><br/>
-                {m.content}
+                {m.content && (<><strong>{m.role === 'user' ? '나' : ssot.name}:</strong><br/>{m.content}</>)}
                 {m.animationId === 'sine_rule' && <div style={{marginTop: '1.5rem', width: '100%'}}><SineRuleAnimation /></div>}
                 {m.animationId === 'cosine_rule' && <div style={{marginTop: '1.5rem', width: '100%'}}><CosineRuleAnimation /></div>}
                 {m.animationId === 'triangle_area' && <div style={{marginTop: '1.5rem', width: '100%'}}><TriangleAreaAnimation /></div>}
@@ -2124,7 +2123,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                     const cleaned = prev.map(m => m.dynamicData || m.hintPlayer ? { ...m, dynamicData: undefined, hintPlayer: undefined } : m);
                     return [...cleaned, { 
                       role: 'assistant', 
-                      content: `[${targetUnit}] 문제 풀이가 막히셨나요? 걱정하지 마세요! Ai Vision Solution을 실행합니다.`,
+                      content: '',
                       hintPlayer: { unit: targetUnit, problemId: pid }
                     }];
                   });
