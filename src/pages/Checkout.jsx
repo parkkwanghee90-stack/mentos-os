@@ -38,7 +38,7 @@ export default function Checkout() {
       }
 
       // 결제 결과 기록·프리미엄 승인은 Supabase edge function(feedbackurl)에서만 처리한다.
-      await startPayappCheckout({ userId: user.id });
+      await startPayappCheckout({ userId: user.id, phone: parentPhone });
     } catch (err) {
       console.error('[PAYAPP_PAYMENT_ERROR]', err);
       alert(`결제창 호출에 실패했습니다: ${err.message}`);

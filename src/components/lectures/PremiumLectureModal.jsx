@@ -89,7 +89,7 @@ export default function PremiumLectureModal({ onClose, selectedUnit, selectedCou
         return;
       }
       // 결제 결과 기록·프리미엄 승인은 Supabase edge function(feedbackurl)에서만 처리한다.
-      await startPayappCheckout({ userId: user.id });
+      await startPayappCheckout({ userId: user.id, phone: user.parentPhone });
       onClose();
     } catch (err) {
       console.error('[PAYAPP_PAYMENT_ERROR]', err);
