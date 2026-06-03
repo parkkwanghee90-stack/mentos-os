@@ -422,10 +422,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
   const handleAvsClick = () => {
     const targetUnit = selectedUnit || currentUnit;
     if (targetUnit) {
-      setMessages(prev => {
-        const cleaned = prev.map(m => m.dynamicData || m.hintPlayer ? { ...m, dynamicData: undefined, hintPlayer: undefined } : m);
-        return [...cleaned, { role: 'user', content: `[${targetUnit}] Ai Vision Solution을 보여주세요!` }];
-      });
+      // 사용자 요청: AVS 버튼 클릭 시 "나:" 채팅 메시지는 띄우지 않음 (해설 영상만 표시)
       setTimeout(() => {
         const pid = String(testProblemIdx).padStart(3, '0');
         setMessages(prev => {
@@ -714,11 +711,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
     if (phaseName === 'core' || phaseName === 'step' || phaseName === 'mock') {
       setPcbsPhase('P');
       setPcbsTurnCount(0);
-      const phaseLabel = phaseName === 'core' ? '핵심 개념' : phaseName === 'step' ? '단계별 문제 풀이' : '미니 모의고사';
-      initialMessages.push({
-        role: 'assistant',
-        content: `[${phaseLabel}] 새 문제를 시작합니다.\n\n이 문제에서 구하고자 하는 것이 무엇인지, 주어진 단서가 무엇인지, 어떤 배경 개념이 필요한지 한 번 생각해볼까?\n생각해본 바탕으로 스스로 풀이를 진행해보고, 모르겠다면 우측의 [Ai Vision Solution]을 시청해봐!`,
-      });
+      // 인트로 안내 메시지 제거 (사용자 요청) — 채팅은 빈 상태로 시작
     } else if (phaseName === 'homework') {
       initialMessages.push({ role: 'assistant', content: '[과제 안내]\n오늘 배운 단원의 복습 과제를 안내합니다.' });
     } else if (phaseName === 'finalize') {
@@ -1857,10 +1850,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                 onClick={() => {
                   const targetUnit = selectedUnit || currentUnit;
                   if (targetUnit) {
-                    setMessages(prev => {
-                      const cleaned = prev.map(m => m.dynamicData || m.hintPlayer ? { ...m, dynamicData: undefined, hintPlayer: undefined } : m);
-                      return [...cleaned, { role: 'user', content: `[${targetUnit}] Ai Vision Solution을 보여주세요!` }];
-                    });
+                    // 사용자 요청: AVS 버튼 클릭 시 "나:" 채팅 메시지는 띄우지 않음
                     setTimeout(() => {
                       const pid = String(testProblemIdx).padStart(3, '0');
                       setMessages(prev => {
@@ -2127,10 +2117,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
             onClick={() => {
               const targetUnit = selectedUnit || currentUnit;
               if (targetUnit) {
-                setMessages(prev => {
-                  const cleaned = prev.map(m => m.dynamicData || m.hintPlayer ? { ...m, dynamicData: undefined, hintPlayer: undefined } : m);
-                  return [...cleaned, { role: 'user', content: `[${targetUnit}] Ai Vision Solution을 보여주세요!` }];
-                });
+                // 사용자 요청: AVS 버튼 클릭 시 "나:" 채팅 메시지는 띄우지 않음
                 setTimeout(() => {
                   const pid = String(testProblemIdx).padStart(3, '0');
                   setMessages(prev => {
