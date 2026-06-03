@@ -125,7 +125,7 @@ export default function GradeSelect() {
       // 고2: 수학2 섹션 헤더
       if (selectedGrade === '고2' && scope === '함수의 극한') {
         items.push(
-          <div key="header-math2" style={{ padding: '0.6rem 1rem', color: '#60a5fa', fontSize: '0.85rem', fontWeight: '900', borderBottom: '1px solid rgba(96,165,250,0.2)', marginTop: '0.5rem' }}>
+          <div key="header-math2" style={{ padding: '0.6rem 1rem', color: '#3b82f6', fontSize: '0.85rem', fontWeight: '900', borderBottom: '1px solid rgba(59,130,246,0.25)', marginTop: '0.5rem' }}>
             📈 수학2 단원
           </div>
         );
