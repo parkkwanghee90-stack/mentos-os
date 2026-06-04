@@ -1,0 +1,303 @@
+{
+  "orphanFiles": [
+    "step_1.mp3",
+    "step_10.mp3",
+    "step_11.mp3",
+    "step_12.mp3",
+    "step_13.mp3",
+    "step_14.mp3",
+    "step_15.mp3",
+    "step_2.mp3",
+    "step_3.mp3",
+    "step_4.mp3",
+    "step_5.mp3",
+    "step_6.mp3",
+    "step_7.mp3",
+    "step_8.mp3",
+    "step_9.mp3"
+  ],
+  "junkFolders": [
+    "1",
+    "2",
+    "3",
+    "derivative_01",
+    "derivative_app_2",
+    "derivative_app_3",
+    "independent_trials",
+    "recursive_def"
+  ],
+  "report": [
+    {
+      "lectureId": "고차방정식",
+      "slug": "higher_order_eq",
+      "sourceJson": "higher_order_eq.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 6
+    },
+    {
+      "lectureId": "일차부등식",
+      "slug": "linear_ineq",
+      "sourceJson": "linear_ineq.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 5
+    },
+    {
+      "lectureId": "이차부등식",
+      "slug": "quad_ineq",
+      "sourceJson": "quad_ineq.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 4
+    },
+    {
+      "lectureId": "경우의수",
+      "slug": "prob_cases",
+      "sourceJson": "prob_cases.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 4
+    },
+    {
+      "lectureId": "행렬",
+      "slug": "matrix",
+      "sourceJson": "matrix.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 6
+    },
+    {
+      "lectureId": "점과좌표",
+      "slug": "points_coord",
+      "sourceJson": "points_coord.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 6
+    },
+    {
+      "lectureId": "직선의방정식",
+      "slug": "line_eq",
+      "sourceJson": "line_eq.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 6
+    },
+    {
+      "lectureId": "원의방정식",
+      "slug": "circle_eq",
+      "sourceJson": "circle_eq.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 10
+    },
+    {
+      "lectureId": "도형의이동",
+      "slug": "geom_transform",
+      "sourceJson": "geom_transform.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 7
+    },
+    {
+      "lectureId": "지수",
+      "slug": "exponent",
+      "sourceJson": "exponent.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 5
+    },
+    {
+      "lectureId": "로그",
+      "slug": "logarithm",
+      "sourceJson": "logarithm.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 7
+    },
+    {
+      "lectureId": "지수함수",
+      "slug": "exp_func",
+      "sourceJson": "exponent_.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 22
+    },
+    {
+      "lectureId": "로그함수",
+      "slug": "log_func",
+      "sourceJson": "logarithm_.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 22
+    },
+    {
+      "lectureId": "등차등비",
+      "slug": "arith_geom_seq",
+      "sourceJson": "arith_geom_seq.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 11
+    },
+    {
+      "lectureId": "시그마용법",
+      "slug": "sigma",
+      "sourceJson": "sigma.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 5
+    },
+    {
+      "lectureId": "수학적귀납법",
+      "slug": "math_induction",
+      "sourceJson": "math_induction.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 7
+    },
+    {
+      "lectureId": "함수의극한",
+      "slug": "limit",
+      "sourceJson": "limit.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 9
+    },
+    {
+      "lectureId": "함수의연속",
+      "slug": "continuity",
+      "sourceJson": ".json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 6
+    },
+    {
+      "lectureId": "미분계수",
+      "slug": "derivative_coeff_full",
+      "sourceJson": "derivative_coeff_.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 15
+    },
+    {
+      "lectureId": "도함수의활용",
+      "slug": "derivative_app_1",
+      "sourceJson": "derivative_app_1.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 5
+    },
+    {
+      "lectureId": "부정적분과정적분",
+      "slug": "indef_def_integral",
+      "sourceJson": "def_integral_def_integral.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 8
+    },
+    {
+      "lectureId": "정적분의활용",
+      "slug": "def_integral_util",
+      "sourceJson": "def_integral_.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 10
+    },
+    {
+      "lectureId": "미적분_수열의극한",
+      "slug": "calc_seq_limit",
+      "sourceJson": "calculus_sequence_limit.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 10
+    },
+    {
+      "lectureId": "미적분_급수",
+      "slug": "calc_series",
+      "sourceJson": "calculus_series.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 10
+    },
+    {
+      "lectureId": "미적분_삼각함수극한",
+      "slug": "calc_trig_limit",
+      "sourceJson": "calculus_trig_funclimit.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 10
+    },
+    {
+      "lectureId": "미적분_삼각함수공식",
+      "slug": "calc_trig_formula",
+      "sourceJson": "calculus_trig_func_.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 15
+    },
+    {
+      "lectureId": "미적분_도함수활용",
+      "slug": "calc_deriv_app",
+      "sourceJson": "calculus_.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 10
+    },
+    {
+      "lectureId": "미적분_적분법",
+      "slug": "calc_integration",
+      "sourceJson": "various_integral_.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 15
+    },
+    {
+      "lectureId": "미적분_정적분",
+      "slug": "calc_def_integral",
+      "sourceJson": "calculus_def_integral.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 15
+    },
+    {
+      "lectureId": "미적분_정적분활용",
+      "slug": "calc_def_integral_util",
+      "sourceJson": "calculus_def_integral_.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 10
+    },
+    {
+      "lectureId": "순열",
+      "slug": "permutation",
+      "sourceJson": "permutation.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 4
+    },
+    {
+      "lectureId": "조합",
+      "slug": "combination",
+      "sourceJson": "combination.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 8
+    },
+    {
+      "lectureId": "이항정리",
+      "slug": "binomial_thm",
+      "sourceJson": "binomial_thm.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 12
+    },
+    {
+      "lectureId": "조건부확률",
+      "slug": "conditional_prob",
+      "sourceJson": "conditional_prob_.json",
+      "status": "COMPLETE",
+      "missing": [],
+      "total": 9
+    }
+  ]
+}
