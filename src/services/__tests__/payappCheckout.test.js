@@ -1,9 +1,15 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi, beforeEach } from 'vitest';
 import {
   buildOrderId,
   normalizePhone,
   isValidPhone,
+  buildPayappParams,
 } from '../payappCheckout';
+
+beforeEach(() => {
+  vi.stubGlobal('window', { location: { origin: 'https://app.test' } });
+  import.meta.env.VITE_PAYAPP_USERID = 'nuricampus';
+});
 
 describe('buildOrderId', () => {
   it('mentos_ 접두 + 숫자', () => {
@@ -33,5 +39,19 @@ describe('isValidPhone', () => {
     expect(isValidPhone('1234')).toBe(false);
     expect(isValidPhone('02-123-4567')).toBe(false);
     expect(isValidPhone('')).toBe(false);
+  });
+});
+
+describe('buildPayappParams', () => {
+  it('필수 파라미터(recvphone·var1) 구성, feedbackurl은 포함하지 않는다', () => {
+    const p = buildPayappParams({ userId: 'user-uuid', orderId: 'mentos_1', recvphone: '01012345678' });
+    expect(p.userid).toBe('nuricampus');
+    expect(p.price).toBe('1000');
+    expect(p.recvphone).toBe('01012345678');
+    expect(p.var1).toBe('user-uuid');
+    expect(p.var2).toBe('mentos_1');
+    expect(p.returnurl).toBe('https://app.test/success?orderId=mentos_1');
+    // feedbackurl은 lite 결제 엔드포인트가 거부(70080)하므로 절대 포함하지 않는다.
+    expect(p.feedbackurl).toBeUndefined();
   });
 });

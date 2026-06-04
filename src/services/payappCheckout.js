@@ -1,4 +1,17 @@
+const SDK_SRC = 'https://lite.payapp.kr/public/api/v2/payapp-lite.js';
 const PHONE_PROMPT = '결제 승인 통보를 받을 휴대폰 번호를 입력해주세요 (예: 010-1234-5678)';
+
+function loadPayappSdk() {
+  return new Promise((resolve, reject) => {
+    if (window.PayApp) return resolve(window.PayApp);
+    const script = document.createElement('script');
+    script.src = SDK_SRC;
+    script.async = true;
+    script.onload = () => resolve(window.PayApp);
+    script.onerror = () => reject(new Error('PayApp SDK 로딩에 실패했습니다.'));
+    document.body.appendChild(script);
+  });
+}
 
 export function buildOrderId() {
   return `mentos_${Date.now()}`;
@@ -44,42 +57,29 @@ function askPhone() {
 }
 
 /**
- * Supabase Edge Function(payapp-create)에 결제요청을 만들어 PayApp 결제URL을 받는다.
- * @returns {Promise<{ payurl: string, orderId: string }>}
+ * PayApp 결제 파라미터를 구성한다.
+ * NOTE: feedbackurl은 PayApp lite 결제 엔드포인트가 거부(error 70080)하므로 여기서 보내지 않는다.
+ *       결제 완료 통보(웹훅)는 PayApp 판매자 관리자에서 "계정 단위 feedbackurl"로 설정한다.
+ *       var1(회원ID)·var2(주문번호)는 통보에 그대로 실려 회원 매칭에 사용된다.
  */
-export async function requestPayurl({ userId, recvphone, orderId }) {
-  const createUrl = import.meta.env.VITE_PAYAPP_CREATE_URL;
-  const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-  if (!createUrl) {
-    throw new Error('결제 설정이 누락되었습니다. (VITE_PAYAPP_CREATE_URL)');
-  }
-
-  const res = await fetch(createUrl, {
-    method: 'POST',
-    headers: {
-      'content-type': 'application/json',
-      apikey: anonKey,
-      authorization: `Bearer ${anonKey}`,
-    },
-    body: JSON.stringify({ userId, phone: recvphone, orderId }),
-  });
-
-  let data = {};
-  try {
-    data = await res.json();
-  } catch {
-    throw new Error('결제 서버 응답을 처리하지 못했습니다.');
-  }
-
-  if (!res.ok || !data.payurl) {
-    throw new Error(data.error || '결제 요청에 실패했습니다.');
-  }
-  return { payurl: data.payurl, orderId };
+export function buildPayappParams({ userId, orderId, recvphone }) {
+  return {
+    userid: import.meta.env.VITE_PAYAPP_USERID,
+    goodname: 'Mentos AI 프리미엄 (테스트 1,000원)',
+    price: '1000',
+    recvphone,
+    smsuse: 'n',
+    var1: userId,
+    var2: orderId,
+    returnurl: `${window.location.origin}/success?orderId=${orderId}`,
+    checkretry: 'y',
+  };
 }
 
 /**
- * PayApp 결제를 시작한다. 서버(payapp-create)에서 발급한 결제URL로 이동한다.
- * 결제 결과 기록·프리미엄 승인은 Supabase edge function(payapp-feedback)에서만 처리한다.
+ * PayApp 결제창을 브라우저에서 직접 띄운다(클라이언트 form 전송).
+ * 서버 생성 payurl을 다른 IP에서 여는 방식은 PayApp이 "요청을 확인할 수 없습니다"로 거부하므로,
+ * 결제 생성·열기를 같은 브라우저 세션에서 수행한다.
  * @param {{ userId: string, phone?: string }} args
  * @returns {Promise<string>} 생성된 orderId
  */
@@ -91,7 +91,7 @@ export async function startPayappCheckout({ userId, phone }) {
   const recvphone = resolveStoredPhone(phone) || askPhone();
   const orderId = buildOrderId();
 
-  const { payurl } = await requestPayurl({ userId, recvphone, orderId });
-  window.location.href = payurl;
+  const PayApp = await loadPayappSdk();
+  PayApp.payrequest(buildPayappParams({ userId, orderId, recvphone }));
   return orderId;
 }
