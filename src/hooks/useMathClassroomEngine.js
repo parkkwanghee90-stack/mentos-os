@@ -145,11 +145,11 @@ export function resolveProblemImage(currentUnit, testProblemIdx, selectedCourse)
   } else if (selectedCourse === '확률과통계' || mappedUnit.includes('확률') || mappedUnit.includes('통계')) {
     img = window.resolveAsset(`/math_crops/확통수능/${mappedUnit}/${formattedIdx}.webp`);
   } else if (mappedUnit.includes('등차') || mappedUnit.includes('등비')) {
-    img = stepStr === '4단계' ? window.resolveAsset(`/math_crops/(5)수학1 중간/4단계/등차등비수열4단계/${formattedIdx}.webp`) : window.resolveAsset(`/math_crops/(5)수학1 중간/${stepStr}/등차등비${stepStr}/${formattedIdx}.webp`);
+    img = stepStr === '4단계' ? window.resolveAsset(`/math_crops/등차등비수열4단계/${formattedIdx}.webp`) : window.resolveAsset(`/math_crops/등차등비${stepStr}/${formattedIdx}.webp`);
   } else if (currentUnit.includes('시그마') || currentUnit.includes('여러가지수열') || currentUnit.includes('수열의합') || currentUnit.includes('수열의 합')) {
-    if (stepStr === '3단계') img = window.resolveAsset(`/math_crops/(5)수학1 중간/3단계/여러가지수열3단계/${formattedIdx}.webp`);
-    else if (stepStr === '4단계') img = window.resolveAsset(`/math_crops/(5)수학1 중간/4단계/수열의합4단계/${formattedIdx}.webp`);
-    else img = window.resolveAsset(`/math_crops/(5)수학1 중간/2단계/시그마용법2단계/${formattedIdx}.webp`);
+    if (stepStr === '3단계') img = window.resolveAsset(`/math_crops/여러가지수열3단계/${formattedIdx}.webp`);
+    else if (stepStr === '4단계') img = window.resolveAsset(`/math_crops/수열의합4단계/${formattedIdx}.webp`);
+    else img = window.resolveAsset(`/math_crops/시그마용법2단계/${formattedIdx}.webp`);
   } else if (currentUnit.includes('귀납적') || currentUnit.includes('수학적귀납법')) {
     img = stepStr === '2단계' ? window.resolveAsset(`/math_crops/(5)수학1 중간/2단계/귀납적정의2단계/${formattedIdx}.webp`) : window.resolveAsset(`/math_crops/(5)수학1 중간/${stepStr}/수학적귀납법${stepStr}/${formattedIdx}.webp`);
   } else if (currentUnit.includes('삼각함수') && currentUnit.includes('활용')) {

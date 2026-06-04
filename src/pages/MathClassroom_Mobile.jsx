@@ -469,13 +469,13 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
      
      // [대수 매핑]
      if (currentUnit.includes('등차') || currentUnit.includes('등비')) {
-        if (stepStr === '4단계') currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/4단계/등차등비수열4단계/${formattedIdx}.webp`)
-        else currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/${stepStr}/등차등비${stepStr}/${formattedIdx}.webp`)
+        if (stepStr === '4단계') currentProblemImage = window.resolveAsset(`/math_crops/등차등비수열4단계/${formattedIdx}.webp`)
+        else currentProblemImage = window.resolveAsset(`/math_crops/등차등비${stepStr}/${formattedIdx}.webp`)
      }
      else if (currentUnit.includes('시그마')) {
-        if (stepStr === '3단계') currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/3단계/여러가지수열3단계/${formattedIdx}.webp`)
-        else if (stepStr === `4단계`) currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/4단계/수열의합4단계/${formattedIdx}.webp`)
-        else currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/2단계/시그마용법2단계/${formattedIdx}.webp`)
+        if (stepStr === '3단계') currentProblemImage = window.resolveAsset(`/math_crops/여러가지수열3단계/${formattedIdx}.webp`)
+        else if (stepStr === `4단계`) currentProblemImage = window.resolveAsset(`/math_crops/수열의합4단계/${formattedIdx}.webp`)
+        else currentProblemImage = window.resolveAsset(`/math_crops/시그마용법2단계/${formattedIdx}.webp`)
      }
      else if (currentUnit.includes('귀납적')) {
         if (stepStr === '2단계') currentProblemImage = window.resolveAsset(`/math_crops/(5)수학1 중간/2단계/귀납적정의2단계/${formattedIdx}.webp`)
