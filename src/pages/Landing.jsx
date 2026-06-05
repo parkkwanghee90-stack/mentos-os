@@ -1,32 +1,27 @@
-// 매스멘토스 홈 V3 — 칠판 다크테크
-import "@/styles/chalkboard.css";
-import ChalkHeader from "@/components/home/ChalkHeader";
-import Hero from "@/components/home/Hero";
-import Empathy from "@/components/home/Empathy";
-import HowItWorks from "@/components/home/HowItWorks";
-import AiDemo from "@/components/home/AiDemo";
-import ParentsReport from "@/components/home/ParentsReport";
-import Pricing from "@/components/home/Pricing";
-import FinalCta from "@/components/home/FinalCta";
-import Faq from "@/components/home/Faq";
-import ChalkFooter from "@/components/home/ChalkFooter";
+// 매쓰멘토스 랜딩 V4 — 다크테크 (네이비 + 바이올렛)
+import "@/styles/home.css";
+import LandingNav from "@/components/home/LandingNav";
+import LandingHero from "@/components/home/LandingHero";
+import LandingCompare from "@/components/home/LandingCompare";
+import LandingShowcase from "@/components/home/LandingShowcase";
+import LandingTutorAlert from "@/components/home/LandingTutorAlert";
+import LandingPricing from "@/components/home/LandingPricing";
+import LandingReviews from "@/components/home/LandingReviews";
+import LandingFooter from "@/components/home/LandingFooter";
 
 export default function Landing() {
   return (
-    <div className="chalk-root" style={{ minHeight: "100vh", width: "100%", overflowX: "hidden", background: "var(--bb)" }}>
-      <a href="#main" className="chalk-skip">본문 바로가기</a>
-      <ChalkHeader />
-      <main id="main">
-        <Hero />
-        <Empathy />
-        <HowItWorks />
-        <AiDemo />
-        <ParentsReport />
-        <Pricing />
-        <FinalCta />
-        <Faq />
+    <div className="home-v4">
+      <LandingNav />
+      <main>
+        <LandingHero />
+        <LandingCompare />
+        <LandingShowcase />
+        <LandingTutorAlert />
+        <LandingPricing />
+        <LandingReviews />
       </main>
-      <ChalkFooter />
+      <LandingFooter />
     </div>
   );
 }
