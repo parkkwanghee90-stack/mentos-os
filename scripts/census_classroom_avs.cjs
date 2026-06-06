@@ -26,23 +26,34 @@ const isFolder = o => o.id === null || o.id === undefined;
   console.log('hints 폴더 조회...');
   const hintFolders = (await list('math_hints/')).filter(isFolder).map(o => o.name);
 
-  // 각 crops 폴더: 문제 이미지(NNN.webp, 'a' 해설 제외) 수
-  const cropCount = {};
+  // 접두사(숫자_) 제거 + 소문자 정규화 키
+  const norm = s => s.replace(/^\d+[_-]?/, '').toLowerCase();
+
+  // 각 crops 폴더: 문제번호 집합 (NNN.webp, 'a' 해설 제외)
+  const cropNums = {}; // normKey -> Set(번호), 원래이름 보존용
+  const cropName = {};
   for (const f of cropFolders) {
     const items = await list(`math_crops/${f}/`);
-    const probs = items.filter(o => /^\d{3}\.webp$/.test(o.name)).length;
-    if (probs > 0) cropCount[f] = probs;
+    const nums = new Set(items.filter(o => /^\d{3}\.webp$/.test(o.name)).map(o => o.name.slice(0, 3)));
+    if (nums.size > 0) { const k = norm(f); cropNums[k] = new Set([...(cropNums[k] || []), ...nums]); cropName[k] = cropName[k] || f; }
   }
-  // 각 hints 폴더: AVS JSON(NNN.json) 수
-  const hintCount = {};
+  // 각 hints 폴더: 문제번호 집합 (NNN.json), 정규화 키로 union (접두사 다른 폴더 합산)
+  const hintNums = {};
   for (const f of hintFolders) {
     const items = await list(`math_hints/${f}/`);
-    const js = items.filter(o => /^\d{3}(_v\d)?\.json$/.test(o.name)).length;
-    hintCount[f] = js;
+    const nums = items.filter(o => /^\d{3}(_v\d)?\.json$/.test(o.name)).map(o => o.name.slice(0, 3));
+    if (nums.length) { const k = norm(f); hintNums[k] = new Set([...(hintNums[k] || []), ...nums]); }
   }
-
-  // 매칭: 같은 폴더명 우선
-  const allUnits = [...new Set([...Object.keys(cropCount), ...Object.keys(hintCount)])].sort();
+  // count 형태로 환원 (호환)
+  const cropCount = {}; for (const k in cropNums) cropCount[cropName[k]] = cropNums[k].size;
+  const hintCount = {};
+  for (const k in cropNums) {
+    const hs = hintNums[k] || new Set();
+    // 크롭 문제번호 중 힌트로 커버된 수
+    let covered = 0; for (const n of cropNums[k]) if (hs.has(n)) covered++;
+    hintCount[cropName[k]] = covered;
+  }
+  const allUnits = Object.keys(cropCount).sort();
   let md = `# 📊 수학 교실 AVS 전수조사\n\n`;
   md += `crops(문제) 폴더 ${Object.keys(cropCount).length} · hints(AVS) 폴더 ${Object.keys(hintCount).filter(k=>hintCount[k]>0).length}\n\n`;
   md += `| 단원 폴더 | 문제(크롭) | AVS 힌트 | 커버리지 | 상태 |\n|---|---|---|---|---|\n`;
