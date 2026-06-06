@@ -7,6 +7,12 @@ import { useAuth } from '@/context/AuthContext';
 // 실제 public/premium_lectures/ 디렉토리의 파일 기반 인덱스
 const LECTURE_INDEX = {
   '수학(상)': [
+    { id: '다항식', title: '다항식의 연산' },
+    { id: '항등식과 나머지정리', title: '항등식과 나머지정리' },
+    { id: '인수분해', title: '인수분해' },
+    { id: '복소수', title: '복소수' },
+    { id: '이차방정식', title: '이차방정식' },
+    { id: '이차함수', title: '이차함수' },
     { id: '고차방정식', title: '고차방정식' },
     { id: '일차부등식', title: '일차부등식' },
     { id: '이차부등식', title: '이차부등식' },
