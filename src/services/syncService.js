@@ -49,3 +49,28 @@ export async function mirrorProgress({ homeworkId, problemId, isCorrect, userAns
     return false;
   }
 }
+
+/**
+ * 오답 1건을 wrong_answers 테이블에 미러(학생ID·문제ID·정답·학생답).
+ * 비로그인/오류 시 조용히 무시(로컬 오답노트가 SSOT).
+ */
+export async function mirrorWrongAnswer({ problemId, problemNum, unit, correctAnswer, userAnswer }) {
+  const userId = getUserId();
+  if (!userId) return false;
+  try {
+    const { error } = await supabase.from('wrong_answers').insert({
+      student_id: userId,        // 학생ID
+      subject: '수학',
+      unit_folder: unit,
+      problem_id: problemId,     // 문제ID
+      problem_num: problemNum != null ? String(problemNum) : null,
+      correct_answer: correctAnswer, // 정답
+      wrong_answer_text: userAnswer, // 학생답
+    });
+    if (error) throw error;
+    return true;
+  } catch (err) {
+    console.warn('[syncService] mirrorWrongAnswer 실패(무시):', err.message);
+    return false;
+  }
+}
