@@ -312,7 +312,16 @@ export default function HomeworkMathBox() {
       const { shouldPush } = recordCompletion(completionKey, summary);
       if (shouldPush) {
         const studentName = JSON.parse(localStorage.getItem('mentos_mock_user') || '{}')?.name || '멘토스 학생';
-        queueParentPush(buildSummaryMessage(studentName, summary));
+        queueParentPush(buildSummaryMessage(studentName, summary), {
+          templateKey: 'homework', // 숙제결과리포트
+          variables: {
+            '#{name}': studentName,
+            '#{hwname}': summary.title || '수학 숙제',
+            '#{submit}': `${summary.correct}/${summary.total}문제 제출`,
+            '#{rate}': `${summary.accuracy}%`,
+            '#{wrongnote}': `오답 ${summary.wrong}개`,
+          },
+        });
       }
     }
 

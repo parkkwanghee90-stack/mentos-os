@@ -34,7 +34,19 @@ ${reinforcementStatus}
 AI가 취약점을 분석하여 맞춤형 복습 과제를 발송했습니다. 앱 내 '숙제함'을 확인해 주세요!`;
 
   saveMathLessonResult(lessonResult);
-  queueParentPush(pushMsg);
+
+  let studentName = '멘토스 학생';
+  try { studentName = JSON.parse(localStorage.getItem('mentos_mock_user') || '{}')?.name || studentName; } catch { /* noop */ }
+  queueParentPush(pushMsg, {
+    templateKey: 'lessonEnd', // 수업종료리포트
+    variables: {
+      '#{학생명}': studentName,
+      '#{과목}': '수학',
+      '#{단원}': topics || '오늘 학습 단원',
+      '#{문제수}': String(totalQuestions),
+      '#{오답수}': String(Math.max(0, totalQuestions - totalCorrect)),
+    },
+  });
   
   console.log("=== [Finalize Math Lesson Session] Completed ===");
   return { lessonResult, pushMsg };
