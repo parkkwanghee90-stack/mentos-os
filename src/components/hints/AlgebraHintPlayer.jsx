@@ -186,10 +186,10 @@ export default function AlgebraHintPlayer({ data }) {
               <RichSolutionText key={i} text={typeof ln === 'string' ? ln : (ln?.content || '')} />
             ))}
           </div>
-          {step === totalSteps - 1 && data.finalAnswer && (
+          {step === totalSteps - 1 && (data.finalAnswer || data.correctAnswer) && (
             <div style={{ marginTop: '1.1rem', padding: '0.7rem 1rem', background: '#0a0f1a', borderRadius: 8, border: `1px solid ${chalkYellow}55`, display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
               <span style={{ color: chalkYellow, fontWeight: 700 }}>정답</span>
-              <RichSolutionText text={data.finalAnswer} />
+              <RichSolutionText text={String(data.finalAnswer || data.correctAnswer)} />
             </div>
           )}
         </div>

@@ -27,16 +27,23 @@ const D = Math.PI / 180;
 function parseExpr(expr) {
   if (!expr) return () => NaN;
   try {
-    const body = String(expr)
-      .replace(/\^/g, '**')
-      .replace(/sqrt\(/g, 'Math.sqrt(')
-      .replace(/sin\(/g, 'Math.sin(')
-      .replace(/cos\(/g, 'Math.cos(')
-      .replace(/tan\(/g, 'Math.tan(')
-      .replace(/abs\(/g, 'Math.abs(')
-      .replace(/pi/g, 'Math.PI');
+    let body = String(expr).trim().replace(/\^/g, '**');
+    // 함수명 → Math.* (긴 이름 우선, 'Math.' 또는 다른 영문 뒤는 제외)
+    const FNS = [
+      ['asin', 'Math.asin'], ['acos', 'Math.acos'], ['atan', 'Math.atan'],
+      ['sinh', 'Math.sinh'], ['cosh', 'Math.cosh'], ['tanh', 'Math.tanh'],
+      ['sin', 'Math.sin'], ['cos', 'Math.cos'], ['tan', 'Math.tan'],
+      ['sqrt', 'Math.sqrt'], ['cbrt', 'Math.cbrt'], ['abs', 'Math.abs'],
+      ['exp', 'Math.exp'], ['ln', 'Math.log'], ['log10', 'Math.log10'], ['log', 'Math.log10'],
+    ];
+    for (const [name, repl] of FNS) {
+      body = body.replace(new RegExp(`(?<!Math\\.)(?<![A-Za-z_])${name}\\(`, 'g'), `${repl}(`);
+    }
+    // 상수: pi, e (영문/점 뒤는 제외 → Math.exp의 e 등 보호)
+    body = body.replace(/(?<![A-Za-z_.])pi(?![A-Za-z_])/g, 'Math.PI');
+    body = body.replace(/(?<![A-Za-z_.])e(?![A-Za-z_])/g, 'Math.E');
     // eslint-disable-next-line no-new-func
-    const fn = new Function('x', `try { return (${body}); } catch(e) { return NaN; }`);
+    const fn = new Function('x', `try { const r = (${body}); return (typeof r === 'number' && isFinite(r)) ? r : NaN; } catch(e) { return NaN; }`);
     return fn;
   } catch { return () => NaN; }
 }
@@ -313,6 +320,7 @@ function MathObject({ obj, triVerts }) {
     // Removed duplicate label_text cases
 
     default:
+      if (obj && obj.type) console.warn('[MathCanvas] 미인식 도형 타입(렌더 생략):', obj.type, obj);
       return null;
   }
 }

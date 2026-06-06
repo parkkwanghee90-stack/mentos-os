@@ -844,6 +844,12 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
             </div>
             );
           })}
+          {step >= stepsData.length - 1 && (data.finalAnswer || data.correctAnswer) && (
+            <div style={{ marginTop: '0.9rem', padding: '0.7rem 1rem', background: '#0a0f1a', borderRadius: 10, border: `1px solid ${chalkYellow}66`, display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
+              <span style={{ color: chalkYellow, fontWeight: 700 }}>정답</span>
+              <RichText content={String(data.finalAnswer || data.correctAnswer)} isMobile={isMobile} />
+            </div>
+          )}
         </div>
 
         {/* 그래프 영역: 기하(geometry) 도형이 있는 경우에만 렌더링 (단순 문제 이미지 fallback 제거) */}
