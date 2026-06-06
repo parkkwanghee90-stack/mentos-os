@@ -132,58 +132,80 @@ async function sendCoolSMS(message, config) {
   }
 }
 
-// ─── 3. 카카오톡 알림톡 API 발송 ────────────────────────────────────
-async function sendKakaoAlimtalk(message, config) {
-  const { kakao } = config;
-  if (!kakao?.apiKey || !kakao?.senderKey) {
-    console.log('[pushService] 카카오 알림톡 설정 없음 — skip');
-    return false;
-  }
+// ─── Solapi(CoolSMS) v4 공통 인증 헤더 (HMAC-SHA256) ─────────────────
+const SOLAPI_SEND_URL = 'https://api.solapi.com/messages/v4/send';
 
-  // parentPhones가 비어있으면 localStorage의 mentos_mock_user에서 자동 추출
+async function buildSolapiAuthHeader(apiKey, apiSecret) {
+  const date = new Date().toISOString();
+  const salt = crypto.randomUUID ? crypto.randomUUID() : String(Date.now());
+  const encoder = new TextEncoder();
+  const cryptoKey = await crypto.subtle.importKey(
+    'raw', encoder.encode(apiSecret), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']
+  );
+  const signatureBuffer = await crypto.subtle.sign('HMAC', cryptoKey, encoder.encode(date + salt));
+  const signature = Array.from(new Uint8Array(signatureBuffer))
+    .map(b => b.toString(16).padStart(2, '0')).join('');
+  return `HMAC-SHA256 apiKey=${apiKey}, date=${date}, salt=${salt}, signature=${signature}`;
+}
+
+// 학부모 전화번호 수집 (config.parentPhones 또는 mentos_mock_user fallback)
+function resolveParentPhones(config) {
   let { parentPhones } = config;
   if (!parentPhones || Object.keys(parentPhones).length === 0) {
     try {
       const u = JSON.parse(localStorage.getItem('mentos_mock_user') || '{}');
-      if (u.parentPhone) {
-        parentPhones = { [u.name || '학생']: u.parentPhone };
-      }
+      if (u.parentPhone) parentPhones = { [u.name || '학생']: u.parentPhone };
     } catch (e) { /* ignore */ }
+  }
+  return parentPhones ? Object.values(parentPhones).filter(Boolean) : [];
+}
+
+// ─── 3. Solapi → 카카오 발송 (알림톡/친구톡) ────────────────────────
+// 인증·발신번호는 Solapi 자격증명(config.sms)을 그대로 사용한다.
+// 카카오 채널 pfId는 필수, templateId가 있으면 알림톡, 없으면 친구톡(자유 텍스트).
+// SMS와 동일한 Solapi 계정이므로 "Solapi에서 카카오톡으로 전송" 구조와 일치한다.
+async function sendKakaoAlimtalk(message, config) {
+  const { sms, kakao } = config;
+  if (!sms?.apiKey || !sms?.apiSecret) {
+    console.log('[pushService] Solapi 자격증명(config.sms) 없음 — 카카오 skip');
+    return false;
+  }
+  if (!kakao?.pfId) {
+    console.log('[pushService] 카카오 채널(pfId) 미설정 — 카카오 skip');
+    return false;
+  }
+
+  const phones = resolveParentPhones(config);
+  if (phones.length === 0) {
+    console.log('[pushService] 학부모 전화번호 미등록 — 카카오 skip');
+    return false;
   }
 
   try {
-    const response = await fetch(
-      'https://kapi.kakao.com/v1/api/talk/friends/message/default/send',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'Authorization': `Bearer ${kakao.apiKey}`,
-        },
-        body: new URLSearchParams({
-          receiver_uuids: '[]',
-          template_object: JSON.stringify({
-            object_type: 'text',
-            text: message,
-            link: {
-              web_url: window.location.origin,
-              mobile_web_url: window.location.origin,
-            },
-            button_title: '멘토스 OS 바로가기',
-          }),
-        }),
-      }
+    const authHeader = await buildSolapiAuthHeader(sms.apiKey, sms.apiSecret);
+    const from = (sms.sender || '').replace(/-/g, '');
+
+    const results = await Promise.allSettled(
+      phones.map(phone => {
+        const to = phone.replace(/-/g, '');
+        const kakaoOptions = { pfId: kakao.pfId, disableSms: false };
+        if (kakao.templateId) kakaoOptions.templateId = kakao.templateId;
+        return fetch(SOLAPI_SEND_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': authHeader },
+          body: JSON.stringify({ message: { to, from, text: message, kakaoOptions } }),
+        }).then(async res => {
+          if (!res.ok) throw new Error(`Solapi ${res.status}: ${await res.text()}`);
+          return res;
+        });
+      })
     );
 
-    if (!response.ok) {
-      const errorData = await response.text();
-      throw new Error(`Kakao API ${response.status}: ${errorData}`);
-    }
-
-    console.log('[pushService] 카카오 알림톡 발송 성공');
-    return true;
+    const ok = results.filter(r => r.status === 'fulfilled').length;
+    console.log(`[pushService] Solapi 카카오 발송: ${ok}/${phones.length}건`);
+    return ok > 0;
   } catch (err) {
-    console.warn('[pushService] 카카오 알림톡 발송 실패:', err.message);
+    console.warn('[pushService] Solapi 카카오 발송 실패:', err.message);
     return false;
   }
 }

@@ -69,6 +69,7 @@ export default function PushSettings() {
   const [kakaoApiKey, setKakaoApiKey] = useState('');
   const [kakaoSenderKey, setKakaoSenderKey] = useState('');
   const [kakaoTemplateId, setKakaoTemplateId] = useState('');
+  const [kakaoPfId, setKakaoPfId] = useState(''); // Solapi 카카오 채널 ID (필수)
 
   const [parentPhones, setParentPhones] = useState({});
   const [newStudentName, setNewStudentName] = useState('');
@@ -88,6 +89,7 @@ export default function PushSettings() {
       setKakaoApiKey(config.kakao?.apiKey || '');
       setKakaoSenderKey(config.kakao?.senderKey || '');
       setKakaoTemplateId(config.kakao?.templateId || '');
+      setKakaoPfId(config.kakao?.pfId || '');
       setParentPhones(config.parentPhones || {});
     }
     setPushHistory(getPushHistory(20));
@@ -98,7 +100,7 @@ export default function PushSettings() {
     try {
       const config = {
         sms: { apiKey: smsApiKey, apiSecret: smsApiSecret, sender: smsSender },
-        kakao: { apiKey: kakaoApiKey, templateId: kakaoTemplateId, senderKey: kakaoSenderKey },
+        kakao: { apiKey: kakaoApiKey, templateId: kakaoTemplateId, senderKey: kakaoSenderKey, pfId: kakaoPfId },
         parentPhones,
       };
       savePushConfig(config);
@@ -260,12 +262,24 @@ export default function PushSettings() {
             카카오톡 알림톡 설정
           </h2>
           <p style={{ color: '#64748b', fontSize: '0.82rem', marginBottom: '1.5rem' }}>
-            카카오 비즈니스 알림톡 발송을 위한 API 인증 정보를 입력하세요.
+            카카오는 <b>Solapi(SMS와 동일 계정)</b>를 통해 발송됩니다. 위 SMS API Key/Secret이
+            인증에 그대로 쓰이며, 아래 <b>채널 ID(pfId)</b>가 필수입니다. 템플릿 ID가 있으면
+            알림톡, 없으면 친구톡(자유 텍스트)으로 전송됩니다.
           </p>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <div>
-              <label style={LABEL_STYLE}>API Key (Bearer Token)</label>
+              <label style={LABEL_STYLE}>카카오 채널 ID (pfId) — 필수</label>
+              <input
+                style={INPUT_STYLE}
+                type="text"
+                placeholder="Solapi 카카오 채널 ID (예: KA01PF...)"
+                value={kakaoPfId}
+                onChange={e => setKakaoPfId(e.target.value)}
+              />
+            </div>
+            <div>
+              <label style={LABEL_STYLE}>API Key (Bearer Token) — 레거시(미사용)</label>
               <input
                 style={INPUT_STYLE}
                 type="password"
