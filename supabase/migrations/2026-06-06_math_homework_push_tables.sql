@@ -12,8 +12,10 @@ create table if not exists public.wrong_answers (
   student_id uuid not null,
   subject text,
   unit_folder text,
+  problem_id text,          -- 문제ID (숙제 플로우)
   problem_num text,
-  wrong_answer_text text,
+  correct_answer text,      -- 정답
+  wrong_answer_text text,   -- 학생답
   resolved boolean default false,
   created_at timestamptz default now()
 );

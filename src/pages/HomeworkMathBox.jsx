@@ -13,7 +13,7 @@ import { resolveAnswer } from '@/services/answerResolver';
 import { recordCompletion, buildSummaryMessage } from '@/services/homeworkCompletion';
 import { computeSolvedCounts } from '@/services/progressCounts';
 import { queueParentPush } from '@/services/pushService';
-import { mirrorProgress } from '@/services/syncService';
+import { mirrorProgress, mirrorWrongAnswer } from '@/services/syncService';
 import avsAnswersData from '@/data/avs_answers.json';
 
 export default function HomeworkMathBox() {
@@ -255,6 +255,10 @@ export default function HomeworkMathBox() {
     setSolvedStatus(newStatus);
     saveHomeworkProgress(homeworkId, newStatus);
     mirrorProgress({ homeworkId, problemId: pid, isCorrect, userAnswer, avsViewed: newStatus[pid]?.avsViewed || false });
+    // 오답이면 wrong_answers 테이블에 학생ID·문제ID·정답·학생답 기록
+    if (!isCorrect) {
+      mirrorWrongAnswer({ problemId: pid, problemNum: currentProblem.keyStr, unit: hwUnit.relatedUnit || hwUnit.title, correctAnswer, userAnswer });
+    }
     setGradingResult(isCorrect ? 'correct' : 'incorrect');
 
     // 오답노트 수집 (오답노트 자체 풀이 중에는 재수집 안 함)
