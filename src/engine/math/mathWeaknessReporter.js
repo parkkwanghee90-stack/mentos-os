@@ -320,7 +320,19 @@ ${gradingResult.accuracy >= 80
 
 자세한 분석과 오답 노트 해설 동영상(AVS) 시청 현황은 앱 내 대시보드 리포트에서 확인하실 수 있습니다.`;
 
-  queueParentPush(pushMsg);
+  const _weakUnit = [...gradingResult.unitDiagnoses].sort((a, b) => a.testAccuracy - b.testAccuracy)[0];
+  const _gradeOf = (s) => (s >= 90 ? '1등급' : s >= 80 ? '2등급' : s >= 70 ? '3등급' : s >= 60 ? '4등급' : '5등급 이하');
+  queueParentPush(pushMsg, {
+    templateKey: 'weeklyTest', // 주간테스트결과
+    variables: {
+      '#{name}': studentName,
+      '#{range}': gradingResult.unitDiagnoses.map(d => d.unit).join(', ') || '이번 점검 범위',
+      '#{score}': String(gradingResult.accuracy),
+      '#{grade}': _gradeOf(gradingResult.accuracy),
+      '#{weak}': _weakUnit ? _weakUnit.unit : '-',
+      '#{comment}': gradingResult.accuracy >= 80 ? '고난이도 유형을 잘 격파했습니다.' : '수식 전개 실수 보강이 필요합니다.',
+    },
+  });
   console.log('[Fortnightly Push Sent Successfully]', pushMsg);
   return pushMsg;
 }

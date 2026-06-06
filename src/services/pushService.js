@@ -1,4 +1,5 @@
 import { supabase } from '@/services/supabaseClient';
+import KAKAO_TEMPLATES from '@/config/kakaoTemplates.json';
 
 // ─── Push Config Helpers ────────────────────────────────────────────
 const PUSH_CONFIG_KEY = 'mentos_push_config';
@@ -164,13 +165,16 @@ function resolveParentPhones(config) {
 // 인증·발신번호는 Solapi 자격증명(config.sms)을 그대로 사용한다.
 // 카카오 채널 pfId는 필수, templateId가 있으면 알림톡, 없으면 친구톡(자유 텍스트).
 // SMS와 동일한 Solapi 계정이므로 "Solapi에서 카카오톡으로 전송" 구조와 일치한다.
-async function sendKakaoAlimtalk(message, config) {
+async function sendKakaoAlimtalk(message, config, opts = {}) {
   const { sms, kakao } = config;
   if (!sms?.apiKey || !sms?.apiSecret) {
     console.log('[pushService] Solapi 자격증명(config.sms) 없음 — 카카오 skip');
     return false;
   }
-  if (!kakao?.pfId) {
+  // 템플릿 매핑(이벤트키→templateId/pfId/변수). 설정값이 매핑보다 우선.
+  const tpl = opts.templateKey ? (KAKAO_TEMPLATES[opts.templateKey] || null) : null;
+  const pfId = kakao?.pfId || tpl?.pfId || null;
+  if (!pfId) {
     console.log('[pushService] 카카오 채널(pfId) 미설정 — 카카오 skip');
     return false;
   }
@@ -188,8 +192,10 @@ async function sendKakaoAlimtalk(message, config) {
     const results = await Promise.allSettled(
       phones.map(phone => {
         const to = phone.replace(/-/g, '');
-        const kakaoOptions = { pfId: kakao.pfId, disableSms: false };
-        if (kakao.templateId) kakaoOptions.templateId = kakao.templateId;
+        const kakaoOptions = { pfId, disableSms: false };
+        const templateId = tpl?.templateId || kakao.templateId;
+        if (templateId) kakaoOptions.templateId = templateId;
+        if (opts.variables) kakaoOptions.variables = opts.variables;
         return fetch(SOLAPI_SEND_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Authorization': authHeader },
@@ -241,10 +247,12 @@ async function sendBrowserNotification(message) {
  * @param {string} messageStr - 푸시 메시지 문자열
  * @returns {object} pushTask 결과 객체
  */
-export function queueParentPush(messageStr) {
+export function queueParentPush(messageStr, opts = {}) {
   const pushTask = {
     type: 'parent_notification',
     message: messageStr,
+    templateKey: opts.templateKey || null,   // 'lessonEnd'|'homework'|'weeklyTest'|'monthlyTest'
+    variables: opts.variables || null,        // 알림톡 템플릿 변수 (#{...} 치환값)
     timestamp: Date.now(),
     status: 'pending',
     channels: [],
@@ -272,8 +280,11 @@ async function _dispatchAsync(pushTask) {
 
   // 6. 발송 순서: 카카오톡 → SMS → 브라우저 → localStorage(이미 완료)
   if (config) {
-    // 카카오톡 알림톡
-    const kakaoResult = await sendKakaoAlimtalk(pushTask.message, config);
+    // 카카오톡 알림톡 (템플릿 키/변수 전달)
+    const kakaoResult = await sendKakaoAlimtalk(pushTask.message, config, {
+      templateKey: pushTask.templateKey,
+      variables: pushTask.variables,
+    });
     if (kakaoResult) channelsUsed.push('kakao');
 
     // CoolSMS

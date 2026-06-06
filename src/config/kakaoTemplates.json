@@ -1,0 +1,52 @@
+{
+  "lessonEnd": {
+    "templateId": "KA01TP260601164302494CqboIwRHT27",
+    "name": "수업종료리포트",
+    "pfId": "KA01PF260601162542370lCz5XpN5NVn",
+    "variables": [
+      "#{학생명}",
+      "#{과목}",
+      "#{단원}",
+      "#{문제수}",
+      "#{오답수}"
+    ]
+  },
+  "homework": {
+    "templateId": "KA01TP260601164449894bPrfpgbTrWI",
+    "name": "숙제결과리포트",
+    "pfId": "KA01PF260601162542370lCz5XpN5NVn",
+    "variables": [
+      "#{name}",
+      "#{hwname}",
+      "#{submit}",
+      "#{rate}",
+      "#{wrongnote}"
+    ]
+  },
+  "weeklyTest": {
+    "templateId": "KA01TP260601164549321PLaZJTVZ0b4",
+    "name": "주간테스트결과",
+    "pfId": "KA01PF260601162542370lCz5XpN5NVn",
+    "variables": [
+      "#{name}",
+      "#{range}",
+      "#{score}",
+      "#{grade}",
+      "#{weak}",
+      "#{comment}"
+    ]
+  },
+  "monthlyTest": {
+    "templateId": "KA01TP260601164648956BKANDigEEXU",
+    "name": "월말평가리포트",
+    "pfId": "KA01PF260601162542370lCz5XpN5NVn",
+    "variables": [
+      "#{name}",
+      "#{avg}",
+      "#{grade}",
+      "#{strong}",
+      "#{weak}",
+      "#{goal}"
+    ]
+  }
+}

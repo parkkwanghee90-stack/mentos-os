@@ -201,10 +201,11 @@ export default function PushSettings() {
         <div style={{ ...CARD_STYLE, borderColor: 'rgba(59, 130, 246, 0.15)' }}>
           <h2 style={{ fontSize: '1.15rem', fontWeight: '800', color: 'white', marginBottom: '0.3rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <MessageSquare size={20} color="#3b82f6" />
-            CoolSMS 설정
+            Solapi 연동 (SMS · 카카오 공용 인증)
           </h2>
           <p style={{ color: '#64748b', fontSize: '0.82rem', marginBottom: '1.5rem' }}>
-            CoolSMS REST API v4 인증 정보를 입력하세요. 미입력 시 SMS 발송이 skip됩니다.
+            Solapi(구 CoolSMS) API 인증 정보입니다. <b>SMS와 카카오 알림톡 모두 이 인증</b>으로 발송됩니다.
+            <br/>① <b>API Key</b> · ② <b>API Secret</b>: Solapi 콘솔 → 우상단 계정 → <b>API Key 관리</b>에서 발급.
           </p>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -262,48 +263,28 @@ export default function PushSettings() {
             카카오톡 알림톡 설정
           </h2>
           <p style={{ color: '#64748b', fontSize: '0.82rem', marginBottom: '1.5rem' }}>
-            카카오는 <b>Solapi(SMS와 동일 계정)</b>를 통해 발송됩니다. 위 SMS API Key/Secret이
-            인증에 그대로 쓰이며, 아래 <b>채널 ID(pfId)</b>가 필수입니다. 템플릿 ID가 있으면
-            알림톡, 없으면 친구톡(자유 텍스트)으로 전송됩니다.
+            카카오는 위 <b>Solapi 인증(API Key/Secret)</b>으로 발송됩니다. 여기서는 채널·템플릿만 지정합니다.
+            <br/>③ <b>채널 ID(pfId)</b>: Solapi 콘솔 → <b>카카오 → 채널</b> 목록의 채널 ID(KA01PF…). <b>필수.</b>
+            <br/>④ <b>템플릿 ID</b>: Solapi 콘솔 → <b>카카오 → 알림톡 템플릿</b>의 승인된 템플릿 ID. 있으면 알림톡, 없으면 친구톡(자유 텍스트).
           </p>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <div>
-              <label style={LABEL_STYLE}>카카오 채널 ID (pfId) — 필수</label>
+              <label style={LABEL_STYLE}>③ 카카오 채널 ID (pfId) — 필수</label>
               <input
                 style={INPUT_STYLE}
                 type="text"
-                placeholder="Solapi 카카오 채널 ID (예: KA01PF...)"
+                placeholder="KA01PF..."
                 value={kakaoPfId}
                 onChange={e => setKakaoPfId(e.target.value)}
               />
             </div>
             <div>
-              <label style={LABEL_STYLE}>API Key (Bearer Token) — 레거시(미사용)</label>
-              <input
-                style={INPUT_STYLE}
-                type="password"
-                placeholder="카카오 REST API 키 또는 Bearer Token"
-                value={kakaoApiKey}
-                onChange={e => setKakaoApiKey(e.target.value)}
-              />
-            </div>
-            <div>
-              <label style={LABEL_STYLE}>Sender Key</label>
+              <label style={LABEL_STYLE}>④ 알림톡 템플릿 ID (선택)</label>
               <input
                 style={INPUT_STYLE}
                 type="text"
-                placeholder="플러스친구 발신 프로필 키"
-                value={kakaoSenderKey}
-                onChange={e => setKakaoSenderKey(e.target.value)}
-              />
-            </div>
-            <div>
-              <label style={LABEL_STYLE}>Template ID</label>
-              <input
-                style={INPUT_STYLE}
-                type="text"
-                placeholder="알림톡 템플릿 ID (선택)"
+                placeholder="승인된 알림톡 템플릿 ID (비우면 친구톡)"
                 value={kakaoTemplateId}
                 onChange={e => setKakaoTemplateId(e.target.value)}
               />
