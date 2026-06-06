@@ -7,7 +7,7 @@ import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import MathProblemRenderer from '@/components/MathProblemRenderer';
 import HintPlayerRouter from '@/components/hints/HintPlayerRouter';
-import { HOMEWORK_UNITS, getHomeworkRange, padProblemNum, getHomeworkProgress, saveHomeworkProgress, markSequenceComplete, WRONG_REVIEW_ID, getUnitById, buildSolutionSrc } from '@/data/homeworkSSOT';
+import { HOMEWORK_UNITS, getHomeworkRange, padProblemNum, getHomeworkProgress, saveHomeworkProgress, markSequenceComplete, WRONG_REVIEW_ID, getUnitById, buildSolutionSrc, isExcludedProblem } from '@/data/homeworkSSOT';
 import { addWrong, markResolved, getActiveUnresolvedWrongAnswers } from '@/services/wrongAnswerStore';
 import { resolveAnswer } from '@/services/answerResolver';
 import { recordCompletion, buildSummaryMessage } from '@/services/homeworkCompletion';
@@ -117,6 +117,7 @@ export default function HomeworkMathBox() {
     if (!hwUnit) return [];
     const list = [];
     for (let i = problemRange.start; i <= problemRange.end; i++) {
+      if (isExcludedProblem(hwUnit.answerKey, i)) continue; // 정답·풀이 없는 문항 숙제에서 제외
       const pid = padProblemNum(i);
       list.push({
         problemId: pid,
@@ -244,6 +245,12 @@ export default function HomeworkMathBox() {
     const normUser = normalizeAnswer(userAnswer);
     const correctAnswer = answers[pid] || '';
     const normCorrect = normalizeAnswer(correctAnswer);
+
+    // 방어: 정답 데이터가 없는 문항은 오답 처리하지 않고 채점 보류(안전망)
+    if (!normCorrect) {
+      setToast('ℹ️ 이 문항은 정답 데이터 준비 중이라 채점을 보류합니다');
+      return;
+    }
 
     // 정확 일치 비교 (includes 버그 수정)
     const isCorrect = normUser.length > 0 && normUser === normCorrect;
