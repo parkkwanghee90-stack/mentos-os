@@ -14,6 +14,7 @@ import { progressToNextUnit, initTrial, TEACHER_ASSIGNMENT } from '@/engine/grad
 import { analyzeMathWeakness, generateFortnightlyTestProblems, gradeFortnightlyTest, sendFortnightlyParentPush } from '@/engine/math/mathWeaknessReporter';
 import { generateMonthlyTestProblems, gradeMonthlyTest, sendMonthlyParentPush, recordMonthlyTestWrongs } from '@/engine/math/monthlyTest';
 import { getCompletions } from '@/services/homeworkCompletion';
+import { fetchCloudDashboard, buildWeeklySeries } from '@/services/dashboardData';
 import '@/pages/Dashboard.css';
 
 const parseSubject = (subj) => {
@@ -260,10 +261,15 @@ export default function Dashboard() {
     }
   };
 
-  // ── [Real Data Integration with Simulation Fallback] ──
+  // ── [Real Data Integration: Supabase 우선, localStorage 폴백] ──
+  const [cloud, setCloud] = React.useState(null); // {homeworkProgress, wrongAnswers, studyLogs} | null
+  React.useEffect(() => { fetchCloudDashboard().then(setCloud); }, []);
+
   const wrongReviewCount = React.useMemo(
-    () => getActiveWrongAnswers().filter(e => !e.resolved).length,
-    []
+    () => cloud
+      ? cloud.wrongAnswers.filter(e => !e.resolved).length
+      : getActiveWrongAnswers().filter(e => !e.resolved).length,
+    [cloud]
   );
   const completionEvents = React.useMemo(() => getCompletions(), []);
   const trialState = React.useMemo(() => JSON.parse(localStorage.getItem('mentos_free_trial') || '{}'), []);
@@ -567,76 +573,16 @@ export default function Dashboard() {
   const streakCount = studyLogs.length; // Simplified streak
   const examModeActive = getStudyMode(today).startsWith("EXAM");
 
-  // Dynamic Recharts Graph Aggregations
-  const weeklyData = React.useMemo(() => {
-    const defaultData = [
-      { day: '월', 개념이해도: 65, 오답률: 35, 푼문제수: 20 },
-      { day: '화', 개념이해도: 70, 오답률: 30, 푼문제수: 25 },
-      { day: '수', 개념이해도: 68, 오답률: 32, 푼문제수: 15 },
-      { day: '목', 개념이해도: 75, 오답률: 25, 푼문제수: 30 },
-      { day: '금', 개념이해도: 82, 오답률: 18, 푼문제수: 40 },
-      { day: '토', 개념이해도: 88, 오답률: 12, 푼문제수: 50 },
-      { day: '오늘', 개념이해도: 70, 오답률: 30, 푼문제수: 20 }
-    ];
-
-    const realHistory = JSON.parse(localStorage.getItem('mentos_lesson_results') || '[]');
-    if (realHistory.length === 0) return defaultData;
-
-    const days = ['일', '월', '화', '수', '목', '금', '토'];
-    const dataByDay = {};
-
-    // Initialize last 7 days of the calendar leading up to today
-    for (let i = 6; i >= 0; i--) {
-      const d = new Date();
-      d.setDate(d.getDate() - i);
-      const dateStr = `${d.getMonth() + 1}/${d.getDate()}`;
-      const dayName = i === 0 ? '오늘' : days[d.getDay()];
-      dataByDay[dateStr] = {
-        day: dayName,
-        totalCorrect: 0,
-        totalQuestions: 0,
-        count: 0
-      };
-    }
-
-    // Populate with real history
-    realHistory.forEach(lh => {
-      const d = new Date(lh.date);
-      const dateStr = `${d.getMonth() + 1}/${d.getDate()}`;
-      if (dataByDay[dateStr]) {
-        dataByDay[dateStr].totalQuestions += lh.totalQuestions || 0;
-        dataByDay[dateStr].totalCorrect += lh.correctCount || 0;
-        dataByDay[dateStr].count += 1;
-      }
-    });
-
-    return Object.keys(dataByDay).map((dateStr, index) => {
-      const dayData = dataByDay[dateStr];
-      if (dayData.count === 0) {
-        // Fallback to a realistic baseline if there's no learning recorded for this day
-        // This keeps the chart beautiful but allows "오늘" to update dynamically when solved!
-        const dayIndex = (new Date().getDay() - 6 + index + 7) % 7;
-        const baseAccuracy = 60 + (dayIndex * 4) % 20;
-        return {
-          day: dayData.day,
-          개념이해도: baseAccuracy,
-          오답률: 100 - baseAccuracy,
-          푼문제수: 10 + (dayIndex * 5) % 25
-        };
-      }
-
-      const accuracy = dayData.totalQuestions > 0 
-        ? Math.round((dayData.totalCorrect / dayData.totalQuestions) * 100)
-        : 70;
-
-      return {
-        day: dayData.day,
-        개념이해도: accuracy,
-        오답률: Math.max(0, 100 - accuracy),
-        푼문제수: dayData.totalQuestions
-      };
-    });
-  }, [lessonHistory]);
+  // 주간 추이 — Supabase homework_progress(updated_at) 기반 실데이터 전용. 목업/합성공식 제거.
+  // 기록 없는 날은 0(빈 상태). cloud 미로딩/비로그인 시에도 0으로 표시(가짜 데이터 안 넣음).
+  const weeklyData = React.useMemo(
+    () => buildWeeklySeries(cloud?.homeworkProgress || []),
+    [cloud]
+  );
+  const weeklyHasData = React.useMemo(
+    () => weeklyData.some(d => d.푼문제수 > 0),
+    [weeklyData]
+  );
 
   const monthlyData = React.useMemo(() => {
     const defaultData = [
@@ -1486,7 +1432,12 @@ export default function Dashboard() {
             <span className="chart-desc">이해도 상승과 오답 감소율</span>
           </div>
           <div className="chart-wrapper">
-            {weeklyData && weeklyData.length > 0 && (
+            {!weeklyHasData && (
+              <div style={{ height: 220, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#64748b', fontSize: '0.85rem', textAlign: 'center' }}>
+                아직 학습 기록이 없습니다.<br/>숙제를 풀면 실제 데이터로 채워집니다.
+              </div>
+            )}
+            {weeklyHasData && (
               <ResponsiveContainer width="100%" height={220}>
                 <LineChart data={weeklyData}>
                   <CartesianGrid strokeDasharray="3 3" stroke="var(--panel-border)" vertical={false}/>
