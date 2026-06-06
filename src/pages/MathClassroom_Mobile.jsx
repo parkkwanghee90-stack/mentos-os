@@ -818,9 +818,9 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
               value={input} onChange={e => setInput(e.target.value)}
               placeholder="풀이 과정에 대해 질문하세요..." 
               style={{ flex: 1, background: '#27272a', border: 'none', color: 'white', padding: '1rem', borderRadius: '24px', outline: 'none', fontSize: '1rem' }}
-              onKeyPress={(e) => e.key === 'Enter' && handeSubmit()}
+              onKeyDown={(e) => { if (e.key === 'Enter' && !e.nativeEvent.isComposing) handleSubmit(); }}
             />
-            <button onClick={handeSubmit} style={{ background: '#3b82f6', color: 'white', border: 'none', padding: '0.8rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
+            <button onClick={handleSubmit} style={{ background: '#3b82f6', color: 'white', border: 'none', padding: '0.8rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
               <Send size={20} />
             </button>
           </div>

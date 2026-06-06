@@ -651,7 +651,9 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
           student_id: user.id,
           subject: '수학',
           unit_folder: targetUnitFolder || selectedUnit || currentUnit || '수학상',
+          problem_id: String(testProblemIdx).padStart(3, '0'),
           problem_num: String(testProblemIdx).padStart(3, '0'),
+          correct_answer: rawAnswer != null ? String(rawAnswer) : null,
           wrong_answer_text: userAnswer
         }).then(({ error }) => {
           if (error) console.error('[Supabase DB] Failed to record wrong answer:', error);
@@ -761,7 +763,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
           student_id: user.id,
           subject: '수학',
           unit: unitName,
-          duration_minutes: 120,
+          duration_minutes: 120, // 의도된 설계: 주2회 2시간 고정 과외 모델(계약 수업시간)
           score: accuracy
         }).then(({ error }) => {
           if (error) console.error('[Supabase DB] Failed to save study log:', error);
@@ -1712,7 +1714,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                   placeholder="질문 또는 의견 입력..."
                   value={input}
                   onChange={e => setInput(e.target.value)}
-                  onKeyDown={e => e.key === 'Enter' && handleSubmit()}
+                  onKeyDown={e => { if (e.key === 'Enter' && !e.nativeEvent.isComposing) handleSubmit(); }}
                   style={{ flex: 1, minWidth: 0, padding: '0.6rem 0.7rem', borderRadius: 'var(--mc-r-sm)', border: '1px solid var(--mc-border-strong)', background: 'var(--mc-surface)', color: 'var(--mc-text)', fontSize: '0.85rem' }}
                />
 
@@ -2211,7 +2213,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
               placeholder="답변을 입력하세요..."
               value={input}
               onChange={e => setInput(e.target.value)}
-              onKeyDown={e => e.key === 'Enter' && handleSubmit()}
+              onKeyDown={e => { if (e.key === 'Enter' && !e.nativeEvent.isComposing) handleSubmit(); }}
               style={{ flex: 1, padding: '0.95rem 1rem', borderRadius: 'var(--mc-r-md)', border: '1px solid var(--mc-border-strong)', background: 'var(--mc-surface)', color: 'var(--mc-text)', fontSize: '0.95rem' }}
            />
 
