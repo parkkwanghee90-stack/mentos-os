@@ -5,6 +5,7 @@ import { getTeacherById } from '@/data/teacherProfiles';
 import { HIGH_TEACHER_PROFILES } from '@/data/hTeacherProfiles';
 import { ChevronRight, GraduationCap, Target, Zap, BookOpen, Star, Award } from 'lucide-react';
 import LessonManual from '@/components/LessonManual';
+import { useAuth } from '@/context/AuthContext';
 
 const GRADE_ICONS = { '고1': '🎓', '고2': '📐', '고3': '🚀' };
 const GRADE_COLORS = { '고1': '#3b82f6', '고2': '#8b5cf6', '고3': '#ef4444' };
@@ -13,6 +14,7 @@ const RANK_ICONS = { '4~5등급': '📖', '3등급': '⚡', '1~2등급': '🔥' 
 export default function GradeSelect() {
   const navigate = useNavigate();
   const location = useLocation();
+  const { user } = useAuth();
   const subjectOverride = location.state?.subjectOverride;
   const [step, setStep] = useState(() => {
     return localStorage.getItem('mentos_manual_seen') === 'true' ? 'grade' : 'manual';
@@ -189,7 +191,13 @@ export default function GradeSelect() {
         {step === 'manual' && (
           <LessonManual onComplete={() => {
             localStorage.setItem('mentos_manual_seen', 'true');
-            navigate('/login', { state: { from: { pathname: '/dashboard' } } });
+            // 이미 로그인(또는 슈퍼패스)된 경우 재로그인 요구하지 않고 학년 선택으로 이어감
+            const loggedIn = !!user || localStorage.getItem('mentos_super_pass') === 'true';
+            if (loggedIn) {
+              setStep('grade');
+            } else {
+              navigate('/login', { state: { from: { pathname: '/dashboard' } } });
+            }
           }} />
         )}
 
