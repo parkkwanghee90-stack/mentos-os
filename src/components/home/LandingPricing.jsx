@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Check, ArrowRight, ShieldCheck } from "lucide-react";
+import PaymentCheckoutModal from "@/components/PaymentCheckoutModal";
 
 // 런칭 선착순 단계별 월 가격 — "AI 1:1 과외" 프리미엄 포지셔닝.
 const PLANS = [
   {
     name: "오픈 이벤트",
-    event: true,
+    event: true, // 무료 가입 → /login
     priceLabel: "1개월 무료",
     sub: "선착순 100명 한정 · 첫 달 0원",
     badge: "🎉 선착순 100명",
@@ -14,6 +16,7 @@ const PLANS = [
   },
   {
     name: "얼리버드",
+    planKey: "early",
     price: "49,000",
     original: "89,000",
     popular: true,
@@ -24,6 +27,7 @@ const PLANS = [
   },
   {
     name: "정규 멤버십",
+    planKey: "regular",
     price: "89,000",
     sub: "학원·과외의 1/3 가격, AI 1:1 과외",
     features: PREMIUM_FEATURES(),
@@ -33,9 +37,9 @@ const PLANS = [
 
 // 장기 이용권 (정가 월 89,000 기준 할인)
 const DURATION = [
-  { name: "6개월 이용권", perMonth: "62,300", total: "373,800", off: "30%" },
-  { name: "1년 이용권", perMonth: "53,400", total: "640,800", off: "40%", best: true },
-  { name: "평생 이용권", total: "1,800,000", note: "한 번 결제로 평생 이용", badge: "선착순 100명 한정" },
+  { name: "6개월 이용권", planKey: "m6", perMonth: "62,300", total: "373,800", off: "30%" },
+  { name: "1년 이용권", planKey: "y1", perMonth: "53,400", total: "640,800", off: "40%", best: true },
+  { name: "평생 이용권", planKey: "lifetime", total: "1,800,000", note: "한 번 결제로 평생 이용", badge: "선착순 100명 한정" },
 ];
 
 function PREMIUM_FEATURES() {
@@ -50,6 +54,14 @@ function PREMIUM_FEATURES() {
 }
 
 export default function LandingPricing() {
+  const navigate = useNavigate();
+  const [checkoutPlan, setCheckoutPlan] = useState(null);
+
+  const choose = (plan) => {
+    if (!plan) { navigate("/login"); return; } // 오픈이벤트(무료) → 가입
+    setCheckoutPlan(plan);
+  };
+
   return (
     <section id="pricing" className="hv-section hv-dark hv-pricing">
       <div className="hv-wrap hv-pricing-grid">
@@ -57,7 +69,7 @@ export default function LandingPricing() {
           <span className="hv-pricing-eyebrow">AI 1:1 과외</span>
           <h2 className="hv-h2">학원·과외보다 똑똑하게,<br />매쓰멘토스 AI 과외</h2>
           <p className="hv-sub">사고력 AVS로 직접 가르치는 AI 1:1 과외.<br />학원 월 20~40만 · 과외 회당 5~10만 → 매쓰멘토스 <b>월 89,000원</b>.</p>
-          <Link to="/login" className="hv-btn hv-btn-primary hv-btn-lg">지금 무료로 시작하기 <ArrowRight size={18} /></Link>
+          <button type="button" onClick={() => navigate("/login")} className="hv-btn hv-btn-primary hv-btn-lg">지금 무료로 시작하기 <ArrowRight size={18} /></button>
           <p className="hv-guarantee"><ShieldCheck size={16} /> 1개월 안에 성적 변화 없으면 <b>100% 환불 보장</b></p>
           <p className="hv-pricing-note">· 선착순 100명 첫 1개월 무료 → 1,000명 얼리버드 월 49,000원 → 이후 정가 월 89,000원</p>
         </div>
@@ -84,7 +96,7 @@ export default function LandingPricing() {
                   <li key={f}><Check size={15} /> {f}</li>
                 ))}
               </ul>
-              <Link to="/login" className={`hv-btn ${p.event || p.popular ? "hv-btn-primary" : "hv-btn-ghost"} hv-btn-block`}>{p.cta}</Link>
+              <button type="button" onClick={() => choose(p.planKey)} className={`hv-btn ${p.event || p.popular ? "hv-btn-primary" : "hv-btn-ghost"} hv-btn-block`}>{p.cta}</button>
             </article>
           ))}
         </div>
@@ -104,12 +116,14 @@ export default function LandingPricing() {
                   <div className="hv-duration-price"><b>{d.total}</b>원</div>
                 )}
                 <span className="hv-duration-total">{d.perMonth ? `총 ${d.total}원` : d.note}</span>
-                <Link to="/login" className="hv-btn hv-btn-ghost hv-btn-block">선택하기</Link>
+                <button type="button" onClick={() => choose(d.planKey)} className="hv-btn hv-btn-ghost hv-btn-block">선택하기</button>
               </div>
             ))}
           </div>
         </div>
       </div>
+
+      {checkoutPlan && <PaymentCheckoutModal plan={checkoutPlan} onClose={() => setCheckoutPlan(null)} />}
     </section>
   );
 }
