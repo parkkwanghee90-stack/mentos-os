@@ -516,6 +516,20 @@
 .home-v4 .hv-plan.is-event .hv-plan-features svg { color: #10b981; }
 .home-v4 .hv-plan-sub { margin: -10px 0 16px; color: #34d399; font-size: 12px; font-weight: 600; }
 .home-v4 .hv-plan-original { display: block; text-decoration: line-through; color: var(--on-dark); opacity: .55; font-size: 13px; margin-bottom: 2px; }
+/* 장기 이용권 섹션 (전체 너비) */
+.home-v4 .hv-duration { grid-column: 1 / -1; margin-top: 8px; }
+.home-v4 .hv-duration-title { color: #fff; font-size: 17px; font-weight: 700; text-align: center; margin: 0 0 18px; }
+.home-v4 .hv-duration-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+@media (min-width: 640px) { .home-v4 .hv-duration-grid { grid-template-columns: repeat(3, 1fr); } }
+.home-v4 .hv-duration-card { position: relative; border: 1px solid var(--border); background: var(--surface-2); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 5px; align-items: flex-start; }
+.home-v4 .hv-duration-card.is-best { border-color: var(--violet); box-shadow: 0 16px 40px -24px rgba(111,91,255,.7); }
+.home-v4 .hv-duration-badge { position: absolute; top: -11px; right: 16px; background: var(--violet); color: #fff; font-size: 11px; font-weight: 700; padding: 4px 11px; border-radius: 999px; }
+.home-v4 .hv-duration-name { color: #fff; font-size: 15px; font-weight: 700; }
+.home-v4 .hv-duration-off { color: #34d399; font-size: 12px; font-weight: 700; }
+.home-v4 .hv-duration-price { color: #fff; margin: 4px 0; }
+.home-v4 .hv-duration-price b { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; }
+.home-v4 .hv-duration-total { color: var(--on-dark); font-size: 12px; margin-bottom: 12px; }
+.home-v4 .hv-duration-card .hv-btn { margin-top: auto; width: 100%; }
 .home-v4 .hv-plan-features { list-style: none; margin: 0 0 20px; padding: 0; display: flex; flex-direction: column; gap: 10px; flex: 1; }
 .home-v4 .hv-plan-features li { display: flex; align-items: center; gap: 8px; color: var(--on-dark); font-size: 13px; }
 .home-v4 .hv-plan-features svg { color: var(--violet); flex-shrink: 0; }

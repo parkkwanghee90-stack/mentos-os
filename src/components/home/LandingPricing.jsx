@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Check, ArrowRight } from "lucide-react";
 
-// 런칭 선착순 단계별 가격 (프리미엄 고가 포지셔닝). 동일 프리미엄 상품, 신청 순서로 가격 결정.
+// 런칭 선착순 단계별 월 가격 (프리미엄 고가 포지셔닝). 동일 프리미엄 상품.
 const PLANS = [
   {
     name: "오픈 이벤트",
@@ -15,7 +15,7 @@ const PLANS = [
   {
     name: "얼리버드",
     price: "49,000",
-    original: "79,000",
+    original: "89,000",
     popular: true,
     sub: "선착순 1,000명 한정 특가",
     badge: "선착순 1,000명",
@@ -24,11 +24,18 @@ const PLANS = [
   },
   {
     name: "정규 멤버십",
-    price: "79,000",
+    price: "89,000",
     sub: "선착순 마감 후 정가",
     features: PREMIUM_FEATURES(),
     cta: "시작하기",
   },
+];
+
+// 장기 이용권 (정가 월 89,000 기준 할인)
+const DURATION = [
+  { name: "6개월 이용권", perMonth: "62,300", total: "373,800", off: "30%" },
+  { name: "1년 이용권", perMonth: "53,400", total: "640,800", off: "40%", best: true },
+  { name: "평생 이용권", total: "1,100,000", note: "한 번 결제로 평생 이용" },
 ];
 
 function PREMIUM_FEATURES() {
@@ -50,7 +57,7 @@ export default function LandingPricing() {
           <h2 className="hv-h2">지금 매쓰멘토스를<br />시작하세요!</h2>
           <p className="hv-sub">사고력 AVS로 진짜 실력을 만드는 프리미엄 AI 수학.</p>
           <Link to="/login" className="hv-btn hv-btn-primary hv-btn-lg">지금 무료로 시작하기 <ArrowRight size={18} /></Link>
-          <p className="hv-pricing-note">· 선착순 100명 첫 1개월 무료 → 1,000명 얼리버드 월 49,000원 → 이후 정가 월 79,000원</p>
+          <p className="hv-pricing-note">· 선착순 100명 첫 1개월 무료 → 1,000명 얼리버드 월 49,000원 → 이후 정가 월 89,000원</p>
         </div>
 
         <div className="hv-plans">
@@ -78,6 +85,27 @@ export default function LandingPricing() {
               <Link to="/login" className={`hv-btn ${p.event || p.popular ? "hv-btn-primary" : "hv-btn-ghost"} hv-btn-block`}>{p.cta}</Link>
             </article>
           ))}
+        </div>
+
+        {/* 장기 이용권 — 더 큰 할인 */}
+        <div className="hv-duration">
+          <h3 className="hv-duration-title">장기 이용권 · 더 큰 할인</h3>
+          <div className="hv-duration-grid">
+            {DURATION.map((d) => (
+              <div key={d.name} className={`hv-duration-card ${d.best ? "is-best" : ""}`}>
+                {d.best && <span className="hv-duration-badge">가장 인기</span>}
+                <span className="hv-duration-name">{d.name}</span>
+                {d.off && <span className="hv-duration-off">{d.off} 할인</span>}
+                {d.perMonth ? (
+                  <div className="hv-duration-price"><b>월 {d.perMonth}</b>원</div>
+                ) : (
+                  <div className="hv-duration-price"><b>{d.total}</b>원</div>
+                )}
+                <span className="hv-duration-total">{d.perMonth ? `총 ${d.total}원` : d.note}</span>
+                <Link to="/login" className="hv-btn hv-btn-ghost hv-btn-block">선택하기</Link>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
