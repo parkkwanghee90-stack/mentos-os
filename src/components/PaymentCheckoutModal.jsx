@@ -1,46 +1,55 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { X, CreditCard, Gift, ShieldCheck, HelpCircle, ChevronDown, Clock, BookOpen, AlertCircle } from 'lucide-react';
+import { useAuth } from '@/context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
-// Dynamic SDK loader for Toss Payments V1
-const loadTossSdk = () => {
-  return new Promise((resolve, reject) => {
-    if (window.TossPayments) return resolve(window.TossPayments);
-    const script = document.createElement('script');
-    script.src = 'https://js.tosspayments.com/v1/payment';
-    script.async = true;
-    script.onload = () => resolve(window.TossPayments);
-    script.onerror = () => reject(new Error('토스페이먼츠 SDK 로딩에 실패했습니다.'));
-    document.body.appendChild(script);
-  });
+const PLAN_LABELS = {
+  early: '얼리버드 · 월 49,000원',
+  regular: '정규 멤버십 · 월 89,000원',
+  m6: '6개월 이용권 · 373,800원',
+  y1: '1년 이용권 · 640,800원',
+  lifetime: '평생 이용권 · 1,800,000원',
 };
 
-export default function PaymentCheckoutModal({ onClose }) {
+// plan: early | regular | m6 | y1 | lifetime
+export default function PaymentCheckoutModal({ onClose, plan = 'regular' }) {
+  const { user } = useAuth();
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [showRefundDetail, setShowRefundDetail] = useState(false);
+  const [phone, setPhone] = useState(() => localStorage.getItem('mentos_parent_phone') || '');
 
-  // 100원 테스트 상품과 49,000원 상품 결제링크 정의 (상수 분리)
-  const PAYAPP_TEST_100W_LINK = 'https://www.payapp.kr/L/z4ePI1'; // 100원 테스트 시 이 링크에 100원 연동 필요
-  const PAYAPP_PROD_49000_LINK = 'https://www.payapp.kr/L/z4ePI1';
+  const CREATE_URL = import.meta.env.VITE_PAYAPP_CREATE_URL
+    || 'https://trvqgqvwhqvlgqzlsxbu.supabase.co/functions/v1/payapp-create';
 
-  // 100원 테스트 모드 플래그 (true면 100원, false면 49,000원)
-  const IS_TEST_MODE = true; 
-
-  const activePayappLink = IS_TEST_MODE ? PAYAPP_TEST_100W_LINK : PAYAPP_PROD_49000_LINK;
-  const activeAmount = IS_TEST_MODE ? '100' : '49000';
-
-  const handlePayment = () => {
+  const handlePayment = async () => {
+    if (!user?.id) {
+      alert('로그인 후 결제할 수 있습니다.');
+      onClose?.();
+      navigate('/login');
+      return;
+    }
+    const cleanPhone = (phone || '').replace(/\D/g, '');
+    if (!/^01\d{8,9}$/.test(cleanPhone)) {
+      alert('결제 안내를 받을 휴대폰 번호를 정확히 입력해 주세요.');
+      return;
+    }
+    localStorage.setItem('mentos_parent_phone', cleanPhone);
     setLoading(true);
     try {
-      // 결제 성공 후 멘토스 OS /success로 자동 복귀하여 premium=true, paid_at 자동 설정하도록 returnurl을 동적으로 붙여 띄움
-      const returnUrl = encodeURIComponent(`${window.location.origin}/success?payapp_success=true&amount=${activeAmount}&orderId=payapp_${Date.now()}`);
-      const checkoutUrl = `${activePayappLink}?returnurl=${returnUrl}`;
-      
-      window.open(checkoutUrl, '_blank');
-      onClose();
+      const orderId = `${Date.now()}_${Math.floor(Math.random() * 1e6)}`;
+      const res = await fetch(CREATE_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId: user.id, phone: cleanPhone, orderId, plan }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.payurl) throw new Error(data.error || '결제 요청에 실패했습니다.');
+      // PayApp 결제 페이지로 이동 (결제완료 시 feedback 웹훅이 프리미엄 활성화)
+      window.location.href = data.payurl;
     } catch (err) {
-      console.error('[PAYAPP_PAYMENT_ERROR]', err);
-      alert(`결제창 호출에 실패했습니다: ${err.message}`);
-    } finally {
+      console.error('[PAYAPP_CREATE_ERROR]', err);
+      alert(`결제창 호출 실패: ${err.message}`);
       setLoading(false);
     }
   };
@@ -198,6 +207,20 @@ export default function PaymentCheckoutModal({ onClose }) {
               3. <strong>주의 사항</strong>: 무단 공유, 다중 접속, 부정 이용 행위 적발 시 환불 규정 예외 처리 및 계정이 강제 해지될 수 있습니다.
             </div>
           )}
+        </div>
+
+        {/* 선택 요금제 + 휴대폰 입력 */}
+        <div style={{ background: 'rgba(139,92,246,0.08)', border: '1px solid rgba(139,92,246,0.25)', borderRadius: '14px', padding: '0.9rem 1rem', marginBottom: '1rem' }}>
+          <div style={{ fontSize: '0.78rem', color: '#a78bfa', fontWeight: 700, marginBottom: '4px' }}>선택한 요금제</div>
+          <div style={{ fontSize: '1rem', color: '#fff', fontWeight: 800, marginBottom: '0.8rem' }}>{PLAN_LABELS[plan] || PLAN_LABELS.regular}</div>
+          <input
+            type="tel"
+            inputMode="numeric"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            placeholder="결제 안내받을 휴대폰 번호 (예: 01012345678)"
+            style={{ width: '100%', boxSizing: 'border-box', padding: '0.85rem 1rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.15)', background: 'rgba(0,0,0,0.25)', color: '#fff', fontSize: '0.95rem', outline: 'none' }}
+          />
         </div>
 
         {/* Payment Button */}
