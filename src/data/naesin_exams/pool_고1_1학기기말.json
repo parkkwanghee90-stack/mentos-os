@@ -1,0 +1,2874 @@
+{
+  "grade": "고1",
+  "term": "1학기 기말",
+  "필수": {
+    "절댓값부등식": [
+      {
+        "id": "N0001",
+        "unit": "절댓값부등식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "$x$에 대한 부등식 $|x+a| \\le 5$의 해가 $-7 \\le x \\le b$일 때, $a-b$의 값은? (단, $a, b$는 상수이다.)",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0123",
+        "unit": "절댓값부등식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "부등식 $|x+2|-|3x-5| \\ge 1$을 만족시키는 모든 정수 $x$의 값은?",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0258",
+        "unit": "절댓값부등식",
+        "level": "필수",
+        "type": "주관식",
+        "latex": "함수 $y=|2x+1|+|x-2|$ 에 대하여, 직선 $y=k$ 가 그래프와 만나지 않도록 하는 $k$ 의 범위를 구하시오. (단, $k$ 는 상수) [그림]",
+        "answer": null,
+        "answer_verified": false
+      }
+    ],
+    "고차방정식": [
+      {
+        "id": "N0002",
+        "unit": "고차방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "사차방정식 $2x^4 - 10x^3 + 10x^2 + 10x - 12 = 0$의 근으로 옳지 않은 것은?",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0165",
+        "unit": "고차방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "방정식 $x^3 = 1$은 $x^3 - 1 = 0$으로 변형되므로 $(x-1)(x^2+x+1)=0$이다. 서로 다른 두 허근 $w_1, w_2$는 $x^2+x+1=0$의 두 근이므로 근과 계수의 관계에 의해 $w_1+w_2 = -1$, $w_1w_2 = 1$이다. 이제 $\\frac{2(1-w_1)(1-w_2)}{(1+w_1)(1+w_2)}$의 값을 구하면, 분자는 $(1-w_1)(1-w_2) = 1-(w_1+w_2)+w_1w_2 = 1-(-1)+1 = 3$이다. 분모는 $(1+w_1)(1+w_2) = 1+(w_1+w_2)+w_1w_2 = 1+(-1)+1 = 1$이다. 그러므로 주어진 값은 $2 \\times \\frac{3}{1} = 6$이다. 따라서 정답은 ③ 6이다.",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0182",
+        "unit": "고차방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "삼차방정식 $x^3 - 6x^2 + 12x - 8 = 0$ 의 근은?",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0273",
+        "unit": "고차방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "삼차방정식 $x^3+1=0$의 한 허근을 $\\omega$라 할 때, $\\frac{\\omega^3}{1+\\omega^2}$의 값은?",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0274",
+        "unit": "고차방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "계수가 실수인 삼차방정식 $x^3+ax^2+x+b=0$의 한 허근이 $1-2i$일 때, $a+b$의 값은? (단, $a, b$는 실수이다.)",
+        "answer": "3",
+        "answer_verified": false
+      }
+    ],
+    "경우의수": [
+      {
+        "id": "N0003",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "남학생 3명, 여학생 4명 중 회장 1명, 부회장 1명을 뽑는 경우의 수는?",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0010",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "다음은 어느 아이스크림 가게의 주문 방법을 나타낸 것이다. 사이즈와 시럽은 필수로 $1$가지를 선택해야 하며 토핑은 최대 $2$개까지 추가할 수 있을 때, 아이스크림을 주문할 수 있는 모든 경우의 수는? [그림]",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0029",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "6개의 문자 $F, L, O, W, E, R$이 각각 하나씩 적힌 6장의 카드를 일렬로 나열하려고 한다. $O$와 $E$ 사이에 1개의 문자만 있는 경우의 수는?",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0045",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "$_5P_3 + _6C_2 - 4!$의 값은?",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0048",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "서로 다른 빵 7종류와 서로 다른 음료 6종류가 있는 가게에서 빵 3종류와 음료 3종류를 주문하는 경우의 수는?",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0049",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "$5880$의 양의 약수 중 짝수의 개수는?",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0051",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "서로 다른 두 개의 주사위를 동시에 던져서 나오는 두 눈의 수의 합이 $12$의 약수가 되는 경우의 수는?",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0069",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "$_4P_2 - _4C_2$의 값은?",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0073",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "전체 8명 중에서 $A$와 $B$를 포함해 대표 3명을 뽑는 다. $A$는 뽑히지 않고 $B$는 반드시 뽑혀야 하므로, 먼저 $B$를 대표로 정한다. 이제 $A$와 $B$를 제외한 나머지 6명 중에서 2명을 뽑으면 된다. 따라서 경우의 수는 $_6C_2 = \\frac{6 \\times 5}{2 \\times 1} = 15$이다. 따라서 정답은 ② 15이다.",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0074",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "1440을 소인수분해하면 $1440 = 144 \\times 10 = (2^4 \\times 3^2) \\times (2 \\times 5) = 2^5 \\times 3^2 \\times 5^1$이다. 1440의 약수는 $2^a \\times 3^b \\times 5^c$ 꼴로 나타낼 수 있으며, 이때 $a$는 0부터 5, $b$는 0부터 2, $c$는 0부터 1 사이의 정수이다. 짝수인 약수는 2가 적어도 1개 포함되어야 하므로 $a \\ge 1$이어야 한다. $a$의 경우의 수는 1, 2, 3, 4, 5로 5가지이다. $b$의 경우의 수는 0, 1, 2로 3가지이다. $c$의 경우의 수는 0, 1로 2가지이다. 따라서 짝수인 약수의 개수는 $5 \\times 3 \\times 2 = 30$이다. 따라서 정답은 ④ 30이다.",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0091",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "두 자리 자연수 중에서 십의 자리의 숫자는 짝수이고, 일의 자리의 숫자는 홀수인 것의 개수는?",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0102",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "엘리베이터는 1층에서 출발하여 8층까지 올라가므로, 사람들이 내릴 수 있는 층은 2층부터 8층까지 총 7개 층이다. 5명이 모두 서로 다른 층에서 1명씩 내리므로, 7개 층 중 5개 층을 차례대로 정하는 경우의 수를 구하면 된다. 이는 7개 층에서 5개 층을 순서 있게 고르는 순열의 수이므로 $_7P_5$이다. $_7P_5 = 7 \\times 6 \\times 5 \\times 4 \\times 3 = 2520$이다. 따라서 정답은 ② 2520이다.",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0111",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "$_7C_2 + _5P_3$ 의 값은?",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0112",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "상자 속에 1부터 9까지 숫자가 각각 하나씩 적힌 9개의 공이 들어 있다. 이 상자 속에서 한 개의 공을 꺼낼 때, 짝수 또는 5의 약수가 나오는 경우의 수는?",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0117",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "등식 $22C_{2r-3} = 22C_{-2r+4}$를 만족시키는 모든 자연수 $r$의 값의 합은?",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0138",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "$_5P_3 + _4C_2$의 값은?",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0139",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "$180$의 약수의 개수는?",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0140",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "축구 선수 $5$명이 승부차기 순서를 정하는 경우의 수는?",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0157",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "서술형",
+        "latex": "숫자 $1, 2, 3, 4, 5$ 중에서 서로 다른 $3$개를 뽑아 세 자리의 자연수를 만들 때, $6$의 배수의 개수를 구하고 풀이 과정을 논술하시오.",
+        "answer": "8개",
+        "answer_verified": false
+      },
+      {
+        "id": "N0179",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "서로 다른 축구공 3개와 서로 다른 야구공 4개 중에서 한 개를 고르는 경우의 수는?",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0203",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "전체 10명 중에서 3명을 뽑는 경우의 수에서 남학생만 3명을 뽑는 경우와 여학생만 3명을 뽑는 경우를 빼면 된다. 전체 3명을 뽑는 경우의 수는 $_{10}C_3 = 120$이다. 남학생만 3명을 뽑는 경우의 수는 $_6C_3 = 20$이다. 여학생만 3명을 뽑는 경우의 수는 $_4C_3 = 4$이다. 남학생과 여학생이 모두 포함되는 경우의 수는 $120 - 20 - 4 = 96$이다. 남학생과 여학생이 모두 포함되도록 3명을 뽑는 경우의 수를 구하시오.",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0205",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "$225$의 양의 약수 중 $15$의 배수인 것의 개수는?",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0207",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "남학생 4명과 여학생 3명은 모두 서로 다른 사람으로 본다. 먼저 남학생 4명을 일렬로 나열하는 방법의 수는 $4! = 24$이다. 남학생 4명을 세우면 여학생이 들어갈 수 있는 자리는 양 끝과 남학생 사이를 포함하여 모두 5곳이다. 여학생 3명 중 어떤 2명도 서로 이웃하지 않으려면 이 5곳 중 서로 다른 3곳을 골라 한 자리마다 한 명씩 들어가야 한다. 자리를 고르는 방법의 수는 $_5C_3 = 10$이고, 그 자리에 여학생 3명을 배열하는 방법의 수는 $3! = 6$이다. 전체 경우의 수는 $4! \\times _5C_3 \\times 3! = 24 \\times 10 \\times 6 = 1440$이다.",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0211",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "$n \\ge 7$인 모든 자연수 $n$에 대하여 $_nC_5 = _{n-2}C_5 + k \\cdot _{n-2}C_4 + _{n-2}C_3$일 때, 상수 $k$의 값은?",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0215",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "서로 같은 주사위 2개를 던지고 나온 눈의 결과는 순서를 구별하지 않는다.6의 약수는 $1, 2, 3, 6$이므로 모두 $4$개이다.6의 약수가 아닌 눈은 $4, 5$이므로 모두 $2$개이다.서로 같은 주사위 $2$개의 전체 경우의 수는 중복조합으로 $_6H_2 = \\binom{6+2-1}{2} = \\binom{7}{2} = 21$이다.적어도 하나는 $6$의 약수의 눈이 나오는 경우의 수는 여사건을 이용하여 구한다.여사건은 두 주사위 모두 $6$의 약수가 아닌 눈이 나오는 경우이다.$4, 5$만으로 서로 같은 주사위 $2$개의 경우의 수는 $(4, 4), (4, 5), (5, 5)$의 $3$가지이다.원하는 경우의 수는 $21 - 3 = 18$이다.따라서 정답은 ③ $18$ 이다.",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0243",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "주관식",
+        "latex": "서로 다른 6개에서 순서에 관계없이 1개 뽑아 짝짓는다고. $C_1=6$이다. 12개",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0247",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "주관식",
+        "latex": "세 자리 자연수를 기준으로 경우를 나누면 1) $67\\bigcirc\\bigcirc$, $68\\bigcirc\\bigcirc$일 때 나머지 6개 숫자 중에서 2자리 에 나열하면 $P(6,2)$ 2) $69\\bigcirc\\bigcirc$, $8\\bigcirc\\bigcirc\\bigcirc$일 때 나머지 7개 숫자 중에서 3자리에 나열한다. $P(7,3)$ 1) $48$에서 자연수의 개수는 $6 \\cdot 5 \\cdot 2 + 7 \\cdot 6 \\cdot 5 \\cdot 2 = 60 + 420 = 480$이다.",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0277",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "학생 A, B를 포함한 육상 선수 7명 중에서 3명을 선발하여 계주 순서를 정하려고 한다. 학생 A, B 중에서 한 사람만 선발하여 계주 순서를 정하는 경우의 수는? (1) 30 (2) 90 (3) 120 (4) 240 (5) 360",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0281",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "앞좌석 3개, 뒷좌석 3개 있는 6인승에 아버지와 어머니를 포함한 가족 6명이 탈 때, 아버지와 어머니 중에서 한 사람은 높이규정의 운전석에 앉고 나머지 5개의 좌석에 앉는 경우의 수는?",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0294",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "서로 다른 두 개의 주사위를 동시에 던질 때, 나온 두 눈의 수의 합이 5의 배수인 경우의 수는?",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0298",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "등식 $_{12}C_r = {}_{12}C_{2r}$을 만족시키는 모든 자연수 $r$의 값의 합은? [1.2점] (1) 1 (2) 2 (3) 3 (4) 4 (5) 5",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0309",
+        "unit": "경우의수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "다음은 $n$ 이 자연수일 때, $10 \\times 9 = 90$ 이고, $10P_2 = 10 \\times 9 = 720$ 이다. \\\\ 주어진 등식의 좌변은 $6 \\times 45 = 720 + 270 = 720 = 990$ 이다. \\\\ 등식의 우변은 $6 \\times C_2 = 6 \\times \\frac{n(n-1)}{2} = n(n-1)(n-2)$ 이다. \\\\ 따라서 $n(n-1)(n-2)=990$ 이고, $990 = 11 \\times 10 \\times 9$ 이므로 자연수 $n$ 의 값은 $11$ 이다.",
+        "answer": "11",
+        "answer_verified": false
+      }
+    ],
+    "행렬": [
+      {
+        "id": "N0005",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "두 행렬 $A = \\begin{pmatrix} 2 & a-2 \\\\ 1 & 0 \\end{pmatrix}$, $B = \\begin{pmatrix} 2 & 5 \\\\ -b+3 & 0 \\end{pmatrix}$에 대하여 $A=B$일 때, $a+b$의 값은? (단, $a, b$는 상수이다.)",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0008",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "행렬 $A, B, C$의 크기를 각각 $m \\times n, n \\times p, p \\times q$라고 하자.곱 $ABC$가 정의되려면 $A$와 $B$의 안쪽 차원, $B$와 $C$의 안쪽 차원이 각각 같아야 하므로 $A$의 열 수와 $B$의 행 수가 같고, $B$의 열 수와 $C$의 행 수가 같아야 한다.또한 $ABC$의 크기는 맨 앞 행렬 $A$의 행 수와 맨 뒤 행렬 $C$의 열 수로 정해지므로 $ABC$는 $m \\times q$ 행렬이다.문제에서 $ABC$가 $2 \\times 1$ 행렬이므로 $m=2, q=1$이다.각 행렬의 행과 열의 개수가 모두 $2$ 이하이므로 $n, p$는 각각 $1$ 또는 $2$이다.따라서 가능한 크기는 다음과 같다.$A: 2 \\times 1, B: 1 \\times 1, C: 1 \\times 1$$A: 2 \\times 1, B: 1 \\times 2, C: 2 \\times 1$$A: 2 \\times 2, B: 2 \\times 1, C: 1 \\times 1$$A: 2 \\times 2, B: 2 \\times 2, C: 2 \\times 1$이렇게 경우의 수는 모두 $4$가지이다.따라서 정답은 ④ 4이다.",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0025",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "A를 2차 정사각행렬이라 하자. A의 $(i, j)$ 성분 $a_{ij}$를 $a_{ij} = (i \\times j) + 2 \\quad (i=1, 2, j=1, 2)$라 하자. 행렬 A의 모든 성분의 합은?",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0046",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "$3 \\times 2$ 행렬 $A$의 $(i,j)$성분 $a_{ij}$를 $a_{ij} = (i-j)^2 (i=1,2,3, j=1,2)$이라 할 때, 행렬 $A$의 모든 성분의 합은?",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0052",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "두 이차 정사각행렬 $A=\\begin{pmatrix} k & -1 \\\\ -2 & 1 \\end{pmatrix}$에 대하여 $A^2$의 모든 성분의 합이 $6$이 되도록 하는 모든 실수 $k$의 값은?",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0053",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "두 이차 정사각행렬 $A, B$에 대하여 $3A+B = \\begin{pmatrix} 9 & 8 \\\\ 5 & 7 \\end{pmatrix}, A-2B = \\begin{pmatrix} -4 & -2 \\\\ 4 & -7 \\end{pmatrix}$일 때 행렬 $A+B$의 모든 성분의 합은?",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0070",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "행렬 $A = \\begin{pmatrix} x & 0 \\\\ y & -2 \\end{pmatrix}$에 대하여 $A+2E=O$를 만족시킬 때, $x+y$의 값은?",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0090",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "행렬 $\\begin{pmatrix} 4 & 2 \\\\ -3 & -1 \\\\ 0 & 1 \\end{pmatrix}$에 대하여 $(1,1)$성분을 $a$, $(2,2)$성분을 $b$, $(3,2)$성분을 $c$라 할 때, $a+b-c$의 값은?",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0095",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "이차 정사각행렬 $A$에 대하여 $A\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix} = \\begin{pmatrix} 4 \\\\ -1 \\end{pmatrix}$, $A\\begin{pmatrix} 2 \\\\ -1 \\end{pmatrix} = \\begin{pmatrix} 2 \\\\ 0 \\end{pmatrix}$일 때, $A\\begin{pmatrix} -3 \\\\ 1 \\end{pmatrix}$의 모든 성분의 곱은?",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0100",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "행렬의 크기를 먼저 확인한다. $A = \\begin{pmatrix} -2 \\\\ 4 \\end{pmatrix}$는 2행 1열 행렬, 즉 $2 \\times 1$ 행렬이다. $B = \\begin{pmatrix} -3 & 1 \\\\ 2 & 5 \\end{pmatrix}$는 2행 2열 행렬, 즉 $2 \\times 2$ 행렬이다. 행렬의 곱은 앞 행렬의 열의 수와 뒤 행렬의 행의 수가 같아야 정의되고, 행렬의 덧셈과 뺄셈은 두 행렬의 크기가 같아야 정의된다. ㄱ. $AB$는 $A$의 열 수가 1, $B$의 행 수가 2이므로 정의되지 않는다. ㄴ. $BA$는 $B$의 열 수가 2, $A$의 행 수가 2이므로 정의된다. 결과는 $2 \\times 1$ 행렬이다. ㄷ. $AB+B$는 $AB$가 정의되지 않으므로 정의되지 않는다. ㄹ. $BA-A$는 $BA$와 $A$의 크기가 모두 $2 \\times 1$이므로 정의된다. 따라서 정답은 ④ ㄴ, ㄹ 이다.",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0108",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "주관식",
+        "latex": "A, B는 이차 정사각행렬이므로 둘 다 $2 \\times 2$ 행렬이다. 따라서 $i, j$는 각각 $1$ 또는 $2$이다. 행렬 $2B - A$의 $(i, j)$ 성분이 $5a_{ij}$이므로 $2b_{ij} - a_{ij} = 5a_{ij}$이다. 이를 정리하면 $2b_{ij} = 6a_{ij}$이고, 따라서 $b_{ij} = 3a_{ij}$이다. 즉, 행렬 $B$의 모든 성분은 행렬 $A$의 대응하는 성분의 $3$배이다. 이제 행렬 $A$의 각 성분을 구하면 다음과 같다. $a_{11}: i = 1, j = 1$이고 $1 \\ge 1$이므로 $a_{11} = 2 \\times 1^2 - 1 = 1$이다. $a_{12}: i = 1, j = 2$이고 $1 < 2$이므로 $a_{12} = 3 + 2 = 5$이다. $a_{21}: i = 2, j = 1$이고 $2 \\ge 1$이므로 $a_{21} = 2 \\times 2^2 - 1 = 8 - 1 = 7$이다. $a_{22}: i = 2, j = 2$이고 $2 \\ge 2$이므로 $a_{22} = 2 \\times 2^2 - 1 = 8 - 1 = 7$이다. 따라서 행렬 $A$의 모든 성분의 합은 $1 + 5 + 7 + 7 = 20$이다. 행렬 $B$의 모든 성분의 합은 $3 \\times 20 = 60$이다. 따라서 정답은 $60$이다.",
+        "answer": "60",
+        "answer_verified": false
+      },
+      {
+        "id": "N0110",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "행렬 $A = \\begin{pmatrix} 1 & -1 \\\\ a & 3 \\end{pmatrix}, B = \\begin{pmatrix} 3 & 1 \\\\ 2 & 1 \\end{pmatrix}$에 대하여 $AB = BA$가 성립하도록 하는 $a$의 값은? [4점]\\(1) -2\\(2) -1\\(3) 0\\(4) 1\\(5) 2",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0114",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "두 행렬 $A = \\begin{pmatrix} 5 & 8 \\\\ 4 & 3 \\end{pmatrix}$과 $B = \\begin{pmatrix} 0 & 1 \\\\ a & b \\end{pmatrix}$에 대하여 $AB = BA$일 때, $4(a+b)$의 값은?",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0120",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "$3 \\times 2$의 두 행렬 $A, B$에 대하여 행렬 $A$의 $(i,j)$ 성분은 $i^3 - j^2$이고, 행렬 $B - 3A$의 $(i,j)$ 성분은 $2i - j + 3$이다. 이때 행렬 $B$의 $(2,2)$ 성분과 $(3,2)$ 성분의 합은?",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0141",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "두 행렬 $A = \\begin{pmatrix} -2 & 1 \\\\ 1 & 0 \\end{pmatrix}$, $B = \\begin{pmatrix} 3 & -5 \\\\ 1 & -3 \\end{pmatrix}$에 대하여 행렬 $AB$의 모든 성분의 합은?",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0143",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "다음 등식을 만족시키는 실수 $x, y$에 대하여 $x+y$의 값은? $$\\begin{pmatrix} 3 & -2 \\\\ -4 & x \\end{pmatrix} = \\begin{pmatrix} y+5 & -2 \\\\ -4 & y-5 \\end{pmatrix}$$",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0145",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "두 행렬 $A = \\begin{pmatrix} 3 & 1 \\\\ 2 & 4 \\end{pmatrix}$, $B = \\begin{pmatrix} -1 & 2 \\\\ 5 & 3 \\end{pmatrix}$에 대하여 $3A + X = B$를 만족시키는 행렬 $X$는 $X = \\begin{pmatrix} a & -1 \\\\ -1 & b \\end{pmatrix}$이다. 두 상수 $a, b$에 대하여 $a - b$의 값은?",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0155",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "서술형",
+        "latex": "두 행렬 $A = \\begin{pmatrix} 1 & 2 \\\\ 2 & 3 \\end{pmatrix}, B = \\begin{pmatrix} 4 & 4 \\\\ 4 & 8 \\end{pmatrix}$에 대하여 등식 $A^2 = pB + qE$를 만족시키는 실수 $p, q$의 값을 구하고 풀이 과정을 논술하시오.",
+        "answer": "p=2, q=-3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0169",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "$A$와 $B$를 2차 정사각형렬이라 하자. 연산 $A \\cdot B$를 정의할 때, 보기에서 옳은 것만을 있는 대로 고른 것은?(단, $E$는 단위행렬)ㄱ. $(A+B)^2 = A^2 + 2AB + B^2$ㄴ. $(A+E)(A-E) = A^2 - E$ㄷ. $AB = O$이면 $A=O$ 또는 $B=O$① ㄱ, ㄷ② ㄴ, ㄷ③ ㄱ, ㄴ, ㄷ",
+        "answer": "풀이참조",
+        "answer_verified": false
+      },
+      {
+        "id": "N0180",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "행렬 $\\begin{pmatrix} 4 & 2 \\\\ 5 & 3 \\end{pmatrix}$ 의 $(1,2)$ 성분은?",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0184",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "행렬 $A = \\begin{pmatrix} 2 \\\\ 6 \\end{pmatrix}$, $B = \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}$, $C = \\begin{pmatrix} 1 & 2 \\end{pmatrix}$ 에 대하여 다음 보기 중 옳은 것을 모두 고르시오. ㄱ. $A$와 $B$는 같은 꼴의 행렬이다. ㄴ. $BC$는 정의된다. 실제로 $BC = \\begin{pmatrix} 1 & 2 \\\\ 2 & 4 \\end{pmatrix}$ 이다. ㄷ. $aA+bB = \\begin{pmatrix} 2 \\\\ 99 \\end{pmatrix}$ 이면 $a+b=6$ 이다.",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0200",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "행렬 $A = (1,2)$이고, 행렬 $B = \\begin{pmatrix} -1 \\\\ 1 \\end{pmatrix}$일 때, $AB$를 구하시오.",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0217",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "다음 중 식 $A^2 - A - 2E = O$를 만족하는 행렬 $A$는? (단, $E$는 단위행렬, $O$는 영행렬) [그림]",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0233",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "$A$와 $B$를 2차 정사각형렬이라 하자. 연산 $A \\cdot B$를 정의할 때, 보기에서 옳은 것만을 있는 대로 고른 것은?(단, $E$는 단위행렬)ㄱ. $(A+B)^2 = A^2 + 2AB + B^2$ㄴ. $(A+E)(A-E) = A^2 - E$ㄷ. $AB = O$이면 $A=O$ 또는 $B=O$① ㄱ, ㄷ② ㄴ, ㄷ③ ㄱ, ㄴ, ㄷ",
+        "answer": "풀이참조",
+        "answer_verified": false
+      },
+      {
+        "id": "N0252",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "주관식",
+        "latex": "두 행렬 $A$와 $B$에 대하여 $A+B=\\begin{pmatrix} 2 & 3 \\\\ 2 & 3 \\end{pmatrix}$, $A-B=\\begin{pmatrix} 2 & -1 \\\\ 0 & 1 \\end{pmatrix}$일 때, 행렬 $A$와 $B$를 구하고 $A^2-B^2$을 계산하시오. $A=\\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}$, $B=\\begin{pmatrix} 0 & 2 \\\\ 1 & 1 \\end{pmatrix}$ $A^2-B^2 = \\begin{pmatrix} 4 & 4 \\\\ 4 & 4 \\end{pmatrix} - \\begin{pmatrix} 2 & 2 \\\\ 2 & 2 \\end{pmatrix} = \\begin{pmatrix} 2 & 2 \\\\ 2 & 2 \\end{pmatrix}$이다. $k=2$이다. 따라서 준식은 $20 \\cdot 7 = 140$이다.",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0257",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "주관식",
+        "latex": "행렬",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0259",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "세 행렬 $A=\\begin{pmatrix} 0 & 0 \\\\ 0 & 1 \\end{pmatrix}$, $B=\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$, $A+B=E$ 이고 $A^2=A$ 일 때, 행렬 $A$ 와 $B$ 에 대한 다음 설명 중 옳은 것을 모두 고르시오. (단, $E$ 는 단위행렬이다.) ㄱ. $(A+B)^2=A^2+B^2$ ㄴ. $A^2B=B^2A$ ㄷ. $AB=BA$",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0276",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "행렬 $A=\\begin{pmatrix} 2 & 5 \\\\ 4 & -1 \\end{pmatrix}$에 대하여 옳은 것만을 <보기>에서 있는 대로 고른 것은? [보기]ㄱ. 제 2행은 $(4-1)$이다.ㄴ. 행렬 $A$의 $(3,2)$성분은 $1$이다.ㄷ. 제 3열의 성분의 합은 $14$이다.",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0308",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "행렬 $\\begin{pmatrix} 3 & 5 \\\\ 2 & 1 \\end{pmatrix} + k \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$ 로 놓으면 \\\\ $\\begin{pmatrix} 2k-k_1 \\\\ -k_1+k_2 \\end{pmatrix}$",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0311",
+        "unit": "행렬",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "첫 번째 글자를 결정하는 행렬 $AA$ 를 구하면 \\\\ $AM = \\begin{pmatrix} 3 & 9 & 14 \\\\ 15 & 20 & 17 \\\\ 10 & 2 & 6 \\end{pmatrix} \\begin{pmatrix} 6 \\\\ 10 \\\\ 5 \\end{pmatrix}$ \\\\ 이때 성분 $5,15,2$ 에 대응하는 한글 코드는 각각 'ㅁ', 'ㅣ', 'ㄴ' 이므로 첫 번째 글자는 '만'이다. \\\\ 두 번째 글자를 결정하는 행렬 $AA$ 를 구하면 \\\\ $AN = \\begin{pmatrix} 5 & 3 & 9 \\\\ 14 & 20 & 19 \\\\ 2 & 17 & 10 \\end{pmatrix} \\begin{pmatrix} 6 \\\\ 10 \\\\ 5 \\end{pmatrix}$ \\\\ 이때 성분 $9,17,5$ 에 대응하는 한글 코드는 각각 'ㅈ', 'ㅏ', 'ㅂ' 이므로 두 번째 글자는 '정'이다. \\\\ 따라서 구하는 두 글자는 '만정'이다.",
+        "answer": "만점",
+        "answer_verified": false
+      }
+    ],
+    "연립방정식": [
+      {
+        "id": "N0006",
+        "unit": "연립방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "연립방정식 $\\begin{cases} x-y=3 \\\\ x^2+2y^2=9 \\end{cases}$의 해를 $x=\\alpha, y=\\beta$라 할 때, $\\alpha\\beta$의 값은? (단, $\\alpha, \\beta$는 0이 아닌 정수이다.)",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0009",
+        "unit": "연립방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "십의 자리 숫자를 $x$, 일의 자리 숫자를 $y$라고 하자. 그러면 처음 수는 $10x+y$, 자리를 바꾼 수는 $10y+x$이다.자리를 바꾼 수가 처음 수보다 $9$만큼 작으므로 $10y+x = 10x+y-9$이다.정리하면 $9(y-x) = -9$이므로 $x-y=1$이다.또 각 자릿수의 곱의 차가 $7$이므로 $x^2-y^2=7$이다.이를 인수분해하면 $(x-y)(x+y)=7$이다.앞에서 $x-y=1$이므로 $1 \\times (x+y)=7$에서 $x+y=7$이다.따라서 정답은 ③ 7이다.",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0027",
+        "unit": "연립방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "연립방정식 $$\\begin{cases} x-y=3 \\\\ x^2 - 5xy - y^2 = 13 \\end{cases}$$을 만족시키는 정수 $x, y$에 대하여 $2x + y$의 값은?",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0087",
+        "unit": "연립방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "주어진 연립방정식은 다음과 같다. $$\\begin{cases} x^2 - xy - 6y^2 = 0 \\\\ x^2 + 2xy + 3y^2 = 18 \\end{cases}$$ 먼저 첫째 식을 인수분해하면 $x^2 - xy - 6y^2 = (x-3y)(x+2y) = 0$이므로, $x = 3y$ 또는 $x = -2y$이다. 1) $x = 3y$인 경우 이를 둘째 식에 대입하면 $(3y)^2 + 2(3y)(y) + 3y^2 = 18$이므로 $9y^2 + 6y^2 + 3y^2 = 18$이다. 따라서 $18y^2 = 18$, $y^2 = 1$이므로 $y = 1$ 또는 $y = -1$이다. $y = 1$일 때 $x = 3$이므로 $x+y = 4$이다. $y = -1$일 때 $x = -3$이므로 $x+y = -4$이다. 2) $x = -2y$인 경우 이를 둘째 식에 대입하면 $(-2y)^2 + 2(-2y)(y) + 3y^2 = 18$이므로 $4y^2 - 4y^2 + 3y^2 = 18$이다. 따라서 $3y^2 = 18$, $y^2 = 6$이므로 $y = \\sqrt{6}$ 또는 $y = -\\sqrt{6}$이다. $y = \\sqrt{6}$일 때 $x = -2\\sqrt{6}$이므로 $x+y = -\\sqrt{6}$이다. $y = -\\sqrt{6}$일 때 $x = 2\\sqrt{6}$이므로 $x+y = \\sqrt{6}$이다. 가능한 $x+y$의 값은 $4, -4, -\\sqrt{6}, \\sqrt{6}$이며, 이 중 최솟값은 $-4$이다. 따라서 정답은 $-4$이다.",
+        "answer": "-4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0094",
+        "unit": "연립방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "연립방정식 $\\begin{cases} 2x^2 - xy + y^2 = 16 \\\\ 6x^2 - 5xy + y^2 = 0 \\end{cases}$의 해를 $\\begin{cases} x = \\alpha \\\\ y = \\beta \\end{cases}$라고 할 때, $\\alpha^2 + \\beta^2$의 값이 될 수 있는 것은?",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0116",
+        "unit": "연립방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "연립방정식 $\\begin{cases} 3x^2 - 2xy - y^2 = 0 \\\\ x^2 + y^2 = 10 \\end{cases}$의 해가 $\\begin{cases} x = \\alpha \\\\ y = \\beta \\end{cases}$일 때, $\\alpha\\beta$의 최댓값은?",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0144",
+        "unit": "연립방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "연립방정식 $\\begin{cases} x-y=2 \\\\ x^2+y^2=4 \\end{cases}$의 해를 $x=\\alpha, y=\\beta$라 할 때, $\\alpha+\\beta$의 최댓값은?",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0161",
+        "unit": "연립방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "연립방정식 $\\begin{cases} x^2 - xy - 2y^2 = 0 \\\\ x^2 + 2xy + 4y^2 = 12 \\end{cases}$의 한 근을 $x = \\alpha, y = \\beta$라고 할 때, $3\\alpha + 2\\beta$의 최댓값은?",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0183",
+        "unit": "연립방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "주어진 연립방정식 $x^2 - 5xy + 4y^2 = 0$, $x^2 - xy + y^2 = 13$ 이다. 이때 이 연립방정식의 해 $(x,y)$의 개수를 구하시오.",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0225",
+        "unit": "연립방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "연립방정식 $\\begin{cases} x^2 - xy - 2y^2 = 0 \\\\ x^2 + 2xy + 4y^2 = 12 \\end{cases}$의 한 근을 $x = \\alpha, y = \\beta$라고 할 때, $3\\alpha + 2\\beta$의 최댓값은?",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0293",
+        "unit": "연립방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "연립방정식 $\\begin{cases} x-y=1 \\\\ x^2-2y^2=2 \\end{cases}$ 의 해를 $x=\\alpha$, $y=\\beta$ 라 할 때, $\\alpha+\\beta$ 의 최솟값은?",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0305",
+        "unit": "연립방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "13. 정답 ③\\n풍부가 뿔의 절반을 농부에게 주었을 때, 풍부와 농부의 뿔의 양은",
+        "answer": "4",
+        "answer_verified": false
+      }
+    ],
+    "일차방정식": [
+      {
+        "id": "N0014",
+        "unit": "일차방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "학생 수 $n$명, 텐트 수 $t$개라고 하자. 한 텐트에 4명씩 들어가면 10명의 학생이 남으므로, 학생 수는 $n = 4t + 10$이다. 한 텐트에 5명씩 들어가면 4개의 텐트가 남으므로, 실제로 사용한 텐트 수는 $t - 4$개이고 학생 수는 $n = 5(t - 4)$이다. 두 식을 같게 두면 $4t + 10 = 5t - 20$이고, 이를 풀면 $4t + 10 = 5t - 20$, $t = 30$이다. 따라서 정답은 ① 30이다.",
+        "answer": "1",
+        "answer_verified": false
+      }
+    ],
+    "이차방정식": [
+      {
+        "id": "N0015",
+        "unit": "이차방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "직사각형 잔디밭의 전체 넓이는 $x(x + 2) = x^2 + 2x$이다. 산책로는 폭이 $1m$인 십자 모양이므로, 가로 산책로의 넓이는 $x$, 세로 산책로의 넓이는 $x + 2$이다. 이때 가운데 겹치는 부분 1을 한 번 빼야 하므로 산책로의 넓이는 $x + (x + 2) - 1 = 2x + 1$이다. 따라서 잔디를 심는 부분의 넓이는 $x(x + 2) - (2x + 1) = x^2 - 1$이다. 잔디를 심는 시간은 $1m^2$당 $x + 3$시간이므로 총 시간은 $(x^2 - 1)(x + 3)$이고, 이것이 192시간이므로 $(x^2 - 1)(x + 3) = 192$이다. $x = 5$일 때 $(x^2 - 1)(x + 3) = (25 - 1) \\times 8 = 24 \\times 8 = 192$가 되어 조건을 만족한다. 따라서 정답은 ⑤ 5이다.",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0093",
+        "unit": "이차방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "한 개의 주사위를 두 번 던져서 첫 번째에 나온 눈의 수를 $a$, 두 번째에 나온 눈의 수를 $b$라고 할 때, $x$에 대한 이차방정식 $x^2 + ax + b = 0$이 실근을 가질 경우의 수는?",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0146",
+        "unit": "이차방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "이차방정식 $x^2 - 4x + a^2 = 0$은 실근을 갖고, 이차방정식 $x^2 - 2ax + 3a + 10 = 0$은 허근을 갖도록 하는 정수 $a$의 개수는?",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0202",
+        "unit": "이차방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "두 그래프의 교점에서는 두 식의 $y$값이 같으므로 $x^2 + ax + b = x + 2$를 만족한다. 이를 정리하면 $x^2 + (a - 1)x + (b - 2) = 0$이다. 이 방정식의 두 근이 $-7, 5$이므로 근과 계수의 관계를 이용한다. 두 근의 합은 $-7 + 5 = -2$이므로 $-(a - 1) = -2$이다. 이를 풀면 $a - 1 = 2$이므로 $a = 3$이다. 또 두 근의 곱은 $(-7) \\cdot 5 = -35$이므로 $b - 2 = -35$이다. 이를 풀면 $b = -33$이다. $a - b$의 값을 구하시오.",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0204",
+        "unit": "이차방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "방정식 $x^2 - 4|x| + k = 0$의 해가 3개일 때, 상수 $k$의 값은?",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0219",
+        "unit": "이차방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "$x$에 대한 이차방정식 $x^2 + ax - 3b = 0$의 서로 다른 두 근을 $\\alpha$와 $\\beta$, $x^2 + (a+4)x + b = 0$의 서로 다른 두 근을 $\\alpha$와 $\\gamma$라 하자. 상수 $a, b$에 대하여 $2\\alpha + \\beta - \\gamma = 0$이 성립할 때, $b-a$의 값은? ① 1 ② 2 ③ 3 ④ 4 ⑤ 5",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0246",
+        "unit": "이차방정식",
+        "level": "필수",
+        "type": "주관식",
+        "latex": "이차방정식 $x^2-2(k-1)x+3k-1=0$에서 중근 또는 허근을 가져야 하므로 판별식 $D/4=(k-1)^2-(3k-1) \\le 0$, $k^2-5k \\le 0$, $0 \\le k \\le 5$가 성립한다. 따라서 최댓값은 $k=5$이다.",
+        "answer": null,
+        "answer_verified": false
+      }
+    ],
+    "방정식": [
+      {
+        "id": "N0024",
+        "unit": "방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "방정식 $x + 2y = 10$을 만족시키는 자연수 $x, y$의 순서쌍 $(x, y)$의 개수는?",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0160",
+        "unit": "방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "방정식 $2x + 4y + z = 14$를 만족시키는 자연수 $x, y, z$의 모든 순서쌍 $(x, y, z)$의 개수는?",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0224",
+        "unit": "방정식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "방정식 $2x + 4y + z = 14$를 만족시키는 자연수 $x, y, z$의 모든 순서쌍 $(x, y, z)$의 개수는?",
+        "answer": "3",
+        "answer_verified": false
+      }
+    ],
+    "이차부등식": [
+      {
+        "id": "N0026",
+        "unit": "이차부등식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "모든 실수 $x$에 대하여 이차부등식 $x^2 - 2ax + 3a + 10 > 0$이 성립하도록 하는 정수 $a$의 개수는?",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0032",
+        "unit": "이차부등식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "이차부등식 $2x^2 + kx \\le 0$을 만족시키는 정수 $x$의 개수가 8이 되도록 하는 정수 $k$의 최댓값을 $M$, 최솟값을 $m$이라 할 때, $M-m$의 값은?",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0047",
+        "unit": "이차부등식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "이차부등식 $x^2 + ax - b < 0$의 해가 $-1 < x < 3$일 때, $a+b$의 값은? (단, $a, b$는 실수이다.)",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0071",
+        "unit": "이차부등식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "이차부등식 $x^2 + 8x + 16 \\le 0$을 만족하는 정수 $x$의 개수는?",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0077",
+        "unit": "이차부등식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "$-3 \\le x \\le 3$에서 $x$에 대한 이차부등식 $x^2 + 4x + 5k - 6 \\le 0$이 항상 성립할 때, 실수 $k$의 최댓값은?",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0122",
+        "unit": "이차부등식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "모든 실수 $x$에 대하여 항상 성립하는 부등식만을 <보기>에서 고른 것은? <보기> ㄱ. $x^2 \\ge 2x - 3$ ㄴ. $-x^2 + 4x \\le 1$ ㄷ. $3x^2 \\ge 2x - 2$ ㄹ. $4x^2 - 4x \\ge 1$",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0137",
+        "unit": "이차부등식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "이차부등식 $x^2 - 6x + 8 < 0$을 만족시키는 정수 $x$의 개수는?",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0172",
+        "unit": "이차부등식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "길이가 $x, x, 12 - 2x$인 세 선분이 주어졌을 때, 이 선분이 삼각형의 세 변이 되도록 하는 실수 $x$의 값의 범위를 구하여라.",
+        "answer": "$3Wlt xWlt 6$",
+        "answer_verified": false
+      },
+      {
+        "id": "N0236",
+        "unit": "이차부등식",
+        "level": "필수",
+        "type": "서술형",
+        "latex": "삼각형이 되기 위해서는 세 변의 길이가 모두 양수이고, 두 변의 합이 나머지 한 변보다 커야 한다. $12 - 2x > 0$이므로 $x < 6$이다. 또한 $x + x > 12 - 2x$이므로 $4x > 12$, $x > 3$이다. 따라서 $x$의 범위는 $3 < x < 6$이다.",
+        "answer": "$3Wlt xWlt 6$",
+        "answer_verified": false
+      },
+      {
+        "id": "N0244",
+        "unit": "이차부등식",
+        "level": "필수",
+        "type": "주관식",
+        "latex": "정의역이 $-5 \\le x \\le 1$, $2x+1<6$이고, 정수 $x$의 개수는 5개이다.",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0245",
+        "unit": "이차부등식",
+        "level": "필수",
+        "type": "주관식",
+        "latex": "정의역이 $x \\ne -1$이고, 두 번에 걸쳐서 $p \\le x < 1$이므로, 연립부등식의 해는 $-1 \\le x < 1$이고, 정수 $x=-1$이 0개이다.",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0275",
+        "unit": "이차부등식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "이차부등식 $-x^2+2(a-3)x-4a \\ge 0$의 해가 존재하지 않도록 하는 정수 $a$의 개수는?",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0291",
+        "unit": "이차부등식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "19 부등식 $|x^2+3x+2|-|x| \\ge \\frac{1}{2}x^2+2$ 의 해와 이차부등식 $x^2+ax+b \\ge 0$ 의 해가 일치한다. 이때 $a+b$ 의 값을 구하는 과정을 논술하시오. (단, $a, b$ 는 상수이다.)",
+        "answer": "8",
+        "answer_verified": false
+      },
+      {
+        "id": "N0297",
+        "unit": "이차부등식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "이차부등식 $x^2-2x-8 \\le 0$을 만족시키는 정수 $x$의 개수는? [1.2점] (1) 4 (2) 5 (3) 6 (4) 7 (5) 8",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0301",
+        "unit": "이차부등식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "9. $2x+5>1$ 에서 $2x>-4$ 이므로 $x>-2$ 이다.\\n$3x+4<n+3$ 에서 $3x<n-1$ 이므로 $x<\\frac{n-1}{3}$ 이다.\\n주어진 연립부등식의 해는 $-2<x<\\frac{n-1}{3}$ 이다.\\n이를 만족하는 정수 $x$ 가 $6$ 개이려면 $x$ 는 $-1,0,1,2,3,4$ 이어야 한다.\\n따라서 $4<\\frac{n-1}{3} \\le 5$ 가 성립해야 한다.\\n각 변에 $3$ 을 곱하면 $12<n-1 \\le 15$ 이다.\\n각 변에 $1$ 을 더하면 $13<n \\le 16$ 이다.\\n이때 자연수 $n$ 의 값은 $14,15,16$ 이다.\\n따라서 모든 자연수 $n$ 의 값의 합은 $14+15+16=45$ 이다.",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0302",
+        "unit": "이차부등식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "10. 정답 ③",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0303",
+        "unit": "이차부등식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "11. 정답 ③\\n부등식 $3x-2|x+a|$ 를 풀면\\n(i) $x+a \\ge 0$ 일 때, 즉 $x \\ge -a$ 일 때\\n$3x-2(x+a) < 4x-2a$ 이므로 $x < 2x-2a$ 이다.\\n$x < 2x-2a$ 이므로 $-x < -2a$ 이므로 $x > 2a$ 이다.\\n(ii) $x+a < 0$ 일 때, 즉 $x < -a$ 일 때\\n$3x-2(-(x+a)) < 4x-2a$ 이므로 $3x+2x+2a < 4x-2a$ 이다.\\n$5x+2a < 4x-2a$ 이므로 $x < -4a$ 이다.\\n연립부등식의 해는 $2<x<\\frac{a+2}{2}$ 이다.\\n이때 해가 $0<x<2$ 이므로 $2a=0$ 에서 $a=2$ 이다.\\n이 값을 $a=2$ 에 대입하면 $2<x<\\frac{2+2}{2}$ 이므로 $2<x<2$ 가 되어 해가 존재하지 않는다.\\n따라서 양수 $a$ 의 값은 $2$ 이다.",
+        "answer": "2",
+        "answer_verified": false
+      }
+    ],
+    "연립부등식": [
+      {
+        "id": "N0028",
+        "unit": "연립부등식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "부등식 $-x+7 \\le 3(x+2)-3 \\le 2(x+4)$의 해가 $a \\le x \\le b$일 때, $a+b$의 값은?",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0050",
+        "unit": "연립부등식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "$x$에 대한 연립부등식 $\\begin{cases} 2x-1 \\le 3x-2 \\\\ |x-2|<3 \\end{cases}$을 만족시키는 정수 $x$의 개수는?",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0113",
+        "unit": "연립부등식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "연립부등식 $5(1-x) < 2x+1 \\le x+4$를 만족시키는 정수 $x$의 개수는?",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0142",
+        "unit": "연립부등식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "연립부등식 $2x+1 < 5x-2 < 18$의 해가 $a < x < b$일 때, 실수 $a, b$에 대하여 $ab$의 값은?",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0296",
+        "unit": "연립부등식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "연립부등식 $4x-1 < 6x+3 \\le 3x+9$ 를 만족시키는 모든 정수 $x$ 의 값의 합은?",
+        "answer": "2",
+        "answer_verified": false
+      }
+    ],
+    "복소수": [
+      {
+        "id": "N0056",
+        "unit": "복소수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "삼차방정식 $x^3=1$의 한 허근을 $\\omega$라 할 때, <보기>에서 옳은 것만을 있는 대로 고른 것은? (단, $\\bar{\\omega}$는 $\\omega$의 켤레복소수이다.)<보기>ㄱ. $(\\omega)^2 + \\frac{1}{\\omega^2} = \\frac{2\\bar{\\omega}}{\\omega}$ㄴ. $(\\omega)^{100} - \\frac{1}{\\omega^{100}} = 0$ㄷ. $\\frac{1}{\\omega} + \\frac{1}{\\omega^2} + \\frac{1}{\\omega^3} + \\dots + \\frac{1}{\\omega^{2024}} + \\frac{1}{\\omega^{2025}} = 0$① ㄱ② ㄴ③ ㄱ, ㄴ④ ㄴ, ㄷ⑤ ㄱ, ㄴ, ㄷ",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0201",
+        "unit": "복소수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "이차방정식 $x^2 + ax + b = 0$의 계수 $a, b$가 모두 실수이므로 한 근이 $1 + 2i$이면 다른 한 근은 켤레복소수인 $1 - 2i$이다. 두 근의 합은 $(1 + 2i) + (1 - 2i) = 2$이므로 근과 계수의 관계에서 $-a = 2$이다. 따라서 $a = -2$이다. 두 근의 곱은 $(1 + 2i)(1 - 2i) = 1 - (2i)^2 = 1 - 4(-1) = 5$이므로 $b = 5$이다. $a + b$의 값을 구하시오.",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0229",
+        "unit": "복소수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "방정식 $x^3 = 1$은 $x^3 - 1 = 0$으로 변형되므로 $(x - 1)(x^2 + x + 1) = 0$이다. 서로 다른 두 허근 $w_1, w_2$는 $x^2 + x + 1 = 0$의 두 근이므로 근과 계수의 관계에 의해 $w_1 + w_2 = -1$, $w_1w_2 = 1$이다. 이제 $\\frac{2(1 - w_1)(1 - w_2)}{(1 + w_1)(1 + w_2)}$의 값을 구하면, 분자는 $(1 - w_1)(1 - w_2) = 1 - (w_1 + w_2) + w_1w_2 = 1 - (-1) + 1 = 3$이다. 분모는 $(1 + w_1)(1 + w_2) = 1 + (w_1 + w_2) + w_1w_2 = 1 + (-1) + 1 = 1$이다. 그러므로 주어진 값은 $2 \\times \\frac{3}{1} = 6$이다. 따라서 정답은 ③ 6이다.",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0249",
+        "unit": "복소수",
+        "level": "필수",
+        "type": "주관식",
+        "latex": "첫 식 $xy=2$를 두 번째 식에 대입하면 $x+y=6$이고, $x,y$는 이차방정식의 근과 계수의 관계에 의해서 $t^2-6t+2=0$의 두 근이므로 $t=3 \\pm \\sqrt{9-2}=3 \\pm \\sqrt{7}$이고, $x$와 $y$는 $3+\\sqrt{11}, 3-\\sqrt{11}$이다. 따라서 준식은 $3+\\sqrt{11}-(3-\\sqrt{11})=2\\sqrt{11}$이다.",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0254",
+        "unit": "복소수",
+        "level": "필수",
+        "type": "주관식",
+        "latex": "인수분해하면 $x^3-1=(x-1)(x^2+x+1)=0$이고, $\\omega$는 $1$에서 $x$는 $1$이므로 $3+\\omega^2$을 가진다. $\\omega^3=1$, $1+\\omega+\\omega^2=0$에서 $1+\\omega=-\\omega^2$, $1+\\omega^2=-\\omega$, $\\omega+\\omega^2=-1$이므로 $\\frac{1}{1+\\omega}+\\frac{1}{1+\\omega^2}+\\frac{1}{\\omega+\\omega^2}$이고, 한주기 뒤는 $-\\frac{1}{\\omega^2}-\\frac{1}{\\omega}-1$이다. 이 때, $20 \\cdot 3 \\cdot 6 \\cdot 2$에서 짝수부터 2항씩 묶으면 3개의 모둠은 각각 $f(20)=20-\\omega-\\omega^2=3 \\cdot 6 = 1+9=10$이다.",
+        "answer": null,
+        "answer_verified": false
+      }
+    ],
+    "피타고라스정리": [
+      {
+        "id": "N0098",
+        "unit": "피타고라스정리",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "아래 그림과 같이 직사각형 $ABCD$ 내부에 선분 $PQ$가 변 $AD$와 평행하게 놓여 있다. $AP = 3$, $BP = 2\\sqrt{5}$이고 선분 $QC$의 길이가 선분 $QD$의 길이보다 $1$만큼 더 길 때, 선분 $QC$의 길이는? [그림]",
+        "answer": "4",
+        "answer_verified": false
+      }
+    ],
+    "부등식": [
+      {
+        "id": "N0181",
+        "unit": "부등식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "부등식 $|2x-1| < 3$ 의 해는?",
+        "answer": "3",
+        "answer_verified": false
+      }
+    ],
+    "다항식": [
+      {
+        "id": "N0212",
+        "unit": "다항식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "다음 그림과 같이 직사각형 $ABCD$는 크기와 모양이 같은 직사각형 모양의 카드 9장을 겹치는 부분 없이 이어 붙여 만든 것이다. 직사각형 $ABCD$의 넓이가 90일 때, 카드 한 장의 둘레의 길이의 값은? [그림]",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0299",
+        "unit": "다항식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "7. 다음 중 $A^2+B^2$ 에 대한 설명으로 옳은 것은? (단, $A=x+y$, $B=x-y$ 이다.)\\n① $(A+B)^2 = A^2+B^2$\\n② $(A-B)^2 = A^2-B^2$\\n③ $A^2+B^2 = (A+B)^2-2AB$\\n④ $A^2+B^2 = (A-B)^2+2AB$\\n⑤ $(A+B)^2 = (A-B)^2+4AB$",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0300",
+        "unit": "다항식",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "8. 첫 번째 식 $x^2-y^2=0$ 을 인수분해하면 $(x-y)(x+y)=0$ 이므로 $y=x$ 또는 $y=-x$ 이다.\\n조건에서 $a>0$, $b>0$ 이므로 $y=x$ 이다.\\n이때 두 번째 식 $4x^2-xy-y^2=0$ 에 대입하면 $4x^2-x^2-x^2=0$, $2x^2=0$, $x=0$ 이다.\\n$x>0$ 이므로 $x=0$ 은 모순이다.\\n따라서 $a=2$, $b=2$ 이므로 $a+b=2+2=4$ 이다.",
+        "answer": "3",
+        "answer_verified": false
+      }
+    ],
+    "함수": [
+      {
+        "id": "N0289",
+        "unit": "함수",
+        "level": "필수",
+        "type": "객관식",
+        "latex": "조건 (가): 어떤 자연수 $p$에 대해 $f(p)$가 5의 배수이므로, $p$의 자릿수 $f$는 5여야 합니다. $f=5$조건 (나): $c \\times d \\times e \\times f = 10$의 배수입니다. $f=5$이므로, $c \\times d \\times e \\times 5$가 10의 배수가 되려면 $c \\times d \\times e$는 짝수여야 합니다. 즉, $c, d, e$ 중 적어도 하나는 짝수여야 합니다. $a, b, c, d, e, f$는 $(1,2,3,4,5,6,7,8,9)$에서 서로 다른 수입니다. $f=5$이므로, $a, b, c, d, e$는 $(1,2,3,4,6,7,8,9)$에서 선택된 5개의 수입니다. 조건 $b<c<d<e$와 $c \\times d \\times e$가 짝수로 나누어떨어진다는 조건을 만족하는 순서쌍 $b$의 값을 기준으로 경우를 나누어 구합니다. $b=2$일 경우: $a=1$이어야 합니다. $(c,d,e)$는 $(3,4,6,7,8,9)$에서 1개를",
+        "answer": "5",
+        "answer_verified": false
+      }
+    ]
+  },
+  "심화": {
+    "다항식": [
+      {
+        "id": "N0004",
+        "unit": "다항식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "다항식 $(a-b+c)(p+q) + (a-b)(l+m-n)$을 전개할 때, 생기는 서로 다른 항의 개수는?",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0036",
+        "unit": "다항식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "실수 $a, b, c$에 대하여 삼차다항식 $P(x) = x^3 + ax^2 + bx + c$가 다음 조건을 만족시킨다.\\(가) $P(x)$의 계수는 모두 다르다.\\(나) $P(x)$의 계수는 회원번호의 각 자리에서 큰 숫자와 0을 사용한다.\\(다) $P(x)$의 계수는 회원번호가 나타내는 수보다 큰 4의 배수이다.\\이때 $a+b+c$의 값은?",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0041",
+        "unit": "다항식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "최고차항의 계수가 음수인 이차다항식 $P(x)$가 모든 실수 $x$에 대하여 $(P(x) + 2x)^2 = (x-a)(x+a)(x^2+7)+16$을 만족시킨다. \\{P(a)\\|^2$의 값을 구하는 과정을 서술하고 답을 쓰시오. (단, $a < 0$)",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0092",
+        "unit": "다항식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "두 다항식 $A = x^3 - x^2 - 4x + 4$, $B = 2x^4 + 3x^3 - 4x^2 - 3x + 2$에 대하여 $|A| + |B| = 0$을 만족하는 모든 실수 $x$의 값의 합은?",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0101",
+        "unit": "다항식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "신관, 운동장, 체육관이 모두 정사각형이므로 각 한 변의 길이를 차례로 $a, b, c$라 하자. 조건 (가)에서 신관과 체육관의 넓이가 같으므로 $a^2 = c^2$이다. 길이는 양수이므로 $a=c$이다. 또 체육관의 넓이는 운동장의 넓이보다 작으므로 $c^2 < b^2$이고, $c=b$는 될 수 없으므로 $a=c<b$이다. 그림에서 도로의 가로 방향 길이의 합은 $(a+b+c)+(a+b+c)+(b+c-2a+3b+4c)$이다. 세로 방향 길이의 합은 $a+(a+b)+(a+b+c)+(a+b+c)=4a+3b+2c$이다. 그러므로 모든 도로 길이의 합은 $(2a+3b+4c)+(4a+3b+2c)=6(a+b+c)$이다. 조건 (나)에 의해 $6(a+b+c)=78$이므로 $a+b+c=13$이다. $a=c$이므로 $2a+b=13$이다. 또 조건 (다)에 의해 $a^2+b^2+c^2=67$이다. $a=c$를 이용하여 $2a^2+b^2=67$이고, $b=13-2a$를 대입하면 $2a^2+(13-2a)^2=67$이다. 이를 정리하면 $2a^2+169-52a+4a^2=67$이므로 $6a^2-52a+102=0$이다. $3a^2-26a+51=0$, $(3a-17)(a-3)=0$이므로 $a=\\frac{17}{3}$ 또는 $a=3$이다. $a<b$이어야 하므로 $2a+b=13$에서 $a=\\frac{17}{3}$이면 $b=\\frac{5}{3}$가 되어 조건에 맞지 않는다. 그래서 $a=3, b=7, c=3$이다. 고등학교 전체의 넓이는 세 정사각형과 도로를 포함한 바깥 직사각형의 넓이이므로 $c(a+b+c)=3(3+7+3)=39$이다. 따라서 정답은 ① 21이다. [그림]",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0130",
+        "unit": "다항식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "다항식 $P(x) = ax^4 + bx^3 + cx^2 + bx + a$라 하자. $a \\neq 0$이므로 상수항이 $0$이 아니어서 $x=0$은 근이 아니다. $x \\neq 0$일 때 $x^4 P\\left(\\frac{1}{x}\\right) = x^4 \\left( a\\left(\\frac{1}{x}\\right)^4 + b\\left(\\frac{1}{x}\\right)^3 + c\\left(\\frac{1}{x}\\right)^2 + b\\left(\\frac{1}{x}\\right) + a \\right) = a + bx + cx^2 + bx^3 + ax^4 = P(x)$ 이다. 즉, $P(x) = x^4 P\\left(\\frac{1}{x}\\right)$가 성립한다. ㄱ. $\\alpha$가 근이면 $P(\\alpha)=0$이다. 위 식에 $x=\\alpha$를 대입하면 $0 = P(\\alpha) = \\alpha^4 P\\left(\\frac{1}{\\alpha}\\right)$ 이다. $\\alpha \\neq 0$이므로 $P\\left(\\frac{1}{\\alpha}\\right) = 0$이다. 같은 방법으로 $\\beta$가 근이면 $\\frac{1}{\\beta}$도 근이다. ㄱ은 (참) ㄴ. 항상 중근을 갖는 것은 아니다. 예를 들어 $a=1, b=0, c=0$이면 방정식은 $x^4+1=0$이다. 이 식의 중근 여부를 보려면 $f(x)=x^4+1$에 대하여 $f'(x)=4x^3$이다. 중근 $r$이 있으면 $f(r)=0$이고 $f'(r)=0$이어야 하는데, $f'(r)=0$에서 $r=0$이고 $f(0)=1$이므로 모순이다. 그러므로 중근이 없다. ㄴ은 (거짓) ㄷ. 근들은 역수끼리 짝을 이룬다. 따라서 네 근을 $r, \\frac{1}{r}, s, \\frac{1}{s}$의 꼴로 둘 수 있다. 이때 $\\alpha=r, \\beta=\\frac{1}{r}, \\gamma=s, \\delta=\\frac{1}{s}$로 잡으면 $\\alpha\\beta+\\gamma\\delta = r \\cdot \\frac{1}{r} + s \\cdot \\frac{1}{s} = 1+1=2$이다. ㄷ은 (참) 따라서 정답은 ③ ㄱ, ㄷ 이다.",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0189",
+        "unit": "다항식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$5$ 이상의 자연수 $n$에 대하여 다항식 $A_n(x) = (1-x)(1+x^2)(1+x^4) \\cdots (1+x^{2^{n-1}})-128$이 $x^2-x+1$로 나누어떨어지도록 하는 모든 자연수 $n$의 값의 합은? (1) $38$ (2) $44$ (3) $50$ (4) $56$ (5) $62$",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0195",
+        "unit": "다항식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$P, Q$는 모두 직선 $y=x$ 위의 점이므로 $P=(p,p)$, $Q=(q,q)$로 둘 수 있다. 이때 조건 $2OP=PQ$를 만족한다. $f(x)$의 최고차항의 계수가 $2$이고, $y=f(x)$가 $y=x$와 점 $P, Q$에서 만나므로 $f(x)-x = 2(x-p)(x-q)$이다. 따라서 $f(x) = 2(x-p)(x-q)+x$이다. $g(x)$의 최고차항의 계수가 $-1$이고, $y=g(x)$가 $y=x$와 점 $P, Q$에서 만나므로 두 그래프는 점 $P$에서 접한다. 그러므로 $g(x)-x = -(x-p)^2$이고, $g(x) = -(x-p)^2+x$이다. 이제 조건 $2OP=PQ$를 이용한다. 직선 $y=x$ 위에서 $OP=\\sqrt{2}|p|$, $PQ=\\sqrt{2}|q-p|$이므로 $2\\sqrt{2}|p|=\\sqrt{2}|q-p|$이다. 정리하면 $2|p|=|q-p|$이다. $p>0$이면 $2p=q-p$이므로 $q=3p$이다. $p<0$이면 $-2p=q-p$이므로 $q=-p$이다. 한편 $f(x)+g(x) = 2(x-p)(x-q)+x-(x-p)^2+x$이므로 $f(x)+g(x) = 2(x-p)(x-q)-(x-p)^2+2x$이다. 이 이차식의 최고차항의 계수는 $1$이므로, 부등식 $f(x)+g(x) \\ge 0$의 해가 모든 실수가 되려면 판별식이 $D \\le 0$이어야 한다. 판별식을 $D$라 하면 $D = (1-q)^2-p(2q-p) \\le 0$이다. 이를 정리하면 $p^2-q^2+2p-1 \\le 0$이다. 먼저 $p<0$이어서 $q=-p$인 경우를 보면 $p^2-(-p)^2+2p-1 \\le 0 \\implies 2p-1 \\le 0 \\implies p \\le \\frac{1}{2}$이다. 그런데 $4p^2+2p-1+4(p-\\frac{1}{2})^2+3>0$이므로 이 경우는 불가능하다. 그러므로 $p>0$이고 $q=3p$이다. 이를 대입하면 $p^2-(3p)^2+2p-1 \\le 0 \\implies -8p^2+2p-1 \\le 0 \\implies 8p^2-2p+1 \\ge 0$이다. 즉 $4p^2-6p+1 \\le 0$이고, 이 부등식의 근은 $p = \\frac{6 \\pm \\sqrt{36-16}}{8} = \\frac{6 \\pm \\sqrt{20}}{8} = \\frac{3 \\pm \\sqrt{5}}{4}$이다. 따라서 $p$의 범위는 $\\frac{3-\\sqrt{5}}{4} \\le p \\le \\frac{3+\\sqrt{5}}{4}$이다. 점 $P$의 $x$좌표의 최솟값은 $\\alpha$이고, 최댓값은 $\\beta$이므로 $\\alpha = \\frac{3-\\sqrt{5}}{4}$, $\\beta = \\frac{3+\\sqrt{5}}{4}$이다. 따라서 정답은 $3$이다.",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0223",
+        "unit": "다항식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "다항식 $f(x)$는 최고차항의 계수가 자연수이고, 모든 계수가 실수인 5차 다항식이다. $x$에 대한 방정식 $f(x) = 0$이 다음 조건을 모두 만족시킨다. <조건> (가) $f(3) = 0$ (나) $f(x)=0$을 만족하는 서로 다른 유리수 $\\alpha$는 3개 또는 5개다. (다) $f(x)=0$을 만족하는 서로 다른 유리수 $\\beta$는 4개다. (라) $\\text{① } \\{f(\\alpha)\\}^2 + \\{f(-\\alpha)\\}^2 = 0$ $\\text{② } |f(\\beta)| + \\left|f\\left(\\frac{1}{\\beta}\\right)\\right| = 0$ (단, $\\beta \\ne 0$) $f(9)$의 양의 약수의 개수는 126이다. 서로 다른 모든 $f(9)$의 개수를 $n$, $f(9)$의 최솟값을 $m$, $f(9)$의 최댓값을 $M$이라 할 때, $(n+1)^2 \\times \\frac{M}{m}$의 값은?",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0248",
+        "unit": "다항식",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "$f(x)=x^4+5x^3+11x^2+5x+a=(x^2+ax+b)(x^2+cx+d)$ 라면 준식은 $(x-a)(x-b)(x-2)(x-a)(x+2)$ 준식은 $(x-a)(x-b)(x-2)(x-a)(x-2-a)(x-2-b)(-2-\\gamma)$ $f(2)=0, f(-2)=0$ $f(2)=16+20+22+5+11$, $f(-2)=-8+20+22+5=39$에서 준식은 $11-20=429$이다.",
+        "answer": null,
+        "answer_verified": false
+      }
+    ],
+    "부등식": [
+      {
+        "id": "N0007",
+        "unit": "부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "부등식 $3x+2y \\le 9-z$를 만족시키는 자연수 $x, y, z$의 순서쌍 $(x, y, z)$의 개수는?",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0040",
+        "unit": "부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "두 부등식 $x^2 - x + n - n^2 > 0$, $x^2 - (n^2 - n + 1)x + n^2 - n^3 \\le 0$을 동시에 만족시키는 정수 $x$가 존재하고, 그 개수가 $42$개 이하가 되도록 하는 모든 자연수 $n$의 값의 합은?① $27$② $28$③ $29$④ $30$⑤ $31$",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0105",
+        "unit": "부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$N(a,b)$는 부등식 $|x-a| < b$를 만족시키는 정수 $x$의 개수이다. 다음 보기 중 옳은 것을 모두 고른 것은? (단, $a, b$는 상수이다.)ㄱ. $N(1,100)$에서 $1-100 < x < 1+100$이므로 $-99 < x < 101$이다. 따라서 정수 $x$의 개수는 $101-(-99)-1 = 199$개이다.ㄴ. $N(n, n+2)$에서 $-1 < x < n+1$이므로 정수 $x$의 개수는 $(n+1)-(-1)-1 = n+1$개이다.ㄷ. $N(n, n+2, n+4)$에서 $-1 < x < n+3$이므로 정수 $x$의 개수는 $(n+3)-(-1)-1 = n+3$개이다.",
+        "answer": "2",
+        "answer_verified": false
+      }
+    ],
+    "이차부등식": [
+      {
+        "id": "N0011",
+        "unit": "이차부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "자연수 $x$에 대하여 세 수 $3x-1$, $x$, $3x+1$을 세 변의 길이로 하는 둔각삼각형을 만들려고 한다. 자연수 $x$의 개수는?",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0017",
+        "unit": "이차부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "연립부등식의 해가 $-2 \\le x < 3$이므로, 각 부등식의 경계가 어디에서 결정되는지 살펴본다. 먼저 $f(x) = x^2 + ax + 4a$, $g(x) = x^2 - 2bx + 4b - 1$라 두면, 첫 번째 연립부등식은 $\\begin{cases} f(x) \\le 0 \\\\ g(x) > 0 \\end{cases}$이다. $x = -2$가 해에 포함되므로, 등호를 포함하지 않는 $g(x) > 0$가 아니라 $f(x) \\le 0$에서 경계가 결정된다. 따라서 $f(-2) = 0$이다. $f(-2) = (-2)^2 + a(-2) + 4a = 4 - 2a + 4a = 4 + 2a$이므로 $4 + 2a = 0$, 따라서 $a = -2$이다. 그러면 $f(x) = x^2 - 2x - 8 = (x - 4)(x + 2)$이므로, $f(x) \\le 0$의 해는 $-2 \\le x \\le 4$이다. 이제 전체 해가 $-2 \\le x < 3$이 되려면, $g(x) > 0$가 이 구간에서만 성립해야 하므로 $x = 3$에서 경계가 생겨야 한다. 즉 $g(3) = 0$이다. $g(3) = 3^2 - 2b \\cdot 3 + 4b - 1 = 9 - 6b + 4b - 1 = 8 - 2b$이므로 $8 - 2b = 0$, 따라서 $b = 4$이다. 그러면 $g(x) = x^2 - 8x + 15 = (x - 3)(x - 5)$이고, $g(x) < 0$의 해는 $3 < x < 5$이다. 이제 구하는 연립부등식은 $\\begin{cases} x^2 - 2x - 8 \\ge 0 \\\\ x^2 - 8x + 15 < 0 \\end{cases}$이다. 첫째 부등식의 해는 $x \\le -2$ 또는 $x \\ge 4$이고, 둘째 부등식의 해는 $3 < x < 5$이므로, 두 해의 교집합은 $4 \\le x < 5$이다. 따라서 $\\alpha = 4$, $\\beta = 5$이므로 $\\alpha + \\beta = 9$이다. 따라서 정답은 \\textcircled{4} 9이다.",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0044",
+        "unit": "이차부등식",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "주어진 함수는 $f(x)=x^2+2x-3=(x-1)(x+3)$이다. 이때 $f(x)$의 부호에 따라 나누어 생각한다. $f(x) \\ge 0$인 구간은 $x \\le -3$ 또는 $x \\ge 1$이고, $f(x) < 0$인 구간은 $-3 < x < 1$이다. 먼저 $-3 < x < 1$에서는 $|f(x)|=-f(x)$이므로 $f(x) - \\frac{|f(x)|}{3} = f(x) - \\frac{-f(x)}{3} = \\frac{4}{3}f(x)$이다. 그러므로 부등식은 $\\frac{4}{3}(x-1)(x+3) \\le m(x-1)$이 된다. 정수 $x$는 $-2, -1, 0$인데, 이때 $f(x) < 0$이고 $m < 0, x-1 < 0$이므로 우변 $m(x-1)$은 양수이다. 그러므로 $x=-2, -1, 0$은 모두 해이다. 또한 $x=1$에서는 $f(1)=0$이므로 $0 \\le 0$이 되어 해이다. 즉, 항상 해인 정수는 $x=-2, -1, 0, 1$로 모두 4개이다. 이제 $x \\le -3$인 경우를 보자. 이때 $f(x) \\ge 0$이므로 $|f(x)|=f(x)$이고, $f(x) - \\frac{|f(x)|}{3} = f(x) - \\frac{f(x)}{3} = \\frac{2}{3}f(x)$이다. 그러므로 부등식은 $\\frac{2}{3}(x-1)(x+3) \\le m(x-1)$, 즉 $(x-1)(2x+6-3m) \\le 0$이 된다. $x \\le -3$에서는 $x-1 < 0$이므로 $2x+6-3m \\ge 0$, 즉 $x \\ge \\frac{3m-6}{2}$이다. 그러므로 $x \\le -3$에서의 해는 $\\frac{3m-6}{2} \\le x \\le -3$인 정수들이다. 전체 해의 개수가 6개가 되려면, 이미 있는 4개의 해 외에 $x \\le -3$에서 정확히 2개의 정수해가 더 있어야 한다. 그러므로 $-4, -3$이 추가 해가 되어야 하므로 $-5 < \\frac{3m-6}{2} \\le -4$이어야 한다. 이를 풀면 $-10 < 3m-6 \\le -8$, 그러므로 $-4 < 3m \\le -2$이다. $m$은 음의 정수이므로 $m=-1$이다. 따라서 정답은 $-1$이다.",
+        "answer": "-1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0079",
+        "unit": "이차부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$x$에 대한 이차부등식 $ax^2 + bx + 3 \\ge 0$의 해가 부등식 $|3x+1| - |x-1| \\le 1$의 해와 같을 때, 이차부등식 $bx^2 + ax + 24 \\ge 0$을 만족시키는 정수 $x$의 개수는?",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0088",
+        "unit": "이차부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$x$에 대한 연립부등식 $\\begin{cases} x^2 - (k+2)x + 2k \\le 0 \\\\ x^2 + (k-6)x - 6k < 0 \\end{cases}$의 해가 존재하지 않도록 하는 음수 $k$의 값의 범위를 구하고, 그 과정을 서술하시오.",
+        "answer": "k \\le -2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0109",
+        "unit": "이차부등식",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "첫째 부등식 $x^2 - 2nx - 4x + n^2 + 4n > 0$을 정리하면 $x^2 - (2n + 4)x + n(n + 4) > 0$이고, 이는 $(x - n)(x - n - 4) > 0$로 인수분해된다. 따라서 해는 $x < n$ 또는 $x > n + 4$이다. 둘째 부등식 $x^2 - 2nx - 8n^2 - 6n - 1 \\le 0$의 두 근을 구하면, 판별식은 $D = (-2n)^2 - 4(-8n^2 - 6n - 1) = 36n^2 + 24n + 4 = 4(3n + 1)^2$이다. 따라서 근은 $x = \\frac{2n \\pm 2(3n + 1)}{2} = n \\pm (3n + 1)$이므로 $x = -2n - 1, 4n + 1$이다. 그러므로 해는 $-2n - 1 \\le x \\le 4n + 1$이다. 연립부등식의 해는 두 조건의 공통부분이므로 $-2n - 1 \\le x < n$ 또는 $n + 4 < x \\le 4n + 1$이다. 정수해의 범위로 보면 $[-2n - 1, n - 1]$과 $[n + 5, 4n + 1]$이다. 음의 정수의 개수 $\\alpha$는 첫 번째 구간 $[-2n - 1, n - 1]$에서 $-2n - 1, -2n, \\dots, -1$의 개수이므로 $\\alpha = 2n + 1$이다. 양의 정수의 개수 $\\beta$는 첫 번째 구간에서 $1, 2, \\dots, n - 1$의 $n - 1$개와, 두 번째 구간 $[n + 5, 4n + 1]$의 $(4n + 1) - (n + 5) + 1 = 3n - 3$개를 더한 값이므로 $\\beta = 4n - 4$이다. $\\alpha < \\beta$이므로 $2n + 1 < 4n - 4$, 즉 $2n > 5$이다. 따라서 $n > \\frac{5}{2}$이고, 이를 만족하는 자연수 $n$의 최솟값은 $3$이다. 따라서 정답은 $3$이다.",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0151",
+        "unit": "이차부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "임의의 두 실수 $a, b$에 대하여 연립부등식 $$\\begin{cases} x^2 - x - 6 \\le 0 \\\\ (x - a - 3)(x - 2a) \\le 0 \\end{cases}$$의 해가 $x = b$일 때, $k = ab$라 하자. 가능한 모든 $k$값의 곱은? ① 15 ② 30 ③ 45 ④ 60 ⑤ 75",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0154",
+        "unit": "이차부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "세 일차식 $A(x), B(x), C(x)$를 각각 $A(x) = x-a, B(x) = x-b, C(x) = x-c$로 두면 $A(0) + B(0) + C(0) = -(a+b+c)$이다. 조건 (가)에서 $A(x)B(x) \\le 0$의 해는 $a$와 $b$사이의 구간이고, $C(x)(x-1) > 0$의 해는 $x < \\min(c, 1)$ 또는 $x > \\max(c, 1)$이다. 연립부등식의 해가 $-3 \\le x < 1$이므로 $A(x)B(x) \\le 0$의 해가 $[-3, 1]$을 포함해야 한다. 따라서 $a$와 $b$ 중 하나는 $-3$이고, 다른 하나는 $1$ 이상이어야 한다. 또한 $C(x)(x-1) > 0$의 해가 $x < 1$쪽에서 끊기지 않으려면 $c \\ge 1$이어야 한다. 조건 (나)에서 $A(x)-1 < 0$는 $x < a+1$이다. 또 $B(x)C(x) > 0$의 해는 $x < \\min(b, c)$ 또는 $x > \\max(b, c)$이다. 연립부등식의 해가 $x < -2$이므로, $x < -2$에서만 두 부등식이 동시에 성립해야 한다. 조건 (가)에서 $a = -3$이고 다른 한 값은 $1$ 이상이므로, $A(x)-1 < 0$의 해는 $x < -2$가 된다. 이 해가 조건 (나)의 해와 일치하려면 $B(x)C(x) > 0$가 $x < -2$에서 항상 성립하고, $x \\ge -2$에서는 성립하지 않아야 한다. 그러므로 $b \\ge 1, c \\ge 1$이어야 한다. 따라서 $a = -3, b \\ge 1, c \\ge 1$이다. 이때 $A(0) + B(0) + C(0) = 3-b-c$이므로 최댓값은 $b=1, c=1$일 때의 $3-1-1=1$이다. 따라서 정답은 \\textcircled{4} $1$이다.",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0156",
+        "unit": "이차부등식",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "동일한 제품을 생산하는 두 공장 $A, B$가 있다. 다음 그림과 같이 두 공장 사이의 거리는 $30 \\text{km}$이고, 공장 $A$보다 공장 $B$에 가까운 지점에 창고 $P$를 지으려 한다. 이때 공장과 창고 사이의 거리가 $a \\text{km}$이면 제품 한 개당 운송비는 $a^2$원이라고 한다. 두 공장 $A, B$에서 하루에 생산되는 제품이 각각 $300$개, $100$개이고 하루 총운송비가 $130000$원 이하일 때, 다음 물음에 답하시오. [그림] 1) 공장 $A$와 창고 $P$ 사이의 거리를 $x \\text{km}$라고 할 때, $x$에 대한 연립부등식을 세우시오. 2) 위 1)에서 세운 연립부등식을 활용하여 공장 $A$와 창고 $P$ 사이의 거리의 최댓값은 몇 $\\text{km}$인지 구하고 풀이 과정을 논술하시오.",
+        "answer": "20km",
+        "answer_verified": false
+      },
+      {
+        "id": "N0168",
+        "unit": "이차부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "방정식 $bx^2 + 2x + a = 0$의 두 근을 $\\alpha, \\beta$라 할 때, 부등식 $ax^2 - 2x + b > 0$의 해는? (단, $0 < \\alpha < \\beta$이고, $a, b$는 실수이다.)① $\\alpha < x < \\beta$② $-\\frac{1}{\\alpha} < x < -\\frac{1}{\\beta}$③ $x < -\\frac{1}{\\alpha}$ 또는 $x > -\\frac{1}{\\beta}$④ $x < -\\beta$ 또는 $x > -\\alpha$⑤ $x < \\alpha$ 또는 $x > \\beta$",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0170",
+        "unit": "이차부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "두 자연수 $p, q$ ($p \\le 10, q \\le 10$)에 대하여 연립부등식$$ \\begin{cases} |x - p| \\le 2 \\\\ x^2 + 4q < (q + 4)x \\end{cases} $$를 만족시키는 정수 $x$의 개수가 3일 때, $p + q$의 최댓값을 $M$, 최솟값을 $m$이라 하자. $M + m$의 값은?",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0176",
+        "unit": "이차부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "주어진 연립부등식을 인수분해하면 다음과 같다.$x^2 - (4a-2)x + 3a^2 - 2a = (x-a)(x-(3a-2))$$x^2 - 2ax + 2a - 1 = (x-1)(x-(2a-1))$그러므로 연립부등식은$(x-a)(x-(3a-2)) \\ge 0$$(x-1)(x-(2a-1)) < 0$이 된다.이제 $a$의 범위에 따라 나누어 생각한다.① $a > 1$인 경우(2)에서 $2a-1 > 1$이므로 $1 < x < 2a-1$이다.(1)에서 $a < 3a-2$이므로 $x \\le a$ 또는 $x \\ge 3a-2$이다.그런데 $a > 1$일 때$1 < a < 2a-1 < 3a-2$이므로, 구간 $(1, 2a-1)$에서는 $x \\ge 3a-2$는 불가능하다.그러므로 연립부등식의 해는 $1 < x \\le a$이다.즉, 정수해는 $2, 3, \\dots, [a]$이다.정수해가 오직 1개이려면 2만 가능해야 하므로$2 \\le a < 3$이다.② $a < 1$인 경우(2)에서 $2a-1 < 1$이므로 $2a-1 < x < 1$이다.(1)에서 $3a-2 < a$이므로 $x \\le 3a-2$ 또는 $x \\ge a$이다.또한 $a < 1$이면 $3a-2 < 2a-1 < a < 1$이므로, 구간 $(2a-1, 1)$에서는 $x \\le 3a-2$는 불가능하다.그러므로 연립부등식의 해는 $a \\le x < 1$이다.즉, 정수해는 $a$ 이상 1 미만의 정수들이다.오직 1개의 정수만 존재하려면 0만 가능해야 하므로 $-1 < a \\le 0$이다.③ $a = 1$인 경우(2)는 $(x-1)^2 < 0$이 되어 해가 없다. 그러므로 제외한다.이상을 종합하면, 정수 $x$가 오직 한 개만 존재하도록 하는 $a$의 범위는 $-1 < a \\le 0$ 또는 $2 \\le a < 3$이다.따라서 정답은 $(-1, 0] \\cup [2, 3)$이다.",
+        "answer": "$(-1,0] \\cup [2,3)$",
+        "answer_verified": false
+      },
+      {
+        "id": "N0188",
+        "unit": "이차부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "절댓값을 포함한 일차부등식 $|x+1|+|x-2| \\le 5$의 해와 이차부등식 $ax^2+bx+c \\ge 0$의 해가 같을 때, $\\frac{2b-3c}{a}$의 값은? (단, $a,b,c$는 실수이고, $a \\ne 0$이다.) (1) $1$ (2) $4$ (3) $8$ (4) $12$ (5) $16$",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0197",
+        "unit": "이차부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$x$에 대한 이차부등식 $(2x - k^2 + 2k)(2x - 3k) \\le 0$의 해가 $\\alpha \\le x \\le \\beta$이다. 정수가 아닌 두 실수 $\\alpha, \\beta$가 다음 조건을 만족시킬 때, 모든 실수 $k$의 값의 곱은?<조건>(가) $\\beta - \\alpha$는 자연수이다.(나) $\\alpha \\le x \\le \\beta$를 만족시키는 정수 $x$의 개수는 $3$이다.① $-6$② $-3$③ $-2$④ $6$⑤ $12$",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0220",
+        "unit": "이차부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "정수 $a, b$는 $|a| \\le 10, |b| \\le 10$이다. $x$에 대한 연립부등식$$ \\begin{cases} (a+b)x^2 + (a+2b)x + b \\le 0 \\\\ |x-b| > b \\end{cases} $$를 만족시키는 해가 $x \\ne p$인 모든 실수일 때 서로 다른 $(a,b)$의 개수를 $l$, 해가 $x=q$일 때 서로 다른 $(a,b)$의 개수를 $m$, 해가 모든 실수 전체일 때 서로 다른 $(a,b)$의 개수를 $n$이라 하자. $p+q+lmn$의 값은? (단, $p, q$는 실수이고 $lmn \\ne 0$이다.)",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0232",
+        "unit": "이차부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "방정식 $bx^2 + 2x + a = 0$의 두 근을 $\\alpha, \\beta$라 할 때, 부등식 $ax^2 - 2x + b > 0$의 해는? (단, $0 < \\alpha < \\beta$이고, $a, b$는 실수이다.)① $\\alpha < x < \\beta$② $-\\frac{1}{\\alpha} < x < -\\frac{1}{\\beta}$③ $x < -\\frac{1}{\\alpha}$ 또는 $x > -\\frac{1}{\\beta}$④ $x < -\\beta$ 또는 $x > -\\alpha$⑤ $x < \\alpha$ 또는 $x > \\beta$",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0250",
+        "unit": "이차부등식",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "연립부등식 $(x^2-a)(x-6) \\le 0$, $(x-a)(x+b) \\ge 0$ 따라서 $a$의 최근값과 $6$을 모두 가지므로 $b \\le x \\le 6$ 또는 $x \\ge a$이다. $a$는 $b$보다 작거나 같고 $b$는 $6$보다 작거나 같으므로 $a \\le b \\le 6$이다. 이때 정수인 해의 개수가 4개가 되려면 $b-a+1=4$이므로 $b-a=3$이다. $a$의 값은 $-4-3=60$이다.",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0288",
+        "unit": "이차부등식",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "두 부등식의 해의 공통부분이 $x<p$가 되는 단단한 경우로 $a+b=0$, 즉 $b=-a$입니다. $b=-a$를 두 부등식에 대입하여 정리합니다.1. $x^2+ax-a^2 \\le 0$2. $ax^2+ax-a < 0$근을 $x=0$ 또는 $x=-1$로 갖는 이차방정식 $ax(x+1)=0$의 해는 $x=0$ 또는 $x=-1$입니다. $a<0$이므로 $ax^2+ax<0$의 해는 $-1<x<0$입니다.두 부등식의 공통부분이 $x<p$가 되려면, $x<-\\sqrt{a \\over 2}$의 공통부분만 남아야 합니다. $-\\sqrt{a \\over 2} = -1$이므로 $a=2$입니다. $a=2$이면 $b=-2$입니다. 이때 $8a^2+b^2$의 값은 다음과 같습니다. $8(2)^2+(-2)^2 = 8(4)+4 = 32+4 = 36$입니다.",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0306",
+        "unit": "이차부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "두 이차부등식 $x^2-5x+4<0$ 과 $x^2-(a-1)x-(a-4) \\le 0$ 을 동시에 만족시키는 정수 $x$ 가 $2,3,4$ 일 때, 다음 중 옳은 것만을 있는 대로 고른 것은? \\\\ ㄱ. $a$ 가 자연수일 때, 구간 $(a-2, a+2)$ 에 포함되는 정수는 $a-1, a, a+1$ 이다. \\\\ ㄴ. 공통된 정수의 개수가 $2$ 이려면 $a=1$ 일 때, 구간 $(-1,3)$ 과의 공통 정수는 $1,2$ (2개) $a=4$ 일 때, 구간 $(2,6)$ 과의 공통 정수는 $3,4$ (2개) $a=2$ 이면 $1,2,3$ (3개), $a=3$ 이면 $2,3,4$ (3개) 이므로 조건을 만족하지 않는다. \\\\ ㄷ. 따라서 모든 자연수 $a$ 는 $1,4$ 이고 그 합은 $1+4=5$ 이다.",
+        "answer": "1",
+        "answer_verified": false
+      }
+    ],
+    "복소수": [
+      {
+        "id": "N0012",
+        "unit": "복소수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "방정식 $x^3 = -1$의 한 허근을 $\\omega$라고 할 때, 자연수 $n$에 대하여 함수 $f(n)$을 다음과 같이 정의한다. $f(n) = \\frac{(1-\\omega)^n}{\\omega^n}$ 이때, $f(1)+f(2)+f(3)+\\dots+f(6)=a\\omega+b$를 만족시키는 실수 $a, b$에 대하여 $a+b$의 값은?",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0078",
+        "unit": "복소수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼차방정식 $x^3 - x^2 - x - 2 = 0$의 한 허근을 $w$라고 할 때 <보기>에서 옳은 것만을 있는 대로 고른 것은? ㄱ. $(w+1)(\\overline{w}+1) = 1$ ㄴ. $w^6 + (\\overline{w})^6 - w\\overline{w} = 0$ ㄷ. $w^5 + (\\overline{w})^4 + w^3 + (\\overline{w})^2 + 1 = 0",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0132",
+        "unit": "복소수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "한 근이 $\\frac{-1+\\sqrt{3}i}{2}$이고 계수 $a, b$가 실수이므로, 다른 한 근은 켤레복소수인 $\\frac{-1-\\sqrt{3}i}{2}$이다.이 두 수를 $\\omega, \\omega^2$라 두면 $\\omega = \\frac{-1+\\sqrt{3}i}{2}$이므로 $\\omega^3=1$이고, $1+\\omega+\\omega^2=0$이다.주어진 이차식은 근과 계수의 관계에 의해 $(x-\\omega)(x-\\omega^2) = x^2-(\\omega+\\omega^2)x+\\omega^3 = x^2+x+1$이므로 $a=1, b=1$이다.이제 $P_n(x)$가 $x^2+x+1$로 나누어떨어지려면 $\\omega$가 $P_n(x)$의 근이어야 한다. 즉,$P_n(\\omega) = 128 - \\prod_{k=1}^{n}(1+\\omega^k) = 0$이어야 한다.따라서 $\\prod_{k=1}^{n}(1+\\omega^k) = 128$을 만족하는 $n \\ge 5$를 찾으면 된다.$\\omega^3=1$이므로 $\\omega^k$는 3을 주기로 반복된다.$k \\equiv 1 \\pmod 3$이면 $1+\\omega^k = 1+\\omega$,$k \\equiv 2 \\pmod 3$이면 $1+\\omega^k = 1+\\omega^2$,$k \\equiv 0 \\pmod 3$이면 $1+\\omega^k = 2$이다.또한 $(1+\\omega)(1+\\omega^2)(1+\\omega^3) = (-\\omega^2)(-\\omega)(1+1) = 1 \\cdot 2 = 2$이므로, 세 항씩 묶은 곱은 $(1+\\omega)(1+\\omega^2)(1+1) = 2$가 된다.$n = 3m+r$ ($r=0, 1, 2$)로 나누어 계산하면, $\\prod_{k=1}^{n}(1+\\omega^k)$의 값은 다음과 같다.$r=0$일 때는 $2^m$, $r=1$일 때는 $2^m(1+\\omega)$,$r=2$일 때는 $2^m(1+\\omega)(1+\\omega^2) = 2^m(-\\omega^2)(-\\omega) = 2^m$이다.이 값이 $128 = 2^7$이어야 한다.$r=0$인 경우에는 $2^m=2^7$이므로 $m=7$, 따라서 $n=3 \\times 7 = 21$이다.$r=2$인 경우에도 $2^m=2^7$이므로 $m=7$, 따라서 $n=3 \\times 7 + 2 = 23$이다.$r=1$인 경우에는 $2^m(1+\\omega)$가 허수를 포함하므로 실수 128이 될 수 없다.가능한 모든 $n$은 $21, 23$이고, 그 합은 $21+23=44$이다.따라서 정답은 ③ 44이다.",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0208",
+        "unit": "복소수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\omega$는 $x^3=1$의 한 허근이고 $\\omega^3=1$, $1+\\omega+\\omega^2=0$을 만족한다. 주어진 식을 $P = (1+\\omega)(1+\\omega^2)(1+\\omega^3)\\cdots(1+\\omega^{17})$이라 하자. $\\omega^3=1$이므로 지수를 3으로 나눈 나머지에 따라 같은 값이 반복된다. 1부터 17까지에서 3의 배수는 5개, 3으로 나누어 나머지가 1인 수는 6개, 나머지가 2인 수는 6개이다. 그러므로 $P = (1+\\omega)^6(1+\\omega^2)^6(1+\\omega^3)^5$이다. 이때 $1+\\omega^3 = 2$이다. 또 $(1+\\omega)(1+\\omega^2) = 1+\\omega+\\omega^2+\\omega^3 = (1+\\omega+\\omega^2)+\\omega^3 = 1$이다. 그러므로 $(1+\\omega)^6(1+\\omega^2)^6 = ((1+\\omega)(1+\\omega^2))^6 = 1^6 = 1$이다. 따라서 $P = 1 \\cdot 2^5 = 32$이다.",
+        "answer": "3",
+        "answer_verified": false
+      }
+    ],
+    "연립부등식": [
+      {
+        "id": "N0013",
+        "unit": "연립부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$x$에 대한 연립부등식 $$\\begin{cases} 3x+2 < x-2 \\\\ \\frac{2kx+5}{5} < \\frac{kx+4}{3} + 1 \\end{cases}$$을 만족시키는 정수 $x$의 개수가 2가 되도록 하는 정수 $k$값은?",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0064",
+        "unit": "연립부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$x$에 대한 연립부등식 $\\begin{cases} x^2 - 3x - 54 \\le 0 \\\\ |2x - 4| > n \\end{cases}$을 만족시키는 모든 정수 $x$의 값의 합이 음수가 되도록 하는 모든 자연수 $n$의 값의 합은?",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0121",
+        "unit": "연립부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "연립부등식 $\\begin{cases} x^2 - x - 6 \\le 0 \\\\ x^2 - (2n - 3)x + n^2 - 3n \\ge 0 \\end{cases}$을 만족시키는 정수 $x$의 개수가 4개가 되도록 하는 모든 자연수 $n$의 개수는?",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0136",
+        "unit": "연립부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$x$에 대한 연립부등식 $$ \\begin{cases} ax^2 + (a+b)x + a+b+2 < 0 \\\\ (a+b)x^2 + (a+b+2)x + a < 0 \\end{cases} $$ 을 만족시키는 모든 $x$의 값의 범위가 $x < p$이다. $a^3$의 값이 최소일 때, $a^2+b^2+p^3$의 값은? (단, $a, b, p$는 실수이다.) \\ ① $6$ \\ ② $7$ \\ ③ $8$ \\ ④ $9$ \\ ⑤ $10$",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0147",
+        "unit": "연립부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "연립부등식 $\\begin{cases} |x+3| \\le 5 \\\\ x^2 - 2x - 8 < 0 \\end{cases}$의 해가 $\\alpha < x \\le \\beta$일 때, 부등식 $2|x - \\alpha| + |x - \\beta| \\le 7$을 만족시키는 정수 $x$의 개수는?",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0153",
+        "unit": "연립부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "주어진 연립부등식을 각각 해석한다. 첫 번째 부등식 $|x-3| \\le n$은 $x$가 구간 $[3-n, 3+n]$ 안에 있다는 뜻이다. 두 번째 부등식 $x^2 - 3x - 10 > 0$을 인수분해 하면 $(x-5)(x+2) > 0$이므로 해는 $x < -2$ 또는 $x > 5$이다. 따라서 구해야 하는 것은 구간 $[3-n, 3+n]$ 안에 있으면서 $x \\le -3$ 또는 $x \\ge 6$인 정수의 개수이다. 이제 경우를 나누어 개수를 센다. $x \\ge 6$인 정수의 개수는 $n \\ge 3$일 때 $6, 7, \\dots, 3+n$이므로 $(3+n) - 6 + 1 = n-2$이다. $x \\le -3$인 정수의 개수는 $n \\ge 6$일 때 $3-n, -4, \\dots, -3$이므로 $(-3) - (3-n) + 1 = n-5$이다. 전체 개수는 다음과 같다. $n < 3$일 때 $0$개이다. $3 \\le n < 6$일 때 $n-2$개이다. $n \\ge 6$일 때 $(n-2) + (n-5) = 2n-7$개이다. 이 개수가 $3$ 이상 $7$ 이하가 되어야 하므로, 먼저 $3 \\le n < 6$에서 $3 \\le n-2 \\le 7$을 풀면 $5 \\le n \\le 9$이고, 이 범위의 자연수는 $n=5$이다. 또한 $n \\ge 6$에서 $3 \\le 2n-7 \\le 7$을 풀면 $10 \\le 2n \\le 14$이므로 $5 \\le n \\le 7$이다. 이 범위에서 $n \\ge 6$인 자연수는 $n=6, 7$이다. 조건을 만족하는 자연수 $n$은 $5, 6, 7$이고, 이들의 합은 $5+6+7=18$이다. 따라서 정답은 \\textcircled{2} $18$이다.",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0158",
+        "unit": "연립부등식",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "$x$에 대한 연립부등식 $\\begin{cases} x^2 + (a-3)x - 3a > 0 \\ x^2 - (a^2-1)x - a^2 < 0 \\ \\end{cases}$의 정수해가 존재하지 않도록 하는 실수 $a$의 범위는 $p \\le a \\le q$이다. 실수 $p, q$에 대하여 $p+q$의 값을 구하고 풀이 과정을 논술하시오.",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0199",
+        "unit": "연립부등식",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "정수 $x$에 대하여 $a$에 대한 연립부등식 $$\\begin{cases} |x-1| < 3 \\\\ (a-1)x^2 + (-a+3)x - 2 \\ge 0 \\end{cases}$$ 을 만족시키는 정수 $x$의 개수가 $2$개 되도록 하는 $a$의 값을 구하고 그 과정을 서술하시오.",
+        "answer": "$0 \\le a < \\frac{1}{3}$",
+        "answer_verified": false
+      },
+      {
+        "id": "N0234",
+        "unit": "연립부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "두 자연수 $p, q (p \\le 10, q \\le 10)$에 대하여 연립부등식 $$ \\begin{cases} |x - p| \\le 2 \\\\ x^2 + 4q < (q + 4)x \\end{cases} $$를 만족시키는 정수 $x$의 개수가 3일 때, $p+q$의 최댓값을 $M$, 최솟값을 $m$이라 하자. $M+m$의 값은?",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0240",
+        "unit": "연립부등식",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "$x$에 대한 연립부등식 $\\begin{cases} x^2 - (4a - 2)x + 3a^2 - 2a \\ge 0 \\\\ x^2 - 2ax + 2a - 1 < 0 \\end{cases}$을 만족시키는 정수 $x$가 오직 한 개 존재하도록 하는 실수 $a$의 값의 범위를 구하여라.",
+        "answer": "$(-1,0] \\cup [2,3)$",
+        "answer_verified": false
+      },
+      {
+        "id": "N0283",
+        "unit": "연립부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "연립부등식 $\\begin{cases} x-n \\le 3 \\\\ x^2-10x+21 > 0 \\end{cases}$의 정수해가 4개가 되도록 하는 모든 정수 $n$의 합은?",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0310",
+        "unit": "연립부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "계수의 절댓값이 가장 큰 $x$ 를 기준으로 경우를 나눈다. \\\\ 세 자연수 $x, y, z$ 에 대하여 \\\\ (i) $z=1$ 일 때 $x+2y+2 \\le 8$ 에서 $x+2y \\le 6$ \\\\ $y=1$ 이면 $x+2 \\le 6$ 에서 $x \\le 4$ 이므로 $x$ 는 $1, 2, 3$ 의 $3$ 개 \\\\ $y=2$ 이면 $x+4 \\le 6$ 에서 $x \\le 2$ 이므로 $x$ 는 $1$ 의 $1$ 개 \\\\ (ii) $z=2$ 일 때, $x+2y+4 \\le 8$ 에서 $x+2y \\le 4$ \\\\ $y=1$ 이면 $x+2 \\le 4$ 에서 $x \\le 2$ 이므로 만족하는 자연수 $x$ 는 없다. \\\\ 따라서 구하는 순서쌍의 개수는 $3+1=4$",
+        "answer": "4",
+        "answer_verified": false
+      }
+    ],
+    "경우의수": [
+      {
+        "id": "N0016",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "그림에서 이웃한 관계를 보면 $A$는 $B, D$와 이웃하고, $C$도 $B, D$와 이웃한다. 반면 $A$와 $C$는 이웃하지 않고, $B$와 $D$도 이웃하지 않는다. $A$의 색은 4가지이다. $B$의 색은 $A$와 달라야 하므로 3가지이다. 이제 $C$의 색을 경우를 나누어 생각한다. $C$가 $A$와 같은 색인 경우이다. 이때 $C$는 $B$와만 달라야 하므로 1가지이다. 또 $D$는 $A, C$와 이웃하므로 $A(=C)$와만 달라지면 된다. 따라서 $D$의 색은 3가지이다. 경우의 수는 $4 \\times 3 \\times 1 \\times 3 = 36$이다. $C$가 $A, B$와 모두 다른 색인 경우이다. 이때 $C$의 색은 2가지이다. 또 $D$는 $A$와 $C$ 두 색과 달라야 하므로 2가지이다. 경우의 수는 $4 \\times 3 \\times 2 \\times 2 = 48$이다. 전체 경우의 수는 $36 + 48 = 84$이다. 따라서 정답은 ④ 84이다. [그림]",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0018",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "직사각형의 대각선이 $O(0,0)$와 $A(5,4)$이므로, 직사각형의 꼭짓점은 $(0,0)$, $(5,0)$, $(5,4)$, $(0,4)$이다. 이 직사각형의 둘레와 내부에 있는 정수 격자점은 $x = 0, 1, 2, 3, 4, 5$, $y = 0, 1, 2, 3, 4$를 만족하는 점들이므로 $6 \\times 5 = 30$개이다. 서로 다른 두 점을 고르는 전체 방법 수는 $\\frac{30 \\times 29}{2} = 435$이다. 이제 두 점을 이은 직선이 직선 $y = x$와 교점을 갖지 않는 경우를 구한다. 두 직선이 교점을 갖지 않으려면 서로 평행해야 하므로, 두 점을 이은 직선의 기울기는 $1$이어야 한다. 즉, 두 점은 같은 직선 $y = x + k$ 위에 있어야 하며, 이때 $k \\ne 0$이다. 직사각형 안의 정수 격자점 중 각 직선 $y = x + k$ 위의 점의 개수는 다음과 같다. $k = -4$부터 $k = 4$까지 순서대로 $1, 2, 3, 4, 5, 5, 4, 3, 2, 1$개이다. 여기서 $k = 0$인 경우는 직선 $y = x$ 자체이므로 교점을 갖는다. 따라서 제외할 것은 $k \\ne 0$인 경우뿐이다. 따라서 교점을 갖지 않는 경우의 수는 $1+2+3+4+5+5+4+3+2+1 = 30$이다. 그러므로 구하는 방법의 수는 $435 - 30 = 405$이다. 따라서 정답은 \\textcircled{4} 405이다.",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0022",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "다음은 $A, B, C, D, E$ 5명의 학생이 발표할 수 있는 요일을 각각 $\\circ$기호로 표시한 것이다. 5명의 학생 중 4명을 선발하여 서로 다른 요일에 발표하려고 할 때, 학생들이 발표하는 경우의 수는? (단, 한 학생은 한 번만 발표한다.) [그림]",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0035",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "어떤 인터넷 사이트의 회원인 영재는 자신의 회원번호를 이용하여 다음과 같은 규칙에 따라 4자리 자연수인 비밀번호를 만들려고 한다.\\(가) 각 자리의 숫자는 모두 다르다.\\(나) 회원번호와 각 자리에서 큰 숫자와 0을 사용한다.\\(다) 회원번호가 나타내는 수보다 큰 4의 배수이다.\\영재의 회원번호가 $5819$일 때, 만들 수 있는 서로 다른 비밀번호의 개수는?",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0037",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "정사각형에 적힌 수 $T$, 왼쪽 정사각형, 가운데 정사각형, 오른쪽 정사각형에 적힌 수를 각각 $L, M, R$라고 하자. 조건을 식으로 나타내면 다음과 같다. $L > T, M > T, R > T$이다. 변을 공유하는 두 정사각형에 적은 서로 다른 수여야 하므로 $L \\neq M, M \\neq R$이다. 이때, $T$에 적을 수 있는 수는 $1$부터 $7$까지의 자연수이다. 이 조건을 만족하는 경우의 수를 구하시오.",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0043",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "A 그룹에서 이용한 놀이기구 수를 $x$, B 그룹을 $y$, C 그룹을 $z$라 하자. 그러면 $x+y+z=5$이고, 각 그룹의 놀이기구 수 때문에 $0 \\le x \\le 4, 0 \\le y \\le 4, 0 \\le z \\le 2$이다. 티켓 조건을 반영하면 다음과 같다. A 그룹의 놀이기구를 이용할 수 있는 티켓이 2장 이므로 A 그룹 놀이기구는 적어도 2개 이용해야 한다. 즉, $x \\ge 2$이다. A, B, C 그룹의 놀이기구를 이용할 수 있는 티켓은 1장이므로 C 그룹 놀이기구는 최대 1개만 이용할 수 있다. 즉, $z \\le 1$이다. $z$ 값에 따라 경우를 나눈다. $z=0$인 경우 $x+y=5$이다. 또한 B 그룹 놀이기구는 A 또는 B 그룹의 놀이기구를 이용할 수 있는 티켓 2장과 A, B, C 그룹의 놀이기구를 이용할 수 있는 티켓으로만 이용할 수 있으므로 $y \\le 3$이다. 그러므로 가능한 $(x,y)$는 $(4,1), (3,2), (2,3)$이다. $(4,1)$일 때의 경우의 수는 $_4C_4 \\times _4C_1 \\times _2C_0 = 1 \\times 4 \\times 1 = 4$이다. $(3,2)$일 때의 경우의 수는 $_4C_3 \\times _4C_2 \\times _2C_0 = 4 \\times 6 \\times 1 = 24$이다. $(2,3)$일 때의 경우의 수는 $_4C_2 \\times _4C_3 \\times _2C_0 = 6 \\times 4 \\times 1 = 24$이다. 이 경우의 수는 $4+24+24=52$이다. $z=1$인 경우 $x+y=4$이다. C 그룹 놀이기구 1개는 A, B, C 그룹의 놀이기구를 이용할 수 있는 티켓으로 이용하고, 남은 4개는 A 전용 티켓 2장과 A 또는 B 그룹의 놀이기구를 이용할 수 있는 티켓 2장으로 이용해야 한다. 그러므로 B 그룹 놀이기구는 최대 2개까지 가능하므로 $y \\le 2$이고, $x \\ge 2$이다. 그러므로 가능한 $(x,y)$는 $(4,0,1), (3,1,1), (2,2,1)$이다. $(4,0,1)$일 때의 경우의 수는 $_4C_4 \\times _4C_0 \\times _2C_1 = 1 \\times 1 \\times 2 = 2$이다. $(3,1,1)$일 때의 경우의 수는 $_4C_3 \\times _4C_1 \\times _2C_1 = 4 \\times 4 \\times 2 = 32$이다. $(2,2,1)$일 때의 경우의 수는 $_4C_2 \\times _4C_2 \\times _2C_1 = 6 \\times 6 \\times 2 = 72$이다. 이 경우의 수는 $2+32+72=106$이다. 전체 경우의 수는 $52+106=158$이다. 따라서 정답은 158이다.",
+        "answer": "158",
+        "answer_verified": false
+      },
+      {
+        "id": "N0055",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "다음 (가)와 (나)는 각각 $2$ 이상인 자연수 $n$과 $1 \\le r < n$인 자연수 $r$에 대하여 $r \\times {}_{n}C_{r} = n \\times {}_{n-1}C_{r-1}$가 성립함을 보이는 과정이다. ㉠~㉤에 들어갈 식으로 옳지 않은 것은?(가)$r \\times {}_{n}C_{r} = r \\times \\frac{\\text{㉠}}{(n-r)!r!} = \\frac{\\text{㉠}}{(n-r)!(r-1)!} = n \\times \\frac{\\text{㉡}}{(n-r)!(r-1)!} = n \\times {}_{n-1}C_{r-1}$(나)$n$명의 학생 중 회장 $1$명을 포함하여 $r$명의 임원을 뽑는 경우의 수는 다음과 같이 구할 수 있다.(i) $n$명의 학생 중 회장 $r$명을 선발하는 경우의 수는 \\text{㉢}이고, 뽑힌 임원 $r$명 중 회장 한 명을 선발하는 경우의 수는 $r$이므로 구하는 경우의 수는 \\text{㉢} $\\times r$(ii) $n$명의 학생 중 회장 한 명을 먼저 선발하는 경우의 수는 $n$이고, 회장을 제외한 나머지 학생 중 임원 \\text{㉣}명을 뽑는 경우의 수는 \\text{㉤}이므로 구하는 경우의 수는 $n \\times \\text{㉤}$따라서 $r \\times {}_{n}C_{r} = n \\times {}_{n-1}C_{r-1}$① ㉠: $n!$② ㉡: $n!$③ ㉢: ${}_{n}C_{r}$④ ㉣: $r-1$⑤ ㉤: ${}_{n-1}C_{r-1}$",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0058",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "9 이하의 서로 다른 자연수 $a, b, c, d, e$ 중에서 서로 다른 3개를 뽑아 일렬로 나열하여 만들 수 있는 세 자리 자연수 중 4의 배수인 것의 개수가 18이라고 한다. 이때 $a, b, c, d, e$를 모두 사용하여 일렬로 나열하여 만들 수 있는 다섯 자리 자연수 중에서 4의 배수인 것의 개수는?",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0065",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "남학생 5명, 여학생 7명으로 구성된 학급에서 4명씩 세 조로 나누어 서로 다른 상자 $A, B, C$를 뽑는다고 한다. 어느 강좌도 수강생들이 같은 성별로만 이루어지지 않도록 나누는 경우의 수는?",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0067",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "한 개의 주사위를 4번 던져서 나오는 눈의 수를 차례로 $a_1, a_2, a_3, a_4$라 할 때, $a_1 \\times a_2 \\times a_3 \\times a_4$가 16의 배수가 되도록 하는 순서쌍 $(a_1, a_2, a_3, a_4)$의 개수는? ① 216 ② 363 ③ 478 ④ 609 ⑤ 740",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0076",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "그림과 같이 $A, B, C, D, E$ 다섯 개의 행정구역으로 나누어진 지도가 있다. 서로 다른 5가지 이하의 색으로 각 영역에 모두 칠하려고 한다. 같은 색을 중복하여 사용해도 좋으나 인접한 영역은 서로 다른 색으로 칠하여 구별하려고 할 때, 칠할 수 있는 방법의 수는? (단, 경계선을 공유하는 경우만 인접한 영역으로 생각한다.) [그림]",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0081",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "(가)에서 $_s P_r = 3 \\times {}_{s} P_{r-1} + {}_{s} P_3$이다. ${}_{s} P_{r-1} = r!$이고, ${}_{s} P_3 = r(r-1)(r-2)$이므로 ${}_{s} P_r = 3r! + r(r-1)(r-2)$이다. 이 식이 성립하려면 ${}_{s} P_r$가 정의되어야 하므로 $r \\ge 3$이다. 이제 $r$의 값을 살펴본다. $r \\ge 4$이면 ${}_{s} P_r = r!$보다 크고, 또한 ${}_{r+1} P_r = (r+1)!$ 이상이어야 하므로 ${}_{s} P_r$의 값이 그 사이에 들어갈 수 없다. 따라서 $r=3$이다. $r=3$을 (가)에 대입하면 ${}_{s} P_3 - 3 \\times {}_{s} P_2 = {}_{s} P_3$이므로 ${}_{s} P_3 - 18 = 6$이다. 따라서 ${}_{s} P_3 = 24$이고, 이를 만족하는 자연수 $s$는 $s=4$이다. 이제 (나)에 $r=3, s=4$를 대입하면 ${}_{n-1} C_2 + {}_{n-1} C_3 = {}_{4} P_2 = 12$이다. 좌변은 파스칼의 법칙에 의해 ${}_{n} C_3$이므로 ${}_{n} C_3 = 12$이다. 그런데 자연수 $n$에 대하여 ${}_{n} C_3 = 12$를 만족하는 $n$은 존재하지 않는다. 실제로 ${}_{4} C_3 = 4$, ${}_{5} C_3 = 10$, ${}_{6} C_3 = 20$이므로 12가 될 수 없다. 따라서 주어진 조건을 모두 만족하는 자연수 $n, r, s$는 존재하지 않으므로, 구하는 순서쌍의 개수는 0이다.",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0083",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "의자 $9$개를 왼쪽부터 $1$번부터 $9$번까지 번호를 붙인다.학생은 여학생 $3$명, 남학생 $4$명으로 모두 $7$명이고, 의자 $9$개이므로 빈 의자는 $2$개이다.조건은 다음과 같다.1. 여학생끼리는 이웃하지 않는다.2. 양 끝 의자 $1$번, $9$번에는 모두 남학생이 앉는다.먼저 양 끝 의자 $1$번과 $9$번에 남학생 $2$명을 앉히는 방법은 $_4C_2$가지이다.이제 가운데 $2$번부터 $8$번까지의 $7$자리에 여학생 $3$명을 서로 이웃하지 않게 앉힌다. $7$자리 중 서로 이웃하지 않게 $3$자리를 고르는 방법은 $7-3+1C_3 = _5C_3$가지이다.남은 $4$자리에 남학생 $2$명과 빈 의자 $2$개를 배치하는 방법은 $_4C_2$가지이다.따라서 의자에 학생을 앉히는 자리 배치의 수는 $_4C_2 \\times _5C_3 \\times _4C_2$이다.여학생 $3$명을 앉히는 방법은 $3!$가지, 남학생 $4$명을 앉히는 방법은 $4!$가지이다.따라서 전체 경우의 수는 $_4C_2 \\times _5C_3 \\times _4C_2 \\times 3! \\times 4! = 6 \\times 10 \\times 6 \\times 6 \\times 24 = 8640$이다.따라서 정답은 ⑤ 8640이다.",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0085",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "출발 지점을 $0$, 돌 7개를 차례로 $1$부터 $7$, 도착 지점을 $8$이라고 두면, 출발점에서 도착점까지 총 $8$칸을 이동해야 한다. 한 번에 $1$칸, $2$칸, $3$칸을 건널 수 있고, $2$칸을 연속하여 건널 수는 없으므로, 마지막에 $2$칸을 건넜는지에 따라 경우를 나누어 생각한다. $A_n$을 $n$번째 지점에 도착하는 방법 중 마지막 점프가 $2$칸이 아닌 경우의 수, $B_n$을 마지막 점프가 $2$칸인 경우의 수라고 하자. 그러면 $T_n = A_n + B_n$이다. $n$번째 지점에 도착하는 방법 중 마지막 점프가 $2$칸이 아닌 경우는, 직전에서 $1$칸 또는 $3$칸을 건너온 경우이므로 $A_n = T_{n-1} + T_{n-3}$이다. 또한 마지막 점프가 $2$칸인 경우는 그 직전 점프가 $2$칸이면 안 되므로 $B_n = A_{n-2}$이다. 이제 차례로 계산하면 다음과 같다. $T_0 = 1, T_1 = 1, T_2 = 2, T_3 = 4, T_4 = 6, T_5 = 11, T_6 = 20, T_7 = 34, T_8 = 60$이다. 따라서 정답은 ④ $60$ 이다.",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0086",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "이 문제에서는 $A, B$가 모두 $2 \\times 2$ 행렬이므로 $a_{ij}$는 각각 $1, 2$만 생각하면 된다. 먼저 $A$의 성분을 구한다. $a_{11}$은 서로 같은 공 2개를 서로 다른 상자 2개에 넣는 방법의 수이므로 $1$이다. $a_{12}$는 서로 같은 공 2개를 상자 2개에 넣는 방법의 수인데, 상자 수용량이 부족하여 불가능하므로 $0$이다. $a_{21}$은 서로 다른 공 2개를 상자 3개에 넣는 방법의 수이므로 각 공이 3가지 상자 중 하나를 선택한다. 따라서 $3^2 = 9$이다. $a_{22}$는 서로 같은 공 3개를 상자 3개에 넣는 방법의 수이다. 제한이 없으면 $_3H_3 = 27$가지이고, 한 상자에 3개가 모두 들어가는 경우는 3가지이므로 $27-3=24$이다. 따라서 $A = \\begin{pmatrix} 1 & 0 \\\\ 9 & 24 \\end{pmatrix}$이다. 이제 $B$의 성분을 구한다. $b_{11}$은 서로 다른 공 2개를 상자 2개에 넣는 방법의 수이므로 각 공이 서로 다른 상자에 들어가야 한다. 따라서 $2^2 = 4$이다. $b_{12}$는 서로 같은 공 2개를 상자 2개에 넣는 방법의 수이므로 각 공이 서로 다른 상자에 들어가야 한다. 따라서 $2^2 = 4$이다. $b_{21}$은 서로 다른 공 3개를 상자 3개에 넣는 방법의 수이므로 각 공이 3가지 상자 중 하나를 선택한다. 따라서 $3^3 = 27$이다. $b_{22}$는 서로 같은 공 3개를 상자 3개에 넣는 방법의 수이다. 제한이 없으면 $_3H_3 = 27$가지이고, 한 상자에 3개가 모두 들어가는 경우는 3가지이므로 $27-3=24$이다. 따라서 $B = \\begin{pmatrix} 4 & 4 \\\\ 27 & 24 \\end{pmatrix}$이다. 이제 보기의 참, 거짓을 판단한다. ㄱ. $2A-B = \\begin{pmatrix} 2 & 0 \\\\ 18 & 48 \\end{pmatrix} - \\begin{pmatrix} 4 & 4 \\\\ 27 & 24 \\end{pmatrix} = \\begin{pmatrix} -2 & -4 \\\\ -9 & 24 \\end{pmatrix}$이므로 제시한 행렬과 다르다. (거짓) ㄴ. $i, j$인 성분은 $b_{12}, b_{21}$이므로 그 합은 $4+27=31$이다. (참) ㄷ. $X = \\begin{pmatrix} a_{11} & a_{21}-b_{11} \\\\ a_{12}-a_{22} & -b_{12} \\end{pmatrix} = \\begin{pmatrix} 1 & 9-4 \\\\ 0-24 & -4 \\end{pmatrix} = \\begin{pmatrix} 1 & 5 \\\\ -24 & -4 \\end{pmatrix}$이다. 계산하면 $X^2 = \\begin{pmatrix} 1 & 5 \\\\ -24 & -4 \\end{pmatrix} \\begin{pmatrix} 1 & 5 \\\\ -24 & -4 \\end{pmatrix} = \\begin{pmatrix} 1-120 & 5-20 \\\\ -24+96 & -120+16 \\end{pmatrix} = \\begin{pmatrix} -119 & -15 \\\\ 72 & -104 \\end{pmatrix}$이고, 따라서 $X^2+X+E=O$이다. 그러므로 $X^3=E$이고, $X^4=X, X^5=X^2$가 반복된다. 따라서 $X^{2025}=X$이다. 이는 $X-2E$와 다르다. (거짓) 따라서 정답은 ⑤이다.",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0089",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$1$부터 $14$까지의 자연수가 하나씩 적혀 있는 $14$개의 공이 들어 있는 주머니에서 임의로 세 개의 공을 동시에 꺼낼 때, 꺼낸 공에 적혀 있는 세 수 중 어느 두 수도 연속되지 않는 경우의 수를 구하고 그 과정을 서술하시오.",
+        "answer": "220",
+        "answer_verified": false
+      },
+      {
+        "id": "N0099",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "그림에서 4개의 영역은 원형으로 이어진 형태이다. $A$는 $B, D$와 인접하고, $B$는 $A, C$와 인접하며, $C$는 $B, D$와 인접하고, $D$는 $A, C$와 인접한다. 따라서 $A$와 $C$는 인접하지 않고, $B$와 $D$도 인접하지 않는다. 색칠하는 순서를 $A, B, C, D$로 정하여 경우의 수를 구한다. $A$의 색은 4가지이다. $B$의 색은 $A$와 달라야 하므로 3가지이다. $C$의 색은 $B$와 달라야 한다. 이제 $D$의 색은 $A$와 $C$와 모두 달라야 한다. 이때 $A$와 $C$가 같은지 다른지에 따라 나눈다. $C=A$이면 $C$를 정하는 방법은 1가지이고, $D$는 $A(=C)$와만 다르면 되므로 3가지이다. $C \\neq A$이면 $C$는 $B$와도 다르고 $A$와도 달라야 하므로 2가지이고, 이때 $D$는 $A, C$와 모두 달라야 하므로 2가지이다. 따라서 $A, B$를 정한 뒤의 경우의 수는 $1 \\times 3 + 2 \\times 2 = 7$이다. 전체 경우의 수는 $4 \\times 3 \\times 7 = 84$이다. 따라서 정답은 ⑤ 84이다. [그림]",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0103",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "$_{n-1}C_r = \\frac{(n-1)!}{r!\\{(n-1)-r\\}!}$ 이므로 (가)는 $\\{(n-1)-r\\}!$이다. $_{n-1}C_{r-1} = \\frac{(n-1)!}{(r-1)!\\{(n-1)-(r-1)\\}!}$ 이므로 (나)는 $(r-1)!$이다. 첫째 항의 분모 $r!\\{(n-1)-r\\}!$ 에서 $\\{(n-1)-r\\}! = (n-r-1)!$ 이고, $(n-r)! = (n-r)(n-r-1)!$ 이므로 두 식의 공통분모는 $r!(n-r)!$이다. 즉 (다) = $r!(n-r)!$ 이고, $\\frac{(n-1)!}{r!(n-r)!} + \\frac{(n-1)!}{(r-1)!(n-r)!} = \\frac{(n-1)!}{r!(n-r)!} + \\frac{r(n-1)!}{r!(n-r)!} = \\frac{(n-1)!(1+r)}{r!(n-r)!}$ 이다. 따라서 정답은 ③ Math input error Math input error Math input error 이다.",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0107",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "0이상 9이하의 서로 다른 네 정수 $a, b, c, d$에 대하여 네 자리의 자연수 $a \\times 10^3 + b \\times 10^2 + c \\times 10 + d$가 있다. 다음 조건을 모두 만족시킬 때, 가능한 자연수의 개수를 구하시오.\\(가) $a \\neq 0$\\(나) $(a-b)(c-d) < 0$\\(다) 네 자리 자연수는 짝수이다.",
+        "answer": "1148",
+        "answer_verified": false
+      },
+      {
+        "id": "N0115",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "자연수 $n$에 대하여 여학생 $n$명을 포함하여 16명의 학생이 있다. 남학생 중에서 2명을 뽑는 경우가 여학생 중에서 2명을 뽑는 경우의 수의 3배일 때, $n$의 값은? (단, $2 \\le n \\le 16$)",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0124",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "주어진 숫자 $0, 1, 3, 5, 7, 9$ 중에서 서로 다른 $4$ 개를 택하여 네 자리 자연수를 만든다. 네 자리 자연수이므로 맨 앞자리는 $0$ 이 될 수 없다.",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0125",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "조건 (나)에서 세 자리 수의 각 자리의 합이 홀수이려면, 세 수 중 홀수의 개수가 홀수여야 한다. 사용할 수 있는 수는 $1$ 부터 $9$ 까지이고, 홀수는 $5$ 개($1, 3, 5, 7, 9$), 짝수는 $4$ 개($2, 4, 6, 8$)이다. 따라서 홀수의 개수는 $3$ 개 또는 $1$ 개인 경우로 나누어 생각한다.1) 홀수 $3$ 개를 쓰는 경우세 자리 모두 홀수이므로 조건 (가)는 자동으로 만족한다. 서로 다른 홀수 $5$ 개 중 $3$ 개를 택하여 일렬로 나열하는 경우의 수는 $_5P_3 = 5 \\times 4 \\times 3 = 60$ 이다.2) 홀수 $1$ 개, 짝수 $2$ 개를 쓰는 경우일의 자리가 짝수이면 십의 자리는 홀수여야 하므로, 일의 자리의 짝수 여부에 따라 나눈다.일의 자리가 짝수인 경우배치는 (짝수, 홀수, 짝수)가 된다. 경우의 수는 $4 \\times 5 \\times 3 = 60$ 이다.일의 자리가 홀수인 경우조건 (가)의 전제에 해당하지 않으므로 항상 만족한다. 배치는 (짝수, 짝수, 홀수)가 된다. 경우의 수는 $4 \\times 3 \\times 5 = 60$ 이다.이 경우의 수는 $60 + 60 = 120$ 이다.전체 경우의 수는 $60 + 120 = 180$ 이다. 따라서 정답은 $⑤ 180$ 이다.",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0126",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "부등식 $x+y+z \\le 6$을 만족하는 양의 정수 $(x, y, z)$의 모든 순서쌍을 생각하자. $x, y, z$가 대칭이므로, 전체 순서쌍들에서 $x$의 곱, $y$의 곱, $z$의 곱은 서로 같다. 이 공통된 값을 $P$라 하면 $T = x_1x_2 \\cdots x_ny_1y_2 \\cdots y_nz_1z_2 \\cdots z_n = P^3$이다. 이제 $P$를 구하자. $x=k$로 고정하면 $y+z \\le 6-k$를 만족하는 양의 정수 $(y, z)$의 개수를 세면 된다. 양의 정수 $(y, z)$가 $y+z \\le M$을 만족하는 경우의 수는 $_MC_2$이므로, $x = 1$일 때 10개, $x = 2$일 때 6개, $x = 3$일 때 3개, $x = 4$일 때 1개이고, $x \\ge 5$는 불가능하다. 따라서 $P = 1^{10} \\cdot 2^6 \\cdot 3^3 \\cdot 4^1 = 2^{6+2} \\cdot 3^3 = 2^8 \\cdot 3^3$이다. 그러므로 $T = P^3 = (2^8 \\cdot 3^3)^3 = 2^{24} \\cdot 3^9$이다. $2^{24} \\cdot 3^9$의 양의 약수의 개수는 $(24+1)(9+1) = 25 \\cdot 10 = 250$이다. 따라서 정답은 ⑤ 250 이다.",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0129",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$2$보다 큰 자연수 $n$에 대하여 $2 \\le r < n$일 때, 옳은 것만을 <보기>에 있는 대로 고른 것은? <보기> ㄱ. $(n+4)(_{n+3}C_n - _{n+3}C_{n-1}) = (4-n) \\times _{n+4}C_4$ ㄴ. $_{n-1}P_r + r \\times _{n-1}P_{r-1} = _nP_r$ ㄷ. $(r-1) \\times _nC_r = n \\times _{n-1}C_{r-1}$ (1) ㄱ (2) ㄴ (3) ㄱ, ㄴ (4) ㄴ, ㄷ (5) ㄱ, ㄴ, ㄷ",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0148",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "0부터 9까지의 자연수 중에서 서로 다른 3개를 택해 일렬로 나열하여 세 자리의 자연수를 만들 때, 다음 조건을 만족시키는 자연수의 개수는? <보기> (가) 백의 자리의 수는 짝수이다. (나) 각 자리의 수 중 짝수끼리는 이웃하지 않는다.",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0149",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "A, B 공연 팀을 포함한 서로 다른 8개의 공연 팀 중에서 서로 다른 5개의 공연 팀을 뽑아 공연 순서를 정하려고 한다. 다음 조건을 만족시키도록 공연 순서를 정하는 경우의 수는? <조건> (가) A, B 공연 팀을 모두 포함한다. (나) A, B 공연 팀은 이어서 공연을 한다. ① 480 ② 720 ③ 960 ④ 1200 ⑤ 1440",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0152",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "한 개의 주사위를 네 번 던져서 나오는 눈의 수를 차례로 $a, b, c, d$라 하자. $a \\le b < c < d$가 되는 경우의 수는? ① 15 ② 20 ③ 25 ④ 30 ⑤ 35",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0159",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "어느 놀이공원의 놀이기구 $A, B, C$는 최대 탑승 인원이 각각 $2$명, $3$명, $3$명이다. 모든 놀이기구에는 어른 없이 어린이만 탑승할 수 없고, 탑승 순서와 자리 배치는 고려하지 않을 때, 어른 $3$명과 어린이 $3$명이 동시에 놀이기구에 탑승하는 방법의 수를 구하고 풀이 과정을 논술하시오. (단, 비어있는 놀이기구가 있을 수 있다.)",
+        "answer": "126",
+        "answer_verified": false
+      },
+      {
+        "id": "N0164",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "출발 지점을 0, 도착 지점을 12라고 두면 11개의 돌은 1번부터 11번까지 놓여 있다. 한 번에 1칸 또는 2칸씩 건너고, 1칸을 4번, 2칸을 4번 건너므로 전체 이동 거리는 $4 \\times 1 + 4 \\times 2 = 12$이다. 따라서 출발 지점에서 도착 지점까지 정확히 도착한다. 또한 출발 지점으로부터 3번째 돌에서 무조건 1칸을 건넌다고 했으므로, 위치 3에 도착한 뒤에는 다음 이동이 1칸이어야 한다. 이제 위치 3에 도착하는 경우를 나누어 생각한다. 1, 1, 1로 위치 3에 도착한 뒤 다음에 1칸을 건너는 경우 앞부분은 1, 1, 1이 된다. 이때 1칸 이동 4번을 모두 사용하므로 남은 것은 2칸 이동 4번뿐이다. 방법 수는 1가지이다. 1, 2로 위치 3에 도착한 뒤 다음에 1칸을 건너는 경우 앞부분은 1, 2, 1이 된다. 사용한 것은 1칸 이동 2번, 2칸 이동 1번이므로 남은 것은 1칸 이동 2번, 2칸 이동 3번이다. 남은 5번의 이동에서 1칸 이동 2번의 위치를 고르면 되므로 방법 수는 $_{5}C_{2} = 10$이다. 2, 1로 위치 3에 도착한 뒤 다음에 1칸을 건너는 경우 앞부분은 2, 1, 1이 된다. 이 경우도 남은 것은 1칸 이동 2번, 2칸 이동 3번이므로 방법 수는 $_{5}C_{2} = 10$이다. 따라서 전체 방법 수는 $1 + 10 + 10 = 21$이다. 따라서 정답은 ② 21이다.",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0171",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "다음 조건을 만족시키는 네 개의 자연수 $a, b, c, d$의 모든 순서쌍 $(a, b, c, d)$의 개수는? <보기>(가) $0 < a < b < c < d < 20$(나) $b - a \\le 2, c - b \\le 2, d - c \\le 2$",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0173",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "1부터 9까지의 자연수가 각각 하나씩 적힌 9개의 공이 들어 있는 주머니가 있다. 이 주머니에서 임의로 4개의 공을 동시에 꺼낼 때, 다음 조건을 만족시키는 경우의 수를 구하시오.(1) 네 수의 합은 홀수이다.(2) 네 수의 곱은 15의 배수이다.",
+        "answer": "24",
+        "answer_verified": false
+      },
+      {
+        "id": "N0174",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "$<그림 1>$의 영역 $A, B, C, D, E$와 $<그림 2>$의 영역 (가), (나), (다), (라)를 서로 다른 $k(k \\ge 4)$가지 이하의 색으로 칠하려고 한다. 같은 색을 중복하여 사용해도 좋으나 인접한 영역은 서로 다른 색으로 구분하여 칠할 때, $<그림 1>$과 $<그림 2>$를 칠하는 방법의 수를 각각 $p, q$라 하자. $\\frac{p-q}{6} = 210$일 때, $kC_4$의 값을 구하라. [그림]",
+        "answer": "35",
+        "answer_verified": false
+      },
+      {
+        "id": "N0185",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "원 위에 같은 간격으로 놓인 14개의 점 중에서 3개의 점을 선택하여 만들 수 있는 삼각형 중 예각삼각형 또는 둔각삼각형의 개수를 구하시오.",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0191",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "주머니 $A$에는 1부터 10까지의 자연수가 하나씩 적힌 10개의 카드가 들어 있고, 주머니 $B$에는 1부터 13까지의 자연수가 하나씩 적힌 13개의 카드가 들어 있다. 같은 주머니 $A$에서 옳은 주머니 $B$에서 각각 임의로 1개의 카드를 꺼낼 때, 꺼낸 카드에 적힌 수의 합을 4로 나눈 나머지가 2가 아닌 경우의 수는? ① 27 ② 33 ③ 66 ④ 97 ⑤ 103",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0193",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "전체 물건 수는 서로 다른 꽃 4송이와 같은 초콜릿 3개로 모두 7개이고, 학생은 6명이므로 모든 학생이 적어도 1개씩 받으면 정확히 1명만 2개를 받고 나머지 5명은 1개씩 받아야 한다. 이제 2개를 받는 학생이 무엇을 받는지에 따라 경우를 나눈다. (i) 서로 다른 꽃 2송이를 받는 경우이다. 2개를 받는 학생을 정하는 방법은 6가지이고, 그 학생이 받을 꽃 2송이를 고르는 방법은 $_4C_2 = 6$가지이다. 남은 꽃 2송이는 서로 다르므로 남은 5명 중 2명에게 나누어 주는 방법은 $5 \\times 4 = 20$가지이다. 나머지 3명은 초콜릿을 1개씩 받으므로 이 경우의 수는 $6 \\times 6 \\times 20 = 720$가지이다. (ii) 꽃 1송이와 초콜릿 1개를 받는 경우이다. 2개를 받는 학생을 정하는 방법은 6가지이고, 그 학생이 받을 꽃을 고르는 방법은 4가지이다. 남은 꽃 3송이는 서로 다르므로 남은 5명 중 3명에게 나누어 주는 방법은 $5 \\times 4 \\times 3 = 60$가지이다. 나머지 2명은 초콜릿을 1개씩 받으므로 이 경우의 수는 $6 \\times 4 \\times 60 = 1440$가지이다. (iii) 초콜릿 2개를 받는 경우이다. 2개를 받는 학생을 정하는 방법은 6가지이다. 남은 꽃 4송이는 서로 다르므로 남은 5명 중 4명에게 나누어 주는 방법은 $5 \\times 4 \\times 3 \\times 2 = 120$가지이다. 나머지 1명은 초콜릿 1개를 받으므로 이 경우의 수는 $6 \\times 120 = 720$가지이다. 전체 경우의 수는 $720 + 1440 + 720 = 2880$가지이다. 따라서 정답은 ② 2880 이다.",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0196",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "어른 $4$명과 어린이 $3$명은 모두 서로 다른 사람이라고 본다. 어른 중 적어도 $3$명이 서로 이웃하는 경우를 센다. 어른을 $A_1, A_2, A_3, A_4$라고 하자. $E_1: A_2, A_3, A_4$가 서로 이웃, $E_2: A_1, A_3, A_4$가 서로 이웃, $E_3: A_1, A_2, A_4$가 서로 이웃, $E_4: A_1, A_2, A_3$가 서로 이웃이라고 하자. 구하는 경우의 수는 $E_1 \\cup E_2 \\cup E_3 \\cup E_4$의 경우의 수이다. 각 $E_i$의 경우의 수를 구하면, 예를 들어 $E_1$에서는 $A_2, A_3, A_4$를 한 묶음으로 볼 수 있다. 그러면 $[A_2A_3A_4]$ $1$개, 남은 어른 $A_1$ $1$명, 어린이 $3$명으로 총 $5$개의 대상을 배열하므로 $5!$가지이고, 블록 안의 순서는 $3!$가지이다. 그러므로 $|E_i| = 5! \\times 3! = 720$이고, 전체 합은 $4 \\times 720 = 2880$이다. 서로 다른 두 사건 $E_i, E_j$가 동시에 성립하려면 어른 $4$명이 모두 연속해서 서야 한다. 이때 어른 $4$명 전체를 하나의 블록으로 보면 어린이 $3$명과 함께 총 $4$개를 배열하므로 $4!$가지이고, 블록 안의 어른 $4$명 배열은 $4!$가지이다. 그러므로 $|E_i \\cap E_j| = 4! \\times 4! = 576$이다. 이러한 쌍은 $_4C_2 = 6$가지이지만, 어른 $4$명이 모두 연속한 한 배열은 정확히 $2$개의 $E_i$에만 속한다. 그래서 두 사건 교집합의 합은 어른 $4$명이 모두 연속한 경우를 $2$번씩 센 것이며, 그 값은 $2 \\times 576 = 1152$이다. 세 사건 이상의 교집합은 없다. 어른 $4$명이 모두 연속해 서더라도 연속한 $3$명짜리 부분은 $2$개뿐이기 때문이다. 포함배제의 원리를 적용하면 전체 경우의 수는 $2880 - 1152 = 1728$이다. 따라서 정답은 $3$ $1728$이다.",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0221",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "그림은 정사각형 6개가 2행 3열로 놓인 직사각형이므로, 인접한 영역은 가로 또는 세로로 맞닿은 칸이다. 원쪽 열부터 차례로 색칠하여 경우의 수를 구한다. 첫 번째 열에서 위 칸의 색은 4가지이고, 아래 칸의 색은 위 칸과 달라야 하므로 3가지이다. 그러므로 첫 번째 열을 색칠하는 방법은 $4 \\times 3 = 12$가지이다. 이제 어떤 한 열의 위아래 색을 각각 $x, y$라 하면 $x \\neq y$이다. 다음 열의 위아래 색을 각각 $p, q$라 하면 $p \\neq x, q \\neq y, p \\neq q$를 만족해야 한다. $p$를 정하는 경우로 나누어 세면, $p=y$인 경우는 1가지이고 이때 $q$는 $y$와만 다르면 되므로 3가지이다. 또 $p$가 $x, y$를 제외한 나머지 2색 중 하나인 경우는 2가지이고, 이때 $q$는 $y$와 $p$를 모두 피해야 하므로 2가지이다. 따라서 한 열이 정해져 있을 때 그 다음 열을 색칠하는 방법은 $1 \\times 3 + 2 \\times 2 = 7$가지이다. 두 번째 열은 첫 번째 열에 대하여 7가지, 세 번째 열은 두 번째 열에 대하여 다시 7가지이다. 전체 경우의 수는 $12 \\times 7 \\times 7 = 588$이다. 따라서 정답은 ⑤ 588이다. [그림]",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0228",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "출발 지점을 0, 도착 지점을 12라고 두면 11개의 돌은 1번부터 11번까지 놓여 있다. 한 번에 1칸 또는 2칸씩 건너고, 1칸을 4번, 2칸을 4번 건너므로 전체 이동 거리는 $4 \\times 1 + 4 \\times 2 = 12$이다. 따라서 출발 지점에서 도착 지점까지 정확히 도착한다. 또한 출발 지점으로부터 3번째 돌에서 무조건 1칸을 건넌다고 했으므로, 위치 3에 도착한 뒤에는 다음 이동이 1칸이어야 한다. 이제 위치 3에 도착하는 경우를 나누어 생각한다. 1, 1, 1로 위치 3에 도착한 뒤 다음에 1칸을 건너는 경우 앞부분은 1, 1, 1이 된다. 이때 1칸 이동 4번을 모두 사용하므로 남은 것은 2칸 이동 4번뿐이다. 방법 수는 1가지이다. 1, 2로 위치 3에 도착한 뒤 다음에 1칸을 건너는 경우 앞부분은 1, 2, 1이 된다. 사용한 것은 1칸 이동 2번, 2칸 이동 1번이므로 남은 것은 1칸 이동 2번, 2칸 이동 3번이다. 남은 5번의 이동에서 1칸 이동 2번의 위치를 고르면 되므로 방법 수는 $_5C_2 = 10$이다. 2, 1로 위치 3에 도착한 뒤 다음에 1칸을 건너는 경우 앞부분은 2, 1, 1이 된다. 이 경우도 남은 것은 1칸 이동 2번, 2칸 이동 3번이므로 방법 수는 $_5C_2 = 10$이다. 따라서 전체 방법 수는 $1 + 10 + 10 = 21$이다. 따라서 정답은 ② 21이다.",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0235",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "다음 조건을 만족시키는 네 개의 자연수 $a, b, c, d$의 모든 순서쌍 $(a, b, c, d)$의 개수는?<보기>(가) $0 < a < b < c < d < 20$(나) $b - a \\le 2, c - b \\le 2, d - c \\le 2$",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0237",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "1부터 9까지에서 서로 다른 4개의 공을 동시에 꺼내므로 순서는 관계없이 4개의 수의 조합을 센다. 먼저 조건 (ii)를 본다. 네 수의 곱이 15의 배수이려면 3과 5를 인수로 가져야 한다. 1부터 9까지에서 5의 배수는 5뿐이므로 5가 반드시 포함되어야 한다. 또한 3의 배수인 3, 6, 9 중 적어도 하나가 포함되어야 한다. 이제 조건 (i)를 본다. 네 수의 합이 홀수이려면 뽑은 4개의 수 중 홀수의 개수가 홀수여야 한다. 그런데 5는 홀수이므로 나머지 3개에서 홀수의 개수는 0개 또는 2개여야 한다. 그러므로 5를 포함한 상태에서 다음 두 경우를 센다. 1) 나머지 3개가 모두 짝수인 경우 짝수는 ${2, 4, 6, 8}$이다. 이 중 3의 배수가 적어도 하나 있어야 하므로 6이 반드시 포함되어야 한다. 그러면 나머지 2개는 ${2, 4, 8}$ 중에서 고른다. 경우의 수는 $_3C_2 = 3$이다. 2) 나머지 3개 중 홀수 2개, 짝수 1개인 경우 5를 제외한 홀수는 ${1, 3, 7, 9}$, 짝수는 ${2, 4, 6, 8}$이다. 전체 경우의 수는 $_4C_2 \\times _4C_1 = 6 \\times 4 = 24$이다. 여기서 3의 배수가 전혀 없는 경우를 빼야 한다. 3의 배수가 아닌 홀수는 ${1, 7}$뿐이므로 홀수 2개는 ${1, 7}$로 고정된다. 3의 배수가 아닌 짝수는 ${2, 4, 8}$이므로 짝수 1개는 3가지이다. 그러므로 제외할 경우의 수는 $1 \\times 3 = 3$이다. 유효한 경우의 수는 $24 - 3 = 21$이다. 그러므로 전체 경우의 수는 $3 + 21 = 24$이다. 따라서 정답은 24이다.",
+        "answer": "24",
+        "answer_verified": false
+      },
+      {
+        "id": "N0238",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "$<그림 1>$의 영역 $A, B, C, D, E$와 $<그림 2>$의 영역 (가), (나), (다), (라)를 서로 다른 $k(k \\ge 4)$가지 이하의 색으로 칠하려고 한다. 같은 색을 중복하여 사용해도 좋으나 인접한 영역은 서로 다른 색으로 구분하여 칠할 때, $<그림 1>$과 $<그림 2>$를 칠하는 방법의 수를 각각 $p, q$라 하자. $\\frac{p-q}{6} = 210$일 때, $kC_4$의 값을 구하라. [그림]",
+        "answer": "35",
+        "answer_verified": false
+      },
+      {
+        "id": "N0251",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "서로 다른 12개의 점이 원에서 한계점이 3개를 선택하면 삼각형이 만들어지므로 $C(12,3)$ 한 직선 위에 3개 이상의 점이 있는 경우. 즉 가로로 3개씩 4개, 세로로 4개씩 3개인 위의 위에서 뽑는 경우는 제외한다. $C(12,3)-4 \\cdot C(3,3)-3 \\cdot C(4,3)$ 따라서 삼각형 개수는 $2 \\cdot 11 \\cdot 10 - (12+4+4) = 220 - 20 = 200$이다.",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0255",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "학교에서 3명의 학생은 1개의 간식을 받고, 1명의 학생만 2개의 간식을 받고 $C(3,2)$는 받은 종류를 기준으로 경우를 나눈다. 1) 서로 다른 사탕 2개인 경우: 나머지 3명에게서 서로 다른 간식을 나누어 준다. 2) 서로 다른 간식 2개인 경우: 서로 다른 간식 3개 중에서 2개 택하고 $C(3,2)$, 나머지 3명에게 남은 서로 다른 간식을 주면 $C(3,1)$는 3가지이다. 3) 사탕 1개, 서로 다른 간식 1개인 경우: 서로 다른 간식 3개 중에서 1개 택하고 $C(3,1)$ 나머지 3명에게 남은 서로 다른 간식 2개를 주면 $P(3,2)$이다. 남은 학생은 서로 같은 사탕을 받는다 (1가지) 1) $18$에서 경우의 수는 $4(3+3+3+6)=4 \\cdot 32 = 132$이다.",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0261",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "어느 고등학교 1학년 학생 120명은 2개의 동아리 A, B 중 적어도 하나에 가입하였다. 동아리 A에 가입한 학생 수는 동아리 B에 가입한 학생 수의 2배이고, 두 동아리 A, B 모두에 가입한 학생 수는 동아리 A에만 가입한 학생 수의 3배이다. 동아리 A에 가입한 학생 수를 구하시오.",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0279",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "다음 조건을 만족하는 $n$과 $r$의 값 중 $n+r$의 최댓값은? (단, $n \\le 10$, $n$과 $r$는 자연수이다.) (가) $12-nC_r \\le 1$ (나) $nP_r \\ge 4 \\times nP_{r-1}$ (1) 13 (2) 14 (3) 15 (4) 16 (5) 17",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0286",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "비밀번호는 (홀수 짝수), (남비지 숫자들), (특수문자)로 구성됩니다. 홀수의 개수에 따라 경우를 나눕니다.Case 1: 홀수 2개, 짝수 1개, 특수문자 1개문자 선택: $5C_2 \\times 5C_1 \\times 2C_1 = 200$배열: (홀수 묶음), 짝수, 특수문자를 배열하는 경우의 수는 4이고, 홀수끼리 자리를 바꾸는 경우는 2이므로, $4! \\times 2!$입니다.경우의 수: $200 \\times 48 = 9600$Case 2: 홀수 3개, 짝수 1개, 특수문자 1개문자 선택: $5C_3 \\times 5C_1 \\times 2C_1 = 100$배열: $3! \\times 3!$경우의 수: $100 \\times 36 = 3600$Case 3: 홀수 4개, 특수문자 1개문자 선택: $5C_4 \\times 2C_1 = 10$배열: $2! \\times 4!$경우의 수: $10 \\times 48 = 480$총 비밀번호의 개수 $N = 9600 + 3600 + 480 = 13680$입니다.따라서 $N \\over 120 = 114$입니다.",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0307",
+        "unit": "경우의수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "A, B 두 학급 각각에는 해운대 여행지를 $h_1, h_2$, 광안리 여행지를 $g_1, g_2$ 라 하자. \\\\ 두 사람 모두에게 선택된 여행지가 1곳인 경우는 다음과 같이 나뉜다. \\\\ 해운대 여행지만 공통으로 선택하는 경우. $h_1=h_2$ 인 경우의 수는 $3 \\times 2$, $g_1=g_2$ 인 경우의 수는 $4 \\times 3=12$ 이다. \\\\ 따라서 경우의 수는 $3 \\times 12=36$ \\\\ 광안리 여행지만 공통으로 선택하는 경우. $h_1 \\ne h_2$ 인 경우의 수는 $3 \\times 2=6$ 이고, $g_1=g_2$ 인 경우의 수는 $4$ 이다. \\\\ 따라서 경우의 수는 $6 \\times 4=24$ \\\\ 구하는 경우의 수는 $36+24=60$",
+        "answer": "3",
+        "answer_verified": false
+      }
+    ],
+    "행렬": [
+      {
+        "id": "N0019",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "약수 여부를 나타내는 행렬 $A$가 자기 자신과는 약수하지 않아 대각성분은 모두 0이고, $A_i$와 $A_j$가 약수하면 $A_i$와 $A_j$도 약수하므로 $a_{ij} = a_{ji}$이다. 첫째 행이 $(0, 1, 0, 1, 0)$ 이므로 $a_{21} = 1$, $a_{31} = 0$, $a_{41} = 1$, $a_{51} = 0$ 이다. 또 주어진 값에서 $a_{32} = 1$, $a_{42} = 1$, $a_{52} = 0$ 이므로 대칭성을 이용하면 $a_{23} = 1$, $a_{24} = 1$, $a_{25} = 0$ 이다. 그리고 대각성분이므로 $a_{44} = 0$ 이고, $a_{55} = 0$ 이다. 이제 정해지지 않은 것은 $a_{34} = a_{43}$, $a_{35} = a_{53}$, $a_{45} = a_{54}$ 의 세 쌍뿐이다. 이를 각각 $x, y, z$라 하면 $x, y, z$는 각각 0 또는 1 이다. 이미 확정된 약수는 $A_1A_2, A_1A_4, A_2A_3, A_2A_4$ 의 4번이다. 약수 1번은 행렬에서 대칭인 두 성분에 1이 나타나므로 성분의 합에 2를 더한다. 따라서 $S = 2 \\times 4 + 2(x+y+z) = 8 + 2(x+y+z)$ 이다. $x+y+z$의 가능한 값은 $0, 1, 2, 3$ 이므로 $S$의 가능한 값은 $8, 10, 12, 14$ 이다. 이 중 가장 큰 값은 14이고 두 번째로 큰 값은 12 이다. 따라서 정답은 ② 12 이다.",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0030",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "이차방정식 $x^2+5x-4=0$의 두 근을 $\\alpha, \\beta$라 하자. 두 행렬 $A = \\begin{pmatrix} 1 & \\alpha \\\\ 3 & -1 \\end{pmatrix}, B = \\begin{pmatrix} 1 & -2 \\\\ -1 & \\beta \\end{pmatrix}$에 대하여 행렬 $AB$의 모든 성분의 합은?",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0031",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "2차 정사각형렬 $A$가 다음 조건을 만족시킨다. (가) $A^2-2A-E=O$ (나) $A\\begin{pmatrix} 2 \\\\ -2 \\end{pmatrix} = \\begin{pmatrix} a \\\\ b \\end{pmatrix}$를 만족시키는 두 실수 $a, b$에 대하여 $a-b$의 값은? (단, $E$는 단위행렬이고, $O$는 영행렬이다.)",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0034",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "각 보기의 참\\cdot 거짓을 차례로 판단한다. ㄱ. $A+B=E$이면 $A^2-B^2=A-B$인가를 확인한다. ㄴ. $AB=A$, $BA=B$이면 $A^2+B^2=A+B$인가를 확인한다. ㄷ. $A+B=E$이고 $AB=O$이면 $A^2+B^2=E$인가를 확인한다.",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0042",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "두 $2$차 정사각행렬 $A, B$가 다음 조건을 만족시킨다. (가) $A+B=2E$(나) $AB=E$$A^4 = pA - qE$를 항상 만족할 때, $p+q$의 값을 구하는 과정을 서술하고 답을 쓰시오. (단, $E$는 단위행렬이고, $p, q$는 $2$ 이상의 자연수이다.)",
+        "answer": "7",
+        "answer_verified": false
+      },
+      {
+        "id": "N0054",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "어느 고등학교의 두 학생회장 후보 $A$와 $B$에 대하여 투표를 실시한 결과 $A$ 후보는 남학생의 $60\\%$와 여학생의 $45\\%$가 지지하였고, $B$ 후보는 남학생의 $40\\%$와 여학생의 $55\\%$가 지지하였다. 남학생이 $200$명이고, 여학생이 $180$명일 때, 후보 $B$의 득표수를 나타낸 것은?① 행렬 $\\begin{pmatrix} 0.6 & 0.45 \\\\ 0.4 & 0.55 \\end{pmatrix} \\begin{pmatrix} 180 \\\\ 200 \\end{pmatrix}$ 의 $(1,1)$성분② 행렬 $\\begin{pmatrix} 0.6 & 0.45 \\\\ 0.4 & 0.55 \\end{pmatrix} \\begin{pmatrix} 200 \\\\ 180 \\end{pmatrix}$ 의 $(2,1)$성분③ 행렬 $\\begin{pmatrix} 0.6 & 0.45 \\\\ 0.4 & 0.55 \\end{pmatrix} \\begin{pmatrix} 200 \\\\ 180 \\end{pmatrix}$ 의 $(1,1)$성분④ 행렬 $\\begin{pmatrix} 0.6 & 0.45 \\\\ 0.4 & 0.55 \\end{pmatrix} \\begin{pmatrix} 200 \\\\ 180 \\end{pmatrix}$ 의 $(2,1)$성분⑤ 행렬 $\\begin{pmatrix} 0.45 & 0.45 \\\\ 0.6 & 0.4 \\end{pmatrix} \\begin{pmatrix} 200 \\\\ 180 \\end{pmatrix}$ 의 $(2,1)$성분",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0060",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "행렬 $A = -I + N$이라 두면 $N = \\begin{pmatrix} 0 & 0 \\\\ a & 0 \\end{pmatrix}$이다. $N^2 = \\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$이므로 $N^2 = O$이다. $I$와 $N$은 가환하고 $N^2 = O$이므로 이항정리를 이용하면 $A^k = (-I + N)^k = (-I)^k + k(-I)^{k-1}N$이다. 즉, $A^k = \\begin{pmatrix} (-1)^k & 0 \\\\ k(-1)^{k-1}a & (-1)^k \\end{pmatrix}$이다. $X = \\sum_{k=1}^6 A^k$에서 대각성분은 $\\sum_{k=1}^6 (-1)^k = -1 + 1 - 1 + 1 - 1 + 1 = 0$이므로 모두 $0$이다. 또한 $(1,2)$ 성분은 항상 $0$이다. $(2,1)$ 성분은 $a \\sum_{k=1}^6 k(-1)^{k-1} = a(1 - 2 + 3 - 4 + 5 - 6) = -3a$이다. 그러므로 $X = \\begin{pmatrix} 0 & 0 \\\\ -3a & 0 \\end{pmatrix}$이다. 행렬 $X$의 모든 성분의 합은 $-3a$이므로 $-3a = 15$이다. $a = -5$이다.",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0066",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "자연수 $i, j$에 대하여 이차함수 $y = -x^2 - 1$의 그래프와 직선 $y = ix$의 서로 다른 교점의 개수를 $p_i$라 하고, $y = -x^2 - 1$의 그래프와 직선 $y = -jx$의 서로 다른 교점의 개수를 $q_j$라 하자. 3차 정사각형렬 $A$의 $(i,j)$ 성분 $a_{ij}$를 $a_{ij} = p_i + q_j$라 하고, 3차 정사각형렬 $B$의 $(i,j)$ 성분 $b_{ij} = a_{ji}$라 할 때 행렬 $A + B$의 $(2,3)$ 성분은? ① 2 ② 4 ③ 6 ④ 8 ⑤ 10",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0072",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "두 행렬 $A, B$에 대하여 $A+B = \\begin{pmatrix} 2 & 3 \\\\ 1 & 2 \\end{pmatrix}$, $B = \\begin{pmatrix} 1 & 1 \\\\ 0 & 2 \\end{pmatrix}$일 때, $AB+B^2$의 모든 성분의 합은?",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0097",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "행렬 $A = \\begin{pmatrix} 1 & 0 \\\\ -2 & -1 \\end{pmatrix}$에 대하여 행렬 $A + A^2 + \\cdots + A^{99}$의 모든 성분의 합은?",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0104",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "각 보기의 참\\cdot 거짓을 차례로 판단한다.ㄱ. $(A+B)^2 = (A-B)^2$ㄴ. $A^2=E, B^2=B$일 때 $(ABA)^2 = ABA$ㄷ. $A(A+E)=E, AB=-E$일 때 $B^2=A+2E$",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0106",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "행렬 $A = \\begin{pmatrix} m & 0 \\\\ m-3 & 3 \\end{pmatrix}$에 대하여 $A^n$의 모든 성분의 합이 $2^{40}$이 되도록 하는 두 자연수 $m, n$의 순서쌍 $(m,n)$이 존재한다. 이때, $m+n$의 최솟값을 구하시오.",
+        "answer": "14",
+        "answer_verified": false
+      },
+      {
+        "id": "N0127",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "이차방정식 $x^2+5x+2=0$의 두 근을 $\\alpha, \\beta$라 하면, 근과 계수의 관계에 의해 $\\alpha+\\beta=-5$, $\\alpha\\beta=2$이다. 행렬 $A = \\begin{pmatrix} \\alpha & 1 \\\\ 1 & \\beta \\end{pmatrix}$의 대각합은 $\\alpha+\\beta=-5$이고, 행렬식은 $\\alpha\\beta-1=2-1=1$이다. 그러므로 $A$의 특성다항식은 $\\lambda^2-(\\alpha+\\beta)\\lambda+(\\alpha\\beta-1) = \\lambda^2+5\\lambda+1$이다. 행렬 $A$는 자신의 특성다항식을 만족하므로 $A^2+5A+I=0$이고, 따라서 $A^2=-5A-I$이다. 이 식에 $A$를 곱하면 $A^3=A \\cdot A^2=A(-5A-I)=-5A^2-A$이다. 여기에 $A^2=-5A-I$를 대입하면 $A^3=-5(-5A-I)-A=25A+5I-A=24A+5I$이다. $A$의 모든 성분의 합은 $\\alpha+1+1+\\beta=(\\alpha+\\beta)+2=-5+2=-3$이다. 또한 $5I = \\begin{pmatrix} 5 & 0 \\\\ 0 & 5 \\end{pmatrix}$의 모든 성분의 합은 10이므로, $A^3=24A+5I$의 모든 성분의 합은 $24 \\times (-3)+10 = -72+10 = -62$이다. 따라서 정답은 ① $-62$ 이다.",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0128",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$A = \\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}$일 때, $3$ 이상의 모든 자연수 $n$에 대하여 $A^n = \\begin{pmatrix} a & b \\\\ b & a \\end{pmatrix}$와 $A^{n-2} + \\begin{pmatrix} c & -d \\\\ -e & f \\end{pmatrix}$가 성립하도록 하는 상수 $a, b, c, d, e, f$에 대하여 $a+b+c+d+e+f$의 값은? (1) $-2$ (2) $-1$ (3) $0$ (4) $1$ (5) $2$",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0133",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "행렬 $A = \\begin{pmatrix} 1 & -1 \\\\ 1 & 0 \\end{pmatrix}$에 대하여 조건 (가) $A^m = A^n$, 조건 (나) $m$은 $n$의 약수인 두 자연수 $m, n$을 찾는다. 이때 $1 \\le m < n \\le 50$이다.먼저 $A$의 거듭제곱의 주기를 구한다.$A$의 특성다항식은 $\\det(A-\\lambda I) = (1-\\lambda)(-\\lambda)-(-1)(1) = \\lambda^2-\\lambda+1$이므로 케일리-해밀턴 정리에 의해 $A^2-A+I=0$이다. 따라서 $A^2=A-I$이다.이를 이용하면 $A^3 = A \\cdot A^2 = A(A-I) = A^2-A = (A-I)-A = -I$이다. 그러므로 $A^6 = (-I)^2 = I$이다.또한 $A^3 = -I \\ne I$이므로 $A$의 최소 주기는 6이다. 따라서 $A^m = A^n$이면 $A^{n-m} = I$이므로 $n-m$은 6의 배수이다.이제 $n-m$의 최솟값 $N$을 구한다.$m < n$이므로 $n-m$은 양의 정수이고, 6의 배수여야 하므로 최솟값은 6이다. 실제로 $m=1, n=7$이면 $1 \\mid 7$이고 $A^1 = A^7$이므로 가능하다. 따라서 $N=6$이다.다음으로 $n-m$의 최댓값 $M$을 구한다.$n \\le 50$이므로 $n-m \\le 49$이고, 이 값은 6의 배수여야 하므로 가능한 최댓값은 48이다. 실제로 $m=1, n=49$이면 $1 \\mid 49$이고 $A^1 = A^{49}$이므로 가능하다. 따라서 $M=48$이다.따라서 $M-N = 48-6 = 42$이므로 정답은 ③ 42이다.",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0150",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "이차 정사각형렬 $A$가 다음 조건을 만족시킨다. <조건> (가) $A\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix} = \\begin{pmatrix} 3 \\\\ 7 \\end{pmatrix}$ (나) $A\\begin{pmatrix} 0 \\\\ 3 \\end{pmatrix} = \\begin{pmatrix} 12 \\\\ -15 \\end{pmatrix}$ 행렬 $A\\begin{pmatrix} 1 \\\\ 4 \\end{pmatrix}$의 모든 성분의 합은? ① 5 ② 6 ③ 7 ④ 8 ⑤ 9",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0162",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "행렬 $A = \\begin{pmatrix} 1 & 0 \\\\ 2 & 1 \\end{pmatrix}$과 두 실수 $a, b$에 대하여 등식 $A + A^2 + A^3 + A^4 + A^5 = aA + bE$가 성립할 때, $a - b$의 값은? (단, $E$는 단위행렬)",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0166",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\\\mathbf{v} = \\\\begin{pmatrix} 3 \\\\ -2 \\\\end{pmatrix}, \\\\mathbf{w} = \\\\begin{pmatrix} 1 \\\\ 5 \\\\end{pmatrix}$라고 두면 조건 2에 의해 $A\\\\mathbf{v} = \\\\mathbf{w}$이다. 조건 1의 $A^2 - 3A + 2E = \\\\mathbf{O}$를 벡터 $\\\\mathbf{v}$에 작용시키면 $A^2\\\\mathbf{v} - 3A\\\\mathbf{v} + 2\\\\mathbf{v} = \\\\mathbf{0}$이므로 $A\\\\mathbf{w} - 3\\\\mathbf{w} + 2\\\\mathbf{v} = \\\\mathbf{0}$이다. 그러므로 $A\\\\mathbf{w} = 3\\\\mathbf{w} - 2\\\\mathbf{v} = 3\\\\begin{pmatrix} 1 \\\\ 5 \\\\end{pmatrix} - 2\\\\begin{pmatrix} 3 \\\\ -2 \\\\end{pmatrix} = \\\\begin{pmatrix} -3 \\\\ 19 \\\\end{pmatrix}$이다. 구하려는 식은 선형성에 의해 $A\\\\begin{pmatrix} -2 \\\\ 10 \\\\end{pmatrix} + A\\\\begin{pmatrix} 9 \\\\ -6 \\\\end{pmatrix} = A\\\\begin{pmatrix} 7 \\\\ 4 \\\\end{pmatrix}$이다. 이제 $\\\\begin{pmatrix} 7 \\\\ 4 \\\\end{pmatrix} = a\\\\begin{pmatrix} 3 \\\\ -2 \\\\end{pmatrix} + b\\\\begin{pmatrix} 1 \\\\ 5 \\\\end{pmatrix}$라 두면 $3a+b=7, -2a+5b=4$이다. 이를 풀면 $a=\\\\frac{31}{17}, b=\\\\frac{26}{17}$이다. 그러므로 $A\\\\begin{pmatrix} 7 \\\\ 4 \\\\end{pmatrix} = aA\\\\mathbf{v} + bA\\\\mathbf{w} = \\\\frac{31}{17}\\\\begin{pmatrix} 1 \\\\ 5 \\\\end{pmatrix} + \\\\frac{26}{17}\\\\begin{pmatrix} -3 \\\\ 19 \\\\end{pmatrix} = \\\\begin{pmatrix} \\\\frac{31-78}{17} \\\\ \\\\frac{155+494}{17} \\\\end{pmatrix} = \\\\begin{pmatrix} -\\\\frac{47}{17} \\\\ \\\\frac{649}{17} \\\\end{pmatrix}$이므로 $p = -\\\\frac{47}{17}, q = \\\\frac{649}{17}$이다. $p-q = -\\\\frac{47}{17} - \\\\frac{649}{17} = -\\\\frac{696}{17}$이다. 따라서 정답은 ① 32 이다.",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0177",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "(나)에서 $A = kE - B$이다.이를 (가)에 대입하면$(kE - B) + kB = \\begin{pmatrix} 10 & -6 \\\\ -6 & 10 \\end{pmatrix}$이므로$kE + (k-1)B = \\begin{pmatrix} 10 & -6 \\\\ -6 & 10 \\end{pmatrix}$이다.$k \\ne 1$이므로$B = \\frac{1}{k-1} \\left\\{ \\begin{pmatrix} 10 & -6 \\\\ -6 & 10 \\end{pmatrix} - kE \\right\\}$이다.행렬 $\\begin{pmatrix} 10 & -6 \\\\ -6 & 10 \\end{pmatrix}$의 고유값은 4, 16이다.그러므로 $B$의 고유값은 각각 $\\frac{4-k}{k-1}$, $\\frac{16-k}{k-1}$이다.(다)에서 $B^2 = kB$이므로 $B$의 고유값 $\\lambda$는$\\lambda^2 = k\\lambda$를 만족하여 $\\lambda = 0$ 또는 $\\lambda = k$이다.그러므로 $\\frac{4-k}{k-1}$, $\\frac{16-k}{k-1}$는 각각 0 또는 $k$이다.$\\frac{4-k}{k-1} = 0$이면 $k=4$이고, 이때$\\frac{16-k}{k-1} = \\frac{12}{3} = 4$이므로 조건을 만족한다.그러므로 $k=4$이다.이제$B = \\frac{1}{3} \\left\\{ \\begin{pmatrix} 10 & -6 \\\\ -6 & 10 \\end{pmatrix} - 4E \\right\\} = \\begin{pmatrix} 2 & -2 \\\\ -2 & 2 \\end{pmatrix}$이고,$A = 4E - B = \\begin{pmatrix} 2 & 2 \\\\ 2 & 2 \\end{pmatrix}$이다.그러므로 $a = 2+2+2+2 = 8$이므로$\\frac{k}{a} = \\frac{4}{8} = \\frac{1}{2}$이다.따라서 정답은 $\\frac{1}{2}$이다.",
+        "answer": "$\\frac{1}{2}$",
+        "answer_verified": false
+      },
+      {
+        "id": "N0178",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "이차정사각행렬 $A$와 $B$에 대하여 연산 $A \\cdot B$를$$A \\cdot B = AB - BA + A$$로 정의할 때, 보기에서 옳은 것만을 있는 대로 고른 것은?(단, $E$는 단위행렬)| 보기 |ㄱ. 모든 이차정사각행렬 $A$에 대하여 $A \\cdot B = A$가 성립하면 $B = E$이다.ㄴ. $A = -E$이면 $A \\cdot B = -E$를 만족시키는 $B$가 존재한다.ㄷ. $A = \\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}$이면 $A \\cdot B = B \\cdot A$를 만족시키는 $B = A$뿐이다.① ㄱ② ㄴ③ ㄱ, ㄷ④ ㄴ, ㄷ⑤ ㄱ, ㄴ, ㄷ",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0187",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "등식 $\\begin{pmatrix} -x^2+1 & 1 \\ x^4-20x & -8x+24 \\end{pmatrix} \\begin{pmatrix} 1 \\\\ x^2 \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 12x-15 \\end{pmatrix}$가 성립하도록 하는 모든 실수 $x$의 값을 $a$라 하자. 서로 다른 주사위 $2$개를 던져서 나오는 눈의 수의 합이 $a$보다 큰 경우의 수는? (1) $6$ (2) $10$ (3) $18$ (4) $26$ (5) $30$",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0206",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$2 \\times 2$ 행렬 $A$에 대하여 $A \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$, $A \\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} -5 \\\\ -3 \\end{pmatrix}$일 때, $A^3 - 2A^2 + 3A - 4E = pA + qE$이다. 두 실수 $p, q$의 합은? (단, $E$는 단위행렬이다.)",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0226",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "행렬 $A = \\begin{pmatrix} 1 & 0 \\\\ 2 & 1 \\end{pmatrix}$과 두 실수 $a, b$에 대하여 등식 $A + A^2 + A^3 + A^4 + A^5 = aA + bE$가 성립할 때, $a - b$의 값은? (단, $E$는 단위행렬)",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0230",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\\\mathbf{v} = \\\\begin{pmatrix} 3 \\\\ -2 \\\\end{pmatrix}, \\\\mathbf{w} = \\\\begin{pmatrix} 1 \\\\ 5 \\\\end{pmatrix}$라고 두면 조건 2에 의해 $A\\\\mathbf{v} = \\\\mathbf{w}$이다. 조건 1의 $A^2 - 3A + 2E = \\\\mathbf{O}$를 벡터 $\\\\mathbf{v}$에 작용시키면 $A^2\\\\mathbf{v} - 3A\\\\mathbf{v} + 2\\\\mathbf{v} = \\\\mathbf{0}$이므로 $A\\\\mathbf{w} - 3\\\\mathbf{w} + 2\\\\mathbf{v} = \\\\mathbf{0}$이다. 그러므로 $A\\\\mathbf{w} = 3\\\\mathbf{w} - 2\\\\mathbf{v} = 3\\\\begin{pmatrix} 1 \\\\ 5 \\\\end{pmatrix} - 2\\\\begin{pmatrix} 3 \\\\ -2 \\\\end{pmatrix} = \\\\begin{pmatrix} -3 \\\\ 19 \\\\end{pmatrix}$이다. 구하려는 식은 선형성에 의해 $A\\\\begin{pmatrix} -2 \\\\ 10 \\\\end{pmatrix} + A\\\\begin{pmatrix} 9 \\\\ -6 \\\\end{pmatrix} = A\\\\begin{pmatrix} 7 \\\\ 4 \\\\end{pmatrix}$이다. 이제 $\\\\begin{pmatrix} 7 \\\\ 4 \\\\end{pmatrix} = a\\\\begin{pmatrix} 3 \\\\ -2 \\\\end{pmatrix} + b\\\\begin{pmatrix} 1 \\\\ 5 \\\\end{pmatrix}$라 두면 $3a+b=7, -2a+5b=4$이다. 이를 풀면 $a=\\\\frac{31}{17}, b=\\\\frac{26}{17}$이다. 그러므로 $A\\\\begin{pmatrix} 7 \\\\ 4 \\\\end{pmatrix} = aA\\\\mathbf{v} + bA\\\\mathbf{w} = \\\\frac{31}{17}\\\\begin{pmatrix} 1 \\\\ 5 \\\\end{pmatrix} + \\\\frac{26}{17}\\\\begin{pmatrix} -3 \\\\ 19 \\\\end{pmatrix} = \\\\begin{pmatrix} \\\\frac{31-78}{17} \\\\ \\\\frac{155+494}{17} \\\\end{pmatrix} = \\\\begin{pmatrix} -\\\\frac{47}{17} \\\\ \\\\frac{649}{17} \\\\end{pmatrix}$이므로 $p = -\\\\frac{47}{17}, q = \\\\frac{649}{17}$이다. $p-q = -\\\\frac{47}{17} - \\\\frac{649}{17} = -\\\\frac{696}{17}$이다. 따라서 정답은 ① 32 이다.",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0241",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "이차 정사각행렬 $A, B$와 $k(k \\ne 1)$에 대하여 다음 조건을 모두 만족시키는 행렬 $A$의 성분의 합을 $a$라 할 때, $\\frac{a}{k}$의 값을 구하여라. (단, $E$는 단위행렬) $<조건>$ (1) (가) $A+kB = \\begin{pmatrix} 10 & -6 \\\\ -6 & 10 \\end{pmatrix}$ (2) (나) $A+B = kE$ (3) (다) $B^2 = kB$",
+        "answer": "$\\frac{1}{2}$",
+        "answer_verified": false
+      },
+      {
+        "id": "N0242",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "이차정사각행렬 $A$와 $B$에 대하여 연산 $A \\cdot B$를 $$A \\cdot B = AB - BA + A$$ 로 정의할 때, 보기에서 옳은 것만을 있는 대로 고른 것은?(단, $E$는 단위행렬)| 보기 |ㄱ. 모든 이차정사각행렬 $A$에 대하여 $A \\cdot B = A$가 성립하면 $B = E$이다.ㄴ. $A = -E$이면 $A \\cdot B = -E$를 만족시키는 $B$가 존재한다.ㄷ. $A = \\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}$이면 $A \\cdot B = B \\cdot A$를 만족시키는 $B = A$뿐이다.",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0253",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "정의에 따라 $A=\\begin{pmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \\end{pmatrix}$, $B=\\begin{pmatrix} b_{11} & b_{12} \\\\ b_{21} & b_{22} \\end{pmatrix}$이고, 두 행렬 더하면 $A+B=\\begin{pmatrix} a_{11}+b_{11} & a_{12}+b_{12} \\\\ a_{21}+b_{21} & a_{22}+b_{22} \\end{pmatrix}$이다. $x_1, x_2, x_3, x_4$는 $13, 13, 13, 13$이고, $B-3$ 연립하면 $a_{11}, a_{12}, a_{21}, a_{22}$는 $8, 11, 7, 13$이다. 따라서 $A=\\begin{pmatrix} 7 & 13 \\\\ 8 & 11 \\end{pmatrix}$, $B=\\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$이다. $A+B$의 모든 성분의 합은 $22-128=106$이다.",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0256",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "두 행렬에서 $B-A=E$이고 두 번째 행렬식에 대입하면 $A+E=B$이다. $A+E=A+E$이고, 양변에 행렬 $A+E$를 곱하면 $(A+E)(A-E)=O$이다. $A^2-E^2=O$, $A^2=E^2$이므로 거듭제곱하면 $A$주기를 가지고 한 주기의 합은 $A+A^2-E-A^2+A^3-E=O$이다. 또한 $A+B=E$를 대입하면 $(B+E)B-E=O$, $B^2+BE-E=O$이고, $B-E=A$이다. $B^2+BE-E=O$이고, $B^2+BE-E=O$이고, $B^2+BE-E=O$이다. $B^2+BE-E=O$이다. 이 때, $2023=3 \\cdot 674+1$이고, 준식을 행렬 $A, B$와 $X$가 곱셈규칙을 따르고 다시 위로부터 각각 $A, B$에 곱하면 모두 행렬이 되면서 첫 행만 남는다. 준식의 값은 $1-1=0$이다.",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0280",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "두 이차정사각행렬 $A$, $E$에 대하여 $2A+E = \\begin{pmatrix} -1 & 0 \\\\ 1 & 2 \\end{pmatrix}$, $2A-E = \\begin{pmatrix} -3 & 2 \\\\ 0 & -7 \\end{pmatrix}$ 일 때, 행렬 $4A^2-E^2$의 $(2,1)$의 성분은? (단, $E$는 단위행렬이다.) (1) -5 (2) 0 (3) 1 (4) 3 (5) 5",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0284",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "이차정사각행렬 $A$가 다음 조건을 만족시킨다. (가) $A^2+2A+4E=O$ (나) $A\\begin{pmatrix} 2 \\\\ -1 \\end{pmatrix}=\\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}$ $(A+2E)\\begin{pmatrix} x \\\\ y \\end{pmatrix}=\\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}$을 만족시키는 실수 $x, y$에 대하여 $x+2y$의 값은? (단, $E$는 단위행렬, $O$는 영행렬이다.)",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0295",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$3 \\times 3$ 행렬 $A$ 의 $(m,n)$ 성분 $a_{mn}$ 은 이차방정식 $x^2+mx+n=0$ 의 서로 다른 실근의 개수로 정의할 때 행렬 $A$ 의 모든 성분의 합은?",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0312",
+        "unit": "행렬",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "행렬 $A$ 에 대하여 $A^2 = \\begin{pmatrix} 2 & 1 \\\\ -3 & -2 \\end{pmatrix} \\begin{pmatrix} 2 & 1 \\\\ -3 & -2 \\end{pmatrix} = \\begin{pmatrix} 4-3 & 2-2 \\\\ -6+6 & -3+4 \\end{pmatrix} = \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix} = E$ 이다. $A^2=E$ 이므로 자연수 $k$ 에 대하여 $A^k=E$, $A^{2n-1}=A$ 이 성립한다. $f(n)$ 은 $A^n$ 의 $(1,2)$ 원소이므로 $n$ 이 짝수이면 $f(n)=0$, $n$ 이 홀수이면 $f(n)=1$ 이다. 구하는 식 $f(10)+f(11)+f(12)+\\cdots+f(22)$ 의 값을 구하시오.",
+        "answer": "6",
+        "answer_verified": false
+      }
+    ],
+    "이차방정식": [
+      {
+        "id": "N0020",
+        "unit": "이차방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "주어진 행렬식을 성분별로 계산하면 $\\alpha f(a) + f(b) = -1$ $\\beta f(a) - f(b) = -23$ 이다. 두 식을 더하면 $(\\alpha + \\beta)f(a) = -24$이다. $f(x) = x^2 - 6x + k$의 두 실근을 $\\alpha, \\beta$라 하였으므로 근과 계수의 관계에 의해 $\\alpha + \\beta = 6$ 이다. 따라서 $6f(a) = -24$이므로 $f(a) = -4$이다. 즉, $a^2 - 6a + k = -4$이므로 $a^2 - 6a + k + 4 = 0$이다. 이 방정식을 만족하는 실수 $a$의 개수가 1이므로 판별식은 0이어야 한다. 따라서 $(-6)^2 - 4(k+4) = 0$이고, $36 - 4k - 16 = 0$에서 $k = 5$이다. 그러면 $f(x) = x^2 - 6x + 5 = (x-1)(x-5)$이므로 $\\alpha = 1, \\beta = 5$이다. 또한 $\\alpha f(a) + f(b) = -1$에 $\\alpha = 1$, $f(a) = -4$를 대입하면 $-4 + f(b) = -1$이므로 $f(b) = 3$이다. 이제 $f(x) = f(b)$는 $x^2 - 6x + 5 = 3$이므로 $x^2 - 6x + 2 = 0$이다. 이 방정식의 두 실근을 $\\gamma, \\delta$라 하면 근과 계수의 관계에 의해 $\\gamma\\delta = 2$이다. 행렬 $\\begin{pmatrix} \\alpha & \\gamma \\\\ \\beta & \\delta \\end{pmatrix}$의 모든 성분의 곱은 $\\alpha\\beta\\gamma\\delta$이므로 $\\alpha\\beta\\gamma\\delta = (1)(5)(\\gamma\\delta) = 5 \\times 2 = 10$이다. 따라서 정답은 ⑤ 100 이다.",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0061",
+        "unit": "이차방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "첫째 식 $3x + y = 2$에서 $y = 2 - 3x$이다. 이를 둘째 식에 대입하면 $kx^2 - (2 - 3x)^2 = 2$이고, 정리하면 $(k - 9)x^2 + 12x - 6 = 0$이다. 연립방정식이 오직 한 쌍의 해를 가지려면, $x$에 대한 방정식이 실근을 정확히 $1$개만 가져야 한다. $x$가 정해지면 $y = 2 - 3x$로 하나로 정해지기 때문이다. $k \\neq 9$이면 이차방정식이므로 중근을 가져야 하여 판별식이 $0$이어야 한다. 판별식은 $D = 12^2 - 4(k - 9)(-6) = 144 + 24(k - 9) = 24(k - 3)$이므로 $D = 0$에서 $k = 3$이다. $k = 9$이면 방정식은 $12x - 6 = 0$이 되어 $x = \\frac{1}{2}$이고, 이때도 해는 한 쌍만 존재한다. 조건을 만족하는 $k$의 값은 $3, 9$이므로 그 합은 $12$이다.",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0209",
+        "unit": "이차방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$x$에 대한 이차방정식 $x^2+2kx+k^2+k-6=0$이 서로 다른 두 음수근을 갖도록 하는 모든 정수 $k$값의 합은?",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0210",
+        "unit": "이차방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "방정식 $xy=2x+2y+8$을 만족하는 자연수 $x, y$에 대하여 $x+y$의 최솟값과 최댓값의 합은?",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0278",
+        "unit": "이차방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "이차방정식 $x^2-4mx+m+3=0$의 두 근이 4보다 작은 양수일 때, 실수 $m$의 범위는? (1) $\\frac{3}{19} < m \\le \\frac{15}{19}$ (2) $-\\frac{3}{4} < m \\le \\frac{15}{19}$ (3) $1 < m \\le \\frac{15}{19}$ (4) $1 \\le m < \\frac{15}{19}$ (5) $\\frac{19}{15} \\le m < 2$",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0282",
+        "unit": "이차방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$x$에 대한 삼차함수 $f(x)=x^3+(2a-1)x^2+(b^2-2a)x-b^2$에 대하여 방정식 $f(x)=0$이 서로 다른 세 실근을 갖고 세 근의 합이 9가 되도록 하는 두 정수 $a, b$의 모든 순서쌍 $(a, b)$의 개수는?",
+        "answer": "5",
+        "answer_verified": false
+      }
+    ],
+    "이차함수": [
+      {
+        "id": "N0021",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "실수 전체의 집합에서 정의된 함수 $f(x) = x^2 - 2x - 3$의 그래프는 그림과 같다. 함수 $g(x)$를 $g(x) = \\frac{f(x) + 3|f(x)|}{2}$라 할 때, 부등식 $g(x) \\le m(x+1)$을 만족시키는 정수 $x$의 개수가 8개가 되도록 하는 자연수 $m$의 개수는? [그림]",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0057",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "이차함수 $f(x) = -x^2 + 6x$의 그래프와 직선 $y=x$가 만나는 두 점 중 원점이 아닌 점을 $A$라 하고, 점 $A$의 $x$좌표를 $a$라 하자. $0 < t < a$인 실수 $t$에 대하여 이차함수 $y=f(x)$의 그래프, 직선 $y=x$와 만나는 점을 각각 $P, Q$라 할 때, 선분 $PQ$의 길이의 최댓값은 $\\frac{q}{p}$이다. $p+q$의 값은? (단, $p$와 $q$는 서로소인 자연수이다.) [그림]① 21② 23③ 25④ 27⑤ 29",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0062",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "실수 $a$와 정수 $b$에 대하여 이차함수 $f(x) = x^2 + ax + b$의 그래프가 다음 조건을 만족시킬 때, $f(2)$의 최솟값은? (가) $f(1) = f(7)$ (나) 이차함수 $y = f(x)$의 그래프와 직선 $y = 2x - 6$의 그래프는 서로 만나지 않는다.",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0068",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "최고차항의 계수가 각각 $1$, $-1$인 이차함수 $f(x)$, $g(x)$가 다음 조건을 만족한다. 이때 $\\{f(0)\\}^2 + \\{g(0)\\}^2$의 값은? (가) 부등식 $g(x) \\le f(x)$의 해는 모든 실수이다. (나) 방정식 $f(x)g(x) = 0$의 서로 다른 실근의 개수는 $2$이다. (다) 방정식 $f(x)-x = 0$의 실근 $x=t$와 방정식 $g(x)-x = 0$의 실근 $x=s$에 대하여 $|t-s|$의 최솟값은 $1$, 최댓값은 $5$이다. ① $\\frac{1}{16}$ ② $\\frac{1}{4}$ ③ $2$ ④ $4$ ⑤ $16$",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0163",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "동일한 제품을 생산하는 세 공장 $A, B, C$가 있다. 다음 그림과 같이 공장 $A$와 공장 $B$ 사이의 거리는 $10km$, 공장 $B$와 공장 $C$ 사이의 거리는 $30km$, 공장 $A$와 공장 $C$ 사이의 거리는 $20km$이다. 공장 $A$와 공장 $C$ 사이에 창고를 지으려고 하는데 공장 $A$보다 공장 $C$에 가까운 지점에 창고를 지으려고 한다. 이때 공장과 창고 사이의 거리가 $a km$이면 제품 한 개당 운송비는 $a^2$원이라고 한다. 세 공장 $A, B, C$에서 하루에 생산되는 제품이 각각 $100$개, $200$개, $300$개이고 하루 총 운송비가 $155000$원 이하가 되도록 하는 창고와 공장 $A$ 사이의 거리의 최댓값은? [그림]",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0186",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "이차함수 $f(x)$는 최고차항의 계수가 1이고 $x$절편이 $-2, 1$이므로 $f(x) = (x+2)(x-1) = x^2+x-2$이다. 이차함수 $g(x)$는 최고차항의 계수가 $-1$이고 $x$축에 점 $(3,0)$에서 접하므로 $g(x) = -(x-3)^2$이다. 이때 $f(2x) = 4x^2+2x-2$이고, $3g(x) = -3(x-3)^2 = -3x^2+18x-27$이다. 그러므로 $f(2x)+3g(x) = (4x^2+2x-2)+(-3x^2+18x-27) = x^2+20x-29$이다. 주어진 부등식에 대입하면 $x^2+20x-29 \\le -8x$이므로 $x^2+28x-29 \\le 0$이다. $x^2+28x-29 = 0$의 근은 $x = \\frac{-28 \\pm \\sqrt{28^2-4 \\cdot 1 \\cdot (-29)}}{2} = \\frac{-28 \\pm 30}{2}$이므로 $x=1, -29$이다. 최고차항의 계수가 양수이므로 부등식 $x^2+28x-29 \\le 0$의 해는 $-29 \\le x \\le 1$이다. 자연수 $x$는 1만 가능하므로 그 개수는 1이다. 따라서 정답은 ② 1이다.",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0192",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "함수 $f(x)=x^2+3x-10$에 대하여 부등식 $\\frac{|f(x)|-f(x)}{5} \\ge m(x-2)$를 만족시키는 정수 $x$의 개수가 11이 되도록 하는 양수 $m$의 최솟값은? ① $\\frac{12}{5}$ ② $\\frac{13}{5}$ ③ $\\frac{14}{5}$ ④ $3$ ⑤ $\\frac{16}{5}$",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0214",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "이차함수 $y = x^2 + ax - a + 3$의 그래프가 $a$의 값에 관계없이 항상 지나는 점을 A라 하자. 점 A에서 이 이차함수의 그래프에 접하는 직선의 기울기가 3일 때, 상수 $a, b$에 대하여 $a + b$의 값을 구하시오. (단, 직선의 방정식은 $y = 3x + b$이다.)",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0216",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "함수 $f(x) = |x^2 - 26|$로 두면 $g(t)$는 구간 $[t, t+2]$에서 $f(x)$의 최댓값이다.$f(x)$는 짝함수이고, $x = \\pm\\sqrt{26}$에서 최솟값 $0$을 갖는다.또 $0 \\le x \\le \\sqrt{26}$에서는 $f(x) = 26 - x^2$로 감소하고, $x \\ge \\sqrt{26}$에서는 $f(x) = x^2 - 26$으로 증가한다.길이가 $2$인 구간에서 최댓값을 가장 작게 하려면 구간이 $\\sqrt{26}$ 또는 $-\\sqrt{26}$를 포함해야 한다.짝함수이므로 $\\sqrt{26}$를 포함하는 경우만 생각하면 충분하므로 $t \\le \\sqrt{26} \\le t+2$인 경우를 본다.이때 구간 $[t, t+2]$에서 최댓값은 양 끝점에서 결정되므로$g(t) = \\max(26 - t^2, (t+2)^2 - 26)$이다.$26 - t^2$는 $t$가 커질수록 감소하고,$(t+2)^2 - 26$은 증가하므로 $g(t)$의 최솟값은 두 값이 같을 때 생긴다.$26 - t^2 = (t+2)^2 - 26$에서$26 - t^2 = t^2 + 4t + 4 - 26$이고,$48 = 2t^2 + 4t$이므로 $t^2 + 2t - 24 = 0$이다.즉, $(t+6)(t-4) = 0$이므로 $t = -6$ 또는 $t = 4$이다.이때$g(4) = \\max(26 - 16, 36 - 26) = \\max(10, 10) = 10$ 이고, $t = -6$일 때도 같은 값을 갖는다.따라서 정답은 ⑤ $10$ 이다.",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0218",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "직선 $y = mx + b$가 두 이차함수 $f(x) = x^2 - 2x + 15$, $g(x) = -x^2 + 6x - 1$에 동시에 접할 때, $m^2 + b^2$의 값을 구하시오. [그림]",
+        "answer": "26",
+        "answer_verified": false
+      },
+      {
+        "id": "N0222",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$f(x)=x^3-2x^2-3-(x-1)^2-4$이므로 꼭짓점은 $(1, -4)$이다. $g(x)=-(x-2)^2+b$는 아래로 볼록한 포물선으로, 함수 $h(a)$에 그래프와 직선 $y=k$가 서로 다른 세 점에서 만나는 일은 가운데 구간의 꼭짓점 높이와 양 끝점 높이의 높이에서 생긴다. 문제에서 그런 $k$의 값이 $h(a)$와 45뿐이라고 하였으므로 $g(x)$의 꼭짓점의 $y$좌표는 45이어야 하여 $b=45$이다. 이제 교점은 $f(x)=g(x)$, 즉 $x^3-2x^2-3=-(x-2)^2+45$를 만족하는 두 실근 $\\alpha, \\beta$이다. 정리하면 $3x^2-(4a+2)x+2a^2-48=0$이므로 $\\alpha+\\beta=\\frac{4a+2}{3}$이다. $k=h(a)$에서만 세 점에서 만나려면 양 끝점의 높이 중 $h(a)$가 더 커야 한다. $f(x)=(x-1)^2-4$이므로 $h(a) > h(\\beta)$는 $(a-1)^2 > (\\beta-1)^2$와 같고, $\\alpha < \\beta$이므로 $\\alpha+\\beta < 2$이다. 따라서 $\\frac{4a+2}{3} < 2$이고, 여기서 $a<1$이다. 또 $k$의 값이 $h(a)$와 45뿐이라는 $h(\\beta)$에서는 세 점에서 만나면 안 된다. 이를 위해서는 오른쪽 구간 $x>\\beta$에서 $f(x)$가 증가해야 하므로 $f'(\\beta) \\ge 1$이어야 한다. $f'(\\beta) \\ge 1$이면 이차식 $3x^2-(4a+2)x+2a^2-48$에 대하여 $2x^2-4a-47 \\le 0$이다. 즉 $2x^2-4a-47 \\le 0$이므로, 이를 풀면 $1-\\frac{7\\sqrt{2}}{2} \\le a \\le 1+\\frac{7\\sqrt{2}}{2}$이다. 따라서 $a<1$과 합치면 $1-\\frac{7\\sqrt{2}}{2} \\le a < 1$이 된다. $h(\\beta)=f(\\beta)-(f(\\beta)-1)^2-4$의 범위를 구한다. $a=1-\\frac{7\\sqrt{2}}{2}$일 때는 $x=1$이 교점이므로 $f=1$이고, $h(\\beta)=f(1)=-4$이다. $a \\to 1^-$일 때 교점방정식은 $3x^2-6x-46=0$에 가까워지고, 한 근은 $\\frac{3+\\sqrt{147}}{3}=1+\\frac{7\\sqrt{3}}{3}$이다. 그러므로 $h(\\beta)=(1+\\frac{7\\sqrt{3}}{3})-(1+\\frac{7\\sqrt{3}}{3}-1)^2-4 = (\\frac{7\\sqrt{3}}{3})-(\\frac{7\\sqrt{3}}{3})^2-4 = \\frac{7\\sqrt{3}}{3}-\\frac{49}{3}-4 = \\frac{7\\sqrt{3}-61}{3}$이다. 따라서, 다만 $a<1$이므로 이 값은 도달하지 못한다. 결국 $-4 \\le h(\\beta) < \\frac{7\\sqrt{3}-61}{3}$이다. 이 구간에 들어가는 정수는 $-4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12$로 모두 17개이다. 따라서 정답은 ⑤ 17이다. [그림]",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0227",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "동일한 제품을 생산하는 세 공장 $A, B, C$가 있다. 다음 그림과 같이 공장 $A$와 공장 $B$ 사이의 거리는 $10km$, 공장 $B$와 공장 $C$ 사이의 거리는 $30km$, 공장 $A$와 공장 $C$ 사이의 거리는 $20km$이다. 공장 $A$와 공장 $C$ 사이에 창고를 지으려고 하는데 공장 $A$보다 공장 $C$에 가까운 지점에 창고를 지으려고 한다. 이때 공장과 창고 사이의 거리가 $a km$이면 제품 한 개당 운송비는 $a^2$원이라고 한다. 세 공장 $A, B, C$에서 하루에 생산되는 제품이 각각 $100$개, $200$개, $300$개이고 하루 총 운송비가 $155000$원 이하가 되도록 하는 창고와 공장 $A$ 사이의 거리의 최댓값은? [그림]",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0260",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "이차함수 $f(x)=x^2-2x+a^2-6a+10$ 의 최솟값이 $2$ 일 때, 상수 $a$ 의 값을 구하시오.",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0262",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "이차함수 $f(x)=ax^2-2ax+b$ 의 그래프가 그림과 같이 점 $P(1, -2)$ 를 지나고, $x$ 축에 접할 때, 상수 $a, b$ 에 대하여 $a+b$ 의 값을 구하시오. [그림]",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0263",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "이차함수 $f(x)=x^2-2x+k$ 의 그래프와 직선 $y=x+2$ 가 서로 다른 두 점 $A, B$ 에서 만난다. 선분 $AB$ 의 중점의 $x$ 좌표가 $3$ 일 때, 상수 $k$ 의 값을 구하시오.",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0264",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "이차함수 $y=x^2-2x+k$ 의 그래프와 직선 $y=x+2$ 가 서로 다른 두 점 $A, B$ 에서 만난다. 선분 $AB$ 의 중점의 $x$ 좌표가 $3$ 일 때, 상수 $k$ 의 값을 구하시오.",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0265",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "이차함수 $f(x)=x^2-2x+k$ 의 그래프와 직선 $y=x+2$ 가 서로 다른 두 점 $A, B$ 에서 만난다. 선분 $AB$ 의 중점의 $x$ 좌표가 $3$ 일 때, 상수 $k$ 의 값을 구하시오.",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0266",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "이차함수 $f(x)=x^2-2x+k$ 의 그래프와 직선 $y=x+2$ 가 서로 다른 두 점 $A, B$ 에서 만난다. 선분 $AB$ 의 중점의 $x$ 좌표가 $3$ 일 때, 상수 $k$ 의 값을 구하시오.",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0267",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "이차함수 $f(x)=x^2-2x+k$ 의 그래프와 직선 $y=x+2$ 가 서로 다른 두 점 $A, B$ 에서 만난다. 선분 $AB$ 의 중점의 $x$ 좌표가 $3$ 일 때, 상수 $k$ 의 값을 구하시오.",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0268",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "이차함수 $f(x)=x^2-2x+k$ 의 그래프와 직선 $y=x+2$ 가 서로 다른 두 점 $A, B$ 에서 만난다. 선분 $AB$ 의 중점의 $x$ 좌표가 $3$ 일 때, 상수 $k$ 의 값을 구하시오.",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0269",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "이차함수 $f(x)=x^2-2x+k$ 의 그래프와 직선 $y=x+2$ 가 서로 다른 두 점 $A, B$ 에서 만난다. 선분 $AB$ 의 중점의 $x$ 좌표가 $3$ 일 때, 상수 $k$ 의 값을 구하시오.",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0270",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "이차함수 $f(x)=x^2-2x+k$ 의 그래프와 직선 $y=x+2$ 가 서로 다른 두 점 $A, B$ 에서 만난다. 선분 $AB$ 의 중점의 $x$ 좌표가 $3$ 일 때, 상수 $k$ 의 값을 구하시오.",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0271",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "이차함수 $f(x)=x^2-2x+k$ 의 그래프와 직선 $y=x+2$ 가 서로 다른 두 점 $A, B$ 에서 만난다. 선분 $AB$ 의 중점의 $x$ 좌표가 $3$ 일 때, 상수 $k$ 의 값을 구하시오.",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0272",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "이차함수 $f(x)=x^2-2x+k$ 의 그래프와 직선 $y=x+2$ 가 서로 다른 두 점 $A, B$ 에서 만난다. 선분 $AB$ 의 중점의 $x$ 좌표가 $3$ 일 때, 상수 $k$ 의 값을 구하시오.",
+        "answer": null,
+        "answer_verified": false
+      },
+      {
+        "id": "N0287",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "포물선의 꼭짓점 $x=t$가 모든 경우에 주어진 구간에 포함되므로, 최솟값 $b_t = f(t)$입니다.최댓값 $a_t$는 꼭짓점에서 가장 먼 구간의 양 끝점에서 발생합니다. $a_t = \\max(f(2-3t), f(t+1))$입니다.따라서 $b_t = (t^2-t+1)^2+t^2-t+1$입니다. $b_t = (t^2-t+1)^2+(t^2-t+1)$입니다. $(t^2-t+1)$을 $X$로 치환하면 $X^2+X$입니다. $t^2-t+1 = (t-1/2)^2+3/4 \\ge 3/4$이므로 $X \\ge 3/4$입니다. $X^2+X$는 $X \\ge 3/4$에서 증가함수이므로 최솟값은 $X=3/4$일 때 $9/16+3/4 = 21/16$입니다.따라서 $b_t$의 최솟값은 $21/16$입니다. [그림]",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0292",
+        "unit": "이차함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "20 $a$ 는 $0$ 이 아닌 정수이고 $f(x)=x^2+ax+2a$ 이다. 곡선 $y=f(x)$ 의 꼭짓점을 $A$, $y$ 축과 만나는 점을 $B$ 라 할 때, 두 점 $A, B$ 를 지나는 직선의 방정식을 $y=g(x)$ 라 하자. 부등식 $g(x)-f(x) \\ge 0$ 을 만족시키는 정수 $x$ 가 $12$ 개일 때, 정수 $a$ 의 최댓값을 $M$, 최솟값을 $m$ 이라 한다. 이때 $M-m$ 의 값을 구하는 과정을 논술하시오.",
+        "answer": "46",
+        "answer_verified": false
+      }
+    ],
+    "고차방정식": [
+      {
+        "id": "N0023",
+        "unit": "고차방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "그림과 같이 점 $O$를 중심으로 하는 원 위에 네 점 $A, B, C, D$가 있다. $\\overline{AB}$와 $\\overline{CD}$가 점 $P$에서 만날 때, $\\overline{AP}=a, \\overline{PB}=b, \\overline{CP}=c, \\overline{PD}=d$라 하면 $a, b, c, d$는 다음 조건을 따른다. 이 원의 넓이는? (단, $a, b, c, d$는 자연수이다.)<br><br><조건><br>(가) $a, b, c$는 삼차방정식 $x^3 - 11x^2 + 26x - 16 = 0$을 만족시키는 세 근이다. (단, $b < c < a$)<br>(나) $c+d$는 원의 반지름의 길이와 같다.<br>① $36\\pi$<br>② $49\\pi$<br>③ $64\\pi$<br>④ $81\\pi$<br>⑤ $100\\pi$ [그림]",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0038",
+        "unit": "고차방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "세 실근을 작은 것부터 $a, b, c$라 하자. 서로 다른 세 실근이 직각삼각형의 세 변의 길이이므로 가장 큰 변은 $c$이고, $a^2 + b^2 = c^2$이다. 주어진 삼차방정식 $x^3 - 8x^2 + (12 + k)x - 2k = 0$의 세 근이 $a, b, c$이므로 근과 계수의 관계에 의해 $a + b + c = 8$, $ab + bc + ca = 12 + k$, $abc = 2k$이다. $a^2 + b^2 = c^2$이므로 $a^2 + b^2 + c^2 = 2c^2$이다. 이때, $k$의 값을 구하시오.",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0039",
+        "unit": "고차방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$x$에 대한 방정식 $x^3 - 2ax^2 + a^2x + a^2 + 2a + 1 = 0$이 서로 다른 두 실근을 갖도록 하는 실수 $a$의 최댓값을 $M$, 최솟값을 $m$이라 할 때, $M+m$의 값은?",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0059",
+        "unit": "고차방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$x$에 대한 사차방정식 $x^4 + (a-1)x^3 + (a-2)x^2 - (a-1)x - a + 1 = 0$ 실근의 개수가 2가 되도록 하는 모든 정수 $a$의 값의 합은?",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0075",
+        "unit": "고차방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "주어진 방정식은 $x(x-1)(x+2)(x+3) = 10$이다. 식을 묶어 정리하면 $x(x+2) = x^2+2x$, $(x-1)(x+3) = x^2+2x-3$이므로 $x(x-1)(x+2)(x+3) = (x^2+2x)(x^2+2x-3)$이다. $y = x^2+2x$라고 두면 $y(y-3) = 10$이므로 $y^2-3y-10 = 0$이다. 인수분해하면 $(y-5)(y+2) = 0$이므로 $y=5$ 또는 $y=-2$이다. $y=5$일 때는 $x^2+2x-5 = 0$이 되고, 판별식 $D = 2^2-4 \\times 1 \\times (-5) = 24 > 0$이므로 서로 다른 두 실근을 갖는다. $y=-2$일 때는 $x^2+2x+2 = 0$이 되고, 판별식 $D = 2^2-4 \\times 1 \\times 2 = -4 < 0$이므로 실근이 없다. 따라서 두 실근 $\\alpha, \\beta$는 $x^2+2x-5 = 0$의 두 근이다. 근과 계수의 관계에 의해 $\\alpha+\\beta = -2$, $\\alpha\\beta = -5$이다. 그러므로 $\\alpha^2+\\beta^2 = (\\alpha+\\beta)^2-2\\alpha\\beta = (-2)^2-2(-5) = 14$이다. 또한 $\\alpha^2\\beta^2 = (\\alpha\\beta)^2 = 25$이다. 따라서 $\\alpha^4+\\beta^4 = (\\alpha^2+\\beta^2)^2-2\\alpha^2\\beta^2 = 14^2-2 \\times 25 = 146$이다. 따라서 정답은 ③ 146이다.",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0082",
+        "unit": "고차방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$P(x) = x^3 + px^2 + qx + r$의 세 근을 $a, u, \\bar{u}$라 하자. 실수계수 삼차다항식이므로 허근은 서로 켤레복소수이다.조건 (가)에서 서로 다른 두 허근의 합이 $3$이므로 $u + \\bar{u} = 3$이다.따라서 $P(x) = 0$의 세 근의 합은 $a + u + \\bar{u} = a + 3$이고, 근과 계수의 관계에 의해 $a + 3 = -p$이다.조건 (나)를 보자. $P(4x+1) = 0$의 근은 $P(y) = 0$의 근 $y$에 대하여 $y = 4x+1$을 만족하므로, $P(x) = 0$의 근 $y$가 $x = \\frac{y-1}{4}$로 변한 값들이다.이 방정식의 한 근이 $-1$이므로, 실근 $a$에 대하여 $\\frac{a-1}{4} = -1$이다. 따라서 $a = -3$이다.이를 $a+3 = -p$에 대입하면 $-3+3 = -p$이므로 $p = 0$이다.이제 조건 (나)의 서로 다른 두 허근의 곱이 $1$이라는 조건을 사용한다. $P(4x+1) = 0$의 두 허근은 $\\frac{u-1}{4}, \\frac{\\bar{u}-1}{4}$이므로 $\\left(\\frac{u-1}{4}\\right)\\left(\\frac{\\bar{u}-1}{4}\\right) = 1$이다. 따라서 $\\frac{(u-1)(\\bar{u}-1)}{16} = 1$이다.또 $u+\\bar{u} = 3$이므로 $u$와 $\\bar{u}$의 실수부는 각각 $\\frac{3}{2}$이다. 그러면 $(u-1)(\\bar{u}-1) = |u-1|^2 = \\left(\\frac{3}{2}-1\\right)^2 + b^2 = \\frac{1}{4} + b^2$이고, 이것이 $16$이므로 $b^2 = \\frac{63}{4}$이다.따라서 $u\\bar{u} = \\left(\\frac{3}{2}\\right)^2 + b^2 = \\frac{9}{4} + \\frac{63}{4} = 18$이다.근과 계수의 관계에 의해 $q = au + a\\bar{u} + u\\bar{u} = a(u+\\bar{u}) + u\\bar{u}$이므로 $q = (-3)\\cdot 3 + 18 = 9$이다.또 $r = -au\\bar{u}$이므로 $r = -(-3\\cdot 18) = 54$이다.따라서 $p+q+r = 0+9+54 = 63$이다.따라서 정답은 ③ 63이다.",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0084",
+        "unit": "고차방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "다항식 $P(x) = x^4 + (5-2a)x^2 + a^2 - 5a - 6$에 대하여 다음 보기 중 옳은 것만을 있는 대로 고른 것은? (단, $P(x)$는 $P(x) = \\{x^2 - (a+1)\\}\\{x^2 - (a-6)\\}$으로 인수분해된다.)ㄱ. $a=2$일 때, $P(x)=0$의 허근의 곱은 $4$이다.ㄴ. $P(x)=0$의 허근의 곱이 $1$일 때, 모든 실근의 곱은 $-6$이다.ㄷ. $P(x)=0$이 실근과 허근을 모두 가지도록 하는 정수 $a$ 중, $P(k)=0$이 되는 정수 $k$가 존재하지 않도록 하는 $a$ 값들의 합은 $14$이다.① ㄱ ② ㄴ ③ ㄱ, ㄴ ④ ㄱ, ㄷ ⑤ ㄴ, ㄷ",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0096",
+        "unit": "고차방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼차방정식 $x^3 = 1$의 두 허근을 $\\alpha, \\beta$라 하자. 자연수 $n$에 대하여 $f(n) = \\alpha^n + \\beta^n$이라 할 때, $f(1) + f(2) + f(3) + \\cdots + f(2025)$의 값은?",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0134",
+        "unit": "고차방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "주어진 방정식 $(x+1)(x^2+ax+b)=0$의 한 근은 $-1$이고, 나머지 두 근은 이차방정식 $x^2+ax+b=0$의 두 근이다. 서로 다른 세 근을 $\\alpha, \\beta, \\gamma$라 하자. 조건 $(\\alpha+\\beta+2\\gamma)^2=-8$을 만족시키는 두 실수 $a, b$에 대하여 $3(a+3b)$의 값을 구하시오.",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0135",
+        "unit": "고차방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "주어진 방정식은 $x^4+2ax^3-(a^2-1)x^2-(3a-2)x=0$이다. 공통인수 $x$를 묶으면 $x(x^3+2ax^2-(a^2-1)x-(3a-2))=0$이다. 이제 세제곱식의 인수분해를 생각하면 $x=-1$을 대입할 때 $(-1)^3+2a(-1)^2-(a^2-1)(-1)-(3a-2)=-1+2a+a^2-1-3a+2=a^2-a=a(a-1)=0$이다. 즉 항상 실근 $x=0, x=-1$을 가진다. 서로 다른 실근의 개수가 3개가 되려면, 이차식 $q(x)=x^2+(2a-1)x-(3a-2)$이 다음 중 하나를 만족해야 한다. 1) $q(x)$가 중근을 가질 때 2) $q(x)$가 $x=0$을 근으로 가질 때 3) $q(x)$가 $x=-1$을 근으로 가질 때 따라서 조건을 만족하는 모든 실수 $a$ 값의 합을 구하시오.",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0167",
+        "unit": "고차방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "주어진 식에서 $x^2 - 6x + 5 = (x-1)(x-5)$, $x^2 - 10x + 21 = (x-3)(x-7)$이므로 $(x-1)(x-3)(x-5)(x-7) = 180$이다. 대칭적인 형태를 이용하기 위해 $x = 4+y$로 놓으면 $x-1 = y+3, x-3 = y+1, x-5 = y-1, x-7 = y-3$이다. 그러면 $(y+3)(y+1)(y-1)(y-3) = 180$이고, 이를 묶으면 $(y^2-9)(y^2-1) = 180$이다. 전개하면 $y^4 - 10y^2 + 9 = 180$이므로 $y^4 - 10y^2 - 171 = 0$이다. $z = y^2$로 놓으면 $z^2 - 10z - 171 = 0$이고, $(z-19)(z+9) = 0$이므로 $z = 19$ 또는 $z = -9$이다. 허근은 $y^2 = -9$일 때 생기므로 $y = \\\\pm 3i$이다. 이때 $x = 4+y$이므로 한 허근 $w$는 $w = 4 \\\\pm 3i$이다. 그러면 $w-4 = \\\\pm 3i$이므로 $(w-4)^2 = -9$이다. 이를 전개하면 $w^2 - 8w + 16 = -9$, 즉 $w^2 - 8w + 25 = 0$이다. 따라서 정답은 ③ 25 이다.",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0175",
+        "unit": "고차방정식",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "사차방정식 $x^4 - (2a - 3)x^2 + a^2 - 3a - 4 = 0$이 실근과 허근을 모두 갖도록 하는 실수 $a$의 값의 범위를 구하라.",
+        "answer": "$-1Wle aWlt 4$",
+        "answer_verified": false
+      },
+      {
+        "id": "N0194",
+        "unit": "고차방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "주어진 방정식은 $x^4 + (-2-2a)x^2 + a^2 + 2a - 15 = 0$이다. $x^2 = t$로 두면 $t^2 - (2+2a)t + a^2 + 2a - 15 = 0$이다. 이때 판별식은 $D = (2+2a)^2 - 4(a^2+2a-15) = 4(a^2+4a+4) - 4(a^2+2a-15) = 4(2a+19)$이다. 그러므로 $t = \\frac{(2+2a) \\pm \\sqrt{4(2a+19)}}{2} = a+1 \\pm \\sqrt{2a+19}$이므로 $t = a+5$ 또는 $t = a-3$이다. 원래 방정식은 $(x^2 - (a+5))(x^2 - (a-3)) = 0$으로 인수분해된다. 즉 근은 $x = \\pm \\sqrt{a+5}$, $x = \\pm \\sqrt{a-3}$이다. 이 방정식이 실근과 허근을 모두 가지려면 한 쌍은 실근이고 다른 한 쌍은 허근이어야 하므로 $a+5 \\ge 0$이고 $a-3 < 0$이어야 한다. 따라서 가능한 $a$의 범위는 $-5 \\le a < 3$이다. ㄱ. $a = -1$이면 $x^2 = 4$ 또는 $x^2 = -4$이므로 근은 $2, -2, 2i, -2i$이다. 모든 실근의 곱은 $2 \\cdot (-2) = -4$이므로 ㄱ은 (참)이다. ㄴ. 모든 허근은 $x = \\pm i\\sqrt{3-a}$이고 그 곱은 $(i\\sqrt{3-a})(-i\\sqrt{3-a}) = 3-a$이다. 이때 모든 실근은 $\\pm \\sqrt{7}$이므로 그 곱은 $(\\sqrt{7})(-\\sqrt{7}) = -7$이다. 주어진 내용과 다르므로 ㄴ은 (거짓)이다. ㄷ. 정수근 $n$을 가지려면 $n^2 = a+5$ 또는 $n^2 = a-3$이어야 한다. 그런데 $-5 \\le a < 3$이므로 $a-3 < 0$이어서 $n^2 = a-3$에서는 정수근이 나올 수 없다. 그러므로 $a = n^2 - 5$이고 동시에 $-5 \\le a < 3$이어야 하므로 $-5 \\le n^2 - 5 < 3$이다. $0 \\le n^2 < 8$이므로 가능한 값은 $n^2 = 0, 1, 4$이다. 따라서 가능한 $a$는 $-5, -4, -1$이고 그 합은 $-10$이므로 ㄷ은 (참)이다. 따라서 정답은 ③ ㄱ, ㄷ 이다.",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0198",
+        "unit": "고차방정식",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "삼차다항식 $f(x) = x^3 + ax^2 + x - a - 2$ 와 복소수 $z = p + qi$가 다음 조건을 만족시킨다. (가) $z$는 $x$에 대한 삼차방정식 $f(x) = 0$의 해이다. (나) $(z - \\bar{z})^2 = -8$ $z$와 $a$의 값을 각각 구하고, 그 과정을 서술하시오. (단, $i = \\sqrt{-1}$이고, $a, p$는 실수이며 $q$는 양수이다.)",
+        "answer": "$z = -1 + \\sqrt{2}i$, $a=1$",
+        "answer_verified": false
+      },
+      {
+        "id": "N0213",
+        "unit": "고차방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$f(2x - 2) = x^3 - 4x^2 - 4x - 1$일 때, $f(x) = 0$의 서로 다른 세 실근의 합을 구하시오.",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0231",
+        "unit": "고차방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "주어진 식에서 $x^2 - 6x + 5 = (x-1)(x-5)$, $x^2 - 10x + 21 = (x-3)(x-7)$이므로 $(x-1)(x-3)(x-5)(x-7) = 180$이다. 대칭적인 형태를 이용하기 위해 $x = 4+y$로 놓으면 $x-1 = y+3, x-3 = y+1, x-5 = y-1, x-7 = y-3$이다. 그러면 $(y+3)(y+1)(y-1)(y-3) = 180$이고, 이를 묶으면 $(y^2-9)(y^2-1) = 180$이다. 전개하면 $y^4 - 10y^2 + 9 = 180$이므로 $y^4 - 10y^2 - 171 = 0$이다. $z = y^2$로 놓으면 $z^2 - 10z - 171 = 0$이고, $(z-19)(z+9) = 0$이므로 $z = 19$ 또는 $z = -9$이다. 허근은 $y^2 = -9$일 때 생기므로 $y = \\\\pm 3i$이다. 이때 $x = 4+y$이므로 한 허근 $w$는 $w = 4 \\\\pm 3i$이다. 그러면 $w-4 = \\\\pm 3i$이므로 $(w-4)^2 = -9$이다. 이를 전개하면 $w^2 - 8w + 16 = -9$, 즉 $w^2 - 8w + 25 = 0$이다. 따라서 정답은 ③ 25 이다.",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0239",
+        "unit": "고차방정식",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "사차방정식 $x^4 - (2a - 3)x^2 + a^2 - 3a - 4 = 0$이 실근과 허근을 모두 갖도록 하는 실수 $a$의 값의 범위를 구하라.",
+        "answer": "$-1Wle aWlt 4$",
+        "answer_verified": false
+      }
+    ],
+    "절댓값부등식": [
+      {
+        "id": "N0033",
+        "unit": "절댓값부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "주어진 부등식은 $|2x-1| - |x+2| < 10$이다.",
+        "answer": "4",
+        "answer_verified": false
+      },
+      {
+        "id": "N0063",
+        "unit": "절댓값부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "부등식 $|x+6| - |2x-5| \\ge x^2 - 4x + 1$을 만족시키는 정수 $x$의 개수는?",
+        "answer": "2",
+        "answer_verified": false
+      },
+      {
+        "id": "N0080",
+        "unit": "절댓값부등식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "주어진 연립 부등식을 만족하는 자연수 $x$의 개수가 4가 되도록 하는 $n$의 값을 구한다. 먼저 $x^2 - 12x + 27 < 0$을 풀면 $(x-3)(x-9) < 0$이므로 $3 < x < 9$이다. 따라서 자연수 $x$는 $4, 5, 6, 7, 8$이고, 모두 5개이다. 이제 $|x-n| \\ge 1$의 의미를 살펴보면 $|x-n| < 1$인 $x$는 제외된다. 주어진 자연수 $x$가 5개이므로, 최종적으로 4개가 되려면 그중 정확히 1개가 제외되어야 한다. $x$가 자연수이므로 $|x-n| < 1$이 되려면 $x=n$이어야 한다. 따라서 $n$이 $4, 5, 6, 7, 8$ 중 하나이면 각각 해당하는 $x$ 하나만 제외되어 조건을 만족하는 자연수 $x$의 개수는 4개가 된다. 이때 모든 $n$의 값의 합은?",
+        "answer": "4",
+        "answer_verified": false
+      }
+    ],
+    "연립방정식": [
+      {
+        "id": "N0118",
+        "unit": "연립방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "두 연립방정식 $\\begin{cases} 3x - 2y = a \\\\ x + y = -4 \\end{cases}$와 $\\begin{cases} x - by = 3 \\\\ x^2 + y^2 = 8 \\end{cases}$의 공통인 해가 존재할 때 $a^2 + 2b$의 값은? (단, $a, b$는 실수이다.)",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0119",
+        "unit": "연립방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "두 연립방정식 $\\begin{cases} 3x - 2y = a \\\\ x + y = -4 \\end{cases}$과 $\\begin{cases} x - by = 3 \\\\ x^2 + y^2 = 8 \\end{cases}$의 공통인 해가 존재할 때 $a^2 + 2b$의 값은? (단, $a, b$는 실수이다.) [3.5점]",
+        "answer": "1",
+        "answer_verified": false
+      },
+      {
+        "id": "N0131",
+        "unit": "연립방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$A\\begin{pmatrix} 1 \\\\ x \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ x \\end{pmatrix}$이므로 $\\begin{pmatrix} a+x \\\\ b+cx \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ x \\end{pmatrix}$이다. 그러므로 $a+x=1, b+cx=x$이고, $a=1-x, b=x-cx=x(1-c)$이다. 또 $A\\begin{pmatrix} 1 \\\\ y \\end{pmatrix} = \\begin{pmatrix} 3 \\\\ 3y \\end{pmatrix}$이므로 $\\begin{pmatrix} a+y \\\\ b+cy \\end{pmatrix} = \\begin{pmatrix} 3 \\\\ 3y \\end{pmatrix}$이다. 그러므로 $a+y=3, b+cy=3y$이고, $a=3-y, b=3y-cy=y(3-c)$이다. 두 식에서 $a$가 같으므로 $1-x=3-y$이다. 정리하면 $y=x+2$이다. 또 두 식에서 $b$가 같으므로 $x(1-c)=y(3-c)$이다. 여기에 $y=x+2$를 대입하면 $x(1-c)=(x+2)(3-c)$이다. 전개하면 $x-cx=3x-cx+6-2c$이고, 정리하면 $x=3x+6-2c$이다. 그러므로 $2x=2c-6, c=x+3$이다. 이를 $b=x(1-c)$에 대입하면 $b=x\\{1-(x+3)\\} = -x^2-2x$이다. 완전제곱식으로 나타내면 $b=-(x^2+2x) = -(x^2+2x+1-1) = -(x+1)^2+1$이다. $(x+1)^2 \\ge 0$이므로 $b \\le 1$이고, $x=-1$일 때 최댓값은 $1$이다. 따라서 정답은 ③",
+        "answer": "3",
+        "answer_verified": false
+      },
+      {
+        "id": "N0285",
+        "unit": "연립방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$x, y$에 대한 연립방정식 $\\begin{cases} xy+2(x+y)=0 \\\\ xy-2(x+y)=k-3 \\end{cases}$을 만족시키는 실수인 $x, y$가 존재하도록 하는 100 이하의 자연수 $k$의 개수는? \\u2460 16 \\u2461 24 \\u2462 43 \\u2463 53 \\u2464 69",
+        "answer": "5",
+        "answer_verified": false
+      },
+      {
+        "id": "N0304",
+        "unit": "연립방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "12. 정답 ③\\n$|x|=a$, $|y|=b$, $|z|=c$ 라 하면 $xyz \\ne 0$ 이므로 $a,b,c$ 는 자연수이다.\\n조건 (가), (나)에 의해 $a+b+c=10$ 이고 $a<b<c$ 이다.\\n이를 만족하는 $(a,b,c)$ 의 순서쌍은 $(1,2,7), (1,3,6), (1,4,5), (2,3,5)$ 의 $4$ 가지이다.\\n정수해의 대하여 정수 $x,y,z$ 의 부호는 각각 $+,-$ 의 $2$ 가지씩 가능하므로 하나의 $(a,b,c)$ 당 $2^3=8$ 개의 순서쌍이 존재한다.\\n따라서 구하는 순서쌍의 개수는 $4 \\times 8 = 32$ 이다.",
+        "answer": "4",
+        "answer_verified": false
+      }
+    ],
+    "원의방정식": [
+      {
+        "id": "N0190",
+        "unit": "원의방정식",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "그림과 같이 직선 위에 $AB=6$인 두 점 $A, B$가 있다. 선분 $AB$ 위의 점 $C$에 대하여 선분 $AC$의 중점을 $P_1$, 선분 $CB$의 중점을 $P_2$라 하고 $P_1C=a$, $CP_2=b$라 하자. 점 $P_1$을 중심으로 하고 반지름의 길이가 $a+\\frac{1}{4}$인 반원 $O_1$, 점 $P_2$를 중심으로 하고 반지름의 길이가 $b+\\frac{1}{4}$인 반원 $O_2$를 각각 그린 후 선분 $P_1P_2$를 지름으로 하는 반원을 그린다. 두 반원 $O_1, O_2$의 교점이 호 $P_1P_2$ 위에 있을 때, $b$의 값은? (단, $a<b$이다.) [그림]",
+        "answer": "4",
+        "answer_verified": false
+      }
+    ],
+    "수열": [
+      {
+        "id": "N0290",
+        "unit": "수열",
+        "level": "심화",
+        "type": "주관식",
+        "latex": "$(k, j) = (2, 2): b_{22}-a_{22} = \\max((2-3)^2, (2+1)^2) = \\max(1, 9) = 9$입니다. $b_{22}-a_{22} = 9$입니다.행렬 $B-A$의 모든 성분의 합은 다음과 같습니다. $(-4)+(-1)+(-1)+(-1) = -7$입니다.답: $-10$",
+        "answer": "5",
+        "answer_verified": false
+      }
+    ]
+  }
+}
