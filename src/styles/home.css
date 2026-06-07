@@ -515,6 +515,7 @@
 .home-v4 .hv-plan.is-event .hv-plan-price b { color: #34d399; font-size: 26px; }
 .home-v4 .hv-plan.is-event .hv-plan-features svg { color: #10b981; }
 .home-v4 .hv-plan-sub { margin: -10px 0 16px; color: #34d399; font-size: 12px; font-weight: 600; }
+.home-v4 .hv-plan-original { display: block; text-decoration: line-through; color: var(--on-dark); opacity: .55; font-size: 13px; margin-bottom: 2px; }
 .home-v4 .hv-plan-features { list-style: none; margin: 0 0 20px; padding: 0; display: flex; flex-direction: column; gap: 10px; flex: 1; }
 .home-v4 .hv-plan-features li { display: flex; align-items: center; gap: 8px; color: var(--on-dark); font-size: 13px; }
 .home-v4 .hv-plan-features svg { color: var(--violet); flex-shrink: 0; }
