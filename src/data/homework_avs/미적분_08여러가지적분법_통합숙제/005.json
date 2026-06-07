@@ -1,0 +1,18 @@
+{
+  "title": "[통합숙제] 미적분 - 여러 가지 적분법 5번 명품 해설",
+  "type": "calculus",
+  "P": "치환적분, 부분적분을 활용하여 복잡한 함수의 적분을 수행합니다.",
+  "C": "적절한 치환 또는 부분적분 공식을 선택하여 적용합니다.",
+  "B": "여러 가지 적분법:\n\n1) 치환적분: $$\\int f(g(x)) g'(x) dx = \\int f(t) dt$$ ($$t = g(x)$$)\n2) 부분적분: $$\\int f(x)g'(x)dx = f(x)g(x) - \\int f'(x)g(x)dx$$\n3) $$\\int \\frac{f'(x)}{f(x)} dx = \\ln|f(x)| + C$$",
+  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "S_objects": [
+    {
+      "type": "image",
+      "src": "/math_crops/숙제/미적분/08여러가지적분법/006a.webp"
+    }
+  ],
+  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{⑤번}}$$ 입니다.",
+  "finalAnswer": "5",
+  "correctAnswer": "5",
+  "pcbsa_completed": true
+}

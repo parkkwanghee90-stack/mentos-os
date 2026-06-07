@@ -1,0 +1,18 @@
+{
+  "title": "[통합숙제] 미적분 - 삼각함수의 미분 137번 명품 해설",
+  "type": "calculus",
+  "P": "삼각함수의 극한과 도함수를 구합니다.",
+  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
+  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
+  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "S_objects": [
+    {
+      "type": "image",
+      "src": "/math_crops/숙제/미적분/04삼각함수미분/138a.webp"
+    }
+  ],
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{ㄱ,ㄴ,ㄷ}}$$ 입니다.",
+  "finalAnswer": "ㄱ,ㄴ,ㄷ",
+  "correctAnswer": "ㄱ,ㄴ,ㄷ",
+  "pcbsa_completed": true
+}

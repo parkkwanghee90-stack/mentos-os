@@ -1,0 +1,18 @@
+{
+  "title": "[통합숙제] 수학2 - 부정적분과 정적분 32번 명품 해설",
+  "type": "calculus",
+  "P": "부정적분과 정적분의 계산법을 활용하여 넓이, 적분값을 구합니다.",
+  "C": "역미분(부정적분) 공식과 정적분의 기본 정리를 적용합니다.",
+  "B": "부정적분과 정적분:\n\n1) $$\\int x^n dx = \\frac{x^{n+1}}{n+1} + C$$ ($$n \\neq -1$$)\n2) $$\\int_a^b f(x) dx = F(b) - F(a)$$\n3) $$\\frac{d}{dx} \\int_a^x f(t) dt = f(x)$$\n4) 우함수: $$\\int_{-a}^{a} f(x)dx = 2\\int_0^a f(x)dx$$, 기함수: $$= 0$$",
+  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "S_objects": [
+    {
+      "type": "image",
+      "src": "/math_crops/숙제/수학2/06부정적분정적분/032a.webp"
+    }
+  ],
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{28}}$$ 입니다.",
+  "finalAnswer": "28",
+  "correctAnswer": "28",
+  "pcbsa_completed": true
+}
