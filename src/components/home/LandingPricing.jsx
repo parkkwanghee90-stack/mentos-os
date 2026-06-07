@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { Check, ArrowRight } from "lucide-react";
+import { Check, ArrowRight, ShieldCheck } from "lucide-react";
 
-// 런칭 선착순 단계별 월 가격 (프리미엄 고가 포지셔닝). 동일 프리미엄 상품.
+// 런칭 선착순 단계별 월 가격 — "AI 1:1 과외" 프리미엄 포지셔닝.
 const PLANS = [
   {
     name: "오픈 이벤트",
@@ -17,7 +17,7 @@ const PLANS = [
     price: "49,000",
     original: "89,000",
     popular: true,
-    sub: "선착순 1,000명 한정 특가",
+    sub: "선착순 1,000명 한정 · 마감 시 정가 월 89,000원",
     badge: "선착순 1,000명",
     features: PREMIUM_FEATURES(),
     cta: "얼리버드 신청",
@@ -25,7 +25,7 @@ const PLANS = [
   {
     name: "정규 멤버십",
     price: "89,000",
-    sub: "선착순 마감 후 정가",
+    sub: "학원·과외의 1/3 가격, AI 1:1 과외",
     features: PREMIUM_FEATURES(),
     cta: "시작하기",
   },
@@ -35,7 +35,7 @@ const PLANS = [
 const DURATION = [
   { name: "6개월 이용권", perMonth: "62,300", total: "373,800", off: "30%" },
   { name: "1년 이용권", perMonth: "53,400", total: "640,800", off: "40%", best: true },
-  { name: "평생 이용권", total: "1,100,000", note: "한 번 결제로 평생 이용" },
+  { name: "평생 이용권", total: "1,990,000", note: "한 번 결제로 평생 이용", badge: "선착순 100명 한정" },
 ];
 
 function PREMIUM_FEATURES() {
@@ -43,7 +43,7 @@ function PREMIUM_FEATURES() {
     "사고력 AVS 시각화 해설 무제한",
     "AI 취약점 진단 · 전국 상위 % 리포트",
     "무제한 문제 · 모의고사 · 내신 대비",
-    "1:1 AI 튜터",
+    "1:1 AI 튜터 (24시간 질문)",
     "학부모 카톡 리포트",
     "개인별 맞춤 커리큘럼",
   ];
@@ -54,9 +54,11 @@ export default function LandingPricing() {
     <section id="pricing" className="hv-section hv-dark hv-pricing">
       <div className="hv-wrap hv-pricing-grid">
         <div className="hv-pricing-intro">
-          <h2 className="hv-h2">지금 매쓰멘토스를<br />시작하세요!</h2>
-          <p className="hv-sub">사고력 AVS로 진짜 실력을 만드는 프리미엄 AI 수학.</p>
+          <span className="hv-pricing-eyebrow">AI 1:1 과외</span>
+          <h2 className="hv-h2">학원·과외보다 똑똑하게,<br />매쓰멘토스 AI 과외</h2>
+          <p className="hv-sub">사고력 AVS로 직접 가르치는 AI 1:1 과외.<br />학원 월 20~40만 · 과외 회당 5~10만 → 매쓰멘토스 <b>월 89,000원</b>.</p>
           <Link to="/login" className="hv-btn hv-btn-primary hv-btn-lg">지금 무료로 시작하기 <ArrowRight size={18} /></Link>
+          <p className="hv-guarantee"><ShieldCheck size={16} /> 1개월 안에 성적 변화 없으면 <b>100% 환불 보장</b></p>
           <p className="hv-pricing-note">· 선착순 100명 첫 1개월 무료 → 1,000명 얼리버드 월 49,000원 → 이후 정가 월 89,000원</p>
         </div>
 
@@ -93,7 +95,7 @@ export default function LandingPricing() {
           <div className="hv-duration-grid">
             {DURATION.map((d) => (
               <div key={d.name} className={`hv-duration-card ${d.best ? "is-best" : ""}`}>
-                {d.best && <span className="hv-duration-badge">가장 인기</span>}
+                {(d.badge || d.best) && <span className="hv-duration-badge">{d.badge || "가장 인기"}</span>}
                 <span className="hv-duration-name">{d.name}</span>
                 {d.off && <span className="hv-duration-off">{d.off} 할인</span>}
                 {d.perMonth ? (
