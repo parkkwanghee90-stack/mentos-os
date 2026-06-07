@@ -530,6 +530,12 @@
 .home-v4 .hv-duration-price b { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; }
 .home-v4 .hv-duration-total { color: var(--on-dark); font-size: 12px; margin-bottom: 12px; }
 .home-v4 .hv-duration-card .hv-btn { margin-top: auto; width: 100%; }
+/* AI 과외 포지셔닝 — 눈썹 라벨 + 환불 보장 */
+.home-v4 .hv-pricing-eyebrow { display: inline-block; background: rgba(111,91,255,.18); color: #b9acff; font-size: 12px; font-weight: 700; padding: 5px 12px; border-radius: 999px; margin-bottom: 14px; letter-spacing: .02em; }
+.home-v4 .hv-sub b { color: #fff; font-weight: 800; }
+.home-v4 .hv-guarantee { display: flex; align-items: center; gap: 7px; color: #34d399; font-size: 13px; font-weight: 600; margin-top: 14px; }
+.home-v4 .hv-guarantee svg { flex-shrink: 0; }
+.home-v4 .hv-guarantee b { color: #34d399; }
 .home-v4 .hv-plan-features { list-style: none; margin: 0 0 20px; padding: 0; display: flex; flex-direction: column; gap: 10px; flex: 1; }
 .home-v4 .hv-plan-features li { display: flex; align-items: center; gap: 8px; color: var(--on-dark); font-size: 13px; }
 .home-v4 .hv-plan-features svg { color: var(--violet); flex-shrink: 0; }
