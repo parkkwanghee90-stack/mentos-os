@@ -976,3 +976,38 @@
   .math-classroom-root .mc-btn--avs { animation: none; }
 }
 
+/* ============================================================ */
+/* 모바일 교실 스크롤 — 중첩 스크롤 제거, #root 하나만 스크롤(100vh)  */
+/* 기존: 내부 overflow-y:auto가 여러 겹 + 높이 auto라 기준높이가 없어  */
+/* 하단(정답제출/다음문제) 버튼에 도달 불가. → #root를 유일한 스크롤  */
+/* 컨테이너로 100vh 고정, 안쪽은 전부 overflow:visible로 흘려보냄.     */
+/* (마지막 규칙 = 최우선)                                              */
+/* ============================================================ */
+@media (max-width: 768px) {
+  #root {
+    height: 100vh !important;
+    max-height: 100vh !important;
+    min-height: 100vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  .math-classroom-root,
+  .math-classroom-root .classroom-layout,
+  .math-classroom-root .classroom-main,
+  .math-classroom-root .classroom-main-mobile {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  .math-classroom-root .mc-stage-scroll {
+    flex: none !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  /* 하단 고정 입력바가 마지막 내용 가리지 않게 */
+  .math-classroom-root { padding-bottom: 110px !important; }
+}
+
