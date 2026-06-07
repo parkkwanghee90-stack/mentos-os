@@ -327,12 +327,8 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
       if (stepStr === '2단계') return '(2)수학(상)기말/(2)이차부등식 개념2단계(42)p21 1+1(쌍둥이)';
       return `이차부등식${stepStr}`;
     }
-    if (clean.includes('경우의수')) {
-      if (stepStr === '2단계') return 'cases_step2';
-      if (stepStr === '3단계') return 'cases_step3';
-      if (stepStr === '4단계') return 'cases_step4';
-      return `경우의수${stepStr}`;
-    }
+    // 경우의수: 한글 키로 통일(정답 avs 키 '경우의수N단계'와 일치). 힌트는 resolveAsset→getSafePath가 cases_stepN로 변환.
+    if (clean.includes('경우의수')) return `경우의수${stepStr}`;
     if (clean.includes('행렬')) {
       if (stepStr === '2단계') return '(2)수학(상)기말/(4)행렬2단계';
       return `행렬${stepStr}`;
