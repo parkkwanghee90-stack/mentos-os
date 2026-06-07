@@ -35,7 +35,7 @@ const PLANS = [
 const DURATION = [
   { name: "6개월 이용권", perMonth: "62,300", total: "373,800", off: "30%" },
   { name: "1년 이용권", perMonth: "53,400", total: "640,800", off: "40%", best: true },
-  { name: "평생 이용권", total: "1,990,000", note: "한 번 결제로 평생 이용", badge: "선착순 100명 한정" },
+  { name: "평생 이용권", total: "1,800,000", note: "한 번 결제로 평생 이용", badge: "선착순 100명 한정" },
 ];
 
 function PREMIUM_FEATURES() {
