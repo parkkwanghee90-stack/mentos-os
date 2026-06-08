@@ -489,7 +489,7 @@ export default function LessonManual({ onComplete }) {
                 선착순 1000명 한정 평생 소장 이벤트
               </div>
               <p style={{ margin: 0, fontSize: '0.72rem', color: '#cbd5e1', lineHeight: '1.4' }}>
-                출시 기념 <strong style={{ color: '#fff' }}>월 45,000원</strong>에 멘토스 수학의 AI 강의노트 & AVS 무제한 수강 혜택을 제공합니다. (3개월 후 정상가 월 99,000원 인상 예정)
+                선착순 1,000명 한정 <strong style={{ color: '#fff' }}>월 45,000원</strong>에 멘토스 수학의 AI 강의노트 & AVS 무제한 수강 혜택을 제공합니다. (이후 정가 월 89,000원)
               </p>
             </div>
           </div>
