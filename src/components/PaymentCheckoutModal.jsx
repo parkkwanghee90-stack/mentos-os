@@ -22,6 +22,10 @@ export default function PaymentCheckoutModal({ onClose, plan = 'regular' }) {
   const CREATE_URL = import.meta.env.VITE_PAYAPP_CREATE_URL
     || 'https://trvqgqvwhqvlgqzlsxbu.supabase.co/functions/v1/payapp-create';
 
+  // 테스트 결제 표시 토글(가격 문구 전용). 미설정 시 false → 실제 가격 표시.
+  // 실제 결제 금액은 서버가 plan 기준으로 결정하므로 표시값과 어긋나지 않도록 기본 false 유지.
+  const IS_TEST_MODE = import.meta.env.VITE_PAYAPP_TEST_MODE === 'true';
+
   const handlePayment = async () => {
     if (!user?.id) {
       alert('로그인 후 결제할 수 있습니다.');

@@ -8,7 +8,7 @@ import './Login.css';
 export default function Login() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { signInWithEmail, signUpWithEmail, signInWithGoogle, resetPassword, verifyAdminCode, updateStudentInfo } = useAuth();
+  const { signInWithEmail, signUpWithEmail, resetPassword, verifyAdminCode, updateStudentInfo } = useAuth();
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -187,19 +187,6 @@ export default function Login() {
       else if (msg.includes('Password should be')) msg = '비밀번호는 최소 8자리 이상이어야 합니다.';
       setErrorMsg(msg);
     } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleGoogleLogin = async () => {
-    setIsLoading(true);
-    setErrorMsg('');
-    try {
-      await signInWithGoogle();
-    } catch (err) {
-      let msg = err.message || 'Google 로그인 오류';
-      if (msg.includes('provider is not enabled')) msg = '현재 Google 로그인이 비활성화되어 있습니다. 이메일로 가입해 주세요.';
-      setErrorMsg(msg);
       setIsLoading(false);
     }
   };
@@ -454,22 +441,6 @@ export default function Login() {
               {isLoading ? (isSignUp ? '가입 중...' : '로그인 중...') : (isSignUp ? '가입하기' : '로그인')}
             </button>
           </form>
-
-          {!isSignUp && !isAdmin && (
-            <>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 12, margin: '1.2rem 0', color: '#cbd5e1', fontSize: '0.78rem' }}>
-                <div style={{ flex: 1, height: 1, background: '#e4e8f1' }} /> 또는 <div style={{ flex: 1, height: 1, background: '#e4e8f1' }} />
-              </div>
-              <button type="button" className="lsplit-btn lsplit-btn--social" onClick={handleGoogleLogin} disabled={isLoading} style={{ marginBottom: '0.6rem' }}>
-                <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.18a11 11 0 0 0 0 9.88l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg>
-                Google로 로그인
-              </button>
-              <button type="button" className="lsplit-btn lsplit-btn--kakao" onClick={() => { setSuccessMsg(''); setErrorMsg('카카오 로그인은 준비 중입니다. 이메일 또는 Google로 로그인해 주세요.'); }} disabled={isLoading}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="#181600"><path d="M12 3C6.5 3 2 6.48 2 10.77c0 2.78 1.86 5.21 4.65 6.58-.2.72-.73 2.64-.84 3.05-.13.5.18.5.39.36.16-.11 2.6-1.77 3.66-2.5.71.1 1.44.16 2.14.16 5.5 0 10-3.48 10-7.61C22 6.48 17.5 3 12 3z"/></svg>
-                Kakao로 로그인
-              </button>
-            </>
-          )}
 
           <div style={{ textAlign: 'center', marginTop: '1.4rem', fontSize: '0.85rem', color: '#64748b' }}>
             {isSignUp ? '이미 계정이 있으신가요? ' : '아직 계정이 없으신가요? '}

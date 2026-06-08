@@ -426,8 +426,6 @@
 .login-split .lsplit-btn--primary:hover { background: #6d28d9; }
 .login-split .lsplit-btn--social { background: #fff; color: #1f2937; border-color: #d4d9e3; }
 .login-split .lsplit-btn--social:hover { background: #f8fafc; }
-.login-split .lsplit-btn--kakao { background: #FEE500; color: #181600; border-color: #FEE500; }
-.login-split .lsplit-btn--kakao:hover { background: #f5dc00; }
 
 @media (max-width: 900px) {
   .login-split { flex-direction: column; }

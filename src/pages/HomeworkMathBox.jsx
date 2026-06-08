@@ -189,6 +189,25 @@ export default function HomeworkMathBox() {
     }
   }, [toast]);
 
+  // ── 풀 문제가 없을 때 (오답복습 목록이 비어있는 경우 등) → 크래시 방지 안내 ──
+  // 모든 훅 호출 이후 지점이라 Rules of Hooks 위반 없음
+  if (!currentProblem) {
+    return (
+      <div style={{ background: '#09090b', color: 'white', minHeight: '100vh', padding: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
+        <CheckCircle size={48} color="#10b981" />
+        <h2 style={{ marginTop: '1rem' }}>{isWrongReview ? '복습할 오답이 없습니다 🎉' : '표시할 문제가 없습니다'}</h2>
+        <p style={{ color: '#94a3b8', maxWidth: 360, lineHeight: 1.6 }}>
+          {isWrongReview
+            ? '틀린 문제를 모두 복습했어요. 새로운 숙제를 풀면 오답이 여기에 모입니다.'
+            : '이 숙제에서 풀 수 있는 문항을 찾지 못했습니다.'}
+        </p>
+        <button onClick={() => navigate('/homework')} style={{ marginTop: '1.5rem', padding: '0.8rem 2rem', background: '#3b82f6', color: 'white', border: 'none', borderRadius: '10px', cursor: 'pointer', fontWeight: 'bold' }}>
+          숙제함으로 돌아가기
+        </button>
+      </div>
+    );
+  }
+
   // ── 정답 정규화 ──
   const normalizeAnswer = (str) => {
     if (!str) return '';
@@ -268,8 +287,17 @@ export default function HomeworkMathBox() {
     }
     setGradingResult(isCorrect ? 'correct' : 'incorrect');
 
-    // 오답노트 수집 (오답노트 자체 풀이 중에는 재수집 안 함)
-    if (!isWrongReview && currentProblem && !currentProblem.isDynamic) {
+    // 오답노트 반영
+    if (isWrongReview && currentProblem?._wr) {
+      // 오답복습 모드: 원본 항목(_wr) 기준으로 해결/재오답 처리 → 정답 시 목록에서 제거됨
+      const { hwId, num, unit, answerKey } = currentProblem._wr;
+      if (isCorrect) {
+        markResolved(hwId, num);
+      } else {
+        addWrong({ hwId, num, unit, answerKey });
+      }
+    } else if (currentProblem && !currentProblem.isDynamic) {
+      // 일반 정적 숙제: 오답노트 수집
       const numVal = parseInt(currentProblem.keyStr, 10);
       if (isCorrect) {
         markResolved(hwUnit.id, numVal);
@@ -586,8 +614,12 @@ export default function HomeworkMathBox() {
   const renderAVSHint = () => {
     if (!showAVS) return null;
 
-    // hintKey가 null인 경우 → solutionHtmlPath 체크
-    if (!hwUnit.hintKey) {
+    // 오답복습 모드: 페이지 hwUnit엔 hintKey가 없으므로 원본 문제의 단원에서 hintKey를 가져온다
+    const wrSrcUnit = isWrongReview && currentProblem?._wr ? getUnitById(currentProblem._wr.hwId) : null;
+    const effectiveHintKey = wrSrcUnit?.hintKey || hwUnit.hintKey;
+
+    // hintKey가 없는 경우 → solutionHtmlPath 체크
+    if (!effectiveHintKey) {
       // solutionHtmlPath가 있으면 HTML 해설 iframe 표시
       if (hwUnit.solutionHtmlPath) {
         // 학생 레벨에 따라 적절한 단계 해설 선택
@@ -651,7 +683,7 @@ export default function HomeworkMathBox() {
           ✨ AI Vision Solution
         </h4>
         <HintPlayerRouter
-          unit={hwUnit.hintKey}
+          unit={effectiveHintKey}
           problemId={hintProblemId}
           showQA={false}
         />

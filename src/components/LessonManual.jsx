@@ -57,7 +57,7 @@ export default function LessonManual({ onComplete }) {
       position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh',
       background: 'linear-gradient(135deg, #09090b, #0f172a, #1e1b4b)',
       zIndex: 10000, display: 'flex', alignItems: 'center', justifyContent: 'center',
-      color: 'white', padding: '0.8rem', fontFamily: "'Outfit', 'Inter', 'Noto Sans KR', sans-serif"
+      color: 'white', padding: '0.8rem', fontFamily: "'Pretendard', sans-serif"
     }}>
       <div style={{
         width: '100%', maxWidth: '530px', background: 'rgba(15, 23, 42, 0.45)',
@@ -78,7 +78,7 @@ export default function LessonManual({ onComplete }) {
             <div key={idx} style={{
               flex: 1, height: '4px', borderRadius: '2px',
               background: idx <= currentPage 
-                ? 'linear-gradient(to right, #3b82f6, #8b5cf6, #ec4899)' 
+                ? 'linear-gradient(to right, #3f7fff, #6f5bff, #ff5c8a)' 
                 : 'rgba(255, 255, 255, 0.08)',
               transition: 'all 0.4s ease'
             }} />
@@ -90,11 +90,11 @@ export default function LessonManual({ onComplete }) {
           <div style={{ animation: 'fadeIn 0.4s ease' }}>
             <div style={{ textAlign: 'center', marginBottom: '0.8rem' }}>
               <span style={{
-                background: 'linear-gradient(90deg, #3b82f6, #8b5cf6)',
+                background: 'linear-gradient(90deg, #3f7fff, #6f5bff)',
                 color: '#fff', fontSize: '0.72rem', fontWeight: 'bold',
                 padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '1px'
               }}>가이드 1 / 7</span>
-              <h2 style={{ fontSize: '1.25rem', fontWeight: '900', margin: '0.5rem 0 0.3rem 0', background: 'linear-gradient(to right, #60a5fa, #c084fc)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '-0.5px' }}>
+              <h2 style={{ fontSize: '1.25rem', fontWeight: '900', margin: '0.5rem 0 0.3rem 0', background: 'linear-gradient(to right, #8b9bff, #b9acff)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '-0.5px' }}>
                 한눈에 보는 학습 화면 구성
               </h2>
               <p style={{ fontSize: '0.78rem', color: '#94a3b8', margin: 0 }}>멘토스 AI 수학의 완벽한 훈련 환경 구조도입니다.</p>
@@ -116,12 +116,12 @@ export default function LessonManual({ onComplete }) {
                   display: 'flex', justifyContent: 'space-between', alignItems: 'center',
                   background: 'rgba(255,255,255,0.04)', borderRadius: '8px',
                   padding: '4px 8px', fontSize: '0.7rem', color: '#cbd5e1', cursor: 'pointer',
-                  border: activeGuide === 'timer' ? '1px solid #3b82f6' : '1px solid transparent',
+                  border: activeGuide === 'timer' ? '1px solid #3f7fff' : '1px solid transparent',
                   transition: 'all 0.2s', marginBottom: '6px'
                 }}
               >
                 <span>⏱️ 제한시간 01:23:45</span>
-                <span style={{ color: '#8b5cf6', fontWeight: 'bold' }}>⚡ 고차방정식 2단계</span>
+                <span style={{ color: '#6f5bff', fontWeight: 'bold' }}>⚡ 고차방정식 2단계</span>
               </div>
 
               {/* Middle Row: Content & Sidebar */}
@@ -142,9 +142,9 @@ export default function LessonManual({ onComplete }) {
                       onClick={(e) => { e.stopPropagation(); setActiveGuide('avs'); }}
                       style={{
                         flex: 1, padding: '4px', fontSize: '0.62rem', fontWeight: 'bold',
-                        background: 'linear-gradient(135deg, #7c3aed, #db2777)', border: 'none',
+                        background: 'linear-gradient(135deg, #5b46ee, #e34d7d)', border: 'none',
                         color: 'white', borderRadius: '4px', cursor: 'pointer',
-                        boxShadow: activeGuide === 'avs' ? '0 0 8px #db2777' : 'none'
+                        boxShadow: activeGuide === 'avs' ? '0 0 8px #e34d7d' : 'none'
                       }}
                     >
                       🔍 AVS 보기
@@ -154,8 +154,8 @@ export default function LessonManual({ onComplete }) {
                       style={{
                         flex: 1, padding: '4px', fontSize: '0.62rem', fontWeight: 'bold',
                         background: '#1e293b', border: '1px solid #475569',
-                        color: '#60a5fa', borderRadius: '4px', cursor: 'pointer',
-                        boxShadow: activeGuide === 'note' ? '0 0 8px #3b82f6' : 'none'
+                        color: '#8b9bff', borderRadius: '4px', cursor: 'pointer',
+                        boxShadow: activeGuide === 'note' ? '0 0 8px #3f7fff' : 'none'
                       }}
                     >
                       📝 AI 강의노트
@@ -168,12 +168,12 @@ export default function LessonManual({ onComplete }) {
                   onClick={() => setActiveGuide('sidebar')}
                   style={{
                     flex: 1.2, background: 'rgba(99, 102, 241, 0.08)', borderRadius: '8px',
-                    border: activeGuide === 'sidebar' ? '1px solid #8b5cf6' : '1px solid rgba(99, 102, 241, 0.2)',
+                    border: activeGuide === 'sidebar' ? '1px solid #6f5bff' : '1px solid rgba(99, 102, 241, 0.2)',
                     padding: '6px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
                     cursor: 'pointer', transition: 'all 0.2s'
                   }}
                 >
-                  <div style={{ fontSize: '0.6rem', fontWeight: 'bold', color: '#a5b4fc', textAlign: 'center' }}>
+                  <div style={{ fontSize: '0.6rem', fontWeight: 'bold', color: '#b9acff', textAlign: 'center' }}>
                     💬 AI 멘토
                   </div>
                   <div style={{
@@ -183,7 +183,7 @@ export default function LessonManual({ onComplete }) {
                     실근은 인수분해를 통해...
                   </div>
                   <div style={{
-                    background: '#8b5cf6', color: 'white', borderRadius: '4px',
+                    background: '#6f5bff', color: 'white', borderRadius: '4px',
                     fontSize: '0.52rem', textAlign: 'center', padding: '2px', fontWeight: 'bold'
                   }}>
                     1:1 질문
@@ -217,8 +217,8 @@ export default function LessonManual({ onComplete }) {
               minHeight: '80px',
               transition: 'all 0.3s ease'
             }}>
-              <div style={{ fontWeight: 'bold', fontSize: '0.85rem', color: '#60a5fa', marginBottom: '0.3rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                <Sparkles size={14} color="#60a5fa" />
+              <div style={{ fontWeight: 'bold', fontSize: '0.85rem', color: '#8b9bff', marginBottom: '0.3rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <Sparkles size={14} color="#8b9bff" />
                 {GUIDE_INFOS[activeGuide].title}
               </div>
               <p style={{ fontSize: '0.78rem', color: '#cbd5e1', margin: 0, lineHeight: '1.45' }}>
@@ -233,7 +233,7 @@ export default function LessonManual({ onComplete }) {
           <div style={{ animation: 'fadeIn 0.4s ease' }}>
             <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
               <span style={{
-                background: 'linear-gradient(90deg, #7c3aed, #db2777)',
+                background: 'linear-gradient(90deg, #5b46ee, #e34d7d)',
                 color: '#fff', fontSize: '0.72rem', fontWeight: 'bold',
                 padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '1px'
               }}>가이드 2 / 7</span>
@@ -272,11 +272,11 @@ export default function LessonManual({ onComplete }) {
           <div style={{ animation: 'fadeIn 0.4s ease' }}>
             <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
               <span style={{
-                background: 'linear-gradient(90deg, #10b981, #3b82f6)',
+                background: 'linear-gradient(90deg, #10b981, #3f7fff)',
                 color: '#fff', fontSize: '0.72rem', fontWeight: 'bold',
                 padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '1px'
               }}>가이드 3 / 7</span>
-              <h2 style={{ fontSize: '1.25rem', fontWeight: '900', margin: '0.5rem 0 0.3rem 0', background: 'linear-gradient(to right, #34d399, #60a5fa)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '-0.5px' }}>
+              <h2 style={{ fontSize: '1.25rem', fontWeight: '900', margin: '0.5rem 0 0.3rem 0', background: 'linear-gradient(to right, #34d399, #8b9bff)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '-0.5px' }}>
                 AI 멘토 대화창 & 정답 입력 루프
               </h2>
               <p style={{ fontSize: '0.78rem', color: '#cbd5e1', margin: 0 }}>언제든지 바로 옆에 상주하는 초밀착 AI 멘토링.</p>
@@ -294,7 +294,7 @@ export default function LessonManual({ onComplete }) {
               </div>
 
               <div style={{ display: 'flex', gap: '10px', background: 'rgba(255,255,255,0.02)', padding: '0.8rem', borderRadius: '14px', border: '1px solid rgba(255,255,255,0.04)' }}>
-                <Timer size={28} color="#60a5fa" style={{ flexShrink: 0 }} />
+                <Timer size={28} color="#8b9bff" style={{ flexShrink: 0 }} />
                 <div>
                   <h4 style={{ margin: '0 0 0.2rem 0', fontSize: '0.85rem', color: '#fff', fontWeight: 'bold' }}>실시간 타이머와 채점 진행</h4>
                   <p style={{ margin: 0, fontSize: '0.76rem', color: '#cbd5e1', lineHeight: '1.4' }}>
@@ -311,11 +311,11 @@ export default function LessonManual({ onComplete }) {
           <div style={{ animation: 'fadeIn 0.4s ease' }}>
             <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
               <span style={{
-                background: 'linear-gradient(90deg, #ec4899, #8b5cf6)',
+                background: 'linear-gradient(90deg, #ff5c8a, #6f5bff)',
                 color: '#fff', fontSize: '0.72rem', fontWeight: 'bold',
                 padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '1px'
               }}>가이드 4 / 7</span>
-              <h2 style={{ fontSize: '1.25rem', fontWeight: '900', margin: '0.5rem 0 0.3rem 0', background: 'linear-gradient(to right, #f472b6, #c084fc)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '-0.5px' }}>
+              <h2 style={{ fontSize: '1.25rem', fontWeight: '900', margin: '0.5rem 0 0.3rem 0', background: 'linear-gradient(to right, #f472b6, #b9acff)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '-0.5px' }}>
                 모의고사 & 실시간 자동 채점
               </h2>
               <p style={{ fontSize: '0.78rem', color: '#cbd5e1', margin: 0 }}>최신 수능/평가원 기출과 완벽히 동기화된 실전 테스트.</p>
@@ -333,7 +333,7 @@ export default function LessonManual({ onComplete }) {
               </div>
 
               <div style={{ display: 'flex', gap: '10px', background: 'rgba(255,255,255,0.02)', padding: '0.8rem', borderRadius: '14px', border: '1px solid rgba(255,255,255,0.04)' }}>
-                <Award size={28} color="#c084fc" style={{ flexShrink: 0 }} />
+                <Award size={28} color="#b9acff" style={{ flexShrink: 0 }} />
                 <div>
                   <h4 style={{ margin: '0 0 0.2rem 0', fontSize: '0.85rem', color: '#fff', fontWeight: 'bold' }}>수능 기출 데이터 매핑 완비</h4>
                   <p style={{ margin: 0, fontSize: '0.76rem', color: '#cbd5e1', lineHeight: '1.4' }}>
@@ -389,11 +389,11 @@ export default function LessonManual({ onComplete }) {
           <div style={{ animation: 'fadeIn 0.4s ease' }}>
             <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
               <span style={{
-                background: 'linear-gradient(90deg, #3b82f6, #10b981)',
+                background: 'linear-gradient(90deg, #3f7fff, #10b981)',
                 color: '#fff', fontSize: '0.72rem', fontWeight: 'bold',
                 padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '1px'
               }}>가이드 6 / 7</span>
-              <h2 style={{ fontSize: '1.25rem', fontWeight: '900', margin: '0.5rem 0 0.3rem 0', background: 'linear-gradient(to right, #60a5fa, #34d399)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '-0.5px' }}>
+              <h2 style={{ fontSize: '1.25rem', fontWeight: '900', margin: '0.5rem 0 0.3rem 0', background: 'linear-gradient(to right, #8b9bff, #34d399)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '-0.5px' }}>
                 출석 보상(Streak) & 크레딧 성장
               </h2>
               <p style={{ fontSize: '0.78rem', color: '#cbd5e1', margin: 0 }}>꾸준한 노력과 성취를 즉각적인 성장 점수로 환산합니다.</p>
@@ -401,7 +401,7 @@ export default function LessonManual({ onComplete }) {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
               <div style={{ display: 'flex', gap: '10px', background: 'rgba(255,255,255,0.02)', padding: '0.8rem', borderRadius: '14px', border: '1px solid rgba(255,255,255,0.04)' }}>
-                <Zap size={28} color="#60a5fa" style={{ flexShrink: 0 }} />
+                <Zap size={28} color="#8b9bff" style={{ flexShrink: 0 }} />
                 <div>
                   <h4 style={{ margin: '0 0 0.2rem 0', fontSize: '0.85rem', color: '#fff', fontWeight: 'bold' }}>불꽃(🔥) 연속 출석일수 상승</h4>
                   <p style={{ margin: 0, fontSize: '0.76rem', color: '#cbd5e1', lineHeight: '1.4' }}>
@@ -428,7 +428,7 @@ export default function LessonManual({ onComplete }) {
           <div style={{ animation: 'fadeIn 0.4s ease' }}>
             <div style={{ textAlign: 'center', marginBottom: '0.8rem' }}>
               <span style={{
-                background: 'linear-gradient(90deg, #ec4899, #ef4444)',
+                background: 'linear-gradient(90deg, #ff5c8a, #ef4444)',
                 color: '#fff', fontSize: '0.72rem', fontWeight: 'bold',
                 padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '1px'
               }}>가이드 7 / 7</span>
@@ -516,7 +516,7 @@ export default function LessonManual({ onComplete }) {
             onClick={handleNext}
             style={{
               flex: 2, padding: '0.7rem', borderRadius: '12px', border: 'none',
-              background: 'linear-gradient(135deg, #2563eb, #7c3aed, #db2777)',
+              background: 'linear-gradient(135deg, #2563eb, #5b46ee, #e34d7d)',
               color: 'white', fontSize: '0.9rem', fontWeight: '900', cursor: 'pointer',
               boxShadow: '0 6px 20px rgba(124, 58, 237, 0.35)',
               transition: 'transform 0.15s, box-shadow 0.15s', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px'
@@ -547,7 +547,7 @@ export default function LessonManual({ onComplete }) {
             color: '#64748b'
           }}>
             <div>
-              멘토스 AI는 <strong style={{ color: '#60a5fa' }}>KS BrainTech</strong>에서 투명하게 운영합니다.
+              멘토스 AI는 <strong style={{ color: '#8b9bff' }}>KS BrainTech</strong>에서 투명하게 운영합니다.
             </div>
             <div style={{ display: 'flex', gap: '8px', justifyContent: 'center' }}>
               <Link to="/terms" target="_blank" style={{ color: '#94a3b8', textDecoration: 'none', fontWeight: 'bold' }}>
