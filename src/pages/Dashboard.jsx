@@ -734,6 +734,7 @@ export default function Dashboard() {
         </div>
         <div className="course-grid">
           {[
+            { name: '기말 내신 완벽대비', desc: '🎉 오픈이벤트 · 기본필수+심화', icon: '🏆', color: '#10b981', route: '/class/naesin' },
             { name: '수학(상)', desc: '고1 수학(상/하)', icon: '📐', color: '#3b82f6' },
             { name: '수학1', desc: '수학1 (대수)', icon: '📊', color: '#8b5cf6' },
             { name: '수학2', desc: '미적분 기초', icon: '📈', color: '#06b6d4' },
@@ -745,7 +746,9 @@ export default function Dashboard() {
               key={course.name}
               className="course-card"
               onClick={() => {
-                if (course.name === '모의고사') {
+                if (course.route) {
+                  navigate(course.route);
+                } else if (course.name === '모의고사') {
                   navigate('/grade-select', { state: { subjectOverride: '모의고사' } });
                 } else {
                   navigate('/grade-select', { state: { subjectOverride: course.name } });

@@ -66,6 +66,9 @@ export default function LandingPricing() {
     <section id="pricing" className="hv-section hv-dark hv-pricing">
       <div className="hv-wrap hv-pricing-grid">
         <div className="hv-pricing-intro">
+          <button type="button" className="hv-naesin-event" onClick={() => navigate('/class/naesin')}>
+            🏆 [오픈이벤트] 기말 내신 완벽대비 풀코스 — 기본필수+심화 · 자동채점·AVS · <b>19,900원</b> →
+          </button>
           <span className="hv-pricing-eyebrow">AI 1:1 과외</span>
           <h2 className="hv-h2">학원·과외보다 똑똑하게,<br />매쓰멘토스 AI 과외</h2>
           <p className="hv-sub">사고력 AVS로 직접 가르치는 AI 1:1 과외.<br />학원 월 20~40만 · 과외 회당 5~10만 → 매쓰멘토스 <b>월 89,000원</b>.</p>
