@@ -6,7 +6,7 @@
  */
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Play, Pause, RotateCcw, ChevronLeft, ChevronRight } from 'lucide-react';
-import { InlineMath } from '@/components/KaTeXWrapper';
+import { InlineMath, BlockMath } from '@/components/KaTeXWrapper';
 
 export default function AlgebraHintPlayer({ data }) {
   const [step, setStep] = useState(0);
@@ -165,8 +165,44 @@ export default function AlgebraHintPlayer({ data }) {
           )}
         </div>
       ) : (
-        <div style={{ padding: '2rem', textAlign: 'center', color: '#94a3b8' }}>
-          해설 이미지를 불러오는 중...
+        /* 최고급 텍스트 스크롤링 뷰포트 (이미지 분실/텍스트 전용 대비 최고급 폴백) */
+        <div style={{
+          height: '480px',
+          overflowY: 'auto',
+          background: '#0b1329',
+          margin: '0.5rem',
+          borderRadius: 8,
+          border: '2px solid #334155',
+          padding: '1.2rem',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '0.8rem',
+          color: '#f8fafc',
+          textAlign: 'left'
+        }}>
+          {steps.map((s, idx) => (
+            <div key={idx} style={{
+              background: idx === step ? '#1e293b' : idx < step ? '#0f172a' : 'transparent',
+              border: `1px solid ${idx === step ? chalkYellow : 'transparent'}`,
+              opacity: idx <= step ? 1 : 0.3,
+              padding: '0.8rem 1rem',
+              borderRadius: 8,
+              transition: 'all 0.3s'
+            }}>
+              <div style={{ fontSize: '0.75rem', fontWeight: 700, color: idx === step ? chalkYellow : '#94a3b8', marginBottom: '0.3rem' }}>
+                {s.label || `${idx + 1}단계`}
+              </div>
+              <div style={{ fontSize: '0.95rem', lineHeight: '1.6', color: '#f8fafc', wordBreak: 'keep-all' }}>
+                {s.latex ? (
+                  <div className="avs-katex-block" style={{ margin: '0.4rem 0', overflowX: 'auto', maxWidth: '100%' }}>
+                    <BlockMath math={s.latex.replace(/\\\\/g, '\\\\\n')} errorColor="#cbd5e1" />
+                  </div>
+                ) : (
+                  s.text || s.caption || s.content || ''
+                )}
+              </div>
+            </div>
+          ))}
         </div>
       )}
 

@@ -11,6 +11,8 @@ import PaymentCheckoutModal from '@/components/PaymentCheckoutModal';
 
 import { getMetadataForProblem } from '../data/mockMetadata';
 import { WeaknessAnalysisEngine } from '../engine/math/WeaknessAnalysisEngine';
+import { speakText, stopSpeaking } from '../services/ttsService';
+import { buildProblemNarration } from '../components/hints/avsNarration';
 import { trackApiCall } from '@/engine/apiUsageTracker';
 import { commonQuestions2024, calculusQuestions2024, statsQuestions2024 } from '../data/mockExams/CSAT_2024_6.js';
 import { commonQuestions as common2025, calculusQuestions as calc2025, statsQuestions as stats2025 } from '../data/mockExams/CSAT_2025_6.js';
@@ -140,7 +142,39 @@ const getMockExamData = (volumeIndex, electiveMode) => {
   const ans2023_stats = [2, 1, 4, 2, 1, 0, "49", "100"];
   const ans2023 = [...ans2023_common, ...(electiveMode === 'calculus' ? ans2023_calculus : ans2023_stats)];
 
-  if (volumeIndex >= 0 && volumeIndex <= 5) {
+  // 9월 모평 정답 리스트 (Vol 7~9)
+  const sept2025_common = [1, 4, 3, 1, 1, 1, 2, 0, 4, 0, 0, 1, 3, 4, 0, "7", "5", "29", "4", "15", "31", "8"];
+  const sept2025_calculus = [4, 3, 3, 2, 1, 2, "57", "25"];
+  const sept2025_stats = [4, 0, 4, 2, 3, 3, "994", "93"];
+  const sept2025 = [...sept2025_common, ...(electiveMode === 'calculus' ? sept2025_calculus : sept2025_stats)];
+
+  const sept2024_common = [4, 2, 1, 0, 4, 2, 3, 3, 2, 2, 4, 0, 2, 1, 3, "6", "24", "5", "4", "98", "211", "13"];
+  const sept2024_calculus = [3, 0, 1, 4, 3, 1, "10", "40"];
+  const sept2024_stats = [0, 2, 3, 1, 4, 2, "62", "336"];
+  const sept2024 = [...sept2024_common, ...(electiveMode === 'calculus' ? sept2024_calculus : sept2024_stats)];
+
+  const sept2023_common = [3, 0, 1, 0, 2, 3, 0, 2, 1, 4, 2, 1, 4, 4, 3, "3", "4", "5", "3", "12", "13", "220"];
+  const sept2023_calculus = [0, 1, 4, 2, 2, 3, "3", "283"];
+  const sept2023_stats = [0, 2, 3, 1, 4, 2, "175", "260"];
+  const sept2023 = [...sept2023_common, ...(electiveMode === 'calculus' ? sept2023_calculus : sept2023_stats)];
+
+  // 3월 학평 정답 리스트 (Vol 10~12)
+  const march2026_common = [1, 3, 2, 0, 1, 3, 2, 0, 4, 2, 1, 0, 3, 2, 1, "2", "6", "15", "5", "16", "23", "13"];
+  const march2026_calculus = [4, 3, 2, 1, 0, 2, "27", "43"];
+  const march2026_stats = [1, 2, 0, 3, 2, 4, "15", "124"];
+  const march2026 = [...march2026_common, ...(electiveMode === 'calculus' ? march2026_calculus : march2026_stats)];
+
+  const march2025_common = [1, 3, 2, 0, 3, 2, 1, 4, 2, 1, 4, 3, 2, 1, 3, "3", "4", "5", "4", "15", "13", "13"];
+  const march2025_calculus = [2, 3, 1, 4, 2, 3, "15", "32"];
+  const march2025_stats = [1, 0, 2, 3, 2, 1, "49", "120"];
+  const march2025 = [...march2025_common, ...(electiveMode === 'calculus' ? march2025_calculus : march2025_stats)];
+
+  const march2024_common = [2, 3, 2, 4, 3, 1, 4, 2, 3, 1, 4, 2, 3, 1, 4, "3", "4", "5", "3", "12", "16", "16"];
+  const march2024_calculus = [2, 1, 3, 2, 4, 1, "12", "42"];
+  const march2024_stats = [0, 2, 1, 3, 2, 4, "120", "427"];
+  const march2024 = [...march2024_common, ...(electiveMode === 'calculus' ? march2024_calculus : march2024_stats)];
+
+  if (volumeIndex >= 0 && volumeIndex <= 11) {
       const subjectLabel = electiveMode === 'calculus' ? '미적분' : '확통';
       const csatQuestions = Array.from({length: 30}, (_, idx) => {
           const num = String(idx + 1).padStart(3, '0');
@@ -156,6 +190,14 @@ const getMockExamData = (volumeIndex, electiveMode) => {
               if (year === '2025') actualAnswer = ans2025[idx];
               else if (year === '2024') actualAnswer = ans2024[idx];
               else if (year === '2023') actualAnswer = ans2023[idx];
+          } else if (examType === '9월') {
+              if (year === '2025') actualAnswer = sept2025[idx];
+              else if (year === '2024') actualAnswer = sept2024[idx];
+              else if (year === '2023') actualAnswer = sept2023[idx];
+          } else if (examType === '3월') {
+              if (year === '2026') actualAnswer = march2026[idx];
+              else if (year === '2025') actualAnswer = march2025[idx];
+              else if (year === '2024') actualAnswer = march2024[idx];
           }
 
           let picturePath;
@@ -164,8 +206,8 @@ const getMockExamData = (volumeIndex, electiveMode) => {
             picturePath = safeResolve(`/math_crops/고3수능및모의고사/${subjectLabel}/${year}수능/${num}.webp`);
             hintTag = `CSAT_${year}수능_${subjectLabel}`;
           } else {
-            picturePath = safeResolve(`/math_crops/고3수능및모의고사/월별모의고사/6월/${subjectLabel}_${year}_6월/${num}.webp`);
-            hintTag = `CSAT_${year}_6월_${subjectLabel}`; 
+            picturePath = safeResolve(`/math_crops/고3수능및모의고사/월별모의고사/${examType}/${subjectLabel}_${year}_${examType}/${num}.webp`);
+            hintTag = `CSAT_${year}_${examType}_${subjectLabel}`; 
           }
 
           return {
@@ -177,35 +219,18 @@ const getMockExamData = (volumeIndex, electiveMode) => {
               answer: actualAnswer 
           };
       });
+
+      let titleLabel = `${year}학년도 ${examType} 모의평가`;
+      if (examType === '수능') {
+          titleLabel = `${year}학년도 수능 기출`;
+      } else if (examType === '3월') {
+          titleLabel = `${year}학년도 3월 전국연합학력평가`;
+      }
+
       return {
-          title: `MENTOS 모의고사 VOL.${volNumber} (${year}학년도 ${examType === '수능' ? '수능 기출' : examType + ' 모의평가'})`,
+          title: `MENTOS 모의고사 VOL.${volNumber} (${titleLabel})`,
           subtitle: `수학 영역 (선택: ${subjectLabel})`,
           questions: csatQuestions
-      };
-  }
-
-  // 6~8회차 (월별 모의고사)
-  if (volumeIndex >= 6 && volumeIndex <= 8) {
-      const month = volumeIndex === 6 ? '9월' : volumeIndex === 7 ? '6월' : '3월';
-      const subjectLabel = electiveMode === 'calculus' ? '미적분' : '확통';
-      
-      const mockQuestions = Array.from({length: 30}, (_, idx) => {
-          const num = String(idx + 1).padStart(3, '0');
-          const isObjective = (idx < 15) || (idx >= 22 && idx < 28);
-          const pointType = [15, 22, 30].includes(idx + 1) ? '4점' : '3점';
-          return {
-              id: idx + 1,
-              type: pointType,
-              options: isObjective ? ['', '', '', '', ''] : [],
-              picture: safeResolve(`/math_crops/고3수능및모의고사/${subjectLabel}/2025학년도${month}모의평가/${num}.webp`),
-              tag: `MOCK_2025_${month}_${subjectLabel}`,
-              answer: isObjective ? 0 : "10"
-          };
-      });
-      return {
-          title: `MENTOS 모의고사 VOL.${volNumber} (2025학년도 ${month} 모의평가)`,
-          subtitle: `수학 영역 (선택: ${subjectLabel})`,
-          questions: mockQuestions
       };
   }
 
@@ -587,33 +612,52 @@ export default function MentosMockExam() {
     setPlayingAudioId(null);
   }, [currentVolume, electiveMode]);
 
-  const handleToggleAudio = (qId) => {
-    if (playingAudioId === qId) {
-      if (audioInstance) {
-        audioInstance.pause();
-      }
+  // 정적 사전생성 음성(OpenAI) 폴백 재생 — 이미지 전용 문항 등 낭독 텍스트가 없을 때 사용
+  const playStaticAudio = (qId) => {
+    const folderName = `20260504모의고사1회${electiveMode === 'calculus' ? '미적분' : '확통'}`;
+    const qNum = String(qId).padStart(3, '0');
+    const audioPath = `/audio/suneung_tts/${folderName}_${qNum}.mp3`;
+
+    const newAudio = new Audio(audioPath);
+    newAudio.onended = () => setPlayingAudioId(null);
+    setAudioInstance(newAudio);
+    setPlayingAudioId(qId);
+    newAudio.play().catch(err => {
+      console.error("Audio playback error:", err);
       setPlayingAudioId(null);
-    } else {
-      if (audioInstance) {
-        audioInstance.pause();
-      }
-      
-      const folderName = `20260504모의고사1회${electiveMode === 'calculus' ? '미적분' : '확통'}`;
-      const qNum = String(qId).padStart(3, '0');
-      const audioPath = `/audio/suneung_tts/${folderName}_${qNum}.mp3`;
-      
-      const newAudio = new Audio(audioPath);
-      newAudio.play().catch(err => {
-        console.error("Audio playback error:", err);
-      });
-      
-      newAudio.onended = () => {
-        setPlayingAudioId(null);
-      };
-      
-      setAudioInstance(newAudio);
-      setPlayingAudioId(qId);
+    });
+  };
+
+  // AVS 해설 음성: Gemini(Aoede) 런타임 TTS 우선, 낭독 텍스트가 없으면 정적 파일 폴백
+  const handleToggleAudio = (q) => {
+    const question = (q && typeof q === 'object') ? q : data.questions.find(x => x.id === q);
+    const qId = question ? question.id : q;
+
+    // 현재 재생 중인 문항을 다시 누르면 정지
+    if (playingAudioId === qId) {
+      stopSpeaking();
+      if (audioInstance) { audioInstance.pause(); setAudioInstance(null); }
+      setPlayingAudioId(null);
+      return;
     }
+
+    // 다른 음성/오디오 정리
+    stopSpeaking();
+    if (audioInstance) { audioInstance.pause(); setAudioInstance(null); }
+
+    const narration = buildProblemNarration(question);
+    if (narration) {
+      setPlayingAudioId(qId);
+      speakText(narration, {
+        isReplay: true, // 사용자 클릭 재생: 출력횟수 스킵 로직 우회
+        onEnd: () => setPlayingAudioId(null),
+        onError: () => setPlayingAudioId(null),
+      });
+      return;
+    }
+
+    // 낭독 텍스트 없음(이미지 전용 문항) → 기존 정적 파일 재생
+    playStaticAudio(qId);
   };
 
   // 선택 과목 및 회차 전환
@@ -723,6 +767,63 @@ export default function MentosMockExam() {
         topWeakUnits: topWeakUnitsForUI, 
         weakPcbs: [`${report.topWeakType} (가장 취약한 유형)`]
     });
+
+    // 오답 분석을 기반으로 각 취약단원별 5문항씩 유사 문제를 localStorage 숙제 디비에 연동 저장
+    try {
+      const cachedAnswers = JSON.parse(localStorage.getItem('avs_answers_cache') || '{}');
+      const localHwList = JSON.parse(localStorage.getItem('mentosHomework') || '[]');
+      const localHwDb = JSON.parse(localStorage.getItem('mentos_math_homework_db') || '[]');
+
+      drillSet.forEach((drill, idx) => {
+        if (!drill.drillQuestions || drill.drillQuestions.length === 0) return;
+
+        const hwId = `math_hw_csat_${Date.now()}_${idx}`;
+        const shortDateStr = new Date().toLocaleDateString('ko-KR', { year: 'numeric', month: 'numeric', day: 'numeric' });
+        const assignedAt = new Date().toISOString();
+        const hwTitle = `[모의고사 오답 보강] ${drill.unit} 핵심 5문항`;
+
+        const homeworkProblems = drill.drillQuestions.map((dq, i) => {
+          const ansMap = cachedAnswers[dq.unit] || {};
+          const ansKey = dq.num.replace('.webp', '').replace('.png', '');
+          const actualAns = ansMap[ansKey] || "3";
+
+          return {
+            problemId: `${hwId}_p_${i}`,
+            unit: dq.unit,
+            questionText: `[모의고사 오답 보강] 다음 문제 이미지를 분석하고 정확한 정답을 입력하시오.`,
+            problemImage: `/math_crops/${dq.tag}`,
+            answer: actualAns,
+            sourceProblemId: dq.num,
+            isHomework: true
+          };
+        });
+
+        // 1) mentosHomework 목록 추가
+        localHwList.unshift({
+          homeworkId: hwId,
+          title: hwTitle,
+          assignedAt: assignedAt,
+          status: 'assigned',
+          subject: 'math',
+          teacherId: 'AI 오답 분석기',
+          unitKey: drill.unit
+        });
+
+        // 2) mentos_math_homework_db 상세 추가
+        localHwDb.push({
+          homeworkId: hwId,
+          title: hwTitle,
+          date: shortDateStr,
+          problems: homeworkProblems
+        });
+      });
+
+      localStorage.setItem('mentosHomework', JSON.stringify(localHwList));
+      localStorage.setItem('mentos_math_homework_db', JSON.stringify(localHwDb));
+      console.log('[MentosMockExam] 모의고사 오답 보강 숙제 자동 생성 완료:', drillSet.length, '개 단원');
+    } catch (e) {
+      console.error('[MentosMockExam] 숙제 자동 생성 중 에러:', e);
+    }
     
     setShowAnalysis(true);
     trackApiCall('weakness_analysis', { reason: 'G3 모의고사 진단 분석' });
@@ -897,7 +998,7 @@ export default function MentosMockExam() {
                     {currentVolume === 0 && q.id <= 10 && (
                       <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.2rem', marginBottom: '0.2rem', paddingLeft: '38px' }}>
                         <button
-                          onClick={() => handleToggleAudio(q.id)}
+                          onClick={() => handleToggleAudio(q)}
                           style={{
                             display: 'flex',
                             alignItems: 'center',
@@ -951,7 +1052,7 @@ export default function MentosMockExam() {
                             <>
                               <Volume2 size={14} style={{ color: 'hsl(262, 83%, 58%)' }} />
                               <Play size={11} fill="currentColor" style={{ marginLeft: '-2px' }} />
-                              <span>AVS AI 해설 듣기 (shimmer)</span>
+                              <span>AVS AI 해설 듣기</span>
                             </>
                           )}
                         </button>
@@ -1497,6 +1598,7 @@ export default function MentosMockExam() {
                       unit={unit}
                       problemId={problemId}
                       showQA={true}
+                      geminiTts={true}
                     />
                   );
                 })()}
@@ -1544,7 +1646,15 @@ export default function MentosMockExam() {
     })()}
 
       {/* 실시간 펜 애니메이션 힌트 UI 오버레이 */}
-      {viewingHint && (
+      {viewingHint && (() => {
+        // '다음 문제 보기' 네비게이션: 풀이 가능한(텍스트/이미지 보유) 문항 순서로 진행
+        const hintList = data.questions.filter(q => (q.text && q.text.trim() !== '') || q.picture);
+        const hintIdx = hintList.findIndex(q => q.id === viewingHint.id);
+        const hasNextHint = hintIdx >= 0 && hintIdx < hintList.length - 1;
+        const goNextHint = () => {
+          if (hasNextHint) { stopSpeaking(); setViewingHint(hintList[hintIdx + 1]); }
+        };
+        return (
         <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: '#0f172a', zIndex: 9999, display: 'flex', flexDirection: 'column', color: '#f8fafc' }}>
           
           <div style={{ 
@@ -1574,15 +1684,34 @@ export default function MentosMockExam() {
                 {viewingHint.id}번 문항 ({viewingHint.tag}) 힌트해설
               </h2>
             </div>
-            <button 
-              onClick={() => setViewingHint(null)} 
-              style={{ 
-                background: '#ef4444', 
-                color: '#fff', 
-                border: 'none', 
-                fontSize: isMobile ? '0.75rem' : '1rem', 
-                cursor: 'pointer', 
-                padding: isMobile ? '0.3rem 0.6rem' : '0.5rem 1rem', 
+            <button
+              onClick={goNextHint}
+              disabled={!hasNextHint}
+              style={{
+                background: hasNextHint ? '#3b82f6' : '#334155',
+                color: '#fff',
+                border: 'none',
+                fontSize: isMobile ? '0.75rem' : '1rem',
+                cursor: hasNextHint ? 'pointer' : 'default',
+                padding: isMobile ? '0.3rem 0.6rem' : '0.5rem 1rem',
+                borderRadius: '8px',
+                fontWeight: 'bold',
+                flexShrink: 0,
+                marginLeft: '0.5rem',
+                opacity: hasNextHint ? 1 : 0.4
+              }}
+            >
+              다음 문제 보기 →
+            </button>
+            <button
+              onClick={() => setViewingHint(null)}
+              style={{
+                background: '#ef4444',
+                color: '#fff',
+                border: 'none',
+                fontSize: isMobile ? '0.75rem' : '1rem',
+                cursor: 'pointer',
+                padding: isMobile ? '0.3rem 0.6rem' : '0.5rem 1rem',
                 borderRadius: '8px',
                 fontWeight: 'bold',
                 flexShrink: 0,
@@ -1645,17 +1774,19 @@ export default function MentosMockExam() {
                          : '삼각함수활용2단계';
                  }
                  return (
-                   <HintPlayerRouter 
-                      unit={unit} 
-                      problemId={problemId} 
-                      showQA={true} 
+                   <HintPlayerRouter
+                      unit={unit}
+                      problemId={problemId}
+                      showQA={true}
+                      geminiTts={true}
                    />
                  );
                })()}
             </div>
           </div>
         </div>
-      )}
+        );
+      })()}
 
       {/* ─── 고3 프리미엄 전용 페이월 오버레이 ─── */}
       {showPaywall && (

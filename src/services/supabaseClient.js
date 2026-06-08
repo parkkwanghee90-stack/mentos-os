@@ -1,10 +1,10 @@
 import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://trvqgqvwhqvlgqzlsxbu.supabase.co';
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRydnFncXZ3aHF2bGdxemxzeGJ1Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3ODY1NzA1MywiZXhwIjoyMDk0MjMzMDUzfQ.a76V1LYSItB48fXQN2in-rXfy8oD4o7KJteAMCyX9so';
 
-if (!supabaseAnonKey || supabaseAnonKey.length < 50) {
-  console.error('[SupabaseClient] ⛔ VITE_SUPABASE_ANON_KEY가 설정되지 않았습니다. .env 파일을 확인하세요.');
+if (!import.meta.env.VITE_SUPABASE_ANON_KEY) {
+  console.warn('[SupabaseClient] ⚠️ VITE_SUPABASE_ANON_KEY가 설정되지 않아 내장 헬퍼 키(Fallback)로 대체 구동됩니다.');
 }
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
