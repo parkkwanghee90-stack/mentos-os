@@ -11,7 +11,7 @@ const { getSafePath } = require('../src/config/pathMapping.js');
 // Support multiple API keys for pool rotation
 const GEMINI_API_KEYS = [
   process.env.VITE_GEMINI_API_KEY,
-  "AIzaSyATuwWx35ho0HovQ1915tY_tbvpzZAKlgw" // Secondary pool key from math_su1 script
+  process.env.VITE_GEMINI_API_KEY_2,
 ].filter(Boolean);
 
 let currentKeyIndex = 0;

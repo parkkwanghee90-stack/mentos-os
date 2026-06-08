@@ -8,7 +8,7 @@ dotenv.config();
 
 const GEMINI_API_KEYS = [
   process.env.VITE_GEMINI_API_KEY,
-  "AIzaSyATuwWx35ho0HovQ1915tY_tbvpzZAKlgw" 
+  process.env.VITE_GEMINI_API_KEY_2,
 ].filter(Boolean);
 
 let currentKeyIndex = 0;
