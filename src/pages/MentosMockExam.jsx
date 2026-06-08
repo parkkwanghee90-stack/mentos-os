@@ -13,6 +13,7 @@ import { getMetadataForProblem } from '../data/mockMetadata';
 import { WeaknessAnalysisEngine } from '../engine/math/WeaknessAnalysisEngine';
 import { speakText, stopSpeaking } from '../services/ttsService';
 import { buildProblemNarration } from '../components/hints/avsNarration';
+import { nextHintProblem } from './mockExamNav';
 import { trackApiCall } from '@/engine/apiUsageTracker';
 import { commonQuestions2024, calculusQuestions2024, statsQuestions2024 } from '../data/mockExams/CSAT_2024_6.js';
 import { commonQuestions as common2025, calculusQuestions as calc2025, statsQuestions as stats2025 } from '../data/mockExams/CSAT_2025_6.js';
@@ -1647,12 +1648,10 @@ export default function MentosMockExam() {
 
       {/* 실시간 펜 애니메이션 힌트 UI 오버레이 */}
       {viewingHint && (() => {
-        // '다음 문제 보기' 네비게이션: 풀이 가능한(텍스트/이미지 보유) 문항 순서로 진행
-        const hintList = data.questions.filter(q => (q.text && q.text.trim() !== '') || q.picture);
-        const hintIdx = hintList.findIndex(q => q.id === viewingHint.id);
-        const hasNextHint = hintIdx >= 0 && hintIdx < hintList.length - 1;
+        // '다음 문제 보기' 네비게이션: 풀이 가능한(텍스트/이미지 보유) 문항 순서로 진행 (mockExamNav: 단위테스트 보유)
+        const { hasNext: hasNextHint, next: nextHintQ } = nextHintProblem(data.questions, viewingHint.id);
         const goNextHint = () => {
-          if (hasNextHint) { stopSpeaking(); setViewingHint(hintList[hintIdx + 1]); }
+          if (hasNextHint) { stopSpeaking(); setViewingHint(nextHintQ); }
         };
         return (
         <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: '#0f172a', zIndex: 9999, display: 'flex', flexDirection: 'column', color: '#f8fafc' }}>
