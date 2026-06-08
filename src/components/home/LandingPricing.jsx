@@ -16,8 +16,8 @@ const PLANS = [
   },
   {
     name: "얼리버드",
-    planKey: "early",
-    price: "49,000",
+    planKey: "earlybird",
+    price: "45,000",
     original: "89,000",
     popular: true,
     sub: "선착순 1,000명 한정 · 마감 시 정가 월 89,000원",
@@ -74,7 +74,7 @@ export default function LandingPricing() {
           <p className="hv-sub">사고력 AVS로 직접 가르치는 AI 1:1 과외.<br />학원 월 20~40만 · 과외 회당 5~10만 → 매쓰멘토스 <b>월 89,000원</b>.</p>
           <button type="button" onClick={() => navigate("/login")} className="hv-btn hv-btn-primary hv-btn-lg">지금 무료로 시작하기 <ArrowRight size={18} /></button>
           <p className="hv-guarantee"><ShieldCheck size={16} /> 1개월 안에 성적 변화 없으면 <b>100% 환불 보장</b></p>
-          <p className="hv-pricing-note">· 선착순 100명 첫 1개월 무료 → 1,000명 얼리버드 월 49,000원 → 이후 정가 월 89,000원</p>
+          <p className="hv-pricing-note">· 선착순 100명 첫 1개월 무료 → 1,000명 얼리버드 월 45,000원 → 이후 정가 월 89,000원</p>
         </div>
 
         <div className="hv-plans">

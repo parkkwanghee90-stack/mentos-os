@@ -1820,7 +1820,7 @@ export default function MentosMockExam() {
                 <span style={{ fontSize: '1.25rem', fontWeight: '950', color: '#c084fc' }}>월 45,000원</span>
               </div>
               <div style={{ textAlign: 'right', fontSize: '0.75rem', color: '#94a3b8' }}>
-                <span>3개월 후 정상가 99,000원 인상</span>
+                <span>이후 정가 월 89,000원 적용</span>
                 <br />
                 <span style={{ color: '#f87171' }}>★ 잔여 혜택 수량 소량 남음</span>
               </div>

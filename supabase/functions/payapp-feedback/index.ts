@@ -3,6 +3,7 @@ import { verifyCredentials, decideAction, mapPaymentRow } from './lib.ts';
 
 // payapp-create와 동일한 서버 권위 가격. var2(orderId) 접두사로 plan 식별.
 const PLAN_PRICES: Record<string, number> = {
+  earlybird: 45000,
   early: 49000,
   regular: 89000,
   m6: 373800,

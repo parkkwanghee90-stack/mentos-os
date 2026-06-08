@@ -1,17 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, CreditCard, Gift, ShieldCheck, HelpCircle, ChevronDown, Clock, BookOpen, AlertCircle } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { getMembershipStatus } from '@/services/membershipService';
 
 const PLAN_LABELS = {
-  early: '얼리버드 · 월 49,000원',
+  earlybird: '얼리버드 멤버십 · 월 45,000원',
+  early: '프리미엄 강의 · 49,000원',
   regular: '정규 멤버십 · 월 89,000원',
   m6: '6개월 이용권 · 373,800원',
   y1: '1년 이용권 · 640,800원',
   lifetime: '평생 이용권 · 1,800,000원',
 };
 
-// plan: early | regular | m6 | y1 | lifetime
+// plan별 표시 가격(서버 PLAN_PRICES와 일치). 공유 모달이 plan/tier에 맞는 가격을 보이도록.
+const PLAN_DISPLAY = {
+  earlybird: { price: 45000,   original: 89000, monthly: true,  note: '선착순 1,000명 한정 · 이후 정가 월 89,000원' },
+  early:     { price: 49000,   original: null,  monthly: true,  note: '프리미엄 강의 이용권' },
+  regular:   { price: 89000,   original: null,  monthly: true,  note: '월 정기 멤버십' },
+  m6:        { price: 373800,  original: null,  monthly: false, note: '6개월 약정 이용권' },
+  y1:        { price: 640800,  original: null,  monthly: false, note: '1년 약정 이용권' },
+  lifetime:  { price: 1800000, original: null,  monthly: false, note: '평생 소장 이용권' },
+};
+
+// 서버가 가입 순번으로 가격을 정하는 멤버십 plan(클라이언트 선택 무시)
+const MEMBERSHIP_PLANS = ['regular', 'earlybird'];
+
+// plan: earlybird | early | regular | m6 | y1 | lifetime
 export default function PaymentCheckoutModal({ onClose, plan = 'regular' }) {
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -25,6 +40,27 @@ export default function PaymentCheckoutModal({ onClose, plan = 'regular' }) {
   // 테스트 결제 표시 토글(가격 문구 전용). 미설정 시 false → 실제 가격 표시.
   // 실제 결제 금액은 서버가 plan 기준으로 결정하므로 표시값과 어긋나지 않도록 기본 false 유지.
   const IS_TEST_MODE = import.meta.env.VITE_PAYAPP_TEST_MODE === 'true';
+
+  // ── 멤버십은 서버가 가입 순번으로 가격을 정함 → 표시 가격도 서버 tier로 맞춘다 ──
+  const isMembership = MEMBERSHIP_PLANS.includes(plan);
+  const [tierInfo, setTierInfo] = useState(null); // { ordinal, tier, price }
+  useEffect(() => {
+    let alive = true;
+    if (isMembership && user) {
+      getMembershipStatus()
+        .then((s) => { if (alive) setTierInfo(s); })
+        .catch(() => { /* 실패 시 earlybird 폴백 표시(서버가 최종 결정) */ });
+    }
+    return () => { alive = false; };
+  }, [isMembership, user]);
+
+  // 표시할 plan: 멤버십이면 서버 tier(regular는 정가, 그 외는 earlybird 선착순가), 아니면 전달된 plan.
+  const displayPlanKey = isMembership
+    ? (tierInfo?.tier === 'regular' ? 'regular' : 'earlybird')
+    : plan;
+  const display = PLAN_DISPLAY[displayPlanKey] || PLAN_DISPLAY.regular;
+  const priceText = `${display.monthly ? '월 ' : ''}${Number(display.price).toLocaleString()}원`;
+  const discountPct = display.original ? Math.round((1 - display.price / display.original) * 100) : 0;
 
   const handlePayment = async () => {
     if (!user?.id) {
@@ -152,22 +188,24 @@ export default function PaymentCheckoutModal({ onClose, plan = 'regular' }) {
           marginBottom: '1.5rem'
         }}>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
-            <span style={{ fontSize: '0.85rem', color: '#94a3b8', textDecoration: IS_TEST_MODE ? 'none' : 'line-through' }}>
-              {IS_TEST_MODE ? '테스트 결제 진행' : '월 99,000원'}
-            </span>
+            {!IS_TEST_MODE && display.original && (
+              <span style={{ fontSize: '0.85rem', color: '#94a3b8', textDecoration: 'line-through' }}>
+                {`${display.monthly ? '월 ' : ''}${Number(display.original).toLocaleString()}원`}
+              </span>
+            )}
             <span style={{ fontSize: '0.8rem', color: '#f87171', fontWeight: '900', background: 'rgba(239,68,68,0.15)', padding: '2px 6px', borderRadius: '4px' }}>
-              {IS_TEST_MODE ? '간편 검증' : '54% 특별할인'}
+              {IS_TEST_MODE ? '간편 검증' : (discountPct > 0 ? `${discountPct}% 할인` : '프리미엄')}
             </span>
           </div>
-          
+
           <div style={{ fontSize: '2.2rem', fontWeight: '900', background: 'linear-gradient(to right, #60a5fa, #c084fc, #f472b6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '-1px' }}>
-            {IS_TEST_MODE ? '100원' : '월 45,000원'}
+            {IS_TEST_MODE ? '100원' : priceText}
           </div>
-          
+
           <div style={{ fontSize: '0.8rem', color: '#c084fc', fontWeight: 'bold', marginTop: '4px' }}>
-            {IS_TEST_MODE 
-              ? '* 100원 결제 완료 즉시 프리미엄 승인 자동 흐름이 실행됩니다.' 
-              : '* 3개월간 이벤트 특가 혜택 제공 후 정상가 월 99,000원으로 조정됩니다.'}
+            {IS_TEST_MODE
+              ? '* 100원 결제 완료 즉시 프리미엄 승인 자동 흐름이 실행됩니다.'
+              : `* ${display.note}`}
           </div>
         </div>
 
