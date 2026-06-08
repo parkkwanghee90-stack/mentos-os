@@ -28,8 +28,8 @@ const AVS_SCHEMA = { type: 'object', properties: { found: { type: 'boolean' }, s
   const missing = probs.filter(p => !fs.existsSync(path.join(outDir, String(p.num).padStart(3, '0') + '.json')));
   if (!missing.length) { console.log('  누락 없음'); return; }
   console.log('  누락 ' + missing.length + '개: ' + missing.map(p => p.num).join(','));
-  // 해설 후보 페이지(뒤쪽 절반)
-  const solPages = pages.slice(Math.max(0, Math.floor(pages.length / 3)));
+  // 해설 후보 페이지: 전 페이지 탐색(누락분이 적으니 철저히)
+  const solPages = pages;
   let filled = 0;
   for (const p of missing) {
     const pad = String(p.num).padStart(3, '0');

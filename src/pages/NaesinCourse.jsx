@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, XCircle, BookOpen, Sparkles, Lock, Volume2, VolumeX } from 'lucide-react';
 import { MathText } from '@/components/MathProblemRenderer';
+import GeometryHintPlayer from '@/components/hints/GeometryHintPlayer';
 import COURSE from '@/data/naesin_full.json';
 import { useAuth } from '@/context/AuthContext';
 import { speakText, stopSpeaking } from '@/services/ttsService';
@@ -185,12 +186,12 @@ export default function NaesinCourse() {
                     </button>
                   )}
                 </div>
-                {prob.avs && prob.avs.length ? prob.avs.map((s, i) => (
-                  <div key={i} style={{ marginBottom: 12, padding: '0.8rem 1rem', borderRadius: 12, background: 'rgba(124,58,237,0.06)', border: '1px solid rgba(124,58,237,0.2)' }}>
-                    <div style={{ fontWeight: 700, color: '#c4b5fd', marginBottom: 6, fontSize: '0.9rem' }}>[{s.phase}] {s.title}</div>
-                    <div style={{ color: '#e2e8f0', lineHeight: 1.8, fontSize: '0.95rem' }}><MathText text={s.content} /></div>
-                  </div>
-                )) : <p style={{ color: '#94a3b8' }}>이 문제의 AVS 해설은 준비 중입니다. (정답: {prob.answer})</p>}
+                {prob.avs && prob.avs.length ? (
+                  <GeometryHintPlayer key={prob.id} data={{
+                    type: 'geometry',
+                    steps: prob.avs.map(s => ({ label: `[${s.phase}] ${s.title}`, content: s.content })),
+                  }} />
+                ) : <p style={{ color: '#94a3b8' }}>이 문제의 AVS 해설은 준비 중입니다. (정답: {prob.answer})</p>}
               </div>
             )}
 
