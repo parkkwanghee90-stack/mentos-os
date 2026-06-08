@@ -12,9 +12,13 @@ export function AuthProvider({ children }) {
   const syncToLocalStorage = (currentSession) => {
     if (currentSession?.user) {
       const dbUser = currentSession.user;
-      const isPaid = dbUser.user_metadata?.is_paid === true || dbUser.user_metadata?.premium === true;
-      const isPremium = dbUser.user_metadata?.premium === true;
-      const paidAt = dbUser.user_metadata?.paid_at || null;
+      const meta = dbUser.user_metadata || {};
+      // 프리미엄 만료(premium_until) 반영 — 선착순 100명 1개월 무료 등 만료성 권한 지원
+      const premiumUntil = meta.premium_until || null;
+      const notExpired = !premiumUntil || new Date(premiumUntil).getTime() > Date.now();
+      const isPaid = (meta.is_paid === true || meta.premium === true) && notExpired;
+      const isPremium = meta.premium === true && notExpired;
+      const paidAt = meta.paid_at || null;
 
       const legacyUser = {
         id: dbUser.id,
@@ -33,17 +37,25 @@ export function AuthProvider({ children }) {
         localStorage.setItem('mentos_is_paid', 'true');
         localStorage.setItem('mentos_premium', isPremium ? 'true' : 'false');
         if (paidAt) localStorage.setItem('mentos_paid_at', paidAt);
+        if (premiumUntil) localStorage.setItem('mentos_premium_until', premiumUntil);
+        else localStorage.removeItem('mentos_premium_until');
       } else {
-        const localPaid = localStorage.getItem('mentos_is_paid') === 'true';
-        if (localPaid) {
-          updatePremiumStatus(true);
-        }
+        // 미결제/만료 → 로컬 프리미엄 흔적 제거.
+        // (보안) 과거의 localStorage 기반 서버 셀프부여(updatePremiumStatus 호출)를 제거:
+        //   ① 누구나 localStorage 조작으로 셀프 프리미엄 부여하던 취약점 차단
+        //   ② 만료된 무료부여(premium_until)가 영구 권한으로 되살아나던 버그 차단
+        // 정식 프리미엄은 서버(payapp-feedback 웹훅 / membership 함수)만 부여한다.
+        localStorage.removeItem('mentos_is_paid');
+        localStorage.removeItem('mentos_premium');
+        localStorage.removeItem('mentos_paid_at');
+        localStorage.removeItem('mentos_premium_until');
       }
     } else {
       localStorage.removeItem('mentos_mock_user');
       localStorage.removeItem('mentos_is_paid');
       localStorage.removeItem('mentos_premium');
       localStorage.removeItem('mentos_paid_at');
+      localStorage.removeItem('mentos_premium_until');
     }
   };
 

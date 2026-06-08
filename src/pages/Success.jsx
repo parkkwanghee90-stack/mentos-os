@@ -7,7 +7,7 @@ import { useAuth } from '@/context/AuthContext';
 export default function Success() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const { user, updatePremiumStatus } = useAuth();
+  const { user } = useAuth();
   const [status, setStatus] = useState('processing'); // 'processing' | 'success' | 'error'
 
   const paymentKey = searchParams.get('paymentKey');
@@ -54,9 +54,11 @@ export default function Success() {
             console.error('[PaymentSuccess] Failed to save invoice to Supabase DB:', dbError);
           }
 
-          // 2. AuthContext의 프리미엄 업데이트 호출 (Profiles/Users 테이블 premium=true, paid_at 자동 설정)
-          console.log('[PaymentSuccess] Elevating user profile to Premium Status...');
-          await updatePremiumStatus(true);
+          // 2. 보안: 클라이언트가 직접 프리미엄을 부여하지 않는다(결제 우회 차단).
+          //    프리미엄 부여는 결제 완료 웹훅(payapp-feedback)이 서버에서 처리한다.
+          //    여기서는 세션을 새로고침해 서버가 부여한 권한 메타데이터를 반영만 한다.
+          console.log('[PaymentSuccess] Refreshing session to reflect server-granted premium...');
+          try { await supabase.auth.refreshSession(); } catch (e) { /* best-effort */ }
         } else {
           // 비회원 결제 시나리오 fallback (테스트 목적)
           localStorage.setItem('mentos_is_paid', 'true');

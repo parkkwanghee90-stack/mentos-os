@@ -76,7 +76,7 @@ export default function App() {
 }
 
 function AppContent() {
-  const { updatePremiumStatus, user } = useAuth();
+  const { user } = useAuth();
   const [showSuccessOverlay, setShowSuccessOverlay] = useState(false);
 
   useEffect(() => {
@@ -84,23 +84,9 @@ function AppContent() {
 
     const params = new URLSearchParams(window.location.search);
     if (params.get('payment_success') === 'true') {
-      localStorage.setItem('mentos_is_paid', 'true');
-      
-      // Sync payment success to Supabase metadata
-      if (user) {
-        updatePremiumStatus(true);
-      }
-      
-      // Auto register if no user registered yet
-      if (!localStorage.getItem('mentos_mock_user')) {
-        localStorage.setItem('mentos_mock_user', JSON.stringify({
-          id: 'user_p_' + Date.now(),
-          name: '프리미엄 학생',
-          email: 'premium@mentos.ai',
-          role: 'student'
-        }));
-      }
-
+      // 보안: 클라이언트가 URL 파라미터만으로 프리미엄을 셀프 부여하지 않는다(결제 우회 차단).
+      // 실제 프리미엄 부여는 결제 완료 웹훅(payapp-feedback)이 서버에서 처리한다.
+      // 여기서는 완료 안내 오버레이만 표시한다(권한 반영은 서버 메타데이터 동기화로).
       setShowSuccessOverlay(true);
       // Clean query parameters from URL bar
       window.history.replaceState({}, document.title, window.location.pathname);
