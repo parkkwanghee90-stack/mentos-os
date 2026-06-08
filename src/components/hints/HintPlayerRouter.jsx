@@ -510,7 +510,7 @@ function AudioHintControl({ unit, problemId }) {
 }
 
 // ─── 메인 라우터 ───────────────────────────────────────────────
-export default function HintPlayerRouter({ unit, problemId, data: propData, showQA = true, problemImage }) {
+export default function HintPlayerRouter({ unit, problemId, data: propData, showQA = true, problemImage, geminiTts = false }) {
   const [data,    setData]    = useState(propData || null);
   const [loading, setLoading] = useState(false);
   const [error,   setError]   = useState(null);
@@ -965,7 +965,7 @@ export default function HintPlayerRouter({ unit, problemId, data: propData, show
       {/* 음성 힌트 컨트롤 UI 추가 */}
       <AudioHintControl unit={unit} problemId={problemId} />
 
-      <Player data={normalizedData} problemId={problemId} ttsUnit={unit} ttsProblemId={problemId} />
+      <Player data={normalizedData} problemId={problemId} ttsUnit={unit} ttsProblemId={problemId} geminiTts={geminiTts} />
       {showQA && <HintQA data={data} unit={unit} problemId={problemId} />}
     </div>
   );
