@@ -7,7 +7,7 @@ import './Login.css';
 export default function Login() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { signInWithEmail, signUpWithEmail, signInWithGoogle, signInAsDemo, updateStudentInfo } = useAuth();
+  const { signInWithEmail, signUpWithEmail, signInAsDemo, updateStudentInfo } = useAuth();
   
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -110,25 +110,6 @@ export default function Login() {
       }
       setErrorMsg(localizedError);
     } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleGoogleLogin = async () => {
-    setIsLoading(true);
-    setErrorMsg('');
-    setSuccessMsg('');
-    
-    try {
-      await signInWithGoogle();
-      setSuccessMsg('Google 계정 로그인 페이지로 이동합니다...');
-    } catch (err) {
-      console.error(err);
-      let localizedError = err.message || 'Google 로그인 연동 중 오류가 발생했습니다.';
-      if (localizedError.includes('provider is not enabled')) {
-        localizedError = '현재 Google 소셜 로그인이 비활성화되어 있습니다. 이메일 로그인을 이용해 주세요!';
-      }
-      setErrorMsg(localizedError);
       setIsLoading(false);
     }
   };
@@ -461,25 +442,6 @@ export default function Login() {
             <Sparkles size={20} color="#fff" />
             체험용 데모 계정으로 1초만에 시작하기
           </button>
-
-          {!isAdmin && !isSignUp && (
-            <button 
-              type="button" 
-              className="btn-secondary login-btn"
-              onClick={handleGoogleLogin}
-              disabled={isLoading}
-              style={{ 
-                marginTop: '0.5rem', 
-                background: 'rgba(255, 255, 255, 0.03)', 
-                color: '#f8fafc', 
-                border: '1px solid rgba(255, 255, 255, 0.1)', 
-                boxShadow: 'none'
-              }}
-            >
-              <Sparkles size={18} color="#60a5fa" style={{ marginRight: '8px' }} />
-              Google 계정으로 로그인
-            </button>
-          )}
 
           <div className="login-footer-links">
             <button type="button" className="text-link">비밀번호 찾기</button>

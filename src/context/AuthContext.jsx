@@ -120,18 +120,6 @@ export function AuthProvider({ children }) {
     return data;
   };
 
-  // Google OAuth Login
-  const signInWithGoogle = async () => {
-    const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: {
-        redirectTo: `${window.location.origin}/dashboard`
-      }
-    });
-    if (error) throw error;
-    return data;
-  };
-
   // 비밀번호 재설정 이메일 전송
   const resetPassword = async (email) => {
     const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
@@ -254,7 +242,6 @@ export function AuthProvider({ children }) {
       loading,
       signUpWithEmail,
       signInWithEmail,
-      signInWithGoogle,
       signOut,
       resetPassword,
       verifyAdminCode,
