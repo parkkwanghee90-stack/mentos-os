@@ -22,6 +22,7 @@ const Dashboard = lazy(() => import("@/pages/Dashboard"));
 const ParentDashboard = lazy(() => import("@/pages/ParentDashboard"));
 const LoginGate = lazy(() => import("@/components/auth/LoginGate"));
 const MentosMockExam = lazy(() => import("@/pages/MentosMockExam"));
+const NaesinCourse = lazy(() => import("@/pages/NaesinCourse"));
 const LessonTest = lazy(() => import("@/pages/LessonTest"));
 const Login = lazy(() => import("@/pages/Login"));
 const AdminDashboard = lazy(() => import("@/pages/AdminDashboard"));
@@ -198,6 +199,7 @@ function AppContent() {
             
             <Route path="/test" element={<LessonTest />} />
             <Route path="/class/mock-exam" element={<MentosMockExam />} />
+            <Route path="/class/naesin" element={<NaesinCourse />} />
             
             <Route path="/login" element={<Login />} />
             <Route path="/admin" element={<AdminDashboard />} />
