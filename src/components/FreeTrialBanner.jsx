@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Clock, Lock, CreditCard, Sparkles, UserPlus, LogIn, ArrowRight, User } from 'lucide-react';
+import { Clock, Lock, CreditCard, Sparkles, UserPlus, LogIn, ArrowRight, User, Gift } from 'lucide-react';
 import PaymentCheckoutModal from './PaymentCheckoutModal';
+import { useAuth } from '@/context/AuthContext';
+import { supabase } from '@/services/supabaseClient';
+import { getMembershipStatus, claimFreeMembership } from '@/services/membershipService';
 
 export default function FreeTrialBanner({ gradeFlow }) {
   const navigate = useNavigate();
+  const { user } = useAuth();
   const [secondsLeft, setSecondsLeft] = useState(null);
   const [isPaid, setIsPaid] = useState(false);
   const [showCheckout, setShowCheckout] = useState(false);
   const [loggedInUser, setLoggedInUser] = useState(null);
+  const [membership, setMembership] = useState(null); // 실제 인증 유저의 { ordinal, tier, price }
+  const [claiming, setClaiming] = useState(false);
   
   // Registration / Login input state inside the paywall
   const [emailInput, setEmailInput] = useState('');
@@ -72,6 +78,35 @@ export default function FreeTrialBanner({ gradeFlow }) {
     window.addEventListener('storage', handleStorageChange);
     return () => window.removeEventListener('storage', handleStorageChange);
   }, []);
+
+  // 실제 인증 유저의 가입 순번 tier 조회 (체험 종료 결제 유도 분기용)
+  useEffect(() => {
+    let alive = true;
+    if (user) {
+      getMembershipStatus()
+        .then((s) => { if (alive) setMembership(s); })
+        .catch(() => { if (alive) setMembership(null); });
+    } else {
+      setMembership(null);
+    }
+    return () => { alive = false; };
+  }, [user]);
+
+  // 선착순 100명: 1개월 무료 청구(서버 권위) → 세션 갱신해 프리미엄 즉시 반영
+  const handleClaimFree = async () => {
+    setClaiming(true);
+    try {
+      await claimFreeMembership();
+      try { await supabase.auth.refreshSession(); } catch { /* best-effort */ }
+      localStorage.setItem('mentos_is_paid', 'true');
+      setIsPaid(true);
+      window.dispatchEvent(new Event('storage'));
+    } catch (e) {
+      alert(e?.message || '무료 혜택을 받지 못했습니다. 잠시 후 다시 시도해 주세요.');
+    } finally {
+      setClaiming(false);
+    }
+  };
 
   // Handlers for dynamic simulated auth inside the paywall
   const handleRegisterAndPay = (e) => {
@@ -154,7 +189,73 @@ export default function FreeTrialBanner({ gradeFlow }) {
           </p>
 
           {/* User state section */}
-          {!loggedInUser ? (
+          {user ? (
+            <div style={{
+              background: 'rgba(255, 255, 255, 0.02)',
+              border: '1px solid rgba(255, 255, 255, 0.04)',
+              borderRadius: '24px',
+              padding: '1.5rem',
+              marginBottom: '1.8rem',
+              textAlign: 'left'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1rem' }}>
+                <div style={{ padding: '0.5rem', background: 'rgba(59, 130, 246, 0.1)', borderRadius: '50%' }}>
+                  <User size={18} color="#3b82f6" />
+                </div>
+                <div>
+                  <div style={{ fontSize: '0.8rem', color: '#94a3b8' }}>접속 계정</div>
+                  <div style={{ fontSize: '0.95rem', fontWeight: 'bold', color: '#e2e8f0' }}>{user.user_metadata?.name || user.email}</div>
+                </div>
+              </div>
+
+              {membership === null ? (
+                <div style={{ textAlign: 'center', color: '#94a3b8', fontSize: '0.9rem', padding: '1.2rem 0' }}>
+                  멤버십 혜택 확인 중...
+                </div>
+              ) : membership.tier === 'free' ? (
+                <>
+                  <div style={{ background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.25)', padding: '1rem 1.2rem', borderRadius: '14px', textAlign: 'center' }}>
+                    <div style={{ fontSize: '0.8rem', color: '#34d399', fontWeight: 'bold', marginBottom: '4px' }}>🎉 선착순 100명 한정 이벤트</div>
+                    <div style={{ fontSize: '1.2rem', fontWeight: '900', color: '#6ee7b7' }}>1개월 무료 이용</div>
+                    <div style={{ fontSize: '0.72rem', color: '#94a3b8', marginTop: '4px' }}>{membership.ordinal}번째 가입 고객 · 결제 없이 바로 시작</div>
+                  </div>
+                  <button onClick={handleClaimFree} disabled={claiming} style={{
+                    width: '100%', padding: '1.1rem', borderRadius: '14px', border: 'none',
+                    background: claiming ? '#334155' : 'linear-gradient(135deg, #10b981, #34d399)',
+                    color: 'white', fontSize: '1.1rem', fontWeight: 'bold', cursor: claiming ? 'not-allowed' : 'pointer',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', marginTop: '1rem'
+                  }}>
+                    <Gift size={18} /> {claiming ? '처리 중...' : '1개월 무료로 시작하기'}
+                  </button>
+                </>
+              ) : (
+                <>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'rgba(124, 58, 237, 0.1)', border: '1px solid rgba(124, 58, 237, 0.2)', padding: '0.8rem 1.2rem', borderRadius: '14px' }}>
+                    <div>
+                      <span style={{ fontSize: '0.75rem', color: '#f472b6', fontWeight: 'bold', display: 'block' }}>
+                        {membership.tier === 'earlybird' ? '선착순 1,000명 한정 특가' : '정규 멤버십'}
+                      </span>
+                      <span style={{ fontSize: '1.1rem', fontWeight: '900', color: '#c084fc' }}>
+                        월 {Number(membership.price).toLocaleString()}원
+                      </span>
+                    </div>
+                    {membership.tier === 'earlybird' && (
+                      <span style={{ fontSize: '0.72rem', color: '#94a3b8', textAlign: 'right' }}>이후 정가<br />월 89,000원</span>
+                    )}
+                  </div>
+                  <button onClick={() => setShowCheckout(true)} style={{
+                    width: '100%', padding: '1.1rem', borderRadius: '14px', border: 'none',
+                    background: 'linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899)',
+                    color: 'white', fontSize: '1.1rem', fontWeight: 'bold', cursor: 'pointer',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
+                    marginTop: '1rem', boxShadow: '0 4px 15px rgba(139,92,246,0.3)'
+                  }}>
+                    <CreditCard size={18} /> 프리미엄 이용권 구매하기
+                  </button>
+                </>
+              )}
+            </div>
+          ) : !loggedInUser ? (
             <form onSubmit={handleRegisterAndPay} style={{
               background: 'rgba(255, 255, 255, 0.02)',
               border: '1px solid rgba(255, 255, 255, 0.04)',
@@ -241,7 +342,7 @@ export default function FreeTrialBanner({ gradeFlow }) {
                   <span style={{ fontSize: '0.75rem', color: '#f472b6', fontWeight: 'bold', display: 'block' }}>선착순 1000명 초특가</span>
                   <span style={{ fontSize: '1.1rem', fontWeight: '900', color: '#c084fc' }}>월 45,000원</span>
                 </div>
-                <span style={{ fontSize: '0.72rem', color: '#94a3b8', textAlign: 'right' }}>3개월간 54% 할인<br />이후 99,000원</span>
+                <span style={{ fontSize: '0.72rem', color: '#94a3b8', textAlign: 'right' }}>선착순 1,000명 특가<br />이후 89,000원</span>
               </div>
 
               <button 
