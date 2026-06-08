@@ -1,9 +1,26 @@
 import React, { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, CheckCircle, XCircle, BookOpen, Sparkles, Lock } from 'lucide-react';
+import { ArrowLeft, CheckCircle, XCircle, BookOpen, Sparkles, Lock, Volume2, VolumeX } from 'lucide-react';
 import { MathText } from '@/components/MathProblemRenderer';
 import COURSE from '@/data/naesin_full.json';
 import { useAuth } from '@/context/AuthContext';
+import { speakText, stopSpeaking } from '@/services/ttsService';
+
+// LaTeX → 한국어 음성용 정리 (ttsConfig.cleanNarration 이식)
+function cleanForSpeech(text) {
+  if (!text) return '';
+  return String(text)
+    .replace(/\$\$([^$]*)\$\$/g, ' $1 ').replace(/\$([^$]*)\$/g, ' $1 ')
+    .replace(/\\frac\{([^}]*)\}\{([^}]*)\}/g, '$2 분의 $1')
+    .replace(/\\dfrac\{([^}]*)\}\{([^}]*)\}/g, '$2 분의 $1')
+    .replace(/\\sqrt\{([^}]*)\}/g, '루트 $1')
+    .replace(/\\pm/g, '플러스 마이너스').replace(/\\times/g, ' 곱하기 ').replace(/\\div/g, ' 나누기 ')
+    .replace(/\\leq|\\le/g, ' 이하 ').replace(/\\geq|\\ge/g, ' 이상 ').replace(/\\neq/g, ' 같지 않음 ')
+    .replace(/\\cdot/g, ' 곱하기 ').replace(/\\alpha/g, '알파').replace(/\\beta/g, '베타').replace(/\\gamma/g, '감마')
+    .replace(/\\omega/g, '오메가').replace(/\\implies|\\Rightarrow/g, ' 따라서 ')
+    .replace(/\^\{?2\}?/g, ' 제곱 ').replace(/\^\{?3\}?/g, ' 세제곱 ').replace(/\^/g, ' 의 ')
+    .replace(/[{}\\]/g, ' ').replace(/\s+/g, ' ').trim();
+}
 
 const LEVELS = [
   { key: '필수', label: '기본 필수유형', sub: '3~5등급 → 무조건 3등급', color: '#10b981', icon: '🟢' },
@@ -24,6 +41,15 @@ export default function NaesinCourse() {
   const [input, setInput] = useState('');
   const [graded, setGraded] = useState(null); // 'correct'|'wrong'|null
   const [showAVS, setShowAVS] = useState(false);
+  const [speaking, setSpeaking] = useState(false);
+
+  const speakAVS = () => {
+    if (speaking) { stopSpeaking(); setSpeaking(false); return; }
+    const narration = (prob?.avs || []).map(s => `${s.title}. ${s.content}`).join('. ');
+    if (!narration) return;
+    setSpeaking(true);
+    speakText(cleanForSpeech(narration), { onEnd: () => setSpeaking(false), onError: () => setSpeaking(false) });
+  };
 
   const units = COURSE.levels[level] || {};
   const unitNames = Object.keys(units).sort((a, b) => units[b].length - units[a].length);
@@ -38,7 +64,7 @@ export default function NaesinCourse() {
     localStorage.setItem('naesin_solved', JSON.stringify([...ns]));
   };
 
-  const reset = () => { setInput(''); setGraded(null); setShowAVS(false); };
+  const reset = () => { setInput(''); setGraded(null); setShowAVS(false); try { stopSpeaking(); } catch {} setSpeaking(false); };
   const openUnit = (u) => { setUnit(u); setIdx(0); reset(); };
   const go = (d) => { const n = idx + d; if (n >= 0 && n < problems.length) { setIdx(n); reset(); } };
 
@@ -151,7 +177,14 @@ export default function NaesinCourse() {
             {/* AVS 해설 */}
             {showAVS && (
               <div style={{ marginTop: 16, borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: 14 }}>
-                <div style={{ fontWeight: 800, color: '#a78bfa', marginBottom: 10 }}><Sparkles size={16} /> 사고력 AVS 해설</div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
+                  <span style={{ fontWeight: 800, color: '#a78bfa' }}><Sparkles size={16} /> 사고력 AVS 해설</span>
+                  {prob.avs && prob.avs.length > 0 && (
+                    <button onClick={speakAVS} style={{ ...btnGhost, padding: '0.5rem 0.9rem', display: 'flex', alignItems: 'center', gap: 6 }}>
+                      {speaking ? <><VolumeX size={16} /> 정지</> : <><Volume2 size={16} /> 해설 듣기</>}
+                    </button>
+                  )}
+                </div>
                 {prob.avs && prob.avs.length ? prob.avs.map((s, i) => (
                   <div key={i} style={{ marginBottom: 12, padding: '0.8rem 1rem', borderRadius: 12, background: 'rgba(124,58,237,0.06)', border: '1px solid rgba(124,58,237,0.2)' }}>
                     <div style={{ fontWeight: 700, color: '#c4b5fd', marginBottom: 6, fontSize: '0.9rem' }}>[{s.phase}] {s.title}</div>
