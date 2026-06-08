@@ -8,6 +8,6 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     globals: true,
-    include: ['src/**/*.test.{js,jsx}', 'scripts/**/*.test.mjs'],
+    include: ['src/**/*.test.{js,jsx}', 'scripts/**/*.test.mjs', 'supabase/functions/**/*.test.ts'],
   },
 });
