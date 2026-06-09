@@ -462,7 +462,10 @@ async function processStage(stageSpec, opts = {}) {
     console.log(`Script: "${narrationText.substring(0, 100)}..."`);
 
     let success = false;
-    while (!success) {
+    let attempt = 0;
+    const MAX_ATTEMPTS = 2;
+    while (!success && attempt < MAX_ATTEMPTS) {
+      attempt++;
       try {
         // 1. Generate Voice Audio via Gemini 2.5 Voice API (Aoede)
         const rawAudioBuffer = await generateGeminiTTS(narrationText);
@@ -511,9 +514,22 @@ async function processStage(stageSpec, opts = {}) {
         await new Promise(resolve => setTimeout(resolve, 6500));
 
       } catch (err) {
-        console.error(`❌ Failed to process ${pid}:`, err.message);
-        console.log(`⏳ Waiting 65 seconds for API quota recovery before retrying ${pid}...`);
-        await new Promise(resolve => setTimeout(resolve, 65000));
+        const msg = (err && err.message) || String(err);
+        const fatal = err.name === 'AbortError' || /quota|QUOTA|RESOURCE_EXHAUSTED|exhausted|depleted|credit|abort|\b429\b|limit|exceeded/i.test(msg);
+        console.error(`❌ Failed to process ${pid} (attempt ${attempt}/${MAX_ATTEMPTS}): ${msg.slice(0, 160)}`);
+        if (fatal) {
+          // Quota/credits exhausted or the API hung — retrying within this run is futile.
+          console.error(`🛑 Quota/credits exhausted or request timed out — stopping run.`);
+          failCount++;
+          return { successCount, failCount, aborted: true };
+        }
+        if (attempt < MAX_ATTEMPTS) {
+          console.log(`⏳ Transient error — retrying ${pid} in 10s...`);
+          await new Promise(resolve => setTimeout(resolve, 10000));
+        } else {
+          console.warn(`⚠️ Giving up on ${pid} after ${MAX_ATTEMPTS} attempts.`);
+          failCount++;
+        }
       }
     }
   }
@@ -554,6 +570,10 @@ async function main() {
     const result = await processStage(stageSpec, { force, overwriteOpenai, dryRun, report });
     totalSuccess += result.successCount;
     totalFail += result.failCount;
+    if (result.aborted) {
+      console.error(`🛑 Stopping chapter "${spec.name}" — quota/credits exhausted. Resume after reset/top-up.`);
+      break;
+    }
   }
 
   if (overwriteOpenai) {

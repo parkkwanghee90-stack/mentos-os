@@ -24,12 +24,14 @@ precheck_ok() {
       const keys=[process.env.VITE_GEMINI_API_KEY,process.env.VITE_GEMINI_API_KEY_2].filter(Boolean);
       if(!keys.length){process.stdout.write("PRECHECK=NOKEY");return;}
       for(const k of keys){
+        const c=new AbortController();const tm=setTimeout(()=>c.abort(),25000);
         try{
           const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-tts-preview:generateContent?key=${k}`,{
-            method:"POST",headers:{"Content-Type":"application/json"},
-            body:JSON.stringify({contents:[{parts:[{text:"."}]}],generationConfig:{responseModalities:["AUDIO"],speechConfig:{voiceConfig:{prebuiltVoiceConfig:{voiceName:"Aoede"}}}}})});
+            method:"POST",headers:{"Content-Type":"application/json"},signal:c.signal,
+            body:JSON.stringify({contents:[{parts:[{text:"안녕하세요"}]}],generationConfig:{responseModalities:["AUDIO"],speechConfig:{voiceConfig:{prebuiltVoiceConfig:{voiceName:"Aoede"}}}}})});
+          clearTimeout(tm);
           if(r.ok){process.stdout.write("PRECHECK=YES");return;}
-        }catch(e){}
+        }catch(e){clearTimeout(tm);}  // abort/timeout (hanging key) => treat as unavailable
       }
       process.stdout.write("PRECHECK=NO");
     })().catch(()=>process.stdout.write("PRECHECK=NO"));' 2>/dev/null)
@@ -65,7 +67,9 @@ for job in "${JOBS[@]}"; do
     break
   fi
   echo "[$(date)] auto_tts generating: $ch ${flag:-（gap-fill）}" >> "$LOG"
-  timeout 1800 "$NODE" scripts/generate_gemini_math_sang_tts.cjs "$ch" $flag >> "$LOG" 2>&1
+  # No `timeout` binary on macOS; the generator self-limits (bounded retries + abort on
+  # quota/credit/hang via a 180s per-request AbortController), so call node directly.
+  "$NODE" scripts/generate_gemini_math_sang_tts.cjs "$ch" $flag >> "$LOG" 2>&1
 done
 
 # Completion check (no quota cost): only mark done when all gaps filled AND no OpenAI remain.
