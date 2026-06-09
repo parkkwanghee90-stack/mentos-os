@@ -69,7 +69,7 @@ async function geminiTtsOnce(text) {
   const r = await fetchT(`https://generativelanguage.googleapis.com/v1beta/models/${TTS_MODEL}:generateContent?key=${GKEY}`, {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      systemInstruction: { parts: [{ text: '너는 친절한 수학 선생님이야. 주어진 한국어 수학 해설을 자연스러운 구어체로 또박또박 읽어줘. 인사나 잡담 없이 본문만 읽어.' }] },
+      // gemini-3.1-flash-tts-preview는 systemInstruction(Developer instruction) 미지원 → 제거
       contents: [{ parts: [{ text }] }],
       generationConfig: { responseModalities: ['AUDIO'], speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: 'Aoede' } } } },
     }),

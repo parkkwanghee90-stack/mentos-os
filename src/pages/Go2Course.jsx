@@ -34,18 +34,30 @@ const circled = ['①', '②', '③', '④', '⑤'];
 
 function normAns(s) { return String(s ?? '').replace(/\s/g, '').replace(/[①②③④⑤]/g, m => '12345'['①②③④⑤'.indexOf(m)]); }
 
-// 문제 latex에서 본문과 보기(①~⑤)를 분리
+// 문제 latex에서 본문과 보기(①~⑤)를 분리.
+// 3가지 보기 형식 모두 대응: "① $-2$"(○ 밖), "$①\ 6$"(○가 $안), "①724"(평문).
 function parseProblem(latex) {
-  const norm = String(latex ?? '');
+  const norm = String(latex ?? '').replace(/\\text\{\s*([①②③④⑤])\s*\}/g, '$1'); // \text{①} → ①
   const start = norm.search(/[①②③④⑤]/);
-  const body = (start === -1 ? norm : norm.slice(0, start)).trim();
+  if (start === -1) return { body: norm.trim(), options: [] };
+
+  let body = norm.slice(0, start);
+  // 보기를 감싸려 열린 '$'가 본문 끝에 남은 경우 제거 ($①... 형식 → 본문에 댕글링 $)
+  if (((body.match(/\$/g) || []).length) % 2 === 1) body = body.replace(/\$\s*$/, '');
+  body = body.trim();
+
   const options = [];
-  if (start !== -1) {
-    const reg = /([①②③④⑤])\s*([^\n①②③④⑤]*)/g;
-    let m;
-    while ((m = reg.exec(norm.slice(start))) !== null) {
-      options.push({ circle: m[1], value: (m[2] || '').trim() });
-    }
+  for (const seg of norm.slice(start).split(/(?=[①②③④⑤])/)) {
+    if (!/[①②③④⑤]/.test(seg[0] || '')) continue;
+    const circle = seg[0];
+    let v = (seg.slice(1).split('\n')[0] || '')   // 같은 줄까지만
+      .replace(/\$/g, '')                           // 보기 내부 $ 제거(불균형 방지)
+      .replace(/\\q?quad/g, ' ')                     // \quad/\qquad 보기 구분자 제거
+      .replace(/\\[,;:!\s]/g, ' ')                  // LaTeX 공백/구두점 명령 → 공백
+      .replace(/\s+/g, ' ').trim();
+    // 수식성(역슬래시·첨자·숫자·√)이고 한글이 없으면 KaTeX 렌더 위해 $..$로 감쌈
+    const isMath = v && /[\\^_{}]|\d|√|·/.test(v) && !/[가-힣]/.test(v);
+    options.push({ circle, value: isMath ? `$${v}$` : v });
   }
   return { body, options };
 }
