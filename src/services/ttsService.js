@@ -140,30 +140,10 @@ export const speakText = async (text, { voice, onStart, onEnd, onError, isReplay
       console.log('[TTS] No Gemini API key found, skipping Gemini...');
     }
 
-    // Gemini 실패 혹은 미설정 시 OpenAI 시도
+    // 정책: TTS는 Gemini 2.5 전용 (OpenAI 폴백 사용 안 함).
+    // Gemini 실패/미설정 시 OpenAI를 호출하지 않고, 아래 catch에서 브라우저 음성으로만 폴백.
     if (!blob) {
-      console.log('[TTS] Attempting OpenAI TTS API...');
-      const res = await fetch(`${BASE_URL()}/audio/speech`, {
-        method: `POST`,
-        headers: {
-          Authorization:  `Bearer ${API_KEY()}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          model: 'tts-1',
-          voice: selectedVoice,
-          input: filteredText,
-          response_format: 'mp3',
-        }),
-      });
-
-      if (!res.ok) {
-        const err = await res.json().catch(() => ({}));
-        throw new Error(err?.error?.message || `OpenAI TTS API HTTP ${res.status}`);
-      }
-
-      blob = await res.blob();
-      console.log('[TTS] OpenAI TTS generated successfully');
+      throw new Error('Gemini 2.5 TTS 실패/미설정 — OpenAI 미사용(정책), 브라우저 음성으로 폴백');
     }
 
     if (currentObjectUrl) {
@@ -190,9 +170,10 @@ export const speakText = async (text, { voice, onStart, onEnd, onError, isReplay
     await currentAudio.play();
 
   } catch (e) {
-    console.error('[TTS] speakText primary / secondary failure:', e);
+    // 정책: TTS는 Gemini 2.5 전용. 브라우저 음성(수식 오독·저품질) 폴백 절대 사용 안 함.
+    console.error('[TTS] Gemini 2.5 TTS 실패 — 브라우저 폴백 미사용(무음 처리):', e.message);
     isAudioPlaying = false;
-    _browserFallback(filteredText, onEnd);
+    onEnd?.();
     onError?.(e);
   }
 };
@@ -245,11 +226,5 @@ export const getVoiceForTeacher = (teacher) => {
   return voiceId;
 };
 
-const _browserFallback = (filteredText, onEnd) => {
-  if (!window.speechSynthesis || !filteredText) { onEnd?.(); return; }
-  const u = new SpeechSynthesisUtterance(filteredText);
-  u.lang  = 'ko-KR'; 
-  u.rate  = 1.0;
-  u.onend = () => onEnd?.();
-  window.speechSynthesis.speak(u);
-};
+// 브라우저 음성(수식 오독·저품질) 폴백은 정책상 사용하지 않음 — 무음 처리.
+const _browserFallback = (_filteredText, onEnd) => { onEnd?.(); };

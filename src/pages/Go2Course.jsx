@@ -1,13 +1,13 @@
 import React, { useState, useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, CheckCircle, XCircle, BookOpen, Sparkles, Lock, Volume2, VolumeX } from 'lucide-react';
+import { ArrowLeft, CheckCircle, XCircle, BookOpen, Sparkles, Lock } from 'lucide-react';
 import { MathText } from '@/components/MathProblemRenderer';
 import ClassroomBoard from '@/components/hints/ClassroomBoard';
-import COURSE from '@/data/naesin_full.json';
+import COURSE from '@/data/go2_full.json';
 import { useAuth } from '@/context/AuthContext';
 import { speakText, stopSpeaking } from '@/services/ttsService';
 
-// LaTeX → 한국어 음성용 정리 (ttsConfig.cleanNarration 이식)
+// LaTeX → 한국어 음성용 정리
 function cleanForSpeech(text) {
   if (!text) return '';
   return String(text)
@@ -17,8 +17,9 @@ function cleanForSpeech(text) {
     .replace(/\\sqrt\{([^}]*)\}/g, '루트 $1')
     .replace(/\\pm/g, '플러스 마이너스').replace(/\\times/g, ' 곱하기 ').replace(/\\div/g, ' 나누기 ')
     .replace(/\\leq|\\le/g, ' 이하 ').replace(/\\geq|\\ge/g, ' 이상 ').replace(/\\neq/g, ' 같지 않음 ')
-    .replace(/\\cdot/g, ' 곱하기 ').replace(/\\alpha/g, '알파').replace(/\\beta/g, '베타').replace(/\\gamma/g, '감마')
-    .replace(/\\omega/g, '오메가').replace(/\\implies|\\Rightarrow/g, ' 따라서 ')
+    .replace(/\\cdot/g, ' 곱하기 ').replace(/\\sin/g, '사인').replace(/\\cos/g, '코사인').replace(/\\tan/g, '탄젠트')
+    .replace(/\\sum/g, '시그마').replace(/\\alpha/g, '알파').replace(/\\beta/g, '베타').replace(/\\theta/g, '세타')
+    .replace(/\\implies|\\Rightarrow/g, ' 따라서 ')
     .replace(/\^\{?2\}?/g, ' 제곱 ').replace(/\^\{?3\}?/g, ' 세제곱 ').replace(/\^/g, ' 의 ')
     .replace(/[{}\\]/g, ' ').replace(/\s+/g, ' ').trim();
 }
@@ -47,7 +48,7 @@ function parseProblem(latex) {
   return { body, options };
 }
 
-export default function NaesinCourse() {
+export default function Go2Course() {
   const navigate = useNavigate();
   const { user } = useAuth();
   const isPaid = !!user || localStorage.getItem('mentos_is_paid') === 'true' || localStorage.getItem('mentos_premium') === 'true' || localStorage.getItem('mentos_super_pass') === 'true';
@@ -56,7 +57,7 @@ export default function NaesinCourse() {
   const [unit, setUnit] = useState(null);
   const [idx, setIdx] = useState(0);
   const [input, setInput] = useState('');
-  const [graded, setGraded] = useState(null); // 'correct'|'wrong'|null
+  const [graded, setGraded] = useState(null);
   const [showAVS, setShowAVS] = useState(false);
   const [speaking, setSpeaking] = useState(false);
   const audioRef = useRef(null);
@@ -70,7 +71,7 @@ export default function NaesinCourse() {
     // 사전생성 Gemini 2.5 음성(mp3) 우선 재생, 없으면 라이브 Gemini로 폴백
     const base = import.meta.env.VITE_SUPABASE_URL;
     if (base && prob?.id) {
-      const url = `${base}/storage/v1/object/public/mentos-assets/avs_tts/naesin/${prob.id}.mp3`;
+      const url = `${base}/storage/v1/object/public/mentos-assets/avs_tts/go2/${prob.id}.mp3`;
       const audio = new Audio(url);
       audioRef.current = audio;
       audio.onended = () => { audioRef.current = null; setSpeaking(false); };
@@ -86,11 +87,11 @@ export default function NaesinCourse() {
   const parsed = useMemo(() => parseProblem(prob?.latex), [prob?.id, prob?.latex]);
 
   const [solved, setSolved] = useState(() => {
-    try { return new Set(JSON.parse(localStorage.getItem('naesin_solved') || '[]')); } catch { return new Set(); }
+    try { return new Set(JSON.parse(localStorage.getItem('go2_solved') || '[]')); } catch { return new Set(); }
   });
   const markSolved = (id) => {
     const ns = new Set(solved); ns.add(id); setSolved(ns);
-    localStorage.setItem('naesin_solved', JSON.stringify([...ns]));
+    localStorage.setItem('go2_solved', JSON.stringify([...ns]));
   };
 
   const reset = () => { setInput(''); setGraded(null); setShowAVS(false); try { stopSpeaking(); } catch {} setSpeaking(false); };
@@ -102,7 +103,7 @@ export default function NaesinCourse() {
     const ok = normAns(input) === normAns(prob.answer);
     setGraded(ok ? 'correct' : 'wrong');
     if (ok) markSolved(prob.id);
-    setShowAVS(true); // 채점 후 AVS 공개
+    setShowAVS(true);
   };
 
   // 결제 게이트
@@ -111,7 +112,7 @@ export default function NaesinCourse() {
       <div style={wrap}>
         <div style={{ ...card, textAlign: 'center', maxWidth: 480 }}>
           <Lock size={40} color="#a78bfa" style={{ margin: '0 auto 1rem' }} />
-          <h2 style={{ fontWeight: 900, fontSize: '1.4rem' }}>기말 내신 완벽대비 풀코스</h2>
+          <h2 style={{ fontWeight: 900, fontSize: '1.4rem' }}>{COURSE.title}</h2>
           <p style={{ color: '#94a3b8', margin: '0.8rem 0 1.5rem', lineHeight: 1.6 }}>
             기본 필수유형 + 심화 실력 · 단원별 문제 + 자동채점 + AVS 해설 + 복습<br />
             <b style={{ color: '#fff' }}>오픈 이벤트 19,900원</b>으로 완벽 대비하세요.
@@ -183,7 +184,6 @@ export default function NaesinCourse() {
             {/* 정답 입력 */}
             {prob.type === '객관식' ? (
               parsed.options.length >= 2 ? (
-                /* 보기를 클릭 가능한 선택지로 — 보기번호 + 내용 */
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 14 }}>
                   {parsed.options.map((opt, i) => {
                     const n = String(i + 1);
@@ -202,7 +202,6 @@ export default function NaesinCourse() {
                   })}
                 </div>
               ) : (
-                /* 보기 파싱 실패(추출 손상) 시 ①~⑤ 번호 버튼 폴백 */
                 <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 14 }}>
                   {circled.map((c, i) => (
                     <button key={i} onClick={() => setInput(String(i + 1))}

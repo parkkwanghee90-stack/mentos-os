@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Star, X } from "lucide-react";
 import { supabase } from "@/services/supabaseClient";
+import { useAuth } from "@/context/AuthContext";
 
 const SEED_REVIEWS = [
   { content: "AVS 덕분에 어려운 개념도 눈에 쏙 들어와요!", name: "고2 학생", rating: 5 },
@@ -18,6 +20,8 @@ function Stars({ n = 5 }) {
 }
 
 export default function LandingReviews() {
+  const navigate = useNavigate();
+  const { user } = useAuth();
   const [reviews, setReviews] = useState([]);
   const [open, setOpen] = useState(false);
   const [form, setForm] = useState({ name: "", role: "학생", rating: 5, content: "" });
@@ -37,8 +41,19 @@ export default function LandingReviews() {
   };
   useEffect(() => { load(); }, []);
 
+  // 리뷰 작성은 로그인 사용자만 가능
+  const openWrite = () => {
+    if (!user) {
+      alert("리뷰는 로그인 후 작성할 수 있습니다.");
+      navigate("/login");
+      return;
+    }
+    setOpen(true);
+  };
+
   const submit = async (e) => {
     e.preventDefault();
+    if (!user) { alert("리뷰는 로그인 후 작성할 수 있습니다."); navigate("/login"); return; }
     const name = form.name.trim();
     const content = form.content.trim();
     if (!name || !content) { alert("이름과 후기 내용을 입력해 주세요."); return; }
@@ -49,6 +64,7 @@ export default function LandingReviews() {
         role: form.role,
         rating: Number(form.rating),
         content: content.slice(0, 1000),
+        user_id: user.id,
       });
       if (error) throw error;
       setDone(true);
@@ -68,7 +84,7 @@ export default function LandingReviews() {
     <section id="reviews" className="hv-section hv-dark hv-reviews">
       <div className="hv-wrap hv-reviews-grid">
         <h2 className="hv-h2 hv-reviews-title">학생과 학부모들의<br />실제 후기</h2>
-        <button type="button" className="hv-btn hv-btn-primary hv-review-write-btn" onClick={() => setOpen(true)}>✍️ 리뷰 작성하기</button>
+        <button type="button" className="hv-btn hv-btn-primary hv-review-write-btn" onClick={openWrite}>✍️ 리뷰 작성하기</button>
         <div className="hv-reviews-list">
           {all.map((r, i) => (
             <article key={i} className="hv-review">
