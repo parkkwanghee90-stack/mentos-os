@@ -29,6 +29,7 @@ const GAP_TARGETS = [
   ...range('quad_func_s4', 1, 20),
   'complex_s3/015.mp3',
   'circle_s2/013.mp3',
+  'point_s2/013.mp3',
 ];
 // Stages whose legacy OpenAI clips must be overwritten (no OpenAI should remain).
 const OVERWRITE_DIRS = ['cases_s4', 'circle_s2', 'circle_s4', 'line_s2', 'quad_ineq_s3', 'quad_ineq_s4', 'shape_move_s2', 'shape_move_s3', 'shape_move_s4'];

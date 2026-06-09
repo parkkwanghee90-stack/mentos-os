@@ -50,6 +50,7 @@ JOBS=(
   "quad_eq:"
   "quad_func:"
   "complex:"
+  "point:"
   "cases:--overwrite-openai"
   "circle:--overwrite-openai"
   "line:--overwrite-openai"
