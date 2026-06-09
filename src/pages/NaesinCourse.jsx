@@ -6,6 +6,8 @@ import ClassroomBoard from '@/components/hints/ClassroomBoard';
 import COURSE from '@/data/naesin_full.json';
 import { useAuth } from '@/context/AuthContext';
 import { speakText, stopSpeaking } from '@/services/ttsService';
+import { isTrulyPaid } from '@/lib/freeEvent';
+import NaesinPaywall from '@/components/NaesinPaywall';
 
 // LaTeX → 한국어 음성용 정리 (ttsConfig.cleanNarration 이식)
 function cleanForSpeech(text) {
@@ -50,7 +52,8 @@ function parseProblem(latex) {
 export default function NaesinCourse() {
   const navigate = useNavigate();
   const { user } = useAuth();
-  const isPaid = !!user || localStorage.getItem('mentos_is_paid') === 'true' || localStorage.getItem('mentos_premium') === 'true' || localStorage.getItem('mentos_super_pass') === 'true';
+  // 내신은 유료 전용: 로그인(!!user)이나 무료이벤트(free_event)로는 열리지 않고, 실제 결제만 통과
+  const isPaid = isTrulyPaid();
 
   const [level, setLevel] = useState('필수');
   const [unit, setUnit] = useState(null);
@@ -105,22 +108,9 @@ export default function NaesinCourse() {
     setShowAVS(true); // 채점 후 AVS 공개
   };
 
-  // 결제 게이트
+  // 결제 게이트 — 선착순 100명 특가 19,900원 / 이후 50,000원 (NaesinPaywall)
   if (!isPaid) {
-    return (
-      <div style={wrap}>
-        <div style={{ ...card, textAlign: 'center', maxWidth: 480 }}>
-          <Lock size={40} color="#a78bfa" style={{ margin: '0 auto 1rem' }} />
-          <h2 style={{ fontWeight: 900, fontSize: '1.4rem' }}>기말 내신 완벽대비 풀코스</h2>
-          <p style={{ color: '#94a3b8', margin: '0.8rem 0 1.5rem', lineHeight: 1.6 }}>
-            기본 필수유형 + 심화 실력 · 단원별 문제 + 자동채점 + AVS 해설 + 복습<br />
-            <b style={{ color: '#fff' }}>오픈 이벤트 19,900원</b>으로 완벽 대비하세요.
-          </p>
-          <button style={btnPrimary} onClick={() => navigate('/login')}>지금 시작하기</button>
-          <button style={{ ...btnGhost, marginTop: 10 }} onClick={() => navigate('/dashboard')}>대시보드로</button>
-        </div>
-      </div>
-    );
+    return <NaesinPaywall title="고1 기말 내신 완벽대비 풀코스" subtitle="기본 필수유형 + 심화 실력 · 단원별 문제 + 자동채점 + AVS 칠판해설 + 복습" />;
   }
 
   return (

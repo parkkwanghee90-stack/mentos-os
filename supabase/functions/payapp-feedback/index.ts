@@ -8,6 +8,9 @@ const PLAN_PRICES: Record<string, number> = {
   m6: 373800,
   y1: 640800,
   lifetime: 1800000,
+  // 내신 완벽대비 풀코스 — payapp-create와 동일 권위 가격
+  naesin_event: 19900,
+  naesin_regular: 50000,
 };
 
 Deno.serve(async (req: Request) => {

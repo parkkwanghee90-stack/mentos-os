@@ -126,7 +126,7 @@ function JoinEventOverlay({ isMobile, navigate, onJoined }) {
           <PartyPopper size={40} color="#4ade80" />
         </div>
         <div style={{ fontSize: '0.85rem', color: '#a7f3d0', fontWeight: 'bold', letterSpacing: '2px', marginBottom: '0.4rem' }}>
-          🎉 무료이벤트 고객
+          🎉 특별이벤트 당첨자
         </div>
         <div style={{
           fontSize: '3.4rem', fontWeight: 900, lineHeight: 1,
@@ -253,7 +253,7 @@ function ReviewGateOverlay({ slotNo, onDone }) {
         일주일 잘 사용하셨나요? ✍️
       </h2>
       <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '1.6rem' }}>
-        무료이벤트 고객 <b style={{ color: '#c084fc' }}>{formatSlot(slotNo)}</b>님,<br />
+        특별이벤트 당첨자 <b style={{ color: '#c084fc' }}>{formatSlot(slotNo)}</b>님,<br />
         솔직한 후기를 남겨주시면 남은 무료기간 동안 계속 이용하실 수 있어요.
       </p>
 
@@ -301,7 +301,7 @@ function ExpiredPaywallOverlay({ slotNo, navigate }) {
         한 달 무료 이용이 종료되었습니다
       </h2>
       <p style={{ color: '#94a3b8', fontSize: '0.92rem', lineHeight: 1.6, marginBottom: '1.6rem' }}>
-        무료이벤트 고객 <b style={{ color: '#c084fc' }}>{formatSlot(slotNo)}</b>님,<br />
+        특별이벤트 당첨자 <b style={{ color: '#c084fc' }}>{formatSlot(slotNo)}</b>님,<br />
         그동안 매쓰멘토스와 함께해 주셔서 감사합니다.<br />
         프리미엄 멤버십으로 AI 1:1 과외를 계속 이용해 보세요.
       </p>
@@ -342,7 +342,7 @@ function FreeActiveBanner({ slotNo, daysLeft, isMobile }) {
     }}>
       <Gift size={16} color={urgent ? 'white' : '#c084fc'} />
       <span style={{ color: urgent ? 'white' : '#94a3b8' }}>
-        무료이벤트 고객 <b style={{ color: urgent ? 'white' : '#e2e8f0' }}>{formatSlot(slotNo)}</b>
+        특별이벤트 당첨자 <b style={{ color: urgent ? 'white' : '#e2e8f0' }}>{formatSlot(slotNo)}</b>
       </span>
       <span style={{
         fontFamily: 'monospace', fontSize: '0.9rem', letterSpacing: '0.5px',

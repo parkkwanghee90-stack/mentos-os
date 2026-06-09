@@ -12,10 +12,13 @@ const PLAN_LABELS = {
   m6: '6개월 이용권 · 373,800원',
   y1: '1년 이용권 · 640,800원',
   lifetime: '평생 이용권 · 1,800,000원',
+  naesin_event: '기말 내신 완벽대비 · 선착순 특가 19,900원',
+  naesin_regular: '기말 내신 완벽대비 · 50,000원',
 };
 
-// plan: early | regular | m6 | y1 | lifetime
-export default function PaymentCheckoutModal({ onClose, plan = 'regular' }) {
+// plan: early | regular | m6 | y1 | lifetime | naesin_event | naesin_regular
+// preset: 내신 등 다른 상품용 표시 오버라이드 { badge, title, subtitle, originalText, discountText, priceText, noteText }
+export default function PaymentCheckoutModal({ onClose, plan = 'regular', preset = null }) {
   const { user } = useAuth();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -70,6 +73,8 @@ export default function PaymentCheckoutModal({ onClose, plan = 'regular' }) {
       <div style={{
         background: 'rgba(15, 23, 42, 0.95)',
         width: '100%', maxWidth: '480px',
+        maxHeight: '92vh', overflowY: 'auto',
+        WebkitOverflowScrolling: 'touch',
         borderRadius: '32px',
         border: '1px solid rgba(255, 255, 255, 0.08)',
         padding: '2.2rem',
@@ -104,13 +109,13 @@ export default function PaymentCheckoutModal({ onClose, plan = 'regular' }) {
             marginBottom: '1rem', animation: 'pulse 2s infinite'
           }}>
             <Gift size={15} color="#ec4899" />
-            <span style={{ fontSize: '0.8rem', fontWeight: 'bold', color: '#f472b6', letterSpacing: '-0.3px' }}>선착순 1,000명 런칭 초특가 이벤트</span>
+            <span style={{ fontSize: '0.8rem', fontWeight: 'bold', color: '#f472b6', letterSpacing: '-0.3px' }}>{preset?.badge ?? '선착순 1,000명 런칭 초특가 이벤트'}</span>
           </div>
           <h2 style={{ fontSize: '1.6rem', fontWeight: '900', margin: 0, letterSpacing: '-0.5px' }}>
-            Mentos AI 프리미엄
+            {preset?.title ?? 'Mentos AI 프리미엄'}
           </h2>
           <p style={{ color: '#94a3b8', fontSize: '0.85rem', marginTop: '0.4rem' }}>
-            나에게 딱 맞추어 성적을 급상승시키는 초개인화 과외
+            {preset?.subtitle ?? '나에게 딱 맞추어 성적을 급상승시키는 초개인화 과외'}
           </p>
         </div>
 
@@ -152,21 +157,21 @@ export default function PaymentCheckoutModal({ onClose, plan = 'regular' }) {
         }}>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
             <span style={{ fontSize: '0.85rem', color: '#94a3b8', textDecoration: IS_TEST_MODE ? 'none' : 'line-through' }}>
-              {IS_TEST_MODE ? '테스트 결제 진행' : '월 99,000원'}
+              {IS_TEST_MODE ? '테스트 결제 진행' : (preset?.originalText ?? '월 99,000원')}
             </span>
             <span style={{ fontSize: '0.8rem', color: '#f87171', fontWeight: '900', background: 'rgba(239,68,68,0.15)', padding: '2px 6px', borderRadius: '4px' }}>
-              {IS_TEST_MODE ? '간편 검증' : '54% 특별할인'}
+              {IS_TEST_MODE ? '간편 검증' : (preset?.discountText ?? '54% 특별할인')}
             </span>
           </div>
-          
+
           <div style={{ fontSize: '2.2rem', fontWeight: '900', background: 'linear-gradient(to right, #60a5fa, #c084fc, #f472b6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '-1px' }}>
-            {IS_TEST_MODE ? '100원' : '월 45,000원'}
+            {IS_TEST_MODE ? '100원' : (preset?.priceText ?? '월 45,000원')}
           </div>
-          
+
           <div style={{ fontSize: '0.8rem', color: '#c084fc', fontWeight: 'bold', marginTop: '4px' }}>
-            {IS_TEST_MODE 
-              ? '* 100원 결제 완료 즉시 프리미엄 승인 자동 흐름이 실행됩니다.' 
-              : '* 3개월간 이벤트 특가 혜택 제공 후 정상가 월 99,000원으로 조정됩니다.'}
+            {IS_TEST_MODE
+              ? '* 100원 결제 완료 즉시 프리미엄 승인 자동 흐름이 실행됩니다.'
+              : (preset?.noteText ?? '* 3개월간 이벤트 특가 혜택 제공 후 정상가 월 99,000원으로 조정됩니다.')}
           </div>
         </div>
 

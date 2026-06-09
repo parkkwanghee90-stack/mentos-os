@@ -78,9 +78,10 @@ export const speakText = async (text, { voice, onStart, onEnd, onError, isReplay
     let blob = null;
 
     if (geminiApiKey) {
-      console.log('[TTS] Attempting Gemini 2.5 Voice API...');
+      console.log('[TTS] Attempting Gemini 3.1 Voice API...');
       try {
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${geminiApiKey}`, {
+        // gemini-2.5-flash-preview-tts 사용 중지 → gemini-3.1-flash-tts-preview (200+오디오 정상)
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-tts-preview:generateContent?key=${geminiApiKey}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

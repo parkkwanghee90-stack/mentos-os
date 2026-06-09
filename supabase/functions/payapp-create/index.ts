@@ -27,6 +27,9 @@ const PLAN_PRICES: Record<string, { price: number; name: string }> = {
   m6:       { price: 373800,  name: '매쓰멘토스 AI 1:1 과외 · 6개월권' },
   y1:       { price: 640800,  name: '매쓰멘토스 AI 1:1 과외 · 1년권' },
   lifetime: { price: 1800000, name: '매쓰멘토스 AI 1:1 과외 · 평생권' },
+  // 내신 완벽대비 풀코스 — 선착순 100명 특가 19,900원, 이후 정가 50,000원
+  naesin_event:   { price: 19900, name: '기말 내신 완벽대비 풀코스 · 선착순 특가' },
+  naesin_regular: { price: 50000, name: '기말 내신 완벽대비 풀코스' },
 };
 
 Deno.serve(async (req: Request) => {

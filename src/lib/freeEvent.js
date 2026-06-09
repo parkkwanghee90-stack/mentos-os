@@ -51,7 +51,7 @@ function saveFreeEventRecord(rec) {
   localStorage.setItem(K_EVENT, JSON.stringify(rec));
 }
 
-function isTrulyPaid() {
+export function isTrulyPaid() {
   if (localStorage.getItem('mentos_premium') === 'true') return true;
   if (localStorage.getItem('mentos_super_pass') === 'true') return true;
   // free_event 가 켠 mentos_is_paid 는 "실제 결제"가 아님
