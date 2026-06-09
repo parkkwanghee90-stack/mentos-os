@@ -24,14 +24,25 @@ create index if not exists reviews_approved_created_idx
 
 alter table public.reviews enable row level security;
 
+-- 기존(수동 생성 시 만들어졌을 수 있는) 정책을 모두 제거한 뒤 깨끗하게 재정의.
+-- 느슨한 insert 정책이 남아 있으면 OR 로 합쳐져 anon 삽입이 통과되므로 반드시 정리.
+do $$
+declare pol record;
+begin
+  for pol in
+    select policyname from pg_policies
+     where schemaname = 'public' and tablename = 'reviews'
+  loop
+    execute format('drop policy if exists %I on public.reviews', pol.policyname);
+  end loop;
+end $$;
+
 -- 조회: 누구나(anon/authenticated) approved=true 만
-drop policy if exists reviews_select_approved on public.reviews;
 create policy reviews_select_approved on public.reviews
   for select to anon, authenticated
   using (approved = true);
 
 -- 작성: 로그인 유저, 본인 user_id 로만
-drop policy if exists reviews_insert_own on public.reviews;
 create policy reviews_insert_own on public.reviews
   for insert to authenticated
   with check (user_id = auth.uid());
