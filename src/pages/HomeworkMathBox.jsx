@@ -189,6 +189,23 @@ export default function HomeworkMathBox() {
     }
   }, [toast]);
 
+  // 방어: 문제 배열이 비었거나 index가 범위를 벗어나 현재 문제가 없을 때 fallback UI
+  // (모든 렌더 함수가 currentProblem.num 등을 참조하기 전에 안전 차단)
+  if (!currentProblem) {
+    return (
+      <div style={{ background: '#09090b', color: 'white', height: '100vh', padding: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+        <BookOpen size={48} color="#3b82f6" />
+        <h2 style={{ marginTop: '1rem' }}>숙제 문제를 불러오는 중입니다</h2>
+        <p style={{ color: '#94a3b8' }}>
+          {totalProblems === 0 ? '표시할 문제가 없습니다.' : '문제를 준비하고 있습니다.'}
+        </p>
+        <button onClick={() => navigate('/homework')} style={{ marginTop: '1rem', padding: '0.8rem 2rem', background: '#3b82f6', color: 'white', border: 'none', borderRadius: '10px', cursor: 'pointer', fontWeight: 'bold' }}>
+          숙제함으로 돌아가기
+        </button>
+      </div>
+    );
+  }
+
   // ── 정답 정규화 ──
   const normalizeAnswer = (str) => {
     if (!str) return '';

@@ -3,6 +3,9 @@ import { X, CreditCard, Gift, ShieldCheck, HelpCircle, ChevronDown, Clock, BookO
 import { useAuth } from '@/context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
+// 결제 테스트 모드 (env 미설정 시 기본값 false)
+const IS_TEST_MODE = import.meta.env.VITE_PAYMENT_TEST_MODE === 'true';
+
 const PLAN_LABELS = {
   early: '얼리버드 · 월 49,000원',
   regular: '정규 멤버십 · 월 89,000원',
