@@ -41,11 +41,13 @@ export default function LandingReviews() {
   };
   useEffect(() => { load(); }, []);
 
-  // 리뷰 작성은 로그인 사용자만 가능
+  // 리뷰 작성은 로그인 사용자만 가능.
+  // 비로그인 → 로그인 후 대시보드 리뷰 섹션으로 자동 복귀(sessionStorage 플래그).
   const openWrite = () => {
     if (!user) {
-      alert("리뷰는 로그인 후 작성할 수 있습니다.");
-      navigate("/login");
+      alert("리뷰는 로그인 후 작성할 수 있어요. 로그인하면 대시보드 하단 후기 작성란으로 안내해 드릴게요.");
+      sessionStorage.setItem("mentos_pending_review", "1");
+      navigate("/login", { state: { from: { pathname: "/dashboard" } } });
       return;
     }
     setOpen(true);
@@ -65,6 +67,7 @@ export default function LandingReviews() {
         rating: Number(form.rating),
         content: content.slice(0, 1000),
         user_id: user.id,
+        approved: true,
       });
       if (error) throw error;
       setDone(true);

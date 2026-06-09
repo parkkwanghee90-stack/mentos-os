@@ -15,6 +15,7 @@ import { analyzeMathWeakness, generateFortnightlyTestProblems, gradeFortnightlyT
 import { generateMonthlyTestProblems, gradeMonthlyTest, sendMonthlyParentPush, recordMonthlyTestWrongs } from '@/engine/math/monthlyTest';
 import { getCompletions } from '@/services/homeworkCompletion';
 import { fetchCloudDashboard, buildWeeklySeries } from '@/services/dashboardData';
+import DashboardReviewSection from '@/components/dashboard/DashboardReviewSection';
 import '@/pages/Dashboard.css';
 
 const parseSubject = (subj) => {
@@ -1552,6 +1553,9 @@ export default function Dashboard() {
           })}
         </div>
       </div>
+
+      {/* 후기 남기기 (작성 즉시 대문 후기 목록에 노출) */}
+      <DashboardReviewSection />
 
       {/* 날짜 클릭 상세 모달 */}
       {selectedDateKey && (
