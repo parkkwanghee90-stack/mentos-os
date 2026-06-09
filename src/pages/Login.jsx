@@ -15,7 +15,15 @@ export default function Login() {
   const [passwordConfirm, setPasswordConfirm] = useState('');
   const [adminCode, setAdminCode] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(location.state?.tab === 'admin' || false);
+  // 계정 유형: student | parent | admin (학부모 추가 — 결제 등 보호자 전용 진입)
+  const [accountType, setAccountType] = useState(
+    location.state?.tab === 'admin' ? 'admin'
+      : location.state?.tab === 'parent' ? 'parent'
+      : 'student'
+  );
+  const isAdmin = accountType === 'admin';
+  const isParent = accountType === 'parent';
+  const isStudent = accountType === 'student';
   const [isSignUp, setIsSignUp] = useState(false);
   const [isResetMode, setIsResetMode] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
@@ -97,24 +105,24 @@ export default function Login() {
           setIsLoading(false);
           return;
         }
-        if (!isAdmin && !school.trim()) {
+        if (isStudent && !school.trim()) {
           setErrorMsg('학교명을 입력해 주세요.');
           setIsLoading(false);
           return;
         }
-        if (!isAdmin && !parentPhone.trim()) {
+        if (isStudent && !parentPhone.trim()) {
           setErrorMsg('학부모 전화번호를 입력해 주세요. (수업 결과 알림 발송용)');
           setIsLoading(false);
           return;
         }
-        if (!isAdmin && parentPhone.trim() && !/^01[016789]-?\d{3,4}-?\d{4}$/.test(parentPhone.trim())) {
+        if (isStudent && parentPhone.trim() && !/^01[016789]-?\d{3,4}-?\d{4}$/.test(parentPhone.trim())) {
           setErrorMsg('전화번호 형식이 올바르지 않습니다. (예: 010-0000-0000)');
           setIsLoading(false);
           return;
         }
 
-        const nickname = username.split('@')[0] || '학생';
-        const role = isAdmin ? 'admin' : 'student';
+        const nickname = username.split('@')[0] || (isParent ? '학부모' : '학생');
+        const role = accountType; // student | parent | admin
         
         // 관리자 가입 시 관리자 코드 검증
         if (isAdmin && !adminCode.trim()) {
@@ -162,9 +170,13 @@ export default function Login() {
           }
         }
 
-        // 학생 정보 온보딩 체크
+        // 계정의 실제 역할 기준으로 분기 (학부모/관리자는 학생 온보딩 불필요)
         const meta = signedUser?.user_metadata || {};
-        if (!isAdmin && (!meta.school || !meta.grade || !meta.math_grade)) {
+        const acctRole = meta.role || accountType; // student | parent | admin
+        const destByRole = acctRole === 'admin' ? '/admin'
+          : acctRole === 'parent' ? '/parent/dashboard'
+          : '/dashboard';
+        if (acctRole === 'student' && (!meta.school || !meta.grade || !meta.math_grade)) {
           setSuccessMsg('학습 정보 설정이 필요합니다...');
           setTimeout(() => {
             setIsOnboarding(true);
@@ -173,7 +185,7 @@ export default function Login() {
         } else {
           setSuccessMsg('로그인 성공! 이동 중...');
           setTimeout(() => {
-            const from = location.state?.from?.pathname || (isAdmin ? '/admin' : '/dashboard');
+            const from = location.state?.from?.pathname || destByRole;
             navigate(from, { replace: true });
           }, 800);
         }
@@ -390,13 +402,30 @@ export default function Login() {
       <div className="login-formside">
         <div className="login-card">
           <h2 style={{ margin: '0 0 0.3rem', fontSize: '1.5rem', fontWeight: 800, color: '#0f172a' }}>
-            {isSignUp ? (isAdmin ? '관리자 회원가입' : '회원가입') : '로그인'}
+            {isSignUp ? (isAdmin ? '관리자 회원가입' : isParent ? '학부모 회원가입' : '회원가입') : '로그인'}
           </h2>
-          <p style={{ margin: '0 0 1.4rem', color: '#94a3b8', fontSize: '0.85rem' }}>AVS 풀이와 모든 콘텐츠를 무제한으로</p>
+          <p style={{ margin: '0 0 1.4rem', color: '#94a3b8', fontSize: '0.85rem' }}>
+            {isParent ? '자녀 학습 확인과 결제는 학부모 계정으로' : 'AVS 풀이와 모든 콘텐츠를 무제한으로'}
+          </p>
 
           <div style={{ display: 'flex', gap: '6px', marginBottom: '1.1rem', background: '#f1f5f9', borderRadius: 10, padding: 4 }}>
-            <button type="button" onClick={() => { setIsAdmin(false); setErrorMsg(''); setSuccessMsg(''); }} style={{ flex: 1, padding: '0.5rem', borderRadius: 8, border: 'none', cursor: 'pointer', fontWeight: 700, fontSize: '0.82rem', background: !isAdmin ? '#fff' : 'transparent', color: !isAdmin ? '#7c3aed' : '#64748b', boxShadow: !isAdmin ? '0 1px 3px rgba(15,23,42,0.08)' : 'none' }}>학생</button>
-            <button type="button" onClick={() => { setIsAdmin(true); setErrorMsg(''); setSuccessMsg(''); }} style={{ flex: 1, padding: '0.5rem', borderRadius: 8, border: 'none', cursor: 'pointer', fontWeight: 700, fontSize: '0.82rem', background: isAdmin ? '#fff' : 'transparent', color: isAdmin ? '#7c3aed' : '#64748b', boxShadow: isAdmin ? '0 1px 3px rgba(15,23,42,0.08)' : 'none' }}>관리자/원장</button>
+            {[
+              { key: 'student', label: '학생' },
+              { key: 'parent', label: '학부모' },
+              { key: 'admin', label: '관리자/원장' },
+            ].map((t) => {
+              const active = accountType === t.key;
+              return (
+                <button
+                  key={t.key}
+                  type="button"
+                  onClick={() => { setAccountType(t.key); setErrorMsg(''); setSuccessMsg(''); }}
+                  style={{ flex: 1, padding: '0.5rem 0.3rem', borderRadius: 8, border: 'none', cursor: 'pointer', fontWeight: 700, fontSize: '0.78rem', whiteSpace: 'nowrap', background: active ? '#fff' : 'transparent', color: active ? '#7c3aed' : '#64748b', boxShadow: active ? '0 1px 3px rgba(15,23,42,0.08)' : 'none' }}
+                >
+                  {t.label}
+                </button>
+              );
+            })}
           </div>
 
           {errorMsg && <div style={{ color: '#dc2626', background: '#fef2f2', border: '1px solid #fecaca', padding: '0.7rem', borderRadius: 10, fontSize: '0.82rem', textAlign: 'center', marginBottom: '0.9rem' }}>{errorMsg}</div>}
@@ -423,7 +452,7 @@ export default function Login() {
                 <input className="lsplit-input" aria-label="관리자 인증코드" type="password" placeholder="관리자 인증코드" value={adminCode} onChange={(e) => setAdminCode(e.target.value)} />
               </div>
             )}
-            {isSignUp && !isAdmin && (
+            {isSignUp && isStudent && (
               <>
                 <div style={{ position: 'relative' }}>
                   <User size={18} color="#94a3b8" style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)' }} />
