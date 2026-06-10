@@ -35,7 +35,10 @@ export function AuthProvider({ children }) {
         if (paidAt) localStorage.setItem('mentos_paid_at', paidAt);
       } else {
         const localPaid = localStorage.getItem('mentos_is_paid') === 'true';
-        if (localPaid) {
+        const paidSrc = localStorage.getItem('mentos_paid_source');
+        // 무료이벤트(한달무료)가 임시로 켠 mentos_is_paid 는 "실제 결제"가 아니므로
+        // 프리미엄으로 승격하면 안 된다. (이게 켜지면 내신 등 유료 콘텐츠가 무료 개방됨)
+        if (localPaid && paidSrc !== 'free_event') {
           updatePremiumStatus(true);
         }
       }
