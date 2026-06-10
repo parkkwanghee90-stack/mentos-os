@@ -73,10 +73,21 @@ for job in "${JOBS[@]}"; do
   "$NODE" scripts/generate_gemini_math_sang_tts.cjs "$ch" $flag >> "$LOG" 2>&1
 done
 
-# Completion check (no quota cost): only mark done when all gaps filled AND no OpenAI remain.
+# 수1(수학I) TTS: generate_su1_tts.cjs 가 전 스테이지를 자체 순회하며 갭만 채우고,
+# quota 소진 시 clean abort 하므로 한 번 호출로 충분 (per-stage precheck 불필요).
+if precheck_ok; then
+  echo "[$(date)] auto_tts generating: su1 all (gap-fill)" >> "$LOG"
+  "$NODE" scripts/generate_su1_tts.cjs all >> "$LOG" 2>&1
+else
+  echo "[$(date)] auto_tts: quota exhausted before su1 — resume next schedule" >> "$LOG"
+fi
+
+# Completion check (no quota cost): mark done only when BOTH the math-sang scope
+# (gaps filled AND no legacy OpenAI) and the su1 scope (all hint clips present) finish.
 RES=$("$NODE" scripts/tts_completion_check.cjs 2>/dev/null)
-echo "[$(date)] auto_tts completion: $RES" >> "$LOG"
-if echo "$RES" | grep -q "TTS_COMPLETE"; then
+RES_SU1=$("$NODE" scripts/su1_tts_completion_check.cjs 2>/dev/null)
+echo "[$(date)] auto_tts completion: $RES | $(echo "$RES_SU1" | head -1)" >> "$LOG"
+if echo "$RES" | grep -q "TTS_COMPLETE" && echo "$RES_SU1" | grep -q "SU1_TTS_COMPLETE"; then
   touch "$MARK"
   echo "[$(date)] auto_tts COMPLETE — marker set, will not re-run." >> "$LOG"
 fi

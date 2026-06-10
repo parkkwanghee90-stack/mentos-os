@@ -89,6 +89,7 @@ android/
 /scripts/auto_tts_launchd.out
 /scripts/auto_tts_launchd.err
 /scripts/.auto_tts_done
+/scripts/.su1_hint_cache/
 /tts_audit_report.json
 /tts_progress_monitor.md
 /scratch_slug_check.mjs
