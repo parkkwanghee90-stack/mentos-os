@@ -13,6 +13,22 @@ LOG="scripts/tts_progress.log"
 
 [ -f "$MARK" ] && exit 0   # already fully completed on a prior run
 
+# Single-instance lock: long runs (su1 ≈1,300 clips) can span multiple launchd slots;
+# skip this slot if a previous instance is still generating. Stale-lock guard: a lock
+# older than 12h is from a crashed run (clean aborts remove it) — reclaim it.
+LOCK="scripts/.auto_tts.lock"
+if ! mkdir "$LOCK" 2>/dev/null; then
+  if [ -n "$(find "$LOCK" -maxdepth 0 -mmin +720 2>/dev/null)" ]; then
+    echo "[$(date)] auto_tts: reclaiming stale lock (>12h)" >> "$LOG"
+    rmdir "$LOCK" 2>/dev/null
+    mkdir "$LOCK" 2>/dev/null || { echo "[$(date)] auto_tts: lock race — skipping" >> "$LOG"; exit 0; }
+  else
+    echo "[$(date)] auto_tts: another instance is running — skipping this slot" >> "$LOG"
+    exit 0
+  fi
+fi
+trap 'rmdir "$LOCK" 2>/dev/null' EXIT
+
 # Quota probe: tiny TTS request against EACH key; YES if either key has quota.
 # A 429 (exhausted) consumes nothing; a 200 consumes one slot. stdout-only sentinel so the
 # dotenv(x) banner cannot pollute the result (we grep for the exact token).
