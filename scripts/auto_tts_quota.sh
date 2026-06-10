@@ -102,7 +102,7 @@ fi
 # (gaps filled AND no legacy OpenAI) and the su1 scope (all hint clips present) finish.
 RES=$("$NODE" scripts/tts_completion_check.cjs 2>/dev/null)
 RES_SU1=$("$NODE" scripts/su1_tts_completion_check.cjs 2>/dev/null)
-echo "[$(date)] auto_tts completion: $RES | $(echo "$RES_SU1" | head -1)" >> "$LOG"
+echo "[$(date)] auto_tts completion: $RES | $(echo "$RES_SU1" | grep -o 'SU1_GAPS=[0-9]*' | head -1)" >> "$LOG"
 if echo "$RES" | grep -q "TTS_COMPLETE" && echo "$RES_SU1" | grep -q "SU1_TTS_COMPLETE"; then
   touch "$MARK"
   echo "[$(date)] auto_tts COMPLETE — marker set, will not re-run." >> "$LOG"
