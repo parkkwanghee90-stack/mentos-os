@@ -193,7 +193,7 @@ const PATH_MAP = {
   '시그마용법2단계': 'sigma_step2',
   '여러가지수열3단계': 'seq_misc_step3',
   '수열의합4단계': 'seq_sum_step4',
-  '귀납적정의2단계': 'induction_def_step2',
+  '귀납적정의2단계': 'recursive_defstep2',
   '수학적귀납법3단계': 'induction_step3',
   '수학적귀납법4단계': 'induction_step4',
 
