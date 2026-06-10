@@ -1308,6 +1308,16 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
           currentProblemText = null;
       }
    }
+
+  // [KaTeX 문제 우선] 크롭 PNG 대신, hint JSON 의 problem_render.body 를 KaTeX 로 렌더.
+  // (등차등비 등 math_problem_texts 에 없는 단원도 KaTeX 로 뜨게 함. body 없으면 기존 PNG fallback 유지)
+  if (!currentProblemText && currentProblemRawData?.problem_render?.body) {
+    currentProblemText = currentProblemRawData.problem_render.body;
+    if (!currentProblemTitle && currentProblemRawData.problem_render.title) {
+      currentProblemTitle = currentProblemRawData.problem_render.title;
+    }
+  }
+
   // ── 개념카드 필터 로직 ──
   const getFilteredCards = () => {
     if (!currentUnit) return [];
@@ -1500,7 +1510,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                   text={currentProblemText} 
                   title={currentProblemTitle} 
                   sourceImage={currentProblemImage} 
-                  choices={currentProblemRawData?.choices}
+                  choices={currentProblemRawData?.problem_render?.choices || currentProblemRawData?.choices}
                 />
               </div>
             ) : currentProblemImage ? (
@@ -1957,7 +1967,7 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
                   text={currentProblemText} 
                   title={currentProblemTitle} 
                   sourceImage={currentProblemImage} 
-                  choices={currentProblemRawData?.choices}
+                  choices={currentProblemRawData?.problem_render?.choices || currentProblemRawData?.choices}
                 />
               </div>
             ) : currentProblemImage && (
