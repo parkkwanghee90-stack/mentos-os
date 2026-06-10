@@ -275,11 +275,22 @@ async function listAll(bucket, prefix) {
   const out = [];
   let offset = 0;
   for (;;) {
-    const res = await fetch(`${SUPABASE_URL}/storage/v1/object/list/${bucket}`, {
-      method: 'POST',
-      headers: { Authorization: `Bearer ${SUPABASE_KEY}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ prefix, limit: 1000, offset, sortBy: { column: 'name', order: 'asc' } }),
-    });
+    // 일시적 DNS/네트워크 장애(fetch failed/ENOTFOUND)에 3회 재시도
+    let res;
+    for (let attempt = 1; ; attempt++) {
+      try {
+        res = await fetch(`${SUPABASE_URL}/storage/v1/object/list/${bucket}`, {
+          method: 'POST',
+          headers: { Authorization: `Bearer ${SUPABASE_KEY}`, 'Content-Type': 'application/json' },
+          body: JSON.stringify({ prefix, limit: 1000, offset, sortBy: { column: 'name', order: 'asc' } }),
+        });
+        break;
+      } catch (err) {
+        if (attempt >= 3) throw err;
+        console.warn(`⚠️ storage list 네트워크 오류 (${attempt}/3) — 10s 후 재시도: ${err.message}`);
+        await new Promise(r => setTimeout(r, 10000));
+      }
+    }
     if (!res.ok) throw new Error(`storage list failed (${bucket}/${prefix}): ${res.status}`);
     const files = await res.json().catch(() => []);
     out.push(...files);
@@ -552,7 +563,15 @@ async function main() {
   let totalSuccess = 0;
   let totalFail = 0;
   for (const key of keys) {
-    const result = await processStage(key, { force, dryRun, limit });
+    let result;
+    try {
+      result = await processStage(key, { force, dryRun, limit });
+    } catch (err) {
+      // 스테이지 단위 예외(예: DNS 장애로 listing 실패)는 크래시 대신 clean abort —
+      // 갭 채움은 멱등이라 다음 launchd 슬롯에서 그대로 이어진다.
+      console.error(`\n🛑 Stage "${key}" 처리 오류(네트워크 추정) — run 중단: ${err.message}`);
+      break;
+    }
     totalSuccess += result.successCount;
     totalFail += result.failCount;
     if (result.aborted) {
