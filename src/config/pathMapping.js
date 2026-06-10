@@ -190,7 +190,7 @@ const PATH_MAP = {
   '등차등비2단계': 'arith_geom_seqstep2',
   '등차등비3단계': 'arith_geom_seqstep3',
   '등차등비수열4단계': 'arith_geom_seqsequencestep4',
-  '시그마용법2단계': 'sigma_step2',
+  '시그마용법2단계': 'sigma2step',
   '여러가지수열3단계': 'seq_misc_step3',
   '수열의합4단계': 'seq_sum_step4',
   '귀납적정의2단계': 'recursive_defstep2',
