@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AppProvider } from '@/context/AppContext';
 import { initStudentProfile } from '@/engine/studentProfileEngine';
 import { AuthProvider, useAuth } from '@/context/AuthContext';
+import ErrorBoundary from '@/components/ErrorBoundary';
 
 const Landing = lazy(() => import("@/pages/Landing"));
 const Diagnosis = lazy(() => import("@/pages/Diagnosis"));
@@ -21,6 +22,7 @@ const Dashboard = lazy(() => import("@/pages/Dashboard"));
 const ParentDashboard = lazy(() => import("@/pages/ParentDashboard"));
 const LoginGate = lazy(() => import("@/components/auth/LoginGate"));
 const MentosMockExam = lazy(() => import("@/pages/MentosMockExam"));
+const NaesinCourse = lazy(() => import("@/pages/NaesinCourse"));
 const LessonTest = lazy(() => import("@/pages/LessonTest"));
 const Login = lazy(() => import("@/pages/Login"));
 const AdminDashboard = lazy(() => import("@/pages/AdminDashboard"));
@@ -33,6 +35,7 @@ const Refund = lazy(() => import("@/pages/Refund"));
 const LocalInspector = lazy(() => import("@/pages/LocalInspector"));
 const Terms = lazy(() => import("@/pages/Terms"));
 const Privacy = lazy(() => import("@/pages/Privacy"));
+const DesignCheck = lazy(() => import("@/pages/DesignCheck"));
 
 
 // 진입 플로우: 매뉴얼 미확인 → /grade-select(매뉴얼) → /login → /dashboard
@@ -55,6 +58,15 @@ function RootRedirect() {
   return <Navigate to="/dashboard" replace />;
 }
 
+// 홈("/") 진입 게이트: 비회원 → 랜딩 먼저, 회원 → 대시보드
+function RootGate() {
+  const { user, loading } = useAuth();
+  const isSuperPass = localStorage.getItem('mentos_super_pass') === 'true';
+  if (loading) return null; // 인증 확인 중 깜빡임 방지
+  if (user || isSuperPass) return <Navigate to="/dashboard" replace />;
+  return <Landing />;
+}
+
 export default function App() {
   return (
     <AuthProvider>
@@ -64,7 +76,7 @@ export default function App() {
 }
 
 function AppContent() {
-  const { updatePremiumStatus, user } = useAuth();
+  const { user } = useAuth();
   const [showSuccessOverlay, setShowSuccessOverlay] = useState(false);
 
   useEffect(() => {
@@ -72,23 +84,9 @@ function AppContent() {
 
     const params = new URLSearchParams(window.location.search);
     if (params.get('payment_success') === 'true') {
-      localStorage.setItem('mentos_is_paid', 'true');
-      
-      // Sync payment success to Supabase metadata
-      if (user) {
-        updatePremiumStatus(true);
-      }
-      
-      // Auto register if no user registered yet
-      if (!localStorage.getItem('mentos_mock_user')) {
-        localStorage.setItem('mentos_mock_user', JSON.stringify({
-          id: 'user_p_' + Date.now(),
-          name: '프리미엄 학생',
-          email: 'premium@mentos.ai',
-          role: 'student'
-        }));
-      }
-
+      // 보안: 클라이언트가 URL 파라미터만으로 프리미엄을 셀프 부여하지 않는다(결제 우회 차단).
+      // 실제 프리미엄 부여는 결제 완료 웹훅(payapp-feedback)이 서버에서 처리한다.
+      // 여기서는 완료 안내 오버레이만 표시한다(권한 반영은 서버 메타데이터 동기화로).
       setShowSuccessOverlay(true);
       // Clean query parameters from URL bar
       window.history.replaceState({}, document.title, window.location.pathname);
@@ -167,10 +165,12 @@ function AppContent() {
       )}
 
       <BrowserRouter>
+        <ErrorBoundary>
         <Suspense fallback={<div style={{color:'white', padding:'2rem', background:'#09090b', height:'100vh'}}>Loading Mentos App...</div>}>
           <Routes>
-            <Route path="/" element={<RootRedirect />} />
+            <Route path="/" element={<RootGate />} />
             <Route path="/landing" element={<Landing />} />
+            <Route path="/start" element={<RootRedirect />} />
             <Route path="/diagnosis" element={<Diagnosis />} />
             <Route path="/push-settings" element={<PushSettings />} />
             {/* <Route path="/teacher" element={<TeacherSelect />} /> */}
@@ -185,6 +185,7 @@ function AppContent() {
             
             <Route path="/test" element={<LessonTest />} />
             <Route path="/class/mock-exam" element={<MentosMockExam />} />
+            <Route path="/class/naesin" element={<NaesinCourse />} />
             
             <Route path="/login" element={<Login />} />
             <Route path="/admin" element={<AdminDashboard />} />
@@ -208,8 +209,10 @@ function AppContent() {
             <Route path="/privacy" element={<Privacy />} />
             {/* 개발자 도구 및 힌트/보이스 검수용 라우트 */}
             <Route path="/inspector" element={<LocalInspector />} />
+            <Route path="/design-check" element={<DesignCheck />} />
           </Routes>
         </Suspense>
+        </ErrorBoundary>
       </BrowserRouter>
     </AppProvider>
   );

@@ -8,8 +8,8 @@ export default function Refund() {
   return (
     <div style={{
       minHeight: '100vh',
-      background: 'radial-gradient(circle at 50% 0%, #1e1b4b 0%, #09090b 70%)',
-      color: '#f8fafc',
+      background: 'linear-gradient(135deg, #f1f5f9 0%, #eff6ff 50%, #f5f3ff 100%)',
+      color: '#475569',
       fontFamily: 'system-ui, -apple-system, sans-serif',
       padding: '2rem 1rem',
       display: 'flex',
@@ -30,9 +30,9 @@ export default function Refund() {
             display: 'inline-flex',
             alignItems: 'center',
             gap: '8px',
-            background: 'rgba(255, 255, 255, 0.03)',
-            border: '1px solid rgba(255, 255, 255, 0.08)',
-            color: '#94a3b8',
+            background: 'rgba(255, 255, 255, 0.75)',
+            border: '1px solid rgba(15, 23, 42, 0.08)',
+            color: '#475569',
             padding: '0.6rem 1.2rem',
             borderRadius: '12px',
             cursor: 'pointer',
@@ -41,8 +41,8 @@ export default function Refund() {
             marginBottom: '2rem',
             transition: 'all 0.2s'
           }}
-          onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'; e.currentTarget.style.color = '#f8fafc'; }}
-          onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)'; e.currentTarget.style.color = '#94a3b8'; }}
+          onMouseEnter={e => { e.currentTarget.style.background = '#ffffff'; e.currentTarget.style.color = '#0f172a'; }}
+          onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.75)'; e.currentTarget.style.color = '#475569'; }}
         >
           <ArrowLeft size={16} /> 이전 화면으로
         </button>
@@ -55,31 +55,31 @@ export default function Refund() {
             background: 'rgba(99, 102, 241, 0.1)',
             borderRadius: '24px',
             border: '1px solid rgba(99, 102, 241, 0.2)',
-            color: '#818cf8',
+            color: '#6366f1',
             marginBottom: '1rem'
           }}>
             <RefreshCw size={40} className="animate-spin-slow" />
           </div>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: '900', letterSpacing: '-1px', margin: '0 0 0.5rem 0', background: 'linear-gradient(to right, #ffffff, #c084fc)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: '900', letterSpacing: '-1px', margin: '0 0 0.5rem 0', background: 'linear-gradient(to right, #0f172a, #8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
             환불 정책 (Refund Policy)
           </h1>
-          <p style={{ color: '#94a3b8', fontSize: '1.05rem', margin: 0 }}>멘토스 AI 서비스의 환불 및 운영 관련 핵심 규정을 투명하게 안내합니다</p>
+          <p style={{ color: '#64748b', fontSize: '1.05rem', margin: 0 }}>멘토스 AI 서비스의 환불 및 운영 관련 핵심 규정을 투명하게 안내합니다</p>
         </div>
 
         {/* Policy Contents - Glass Card */}
         <div style={{
-          background: 'rgba(15, 23, 42, 0.45)',
-          backdropFilter: 'blur(20px)',
+          background: 'rgba(255, 255, 255, 0.7)',
+          backdropFilter: 'blur(16px)',
           borderRadius: '32px',
-          border: '1px solid rgba(255, 255, 255, 0.08)',
+          border: '1px solid rgba(15, 23, 42, 0.08)',
           padding: '2.5rem',
-          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
+          boxShadow: '0 10px 30px rgba(99, 102, 241, 0.1)',
           marginBottom: '2rem',
           lineHeight: '1.7',
           fontSize: '0.98rem',
-          color: '#cbd5e1'
+          color: '#475569'
         }}>
-          
+
           {/* Highlight Section */}
           <div style={{
             background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1))',
@@ -88,16 +88,16 @@ export default function Refund() {
             padding: '1.5rem',
             marginBottom: '2rem'
           }}>
-            <h2 style={{ fontSize: '1.2rem', fontWeight: '800', color: '#c084fc', marginTop: 0, marginBottom: '0.8rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <h2 style={{ fontSize: '1.2rem', fontWeight: '800', color: '#8b5cf6', marginTop: 0, marginBottom: '0.8rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
               <ShieldCheck size={20} /> 결제 후 7일 이내 전액 환불 보장
             </h2>
-            <p style={{ margin: 0, fontSize: '0.92rem', color: '#94a3b8' }}>
-              결제 완료 시점으로부터 <strong style={{ color: '#fff' }}>7일 이내</strong>에 학습 이력(이용 기록 및 콘텐츠 소비)이 없는 경우, 전액 환불 신청이 가능합니다. 
+            <p style={{ margin: 0, fontSize: '0.92rem', color: '#475569' }}>
+              결제 완료 시점으로부터 <strong style={{ color: '#0f172a' }}>7일 이내</strong>에 학습 이력(이용 기록 및 콘텐츠 소비)이 없는 경우, 전액 환불 신청이 가능합니다.
               학습 이력이 존재할 경우 사용 금액을 차감한 부분 환불이 이루어집니다.
             </p>
           </div>
 
-          <h3 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#fff', borderLeft: '4px solid #818cf8', paddingLeft: '12px', margin: '2rem 0 1rem 0' }}>
+          <h3 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#0f172a', borderLeft: '4px solid #6366f1', paddingLeft: '12px', margin: '2rem 0 1rem 0' }}>
             1. 환불 신청 기준 및 금액 계산
           </h3>
           <ul style={{ paddingLeft: '1.2rem', margin: '0 0 1.5rem 0', display: 'flex', flexDirection: 'column', gap: '8px' }}>
@@ -106,7 +106,7 @@ export default function Refund() {
             <li>결제 시 적용된 이벤트 및 할인 혜택은 환불 시 무효화되며, 정상 가격을 기준으로 사용 요금이 차감됩니다.</li>
           </ul>
 
-          <h3 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#fff', borderLeft: '4px solid #818cf8', paddingLeft: '12px', margin: '2rem 0 1rem 0' }}>
+          <h3 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#0f172a', borderLeft: '4px solid #6366f1', paddingLeft: '12px', margin: '2rem 0 1rem 0' }}>
             2. 디지털 콘텐츠 특성에 따른 일부 제한 사항
           </h3>
           <p style={{ margin: '0 0 1rem 0' }}>
@@ -117,56 +117,56 @@ export default function Refund() {
             <li>발급된 맞춤형 학습 데이터베이스 및 모의고사 문제 패키지를 다운로드 하거나 시청을 완료한 상태에서는 해당 콘텐츠 가치가 소비된 것으로 간주되어 차감액이 발생합니다.</li>
           </ul>
 
-          <h3 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#fff', borderLeft: '4px solid #818cf8', paddingLeft: '12px', margin: '2rem 0 1rem 0' }}>
+          <h3 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#0f172a', borderLeft: '4px solid #6366f1', paddingLeft: '12px', margin: '2rem 0 1rem 0' }}>
             3. 환불 프로세스 및 소요 기간
           </h3>
           <ul style={{ paddingLeft: '1.2rem', margin: '0 0 1.5rem 0', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            <li>신청 방법: 고객센터 이메일(<span style={{ color: '#60a5fa' }}>support@ksbraintech.com</span>) 혹은 카카오톡 멘토스 AI 채널로 [이름 / 이메일 주소 / 환불 사유]를 접수해 주시면 확인 후 신속히 처리해 드립니다.</li>
+            <li>신청 방법: 고객센터 이메일(<span style={{ color: '#3b82f6' }}>support@ksbraintech.com</span>) 혹은 카카오톡 멘토스 AI 채널로 [이름 / 이메일 주소 / 환불 사유]를 접수해 주시면 확인 후 신속히 처리해 드립니다.</li>
             <li>신용카드/간편결제(Toss, PayApp 등): 승인 취소 처리는 카드사 영업일 기준 3~5일 소요됩니다.</li>
             <li>가상계좌/계좌이체: 고객 명의의 환불 계좌가 필요하며 접수일 기준 영업일 2~3일 내 송금 처리됩니다.</li>
           </ul>
 
           {/* Separation line */}
-          <div style={{ height: '1px', background: 'rgba(255, 255, 255, 0.08)', margin: '2.5rem 0' }} />
+          <div style={{ height: '1px', background: 'rgba(15, 23, 42, 0.08)', margin: '2.5rem 0' }} />
 
           {/* Operation Info Block (Critical for PG Approval) */}
-          <h3 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#fff', margin: '0 0 1rem 0', display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <FileText size={20} color="#c084fc" /> 운영사 및 사업자 정보 (KS BrainTech)
+          <h3 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#0f172a', margin: '0 0 1rem 0', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <FileText size={20} color="#8b5cf6" /> 운영사 및 사업자 정보 (KS BrainTech)
           </h3>
           <div style={{
-            background: 'rgba(255, 255, 255, 0.02)',
-            border: '1px solid rgba(255, 255, 255, 0.05)',
+            background: 'rgba(255, 255, 255, 0.6)',
+            border: '1px solid rgba(15, 23, 42, 0.08)',
             borderRadius: '16px',
             padding: '1.5rem',
             fontSize: '0.88rem',
-            color: '#94a3b8',
+            color: '#64748b',
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
             gap: '12px'
           }}>
             <div>
               <span style={{ color: '#64748b', display: 'block' }}>운영 법인(상호)</span>
-              <strong style={{ color: '#e2e8f0', fontSize: '0.95rem' }}>주식회사 케이에스브레인텍 (KS BrainTech Co., Ltd.)</strong>
+              <strong style={{ color: '#0f172a', fontSize: '0.95rem' }}>주식회사 케이에스브레인텍 (KS BrainTech Co., Ltd.)</strong>
             </div>
             <div>
               <span style={{ color: '#64748b', display: 'block' }}>대표이사</span>
-              <strong style={{ color: '#e2e8f0', fontSize: '0.95rem' }}>김민수</strong>
+              <strong style={{ color: '#0f172a', fontSize: '0.95rem' }}>김민수</strong>
             </div>
             <div>
               <span style={{ color: '#64748b', display: 'block' }}>사업자 등록번호</span>
-              <strong style={{ color: '#e2e8f0', fontSize: '0.95rem' }}>123-45-67890</strong>
+              <strong style={{ color: '#0f172a', fontSize: '0.95rem' }}>123-45-67890</strong>
             </div>
             <div>
               <span style={{ color: '#64748b', display: 'block' }}>통신판매업 신고번호</span>
-              <strong style={{ color: '#e2e8f0', fontSize: '0.95rem' }}>제 2026-서울강남-1234호</strong>
+              <strong style={{ color: '#0f172a', fontSize: '0.95rem' }}>제 2026-서울강남-1234호</strong>
             </div>
             <div>
               <span style={{ color: '#64748b', display: 'block' }}>대표 이메일</span>
-              <strong style={{ color: '#e2e8f0', fontSize: '0.95rem' }}>support@ksbraintech.com</strong>
+              <strong style={{ color: '#0f172a', fontSize: '0.95rem' }}>support@ksbraintech.com</strong>
             </div>
             <div>
               <span style={{ color: '#64748b', display: 'block' }}>사업장 소재지</span>
-              <strong style={{ color: '#e2e8f0', fontSize: '0.95rem' }}>서울특별시 강남구 테헤란로 123, 10층 (역삼동)</strong>
+              <strong style={{ color: '#0f172a', fontSize: '0.95rem' }}>서울특별시 강남구 테헤란로 123, 10층 (역삼동)</strong>
             </div>
           </div>
         </div>

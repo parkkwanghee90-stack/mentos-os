@@ -692,15 +692,10 @@ export default function HintPlayerRouter({ unit, problemId, data: propData, show
 
     // [SSOT 연동] window.resolveAsset를 활용해 로컬/배포 영어 경로 완벽 번역 및 URL_PREFIX 동적 자동 적용
     // 통합숙제 힌트는 Supabase 미업로드 상태이므로 로컬 public/ 경로에서 직접 fetch
-    const isHomeworkHint = fetchUnit && fetchUnit.includes('통합숙제');
-    const mkUrl = (uid, pid, v2 = false) => {
-      if (isHomeworkHint) {
-        // 통합숙제: Supabase에 없음 → 로컬 public 경로를 한글 인코딩하여 직접 사용
-        const segments = `math_hints/${uid}/${pid}${v2 ? '_v2' : ''}.json`.split('/').map(s => encodeURIComponent(s)).join('/');
-        return `/${segments}`;
-      }
-      return window.resolveAsset(`/math_hints/${uid}/${pid}${v2 ? '_v2' : ''}.json`);
-    };
+    // 통합숙제 힌트도 이제 Supabase(mentos-assets)에 업로드됨 → resolveAsset로 통일.
+    // (이전엔 로컬 public/ 경로로 찾았으나 배포 빌드에서 math_hints가 제외되어 404 발생)
+    const mkUrl = (uid, pid, v2 = false) =>
+      window.resolveAsset(`/math_hints/${uid}/${pid}${v2 ? '_v2' : ''}.json`);
 
     console.log('[HintRouter] 페치 unit:', fetchUnit, '| padded:', paddedId);
 

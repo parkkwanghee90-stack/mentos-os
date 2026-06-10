@@ -1,332 +1,175 @@
-// scripts/generate_premium_gemini_tts.cjs
+// Premium lecture TTS generator (slug SSOT).
+// For each target lecture: pull its source JSON, re-upload it to premium_lectures/{slug}.json
+// (migration to the clean slug), then synthesize the whole lecture in ONE Gemini call
+// (timbre consistency) and silence-split into per-step MP3s. If the split count != step
+// count (or the lecture is too long), fall back to per-step generation. Idempotent upload.
+//
+// Usage:
+//   node scripts/generate_premium_gemini_tts.cjs                 # all GAP lectures from audit report
+//   node scripts/generate_premium_gemini_tts.cjs --lecture line_eq   # one lecture by slug or modal id
+//   node scripts/generate_premium_gemini_tts.cjs --limit 1       # first N targets
+//   node scripts/generate_premium_gemini_tts.cjs --per-step      # skip single-call, force per-step
+//   node scripts/generate_premium_gemini_tts.cjs --force         # regenerate even if present
 const fs = require('fs');
 const path = require('path');
-const dotenv = require('dotenv');
 const { execSync } = require('child_process');
-
+const dotenv = require('dotenv');
 dotenv.config();
 
-const { getSafePath } = require('../src/config/pathMapping.js');
-
-// Support multiple API keys for pool rotation
-const GEMINI_API_KEYS = [
-  process.env.VITE_GEMINI_API_KEY,
-  process.env.VITE_GEMINI_API_KEY_2,
-].filter(Boolean);
-
-let currentKeyIndex = 0;
-
-function getCurrentKey() {
-  return GEMINI_API_KEYS[currentKeyIndex];
-}
+const LECTURES = require('../src/lib/premiumLectures.json');
+const { cleanNarration } = require('./lib/ttsConfig.cjs');
+const { makeKeyPool, generatePCM } = require('./lib/geminiTts.cjs');
 
 const SUPABASE_URL = process.env.VITE_SUPABASE_URL;
-const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
-const BUCKET = 'mentos-assets'; // Supabase bucket for premium lecture audio (resolved via window.resolveAsset)
-const LOCAL_OUTPUT_DIR = path.join('public', 'audio', 'premium_lectures');
+const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const PUBLIC_PREFIX = `${SUPABASE_URL}/storage/v1/object/public/mentos-assets`;
+const BUCKET = 'mentos-assets';
+const LOCAL_DIR = path.join('public', 'audio', 'premium_lectures');
+const JSON_DIR = path.join('public', 'premium_lectures');
+const PAUSE_MARKER = '\n\n.\n\n'; // a clear spoken pause between steps for silence detection
+const MAX_CHARS_SINGLE_CALL = 2800; // above this, force per-step (avoids long-call drift/timeouts)
+const STEP_DELAY_MS = parseInt(process.env.TTS_STEP_DELAY_MS, 10) || 8500; // inter-call spacing (paid tier can lower this)
+// Extra Gemini keys from env only (never hardcode secrets):
+const POOL_EXTRA = [process.env.VITE_GEMINI_API_KEY_2, process.env.VITE_GEMINI_API_KEY_3].filter(Boolean);
 
-if (GEMINI_API_KEYS.length === 0) {
-  console.error('❌ Error: VITE_GEMINI_API_KEY is not defined in .env');
-  process.exit(1);
+if (!SUPABASE_URL || !SERVICE_KEY) { console.error('Missing Supabase env'); process.exit(1); }
+fs.mkdirSync(LOCAL_DIR, { recursive: true });
+fs.mkdirSync(JSON_DIR, { recursive: true });
+
+async function fetchSource(sourceJson) {
+  const res = await fetch(`${PUBLIC_PREFIX}/premium_lectures/${sourceJson}`);
+  if (!res.ok) return null;
+  return res.json().catch(() => null);
 }
 
-if (!SUPABASE_URL || !SUPABASE_KEY) {
-  console.error('❌ Error: Supabase URL or Service Role Key is not defined in .env');
-  process.exit(1);
+async function uploadBuffer(buffer, remotePath, contentType) {
+  const res = await fetch(`${SUPABASE_URL}/storage/v1/object/${BUCKET}/${remotePath}`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${SERVICE_KEY}`, 'Content-Type': contentType, 'x-upsert': 'true' },
+    body: buffer,
+  });
+  if (!res.ok) throw new Error(`upload ${remotePath} -> ${res.status} ${await res.text()}`);
 }
 
-if (!fs.existsSync(LOCAL_OUTPUT_DIR)) {
-  fs.mkdirSync(LOCAL_OUTPUT_DIR, { recursive: true });
+async function audioExists(slug, step) {
+  const res = await fetch(`${SUPABASE_URL}/storage/v1/object/info/public/${BUCKET}/audio/premium_lectures/${slug}/step_${step}.mp3`);
+  if (!res.ok) return false;
+  const info = await res.json().catch(() => null);
+  return !!(info && info.size > 10240);
 }
 
-// Clean up narration text from markdown/HTML/KaTeX tags for smooth pronunciation
-function cleanNarration(text) {
-  if (!text) return '';
-  return text
-    .replace(/<\/?(blue|green|yellow|red)>/g, '') // Remove color tags
-    .replace(/\$([^$]*)\$/g, '$1') // Strip dollar signs from inline math
-    .replace(/\\frac\{([^}]*)\}\{([^}]*)\}/g, '$2 분의 $1') // Fractions
-    .replace(/\\sqrt\{([^}]*)\}/g, '루트 $1') // Square root
-    .replace(/\\pm/g, '플러스 마이너스')
-    .replace(/\\times/g, ' 곱하기 ')
-    .replace(/\\div/g, ' 나누기 ')
-    .replace(/\\leq/g, ' 이하')
-    .replace(/\\geq/g, ' 이상')
-    .replace(/\\neq/g, ' 같지 않음')
-    .replace(/\\cdot/g, ' 곱하기 ')
-    .replace(/\\alpha/g, '알파')
-    .replace(/\\beta/g, '베타')
-    .replace(/_n\\mathrm\{P\}_r/g, 'n 피 알')
-    .replace(/_n\\mathrm\{C\}_r/g, 'n 시 알')
-    .replace(/\^/g, '') // Remove exponent symbol
-    .replace(/\\quad/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
+function pcmToMp3(pcmBuffer, outMp3) {
+  const tmp = outMp3 + '.pcm';
+  fs.writeFileSync(tmp, pcmBuffer);
+  try {
+    execSync(`ffmpeg -y -f s16le -ar 24000 -ac 1 -i "${tmp}" -codec:a libmp3lame -qscale:a 2 "${outMp3}"`, { stdio: 'pipe' });
+  } finally { try { fs.unlinkSync(tmp); } catch (e) {} }
+  return fs.readFileSync(outMp3);
 }
 
-async function generateGeminiTTS(text, retries = 3) {
-  // Reset key index to start with the primary key for each new narration generation
-  currentKeyIndex = 0;
+// Decode PCM to wav, detect silence gaps, return { wav, segs } where segs are speech ranges.
+function detectSegments(pcmBuffer, workDir) {
+  const pcm = path.join(workDir, '_full.pcm');
+  const wav = path.join(workDir, '_full.wav');
+  fs.writeFileSync(pcm, pcmBuffer);
+  execSync(`ffmpeg -y -f s16le -ar 24000 -ac 1 -i "${pcm}" "${wav}"`, { stdio: 'pipe' });
+  try { fs.unlinkSync(pcm); } catch (e) {}
+  const log = execSync(`ffmpeg -i "${wav}" -af silencedetect=noise=-40dB:d=0.6 -f null - 2>&1 || true`, { encoding: 'utf8' });
+  const dur = parseFloat((execSync(`ffprobe -v error -show_entries format=duration -of default=nw=1:nk=1 "${wav}"`, { encoding: 'utf8' }) || '0').trim()) || 0;
+  const starts = [...log.matchAll(/silence_start:\s*(-?[\d.]+)/g)].map((m) => parseFloat(m[1]));
+  const ends = [...log.matchAll(/silence_end:\s*([\d.]+)/g)].map((m) => parseFloat(m[1]));
+  const segs = [];
+  let cur = 0;
+  for (let i = 0; i < starts.length; i++) {
+    const s = Math.max(0, starts[i]);
+    if (s - cur > 0.3) segs.push({ start: cur, end: s });
+    cur = ends[i] != null ? ends[i] : s;
+  }
+  if (dur - cur > 0.3) segs.push({ start: cur, end: dur });
+  return { wav, segs };
+}
 
-  const promptText = `너는 고등학생들의 수학 학습을 돕는 친절하고 활기찬 대학생 여자 선생님이야. 입력받은 한국어 수학 텍스트(수식 포함)를 친절하고 자연스러운 구어체로 상냥하게 읽어줘. 절대로 추가적인 인사말, 해설, 격려 등 잡담을 전혀 덧붙이지 말고, 오직 아래에 주어진 대본 텍스트 자체만 있는 그대로 읽어줘:
-
-${text}`;
-
-  for (let attempt = 1; attempt <= retries; attempt++) {
-    try {
-      const currentKey = getCurrentKey();
-      if (!currentKey) {
-        throw new Error("No Gemini API keys available");
-      }
-
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-tts-preview:generateContent?key=${currentKey}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          contents: [{ parts: [{ text: promptText }] }],
-          generationConfig: {
-            responseModalities: ["AUDIO"],
-            speechConfig: {
-              voiceConfig: {
-                prebuiltVoiceConfig: { voiceName: "Aoede" } // Beautiful, natural female narrator
-              }
-            }
-          }
-        })
-      });
-
-      if (!response.ok) {
-        const errorJson = await response.json().catch(() => ({}));
-        const errMsg = errorJson?.error?.message || `Gemini API HTTP ${response.status}`;
-        
-        // Handle rate limiting / quota exhaustion by rotating API keys
-        if (response.status === 429 || errMsg.includes('quota') || errMsg.includes('QUOTA') || errMsg.includes('RESOURCE_EXHAUSTED')) {
-          console.warn(`\n⚠️ API Key ${currentKeyIndex + 1}/${GEMINI_API_KEYS.length} exhausted. Rotating...`);
-          if (currentKeyIndex < GEMINI_API_KEYS.length - 1) {
-            currentKeyIndex++;
-            console.log(`🔄 Rotated to Key ${currentKeyIndex + 1}/${GEMINI_API_KEYS.length}...`);
-            attempt = 0; // Reset attempt counter for the new key
-            continue;
-          } else {
-            console.error("❌ All Gemini API keys exhausted.");
-          }
-        }
-        throw new Error(errMsg);
-      }
-
-      const data = await response.json();
-      const audioPart = data.candidates?.[0]?.content?.parts?.find(part => part.inlineData);
-
-      if (!audioPart || !audioPart.inlineData || !audioPart.inlineData.data) {
-        throw new Error("No audio data returned in Gemini response JSON");
-      }
-
-      return Buffer.from(audioPart.inlineData.data, 'base64');
-    } catch (err) {
-      console.warn(`⚠️ Gemini API attempt ${attempt} failed: ${err.message}`);
-      if (attempt === retries || err.message.includes('quota') || err.message.includes('QUOTA') || err.message.includes('limit') || err.message.includes('exceeded') || err.message.includes('RESOURCE_EXHAUSTED')) {
-        throw err;
-      }
-      await new Promise(resolve => setTimeout(resolve, 3000));
-    }
+async function generatePerStep(voiced, slug, dir, pool, force) {
+  for (const step of voiced) {
+    if (!force && (await audioExists(slug, step.step))) { console.log(`    step ${step.step}: skip (exists)`); continue; }
+    const pcm = await generatePCM(cleanNarration(step.narration), pool);
+    const mp3 = pcmToMp3(pcm, path.join(dir, `step_${step.step}.mp3`));
+    await uploadBuffer(mp3, `audio/premium_lectures/${slug}/step_${step.step}.mp3`, 'audio/mpeg');
+    console.log(`    step ${step.step}: uploaded (per-step)`);
+    await new Promise((r) => setTimeout(r, STEP_DELAY_MS));
   }
 }
 
-async function checkSupabaseExists(remotePath) {
-  if (!SUPABASE_URL || !SUPABASE_KEY) return false;
-  const url = `${SUPABASE_URL}/storage/v1/object/info/public/${BUCKET}/${remotePath}`;
-  try {
-    const res = await fetch(url);
-    if (!res.ok) return false;
-    const info = await res.json().catch(() => null);
-    if (!info) return false;
+async function generateSingleCall(voiced, slug, dir, pool) {
+  const joined = voiced.map((s) => cleanNarration(s.narration)).join(PAUSE_MARKER);
+  if (joined.length > MAX_CHARS_SINGLE_CALL) { console.log('    too long for single-call'); return false; }
 
-    // Verify it is a valid sized file
-    return info.size && info.size > 10240;
-  } catch (e) {
+  const pcm = await generatePCM(joined, pool);
+  const { wav, segs } = detectSegments(pcm, dir);
+  if (segs.length !== voiced.length) {
+    console.log(`    single-call split mismatch (${segs.length} segs vs ${voiced.length} steps) -> per-step fallback`);
+    try { fs.unlinkSync(wav); } catch (e) {}
     return false;
   }
-}
-
-async function uploadToSupabase(buffer, remotePath, retries = 3) {
-  if (!SUPABASE_URL || !SUPABASE_KEY) return;
-  const url = `${SUPABASE_URL}/storage/v1/object/${BUCKET}/${remotePath}`;
-  
-  for (let attempt = 1; attempt <= retries; attempt++) {
-    try {
-      const res = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${SUPABASE_KEY}`,
-          'Content-Type': 'audio/mpeg',
-          'x-upsert': 'true',
-        },
-        body: buffer
-      });
-      if (!res.ok) {
-        throw new Error(`Supabase upload error: ${res.status} - ${await res.text()}`);
-      }
-      return;
-    } catch (err) {
-      console.warn(`⚠️ Supabase upload attempt ${attempt} failed: ${err.message}`);
-      if (attempt === retries) throw err;
-      await new Promise(resolve => setTimeout(resolve, 3000));
-    }
+  for (let i = 0; i < voiced.length; i++) {
+    const step = voiced[i];
+    const out = path.join(dir, `step_${step.step}.mp3`);
+    const { start, end } = segs[i];
+    execSync(`ffmpeg -y -i "${wav}" -ss ${start.toFixed(2)} -to ${end.toFixed(2)} -codec:a libmp3lame -qscale:a 2 "${out}"`, { stdio: 'pipe' });
+    await uploadBuffer(fs.readFileSync(out), `audio/premium_lectures/${slug}/step_${step.step}.mp3`, 'audio/mpeg');
+    console.log(`    step ${step.step}: uploaded (single-call seg ${i + 1}/${voiced.length})`);
   }
+  try { fs.unlinkSync(wav); } catch (e) {}
+  return true;
 }
 
 async function main() {
-  console.log('🎙️ === Premium AI Lecture Voice Generation: Gemini 3.1 & ffmpeg ===\n');
+  const argv = process.argv;
+  const force = argv.includes('--force');
+  const perStepOnly = argv.includes('--per-step');
+  const lectArg = argv.indexOf('--lecture') !== -1 ? argv[argv.indexOf('--lecture') + 1] : null;
+  const limit = argv.indexOf('--limit') !== -1 ? parseInt(argv[argv.indexOf('--limit') + 1], 10) : 0;
 
-  const force = process.argv.includes('--force');
-  
-  // Custom arguments parsing
-  let targetLecture = null;
-  const lectureArgIndex = process.argv.indexOf('--lecture');
-  if (lectureArgIndex !== -1 && process.argv[lectureArgIndex + 1]) {
-    targetLecture = process.argv[lectureArgIndex + 1];
-    console.log(`🎯 Targeting specific lecture: "${targetLecture}"`);
-  }
+  // Build target list from SSOT (lectureId -> {slug, sourceJson}).
+  let targets = Object.entries(LECTURES).map(([lectureId, v]) => ({ lectureId, ...v }));
+  if (lectArg) targets = targets.filter((t) => t.slug === lectArg || t.lectureId === lectArg);
+  if (limit > 0) targets = targets.slice(0, limit);
 
-  let limit = 0;
-  const limitArgIndex = process.argv.indexOf('--limit');
-  if (limitArgIndex !== -1 && process.argv[limitArgIndex + 1]) {
-    limit = parseInt(process.argv[limitArgIndex + 1], 10) || 0;
-    console.log(`⏱️ Limit set to first ${limit} lectures.`);
-  }
+  const pool = makeKeyPool(POOL_EXTRA);
+  console.log(`🎙️ Premium TTS generation: ${targets.length} target lecture(s).`);
 
-  const lecturesDir = 'public/premium_lectures';
-  if (!fs.existsSync(lecturesDir)) {
-    console.error(`❌ Premium lectures directory not found: ${lecturesDir}`);
-    process.exit(1);
-  }
+  for (const t of targets) {
+    console.log(`\n>>> ${t.lectureId} (${t.slug})`);
+    const json = await fetchSource(t.sourceJson);
+    if (!json || !Array.isArray(json.steps)) { console.log(`  no source JSON (${t.sourceJson}), skip`); continue; }
 
-  let files = fs.readdirSync(lecturesDir).filter(f => f.endsWith('.json'));
-  
-  if (targetLecture) {
-    files = files.filter(f => f.includes(targetLecture));
-    if (files.length === 0) {
-      console.error(`❌ No lecture files matching "${targetLecture}" found.`);
-      process.exit(1);
-    }
-  }
-
-  console.log(`- Found ${files.length} premium lectures to process.`);
-  
-  if (limit > 0) {
-    files = files.slice(0, limit);
-  }
-
-  let processedCount = 0;
-
-  for (const file of files) {
-    const lectureId = path.basename(file, '.json');
-    const filePath = path.join(lecturesDir, file);
-    
-    console.log(`\n>>> Processing Lecture [${processedCount + 1}/${files.length}]: [${lectureId}]`);
-    let data;
+    // Migrate the lecture JSON to the clean slug path so the player can fetch it.
+    const localJson = path.join(JSON_DIR, `${t.slug}.json`);
+    fs.writeFileSync(localJson, JSON.stringify(json, null, 2));
     try {
-      data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-    } catch (e) {
-      console.error(`  - Failed to parse JSON file: ${file} -> ${e.message}`);
-      continue;
+      await uploadBuffer(Buffer.from(JSON.stringify(json)), `premium_lectures/${t.slug}.json`, 'application/json');
+      console.log(`  migrated JSON -> premium_lectures/${t.slug}.json`);
+    } catch (e) { console.error(`  ⚠️ JSON migrate failed: ${e.message}`); }
+
+    const voiced = json.steps.filter((s) => s.narration);
+    if (voiced.length === 0) { console.log('  no voiced steps'); continue; }
+
+    // Idempotent: skip if all steps already present (unless --force).
+    if (!force) {
+      let allPresent = true;
+      for (const s of voiced) { if (!(await audioExists(t.slug, s.step))) { allPresent = false; break; } }
+      if (allPresent) { console.log('  all steps present, skip'); continue; }
     }
 
-    if (!data.steps || !Array.isArray(data.steps)) {
-      console.log(`  - Skipping: No steps array in ${file}`);
-      continue;
-    }
-
-    const lectureOutputDir = path.join(LOCAL_OUTPUT_DIR, lectureId);
-    if (!fs.existsSync(lectureOutputDir)) {
-      fs.mkdirSync(lectureOutputDir, { recursive: true });
-    }
-
-    for (const step of data.steps) {
-      const stepNum = step.step;
-      const narrationText = step.narration;
-
-      if (!narrationText) {
-        console.log(`  - Step ${stepNum}: No narration text. Skipped.`);
-        continue;
-      }
-
-      const cleanedText = cleanNarration(narrationText);
-      const localFileName = `step_${stepNum}.mp3`;
-      const localFilePath = path.join(lectureOutputDir, localFileName);
-      
-      // Calculate correct safe production path using getSafePath
-      const rawRemotePath = `audio/premium_lectures/${lectureId}/step_${stepNum}.mp3`;
-      const remotePath = getSafePath(rawRemotePath);
-
-      // Check local cache and Supabase status
-      const existsLocally = fs.existsSync(localFilePath) && fs.statSync(localFilePath).size > 10240;
-      const existsRemotely = await checkSupabaseExists(remotePath);
-
-      if (!force && existsLocally && existsRemotely) {
-        console.log(`  - Step ${stepNum}: Already generated & uploaded. Skipped.`);
-        continue;
-      }
-
-      console.log(`  - Step ${stepNum}: Processing Gemini 3.1 Audio...`);
-      console.log(`    Script: "${cleanedText.substring(0, 60)}..."`);
-
-      let success = false;
-      while (!success) {
-        try {
-          let mp3Buffer = null;
-
-          if (!force && existsLocally) {
-            mp3Buffer = fs.readFileSync(localFilePath);
-            console.log(`    -> Loaded from local cache.`);
-          } else {
-            // 1. Generate Voice Audio via Gemini 3.1 Voice API (Aoede)
-            const rawAudioBuffer = await generateGeminiTTS(cleanedText);
-            console.log(`    -> Generated raw Gemini Voice (${(rawAudioBuffer.length / 1024).toFixed(1)} KB)`);
-
-            // 2. Decode raw PCM and encode to genuine MP3 via ffmpeg (perfect browser/mobile compatibility)
-            const tempPcmPath = path.resolve(lectureOutputDir, `temp_${stepNum}.pcm`);
-            const tempMp3Path = path.resolve(lectureOutputDir, `temp_${stepNum}.mp3`);
-            fs.writeFileSync(tempPcmPath, rawAudioBuffer);
-
-            try {
-              execSync(`ffmpeg -y -f s16le -ar 24000 -ac 1 -i "${tempPcmPath}" -codec:a libmp3lame -qscale:a 2 "${tempMp3Path}"`, { stdio: 'pipe' });
-              mp3Buffer = fs.readFileSync(tempMp3Path);
-            } catch (err) {
-              const stderr = err.stderr ? err.stderr.toString() : '';
-              throw new Error(`ffmpeg conversion failed: ${err.message}\nStderr: ${stderr}`);
-            } finally {
-              try {
-                if (fs.existsSync(tempPcmPath)) fs.unlinkSync(tempPcmPath);
-                if (fs.existsSync(tempMp3Path)) fs.unlinkSync(tempMp3Path);
-              } catch (e) {}
-            }
-
-            // Save local cache
-            fs.writeFileSync(localFilePath, mp3Buffer);
-            console.log(`    -> Saved genuine MP3 local cache.`);
-          }
-
-          // 3. Upload to Supabase storage if missing or force enabled
-          if (force || !existsRemotely) {
-            await uploadToSupabase(mp3Buffer, remotePath);
-            console.log(`    -> Uploaded to Supabase storage [${BUCKET}/${remotePath}].`);
-          }
-          success = true;
-        } catch (err) {
-          console.error(`  ❌ Failed to generate/upload audio for Step ${stepNum}: ${err.message}`);
-          console.log(`  ⏳ Waiting 65 seconds for API quota recovery before retrying Step ${stepNum}...`);
-          await new Promise(resolve => setTimeout(resolve, 65000));
-        }
-      }
-
-      // Add a slight delay to respect API rate limits (8.5s delay keeps us safely under 7 RPM)
-      await new Promise(resolve => setTimeout(resolve, 8500));
-    }
-    processedCount++;
+    const dir = path.join(LOCAL_DIR, t.slug);
+    fs.mkdirSync(dir, { recursive: true });
+    try {
+      let done = false;
+      if (!perStepOnly && !force) done = await generateSingleCall(voiced, t.slug, dir, pool);
+      if (!done) await generatePerStep(voiced, t.slug, dir, pool, force);
+    } catch (e) { console.error(`  ❌ ${t.lectureId}: ${e.message}`); }
+    await new Promise((r) => setTimeout(r, STEP_DELAY_MS));
   }
-
-  console.log('\n🎉 === Premium Lecture Voice Generation Completed successfully! ===');
+  console.log('\n🎉 Done. Re-run scripts/audit_premium_tts.cjs to confirm coverage.');
 }
-
-main().catch(console.error);
+main().catch((e) => { console.error(e); process.exit(1); });

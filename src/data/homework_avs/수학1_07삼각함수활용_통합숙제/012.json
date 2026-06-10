@@ -1,0 +1,18 @@
+{
+  "title": "[통합숙제] 수학1 - 삼각함수 활용 12번 명품 해설",
+  "type": "trigonometry",
+  "P": "삼각함수의 덧셈정리, 배각·반각 공식을 활용하여 값을 구합니다.",
+  "C": "사인·코사인 법칙과 삼각형의 넓이 공식을 적용합니다.",
+  "B": "삼각함수 활용:\n\n1) 사인법칙: $$\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R$$\n2) 코사인법칙: $$a^2 = b^2 + c^2 - 2bc\\cos A$$\n3) 삼각형 넓이: $$S = \\frac{1}{2}ab\\sin C$$\n4) 덧셈정리: $$\\sin(\\alpha \\pm \\beta) = \\sin\\alpha\\cos\\beta \\pm \\cos\\alpha\\sin\\beta$$",
+  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "S_objects": [
+    {
+      "type": "image",
+      "src": "/math_crops/숙제/수학1/07삼각함수활용/012a.webp"
+    }
+  ],
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{7/6π}}$$ 입니다.",
+  "finalAnswer": "7/6π",
+  "correctAnswer": "7/6π",
+  "pcbsa_completed": true
+}

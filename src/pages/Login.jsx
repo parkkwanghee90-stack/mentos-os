@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { User, Shield, Lock, ArrowRight, Zap, Sparkles, Mail, Key } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
+import { isSuperPassMatch } from '@/services/superPass';
 import './Login.css';
 
 export default function Login() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { signInWithEmail, signUpWithEmail, signInWithGoogle, resetPassword, verifyAdminCode, updateStudentInfo } = useAuth();
+  const { signInWithEmail, signUpWithEmail, resetPassword, verifyAdminCode, updateStudentInfo } = useAuth();
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -20,6 +21,7 @@ export default function Login() {
   const [emailSent, setEmailSent] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
+  const [rememberId, setRememberId] = useState(false);
 
   // 온보딩 필드
   const [school, setSchool] = useState('');
@@ -33,9 +35,14 @@ export default function Login() {
   const [superPassInput, setSuperPassInput] = useState('');
   const [superPassError, setSuperPassError] = useState('');
 
+  // 슈퍼패스 인증번호는 환경변수(VITE_SUPER_PASS)에서만 주입한다. 코드에 하드코딩 금지. (main #5)
+  // 환경변수가 설정된 경우에만 UI 노출 → 미설정 시 백도어 자체가 렌더되지 않음(프로덕션 기본 미노출).
+  const SUPER_PASS = import.meta.env.VITE_SUPER_PASS;
+  const SUPERPASS_ENABLED = !!SUPER_PASS;
+
   const handleSuperPass = (e) => {
     e.preventDefault();
-    if (superPassInput.trim() === '1234') {
+    if (isSuperPassMatch(SUPER_PASS, superPassInput)) {
       localStorage.setItem('mentos_super_pass', 'true');
       localStorage.setItem('mentos_mock_user', JSON.stringify({
         id: 'super_admin_pass',
@@ -180,19 +187,6 @@ export default function Login() {
       else if (msg.includes('Password should be')) msg = '비밀번호는 최소 8자리 이상이어야 합니다.';
       setErrorMsg(msg);
     } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleGoogleLogin = async () => {
-    setIsLoading(true);
-    setErrorMsg('');
-    try {
-      await signInWithGoogle();
-    } catch (err) {
-      let msg = err.message || 'Google 로그인 오류';
-      if (msg.includes('provider is not enabled')) msg = '현재 Google 로그인이 비활성화되어 있습니다. 이메일로 가입해 주세요.';
-      setErrorMsg(msg);
       setIsLoading(false);
     }
   };
@@ -342,260 +336,145 @@ export default function Login() {
     );
   }
 
-  // ─── 메인 로그인/가입 화면 ───
+  // ─── 메인 로그인/가입 화면 (login.png split 레이아웃) ───
+  const features = [
+    { icon: <Sparkles size={20} color="#7c3aed" />, title: '무료 체험 7일', sub: '모든 기능을 무료로 체험' },
+    { icon: <Zap size={20} color="#7c3aed" />, title: '맞춤형 학습', sub: '개인별 최적화된 학습 경로' },
+    { icon: <Shield size={20} color="#7c3aed" />, title: '전문 선생님', sub: '검증된 AI 튜터와 함께' },
+  ];
   return (
-    <div className="login-container">
-      <div className="login-bg-orb orb-1"></div>
-      <div className="login-bg-orb orb-2"></div>
-
-      <div className="login-content animate-fade-in">
-        <div className="login-header">
-          <div className="login-logo-box">
-            <Zap size={32} color={isAdmin ? "#8b5cf6" : "#10b981"} />
+    <div className="login-split">
+      {/* LEFT: 브랜드 패널 */}
+      <div className="login-brand">
+        <div style={{ display: 'flex', alignItems: 'center', gap: 11, marginBottom: '3rem' }}>
+          <div style={{ width: 42, height: 42, borderRadius: 13, background: 'linear-gradient(135deg,#7c3aed,#a78bfa)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 6px 16px rgba(124,58,237,0.32)' }}>
+            <Sparkles size={22} color="#fff" />
           </div>
-          <h1 className="login-title">Mentos</h1>
-          <p className="login-subtitle">초개인화 AI 학습 OS</p>
+          <div style={{ lineHeight: 1.15 }}>
+            <div style={{ fontWeight: 800, fontSize: '1.15rem', color: '#0f172a' }}>AVS 풀이</div>
+            <div style={{ fontSize: '0.74rem', color: '#94a3b8', fontWeight: 600, letterSpacing: '0.3px' }}>AI Math Tutor</div>
+          </div>
         </div>
+        <h1 style={{ fontSize: 'clamp(2rem, 3.4vw, 2.8rem)', fontWeight: 800, lineHeight: 1.28, margin: 0, color: '#0f172a' }}>
+          AI와 함께<br />
+          <span style={{ color: '#7c3aed' }}>수학 실력을<br />업그레이드하세요!</span>
+        </h1>
+        <p style={{ color: '#64748b', fontSize: '1.02rem', marginTop: '1.3rem', lineHeight: 1.6, maxWidth: 420 }}>
+          지금 가입하고 맞춤형 학습의 놀라운 경험을 시작하세요.
+        </p>
+        <div style={{ display: 'flex', gap: '1.1rem', marginTop: '2.6rem', flexWrap: 'wrap' }}>
+          {features.map((f, i) => (
+            <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', maxWidth: 150 }}>
+              <div style={{ width: 44, height: 44, borderRadius: 12, background: 'rgba(124,58,237,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{f.icon}</div>
+              <div style={{ fontWeight: 700, fontSize: '0.9rem', color: '#0f172a' }}>{f.title}</div>
+              <div style={{ fontSize: '0.78rem', color: '#94a3b8', lineHeight: 1.4 }}>{f.sub}</div>
+            </div>
+          ))}
+        </div>
+      </div>
 
-        <form className="login-form glass-panel" onSubmit={handleLogin}>
-          <div className="login-tabs">
-            <button type="button" className={`login-tab ${!isAdmin ? 'active' : ''}`}
-              onClick={() => { setIsAdmin(false); setErrorMsg(''); setSuccessMsg(''); }}>
-              학생
-            </button>
-            <button type="button" className={`login-tab ${isAdmin ? 'active-admin' : ''}`}
-              onClick={() => { setIsAdmin(true); setErrorMsg(''); setSuccessMsg(''); }}>
-              관리자/원장
-            </button>
-          </div>
-
-          <h2 className="form-title">
-            {isAdmin 
-              ? (isSignUp ? '관리자 회원가입' : '관리자 로그인') 
-              : (isSignUp ? '학생 회원가입' : '학생 로그인')}
+      {/* RIGHT: 로그인 폼 */}
+      <div className="login-formside">
+        <div className="login-card">
+          <h2 style={{ margin: '0 0 0.3rem', fontSize: '1.5rem', fontWeight: 800, color: '#0f172a' }}>
+            {isSignUp ? (isAdmin ? '관리자 회원가입' : '회원가입') : '로그인'}
           </h2>
-          
-          {errorMsg && (
-            <div style={{ color: '#ef4444', background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.2)', padding: '0.8rem', borderRadius: '12px', fontSize: '0.875rem', textAlign: 'center' }}>
-              {errorMsg}
-            </div>
-          )}
-          
-          {successMsg && (
-            <div style={{ color: '#10b981', background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.2)', padding: '0.8rem', borderRadius: '12px', fontSize: '0.875rem', textAlign: 'center' }}>
-              {successMsg}
-            </div>
-          )}
+          <p style={{ margin: '0 0 1.4rem', color: '#94a3b8', fontSize: '0.85rem' }}>AVS 풀이와 모든 콘텐츠를 무제한으로</p>
 
-          {/* 이메일 */}
-          <div className="input-group">
-            <div className="input-icon">
-              <Mail size={20} color="#94a3b8" />
-            </div>
-            <input type="text" placeholder="이메일 주소 또는 아이디" value={username} onChange={(e) => setUsername(e.target.value)} required />
+          <div style={{ display: 'flex', gap: '6px', marginBottom: '1.1rem', background: '#f1f5f9', borderRadius: 10, padding: 4 }}>
+            <button type="button" onClick={() => { setIsAdmin(false); setErrorMsg(''); setSuccessMsg(''); }} style={{ flex: 1, padding: '0.5rem', borderRadius: 8, border: 'none', cursor: 'pointer', fontWeight: 700, fontSize: '0.82rem', background: !isAdmin ? '#fff' : 'transparent', color: !isAdmin ? '#7c3aed' : '#64748b', boxShadow: !isAdmin ? '0 1px 3px rgba(15,23,42,0.08)' : 'none' }}>학생</button>
+            <button type="button" onClick={() => { setIsAdmin(true); setErrorMsg(''); setSuccessMsg(''); }} style={{ flex: 1, padding: '0.5rem', borderRadius: 8, border: 'none', cursor: 'pointer', fontWeight: 700, fontSize: '0.82rem', background: isAdmin ? '#fff' : 'transparent', color: isAdmin ? '#7c3aed' : '#64748b', boxShadow: isAdmin ? '0 1px 3px rgba(15,23,42,0.08)' : 'none' }}>관리자/원장</button>
           </div>
 
-          {/* 비밀번호 */}
-          <div className="input-group">
-            <div className="input-icon"><Lock size={20} color="#94a3b8" /></div>
-            <input type="password" placeholder={isSignUp ? "비밀번호 (8자리 이상)" : "비밀번호"} value={password} onChange={(e) => setPassword(e.target.value)} required />
-          </div>
+          {errorMsg && <div style={{ color: '#dc2626', background: '#fef2f2', border: '1px solid #fecaca', padding: '0.7rem', borderRadius: 10, fontSize: '0.82rem', textAlign: 'center', marginBottom: '0.9rem' }}>{errorMsg}</div>}
+          {successMsg && <div style={{ color: '#059669', background: '#ecfdf5', border: '1px solid #a7f3d0', padding: '0.7rem', borderRadius: 10, fontSize: '0.82rem', textAlign: 'center', marginBottom: '0.9rem' }}>{successMsg}</div>}
 
-          {/* 비밀번호 확인 (가입 시) */}
-          {isSignUp && (
-            <div className="input-group animate-fade-in">
-              <div className="input-icon"><Lock size={20} color="#94a3b8" /></div>
-              <input type="password" placeholder="비밀번호 확인" value={passwordConfirm} onChange={(e) => setPasswordConfirm(e.target.value)} required />
+          <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+            <div style={{ position: 'relative' }}>
+              <Mail size={18} color="#94a3b8" style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)' }} />
+              <input className="lsplit-input" aria-label="이메일 또는 아이디" type="text" placeholder="이메일 또는 아이디" value={username} onChange={(e) => setUsername(e.target.value)} required />
             </div>
-          )}
-
-          {/* 관리자 인증코드 */}
-          {isAdmin && (
-            <div className="input-group animate-fade-in">
-              <div className="input-icon"><Key size={20} color="#8b5cf6" /></div>
-              <input type="password" placeholder="관리자 인증코드" value={adminCode} onChange={(e) => setAdminCode(e.target.value)} />
+            <div style={{ position: 'relative' }}>
+              <Lock size={18} color="#94a3b8" style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)' }} />
+              <input className="lsplit-input" aria-label="비밀번호" type="password" placeholder={isSignUp ? '비밀번호 (8자리 이상)' : '비밀번호'} value={password} onChange={(e) => setPassword(e.target.value)} required />
             </div>
-          )}
-
-          {/* 학생 회원가입 추가 필드 */}
-          {isSignUp && !isAdmin && (
-            <>
-              <div className="input-group animate-fade-in">
-                <div className="input-icon"><User size={20} color="#94a3b8" /></div>
-                <input type="text" placeholder="학교명 (예: 서울고등학교)" value={school} onChange={(e) => setSchool(e.target.value)} required />
+            {isSignUp && (
+              <div style={{ position: 'relative' }}>
+                <Lock size={18} color="#94a3b8" style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)' }} />
+                <input className="lsplit-input" aria-label="비밀번호 확인" type="password" placeholder="비밀번호 확인" value={passwordConfirm} onChange={(e) => setPasswordConfirm(e.target.value)} required />
               </div>
-              <div className="animate-fade-in" style={{ width: '100%' }}>
-                <label style={{ display: 'block', fontSize: '0.82rem', color: '#cbd5e1', marginBottom: '6px', fontWeight: '600' }}>학부모 전화번호 <span style={{ color: '#ef4444', fontSize: '0.7rem' }}>필수</span></label>
-                <input
-                  type="tel"
-                  value={parentPhone}
-                  onChange={(e) => setParentPhone(e.target.value)}
-                  placeholder="010-0000-0000"
-                  style={{ width: '100%', padding: '0.75rem 1rem', background: 'rgba(255,255,255,0.6)', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '16px', color: '#1e293b', fontSize: '0.95rem', outline: 'none', boxSizing: 'border-box' }}
-                />
-                <span style={{ fontSize: '0.72rem', color: '#64748b', marginTop: '2px', display: 'block' }}>수업 결과 알림이 자동 발송됩니다</span>
-              </div>
-              <div className="select-group animate-fade-in" style={{ width: '100%' }}>
-                <select value={grade} onChange={(e) => setGrade(e.target.value)} style={{ width: '100%', background: 'rgba(255,255,255,0.6)', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '16px', padding: '0.8rem 1rem', color: '#1e293b', fontSize: '0.95rem', outline: 'none', cursor: 'pointer' }}>
-                  <option value="중학교 1학년">중학교 1학년</option>
-                  <option value="중학교 2학년">중학교 2학년</option>
-                  <option value="중학교 3학년">중학교 3학년</option>
-                  <option value="고등학교 1학년">고등학교 1학년</option>
-                  <option value="고등학교 2학년">고등학교 2학년</option>
-                  <option value="고등학교 3학년">고등학교 3학년</option>
-                </select>
-              </div>
-              <div className="select-group animate-fade-in" style={{ width: '100%' }}>
-                <select value={mathGrade} onChange={(e) => setMathGrade(e.target.value)} style={{ width: '100%', background: 'rgba(255,255,255,0.6)', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '16px', padding: '0.8rem 1rem', color: '#1e293b', fontSize: '0.95rem', outline: 'none', cursor: 'pointer' }}>
-                  <option value="1등급">1등급 (최상위권)</option>
-                  <option value="2등급">2등급 (상위권)</option>
-                  <option value="3등급">3등급 (중상위권)</option>
-                  <option value="4등급">4등급 (중위권)</option>
-                  <option value="5등급">5등급 (중하위권)</option>
-                  <option value="6등급">6등급</option>
-                  <option value="7등급">7등급</option>
-                  <option value="8등급">8등급</option>
-                  <option value="9등급">9등급</option>
-                </select>
-              </div>
-            </>
-          )}
-
-          <button type="submit" className={`btn-primary login-btn ${isAdmin ? 'admin-btn' : ''} ${isLoading ? 'loading' : ''}`} disabled={isLoading}>
-            {isLoading ? (isSignUp ? '가입 중...' : '로그인 중...') : (
-              <>{isSignUp ? '가입하기' : (isAdmin ? '관리자 로그인' : '로그인')} <ArrowRight size={20} /></>
             )}
-          </button>
+            {isAdmin && (
+              <div style={{ position: 'relative' }}>
+                <Key size={18} color="#7c3aed" style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)' }} />
+                <input className="lsplit-input" aria-label="관리자 인증코드" type="password" placeholder="관리자 인증코드" value={adminCode} onChange={(e) => setAdminCode(e.target.value)} />
+              </div>
+            )}
+            {isSignUp && !isAdmin && (
+              <>
+                <div style={{ position: 'relative' }}>
+                  <User size={18} color="#94a3b8" style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)' }} />
+                  <input className="lsplit-input" aria-label="학교명" type="text" placeholder="학교명 (예: 서울고등학교)" value={school} onChange={(e) => setSchool(e.target.value)} required />
+                </div>
+                <input className="lsplit-input" style={{ paddingLeft: '0.95rem' }} type="tel" aria-label="학부모 전화번호" placeholder="학부모 전화번호 (010-0000-0000)" value={parentPhone} onChange={(e) => setParentPhone(e.target.value)} />
+                <select value={grade} aria-label="학년" onChange={(e) => setGrade(e.target.value)} className="lsplit-input" style={{ paddingLeft: '0.95rem', cursor: 'pointer' }}>
+                  <option value="중학교 1학년">중학교 1학년</option><option value="중학교 2학년">중학교 2학년</option><option value="중학교 3학년">중학교 3학년</option>
+                  <option value="고등학교 1학년">고등학교 1학년</option><option value="고등학교 2학년">고등학교 2학년</option><option value="고등학교 3학년">고등학교 3학년</option>
+                </select>
+                <select value={mathGrade} aria-label="수학 등급" onChange={(e) => setMathGrade(e.target.value)} className="lsplit-input" style={{ paddingLeft: '0.95rem', cursor: 'pointer' }}>
+                  <option value="1등급">1등급 (최상위권)</option><option value="2등급">2등급 (상위권)</option><option value="3등급">3등급 (중상위권)</option><option value="4등급">4등급 (중위권)</option><option value="5등급">5등급 (중하위권)</option><option value="6등급">6등급</option><option value="7등급">7등급</option><option value="8등급">8등급</option><option value="9등급">9등급</option>
+                </select>
+              </>
+            )}
 
-          {/* Google 로그인 (학생 전용, 가입 아닐 때) */}
-          {!isAdmin && !isSignUp && (
-            <button type="button" className="btn-secondary login-btn" onClick={handleGoogleLogin} disabled={isLoading}
-              style={{ marginTop: '0.5rem', background: 'rgba(255,255,255,0.03)', color: '#f8fafc', border: '1px solid rgba(255,255,255,0.1)', boxShadow: 'none' }}>
-              <Sparkles size={18} color="#60a5fa" style={{ marginRight: '8px' }} />
-              Google 계정으로 계속하기
-            </button>
-          )}
+            {!isSignUp && (
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.82rem' }}>
+                <label style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#64748b', cursor: 'pointer' }}>
+                  <input type="checkbox" checked={rememberId} onChange={(e) => setRememberId(e.target.checked)} style={{ accentColor: '#7c3aed', width: 15, height: 15 }} />
+                  아이디 저장
+                </label>
+                <button type="button" onClick={() => { setIsResetMode(true); setErrorMsg(''); setSuccessMsg(''); }} style={{ background: 'none', border: 'none', color: '#7c3aed', cursor: 'pointer', fontWeight: 600, fontSize: '0.82rem' }}>비밀번호 찾기</button>
+              </div>
+            )}
 
-          <div className="login-footer-links">
-            <button type="button" className="text-link" onClick={() => { setIsResetMode(true); setErrorMsg(''); setSuccessMsg(''); }}>
-              비밀번호 찾기
+            <button type="submit" className="lsplit-btn lsplit-btn--primary" disabled={isLoading} style={{ marginTop: '0.3rem', opacity: isLoading ? 0.7 : 1 }}>
+              {isLoading ? (isSignUp ? '가입 중...' : '로그인 중...') : (isSignUp ? '가입하기' : '로그인')}
             </button>
-            <span className="divider">|</span>
-            <button type="button" className="text-link highlight" onClick={() => {
-              setIsSignUp(!isSignUp);
-              setErrorMsg('');
-              setSuccessMsg('');
-              setEmailSent(false);
-            }}>
-              {isSignUp ? '로그인하러 가기' : '회원가입'}
+          </form>
+
+          <div style={{ textAlign: 'center', marginTop: '1.4rem', fontSize: '0.85rem', color: '#64748b' }}>
+            {isSignUp ? '이미 계정이 있으신가요? ' : '아직 계정이 없으신가요? '}
+            <button type="button" onClick={() => { setIsSignUp(!isSignUp); setErrorMsg(''); setSuccessMsg(''); setEmailSent(false); }} style={{ background: 'none', border: 'none', color: '#7c3aed', cursor: 'pointer', fontWeight: 700, fontSize: '0.85rem' }}>
+              {isSignUp ? '로그인' : '회원가입'}
             </button>
           </div>
 
-          {isAdmin && (
-            <p style={{ fontSize: '0.75rem', color: '#64748b', textAlign: 'center', marginTop: '0.3rem', lineHeight: '1.5' }}>
-              ⚠️ 관리자 인증코드는 본사에서 발급받으실 수 있습니다.
-            </p>
+          {SUPERPASS_ENABLED && (
+          <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+            {!showSuperPass ? (
+              <button type="button" onClick={() => setShowSuperPass(true)} style={{ background: 'transparent', border: '1px dashed #d4d9e3', color: '#94a3b8', padding: '0.4rem 0.9rem', borderRadius: 10, cursor: 'pointer', fontSize: '0.74rem' }}>통합관리자 모드</button>
+            ) : (
+              <form onSubmit={handleSuperPass} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', background: '#f5f3fe', border: '1px solid #ddd6fe', borderRadius: 12, padding: '0.9rem' }}>
+                <input type="password" aria-label="관리자 인증번호" placeholder="관리자 인증번호" value={superPassInput} onChange={(e) => setSuperPassInput(e.target.value)} autoFocus className="lsplit-input" style={{ paddingLeft: '0.95rem' }} />
+                {superPassError && <div style={{ color: '#dc2626', fontSize: '0.78rem' }}>{superPassError}</div>}
+                <div style={{ display: 'flex', gap: 6 }}>
+                  <button type="submit" className="lsplit-btn lsplit-btn--primary" style={{ flex: 1, padding: '0.6rem', fontSize: '0.82rem' }}>잠금 해제</button>
+                  <button type="button" onClick={() => { setShowSuperPass(false); setSuperPassError(''); }} className="lsplit-btn lsplit-btn--social" style={{ width: 70, padding: '0.6rem', fontSize: '0.82rem' }}>취소</button>
+                </div>
+              </form>
+            )}
+          </div>
           )}
-        </form>
 
-        {/* 🔑 슈퍼패스 통합관리자 모드 */}
-        <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
-          {!showSuperPass ? (
-            <button
-              type="button"
-              onClick={() => setShowSuperPass(true)}
-              style={{
-                background: 'transparent',
-                border: '1px dashed rgba(255,255,255,0.15)',
-                color: '#64748b',
-                padding: '0.6rem 1.2rem',
-                borderRadius: '12px',
-                cursor: 'pointer',
-                fontSize: '0.8rem',
-                transition: 'all 0.2s'
-              }}
-            >
-              🔑 통합관리자 모드
-            </button>
-          ) : (
-            <form onSubmit={handleSuperPass} style={{
-              background: 'rgba(139, 92, 246, 0.08)',
-              border: '1px solid rgba(139, 92, 246, 0.25)',
-              borderRadius: '16px',
-              padding: '1.2rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '0.8rem'
-            }}>
-              <div style={{ fontSize: '0.85rem', color: '#a78bfa', fontWeight: 'bold' }}>
-                🔑 통합관리자 슈퍼패스
-              </div>
-              <input
-                type="password"
-                placeholder="관리자 인증번호 입력"
-                value={superPassInput}
-                onChange={(e) => setSuperPassInput(e.target.value)}
-                autoFocus
-                style={{
-                  width: '100%',
-                  padding: '0.7rem 1rem',
-                  borderRadius: '10px',
-                  border: '1px solid rgba(139, 92, 246, 0.3)',
-                  background: 'rgba(0,0,0,0.2)',
-                  color: 'white',
-                  fontSize: '0.95rem',
-                  outline: 'none',
-                  boxSizing: 'border-box'
-                }}
-              />
-              {superPassError && (
-                <div style={{ color: '#ef4444', fontSize: '0.8rem' }}>{superPassError}</div>
-              )}
-              <div style={{ display: 'flex', gap: '0.5rem' }}>
-                <button
-                  type="submit"
-                  style={{
-                    flex: 1,
-                    padding: '0.7rem',
-                    borderRadius: '10px',
-                    border: 'none',
-                    background: 'linear-gradient(135deg, #8b5cf6, #6d28d9)',
-                    color: 'white',
-                    fontWeight: 'bold',
-                    fontSize: '0.85rem',
-                    cursor: 'pointer'
-                  }}
-                >
-                  잠금 해제
-                </button>
-                <button
-                  type="button"
-                  onClick={() => { setShowSuperPass(false); setSuperPassError(''); }}
-                  style={{
-                    padding: '0.7rem 1rem',
-                    borderRadius: '10px',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    background: 'transparent',
-                    color: '#94a3b8',
-                    fontSize: '0.85rem',
-                    cursor: 'pointer'
-                  }}
-                >
-                  취소
-                </button>
-              </div>
-            </form>
-          )}
-        </div>
-
-        <div className="login-bottom-footer" style={{ marginTop: '2rem', textAlign: 'center', color: '#64748b', fontSize: '0.8rem', lineHeight: '1.6', zIndex: 10 }}>
-          <p style={{ margin: '0 0 0.5rem 0' }}>© {new Date().getFullYear()} KS BrainTech. All rights reserved.</p>
-          <div style={{ display: 'flex', gap: '12px', justifyContent: 'center' }}>
-            <Link to="/terms" style={{ color: '#94a3b8', textDecoration: 'none' }}>Terms</Link>
-            <span style={{ color: '#475569' }}>·</span>
-            <Link to="/privacy" style={{ color: '#94a3b8', textDecoration: 'none' }}>Privacy</Link>
-            <span style={{ color: '#475569' }}>·</span>
-            <Link to="/refund" style={{ color: '#94a3b8', textDecoration: 'none' }}>Refund</Link>
+          <div style={{ marginTop: '1.5rem', textAlign: 'center', color: '#94a3b8', fontSize: '0.74rem' }}>
+            <p style={{ margin: '0 0 0.4rem' }}>© {new Date().getFullYear()} Mentos AI. All rights reserved.</p>
+            <div style={{ display: 'flex', gap: 10, justifyContent: 'center' }}>
+              <Link to="/terms" style={{ color: '#94a3b8', textDecoration: 'none' }}>Terms</Link>
+              <span style={{ color: '#cbd5e1' }}>·</span>
+              <Link to="/privacy" style={{ color: '#94a3b8', textDecoration: 'none' }}>Privacy</Link>
+              <span style={{ color: '#cbd5e1' }}>·</span>
+              <Link to="/refund" style={{ color: '#94a3b8', textDecoration: 'none' }}>Refund</Link>
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,31 @@
+{
+  "school": "현암고",
+  "region": "용인시",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "source": "멘토스기출/2025/1학년1학기말 (문제+해설지)",
+  "problems": [
+    { "num": 1, "unit": "복소수", "level": "심화", "answer": 1, "type": "객관식", "latex": "삼차방정식 $x^3+1=0$의 한 허근을 $\\omega$라 할 때, $\\dfrac{\\omega^4}{1+\\omega^2}$의 값은?" },
+    { "num": 2, "unit": "고차방정식", "level": "기본", "answer": 3, "type": "객관식", "latex": "계수가 실수인 삼차방정식 $x^3+ax^2+x+b=0$의 한 허근이 $1-2i$일 때, $a+b$의 값은? (단, $a,b$는 실수)" },
+    { "num": 3, "unit": "이차부등식", "level": "기본", "answer": 4, "type": "객관식", "latex": "이차부등식 $-x^2+2(a-3)x-4a\\ge0$의 해가 존재하지 않도록 하는 정수 $a$의 개수는?" },
+    { "num": 4, "unit": "행렬", "level": "기본", "answer": 3, "type": "객관식", "latex": "행렬 $A=\\begin{pmatrix}2&5&8\\\\4&-1&1\\\\6&-4&5\\end{pmatrix}$에 대하여 보기(ㄱ,ㄴ,ㄷ) 중 옳은 것은?" },
+    { "num": 5, "unit": "경우의수", "level": "기본", "answer": 3, "type": "객관식", "latex": "학생 A,B 포함 육상 선수 7명 중 3명을 뽑아 계주 순서를 정할 때, A,B 중 한 사람만 선발하는 경우의 수는?" },
+    { "num": 6, "unit": "이차방정식", "level": "심화", "answer": 4, "type": "객관식", "latex": "이차방정식 $x^2-4mx+m+3=0$의 두 근이 4보다 작은 양수일 때, 실수 $m$의 범위는?" },
+    { "num": 7, "unit": "경우의수", "level": "심화", "answer": 2, "type": "객관식", "latex": "${}_{12-n}C_2\\le1$, ${}_6P_r\\ge4\\times{}_6P_{r-1}$를 만족하는 $n+r$의 최댓값은? (단, $n\\le10$, $n,r$ 자연수)" },
+    { "num": 8, "unit": "행렬", "level": "심화", "answer": 2, "type": "객관식", "latex": "이차정사각행렬 $A,E$에 대하여 $2A+E=\\begin{pmatrix}-1&2\\\\0&-5\\end{pmatrix}$, $2A-E=\\begin{pmatrix}-3&2\\\\0&-7\\end{pmatrix}$일 때, $4A^2-E^2$의 $(2,1)$ 성분은? (단, $E$는 단위행렬)" },
+    { "num": 9, "unit": "경우의수", "level": "기본", "answer": 4, "type": "객관식", "latex": "앞좌석 3개·뒷좌석 3개 놀이기구에 아버지·어머니 포함 가족 6명이 탈 때, 부모 중 한 사람만 운전석, 나머지는 운전석 아닌 5석에 앉는 경우의 수는?" },
+    { "num": 10, "unit": "고차방정식", "level": "심화", "answer": 5, "type": "객관식", "latex": "삼차함수 $f(x)=x^3+(2a-1)x^2+(b^2-2a)x-b^2$에 대하여 $f(x)=0$이 서로 다른 세 실근을 갖고 세 근의 합이 9가 되도록 하는 정수 $a,b$의 순서쌍 $(a,b)$ 개수는?" },
+    { "num": 11, "unit": "연립부등식", "level": "심화", "answer": 5, "type": "객관식", "latex": "연립부등식 $\\begin{cases}|x-n|\\le3\\\\x^2-10x+21>0\\end{cases}$의 정수해가 4개가 되도록 하는 모든 정수 $n$의 합은?" },
+    { "num": 12, "unit": "행렬", "level": "심화", "answer": 1, "type": "객관식", "latex": "이차정사각행렬 $A$가 (가) $A^2+2A+4E=O$, (나) $A\\begin{pmatrix}2\\\\-2\\end{pmatrix}=\\begin{pmatrix}3\\\\-2\\end{pmatrix}$를 만족. $(A+2E)\\begin{pmatrix}x\\\\y\\end{pmatrix}=\\begin{pmatrix}-8\\\\-8\\end{pmatrix}$일 때 $x+2y$? (단, $E$ 단위, $O$ 영행렬)" },
+    { "num": 13, "unit": "연립방정식", "level": "심화", "answer": 5, "type": "객관식", "latex": "연립방정식 $\\begin{cases}xy+2(x+y)=0\\\\xy-2(x+y)=k-3\\end{cases}$을 만족하는 실수 $x,y$가 존재하도록 하는 100 이하 자연수 $k$의 개수는?" },
+    { "num": 14, "unit": "경우의수", "level": "심화", "answer": 2, "type": "객관식", "latex": "현관문 5자리 비밀번호 만들기. (가)같은 숫자/특수문자 2번 이상 사용 안 함 (나)홀수 2개 이상 포함·모두 이웃 (다)특수문자 1개만 포함. 비밀번호 개수 $n$일 때 $\\dfrac{n}{5!}$?" },
+    { "num": 15, "unit": "행렬", "level": "심화", "answer": 2, "type": "객관식", "latex": "두 이차정사각행렬 $A,B$의 $(i,j)$성분 $a_{ij},b_{ij}$. $2i-3\\le x\\le j+1$에서 $f(x)=(x-i)^2+j$의 최댓값 $a_{ij}$, 최솟값 $b_{ij}$일 때 $B-A$의 모든 성분의 합은?" },
+    { "num": 16, "unit": "이차부등식", "level": "심화", "answer": 1, "type": "객관식", "latex": "연립부등식 $\\begin{cases}ax^2+(a+b)x+a+b+2<0\\\\(a+b)x^2+(a+b+2)x+a<0\\end{cases}$을 만족하는 모든 $x$ 범위가 $x<p$일 때 $8a^3+b^3$의 최솟값은? (단, $a,b,p$ 실수)" },
+    { "num": 17, "unit": "경우의수", "level": "심화", "answer": 5, "type": "객관식", "latex": "1~9 서로 다른 자연수 $a,b,c,d,e,f$로 $a\\times10^5+b\\times10^4+c\\times10^3+d\\times10^2+e\\times10+f$. (가)$abcdef$는 5의 배수 (나)$c\\times d\\times e\\times f$는 10의 배수 (다)$a<b<c<c<d<e$이고 $c\\times d\\times e$는 $b$로 나누어떨어짐. 순서쌍 개수?" },
+    { "num": 18, "unit": "이차함수", "level": "심화", "answer": 5, "type": "객관식", "latex": "최고차항 계수 $a,2a$인 두 이차함수 $y=f(x),y=g(x)$, $h(x)=g(x)-f(x)$. (가)두 그래프는 직선 $x=p$ 축 (나)$h\\!\\left(\\dfrac{1-2x}{5}\\right)\\le0$의 해 $-2\\le x\\le3$ (다)$f(x)\\le x+g(p)$ 해 $x=1$. $8\\{f(p)-g(p)\\}$? (단, $a>0$)" },
+    { "num": 19, "unit": "부등식(절댓값)", "level": "심화", "answer": 8, "type": "서술형", "latex": "부등식 $|x^2+3x+2|-|x|\\ge\\dfrac12 x^2+2$의 해와 이차부등식 $x^2+ax+b\\ge0$의 해가 일치할 때 $a+b$의 값을 구하는 과정을 논술하시오. (단, $a,b$ 상수)" },
+    { "num": 20, "unit": "이차함수", "level": "심화", "answer": 46, "type": "서술형", "latex": "$a$는 0 아닌 정수이고 $f(x)=x^2+ax+2a$. 곡선 $y=f(x)$의 꼭짓점 A, $y$축과 만나는 점 B, 두 점 A,B 지나는 직선 $y=g(x)$. 부등식 $g(x)-f(x)\\ge0$의 정수 $x$ 최댓값 12일 때 정수 $a$의 최댓값 $M$·최솟값 $m$. $M-m$의 값을 구하는 과정을 논술하시오." }
+  ]
+}

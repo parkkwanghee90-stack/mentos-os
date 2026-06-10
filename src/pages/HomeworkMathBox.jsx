@@ -7,13 +7,13 @@ import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import MathProblemRenderer from '@/components/MathProblemRenderer';
 import HintPlayerRouter from '@/components/hints/HintPlayerRouter';
-import { HOMEWORK_UNITS, getHomeworkRange, padProblemNum, getHomeworkProgress, saveHomeworkProgress, markSequenceComplete, WRONG_REVIEW_ID, getUnitById, buildSolutionSrc } from '@/data/homeworkSSOT';
-import { addWrong, markResolved, getActiveWrongAnswers } from '@/services/wrongAnswerStore';
+import { HOMEWORK_UNITS, getHomeworkRange, padProblemNum, getHomeworkProgress, saveHomeworkProgress, markSequenceComplete, WRONG_REVIEW_ID, getUnitById, buildSolutionSrc, isExcludedProblem } from '@/data/homeworkSSOT';
+import { addWrong, markResolved, getActiveUnresolvedWrongAnswers } from '@/services/wrongAnswerStore';
 import { resolveAnswer } from '@/services/answerResolver';
 import { recordCompletion, buildSummaryMessage } from '@/services/homeworkCompletion';
 import { computeSolvedCounts } from '@/services/progressCounts';
 import { queueParentPush } from '@/services/pushService';
-import { mirrorProgress } from '@/services/syncService';
+import { mirrorProgress, mirrorWrongAnswer } from '@/services/syncService';
 import avsAnswersData from '@/data/avs_answers.json';
 
 export default function HomeworkMathBox() {
@@ -81,7 +81,7 @@ export default function HomeworkMathBox() {
   // 문제 목록 생성 (동적 숙제 대응)
   const problems = useMemo(() => {
     if (homeworkId === WRONG_REVIEW_ID) {
-      const actives = getActiveWrongAnswers();
+      const actives = getActiveUnresolvedWrongAnswers();
       return actives.map((e, idx) => {
         const unit = getUnitById(e.hwId);
         const keyStr = String(e.num).padStart(3, '0');
@@ -117,6 +117,7 @@ export default function HomeworkMathBox() {
     if (!hwUnit) return [];
     const list = [];
     for (let i = problemRange.start; i <= problemRange.end; i++) {
+      if (isExcludedProblem(hwUnit.answerKey, i)) continue; // 정답·풀이 없는 문항 숙제에서 제외
       const pid = padProblemNum(i);
       list.push({
         problemId: pid,
@@ -134,7 +135,7 @@ export default function HomeworkMathBox() {
   const answers = useMemo(() => {
     if (homeworkId === WRONG_REVIEW_ID) {
       const ansMap = {};
-      const actives = getActiveWrongAnswers();
+      const actives = getActiveUnresolvedWrongAnswers();
       actives.forEach((e) => {
         const keyStr = String(e.num).padStart(3, '0');
         const ans = resolveAnswer(e.answerKey, e.num);
@@ -187,6 +188,25 @@ export default function HomeworkMathBox() {
       return () => clearTimeout(t);
     }
   }, [toast]);
+
+  // ── 풀 문제가 없을 때 (오답복습 목록이 비어있는 경우 등) → 크래시 방지 안내 ──
+  // 모든 훅 호출 이후 지점이라 Rules of Hooks 위반 없음
+  if (!currentProblem) {
+    return (
+      <div style={{ background: '#09090b', color: 'white', minHeight: '100vh', padding: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
+        <CheckCircle size={48} color="#10b981" />
+        <h2 style={{ marginTop: '1rem' }}>{isWrongReview ? '복습할 오답이 없습니다 🎉' : '표시할 문제가 없습니다'}</h2>
+        <p style={{ color: '#94a3b8', maxWidth: 360, lineHeight: 1.6 }}>
+          {isWrongReview
+            ? '틀린 문제를 모두 복습했어요. 새로운 숙제를 풀면 오답이 여기에 모입니다.'
+            : '이 숙제에서 풀 수 있는 문항을 찾지 못했습니다.'}
+        </p>
+        <button onClick={() => navigate('/homework')} style={{ marginTop: '1.5rem', padding: '0.8rem 2rem', background: '#3b82f6', color: 'white', border: 'none', borderRadius: '10px', cursor: 'pointer', fontWeight: 'bold' }}>
+          숙제함으로 돌아가기
+        </button>
+      </div>
+    );
+  }
 
   // ── 정답 정규화 ──
   const normalizeAnswer = (str) => {
@@ -245,6 +265,12 @@ export default function HomeworkMathBox() {
     const correctAnswer = answers[pid] || '';
     const normCorrect = normalizeAnswer(correctAnswer);
 
+    // 방어: 정답 데이터가 없는 문항은 오답 처리하지 않고 채점 보류(안전망)
+    if (!normCorrect) {
+      setToast('ℹ️ 이 문항은 정답 데이터 준비 중이라 채점을 보류합니다');
+      return;
+    }
+
     // 정확 일치 비교 (includes 버그 수정)
     const isCorrect = normUser.length > 0 && normUser === normCorrect;
 
@@ -255,10 +281,23 @@ export default function HomeworkMathBox() {
     setSolvedStatus(newStatus);
     saveHomeworkProgress(homeworkId, newStatus);
     mirrorProgress({ homeworkId, problemId: pid, isCorrect, userAnswer, avsViewed: newStatus[pid]?.avsViewed || false });
+    // 오답이면 wrong_answers 테이블에 학생ID·문제ID·정답·학생답 기록
+    if (!isCorrect) {
+      mirrorWrongAnswer({ problemId: pid, problemNum: currentProblem.keyStr, unit: hwUnit.relatedUnit || hwUnit.title, correctAnswer, userAnswer });
+    }
     setGradingResult(isCorrect ? 'correct' : 'incorrect');
 
-    // 오답노트 수집 (오답노트 자체 풀이 중에는 재수집 안 함)
-    if (!isWrongReview && currentProblem && !currentProblem.isDynamic) {
+    // 오답노트 반영
+    if (isWrongReview && currentProblem?._wr) {
+      // 오답복습 모드: 원본 항목(_wr) 기준으로 해결/재오답 처리 → 정답 시 목록에서 제거됨
+      const { hwId, num, unit, answerKey } = currentProblem._wr;
+      if (isCorrect) {
+        markResolved(hwId, num);
+      } else {
+        addWrong({ hwId, num, unit, answerKey });
+      }
+    } else if (currentProblem && !currentProblem.isDynamic) {
+      // 일반 정적 숙제: 오답노트 수집
       const numVal = parseInt(currentProblem.keyStr, 10);
       if (isCorrect) {
         markResolved(hwUnit.id, numVal);
@@ -312,7 +351,16 @@ export default function HomeworkMathBox() {
       const { shouldPush } = recordCompletion(completionKey, summary);
       if (shouldPush) {
         const studentName = JSON.parse(localStorage.getItem('mentos_mock_user') || '{}')?.name || '멘토스 학생';
-        queueParentPush(buildSummaryMessage(studentName, summary));
+        queueParentPush(buildSummaryMessage(studentName, summary), {
+          templateKey: 'homework', // 숙제결과리포트
+          variables: {
+            '#{name}': studentName,
+            '#{hwname}': summary.title || '수학 숙제',
+            '#{submit}': `${summary.correct}/${summary.total}문제 제출`,
+            '#{rate}': `${summary.accuracy}%`,
+            '#{wrongnote}': `오답 ${summary.wrong}개`,
+          },
+        });
       }
     }
 
@@ -566,8 +614,12 @@ export default function HomeworkMathBox() {
   const renderAVSHint = () => {
     if (!showAVS) return null;
 
-    // hintKey가 null인 경우 → solutionHtmlPath 체크
-    if (!hwUnit.hintKey) {
+    // 오답복습 모드: 페이지 hwUnit엔 hintKey가 없으므로 원본 문제의 단원에서 hintKey를 가져온다
+    const wrSrcUnit = isWrongReview && currentProblem?._wr ? getUnitById(currentProblem._wr.hwId) : null;
+    const effectiveHintKey = wrSrcUnit?.hintKey || hwUnit.hintKey;
+
+    // hintKey가 없는 경우 → solutionHtmlPath 체크
+    if (!effectiveHintKey) {
       // solutionHtmlPath가 있으면 HTML 해설 iframe 표시
       if (hwUnit.solutionHtmlPath) {
         // 학생 레벨에 따라 적절한 단계 해설 선택
@@ -631,7 +683,7 @@ export default function HomeworkMathBox() {
           ✨ AI Vision Solution
         </h4>
         <HintPlayerRouter
-          unit={hwUnit.hintKey}
+          unit={effectiveHintKey}
           problemId={hintProblemId}
           showQA={false}
         />

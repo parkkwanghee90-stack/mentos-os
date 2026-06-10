@@ -6,6 +6,7 @@
 import { HOMEWORK_UNITS, getHomeworkRange } from '@/data/homeworkSSOT';
 import { resolveAnswer } from '@/services/answerResolver';
 import { queueParentPush } from '@/services/pushService';
+import { getActiveWrongAnswers } from '@/services/wrongAnswerStore';
 
 /**
  * 1. 최근 학습 오답 데이터 취합 및 단원별 취약성 분석
@@ -13,6 +14,7 @@ import { queueParentPush } from '@/services/pushService';
 export function analyzeMathWeakness() {
   const lessonHistory = JSON.parse(localStorage.getItem('mentos_lesson_results') || '[]');
   const unitStats = {};
+  const countedKeys = new Set(); // 소스 B에서 센 (hwId:num) — 입력 C 중복 방지
 
   // A. 수업 오답 집계 (수학 + 미적분 + 확통 + 기하 과목 포함)
   const MATH_SUBJECTS = ['수학', '미적분', '확률과통계', '기하', '수학(상)', '수학1', '수학2'];
@@ -50,12 +52,32 @@ export function analyzeMathWeakness() {
       } else {
         unitStats[unit].wrongCount++;
         unitStats[unit].wrongIndices.push(parseInt(pid, 10));
+        countedKeys.add(`${hw.id}:${parseInt(pid, 10)}`);
       }
     });
     unitStats[unit].wrongIndices = [...new Set(unitStats[unit].wrongIndices)];
   });
 
-  // C. 취약성 데이터 정렬 및 유형화
+  // C. 시험(모의고사) 오답 집계 — 오답스토어. 숙제에서 이미 센 (hwId,num)은 제외.
+  try {
+    for (const e of getActiveWrongAnswers()) {
+      if (e.resolved) continue;
+      const key = `${e.hwId}:${e.num}`;
+      if (countedKeys.has(key)) continue;
+      countedKeys.add(key);
+      const unit = e.unit || '공통수학';
+      if (!unitStats[unit]) {
+        unitStats[unit] = { totalQuestions: 0, correctCount: 0, wrongCount: 0, wrongIndices: [] };
+      }
+      unitStats[unit].totalQuestions++;
+      unitStats[unit].wrongCount++;
+      unitStats[unit].wrongIndices.push(e.num);
+    }
+  } catch (err) {
+    console.warn('[analyzeMathWeakness] 오답스토어 집계 실패:', err.message);
+  }
+
+  // D. 취약성 데이터 정렬 및 유형화
   const weaknessList = Object.entries(unitStats).map(([unit, stat]) => {
     const total = stat.totalQuestions;
     const wrong = stat.wrongCount;
@@ -298,7 +320,19 @@ ${gradingResult.accuracy >= 80
 
 자세한 분석과 오답 노트 해설 동영상(AVS) 시청 현황은 앱 내 대시보드 리포트에서 확인하실 수 있습니다.`;
 
-  queueParentPush(pushMsg);
+  const _weakUnit = [...gradingResult.unitDiagnoses].sort((a, b) => a.testAccuracy - b.testAccuracy)[0];
+  const _gradeOf = (s) => (s >= 90 ? '1등급' : s >= 80 ? '2등급' : s >= 70 ? '3등급' : s >= 60 ? '4등급' : '5등급 이하');
+  queueParentPush(pushMsg, {
+    templateKey: 'weeklyTest', // 주간테스트결과
+    variables: {
+      '#{name}': studentName,
+      '#{range}': gradingResult.unitDiagnoses.map(d => d.unit).join(', ') || '이번 점검 범위',
+      '#{score}': String(gradingResult.accuracy),
+      '#{grade}': _gradeOf(gradingResult.accuracy),
+      '#{weak}': _weakUnit ? _weakUnit.unit : '-',
+      '#{comment}': gradingResult.accuracy >= 80 ? '고난이도 유형을 잘 격파했습니다.' : '수식 전개 실수 보강이 필요합니다.',
+    },
+  });
   console.log('[Fortnightly Push Sent Successfully]', pushMsg);
   return pushMsg;
 }

@@ -20,6 +20,6 @@ describe('AlgebraHintPlayer (latex 해설 렌더)', () => {
     expect(html).not.toContain('해설 이미지를 불러오는 중');
     expect(html).toContain('P: 문제 확인');       // 단계 라벨
     expect(html).toContain('주어진 식');           // 해설 텍스트
-    expect(html).toContain('단계별 해설 스크롤');  // 헤더(렌더 정상)
+    expect(html).toContain('AVS 풀이');            // 헤더(렌더 정상)
   });
 });

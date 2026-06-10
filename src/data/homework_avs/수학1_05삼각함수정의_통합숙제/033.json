@@ -1,0 +1,13 @@
+{
+  "title": "[통합숙제] 수학1 - 삼각함수 정의 33번 명품 해설",
+  "type": "trigonometry",
+  "P": "호도법과 삼각함수의 정의를 이용하여 삼각함수값을 구합니다.",
+  "C": "단위원 위의 점 좌표와 삼각함수의 관계를 활용합니다.",
+  "B": "삼각함수의 정의:\n\n1) 호도법: $$180° = \\pi$$ (rad), 부채꼴 호의 길이 $$l = r\\theta$$, 넓이 $$S = \\frac{1}{2}r^2\\theta$$\n2) 단위원: $$P(\\cos\\theta, \\sin\\theta)$$\n3) $$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$$\n4) $$\\sin^2\\theta + \\cos^2\\theta = 1$$",
+  "S": "[풀이 흐름]\n위의 핵심 개념과 공식을 활용하여 단계적으로 풀어보세요.",
+  "S_objects": [],
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{13}}$$ 입니다.",
+  "finalAnswer": "13",
+  "correctAnswer": "13",
+  "pcbsa_completed": true
+}

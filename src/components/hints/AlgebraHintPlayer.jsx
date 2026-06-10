@@ -6,11 +6,41 @@
  */
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Play, Pause, RotateCcw, ChevronLeft, ChevronRight } from 'lucide-react';
-import { InlineMath, BlockMath } from '@/components/KaTeXWrapper';
+import katex from 'katex';
+import 'katex/dist/katex.min.css';
+
+// ── CJS prop-types require 런타임 크래시 회피용 커스텀 KaTeX 컴포넌트 (main #8a6e8a4) ──
+function BlockMath({ math, errorColor }) {
+  const ref = useRef(null);
+  useEffect(() => {
+    if (ref.current && math) {
+      try {
+        katex.render(math, ref.current, { displayMode: true, throwOnError: false, errorColor: errorColor || '#cbd5e1' });
+      } catch (e) {
+        ref.current.textContent = math;
+      }
+    }
+  }, [math, errorColor]);
+  return <div ref={ref} />;
+}
+function InlineMath({ math, errorColor }) {
+  const ref = useRef(null);
+  useEffect(() => {
+    if (ref.current && math) {
+      try {
+        katex.render(math, ref.current, { displayMode: false, throwOnError: false, errorColor: errorColor || '#94a3b8' });
+      } catch (e) {
+        ref.current.textContent = math;
+      }
+    }
+  }, [math, errorColor]);
+  return <span ref={ref} />;
+}
 
 export default function AlgebraHintPlayer({ data }) {
   const [step, setStep] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [playbackSpeed, setPlaybackSpeed] = useState(1);
   const [imgNaturalH, setImgNaturalH] = useState(0);
   const containerRef = useRef(null);
   const imgRef = useRef(null);
@@ -43,9 +73,9 @@ export default function AlgebraHintPlayer({ data }) {
     const t = setTimeout(() => {
       if (step < totalSteps - 1) setStep(s => s + 1);
       else { setIsPlaying(false); }
-    }, 3000);
+    }, 3000 / playbackSpeed);
     return () => clearTimeout(t);
-  }, [isPlaying, step, totalSteps]);
+  }, [isPlaying, step, totalSteps, playbackSpeed]);
 
   const handlePlay = () => {
     if (step >= totalSteps - 1) { setStep(0); setIsPlaying(true); }
@@ -53,24 +83,20 @@ export default function AlgebraHintPlayer({ data }) {
   };
 
   const chalkYellow = '#fde047';
-  const dark = '#0f172a';
-  const darkCard = '#1e293b';
+  const dark = '#11402e';
+  const darkCard = '#1c5640';
 
   return (
-    <div style={{ background: dark, borderRadius: 14, overflow: 'hidden', border: '1px solid #334155' }}>
+    <div style={{ background: dark, borderRadius: 16, overflow: 'hidden', border: '6px solid #475569', boxShadow: 'inset 0 0 24px rgba(0,0,0,0.45)' }}>
 
       {/* 헤더 */}
-      <div style={{ background: darkCard, padding: '0.7rem 1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #334155' }}>
-        <div style={{ color: chalkYellow, fontWeight: 700, fontSize: '1rem' }}>
-          📋 {data.problem_id?.replace(/^0+/, '')}번 — 단계별 해설 스크롤
+      <div style={{ background: darkCard, padding: '0.7rem 1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <span style={{ color: '#f8fafc', fontWeight: 800, fontSize: '1.15rem' }}>AVS 풀이</span>
+          <span style={{ background: 'rgba(52,211,153,0.18)', color: '#6ee7b7', padding: '2px 8px', borderRadius: '6px', fontSize: '0.62rem', fontWeight: 'bold', border: '1px solid rgba(52,211,153,0.4)', letterSpacing: '0.5px' }}>Beta</span>
         </div>
         <div style={{ display: 'flex', gap: 5 }}>
-          <button onClick={() => { setStep(0); setIsPlaying(false); }} style={btnS('#334155')}><RotateCcw size={13} /></button>
-          <button onClick={() => step > 0 && setStep(s => s - 1)} style={btnS('#334155')} disabled={step === 0}><ChevronLeft size={13} /> 이전</button>
-          <button onClick={handlePlay} style={btnS(isPlaying ? '#7c3aed' : '#dc2626')}>
-            {isPlaying ? <><Pause size={13} /> 정지</> : <><Play size={13} /> 재생</>}
-          </button>
-          <button onClick={() => step < totalSteps - 1 && setStep(s => s + 1)} style={btnS('#334155')} disabled={step === totalSteps - 1}>다음 <ChevronRight size={13} /></button>
+          <button onClick={() => { setStep(0); setIsPlaying(false); }} style={btnS('#334155')}><RotateCcw size={13} /> 다시 보기</button>
         </div>
       </div>
 
@@ -147,20 +173,23 @@ export default function AlgebraHintPlayer({ data }) {
         </div>
       ) : (steps[step]?.latex || steps[step]?.lines?.length) ? (
         /* 이미지가 없는 텍스트/LaTeX 형식 해설(type:'algebra')은 단계별 수식 카드로 렌더 */
-        <div style={{ margin: '0.5rem', background: darkCard, borderRadius: 8, border: '1px solid #334155', padding: '1.1rem 1.2rem', minHeight: 220, color: '#e2e8f0' }}>
+        <div style={{ margin: '0.5rem', background: darkCard, borderRadius: 8, border: '1px solid #334155', padding: '1.1rem 1.2rem', minHeight: 220, color: '#e2e8f0', maxWidth: '100%', overflowX: 'hidden', overflowWrap: 'anywhere', wordBreak: 'break-word' }}>
           {steps[step]?.label && (
-            <div style={{ color: chalkYellow, fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.8rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '7px', color: chalkYellow, fontWeight: 700, fontSize: '0.98rem', marginBottom: '0.7rem' }}>
+              <span style={{ color: chalkYellow, fontSize: '0.95em' }}>✦</span>
               {steps[step].label}
             </div>
           )}
-          {steps[step]?.latex && <RichSolutionText text={steps[step].latex} />}
-          {steps[step]?.lines?.map((ln, i) => (
-            <RichSolutionText key={i} text={typeof ln === 'string' ? ln : (ln?.content || '')} />
-          ))}
-          {step === totalSteps - 1 && data.finalAnswer && (
+          <div style={{ border: '1px solid rgba(253,224,71,0.28)', borderRadius: '12px', padding: '0.9rem 1.1rem', background: 'rgba(0,0,0,0.18)', color: '#f8fafc', lineHeight: 1.9 }}>
+            {steps[step]?.latex && <RichSolutionText text={steps[step].latex} />}
+            {steps[step]?.lines?.map((ln, i) => (
+              <RichSolutionText key={i} text={typeof ln === 'string' ? ln : (ln?.content || '')} />
+            ))}
+          </div>
+          {step === totalSteps - 1 && (data.finalAnswer || data.correctAnswer) && (
             <div style={{ marginTop: '1.1rem', padding: '0.7rem 1rem', background: '#0a0f1a', borderRadius: 8, border: `1px solid ${chalkYellow}55`, display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
               <span style={{ color: chalkYellow, fontWeight: 700 }}>정답</span>
-              <RichSolutionText text={data.finalAnswer} />
+              <RichSolutionText text={String(data.finalAnswer || data.correctAnswer)} />
             </div>
           )}
         </div>
@@ -206,23 +235,24 @@ export default function AlgebraHintPlayer({ data }) {
         </div>
       )}
 
-      {/* 단계 버튼 그리드 */}
-      <div style={{ padding: '0.6rem 0.8rem 0.8rem', display: 'flex', flexWrap: 'wrap', gap: '0.3rem' }}>
-        {steps.map((_, i) => (
-          <button key={i} onClick={() => setStep(i)} style={{
-            background: i === step ? '#dc2626' : i < step ? '#1e3a5f' : '#1e293b',
-            border: `1px solid ${i === step ? '#dc2626' : '#334155'}`,
-            color: i <= step ? '#fff' : '#64748b',
-            padding: '0.3rem 0.7rem',
-            borderRadius: 6,
-            fontSize: '0.78rem',
-            fontWeight: i === step ? 700 : 400,
-            cursor: 'pointer',
-            transition: 'all 0.2s',
-          }}>
-            {i + 1}
+      {/* 하단 컨트롤 바: 단계 이동 · 풀이 컨트롤 (lecture.png 정합) */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', flexWrap: 'wrap', padding: '0.8rem 1rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+          <span style={{ fontSize: '0.72rem', color: '#94a3b8', fontWeight: 600, whiteSpace: 'nowrap' }}>단계 이동</span>
+          <button onClick={() => { setStep(0); setIsPlaying(false); }} style={btnS('#334155')}>처음</button>
+          <button onClick={() => step > 0 && setStep(s => s - 1)} style={btnS('#334155')} disabled={step === 0}><ChevronLeft size={13} /> 이전</button>
+          <span style={{ fontFamily: 'monospace', fontWeight: 700, color: '#fde047', fontSize: '0.85rem', minWidth: 56, textAlign: 'center' }}>STEP {step + 1} / {totalSteps}</span>
+          <button onClick={() => step < totalSteps - 1 && setStep(s => s + 1)} style={btnS('#334155')} disabled={step === totalSteps - 1}>다음 <ChevronRight size={13} /></button>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginLeft: 'auto', flexWrap: 'wrap' }}>
+          <span style={{ fontSize: '0.72rem', color: '#94a3b8', fontWeight: 600, whiteSpace: 'nowrap' }}>풀이 컨트롤</span>
+          <button onClick={handlePlay} style={btnS(isPlaying ? '#7c3aed' : '#7c3aed')}>
+            {isPlaying ? <><Pause size={13} /> 정지</> : <><Play size={13} /> 재생</>}
           </button>
-        ))}
+          <button onClick={() => setPlaybackSpeed(s => (s === 1 ? 1.5 : s === 1.5 ? 2 : 1))} style={btnS('#334155')} title="재생 속도">
+            {playbackSpeed.toFixed(1)}x
+          </button>
+        </div>
       </div>
     </div>
   );

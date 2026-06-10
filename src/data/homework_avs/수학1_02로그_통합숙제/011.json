@@ -1,0 +1,18 @@
+{
+  "title": "[통합숙제] 수학1 - 로그 11번 명품 해설",
+  "type": "algebra",
+  "P": "로그의 정의와 성질을 활용하여 주어진 식의 값을 구합니다.",
+  "C": "로그의 밑 변환 공식과 성질을 적용하여 식을 정리합니다.",
+  "B": "로그의 성질:\n\n1) $$\\log_a b = c \\iff a^c = b$$\n2) $$\\log_a MN = \\log_a M + \\log_a N$$\n3) $$\\log_a \\frac{M}{N} = \\log_a M - \\log_a N$$\n4) $$\\log_a M^k = k\\log_a M$$\n5) 밑 변환: $$\\log_a b = \\frac{\\log_c b}{\\log_c a}$$\n6) $$\\log_a b \\cdot \\log_b c = \\log_a c$$",
+  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "S_objects": [
+    {
+      "type": "image",
+      "src": "/math_crops/숙제/수학1/02로그/011a.webp"
+    }
+  ],
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{5/6}}$$ 입니다.",
+  "finalAnswer": "5/6",
+  "correctAnswer": "5/6",
+  "pcbsa_completed": true
+}

@@ -1,0 +1,18 @@
+{
+  "title": "[통합숙제] 수학2 - 함수의 극한 19번 명품 해설",
+  "type": "calculus",
+  "P": "함수의 극한값을 구하고, 극한의 성질을 활용하여 미지수를 결정합니다.",
+  "C": "$$0/0$$ 꼴 부정형을 인수분해·유리화로 해소하고, 좌극한·우극한을 비교합니다.",
+  "B": "함수의 극한:\n\n1) $$\\lim_{x \\to a} f(x) = L$$ ⟺ $$\\lim_{x \\to a^-} f(x) = \\lim_{x \\to a^+} f(x) = L$$\n2) $$\\lim_{x \\to a} \\frac{f(x)}{g(x)}$$: $$0/0$$ 꼴 → 인수분해 또는 유리화\n3) $$\\lim_{x \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교",
+  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "S_objects": [
+    {
+      "type": "image",
+      "src": "/math_crops/숙제/수학2/01함수의극한/019a.webp"
+    }
+  ],
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{54}}$$ 입니다.",
+  "finalAnswer": "54",
+  "correctAnswer": "54",
+  "pcbsa_completed": true
+}
