@@ -295,7 +295,7 @@ ${text}`;
           console.warn(`\n⚠️ API Key ${currentKeyIndex + 1}/${GEMINI_API_KEYS.length} exhausted! Error: ${errMsg}`);
           if (currentKeyIndex < GEMINI_API_KEYS.length - 1) {
             currentKeyIndex++;
-            console.log(`🔄 Rotating to API Key ${currentKeyIndex + 1}/${GEMINI_API_KEYS.length}: ${getCurrentKey().substring(0, 10)}...`);
+            console.log(`🔄 Rotating to API Key ${currentKeyIndex + 1}/${GEMINI_API_KEYS.length}`);
             // Reset attempt counter and retry immediately with the new key
             attempt = 0; 
             continue;

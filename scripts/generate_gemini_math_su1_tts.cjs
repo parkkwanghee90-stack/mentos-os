@@ -177,7 +177,7 @@ async function generateGeminiTTS(text, retries = 3) {
           console.warn(`\n⚠️ API Key ${currentKeyIndex + 1}/${GEMINI_API_KEYS.length} exhausted! Error: ${errMsg}`);
           if (currentKeyIndex < GEMINI_API_KEYS.length - 1) {
             currentKeyIndex++;
-            console.log(`🔄 Rotating to API Key ${currentKeyIndex + 1}/${GEMINI_API_KEYS.length}: ${getCurrentKey().substring(0, 10)}...`);
+            console.log(`🔄 Rotating to API Key ${currentKeyIndex + 1}/${GEMINI_API_KEYS.length}`);
             attempt = 0; 
             continue;
           } else {
