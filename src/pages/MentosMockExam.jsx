@@ -11,6 +11,9 @@ import PaymentCheckoutModal from '@/components/PaymentCheckoutModal';
 
 import { getMetadataForProblem } from '../data/mockMetadata';
 import { WeaknessAnalysisEngine } from '../engine/math/WeaknessAnalysisEngine';
+import { speakText, stopSpeaking } from '../services/ttsService';
+import { buildProblemNarration } from '../components/hints/avsNarration';
+import { nextHintProblem } from './mockExamNav';
 import { trackApiCall } from '@/engine/apiUsageTracker';
 import { commonQuestions2024, calculusQuestions2024, statsQuestions2024 } from '../data/mockExams/CSAT_2024_6.js';
 import { commonQuestions as common2025, calculusQuestions as calc2025, statsQuestions as stats2025 } from '../data/mockExams/CSAT_2025_6.js';
@@ -610,33 +613,52 @@ export default function MentosMockExam() {
     setPlayingAudioId(null);
   }, [currentVolume, electiveMode]);
 
-  const handleToggleAudio = (qId) => {
-    if (playingAudioId === qId) {
-      if (audioInstance) {
-        audioInstance.pause();
-      }
+  // 정적 사전생성 음성(OpenAI) 폴백 재생 — 이미지 전용 문항 등 낭독 텍스트가 없을 때 사용
+  const playStaticAudio = (qId) => {
+    const folderName = `20260504모의고사1회${electiveMode === 'calculus' ? '미적분' : '확통'}`;
+    const qNum = String(qId).padStart(3, '0');
+    const audioPath = `/audio/suneung_tts/${folderName}_${qNum}.mp3`;
+
+    const newAudio = new Audio(audioPath);
+    newAudio.onended = () => setPlayingAudioId(null);
+    setAudioInstance(newAudio);
+    setPlayingAudioId(qId);
+    newAudio.play().catch(err => {
+      console.error("Audio playback error:", err);
       setPlayingAudioId(null);
-    } else {
-      if (audioInstance) {
-        audioInstance.pause();
-      }
-      
-      const folderName = `20260504모의고사1회${electiveMode === 'calculus' ? '미적분' : '확통'}`;
-      const qNum = String(qId).padStart(3, '0');
-      const audioPath = `/audio/suneung_tts/${folderName}_${qNum}.mp3`;
-      
-      const newAudio = new Audio(audioPath);
-      newAudio.play().catch(err => {
-        console.error("Audio playback error:", err);
-      });
-      
-      newAudio.onended = () => {
-        setPlayingAudioId(null);
-      };
-      
-      setAudioInstance(newAudio);
-      setPlayingAudioId(qId);
+    });
+  };
+
+  // AVS 해설 음성: Gemini(Aoede) 런타임 TTS 우선, 낭독 텍스트가 없으면 정적 파일 폴백
+  const handleToggleAudio = (q) => {
+    const question = (q && typeof q === 'object') ? q : data.questions.find(x => x.id === q);
+    const qId = question ? question.id : q;
+
+    // 현재 재생 중인 문항을 다시 누르면 정지
+    if (playingAudioId === qId) {
+      stopSpeaking();
+      if (audioInstance) { audioInstance.pause(); setAudioInstance(null); }
+      setPlayingAudioId(null);
+      return;
     }
+
+    // 다른 음성/오디오 정리
+    stopSpeaking();
+    if (audioInstance) { audioInstance.pause(); setAudioInstance(null); }
+
+    const narration = buildProblemNarration(question);
+    if (narration) {
+      setPlayingAudioId(qId);
+      speakText(narration, {
+        isReplay: true, // 사용자 클릭 재생: 출력횟수 스킵 로직 우회
+        onEnd: () => setPlayingAudioId(null),
+        onError: () => setPlayingAudioId(null),
+      });
+      return;
+    }
+
+    // 낭독 텍스트 없음(이미지 전용 문항) → 기존 정적 파일 재생
+    playStaticAudio(qId);
   };
 
   // 선택 과목 및 회차 전환
@@ -977,7 +999,7 @@ export default function MentosMockExam() {
                     {currentVolume === 0 && q.id <= 10 && (
                       <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.2rem', marginBottom: '0.2rem', paddingLeft: '38px' }}>
                         <button
-                          onClick={() => handleToggleAudio(q.id)}
+                          onClick={() => handleToggleAudio(q)}
                           style={{
                             display: 'flex',
                             alignItems: 'center',
@@ -1031,7 +1053,7 @@ export default function MentosMockExam() {
                             <>
                               <Volume2 size={14} style={{ color: 'hsl(262, 83%, 58%)' }} />
                               <Play size={11} fill="currentColor" style={{ marginLeft: '-2px' }} />
-                              <span>AVS AI 해설 듣기 (shimmer)</span>
+                              <span>AVS AI 해설 듣기</span>
                             </>
                           )}
                         </button>
@@ -1577,6 +1599,7 @@ export default function MentosMockExam() {
                       unit={unit}
                       problemId={problemId}
                       showQA={true}
+                      geminiTts={true}
                     />
                   );
                 })()}
@@ -1624,7 +1647,13 @@ export default function MentosMockExam() {
     })()}
 
       {/* 실시간 펜 애니메이션 힌트 UI 오버레이 */}
-      {viewingHint && (
+      {viewingHint && (() => {
+        // '다음 문제 보기' 네비게이션: 풀이 가능한(텍스트/이미지 보유) 문항 순서로 진행 (mockExamNav: 단위테스트 보유)
+        const { hasNext: hasNextHint, next: nextHintQ } = nextHintProblem(data.questions, viewingHint.id);
+        const goNextHint = () => {
+          if (hasNextHint) { stopSpeaking(); setViewingHint(nextHintQ); }
+        };
+        return (
         <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: '#0f172a', zIndex: 9999, display: 'flex', flexDirection: 'column', color: '#f8fafc' }}>
           
           <div style={{ 
@@ -1654,15 +1683,34 @@ export default function MentosMockExam() {
                 {viewingHint.id}번 문항 ({viewingHint.tag}) 힌트해설
               </h2>
             </div>
-            <button 
-              onClick={() => setViewingHint(null)} 
-              style={{ 
-                background: '#ef4444', 
-                color: '#fff', 
-                border: 'none', 
-                fontSize: isMobile ? '0.75rem' : '1rem', 
-                cursor: 'pointer', 
-                padding: isMobile ? '0.3rem 0.6rem' : '0.5rem 1rem', 
+            <button
+              onClick={goNextHint}
+              disabled={!hasNextHint}
+              style={{
+                background: hasNextHint ? '#3b82f6' : '#334155',
+                color: '#fff',
+                border: 'none',
+                fontSize: isMobile ? '0.75rem' : '1rem',
+                cursor: hasNextHint ? 'pointer' : 'default',
+                padding: isMobile ? '0.3rem 0.6rem' : '0.5rem 1rem',
+                borderRadius: '8px',
+                fontWeight: 'bold',
+                flexShrink: 0,
+                marginLeft: '0.5rem',
+                opacity: hasNextHint ? 1 : 0.4
+              }}
+            >
+              다음 문제 보기 →
+            </button>
+            <button
+              onClick={() => setViewingHint(null)}
+              style={{
+                background: '#ef4444',
+                color: '#fff',
+                border: 'none',
+                fontSize: isMobile ? '0.75rem' : '1rem',
+                cursor: 'pointer',
+                padding: isMobile ? '0.3rem 0.6rem' : '0.5rem 1rem',
                 borderRadius: '8px',
                 fontWeight: 'bold',
                 flexShrink: 0,
@@ -1725,17 +1773,19 @@ export default function MentosMockExam() {
                          : '삼각함수활용2단계';
                  }
                  return (
-                   <HintPlayerRouter 
-                      unit={unit} 
-                      problemId={problemId} 
-                      showQA={true} 
+                   <HintPlayerRouter
+                      unit={unit}
+                      problemId={problemId}
+                      showQA={true}
+                      geminiTts={true}
                    />
                  );
                })()}
             </div>
           </div>
         </div>
-      )}
+        );
+      })()}
 
       {/* ─── 고3 프리미엄 전용 페이월 오버레이 ─── */}
       {showPaywall && (

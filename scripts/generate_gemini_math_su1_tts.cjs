@@ -8,7 +8,7 @@ dotenv.config();
 
 const GEMINI_API_KEYS = [
   process.env.VITE_GEMINI_API_KEY,
-  process.env.VITE_GEMINI_API_KEY_2, // secondary key from env (never hardcode)
+  process.env.VITE_GEMINI_API_KEY_2,
 ].filter(Boolean);
 
 let currentKeyIndex = 0;
@@ -149,7 +149,7 @@ async function generateGeminiTTS(text, retries = 3) {
       // Gemini voice 전용 모델 사용
       let response;
       try {
-        response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${currentKey}`, {
+        response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-tts-preview:generateContent?key=${currentKey}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           signal: controller.signal,
@@ -177,7 +177,7 @@ async function generateGeminiTTS(text, retries = 3) {
           console.warn(`\n⚠️ API Key ${currentKeyIndex + 1}/${GEMINI_API_KEYS.length} exhausted! Error: ${errMsg}`);
           if (currentKeyIndex < GEMINI_API_KEYS.length - 1) {
             currentKeyIndex++;
-            console.log(`🔄 Rotating to API Key ${currentKeyIndex + 1}/${GEMINI_API_KEYS.length}: ${getCurrentKey().substring(0, 10)}...`);
+            console.log(`🔄 Rotating to API Key ${currentKeyIndex + 1}/${GEMINI_API_KEYS.length}`);
             attempt = 0; 
             continue;
           } else {

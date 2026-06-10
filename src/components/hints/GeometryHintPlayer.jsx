@@ -28,6 +28,8 @@ import React, { useState } from 'react';
 import { Play, Pause, StepForward, RotateCcw } from 'lucide-react';
 import MathCanvas from './MathCanvas';
 import TTS_UNIT_MAP from '../../data/tts_map.json';
+import { speakText, stopSpeaking } from '../../services/ttsService';
+import { buildAvsNarration } from './avsNarration';
 
 import 'katex/dist/katex.min.css';
 import { BlockMath, InlineMath } from '@/components/KaTeXWrapper';
@@ -350,7 +352,7 @@ function LegacySvgCanvas({ shapes }) {
 
 const SUPABASE_TTS_BASE = (import.meta.env.VITE_SUPABASE_URL || '') + '/storage/v1/object/public/math-tts';
 
-export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
+export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId, geminiTts = false }) {
   const [step, setStep]       = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [playbackSpeed, setPlaybackSpeed] = useState(1);
@@ -359,6 +361,12 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
   const [ttsAudio, setTtsAudio] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
   const [activeTab, setActiveTab] = useState('text');
+
+  // Gemini 런타임 TTS 모드: 언마운트 시 재생 중인 음성 정리
+  React.useEffect(() => {
+    if (!geminiTts) return undefined;
+    return () => { stopSpeaking(); };
+  }, [geminiTts]);
 
   React.useEffect(() => {
     const handleResize = () => {
@@ -620,8 +628,30 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
           width: isMobile ? '100%' : 'auto',
           alignItems: 'center'
         }}>
-          {/* 🔊 TTS 음성 듣기 버튼 */}
-          {ttsUnit && ttsProblemId && (() => {
+          {/* 🔊 TTS 음성 듣기 버튼 (Gemini 런타임 모드) — 스텝 나레이션을 Aoede 보이스로 낭독 */}
+          {geminiTts && (() => {
+            const handleGeminiTts = () => {
+              if (ttsPlaying) { stopSpeaking(); setTtsPlaying(false); return; }
+              const narration = buildAvsNarration(stepsData);
+              if (!narration) return;
+              setTtsPlaying(true);
+              speakText(narration, {
+                isReplay: true, // 사용자 클릭 재생: 출력횟수 스킵 로직 우회
+                onEnd: () => setTtsPlaying(false),
+                onError: () => setTtsPlaying(false),
+              });
+            };
+            return (
+              <button onClick={handleGeminiTts} className="avs-btn" style={{
+                ...btn(ttsPlaying ? '#dc2626' : '#7c3aed', isMobile),
+                display: 'flex', alignItems: 'center', gap: 4
+              }}>
+                {ttsPlaying ? '⏹ 정지' : '🔊 음성(Gemini)'}
+              </button>
+            );
+          })()}
+          {/* 🔊 TTS 음성 듣기 버튼 (정적 파일 모드) */}
+          {!geminiTts && ttsUnit && ttsProblemId && (() => {
             const NAVER_TTS_FOLDERS = [
               '20260504모의고사1회미적분', '20260504모의고사1회확통',
               '2024060504미적분2회', '2024060504확통2회모의고사',

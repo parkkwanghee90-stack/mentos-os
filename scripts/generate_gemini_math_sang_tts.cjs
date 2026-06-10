@@ -3,12 +3,13 @@ const fs = require('fs');
 const path = require('path');
 const dotenv = require('dotenv');
 const { execSync } = require('child_process');
+const { classifyRemoteClip } = require('./lib/tts_engine_classifier.cjs');
 
 dotenv.config();
 
 const GEMINI_API_KEYS = [
   process.env.VITE_GEMINI_API_KEY,
-  process.env.VITE_GEMINI_API_KEY_2, // secondary key from env (never hardcode)
+  process.env.VITE_GEMINI_API_KEY_2,
 ].filter(Boolean);
 
 let currentKeyIndex = 0;
@@ -21,6 +22,35 @@ const SUPABASE_URL = process.env.VITE_SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const BUCKET = 'math-tts';
 const LOCAL_OUTPUT_DIR = path.join('public', 'audio', 'math_hints');
+const MANIFEST_PATH = path.join('scripts', 'tts_manifest.json');
+const TTS_MODEL = 'gemini-3.1-flash-tts-preview';
+const TTS_VOICE = 'Aoede';
+
+// Tag each freshly generated clip with its engine/model in a manifest, so future
+// "overwrite legacy" runs can rely on recorded metadata instead of audio-header sniffing.
+function recordManifest(remotePath, bytes) {
+  let current = {};
+  try {
+    if (fs.existsSync(MANIFEST_PATH)) current = JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf8')) || {};
+  } catch (e) {
+    current = {};
+  }
+  const next = {
+    ...current,
+    [remotePath]: {
+      engine: 'gemini',
+      model: TTS_MODEL,
+      voice: TTS_VOICE,
+      bytes,
+      generatedAt: new Date().toISOString(),
+    },
+  };
+  try {
+    fs.writeFileSync(MANIFEST_PATH, JSON.stringify(next, null, 2));
+  } catch (e) {
+    console.warn(`⚠️ Could not write manifest: ${e.message}`);
+  }
+}
 
 if (GEMINI_API_KEYS.length === 0) {
   console.error('❌ Error: No Gemini API keys are defined');
@@ -236,7 +266,7 @@ ${text}`;
 
       let response;
       try {
-        response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${currentKey}`, {
+        response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-tts-preview:generateContent?key=${currentKey}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           signal: controller.signal,
@@ -265,7 +295,7 @@ ${text}`;
           console.warn(`\n⚠️ API Key ${currentKeyIndex + 1}/${GEMINI_API_KEYS.length} exhausted! Error: ${errMsg}`);
           if (currentKeyIndex < GEMINI_API_KEYS.length - 1) {
             currentKeyIndex++;
-            console.log(`🔄 Rotating to API Key ${currentKeyIndex + 1}/${GEMINI_API_KEYS.length}: ${getCurrentKey().substring(0, 10)}...`);
+            console.log(`🔄 Rotating to API Key ${currentKeyIndex + 1}/${GEMINI_API_KEYS.length}`);
             // Reset attempt counter and retry immediately with the new key
             attempt = 0; 
             continue;
@@ -341,7 +371,8 @@ async function getRemoteExistingFiles(remoteDir) {
   }
 }
 
-async function processStage(stageSpec, force = false) {
+async function processStage(stageSpec, opts = {}) {
+  const { force = false, overwriteOpenai = false, dryRun = false, report } = opts;
   const { num, localDir, remoteDir, localAudioPrefix } = stageSpec;
   console.log(`\n======================================================`);
   console.log(`🔷 [Stage ${num}] Directory: "${localDir}" -> Supabase: "${remoteDir}"`);
@@ -369,6 +400,7 @@ async function processStage(stageSpec, force = false) {
     const jsonPath = path.join(stageDirPath, `${pid}.json`);
 
     if (!fs.existsSync(jsonPath)) {
+      if (overwriteOpenai && remoteFiles.has(`${pid}.mp3`) && report) report.noSource.push(`${remoteDir}/${pid}.mp3`);
       console.warn(`⚠️ File missing: ${jsonPath} (skipping)`);
       continue;
     }
@@ -378,9 +410,42 @@ async function processStage(stageSpec, force = false) {
 
     const existsLocally = fs.existsSync(localFilePath) && fs.statSync(localFilePath).size > 10240;
     const existsRemotely = remoteFiles.has(`${pid}.mp3`);
+    const remotePath = `${remoteDir}/${pid}.mp3`;
 
-    if (!force && (existsLocally || existsRemotely)) {
-      console.log(`⏭️ Skipping ${localDir}/${pid} (already exists, locally: ${existsLocally}, remotely: ${existsRemotely})`);
+    if (!force) {
+      if (overwriteOpenai) {
+        // Mode: overwrite ONLY legacy OpenAI clips, keep Gemini clips, and fill gaps.
+        if (existsRemotely) {
+          let engine = 'unknown';
+          try {
+            engine = await classifyRemoteClip({ supabaseUrl: SUPABASE_URL, key: SUPABASE_KEY, bucket: BUCKET, remotePath });
+          } catch (e) {
+            console.warn(`⚠️ Could not classify ${remotePath} (${e.message}) — skipping to avoid clobbering a good clip.`);
+            if (report) report.skipUnknown.push(remotePath);
+            successCount++;
+            continue;
+          }
+          if (engine === 'gemini') {
+            console.log(`⏭️ Skipping ${remotePath} (already Gemini).`);
+            if (report) report.skipGemini.push(remotePath);
+            successCount++;
+            continue;
+          }
+          // 'openai' (legacy) -> overwrite; 'absent' -> treat as a gap to fill.
+          console.log(`♻️ Legacy OpenAI clip detected — will overwrite: ${remotePath}`);
+          if (report) report.overwriteOpenai.push(remotePath);
+        } else if (report) {
+          report.fillGap.push(remotePath);
+        }
+      } else if (existsLocally || existsRemotely) {
+        console.log(`⏭️ Skipping ${localDir}/${pid} (already exists, locally: ${existsLocally}, remotely: ${existsRemotely})`);
+        successCount++;
+        continue;
+      }
+    }
+
+    if (dryRun) {
+      console.log(`📝 [dry-run] would generate/overwrite ${remotePath}`);
       successCount++;
       continue;
     }
@@ -397,7 +462,10 @@ async function processStage(stageSpec, force = false) {
     console.log(`Script: "${narrationText.substring(0, 100)}..."`);
 
     let success = false;
-    while (!success) {
+    let attempt = 0;
+    const MAX_ATTEMPTS = 2;
+    while (!success && attempt < MAX_ATTEMPTS) {
+      attempt++;
       try {
         // 1. Generate Voice Audio via Gemini 2.5 Voice API (Aoede)
         const rawAudioBuffer = await generateGeminiTTS(narrationText);
@@ -434,10 +502,10 @@ async function processStage(stageSpec, force = false) {
         fs.writeFileSync(localFilePath, mp3Buffer);
         console.log(`💾 Saved locally to: ${localFilePath}`);
 
-        // 4. Upload to Supabase Storage math-tts bucket
-        const remotePath = `${remoteDir}/${pid}.mp3`;
+        // 4. Upload to Supabase Storage math-tts bucket (remotePath defined above)
         await uploadToSupabase(mp3Buffer, remotePath);
         console.log(`☁️ Uploaded to Supabase: ${BUCKET}/${remotePath}`);
+        recordManifest(remotePath, mp3Buffer.length);
 
         successCount++;
         success = true;
@@ -446,9 +514,22 @@ async function processStage(stageSpec, force = false) {
         await new Promise(resolve => setTimeout(resolve, 6500));
 
       } catch (err) {
-        console.error(`❌ Failed to process ${pid}:`, err.message);
-        console.log(`⏳ Waiting 65 seconds for API quota recovery before retrying ${pid}...`);
-        await new Promise(resolve => setTimeout(resolve, 65000));
+        const msg = (err && err.message) || String(err);
+        const fatal = err.name === 'AbortError' || /quota|QUOTA|RESOURCE_EXHAUSTED|exhausted|depleted|credit|abort|\b429\b|limit|exceeded/i.test(msg);
+        console.error(`❌ Failed to process ${pid} (attempt ${attempt}/${MAX_ATTEMPTS}): ${msg.slice(0, 160)}`);
+        if (fatal) {
+          // Quota/credits exhausted or the API hung — retrying within this run is futile.
+          console.error(`🛑 Quota/credits exhausted or request timed out — stopping run.`);
+          failCount++;
+          return { successCount, failCount, aborted: true };
+        }
+        if (attempt < MAX_ATTEMPTS) {
+          console.log(`⏳ Transient error — retrying ${pid} in 10s...`);
+          await new Promise(resolve => setTimeout(resolve, 10000));
+        } else {
+          console.warn(`⚠️ Giving up on ${pid} after ${MAX_ATTEMPTS} attempts.`);
+          failCount++;
+        }
       }
     }
   }
@@ -461,6 +542,9 @@ async function main() {
   const args = process.argv.slice(2);
   const chapterArg = args[0];
   const force = args.includes('--force');
+  const overwriteOpenai = args.includes('--overwrite-openai') || args.includes('--upgrade-legacy');
+  const dryRun = args.includes('--dry-run');
+  const report = { overwriteOpenai: [], fillGap: [], skipGemini: [], skipUnknown: [], noSource: [] };
 
   if (!chapterArg || !CHAPTER_MAP[chapterArg]) {
     console.error(`❌ Error: Please specify a valid chapter key.`);
@@ -483,9 +567,24 @@ async function main() {
       continue;
     }
 
-    const result = await processStage(stageSpec, force);
+    const result = await processStage(stageSpec, { force, overwriteOpenai, dryRun, report });
     totalSuccess += result.successCount;
     totalFail += result.failCount;
+    if (result.aborted) {
+      console.error(`🛑 Stopping chapter "${spec.name}" — quota/credits exhausted. Resume after reset/top-up.`);
+      break;
+    }
+  }
+
+  if (overwriteOpenai) {
+    console.log(`\n===== OVERWRITE-OPENAI ${dryRun ? '(DRY-RUN) ' : ''}REPORT =====`);
+    console.log(`  Legacy OpenAI clips to overwrite (source present): ${report.overwriteOpenai.length}`);
+    console.log(`  Missing gaps to fill (source present):             ${report.fillGap.length}`);
+    console.log(`  Skipped (already Gemini):                          ${report.skipGemini.length}`);
+    console.log(`  Skipped (classify failed, left untouched):         ${report.skipUnknown.length}`);
+    console.log(`  Remote clips with NO local source (need task c):   ${report.noSource.length}`);
+    if (report.overwriteOpenai.length) console.log(`  → overwrite: ${report.overwriteOpenai.join(', ')}`);
+    if (report.noSource.length) console.log(`  → no-source: ${report.noSource.join(', ')}`);
   }
 
 

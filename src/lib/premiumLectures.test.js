@@ -12,9 +12,9 @@ describe('premiumLectures SSOT', () => {
     expect(slugForLecture('nope')).toBeNull();
     expect(slugForLecture(null)).toBeNull();
   });
-  it('all 34 slugs are unique lowercase ascii', () => {
+  it('all 40 slugs are unique lowercase ascii', () => {
     const slugs = Object.values(PREMIUM_LECTURES).map((v) => v.slug);
-    expect(slugs.length).toBe(34);
+    expect(slugs.length).toBe(40);
     expect(new Set(slugs).size).toBe(slugs.length);
     slugs.forEach((s) => expect(s).toMatch(/^[a-z0-9_]+$/));
   });
