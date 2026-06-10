@@ -425,6 +425,12 @@ async function processStage(key, opts) {
 
   let successCount = 0;
   let failCount = 0;
+  // key2(선불키)는 수분 내 회복되는 버스트 제한(429 후 200) 패턴을 보임 →
+  // quota 오류 시 즉시 중단하지 않고 90초 쿨다운 후 재시도(연속 최대 6회, 성공 시 리셋).
+  // 일일 quota가 진짜 소진된 날도 최대 9분 내 clean abort 되므로 hang 없음.
+  const MAX_QUOTA_COOLDOWNS = 6;
+  const QUOTA_COOLDOWN_MS = 90000;
+  let quotaCooldowns = 0;
 
   for (const pid of targets) {
     const remotePath = `${ttsDir}/${pid}.mp3`;
@@ -495,13 +501,21 @@ async function processStage(key, opts) {
 
         successCount++;
         success = true;
+        quotaCooldowns = 0; // 성공하면 쿨다운 카운터 리셋 (버스트 회복 확인됨)
         await new Promise(r => setTimeout(r, 6500)); // ≤10 RPM 페이싱
       } catch (err) {
         const msg = (err && err.message) || String(err);
         const fatal = err.name === 'AbortError' || /quota|RESOURCE_EXHAUSTED|exhausted|depleted|credit|abort|\b429\b|limit|exceeded/i.test(msg);
         console.error(`❌ Failed ${ttsDir}/${pid} (attempt ${attempt}/${MAX_ATTEMPTS}): ${msg.slice(0, 160)}`);
         if (fatal) {
-          console.error('🛑 Quota/credits exhausted or request timed out — stopping run.');
+          if (quotaCooldowns < MAX_QUOTA_COOLDOWNS) {
+            quotaCooldowns++;
+            console.warn(`⏳ Quota/burst cooldown ${quotaCooldowns}/${MAX_QUOTA_COOLDOWNS} — ${QUOTA_COOLDOWN_MS / 1000}s 대기 후 같은 클립 재시도`);
+            attempt--; // 쿨다운 재시도는 시도 횟수를 소모하지 않음
+            await new Promise(r => setTimeout(r, QUOTA_COOLDOWN_MS));
+            continue;
+          }
+          console.error('🛑 Quota/credits exhausted (cooldown 한도 초과) — stopping run.');
           failCount++;
           return { successCount, failCount, aborted: true };
         }
