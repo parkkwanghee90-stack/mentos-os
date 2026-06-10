@@ -157,7 +157,7 @@ function LoginModal({ onLogin, onClose }) {
         </div>
 
         <p style={{ textAlign: 'center', marginTop: '2rem', fontSize: '0.8rem', color: '#94a3b8' }}>
-          실데이터 소셜 로그인을 사용해 연동해 주세요.
+          가입한 이메일 또는 아이디로 로그인해 주세요.
         </p>
       </div>
     </div>
