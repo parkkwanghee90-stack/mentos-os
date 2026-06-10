@@ -1,9 +1,9 @@
 #!/bin/bash
 # Auto-generate prepared TTS clips once Gemini daily quota resets.
-# Scope: fill the 42 gap clips (quad_eq/quad_func) + the 2 recovered clips (circle_s2#13,
-# complex_s3#15) AND overwrite the 163 legacy OpenAI clips with Gemini 3.1 (--overwrite-openai).
-# Idempotent: skips clips already Gemini, fills gaps, overwrites only OpenAI. Resumes across
-# days until tts_completion_check.cjs reports COMPLETE (then sets the done-marker).
+# Scope: (1) math-sang gaps + legacy OpenAI overwrites (generate_gemini_math_sang_tts.cjs)
+#        (2) 수1(수학I) full-range gap-fill (generate_su1_tts.cjs)
+# Idempotent: skips clips already present/Gemini. Resumes across days until BOTH
+# completion checks pass (then sets the done-marker).
 # Triggered by launchd (com.mentos.autotts) at several KST times around the PT-midnight reset.
 set -u
 cd /Users/mac/mathmentos || exit 1
@@ -30,8 +30,8 @@ fi
 trap 'rmdir "$LOCK" 2>/dev/null' EXIT
 
 # Quota probe: tiny TTS request against EACH key; YES if either key has quota.
-# A 429 (exhausted) consumes nothing; a 200 consumes one slot. stdout-only sentinel so the
-# dotenv(x) banner cannot pollute the result (we grep for the exact token).
+# NOTE: a 200 probe CONSUMES one request — key2's burst quota is tiny, so probes are
+# spent ONLY for the sang generator (it lacks cooldown-retry). su1 runs probe-free.
 precheck_ok() {
   local out
   out=$("$NODE" -e '
@@ -54,49 +54,50 @@ precheck_ok() {
   echo "$out" | grep -q "PRECHECK=YES"
 }
 
-# Initial gate — fast-exit while still blocked (no hang, no work, no wasted completion scan).
-if ! precheck_ok; then
-  echo "[$(date)] auto_tts precheck: blocked (429) — will retry next schedule" >> "$LOG"
-  exit 0
-fi
-
-# Jobs: "chapter:flag". Empty flag = gap-fill only. --overwrite-openai = overwrite legacy
-# OpenAI clips + fill gaps. quad_eq/quad_func/complex have no OpenAI (pure gap-fill).
-JOBS=(
-  "quad_eq:"
-  "quad_func:"
-  "complex:"
-  "point:"
-  "cases:--overwrite-openai"
-  "circle:--overwrite-openai"
-  "line:--overwrite-openai"
-  "quad_ineq:--overwrite-openai"
-  "shape_move:--overwrite-openai"
-)
-
-for job in "${JOBS[@]}"; do
-  ch="${job%%:*}"
-  flag="${job#*:}"
-  # Re-probe before each chapter: once quota is exhausted, STOP rather than let the
-  # generator's 65s-retry loop hang each remaining chapter until its 30-min timeout.
-  if ! precheck_ok; then
-    echo "[$(date)] auto_tts: quota exhausted before '$ch' — stopping; resume next schedule" >> "$LOG"
-    break
-  fi
-  echo "[$(date)] auto_tts generating: $ch ${flag:-（gap-fill）}" >> "$LOG"
-  # No `timeout` binary on macOS; the generator self-limits (bounded retries + abort on
-  # quota/credit/hang via a 180s per-request AbortController), so call node directly.
-  "$NODE" scripts/generate_gemini_math_sang_tts.cjs "$ch" $flag >> "$LOG" 2>&1
-done
-
-# 수1(수학I) TTS: generate_su1_tts.cjs 가 전 스테이지를 자체 순회하며 갭만 채우고,
-# quota 소진 시 clean abort 하므로 한 번 호출로 충분 (per-stage precheck 불필요).
-if precheck_ok; then
-  echo "[$(date)] auto_tts generating: su1 all (gap-fill)" >> "$LOG"
-  "$NODE" scripts/generate_su1_tts.cjs all >> "$LOG" 2>&1
+# ── (1) math-sang scope ─────────────────────────────────────────────────────
+# Completion check is quota-free; once sang is COMPLETE, skip its jobs AND all
+# prechecks so key2's small burst quota goes entirely to su1 generation.
+SANG_RES=$("$NODE" scripts/tts_completion_check.cjs 2>/dev/null)
+if echo "$SANG_RES" | grep -q "TTS_COMPLETE"; then
+  echo "[$(date)] auto_tts: sang scope COMPLETE — skipping sang jobs/prechecks" >> "$LOG"
 else
-  echo "[$(date)] auto_tts: quota exhausted before su1 — resume next schedule" >> "$LOG"
+  # Initial gate — fast-exit while still blocked (no hang, no work).
+  if ! precheck_ok; then
+    echo "[$(date)] auto_tts precheck: blocked (429) — sang skipped; su1 will self-manage" >> "$LOG"
+  else
+    # Jobs: "chapter:flag". Empty flag = gap-fill only. --overwrite-openai = overwrite
+    # legacy OpenAI clips + fill gaps.
+    JOBS=(
+      "quad_eq:"
+      "quad_func:"
+      "complex:"
+      "point:"
+      "cases:--overwrite-openai"
+      "circle:--overwrite-openai"
+      "line:--overwrite-openai"
+      "quad_ineq:--overwrite-openai"
+      "shape_move:--overwrite-openai"
+    )
+    for job in "${JOBS[@]}"; do
+      ch="${job%%:*}"
+      flag="${job#*:}"
+      # Re-probe before each chapter: the sang generator lacks cooldown-retry, so
+      # stop early rather than let it abort mid-chapter.
+      if ! precheck_ok; then
+        echo "[$(date)] auto_tts: quota exhausted before '$ch' — stopping sang; resume next schedule" >> "$LOG"
+        break
+      fi
+      echo "[$(date)] auto_tts generating: $ch ${flag:-（gap-fill）}" >> "$LOG"
+      "$NODE" scripts/generate_gemini_math_sang_tts.cjs "$ch" $flag >> "$LOG" 2>&1
+    done
+  fi
 fi
+
+# ── (2) 수1 scope ───────────────────────────────────────────────────────────
+# No precheck: the su1 generator has burst-cooldown retry (90s x6) and clean-aborts
+# on true exhaustion, so probing here would only waste burst quota.
+echo "[$(date)] auto_tts generating: su1 all (gap-fill)" >> "$LOG"
+"$NODE" scripts/generate_su1_tts.cjs all >> "$LOG" 2>&1
 
 # Completion check (no quota cost): mark done only when BOTH the math-sang scope
 # (gaps filled AND no legacy OpenAI) and the su1 scope (all hint clips present) finish.
