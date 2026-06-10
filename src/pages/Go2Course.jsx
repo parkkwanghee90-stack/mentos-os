@@ -8,6 +8,7 @@ import { useAuth } from '@/context/AuthContext';
 import { speakText, stopSpeaking } from '@/services/ttsService';
 import { isTrulyPaid } from '@/lib/freeEvent';
 import NaesinPaywall from '@/components/NaesinPaywall';
+import ProblemFigure from '@/components/ProblemFigure';
 
 // LaTeX → 한국어 음성용 정리
 function cleanForSpeech(text) {
@@ -183,6 +184,9 @@ export default function Go2Course() {
               <MathText text={parsed.body} />
             </div>
 
+            {/* 도형 (figure 데이터가 있으면 렌더 — 그림 필요한 문제) */}
+            <ProblemFigure figure={prob.figure} />
+
             {/* 정답 입력 */}
             {prob.type === '객관식' ? (
               parsed.options.length >= 2 ? (
@@ -236,7 +240,7 @@ export default function Go2Course() {
                   <span style={{ fontWeight: 800, color: '#a78bfa' }}><Sparkles size={16} /> 사고력 AVS 해설</span>
                 </div>
                 {prob.avs && prob.avs.length ? (
-                  <ClassroomBoard key={prob.id} steps={prob.avs} answer={prob.answer}
+                  <ClassroomBoard key={prob.id} steps={prob.avs} answer={prob.answer} figure={prob.figure}
                     onSpeak={speakAVS} speaking={speaking} />
                 ) : <p style={{ color: '#94a3b8' }}>이 문제의 AVS 해설은 준비 중입니다. (정답: {prob.answer})</p>}
               </div>

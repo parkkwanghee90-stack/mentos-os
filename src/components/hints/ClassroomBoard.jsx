@@ -13,6 +13,7 @@ import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Play, Pause, StepForward, StepBack, RotateCcw, Volume2, VolumeX } from 'lucide-react';
 import 'katex/dist/katex.min.css';
 import { BlockMath, InlineMath } from '@/components/KaTeXWrapper';
+import ProblemFigure from '@/components/ProblemFigure';
 
 // PCBSA 단계 메타 — 분필색 배지
 const PHASE = {
@@ -82,7 +83,7 @@ function normalizeSteps(raw) {
   }).filter(s => s.content || s.title);
 }
 
-export default function ClassroomBoard({ steps: rawSteps = [], answer, onSpeak, speaking }) {
+export default function ClassroomBoard({ steps: rawSteps = [], answer, onSpeak, speaking, figure = null }) {
   const [step, setStep] = useState(0);
   const [playing, setPlaying] = useState(false);
   const [speed, setSpeed] = useState(1);
@@ -116,6 +117,10 @@ export default function ClassroomBoard({ steps: rawSteps = [], answer, onSpeak, 
 
   return (
     <div className="cb-wrap">
+      {/* 도형(figure)이 있으면 칠판 상단에 함께 표시 — AVS 도형렌더러 */}
+      {figure?.objects?.length > 0 && (
+        <div style={{ marginBottom: 10 }}><ProblemFigure figure={figure} height={240} /></div>
+      )}
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nanum+Pen+Script&display=swap');
 
