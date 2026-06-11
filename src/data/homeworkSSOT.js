@@ -119,23 +119,27 @@ export const HOMEWORK_UNITS = [
     folderName: '09고차방정식',
     hintKey: '수학상_09고차방정식_통합숙제',
     answerKey: '수학상_09고차방정식_통합숙제',
-    problemCount: 22,
+    // 원본 문제집(매쓰홀릭 정답및해설)은 20문제. 021·022는 크롭 파이프라인이
+    // 마지막 문제 자산을 복제해 만든 유령 슬롯이라 제거함 (2026-06).
+    problemCount: 20,
     imagePath: '/math_crops/숙제/수학상/09고차방정식/',
     hintPath: '/math_hints/수학상_09고차방정식_통합숙제/',
     relatedUnit: '고차방정식',
-    stages: { '2단계': { start: 1, end: 10 }, '3·4단계': { start: 1, end: 22 } },
+    stages: { '2단계': { start: 1, end: 10 }, '3·4단계': { start: 1, end: 20 } },
   },
   {
+    // hw_10~13: 크롭 파이프라인이 각 단원 꼬리에 유령 슬롯 2개씩 생성해 원본보다 +2였음.
+    // 원본(매쓰홀릭) 문제 수로 정정 (2026-06-11). 상세: scripts/homework_avs_asset_issues.json
     id: 'hw_10',
     title: '일차부등식',
     folderName: '10일차부등식',
     hintKey: '수학상_10일차부등식_통합숙제',
     answerKey: '수학상_10일차부등식_통합숙제',
-    problemCount: 15,
+    problemCount: 13,
     imagePath: '/math_crops/숙제/수학상/10일차부등식/',
     hintPath: '/math_hints/수학상_10일차부등식_통합숙제/',
     relatedUnit: '일차부등식',
-    stages: { '2단계': { start: 1, end: 7 }, '3·4단계': { start: 1, end: 15 } },
+    stages: { '2단계': { start: 1, end: 7 }, '3·4단계': { start: 1, end: 13 } },
   },
   {
     id: 'hw_11',
@@ -143,11 +147,11 @@ export const HOMEWORK_UNITS = [
     folderName: '11이차부등식',
     hintKey: '수학상_11이차부등식_통합숙제',
     answerKey: '수학상_11이차부등식_통합숙제',
-    problemCount: 32,
+    problemCount: 30,
     imagePath: '/math_crops/숙제/수학상/11이차부등식/',
     hintPath: '/math_hints/수학상_11이차부등식_통합숙제/',
     relatedUnit: '이차부등식',
-    stages: { '2단계': { start: 1, end: 15 }, '3·4단계': { start: 1, end: 32 } },
+    stages: { '2단계': { start: 1, end: 15 }, '3·4단계': { start: 1, end: 30 } },
   },
   {
     id: 'hw_12',
@@ -155,11 +159,11 @@ export const HOMEWORK_UNITS = [
     folderName: '12경우의수',
     hintKey: '수학상_12경우의수_통합숙제',
     answerKey: '수학상_12경우의수_통합숙제',
-    problemCount: 38,
+    problemCount: 36,
     imagePath: '/math_crops/숙제/수학상/12경우의수/',
     hintPath: '/math_hints/수학상_12경우의수_통합숙제/',
     relatedUnit: '경우의수',
-    stages: { '2단계': { start: 1, end: 18 }, '3·4단계': { start: 1, end: 38 } },
+    stages: { '2단계': { start: 1, end: 18 }, '3·4단계': { start: 1, end: 36 } },
   },
   {
     id: 'hw_13',
@@ -167,11 +171,11 @@ export const HOMEWORK_UNITS = [
     folderName: '13행렬',
     hintKey: '수학상_13행렬_통합숙제',
     answerKey: '수학상_13행렬_통합숙제',
-    problemCount: 42,
+    problemCount: 40,
     imagePath: '/math_crops/숙제/수학상/13행렬/',
     hintPath: '/math_hints/수학상_13행렬_통합숙제/',
     relatedUnit: '행렬',
-    stages: { '2단계': { start: 1, end: 20 }, '3·4단계': { start: 1, end: 42 } },
+    stages: { '2단계': { start: 1, end: 20 }, '3·4단계': { start: 1, end: 40 } },
   },
 
   // ════════════════════════════════════════
