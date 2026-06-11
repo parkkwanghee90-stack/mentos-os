@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 수학1 - 로그 9번 명품 해설",
   "type": "algebra",
-  "P": "로그의 정의와 성질을 활용하여 주어진 식의 값을 구합니다.",
-  "C": "로그의 밑 변환 공식과 성질을 적용하여 식을 정리합니다.",
-  "B": "로그의 성질:\n\n1) $$\\log_a b = c \\iff a^c = b$$\n2) $$\\log_a MN = \\log_a M + \\log_a N$$\n3) $$\\log_a \\frac{M}{N} = \\log_a M - \\log_a N$$\n4) $$\\log_a M^k = k\\log_a M$$\n5) 밑 변환: $$\\log_a b = \\frac{\\log_c b}{\\log_c a}$$\n6) $$\\log_a b \\cdot \\log_b c = \\log_a c$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "0이 아닌 두 실수 $a, b$에 대하여 주어진 로그 방정식을 만족할 때, $\\frac{b}{a} + \\frac{a}{b}$의 값을 구해야 합니다.",
+  "C": "$a, b$는 $0$이 아닌 두 실수이며, $\\log_2 (a^2+ab+b^2) = 1 + \\log_2 (a^2-ab+b^2)$ 입니다.",
+  "B": "로그의 성질: $1 = \\log_a a$\n로그의 성질: $\\log_a M + \\log_a N = \\log_a (MN)$\n로그의 성질: $\\log_a M = \\log_a N \\iff M=N$ (단, $M, N > 0$)\n분수의 덧셈: $\\frac{A}{B} + \\frac{C}{D} = \\frac{AD+BC}{BD}$",
+  "S": "주어진 로그 방정식의 우변에 있는 상수 $1$을 밑이 $2$인 로그로 표현한 후, 로그의 합을 하나의 로그로 합칩니다.\n$$ \\log_2 (a^2+ab+b^2) = \\log_2 2 + \\log_2 (a^2-ab+b^2) = \\log_2 \\{2 (a^2-ab+b^2)\\} $$\n양변의 로그 밑이 같으므로, 진수끼리 같다고 놓아 로그를 제거합니다.\n$$ a^2+ab+b^2 = 2 (a^2-ab+b^2) $$\n방정식을 전개하고 모든 항을 한쪽으로 이항하여 동류항끼리 정리합니다.\n$$ a^2+ab+b^2 = 2a^2-2ab+2b^2 $$\n$$ 0 = (2a^2-a^2) + (-2ab-ab) + (2b^2-b^2) $$\n$$ a^2-3ab+b^2 = 0 $$\n구하고자 하는 식의 형태를 만들기 위해 $a^2+b^2$ 항을 $ab$ 항과 분리하여 관계식을 얻습니다.\n$$ a^2+b^2 = 3ab $$\n구해야 하는 식 $\\frac{b}{a} + \\frac{a}{b}$를 통분하여 정리한 후, 앞서 구한 관계식을 대입하여 최종 값을 계산합니다.\n$$ \\frac{b}{a} + \\frac{a}{b} = \\frac{b^2}{ab} + \\frac{a^2}{ab} = \\frac{a^2+b^2}{ab} = \\frac{3ab}{ab} = 3 $$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/수학1/02로그/009a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{③번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{3}}$$ 입니다.",
   "finalAnswer": "3",
   "correctAnswer": "3",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "gemini-2.5-flash"
 }

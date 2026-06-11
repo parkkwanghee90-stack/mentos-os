@@ -358,7 +358,10 @@ async function processProblem(unitName, unit, pid, manifest, mismatches) {
   // 정답 표기: 1~5 값이라도 단답형이면 "○번"으로 포장하면 안 됨 —
   // 비전이 객관식(choice)으로 확인한 경우에만 ○번 표기, 그 외엔 값 그대로 (QA wave0 지적)
   const visionChoice = (r.answer && typeof r.answer === 'object') ? normalizeAnswer(r.answer.choice) : '';
-  const isChoiceQuestion = visionChoice !== '' && visionChoice === normalizeAnswer(existing.finalAnswer);
+  const visionValue = (r.answer && typeof r.answer === 'object') ? normalizeAnswer(r.answer.value) : '';
+  // ○번 표기는 비전 choice가 저장 정답과 일치하고 value와는 구분될 때만 — 비전이 choice를
+  // 값으로 오보고하면 잘못된 보기 번호가 노출됨 (02로그 008·034 QA major). 모호하면 값 표기가 안전.
+  const isChoiceQuestion = visionChoice !== '' && visionChoice === normalizeAnswer(existing.finalAnswer) && visionValue !== normalizeAnswer(existing.finalAnswer);
   const display = isChoiceQuestion ? answerDisplay(existing.finalAnswer) : String(existing.finalAnswer).trim();
 
   const out = {
