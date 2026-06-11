@@ -209,7 +209,12 @@ function normalizeAnswer(v) {
     .replace(/\\sqrt/g, '√')
     .replace(/\\(?=[a-zA-Z])/g, '')
     .replace(/[{}]/g, '')
-    .replace(/\(([^()]*)\)/g, '$1')
+    ;
+  for (let prev = ''; prev !== s; ) { prev = s; s = s.replace(/\(([^()]*)\)/g, '$1'); } // 중첩 괄호 수렴 제거
+  s = s
+    // 캐노니컬 토큰화: sqrt(x)/√x/\sqrt, π/pi 표기 차이 흡수 (05삼각함수정의 위양성 6건)
+    .replace(/√/g, 'sqrt')
+    .replace(/π/g, 'pi')
     .replace(/\s+/g, '');
   return s;
 }
