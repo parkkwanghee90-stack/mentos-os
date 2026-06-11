@@ -7,6 +7,9 @@
 # Triggered by launchd (com.mentos.autotts) at several KST times around the PT-midnight reset.
 set -u
 cd /Users/mac/mathmentos || exit 1
+# launchd 기본 PATH(/usr/bin:/bin:...)에는 /usr/local/bin이 없어 생성기의 ffmpeg 호출이
+# "command not found"로 깨진다(생성 quota만 소모). 어떤 트리거든 동일 환경이 되도록 보강.
+export PATH="/usr/local/bin:/opt/homebrew/bin:$PATH"
 NODE=/usr/local/bin/node
 MARK="scripts/.auto_tts_done"
 LOG="scripts/tts_progress.log"

@@ -517,7 +517,7 @@ async function processStage(key, opts) {
       } catch (err) {
         const msg = (err && err.message) || String(err);
         const fatal = err.name === 'AbortError' || /quota|RESOURCE_EXHAUSTED|exhausted|depleted|credit|abort|\b429\b|limit|exceeded/i.test(msg);
-        console.error(`❌ Failed ${ttsDir}/${pid} (attempt ${attempt}/${MAX_ATTEMPTS}): ${msg.slice(0, 160)}`);
+        console.error(`❌ Failed ${ttsDir}/${pid} (attempt ${attempt}/${MAX_ATTEMPTS}): ${msg.slice(0, 400)}`);
         if (fatal) {
           if (quotaCooldowns < MAX_QUOTA_COOLDOWNS) {
             quotaCooldowns++;
