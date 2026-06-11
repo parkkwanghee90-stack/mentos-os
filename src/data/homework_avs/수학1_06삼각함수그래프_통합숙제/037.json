@@ -11,9 +11,9 @@
       "src": "/math_crops/숙제/수학1/06삼각함수그래프/037a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{11/8}}$$ 입니다.",
-  "finalAnswer": "11/8",
-  "correctAnswer": "11/8",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{④번}}$$ 입니다.",
+  "finalAnswer": "4",
+  "correctAnswer": "4",
   "pcbsa_completed": true,
   "vision_generated": true,
   "vision_model": "gemini-2.5-flash"

@@ -1,8 +1,8 @@
 {
   "title": "[통합숙제] 수학1 - 삼각함수 그래프 16번 명품 해설",
   "type": "trigonometry",
-  "P": "주어진 삼각함수 등식을 이용하여 cos(θ - π/3)의 값을 구해야 합니다.",
-  "C": "주어진 조건은 3sin²(θ + 2π/3) = 8sin(θ + π/6) 입니다.",
+  "P": "주어진 삼각함수 등식을 이용하여 $\\cos\\left(\\theta - \\frac{\\pi}{3}\\right)$의 값을 구해야 합니다.",
+  "C": "주어진 조건은 $3\\sin^2\\left(\\theta + \\frac{2\\pi}{3}\\right) = 8\\sin\\left(\\theta + \\frac{\\pi}{6}\\right)$ 입니다.",
   "B": "삼각함수의 각 변환 공식: $$ \\sin(\\pi + x) = -\\sin x $$, $$ \\sin(\\frac{\\pi}{2} + x) = \\cos x $$\n삼각함수의 관계: $$ \\sin^2x + \\cos^2x = 1 $$\n코사인 함수의 값의 범위: $$ -1 \\le \\cos x \\le 1 $$",
   "S": "구하고자 하는 식의 형태를 단순화하고 주어진 조건식의 각을 통일하기 위해 θ - π/3를 α로 치환합니다. 이때, 주어진 조건식의 각을 α에 대한 식으로 표현합니다.\n$$ \\theta - \\frac{\\pi}{3} = \\alpha $$\n$$ \\theta + \\frac{2}{3}\\pi = \\left(\\theta - \\frac{\\pi}{3}\\right) + \\pi = \\alpha + \\pi $$\n$$ \\theta + \\frac{\\pi}{6} = \\left(\\theta - \\frac{\\pi}{3}\\right) + \\frac{\\pi}{2} = \\alpha + \\frac{\\pi}{2} $$\n치환된 각을 이용하여 주어진 조건식의 좌변 3sin²(θ + 2π/3)을 α에 대한 코사인 식으로 변환합니다.\n$$ 3\\sin^2\\left(\\theta + \\frac{2}{3}\\pi\\right) = 3\\sin^2(\\pi + \\alpha) $$\n$$ = 3(-\\sin\\alpha)^2 = 3\\sin^2\\alpha $$\n$$ = 3(1 - \\cos^2\\alpha) = 3 - 3\\cos^2\\alpha $$\n치환된 각을 이용하여 주어진 조건식의 우변 8sin(θ + π/6)을 α에 대한 코사인 식으로 변환합니다.\n$$ 8\\sin\\left(\\theta + \\frac{\\pi}{6}\\right) = 8\\sin\\left(\\frac{\\pi}{2} + \\alpha\\right) $$\n$$ = 8\\cos\\alpha $$\n좌변과 우변을 α에 대한 코사인 식으로 변환했으므로, 이들을 등식으로 연결하여 cos α에 대한 방정식을 세웁니다.\n$$ 3 - 3\\cos^2\\alpha = 8\\cos\\alpha $$\ncos α에 대한 이차방정식을 표준 형태로 정리하고 인수분해하여 cos α의 값을 구합니다.\n$$ 3\\cos^2\\alpha + 8\\cos\\alpha - 3 = 0 $$\n$$ (3\\cos\\alpha - 1)(\\cos\\alpha + 3) = 0 $$\n따라서 $$ \\cos\\alpha = \\frac{1}{3} $$ 또는 $$ \\cos\\alpha = -3 $$ 입니다.\n코사인 함수의 값의 범위는 -1 ≤ cos x ≤ 1이므로, 이 범위를 만족하는 cos α의 값을 선택합니다.\n$$ -1 \\le \\cos\\alpha \\le 1 $$\n이므로 $$ \\cos\\alpha = -3 $$은 불가능합니다. 따라서 $$ \\cos\\alpha = \\frac{1}{3} $$입니다.\n처음 치환했던 α = θ - π/3를 다시 대입하여 문제에서 요구하는 cos(θ - π/3)의 최종 값을 구합니다.\n$$ \\cos\\left(\\theta - \\frac{\\pi}{3}\\right) = \\cos\\alpha = \\frac{1}{3} $$",
   "S_objects": [

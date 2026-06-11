@@ -297,6 +297,8 @@ function latexifyAnswer(s) {
     .replace(/(?<![A-Za-z\\])sqrt\(([^)]+)\)/g, '\\sqrt{$1}')
     .replace(/(\d+)\/(\d+)π/g, '\\frac{$1}{$2}\\pi')
     .replace(/π/g, '\\pi ')
+    .replace(/(?<![a-zA-Z\\])pi(?![a-zA-Z])/g, '\\pi ')
+    .replace(/\*/g, ' \\cdot ')
     .replace(/\^\(([^)]+)\)/g, '^{$1}')
     .replace(/\^(\d{2,})/g, '^{$1}')
     .replace(/(?<!\\)log_\{([^{}]+)\}/g, '\\log_{$1}')

@@ -11,7 +11,7 @@
       "src": "/math_crops/숙제/수학1/06삼각함수그래프/040a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2\\sqrt{3}/3*pi}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\frac{2\\sqrt{3}}{3}\\pi}}$$ 입니다.",
   "finalAnswer": "2sqrt(3)/3*pi",
   "correctAnswer": "2sqrt(3)/3*pi",
   "pcbsa_completed": true,

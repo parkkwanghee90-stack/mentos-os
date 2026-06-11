@@ -11,7 +11,7 @@
       "src": "/math_crops/숙제/수학1/06삼각함수그래프/039a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2+pi/4}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2+\\frac{\\pi}{4}}}$$ 입니다.",
   "finalAnswer": "2+pi/4",
   "correctAnswer": "2+pi/4",
   "pcbsa_completed": true,
