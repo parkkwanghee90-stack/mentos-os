@@ -198,7 +198,13 @@ function normalizeAnswer(v) {
   s = s.replace(/[①②③④⑤]/g, m => circled[m]).replace(/번$/, '').trim();
   // 수식 표기 동치 정규화(02로그/020 위양성): 양변 동일 규칙이므로 비교 일관성 유지
   s = s.replace(/\$+/g, '')
-    .replace(/\\d?frac\s*\{([^{}]*)\}\s*\{([^{}]*)\}/g, '($1)/($2)')
+    ;
+  // \frac 중첩 중괄호 지원 (1단계 중첩 패턴을 수렴까지 반복 — 03지수로그함수/043 \frac{7\sqrt{6}}{16} 위양성)
+  for (let prev = ''; prev !== s; ) {
+    prev = s;
+    s = s.replace(/\\d?frac\s*\{((?:[^{}]|\{[^{}]*\})*)\}\s*\{((?:[^{}]|\{[^{}]*\})*)\}/g, '($1)/($2)');
+  }
+  s = s
     .replace(/\\left|\\right/g, '')
     .replace(/\\sqrt/g, '√')
     .replace(/\\(?=[a-zA-Z])/g, '')
@@ -275,6 +281,19 @@ function sanitizeResult(r) {
   }
   if (Array.isArray(out.S_steps)) out.S_steps = out.S_steps.map(sanitizeText).filter(Boolean);
   return out;
+}
+
+// ── 정답 LaTeX 정제 (QA wave3a: \boxed 안 $ 중첩·평문 √/^()/log_ 깨짐 방지) ──
+function latexifyAnswer(s) {
+  let t = String(s).trim().replace(/^\$+|\$+$/g, '');
+  t = t
+    .replace(/√\(([^)]+)\)/g, '\\sqrt{$1}')
+    .replace(/√(\d+|[a-zA-Z])/g, '\\sqrt{$1}')
+    .replace(/\^\(([^)]+)\)/g, '^{$1}')
+    .replace(/\^(\d{2,})/g, '^{$1}')
+    .replace(/(?<!\\)log_\{([^{}]+)\}/g, '\\log_{$1}')
+    .replace(/(?<!\\)log_(10|\d)/g, '\\log_{$1}');
+  return t;
 }
 
 // ── 정답 표기 (①~⑤번 또는 값) ──
@@ -362,7 +381,20 @@ async function processProblem(unitName, unit, pid, manifest, mismatches) {
   // ○번 표기는 비전 choice가 저장 정답과 일치하고 value와는 구분될 때만 — 비전이 choice를
   // 값으로 오보고하면 잘못된 보기 번호가 노출됨 (02로그 008·034 QA major). 모호하면 값 표기가 안전.
   const isChoiceQuestion = visionChoice !== '' && visionChoice === normalizeAnswer(existing.finalAnswer) && visionValue !== normalizeAnswer(existing.finalAnswer);
-  const display = isChoiceQuestion ? answerDisplay(existing.finalAnswer) : String(existing.finalAnswer).trim();
+  // 박스 내용: 객관식이면 ○번, 아니면 비전 value(모델이 쓴 LaTeX)가 저장 정답과 동치일 때 그것을 우선
+  // 사용하고 latexify로 정제. 조립 후 KaTeX 검증 실패 시 평문 폴백 (QA wave3a 렌더 깨짐 방지).
+  let display;
+  if (isChoiceQuestion) {
+    display = answerDisplay(existing.finalAnswer);
+  } else {
+    const visionValRaw = (r.answer && typeof r.answer === 'object' && r.answer.value != null) ? String(r.answer.value) : '';
+    const useVision = visionValRaw && normalizeAnswer(visionValRaw) === normalizeAnswer(existing.finalAnswer);
+    display = latexifyAnswer(useVision ? visionValRaw : existing.finalAnswer);
+  }
+  let answerLine = `따라서 최종 정답은 $$\\mathbf{\\boxed{${display}}}$$ 입니다.`;
+  if (katexErrors(answerLine)) {
+    answerLine = `따라서 최종 정답은 [ ${String(existing.finalAnswer).replace(/\$/g, '')} ] 입니다.`;
+  }
 
   const out = {
     title: existing.title,
@@ -372,7 +404,7 @@ async function processProblem(unitName, unit, pid, manifest, mismatches) {
     B: sanitizeText(r.B),
     S: r.S_steps.map(sanitizeText).filter(Boolean).join('\n'),
     S_objects: existing.S_objects || [{ type: 'image', src: `/math_crops/숙제/${subject.koSubject}/${unitName}/${pid}a.webp` }],
-    A: `따라서 최종 정답은 $$\\mathbf{\\boxed{${display}}}$$ 입니다.`,
+    A: answerLine,
     finalAnswer: existing.finalAnswer,
     correctAnswer: existing.correctAnswer ?? existing.finalAnswer,
     pcbsa_completed: true,
