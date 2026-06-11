@@ -11,7 +11,7 @@
       "src": "/math_crops/숙제/수학1/03지수로그함수/053a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{log₂24}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\log_2 24}}$$ 입니다.",
   "finalAnswer": "log₂24",
   "correctAnswer": "log₂24",
   "pcbsa_completed": true,

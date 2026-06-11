@@ -11,7 +11,7 @@
       "src": "/math_crops/숙제/수학1/03지수로그함수/057a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{log_2(32/3)}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\log_2\\frac{32}{3}}}$$ 입니다.",
   "finalAnswer": "log_2(32/3)",
   "correctAnswer": "log_2(32/3)",
   "pcbsa_completed": true,

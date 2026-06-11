@@ -221,7 +221,7 @@ function answerCandidates(r) {
   return list.map(normalizeAnswer).filter(s => s !== '' && s !== 'null');
 }
 
-const META_PHRASES = ['해설 이미지', '해설이미지', '판서', '로 보입니다', '따르겠습니다', '잘못 해석', '잘못된 것으'];
+const META_PHRASES = ['해설 이미지', '해설이미지', '해설에', '판서', '로 보입니다', '따르겠습니다', '잘못 해석', '잘못된 것으', '가정하고 풀이'];
 
 function validateResult(r) {
   const issues = [];
@@ -267,7 +267,7 @@ function sanitizeText(s) {
     .replace(/\u000c/g, '\\f')
     .replace(/\u0008/g, '\\b')
     .replace(/\u000d/g, '\\r')
-    .replace(/\n(eq|abla|otin)\b/g, (m, g) => '\\n' + g)
+    .replace(/\n(eq|abla|otin|e)\b/g, (m, g) => '\\n' + g)
     .replace(/`/g, ''))
     .trim();
 }
