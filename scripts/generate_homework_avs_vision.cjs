@@ -294,6 +294,9 @@ function latexifyAnswer(s) {
   t = t
     .replace(/√\(([^)]+)\)/g, '\\sqrt{$1}')
     .replace(/√(\d+|[a-zA-Z])/g, '\\sqrt{$1}')
+    .replace(/(?<![A-Za-z\\])sqrt\(([^)]+)\)/g, '\\sqrt{$1}')
+    .replace(/(\d+)\/(\d+)π/g, '\\frac{$1}{$2}\\pi')
+    .replace(/π/g, '\\pi ')
     .replace(/\^\(([^)]+)\)/g, '^{$1}')
     .replace(/\^(\d{2,})/g, '^{$1}')
     .replace(/(?<!\\)log_\{([^{}]+)\}/g, '\\log_{$1}')
