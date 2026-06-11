@@ -44,7 +44,7 @@ async function verify(imgUrl, avsText, answer) {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         contents: [{ parts: [{ text: PROMPT(avsText, answer) }, { inline_data: { mime_type: 'image/webp', data: b64 } }] }],
-        generationConfig: { temperature: 0, maxOutputTokens: 2048, thinkingConfig: { thinkingBudget: 1024 }, responseMimeType: 'application/json' },
+        generationConfig: { temperature: 0, maxOutputTokens: 4096, thinkingConfig: { thinkingBudget: 1024 }, responseMimeType: 'application/json' },
       }),
     });
     if (res.status !== 429 && res.status !== 503) break;
@@ -53,8 +53,13 @@ async function verify(imgUrl, avsText, answer) {
   }
   if (!res.ok) return { err: `gemini ${res.status}` };
   const j = await res.json();
-  try { return { v: JSON.parse(j.candidates?.[0]?.content?.parts?.map(p => p.text).filter(Boolean).join('') || '{}') }; }
-  catch { return { err: 'parse' }; }
+  const raw = j.candidates?.[0]?.content?.parts?.map(p => p.text).filter(Boolean).join('') || '{}';
+  try { return { v: JSON.parse(raw) }; }
+  catch {
+    // 평가문 속 LaTeX 백슬래시(\beta 등)로 JSON이 깨지는 경우 복원
+    try { return { v: JSON.parse(raw.replace(/\\(?!["\\\/bfnrtu])/g, '\\\\')) }; }
+    catch { return { err: 'parse' }; }
+  }
 }
 
 (async () => {
