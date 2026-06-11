@@ -62,8 +62,35 @@ const BG_EQ = [
   { t: "f(x) = x² − 2x", x: "44%", y: "62%", s: 0.8 },
 ];
 
-/* 노트북 화면 안의 AVS 제품 UI */
+/* AVS 데모 5단계: 라벨 + AI 요약 (실제 풀이 흐름) */
+const AVS_DEMO_STEPS = [
+  { label: "문제 이해", summary: <>주어진 이차함수 <b>y = x² − 4x + 3</b>의 그래프에서 꼭짓점 좌표를 찾는 문제입니다.</> },
+  { label: "핵심 개념", summary: <>꼭짓점의 x좌표는 <b>x = −b/2a</b> 공식으로 구합니다. 여기서 a = 1, b = −4 입니다.</> },
+  { label: "식 변형", summary: <>완전제곱식으로 변형하면 <b>y = (x − 2)² − 1</b>. 꼭짓점이 식에서 바로 드러납니다.</> },
+  { label: "그래프 분석", summary: <>x = 2를 대칭축으로 하는, 아래로 볼록한 포물선이 그려집니다.</> },
+  { label: "답안 도출", summary: <>따라서 꼭짓점 좌표는 <b>(2, −1)</b> 입니다. 정답을 제출해 볼까요?</> },
+];
+
+const STEP_MS = 3200;
+
+/* 노트북 화면 안의 AVS 제품 UI — 실제 시각화 풀이가 자동 진행되는 데모 */
 function ProductUI() {
+  const reduce = useReducedMotion();
+  // 모션 최소화 환경에서는 최종 답안 상태를 정적으로 보여준다
+  const [step, setStep] = useState(reduce ? 4 : 0);
+
+  useEffect(() => {
+    if (reduce) return;
+    const id = setInterval(() => setStep((p) => (p + 1) % AVS_DEMO_STEPS.length), STEP_MS);
+    return () => clearInterval(id);
+  }, [reduce]);
+
+  const fade = (visible, dur = 0.45) => ({
+    initial: reduce ? false : { opacity: 0 },
+    animate: { opacity: visible ? 1 : 0 },
+    transition: { duration: dur },
+  });
+
   return (
     <div className="hv-product">
       <div className="hv-product-bar">
@@ -76,30 +103,123 @@ function ProductUI() {
           <p className="hv-prob-q">
             이차함수 <b>y = x² − 4x + 3</b>의<br />그래프의 꼭짓점 좌표를 구하세요.
           </p>
-          <span className="hv-prob-submit">정답 제출</span>
+          <span className="hv-prob-submit" style={step === 4 ? { boxShadow: "0 0 0 2px rgba(139,92,246,.55)" } : undefined}>정답 제출</span>
         </div>
 
         <div className="hv-avs-card">
           <span className="hv-avs-tag">AVS 시각화 풀이</span>
           <div className="hv-avs-grid">
             <div className="hv-avs-steps">
-              {["문제 이해", "핵심 개념", "식 변형", "그래프 분석", "답안 도출"].map((s, i) => (
-                <span key={s} className={`hv-avs-step ${i === 0 ? "is-on" : ""}`}>{s}</span>
+              {AVS_DEMO_STEPS.map((s, i) => (
+                <span
+                  key={s.label}
+                  className={`hv-avs-step ${i === step ? "is-on" : ""}`}
+                  onClick={() => setStep(i)}
+                  style={{ cursor: "pointer", opacity: i <= step ? 1 : 0.55, transition: "opacity .3s" }}
+                >
+                  {s.label}
+                </span>
               ))}
             </div>
-            <div className="hv-avs-graph">
+
+            <div className="hv-avs-graph" style={{ position: "relative" }}>
               <svg viewBox="0 0 220 150" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+                {/* 좌표축 */}
                 <line x1="20" y1="130" x2="210" y2="130" stroke="rgba(255,255,255,.22)" strokeWidth="1" />
                 <line x1="110" y1="12" x2="110" y2="138" stroke="rgba(255,255,255,.22)" strokeWidth="1" />
-                <path d="M30 18 Q110 200 190 18" fill="none" stroke="#43c7ff" strokeWidth="2.4" strokeLinecap="round" />
-                <circle cx="110" cy="118" r="4.5" fill="#43c7ff" />
-                <text x="118" y="116" fill="#9fb4e8" fontSize="10">(2, −1)</text>
+
+                {/* step 0: 문제 식 등장 */}
+                <motion.text x="28" y="28" fill="#cfe0ff" fontSize="11.5" fontWeight="700" {...fade(step === 0)}>
+                  y = x² − 4x + 3
+                </motion.text>
+                <motion.text x="28" y="44" fill="#8ea2d8" fontSize="9.5" {...fade(step === 0)}>
+                  꼭짓점 = ?
+                </motion.text>
+
+                {/* step 1: 핵심 공식 */}
+                <motion.g {...fade(step === 1)}>
+                  <rect x="58" y="52" rx="8" width="104" height="34" fill="rgba(139,92,246,.16)" stroke="rgba(139,92,246,.55)" />
+                  <text x="110" y="73" textAnchor="middle" fill="#c4b5fd" fontSize="13" fontWeight="700">x = −b / 2a</text>
+                  <text x="110" y="100" textAnchor="middle" fill="#8ea2d8" fontSize="9.5">a = 1,  b = −4  →  x = 2</text>
+                </motion.g>
+
+                {/* step 2: 완전제곱식 변형 */}
+                <motion.g {...fade(step === 2)}>
+                  <text x="110" y="52" textAnchor="middle" fill="#9fb4e8" fontSize="11">y = x² − 4x + 3</text>
+                  <text x="110" y="72" textAnchor="middle" fill="#8ea2d8" fontSize="10">↓ 완전제곱식</text>
+                  <motion.text
+                    x="110" y="94" textAnchor="middle" fill="#43c7ff" fontSize="12.5" fontWeight="700"
+                    initial={reduce ? false : { opacity: 0, y: 6 }}
+                    animate={step === 2 ? { opacity: 1, y: 0 } : { opacity: 0 }}
+                    transition={{ duration: 0.5, delay: reduce ? 0 : 0.5 }}
+                  >
+                    y = (x − 2)² − 1
+                  </motion.text>
+                </motion.g>
+
+                {/* step 3+: 대칭축 + 포물선 드로잉 */}
+                <motion.line
+                  x1="110" y1="20" x2="110" y2="130" stroke="#8b5cf6" strokeWidth="1.2" strokeDasharray="4 4"
+                  {...fade(step >= 3, 0.5)}
+                />
+                <motion.text x="116" y="30" fill="#a78bfa" fontSize="9" {...fade(step === 3)}>x = 2</motion.text>
+                {step >= 3 && (
+                  <motion.path
+                    d="M30 18 Q110 200 190 18"
+                    fill="none" stroke="#43c7ff" strokeWidth="2.4" strokeLinecap="round"
+                    initial={reduce ? false : { pathLength: 0 }}
+                    animate={{ pathLength: 1 }}
+                    transition={{ duration: reduce ? 0 : 1.4, ease: "easeInOut" }}
+                  />
+                )}
+
+                {/* step 4: 꼭짓점 답안 */}
+                {step === 4 && (
+                  <>
+                    {!reduce && (
+                      <motion.circle
+                        cx="110" cy="118" fill="none" stroke="#43c7ff" strokeWidth="1.5"
+                        initial={{ r: 5, opacity: 0.7 }}
+                        animate={{ r: 16, opacity: 0 }}
+                        transition={{ duration: 1.3, repeat: Infinity, ease: "easeOut" }}
+                      />
+                    )}
+                    <motion.circle
+                      cx="110" cy="118" r="4.5" fill="#43c7ff"
+                      initial={reduce ? false : { scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 14 }}
+                      style={{ transformOrigin: "110px 118px" }}
+                    />
+                    <motion.g {...fade(true, 0.4)}>
+                      <rect x="118" y="104" rx="6" width="56" height="18" fill="rgba(67,199,255,.14)" stroke="rgba(67,199,255,.45)" />
+                      <text x="146" y="117" textAnchor="middle" fill="#aee6ff" fontSize="10" fontWeight="700">(2, −1)</text>
+                    </motion.g>
+                  </>
+                )}
               </svg>
             </div>
+
             <div className="hv-avs-summary">
               <span className="hv-avs-summary-title">AI 풀이 요약</span>
-              <p>이차함수의 꼭짓점은 <b>x = −b/2a</b> 공식을 이용하여 x = 2를 구하고, y값을 대입하여 −1을 얻을 수 있습니다.</p>
-              <span className="hv-avs-next">다음 단계 →</span>
+              <AnimatePresence mode="wait">
+                <motion.p
+                  key={step}
+                  initial={reduce ? false : { opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={reduce ? { opacity: 0 } : { opacity: 0, y: -6 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {AVS_DEMO_STEPS[step].summary}
+                </motion.p>
+              </AnimatePresence>
+              <span
+                className="hv-avs-next"
+                onClick={() => setStep((p) => (p + 1) % AVS_DEMO_STEPS.length)}
+                style={{ cursor: "pointer" }}
+              >
+                다음 단계 →
+              </span>
             </div>
           </div>
         </div>
