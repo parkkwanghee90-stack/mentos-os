@@ -40,7 +40,7 @@ precheck_ok() {
   out=$("$NODE" -e '
     const d=require("dotenv");d.config();
     (async()=>{
-      const keys=[process.env.VITE_GEMINI_API_KEY,process.env.VITE_GEMINI_API_KEY_2].filter(Boolean);
+      const keys=[process.env.VITE_GEMINI_API_KEY,process.env.VITE_GEMINI_API_KEY_2,process.env.VITE_GEMINI_API_KEY_3].filter(Boolean);
       if(!keys.length){process.stdout.write("PRECHECK=NOKEY");return;}
       for(const k of keys){
         const c=new AbortController();const tm=setTimeout(()=>c.abort(),25000);
