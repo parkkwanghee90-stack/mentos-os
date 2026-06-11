@@ -3,7 +3,8 @@
  * 삼각함수3단계(trig_step3) 모지바케 힌트 복원기
  *
  * 프로덕션 math_hints/trig_step3/{NNN}.json의 한국어가 인코딩 손상(??)된 9개 파일을
- * 문제 이미지(math_crops/trig_step3/{NNN}.webp) 비전 분석으로 복원한다.
+ * 문제 이미지(math_crops/math1_mid/step3/trig_funcstep3/{NNN}.webp) 비전 분석으로 복원한다.
+ * (주의: math_crops/trig_step3/는 1×1 플레이스홀더 — IMG_BASE 주석 참조)
  *  - JSON 구조·키·수식은 보존, 깨진 한국어 텍스트만 재작성
  *  - 업로드 전 원본을 scripts/.trig3_backup/ 에 보존
  *
