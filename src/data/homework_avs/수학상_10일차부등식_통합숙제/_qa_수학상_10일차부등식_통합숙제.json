@@ -1,0 +1,13 @@
+[
+  {
+    "pid": "011",
+    "match": true,
+    "answerOk": true,
+    "depthOk": true,
+    "mathOk": false,
+    "issues": [
+      "등변사다리꼴의 성질을 이용한 각도 설정에 오류가 있습니다. $\\angle BAC = 120^{\\circ}$는 $\\triangle ABC$의 한 각이지, 사다리꼴의 내각 $\\angle DAB$나 $\\angle ABC$가 아닙니다. 해설에서는 $\\angle C = 60^{\\circ}$로 가정하고 풀이했는데, 이는 $\\angle DAB = 120^{\\circ}$일 때 $\\angle ADC = 60^{\\circ}$가 되는 등변사다리꼴의 성질을 잘못 적용한 것으로 보입니다. 주어진 $\\angle BAC = 120^{\\circ}$를 활용하여 문제를 풀어야 합니다. 이 각을 활용하려면 보조선을 그어 $\\triangle ABC$ 또는 $\\triangle ACD$ 등의 삼각형을 분석해야 합니다. 현재 풀이는 $\\angle BAC$를 직접적으로 활용하지 않고, 등변사다리꼴의 밑각을 60도로 임의로 설정한 것으로 보입니다.",
+      "위의 각도 오류로 인해 $\\overline{AE}$와 $\\overline{AC}$의 길이가 잘못 계산되었습니다. $\\overline{AE} = \\overline{CE} \\tan 60^{\\circ}$와 $\\overline{AC} = \\frac{\\overline{CE}}{\\cos 60^{\\circ}}$는 $\\angle C = 60^{\\circ}$라는 잘못된 가정 하에 도출된 식입니다. 따라서 이후의 $d$의 범위 계산도 모두 틀렸습니다."
+    ]
+  }
+]
