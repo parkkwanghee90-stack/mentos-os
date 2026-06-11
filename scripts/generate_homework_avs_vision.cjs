@@ -174,7 +174,11 @@ function tolerantJsonParse(text) {
     const fixed = text
       .replace(/\\(?!["\\\/bfnrtu])/g, '\\\\')
       .replace(/\\u(?![0-9a-fA-F]{4})/g, '\\\\u'); // \underline 등 4자리 hex가 아닌 \u
-    return JSON.parse(fixed);
+    try { return JSON.parse(fixed); }
+    catch {
+      // 긴 응답에서 문자열 내부 raw 제어문자가 간헐 발생(01지수 045 2회 실패) — 공백 치환 복구
+      return JSON.parse(fixed.replace(/[\u0000-\u001f]+/g, ' '));
+    }
   }
 }
 
@@ -192,6 +196,15 @@ function normalizeAnswer(v) {
   let s = String(v).trim();
   const circled = { '①': '1', '②': '2', '③': '3', '④': '4', '⑤': '5' };
   s = s.replace(/[①②③④⑤]/g, m => circled[m]).replace(/번$/, '').trim();
+  // 수식 표기 동치 정규화(02로그/020 위양성): 양변 동일 규칙이므로 비교 일관성 유지
+  s = s.replace(/\$+/g, '')
+    .replace(/\\d?frac\s*\{([^{}]*)\}\s*\{([^{}]*)\}/g, '($1)/($2)')
+    .replace(/\\left|\\right/g, '')
+    .replace(/\\sqrt/g, '√')
+    .replace(/\\(?=[a-zA-Z])/g, '')
+    .replace(/[{}]/g, '')
+    .replace(/\(([^()]*)\)/g, '$1')
+    .replace(/\s+/g, '');
   return s;
 }
 
@@ -237,14 +250,19 @@ function katexErrors(text) {
 // ── 텍스트 정리 ──
 // 1) \times·\frac 등이 JSON 유효 이스케이프(\t,\f,\b,\r)로 오인 파싱된 제어문자를 LaTeX로 복원
 // 2) 백틱 등 렌더러에 노출되는 마크다운 잔재 제거
+// 3) 수식 블록($…$/$$…$$) 내부의 과잉 이중 백슬래시(\\frac 등)를 단일로 정규화 (QA wave1 지적)
+function normalizeMathEscapes(s) {
+  return s.replace(/(\${1,2})([^$]+?)\1/gs, (m, d, body) => d + body.replace(/\\\\(?=[a-zA-Z])/g, '\\') + d);
+}
+
 function sanitizeText(s) {
-  return String(s)
+  return normalizeMathEscapes(String(s)
     .replace(/\u0009/g, '\\t')
     .replace(/\u000c/g, '\\f')
     .replace(/\u0008/g, '\\b')
     .replace(/\u000d/g, '\\r')
     .replace(/\n(eq|abla|otin)\b/g, (m, g) => '\\n' + g)
-    .replace(/`/g, '')
+    .replace(/`/g, ''))
     .trim();
 }
 
