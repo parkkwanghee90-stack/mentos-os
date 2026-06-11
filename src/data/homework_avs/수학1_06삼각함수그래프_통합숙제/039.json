@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 수학1 - 삼각함수 그래프 39번 명품 해설",
   "type": "trigonometry",
-  "P": "삼각함수의 그래프 변환(주기, 진폭, 위상)을 분석합니다.",
-  "C": "기본 그래프에서 평행이동, 대칭, 주기 변환을 단계적으로 적용합니다.",
-  "B": "삼각함수 그래프:\n\n1) $$y = a\\sin(bx + c) + d$$: 진폭 $$|a|$$, 주기 $$\\frac{2\\pi}{|b|}$$, 위상 $$-\\frac{c}{b}$$, 수직이동 $$d$$\n2) $$\\sin$$의 주기: $$2\\pi$$, $$\\tan$$의 주기: $$\\pi$$\n3) $$\\sin(-\\theta) = -\\sin\\theta$$ (기함수), $$\\cos(-\\theta) = \\cos\\theta$$ (우함수)",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "주어진 삼각함수 $f(x) = a \\sin bx$의 그래프와 관련된 조건을 이용하여 두 양수 $a, b$의 값을 구하고, 최종적으로 $a+b$의 값을 구해야 합니다.",
+  "C": "함수 $f(x) = a \\sin bx$ ($0 \\le x \\le \\frac{\\pi}{b}$)의 그래프가 주어졌습니다. 점 A는 함수 그래프와 직선 $y=a$의 교점이고, 점 B는 함수 그래프와 $x$축의 교점 중 원점이 아닌 점입니다. 원점을 O라고 할 때, $\\angle OAB = \\frac{\\pi}{2}$이고 삼각형 OAB의 넓이가 4라는 조건이 주어졌습니다.",
+  "B": "삼각함수 $y = a \\sin bx$의 주기와 그래프의 특징을 이해해야 합니다. 특히, $y=a$와 만나는 점, $x$축과 만나는 점의 좌표를 구할 수 있어야 합니다. 또한, 직각삼각형의 넓이 공식과 직각삼각형의 기하학적 성질을 활용합니다.",
+  "S": "먼저 함수 $f(x) = a \\sin bx$의 주기와 점 A, B의 좌표를 파악합니다. 함수 $f(x) = a \\sin bx$의 주기는 $\\frac{2\\pi}{b}$이고, $y=a$와 만나는 첫 번째 점 A는 $\\sin bx = 1$일 때이므로 $bx = \\frac{\\pi}{2}$, 즉 $x = \\frac{\\pi}{2b}$입니다. $x$축과 만나는 원점이 아닌 첫 번째 점 B는 $\\sin bx = 0$일 때이므로 $bx = \\pi$, 즉 $x = \\frac{\\pi}{b}$입니다. 따라서 점 A의 좌표는 $\\left(\\frac{\\pi}{2b}, a\\right)$이고, 점 B의 좌표는 $\\left(\\frac{\\pi}{b}, 0\\right)$입니다.\n점 A에서 $x$축에 내린 수선의 발을 H라고 할 때, $\\angle OAB = \\frac{\\pi}{2}$라는 조건으로부터 삼각형 OAB의 기하학적 성질을 파악합니다. $\\angle OAB = 90^\\circ$이므로, 점 A는 선분 OB를 지름으로 하는 원 위에 있습니다. 이때, 점 A에서 $x$축(선분 OB)에 내린 수선의 발 H에 대해 $\\overline{OH} = \\overline{AH}$이고 $\\overline{BH} = \\overline{AH}$가 성립합니다. 즉, $\\overline{OH} = \\overline{BH} = \\overline{AH}$입니다. 점 A의 $x$좌표가 $\\overline{OH}$이고 $y$좌표가 $\\overline{AH}$이므로 $\\overline{OH} = \\frac{\\pi}{2b}$이고 $\\overline{AH} = a$입니다. 따라서 $a = \\frac{\\pi}{2b}$라는 관계식을 얻습니다.\n위에서 얻은 관계식 $a = \\frac{\\pi}{2b}$를 이용하여 선분 OB의 길이를 $a$에 대한 식으로 나타냅니다. 점 B의 $x$좌표는 $\\frac{\\pi}{b}$이므로 $\\overline{OB} = \\frac{\\pi}{b}$입니다. $a = \\frac{\\pi}{2b}$에서 $\\frac{\\pi}{b} = 2a$이므로, $\\overline{OB} = 2a$입니다.\n삼각형 OAB의 넓이가 4라는 조건을 이용하여 $a$의 값을 구합니다. 삼각형 OAB는 밑변이 $\\overline{OB}$이고 높이가 $\\overline{AH}$인 삼각형입니다. 따라서 넓이는 $\\frac{1}{2} \\times \\overline{OB} \\times \\overline{AH}$입니다. 여기에 위에서 구한 값들을 대입하면 $\\frac{1}{2} \\times (2a) \\times a = 4$가 됩니다.\n삼각형 넓이 식을 정리하여 $a$의 값을 계산합니다. $\\frac{1}{2} \\times 2a \\times a = a^2$이므로, $a^2 = 4$입니다. 문제에서 $a$는 양수라고 했으므로 $a=2$입니다.\n구한 $a$의 값을 이용하여 $b$의 값을 계산합니다. 앞서 얻은 관계식 $a = \\frac{\\pi}{2b}$에 $a=2$를 대입하면 $2 = \\frac{\\pi}{2b}$입니다. 이 식을 $b$에 대해 정리하면 $4b = \\pi$, 따라서 $b = \\frac{\\pi}{4}$입니다.\n마지막으로 문제에서 요구하는 $a+b$의 값을 구합니다. 구한 $a=2$와 $b=\\frac{\\pi}{4}$를 더하면 $a+b = 2 + \\frac{\\pi}{4}$입니다.",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2+pi/4}}$$ 입니다.",
   "finalAnswer": "2+pi/4",
   "correctAnswer": "2+pi/4",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "gemini-2.5-flash"
 }

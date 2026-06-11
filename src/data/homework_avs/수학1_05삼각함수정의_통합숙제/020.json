@@ -11,7 +11,7 @@
       "src": "/math_crops/숙제/수학1/05삼각함수정의/020a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{4/9π}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\frac{4}{9}\\pi}}$$ 입니다.",
   "finalAnswer": "4/9π",
   "correctAnswer": "4/9π",
   "pcbsa_completed": true,
