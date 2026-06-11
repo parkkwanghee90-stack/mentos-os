@@ -1,0 +1,44 @@
+{
+  "base_figure": {
+    "objects": []
+  },
+  "steps": [
+    {
+      "step": 1,
+      "text": "우리가 최종적으로 찾아야 할 것은 무엇일까요?"
+    },
+    {
+      "step": 2,
+      "text": "문제에서 주어진 단서들을 하나씩 살펴봅시다."
+    },
+    {
+      "step": 3,
+      "text": "이 조건들을 보니, 머릿속에 어떤 공식이 떠올라야 할까요?"
+    },
+    {
+      "step": 4,
+      "latex": "S = (??각점 OPQ????이) - \\{(??각점 APB????이) + (부채꼴 ABC????이) + (??각점 ACQ????이)\\}"
+    },
+    {
+      "step": 5,
+      "latex": "= \\left( \\frac{\\sqrt{3}}{4} \\cdot 3^2 \\right) - \\left( \\frac{\\sqrt{3}}{4} \\cdot \\left( \\frac{3}{2} \\right)^2 \\cdot \\frac{1}{2} \\cdot \\frac{\\pi}{3} \\right) + \\left( \\frac{\\sqrt{3}}{4} \\cdot \\left( \\frac{3}{2} \\right)^2 \\right) \\right"
+    },
+    {
+      "step": 6,
+      "latex": "= \\frac{9\\sqrt{3}}{8} - \\frac{3}{8}\\pi"
+    },
+    {
+      "step": 7,
+      "latex": "??라????칠??부분의 ??이"
+    },
+    {
+      "step": 8,
+      "latex": "6S = 6 \\cdot \\left( \\frac{9\\sqrt{3}}{8} - \\frac{3}{8}\\pi \\right) = \\frac{27\\sqrt{3}}{4} - \\frac{9}{4}\\pi"
+    }
+  ],
+  "problem_render": {
+    "body": "삼각함수3단계 - 문제 030",
+    "choices": null,
+    "source_image": "/math_crops/(5)수학1 중간/3단계/삼각함수3단계/030.webp"
+  }
+}

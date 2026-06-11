@@ -1,0 +1,52 @@
+{
+  "base_figure": {
+    "objects": []
+  },
+  "steps": [
+    {
+      "step": 1,
+      "label_text": "우리가 최종적으로 찾아야 할 것은 무엇일까요?",
+      "latex": "n \\text{??} \\frac{n}{5}\\pi \\text{가 ????분면의 각이??면}"
+    },
+    {
+      "step": 2,
+      "label_text": "문제에서 주어진 단서들을 하나씩 살펴봅시다.",
+      "latex": "2k\\pi + \\pi < 2k\\pi + \\frac{n}{5}\\pi < \\frac{3}{2}\\pi \\quad (k \\text{????수})"
+    },
+    {
+      "step": 3,
+      "label_text": "이 조건들을 보니, 머릿속에 어떤 공식이 떠올라야 할까요?",
+      "latex": "10k + 5 < n < 10k + \\frac{15}{2}"
+    },
+    {
+      "step": 4,
+      "label_text": "이제 계산을 전개해 봅시다.",
+      "latex": "n = 10k + 6 \\text{ ??는 } n = 10k + 7 \newline \\text{??라??} k = 0 \\text{????} n??값이 최소??으??\newline m = 6"
+    },
+    {
+      "step": 5,
+      "label_text": "이제 최종 정답을 구해봅시다.",
+      "latex": "n \\text{??} \\frac{n}{9}\\pi \\text{가 ????분면의 각이??면}"
+    },
+    {
+      "step": 6,
+      "label_text": "계산을 계속 전개해 봅시다.",
+      "latex": "2\\pi + \\frac{3}{2}\\pi < \\frac{n}{9}\\pi < 2\\pi + 2\\pi \\quad (t \\text{????수})"
+    },
+    {
+      "step": 7,
+      "label_text": "계산을 계속 전개해 봅시다.",
+      "latex": "18t + \\frac{27}{2} < n < 18t + 18"
+    },
+    {
+      "step": 8,
+      "label_text": "계산을 계속 전개해 봅시다.",
+      "latex": "n = 18t + 14 \\text{ ??는 } n = 18t + 15 \newline n = 18t + 16 \\text{ ??는 } n = 18t + 17 \newline \\text{??라??} l = 4 \\text{????} 100 ??하????연??} n??값이 최????으??\newline M = 89 \newline M - m = 89 - 6 = 83"
+    }
+  ],
+  "problem_render": {
+    "body": "삼각함수3단계 - 문제 028",
+    "choices": null,
+    "source_image": "/math_crops/(5)수학1 중간/3단계/삼각함수3단계/028.webp"
+  }
+}

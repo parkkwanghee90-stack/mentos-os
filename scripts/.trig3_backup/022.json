@@ -1,0 +1,32 @@
+{
+  "base_figure": {
+    "objects": []
+  },
+  "steps": [
+    {
+      "step": 1,
+      "text": "우리가 최종적으로 찾아야 할 것은 무엇일까요?",
+      "latex": "??0\\sin\\theta\\tan\\theta??값을 구합??다."
+    },
+    {
+      "step": 2,
+      "text": "문제에서 주어진 단서들을 하나씩 살펴봅시다.",
+      "latex": "\\frac{\\sqrt{\\sin\\theta}}{\\sqrt{\\cos\\theta}} = -\\sqrt{\\tan\\theta} \\\\ |\\cos\\theta| = \\frac{4}{5}"
+    },
+    {
+      "step": 3,
+      "text": "이 조건들을 보니, 머릿속에 어떤 공식이 떠올라야 할까요?",
+      "latex": "tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta} \\\\ |\\cos\\theta| = \\frac{4}{5} \\Rightarrow \\cos\\theta = \\frac{4}{5} \\text{ or } -\\frac{4}{5}"
+    },
+    {
+      "step": 4,
+      "text": "이제 계산을 전개해 봅시다.",
+      "latex": "\\text{From } |\\cos\\theta| = \\frac{4}{5}, \\text{ we have } \\cos\\theta = \\frac{4}{5}. \\\\ \\text{Then, } \\sin^2\\theta + \\cos^2\\theta = 1 \\\\ \\sin^2\\theta + \\left(\\frac{4}{5}\\right)^2 = 1 \\\\ \\sin^2\\theta + \\frac{16}{25} = 1 \\\\ \\sin^2\\theta = 1 - \\frac{16}{25} \\\\ \\sin^2\\theta = \\frac{9}{25} \\\\ \\sin\\theta = \\frac{3}{5} \\text{ or } -\\frac{3}{5} \\\\ \\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta} = \\frac{\\frac{3}{5}}{\\frac{4}{5}} = \\frac{3}{4} \\\\ -20\\sin\\theta\\tan\\theta = -20 \\cdot \\frac{3}{5} \\cdot \\frac{3}{4} \\\\ = -20 \\cdot \\frac{9}{20} = -9"
+    }
+  ],
+  "problem_render": {
+    "body": "삼각함수3단계 - 문제 022",
+    "choices": null,
+    "source_image": "/math_crops/(5)수학1 중간/3단계/삼각함수3단계/022.webp"
+  }
+}

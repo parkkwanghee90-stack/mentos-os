@@ -1,0 +1,85 @@
+{
+  "base_figure": {
+    "objects": [
+      {
+        "type": "circle",
+        "center": "O",
+        "radius": "r1",
+        "color": "pink"
+      },
+      {
+        "type": "circle",
+        "center": "O",
+        "radius": "r2",
+        "color": "white"
+      },
+      {
+        "type": "point",
+        "label": "P"
+      },
+      {
+        "type": "point",
+        "label": "Q"
+      },
+      {
+        "type": "arc",
+        "start": "A(P)",
+        "end": "B",
+        "label": "60°"
+      },
+      {
+        "type": "arc",
+        "start": "A(P)",
+        "end": "B",
+        "label": "120°"
+      },
+      {
+        "type": "arc",
+        "start": "A(P)",
+        "end": "B",
+        "label": "180°"
+      },
+      {
+        "type": "arc",
+        "start": "A(P)",
+        "end": "B",
+        "label": "240°"
+      }
+    ]
+  },
+  "hints": [
+    {
+      "step": 1,
+      "text": "우리가 최종적으로 찾아야 할 것은 무엇일까요?"
+    },
+    {
+      "step": 2,
+      "text": "문제에서 주어진 단서들을 하나씩 살펴봅시다."
+    },
+    {
+      "step": 3,
+      "text": "이 조건들을 보니, 머릿속에 어떤 공식이 떠올라야 할까요?"
+    },
+    {
+      "step": 4,
+      "latex": "760 = 3 \\cdot 240 + 400"
+    },
+    {
+      "step": 5,
+      "latex": "A(P)\\text{?? } B\\text{????이??} 40\\text{????의 ??????부분과 같다.}"
+    },
+    {
+      "step": 6,
+      "latex": "\\frac{1}{2} \\cdot 12^2 \\cdot \\frac{4}{3} \\pi = 96\\pi"
+    },
+    {
+      "step": 7,
+      "latex": "k = 96"
+    }
+  ],
+  "problem_render": {
+    "body": "삼각함수3단계 - 문제 031",
+    "choices": null,
+    "source_image": "/math_crops/(5)수학1 중간/3단계/삼각함수3단계/031.webp"
+  }
+}
