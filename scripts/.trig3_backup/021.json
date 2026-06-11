@@ -1,0 +1,32 @@
+{
+  "base_figure": {
+    "objects": []
+  },
+  "steps": [
+    {
+      "step": 1,
+      "label": "무엇??구하????",
+      "latex": "a + b??값을 구합니다."
+    },
+    {
+      "step": 2,
+      "label": "주어??조건",
+      "latex": "a = \\sin 0 + \\sin 20 + \\sin 30 + \\cdots + \\sin 120 \\\\ b = \\cos 0 + \\cos 20 + \\cos 30 + \\cdots + \\cos 120"
+    },
+    {
+      "step": 3,
+      "label": "개념 ??결",
+      "latex": "각도????????인??코사????수성질????용??다."
+    },
+    {
+      "step": 4,
+      "label": "계산 ??개",
+      "latex": "\\text{1. } a = \\sum_{k=0}^{12} \\sin(20k) \\\\ \\text{2. } b = \\sum_{k=0}^{12} \\cos(20k) \\\\ \\text{3. } a + b = \\sum_{k=0}^{12} (\\sin(20k) + \\cos(20k)) \\\\ \\text{4. } \\text{각도????라 값을 계산??다.} \\\\ \\text{5. } a + b??최종 값을 ??출??다."
+    }
+  ],
+  "problem_render": {
+    "body": "삼각함수3단계 - 문제 021",
+    "choices": null,
+    "source_image": "/math_crops/(5)수학1 중간/3단계/삼각함수3단계/021.webp"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "base_figure": {
+    "objects": []
+  },
+  "steps": [
+    {
+      "step": 1,
+      "text": "우리가 최종적으로 찾아야 할 것은 무엇일까요?",
+      "latex": "M - m"
+    },
+    {
+      "step": 2,
+      "text": "문제에서 주어진 단서들을 하나씩 살펴봅시다.",
+      "latex": "n = \\frac{n}{4} \\pi \\text{ (2??분??} \\quad n = \\frac{n}{6} \\pi \\text{ (4??분??}"
+    },
+    {
+      "step": 3,
+      "text": "이 조건들을 보니, 머릿속에 어떤 공식이 떠올라야 할까요?",
+      "latex": "n \\text{?? ??연??로 } n = 8k + 3 \\text{ (2??분??} \\quad n = 12t + 10 \\text{ or } n = 12t + 11 \\text{ (4??분??}"
+    },
+    {
+      "step": 4,
+      "text": "이제 계산을 전개해 봅시다.",
+      "latex": "8k + 2 < n < 8k + 4 \\\\ k = 0 \\Rightarrow n = 3 \\\\ 12t + 9 < n < 12t + 12 \\\\ t = 7 \\Rightarrow n < 100 \\\\ M = 95 \\\\ M - m = 95 - 3 = 92"
+    }
+  ],
+  "problem_render": {
+    "body": "삼각함수3단계 - 문제 027",
+    "choices": null,
+    "source_image": "/math_crops/(5)수학1 중간/3단계/삼각함수3단계/027.webp"
+  }
+}
