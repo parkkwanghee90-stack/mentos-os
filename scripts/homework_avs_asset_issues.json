@@ -234,6 +234,12 @@
       "pid": "058",
       "resolved": true,
       "resolution": "정답 추출 손상 정정(2026-06-12, QA wave7). 정답 7π/2=보기 ⑤인데 저장값 \"7/2\"로 π 유실(과목 내 3번째). finalAnswer/avs_answers \"5\"로 정정."
+    },
+    {
+      "unit": "수학2_01함수의극한_통합숙제",
+      "pid": "027",
+      "resolved": true,
+      "resolution": "정답 오염 정정(2026-06-12, QA wave9 + 직접 판독·재계산). 해설 결론 √2/2=보기 ④인데 저장 \"2\"(②=√2/4). finalAnswer/avs_answers \"4\"로 정정. S는 계획문뿐이라 --qa 재생성 큐."
     }
   ]
 }
