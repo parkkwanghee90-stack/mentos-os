@@ -228,6 +228,12 @@
       "pid": "037",
       "resolved": true,
       "resolution": "정답 추출 손상 정정(2026-06-12, QA wave6). 정답 11π/8=보기 ④인데 저장값 \"11/8\"로 π 유실(과목 내 2번째 π 유실, 채점 불일치 상태). finalAnswer/avs_answers \"4\"로 정정."
+    },
+    {
+      "unit": "수학1_06삼각함수그래프_통합숙제",
+      "pid": "058",
+      "resolved": true,
+      "resolution": "정답 추출 손상 정정(2026-06-12, QA wave7). 정답 7π/2=보기 ⑤인데 저장값 \"7/2\"로 π 유실(과목 내 3번째). finalAnswer/avs_answers \"5\"로 정정."
     }
   ]
 }
