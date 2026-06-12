@@ -84,3 +84,11 @@
 ## 수학2_02함수의연속 --qa 재생성 큐
 `node scripts/generate_homework_avs_vision.cjs 02함수의연속 --qa --force --pids 002,017,020,026`
 - 수학2_03미분계수/032: 위양성 — 저장 "4"(ㄱ,ㄷ=④) 정확, 비전이 ㄱ만 읽음. 스윕 재시도, 지속 보류 시 수동
+
+## --qa 재생성 1차 결과 (2026-06-12 09:25~09:55 KST)
+성공 22/31: 03×8(012,037,038,041,051,063,067,071), 04×5, 06×3(045,048,067), 07/017, 수2_01×5(008,014,024,027,028)
+잔여 재시도 9건 (다음 quota 윈도우에 좁힌 pids로):
+- `node scripts/generate_homework_avs_vision.cjs 03지수로그함수 --qa --force --pids 055`
+- `node scripts/generate_homework_avs_vision.cjs 06삼각함수그래프 --qa --force --pids 069`
+- `node scripts/generate_homework_avs_vision.cjs 01함수의극한 --qa --force --pids 025,041,042`
+- `node scripts/generate_homework_avs_vision.cjs 02함수의연속 --qa --force --pids 002,017,020,026`
