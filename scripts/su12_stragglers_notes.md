@@ -92,3 +92,8 @@
 - `node scripts/generate_homework_avs_vision.cjs 06삼각함수그래프 --qa --force --pids 069`
 - `node scripts/generate_homework_avs_vision.cjs 01함수의극한 --qa --force --pids 025,041,042`
 - `node scripts/generate_homework_avs_vision.cjs 02함수의연속 --qa --force --pids 002,017,020,026`
+
+## 수학2_03미분계수 --qa 재생성 큐 (wave12)
+`node scripts/generate_homework_avs_vision.cjs 03미분계수 --qa --force --pids 008,018,019,021,022,025,029,034`
+## 수동 저작 확정 (4회+ 실패 — --qa 큐에서 제거)
+- 03지수로그함수/055, 06삼각함수그래프/069 → 수동 저작 진행 중
