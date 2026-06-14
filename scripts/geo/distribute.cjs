@@ -9,7 +9,7 @@ const AX = new Set(['axes','axis']);
 function strip(o){ const c={...o}; delete c.color; delete c.fillOpacity; return c; }
 function distribute(d) {
   const bf = d.base_figure || (d.base_figure = { preset:'custom', objects:[] });
-  const objs = (bf.objects||[]).map(strip);
+  const objs = (bf.objects||[]);  // 색 유지
   const steps = d.steps || d.overlay_steps || [];
   const N = steps.length;
   if (N < 3) return d;
