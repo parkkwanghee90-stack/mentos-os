@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 9번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "수열 $\\{a_n\\}$의 극한값 $\\displaystyle\\lim_{n\\to\\infty} a_n$을 구한다.",
+  "C": "무한급수 $\\displaystyle\\sum_{n=1}^{\\infty}\\left(a_n-\\frac{1^3+2^3+3^3+\\cdots+n^3}{n^4}\\right)$이 수렴한다.",
+  "B": "무한급수 $\\displaystyle\\sum_{n=1}^{\\infty}b_n$이 수렴하면 그 일반항은 반드시 $\\displaystyle\\lim_{n\\to\\infty}b_n=0$이어야 한다(급수 수렴의 필요조건). 또한 거듭제곱의 합 공식 $\\displaystyle\\sum_{k=1}^{n}k^3=\\left\\{\\frac{n(n+1)}{2}\\right\\}^2$을 이용한다.",
+  "S": "급수가 수렴하면 일반항이 $0$으로 가야 하므로, 수렴의 필요조건에서 다음이 성립한다. $$\\lim_{n\\to\\infty}\\left(a_n-\\frac{1^3+2^3+3^3+\\cdots+n^3}{n^4}\\right)=0$$\n극한의 성질로 두 항의 차의 극한이 $0$이라는 것은 $a_n$의 극한이 분수 부분의 극한과 같음을 뜻하므로, $a_n$을 분리한다. $$\\lim_{n\\to\\infty}a_n=\\lim_{n\\to\\infty}\\frac{1^3+2^3+3^3+\\cdots+n^3}{n^4}$$\n분자의 거듭제곱 합을 닫힌 꼴로 바꾸기 위해 세제곱의 합 공식을 적용한다. $$1^3+2^3+3^3+\\cdots+n^3=\\left\\{\\frac{n(n+1)}{2}\\right\\}^2=\\frac{n^2(n+1)^2}{4}$$\n이를 대입하여 식을 정리하면 분모와 분자가 모두 $n$에 대한 $4$차식이 된다. $$\\lim_{n\\to\\infty}a_n=\\lim_{n\\to\\infty}\\frac{\\dfrac{n^2(n+1)^2}{4}}{n^4}=\\lim_{n\\to\\infty}\\frac{n^2(n+1)^2}{4n^4}$$\n최고차항의 계수를 비교하기 위해 분자와 분모를 $n^4$으로 나누면 $(n+1)^2/n^2=\\left(1+\\dfrac{1}{n}\\right)^2$이 되고, $n\\to\\infty$일 때 이 값은 $1$에 수렴한다. $$\\lim_{n\\to\\infty}\\frac{n^2(n+1)^2}{4n^4}=\\lim_{n\\to\\infty}\\frac{1}{4}\\left(1+\\frac{1}{n}\\right)^2=\\frac{1}{4}$$\n따라서 구하는 극한값은 다음과 같다. $$\\lim_{n\\to\\infty}a_n=\\frac{1}{4}$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/010a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{①번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{1}{4}}}$$ 입니다.",
   "finalAnswer": "1",
   "correctAnswer": "1",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 77번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\angle CBA = \\theta$일 때 삼각형 ABE의 넓이 $f(\\theta)$와 삼각형 DFC의 넓이 $g(\\theta)$에 대하여 $\\displaystyle\\lim_{\\theta\\to 0^+}\\frac{g(\\theta)}{\\theta^2\\times f(\\theta)}$의 값을 구한다.",
+  "C": "삼각형 ABC에서 $\\overline{AB}=1$, $\\overline{BC}=2$, $\\angle CBA=\\theta$이다. 점 M은 선분 AC의 중점이고, 점 M을 지나며 선분 AB에 평행한 직선이 선분 BC와 만나는 점이 D이다. $\\angle BAC$의 이등분선이 직선 BC, 직선 DM과 만나는 점이 각각 E, F이다. 범위는 $0<\\theta<\\pi$이다.",
+  "B": "코사인법칙으로 $\\overline{AC}$를 구하고, 각의 이등분선 정리 $\\overline{BE}:\\overline{CE}=\\overline{AB}:\\overline{AC}$로 $\\overline{BE}$를 얻는다. 삼각형 넓이는 $\\frac12\\times(\\text{두 변})\\times\\sin(\\text{끼인각})$으로 계산하며, 평행선의 엇각과 이등변삼각형 성질로 $\\overline{DF}$를 구한다. 마지막 극한은 표준극한 $\\displaystyle\\lim_{\\theta\\to 0}\\frac{1-\\cos\\theta}{\\theta^2}=\\frac12$로 정리한다.",
+  "S": "코사인법칙으로 $\\overline{AC}$를 먼저 확정해야 이후의 모든 길이를 $\\theta$로 표현할 수 있다. 삼각형 ABC에서 $$\\overline{AC}^{\\,2}=1^2+2^2-2\\cdot 1\\cdot 2\\cos\\theta=5-4\\cos\\theta$$ 이므로 $\\overline{AC}=\\sqrt{5-4\\cos\\theta}$이다.\n직선 AE가 $\\angle BAC$의 이등분선이므로 각의 이등분선 정리로 $\\overline{BE}$를 BC 위에서 분할한다. $$\\overline{BE}:\\overline{CE}=\\overline{AB}:\\overline{AC}=1:\\sqrt{5-4\\cos\\theta}$$ 에서 $$\\overline{BE}=\\frac{1}{1+\\sqrt{5-4\\cos\\theta}}\\times\\overline{BC}=\\frac{2}{1+\\sqrt{5-4\\cos\\theta}}$$ 이다.\n삼각형 ABE의 넓이는 변 $\\overline{AB}$, $\\overline{BE}$와 그 끼인각 $\\angle ABE=\\theta$로 정해진다. $$f(\\theta)=\\frac12\\times\\overline{AB}\\times\\overline{BE}\\times\\sin\\theta=\\frac12\\times 1\\times\\frac{2}{1+\\sqrt{5-4\\cos\\theta}}\\times\\sin\\theta=\\frac{\\sin\\theta}{1+\\sqrt{5-4\\cos\\theta}}$$ 이다.\n두 직선 AB, DM이 평행하므로 엇각에 의해 $\\angle BAE=\\angle DFE$이고, 또 $\\angle BAE=\\angle FAC$이므로 삼각형 AMF는 $\\overline{FM}=\\overline{AM}$인 이등변삼각형이다. 점 M이 선분 AC의 중점이므로 $$\\overline{FM}=\\overline{AM}=\\frac12\\overline{AC}=\\frac{\\sqrt{5-4\\cos\\theta}}{2}$$ 이다.\n점 D가 선분 BC의 중점이 되어($\\overline{BD}=\\overline{CD}=1$) $\\overline{DM}=\\frac12\\overline{AB}=\\frac12$이므로, $\\overline{DF}$는 두 길이의 차로 구한다. $$\\overline{DF}=\\overline{FM}-\\overline{DM}=\\frac{\\sqrt{5-4\\cos\\theta}}{2}-\\frac12=\\frac{\\sqrt{5-4\\cos\\theta}-1}{2}$$ 이다.\n삼각형 DFC의 끼인각 $\\angle FDC$는 평행선의 동측내각 관계 $\\angle CDM=\\theta$로부터 $\\angle FDC=\\pi-\\theta$로 정해진다. $\\sin(\\pi-\\theta)=\\sin\\theta$이므로 $$g(\\theta)=\\frac12\\times\\overline{CD}\\times\\overline{DF}\\times\\sin(\\pi-\\theta)=\\frac12\\times 1\\times\\frac{\\sqrt{5-4\\cos\\theta}-1}{2}\\times\\sin\\theta=\\frac{\\sqrt{5-4\\cos\\theta}-1}{4}\\sin\\theta$$ 이다.\n구하는 식에 $f(\\theta)$, $g(\\theta)$를 대입하면 $\\sin\\theta$가 약분되어 유리화 가능한 꼴이 된다. $$\\frac{g(\\theta)}{\\theta^2\\times f(\\theta)}=\\frac{\\dfrac{\\sin\\theta}{4}\\left(\\sqrt{5-4\\cos\\theta}-1\\right)}{\\theta^2\\times\\dfrac{\\sin\\theta}{1+\\sqrt{5-4\\cos\\theta}}}=\\frac{\\left(\\sqrt{5-4\\cos\\theta}-1\\right)\\left(1+\\sqrt{5-4\\cos\\theta}\\right)}{4\\theta^2}$$ 이다.\n분자를 합차공식으로 정리하면 근호가 사라져 표준극한 꼴이 드러난다. $$\\frac{\\left(5-4\\cos\\theta\\right)-1}{4\\theta^2}=\\frac{4-4\\cos\\theta}{4\\theta^2}=\\frac{1-\\cos\\theta}{\\theta^2}$$ 이다.\n표준극한 $\\displaystyle\\lim_{\\theta\\to 0}\\frac{1-\\cos\\theta}{\\theta^2}=\\frac12$를 적용한다. $$\\lim_{\\theta\\to 0^+}\\frac{g(\\theta)}{\\theta^2\\times f(\\theta)}=\\lim_{\\theta\\to 0^+}\\frac{1-\\cos\\theta}{\\theta^2}=\\frac12$$ 이므로 구하는 값은 $\\dfrac12$이고 이는 보기 ③에 해당한다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/078a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{②번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{1}{2}}}$$ 입니다.",
   "finalAnswer": "2",
   "correctAnswer": "2",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

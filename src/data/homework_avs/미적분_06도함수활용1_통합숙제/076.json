@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 도함수의 활용 1 76번 명품 해설",
   "type": "calculus",
-  "P": "이계도함수를 이용하여 곡선의 볼록성, 변곡점을 분석합니다.",
-  "C": "$$f''(x)$$의 부호로 아래/위로 볼록을 판별하고, 변곡점을 구합니다.",
-  "B": "도함수의 활용 1:\n\n1) $$f''(x) > 0$$: 아래로 볼록, $$f''(x) < 0$$: 위로 볼록\n2) 변곡점: $$f''(x) = 0$$이고 볼록성이 바뀌는 점\n3) 접선·법선의 방정식\n4) 속도·가속도 문제",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "선분 QR의 길이의 최솟값을 $k$라 할 때 $4k^2$의 값을 구하는 문제이다.",
+  "C": "직사각형 $ABCD$에서 $\\overline{AB}=2$, $\\overline{AD}=2\\sqrt{3}$이다. 점 $P$는 선분 $BC$ 위의 점이고 점 $B$가 아니며, 선분 $AP$의 수직이등분선이 두 직선 $AB$, $AD$와 만나는 점이 각각 $Q$, $R$이다.",
+  "B": "직각삼각형에서 한 예각 $\\theta$에 대해 빗변과 밑변의 비는 $\\cos\\theta$로 연결된다. 또한 선분 $AP$의 수직이등분선은 그 중점 $M$을 지나며 $AP$와 수직이므로, $M$을 공유하는 여러 직각삼각형이 연쇄적으로 생긴다. 이 닮음 구조를 한 변수 $\\theta=\\angle BAP$로 묶으면 $\\overline{QR}$가 $\\theta$의 함수로 표현되고, $\\sin\\theta=t$로 치환해 미분으로 최솟값을 찾는다.",
+  "S": "$\\angle BAP=\\theta$로 놓고 각 범위를 정한다. 점 $P$가 $B$에서 $C$로 움직이면 $\\overline{BP}$는 $0$에서 $\\overline{BC}=\\overline{AD}=2\\sqrt{3}$까지 변하고, 직각삼각형 $ABP$에서 $\\tan\\theta=\\dfrac{\\overline{BP}}{\\overline{AB}}=\\dfrac{\\overline{BP}}{2}$이므로 $0<\\theta\\le\\dfrac{\\pi}{3}$이다.\n수직이등분선의 출발점인 중점 $M$까지의 거리를 구한다. 직각삼각형 $ABP$에서 $\\angle BAP=\\theta$이고 빗변이 $\\overline{AP}$이므로 $\\overline{AP}=\\dfrac{\\overline{AB}}{\\cos\\theta}=\\dfrac{2}{\\cos\\theta}$이고, $M$이 $AP$의 중점이므로 $$\\overline{AM}=\\frac{1}{\\cos\\theta}.$$\n수직이등분선과 직선 $AB$의 교점 $Q$까지의 거리를 구한다. $\\overline{AM}\\perp\\overline{QR}$이므로 직각삼각형 $AMQ$에서 $\\angle MAQ=\\theta$, 빗변이 $\\overline{AQ}$가 되어 $$\\overline{AQ}=\\frac{\\overline{AM}}{\\cos\\theta}=\\frac{1}{\\cos^{2}\\theta}.$$\n삼각형 $AQR$에서 $\\overline{QR}$를 $\\theta$로 나타낸다. $\\overline{AM}\\perp\\overline{QR}$이므로 $\\angle ARQ=\\theta$이고, 직각삼각형에서 $\\sin\\theta=\\dfrac{\\overline{AQ}}{\\overline{QR}}$이므로 $$\\overline{QR}=\\frac{\\overline{AQ}}{\\sin\\theta}=\\frac{1}{\\sin\\theta\\,\\cos^{2}\\theta}.$$\n$\\sin\\theta=t$로 치환해 한 변수의 함수로 정리한다. $\\cos^{2}\\theta=1-\\sin^{2}\\theta=1-t^{2}$이고 $0<\\theta\\le\\dfrac{\\pi}{3}$에서 $0<t\\le\\dfrac{\\sqrt{3}}{2}$이므로 $$\\overline{QR}=\\frac{1}{t(1-t^{2})}=\\frac{1}{\\,t-t^{3}\\,}.$$\n$\\overline{QR}$를 최소로 만들려면 분모 $f(t)=t-t^{3}$를 최대로 만들어야 하므로 도함수를 조사한다. $$f'(t)=1-3t^{2}=0 \\;\\Rightarrow\\; t=\\frac{\\sqrt{3}}{3}.$$ 이 값은 $0<t\\le\\dfrac{\\sqrt{3}}{2}$ 안에 있고, $f'(t)$가 양에서 음으로 바뀌므로 $t=\\dfrac{\\sqrt{3}}{3}$에서 $f$가 최대이다.\n최댓값 $f\\!\\left(\\dfrac{\\sqrt{3}}{3}\\right)$를 계산해 $k$를 구한다. $$f\\!\\left(\\frac{\\sqrt{3}}{3}\\right)=\\frac{\\sqrt{3}}{3}-\\left(\\frac{\\sqrt{3}}{3}\\right)^{3}=\\frac{\\sqrt{3}}{3}-\\frac{\\sqrt{3}}{9}=\\frac{2\\sqrt{3}}{9}$$ 이므로 $$k=\\overline{QR}_{\\min}=\\frac{1}{f\\!\\left(\\frac{\\sqrt{3}}{3}\\right)}=\\frac{9}{2\\sqrt{3}}=\\frac{3\\sqrt{3}}{2}.$$\n구하는 값 $4k^{2}$을 계산한다. $$4k^{2}=4\\times\\left(\\frac{3\\sqrt{3}}{2}\\right)^{2}=4\\times\\frac{27}{4}=27.$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{27}}$$ 입니다.",
   "finalAnswer": "27",
   "correctAnswer": "27",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

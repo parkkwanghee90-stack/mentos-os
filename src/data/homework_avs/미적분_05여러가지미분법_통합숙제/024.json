@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 여러 가지 미분법 24번 명품 해설",
   "type": "calculus",
-  "P": "합성함수, 매개변수, 음함수의 미분법을 활용합니다.",
-  "C": "연쇄 법칙, 몫의 미분법, 매개변수 미분을 적용합니다.",
-  "B": "여러 가지 미분법:\n\n1) 합성함수: $$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$$\n2) 매개변수: $$\\frac{dy}{dx} = \\frac{\\frac{dy}{dt}}{\\frac{dx}{dt}}$$\n3) 음함수: 양변을 $$x$$로 미분, $$y' = \\frac{dy}{dx}$$로 놓고 정리\n4) 역함수 미분: $$\\frac{dx}{dy} = \\frac{1}{\\frac{dy}{dx}}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "매개변수 $t\\,(t>0)$로 정의된 곡선 $x=\\ln t,\\ y=\\ln\\!\\left(t^{2}+1\\right)$에서 $\\displaystyle\\lim_{t\\to\\infty}\\dfrac{dy}{dx}$의 값을 구하는 문제이다.",
+  "C": "$x=\\ln t$, $y=\\ln\\!\\left(t^{2}+1\\right)$이며 $t>0$이다. $x,\\ y$가 각각 $t$의 함수로 주어져 있으므로 $\\dfrac{dy}{dx}$를 $t$에 대한 식으로 표현한 뒤 $t\\to\\infty$의 극한을 따진다.",
+  "B": "매개변수로 나타낸 함수의 미분법에서는 $\\dfrac{dy}{dx}=\\dfrac{\\,dy/dt\\,}{\\,dx/dt\\,}$ (단 $\\dfrac{dx}{dt}\\neq 0$)가 성립한다. 로그함수의 도함수는 $\\dfrac{d}{dt}\\ln u=\\dfrac{u'}{u}$로 계산한다.",
+  "S": "$x=\\ln t$를 $t$로 미분한다. $\\ln t$의 도함수는 $\\dfrac{1}{t}$이므로 $$\\frac{dx}{dt}=\\frac{1}{t}.$$\n$y=\\ln\\!\\left(t^{2}+1\\right)$를 $t$로 미분한다. 합성함수 미분으로 분모는 $t^{2}+1$, 분자는 그 도함수 $2t$가 되어 $$\\frac{dy}{dt}=\\frac{2t}{t^{2}+1}.$$\n매개변수 미분법 $\\dfrac{dy}{dx}=\\dfrac{dy/dt}{dx/dt}$에 대입하면 분모의 $\\dfrac{1}{t}$로 나누는 것은 $t$를 곱하는 것과 같으므로 $$\\frac{dy}{dx}=\\frac{\\dfrac{2t}{t^{2}+1}}{\\dfrac{1}{t}}=\\frac{2t}{t^{2}+1}\\cdot t=\\frac{2t^{2}}{t^{2}+1}.$$\n극한을 구하기 위해 분모와 분자를 최고차항 $t^{2}$으로 나눈다. $$\\frac{dy}{dx}=\\frac{2}{1+\\dfrac{1}{t^{2}}}.$$\n$t\\to\\infty$이면 $\\dfrac{1}{t^{2}}\\to 0$이므로 분모가 $1$로 수렴하여 $$\\lim_{t\\to\\infty}\\frac{dy}{dx}=\\frac{2}{1+0}=2.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/05여러가지미분법/025a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{②번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2}}$$ 입니다.",
   "finalAnswer": "2",
   "correctAnswer": "2",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

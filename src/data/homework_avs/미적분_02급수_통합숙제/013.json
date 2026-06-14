@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 13번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\lim\\limits_{n\\to\\infty} \\dfrac{a_n + 2a_n^{2} + 3n^{2}}{a_n^{2} + n^{2}}$의 값",
+  "C": "수열 $\\{a_n\\}$이 $\\displaystyle\\sum_{n=1}^{\\infty} \\dfrac{a_n}{n} = 10$을 만족한다.",
+  "B": "급수 $\\sum b_n$이 수렴하면 그 일반항은 반드시 $0$으로 수렴한다($\\lim\\limits_{n\\to\\infty} b_n = 0$). 또한 분모의 최고차 항을 기준으로 분자·분모를 같은 식으로 나누면, 극한이 알려진 부분식을 만들어 낼 수 있다.",
+  "S": "급수의 수렴은 일반항의 수렴($0$)을 강제하므로, $\\displaystyle\\sum_{n=1}^{\\infty} \\dfrac{a_n}{n}$이 수렴값 $10$을 가지는 것에서 일반항을 살핀다. $$\\lim_{n\\to\\infty} \\frac{a_n}{n} = 0.$$\n분모 $a_n^{2}+n^{2}$의 차수에 맞추어 분자·분모를 $n^{2}$으로 동시에 나누면, 등장하는 식이 모두 $\\dfrac{a_n}{n}$로 정리되도록 변형된다. $$\\frac{a_n + 2a_n^{2} + 3n^{2}}{a_n^{2} + n^{2}} = \\frac{\\dfrac{a_n}{n^{2}} + 2\\left(\\dfrac{a_n}{n}\\right)^{2} + 3}{\\left(\\dfrac{a_n}{n}\\right)^{2} + 1}.$$\n분자의 첫 항을 $\\dfrac{a_n}{n}$로 묶어 두면 그 자리도 알려진 극한으로 처리할 수 있으므로, $\\dfrac{a_n}{n^{2}} = \\dfrac{1}{n}\\cdot\\dfrac{a_n}{n}$로 분리한다. $$\\frac{\\dfrac{1}{n}\\cdot\\dfrac{a_n}{n} + 2\\left(\\dfrac{a_n}{n}\\right)^{2} + 3}{\\left(\\dfrac{a_n}{n}\\right)^{2} + 1}.$$\n$\\dfrac{1}{n}\\to 0$이고 $\\dfrac{a_n}{n}\\to 0$이므로 분자의 각 항을 차례로 극한값으로 바꾸면, 첫 항은 $0\\cdot 0=0$, 둘째 항은 $2\\cdot 0^{2}=0$이 되어 상수 $3$만 남는다. $$\\text{(분자)} \\longrightarrow 0 + 0 + 3 = 3.$$\n분모도 $\\dfrac{a_n}{n}\\to 0$이므로 $0^{2}+1=1$로 수렴한다. $$\\text{(분모)} \\longrightarrow 0 + 1 = 1.$$\n수렴하는 분자·분모의 극한값을 나누어 전체 극한을 확정한다. $$\\lim_{n\\to\\infty} \\frac{a_n + 2a_n^{2} + 3n^{2}}{a_n^{2} + n^{2}} = \\frac{3}{1} = 3.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/014a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{①번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{3}}$$ 입니다.",
   "finalAnswer": "1",
   "correctAnswer": "1",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

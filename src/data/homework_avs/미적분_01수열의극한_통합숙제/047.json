@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 수열의 극한 47번 명품 해설",
   "type": "calculus",
-  "P": "수열의 극한값과 급수의 수렴·발산을 판별합니다.",
-  "C": "최고차항으로 나누기, 샌드위치 정리, 등비수열 극한 조건을 활용합니다.",
-  "B": "수열의 극한:\n\n1) $$\\lim_{n \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교\n2) $$|r| < 1 \\Rightarrow \\lim_{n \\to \\infty} r^n = 0$$\n3) 수렴 조건: 단조 수렴 정리, 샌드위치 정리\n4) $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "두 원 $C_1$, $C_2$의 두 교점 $\\mathrm{P}_n$, $\\mathrm{Q}_n$ 사이의 거리 $\\overline{\\mathrm{P}_n\\mathrm{Q}_n}$을 $n$으로 나눈 값의 $n \\to \\infty$ 극한 $\\displaystyle\\lim_{n\\to\\infty}\\frac{\\overline{\\mathrm{P}_n\\mathrm{Q}_n}}{n}$을 구한다.",
+  "C": "$2$ 이상의 자연수 $n$에 대하여 좌표평면 위의 두 원 $C_1:x^2+y^2=(n-1)^2$, $C_2:(x-n)^2+y^2=n^2$이 서로 다른 두 점 $\\mathrm{P}_n$, $\\mathrm{Q}_n$에서 만난다. 즉 $C_1$은 중심이 원점이고 반지름이 $n-1$, $C_2$는 중심이 $(n,0)$이고 반지름이 $n$이며, 두 교점을 잇는 선분 $\\overline{\\mathrm{P}_n\\mathrm{Q}_n}$은 두 원의 공통현이다.",
+  "B": "두 원의 교점은 두 원의 방정식을 변끼리 빼서 얻는 일차방정식(공통현이 놓인 직선, 근축)을 만족한다. 공통현은 두 중심을 잇는 $x$축에 수직이므로, 교점의 $x$좌표를 한 원의 식에 대입해 $y^2$을 구하면 공통현의 길이는 $2|y|$이다. 극한 계산에서는 $\\sqrt{\\;}$ 안을 $n^2$으로 묶어 $\\dfrac{1}{n}$, $\\dfrac{1}{n^2}$ 꼴을 $0$으로 보낸다.",
+  "S": "교점은 두 원의 식을 동시에 만족하므로, 공통현이 놓인 직선을 얻기 위해 두 식을 변끼리 뺀다. $$x^2+y^2-\\big((x-n)^2+y^2\\big)=(n-1)^2-n^2$$\n좌변을 전개하면 $2nx-n^2$이고 우변은 $(n^2-2n+1)-n^2=-2n+1$이므로, 정리하면 교점의 $x$좌표가 하나로 결정된다. $$2nx-n^2=-2n+1 \\;\\Rightarrow\\; 2nx=n^2-2n+1=(n-1)^2 \\;\\Rightarrow\\; x=\\frac{(n-1)^2}{2n}$$\n두 교점은 이 직선 위에서 $x$축에 대해 대칭이므로, 이 $x$를 $C_1$의 식 $x^2+y^2=(n-1)^2$에 대입해 $y^2$을 구한다. $$y^2=(n-1)^2-\\frac{(n-1)^4}{4n^2}=\\frac{(n-1)^2\\big(4n^2-(n-1)^2\\big)}{4n^2}$$\n$4n^2-(n-1)^2=(2n-(n-1))(2n+(n-1))=(n+1)(3n-1)$이므로 $y^2$을 인수분해된 꼴로 정리한다. $$y^2=\\frac{(n-1)^2(n+1)(3n-1)}{4n^2}$$\n공통현의 길이는 위아래 두 교점의 $y$좌표 차, 즉 $2|y|$이다. $$\\overline{\\mathrm{P}_n\\mathrm{Q}_n}=2\\sqrt{y^2}=\\frac{(n-1)\\sqrt{(n+1)(3n-1)}}{n}=\\frac{(n-1)\\sqrt{3n^2+2n-1}}{n}$$\n구하는 식 $\\dfrac{\\overline{\\mathrm{P}_n\\mathrm{Q}_n}}{n}$을 $n^2$이 분모에 오도록 정리한다. $$\\frac{\\overline{\\mathrm{P}_n\\mathrm{Q}_n}}{n}=\\frac{(n-1)\\sqrt{3n^2+2n-1}}{n^2}$$\n분자의 $\\sqrt{\\;}$ 안에서 $n^2$을 밖으로 빼내면 $\\sqrt{3n^2+2n-1}=n\\sqrt{3+\\frac{2}{n}-\\frac{1}{n^2}}$이므로, 식 전체를 $\\dfrac{1}{n}$ 꼴로 정리한다. $$\\frac{(n-1)\\cdot n\\sqrt{3+\\frac{2}{n}-\\frac{1}{n^2}}}{n^2}=\\Big(1-\\frac{1}{n}\\Big)\\sqrt{3+\\frac{2}{n}-\\frac{1}{n^2}}$$\n$n\\to\\infty$이면 $\\dfrac{1}{n}\\to 0$, $\\dfrac{2}{n}\\to 0$, $\\dfrac{1}{n^2}\\to 0$이므로 극한값을 얻는다. $$\\lim_{n\\to\\infty}\\frac{\\overline{\\mathrm{P}_n\\mathrm{Q}_n}}{n}=\\Big(1-0\\Big)\\sqrt{3+0-0}=\\sqrt{3}$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/01수열의극한/048a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{32}}$$ 입니다.",
-  "finalAnswer": "32",
-  "correctAnswer": "32",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\sqrt{3}}}$$ 입니다.",
+  "finalAnswer": "$\\sqrt{3}$",
+  "correctAnswer": "$\\sqrt{3}$",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

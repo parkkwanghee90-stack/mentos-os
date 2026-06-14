@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 85번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\lim\\limits_{x \\to \\pi} \\dfrac{f(x) - f(\\pi)}{x - \\pi}$ 의 값",
+  "C": "함수 $f(x) = \\dfrac{x}{2} + \\sin x$ 이고, 극한 $\\lim\\limits_{x \\to \\pi} \\dfrac{f(x) - f(\\pi)}{x - \\pi}$ 을 구한다.",
+  "B": "함수 $f$ 가 $x=a$ 에서 미분가능할 때 미분계수의 정의는 $f'(a) = \\lim\\limits_{x \\to a} \\dfrac{f(x) - f(a)}{x - a}$ 이다. 즉 분모가 $x-a$, 분자가 $f(x)-f(a)$ 꼴인 극한은 그 자리에서의 미분계수와 같다. 또한 삼각함수의 도함수는 $(\\sin x)' = \\cos x$ 이다.",
+  "S": "주어진 극한은 분모가 $x-\\pi$, 분자가 $f(x)-f(\\pi)$ 인 미분계수의 정의 형태이므로, 이는 $x=\\pi$ 에서의 미분계수와 같다. $$\\lim_{x \\to \\pi} \\frac{f(x) - f(\\pi)}{x - \\pi} = f'(\\pi)$$\n따라서 극한값을 구하려면 도함수 $f'(x)$ 를 먼저 구하면 된다. 항별로 미분하기 위해 $f(x) = \\dfrac{x}{2} + \\sin x$ 를 두 부분으로 나눈다.\n일차항 $\\dfrac{x}{2}$ 의 도함수는 상수 $\\dfrac{1}{2}$ 이고, $\\sin x$ 의 도함수는 $\\cos x$ 이므로 도함수는 다음과 같다. $$f'(x) = \\frac{1}{2} + \\cos x$$\n이제 $x=\\pi$ 를 대입한다. $\\cos \\pi = -1$ 이므로 $$f'(\\pi) = \\frac{1}{2} + \\cos \\pi = \\frac{1}{2} + (-1)$$\n$\\dfrac{1}{2}$ 에서 $1$ 을 빼면 값이 확정된다. $$f'(\\pi) = \\frac{1}{2} - 1 = -\\frac{1}{2}$$\n그러므로 구하는 극한값은 $-\\dfrac{1}{2}$ 이며, 이는 보기 다섯 번째 선택지의 값과 일치한다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/086a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{-sqrt(2)}}$$ 입니다.",
-  "finalAnswer": "-sqrt(2)",
-  "correctAnswer": "-sqrt(2)",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{-\\dfrac{1}{2}}}$$ 입니다.",
+  "finalAnswer": "-1/2",
+  "correctAnswer": "-1/2",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

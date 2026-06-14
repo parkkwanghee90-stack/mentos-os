@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 128번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\lim\\limits_{\\theta\\to 0+}\\dfrac{S(\\theta)}{r(\\theta)}=a$일 때 $45a$의 값을 구하는 것",
+  "C": "길이 $4$인 선분 $\\mathrm{AB}$를 지름으로 하는 원 $C$의 호 위를 움직이는 점 $\\mathrm{P}$에 대하여 $\\angle\\mathrm{PAB}=\\theta$, 선분 $\\mathrm{AB}$ 위의 점 $\\mathrm{Q}$가 $\\angle\\mathrm{APQ}=2\\theta$를 만족하며, 직선 $\\mathrm{PQ}$가 원 $C$와 다시 만나는 점 중 $\\mathrm{P}$가 아닌 점이 $\\mathrm{R}$이다. 삼각형 $\\mathrm{AQP}$의 내부에 있고 두 선분 $\\mathrm{PA},\\ \\mathrm{PR}$에 동시에 접하는 원 $C'$의 반지름이 $r(\\theta)$, 삼각형 $\\mathrm{BQR}$의 넓이가 $S(\\theta)$이며 $0<\\theta<\\dfrac{\\pi}{4}$이다.",
+  "B": "지름에 대한 원주각은 직각이고, 한 점에서 그은 두 접선의 길이는 같으며 접점까지의 반지름이 접선에 수직이다. 원주각의 크기는 호의 길이에 비례하고, 삼각형에서는 사인법칙과 넓이공식 $\\frac12ab\\sin C$가 성립한다. 극한 계산에는 $\\lim\\limits_{\\theta\\to0}\\dfrac{\\sin k\\theta}{\\theta}=k$를 활용한다.",
+  "S": "원 $C'$의 중심을 $\\mathrm{O}'$, 접점을 잡으면 $\\mathrm{O}'$에서 두 접선까지 거리가 모두 $r(\\theta)$이므로 $\\mathrm{O}'$는 $\\angle\\mathrm{APR}$의 이등분선 위에 있고, $\\angle\\mathrm{APQ}=2\\theta$이므로 절반인 $\\theta$가 직각삼각형의 한 각이 된다.\n선분 $\\mathrm{PA}$ 위의 접점을 $\\mathrm{H}$라 하면 $\\overline{\\mathrm{O}'\\mathrm{H}}=r(\\theta)$이고, $\\mathrm{O}$가 $\\mathrm{AB}$의 중점이자 원 $C$의 중심이므로 삼각형 $\\mathrm{OPA}$가 이등변삼각형이 되어 $\\angle\\mathrm{OPA}=\\theta$, 따라서 $\\overline{\\mathrm{PO}'}=2-r(\\theta)$이다.\n직각삼각형 $\\mathrm{O}'\\mathrm{PH}$에서 $\\sin\\theta=\\dfrac{\\overline{\\mathrm{O}'\\mathrm{H}}}{\\overline{\\mathrm{PO}'}}=\\dfrac{r(\\theta)}{2-r(\\theta)}$이므로 정리하면 $$r(\\theta)=\\frac{2\\sin\\theta}{1+\\sin\\theta}.$$\n호 $\\mathrm{BP}$의 원주각이므로 $\\angle\\mathrm{PRB}=\\theta$, 호 $\\mathrm{AR}$의 원주각이므로 $\\angle\\mathrm{RBA}=2\\theta$이고, $\\mathrm{AB}$가 지름이라 삼각형 $\\mathrm{ARB}$가 직각삼각형이므로 $$\\overline{\\mathrm{RB}}=4\\cos 2\\theta.$$\n삼각형 $\\mathrm{QRB}$에서 $\\angle\\mathrm{BQR}=\\pi-3\\theta$, $\\angle\\mathrm{RBQ}=2\\theta$이므로 사인법칙 $\\dfrac{\\overline{\\mathrm{RB}}}{\\sin(\\pi-3\\theta)}=\\dfrac{\\overline{\\mathrm{RQ}}}{\\sin 2\\theta}$에서 $$\\overline{\\mathrm{RQ}}=\\frac{4\\sin 2\\theta\\cos 2\\theta}{\\sin 3\\theta}.$$\n점 $\\mathrm{R}$에서 두 변 $\\mathrm{RQ},\\ \\mathrm{RB}$가 이루는 각이 $\\theta$이므로 넓이공식으로 $$S(\\theta)=\\frac12\\times\\overline{\\mathrm{RQ}}\\times\\overline{\\mathrm{RB}}\\times\\sin\\theta=\\frac{8\\sin\\theta\\,\\sin 2\\theta\\,\\cos^2 2\\theta}{\\sin 3\\theta}.$$\n비를 만들면 $r(\\theta)$의 분수가 약분되어 $$\\frac{S(\\theta)}{r(\\theta)}=\\frac{4\\sin 2\\theta\\,\\cos^2 2\\theta\\,(1+\\sin\\theta)}{\\sin 3\\theta}=\\frac{4\\sin 2\\theta}{\\sin 3\\theta}\\times\\cos^2 2\\theta\\times(1+\\sin\\theta).$$\n$\\theta\\to 0+$일 때 $\\dfrac{4\\sin 2\\theta}{\\sin 3\\theta}\\to\\dfrac{4\\cdot 2}{3}=\\dfrac{8}{3}$, $\\cos^2 2\\theta\\to1$, $1+\\sin\\theta\\to1$이므로 $$a=\\lim_{\\theta\\to0+}\\frac{S(\\theta)}{r(\\theta)}=\\frac{8}{3}.$$\n따라서 $$45a=45\\times\\frac{8}{3}=120.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/129a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{②번}}$$ 입니다.",
-  "finalAnswer": "2",
-  "correctAnswer": "2",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{120}}$$ 입니다.",
+  "finalAnswer": "120",
+  "correctAnswer": "120",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

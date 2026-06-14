@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 34번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "첫째항이 $a_1=1$이고 점화식 $2a_{n+1}=7a_n$을 만족하는 수열 $\\{a_n\\}$에 대하여 무한급수 $\\displaystyle\\sum_{n=1}^{\\infty}\\dfrac{10}{a_n}$의 값을 구한다.",
+  "C": "$a_1=1$, 모든 $n\\ge 1$에 대하여 $2a_{n+1}=7a_n$.",
+  "B": "점화식 $a_{n+1}=r\\,a_n$ 꼴은 공비가 $r$인 등비수열을 정의하며 일반항은 $a_n=a_1 r^{\\,n-1}$이다. 또 첫째항 $A$, 공비 $\\rho$인 등비급수는 $|\\rho|<1$일 때 수렴하고 그 합은 $\\dfrac{A}{1-\\rho}$이다.",
+  "S": "점화식을 $a_{n+1}$에 대해 정리하면 일반항을 곧바로 읽어낼 수 있으므로, 양변을 $2$로 나눈다. $$a_{n+1}=\\frac{7}{2}a_n$$\n이는 첫째항 $a_1=1$, 공비 $\\dfrac{7}{2}$인 등비수열이므로 일반항을 세운다. $$a_n=1\\cdot\\left(\\frac{7}{2}\\right)^{n-1}=\\left(\\frac{7}{2}\\right)^{n-1}$$\n급수의 일반항 $\\dfrac{10}{a_n}$을 등비수열 형태로 바꾸기 위해 $a_n$을 대입하고 역수를 정리한다. $$\\frac{10}{a_n}=10\\left(\\frac{7}{2}\\right)^{-(n-1)}=10\\left(\\frac{2}{7}\\right)^{n-1}$$\n따라서 주어진 급수는 첫째항 $10$, 공비 $\\dfrac{2}{7}$인 등비급수이며, 공비가 $\\left|\\dfrac{2}{7}\\right|<1$이므로 수렴한다. $$\\sum_{n=1}^{\\infty}\\frac{10}{a_n}=\\sum_{n=1}^{\\infty}10\\left(\\frac{2}{7}\\right)^{n-1}$$\n등비급수의 합 공식 $\\dfrac{A}{1-\\rho}$에 $A=10$, $\\rho=\\dfrac{2}{7}$을 대입한다. $$\\sum_{n=1}^{\\infty}10\\left(\\frac{2}{7}\\right)^{n-1}=\\frac{10}{1-\\dfrac{2}{7}}$$\n분모를 통분하여 계산하면 급수의 값이 확정된다. $$\\frac{10}{\\dfrac{5}{7}}=10\\cdot\\frac{7}{5}=14$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/035a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{④번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{14}}$$ 입니다.",
   "finalAnswer": "4",
   "correctAnswer": "4",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

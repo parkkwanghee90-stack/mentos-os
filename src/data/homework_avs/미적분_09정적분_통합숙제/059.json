@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 정적분 59번 명품 해설",
   "type": "calculus",
-  "P": "정적분의 다양한 성질과 활용(넓이, 부피, 속도)을 다룹니다.",
-  "C": "구분구적법, 정적분과 급수의 관계, 회전체의 부피를 적용합니다.",
-  "B": "정적분의 활용:\n\n1) 넓이: $$S = \\int_a^b |f(x) - g(x)| dx$$\n2) 회전체 부피: $$V = \\pi \\int_a^b \\{f(x)\\}^2 dx$$\n3) 구분구적법: $$\\lim_{n \\to \\infty} \\sum_{k=1}^{n} f\\left(\\frac{k}{n}\\right) \\cdot \\frac{1}{n} = \\int_0^1 f(x)dx$$\n4) 속도와 거리: $$\\int_{t_1}^{t_2} |v(t)| dt$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$a^2+b^2$의 값. 여기서 $\\displaystyle\\int_{1}^{e} f(\\ln x)\\,dx = ae+b$를 만족시키는 정수 $a,\\,b$를 먼저 결정해야 한다.",
+  "C": "두 연속함수 $f(x),\\,g(x)$가 $g(e^{x})=f(x)\\ (0\\le x<1)$이고 $g(e^{x})=g(e^{x-1})+5\\ (1\\le x\\le 2)$를 만족하며, $\\displaystyle\\int_{1}^{e^{2}} g(x)\\,dx = 6e^{2}+4$이다.",
+  "B": "치환적분 $\\displaystyle\\int_{\\alpha}^{\\beta} h(\\phi(x))\\phi'(x)\\,dx=\\int_{\\phi(\\alpha)}^{\\phi(\\beta)} h(t)\\,dt$를 이용해 변수를 통일하고, 정적분의 구간 분할 $\\displaystyle\\int_{1}^{e^{2}}=\\int_{1}^{e}+\\int_{e}^{e^{2}}$로 주어진 함수관계를 한 미지량으로 모은다.",
+  "S": "주어진 조건이 $g(e^{x})$로 표현되어 있으므로 변수를 통일하기 위해 $y=e^{x}$로 두면 $x=\\ln y$이고, $0\\le x<1$은 $1\\le y<e$, $1\\le x\\le 2$는 $e\\le y\\le e^{2}$에 대응한다. 따라서 $$g(y)=\\begin{cases} f(\\ln y) & (1\\le y<e) \\\\ g\\!\\left(\\dfrac{y}{e}\\right)+5 & (e\\le y\\le e^{2}) \\end{cases}$$\n구하려는 정적분이 $\\displaystyle\\int_{1}^{e} f(\\ln x)\\,dx$이므로 이를 미지량 $I$로 두면, 위 정의에 의해 $1\\le y<e$에서 $g(y)=f(\\ln y)$이므로 $$I=\\int_{1}^{e} f(\\ln x)\\,dx=\\int_{1}^{e} g(y)\\,dy$$ 가 성립하여 목표량이 곧 $g$의 정적분으로 연결된다.\n주어진 적분을 두 구간으로 나누면 $$\\int_{1}^{e^{2}} g(y)\\,dy=\\int_{1}^{e} g(y)\\,dy+\\int_{e}^{e^{2}} g(y)\\,dy=\\int_{1}^{e} f(\\ln y)\\,dy+\\int_{e}^{e^{2}}\\left\\{g\\!\\left(\\frac{y}{e}\\right)+5\\right\\}dy$$ 로 정리되며, 앞 항은 $I$이다.\n뒤 항에서 $\\dfrac{y}{e}=t$로 치환하면 $dy=e\\,dt$이고 $y\\colon e\\to e^{2}$일 때 $t\\colon 1\\to e$이므로 $$\\int_{e}^{e^{2}} g\\!\\left(\\frac{y}{e}\\right)dy=e\\int_{1}^{e} g(t)\\,dt,\\qquad \\int_{e}^{e^{2}} 5\\,dy=5(e^{2}-e)$$ 가 된다.\n그런데 $1\\le t<e$에서 $g(t)=f(\\ln t)$이므로 $\\displaystyle\\int_{1}^{e} g(t)\\,dt=\\int_{1}^{e} f(\\ln t)\\,dt=I$이다. 따라서 $$\\int_{e}^{e^{2}} g(y)\\,dy=e\\,I+5e^{2}-5e$$ 로 모두 $I$로 표현된다.\n두 결과를 합치면 $$\\int_{1}^{e^{2}} g(y)\\,dy=I+\\left(e\\,I+5e^{2}-5e\\right)=(1+e)\\,I+5e^{2}-5e$$ 이고, 이것이 $6e^{2}+4$와 같으므로 $$(1+e)\\,I+5e^{2}-5e=6e^{2}+4$$\n이항하여 $I$에 대해 풀면 $$(1+e)\\,I=6e^{2}+4-5e^{2}+5e=e^{2}+5e+4=(e+1)(e+4)$$ 이므로 $$I=\\frac{(e+1)(e+4)}{1+e}=e+4$$\n따라서 $\\displaystyle\\int_{1}^{e} f(\\ln x)\\,dx=e+4=ae+b$이고 $a,\\,b$가 정수이므로 $a=1,\\ b=4$이다. 그러므로 $$a^{2}+b^{2}=1^{2}+4^{2}=1+16=17$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{17}}$$ 입니다.",
   "finalAnswer": "17",
   "correctAnswer": "17",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

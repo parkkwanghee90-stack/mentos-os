@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 급수 99번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "자연수 $m$에 대하여 $a_m=\\displaystyle\\sum_{n=1}^{\\infty}\\dfrac{m+1}{n(n+m+1)}$로 정해지는 수열 $\\{a_m\\}$에서 $a_1+a_{10}=\\dfrac{q}{p}$일 때, $p+q$의 값을 구하는 것이다. (단, $p$, $q$는 서로소인 자연수이다.)",
+  "C": "각 항 $a_m$은 무한급수 $\\displaystyle\\sum_{n=1}^{\\infty}\\dfrac{m+1}{n(n+m+1)}$의 합으로 정의되며, $a_1$과 $a_{10}$을 구해 그 합 $a_1+a_{10}$을 기약분수 $\\dfrac{q}{p}$로 나타낸 뒤 $p+q$를 구해야 한다.",
+  "B": "분모가 두 일차식의 곱인 분수는 부분분수로 분해하여 $\\dfrac{1}{A}-\\dfrac{1}{B}$ 꼴로 만들면, 급수의 부분합에서 가운데 항들이 차례로 소거되는 망원급수(telescoping)가 된다. 두 자연수 $A<B$에 대해 $\\dfrac{B-A}{AB}=\\dfrac{1}{A}-\\dfrac{1}{B}$가 성립한다.",
+  "S": "분모를 분해하기 위해 부분분수로 바꾼다. 분자 $m+1$이 두 분모의 차 $(n+m+1)-n$과 같으므로 $$\\frac{m+1}{n(n+m+1)}=\\frac{1}{n}-\\frac{1}{n+m+1}.$$\n$m=1$인 $a_1$을 먼저 구하면 빼는 항이 두 칸 뒤로 밀려 앞의 두 항만 남는다. $$a_1=\\sum_{n=1}^{\\infty}\\left(\\frac{1}{n}-\\frac{1}{n+2}\\right)=\\left(1-\\frac13\\right)+\\left(\\frac12-\\frac14\\right)+\\left(\\frac13-\\frac15\\right)+\\cdots=1+\\frac12=\\frac32.$$\n$a_{10}$을 직접 다루기 위해 부분합 $S_m=\\sum\\limits_{n=1}^{\\infty}\\left(\\dfrac{1}{n}-\\dfrac{1}{n+m+1}\\right)$이 조화수의 앞부분 $m+1$개의 합이 됨을 이용한다. 빼는 항이 $m+1$칸 밀리므로 $$S_m=1+\\frac12+\\frac13+\\cdots+\\frac{1}{m+1}.$$\n필요한 두 값을 적는다. $$S_{10}=1+\\frac12+\\cdots+\\frac{1}{11},\\qquad S_{9}=1+\\frac12+\\cdots+\\frac{1}{10}.$$\n$a_{10}=S_{10}-S_{9}$이므로 두 합의 차에서 $\\dfrac{1}{11}$ 한 항만 남는다. $$a_{10}=S_{10}-S_{9}=\\frac{1}{11}.$$\n두 값을 더해 기약분수로 정리한다. $$a_1+a_{10}=\\frac32+\\frac{1}{11}=\\frac{33}{22}+\\frac{2}{22}=\\frac{35}{22}.$$\n$\\dfrac{q}{p}=\\dfrac{35}{22}$에서 $35$와 $22$는 서로소이므로 $p=22$, $q=35$이고, 따라서 $$p+q=22+35=57.$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{57}}$$ 입니다.",
   "finalAnswer": "57",
   "correctAnswer": "57",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

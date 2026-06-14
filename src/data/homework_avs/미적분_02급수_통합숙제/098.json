@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 98번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "그림을 한없이 반복하여 얻은 그림 $R_n$에서 색칠된 부분의 넓이 $S_n$에 대하여 $\\lim\\limits_{n\\to\\infty} S_n$의 값을 구한다.",
+  "C": "한 변의 길이가 $4$인 정사각형 $\\mathrm{ABCD}$에서 $\\mathrm{E},\\,\\mathrm{F},\\,\\mathrm{G}$는 각각 변 $\\mathrm{AB},\\,\\mathrm{CD},\\,\\mathrm{DA}$의 중점이다. 선분 $\\mathrm{EG}$ 위에 점 $\\mathrm{A}$를 내부에 두는 정삼각형 $\\mathrm{EGH}$, 선분 $\\mathrm{GF}$ 위에 점 $\\mathrm{D}$를 내부에 두는 정삼각형 $\\mathrm{GFI}$를 그린다. 두 정삼각형의 내부와 정사각형의 외부의 공통부분을 색칠한 것이 $R_1$이다. 선분 $\\mathrm{HG},\\,\\mathrm{IG}$의 중점 $\\mathrm{M},\\,\\mathrm{N}$에 대하여 $\\overline{\\mathrm{HM}},\\,\\overline{\\mathrm{IN}}$을 한 변으로 하는 정사각형 $T_1,\\,T_2$에 같은 방법을 반복한다.",
+  "B": "넓이가 첫째항 $a$, 공비 $r$인 등비수열의 합으로 누적될 때, $|r|<1$이면 $\\lim\\limits_{n\\to\\infty}S_n=\\dfrac{a}{1-r}$이다. 닮음비가 $k$인 두 도형의 넓이비는 $k^2$이며, 한 변의 길이가 $L$인 정삼각형의 넓이는 $\\dfrac{\\sqrt{3}}{4}L^2$이다.",
+  "S": "정삼각형의 한 변 $\\overline{\\mathrm{EG}}$를 정사각형의 두 중점 사이 거리로 직접 구하기 위해, $\\mathrm{E}$를 변 $\\mathrm{AB}$의 중점, $\\mathrm{G}$를 변 $\\mathrm{DA}$의 중점으로 보면 $\\overline{\\mathrm{AE}}=\\overline{\\mathrm{AG}}=2$이고 각 $\\mathrm{A}$가 직각이므로 $$\\overline{\\mathrm{EG}}=\\sqrt{2^2+2^2}=2\\sqrt{2}.$$\n정삼각형 $\\mathrm{EGH}$ 전체의 넓이를 구하면 $$\\triangle\\mathrm{EGH}=\\frac{\\sqrt{3}}{4}\\,(2\\sqrt{2})^2=\\frac{\\sqrt{3}}{4}\\cdot 8=2\\sqrt{3}.$$\n색칠된 부분은 정사각형 외부만 남기므로 정사각형 내부에 들어간 부분 $\\triangle\\mathrm{AEG}$를 빼야 한다. $\\triangle\\mathrm{AEG}$는 직각을 낀 두 변이 $\\overline{\\mathrm{AE}}=\\overline{\\mathrm{AG}}=2$인 직각삼각형이므로 $$\\triangle\\mathrm{AEG}=\\frac{1}{2}\\cdot 2\\cdot 2=2.$$\n정삼각형 한 개가 만드는 색칠 넓이는 $2\\sqrt{3}-2$이고, 정삼각형이 $\\mathrm{EGH},\\,\\mathrm{GFI}$ 두 개이므로 첫 도형의 넓이는 $$S_1=2\\,(2\\sqrt{3}-2)=4\\sqrt{3}-4=4(\\sqrt{3}-1).$$\n다음 단계 정사각형 $T_1$의 한 변을 구하면, $\\overline{\\mathrm{HG}}=\\overline{\\mathrm{EG}}=2\\sqrt{2}$이고 $\\mathrm{M}$이 그 중점이므로 $$\\overline{\\mathrm{HM}}=\\frac{1}{2}\\cdot 2\\sqrt{2}=\\sqrt{2}.$$\n$T_1$과 처음 정사각형 $\\mathrm{ABCD}$의 닮음비는 $$\\overline{\\mathrm{HM}}:\\overline{\\mathrm{AB}}=\\sqrt{2}:4=1:2\\sqrt{2}$$이므로, 한 정사각형이 만드는 색칠 넓이는 넓이비 $\\left(\\dfrac{1}{2\\sqrt{2}}\\right)^2=\\dfrac{1}{8}$만큼 줄어든다.\n한 단계에서 새로 생기는 정사각형은 두 배로 늘어나므로(개수 $\\times 2$, 넓이 $\\times\\frac{1}{8}$), 색칠 넓이가 누적되는 공비는 $$r=2\\times\\frac{1}{8}=\\frac{1}{4}.$$\n첫째항 $a=4(\\sqrt{3}-1)$, 공비 $r=\\dfrac{1}{4}$인 등비급수의 합으로 $$\\lim_{n\\to\\infty}S_n=\\frac{4(\\sqrt{3}-1)}{1-\\frac{1}{4}}=\\frac{4(\\sqrt{3}-1)}{\\frac{3}{4}}=\\frac{16}{3}(\\sqrt{3}-1).$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/099a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{②번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{16}{3}\\left(\\sqrt{3}-1\\right)}}$$ 입니다.",
   "finalAnswer": "2",
   "correctAnswer": "2",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

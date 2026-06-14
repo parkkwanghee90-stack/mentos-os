@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 90번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\tan(\\beta-\\alpha)=\\dfrac{q}{p}$ 로 나타낼 때, 서로소인 두 자연수 $p,\\ q$에 대하여 $p+q$의 값을 구한다.",
+  "C": "$\\overline{AC}=3$, $\\overline{BC}=1$, $\\angle C=90^\\circ$인 직각삼각형 $ABC$에서, 선분 $AB$를 $4:1$로 내분하는 점이 $P$, $2:3$으로 내분하는 점이 $Q$이다. $P$에서 선분 $BC$에 내린 수선의 발이 $R$, $Q$에서 선분 $AC$에 내린 수선의 발이 $S$이며, $\\angle CPR=\\alpha$, $\\angle CQS=\\beta$이다.",
+  "B": "내분점이 만드는 작은 직각삼각형의 변은 큰 직각삼각형의 닮음비로 얻고, 두 예각의 차에 대한 탄젠트는 덧셈정리 $\\tan(\\beta-\\alpha)=\\dfrac{\\tan\\beta-\\tan\\alpha}{1+\\tan\\beta\\tan\\alpha}$로 계산한다.",
+  "S": "점 $P$는 $\\overline{AB}$를 $4:1$로 내분하므로 $\\overline{BP}:\\overline{BA}=1:5$이고, $\\triangle BPR$는 $\\triangle BAC$와 닮음이다. 따라서 $\\overline{PR}=\\dfrac{1}{5}\\,\\overline{AC}=\\dfrac{1}{5}\\times 3=\\dfrac{3}{5}$, $\\overline{BR}=\\dfrac{1}{5}\\,\\overline{BC}=\\dfrac{1}{5}$이다.\n$\\overline{RC}=\\overline{BC}-\\overline{BR}=1-\\dfrac{1}{5}=\\dfrac{4}{5}$이고, 수선의 발 $R$에서 $\\angle PRC=90^\\circ$이므로 $\\triangle PRC$는 직각삼각형이다. 그러므로 $$\\tan\\alpha=\\frac{\\overline{RC}}{\\overline{PR}}=\\frac{\\tfrac{4}{5}}{\\tfrac{3}{5}}=\\frac{4}{3}.$$\n점 $Q$는 $\\overline{AB}$를 $2:3$으로 내분하므로 $\\overline{AQ}:\\overline{AB}=2:5$이고, $\\triangle AQS$는 $\\triangle ABC$와 닮음이다. 따라서 $\\overline{QS}=\\dfrac{2}{5}\\,\\overline{BC}=\\dfrac{2}{5}$, $\\overline{AS}=\\dfrac{2}{5}\\,\\overline{AC}=\\dfrac{6}{5}$이다.\n$\\overline{SC}=\\overline{AC}-\\overline{AS}=3-\\dfrac{6}{5}=\\dfrac{9}{5}$이고, 수선의 발 $S$에서 $\\angle QSC=90^\\circ$이므로 $\\triangle QSC$는 직각삼각형이다. 그러므로 $$\\tan\\beta=\\frac{\\overline{SC}}{\\overline{QS}}=\\frac{\\tfrac{9}{5}}{\\tfrac{2}{5}}=\\frac{9}{2}.$$\n두 예각의 차 $\\beta-\\alpha$의 탄젠트를 구하기 위해 덧셈정리를 적용한다. $$\\tan(\\beta-\\alpha)=\\frac{\\tan\\beta-\\tan\\alpha}{1+\\tan\\beta\\tan\\alpha}=\\frac{\\dfrac{9}{2}-\\dfrac{4}{3}}{1+\\dfrac{9}{2}\\cdot\\dfrac{4}{3}}.$$\n분자는 $\\dfrac{9}{2}-\\dfrac{4}{3}=\\dfrac{27-8}{6}=\\dfrac{19}{6}$, 분모는 $1+\\dfrac{9}{2}\\cdot\\dfrac{4}{3}=1+6=7$이므로 $$\\tan(\\beta-\\alpha)=\\frac{\\tfrac{19}{6}}{7}=\\frac{19}{42}.$$\n$\\dfrac{q}{p}=\\dfrac{19}{42}$에서 $19$와 $42$는 서로소이므로 $p=42,\\ q=19$이다. 따라서 $$p+q=42+19=61.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/091a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{48}}$$ 입니다.",
-  "finalAnswer": "48",
-  "correctAnswer": "48",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{61}}$$ 입니다.",
+  "finalAnswer": "61",
+  "correctAnswer": "61",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

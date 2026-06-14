@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 정적분 73번 명품 해설",
   "type": "calculus",
-  "P": "정적분의 다양한 성질과 활용(넓이, 부피, 속도)을 다룹니다.",
-  "C": "구분구적법, 정적분과 급수의 관계, 회전체의 부피를 적용합니다.",
-  "B": "정적분의 활용:\n\n1) 넓이: $$S = \\int_a^b |f(x) - g(x)| dx$$\n2) 회전체 부피: $$V = \\pi \\int_a^b \\{f(x)\\}^2 dx$$\n3) 구분구적법: $$\\lim_{n \\to \\infty} \\sum_{k=1}^{n} f\\left(\\frac{k}{n}\\right) \\cdot \\frac{1}{n} = \\int_0^1 f(x)dx$$\n4) 속도와 거리: $$\\int_{t_1}^{t_2} |v(t)| dt$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "주어진 정적분 조건들로부터 $\\displaystyle\\int_{0}^{1} f'(x)\\sin 2\\pi x\\,dx$의 값을 구한다.",
+  "C": "실수 전체에서 도함수가 연속인 함수 $f(x)$가 모든 실수 $x$에 대하여 $f(-x)=f(x)$(우함수), $f(x+2)=f(x)$(주기 $2$)를 만족하고, $\\displaystyle\\int_{-1}^{5} f(x)(x+\\cos 2\\pi x)\\,dx=\\frac{47}{2}$, $\\displaystyle\\int_{0}^{1} f(x)\\,dx=2$이다.",
+  "B": "우함수·기함수의 대칭 적분 성질, 주기함수의 구간 평행이동 적분, 그리고 부분적분을 결합해 미지의 적분값을 알려진 값으로 환원한다.",
+  "S": "주어진 적분을 두 조각으로 나눈다. 피적분함수가 $f(x)\\,x$와 $f(x)\\cos 2\\pi x$의 합이기 때문이다. $$\\int_{-1}^{5} f(x)\\,x\\,dx+\\int_{-1}^{5} f(x)\\cos 2\\pi x\\,dx=\\frac{47}{2}.$$\n먼저 우함수의 대칭성으로 한 주기의 적분을 구한다. $f$가 우함수이므로 $$\\int_{-1}^{1} f(x)\\,dx=2\\int_{0}^{1} f(x)\\,dx=2\\cdot 2=4.$$\n첫 조각을 주기 $2$로 평행이동해 정리한다. 구간 $[2k-1,\\,2k+1]$에서 $t=x-2k$로 두면 $f(x)=f(t)$이므로 $$\\int_{2k-1}^{2k+1} x f(x)\\,dx=\\int_{-1}^{1}(t+2k)f(t)\\,dt=\\int_{-1}^{1} t f(t)\\,dt+2k\\int_{-1}^{1} f(t)\\,dt.$$\n$t f(t)$는 기함수라 대칭 구간 적분이 $0$이므로 각 항이 $2k\\cdot 4=8k$가 되고, $k=0,1,2$를 더하면 $$\\int_{-1}^{5} x f(x)\\,dx=8(0+1+2)=24.$$\n둘째 조각은 $f(x)\\cos 2\\pi x$가 주기 $2$의 우함수임을 이용한다. $[-1,5]$는 길이 $2$인 주기 세 개이므로 $$\\int_{-1}^{5} f(x)\\cos 2\\pi x\\,dx=3\\int_{-1}^{1} f(x)\\cos 2\\pi x\\,dx=6\\int_{0}^{1} f(x)\\cos 2\\pi x\\,dx.$$\n두 결과를 합쳐 $\\displaystyle\\int_{0}^{1} f(x)\\cos 2\\pi x\\,dx$를 결정한다. $$24+6\\int_{0}^{1} f(x)\\cos 2\\pi x\\,dx=\\frac{47}{2}\\;\\Rightarrow\\;\\int_{0}^{1} f(x)\\cos 2\\pi x\\,dx=-\\frac{1}{12}.$$\n구하려는 적분에 부분적분을 적용한다. $f'(x)$를 미분된 항으로 보면 $$\\int_{0}^{1} f'(x)\\sin 2\\pi x\\,dx=\\Big[f(x)\\sin 2\\pi x\\Big]_{0}^{1}-\\int_{0}^{1} f(x)\\,2\\pi\\cos 2\\pi x\\,dx.$$\n경계항은 $\\sin 2\\pi=\\sin 0=0$으로 사라지고 남은 적분에 앞의 값을 대입한다. $$\\int_{0}^{1} f'(x)\\sin 2\\pi x\\,dx=-2\\pi\\int_{0}^{1} f(x)\\cos 2\\pi x\\,dx=-2\\pi\\left(-\\frac{1}{12}\\right)=\\frac{\\pi}{6}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/09정적분/074a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{①번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{\\pi}{6}}}$$ 입니다.",
   "finalAnswer": "1",
   "correctAnswer": "1",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

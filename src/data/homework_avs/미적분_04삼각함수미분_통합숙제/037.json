@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 37번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$0 \\le x \\le 2\\pi$에서 삼각방정식 $\\sin 2x = \\cos x$를 만족하는 모든 해의 합을 구한다.",
+  "C": "정의역은 $0 \\le x \\le 2\\pi$이고, 방정식은 $\\sin 2x = \\cos x$이다. 보기로 $\\frac{3}{2}\\pi,\\ 2\\pi,\\ \\frac{5}{2}\\pi,\\ 3\\pi,\\ \\frac{7}{2}\\pi$가 주어진 객관식이다.",
+  "B": "서로 다른 각이 섞여 있으면 한 종류의 각으로 통일해야 인수분해가 보인다. 배각공식 $\\sin 2x = 2\\sin x\\cos x$를 쓰면 양변이 모두 $x$에 대한 식이 되어 공통인수 $\\cos x$로 묶을 수 있다. 곱이 $0$이면 두 인수 중 적어도 하나가 $0$이라는 $AB=0 \\Rightarrow A=0$ 또는 $B=0$ 원리로 두 기본방정식으로 분해된다.",
+  "S": "배각공식으로 좌변의 각을 $x$로 통일하면 양변을 한 종류의 각으로 비교할 수 있으므로 $$2\\sin x\\cos x = \\cos x.$$\n한쪽으로 모아 공통인수 $\\cos x$를 묶으면 곱의 꼴이 되어 해를 분리할 수 있으므로 $$2\\sin x\\cos x - \\cos x = 0,\\qquad \\cos x\\,(2\\sin x - 1) = 0.$$\n곱이 $0$이 되려면 두 인수 중 하나가 $0$이어야 하므로 $$\\cos x = 0 \\quad \\text{또는} \\quad \\sin x = \\frac{1}{2}.$$\n$\\cos x = 0$인 각을 $0 \\le x \\le 2\\pi$에서 모두 찾으면 코사인이 $0$이 되는 위치이므로 $$x = \\frac{\\pi}{2},\\ \\frac{3}{2}\\pi.$$\n$\\sin x = \\dfrac{1}{2}$인 각을 같은 구간에서 모두 찾으면 사인이 양수이고 제1·2사분면에서 기준각 $\\dfrac{\\pi}{6}$을 가지므로 $$x = \\frac{\\pi}{6},\\ \\frac{5}{6}\\pi.$$\n구한 네 해를 통분하여 더하면 모든 해의 합이 되므로 $$\\frac{\\pi}{6} + \\frac{5}{6}\\pi + \\frac{\\pi}{2} + \\frac{3}{2}\\pi = \\frac{\\pi + 5\\pi + 3\\pi + 9\\pi}{6} = \\frac{18\\pi}{6} = 3\\pi.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/038a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{4/3π}}$$ 입니다.",
-  "finalAnswer": "4/3π",
-  "correctAnswer": "4/3π",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{3\\pi}}$$ 입니다.",
+  "finalAnswer": "3π",
+  "correctAnswer": "3π",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

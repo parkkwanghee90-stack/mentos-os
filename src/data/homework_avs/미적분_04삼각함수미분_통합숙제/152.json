@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 152번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle \\lim_{\\theta \\to 0+} \\dfrac{\\sqrt{g(\\theta)}}{\\theta \\times f(\\theta)}$ 의 값을 구한다. 여기서 $f(\\theta)$ 는 삼각형 $OHP$ 의 넓이, $g(\\theta)$ 는 부채꼴 $QRA$ 의 넓이이다.",
+  "C": "반지름의 길이가 $1$, 중심각의 크기가 $\\dfrac{\\pi}{2}$ 인 부채꼴 $OAB$ 에서 호 $AB$ 위의 점 $P$ 에 대해 $\\angle POA = \\theta$ 이고, 점 $H$ 는 $P$ 에서 $OA$ 에 내린 수선의 발이다. 점 $P$ 에서 호 $AB$ 에 접하는 직선(즉 $OP$ 에 수직인 직선)과 직선 $OA$ 의 교점을 $Q$ 라 한다. 단 $0 < \\theta < \\dfrac{\\pi}{2}$.",
+  "B": "직각삼각형에서 한 예각이 $\\theta$ 이면 빗변과 두 직각변의 비는 $\\cos\\theta,\\ \\sin\\theta,\\ \\tan\\theta$ 로 정해진다. 반지름 $r$, 중심각 $\\alpha$ 인 부채꼴의 넓이는 $\\dfrac{1}{2}r^2\\alpha$ 이며, $\\theta \\to 0+$ 일 때 $\\dfrac{\\sin\\theta}{\\theta} \\to 1$ 이라는 극한이 핵심이다.",
+  "S": "$f(\\theta)$ 를 구하기 위해 직각삼각형 $OHP$ 의 두 변의 길이를 $\\theta$ 로 나타낸다. $\\overline{OP}=1$ 이고 $\\angle POH=\\theta$ 이므로 $\\overline{OH}=\\cos\\theta,\\ \\overline{PH}=\\sin\\theta$ 이다. 따라서 $$f(\\theta)=\\frac{1}{2}\\,\\overline{OH}\\cdot\\overline{PH}=\\frac{1}{2}\\sin\\theta\\cos\\theta.$$\n부채꼴 $QRA$ 의 반지름인 $\\overline{AQ}$ 를 구하기 위해 점 $Q$ 의 위치를 정한다. 접선은 $OP$ 와 수직이므로 직각삼각형 $OPQ$ 에서 $\\angle OPQ=\\dfrac{\\pi}{2}$ 이고 $\\angle POQ=\\theta$ 이다. 빗변 $\\overline{OQ}$ 에 대해 $\\overline{OP}=\\overline{OQ}\\cos\\theta=1$ 이므로 $$\\overline{OQ}=\\frac{1}{\\cos\\theta}.$$\n$\\overline{OA}=1$ (부채꼴의 반지름)이므로 $Q$ 는 $A$ 보다 바깥쪽에 있고, 부채꼴 $QRA$ 의 반지름 $\\overline{AQ}$ 는 $$\\overline{AQ}=\\overline{OQ}-\\overline{OA}=\\frac{1}{\\cos\\theta}-1=\\frac{1-\\cos\\theta}{\\cos\\theta}.$$\n부채꼴 $QRA$ 의 중심각을 구한다. 중심 $Q$ 에서 직각삼각형 $OPQ$ 의 내각 $\\angle PQO$ 는 $\\dfrac{\\pi}{2}-\\theta$ 이고 이것이 곧 $\\angle AQR$ 이므로, $$g(\\theta)=\\frac{1}{2}\\,\\overline{AQ}^{\\,2}\\left(\\frac{\\pi}{2}-\\theta\\right)=\\frac{1}{2}\\left(\\frac{1-\\cos\\theta}{\\cos\\theta}\\right)^{2}\\left(\\frac{\\pi}{2}-\\theta\\right).$$\n$\\sqrt{g(\\theta)}$ 를 정리한다. $0<\\theta<\\dfrac{\\pi}{2}$ 에서 모든 값이 양수이므로 $$\\sqrt{g(\\theta)}=\\frac{1-\\cos\\theta}{\\cos\\theta}\\sqrt{\\frac{1}{2}\\left(\\frac{\\pi}{2}-\\theta\\right)}=\\frac{1-\\cos\\theta}{\\cos\\theta}\\sqrt{\\frac{\\pi}{4}-\\frac{\\theta}{2}}.$$\n구하는 식에 대입하여 한 분수로 모은다. $$\\frac{\\sqrt{g(\\theta)}}{\\theta\\,f(\\theta)}=\\frac{\\dfrac{1-\\cos\\theta}{\\cos\\theta}\\sqrt{\\dfrac{\\pi}{4}-\\dfrac{\\theta}{2}}}{\\theta\\cdot\\dfrac{1}{2}\\sin\\theta\\cos\\theta}=\\frac{2(1-\\cos\\theta)\\sqrt{\\dfrac{\\pi}{4}-\\dfrac{\\theta}{2}}}{\\theta\\sin\\theta\\cos^{2}\\theta}.$$\n$1-\\cos\\theta$ 를 극한이 보이도록 변형하기 위해 분자·분모에 $1+\\cos\\theta$ 를 곱하고 $1-\\cos^{2}\\theta=\\sin^{2}\\theta$ 를 이용한다. $$\\frac{2(1-\\cos\\theta)\\sqrt{\\dfrac{\\pi}{4}-\\dfrac{\\theta}{2}}}{\\theta\\sin\\theta\\cos^{2}\\theta}=\\frac{2\\sin^{2}\\theta\\,\\sqrt{\\dfrac{\\pi}{4}-\\dfrac{\\theta}{2}}}{\\theta\\sin\\theta\\cos^{2}\\theta\\,(1+\\cos\\theta)}.$$\n$\\dfrac{\\sin\\theta}{\\theta}$ 가 드러나도록 분리한다. $$=\\frac{\\sin\\theta}{\\theta}\\times\\frac{2\\sqrt{\\dfrac{\\pi}{4}-\\dfrac{\\theta}{2}}}{\\cos^{2}\\theta\\,(1+\\cos\\theta)}.$$\n$\\theta\\to 0+$ 의 극한을 취한다. $\\dfrac{\\sin\\theta}{\\theta}\\to 1$, $\\cos\\theta\\to 1$, $\\sqrt{\\dfrac{\\pi}{4}-\\dfrac{\\theta}{2}}\\to\\sqrt{\\dfrac{\\pi}{4}}=\\dfrac{\\sqrt{\\pi}}{2}$ 이므로 $$\\lim_{\\theta\\to 0+}\\frac{\\sqrt{g(\\theta)}}{\\theta\\,f(\\theta)}=1\\times\\frac{2\\cdot\\dfrac{\\sqrt{\\pi}}{2}}{1\\cdot(1+1)}=\\frac{\\sqrt{\\pi}}{2}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/153a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{40}}$$ 입니다.",
-  "finalAnswer": "40",
-  "correctAnswer": "40",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{\\sqrt{\\pi}}{2}}}$$ 입니다.",
+  "finalAnswer": "sqrt(pi)/2",
+  "correctAnswer": "sqrt(pi)/2",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

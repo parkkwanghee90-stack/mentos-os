@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 120번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$200\\times(p+q)$의 값. 여기서 $\\sin(\\angle\\mathrm{AOE})=p+q\\sqrt{7}$이고 $p,\\,q$는 유리수이다.",
+  "C": "반지름 $8$, 중심각 $\\dfrac{\\pi}{2}$인 부채꼴 $\\mathrm{OAB}$의 호 $\\mathrm{AB}$ 위의 점 $\\mathrm{C}$에 대해, 점 $\\mathrm{B}$에서 선분 $\\mathrm{OC}$에 내린 수선의 발이 $\\mathrm{D}$이고, 두 선분 $\\mathrm{BD},\\,\\mathrm{CD}$와 호 $\\mathrm{BC}$에 동시에 접하는 원 $C$가 있다. 원 $C$의 중심 $\\mathrm{O}$에서 그은 접선 중 점 $\\mathrm{C}$를 지나지 않는 직선이 호 $\\mathrm{AB}$와 만나는 점이 $\\mathrm{E}$이며 $\\cos(\\angle\\mathrm{COE})=\\dfrac{7}{25}$이다.",
+  "B": "원 밖의 한 점에서 그은 두 접선의 길이가 같으므로, 중심을 잇는 선은 두 접선이 이루는 각을 이등분한다. 또한 반각 관계 $\\cos2\\alpha=2\\cos^2\\alpha-1$, 직각삼각형의 변과 삼각비, 그리고 사인의 덧셈정리 $\\sin(\\theta+\\varphi)=\\sin\\theta\\cos\\varphi+\\cos\\theta\\sin\\varphi$를 결합해 $\\sin(\\angle\\mathrm{AOE})$를 구한다.",
+  "S": "원 $C$의 중심을 $\\mathrm{O}_1$이라 하고 $\\mathrm{O}_1$에서 두 접선 $\\mathrm{OC},\\,\\mathrm{OE}$에 내린 수선의 발을 각각 $\\mathrm{H}_1,\\,\\mathrm{H}_2$라 하면, 점 $\\mathrm{O}$에서 그은 두 접선의 대칭성으로 직각삼각형 $\\mathrm{O}_1\\mathrm{OH}_1$과 $\\mathrm{O}_1\\mathrm{H}_2\\mathrm{O}$가 합동이다. 따라서 $\\mathrm{OO}_1$이 $\\angle\\mathrm{COE}$를 이등분하므로 $\\angle\\mathrm{O}_1\\mathrm{OH}_1=\\angle\\mathrm{O}_1\\mathrm{OH}_2=\\alpha$로 놓으면 $\\angle\\mathrm{COE}=2\\alpha$이다.\n주어진 $\\cos2\\alpha=\\dfrac{7}{25}$에서 반각을 풀면 $$\\cos2\\alpha=2\\cos^2\\alpha-1=\\frac{7}{25}\\ \\Rightarrow\\ \\cos\\alpha=\\frac{4}{5},\\quad \\sin\\alpha=\\frac{3}{5},$$ 또한 $\\sin2\\alpha=\\sqrt{1-\\cos^2 2\\alpha}=\\dfrac{24}{25}$이다.\n원 $C$의 반지름을 $r$라 하면 호에 내접하므로 $\\overline{\\mathrm{OO}_1}=8-r$, 접점까지의 거리 $\\overline{\\mathrm{O}_1\\mathrm{H}_1}=r$이다. 직각삼각형 $\\mathrm{O}_1\\mathrm{OH}_1$에서 $$\\sin\\alpha=\\frac{r}{8-r}=\\frac{3}{5}\\ \\Rightarrow\\ 5r=24-3r\\ \\Rightarrow\\ r=3.$$\n원이 선분 $\\mathrm{BD}$와 접하는 점을 $\\mathrm{H}_3$라 하면 $\\mathrm{BD}\\perp\\mathrm{OC}$이므로 사각형 $\\mathrm{H}_3\\mathrm{DH}_1\\mathrm{O}_1$은 한 변이 $r$인 정사각형이다. 따라서 $\\overline{\\mathrm{DH}_1}=r=3$이고 $$\\overline{\\mathrm{OH}_1}=\\overline{\\mathrm{OO}_1}\\cos\\alpha=5\\times\\frac{4}{5}=4\\ \\Rightarrow\\ \\overline{\\mathrm{OD}}=\\overline{\\mathrm{OH}_1}-\\overline{\\mathrm{DH}_1}=4-3=1.$$\n$\\angle\\mathrm{COA}=\\beta$로 놓으면 $\\mathrm{BD}\\perp\\mathrm{OC}$이므로 직각삼각형 $\\mathrm{BOD}$에서 $\\angle\\mathrm{OBD}=\\beta$이고, 빗변 $\\overline{\\mathrm{OB}}=8$, 한 변 $\\overline{\\mathrm{OD}}=1$이므로 $$\\sin\\beta=\\frac{\\overline{\\mathrm{OD}}}{\\overline{\\mathrm{OB}}}=\\frac{1}{8},\\qquad \\cos\\beta=\\sqrt{1-\\frac{1}{64}}=\\frac{3\\sqrt{7}}{8}.$$\n점 $\\mathrm{E}$는 점 $\\mathrm{C}$ 반대쪽 접선 위에 있어 $\\angle\\mathrm{AOE}=\\angle\\mathrm{COE}+\\angle\\mathrm{COA}=2\\alpha+\\beta$이므로 사인의 덧셈정리로 $$\\sin(\\angle\\mathrm{AOE})=\\sin(2\\alpha+\\beta)=\\sin2\\alpha\\cos\\beta+\\cos2\\alpha\\sin\\beta.$$\n값을 대입하면 $$\\sin(\\angle\\mathrm{AOE})=\\frac{24}{25}\\times\\frac{3\\sqrt{7}}{8}+\\frac{7}{25}\\times\\frac{1}{8}=\\frac{9}{25}\\sqrt{7}+\\frac{7}{200}=\\frac{7}{200}+\\frac{9}{25}\\sqrt{7}.$$\n유리수 부분과 $\\sqrt{7}$의 계수를 비교하면 $p=\\dfrac{7}{200},\\ q=\\dfrac{9}{25}$이므로 $$200\\times(p+q)=200\\times\\frac{7}{200}+200\\times\\frac{9}{25}=7+72=79.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/121a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{18}}$$ 입니다.",
-  "finalAnswer": "18",
-  "correctAnswer": "18",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{79}}$$ 입니다.",
+  "finalAnswer": "79",
+  "correctAnswer": "79",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

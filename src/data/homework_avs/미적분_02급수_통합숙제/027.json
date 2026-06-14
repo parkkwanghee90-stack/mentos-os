@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 27번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "양수 $a$에 대하여 급수 $\\displaystyle\\sum_{n=1}^{\\infty}\\left(\\dfrac{a-3n}{n}+\\dfrac{an+6}{n+a}\\right)$이 실수 $S$에 수렴할 때, $a+S$의 값을 구한다.",
+  "C": "$a$는 양수이고, 주어진 급수가 어떤 실수 $S$로 수렴한다.",
+  "B": "급수 $\\sum a_n$이 수렴하면 반드시 $\\displaystyle\\lim_{n\\to\\infty}a_n=0$이다. 따라서 일반항을 상수 부분과 $n$에 의존하는 부분으로 분리하여 상수 부분을 $0$으로 만드는 $a$를 먼저 결정하고, 남은 부분이 부분분수 분해로 소거되는 망원급수(telescoping series)임을 이용해 합 $S$를 구한다.",
+  "S": "일반항을 $n$으로 다룰 수 있도록 두 분수를 각각 정리한다. 첫 분수는 $\\dfrac{a-3n}{n}=\\dfrac{a}{n}-3$이고, 둘째 분수는 분자를 분모로 나누어 $\\dfrac{an+6}{n+a}=a+\\dfrac{6-a^2}{n+a}$로 쓸 수 있으므로 일반항은 $$u_n=(a-3)+\\dfrac{a}{n}+\\dfrac{6-a^2}{n+a}$$ 이다.\n급수가 수렴하려면 일반항이 $0$으로 가야 하므로 $n\\to\\infty$에서의 극한을 본다. $\\dfrac{a}{n}\\to 0$, $\\dfrac{6-a^2}{n+a}\\to 0$이므로 $\\displaystyle\\lim_{n\\to\\infty}u_n=a-3$이고, 이 값이 $0$이어야 하므로 상수 부분에서 $$a-3=0$$ 즉 $a=3$을 얻는다.\n$a=3$을 일반항에 대입하면 $1/n$ 형태 항의 계수까지 함께 정리된다. $\\dfrac{a}{n}+\\dfrac{6-a^2}{n+a}=\\dfrac{3}{n}+\\dfrac{6-9}{n+3}=\\dfrac{3}{n}-\\dfrac{3}{n+3}$ 이므로 $$u_n=\\dfrac{3}{n}-\\dfrac{3}{n+3}=\\dfrac{9}{n(n+3)}.$$\n부분합 $S_N=\\sum_{n=1}^{N}u_n$을 계산하면 $\\dfrac{3}{n}-\\dfrac{3}{n+3}$ 꼴이 망원급수로 소거된다. 분모가 $3$만큼 어긋나므로 앞의 세 항 $\\dfrac{3}{1},\\dfrac{3}{2},\\dfrac{3}{3}$과 뒤의 세 항 $-\\dfrac{3}{N+1},-\\dfrac{3}{N+2},-\\dfrac{3}{N+3}$만 남아 $$S_N=3\\left(1+\\dfrac{1}{2}+\\dfrac{1}{3}\\right)-3\\left(\\dfrac{1}{N+1}+\\dfrac{1}{N+2}+\\dfrac{1}{N+3}\\right).$$\n$N\\to\\infty$에서 뒤쪽 세 항은 모두 $0$으로 가므로 합 $S$는 $$S=\\lim_{N\\to\\infty}S_N=3\\left(1+\\dfrac{1}{2}+\\dfrac{1}{3}\\right)=3\\cdot\\dfrac{11}{6}=\\dfrac{11}{2}.$$\n구한 값을 모아 답을 정한다. $a=3$, $S=\\dfrac{11}{2}$이므로 $$a+S=3+\\dfrac{11}{2}=\\dfrac{17}{2}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/028a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{④번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{17}{2}}}$$ 입니다.",
   "finalAnswer": "4",
   "correctAnswer": "4",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

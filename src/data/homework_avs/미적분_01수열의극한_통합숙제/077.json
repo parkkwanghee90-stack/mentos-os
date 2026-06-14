@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 수열의 극한 77번 명품 해설",
   "type": "calculus",
-  "P": "수열의 극한값과 급수의 수렴·발산을 판별합니다.",
-  "C": "최고차항으로 나누기, 샌드위치 정리, 등비수열 극한 조건을 활용합니다.",
-  "B": "수열의 극한:\n\n1) $$\\lim_{n \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교\n2) $$|r| < 1 \\Rightarrow \\lim_{n \\to \\infty} r^n = 0$$\n3) 수렴 조건: 단조 수렴 정리, 샌드위치 정리\n4) $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\lim_{n\\to\\infty} a_n b_n = L$일 때 $100L$의 값. 여기서 $a_n$은 삼각형 $OP_nQ_n$의 내접원의 중심에서 $x$축까지의 거리, $b_n$은 외접원의 중심에서 $x$축까지의 거리이다.",
+  "C": "$P_n$은 $x$축 위에서 $x$좌표가 $n$인 점이므로 $P_n(n,\\ 0)$이고, $Q_n$은 직선 $y=\\sqrt{3}\\,x$ 위에서 $x$좌표가 $\\dfrac{1}{n}$인 점이므로 $Q_n\\!\\left(\\dfrac{1}{n},\\ \\dfrac{\\sqrt{3}}{n}\\right)$이다. $O$는 원점이다.",
+  "B": "변 $OP_n$이 $x$축 위에 놓이므로 내접원은 $x$축에 접하고, 따라서 내접원의 중심에서 $x$축까지의 거리 $a_n$은 내접원의 반지름과 같아 $a_n=\\dfrac{2S_n}{p_n+q_n+r_n}$로 구한다. 외접원의 중심 $C_n$은 현 $OP_n$의 수직이등분선 위에 있으므로 $x$좌표가 정해지고, $\\overline{OC_n}=\\overline{Q_nC_n}$에서 $y$좌표를 구하면 $b_n$은 그 $y$좌표의 절댓값이다. 극한은 분모·분자의 최고차항으로 정리한다.",
+  "S": "세 변의 길이를 좌표로 계산한다. $p_n=\\overline{OP_n}=n$, $q_n=\\overline{OQ_n}=\\sqrt{\\left(\\dfrac{1}{n}\\right)^2+\\left(\\dfrac{\\sqrt{3}}{n}\\right)^2}=\\dfrac{2}{n}$, $r_n=\\overline{P_nQ_n}=\\sqrt{\\left(n-\\dfrac{1}{n}\\right)^2+\\left(\\dfrac{\\sqrt{3}}{n}\\right)^2}=\\dfrac{\\sqrt{n^4-2n^2+4}}{n}$이다.\n넓이는 밑변을 $x$축 위의 $\\overline{OP_n}=n$, 높이를 $Q_n$의 $y$좌표 $\\dfrac{\\sqrt{3}}{n}$로 보면 $S_n=\\dfrac{1}{2}\\times n\\times\\dfrac{\\sqrt{3}}{n}=\\dfrac{\\sqrt{3}}{2}$로 상수이다.\n변 $OP_n$이 $x$축 위에 있어 내접원이 $x$축에 접하므로 $a_n$은 내접원의 반지름과 같다. $S_n=\\dfrac{1}{2}(p_n+q_n+r_n)\\,a_n$에서 $$a_n=\\dfrac{2S_n}{p_n+q_n+r_n}=\\dfrac{2\\times\\dfrac{\\sqrt{3}}{2}}{\\,n+\\dfrac{2}{n}+\\dfrac{\\sqrt{n^4-2n^2+4}}{n}\\,}=\\dfrac{\\sqrt{3}\\,n}{\\,n^2+2+\\sqrt{n^4-2n^2+4}\\,}.$$\n외접원의 중심 $C_n(x_n,\\ y_n)$은 현 $OP_n$의 수직이등분선 위에 있으므로 $x_n=\\dfrac{n}{2}$이다.\n중심은 $O$와 $Q_n$에서 같은 거리에 있으므로 $\\overline{OC_n}^{\\,2}=\\overline{Q_nC_n}^{\\,2}$이다. $$\\left(\\dfrac{n}{2}\\right)^2+y_n^{\\,2}=\\left(\\dfrac{n}{2}-\\dfrac{1}{n}\\right)^2+\\left(y_n-\\dfrac{\\sqrt{3}}{n}\\right)^2$$를 정리하면 $0=-1+\\dfrac{1}{n^2}-\\dfrac{2\\sqrt{3}}{n}y_n+\\dfrac{3}{n^2}$이므로 $y_n=\\dfrac{4-n^2}{2\\sqrt{3}\\,n}$이다.\n$b_n$은 중심에서 $x$축까지의 거리 $|y_n|$이므로 충분히 큰 $n$($n\\ge 2$)에서 $$b_n=|y_n|=\\dfrac{n^2-4}{2\\sqrt{3}\\,n}.$$\n두 식을 곱하면 $\\sqrt{3}\\,n$이 약분되어 $$a_n b_n=\\dfrac{\\sqrt{3}\\,n}{\\,n^2+2+\\sqrt{n^4-2n^2+4}\\,}\\times\\dfrac{n^2-4}{2\\sqrt{3}\\,n}=\\dfrac{n^2-4}{2\\left(n^2+2+\\sqrt{n^4-2n^2+4}\\right)}.$$\n분모·분자를 $n^2$으로 나누어 극한을 구한다. $$L=\\lim_{n\\to\\infty}\\dfrac{1-\\dfrac{4}{n^2}}{2\\left(1+\\dfrac{2}{n^2}+\\sqrt{1-\\dfrac{2}{n^2}+\\dfrac{4}{n^4}}\\right)}=\\dfrac{1-0}{2(1+0+\\sqrt{1})}=\\dfrac{1}{4}.$$\n따라서 $$100L=100\\times\\dfrac{1}{4}=25.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/01수열의극한/078a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{18}}$$ 입니다.",
-  "finalAnswer": "18",
-  "correctAnswer": "18",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{100L = 25}}$$ 입니다.",
+  "finalAnswer": "25",
+  "correctAnswer": "25",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

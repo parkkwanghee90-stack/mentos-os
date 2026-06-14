@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 89번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "사각형 $OAEC$의 넓이를 구한다.",
+  "C": "중심이 $O$, 반지름이 $4$인 원 위의 점 $A$를 $O$를 중심으로 시계 반대 방향으로 각 $\\theta\\ \\left(0<\\theta<\\dfrac{\\pi}{2}\\right)$만큼 회전시킨 점이 $B$, 점 $B$를 다시 $O$를 중심으로 시계 반대 방향으로 $\\dfrac{\\pi}{2}$만큼 회전시킨 점이 $C$이다. 점 $A,\\ B,\\ C$에서의 접선 중 $A$의 접선과 $B$의 접선이 만나는 점이 $D$, $A$의 접선과 $C$의 접선이 만나는 점이 $E$이며, 사각형 $OADB$의 넓이는 $8$이다.",
+  "B": "원 위의 한 점에서 그은 접선은 그 점을 지나는 반지름과 수직이다. 원 밖의 한 점에서 그은 두 접선의 길이는 같고, 두 접점과 중심을 이으면 그 외부 점과 중심을 잇는 직선에 대하여 대칭인 두 개의 합동인 직각삼각형이 만들어진다. 직각삼각형에서 한 변과 끼인각으로 다른 변을 구할 때 $\\tan$을 쓰며, 두 각의 합의 탄젠트는 $\\tan(\\alpha+\\beta)=\\dfrac{\\tan\\alpha+\\tan\\beta}{1-\\tan\\alpha\\tan\\beta}$로 계산한다.",
+  "S": "두 접선이 만나는 점에서 본 도형의 구조를 파악하기 위해 중심각을 정리하면, $\\angle AOB=\\theta$이고 $\\angle BOC=\\dfrac{\\pi}{2}$이므로 $$\\angle AOC=\\theta+\\frac{\\pi}{2}.$$\n접선은 접점을 지나는 반지름과 수직이므로 사각형 $OADB$는 $OA=OB=4$, $\\angle OAD=\\angle OBD=\\dfrac{\\pi}{2}$인 연꼴이고, 대각선 $OD$가 $\\angle AOB$를 이등분하므로 $$\\angle AOD=\\frac{\\theta}{2}.$$\n직각삼각형 $OAD$에서 밑변 $OA=4$, 끼인각 $\\dfrac{\\theta}{2}$로 접선의 길이를 구하면 $$\\overline{AD}=\\overline{OA}\\tan\\frac{\\theta}{2}=4\\tan\\frac{\\theta}{2}.$$\n사각형 $OADB$는 합동인 두 직각삼각형 $OAD$, $OBD$로 이루어지므로 넓이를 식으로 세우면 $$\\square OADB=2\\times\\frac{1}{2}\\times\\overline{OA}\\times\\overline{AD}=16\\tan\\frac{\\theta}{2}.$$\n주어진 조건 $\\square OADB=8$을 대입하여 각의 정보를 확정하면 $$16\\tan\\frac{\\theta}{2}=8\\ \\Rightarrow\\ \\tan\\frac{\\theta}{2}=\\frac{1}{2}.$$\n점 $E$도 같은 구조이므로 $OA=OC=4$, $\\angle OAE=\\angle OCE=\\dfrac{\\pi}{2}$이고 $OE$가 $\\angle AOC$를 이등분하여 $$\\angle AOE=\\frac{1}{2}\\angle AOC=\\frac{\\pi}{4}+\\frac{\\theta}{2}.$$\n직각삼각형 $OAE$에서 접선의 길이를 구하면 $$\\overline{AE}=\\overline{OA}\\tan\\!\\left(\\frac{\\pi}{4}+\\frac{\\theta}{2}\\right)=4\\tan\\!\\left(\\frac{\\pi}{4}+\\frac{\\theta}{2}\\right).$$\n탄젠트의 덧셈정리에 $\\tan\\dfrac{\\pi}{4}=1$, $\\tan\\dfrac{\\theta}{2}=\\dfrac{1}{2}$을 대입하여 값을 정리하면 $$\\tan\\!\\left(\\frac{\\pi}{4}+\\frac{\\theta}{2}\\right)=\\frac{1+\\frac{1}{2}}{1-\\frac{1}{2}}=3.$$\n마지막으로 사각형 $OAEC$의 넓이를 같은 방식으로 계산하면 $$\\square OAEC=2\\times\\frac{1}{2}\\times\\overline{OA}\\times\\overline{AE}=16\\tan\\!\\left(\\frac{\\pi}{4}+\\frac{\\theta}{2}\\right)=16\\times 3=48.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/090a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{④번}}$$ 입니다.",
-  "finalAnswer": "4",
-  "correctAnswer": "4",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{48}}$$ 입니다.",
+  "finalAnswer": "48",
+  "correctAnswer": "48",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

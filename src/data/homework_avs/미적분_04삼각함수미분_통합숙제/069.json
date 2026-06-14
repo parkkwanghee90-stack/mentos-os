@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 69번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\theta \\to 0+$일 때 $\\dfrac{\\overline{PQ}}{\\theta^3}$의 극한값을 구한다.",
+  "C": "길이가 $2$인 선분 $\\mathrm{AB}$를 지름으로 하고 중심이 $\\mathrm{O}$인 원 $C_1$ 위의 점 $\\mathrm{P}$에 대하여 $\\angle \\mathrm{PAB}=\\theta$이고, 선분 $\\mathrm{OP}$에 접하고 중심이 $\\mathrm{B}$인 원 $C_2$가 선분 $\\mathrm{BP}$와 만나는 점이 $\\mathrm{Q}$이다. (단, $0<\\theta<\\dfrac{\\pi}{4}$)",
+  "B": "반원에 대한 원주각은 직각이므로 지름 $\\mathrm{AB}$에 대하여 $\\angle \\mathrm{APB}=\\dfrac{\\pi}{2}$이다. 직각삼각형에서 변의 길이는 삼각비로 구하고, 접선은 접점에서 반지름과 수직임을 이용한다. 극한 계산에는 $\\displaystyle\\lim_{\\theta\\to 0}\\dfrac{\\sin\\theta}{\\theta}=1$, $\\displaystyle\\lim_{\\theta\\to 0}\\dfrac{1-\\cos\\theta}{\\theta^2}=\\dfrac{1}{2}$를 쓴다.",
+  "S": "지름에 대한 원주각이므로 $\\angle \\mathrm{APB}=\\dfrac{\\pi}{2}$이고, 직각삼각형 $\\mathrm{APB}$에서 빗변 $\\overline{\\mathrm{AB}}=2$이므로 $\\theta$에 마주 보는 변의 길이는 $$\\overline{\\mathrm{PB}}=\\overline{\\mathrm{AB}}\\sin\\theta=2\\sin\\theta.$$\n원 $C_2$의 반지름 $\\overline{\\mathrm{BQ}}$를 구하기 위해 접점을 $\\mathrm{R}$라 하면, 이는 중심 $\\mathrm{B}$에서 선분 $\\mathrm{OP}$에 내린 수선의 발이다. 삼각형 $\\mathrm{OPB}$는 $\\overline{\\mathrm{OP}}=\\overline{\\mathrm{OB}}=1$인 이등변삼각형이므로 밑각이 같아 $\\angle \\mathrm{OBP}=\\angle \\mathrm{OPB}$이다.\n삼각형 $\\mathrm{ABP}$에서 $\\angle \\mathrm{ABP}=\\dfrac{\\pi}{2}-\\theta$이고 $\\angle \\mathrm{OPB}=\\theta$이므로, 직각삼각형 $\\mathrm{BRO}$에서 $\\angle \\mathrm{ROB}=2\\theta$가 되어 접선의 길이가 정해진다.\n직각삼각형 $\\mathrm{BRO}$에서 빗변 $\\overline{\\mathrm{OB}}=1$이므로 원 $C_2$의 반지름은 $$\\overline{\\mathrm{BR}}=\\overline{\\mathrm{OB}}\\sin(2\\theta)=\\sin 2\\theta,$$ 그리고 $\\overline{\\mathrm{BQ}}=\\overline{\\mathrm{BR}}=\\sin 2\\theta.$\n점 $\\mathrm{Q}$가 선분 $\\mathrm{BP}$ 위에 있으므로 구하는 길이는 두 길이의 차이고, 배각공식 $\\sin 2\\theta=2\\sin\\theta\\cos\\theta$로 정리하면 $$\\overline{\\mathrm{PQ}}=\\overline{\\mathrm{PB}}-\\overline{\\mathrm{BQ}}=2\\sin\\theta-2\\sin\\theta\\cos\\theta=2\\sin\\theta(1-\\cos\\theta).$$\n극한식에 대입한 뒤 기본 극한을 만들기 위해 $\\theta^3=\\theta\\cdot\\theta^2$로 쪼개어 인수마다 분리하면 $$\\lim_{\\theta\\to 0+}\\frac{\\overline{\\mathrm{PQ}}}{\\theta^3}=\\lim_{\\theta\\to 0+}\\frac{2\\sin\\theta(1-\\cos\\theta)}{\\theta^3}=\\lim_{\\theta\\to 0+}2\\cdot\\frac{\\sin\\theta}{\\theta}\\cdot\\frac{1-\\cos\\theta}{\\theta^2}.$$\n각 인수의 극한 $\\displaystyle\\lim_{\\theta\\to 0+}\\frac{\\sin\\theta}{\\theta}=1$, $\\displaystyle\\lim_{\\theta\\to 0+}\\frac{1-\\cos\\theta}{\\theta^2}=\\frac{1}{2}$를 적용하면 $$2\\cdot 1\\cdot\\frac{1}{2}=1.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/070a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{①번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{1}}$$ 입니다.",
   "finalAnswer": "1",
   "correctAnswer": "1",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

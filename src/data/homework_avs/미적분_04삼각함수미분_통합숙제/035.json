@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 35번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$0 \\le x < \\pi$에서 방정식 $3\\cos 2x - 2\\sin^2 x - 4\\cos x + 5 = 0$의 모든 실근의 합을 구한다.",
+  "C": "정의역은 $0 \\le x < \\pi$ (오른쪽 끝 $x=\\pi$는 제외). 등식 $3\\cos 2x - 2\\sin^2 x - 4\\cos x + 5 = 0$을 만족하는 모든 $x$의 합을 묻는 객관식 문제이며, 보기는 분수 $\\times\\, \\pi$ 꼴로 주어진다.",
+  "B": "각이 $2x$와 $x$로 섞여 있을 때는 배각공식으로 각을 하나로 통일하는 것이 핵심이다. $\\cos 2x = 2\\cos^2 x - 1$, $\\sin^2 x = 1 - \\cos^2 x$를 쓰면 식 전체가 $\\cos x$에 대한 이차식으로 바뀌어, $\\cos x = k$ 꼴의 기본 방정식으로 환원된다. 이후에는 단위원에서 $\\cos$ 값이 정해진 각을 정의역 안에서 빠짐없이 찾는다.",
+  "S": "배각공식으로 각을 $x$ 하나로 통일하기 위해 $\\cos 2x = 2\\cos^2 x - 1$, $\\sin^2 x = 1 - \\cos^2 x$를 대입한다. $$3(2\\cos^2 x - 1) - 2(1 - \\cos^2 x) - 4\\cos x + 5 = 0$$\n괄호를 풀고 동류항을 정리하면 상수항이 $-3 - 2 + 5 = 0$으로 사라져 $\\cos x$에 대한 이차식이 된다. $$6\\cos^2 x - 3 - 2 + 2\\cos^2 x - 4\\cos x + 5 = 0 \\;\\Longrightarrow\\; 8\\cos^2 x - 4\\cos x = 0$$\n공통인수 $4\\cos x$로 묶어 곱이 $0$이 되는 두 경우로 분리한다. $$4\\cos x\\,(2\\cos x - 1) = 0 \\;\\Longrightarrow\\; \\cos x = 0 \\;\\text{ 또는 }\\; \\cos x = \\tfrac{1}{2}$$\n$\\cos x = 0$인 각을 정의역 $0 \\le x < \\pi$에서 찾으면 단위원에서 $x$축 성분이 $0$인 각은 $x = \\dfrac{\\pi}{2}$ 하나뿐이다.\n$\\cos x = \\dfrac{1}{2}$인 각을 같은 정의역에서 찾으면 $x = \\dfrac{\\pi}{3}$이다. 다른 후보 $x = \\dfrac{5\\pi}{3}$은 $\\dfrac{5\\pi}{3} \\ge \\pi$이므로 정의역 밖이라 버린다.\n정의역 안의 모든 실근은 $x = \\dfrac{\\pi}{3}$, $x = \\dfrac{\\pi}{2}$이므로 그 합을 구한다. $$\\frac{\\pi}{3} + \\frac{\\pi}{2} = \\frac{2\\pi}{6} + \\frac{3\\pi}{6} = \\frac{5}{6}\\pi$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/036a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{11}}$$ 입니다.",
-  "finalAnswer": "11",
-  "correctAnswer": "11",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{5}{6}\\pi}}$$ 입니다.",
+  "finalAnswer": "5/6π",
+  "correctAnswer": "5/6π",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

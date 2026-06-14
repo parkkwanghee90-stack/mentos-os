@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 여러 가지 미분법 35번 명품 해설",
   "type": "calculus",
-  "P": "합성함수, 매개변수, 음함수의 미분법을 활용합니다.",
-  "C": "연쇄 법칙, 몫의 미분법, 매개변수 미분을 적용합니다.",
-  "B": "여러 가지 미분법:\n\n1) 합성함수: $$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$$\n2) 매개변수: $$\\frac{dy}{dx} = \\frac{\\frac{dy}{dt}}{\\frac{dx}{dt}}$$\n3) 음함수: 양변을 $$x$$로 미분, $$y' = \\frac{dy}{dx}$$로 놓고 정리\n4) 역함수 미분: $$\\frac{dx}{dy} = \\frac{1}{\\frac{dy}{dx}}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "곡선 $\\pi x = \\cos y + x\\sin y$ 위의 점 $\\left(0,\\ \\dfrac{\\pi}{2}\\right)$에서의 접선의 기울기를 구한다.",
+  "C": "곡선의 방정식은 $\\pi x = \\cos y + x\\sin y$이고, 접점의 좌표는 $x=0,\\ y=\\dfrac{\\pi}{2}$이다. $y$는 $x$의 함수로 음함수 꼴로 주어져 있다.",
+  "B": "접선의 기울기는 그 점에서의 미분계수 $\\dfrac{dy}{dx}$이다. $y$가 $x$에 대해 음함수로 정해져 있으므로, 양변을 $x$로 미분할 때 $y$를 포함한 항은 합성함수 미분법에 따라 $\\dfrac{dy}{dx}$를 곱해 처리한다. 또한 $x\\sin y$처럼 $x$와 $y$의 곱은 곱의 미분법을 적용한다.",
+  "S": "주어진 식을 음함수로 보고 양변을 $x$에 대해 미분하기 위해, 각 항의 도함수를 합성함수·곱의 미분법으로 전개한다. $\\cos y$는 $-\\sin y\\cdot\\dfrac{dy}{dx}$, $x\\sin y$는 $\\sin y + x\\cos y\\cdot\\dfrac{dy}{dx}$가 된다. $$\\pi = -\\sin y\\,\\frac{dy}{dx} + \\sin y + x\\cos y\\,\\frac{dy}{dx}$$\n$\\dfrac{dy}{dx}$가 들어간 항을 한쪽으로 모아 공통인수로 묶기 위해 정리한다. $$\\pi - \\sin y = \\left(x\\cos y - \\sin y\\right)\\frac{dy}{dx}$$\n$\\dfrac{dy}{dx}$에 대해 풀어 음함수의 도함수를 좌표로 나타낸다. $$\\frac{dy}{dx} = \\frac{\\pi - \\sin y}{x\\cos y - \\sin y}$$\n접점 $\\left(0,\\ \\dfrac{\\pi}{2}\\right)$에서의 기울기를 얻기 위해 $x=0,\\ y=\\dfrac{\\pi}{2}$를 대입한다. 분자는 $\\pi - \\sin\\dfrac{\\pi}{2} = \\pi - 1$이다. $$\\text{(분자)} = \\pi - \\sin\\frac{\\pi}{2} = \\pi - 1$$\n분모를 같은 좌표로 계산하면 $0\\cdot\\cos\\dfrac{\\pi}{2} - \\sin\\dfrac{\\pi}{2} = 0 - 1 = -1$이다. $$\\text{(분모)} = 0\\cdot\\cos\\frac{\\pi}{2} - \\sin\\frac{\\pi}{2} = -1$$\n분자와 분모를 나누어 접선의 기울기를 구한다. $$\\frac{dy}{dx} = \\frac{\\pi - 1}{-1} = 1 - \\pi$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/05여러가지미분법/036a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{④번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{1 - \\pi}}$$ 입니다.",
   "finalAnswer": "4",
   "correctAnswer": "4",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

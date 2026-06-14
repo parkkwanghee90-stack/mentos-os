@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 지수로그함수의 미분 24번 명품 해설",
   "type": "calculus",
-  "P": "지수함수·로그함수의 도함수를 구하고 응용합니다.",
-  "C": "자연로그의 밑 $$e$$와 로그 미분법을 활용합니다.",
-  "B": "지수·로그함수의 미분:\n\n1) $$(e^x)' = e^x$$, $$(a^x)' = a^x \\ln a$$\n2) $$(\\ln x)' = \\frac{1}{x}$$, $$(\\log_a x)' = \\frac{1}{x \\ln a}$$\n3) $$(e^{f(x)})' = f'(x) e^{f(x)}$$\n4) $$\\lim_{x \\to 0} \\frac{e^x - 1}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\ln(1+x)}{x} = 1$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$t \\to 0+$일 때 $\\dfrac{\\overline{\\mathrm{AB}}}{\\overline{\\mathrm{AH}}}$의 극한값을 구한다.",
+  "C": "두 함수는 $f(x)=2^x$, $g(x)=\\left(\\dfrac{1}{2}\\right)^x$이다. 직선 $x=t$ $(t>0)$가 $y=f(x)$와 만나는 점이 $\\mathrm{A}$, $y=g(x)$와 만나는 점이 $\\mathrm{B}$이며, 점 $\\mathrm{A}$에서 $y$축에 내린 수선의 발이 $\\mathrm{H}$이다.",
+  "B": "직선 $x=t$ 위의 점은 $x$좌표가 모두 $t$이므로 곡선과의 교점은 함숫값을 $y$좌표로 가진다. 또한 지수함수의 미분에서 핵심이 되는 극한 $\\lim\\limits_{t\\to 0}\\dfrac{a^t-1}{t}=\\ln a$ $(a>0)$를 이용하면 $\\dfrac{0}{0}$ 꼴 극한을 정리할 수 있다.",
+  "S": "교점은 직선 $x=t$ 위에 있어 $x$좌표가 $t$이고 $y$좌표는 각 함숫값이므로, $\\mathrm{A}\\left(t,\\,2^{t}\\right)$, $\\mathrm{B}\\left(t,\\,\\left(\\dfrac{1}{2}\\right)^{t}\\right)$이다.\n점 $\\mathrm{A}$에서 $y$축에 내린 수선의 발은 $x$좌표가 $0$이고 $y$좌표가 $\\mathrm{A}$와 같으므로 $\\mathrm{H}\\left(0,\\,2^{t}\\right)$이다.\n$\\overline{\\mathrm{AH}}$는 $\\mathrm{A}$와 $\\mathrm{H}$의 $x$좌표 차이이므로 $\\overline{\\mathrm{AH}}=t$이고, $\\overline{\\mathrm{AB}}$는 두 점의 $y$좌표 차이이며 $t>0$에서 $2^{t}>\\left(\\dfrac{1}{2}\\right)^{t}$이므로 $$\\overline{\\mathrm{AB}}=2^{t}-\\left(\\dfrac{1}{2}\\right)^{t}.$$\n구하는 비를 정리하면 $$\\frac{\\overline{\\mathrm{AB}}}{\\overline{\\mathrm{AH}}}=\\frac{2^{t}-\\left(\\dfrac{1}{2}\\right)^{t}}{t}.$$\n$t\\to 0+$에서 분자, 분모가 모두 $0$으로 가는 꼴이므로 분자를 $-1$과 $+1$을 더해 두 항으로 분리한다. $$\\frac{2^{t}-\\left(\\dfrac{1}{2}\\right)^{t}}{t}=\\frac{2^{t}-1}{t}-\\frac{\\left(\\dfrac{1}{2}\\right)^{t}-1}{t}.$$\n지수함수의 극한 공식 $\\lim\\limits_{t\\to 0}\\dfrac{a^{t}-1}{t}=\\ln a$를 각 항에 적용하면 $$\\lim_{t\\to 0+}\\frac{2^{t}-1}{t}=\\ln 2,\\qquad \\lim_{t\\to 0+}\\frac{\\left(\\dfrac{1}{2}\\right)^{t}-1}{t}=\\ln\\frac{1}{2}.$$\n따라서 $$\\lim_{t\\to 0+}\\frac{\\overline{\\mathrm{AB}}}{\\overline{\\mathrm{AH}}}=\\ln 2-\\ln\\frac{1}{2}=\\ln 2-(-\\ln 2)=2\\ln 2.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/03지수로그함수미분/025a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2ln2}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2\\ln 2}}$$ 입니다.",
   "finalAnswer": "2ln2",
   "correctAnswer": "2ln2",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

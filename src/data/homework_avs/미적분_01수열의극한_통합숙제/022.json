@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 수열의 극한 22번 명품 해설",
   "type": "calculus",
-  "P": "수열의 극한값과 급수의 수렴·발산을 판별합니다.",
-  "C": "최고차항으로 나누기, 샌드위치 정리, 등비수열 극한 조건을 활용합니다.",
-  "B": "수열의 극한:\n\n1) $$\\lim_{n \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교\n2) $$|r| < 1 \\Rightarrow \\lim_{n \\to \\infty} r^n = 0$$\n3) 수렴 조건: 단조 수렴 정리, 샌드위치 정리\n4) $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle\\lim_{n\\to\\infty}\\dfrac{2a_n+3b_n}{a_n+b_n}=\\dfrac{q}{p}$ 일 때 $p+q$의 값",
+  "C": "$\\displaystyle\\lim_{n\\to\\infty}a_n=\\infty$, $\\displaystyle\\lim_{n\\to\\infty}(2a_n-5b_n)=3$, 그리고 $p,\\ q$는 서로소인 자연수",
+  "B": "발산하는 수열로 분모와 분자를 나누면 극한을 구할 수 있다. 핵심은 $\\dfrac{b_n}{a_n}$의 극한을 먼저 알아내는 것이다. 유한한 극한값을 발산하는 $a_n$으로 나누면 $0$으로 수렴한다는 성질, 즉 $\\displaystyle\\lim_{n\\to\\infty}\\dfrac{(\\text{수렴값})}{a_n}=0$을 이용한다.",
+  "S": "조건 (나)의 식에서 공통인수 $a_n$을 묶어내야 $a_n\\to\\infty$ 정보를 활용할 수 있으므로, $2a_n-5b_n=a_n\\!\\left(2-5\\cdot\\dfrac{b_n}{a_n}\\right)$로 변형한다. 따라서 $$\\lim_{n\\to\\infty}a_n\\!\\left(2-5\\cdot\\frac{b_n}{a_n}\\right)=3.$$\n이 곱의 극한이 유한한 값 $3$인데 $a_n\\to\\infty$이므로, 곱이 발산하지 않으려면 괄호 안이 $0$으로 수렴해야 한다. 즉 $$\\lim_{n\\to\\infty}\\left(2-5\\cdot\\frac{b_n}{a_n}\\right)=0.$$\n위 식을 $\\dfrac{b_n}{a_n}$에 대해 풀면 비율의 극한이 정해지므로 $$\\lim_{n\\to\\infty}\\frac{b_n}{a_n}=\\frac{2}{5}.$$\n구하는 식의 분모와 분자를 $a_n$으로 나누면 모든 항이 $\\dfrac{b_n}{a_n}$ 꼴로 정리되므로 $$\\lim_{n\\to\\infty}\\frac{2a_n+3b_n}{a_n+b_n}=\\lim_{n\\to\\infty}\\frac{2+3\\cdot\\dfrac{b_n}{a_n}}{1+\\dfrac{b_n}{a_n}}.$$\n앞에서 구한 $\\dfrac{b_n}{a_n}\\to\\dfrac{2}{5}$를 대입하면 $$\\frac{2+3\\cdot\\dfrac{2}{5}}{1+\\dfrac{2}{5}}=\\frac{\\dfrac{16}{5}}{\\dfrac{7}{5}}=\\frac{16}{7}.$$\n극한값 $\\dfrac{16}{7}$이 $\\dfrac{q}{p}$이고 $16$과 $7$은 서로소이므로 $q=16,\\ p=7$이다. 따라서 $$p+q=7+16=23.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/01수열의극한/023a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{④번}}$$ 입니다.",
-  "finalAnswer": "4",
-  "correctAnswer": "4",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{23}}$$ 입니다.",
+  "finalAnswer": "23",
+  "correctAnswer": "23",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

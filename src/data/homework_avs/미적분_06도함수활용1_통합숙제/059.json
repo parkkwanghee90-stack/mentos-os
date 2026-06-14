@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 도함수의 활용 1 59번 명품 해설",
   "type": "calculus",
-  "P": "이계도함수를 이용하여 곡선의 볼록성, 변곡점을 분석합니다.",
-  "C": "$$f''(x)$$의 부호로 아래/위로 볼록을 판별하고, 변곡점을 구합니다.",
-  "B": "도함수의 활용 1:\n\n1) $$f''(x) > 0$$: 아래로 볼록, $$f''(x) < 0$$: 위로 볼록\n2) 변곡점: $$f''(x) = 0$$이고 볼록성이 바뀌는 점\n3) 접선·법선의 방정식\n4) 속도·가속도 문제",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "두 정사각형 ABCD와 EFGH의 내부가 겹치는 공통부분의 넓이가 최대가 될 때, 그 최댓값을 구하는 것.",
+  "C": "정사각형 ABCD의 꼭짓점은 $A(1,0)$, $B(3,0)$, $C(3,2)$, $D(1,2)$이므로 이 정사각형은 영역 $1\\le x\\le 3$, $0\\le y\\le 2$를 차지한다. 정사각형 EFGH는 한 변의 길이가 $2$이고 모든 변이 $x$축 또는 $y$축에 수직이며, 두 대각선의 교점(중심)이 원 $x^2+y^2=1$ 위에 있다.",
+  "B": "변이 좌표축에 평행한 두 직사각형의 공통부분은 다시 직사각형이고, 그 넓이는 $x$방향으로 겹치는 길이와 $y$방향으로 겹치는 길이의 곱과 같다. 한 변수로 표현된 넓이 함수를 미분하여 도함수가 $0$이 되는 점에서 증가에서 감소로 바뀌는지를 확인하면 최댓값을 찾을 수 있다.",
+  "S": "EFGH의 중심이 원 $x^2+y^2=1$ 위에 있으므로 중심을 $(\\cos\\theta,\\ \\sin\\theta)$로 놓으면, 변이 축에 평행하고 한 변의 길이가 $2$이므로 EFGH가 차지하는 영역은 $\\cos\\theta-1\\le x\\le \\cos\\theta+1$, $\\sin\\theta-1\\le y\\le \\sin\\theta+1$이다.\n공통부분의 넓이를 $\\theta$로 나타내기 위해 먼저 겹치는 영역을 분석한다. 넓이가 커지려면 EFGH가 ABCD가 있는 오른쪽 위 방향으로 치우쳐야 하므로 $0\\le\\theta\\le \\dfrac{\\pi}{2}$ 범위에서 $\\cos\\theta,\\ \\sin\\theta$가 모두 $0$ 이상 $1$ 이하인 경우를 살핀다.\n$x$방향 겹침을 구하면, EFGH의 $x$범위 $[\\cos\\theta-1,\\ \\cos\\theta+1]$와 ABCD의 $x$범위 $[1,3]$의 교집합 길이이다. $\\cos\\theta-1\\le 0<1$이고 $1\\le \\cos\\theta+1\\le 2\\le 3$이므로 겹치는 길이는 $(\\cos\\theta+1)-1=\\cos\\theta$이다.\n$y$방향 겹침을 구하면, EFGH의 $y$범위 $[\\sin\\theta-1,\\ \\sin\\theta+1]$와 ABCD의 $y$범위 $[0,2]$의 교집합 길이이다. $\\sin\\theta-1\\le 0$이고 $1\\le \\sin\\theta+1\\le 2$이므로 겹치는 길이는 $(\\sin\\theta+1)-0=\\sin\\theta+1$이다.\n두 방향의 겹침 길이를 곱해 넓이 함수를 세우면 $$S(\\theta)=\\cos\\theta\\,(\\sin\\theta+1)=\\cos\\theta\\sin\\theta+\\cos\\theta,\\qquad 0\\le\\theta\\le\\frac{\\pi}{2}$$ 이다.\n최댓값을 찾기 위해 미분한다. $\\cos\\theta\\sin\\theta=\\dfrac{1}{2}\\sin 2\\theta$이므로 $$S'(\\theta)=\\cos 2\\theta-\\sin\\theta.$$\n$\\cos 2\\theta=1-2\\sin^2\\theta$를 대입해 $S'(\\theta)=0$을 풀면 $$1-2\\sin^2\\theta-\\sin\\theta=0\\ \\Rightarrow\\ 2\\sin^2\\theta+\\sin\\theta-1=0\\ \\Rightarrow\\ (2\\sin\\theta-1)(\\sin\\theta+1)=0.$$ $0\\le\\theta\\le\\dfrac{\\pi}{2}$에서 $\\sin\\theta+1>0$이므로 $\\sin\\theta=\\dfrac{1}{2}$, 즉 $\\theta=\\dfrac{\\pi}{6}$이다.\n$\\theta=\\dfrac{\\pi}{6}$의 좌우에서 $S'(\\theta)$의 부호가 양에서 음으로 바뀌므로(예: $S'(0)=1>0$, $S'\\!\\left(\\dfrac{\\pi}{2}\\right)=-2<0$) 이 점에서 $S(\\theta)$는 극대이자 최대이다.\n$\\theta=\\dfrac{\\pi}{6}$일 때 $\\cos\\theta=\\dfrac{\\sqrt{3}}{2}$, $\\sin\\theta=\\dfrac{1}{2}$이므로 최댓값은 $$S\\!\\left(\\frac{\\pi}{6}\\right)=\\frac{\\sqrt{3}}{2}\\left(\\frac{1}{2}+1\\right)=\\frac{\\sqrt{3}}{2}\\cdot\\frac{3}{2}=\\frac{3\\sqrt{3}}{4}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/06도함수활용1/060a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{④번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{3\\sqrt{3}}{4}}}$$ 입니다.",
   "finalAnswer": "4",
   "correctAnswer": "4",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

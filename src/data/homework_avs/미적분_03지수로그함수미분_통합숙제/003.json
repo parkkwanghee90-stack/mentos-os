@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 지수로그함수의 미분 3번 명품 해설",
   "type": "calculus",
-  "P": "지수함수·로그함수의 도함수를 구하고 응용합니다.",
-  "C": "자연로그의 밑 $$e$$와 로그 미분법을 활용합니다.",
-  "B": "지수·로그함수의 미분:\n\n1) $$(e^x)' = e^x$$, $$(a^x)' = a^x \\ln a$$\n2) $$(\\ln x)' = \\frac{1}{x}$$, $$(\\log_a x)' = \\frac{1}{x \\ln a}$$\n3) $$(e^{f(x)})' = f'(x) e^{f(x)}$$\n4) $$\\lim_{x \\to 0} \\frac{e^x - 1}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\ln(1+x)}{x} = 1$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$f(x)=\\ln(ax+b)$가 $\\displaystyle\\lim_{x\\to 0}\\frac{f(x)}{x}=2$를 만족할 때 $f(2)$의 값을 구한다.",
+  "C": "$f(x)=\\ln(ax+b)$, $\\displaystyle\\lim_{x\\to 0}\\frac{f(x)}{x}=2$, $a,b$는 상수.",
+  "B": "분모가 $0$으로 가는 극한이 유한하게 존재하려면 분자도 $0$으로 가야 한다($f(0)=0$). 이때 $\\displaystyle\\lim_{x\\to 0}\\frac{f(x)}{x}=\\lim_{x\\to 0}\\frac{f(x)-f(0)}{x-0}=f'(0)$이므로, 주어진 극한은 곧 $x=0$에서의 미분계수다. $\\ln$의 도함수는 $\\dfrac{d}{dx}\\ln(ax+b)=\\dfrac{a}{ax+b}$이다.",
+  "S": "분모 $x\\to 0$에서 극한이 유한하게 존재하므로 분자도 $0$으로 수렴해야 한다. 따라서 $$\\lim_{x\\to 0}f(x)=f(0)=0.$$\n$f(0)=\\ln b=0$에서 진수가 $1$이어야 하므로 $$b=1.$$\n$f(0)=0$이므로 주어진 극한을 미분계수 꼴로 바꾸면 $$\\lim_{x\\to 0}\\frac{f(x)}{x}=\\lim_{x\\to 0}\\frac{f(x)-f(0)}{x-0}=f'(0).$$\n$f(x)=\\ln(ax+1)$의 도함수는 합성함수 미분으로 $$f'(x)=\\frac{a}{ax+1}.$$\n$x=0$을 대입하면 $f'(0)=a$이고, 이 값이 $2$여야 하므로 $$a=2.$$\n구한 상수를 넣으면 $f(x)=\\ln(2x+1)$이고, $$f(2)=\\ln(2\\cdot 2+1)=\\ln 5.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/03지수로그함수미분/004a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2/3}}$$ 입니다.",
-  "finalAnswer": "2/3",
-  "correctAnswer": "2/3",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\ln 5}}$$ 입니다.",
+  "finalAnswer": "ln5",
+  "correctAnswer": "ln5",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

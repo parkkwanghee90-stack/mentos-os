@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 10번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "예각 $\\alpha,\\ \\beta$에 대하여 $\\sin\\alpha=\\dfrac{3}{5}$, $\\cos\\beta=\\dfrac{\\sqrt{5}}{5}$일 때 $\\sin(\\beta-\\alpha)$의 값을 구하는 것이다.",
+  "C": "$\\sin\\alpha=\\dfrac{3}{5}$, $\\cos\\beta=\\dfrac{\\sqrt{5}}{5}$이고, $\\alpha$와 $\\beta$는 모두 예각이다.",
+  "B": "사인의 차에 대한 덧셈정리 $\\sin(\\beta-\\alpha)=\\sin\\beta\\cos\\alpha-\\cos\\beta\\sin\\alpha$를 쓰려면 네 값 $\\sin\\alpha,\\ \\cos\\alpha,\\ \\sin\\beta,\\ \\cos\\beta$가 모두 필요하다. 주어진 두 값으로부터 나머지 두 값은 피타고라스 항등식 $\\sin^2\\theta+\\cos^2\\theta=1$로 구하며, 이때 $\\alpha,\\beta$가 예각이므로 사인과 코사인이 모두 양수임을 이용해 부호를 결정한다.",
+  "S": "$\\cos\\alpha$를 먼저 구한다. $\\alpha$가 예각이므로 $\\cos\\alpha>0$이고, 피타고라스 항등식에서 $$\\cos\\alpha=\\sqrt{1-\\sin^2\\alpha}=\\sqrt{1-\\left(\\dfrac{3}{5}\\right)^2}=\\sqrt{\\dfrac{16}{25}}=\\dfrac{4}{5}.$$\n$\\sin\\beta$를 구한다. $\\beta$가 예각이므로 $\\sin\\beta>0$이고, $$\\sin\\beta=\\sqrt{1-\\cos^2\\beta}=\\sqrt{1-\\left(\\dfrac{\\sqrt{5}}{5}\\right)^2}=\\sqrt{1-\\dfrac{5}{25}}=\\sqrt{\\dfrac{20}{25}}=\\dfrac{2\\sqrt{5}}{5}.$$\n사인의 차 공식을 적용해 식의 형태를 정한다. $$\\sin(\\beta-\\alpha)=\\sin\\beta\\cos\\alpha-\\cos\\beta\\sin\\alpha.$$\n네 값을 대입해 두 곱을 각각 계산한다. $$\\sin\\beta\\cos\\alpha=\\dfrac{2\\sqrt{5}}{5}\\times\\dfrac{4}{5}=\\dfrac{8\\sqrt{5}}{25},\\qquad \\cos\\beta\\sin\\alpha=\\dfrac{\\sqrt{5}}{5}\\times\\dfrac{3}{5}=\\dfrac{3\\sqrt{5}}{25}.$$\n두 항을 빼서 분모를 약분하면 $$\\sin(\\beta-\\alpha)=\\dfrac{8\\sqrt{5}}{25}-\\dfrac{3\\sqrt{5}}{25}=\\dfrac{5\\sqrt{5}}{25}=\\dfrac{\\sqrt{5}}{5}.$$\n따라서 구하는 값은 $\\dfrac{\\sqrt{5}}{5}$이며, 이는 보기 ②에 해당한다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/011a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{①번}}$$ 입니다.",
-  "finalAnswer": "1",
-  "correctAnswer": "1",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{\\sqrt{5}}{5}}}$$ 입니다.",
+  "finalAnswer": "sqrt(5)/5",
+  "correctAnswer": "sqrt(5)/5",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

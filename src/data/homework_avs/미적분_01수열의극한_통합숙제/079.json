@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 수열의 극한 79번 명품 해설",
   "type": "calculus",
-  "P": "수열의 극한값과 급수의 수렴·발산을 판별합니다.",
-  "C": "최고차항으로 나누기, 샌드위치 정리, 등비수열 극한 조건을 활용합니다.",
-  "B": "수열의 극한:\n\n1) $$\\lim_{n \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교\n2) $$|r| < 1 \\Rightarrow \\lim_{n \\to \\infty} r^n = 0$$\n3) 수렴 조건: 단조 수렴 정리, 샌드위치 정리\n4) $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\lim\\limits_{n\\to\\infty}\\dfrac{\\overline{\\mathrm{OQ}_n}}{\\overline{\\mathrm{Y}_n\\mathrm{R}_n}}=\\alpha$ 일 때 $100\\alpha$의 값을 구한다.",
+  "C": "곡선 $y=x^2$ 위의 점 $\\mathrm{P}_n(n,\\,n^2)$에서의 접선이 $l_n$이고, $l_n$이 $y$축과 만나는 점이 $\\mathrm{Y}_n$이다. 원 $C_n$은 $x$축과 점 $\\mathrm{P}_n$에서 직선 $l_n$에 모두 접하며 $x$축과의 접점이 $\\mathrm{Q}_n$이고, 원 ${C_n}'$은 $y$축과 점 $\\mathrm{P}_n$에서 직선 $l_n$에 모두 접하며 $y$축과의 접점이 $\\mathrm{R}_n$이다. $\\mathrm{Q}_n$의 $x$좌표와 $\\mathrm{R}_n$의 $y$좌표는 양수이다.",
+  "B": "원 밖의 한 점에서 그은 두 접선의 접점까지의 거리는 서로 같다. 점 $\\mathrm{P}_n$이 두 원의 공통 접선 $l_n$ 위의 접점이므로, $x$축과 $l_n$의 교점에서는 $C_n$에 대해, $y$축과 $l_n$의 교점인 $\\mathrm{Y}_n$에서는 ${C_n}'$에 대해 이 성질을 적용한다. 극한 계산에서는 분모·분자를 최고차항으로 정리한다.",
+  "S": "접선의 기울기를 구하기 위해 $y=x^2$을 미분하면 $y'=2x$이므로 $\\mathrm{P}_n(n,\\,n^2)$에서의 기울기는 $2n$이다. 따라서 접선 $l_n$의 방정식은 $$y=2n(x-n)+n^2=2nx-n^2.$$\n$\\mathrm{Y}_n$의 좌표를 얻기 위해 $l_n$에 $x=0$을 대입하면 $y=-n^2$이므로 $$\\mathrm{Y}_n(0,\\,-n^2).$$\n직선 $l_n$이 $x$축과 만나는 점 $\\mathrm{X}_n$을 구하기 위해 $y=0$을 대입하면 $2nx-n^2=0$에서 $x=\\dfrac{n}{2}$이므로 $\\mathrm{X}_n\\!\\left(\\dfrac{n}{2},\\,0\\right)$, 따라서 $$\\overline{\\mathrm{OX}_n}=\\frac{n}{2}.$$\n원 $C_n$은 $x$축과 점 $\\mathrm{Q}_n$에서, 직선 $l_n$과 점 $\\mathrm{P}_n$에서 접하고 두 접선이 점 $\\mathrm{X}_n$에서 만나므로, 점 $\\mathrm{X}_n$에서 두 접점까지의 거리가 같아 $\\overline{\\mathrm{X}_n\\mathrm{Q}_n}=\\overline{\\mathrm{X}_n\\mathrm{P}_n}$이다. 거리 $\\overline{\\mathrm{X}_n\\mathrm{P}_n}$를 구하면 $$\\overline{\\mathrm{X}_n\\mathrm{Q}_n}=\\sqrt{\\left(n-\\tfrac{n}{2}\\right)^2+(n^2-0)^2}=\\sqrt{n^4+\\frac{1}{4}n^2}.$$\n점 $\\mathrm{Q}_n$이 $\\mathrm{X}_n$보다 원점에서 더 멀리 ($x$축 양의 방향) 놓이므로 $$\\overline{\\mathrm{OQ}_n}=\\overline{\\mathrm{OX}_n}+\\overline{\\mathrm{X}_n\\mathrm{Q}_n}=\\frac{n}{2}+\\sqrt{n^4+\\frac{1}{4}n^2}.$$\n원 ${C_n}'$은 $y$축과 점 $\\mathrm{R}_n$에서, 직선 $l_n$과 점 $\\mathrm{P}_n$에서 접하고 두 접선이 점 $\\mathrm{Y}_n$에서 만나므로, 점 $\\mathrm{Y}_n$에서 두 접점까지의 거리가 같아 $\\overline{\\mathrm{Y}_n\\mathrm{R}_n}=\\overline{\\mathrm{Y}_n\\mathrm{P}_n}$이다. 이를 계산하면 $$\\overline{\\mathrm{Y}_n\\mathrm{R}_n}=\\sqrt{(n-0)^2+\\left(n^2-(-n^2)\\right)^2}=\\sqrt{n^2+4n^4}.$$\n두 길이의 비를 세우면 $$\\frac{\\overline{\\mathrm{OQ}_n}}{\\overline{\\mathrm{Y}_n\\mathrm{R}_n}}=\\frac{\\dfrac{n}{2}+\\sqrt{n^4+\\dfrac{1}{4}n^2}}{\\sqrt{4n^4+n^2}}.$$\n극한을 구하기 위해 분모·분자를 $n^2$으로 나누어 정리하면 $$\\alpha=\\lim_{n\\to\\infty}\\frac{\\dfrac{1}{2n}+\\sqrt{1+\\dfrac{1}{4n^2}}}{\\sqrt{4+\\dfrac{1}{n^2}}}=\\frac{0+\\sqrt{1}}{\\sqrt{4}}=\\frac{1}{2}.$$\n구하는 값은 $100\\alpha$이므로 $$100\\alpha=100\\times\\frac{1}{2}=50.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/01수열의극한/080a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{1/6}}$$ 입니다.",
-  "finalAnswer": "1/6",
-  "correctAnswer": "1/6",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{100\\alpha=50}}$$ 입니다.",
+  "finalAnswer": "50",
+  "correctAnswer": "50",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

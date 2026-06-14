@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 도함수의 활용 2 28번 명품 해설",
   "type": "calculus",
-  "P": "도함수를 활용한 방정식·부등식의 풀이와 최적화 문제를 해결합니다.",
-  "C": "함수의 그래프를 분석하여 근의 개수를 판별하고, 최댓값·최솟값을 구합니다.",
-  "B": "도함수의 활용 2:\n\n1) $$f(x) = g(x)$$의 실근 개수: 두 그래프의 교점\n2) 부등식 증명: 차함수의 최솟값 ≥ 0\n3) 평균값 정리: $$f'(c) = \\frac{f(b) - f(a)}{b - a}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "점 $\\mathrm{P}$가 출발한 지 $5$초가 되는 순간, 삼각형 $\\mathrm{PAH}$의 넓이 $S$의 시간 $t$(초)에 대한 변화율 $\\dfrac{dS}{dt}$를 $\\dfrac{q}{p}\\pi$ 꼴로 나타냈을 때 서로소인 자연수 $p,\\ q$에 대한 $p+q$의 값을 구한다.",
+  "C": "밑면의 지름이 $8$(반지름 $4$), 높이가 $6\\pi$인 원기둥에서 $\\overline{\\mathrm{AB}}$는 아래 밑면의 지름, $\\overline{\\mathrm{DC}}$는 위 밑면의 지름이며 두 선분은 평행하다. 또 $\\overline{\\mathrm{DA}}\\perp\\overline{\\mathrm{AB}}$이므로 $\\mathrm{D}$는 $\\mathrm{A}$의 바로 위에 있다. 점 $\\mathrm{P}$는 매초 $\\pi$의 속력으로 옆면을 따라 $\\mathrm{A}$에서 출발해 선분 $\\mathrm{CB}$ 위의 점을 지나 $\\mathrm{D}$까지 최단거리로 움직이고, $\\mathrm{P}$에서 아래 밑면에 내린 수선의 발이 $\\mathrm{H}$이다.",
+  "B": "원기둥 옆면 위의 최단경로는 옆면을 펼친 전개도에서 직선이 된다. 전개도에서 가로축은 밑면 위를 도는 호의 길이, 세로축은 높이이다. 또 $\\overline{\\mathrm{PH}}$는 밑면에 수직이고 $\\overline{\\mathrm{AH}}$는 밑면 위에 있어 서로 수직이므로 삼각형 $\\mathrm{PAH}$의 넓이는 $S=\\dfrac{1}{2}\\cdot\\overline{\\mathrm{AH}}\\cdot\\overline{\\mathrm{PH}}$이다. 변화율은 $S$를 $t$로 미분하여 구한다.",
+  "S": "옆면을 펼치면 최단경로의 가로 길이는 $\\mathrm{A}$에서 $\\mathrm{CB}$를 지나 $\\mathrm{D}$까지 밑면 둘레를 한 바퀴 도는 호의 길이이므로, 펼친 도형에서 시작점에서 끝점까지의 가로 변위는 $2\\pi\\cdot 4=8\\pi$이고 세로 변위는 높이 $6\\pi$이다. 따라서 전체 경로의 길이는 $$\\sqrt{(8\\pi)^2+(6\\pi)^2}=\\sqrt{100\\pi^2}=10\\pi.$$\n매초 속력이 $\\pi$이므로 $\\mathrm{A}$에서 $\\mathrm{D}$까지 총 $10$초가 걸리고, 직선 경로 위에서 $t$초 동안 이동한 비율은 $\\dfrac{\\pi t}{10\\pi}=\\dfrac{t}{10}$이다. 이때 점 $\\mathrm{P}$의 높이는 세로 변위에 같은 비율을 곱한 $$\\overline{\\mathrm{PH}}=6\\pi\\cdot\\frac{t}{10}=\\frac{3}{5}\\pi t.$$\n$\\mathrm{P}$가 밑면 둘레를 따라 진행한 호의 길이는 $8\\pi\\cdot\\dfrac{t}{10}=\\dfrac{4}{5}\\pi t$이므로, $\\mathrm{A}$를 기준으로 $\\mathrm{H}$가 밑면 중심에서 이루는 중심각은 $$\\theta=\\frac{\\frac{4}{5}\\pi t}{4}=\\frac{\\pi}{5}t.$$\n$\\mathrm{A}$와 $\\mathrm{H}$는 모두 반지름 $4$인 밑면 위의 점이고 두 점이 이루는 중심각이 $\\theta$이므로, 현의 길이 공식 $2r\\sin\\dfrac{\\theta}{2}$에서 $$\\overline{\\mathrm{AH}}=2\\cdot 4\\cdot\\sin\\frac{\\theta}{2}=8\\sin\\frac{\\pi t}{10}.$$\n$\\overline{\\mathrm{PH}}\\perp\\overline{\\mathrm{AH}}$이므로 삼각형 $\\mathrm{PAH}$의 넓이는 $$S=\\frac{1}{2}\\cdot\\overline{\\mathrm{AH}}\\cdot\\overline{\\mathrm{PH}}=\\frac{1}{2}\\cdot 8\\sin\\frac{\\pi t}{10}\\cdot\\frac{3}{5}\\pi t=\\frac{12}{5}\\pi\\,t\\sin\\frac{\\pi t}{10}.$$\n$S$를 $t$에 대해 미분하면 곱의 미분법에 의해 $$\\frac{dS}{dt}=\\frac{12}{5}\\pi\\left(\\sin\\frac{\\pi t}{10}+t\\cdot\\frac{\\pi}{10}\\cos\\frac{\\pi t}{10}\\right).$$\n$t=5$를 대입하면 $\\dfrac{\\pi t}{10}=\\dfrac{\\pi}{2}$이므로 $\\sin\\dfrac{\\pi}{2}=1,\\ \\cos\\dfrac{\\pi}{2}=0$이 되어 $$\\left.\\frac{dS}{dt}\\right|_{t=5}=\\frac{12}{5}\\pi\\left(1+5\\cdot\\frac{\\pi}{10}\\cdot 0\\right)=\\frac{12}{5}\\pi.$$\n변화율이 $\\dfrac{q}{p}\\pi=\\dfrac{12}{5}\\pi$이고 $p=5,\\ q=12$는 서로소이므로 $$p+q=5+12=17.$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{17}}$$ 입니다.",
   "finalAnswer": "17",
   "correctAnswer": "17",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

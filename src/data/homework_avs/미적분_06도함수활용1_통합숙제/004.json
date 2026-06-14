@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 도함수의 활용 1 4번 명품 해설",
   "type": "calculus",
-  "P": "이계도함수를 이용하여 곡선의 볼록성, 변곡점을 분석합니다.",
-  "C": "$$f''(x)$$의 부호로 아래/위로 볼록을 판별하고, 변곡점을 구합니다.",
-  "B": "도함수의 활용 1:\n\n1) $$f''(x) > 0$$: 아래로 볼록, $$f''(x) < 0$$: 위로 볼록\n2) 변곡점: $$f''(x) = 0$$이고 볼록성이 바뀌는 점\n3) 접선·법선의 방정식\n4) 속도·가속도 문제",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "곡선 $y=e^{x-2}$ 위의 점 $(3,\\,e)$에서 그은 접선이 $x$축, $y$축과 만나는 점을 각각 $\\mathrm{A}$, $\\mathrm{B}$라 할 때, 원점 $\\mathrm{O}$와 함께 이루는 삼각형 $\\mathrm{OAB}$의 넓이를 구하는 것이다.",
+  "C": "곡선의 방정식은 $y=e^{x-2}$이고, 접점은 곡선 위의 점 $(3,\\,e)$이다. $\\mathrm{A}$는 접선과 $x$축의 교점, $\\mathrm{B}$는 접선과 $y$축의 교점이며 $\\mathrm{O}$는 원점이다.",
+  "B": "곡선 $y=f(x)$ 위의 점 $(a,\\,f(a))$에서의 접선의 기울기는 그 점에서의 미분계수 $f'(a)$와 같고, 접선의 방정식은 $y-f(a)=f'(a)(x-a)$이다. 직각을 낀 두 변이 두 좌표축 위에 놓인 삼각형의 넓이는 $\\dfrac{1}{2}\\times(\\text{밑변})\\times(\\text{높이})$로, 두 절편의 길이의 곱의 절반이다.",
+  "S": "접선의 기울기를 얻기 위해 도함수가 필요하므로 $y=e^{x-2}$를 미분한다. $$y'=e^{x-2}$$\n접점 $x=3$에서의 미분계수가 곧 접선의 기울기이므로 대입한다. $$y'\\big|_{x=3}=e^{3-2}=e$$\n기울기 $e$이고 점 $(3,\\,e)$를 지나므로 접선의 방정식을 세운다. $$y-e=e(x-3)$$ 즉 $$y=ex-2e$$\n점 $\\mathrm{A}$는 $x$축과의 교점이므로 $y=0$을 대입해 $x$절편을 구한다. $$0=ex-2e \\;\\Rightarrow\\; x=2$$ 따라서 $\\mathrm{A}(2,\\,0)$이고 $\\overline{\\mathrm{OA}}=2$이다.\n점 $\\mathrm{B}$는 $y$축과의 교점이므로 $x=0$을 대입해 $y$절편을 구한다. $$y=e\\cdot 0-2e=-2e$$ 따라서 $\\mathrm{B}(0,\\,-2e)$이고 $\\overline{\\mathrm{OB}}=|-2e|=2e$이다.\n두 절편이 각각 좌표축 위에 있어 $\\angle\\mathrm{AOB}=90^{\\circ}$이므로 $\\overline{\\mathrm{OA}}$를 밑변, $\\overline{\\mathrm{OB}}$를 높이로 하는 직각삼각형의 넓이를 구한다. $$\\triangle\\mathrm{OAB}=\\frac{1}{2}\\times\\overline{\\mathrm{OA}}\\times\\overline{\\mathrm{OB}}=\\frac{1}{2}\\times 2\\times 2e=2e$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/06도함수활용1/005a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{③번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2e}}$$ 입니다.",
   "finalAnswer": "3",
   "correctAnswer": "3",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

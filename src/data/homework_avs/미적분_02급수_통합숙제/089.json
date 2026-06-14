@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 89번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "그림 $R_n$에 색칠된 부분의 넓이 $S_n$에 대하여 $\\displaystyle\\lim_{n\\to\\infty} S_n$의 값을 구한다.",
+  "C": "$\\overline{AB_1}=2$, $\\overline{B_1C_1}=\\sqrt{3}$, $\\overline{C_1D_1}=1$, $\\angle C_1B_1A=\\dfrac{\\pi}{2}$인 사다리꼴 $AB_1C_1D_1$에서 $\\overline{AB_1}\\parallel\\overline{C_1D_1}$이다. 세 점 $A,\\ B_1,\\ D_1$을 지나는 원이 선분 $B_1C_1$과 만나는 점 중 $B_1$이 아닌 점이 $E_1$이고, 색칠 부분은 두 선분 $C_1D_1,\\ C_1E_1$과 호로 둘러싸인 낫 모양이다. 다음 단계에서 점 $A$를 공통 꼭짓점으로, $\\overline{B_2C_2}:\\overline{C_2D_2}=\\sqrt{3}:1$, $\\angle C_2B_2A=\\dfrac{\\pi}{2}$인 닮은 사다리꼴 $AB_2C_2D_2$를 그려 같은 도형을 색칠하는 과정을 반복한다.",
+  "B": "서로 닮은 도형이 일정한 닮음비 $k$로 반복되면 넓이는 공비 $k^2$인 등비수열을 이루고, $0<k^2<1$일 때 $\\displaystyle\\lim_{n\\to\\infty}S_n=\\dfrac{S_1}{1-k^2}$로 수렴한다. 또한 같은 반지름의 원에서 중심각이 같은 두 활꼴의 넓이는 서로 같다는 성질을 이용한다.",
+  "S": "좌표를 도입해 도형을 확정한다. $\\angle C_1B_1A=\\dfrac{\\pi}{2}$이므로 $B_1$을 원점에 두고 $B_1(0,0),\\ A(-2,0),\\ C_1(0,\\sqrt{3}),\\ D_1(-1,\\sqrt{3})$으로 놓으면 $\\overline{AB_1}=2,\\ \\overline{B_1C_1}=\\sqrt{3},\\ \\overline{C_1D_1}=1$이 모두 충족된다.\n원과 $E_1$을 구한다. 세 점 $A,\\ B_1,\\ D_1$을 지나는 원의 중심은 $O\\left(-1,\\ \\dfrac{1}{\\sqrt{3}}\\right)$, 반지름은 $r=\\dfrac{2}{\\sqrt{3}}$이다. 이 원이 직선 $B_1C_1$(즉 $x=0$)과 만나는 점은 $y=0$인 $B_1$과 $y=\\dfrac{2}{\\sqrt{3}}$인 점이므로 $E_1\\left(0,\\ \\dfrac{2}{\\sqrt{3}}\\right)$이다.\n활꼴의 중심각을 비교한다. 중심 $O$에서 본 편각은 $D_1$이 $90^\\circ$, $E_1$이 $30^\\circ$, $B_1$이 $-30^\\circ$이므로 호 $D_1E_1$과 호 $E_1B_1$의 중심각이 모두 $60^\\circ=\\dfrac{\\pi}{3}$로 같다. 따라서 두 활꼴의 넓이가 서로 같다.\n$S_1$을 계산한다. 색칠 부분은 직각삼각형 $C_1D_1E_1$에서 호 $D_1E_1$의 활꼴을 뺀 위쪽 조각과, 호 $E_1B_1$의 활꼴인 아래쪽 조각의 합이다. 두 활꼴 넓이가 같아 상쇄되므로 $$S_1=\\triangle C_1D_1E_1=\\frac{1}{2}\\cdot\\overline{C_1D_1}\\cdot\\overline{C_1E_1}=\\frac{1}{2}\\cdot 1\\cdot\\left(\\sqrt{3}-\\frac{2}{\\sqrt{3}}\\right)=\\frac{1}{2}\\cdot\\frac{1}{\\sqrt{3}}=\\frac{\\sqrt{3}}{6}.$$\n닮음비 $k$를 구한다. 새 사다리꼴은 점 $A$를 중심으로 원래 사다리꼴을 $k$배 축소한 것이며 $C_2=A+k\\,(C_1-A)$이다. $C_2$가 같은 원 위(호 $E_1D_1$)에 있어야 하므로 $|C_2-O|=r$, 즉 $$\\left(-2+2k-\\left(-1\\right)\\right)^2+\\left(k\\sqrt{3}-\\frac{1}{\\sqrt{3}}\\right)^2=\\frac{4}{3}$$ 을 풀면 $k=\\dfrac{6}{7}$을 얻는다.\n공비를 확정한다. 각 그림은 직전 그림을 닮음비 $k=\\dfrac{6}{7}$로 축소한 것이어서 넓이는 공비 $$k^2=\\left(\\frac{6}{7}\\right)^2=\\frac{36}{49}$$ 인 등비수열을 이룬다.\n무한급수의 합을 구한다. $0<\\dfrac{36}{49}<1$이므로 $$\\lim_{n\\to\\infty}S_n=\\frac{S_1}{1-k^2}=\\frac{\\dfrac{\\sqrt{3}}{6}}{1-\\dfrac{36}{49}}=\\frac{\\sqrt{3}}{6}\\cdot\\frac{49}{13}=\\frac{49\\sqrt{3}}{78}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/090a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{④번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{49\\sqrt{3}}{78}}}$$ 입니다.",
   "finalAnswer": "4",
   "correctAnswer": "4",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

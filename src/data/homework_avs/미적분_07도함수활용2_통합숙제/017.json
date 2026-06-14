@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 도함수의 활용 2 17번 명품 해설",
   "type": "calculus",
-  "P": "도함수를 활용한 방정식·부등식의 풀이와 최적화 문제를 해결합니다.",
-  "C": "함수의 그래프를 분석하여 근의 개수를 판별하고, 최댓값·최솟값을 구합니다.",
-  "B": "도함수의 활용 2:\n\n1) $$f(x) = g(x)$$의 실근 개수: 두 그래프의 교점\n2) 부등식 증명: 차함수의 최솟값 ≥ 0\n3) 평균값 정리: $$f'(c) = \\frac{f(b) - f(a)}{b - a}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$f(x)=\\dfrac{\\ln x^2}{x}$의 극댓값 $\\alpha$를 구한 뒤, 각 자연수 $n$에 대해 방정식 $f(x)-\\dfrac{\\alpha}{n}x=0$의 서로 다른 실근의 개수 $a_n$을 찾아 $\\displaystyle\\sum_{n=1}^{10}a_n$의 값을 구한다.",
+  "C": "정의역은 $x\\neq 0$이고 $\\ln x^2=2\\ln|x|$이므로 $f(x)=\\dfrac{2\\ln|x|}{x}$이다. $\\alpha$는 $f(x)$의 극댓값(가장 큰 극대값)이며, $n$은 $1$부터 $10$까지의 자연수이다.",
+  "B": "분수함수의 극값은 도함수의 부호 변화로 판정하고, 방정식의 실근 개수는 양변을 정리한 두 함수의 그래프(또는 매개변수 $c$와 함수 $\\dfrac{2\\ln x}{x^2}$의 최댓값)를 비교하여 센다. 식이 $|x|$에 대해 대칭이면 양수해와 음수해가 짝을 이루어 개수가 두 배가 된다.",
+  "S": "극댓값 $\\alpha$를 구하기 위해 $f(x)=\\dfrac{2\\ln|x|}{x}$를 미분하면 $$f'(x)=\\frac{2(1-\\ln|x|)}{x^2}.$$ $f'(x)=0$에서 $\\ln|x|=1$, 즉 $x=e$ 또는 $x=-e$이다.\n$x>0$에서 $f'(x)$는 $0<x<e$이면 양, $x>e$이면 음이므로 $x=e$에서 극대이고, 그 값은 $$f(e)=\\frac{2\\ln e}{e}=\\frac{2}{e}.$$ 이것이 가장 큰 극댓값이므로 $\\alpha=\\dfrac{2}{e}$이다.\n근의 개수를 세기 위해 방정식 $f(x)-\\dfrac{\\alpha}{n}x=0$의 양변에 $x\\,(\\neq 0)$를 곱하면 $$2\\ln|x|=\\frac{\\alpha}{n}x^2.$$ 좌변과 우변 모두 $x\\mapsto -x$에 대해 불변이므로 식은 $x$의 우함수이고, 양수해 $x_0$가 있으면 $-x_0$도 해가 되어 실근은 좌우 대칭으로 나타난다.\n$x>0$인 해의 개수를 세기 위해 식을 $$\\frac{2\\ln x}{x^2}=\\frac{\\alpha}{n}$$로 변형하고 $\\varphi(x)=\\dfrac{2\\ln x}{x^2}$로 둔다. $$\\varphi'(x)=\\frac{2(1-2\\ln x)}{x^3}=0$$에서 $\\ln x=\\dfrac12$, 즉 $x=\\sqrt{e}$이고, 이때 $\\varphi(\\sqrt{e})=\\dfrac{2\\cdot\\frac12}{e}=\\dfrac{1}{e}$가 $\\varphi$의 최댓값이다.\n$x\\to 0^+$에서 $\\varphi(x)\\to -\\infty$, $x\\to\\infty$에서 $\\varphi(x)\\to 0^+$이며 $x=\\sqrt{e}$에서 최댓값 $\\dfrac1e$을 가지므로, 양수 $c=\\dfrac{\\alpha}{n}$에 대해 $\\varphi(x)=c$의 양수해는 $c>\\dfrac1e$이면 $0$개, $c=\\dfrac1e$이면 $1$개(접점), $0<c<\\dfrac1e$이면 $2$개이다.\n$c=\\dfrac{\\alpha}{n}=\\dfrac{2}{en}$이므로 $\\dfrac1e$과 비교하면 $\\dfrac{2}{en}\\,$과 $\\,\\dfrac1e$의 대소는 $\\dfrac{2}{n}$과 $1$의 대소, 즉 $n$과 $2$의 대소로 결정된다. $n=1$이면 $c>\\dfrac1e$, $n=2$이면 $c=\\dfrac1e$, $n\\ge 3$이면 $c<\\dfrac1e$이다.\n대칭성에 의해 실근 개수 $a_n$은 양수해 개수의 두 배이므로 $$a_1=0,\\quad a_2=2,\\quad a_n=4\\;(3\\le n\\le 10).$$ 특히 $n=2$일 때는 $x=\\pm\\sqrt{e}$에서 접하는 두 개의 서로 다른 실근을 가진다.\n따라서 구하는 합은 $$\\sum_{n=1}^{10}a_n=0+2+\\underbrace{4+4+\\cdots+4}_{8\\text{개}}=0+2+32=34.$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{34}}$$ 입니다.",
   "finalAnswer": "34",
   "correctAnswer": "34",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 107번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle\\lim_{\\theta\\to 0+}\\dfrac{g(\\theta)}{\\theta^{2}\\times f(\\theta)}$ 의 값을 구한다. 여기서 $f(\\theta)$ 는 삼각형 $ABC$ 의 넓이, $g(\\theta)$ 는 삼각형 $CDE$ 의 넓이이다.",
+  "C": "반지름이 $5$ 인 원에 $\\overline{AB}=\\overline{AC}$ 인 삼각형 $ABC$ 가 내접하고 $\\angle BAC=\\theta$ 이다. 점 $B$ 를 지나며 직선 $AB$ 에 수직인 직선이 원과 만나는 점 중 $B$ 가 아닌 점이 $D$, 직선 $BD$ 와 직선 $AC$ 가 만나는 점이 $E$ 이다. 단, $0<\\theta<\\dfrac{\\pi}{2}$.",
+  "B": "원에 내접하는 직각의 빗변은 지름이라는 원주각의 성질(탈레스 정리), 삼각형 넓이 공식 $\\dfrac12 ab\\sin C$, 그리고 $\\theta\\to 0$ 에서의 기본 극한 $\\dfrac{\\sin\\theta}{\\theta}\\to 1,\\ \\dfrac{\\tan\\theta}{\\theta}\\to 1$ 을 결합한다.",
+  "S": "$\\overline{BD}\\perp\\overline{AB}$ 이므로 $\\angle ABD=\\dfrac{\\pi}{2}$ 이고, 직각의 빗변 $\\overline{AD}$ 는 원의 지름이 되어 $\\overline{AD}=2\\times 5=10$ 이다.\n$\\overline{AB}=\\overline{AC}$ 인 이등변삼각형에서 꼭짓점 $A$ 를 지나는 지름 $\\overline{AD}$ 가 $\\angle BAC$ 를 이등분하므로 $\\angle DAB=\\angle CAD=\\dfrac{\\theta}{2}$ 이고, 직각삼각형 $ABD$ 에서 $$\\overline{AB}=\\overline{AD}\\cos\\frac{\\theta}{2}=10\\cos\\frac{\\theta}{2},\\qquad \\overline{BD}=\\overline{AD}\\sin\\frac{\\theta}{2}=10\\sin\\frac{\\theta}{2}.$$\n현 $\\overline{CD}$ 와 현 $\\overline{BD}$ 는 같은 크기의 원주각 $\\dfrac{\\theta}{2}$ 에 대응하므로 $\\overline{CD}=\\overline{BD}=10\\sin\\dfrac{\\theta}{2}$ 이며, $\\overline{AD}$ 가 지름이므로 $\\angle ACD=\\dfrac{\\pi}{2}$, 따라서 점 $E$ 에서 $\\angle ECD=\\dfrac{\\pi}{2}$ 이다.\n직각삼각형 $ABE$ 에서 $\\angle BAE=\\theta$, $\\angle ABE=\\dfrac{\\pi}{2}$ 이므로 $\\angle AEB=\\dfrac{\\pi}{2}-\\theta$ 이고, 직각삼각형 $CDE$ 에서 $\\angle CDE=\\dfrac{\\pi}{2}-\\angle AEB=\\theta$ 가 되어 $$\\overline{CE}=\\overline{CD}\\tan\\theta=10\\sin\\frac{\\theta}{2}\\tan\\theta.$$\n넓이 공식으로 두 삼각형을 정리하면 $$f(\\theta)=\\frac12\\,\\overline{AB}\\cdot\\overline{AC}\\sin\\theta=\\frac12\\left(10\\cos\\frac{\\theta}{2}\\right)^{2}\\sin\\theta=50\\cos^{2}\\frac{\\theta}{2}\\sin\\theta,$$ $$g(\\theta)=\\frac12\\,\\overline{CD}\\cdot\\overline{CE}=\\frac12\\left(10\\sin\\frac{\\theta}{2}\\right)\\left(10\\sin\\frac{\\theta}{2}\\tan\\theta\\right)=50\\sin^{2}\\frac{\\theta}{2}\\tan\\theta.$$\n구하는 극한에 대입하여 약분하면 $$\\frac{g(\\theta)}{\\theta^{2}f(\\theta)}=\\frac{50\\sin^{2}\\frac{\\theta}{2}\\tan\\theta}{\\theta^{2}\\cdot 50\\cos^{2}\\frac{\\theta}{2}\\sin\\theta}=\\frac{1}{\\cos^{2}\\frac{\\theta}{2}}\\cdot\\frac{\\sin^{2}\\frac{\\theta}{2}\\tan\\theta}{\\theta^{2}\\sin\\theta}.$$\n기본 극한 꼴로 분해하면 $$\\frac{g(\\theta)}{\\theta^{2}f(\\theta)}=\\frac{1}{\\cos^{2}\\frac{\\theta}{2}}\\cdot\\frac14\\cdot\\frac{\\sin^{2}\\frac{\\theta}{2}}{\\left(\\frac{\\theta}{2}\\right)^{2}}\\cdot\\frac{\\tan\\theta}{\\theta}\\cdot\\frac{\\theta}{\\sin\\theta}$$ 이고, $\\theta\\to 0+$ 일 때 $\\cos^{2}\\frac{\\theta}{2}\\to 1,\\ \\dfrac{\\sin\\frac{\\theta}{2}}{\\frac{\\theta}{2}}\\to 1,\\ \\dfrac{\\tan\\theta}{\\theta}\\to 1,\\ \\dfrac{\\theta}{\\sin\\theta}\\to 1$ 이다.\n따라서 $$\\lim_{\\theta\\to 0+}\\frac{g(\\theta)}{\\theta^{2}f(\\theta)}=1\\cdot\\frac14\\cdot 1\\cdot 1\\cdot 1=\\frac14.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/108a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{15}}$$ 입니다.",
-  "finalAnswer": "15",
-  "correctAnswer": "15",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{1}{4}}}$$ 입니다.",
+  "finalAnswer": "1/4",
+  "correctAnswer": "1/4",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

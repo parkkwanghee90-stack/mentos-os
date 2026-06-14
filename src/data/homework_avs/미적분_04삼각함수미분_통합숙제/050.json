@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 50번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$0 \\le x \\le 2\\pi$에서 방정식 $\\sin 2x - \\sin x = 4\\cos x - 2$의 모든 해의 합을 구한다.",
+  "C": "변수 $x$는 $0 \\le x \\le 2\\pi$ 범위로 제한되며, 등식 $\\sin 2x - \\sin x = 4\\cos x - 2$를 만족해야 한다.",
+  "B": "이중각 공식 $\\sin 2x = 2\\sin x \\cos x$로 좌변을 단일각으로 바꾸면 양변에서 공통인수 $(2\\cos x - 1)$이 드러나, 곱이 $0$이 되는 인수분해 꼴로 정리할 수 있다. 인수의 곱이 $0$이면 적어도 하나의 인수가 $0$이라는 성질과, $-1 \\le \\sin x \\le 1$이라는 치역 조건으로 불가능한 경우를 걸러낸 뒤, $\\cos x = \\tfrac{1}{2}$를 주어진 구간에서 단위원 위의 대칭으로 해석해 해를 모두 찾는다.",
+  "S": "이중각 공식으로 좌변의 $\\sin 2x$를 풀어 한 종류의 각으로 통일한다. $$\\sin 2x - \\sin x = 2\\sin x\\cos x - \\sin x.$$\n좌변에서 $\\sin x$를 묶어 공통인수가 보이도록 정리한다. $$2\\sin x\\cos x - \\sin x = \\sin x\\,(2\\cos x - 1).$$\n우변도 같은 인수 $(2\\cos x - 1)$로 묶어, 방정식을 한쪽으로 모은다. $$\\sin x\\,(2\\cos x - 1) = 2(2\\cos x - 1) \\;\\Longrightarrow\\; (2\\cos x - 1)(\\sin x - 2) = 0.$$\n곱이 $0$이므로 각 인수를 따로 본다. $\\sin x = 2$는 $-1 \\le \\sin x \\le 1$에 어긋나 해가 없으므로 버린다. $$\\sin x - 2 = 0 \\;\\Rightarrow\\; \\sin x = 2 \\;(\\text{불능}).$$\n남은 인수에서 $\\cos x$ 값을 정한다. $$2\\cos x - 1 = 0 \\;\\Rightarrow\\; \\cos x = \\frac{1}{2}.$$\n$0 \\le x \\le 2\\pi$에서 $\\cos x = \\tfrac{1}{2}$를 만족하는 각은 $x$축에 대해 대칭인 두 점이다. $$x = \\frac{\\pi}{3}, \\quad x = \\frac{5\\pi}{3}.$$\n구한 두 해를 더해 모든 해의 합을 얻는다. $$\\frac{\\pi}{3} + \\frac{5\\pi}{3} = \\frac{6\\pi}{3} = 2\\pi.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/051a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{7}}$$ 입니다.",
-  "finalAnswer": "7",
-  "correctAnswer": "7",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2\\pi}}$$ 입니다.",
+  "finalAnswer": "2π",
+  "correctAnswer": "2π",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

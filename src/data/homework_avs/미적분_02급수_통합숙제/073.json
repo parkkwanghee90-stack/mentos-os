@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 73번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "색칠된 부분의 넓이 $S_n$에 대하여 $\\displaystyle\\lim_{n\\to\\infty} S_n$의 값을 구한다.",
+  "C": "반지름이 $2$인 원 $O_1$에 정삼각형 $\\mathrm{A_1B_1C_1}$이 내접하고, $\\mathrm{A_1}$에서 $\\mathrm{B_1C_1}$에 내린 수선의 발이 $\\mathrm{D_1}$, 선분 $\\mathrm{A_1C_1}$을 $2:1$로 내분하는 점이 $\\mathrm{E_1}$이다. $R_1$은 현 $\\mathrm{B_1C_1}$이 자르는 활꼴과 삼각형 $\\mathrm{A_1D_1E_1}$의 색칠이며, 삼각형 $\\mathrm{A_1B_1D_1}$에 내접하는 원 $O_2$로 같은 과정을 반복한다.",
+  "B": "반지름 $R$인 원에 내접하는 정삼각형의 한 변은 $\\sqrt{3}\\,R$, 높이는 $\\dfrac{3}{2}R$이다. 중심각이 $\\theta$인 활꼴의 넓이는 $\\dfrac{1}{2}R^2(\\theta-\\sin\\theta)$이다. 직각삼각형의 내접원 반지름은 $r=\\dfrac{(\\text{두 변의 합})-(\\text{빗변})}{2}$이다. 닮음비가 $1:t$인 도형의 넓이비는 $1:t^2$이며, 첫째항 $R_1$, 공비 $k\\,(|k|<1)$인 등비급수의 합은 $\\dfrac{R_1}{1-k}$이다.",
+  "S": "먼저 정삼각형 $\\mathrm{A_1B_1C_1}$의 변과 높이를 정한다. 외접원 반지름이 $2$이므로 한 변은 $\\mathrm{A_1B_1}=\\sqrt{3}\\cdot 2=2\\sqrt{3}$, 수선의 길이는 $\\mathrm{A_1D_1}=\\dfrac{3}{2}\\cdot 2=3$, $\\mathrm{D_1}$은 $\\mathrm{B_1C_1}$의 중점이므로 $\\mathrm{D_1C_1}=\\sqrt{3}$이다.\n삼각형 $\\mathrm{A_1D_1E_1}$의 넓이를 구한다. 삼각형 $\\mathrm{A_1C_1D_1}$의 넓이는 $\\dfrac{1}{2}\\cdot\\sqrt{3}\\cdot 3=\\dfrac{3\\sqrt{3}}{2}$이고, $\\mathrm{E_1}$이 $\\mathrm{A_1C_1}$을 $2:1$로 내분하므로 밑변 $\\mathrm{A_1E_1}:\\mathrm{A_1C_1}=2:3$이어서 $\\triangle \\mathrm{A_1D_1E_1}=\\dfrac{2}{3}\\cdot\\dfrac{3\\sqrt{3}}{2}=\\sqrt{3}$이다.\n현 $\\mathrm{B_1C_1}$이 자르는 활꼴의 넓이를 구한다. 정삼각형의 한 변에 대응하는 중심각이 $\\dfrac{2}{3}\\pi$이므로 활꼴의 넓이는 $$\\dfrac{1}{2}\\cdot 2^2\\left(\\dfrac{2}{3}\\pi-\\sin\\dfrac{2}{3}\\pi\\right)=2\\left(\\dfrac{2}{3}\\pi-\\dfrac{\\sqrt{3}}{2}\\right)=\\dfrac{4}{3}\\pi-\\sqrt{3}$$이다.\n두 색칠을 합쳐 첫째항 $R_1$을 얻는다. $$R_1=\\sqrt{3}+\\left(\\dfrac{4}{3}\\pi-\\sqrt{3}\\right)=\\dfrac{4}{3}\\pi.$$\n다음 원 $O_2$의 반지름을 구하기 위해 삼각형 $\\mathrm{A_1B_1D_1}$을 살핀다. 이는 $\\mathrm{D_1}$이 직각인 직각삼각형으로 $\\mathrm{B_1D_1}=\\sqrt{3}$, $\\mathrm{A_1D_1}=3$, 빗변 $\\mathrm{A_1B_1}=2\\sqrt{3}$이므로 내접원 반지름은 $$r=\\dfrac{\\sqrt{3}+3-2\\sqrt{3}}{2}=\\dfrac{3-\\sqrt{3}}{2}.$$\n닮음비로 넓이의 공비 $k$를 정한다. 원 $O_1$의 반지름 $2$와 원 $O_2$의 반지름 $\\dfrac{3-\\sqrt{3}}{2}$의 비가 닮음비이므로 $$\\text{닮음비}=1:\\dfrac{3-\\sqrt{3}}{4},\\qquad k=\\left(\\dfrac{3-\\sqrt{3}}{4}\\right)^2=\\dfrac{6-3\\sqrt{3}}{8}.$$\n$0<k<1$이므로 등비급수의 합으로 극한을 구한다. $$\\lim_{n\\to\\infty}S_n=\\dfrac{R_1}{1-k}=\\dfrac{\\dfrac{4}{3}\\pi}{1-\\dfrac{6-3\\sqrt{3}}{8}}=\\dfrac{\\dfrac{4}{3}\\pi}{\\dfrac{2+3\\sqrt{3}}{8}}=\\dfrac{32\\pi}{3(2+3\\sqrt{3})}=\\dfrac{32(3\\sqrt{3}-2)\\pi}{69}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/074a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{③번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{32(3\\sqrt{3}-2)\\pi}{69}}}$$ 입니다.",
   "finalAnswer": "3",
   "correctAnswer": "3",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

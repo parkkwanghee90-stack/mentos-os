@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 도함수의 활용 2 26번 명품 해설",
   "type": "calculus",
-  "P": "도함수를 활용한 방정식·부등식의 풀이와 최적화 문제를 해결합니다.",
-  "C": "함수의 그래프를 분석하여 근의 개수를 판별하고, 최댓값·최솟값을 구합니다.",
-  "B": "도함수의 활용 2:\n\n1) $$f(x) = g(x)$$의 실근 개수: 두 그래프의 교점\n2) 부등식 증명: 차함수의 최솟값 ≥ 0\n3) 평균값 정리: $$f'(c) = \\frac{f(b) - f(a)}{b - a}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "점 P가 점 $A(10,0)$을 출발해 곡선 $C$ 위를 매초 $5$의 일정한 속력으로 점 $B(-10,0)$까지 이동할 때, 시간 $t$(초)에 대한 선분 $PQ$의 길이의 순간변화율의 최댓값을 구한다.",
+  "C": "곡선 $C$는 $x^2+y^2=100$ 중 $y\\ge 0$인 위쪽 반원이고, 직선 $y=-\\sqrt{3}\\,x+20$은 이 곡선의 접선이다. 곡선 위의 점 $P$에서 $y$축에 평행한 직선을 그어 접선과 만나는 점을 $Q$라 한다. 점 $P$는 매초 $5$의 일정한 속력으로 호를 따라 움직인다.",
+  "B": "반지름이 $r$인 원 위를 호의 길이 기준 일정한 속력 $v$로 움직이면 중심각 $\\theta$의 변화율은 $\\dfrac{d\\theta}{dt}=\\dfrac{v}{r}$로 일정하다. 길이를 $\\theta$의 함수로 나타낸 뒤 합성함수의 미분으로 $\\dfrac{dL}{dt}=\\dfrac{dL}{d\\theta}\\cdot\\dfrac{d\\theta}{dt}$를 구하고, $a\\sin\\theta+b\\cos\\theta=\\sqrt{a^2+b^2}\\,\\sin(\\theta+\\alpha)$ 꼴로 정리하면 진폭이 곧 최댓값이 된다.",
+  "S": "반지름 $10$인 반원 위의 점이므로 중심각을 매개변수로 두면 $P=(10\\cos\\theta,\\ 10\\sin\\theta)$이고, $\\theta=0$일 때 $A(10,0)$, $\\theta=\\pi$일 때 $B(-10,0)$이 되어 이동 범위는 $0\\le\\theta\\le\\pi$이다.\n호의 길이 기준 속력이 $5$이고 반지름이 $10$이므로 각의 변화율은 일정하게 $$\\frac{d\\theta}{dt}=\\frac{5}{10}=\\frac{1}{2}.$$\n$y$축에 평행한 직선은 $x=10\\cos\\theta$이고, 이 직선이 접선 $y=-\\sqrt{3}\\,x+20$과 만나는 점이 $Q$이므로 $$Q=\\bigl(10\\cos\\theta,\\ -10\\sqrt{3}\\cos\\theta+20\\bigr).$$\n선분 $PQ$는 같은 $x$좌표를 가진 두 점을 잇는 세로 선분이므로 그 길이 $L$은 두 $y$좌표의 차이고, $0\\le\\theta\\le\\pi$에서 양수이므로 $$L=\\bigl(-10\\sqrt{3}\\cos\\theta+20\\bigr)-10\\sin\\theta=-10\\sqrt{3}\\cos\\theta-10\\sin\\theta+20.$$\n$\\theta$로 미분하면 $$\\frac{dL}{d\\theta}=10\\sqrt{3}\\sin\\theta-10\\cos\\theta.$$\n합성함수의 미분으로 시간에 대한 순간변화율을 구하면 $$\\frac{dL}{dt}=\\frac{dL}{d\\theta}\\cdot\\frac{d\\theta}{dt}=\\bigl(10\\sqrt{3}\\sin\\theta-10\\cos\\theta\\bigr)\\cdot\\frac{1}{2}=5\\sqrt{3}\\sin\\theta-5\\cos\\theta.$$\n삼각함수의 합성으로 진폭을 드러내면, $5\\sqrt{3}=10\\cos\\dfrac{\\pi}{6}$, $5=10\\sin\\dfrac{\\pi}{6}$이므로 $$\\frac{dL}{dt}=10\\sin\\!\\left(\\theta-\\frac{\\pi}{6}\\right).$$\n$0\\le\\theta\\le\\pi$에서 $-\\dfrac{\\pi}{6}\\le\\theta-\\dfrac{\\pi}{6}\\le\\dfrac{5\\pi}{6}$이므로 $\\theta-\\dfrac{\\pi}{6}=\\dfrac{\\pi}{2}$, 즉 $\\theta=\\dfrac{2\\pi}{3}$일 때 $\\sin$값이 최대 $1$이 되어 $$\\left(\\frac{dL}{dt}\\right)_{\\max}=10.$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{10}}$$ 입니다.",
   "finalAnswer": "10",
   "correctAnswer": "10",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

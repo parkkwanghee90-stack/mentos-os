@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 26번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\tan\\theta=\\dfrac{1}{7}$일 때 $\\sin 2\\theta$의 값",
+  "C": "$\\tan\\theta=\\dfrac{1}{7}$",
+  "B": "이중각 공식 $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$를 분모 분자에 $\\cos^2\\theta$를 곱해 $\\tan\\theta$만의 식으로 바꾸면, 사인·코사인 값을 따로 구하지 않고도 $\\tan\\theta$ 하나로 답을 낼 수 있다. 이때 항등식 $\\dfrac{1}{\\cos^2\\theta}=1+\\tan^2\\theta$가 핵심 다리 역할을 한다.",
+  "S": "이중각 공식으로 출발한다. $$\\sin 2\\theta = 2\\sin\\theta\\cos\\theta.$$\n주어진 조건이 $\\tan\\theta$뿐이므로 식 전체를 $\\cos^2\\theta$로 묶어 $\\tan\\theta$가 드러나게 한다. 분자·분모에 $\\cos^2\\theta$를 같은 비율로 넣으면 $$\\sin 2\\theta = 2\\sin\\theta\\cos\\theta = \\frac{2\\sin\\theta\\cos\\theta}{\\sin^2\\theta+\\cos^2\\theta}.$$\n분자와 분모를 모두 $\\cos^2\\theta$로 나누면 사인·코사인이 $\\tan\\theta$로 정리된다. $$\\sin 2\\theta = \\frac{\\dfrac{2\\sin\\theta\\cos\\theta}{\\cos^2\\theta}}{\\dfrac{\\sin^2\\theta+\\cos^2\\theta}{\\cos^2\\theta}} = \\frac{2\\tan\\theta}{1+\\tan^2\\theta}.$$\n조건 $\\tan\\theta=\\dfrac{1}{7}$을 대입해 분모부터 계산한다. $$1+\\tan^2\\theta = 1+\\left(\\frac{1}{7}\\right)^2 = 1+\\frac{1}{49} = \\frac{50}{49}.$$\n분자도 계산한다. $$2\\tan\\theta = 2\\cdot\\frac{1}{7} = \\frac{2}{7}.$$\n분자를 분모로 나누면 곧 답이 나온다. 나눗셈은 역수의 곱으로 바꾼다. $$\\sin 2\\theta = \\frac{\\frac{2}{7}}{\\frac{50}{49}} = \\frac{2}{7}\\cdot\\frac{49}{50} = \\frac{2\\cdot 49}{7\\cdot 50} = \\frac{98}{350}.$$\n약분하여 정리하면 $$\\sin 2\\theta = \\frac{98}{350} = \\frac{7}{25}.$$ 따라서 보기 다섯 번째 값과 일치한다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/027a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2/27}}$$ 입니다.",
-  "finalAnswer": "2/27",
-  "correctAnswer": "2/27",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{7}{25}}}$$ 입니다.",
+  "finalAnswer": "7/25",
+  "correctAnswer": "7/25",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

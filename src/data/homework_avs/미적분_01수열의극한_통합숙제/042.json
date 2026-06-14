@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 수열의 극한 42번 명품 해설",
   "type": "calculus",
-  "P": "수열의 극한값과 급수의 수렴·발산을 판별합니다.",
-  "C": "최고차항으로 나누기, 샌드위치 정리, 등비수열 극한 조건을 활용합니다.",
-  "B": "수열의 극한:\n\n1) $$\\lim_{n \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교\n2) $$|r| < 1 \\Rightarrow \\lim_{n \\to \\infty} r^n = 0$$\n3) 수렴 조건: 단조 수렴 정리, 샌드위치 정리\n4) $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "한 변의 길이가 $1$인 정삼각형 $\\text{ABC}$ 안에서 변과 평행한 선분을 차례로 그어 만든 점 $\\text{P}_n$들의 이동 거리 $l_n=\\overline{\\text{P}_0\\text{P}_1}+\\overline{\\text{P}_1\\text{P}_2}+\\cdots+\\overline{\\text{P}_{n-1}\\text{P}_n}$에 대하여 $\\displaystyle\\lim_{n\\to\\infty}\\dfrac{l_{2n}}{2n+1}=\\dfrac{b}{a}$일 때, 서로소인 자연수 $a,\\ b$의 합 $a+b$를 구한다.",
+  "C": "$\\overline{\\text{BC}}$ 위의 점 $\\text{P}_0$에서 출발하여, $\\text{P}_0$을 지나 $\\overline{\\text{AB}}$와 평행한 직선이 $\\overline{\\text{AC}}$와 만나는 점이 $\\text{P}_1$, $\\text{P}_1$을 지나 $\\overline{\\text{BC}}$와 평행한 직선이 $\\overline{\\text{AB}}$와 만나는 점이 $\\text{P}_2$, $\\text{P}_2$를 지나 $\\overline{\\text{AC}}$와 평행한 직선이 $\\overline{\\text{BC}}$와 만나는 점이 $\\text{P}_3$이며, 이 과정을 변에 평행하게 반복한다. $a,\\ b$는 서로소인 자연수이다.",
+  "B": "정삼각형의 한 변에 평행한 직선이 나머지 두 변에서 잘라내는 도형은 다시 정삼각형이고, 마주 보는 두 변과 평행한 두 선분은 평행사변형을 이루어 대변의 길이가 서로 같다. 이 성질을 이용하면 각 선분의 길이를 한 변 위의 분할 비율 하나로 모두 표현할 수 있고, 수열의 극한 $\\displaystyle\\lim_{n\\to\\infty}\\dfrac{n}{2n+1}=\\dfrac12$로 마무리한다.",
+  "S": "출발점의 위치를 한 문자로 고정하기 위해 $\\overline{\\text{CP}_0}$의 길이를 $a_0$ $(0<a_0<1)$이라 두면, $\\text{P}_0$은 변 $\\overline{\\text{BC}}$를 $\\overline{\\text{BP}_0}:\\overline{\\text{P}_0\\text{C}}=(1-a_0):a_0$으로 나눈다.\n$\\text{P}_0$에서 $\\overline{\\text{AB}}$에 평행하게 그은 직선이 $\\overline{\\text{AC}}$와 만나므로 $\\triangle\\text{CP}_0\\text{P}_1$은 한 변의 길이가 $a_0$인 정삼각형이 되어 $\\overline{\\text{P}_0\\text{P}_1}=a_0$이다.\n$\\text{P}_1$에서 $\\overline{\\text{BC}}$에 평행하게 그은 직선이 $\\overline{\\text{AB}}$와 만나면 $\\overline{\\text{P}_1\\text{P}_2}$는 윗쪽 정삼각형의 한 변이고, $\\overline{\\text{AP}_1}=1-a_0$이므로 $\\overline{\\text{P}_1\\text{P}_2}=1-a_0$이다.\n같은 방식으로 변에 평행한 선을 번갈아 그으면 홀수 번째 선분과 짝수 번째 선분의 길이가 교대로 나타나, $\\overline{\\text{P}_0\\text{P}_1}=\\overline{\\text{P}_2\\text{P}_3}=\\overline{\\text{P}_4\\text{P}_5}=\\cdots=a_0$, $\\overline{\\text{P}_1\\text{P}_2}=\\overline{\\text{P}_3\\text{P}_4}=\\overline{\\text{P}_5\\text{P}_6}=\\cdots=1-a_0$이다.\n연속한 두 선분의 길이의 합이 항상 $$a_0+(1-a_0)=1$$로 일정하므로, 짝수 개 $2n$개의 선분을 더하면 $$l_{2n}=n\\,\\bigl(a_0+(1-a_0)\\bigr)=n$$이다.\n따라서 구하는 극한은 분자·분모를 $n$으로 나누어 $$\\lim_{n\\to\\infty}\\frac{l_{2n}}{2n+1}=\\lim_{n\\to\\infty}\\frac{n}{2n+1}=\\lim_{n\\to\\infty}\\frac{1}{2+\\frac1n}=\\frac12$$이 된다.\n$\\dfrac{b}{a}=\\dfrac12$이고 $a,\\ b$가 서로소인 자연수이므로 $a=2,\\ b=1$이고, $$a+b=2+1=3$$이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/01수열의극한/043a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{8π}}$$ 입니다.",
-  "finalAnswer": "8π",
-  "correctAnswer": "8π",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{3}}$$ 입니다.",
+  "finalAnswer": "3",
+  "correctAnswer": "3",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

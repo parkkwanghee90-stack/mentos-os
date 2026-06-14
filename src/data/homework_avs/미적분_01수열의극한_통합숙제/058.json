@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 수열의 극한 58번 명품 해설",
   "type": "calculus",
-  "P": "수열의 극한값과 급수의 수렴·발산을 판별합니다.",
-  "C": "최고차항으로 나누기, 샌드위치 정리, 등비수열 극한 조건을 활용합니다.",
-  "B": "수열의 극한:\n\n1) $$\\lim_{n \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교\n2) $$|r| < 1 \\Rightarrow \\lim_{n \\to \\infty} r^n = 0$$\n3) 수렴 조건: 단조 수렴 정리, 샌드위치 정리\n4) $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "자연수 $n$에 대하여 직선 $y=\\dfrac{1}{n}$과 원 $x^2+(y-1)^2=1$의 두 교점을 $A_n$, $B_n$이라 할 때, 선분 $A_nB_n$의 길이 $l_n$에 대하여 $\\displaystyle\\lim_{n\\to\\infty} n\\,(l_n)^2$의 값을 구한다.",
+  "C": "직선 $y=\\dfrac{1}{n}$이 원 $x^2+(y-1)^2=1$과 두 점 $A_n$, $B_n$에서 만나고, $l_n=\\overline{A_nB_n}$이다. 원의 중심은 $C(0,\\,1)$, 반지름은 $1$이다.",
+  "B": "원의 중심에서 현에 내린 수선은 그 현을 이등분하므로, 중심과 현 사이의 거리 $d$, 반지름 $r$, 현의 길이의 절반 $\\dfrac{l_n}{2}$ 사이에는 피타고라스 정리에 의해 $\\left(\\dfrac{l_n}{2}\\right)^2=r^2-d^2$이 성립한다. 가로 직선 $y=k$와 점 $(0,1)$ 사이의 거리는 $|1-k|$이다.",
+  "S": "현 $A_nB_n$의 중점을 $M_n$이라 하면, 중심에서 현에 내린 수선의 발이 중점이 되어 삼각형 $CM_nB_n$이 직각삼각형이 되므로 거리 관계를 세울 수 있다. 직선 $y=\\dfrac{1}{n}$이 $x$축과 평행하므로 중심 $C(0,1)$과 이 직선 사이의 거리는 $\\overline{CM_n}=\\left|\\,1-\\dfrac{1}{n}\\,\\right|=1-\\dfrac{1}{n}$이다.\n빗변이 반지름인 직각삼각형 $CM_nB_n$에서 피타고라스 정리를 적용하면 현의 절반의 제곱을 반지름과 거리로 나타낼 수 있으므로 $$\\left(\\frac{l_n}{2}\\right)^2=\\overline{CB_n}^{\\,2}-\\overline{CM_n}^{\\,2}=1^2-\\left(1-\\frac{1}{n}\\right)^2.$$\n우변을 전개하면 거리 항이 정리되어 현의 절반의 제곱이 $n$에 대한 식으로 나오므로 $$\\left(\\frac{l_n}{2}\\right)^2=1-\\left(1-\\frac{2}{n}+\\frac{1}{n^2}\\right)=\\frac{2}{n}-\\frac{1}{n^2}.$$\n양변에 $4$를 곱하면 $\\left(\\dfrac{l_n}{2}\\right)^2$의 $4$배가 곧 $(l_n)^2$이므로 현의 길이의 제곱을 얻는다. $$(l_n)^2=4\\left(\\frac{2}{n}-\\frac{1}{n^2}\\right)=\\frac{8}{n}-\\frac{4}{n^2}.$$\n구하려는 식은 $(l_n)^2$에 $n$을 곱한 것이므로 각 항에 $n$을 분배하면 분모의 차수가 하나씩 낮아진다. $$n\\,(l_n)^2=n\\left(\\frac{8}{n}-\\frac{4}{n^2}\\right)=8-\\frac{4}{n}.$$\n$n\\to\\infty$일 때 $\\dfrac{4}{n}\\to 0$이므로 극한값은 상수항만 남는다. $$\\lim_{n\\to\\infty} n\\,(l_n)^2=\\lim_{n\\to\\infty}\\left(8-\\frac{4}{n}\\right)=8.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/01수열의극한/059a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{1/4}}$$ 입니다.",
-  "finalAnswer": "1/4",
-  "correctAnswer": "1/4",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{8}}$$ 입니다.",
+  "finalAnswer": "8",
+  "correctAnswer": "8",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 20번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "두 직선 $y=\\dfrac{1}{3}x$, $y=2x+10$의 교점 P와 각 직선 위의 점 A, B로 이루어진 삼각형 PAB에서 $\\angle\\mathrm{B}=90^\\circ$, $\\overline{\\mathrm{PB}}=12$일 때 $\\overline{\\mathrm{PA}}$의 값을 구한다.",
+  "C": "점 A는 직선 $y=\\dfrac{1}{3}x$ 위, 점 B는 직선 $y=2x+10$ 위에 있고, 두 직선은 점 P에서 만난다. 삼각형 PAB의 꼭짓점 B에서의 각이 직각이며, 빗변이 아닌 변 $\\overline{\\mathrm{PB}}$의 길이가 $12$이다.",
+  "B": "한 직선이 $x$축의 양의 방향과 이루는 각을 그 직선의 경사각이라 하면, 기울기가 $m$인 직선의 경사각 $\\theta$는 $\\tan\\theta=m$을 만족한다. 두 직선이 이루는 예각 $\\theta$는 두 경사각의 차로 주어지며, 탄젠트의 뺄셈공식 $\\tan(\\beta-\\alpha)=\\dfrac{\\tan\\beta-\\tan\\alpha}{1+\\tan\\beta\\tan\\alpha}$로 구한다.",
+  "S": "각 직선의 경사각을 기울기로 옮기기 위해, 직선 $y=2x+10$의 경사각을 $\\beta$, 직선 $y=\\dfrac{1}{3}x$의 경사각을 $\\alpha$라 하면 $\\tan\\beta=2$, $\\tan\\alpha=\\dfrac{1}{3}$이다.\n점 P에서 두 직선이 벌어진 각이 곧 삼각형의 각 $\\angle\\mathrm{P}=\\beta-\\alpha$이므로, 탄젠트 뺄셈공식으로 그 값을 계산한다. $$\\tan(\\angle\\mathrm{P})=\\tan(\\beta-\\alpha)=\\frac{\\tan\\beta-\\tan\\alpha}{1+\\tan\\beta\\tan\\alpha}=\\frac{2-\\dfrac{1}{3}}{1+2\\cdot\\dfrac{1}{3}}.$$\n분자와 분모를 각각 정리하면 두 값이 같아져 비가 $1$이 되므로, 점 P에서의 각이 $45^\\circ$임을 확정한다. $$\\tan(\\angle\\mathrm{P})=\\frac{\\dfrac{5}{3}}{\\dfrac{5}{3}}=1 \\;\\Rightarrow\\; \\angle\\mathrm{P}=45^\\circ.$$\n삼각형의 세 각의 합으로 남은 각을 구하면, $\\angle\\mathrm{B}=90^\\circ$, $\\angle\\mathrm{P}=45^\\circ$에서 $\\angle\\mathrm{A}=180^\\circ-90^\\circ-45^\\circ=45^\\circ$이다. 따라서 삼각형 PAB는 직각이등변삼각형이다.\n직각을 낀 두 변의 길이가 같으므로, $\\overline{\\mathrm{AB}}=\\overline{\\mathrm{PB}}=12$이다.\n빗변 $\\overline{\\mathrm{PA}}$는 직각을 낀 변 $\\overline{\\mathrm{PB}}$와 각 $\\angle\\mathrm{P}=45^\\circ$로 연결되므로, 코사인의 정의로 길이를 구한다. $$\\cos 45^\\circ=\\frac{\\overline{\\mathrm{PB}}}{\\overline{\\mathrm{PA}}}\\;\\Rightarrow\\;\\overline{\\mathrm{PA}}=\\frac{\\overline{\\mathrm{PB}}}{\\cos 45^\\circ}=\\frac{12}{\\dfrac{1}{\\sqrt{2}}}=12\\sqrt{2}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/021a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{③번}}$$ 입니다.",
-  "finalAnswer": "3",
-  "correctAnswer": "3",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{12\\sqrt{2}}}$$ 입니다.",
+  "finalAnswer": "$12\\sqrt{2}$",
+  "correctAnswer": "$12\\sqrt{2}$",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

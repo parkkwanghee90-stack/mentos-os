@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 114번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle\\lim_{\\theta\\to\\frac{\\pi}{4}-}\\dfrac{r(\\theta)}{\\frac{\\pi}{4}-\\theta}$ 의 값을 구한다.",
+  "C": "한 변의 길이가 $1$인 정사각형 $ABCD$에서 변 $CD$ 위의 점 $E$에 대해 선분 $DE$를 지름으로 하는 원을 생각하고, 직선 $BE$가 이 원과 만나는 점 중 $E$가 아닌 점을 $F$라 한다. 점 $E$를 포함하지 않는 호 $DF$를 이등분하는 점과 선분 $DF$의 중점을 지름의 양 끝점으로 하는 작은 원의 반지름의 길이가 $r(\\theta)$이고, $\\angle EBC=\\theta$, $0<\\theta<\\dfrac{\\pi}{4}$ 이다.",
+  "B": "반원에 내접하는 직각삼각형에서 빗변이 지름이라는 성질과 직각삼각형의 변의 비, 그리고 원의 중심에서 현에 내린 수선이 현을 이등분한다는 성질을 이용한다. 극한 계산에서는 $t=\\dfrac{\\pi}{4}-\\theta$로 치환하여 $\\displaystyle\\lim_{t\\to0}\\dfrac{\\tan t}{t}=1$ 을 적용한다.",
+  "S": "직각삼각형 $BCE$에서 변 $BC$가 정사각형의 한 변이므로 $\\overline{BC}=1$이고 $\\angle EBC=\\theta$이다. 따라서 $\\overline{CE}=\\overline{BC}\\tan\\theta=\\tan\\theta$ 이다.\n점 $E$는 변 $CD$ 위에 있고 $\\overline{CD}=1$이므로 $\\overline{DE}=\\overline{CD}-\\overline{CE}=1-\\tan\\theta$ 이다. 선분 $DE$를 지름으로 하는 원의 중심을 $O_1$이라 하면 그 반지름은 $$\\overline{DO_1}=\\frac{1}{2}(1-\\tan\\theta).$$\n$\\overline{DE}$가 지름이므로 그 위의 점 $F$에 대해 $\\angle DFE=\\dfrac{\\pi}{2}$ 이고, 직각삼각형 $DEF$에서 빗변 $\\overline{DE}$에 대한 각의 관계로 $\\angle EDF=\\theta$ 가 된다. 선분 $DF$의 중점을 $P$라 하면, 원의 중심 $O_1$에서 현 $DF$에 내린 수선의 발이 $P$이므로 직각삼각형 $DO_1P$에서 $$\\overline{O_1P}=\\overline{DO_1}\\sin\\theta=\\frac{1}{2}(1-\\tan\\theta)\\sin\\theta.$$\n점 $E$를 포함하지 않는 호 $DF$를 이등분하는 점을 $Q$라 하면 $Q$는 직선 $O_1P$가 원과 만나는 점이고 $\\overline{O_1Q}=\\overline{DO_1}$ 이다. 점 $P$가 $O_1$과 $Q$ 사이에 있으므로 작은 원의 지름 $\\overline{PQ}=\\overline{O_1Q}-\\overline{O_1P}=\\overline{DO_1}-\\overline{O_1P}$ 이다. 따라서 $$r(\\theta)=\\frac{1}{2}\\left\\{\\frac{1}{2}(1-\\tan\\theta)-\\frac{1}{2}(1-\\tan\\theta)\\sin\\theta\\right\\}=\\frac{1}{4}(1-\\tan\\theta)(1-\\sin\\theta).$$\n구하는 극한에 $t=\\dfrac{\\pi}{4}-\\theta$ 로 치환하면 $\\theta\\to\\dfrac{\\pi}{4}-$ 일 때 $t\\to0+$ 이므로 $$\\lim_{\\theta\\to\\frac{\\pi}{4}-}\\frac{r(\\theta)}{\\frac{\\pi}{4}-\\theta}=\\lim_{t\\to0+}\\frac{\\frac{1}{4}\\left(1-\\tan\\left(\\frac{\\pi}{4}-t\\right)\\right)\\left(1-\\sin\\left(\\frac{\\pi}{4}-t\\right)\\right)}{t}.$$\n탄젠트의 차 공식으로 $\\tan\\left(\\dfrac{\\pi}{4}-t\\right)=\\dfrac{1-\\tan t}{1+\\tan t}$ 이므로 $$1-\\tan\\left(\\frac{\\pi}{4}-t\\right)=1-\\frac{1-\\tan t}{1+\\tan t}=\\frac{2\\tan t}{1+\\tan t}.$$\n이를 대입하면 $$\\lim_{t\\to0+}\\frac{1}{4}\\cdot\\frac{2\\tan t}{1+\\tan t}\\cdot\\frac{1}{t}\\cdot\\left(1-\\sin\\left(\\frac{\\pi}{4}-t\\right)\\right)=\\frac{1}{4}\\cdot\\left(\\lim_{t\\to0+}\\frac{\\tan t}{t}\\right)\\cdot\\frac{2}{1+0}\\cdot\\left(1-\\sin\\frac{\\pi}{4}\\right).$$\n$\\displaystyle\\lim_{t\\to0+}\\dfrac{\\tan t}{t}=1$ 이고 $\\sin\\dfrac{\\pi}{4}=\\dfrac{\\sqrt{2}}{2}$ 이므로 $$\\frac{1}{4}\\cdot1\\cdot2\\cdot\\left(1-\\frac{\\sqrt{2}}{2}\\right)=\\frac{1}{2}\\cdot\\frac{2-\\sqrt{2}}{2}=\\frac{1}{4}\\left(2-\\sqrt{2}\\right).$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/115a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{1/4}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{1}{4}\\left(2-\\sqrt{2}\\right)}}$$ 입니다.",
   "finalAnswer": "1/4",
   "correctAnswer": "1/4",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

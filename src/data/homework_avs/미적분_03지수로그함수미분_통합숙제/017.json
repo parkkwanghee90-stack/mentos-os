@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 지수로그함수의 미분 17번 명품 해설",
   "type": "calculus",
-  "P": "지수함수·로그함수의 도함수를 구하고 응용합니다.",
-  "C": "자연로그의 밑 $$e$$와 로그 미분법을 활용합니다.",
-  "B": "지수·로그함수의 미분:\n\n1) $$(e^x)' = e^x$$, $$(a^x)' = a^x \\ln a$$\n2) $$(\\ln x)' = \\frac{1}{x}$$, $$(\\log_a x)' = \\frac{1}{x \\ln a}$$\n3) $$(e^{f(x)})' = f'(x) e^{f(x)}$$\n4) $$\\lim_{x \\to 0} \\frac{e^x - 1}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\ln(1+x)}{x} = 1$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$f(x)=\\log_3 x$일 때 $\\displaystyle\\lim_{h\\to 0}\\frac{f(3+h)-f(3-h)}{h}$의 값을 구한다.",
+  "C": "$f(x)=\\log_3 x$이고, 극한은 분자가 $f(3+h)-f(3-h)$, 분모가 $h$인 대칭형 차이몫이다.",
+  "B": "미분계수의 정의 $f'(a)=\\displaystyle\\lim_{t\\to 0}\\frac{f(a+t)-f(a)}{t}$를 이용한다. 밑이 상수인 로그함수의 도함수는 $(\\log_a x)'=\\dfrac{1}{x\\ln a}$이다.",
+  "S": "분자에서 $f(3)$을 더하고 빼면 대칭형을 미분계수 두 개로 분리할 수 있으므로, $$\\frac{f(3+h)-f(3-h)}{h}=\\frac{f(3+h)-f(3)}{h}+\\frac{f(3)-f(3-h)}{h}$$로 쓴다.\n뒤쪽 항은 $-h$를 한 덩어리로 보기 위해 분모와 분자에 같은 부호를 맞추면, $$\\frac{f(3)-f(3-h)}{h}=\\frac{f(3-h)-f(3)}{-h}$$이 되어 두 항 모두 $h\\to 0$에서 미분계수 $f'(3)$으로 수렴한다.\n따라서 극한값은 두 미분계수의 합이므로 $$\\lim_{h\\to 0}\\frac{f(3+h)-f(3-h)}{h}=f'(3)+f'(3)=2f'(3)$$이다.\n로그함수의 도함수 공식을 적용하면, $$f'(x)=(\\log_3 x)'=\\frac{1}{x\\ln 3}$$이다.\n$x=3$을 대입하면 $$f'(3)=\\frac{1}{3\\ln 3}$$을 얻는다.\n이를 결합하면 구하는 값은 $$2f'(3)=2\\cdot\\frac{1}{3\\ln 3}=\\frac{2}{3\\ln 3}$$이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/03지수로그함수미분/018a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{9}}$$ 입니다.",
-  "finalAnswer": "9",
-  "correctAnswer": "9",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{2}{3\\ln 3}}}$$ 입니다.",
+  "finalAnswer": "2/(3ln3)",
+  "correctAnswer": "2/(3ln3)",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

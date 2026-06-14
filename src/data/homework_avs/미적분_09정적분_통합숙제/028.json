@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 정적분 28번 명품 해설",
   "type": "calculus",
-  "P": "정적분의 다양한 성질과 활용(넓이, 부피, 속도)을 다룹니다.",
-  "C": "구분구적법, 정적분과 급수의 관계, 회전체의 부피를 적용합니다.",
-  "B": "정적분의 활용:\n\n1) 넓이: $$S = \\int_a^b |f(x) - g(x)| dx$$\n2) 회전체 부피: $$V = \\pi \\int_a^b \\{f(x)\\}^2 dx$$\n3) 구분구적법: $$\\lim_{n \\to \\infty} \\sum_{k=1}^{n} f\\left(\\frac{k}{n}\\right) \\cdot \\frac{1}{n} = \\int_0^1 f(x)dx$$\n4) 속도와 거리: $$\\int_{t_1}^{t_2} |v(t)| dt$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "정적분 $\\displaystyle\\int_0^1 xe^x\\,dx$ 의 값을 구하는 것이 목표이다.",
+  "C": "피적분함수는 다항식 $x$와 지수함수 $e^x$의 곱이며, 적분 구간은 $0$부터 $1$까지이다.",
+  "B": "서로 성격이 다른 두 함수의 곱을 적분할 때는 부분적분법 $\\displaystyle\\int u\\,v'\\,dx = uv - \\int u'\\,v\\,dx$ 를 사용한다. 미분하면 간단해지는 다항식 $x$를 $u$로, 적분해도 형태가 유지되는 $e^x$를 $v'$으로 두면 남는 적분이 쉬워진다.",
+  "S": "미분하면 차수가 낮아지는 $x$를 그대로 두고, 적분해도 변하지 않는 $e^x$를 적분 대상으로 삼기 위해 $u=x$, $v'=e^x$ 으로 놓는다. 그러면 $u'=1$, $v=e^x$ 이다.\n부분적분 공식 $\\displaystyle\\int_0^1 u\\,v'\\,dx = \\big[\\,uv\\,\\big]_0^1 - \\int_0^1 u'\\,v\\,dx$ 에 대입하여 적분을 한 단계 간단한 형태로 바꾼다. $$\\int_0^1 xe^x\\,dx = \\big[\\,xe^x\\,\\big]_0^1 - \\int_0^1 e^x\\,dx$$\n경계에서의 값을 계산하기 위해 $\\big[\\,xe^x\\,\\big]_0^1$ 에 위끝과 아래끝을 대입한다. $$\\big[\\,xe^x\\,\\big]_0^1 = 1\\cdot e^1 - 0\\cdot e^0 = e$$\n남은 적분 $\\displaystyle\\int_0^1 e^x\\,dx$ 는 $e^x$의 부정적분이 다시 $e^x$이므로 곧바로 계산된다. $$\\int_0^1 e^x\\,dx = \\big[\\,e^x\\,\\big]_0^1 = e^1 - e^0 = e-1$$\n두 결과를 부분적분 식에 합쳐 정리하면 $e$가 상쇄된다. $$\\int_0^1 xe^x\\,dx = e - (e-1) = 1$$\n따라서 정적분의 값은 $1$ 이며, 이는 보기 중 첫 번째 값과 일치한다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/09정적분/029a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{①번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{1}}$$ 입니다.",
   "finalAnswer": "1",
   "correctAnswer": "1",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

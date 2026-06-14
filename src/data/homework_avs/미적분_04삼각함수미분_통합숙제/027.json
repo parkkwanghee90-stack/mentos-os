@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 27번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$0<\\theta<\\dfrac{\\pi}{2}$ 이고 $\\tan 2\\theta=\\dfrac{3}{4}$ 일 때 $\\tan\\theta$ 의 값을 구한다.",
+  "C": "$\\tan 2\\theta=\\dfrac{3}{4}$ 이고 각 $\\theta$ 의 범위는 $0<\\theta<\\dfrac{\\pi}{2}$ 이다.",
+  "B": "탄젠트의 배각공식 $\\tan 2\\theta=\\dfrac{2\\tan\\theta}{1-\\tan^{2}\\theta}$ 를 이용해 $\\tan\\theta$ 에 대한 이차방정식을 세우고, 주어진 각의 범위로 부호 조건을 결정해 해를 가린다.",
+  "S": "미지수를 하나로 모으기 위해 $x=\\tan\\theta$ 로 놓으면 배각공식에서 $\\tan 2\\theta=\\dfrac{2x}{1-x^{2}}$ 이다.\n조건 $\\tan 2\\theta=\\dfrac{3}{4}$ 를 대입하면 $$\\dfrac{2x}{1-x^{2}}=\\dfrac{3}{4}$$ 가 성립한다.\n분수 형태를 없애기 위해 양변에 $4(1-x^{2})$ 을 곱하면 $8x=3(1-x^{2})$ 이다.\n정리하여 표준형 이차방정식으로 만들면 $$3x^{2}+8x-3=0$$ 이다.\n좌변을 인수분해하면 $(3x-1)(x+3)=0$ 이므로 $x=\\dfrac{1}{3}$ 또는 $x=-3$ 이다.\n$0<\\theta<\\dfrac{\\pi}{2}$ 에서 $\\theta$ 는 제1사분면 각이므로 $\\tan\\theta>0$ 이고, 따라서 음수해 $x=-3$ 은 버린다.\n남은 양수해를 택하면 $\\tan\\theta=\\dfrac{1}{3}$ 이며, 이는 보기 다섯 번째 값과 일치한다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/028a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{7/25}}$$ 입니다.",
-  "finalAnswer": "7/25",
-  "correctAnswer": "7/25",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{1}{3}}}$$ 입니다.",
+  "finalAnswer": "1/3",
+  "correctAnswer": "1/3",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

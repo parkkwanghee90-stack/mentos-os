@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 7번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "첫째항이 $1$, 공차가 $d\\,(d>0)$인 등차수열 $\\{a_n\\}$에서 급수 $\\sum_{n=1}^{\\infty}\\left(\\dfrac{n}{a_n}-\\dfrac{n+1}{a_{n+1}}\\right)=\\dfrac{2}{3}$이 성립할 때 공차 $d$의 값을 구한다.",
+  "C": "$a_1=1$이고 $d>0$이며, 일반항은 $a_n=1+(n-1)d$이다. 급수의 합이 $\\dfrac{2}{3}$로 주어져 있다.",
+  "B": "급수의 합은 부분합 $S_N$의 극한 $\\displaystyle\\lim_{N\\to\\infty}S_N$으로 정의된다. 일반항이 $b_n=c_n-c_{n+1}$ 꼴이면 부분합에서 가운데 항들이 차례로 상쇄되는 망원경합(telescoping)이 되어 $S_N=c_1-c_{N+1}$로 단순화된다. 분모의 최고차항만 비교하는 극한 $\\displaystyle\\lim_{n\\to\\infty}\\dfrac{n+1}{dn+1}=\\dfrac{1}{d}$를 이용한다.",
+  "S": "주어진 항이 망원경합 꼴임을 포착한다. $c_n=\\dfrac{n}{a_n}$로 두면 일반항은 $\\dfrac{n}{a_n}-\\dfrac{n+1}{a_{n+1}}=c_n-c_{n+1}$이다.\n이웃한 항이 상쇄되도록 제$N$항까지의 부분합을 전개한다. $$S_N=\\sum_{n=1}^{N}\\left(\\frac{n}{a_n}-\\frac{n+1}{a_{n+1}}\\right)=\\left(\\frac{1}{a_1}-\\frac{2}{a_2}\\right)+\\left(\\frac{2}{a_2}-\\frac{3}{a_3}\\right)+\\cdots+\\left(\\frac{N}{a_N}-\\frac{N+1}{a_{N+1}}\\right)$$\n남는 항만 정리한다. 첫 항 $\\dfrac{1}{a_1}$과 끝 항 $-\\dfrac{N+1}{a_{N+1}}$만 살아남고, $a_1=1$이므로 $$S_N=\\frac{1}{a_1}-\\frac{N+1}{a_{N+1}}=1-\\frac{N+1}{a_{N+1}}$$\n일반항 $a_{N+1}=1+\\big((N+1)-1\\big)d=1+Nd=dN+1$을 대입한다. $$S_N=1-\\frac{N+1}{dN+1}$$\n급수의 합을 얻기 위해 $N\\to\\infty$ 극한을 취한다. 분자와 분모를 $N$으로 나누면 $$\\sum_{n=1}^{\\infty}\\left(\\frac{n}{a_n}-\\frac{n+1}{a_{n+1}}\\right)=\\lim_{N\\to\\infty}\\left(1-\\frac{N+1}{dN+1}\\right)=\\lim_{N\\to\\infty}\\left(1-\\frac{1+\\frac{1}{N}}{d+\\frac{1}{N}}\\right)=1-\\frac{1}{d}$$\n주어진 조건과 같다고 놓고 방정식을 푼다. $$1-\\frac{1}{d}=\\frac{2}{3}\\ \\Longrightarrow\\ \\frac{1}{d}=\\frac{1}{3}\\ \\Longrightarrow\\ d=3$$ 이는 $d>0$을 만족하므로 $d=3$이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/008a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{③번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{d = 3}}$$ 입니다.",
   "finalAnswer": "3",
   "correctAnswer": "3",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

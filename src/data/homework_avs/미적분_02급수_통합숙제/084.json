@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 84번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\smile$ 모양 도형을 같은 닮음비로 무한히 그려 넣을 때, $n$번째 그림 $R_n$의 색칠된 넓이 $S_n$의 극한 $\\displaystyle\\lim_{n\\to\\infty} S_n$의 값을 구한다.",
+  "C": "$\\overline{AB_1}=3$, $\\overline{AC_1}=2$, $\\angle B_1AC_1=\\dfrac{\\pi}{3}$인 삼각형 $AB_1C_1$에서 $\\angle A$의 이등분선이 $\\overline{B_1C_1}$과 만나는 점이 $D_1$, 세 점 $A,\\,D_1,\\,C_1$을 지나는 원이 $\\overline{AB_1}$과 다시 만나는 점이 $B_2$이다. 두 선분 $\\overline{B_1B_2},\\ \\overline{B_1D_1}$과 호 $B_2D_1$로 둘러싸인 부분, 그리고 $\\overline{C_1D_1}$과 호 $C_1D_1$로 둘러싸인 부분에 색칠한 것이 $R_1$이며, 이후 같은 닮음 과정을 반복한다.",
+  "B": "등비급수의 합. 첫 도형의 넓이 $S_1$과 닮음비의 제곱인 공비 $r$를 구하면 $\\displaystyle\\lim_{n\\to\\infty}S_n=\\dfrac{S_1}{1-r}$. 도구로는 코사인법칙, 각의 이등분선 정리(변의 비 $=$ 분할된 밑변의 비), 같은 크기의 원주각은 같은 길이의 호와 활꼴을 만든다는 성질, 그리고 원에 외접한 점에서의 두 할선에 대한 방멱(원의 할선) 관계를 사용한다.",
+  "S": "밑변 $\\overline{B_1C_1}$의 길이를 먼저 확정해야 이후 비율 계산이 가능하므로, 삼각형 $AB_1C_1$에 코사인법칙을 적용한다. $$\\overline{B_1C_1}^{\\,2}=3^2+2^2-2\\cdot3\\cdot2\\cos\\frac{\\pi}{3}=9+4-12\\cdot\\frac12=7,\\qquad \\overline{B_1C_1}=\\sqrt7.$$\n각의 이등분선이 마주보는 변을 이웃한 두 변의 비로 나누므로 $D_1$의 위치를 정한다. 각의 이등분선 정리에서 $\\overline{B_1D_1}:\\overline{D_1C_1}=\\overline{AB_1}:\\overline{AC_1}=3:2$이므로 $$\\overline{B_1D_1}=\\frac35\\sqrt7,\\qquad \\overline{D_1C_1}=\\frac25\\sqrt7.$$\n색칠된 두 활꼴의 넓이가 같음을 보여 곡선 부분을 직선 도형으로 환원해야 하므로 원주각을 비교한다. $\\angle B_2AD_1=\\angle D_1AC_1=\\dfrac{\\pi}{6}$로 같으므로 두 호의 길이가 같아 호 $B_2D_1$과 호 $C_1D_1$이 만드는 활꼴의 넓이가 서로 같다. 따라서 색칠한 $\\smile$ 부분의 넓이는 삼각형 $B_1B_2D_1$의 넓이와 같다.\n삼각형 $B_1B_2D_1$의 넓이를 구하려면 끼인각과 두 변이 필요하므로 원의 중심 $O$를 이용해 $\\overline{B_2D_1}$을 확정한다. $\\overline{OC_1}=\\overline{OD_1}=\\overline{OB_2}$이고 $\\angle C_1OD_1=\\angle B_2OD_1=\\dfrac{\\pi}{3}$이라 두 삼각형 $OC_1D_1,\\ OD_1B_2$가 정삼각형이므로 $$\\overline{B_2D_1}=\\overline{C_1D_1}=\\frac25\\sqrt7,\\qquad \\angle B_1D_1B_2=\\frac{\\pi}{3}.$$\n이제 두 변과 끼인각이 모두 정해졌으므로 첫 도형의 넓이 $S_1$을 직접 계산한다. $$S_1=\\frac12\\cdot\\overline{B_1D_1}\\cdot\\overline{B_2D_1}\\cdot\\sin\\frac{\\pi}{3}=\\frac12\\cdot\\frac35\\sqrt7\\cdot\\frac25\\sqrt7\\cdot\\frac{\\sqrt3}{2}=\\frac{21}{50}\\sqrt3.$$\n닮음비를 얻으려면 작은 삼각형 $AB_2C_2$의 한 변 $\\overline{AB_2}$가 필요하고, 이는 $\\overline{B_1B_2}$를 거쳐 구하므로 삼각형 $B_1B_2D_1$에 코사인법칙을 쓴다. $$\\overline{B_1B_2}^{\\,2}=\\frac{63}{25}+\\frac{28}{25}-\\frac{12}{25}\\cdot7\\cos\\frac{\\pi}{3}=\\frac{49}{25},\\qquad \\overline{B_1B_2}=\\frac75.$$ (방멱 관계 $\\overline{B_1B_2}\\cdot\\overline{B_1A}=\\overline{B_1D_1}\\cdot\\overline{B_1C_1}=\\dfrac{21}{5}$로도 동일하게 확인된다.)\n닮음비는 대응변의 비이므로 $\\overline{AB_2}$를 구해 비를 정한다. $$\\overline{B_2A}=\\overline{AB_1}-\\overline{B_1B_2}=3-\\frac75=\\frac85.$$ 삼각형 $AB_2C_2$와 $AB_1C_1$의 닮음비는 $\\dfrac{\\overline{B_2A}}{\\overline{AB_1}}=\\dfrac{8/5}{3}=\\dfrac{8}{15}$이다.\n넓이의 비는 닮음비의 제곱이므로 등비급수의 공비를 확정한다. $$r=\\left(\\frac{8}{15}\\right)^2=\\frac{64}{225}.$$\n각 단계 넓이가 첫째항 $S_1$, 공비 $r$인 등비수열을 이루므로 등비급수의 합으로 극한을 구한다. $$\\lim_{n\\to\\infty}S_n=\\frac{S_1}{1-r}=\\frac{\\dfrac{21}{50}\\sqrt3}{1-\\dfrac{64}{225}}=\\frac{\\dfrac{21}{50}\\sqrt3}{\\dfrac{161}{225}}=\\frac{27\\sqrt3}{46}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/085a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{①번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{27\\sqrt{3}}{46}}}$$ 입니다.",
   "finalAnswer": "1",
   "correctAnswer": "1",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

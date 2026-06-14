@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 지수로그함수의 미분 2번 명품 해설",
   "type": "calculus",
-  "P": "지수함수·로그함수의 도함수를 구하고 응용합니다.",
-  "C": "자연로그의 밑 $$e$$와 로그 미분법을 활용합니다.",
-  "B": "지수·로그함수의 미분:\n\n1) $$(e^x)' = e^x$$, $$(a^x)' = a^x \\ln a$$\n2) $$(\\ln x)' = \\frac{1}{x}$$, $$(\\log_a x)' = \\frac{1}{x \\ln a}$$\n3) $$(e^{f(x)})' = f'(x) e^{f(x)}$$\n4) $$\\lim_{x \\to 0} \\frac{e^x - 1}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\ln(1+x)}{x} = 1$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$x\\to 0+$일 때 $\\dfrac{\\ln(2x^2+3x)-\\ln 3x}{x}$가 수렴하는 극한값을 구하고, 보기 ①~⑤ 중 해당하는 것을 고른다.",
+  "C": "$x\\to 0+$이므로 $x>0$이고, 진수 $2x^2+3x=x(2x+3)>0$, $3x>0$이 모두 성립하여 두 로그가 정의된다.",
+  "B": "두 로그의 차는 진수의 나눗셈으로 묶을 수 있어 $\\ln A-\\ln B=\\ln\\dfrac{A}{B}$가 성립한다. 또한 $t\\to 0$일 때 $\\dfrac{\\ln(1+t)}{t}\\to 1$이라는 자연로그의 기본 극한이 분자와 분모의 $0/0$ 꼴을 해소하는 핵심이다. 이는 $\\displaystyle\\lim_{t\\to 0}(1+t)^{1/t}=e$를 로그로 옮긴 형태와 동치다.",
+  "S": "두 로그의 차를 하나의 로그로 합치면 분자가 간단해진다. $$\\ln(2x^2+3x)-\\ln 3x=\\ln\\frac{2x^2+3x}{3x}=\\ln\\frac{x(2x+3)}{3x}=\\ln\\Big(\\frac{2x}{3}+1\\Big)$$\n따라서 주어진 식은 $\\dfrac{2x}{3}$를 한 덩어리로 보기 좋은 꼴로 정리된다. $$\\lim_{x\\to 0+}\\frac{\\ln\\big(\\frac{2x}{3}+1\\big)}{x}$$\n기본 극한 $\\dfrac{\\ln(1+t)}{t}\\to 1$을 쓰기 위해 분모를 $\\dfrac{2x}{3}$로 맞추고 그 보정 계수 $\\dfrac{2}{3}$를 앞으로 빼낸다. $$=\\lim_{x\\to 0+}\\frac{2}{3}\\cdot\\frac{\\ln\\big(\\frac{2x}{3}+1\\big)}{\\frac{2x}{3}}$$\n$x\\to 0+$이면 $t=\\dfrac{2x}{3}\\to 0$이므로 $\\dfrac{\\ln(1+t)}{t}\\to 1$이 되어 곱해진 극한 부분이 $1$로 수렴한다. $$=\\frac{2}{3}\\times 1=\\frac{2}{3}$$\n구한 극한값 $\\dfrac{2}{3}$은 보기 중 세 번째 값과 일치한다. 따라서 정답은 보기 ③이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/03지수로그함수미분/003a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{1/e^2}}$$ 입니다.",
-  "finalAnswer": "1/e^2",
-  "correctAnswer": "1/e^2",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{2}{3}}}$$ 입니다.",
+  "finalAnswer": "2/3",
+  "correctAnswer": "2/3",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

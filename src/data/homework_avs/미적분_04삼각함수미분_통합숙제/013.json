@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 13번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\tan 10^\\circ + \\dfrac{1}{\\tan 20^\\circ}$ 의 값과 같은 것을 보기 ①~⑤에서 고른다.",
+  "C": "각 항을 모두 사인과 코사인으로 바꾼 뒤, 두 각의 차에 대한 코사인 법칙 $\\cos(A-B)=\\cos A\\cos B+\\sin A\\sin B$ 를 쓸 수 있도록 정리한다.",
+  "B": "탄젠트는 $\\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}$ 이고, 그 역수는 $\\dfrac{1}{\\tan\\theta}=\\dfrac{\\cos\\theta}{\\sin\\theta}$ 이다. 분자를 한 덩어리로 묶으면 코사인의 차 공식 $\\cos(A-B)=\\cos A\\cos B+\\sin A\\sin B$ 가 그대로 나타난다.",
+  "S": "두 항을 각각 기본 비로 풀어야 통분의 길이 열리므로, $\\tan 10^\\circ=\\dfrac{\\sin 10^\\circ}{\\cos 10^\\circ}$, $\\dfrac{1}{\\tan 20^\\circ}=\\dfrac{\\cos 20^\\circ}{\\sin 20^\\circ}$ 로 바꾼다. $$\\tan 10^\\circ+\\frac{1}{\\tan 20^\\circ}=\\frac{\\sin 10^\\circ}{\\cos 10^\\circ}+\\frac{\\cos 20^\\circ}{\\sin 20^\\circ}$$\n분모를 하나로 합쳐야 분자에서 공식을 찾을 수 있으므로, 공통분모 $\\cos 10^\\circ\\sin 20^\\circ$ 로 통분한다. $$=\\frac{\\sin 10^\\circ\\sin 20^\\circ+\\cos 10^\\circ\\cos 20^\\circ}{\\cos 10^\\circ\\sin 20^\\circ}$$\n분자가 코사인 차 공식 $\\cos(A-B)=\\cos A\\cos B+\\sin A\\sin B$ 의 꼴이므로, $A=20^\\circ,\\ B=10^\\circ$ 로 보아 한 덩어리로 묶는다. $$=\\frac{\\cos(20^\\circ-10^\\circ)}{\\cos 10^\\circ\\sin 20^\\circ}=\\frac{\\cos 10^\\circ}{\\cos 10^\\circ\\sin 20^\\circ}$$\n분자와 분모의 $\\cos 10^\\circ$ 가 약분되어 식이 단번에 정리되므로, 약분하여 정답 꼴을 얻는다. $$=\\frac{1}{\\sin 20^\\circ}$$\n구한 값 $\\dfrac{1}{\\sin 20^\\circ}$ 는 보기 ③과 같으므로, 답은 ③이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/014a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2/3π}}$$ 입니다.",
-  "finalAnswer": "2/3π",
-  "correctAnswer": "2/3π",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{1}{\\sin 20^\\circ}}}$$ 입니다.",
+  "finalAnswer": "1/sin20°",
+  "correctAnswer": "1/sin20°",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

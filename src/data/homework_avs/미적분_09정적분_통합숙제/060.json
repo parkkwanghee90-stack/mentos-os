@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 정적분 60번 명품 해설",
   "type": "calculus",
-  "P": "정적분의 다양한 성질과 활용(넓이, 부피, 속도)을 다룹니다.",
-  "C": "구분구적법, 정적분과 급수의 관계, 회전체의 부피를 적용합니다.",
-  "B": "정적분의 활용:\n\n1) 넓이: $$S = \\int_a^b |f(x) - g(x)| dx$$\n2) 회전체 부피: $$V = \\pi \\int_a^b \\{f(x)\\}^2 dx$$\n3) 구분구적법: $$\\lim_{n \\to \\infty} \\sum_{k=1}^{n} f\\left(\\frac{k}{n}\\right) \\cdot \\frac{1}{n} = \\int_0^1 f(x)dx$$\n4) 속도와 거리: $$\\int_{t_1}^{t_2} |v(t)| dt$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$f(x)=\\dfrac{e^{\\cos x}}{1+e^{\\cos x}}$일 때 $a=f(\\pi-x)+f(x)$와 $b=\\displaystyle\\int_{0}^{\\pi}f(x)\\,dx$를 구해 $a+\\dfrac{100}{\\pi}b$의 값을 구한다.",
+  "C": "$f(x)=\\dfrac{e^{\\cos x}}{1+e^{\\cos x}}$이고, $a=f(\\pi-x)+f(x)$, $b=\\displaystyle\\int_{0}^{\\pi}f(x)\\,dx$이다.",
+  "B": "$\\cos(\\pi-x)=-\\cos x$라는 코사인의 대칭성을 이용해 $f(\\pi-x)$를 변형하면 $f(\\pi-x)+f(x)$가 상수가 된다. 또한 정적분에서 치환 $x=\\pi-t$를 쓰면 $\\displaystyle\\int_{0}^{\\pi}f(\\pi-x)\\,dx=\\int_{0}^{\\pi}f(x)\\,dx$가 되어, 두 식을 더해 적분값을 한 번에 구할 수 있다.",
+  "S": "$f(\\pi-x)$를 만들기 위해 $\\cos(\\pi-x)=-\\cos x$를 대입한다. $$f(\\pi-x)=\\frac{e^{\\cos(\\pi-x)}}{1+e^{\\cos(\\pi-x)}}=\\frac{e^{-\\cos x}}{1+e^{-\\cos x}}.$$\n분모와 분자에 $e^{\\cos x}$를 곱해 지수를 양수로 정리한다. $$f(\\pi-x)=\\frac{e^{-\\cos x}\\cdot e^{\\cos x}}{(1+e^{-\\cos x})\\cdot e^{\\cos x}}=\\frac{1}{e^{\\cos x}+1}.$$\n두 함숫값을 더하면 분모가 같아져 분자가 합쳐지므로 상수가 된다. $$a=f(\\pi-x)+f(x)=\\frac{1}{1+e^{\\cos x}}+\\frac{e^{\\cos x}}{1+e^{\\cos x}}=\\frac{1+e^{\\cos x}}{1+e^{\\cos x}}=1.$$\n$b$를 직접 적분하기 어려우므로, 방금 얻은 관계 $f(x)=1-f(\\pi-x)$를 적분식에 대입한다. $$b=\\int_{0}^{\\pi}f(x)\\,dx=\\int_{0}^{\\pi}\\bigl\\{1-f(\\pi-x)\\bigr\\}\\,dx=\\int_{0}^{\\pi}1\\,dx-\\int_{0}^{\\pi}f(\\pi-x)\\,dx.$$\n오른쪽 둘째 적분을 처리하려고 $\\pi-x=t$로 치환한다. $\\dfrac{dt}{dx}=-1$이고 $x:0\\to\\pi$일 때 $t:\\pi\\to0$이다. $$\\int_{0}^{\\pi}f(\\pi-x)\\,dx=-\\int_{\\pi}^{0}f(t)\\,dt=\\int_{0}^{\\pi}f(t)\\,dt=b.$$\n$\\displaystyle\\int_{0}^{\\pi}1\\,dx=\\pi$이므로 위 식은 $b=\\pi-b$가 되어 $b$에 대한 일차방정식을 푼다. $$2b=\\pi \\;\\Longrightarrow\\; b=\\frac{\\pi}{2}.$$\n구한 $a=1$, $b=\\dfrac{\\pi}{2}$를 목표식에 대입해 마무리한다. $$a+\\frac{100}{\\pi}b=1+\\frac{100}{\\pi}\\cdot\\frac{\\pi}{2}=1+50=51.$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{51}}$$ 입니다.",
   "finalAnswer": "51",
   "correctAnswer": "51",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

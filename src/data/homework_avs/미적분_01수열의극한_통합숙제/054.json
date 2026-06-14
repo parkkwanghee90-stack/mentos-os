@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 수열의 극한 54번 명품 해설",
   "type": "calculus",
-  "P": "수열의 극한값과 급수의 수렴·발산을 판별합니다.",
-  "C": "최고차항으로 나누기, 샌드위치 정리, 등비수열 극한 조건을 활용합니다.",
-  "B": "수열의 극한:\n\n1) $$\\lim_{n \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교\n2) $$|r| < 1 \\Rightarrow \\lim_{n \\to \\infty} r^n = 0$$\n3) 수렴 조건: 단조 수렴 정리, 샌드위치 정리\n4) $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle\\lim_{n\\to\\infty}\\dfrac{a_n}{n^3}$의 값을 구한다. 여기서 $a_n$은 직사각형 $\\mathrm{OABC}$ 또는 그 내부에 있으면서 $x$좌표와 $y$좌표가 모두 정수이고 부등식 $y\\ge x^2$을 만족시키는 점의 개수이다.",
+  "C": "직사각형의 꼭짓점은 $\\mathrm{O}(0,0),\\ \\mathrm{A}(n,0),\\ \\mathrm{B}(n,n^2),\\ \\mathrm{C}(0,n^2)$이므로 직사각형과 그 내부는 $0\\le x\\le n,\\ 0\\le y\\le n^2$인 영역이다. 세는 점은 $x,\\,y$가 모두 정수이고 $y\\ge x^2$을 만족한다.",
+  "B": "정수 격자점의 개수를 셀 때는 한 방향의 변수를 고정하고 다른 방향으로 가능한 정수의 개수를 더한다. 또 거듭제곱의 합 공식 $\\sum_{k=1}^{n}k^2=\\dfrac{n(n+1)(2n+1)}{6}$과, 분모·분자가 모두 $n$의 다항식인 극한은 최고차항의 계수비로 결정된다는 사실을 사용한다.",
+  "S": "$x$좌표를 정수 $k$로 고정하면 점이 직사각형 안에 있으려면 $0\\le k\\le n$이어야 한다. 이때 정수 $k$에 대해 $0\\le k\\le n$이면 $k^2\\le n^2$이 성립한다.\n각 $k$에 대해 $y$가 만족해야 하는 조건은 직사각형 조건 $0\\le y\\le n^2$과 부등식 조건 $y\\ge k^2$을 합친 $k^2\\le y\\le n^2$이다. 이 구간의 정수 $y$의 개수는 $$n^2-k^2+1.$$\n따라서 $x$좌표가 $0,1,2,\\dots,n$일 때의 개수를 모두 더하면 $$a_n=\\sum_{k=0}^{n}\\left(n^2-k^2+1\\right).$$\n합을 정리하기 위해 항의 개수가 $n+1$개임을 이용하면 $$a_n=(n+1)(n^2+1)-\\sum_{k=0}^{n}k^2=(n+1)(n^2+1)-\\frac{n(n+1)(2n+1)}{6}.$$\n공통 분모 $6$으로 통분하여 전개하면 $$a_n=\\frac{6(n+1)(n^2+1)-n(n+1)(2n+1)}{6}=\\frac{4n^3+3n^2+5n+6}{6}.$$\n$a_n$이 $n$에 대한 삼차식이므로 $\\dfrac{a_n}{n^3}$의 극한은 분자와 분모의 $n^3$ 계수의 비로 결정된다. $$\\lim_{n\\to\\infty}\\frac{a_n}{n^3}=\\lim_{n\\to\\infty}\\frac{4n^3+3n^2+5n+6}{6n^3}=\\frac{4}{6}=\\frac{2}{3}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/01수열의극한/055a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{1/2}}$$ 입니다.",
-  "finalAnswer": "1/2",
-  "correctAnswer": "1/2",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{2}{3}}}$$ 입니다.",
+  "finalAnswer": "2/3",
+  "correctAnswer": "2/3",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

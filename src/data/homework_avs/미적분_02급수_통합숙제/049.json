@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 49번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "두 수열 $\\{a_n\\}$, $\\{b_n\\}$에 관한 세 명제 ㄱ, ㄴ, ㄷ의 참·거짓을 판정하여 옳은 것만을 모두 고르는 것.",
+  "C": "$\\text{ㄱ}$은 $a_n=\\dfrac{1}{\\sqrt{n+1}+\\sqrt{n}}$일 때 $\\displaystyle\\sum_{n=1}^{\\infty}a_n$의 수렴·발산을, $\\text{ㄴ}$은 $\\{a_n\\}$, $\\{b_n\\}$이 각각 수렴할 때 $\\displaystyle\\sum_{n=1}^{\\infty}a_nb_n=\\sum_{n=1}^{\\infty}a_n\\sum_{n=1}^{\\infty}b_n$이 항상 성립하는지를, $\\text{ㄷ}$은 $a_1=1$, $a_{n+1}=\\dfrac{1}{n+1}a_n$일 때 $\\displaystyle\\sum_{n=1}^{\\infty}\\dfrac{a_{n+2}}{a_n}=\\dfrac{1}{2}$인지를 묻는다.",
+  "B": "급수의 부분합 $S_N=\\displaystyle\\sum_{n=1}^{N}a_n$이 수렴할 때만 급수가 수렴한다. 분자·분모에 켤레를 곱하면 일반항이 차분 꼴 $f(n)-f(n+1)$로 바뀌어 부분합이 양끝만 남는 망원급수(telescoping) 원리를 쓸 수 있다. 또한 급수의 곱은 항별 곱의 합과 같지 않으므로, 명제의 거짓은 반례 하나로 충분히 보인다.",
+  "S": "$\\text{ㄱ}$의 일반항을 다루기 위해 분모를 유리화하면 차분 꼴이 드러난다. $$a_n=\\frac{1}{\\sqrt{n+1}+\\sqrt{n}}=\\frac{\\sqrt{n+1}-\\sqrt{n}}{(\\sqrt{n+1}+\\sqrt{n})(\\sqrt{n+1}-\\sqrt{n})}=\\sqrt{n+1}-\\sqrt{n}$$\n차분 꼴이므로 부분합은 가운데 항이 모두 상쇄되어 양끝만 남는다. $$\\sum_{n=1}^{N}a_n=\\sum_{n=1}^{N}\\left(\\sqrt{n+1}-\\sqrt{n}\\right)=\\sqrt{N+1}-1$$\n$N\\to\\infty$일 때 부분합이 무한대로 발산하므로 급수도 발산한다. 따라서 $\\text{ㄱ}$은 참이다. $$\\sum_{n=1}^{\\infty}a_n=\\lim_{N\\to\\infty}\\left(\\sqrt{N+1}-1\\right)=\\infty$$\n$\\text{ㄴ}$이 거짓임을 보이려면 두 급수가 모두 수렴하지만 등식이 깨지는 반례 하나면 된다. $a_n=\\dfrac{1}{3^n}$, $b_n=2$를 택하는 대신 $b_n$도 수렴시키기 위해 두 수열을 $a_n=b_n=\\dfrac{1}{2^n}$로 잡으면 각각 $\\displaystyle\\sum_{n=1}^{\\infty}a_n=\\sum_{n=1}^{\\infty}b_n=1$로 수렴한다.\n이때 항별 곱의 급수와 두 급수의 곱을 직접 비교하면 값이 서로 다르다. $$\\sum_{n=1}^{\\infty}a_nb_n=\\sum_{n=1}^{\\infty}\\frac{1}{4^n}=\\frac{1}{3}\\neq 1=\\sum_{n=1}^{\\infty}a_n\\cdot\\sum_{n=1}^{\\infty}b_n$$ 일반적으로 성립하지 않으므로 $\\text{ㄴ}$은 거짓이다.\n$\\text{ㄷ}$의 일반항을 구하기 위해 점화식을 반복 적용한다. $a_{n+1}=\\dfrac{1}{n+1}a_n$이므로 $a_2=\\dfrac{1}{2}a_1,\\ a_3=\\dfrac{1}{3}a_2,\\ \\cdots$를 이어 붙이면 다음을 얻는다. $$a_n=\\frac{1}{2\\times 3\\times\\cdots\\times n}\\,a_1=\\frac{1}{n!}$$\n구한 일반항으로 $\\dfrac{a_{n+2}}{a_n}$을 계산하면 부분분수로 분해되어 차분 꼴이 된다. $$\\frac{a_{n+2}}{a_n}=\\frac{\\,1/(n+2)!\\,}{\\,1/n!\\,}=\\frac{n!}{(n+2)!}=\\frac{1}{(n+1)(n+2)}=\\frac{1}{n+1}-\\frac{1}{n+2}$$\n다시 망원급수 원리로 부분합을 구하면 양끝 항만 남는다. $$\\sum_{n=1}^{N}\\frac{a_{n+2}}{a_n}=\\sum_{n=1}^{N}\\left(\\frac{1}{n+1}-\\frac{1}{n+2}\\right)=\\frac{1}{2}-\\frac{1}{N+2}$$\n$N\\to\\infty$로 극한을 취하면 값이 $\\dfrac{1}{2}$로 수렴하므로 $\\text{ㄷ}$은 참이다. $$\\sum_{n=1}^{\\infty}\\frac{a_{n+2}}{a_n}=\\lim_{N\\to\\infty}\\left(\\frac{1}{2}-\\frac{1}{N+2}\\right)=\\frac{1}{2}$$\n참인 명제는 $\\text{ㄱ}$, $\\text{ㄷ}$이고 $\\text{ㄴ}$은 거짓이므로 옳은 것만을 고른 것은 $\\text{ㄱ}$, $\\text{ㄷ}$이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/050a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{③번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\text{ㄱ, ㄷ}}}$$ 입니다.",
   "finalAnswer": "3",
   "correctAnswer": "3",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 97번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "반지름 6, 중심각 $\\dfrac{\\pi}{2}$인 부채꼴에서 호 위의 점 $\\mathrm{C}$의 접선이 두 반지름의 연장선과 만나는 점 $\\mathrm{P}$, $\\mathrm{Q}$에 대해 $\\overline{\\mathrm{PQ}}=15$일 때 $\\tan 2\\theta$의 값을 구한다. (단, $\\angle\\mathrm{COA}=\\theta$)",
+  "C": "부채꼴 $\\mathrm{OAB}$의 반지름은 $6$, 중심각은 $\\dfrac{\\pi}{2}$이다. 호 $\\mathrm{AB}$ 위의 점 $\\mathrm{C}$는 $\\angle\\mathrm{COA}=\\theta\\left(0<\\theta<\\dfrac{\\pi}{4}\\right)$를 만족하고, 점 $\\mathrm{C}$에서의 접선이 변 $\\mathrm{OA}$의 연장선, 변 $\\mathrm{OB}$의 연장선과 만나는 점이 각각 $\\mathrm{P}$, $\\mathrm{Q}$이며 $\\overline{\\mathrm{PQ}}=15$이다.",
+  "B": "원의 접선은 접점을 지나는 반지름과 수직이다. 따라서 $\\overline{\\mathrm{OC}}$와 접선 $\\mathrm{PQ}$는 점 $\\mathrm{C}$에서 직교하므로, 직각삼각형에서의 탄젠트 정의와 배각공식 $\\tan 2\\theta=\\dfrac{2\\tan\\theta}{1-\\tan^2\\theta}$를 이용한다.",
+  "S": "접선은 접점에서의 반지름과 수직이므로 $\\overline{\\mathrm{OC}}\\perp\\mathrm{PQ}$이고, $\\overline{\\mathrm{OC}}$는 반지름이므로 $\\overline{\\mathrm{OC}}=6$이다.\n삼각형 $\\mathrm{OCP}$는 $\\angle\\mathrm{OCP}=\\dfrac{\\pi}{2}$인 직각삼각형이고 $\\angle\\mathrm{COP}=\\angle\\mathrm{COA}=\\theta$이므로, 빗변에 접한 변의 길이는 $\\overline{\\mathrm{CP}}=\\overline{\\mathrm{OC}}\\tan\\theta=6\\tan\\theta$이다.\n변 $\\mathrm{OB}$는 변 $\\mathrm{OA}$와 수직이므로 $\\angle\\mathrm{COQ}=\\dfrac{\\pi}{2}-\\theta$이고, 직각삼각형 $\\mathrm{OCQ}$에서 $\\overline{\\mathrm{CQ}}=\\overline{\\mathrm{OC}}\\tan\\left(\\dfrac{\\pi}{2}-\\theta\\right)=\\dfrac{6}{\\tan\\theta}$이다.\n점 $\\mathrm{C}$가 선분 $\\mathrm{PQ}$ 위에 있어 $\\overline{\\mathrm{PQ}}=\\overline{\\mathrm{CP}}+\\overline{\\mathrm{CQ}}$이므로 $6\\tan\\theta+\\dfrac{6}{\\tan\\theta}=15$이다.\n$\\tan\\theta=t$로 놓고 양변에 $t$를 곱하면 $6t^2+6=15t$, 즉 $2t^2-5t+2=0$이고 인수분해하면 $(2t-1)(t-2)=0$이므로 $t=\\dfrac{1}{2}$ 또는 $t=2$이다.\n$0<\\theta<\\dfrac{\\pi}{4}$에서 $\\tan\\theta<1$이므로 $\\tan\\theta=\\dfrac{1}{2}$이다.\n배각공식에 대입하면 $\\tan 2\\theta=\\dfrac{2\\tan\\theta}{1-\\tan^2\\theta}=\\dfrac{2\\cdot\\frac{1}{2}}{1-\\frac{1}{4}}=\\dfrac{1}{\\frac{3}{4}}=\\dfrac{4}{3}$이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/098a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{18}}$$ 입니다.",
-  "finalAnswer": "18",
-  "correctAnswer": "18",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{4}{3}}}$$ 입니다.",
+  "finalAnswer": "4/3",
+  "correctAnswer": "4/3",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

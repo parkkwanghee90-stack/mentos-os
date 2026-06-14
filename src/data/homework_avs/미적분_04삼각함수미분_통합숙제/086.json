@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 86번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "함수 $f(x)=e^{x}(2\\sin x+\\cos x)$의 도함수에서 $x=0$일 때의 값 $f'(0)$을 구한다.",
+  "C": "$f(x)=e^{x}(2\\sin x+\\cos x)$로, 지수함수 $e^{x}$와 삼각함수의 일차결합 $2\\sin x+\\cos x$의 곱으로 주어진 함수이다.",
+  "B": "두 함수의 곱 $f(x)=g(x)h(x)$의 도함수는 곱의 미분법 $f'(x)=g'(x)h(x)+g(x)h'(x)$로 구한다. 이때 $(e^{x})'=e^{x}$, $(\\sin x)'=\\cos x$, $(\\cos x)'=-\\sin x$를 이용한다.",
+  "S": "곱의 미분법을 적용하기 위해 $g(x)=e^{x}$, $h(x)=2\\sin x+\\cos x$로 두면 각각의 도함수가 필요하므로 먼저 두 도함수를 구한다. $$g'(x)=e^{x},\\qquad h'(x)=2\\cos x-\\sin x$$\n곱의 미분법 $f'(x)=g'(x)h(x)+g(x)h'(x)$에 대입하면 두 곱의 합으로 도함수가 표현된다. $$f'(x)=e^{x}(2\\sin x+\\cos x)+e^{x}(2\\cos x-\\sin x)$$\n공통인수 $e^{x}$로 묶고 괄호 안의 동류항 $2\\sin x-\\sin x=\\sin x$, $\\cos x+2\\cos x=3\\cos x$를 정리하면 도함수가 간단해진다. $$f'(x)=e^{x}\\left(\\sin x+3\\cos x\\right)$$\n구하는 값은 $x=0$에서의 미분계수이므로 $f'(x)$에 $x=0$을 대입한다. 이때 $e^{0}=1$, $\\sin 0=0$, $\\cos 0=1$이다. $$f'(0)=e^{0}\\left(\\sin 0+3\\cos 0\\right)=1\\times(0+3\\times 1)$$\n따라서 미분계수의 값을 계산하면 다음과 같다. $$f'(0)=3$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/087a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{-1/2}}$$ 입니다.",
-  "finalAnswer": "-1/2",
-  "correctAnswer": "-1/2",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{3}}$$ 입니다.",
+  "finalAnswer": "3",
+  "correctAnswer": "3",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 42번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "중심이 $O$인 원 위의 세 점 $A,\\ B,\\ C$에 대하여 $\\overline{AC}=4$, $\\overline{BC}=3$, 삼각형 $ABC$의 넓이가 $2$이고 중심각 $\\angle AOB=\\theta$ $(0<\\theta<\\pi)$일 때, $\\sin\\theta$의 값을 구한다.",
+  "C": "$\\overline{AC}=4$, $\\overline{BC}=3$이고 삼각형 $ABC$의 넓이는 $2$이다. 또한 호 $AB$에 대한 중심각이 $\\angle AOB=\\theta$이며 $0<\\theta<\\pi$이다.",
+  "B": "한 호에 대한 원주각의 크기는 그 호에 대한 중심각의 크기의 절반이다. 두 변의 길이와 그 끼인각으로 삼각형의 넓이는 $\\dfrac{1}{2}ab\\sin C$로 구한다. 사인과 코사인 사이에는 $\\sin^2 x+\\cos^2 x=1$이 성립하고, 배각공식 $\\sin 2x=2\\sin x\\cos x$를 이용한다.",
+  "S": "꼭짓점 $C$의 원주각 $\\angle ACB$는 변 $AC$, $BC$의 끼인각이면서 호 $AB$에 대한 원주각이므로, 같은 호 $AB$에 대한 중심각 $\\theta$의 절반과 같다. 따라서 $$\\angle ACB=\\dfrac{\\theta}{2}.$$\n삼각형 $ABC$의 넓이는 두 변 $\\overline{AC}=4$, $\\overline{BC}=3$과 끼인각 $\\dfrac{\\theta}{2}$로 표현되므로 넓이 공식에 대입하면 $$\\dfrac{1}{2}\\times 4\\times 3\\times\\sin\\dfrac{\\theta}{2}=2.$$\n좌변을 정리하면 $6\\sin\\dfrac{\\theta}{2}=2$이므로, 양변을 $6$으로 나누어 $$\\sin\\dfrac{\\theta}{2}=\\dfrac{1}{3}.$$\n$0<\\theta<\\pi$에서 $0<\\dfrac{\\theta}{2}<\\dfrac{\\pi}{2}$이므로 $\\cos\\dfrac{\\theta}{2}>0$이다. 따라서 $\\sin^2\\dfrac{\\theta}{2}+\\cos^2\\dfrac{\\theta}{2}=1$에서 $$\\cos\\dfrac{\\theta}{2}=\\sqrt{1-\\left(\\dfrac{1}{3}\\right)^2}=\\sqrt{\\dfrac{8}{9}}=\\dfrac{2\\sqrt{2}}{3}.$$\n구하는 것은 중심각 $\\theta$에 대한 $\\sin\\theta$이므로 배각공식 $\\sin\\theta=2\\sin\\dfrac{\\theta}{2}\\cos\\dfrac{\\theta}{2}$에 대입한다. $$\\sin\\theta=2\\times\\dfrac{1}{3}\\times\\dfrac{2\\sqrt{2}}{3}=\\dfrac{4\\sqrt{2}}{9}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/043a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{-7/25}}$$ 입니다.",
-  "finalAnswer": "-7/25",
-  "correctAnswer": "-7/25",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{4\\sqrt{2}}{9}}}$$ 입니다.",
+  "finalAnswer": "4sqrt(2)/9",
+  "correctAnswer": "4sqrt(2)/9",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

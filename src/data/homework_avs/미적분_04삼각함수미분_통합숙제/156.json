@@ -1,13 +1,15 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 156번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[풀이 흐름]\n위의 핵심 개념과 공식을 활용하여 단계적으로 풀어보세요.",
+  "P": "반지름 $1$인 원 위에서 각 $\\theta$로 정해지는 두 도형의 넓이 $f(\\theta)$, $g(\\theta)$에 대하여 $a=\\lim\\limits_{\\theta\\to0+}\\dfrac{g(\\theta)}{f(\\theta)}$일 때, $80a$의 값을 구하는 것이다.",
+  "C": "중심 $O$, 반지름 $1$인 원에서 $\\angle RBO=\\angle BRQ=\\dfrac12\\angle BOQ=\\theta$이고, 이로부터 $\\angle OST=2\\theta$, $\\angle OTS=\\pi-3\\theta$, $\\angle ROA=2\\theta$가 결정된다. $f(\\theta)$는 부채꼴 $ORA$의 넓이와 삼각형 $OTR$의 넓이의 합, $g(\\theta)$는 부채꼴 $OPQ$의 넓이에서 삼각형 $OST$의 넓이를 뺀 값이다.",
+  "B": "삼각형의 두 변과 마주보는 각 사이에는 사인법칙 $\\dfrac{a}{\\sin A}=\\dfrac{b}{\\sin B}$가 성립하고, 반지름 $r$, 중심각 $\\alpha$인 부채꼴의 넓이는 $\\dfrac12 r^2\\alpha$, 두 변의 길이가 $b,c$이고 끼인각이 $A$인 삼각형의 넓이는 $\\dfrac12 bc\\sin A$이다. 또한 $\\theta\\to0$일 때 $\\dfrac{\\sin\\theta}{\\theta}\\to1$이라는 삼각함수의 극한을 이용한다.",
+  "S": "선분 $\\overline{OS}$, $\\overline{OT}$의 길이를 사인법칙으로 구한다. 삼각형 $OBS$에서 $\\dfrac{\\overline{OS}}{\\sin\\theta}=\\dfrac{1}{\\sin(\\pi-2\\theta)}$이므로 $$\\overline{OS}=\\frac{\\sin\\theta}{\\sin 2\\theta},$$ 삼각형 $OBT$에서 $\\dfrac{\\overline{OT}}{\\sin\\theta}=\\dfrac{1}{\\sin(\\pi-3\\theta)}$이므로 $$\\overline{OT}=\\frac{\\sin\\theta}{\\sin 3\\theta}.$$\n$f(\\theta)$를 식으로 나타낸다. 부채꼴 $ORA$는 반지름 $1$, 중심각 $2\\theta$이고 삼각형 $OTR$은 두 변 $1$, $\\overline{OT}$와 끼인각 $\\pi-4\\theta$를 가지므로 $$f(\\theta)=\\frac12\\times1^2\\times2\\theta+\\frac12\\times1\\times\\overline{OT}\\times\\sin(\\pi-4\\theta)=\\theta+\\frac{\\sin\\theta\\sin 4\\theta}{2\\sin 3\\theta}.$$\n$\\dfrac{f(\\theta)}{\\theta}$의 극한을 $\\dfrac{\\sin x}{x}\\to1$ 꼴로 분해해 계산한다. $$\\lim_{\\theta\\to0+}\\frac{f(\\theta)}{\\theta}=\\lim_{\\theta\\to0+}\\left(1+\\frac{4\\times\\dfrac{\\sin\\theta}{\\theta}\\times\\dfrac{\\sin 4\\theta}{4\\theta}}{6\\times\\dfrac{\\sin 3\\theta}{3\\theta}}\\right)=1+\\frac{4\\times1\\times1}{6\\times1}=\\frac{5}{3}.$$\n$g(\\theta)$를 식으로 나타낸다. 부채꼴 $OPQ$는 반지름 $1$, 중심각 $\\theta$이고 삼각형 $OST$는 두 변 $\\overline{OS}$, $\\overline{OT}$와 끼인각 $\\theta$를 가지므로 $$g(\\theta)=\\frac12\\times1^2\\times\\theta-\\frac12\\times\\overline{OS}\\times\\overline{OT}\\times\\sin\\theta=\\frac{\\theta}{2}-\\frac{\\sin^3\\theta}{2\\sin 2\\theta\\sin 3\\theta}.$$\n$\\dfrac{g(\\theta)}{\\theta}$의 극한을 같은 방식으로 계산한다. $$\\lim_{\\theta\\to0+}\\frac{g(\\theta)}{\\theta}=\\lim_{\\theta\\to0+}\\left(\\frac12-\\frac{\\left(\\dfrac{\\sin\\theta}{\\theta}\\right)^3}{12\\times\\dfrac{\\sin 2\\theta}{2\\theta}\\times\\dfrac{\\sin 3\\theta}{3\\theta}}\\right)=\\frac12-\\frac{1^3}{12\\times1\\times1}=\\frac{5}{12}.$$\n두 극한을 결합해 $a$를 구한다. 분모·분자를 각각 $\\theta$로 나눈 꼴로 보면 $$a=\\lim_{\\theta\\to0+}\\frac{g(\\theta)}{f(\\theta)}=\\frac{\\displaystyle\\lim_{\\theta\\to0+}\\dfrac{g(\\theta)}{\\theta}}{\\displaystyle\\lim_{\\theta\\to0+}\\dfrac{f(\\theta)}{\\theta}}=\\frac{\\frac{5}{12}}{\\frac{5}{3}}=\\frac14.$$\n구한 $a$로 답을 마무리한다. $a=\\dfrac14$이므로 $$80a=80\\times\\frac14=20.$$",
   "S_objects": [],
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{20}}$$ 입니다.",
   "finalAnswer": "20",
   "correctAnswer": "20",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

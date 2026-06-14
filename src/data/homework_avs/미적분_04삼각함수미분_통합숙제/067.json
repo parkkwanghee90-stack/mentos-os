@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 67번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\angle\\mathrm{PAQ}=\\theta$일 때 사각형 $\\mathrm{APRQ}$의 넓이 $S(\\theta)$에 대하여 $\\displaystyle\\lim_{\\theta\\to 0}\\dfrac{S(\\theta)}{\\tan\\theta}$의 값을 구한다.",
+  "C": "반지름의 길이가 $1$인 원 위에 점 $\\mathrm{A}$가 있고, $\\mathrm{AB}$는 지름이므로 $\\overline{\\mathrm{AB}}=2$이다. 원 위의 두 점 $\\mathrm{P},\\ \\mathrm{Q}$와 지름 $\\mathrm{AB}$ 위의 점 $\\mathrm{R}$가 $\\overline{\\mathrm{AP}}=\\overline{\\mathrm{AQ}}=\\overline{\\mathrm{AR}}$를 만족하고, $\\angle\\mathrm{PAQ}=\\theta$이다. 그림에서 $\\mathrm{P},\\ \\mathrm{Q}$는 지름 $\\mathrm{AB}$에 대하여 대칭이다.",
+  "B": "지름에 대한 원주각은 $90^\\circ$이므로 지름을 빗변으로 하는 직각삼각형에서 한 변의 길이는 빗변과 코사인으로 구할 수 있다. 또한 두 변의 길이와 그 사이 끼인각 $\\alpha$를 아는 삼각형의 넓이는 $\\dfrac{1}{2}\\times(\\text{두 변의 곱})\\times\\sin\\alpha$이고, $\\theta\\to 0$일 때 $\\dfrac{\\sin\\theta}{\\theta}\\to 1$, $\\dfrac{\\tan\\theta}{\\theta}\\to 1$이다.",
+  "S": "대칭성에서 점 $\\mathrm{P},\\ \\mathrm{Q}$가 지름 $\\mathrm{AB}$에 대하여 대칭이므로 끼인각 $\\theta$가 $\\mathrm{AB}$에 의해 이등분되어 $\\angle\\mathrm{PAB}=\\angle\\mathrm{QAB}=\\dfrac{\\theta}{2}$이다.\n$\\mathrm{AB}$가 지름이므로 원주각의 성질에 의해 $\\angle\\mathrm{APB}=90^\\circ$이고, 직각삼각형 $\\mathrm{APB}$에서 빗변이 $\\overline{\\mathrm{AB}}=2$이므로 $$\\overline{\\mathrm{AP}}=\\overline{\\mathrm{AB}}\\cos\\dfrac{\\theta}{2}=2\\cos\\dfrac{\\theta}{2}.$$\n조건 $\\overline{\\mathrm{AP}}=\\overline{\\mathrm{AQ}}=\\overline{\\mathrm{AR}}$에서 세 길이가 모두 $2\\cos\\dfrac{\\theta}{2}$로 같으므로, 사각형 $\\mathrm{APRQ}$는 대각선 $\\mathrm{AR}$에 의해 두 삼각형 $\\mathrm{APR}$와 $\\mathrm{AQR}$로 나뉘고 둘은 서로 합동이다.\n삼각형 $\\mathrm{APR}$는 끼인각 $\\angle\\mathrm{PAR}=\\dfrac{\\theta}{2}$와 두 변 $\\overline{\\mathrm{AP}}=\\overline{\\mathrm{AR}}=2\\cos\\dfrac{\\theta}{2}$를 가지므로 그 넓이는 $$\\dfrac{1}{2}\\,\\overline{\\mathrm{AP}}\\cdot\\overline{\\mathrm{AR}}\\,\\sin\\dfrac{\\theta}{2}=\\dfrac{1}{2}\\left(2\\cos\\dfrac{\\theta}{2}\\right)^{2}\\sin\\dfrac{\\theta}{2}.$$\n두 합동인 삼각형을 더하여 사각형의 넓이를 구하면 $$S(\\theta)=2\\times\\dfrac{1}{2}\\left(2\\cos\\dfrac{\\theta}{2}\\right)^{2}\\sin\\dfrac{\\theta}{2}=4\\cos^{2}\\dfrac{\\theta}{2}\\,\\sin\\dfrac{\\theta}{2}.$$\n구하는 극한에 대입하고 $\\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}$, $\\sin\\theta=2\\sin\\dfrac{\\theta}{2}\\cos\\dfrac{\\theta}{2}$를 이용하여 정리하면 $$\\dfrac{S(\\theta)}{\\tan\\theta}=\\dfrac{4\\cos^{2}\\dfrac{\\theta}{2}\\,\\sin\\dfrac{\\theta}{2}}{\\dfrac{2\\sin\\dfrac{\\theta}{2}\\cos\\dfrac{\\theta}{2}}{\\cos\\theta}}=2\\cos\\dfrac{\\theta}{2}\\cos\\theta.$$\n$\\theta\\to 0$일 때 $\\cos\\dfrac{\\theta}{2}\\to 1$, $\\cos\\theta\\to 1$이므로 $$\\lim_{\\theta\\to 0}\\dfrac{S(\\theta)}{\\tan\\theta}=\\lim_{\\theta\\to 0}2\\cos\\dfrac{\\theta}{2}\\cos\\theta=2\\times 1\\times 1=2.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/068a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{17}}$$ 입니다.",
-  "finalAnswer": "17",
-  "correctAnswer": "17",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2}}$$ 입니다.",
+  "finalAnswer": "2",
+  "correctAnswer": "2",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

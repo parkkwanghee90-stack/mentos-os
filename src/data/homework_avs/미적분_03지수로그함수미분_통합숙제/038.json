@@ -1,13 +1,15 @@
 {
   "title": "[통합숙제] 미적분 - 지수로그함수의 미분 38번 명품 해설",
   "type": "calculus",
-  "P": "지수함수·로그함수의 도함수를 구하고 응용합니다.",
-  "C": "자연로그의 밑 $$e$$와 로그 미분법을 활용합니다.",
-  "B": "지수·로그함수의 미분:\n\n1) $$(e^x)' = e^x$$, $$(a^x)' = a^x \\ln a$$\n2) $$(\\ln x)' = \\frac{1}{x}$$, $$(\\log_a x)' = \\frac{1}{x \\ln a}$$\n3) $$(e^{f(x)})' = f'(x) e^{f(x)}$$\n4) $$\\lim_{x \\to 0} \\frac{e^x - 1}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\ln(1+x)}{x} = 1$$",
-  "S": "[풀이 흐름]\n위의 핵심 개념과 공식을 활용하여 단계적으로 풀어보세요.",
+  "P": "곡선 $y=e^x$ 위의 점 $\\mathrm{A}(a,\\ e^{a})$에 대하여 직선 $\\mathrm{OA}$의 기울기를 구한다.",
+  "C": "점 $\\mathrm{A}(a,\\ e^{a})$는 $y=e^x$ 위, 점 $\\mathrm{B}(b,\\ -\\ln b)$는 $y=-\\ln x$ 위의 점이고, 직선 $\\mathrm{OA}$, $\\mathrm{OB}$가 $x$축의 양의 방향과 이루는 각을 각각 $\\alpha$, $\\beta$라 한다. 조건 (가) $\\overline{\\mathrm{OA}}=2\\,\\overline{\\mathrm{OB}}$, 조건 (나) $\\alpha+\\beta=90^{\\circ}$를 만족한다. ($\\mathrm{O}$는 원점)",
+  "B": "두 곡선 $y=e^x$와 $y=-\\ln x$는 직선 $y=x$에 대한 대칭과 $x$축에 대한 대칭을 거쳐 서로 옮겨지므로, $y=-\\ln x$ 위의 점을 $y=e^x$ 위의 점으로 대응시켜 원점에서의 거리와 각을 보존하는 관계로 바꿀 수 있다. 이렇게 옮긴 점이 $\\mathrm{A}$와 한 직선 위에 놓이면 두 점의 좌표 성분이 비례하므로 연립으로 $a$, $b$를 결정할 수 있다.",
+  "S": "점 $\\mathrm{B}(b,\\ -\\ln b)$를 직선 $y=x$에 대하여 대칭이동한 뒤 $x$축에 대하여 대칭이동하면 점 $\\mathrm{C}(\\ln b,\\ b)$로 옮겨지는데, 이 일련의 대칭은 곡선 $y=-\\ln x$를 곡선 $y=e^x$로 옮기므로 점 $\\mathrm{C}$는 $y=e^x$ 위에 있고, 거리가 보존되어 $\\overline{\\mathrm{OC}}=\\overline{\\mathrm{OB}}$이다.\n대칭이동에서 직선 $\\mathrm{OB}$가 $x$축과 이루는 각 $\\beta$는 직선 $\\mathrm{OC}$가 $y$축과 이루는 각으로 보존되므로, 직선 $\\mathrm{OC}$가 $x$축의 양의 방향과 이루는 각은 $90^{\\circ}-\\beta$이다.\n조건 (나)에서 $\\alpha+\\beta=90^{\\circ}$이므로 $90^{\\circ}-\\beta=\\alpha$가 되어 직선 $\\mathrm{OC}$가 이루는 각과 직선 $\\mathrm{OA}$가 이루는 각이 같다. 따라서 세 점 $\\mathrm{O}$, $\\mathrm{A}$, $\\mathrm{C}$는 한 직선 위에 있다.\n조건 (가)와 $\\overline{\\mathrm{OB}}=\\overline{\\mathrm{OC}}$에서 $\\overline{\\mathrm{OA}}=2\\,\\overline{\\mathrm{OC}}$이고, $\\mathrm{O}$, $\\mathrm{A}$, $\\mathrm{C}$가 같은 반직선 위에 있으므로 점 $\\mathrm{C}$는 선분 $\\mathrm{OA}$의 중점이다. 즉 점 $\\mathrm{A}$의 좌표는 점 $\\mathrm{C}$ 좌표의 $2$배이므로 $$\\left(a,\\ e^{a}\\right)=\\left(2\\ln b,\\ 2b\\right).$$\n성분을 비교하면 $a=2\\ln b$이고 $e^{a}=2b$이다. 앞 식에서 $e^{a}=e^{2\\ln b}=b^{2}$이므로 뒤 식과 연립하면 $$b^{2}=2b,\\qquad b>0\\ \\Rightarrow\\ b=2.$$\n$b=2$를 대입하면 $a=2\\ln 2$이고 $e^{a}=2b=4$이다. 따라서 직선 $\\mathrm{OA}$의 기울기는 $$\\frac{e^{a}}{a}=\\frac{4}{2\\ln 2}=\\frac{2}{\\ln 2}.$$",
   "S_objects": [],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2/ln2}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{2}{\\ln 2}}}$$ 입니다.",
   "finalAnswer": "2/ln2",
   "correctAnswer": "2/ln2",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

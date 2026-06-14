@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 수열의 극한 71번 명품 해설",
   "type": "calculus",
-  "P": "수열의 극한값과 급수의 수렴·발산을 판별합니다.",
-  "C": "최고차항으로 나누기, 샌드위치 정리, 등비수열 극한 조건을 활용합니다.",
-  "B": "수열의 극한:\n\n1) $$\\lim_{n \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교\n2) $$|r| < 1 \\Rightarrow \\lim_{n \\to \\infty} r^n = 0$$\n3) 수렴 조건: 단조 수렴 정리, 샌드위치 정리\n4) $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle\\lim_{n\\to\\infty}(a_{n+1}-a_n)$의 값을 구한다. 여기서 $a_n=\\overline{\\mathrm{P_1P_n}}$이다.",
+  "C": "점 $\\mathrm{P}_n$은 $\\mathrm{P}_1=(1,1)$, $\\overline{\\mathrm{P_nP_{n+1}}}=1$, 그리고 $\\mathrm{P}_{n+2}$는 $\\mathrm{P}_{n+1}$을 지나 직선 $\\mathrm{P_nP_{n+1}}$에 수직인 직선 위의 점 중 $\\overline{\\mathrm{P_1P_{n+2}}}$가 최대인 점이라는 규칙을 만족한다. 수열은 $a_1=0,\\ a_2=1$이고 $n\\ge 3$일 때 $a_n=\\overline{\\mathrm{P_1P_n}}$이다.",
+  "B": "길이 $1$의 단위 이동을 직각으로 번갈아 꺾으면 점들은 직선 $y=x$를 따라 올라가는 계단 모양을 이룬다. 좌표를 일반항으로 잡으면 $\\overline{\\mathrm{P_1P_n}}$은 $n$의 식이 되고, $\\infty-\\infty$ 꼴 극한은 분자를 유리화하여 처리한다.",
+  "S": "출발점 $\\mathrm{P}_1=(1,1)$에서 $\\overline{\\mathrm{P_1P_2}}=a_2=1$이므로 다음 점을 $\\mathrm{P}_2=(2,1)$로 둔다. 그러면 $\\overrightarrow{\\mathrm{P_1P_2}}$는 $x$축 방향이다.\n$\\mathrm{P}_3$은 $\\mathrm{P}_2$를 지나 $\\mathrm{P_1P_2}$에 수직인 직선(즉 $\\mathrm{P}_2$를 지나는 세로선) 위에서 $\\overline{\\mathrm{P_1P_3}}$를 최대로 하는 점이므로 위로 한 칸 올라간 $\\mathrm{P}_3=(2,2)$가 된다. 같은 규칙을 반복하면 점들은 오른쪽 한 칸, 위쪽 한 칸을 번갈아 밟으며 직선 $y=x$를 따라 올라간다.\n규칙적 좌표를 자연수 $m$으로 정리하면 $\\mathrm{P}_{2m-1}=(m,\\,m)$, $\\mathrm{P}_{2m}=(m+1,\\,m)$이다. 이때 $\\mathrm{P}_1=(1,1)$로부터의 거리는 $$a_{2m-1}=\\overline{\\mathrm{P_1P_{2m-1}}}=\\sqrt{(m-1)^2+(m-1)^2}=\\sqrt{2}\\,(m-1),$$ $$a_{2m}=\\overline{\\mathrm{P_1P_{2m}}}=\\sqrt{m^2+(m-1)^2}=\\sqrt{2m^2-2m+1}.$$\n홀수 항에서 짝수 항으로의 차를 보면, $n=2m-1$일 때 $$a_{2m}-a_{2m-1}=\\sqrt{2m^2-2m+1}-\\sqrt{2}\\,(m-1).$$ 분자를 유리화하기 위해 $\\sqrt{2}(m-1)=\\sqrt{2m^2-4m+2}$로 두면 $$\\frac{(2m^2-2m+1)-(2m^2-4m+2)}{\\sqrt{2m^2-2m+1}+\\sqrt{2m^2-4m+2}}=\\frac{2m-1}{\\sqrt{2m^2-2m+1}+\\sqrt{2}\\,(m-1)}.$$\n분모·분자를 $m$으로 나누면 $$\\frac{2-\\frac1m}{\\sqrt{2-\\frac2m+\\frac1{m^2}}+\\sqrt{2}\\left(1-\\frac1m\\right)}\\xrightarrow[m\\to\\infty]{}\\frac{2}{\\sqrt{2}+\\sqrt{2}}=\\frac{2}{2\\sqrt{2}}=\\frac{\\sqrt{2}}{2}.$$\n짝수 항에서 홀수 항으로의 차도 보면, $n=2m$일 때 $$a_{2m+1}-a_{2m}=\\sqrt{2}\\,m-\\sqrt{2m^2-2m+1}=\\frac{2m^2-(2m^2-2m+1)}{\\sqrt{2}\\,m+\\sqrt{2m^2-2m+1}}=\\frac{2m-1}{\\sqrt{2}\\,m+\\sqrt{2m^2-2m+1}},$$ 같은 방식으로 $m\\to\\infty$이면 $$\\frac{2}{\\sqrt{2}+\\sqrt{2}}=\\frac{\\sqrt{2}}{2}.$$\n홀수 번째 차의 극한과 짝수 번째 차의 극한이 모두 $\\dfrac{\\sqrt{2}}{2}$로 같으므로, $$\\lim_{n\\to\\infty}(a_{n+1}-a_n)=\\frac{\\sqrt{2}}{2}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/01수열의극한/072a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{50}}$$ 입니다.",
-  "finalAnswer": "50",
-  "correctAnswer": "50",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{\\sqrt{2}}{2}}}$$ 입니다.",
+  "finalAnswer": "sqrt(2)/2",
+  "correctAnswer": "sqrt(2)/2",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

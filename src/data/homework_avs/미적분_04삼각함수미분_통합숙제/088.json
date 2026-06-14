@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 88번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "직선 $l$의 기울기를 $t$에 대한 식으로 세우는 과정에서 빈칸 (가)$=f(t)$, (나)$=g(t)$를 구하고 $\\dfrac{g(8)}{f(7)}$의 값을 구한다.",
+  "C": "중심이 원점 $\\mathrm{O}$이고 반지름이 $3$인 원 $C_1$과 중심이 $\\mathrm{A}(t,\\,6)$이고 반지름이 $3$인 원 $C_2$가 있고($t>6$), 기울기가 양수인 직선 $l$이 선분 $\\mathrm{OA}$와 만나면서 두 원에 각각 접한다. 직선 $\\mathrm{OA}$가 $x$축의 양의 방향과 이루는 각을 $\\alpha$($\\tan\\alpha=\\frac{6}{t}$), 점 $\\mathrm{O}$를 지나고 $l$에 평행한 직선 $m$이 $\\mathrm{OA}$와 이루는 예각을 $\\beta$, 직선 $l$이 $x$축의 양의 방향과 이루는 각을 $\\theta$라 하면 $\\theta=\\alpha+\\beta$이다.",
+  "B": "반지름이 같은 두 원의 공통내접선은 두 중심을 잇는 선분의 중점을 지나며, 접선과 중심 사이의 거리는 반지름과 같다. 각을 더할 때는 탄젠트 덧셈정리 $\\tan(\\alpha+\\beta)=\\dfrac{\\tan\\alpha+\\tan\\beta}{1-\\tan\\alpha\\tan\\beta}$를 쓴다.",
+  "S": "직선 $l$이 선분 $\\mathrm{OA}$와 만나며 두 원에 동시에 접하려면 두 원을 갈라놓는 공통내접선이어야 하고, 반지름이 $3$으로 같으므로 $l$은 선분 $\\mathrm{OA}$의 중점 $\\mathrm{M}\\!\\left(\\dfrac{t}{2},\\,3\\right)$을 지난다.\n직선 $m$은 점 $\\mathrm{O}$를 지나고 $l$에 평행하므로 $m$과 $\\mathrm{OA}$가 이루는 각 $\\beta$는 점 $\\mathrm{O}$에서 $l$에 내린 수선의 길이(접점까지의 거리 $=3$)와 $\\overline{\\mathrm{OM}}$이 이루는 직각삼각형에서 정해진다. $\\overline{\\mathrm{OM}}=\\dfrac{1}{2}\\sqrt{t^2+36}$이므로 $\\sin\\beta=\\dfrac{3}{\\overline{\\mathrm{OM}}}=\\dfrac{6}{\\sqrt{t^2+36}}$이다.\n따라서 $\\cos\\beta=\\dfrac{\\sqrt{t^2}}{\\sqrt{t^2+36}}=\\dfrac{t}{\\sqrt{t^2+36}}$이므로 빈칸 (가)는 $$\\tan\\beta=\\frac{\\sin\\beta}{\\cos\\beta}=\\frac{6}{t},\\qquad f(t)=\\frac{6}{t}.$$\n직선 $l$이 $x$축의 양의 방향과 이루는 각이 $\\theta=\\alpha+\\beta$이고 $\\tan\\alpha=\\dfrac{6}{t}$, $\\tan\\beta=\\dfrac{6}{t}$이므로 탄젠트 덧셈정리로 (나)를 구하면 $$\\tan\\theta=\\frac{\\tan\\alpha+\\tan\\beta}{1-\\tan\\alpha\\tan\\beta}=\\frac{\\dfrac{6}{t}+\\dfrac{6}{t}}{1-\\dfrac{6}{t}\\cdot\\dfrac{6}{t}}=\\frac{\\dfrac{12}{t}}{\\dfrac{t^2-36}{t^2}}.$$\n정리하면 직선 $l$의 기울기는 $$\\tan\\theta=\\frac{12t}{t^2-36},\\qquad g(t)=\\frac{12t}{t^2-36}.$$\n구한 두 식에 값을 대입하면 $$f(7)=\\frac{6}{7},\\qquad g(8)=\\frac{12\\cdot 8}{8^2-36}=\\frac{96}{28}=\\frac{24}{7}.$$\n따라서 $$\\frac{g(8)}{f(7)}=\\frac{\\dfrac{24}{7}}{\\dfrac{6}{7}}=\\frac{24}{6}=4.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/089a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{20}}$$ 입니다.",
-  "finalAnswer": "20",
-  "correctAnswer": "20",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{4}}$$ 입니다.",
+  "finalAnswer": "4",
+  "correctAnswer": "4",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

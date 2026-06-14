@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 도함수의 활용 1 32번 명품 해설",
   "type": "calculus",
-  "P": "이계도함수를 이용하여 곡선의 볼록성, 변곡점을 분석합니다.",
-  "C": "$$f''(x)$$의 부호로 아래/위로 볼록을 판별하고, 변곡점을 구합니다.",
-  "B": "도함수의 활용 1:\n\n1) $$f''(x) > 0$$: 아래로 볼록, $$f''(x) < 0$$: 위로 볼록\n2) 변곡점: $$f''(x) = 0$$이고 볼록성이 바뀌는 점\n3) 접선·법선의 방정식\n4) 속도·가속도 문제",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "곡선 $y=e^x$ 위의 두 점 $\\mathrm{A}(t,\\,e^t)$, $\\mathrm{B}(-t,\\,e^{-t})$를 지나는 직선의 기울기를 구한다.",
+  "C": "두 점 $\\mathrm{A}(t,\\,e^t)$, $\\mathrm{B}(-t,\\,e^{-t})$에서 곡선 $y=e^x$에 그은 접선이 각각 $l$, $m$이고, 두 직선 $l$, $m$이 이루는 예각의 크기가 $\\dfrac{\\pi}{4}$이며 $t>0$이다.",
+  "B": "곡선 위의 한 점에서의 접선의 기울기는 그 점에서의 미분계수와 같다. 또한 두 직선이 $x$축의 양의 방향과 이루는 각을 각각 $\\alpha$, $\\beta$라 하면 두 직선이 이루는 각의 탄젠트는 탄젠트의 뺄셈정리 $\\tan(\\alpha-\\beta)=\\dfrac{\\tan\\alpha-\\tan\\beta}{1+\\tan\\alpha\\tan\\beta}$로 구할 수 있다.",
+  "S": "접선의 기울기를 얻기 위해 곡선을 미분하면, $y=e^x$에서 $y'=e^x$이므로 두 점 $\\mathrm{A}$, $\\mathrm{B}$에서의 접선 $l$, $m$의 기울기는 각각 $e^t$, $e^{-t}$이다.\n두 접선이 $x$축의 양의 방향과 이루는 각을 각각 $\\alpha$, $\\beta$라 하면 기울기가 곧 탄젠트이므로 $$\\tan\\alpha=e^t,\\qquad \\tan\\beta=e^{-t}.$$\n$t>0$이면 $e^t>1>e^{-t}>0$이라 두 기울기가 모두 양수이고 $l$이 더 가파르므로, $l$과 $m$이 이루는 예각은 $\\alpha-\\beta$이고 그 크기가 $\\dfrac{\\pi}{4}$임을 탄젠트 뺄셈정리에 대입한다. $$\\tan\\frac{\\pi}{4}=\\tan(\\alpha-\\beta)=\\frac{\\tan\\alpha-\\tan\\beta}{1+\\tan\\alpha\\tan\\beta}=\\frac{e^t-e^{-t}}{1+e^t\\cdot e^{-t}}=1.$$\n분모의 $e^t\\cdot e^{-t}=1$을 이용해 식을 정리하면 $\\dfrac{e^t-e^{-t}}{2}=1$, 즉 $$e^t-e^{-t}=2.$$\n$e^t$에 대한 방정식으로 풀기 위해 양변에 $e^t$를 곱하면 $(e^t)^2-2e^t-1=0$이고, 근의 공식으로 $e^t=1\\pm\\sqrt{2}$이다. $e^t>0$이므로 $$e^t=1+\\sqrt{2}.$$\n두 점 $\\mathrm{A}(t,\\,e^t)$, $\\mathrm{B}(-t,\\,e^{-t})$를 지나는 직선의 기울기를 구하면 $$\\frac{e^t-e^{-t}}{t-(-t)}=\\frac{e^t-e^{-t}}{2t}=\\frac{2}{2t}=\\frac{1}{t}.$$\n$e^t=1+\\sqrt{2}$에서 $t=\\ln(1+\\sqrt{2})$이므로 직선 $\\mathrm{AB}$의 기울기는 $$\\frac{1}{t}=\\frac{1}{\\ln\\left(1+\\sqrt{2}\\right)}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/06도함수활용1/033a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{①번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{1}{\\ln\\left(1+\\sqrt{2}\\right)}}}$$ 입니다.",
   "finalAnswer": "1",
   "correctAnswer": "1",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 여러 가지 미분법 15번 명품 해설",
   "type": "calculus",
-  "P": "합성함수, 매개변수, 음함수의 미분법을 활용합니다.",
-  "C": "연쇄 법칙, 몫의 미분법, 매개변수 미분을 적용합니다.",
-  "B": "여러 가지 미분법:\n\n1) 합성함수: $$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$$\n2) 매개변수: $$\\frac{dy}{dx} = \\frac{\\frac{dy}{dt}}{\\frac{dx}{dt}}$$\n3) 음함수: 양변을 $$x$$로 미분, $$y' = \\frac{dy}{dx}$$로 놓고 정리\n4) 역함수 미분: $$\\frac{dx}{dy} = \\frac{1}{\\frac{dy}{dx}}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "실수 전체에서 미분가능한 함수 $f(x)$가 모든 실수 $x$에 대하여 $f(x)+f\\left(\\tfrac{1}{2}\\sin x\\right)=\\sin x$를 만족시킬 때, $f'(\\pi)$의 값",
+  "C": "$f(x)$는 실수 전체에서 미분가능하고, 모든 실수 $x$에서 $f(x)+f\\left(\\dfrac{1}{2}\\sin x\\right)=\\sin x$가 성립한다.",
+  "B": "한 등식이 모든 $x$에서 성립하면 그 양변은 같은 함수이므로 양변을 $x$로 미분해도 등식이 유지된다. 이때 $f\\left(\\tfrac{1}{2}\\sin x\\right)$처럼 함수 안에 다시 함수가 들어간 합성함수는 합성함수의 미분법 $\\dfrac{d}{dx}f(u(x))=f'(u(x))\\,u'(x)$로 미분한다. 미지의 도함숫값이 두 개($f'(\\pi)$와 $f'(0)$) 얽혀 있을 때는 특정한 $x$값을 대입해 연립식을 만들어 차례로 구한다.",
+  "S": "주어진 등식이 모든 실수에서 성립하므로 양변을 $x$에 대해 미분한다. 좌변의 둘째 항은 합성함수이므로 $\\dfrac{1}{2}\\sin x$를 안쪽 함수로 보고 그 도함수 $\\dfrac{1}{2}\\cos x$를 곱한다. $$f'(x)+f'\\!\\left(\\tfrac{1}{2}\\sin x\\right)\\cdot \\tfrac{1}{2}\\cos x=\\cos x$$\n먼저 $f'(0)$을 얻기 위해 $x=0$을 대입한다. $\\sin 0=0$이라 안쪽 값이 $\\tfrac{1}{2}\\sin 0=0$이 되어 $f'(0)$끼리 묶이고, $\\cos 0=1$이다. $$f'(0)+f'(0)\\cdot \\tfrac{1}{2}\\cdot 1=1$$\n$f'(0)$로 정리하면 계수가 $1+\\dfrac{1}{2}=\\dfrac{3}{2}$이므로 $f'(0)$의 값을 구한다. $$\\tfrac{3}{2}\\,f'(0)=1 \\quad\\Longrightarrow\\quad f'(0)=\\tfrac{2}{3}$$\n이제 목표인 $f'(\\pi)$를 얻기 위해 미분한 등식에 $x=\\pi$를 대입한다. $\\sin \\pi=0$이라 안쪽 값이 $\\tfrac{1}{2}\\sin \\pi=0$이 되어 $f'(0)$이 다시 등장하고, $\\cos \\pi=-1$이다. $$f'(\\pi)+f'(0)\\cdot \\tfrac{1}{2}\\cdot(-1)=-1$$\n$f'(\\pi)$에 대해 정리하면 $f'(0)$ 항을 우변으로 넘긴다. $$f'(\\pi)=\\tfrac{1}{2}\\,f'(0)-1$$\n앞에서 구한 $f'(0)=\\dfrac{2}{3}$을 대입하여 값을 계산한다. $$f'(\\pi)=\\tfrac{1}{2}\\cdot\\tfrac{2}{3}-1=\\tfrac{1}{3}-1=-\\tfrac{2}{3}$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/05여러가지미분법/016a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{②번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{-\\dfrac{2}{3}}}$$ 입니다.",
   "finalAnswer": "2",
   "correctAnswer": "2",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 여러 가지 미분법 62번 명품 해설",
   "type": "calculus",
-  "P": "합성함수, 매개변수, 음함수의 미분법을 활용합니다.",
-  "C": "연쇄 법칙, 몫의 미분법, 매개변수 미분을 적용합니다.",
-  "B": "여러 가지 미분법:\n\n1) 합성함수: $$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$$\n2) 매개변수: $$\\frac{dy}{dx} = \\frac{\\frac{dy}{dt}}{\\frac{dx}{dt}}$$\n3) 음함수: 양변을 $$x$$로 미분, $$y' = \\frac{dy}{dx}$$로 놓고 정리\n4) 역함수 미분: $$\\frac{dx}{dy} = \\frac{1}{\\frac{dy}{dx}}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "점 $\\mathrm{Q}$의 $y$좌표가 $5$가 되는 순간, 넓이 $S$의 시간 $t$(초)에 대한 변화율 $\\dfrac{dS}{dt}$를 구한다.",
+  "C": "중심이 원점 $\\mathrm{O}$이고 반지름이 $10$인 원 $x^2+y^2=100$이 있다. 직선 $y=\\sqrt{3}\\,x$가 이 원과 제1사분면에서 만나는 점이 $\\mathrm{A}$이다. 점 $\\mathrm{P}$는 원점 $\\mathrm{O}$에서 출발하여 $x$축을 따라 양의 방향으로 매초 $2$의 일정한 속력으로 움직이므로 $t$초 후 $\\mathrm{P}=(2t,\\ 0)$이다. 점 $\\mathrm{P}$를 지나고 직선 $y=\\sqrt{3}\\,x$에 평행한 직선이 제1사분면에서 원과 만나는 점이 $\\mathrm{Q}$이다. $S$는 두 선분 $\\mathrm{AO}$, $\\mathrm{OP}$, $\\mathrm{PQ}$와 호 $\\mathrm{QA}$로 둘러싸인 부분의 넓이이다. 범위는 $0<t<5$이다.",
+  "B": "원 위의 점은 중심각 $\\theta$를 써서 $(10\\cos\\theta,\\ 10\\sin\\theta)$로 나타내며, 부채꼴의 넓이는 $\\dfrac{1}{2}r^2\\theta$이다. 곡선 경계를 포함한 넓이는 반지름을 그어 삼각형과 부채꼴로 나누면 다룰 수 있다. 한 변수가 다른 변수에 종속될 때는 두 변수를 잇는 조건식을 $t$로 음함수 미분하여 변화율을 연결한다.",
+  "S": "점 $\\mathrm{A}$는 직선 $y=\\sqrt{3}\\,x$ 위의 원 위의 점이므로 그 편각은 $\\tan\\theta=\\sqrt{3}$에서 $\\dfrac{\\pi}{3}$이다. 점 $\\mathrm{Q}$의 편각을 $\\theta$라 하면 $$\\mathrm{A}=\\Big(10\\cos\\tfrac{\\pi}{3},\\ 10\\sin\\tfrac{\\pi}{3}\\Big)=(5,\\ 5\\sqrt{3}),\\qquad \\mathrm{Q}=(10\\cos\\theta,\\ 10\\sin\\theta).$$\n반지름 $\\mathrm{OQ}$를 그으면 넓이 $S$는 삼각형 $\\mathrm{OPQ}$와 중심각이 $\\dfrac{\\pi}{3}-\\theta$인 부채꼴 $\\mathrm{OQA}$로 나뉜다. 삼각형은 밑변 $\\mathrm{OP}=2t$, 높이 $10\\sin\\theta$이므로 $$S=\\frac{1}{2}\\cdot 2t\\cdot 10\\sin\\theta+\\frac{1}{2}\\cdot 10^{2}\\Big(\\frac{\\pi}{3}-\\theta\\Big)=10t\\sin\\theta+50\\Big(\\frac{\\pi}{3}-\\theta\\Big).$$\n선분 $\\mathrm{PQ}$가 기울기 $\\sqrt{3}$인 직선과 평행하므로 $\\mathrm{P}=(2t,\\ 0)$과 $\\mathrm{Q}=(10\\cos\\theta,\\ 10\\sin\\theta)$ 사이에서 $$10\\sin\\theta=\\sqrt{3}\\,(10\\cos\\theta-2t)$$가 성립하여 $\\theta$와 $t$가 연결된다.\n양변을 $t$로 미분하면 $\\theta$는 $t$의 함수이므로 $$10\\cos\\theta\\,\\frac{d\\theta}{dt}=\\sqrt{3}\\Big(-10\\sin\\theta\\,\\frac{d\\theta}{dt}-2\\Big)$$이고, 정리하면 $$\\big(10\\cos\\theta+10\\sqrt{3}\\sin\\theta\\big)\\frac{d\\theta}{dt}=-2\\sqrt{3},\\qquad \\frac{d\\theta}{dt}=-\\frac{\\sqrt{3}}{10\\sin\\!\\big(\\theta+\\tfrac{\\pi}{6}\\big)}.$$\n점 $\\mathrm{Q}$의 $y$좌표가 $5$인 순간은 $10\\sin\\theta=5$에서 $\\sin\\theta=\\dfrac{1}{2}$, 즉 $\\theta=\\dfrac{\\pi}{6}$이다. 조건식에 대입하면 $$5=\\sqrt{3}\\big(5\\sqrt{3}-2t\\big)\\ \\Rightarrow\\ t=\\frac{5\\sqrt{3}}{3},$$ 또한 $\\theta+\\dfrac{\\pi}{6}=\\dfrac{\\pi}{3}$이므로 $$\\frac{d\\theta}{dt}=-\\frac{\\sqrt{3}}{10\\sin\\tfrac{\\pi}{3}}=-\\frac{\\sqrt{3}}{10\\cdot\\tfrac{\\sqrt{3}}{2}}=-\\frac{1}{5}.$$\n넓이를 $t$로 미분하면 곱의 미분과 합성함수 미분에 의해 $$\\frac{dS}{dt}=10\\sin\\theta+10t\\cos\\theta\\,\\frac{d\\theta}{dt}-50\\,\\frac{d\\theta}{dt}.$$\n$\\theta=\\dfrac{\\pi}{6}$, $t=\\dfrac{5\\sqrt{3}}{3}$, $\\dfrac{d\\theta}{dt}=-\\dfrac{1}{5}$을 대입하면 $$\\frac{dS}{dt}=10\\cdot\\frac{1}{2}+10\\cdot\\frac{5\\sqrt{3}}{3}\\cdot\\frac{\\sqrt{3}}{2}\\cdot\\Big(-\\frac{1}{5}\\Big)-50\\cdot\\Big(-\\frac{1}{5}\\Big)=5-5+10=10.$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{10}}$$ 입니다.",
   "finalAnswer": "10",
   "correctAnswer": "10",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

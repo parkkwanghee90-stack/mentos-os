@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 74번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle\\lim_{\\theta\\to 0+}\\dfrac{S(\\theta)}{\\theta^{3}}$ 의 값을 구한다. 여기서 $S(\\theta)$ 는 삼각형 $QPB$ 의 넓이이다.",
+  "C": "지름 $\\overline{AB}=2$ 인 반원에서 $\\overline{AB}$ 위의 점 $P$ 와 반원 위의 점 $Q$ 가 $\\overline{QB}=\\overline{QP}$ 를 만족하고, $\\angle BQP=\\theta\\ \\left(0<\\theta<\\dfrac{\\pi}{2}\\right)$ 이다.",
+  "B": "지름에 대한 원주각은 $\\dfrac{\\pi}{2}$ 이므로 $\\angle AQB=\\dfrac{\\pi}{2}$ 이다. 이등변삼각형의 두 밑각은 같고, 직각삼각형에서 한 변의 길이는 빗변에 코사인을 곱해 얻는다. 또한 $\\displaystyle\\lim_{x\\to0}\\dfrac{\\sin x}{x}=1$ 을 이용한다.",
+  "S": "삼각형 $QPB$ 는 $\\overline{QB}=\\overline{QP}$ 인 이등변삼각형이고 꼭지각이 $\\angle BQP=\\theta$ 이므로, 두 밑각이 서로 같아 $\\angle QBP=\\angle QPB=\\dfrac{\\pi-\\theta}{2}$ 이다.\n$\\overline{AB}$ 가 지름이므로 반원 위의 점 $Q$ 에 대해 $\\angle AQB=\\dfrac{\\pi}{2}$ 이고, 삼각형 $AQB$ 는 빗변이 $\\overline{AB}=2$ 인 직각삼각형이다. 점 $P$ 가 $\\overline{AB}$ 위에 있어 $\\angle QBP$ 는 곧 직각삼각형 $AQB$ 의 각 $B$ 이다.\n직각삼각형 $AQB$ 에서 각 $B$ 에 이웃한 변과 빗변의 관계로 $\\overline{QB}=\\overline{AB}\\cos(\\angle QBP)=2\\cos\\dfrac{\\pi-\\theta}{2}=2\\sin\\dfrac{\\theta}{2}$ 를 얻는다.\n두 변 $\\overline{QB},\\ \\overline{QP}$ 와 그 사이각 $\\theta$ 로 넓이를 쓰면 $$S(\\theta)=\\frac{1}{2}\\,\\overline{QB}\\cdot\\overline{QP}\\sin\\theta=\\frac{1}{2}\\left(2\\sin\\frac{\\theta}{2}\\right)^{2}\\sin\\theta=2\\sin^{2}\\frac{\\theta}{2}\\,\\sin\\theta.$$\n극한을 표준꼴로 정리하기 위해 $\\theta^{3}$ 으로 나누고 $\\dfrac{\\theta}{2}$ 와 $\\theta$ 를 분모에 맞춰 변형하면 $$\\frac{S(\\theta)}{\\theta^{3}}=\\frac{2\\sin^{2}\\frac{\\theta}{2}\\,\\sin\\theta}{\\theta^{3}}=\\frac{1}{2}\\left(\\frac{\\sin\\frac{\\theta}{2}}{\\frac{\\theta}{2}}\\right)^{2}\\cdot\\frac{\\sin\\theta}{\\theta}.$$\n$\\theta\\to 0+$ 에서 $\\dfrac{\\sin\\frac{\\theta}{2}}{\\frac{\\theta}{2}}\\to1$, $\\dfrac{\\sin\\theta}{\\theta}\\to1$ 이므로 $$\\lim_{\\theta\\to 0+}\\frac{S(\\theta)}{\\theta^{3}}=\\frac{1}{2}\\cdot 1^{2}\\cdot 1=\\frac{1}{2}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/075a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{②번}}$$ 입니다.",
-  "finalAnswer": "2",
-  "correctAnswer": "2",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{1}{2}}}$$ 입니다.",
+  "finalAnswer": "1/2",
+  "correctAnswer": "1/2",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

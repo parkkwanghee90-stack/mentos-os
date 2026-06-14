@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 11번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$0 < \\alpha < \\beta < 2\\pi$이고 $\\cos\\alpha = \\cos\\beta = \\dfrac{1}{3}$일 때 $\\sin(\\beta - \\alpha)$의 값을 구한다.",
+  "C": "두 각 $\\alpha,\\ \\beta$는 $0 < \\alpha < \\beta < 2\\pi$를 만족하며, 코사인값이 같아 $\\cos\\alpha = \\cos\\beta = \\dfrac{1}{3}$이다.",
+  "B": "한 주기 $(0,\\ 2\\pi)$에서 코사인값이 같은 서로 다른 두 각은 $x$축 위쪽(제1사분면)과 아래쪽(제4사분면)에 하나씩 대칭으로 놓이므로 사인값의 부호가 반대가 된다. 두 각의 사인은 피타고라스 항등식 $\\sin^2\\theta + \\cos^2\\theta = 1$로 결정하고, 차의 사인은 덧셈정리 $\\sin(\\beta-\\alpha) = \\sin\\beta\\cos\\alpha - \\cos\\beta\\sin\\alpha$로 전개한다.",
+  "S": "코사인값이 같은 두 각의 위치를 먼저 가른다. $y = \\cos x$는 $(0,\\ 2\\pi)$에서 같은 값을 두 곳에서 가지는데, 작은 각 $\\alpha$는 $\\cos$가 양수인 제1사분면 $\\left(0,\\ \\dfrac{\\pi}{2}\\right)$에, 큰 각 $\\beta$는 제4사분면 $\\left(\\dfrac{3}{2}\\pi,\\ 2\\pi\\right)$에 놓인다.\n$\\alpha$의 사인을 구한다. $\\alpha$가 제1사분면 각이라 $\\sin\\alpha > 0$이므로 $$\\sin\\alpha = \\sqrt{1 - \\cos^2\\alpha} = \\sqrt{1 - \\frac{1}{9}} = \\sqrt{\\frac{8}{9}} = \\frac{2\\sqrt{2}}{3}.$$\n$\\beta$의 사인을 구한다. $\\beta$가 제4사분면 각이라 $\\sin\\beta < 0$이므로 $$\\sin\\beta = -\\sqrt{1 - \\cos^2\\beta} = -\\sqrt{1 - \\frac{1}{9}} = -\\frac{2\\sqrt{2}}{3}.$$\n차의 사인은 덧셈정리로 묶어야 하므로 $$\\sin(\\beta - \\alpha) = \\sin\\beta\\cos\\alpha - \\cos\\beta\\sin\\alpha$$ 로 전개한다.\n구한 네 값을 대입한다. $$\\sin(\\beta - \\alpha) = \\left(-\\frac{2\\sqrt{2}}{3}\\right)\\cdot\\frac{1}{3} - \\frac{1}{3}\\cdot\\frac{2\\sqrt{2}}{3}.$$\n두 항을 정리하면 부호가 같아 더해지므로 $$\\sin(\\beta - \\alpha) = -\\frac{2\\sqrt{2}}{9} - \\frac{2\\sqrt{2}}{9} = -\\frac{4\\sqrt{2}}{9}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/012a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{sqrt(5)/5}}$$ 입니다.",
-  "finalAnswer": "sqrt(5)/5",
-  "correctAnswer": "sqrt(5)/5",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{-\\dfrac{4\\sqrt{2}}{9}}}$$ 입니다.",
+  "finalAnswer": "-4sqrt(2)/9",
+  "correctAnswer": "-4sqrt(2)/9",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

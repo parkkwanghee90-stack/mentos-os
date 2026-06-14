@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 수열의 극한 12번 명품 해설",
   "type": "calculus",
-  "P": "수열의 극한값과 급수의 수렴·발산을 판별합니다.",
-  "C": "최고차항으로 나누기, 샌드위치 정리, 등비수열 극한 조건을 활용합니다.",
-  "B": "수열의 극한:\n\n1) $$\\lim_{n \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교\n2) $$|r| < 1 \\Rightarrow \\lim_{n \\to \\infty} r^n = 0$$\n3) 수렴 조건: 단조 수렴 정리, 샌드위치 정리\n4) $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "기울기가 $n$이고 $y$절편이 양수이며 원 $x^2+y^2=n^2$에 접하는 직선이 $x$축, $y$축과 만나는 점 $\\mathrm{P}_n$, $\\mathrm{Q}_n$에 대하여 $l_n=\\overline{\\mathrm{P}_n\\mathrm{Q}_n}$일 때 $\\displaystyle\\lim_{n\\to\\infty}\\dfrac{l_n}{2n^2}$의 값",
+  "C": "자연수 $n$에 대하여 직선의 기울기는 $n$이고 $y$절편은 양수이다. 이 직선은 중심이 원점이고 반지름이 $n$인 원 $x^2+y^2=n^2$에 접한다. $\\mathrm{P}_n$은 직선과 $x$축의 교점, $\\mathrm{Q}_n$은 직선과 $y$축의 교점이고, $l_n$은 두 점 사이의 거리이다.",
+  "B": "원의 중심에서 접선까지의 거리는 반지름과 같다. 직선 $ax+by+c=0$과 점 $(x_0,y_0)$ 사이의 거리는 $\\dfrac{|ax_0+by_0+c|}{\\sqrt{a^2+b^2}}$로 주어진다. 직각삼각형의 빗변 길이는 두 절편을 이용한 피타고라스 정리로 구한다. 수열의 극한에서 분자·분모가 모두 무한대로 발산하면 최고차항의 계수비가 극한값을 결정한다.",
+  "S": "접선을 기울기와 $y$절편으로 표현하기 위해, 구하려는 직선을 $y$절편 $c\\,(c>0)$를 이용하여 $y=nx+c$, 즉 $nx-y+c=0$으로 둔다.\n이 직선이 원에 접한다는 조건은 중심 $(0,0)$에서 직선까지의 거리가 반지름 $n$과 같다는 것이므로 $$\\frac{|c|}{\\sqrt{n^2+1}}=n.$$\n$y$절편이 양수이므로 $c>0$이고, 위 식에서 $$c=n\\sqrt{n^2+1}.$$ 따라서 접선의 방정식은 $y=nx+n\\sqrt{n^2+1}$이다.\n$x$축과의 교점 $\\mathrm{P}_n$을 구하기 위해 $y=0$을 대입하면 $0=nx+n\\sqrt{n^2+1}$에서 $x=-\\sqrt{n^2+1}$이므로 $$\\mathrm{P}_n\\left(-\\sqrt{n^2+1},\\,0\\right).$$\n$y$축과의 교점 $\\mathrm{Q}_n$을 구하기 위해 $x=0$을 대입하면 $y=n\\sqrt{n^2+1}$이므로 $$\\mathrm{Q}_n\\left(0,\\,n\\sqrt{n^2+1}\\right).$$\n두 점 사이의 거리 $l_n$을 피타고라스 정리로 구하면 $$l_n=\\overline{\\mathrm{P}_n\\mathrm{Q}_n}=\\sqrt{\\left(\\sqrt{n^2+1}\\right)^2+\\left(n\\sqrt{n^2+1}\\right)^2}.$$\n근호 안을 정리하면 $$l_n=\\sqrt{(n^2+1)+n^2(n^2+1)}=\\sqrt{(n^2+1)(1+n^2)}=\\sqrt{(n^2+1)^2}=n^2+1.$$\n구하는 극한에 대입하면 $$\\lim_{n\\to\\infty}\\frac{l_n}{2n^2}=\\lim_{n\\to\\infty}\\frac{n^2+1}{2n^2}.$$ 분자·분모를 $n^2$으로 나누면 $$\\lim_{n\\to\\infty}\\frac{1+\\frac{1}{n^2}}{2}=\\frac{1}{2}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/01수열의극한/013a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{ㄱ,ㄴ}}$$ 입니다.",
-  "finalAnswer": "ㄱ,ㄴ",
-  "correctAnswer": "ㄱ,ㄴ",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{1}{2}}}$$ 입니다.",
+  "finalAnswer": "1/2",
+  "correctAnswer": "1/2",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

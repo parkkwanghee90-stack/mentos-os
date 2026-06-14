@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 81번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "함수 $f(x)=\\sin x-\\sqrt{3}\\cos x$의 도함수에 $x=\\dfrac{\\pi}{3}$를 대입한 값 $f'\\!\\left(\\dfrac{\\pi}{3}\\right)$를 구한다.",
+  "C": "$f(x)=\\sin x-\\sqrt{3}\\cos x$로 주어져 있고, 도함수의 함숫값 $f'\\!\\left(\\dfrac{\\pi}{3}\\right)$를 묻는다.",
+  "B": "삼각함수의 미분법에서 $(\\sin x)'=\\cos x$, $(\\cos x)'=-\\sin x$이다. 또한 미분은 선형 연산이므로 합과 상수배는 각각 따로 미분하여 더할 수 있다. 특수각 $\\dfrac{\\pi}{3}$에서는 $\\cos\\dfrac{\\pi}{3}=\\dfrac{1}{2}$, $\\sin\\dfrac{\\pi}{3}=\\dfrac{\\sqrt{3}}{2}$이다.",
+  "S": "각 항을 따로 미분하기 위해 기본 도함수를 적용한다. $(\\sin x)'=\\cos x$이고 $(\\cos x)'=-\\sin x$이다.\n선형성에 따라 $f(x)=\\sin x-\\sqrt{3}\\cos x$를 항별로 미분하면 $$f'(x)=\\cos x-\\sqrt{3}\\cdot(-\\sin x)=\\cos x+\\sqrt{3}\\,\\sin x.$$\n구하는 값을 얻기 위해 $x=\\dfrac{\\pi}{3}$를 대입한다. $$f'\\!\\left(\\dfrac{\\pi}{3}\\right)=\\cos\\dfrac{\\pi}{3}+\\sqrt{3}\\,\\sin\\dfrac{\\pi}{3}.$$\n특수각의 삼각비를 대입한다. $\\cos\\dfrac{\\pi}{3}=\\dfrac{1}{2}$이고 $\\sin\\dfrac{\\pi}{3}=\\dfrac{\\sqrt{3}}{2}$이므로 $$f'\\!\\left(\\dfrac{\\pi}{3}\\right)=\\dfrac{1}{2}+\\sqrt{3}\\cdot\\dfrac{\\sqrt{3}}{2}.$$\n두 번째 항을 정리하면 $\\sqrt{3}\\cdot\\dfrac{\\sqrt{3}}{2}=\\dfrac{3}{2}$이므로 $$f'\\!\\left(\\dfrac{\\pi}{3}\\right)=\\dfrac{1}{2}+\\dfrac{3}{2}=\\dfrac{4}{2}=2.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/082a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{-1}}$$ 입니다.",
-  "finalAnswer": "-1",
-  "correctAnswer": "-1",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2}}$$ 입니다.",
+  "finalAnswer": "2",
+  "correctAnswer": "2",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

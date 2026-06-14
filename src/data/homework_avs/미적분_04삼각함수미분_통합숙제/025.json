@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 25번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\cos\\theta=\\dfrac{\\sqrt5}{3}$이고 $0<\\theta<\\dfrac{\\pi}{2}$일 때 $\\sin\\theta\\cos2\\theta$의 값.",
+  "C": "$\\cos\\theta=\\dfrac{\\sqrt5}{3}$, 그리고 $0<\\theta<\\dfrac{\\pi}{2}$ (즉 $\\theta$가 제1사분면 각이라 $\\sin\\theta>0$).",
+  "B": "피타고라스 항등식 $\\sin^2\\theta+\\cos^2\\theta=1$로 $\\sin\\theta$를 구하고, 코사인의 배각공식 $\\cos2\\theta=2\\cos^2\\theta-1$로 $\\cos2\\theta$를 코사인 한 종류로만 표현해 곧바로 대입한다.",
+  "S": "주어진 값의 범위를 먼저 확인한다. $0<\\theta<\\dfrac{\\pi}{2}$이므로 $\\theta$는 제1사분면 각이고, 따라서 $\\sin\\theta>0$이다. 이 부호 결정이 이후 제곱근을 양수로 택하는 근거가 된다.\n$\\sin\\theta$를 피타고라스 항등식으로 구한다. $$\\sin^2\\theta=1-\\cos^2\\theta=1-\\left(\\dfrac{\\sqrt5}{3}\\right)^2=1-\\dfrac{5}{9}=\\dfrac{4}{9}.$$\n$\\sin\\theta>0$이므로 양의 제곱근을 택한다. $$\\sin\\theta=\\sqrt{\\dfrac{4}{9}}=\\dfrac{2}{3}.$$\n$\\cos2\\theta$는 코사인만으로 나타내는 배각공식을 쓰면 이미 가진 $\\cos\\theta$ 값을 바로 넣을 수 있어 계산이 가장 짧다. $$\\cos2\\theta=2\\cos^2\\theta-1=2\\cdot\\dfrac{5}{9}-1=\\dfrac{10}{9}-1=\\dfrac{1}{9}.$$\n구한 두 값을 곱해 마무리한다. $$\\sin\\theta\\cos2\\theta=\\dfrac{2}{3}\\times\\dfrac{1}{9}=\\dfrac{2}{27}.$$\n값 $\\dfrac{2}{27}$은 보기 중 ①과 일치하므로 정답은 ①이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/026a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{30/7}}$$ 입니다.",
-  "finalAnswer": "30/7",
-  "correctAnswer": "30/7",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{2}{27}}}$$ 입니다.",
+  "finalAnswer": "2/27",
+  "correctAnswer": "2/27",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

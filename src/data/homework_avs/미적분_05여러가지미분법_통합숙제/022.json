@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 여러 가지 미분법 22번 명품 해설",
   "type": "calculus",
-  "P": "합성함수, 매개변수, 음함수의 미분법을 활용합니다.",
-  "C": "연쇄 법칙, 몫의 미분법, 매개변수 미분을 적용합니다.",
-  "B": "여러 가지 미분법:\n\n1) 합성함수: $$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$$\n2) 매개변수: $$\\frac{dy}{dx} = \\frac{\\frac{dy}{dt}}{\\frac{dx}{dt}}$$\n3) 음함수: 양변을 $$x$$로 미분, $$y' = \\frac{dy}{dx}$$로 놓고 정리\n4) 역함수 미분: $$\\frac{dx}{dy} = \\frac{1}{\\frac{dy}{dx}}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "합성함수 $y=f(\\sqrt{x})$ 의 $x=4$ 에서의 미분계수를 구한다.",
+  "C": "$y=f(x)$ 는 미분가능하고 점 $(2,\\,f(2))$ 에서의 접선의 기울기가 $2$ 이므로 $f'(2)=2$ 이다. 함수 $y=f(\\sqrt{x})$ 는 양의 실수 전체에서 정의되며, $x=4$ 에서의 미분계수를 묻고 있다.",
+  "B": "두 함수가 겹쳐진 합성함수 $y=f(g(x))$ 의 도함수는 연쇄법칙(chain rule)에 의해 $\\dfrac{dy}{dx}=f'(g(x))\\cdot g'(x)$ 로, 바깥함수의 도함수에 안쪽함수의 도함수를 곱한다. 여기서는 안쪽함수가 $g(x)=\\sqrt{x}=x^{1/2}$ 이고, 그 도함수는 $g'(x)=\\dfrac{1}{2\\sqrt{x}}$ 이다.",
+  "S": "주어진 접선의 기울기를 미분계수로 옮기면, 점 $(2,\\,f(2))$ 에서의 접선의 기울기가 $2$ 라는 것은 곧 $f'(2)=2$ 를 뜻한다.\n구하려는 함수를 합성구조로 보면, $y=f(\\sqrt{x})$ 는 안쪽함수 $g(x)=\\sqrt{x}$ 와 바깥함수 $f$ 가 결합된 합성함수이므로 연쇄법칙을 적용할 수 있다. $$\\frac{dy}{dx}=f'\\!\\left(\\sqrt{x}\\right)\\cdot\\frac{d}{dx}\\!\\left(\\sqrt{x}\\right)$$\n안쪽함수의 도함수를 구하면, $\\sqrt{x}=x^{1/2}$ 이므로 $$\\frac{d}{dx}\\!\\left(\\sqrt{x}\\right)=\\frac{1}{2}x^{-1/2}=\\frac{1}{2\\sqrt{x}}$$ 이다. 따라서 $$\\frac{dy}{dx}=f'\\!\\left(\\sqrt{x}\\right)\\cdot\\frac{1}{2\\sqrt{x}}$$\n주어진 점 $x=4$ 를 대입하기 위해 먼저 안쪽함수 값을 계산하면, $\\sqrt{4}=2$ 이므로 바깥함수의 도함수는 $f'\\!\\left(\\sqrt{4}\\right)=f'(2)$ 가 되어 알고 있는 값 $f'(2)=2$ 를 그대로 쓸 수 있다.\n안쪽함수의 도함수에도 $x=4$ 를 대입하면 $$\\frac{1}{2\\sqrt{4}}=\\frac{1}{2\\cdot 2}=\\frac{1}{4}$$ 이다.\n두 결과를 연쇄법칙대로 곱하면 $x=4$ 에서의 미분계수가 나온다. $$\\left.\\frac{dy}{dx}\\right|_{x=4}=f'(2)\\cdot\\frac{1}{4}=2\\cdot\\frac{1}{4}=\\frac{1}{2}$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/05여러가지미분법/023a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{①번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{1}{2}}}$$ 입니다.",
   "finalAnswer": "1",
   "correctAnswer": "1",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

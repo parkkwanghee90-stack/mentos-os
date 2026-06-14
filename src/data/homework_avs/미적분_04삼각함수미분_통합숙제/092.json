@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 92번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\angle\\mathrm{ABE}=\\alpha$일 때 $\\tan\\alpha$의 값을 구한다.",
+  "C": "$\\overline{\\mathrm{BC}}$를 빗변으로 하는 직각이등변삼각형 $\\mathrm{ABC}$에서 $\\overline{\\mathrm{AB}}$의 중점을 $\\mathrm{O}$, $\\overline{\\mathrm{AB}}$를 지름으로 하는 원 $\\mathrm{O}$와 선분 $\\overline{\\mathrm{OC}}$의 교점을 $\\mathrm{D}$, 직선 $\\mathrm{BD}$의 연장선과 $\\overline{\\mathrm{AC}}$의 교점을 $\\mathrm{E}$라 한다. $\\angle\\mathrm{ABE}=\\alpha$이다.",
+  "B": "한 호에 대한 원주각의 크기는 그 호에 대한 중심각의 크기의 절반이다. 또한 직각삼각형에서 한 예각의 탄젠트는 그 각의 대변과 인접변의 길이의 비이며, 배각공식 $\\tan 2\\theta=\\dfrac{2\\tan\\theta}{1-\\tan^2\\theta}$가 성립한다.",
+  "S": "점 $\\mathrm{E}$는 직선 $\\mathrm{BD}$ 위에 있어 $\\angle\\mathrm{ABE}$는 곧 호 $\\mathrm{AD}$에 대한 원주각이므로, 같은 호 $\\mathrm{AD}$에 대한 중심각 $\\angle\\mathrm{AOD}$는 그 두 배가 된다. $$\\angle\\mathrm{AOD}=2\\angle\\mathrm{ABD}=2\\alpha$$\n$\\angle\\mathrm{AOD}$는 직선 $\\mathrm{OC}$ 위의 점 $\\mathrm{D}$가 만드는 각이므로 직각삼각형 $\\mathrm{OAC}$에서 점 $\\mathrm{C}$ 방향으로 본 각 $\\angle\\mathrm{AOC}$와 같고, 직각인 꼭짓점 $\\mathrm{A}$를 기준으로 $$\\tan 2\\alpha=\\tan(\\angle\\mathrm{AOC})=\\frac{\\overline{\\mathrm{AC}}}{\\overline{\\mathrm{OA}}}$$\n직각이등변삼각형이므로 $\\overline{\\mathrm{AB}}=\\overline{\\mathrm{AC}}$이고, $\\mathrm{O}$가 $\\overline{\\mathrm{AB}}$의 중점이므로 $\\overline{\\mathrm{OA}}=\\dfrac{1}{2}\\overline{\\mathrm{AB}}$이다. 이를 대입하면 $$\\tan 2\\alpha=\\frac{\\overline{\\mathrm{AC}}}{\\frac{1}{2}\\overline{\\mathrm{AB}}}=\\frac{\\overline{\\mathrm{AB}}}{\\frac{1}{2}\\overline{\\mathrm{AB}}}=2$$\n구하려는 $\\tan\\alpha$를 $t$로 두면 $\\alpha$는 예각이므로 $t>0$이고, 배각공식에 의해 $$\\tan 2\\alpha=\\frac{2t}{1-t^2}=2$$\n양변을 정리하여 $t$에 대한 이차방정식을 세운다. $$2t=2(1-t^2)\\;\\Rightarrow\\;t^2+t-1=0$$\n근의 공식으로 풀면 $t=\\dfrac{-1\\pm\\sqrt{5}}{2}$이고, $t>0$이어야 하므로 $$\\tan\\alpha=t=\\frac{-1+\\sqrt{5}}{2}$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/093a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{8}}$$ 입니다.",
-  "finalAnswer": "8",
-  "correctAnswer": "8",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{-1+\\sqrt{5}}{2}}}$$ 입니다.",
+  "finalAnswer": "(-1+sqrt(5))/2",
+  "correctAnswer": "(-1+sqrt(5))/2",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

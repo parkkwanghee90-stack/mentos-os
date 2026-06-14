@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 122번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "직사각형의 대각선이 만드는 두 직각삼각형 안에 두 변의 길이가 $1:2$인 직사각형을 내접시키는 과정을 무한히 반복할 때, $n$번째 그림에서 색칠된 부분의 넓이 $S_n$의 극한값 $\\lim\\limits_{n\\to\\infty}S_n$을 구한다.",
+  "C": "직사각형 $ABCD$에서 $\\overline{AB}=1$, $\\overline{AD}=2$이다. 대각선 $BD$가 만드는 직각삼각형의 빗변(대각선) 위에 두 변의 비가 $1:2$인 두 직사각형을 내접시키고 그중 하나를 색칠하며, 색칠되지 않은 직사각형 안에서 같은 방법을 반복한다.",
+  "B": "한 변에 직사각형이 내접하면 그 직사각형의 한 변과 빗변이 만드는 작은 삼각형은 원래 직각삼각형과 닮음이다. 매 단계 도형은 직전 도형을 일정한 닮음비 $r$로 축소한 모양이므로, 색칠된 넓이는 첫째항 $S_1$, 공비 $r^2$인 무한등비급수가 되어 $\\lim\\limits_{n\\to\\infty}S_n=\\dfrac{S_1}{1-r^2}$로 계산한다.",
+  "S": "대각선의 길이와 그에 대한 높이를 먼저 정한다. 직각삼각형 $ABD$에서 $\\overline{BD}=\\sqrt{\\overline{AB}^2+\\overline{AD}^2}=\\sqrt{1^2+2^2}=\\sqrt{5}$이고, 넓이를 두 가지로 나타내면 $\\dfrac12\\,\\overline{AB}\\times\\overline{AD}=\\dfrac12\\,\\overline{BD}\\times\\overline{AH}$이므로 꼭짓점 $A$에서 $\\overline{BD}$에 내린 수선의 발 $H$에 대하여 $\\overline{AH}=\\dfrac{\\overline{AB}\\times\\overline{AD}}{\\overline{BD}}=\\dfrac{2}{\\sqrt{5}}$이다.\n내접한 직사각형 $PQRS$의 변의 길이를 비에 맞추어 미지수로 둔다. 두 변의 비가 $1:2$이고 짧은 변을 $k$, 빗변 위에 놓인 긴 변을 $2k$라 하면 $\\overline{PQ}=k$, $\\overline{PS}=2k$이다.\n수선 $\\overline{AH}$가 직사각형의 변 $\\overline{PS}$와 만나는 점을 $K$라 하면, 직사각형 위쪽으로 남는 높이는 $\\overline{AK}=\\overline{AH}-k=\\dfrac{2}{\\sqrt{5}}-k$이다.\n남는 작은 삼각형이 전체 삼각형과 닮음임을 이용해 $k$를 구한다. 삼각형 $ABD$와 삼각형 $APS$가 닮음이므로 $\\overline{PS}:\\overline{BD}=\\overline{AK}:\\overline{AH}$, 즉 $$2k:\\sqrt{5}=\\left(\\dfrac{2}{\\sqrt{5}}-k\\right):\\dfrac{2}{\\sqrt{5}}$$이다.\n비례식을 풀어 닮음비를 결정한다. 내항과 외항의 곱을 같게 하면 $2k\\cdot\\dfrac{2}{\\sqrt5}=\\sqrt5\\left(\\dfrac{2}{\\sqrt5}-k\\right)$이고 정리하면 $\\dfrac{4k}{\\sqrt5}=2-\\sqrt5\\,k$, 곧 $k\\left(\\dfrac{4}{\\sqrt5}+\\sqrt5\\right)=2$이므로 $k=\\dfrac{2\\sqrt5}{9}$이다.\n도형의 자기닮음 구조에서 공비를 정한다. 다음 단계의 직사각형은 짧은 변이 $k$배로 줄어든 닮은 도형이므로 길이의 닮음비는 $k$, 넓이의 비(공비)는 $$k^2=\\left(\\dfrac{2\\sqrt5}{9}\\right)^2=\\dfrac{20}{81}$$이다.\n첫 단계의 색칠된 넓이 $S_1$을 구한다. 색칠된 부분은 변의 길이가 $k$와 $2k$인 직사각형의 넓이이므로 $$S_1=k\\times 2k=2k^2=2\\times\\dfrac{20}{81}=\\dfrac{40}{81}$$이다.\n첫째항 $S_1=\\dfrac{40}{81}$, 공비 $k^2=\\dfrac{20}{81}\\,(<1)$인 무한등비급수의 합으로 극한을 계산한다. $$\\lim_{n\\to\\infty}S_n=\\dfrac{S_1}{1-k^2}=\\dfrac{\\dfrac{40}{81}}{1-\\dfrac{20}{81}}=\\dfrac{\\dfrac{40}{81}}{\\dfrac{61}{81}}=\\dfrac{40}{61}$$이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/123a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{④번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{40}{61}}}$$ 입니다.",
   "finalAnswer": "4",
   "correctAnswer": "4",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

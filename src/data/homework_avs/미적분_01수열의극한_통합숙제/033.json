@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 수열의 극한 33번 명품 해설",
   "type": "calculus",
-  "P": "수열의 극한값과 급수의 수렴·발산을 판별합니다.",
-  "C": "최고차항으로 나누기, 샌드위치 정리, 등비수열 극한 조건을 활용합니다.",
-  "B": "수열의 극한:\n\n1) $$\\lim_{n \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교\n2) $$|r| < 1 \\Rightarrow \\lim_{n \\to \\infty} r^n = 0$$\n3) 수렴 조건: 단조 수렴 정리, 샌드위치 정리\n4) $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "자연수 $n$에 대해 원 $C_n: x^2+y^2=n$의 외부와 삼각형 $\\mathrm{P}_n\\mathrm{O}\\mathrm{Q}_n$의 내부가 겹치는 공통부분의 넓이 $S_n$을 구한 뒤, $\\lim_{n\\to\\infty}\\dfrac{n^2}{S_n}=a$에서 $3a^2$의 값을 구한다.",
+  "C": "원 $C_n$은 중심이 원점 $\\mathrm{O}$이고 반지름이 $\\sqrt{n}$이다. 점 $\\mathrm{P}_n$은 직선 $y=\\sqrt{3}\\,x$ 위의 제1사분면 점으로 원점으로부터의 거리가 $n+2$이다. 점 $\\mathrm{Q}_n$은 $\\mathrm{P}_n$에서 $x$축에 내린 수선의 발이다.",
+  "B": "직선 $y=\\sqrt{3}\\,x$가 $x$축의 양의 방향과 이루는 각의 크기는 $60^\\circ$이므로, 각 $\\mathrm{P}_n\\mathrm{O}\\mathrm{Q}_n$은 항상 $\\dfrac{\\pi}{3}$로 일정하다. 따라서 원의 일부가 삼각형 안에 들어갈 때 그 부분은 중심각 $\\dfrac{\\pi}{3}$, 반지름 $\\sqrt{n}$인 부채꼴이 되고, 부채꼴의 넓이는 $\\dfrac{1}{2}r^2\\theta$로 구한다. 극한 $\\lim n^2/S_n$은 $S_n$의 최고차항만이 결정한다.",
+  "S": "각 $\\mathrm{P}_n\\mathrm{O}\\mathrm{Q}_n$의 크기를 먼저 정한다. 직선의 기울기가 $\\sqrt{3}=\\tan 60^\\circ$이므로 $\\angle \\mathrm{P}_n\\mathrm{O}\\mathrm{Q}_n=\\dfrac{\\pi}{3}$이고, $\\overline{\\mathrm{OP}_n}=n+2$이다.\n직각삼각형 $\\mathrm{P}_n\\mathrm{O}\\mathrm{Q}_n$의 넓이를 구한다. 밑변 $\\overline{\\mathrm{OQ}_n}=(n+2)\\cos\\dfrac{\\pi}{3}=\\dfrac{n+2}{2}$, 높이 $\\overline{\\mathrm{Q}_n\\mathrm{P}_n}=(n+2)\\sin\\dfrac{\\pi}{3}=\\dfrac{\\sqrt{3}\\,(n+2)}{2}$이므로 $$\\triangle \\mathrm{P}_n\\mathrm{O}\\mathrm{Q}_n=\\frac{1}{2}\\cdot\\frac{n+2}{2}\\cdot\\frac{\\sqrt{3}\\,(n+2)}{2}=\\frac{\\sqrt{3}}{8}(n+2)^2.$$\n삼각형 안에 들어가는 원의 부분이 부채꼴임을 확인한다. 삼각형의 수직변은 $x=\\dfrac{n+2}{2}$로 원점에서의 거리가 $\\dfrac{n+2}{2}$인데, 충분히 큰 $n$에서 $\\dfrac{n+2}{2}>\\sqrt{n}$이므로 원은 수직변에 닿지 않는다. 따라서 겹치는 원의 부분은 $x$축과 직선 $\\mathrm{OP}_n$ 사이의 중심각 $\\dfrac{\\pi}{3}$인 부채꼴이다.\n그 부채꼴의 넓이를 구한다. 반지름이 $\\sqrt{n}$이므로 $$(\\text{부채꼴})=\\frac{1}{2}(\\sqrt{n})^2\\cdot\\frac{\\pi}{3}=\\frac{\\pi}{6}\\,n.$$\n원의 외부와 삼각형 내부의 공통부분 넓이 $S_n$을 구한다. 삼각형 넓이에서 원 내부에 해당하는 부채꼴을 빼면 $$S_n=\\frac{\\sqrt{3}}{8}(n+2)^2-\\frac{\\pi}{6}\\,n.$$\n극한을 계산한다. $S_n=\\dfrac{\\sqrt{3}}{8}n^2+\\left(\\dfrac{\\sqrt{3}}{2}-\\dfrac{\\pi}{6}\\right)n+\\dfrac{\\sqrt{3}}{2}$이므로 최고차항이 $\\dfrac{\\sqrt{3}}{8}n^2$이고 $$a=\\lim_{n\\to\\infty}\\frac{n^2}{S_n}=\\frac{1}{\\frac{\\sqrt{3}}{8}}=\\frac{8}{\\sqrt{3}}=\\frac{8\\sqrt{3}}{3}.$$\n구하는 값을 정리한다. $$3a^2=3\\left(\\frac{8}{\\sqrt{3}}\\right)^2=3\\cdot\\frac{64}{3}=64.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/01수열의극한/034a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{9}}$$ 입니다.",
-  "finalAnswer": "9",
-  "correctAnswer": "9",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{64}}$$ 입니다.",
+  "finalAnswer": "64",
+  "correctAnswer": "64",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

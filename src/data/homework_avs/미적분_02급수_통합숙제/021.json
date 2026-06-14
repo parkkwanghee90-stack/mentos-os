@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 21번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "수열 $\\{ a_n \\}$에 대하여 급수 $\\displaystyle\\sum_{n=1}^{\\infty} \\dfrac{a_n}{3^n}$이 수렴할 때, $\\displaystyle\\lim_{n\\to\\infty} \\dfrac{a_n + 3^{n+1}}{a_n + 3^{n-1}}$의 값을 구하는 것이다.",
+  "C": "$\\displaystyle\\sum_{n=1}^{\\infty} \\dfrac{a_n}{3^n}$이 수렴한다.",
+  "B": "급수가 수렴하면 그 일반항은 반드시 $0$으로 수렴한다는 성질이 핵심이다. 즉 $\\displaystyle\\sum_{n=1}^{\\infty} b_n$이 수렴하면 $\\displaystyle\\lim_{n\\to\\infty} b_n = 0$이다. 여기에 분자·분모를 가장 큰 지수항인 $3^n$으로 나누어 미정의 꼴 $\\dfrac{\\infty}{\\infty}$를 정리하는 극한 계산을 결합한다.",
+  "S": "수렴하는 급수의 일반항은 0으로 가야 하므로, 주어진 조건에서 일반항 $\\dfrac{a_n}{3^n}$의 극한을 끌어낸다. 급수 $\\displaystyle\\sum_{n=1}^{\\infty} \\dfrac{a_n}{3^n}$이 수렴하므로 $$\\lim_{n\\to\\infty} \\dfrac{a_n}{3^n} = 0.$$\n구하려는 식의 분자와 분모를 같은 척도로 비교하기 위해, 두 식을 모두 $3^n$으로 나눈다. 분자는 $$\\dfrac{a_n + 3^{n+1}}{3^n} = \\dfrac{a_n}{3^n} + \\dfrac{3^{n+1}}{3^n} = \\dfrac{a_n}{3^n} + 3.$$\n같은 방식으로 분모도 $3^n$으로 나누어 정리한다. $$\\dfrac{a_n + 3^{n-1}}{3^n} = \\dfrac{a_n}{3^n} + \\dfrac{3^{n-1}}{3^n} = \\dfrac{a_n}{3^n} + \\dfrac{1}{3}.$$\n분자와 분모를 동시에 $3^n$으로 나눈 형태로 원래 극한을 다시 쓰면, 1단계에서 구한 $\\dfrac{a_n}{3^n} \\to 0$을 그대로 대입할 수 있는 꼴이 된다. $$\\lim_{n\\to\\infty} \\dfrac{a_n + 3^{n+1}}{a_n + 3^{n-1}} = \\lim_{n\\to\\infty} \\dfrac{\\dfrac{a_n}{3^n} + 3}{\\dfrac{a_n}{3^n} + \\dfrac{1}{3}}.$$\n$\\dfrac{a_n}{3^n} \\to 0$이므로 분자는 $0+3=3$, 분모는 $0+\\dfrac{1}{3}=\\dfrac{1}{3}$로 각각 수렴한다. 따라서 $$\\lim_{n\\to\\infty} \\dfrac{\\dfrac{a_n}{3^n} + 3}{\\dfrac{a_n}{3^n} + \\dfrac{1}{3}} = \\dfrac{0 + 3}{0 + \\dfrac{1}{3}} = \\dfrac{3}{\\dfrac{1}{3}} = 9.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/022a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{⑤번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{9}}$$ 입니다.",
   "finalAnswer": "5",
   "correctAnswer": "5",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

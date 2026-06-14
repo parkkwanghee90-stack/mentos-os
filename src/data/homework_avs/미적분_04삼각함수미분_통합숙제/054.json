@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 54번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$x+y=\\dfrac{\\pi}{3}$를 만족하는 두 실수 $x,\\,y$에 대하여 $\\sqrt{3}\\cos x+2\\sin y$의 최댓값을 구한다.",
+  "C": "$x+y=\\dfrac{\\pi}{3}$, 즉 $y=\\dfrac{\\pi}{3}-x$이며, $x,\\,y$는 모든 실수 범위를 움직인다(각의 제한이 없으므로 합성된 사인은 $-1$부터 $1$까지의 모든 값을 가질 수 있다).",
+  "B": "변수가 두 개로 보이지만 제약식이 둘을 하나로 묶어준다. 마치 시소의 한쪽이 올라가면 반대쪽이 그만큼 내려가듯, $x+y$가 상수로 고정되면 $y$는 $x$에 의해 완전히 결정된다. 따라서 $y=\\dfrac{\\pi}{3}-x$로 치환하면 식 전체가 단일 변수 $x$의 삼각함수가 되고, 여기에 삼각함수의 합성 $a\\cos\\theta+b\\sin\\theta=\\sqrt{a^2+b^2}\\,\\sin(\\theta+\\alpha)$를 적용하면 최댓값은 진폭 $\\sqrt{a^2+b^2}$로 즉시 결정된다. 핵심 도구는 사인의 차 공식 $\\sin(A-B)=\\sin A\\cos B-\\cos A\\sin B$와 이 합성 공식이다.",
+  "S": "제약식이 두 변수를 하나로 묶으므로 $y$를 소거해 단일 변수 식으로 바꾼다. $y=\\dfrac{\\pi}{3}-x$를 대입하면 $$\\sqrt{3}\\cos x+2\\sin y=\\sqrt{3}\\cos x+2\\sin\\!\\left(\\frac{\\pi}{3}-x\\right).$$\n$\\sin\\!\\left(\\dfrac{\\pi}{3}-x\\right)$을 사인의 차 공식으로 풀어 $\\cos x,\\,\\sin x$의 식으로 통일한다. $$2\\sin\\!\\left(\\frac{\\pi}{3}-x\\right)=2\\left(\\sin\\frac{\\pi}{3}\\cos x-\\cos\\frac{\\pi}{3}\\sin x\\right)=2\\left(\\frac{\\sqrt{3}}{2}\\cos x-\\frac{1}{2}\\sin x\\right)=\\sqrt{3}\\cos x-\\sin x.$$\n두 항을 합치면 $\\cos x$항이 모이면서 식이 깔끔한 일차결합으로 정리된다. $$\\sqrt{3}\\cos x+\\bigl(\\sqrt{3}\\cos x-\\sin x\\bigr)=2\\sqrt{3}\\cos x-\\sin x.$$\n$a\\cos x+b\\sin x$ 꼴이므로 삼각함수의 합성을 쓰기 위해 진폭 $\\sqrt{a^2+b^2}$를 계산한다. 여기서 $a=2\\sqrt{3},\\;b=-1$이므로 $$\\sqrt{(2\\sqrt{3})^2+(-1)^2}=\\sqrt{12+1}=\\sqrt{13}.$$\n진폭 $\\sqrt{13}$로 묶어 하나의 사인함수로 합성한다. 보조각 $\\alpha$를 $\\sin\\alpha=\\dfrac{2\\sqrt{3}}{\\sqrt{13}}=\\dfrac{2\\sqrt{39}}{13},\\;\\cos\\alpha=\\dfrac{1}{\\sqrt{13}}=\\dfrac{\\sqrt{13}}{13}$로 두면 $$2\\sqrt{3}\\cos x-\\sin x=\\sqrt{13}\\,\\sin(\\alpha-x).$$\n$x$가 실수 전체를 움직이므로 $\\sin(\\alpha-x)$는 최대 $1$이 될 수 있다. 따라서 $\\sin(\\alpha-x)=1$일 때 식은 최댓값을 가진다. $$\\sqrt{3}\\cos x+2\\sin y=\\sqrt{13}\\,\\sin(\\alpha-x)\\le\\sqrt{13}\\cdot 1=\\sqrt{13}.$$\n구한 최댓값 $\\sqrt{13}$을 보기와 대조한다. 보기 ①\\;$\\sqrt{7}$, ②\\;$3$, ③\\;$\\sqrt{11}$, ④\\;$\\sqrt{13}$, ⑤\\;$\\sqrt{15}$ 중 $\\sqrt{13}$은 ④에 해당하므로 정답은 ④이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/055a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{6}}$$ 입니다.",
-  "finalAnswer": "6",
-  "correctAnswer": "6",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\sqrt{13}}}$$ 입니다.",
+  "finalAnswer": "$\\sqrt{13}$",
+  "correctAnswer": "$\\sqrt{13}$",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

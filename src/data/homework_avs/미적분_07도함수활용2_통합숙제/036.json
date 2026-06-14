@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 도함수의 활용 2 36번 명품 해설",
   "type": "calculus",
-  "P": "도함수를 활용한 방정식·부등식의 풀이와 최적화 문제를 해결합니다.",
-  "C": "함수의 그래프를 분석하여 근의 개수를 판별하고, 최댓값·최솟값을 구합니다.",
-  "B": "도함수의 활용 2:\n\n1) $$f(x) = g(x)$$의 실근 개수: 두 그래프의 교점\n2) 부등식 증명: 차함수의 최솟값 ≥ 0\n3) 평균값 정리: $$f'(c) = \\frac{f(b) - f(a)}{b - a}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "출발한 지 6초가 되는 순간, 부채꼴 OAB에 내접하는 직사각형의 넓이 $S(t)$의 시간 $t$에 대한 변화율 $S'(6)$을 구한다.",
+  "C": "반지름의 길이가 1인 사분원(부채꼴) OAB에서 $A=(1,0)$, $B=(0,1)$이고 각 AOB를 이등분하는 직선이 호와 만나는 점이 C이다. 두 점 P, Q는 점 C에서 동시에 출발하여 호를 따라 각각 시계 방향(A쪽), 시계 반대 방향(B쪽)으로 매초 $\\dfrac{\\pi}{36}$의 일정한 속력으로 움직이며, 선분 PQ를 한 변으로 하는 직사각형이 부채꼴 OAB에 내접한다. 범위는 $0<t<9$이다.",
+  "B": "단위원 위에서 점의 좌표는 $(\\cos\\theta,\\ \\sin\\theta)$로 나타내고, 두 점이 이등분선 $y=x$에 대하여 대칭이면 직사각형의 두 변의 길이를 삼각함수로 표현할 수 있다. 넓이를 $t$의 함수로 정리한 뒤 도함수를 구해 특정 순간의 순간변화율을 얻는다. 이때 합성함수의 미분과 삼각함수의 덧셈정리를 이용한다.",
+  "S": "점 C는 이등분선 위에 있으므로 각도 $\\dfrac{\\pi}{4}$에 대응한다. $t$초 후 두 점은 호 위에서 각각 $\\dfrac{\\pi}{36}t$만큼 이동하므로 $P=\\left(\\cos\\left(\\dfrac{\\pi}{4}-\\dfrac{\\pi}{36}t\\right),\\ \\sin\\left(\\dfrac{\\pi}{4}-\\dfrac{\\pi}{36}t\\right)\\right)$, $Q=\\left(\\cos\\left(\\dfrac{\\pi}{4}+\\dfrac{\\pi}{36}t\\right),\\ \\sin\\left(\\dfrac{\\pi}{4}+\\dfrac{\\pi}{36}t\\right)\\right)$이다.\n두 점 P, Q는 직선 $y=x$에 대하여 대칭이고 선분 PQ는 이 직선과 수직이다. 따라서 선분 PQ의 길이는 두 점의 $x$좌표 차의 절댓값에 $\\sqrt{2}$를 곱한 것과 같아 $$\\overline{PQ}=2\\sin\\dfrac{\\pi t}{36}$$ 이다.\n직사각형은 점 P, Q에서 이등분선 방향(원점 쪽)으로 변을 내려 두 변의 끝점이 각각 $x$축(OA)과 $y$축(OB) 위에 놓이도록 내접한다. 점 P를 직선 $y=x$ 방향으로 이동시켜 $x$축에 닿게 하면 그 변의 길이는 $$\\sqrt{2}\\,\\cos\\left(\\dfrac{\\pi t}{36}+\\dfrac{\\pi}{4}\\right)$$ 이다.\n직사각형의 넓이는 두 변의 길이의 곱이므로 $$S(t)=2\\sin\\dfrac{\\pi t}{36}\\times\\sqrt{2}\\,\\cos\\left(\\dfrac{\\pi t}{36}+\\dfrac{\\pi}{4}\\right)$$ 이다.\n덧셈정리 $\\cos\\left(\\dfrac{\\pi t}{36}+\\dfrac{\\pi}{4}\\right)=\\dfrac{1}{\\sqrt{2}}\\left(\\cos\\dfrac{\\pi t}{36}-\\sin\\dfrac{\\pi t}{36}\\right)$를 대입하고 배각공식으로 정리하면 $$S(t)=\\sin\\dfrac{\\pi t}{18}+\\cos\\dfrac{\\pi t}{18}-1=\\sqrt{2}\\,\\sin\\left(\\dfrac{\\pi t}{18}+\\dfrac{\\pi}{4}\\right)-1$$ 로 간단해진다.\n넓이를 $t$에 대하여 미분하면 합성함수의 미분에 의해 $$S'(t)=\\dfrac{\\sqrt{2}\\,\\pi}{18}\\cos\\left(\\dfrac{\\pi t}{18}+\\dfrac{\\pi}{4}\\right)$$ 이다.\n$t=6$을 대입하면 $\\dfrac{\\pi\\cdot 6}{18}+\\dfrac{\\pi}{4}=\\dfrac{\\pi}{3}+\\dfrac{\\pi}{4}=\\dfrac{7\\pi}{12}$이고 $\\cos\\dfrac{7\\pi}{12}=-\\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$이므로 $$S'(6)=\\dfrac{\\sqrt{2}\\,\\pi}{18}\\times\\left(-\\dfrac{\\sqrt{6}-\\sqrt{2}}{4}\\right)=\\dfrac{(1-\\sqrt{3})\\pi}{36}$$ 이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/07도함수활용2/037a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{①번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{(1-\\sqrt{3})\\pi}{36}}}$$ 입니다.",
   "finalAnswer": "1",
   "correctAnswer": "1",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

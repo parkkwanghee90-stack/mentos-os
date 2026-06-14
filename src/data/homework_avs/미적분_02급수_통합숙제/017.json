@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 17번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle\\lim_{n\\to\\infty}\\dfrac{9^n}{2a_n+1}$ 의 값",
+  "C": "수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{n=1}^{\\infty}\\left(2-\\dfrac{a_n}{9^n}\\right)=1$ 이 성립한다.",
+  "B": "급수가 수렴하면 그 일반항은 반드시 $0$ 으로 수렴한다. 즉 $\\sum b_n$ 이 수렴하면 $\\lim_{n\\to\\infty}b_n=0$ 이다. 이 성질로 $\\dfrac{a_n}{9^n}$ 의 극한을 먼저 확정한 뒤, 구하는 식의 분모·분자를 $9^n$ 으로 나누어 극한을 계산한다.",
+  "S": "수렴하는 급수의 일반항은 $0$ 으로 가야 하므로, $\\displaystyle\\sum_{n=1}^{\\infty}\\left(2-\\dfrac{a_n}{9^n}\\right)=1$ 의 수렴에서 일반항의 극한을 잡는다. $$\\lim_{n\\to\\infty}\\left(2-\\dfrac{a_n}{9^n}\\right)=0$$\n위 식을 $\\dfrac{a_n}{9^n}$ 에 대해 정리하면 그 극한값이 확정된다. $$\\lim_{n\\to\\infty}\\dfrac{a_n}{9^n}=2$$\n구하는 식의 분모·분자를 모두 $9^n$ 으로 나누어 이미 아는 극한 $\\dfrac{a_n}{9^n}\\to 2$ 가 드러나도록 변형한다. $$\\dfrac{9^n}{2a_n+1}=\\dfrac{1}{\\dfrac{2a_n+1}{9^n}}=\\dfrac{1}{2\\cdot\\dfrac{a_n}{9^n}+\\dfrac{1}{9^n}}$$\n$n\\to\\infty$ 일 때 $\\dfrac{a_n}{9^n}\\to 2$ 이고 $\\dfrac{1}{9^n}\\to 0$ 이므로 분모의 극한을 대입한다. $$\\lim_{n\\to\\infty}\\dfrac{9^n}{2a_n+1}=\\dfrac{1}{2\\cdot 2+0}=\\dfrac{1}{4}$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/018a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{②번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{1}{4}}}$$ 입니다.",
   "finalAnswer": "2",
   "correctAnswer": "2",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

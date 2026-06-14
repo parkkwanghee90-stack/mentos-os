@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 수열의 극한 78번 명품 해설",
   "type": "calculus",
-  "P": "수열의 극한값과 급수의 수렴·발산을 판별합니다.",
-  "C": "최고차항으로 나누기, 샌드위치 정리, 등비수열 극한 조건을 활용합니다.",
-  "B": "수열의 극한:\n\n1) $$\\lim_{n \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교\n2) $$|r| < 1 \\Rightarrow \\lim_{n \\to \\infty} r^n = 0$$\n3) 수렴 조건: 단조 수렴 정리, 샌드위치 정리\n4) $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle \\lim_{n\\to\\infty}\\frac{1}{n^3}\\sum_{k=1}^{n}a_k$의 값을 구한다. 여기서 $a_n$은 집합 $S_n=\\{x \\mid x\\text{는 }3n\\text{ 이하의 자연수}\\}$의 부분집합 중 원소가 두 개이고 그 두 원소의 차가 $2n$보다 큰 집합의 개수이다.",
+  "C": "$S_n=\\{1,2,3,\\dots,3n\\}$이고, 세는 대상은 $S_n$의 두 원소 부분집합 $\\{x,y\\}$ $(x<y)$ 중에서 $y-x>2n$을 만족하는 것의 개수 $a_n$이다.",
+  "B": "두 수의 차가 정해진 값 $d$인 순서쌍 $(x,y)$ $(x<y)$의 개수는 전체 범위의 길이에서 $d$를 뺀 만큼이다. 즉 $1\\le x<y\\le M$에서 $y-x=d$인 쌍은 $M-d$개이며, 차가 $d$ 이상인 모든 경우는 이를 합으로 모으면 된다. 이렇게 얻은 $a_n$을 합한 뒤 최고차항만 살아남는 극한을 이용한다.",
+  "S": "조건을 만족하는 쌍을 차 $d$로 분류하기 위해 $y-x=d$인 쌍을 센다. $1\\le x<y\\le 3n$에서 $y-x=d$인 쌍 $\\{x,y\\}$는 $x=1,2,\\dots,3n-d$로 정해지므로 정확히 $3n-d$개이다.\n차가 $2n$보다 커야 하므로 가능한 차는 $d=2n+1,\\,2n+2,\\,\\dots,\\,3n-1$이다. (차의 최댓값은 $3n-1=(3n)-1$이다.) 따라서 $$a_n=\\sum_{d=2n+1}^{3n-1}(3n-d).$$\n합을 간단히 하기 위해 $j=3n-d$로 치환한다. $d=2n+1$일 때 $j=n-1$, $d=3n-1$일 때 $j=1$이므로 $$a_n=\\sum_{j=1}^{n-1}j=\\frac{(n-1)n}{2}.$$\n이제 $\\sum_{k=1}^{n}a_k$를 구한다. $a_k=\\dfrac{k(k-1)}{2}=\\dfrac{k^2-k}{2}$이므로 $$\\sum_{k=1}^{n}a_k=\\frac12\\left(\\sum_{k=1}^{n}k^2-\\sum_{k=1}^{n}k\\right).$$\n거듭제곱 합 공식 $\\sum k^2=\\dfrac{n(n+1)(2n+1)}{6}$, $\\sum k=\\dfrac{n(n+1)}{2}$를 대입한다. $$\\sum_{k=1}^{n}a_k=\\frac12\\cdot\\frac{n(n+1)(2n+1)}{6}-\\frac12\\cdot\\frac{n(n+1)}{2}=\\frac{n(n+1)(n-1)}{6}.$$\n구하는 극한에 대입하면 $$\\frac{1}{n^3}\\sum_{k=1}^{n}a_k=\\frac{n(n+1)(n-1)}{6n^3}=\\frac{n^2-1}{6n^2}=\\frac{1}{6}\\left(1-\\frac{1}{n^2}\\right).$$\n$n\\to\\infty$이면 $\\dfrac{1}{n^2}\\to 0$이므로 $$\\lim_{n\\to\\infty}\\frac{1}{n^3}\\sum_{k=1}^{n}a_k=\\frac{1}{6}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/01수열의극한/079a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{25}}$$ 입니다.",
-  "finalAnswer": "25",
-  "correctAnswer": "25",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{1}{6}}}$$ 입니다.",
+  "finalAnswer": "1/6",
+  "correctAnswer": "1/6",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

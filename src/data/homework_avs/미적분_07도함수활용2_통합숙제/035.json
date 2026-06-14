@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 도함수의 활용 2 35번 명품 해설",
   "type": "calculus",
-  "P": "도함수를 활용한 방정식·부등식의 풀이와 최적화 문제를 해결합니다.",
-  "C": "함수의 그래프를 분석하여 근의 개수를 판별하고, 최댓값·최솟값을 구합니다.",
-  "B": "도함수의 활용 2:\n\n1) $$f(x) = g(x)$$의 실근 개수: 두 그래프의 교점\n2) 부등식 증명: 차함수의 최솟값 ≥ 0\n3) 평균값 정리: $$f'(c) = \\frac{f(b) - f(a)}{b - a}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\angle CBA=\\dfrac{\\pi}{2}$, $\\overline{AB}=\\sqrt{3}$, $\\overline{BC}=2$인 직각삼각형 $ABC$와 $\\overline{BC}$를 지름으로 하는 반원이 있다. 호 $BC$ 위의 점 $P$에 대하여 $\\angle BAP=\\theta$일 때 삼각형 $ABP$의 넓이를 $f(\\theta)$라 한다. $20f'\\!\\left(\\dfrac{\\pi}{6}\\right)$의 값을 구하는 것이 목표이다.",
+  "C": "직각삼각형이므로 $B$를 원점에 놓아 $B(0,\\,0)$, $A(-\\sqrt{3},\\,0)$, $C(0,\\,2)$로 둘 수 있고, $\\overline{BC}$를 지름으로 하는 반원의 중심은 $O(0,\\,1)$, 반지름은 $1$이다. 점 $P$는 호 $BC$ 위의 점이며 $\\angle BAP=\\theta$, 그리고 $P\\neq B$이다.",
+  "B": "반원의 지름 $\\overline{BC}$ 위에서 호 위의 점 $P$를 움직일 때, 넓이의 변화율은 점 $P$의 위치를 한 개의 각으로 매개화하면 깔끔하게 다룰 수 있다. 좌표평면에서 삼각형 $ABP$의 밑변을 $\\overline{AB}$로 잡으면 그 넓이는 $\\dfrac12\\times\\overline{AB}\\times(\\text{점 }P\\text{의 높이})$로 표현되고, 매개변수에 대한 미분과 합성함수의 미분법 $f'(\\theta)=\\dfrac{df/d\\varphi}{d\\theta/d\\varphi}$를 이용해 $f'(\\theta)$를 구한다.",
+  "S": "점 $P$를 한 변수로 나타내기 위해 중심 $O(0,1)$을 기준으로 한 중심각 $\\varphi$로 매개화한다. 반지름이 $1$이고 $\\varphi=0$일 때 $P=B(0,0)$가 되도록 잡으면 $$P=(\\sin\\varphi,\\; 1-\\cos\\varphi)$$가 호 위의 점을 나타낸다.\n삼각형 $ABP$의 밑변을 $x$축 위의 선분 $\\overline{AB}$로 보면 그 길이는 $\\overline{AB}=\\sqrt{3}$이고, 높이는 점 $P$의 $y$좌표 $1-\\cos\\varphi$이다. 따라서 넓이는 $$f=\\frac{1}{2}\\cdot\\sqrt{3}\\cdot(1-\\cos\\varphi)=\\frac{\\sqrt{3}}{2}\\,(1-\\cos\\varphi).$$\n각 $\\theta$를 $\\varphi$로 연결한다. $A(-\\sqrt{3},0)$에서 반직선 $\\overline{AB}$는 $x$축의 양의 방향이고 $\\angle BAP=\\theta$이므로 $$\\tan\\theta=\\frac{1-\\cos\\varphi}{\\sin\\varphi+\\sqrt{3}}.$$\n$\\theta=\\dfrac{\\pi}{6}$에 대응하는 $\\varphi$를 구한다. $\\tan\\dfrac{\\pi}{6}=\\dfrac{1}{\\sqrt{3}}$이므로 $$\\frac{1-\\cos\\varphi}{\\sin\\varphi+\\sqrt{3}}=\\frac{1}{\\sqrt{3}}$$을 풀면 $\\sqrt{3}-\\sqrt{3}\\cos\\varphi=\\sin\\varphi+\\sqrt{3}$, 즉 $\\sin\\varphi+\\sqrt{3}\\cos\\varphi=0$에서 $\\tan\\varphi=-\\sqrt{3}$이고 $0<\\varphi<\\pi$이므로 $$\\varphi=\\frac{2\\pi}{3}.$$\n합성함수의 미분법으로 $f'(\\theta)=\\dfrac{df/d\\varphi}{d\\theta/d\\varphi}$를 쓰기 위해 먼저 $\\dfrac{df}{d\\varphi}$를 구한다. $$\\frac{df}{d\\varphi}=\\frac{\\sqrt{3}}{2}\\sin\\varphi.$$\n다음으로 $\\dfrac{d\\theta}{d\\varphi}$를 구한다. $\\tan\\theta=\\dfrac{1-\\cos\\varphi}{\\sin\\varphi+\\sqrt{3}}$의 양변을 $\\varphi$로 미분하면 $$\\sec^2\\theta\\,\\frac{d\\theta}{d\\varphi}=\\frac{\\sin\\varphi(\\sin\\varphi+\\sqrt{3})-(1-\\cos\\varphi)\\cos\\varphi}{(\\sin\\varphi+\\sqrt{3})^2}=\\frac{1+\\sqrt{3}\\sin\\varphi-\\cos\\varphi}{(\\sin\\varphi+\\sqrt{3})^2}.$$\n$\\varphi=\\dfrac{2\\pi}{3}$에서의 값을 대입한다. $\\sin\\dfrac{2\\pi}{3}=\\dfrac{\\sqrt{3}}{2}$, $\\cos\\dfrac{2\\pi}{3}=-\\dfrac{1}{2}$이므로 분자는 $1+\\sqrt{3}\\cdot\\dfrac{\\sqrt{3}}{2}-\\left(-\\dfrac{1}{2}\\right)=1+\\dfrac{3}{2}+\\dfrac{1}{2}=3$, 분모는 $\\left(\\dfrac{\\sqrt{3}}{2}+\\sqrt{3}\\right)^2=\\left(\\dfrac{3\\sqrt{3}}{2}\\right)^2=\\dfrac{27}{4}$이다. 또한 $\\theta=\\dfrac{\\pi}{6}$에서 $\\sec^2\\theta=\\dfrac{1}{\\cos^2(\\pi/6)}=\\dfrac{4}{3}$이므로 $$\\frac{4}{3}\\cdot\\frac{d\\theta}{d\\varphi}=\\frac{3}{27/4}=\\frac{12}{27}=\\frac{4}{9}\\ \\Rightarrow\\ \\frac{d\\theta}{d\\varphi}=\\frac{1}{3}.$$\n이제 $f'\\!\\left(\\dfrac{\\pi}{6}\\right)$를 계산한다. $\\dfrac{df}{d\\varphi}=\\dfrac{\\sqrt{3}}{2}\\sin\\dfrac{2\\pi}{3}=\\dfrac{\\sqrt{3}}{2}\\cdot\\dfrac{\\sqrt{3}}{2}=\\dfrac{3}{4}$이므로 $$f'\\!\\left(\\frac{\\pi}{6}\\right)=\\frac{df/d\\varphi}{d\\theta/d\\varphi}=\\frac{3/4}{1/3}=\\frac{9}{4}.$$\n따라서 구하는 값은 $$20f'\\!\\left(\\frac{\\pi}{6}\\right)=20\\cdot\\frac{9}{4}=45.$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{45}}$$ 입니다.",
   "finalAnswer": "45",
   "correctAnswer": "45",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 119번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$78 \\times m_1 \\times m_2$의 값",
+  "C": "제2사분면의 점 $\\mathrm{A}$를 지나고 기울기가 각각 $m_1,\\ m_2$ ($0<m_1<m_2<1$)인 두 직선 $l_1,\\ l_2$가 있고, $l_1$을 $y$축에 대하여 대칭이동한 직선이 $l_3$이다. $l_3$이 $l_1,\\ l_2$와 만나는 점을 각각 $\\mathrm{B},\\ \\mathrm{C}$라 할 때, 삼각형 $\\mathrm{ABC}$에서 $\\overline{\\mathrm{AB}}=12$, $\\overline{\\mathrm{AC}}=9$이고 외접원의 반지름의 길이가 $\\dfrac{15}{2}$이다.",
+  "B": "직선이 $x$축의 양의 방향과 이루는 예각의 탄젠트가 그 직선의 기울기와 같다는 사실, $y$축 대칭이동이 기울기의 부호만 바꾼다는 점, 사인법칙 $\\dfrac{a}{\\sin A}=2R$, 그리고 탄젠트 덧셈정리 $\\tan(\\alpha+\\beta)=\\dfrac{\\tan\\alpha+\\tan\\beta}{1-\\tan\\alpha\\tan\\beta}$와 배각공식 $\\tan 2\\alpha=\\dfrac{2\\tan\\alpha}{1-\\tan^2\\alpha}$를 결합한다.",
+  "S": "두 직선의 기울기를 각의 탄젠트로 바꾸면 덧셈정리를 쓸 수 있으므로, $l_1,\\ l_2$가 $x$축의 양의 방향과 이루는 각을 각각 $\\alpha,\\ \\beta$라 하면 $m_1=\\tan\\alpha$, $m_2=\\tan\\beta$이고 $0<m_1<m_2<1$에서 $0<\\alpha<\\beta<\\dfrac{\\pi}{4}$이다.\n$l_3$은 $l_1$을 $y$축에 대하여 대칭이동한 직선이라 기울기가 $-m_1$이 되어 $l_1$과 점 $\\mathrm{B}$에서 만날 때 두 직선이 이루는 각이 $2\\alpha$이므로, 삼각형 $\\mathrm{ABC}$의 세 각은 $\\angle\\mathrm{CBA}=2\\alpha$, $\\angle\\mathrm{BAC}=\\beta-\\alpha$, $\\angle\\mathrm{ACB}=\\pi-2\\alpha-(\\beta-\\alpha)=\\pi-(\\alpha+\\beta)$이다.\n각 변을 그 대각의 사인과 외접원으로 연결하기 위해 사인법칙을 적용하면, $\\overline{\\mathrm{AC}}=9$는 $\\angle\\mathrm{B}=2\\alpha$의 대변이고 $\\overline{\\mathrm{AB}}=12$는 $\\angle\\mathrm{C}=\\pi-(\\alpha+\\beta)$의 대변이므로 $$\\frac{9}{\\sin 2\\alpha}=\\frac{12}{\\sin\\{\\pi-(\\alpha+\\beta)\\}}=2\\cdot\\frac{15}{2}=15$$이다.\n첫 등식에서 $\\sin 2\\alpha$를 직접 얻으면 $$\\sin 2\\alpha=\\frac{9}{15}=\\frac{3}{5}$$이고, $0<2\\alpha<\\dfrac{\\pi}{2}$이므로 $\\cos 2\\alpha=\\sqrt{1-\\left(\\dfrac{3}{5}\\right)^2}=\\dfrac{4}{5}$, 따라서 $\\tan 2\\alpha=\\dfrac{3}{4}$이다.\n배각공식 $\\tan 2\\alpha=\\dfrac{2\\tan\\alpha}{1-\\tan^2\\alpha}=\\dfrac{3}{4}$를 $\\tan\\alpha$에 대해 정리하면 $3\\tan^2\\alpha+8\\tan\\alpha-3=0$, 즉 $(3\\tan\\alpha-1)(\\tan\\alpha+3)=0$이고, $0<\\alpha<\\dfrac{\\pi}{4}$에서 $\\tan\\alpha>0$이므로 $$m_1=\\tan\\alpha=\\frac{1}{3}$$이다.\n둘째 등식에서 $\\sin\\{\\pi-(\\alpha+\\beta)\\}=\\sin(\\alpha+\\beta)$이므로 $$\\sin(\\alpha+\\beta)=\\frac{12}{15}=\\frac{4}{5}$$이고, $0<\\alpha+\\beta<\\dfrac{\\pi}{2}$에서 $\\cos(\\alpha+\\beta)=\\dfrac{3}{5}$, 따라서 $\\tan(\\alpha+\\beta)=\\dfrac{4}{3}$이다.\n덧셈정리로 $\\beta$의 정보를 끌어내기 위해 $\\tan(\\alpha+\\beta)=\\dfrac{\\tan\\alpha+\\tan\\beta}{1-\\tan\\alpha\\tan\\beta}$에 $\\tan\\alpha=\\dfrac{1}{3}$를 대입하면 $$\\frac{\\frac{1}{3}+\\tan\\beta}{1-\\frac{1}{3}\\tan\\beta}=\\frac{4}{3}$$이고, 양변을 정리하면 $1+3\\tan\\beta=4-\\dfrac{4}{3}\\tan\\beta$, 즉 $\\dfrac{13}{3}\\tan\\beta=3$에서 $$m_2=\\tan\\beta=\\frac{9}{13}$$이다.\n구하는 값에 두 기울기를 대입하면 $$78\\times m_1\\times m_2=78\\times\\frac{1}{3}\\times\\frac{9}{13}=18$$이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/120a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{3/4}}$$ 입니다.",
-  "finalAnswer": "3/4",
-  "correctAnswer": "3/4",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{18}}$$ 입니다.",
+  "finalAnswer": "18",
+  "correctAnswer": "18",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 150번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\overline{AB}=1$, $\\angle B=\\dfrac{\\pi}{2}$인 직각삼각형 $ABC$에서 $\\overline{AD}=\\overline{CD}$가 되도록 선분 $AB$ 위에 점 $D$를 잡고, $D$에서 $\\overline{AC}$에 내린 수선의 발을 $E$, $D$를 지나 $\\overline{AC}$에 평행한 직선이 $\\overline{BC}$와 만나는 점을 $F$라 한다. $\\angle BAC=\\theta$일 때 삼각형 $DEF$의 넓이 $S(\\theta)$에 대하여 $\\displaystyle\\lim_{\\theta\\to 0+}\\frac{S(\\theta)}{\\theta}$의 값을 구한다.",
+  "C": "$\\overline{AB}=1$이고 $\\angle B=\\dfrac{\\pi}{2}$인 직각삼각형 $ABC$, $\\overline{AD}=\\overline{CD}$인 점 $D$가 선분 $AB$ 위에 존재, $E$는 $D$에서 $\\overline{AC}$에 내린 수선의 발, $F$는 $D$를 지나 $\\overline{AC}$에 평행한 직선과 $\\overline{BC}$의 교점, $\\angle BAC=\\theta$, $0<\\theta<\\dfrac{\\pi}{4}$.",
+  "B": "직각삼각형의 변의 비는 $\\cos\\theta=\\dfrac{\\text{밑변}}{\\text{빗변}}$, $\\tan\\theta=\\dfrac{\\text{높이}}{\\text{밑변}}$로 결정된다. 이등변삼각형에서 꼭짓점에서 밑변에 내린 수선의 발은 밑변의 중점이다. 평행선이 만드는 동위각은 서로 같다. 두 변의 사잇각이 직각인 삼각형의 넓이는 $\\dfrac{1}{2}\\times(\\text{두 변의 곱})$이며, $\\theta\\to 0+$에서 $\\dfrac{\\tan\\theta}{\\theta}\\to 1$임을 이용한다.",
+  "S": "빗변의 길이를 $\\theta$로 나타내기 위해 $\\angle B=\\dfrac{\\pi}{2}$, $\\angle BAC=\\theta$, $\\overline{AB}=1$인 직각삼각형 $ABC$에서 $\\cos\\theta=\\dfrac{\\overline{AB}}{\\overline{AC}}$를 적용하면 $$\\overline{AC}=\\frac{1}{\\cos\\theta}=\\sec\\theta.$$\n$\\overline{AD}=\\overline{CD}$이므로 삼각형 $ADC$는 이등변삼각형이고, 꼭짓점 $D$에서 밑변 $AC$에 내린 수선의 발 $E$는 $AC$의 중점이 되어 $$\\overline{AE}=\\frac{1}{2}\\,\\overline{AC}=\\frac{1}{2}\\sec\\theta.$$\n수선의 발 $E$에서 직각삼각형 $AED$가 생기고 $\\angle EAD=\\theta$이므로, $\\cos\\theta=\\dfrac{\\overline{AE}}{\\overline{AD}}$와 $\\tan\\theta=\\dfrac{\\overline{DE}}{\\overline{AE}}$에서 $$\\overline{AD}=\\frac{\\overline{AE}}{\\cos\\theta}=\\frac{1}{2}\\sec^{2}\\theta,\\qquad \\overline{DE}=\\overline{AE}\\tan\\theta=\\frac{1}{2}\\sec\\theta\\tan\\theta.$$\n점 $D$가 선분 $AB$ 위에 있으므로 $\\overline{DB}$를 전체에서 빼서 구하면 $$\\overline{DB}=\\overline{AB}-\\overline{AD}=1-\\frac{1}{2}\\sec^{2}\\theta.$$\n$\\overline{DF}\\parallel\\overline{AC}$이므로 동위각에 의해 $\\angle BDF=\\theta$이고, 직각삼각형 $DBF$($\\angle B=\\dfrac{\\pi}{2}$)에서 $\\cos\\theta=\\dfrac{\\overline{DB}}{\\overline{DF}}$이므로 $$\\overline{DF}=\\frac{\\overline{DB}}{\\cos\\theta}=\\sec\\theta\\left(1-\\frac{1}{2}\\sec^{2}\\theta\\right).$$\n$\\overline{DF}\\parallel\\overline{AC}$이고 $\\overline{DE}\\perp\\overline{AC}$이므로 $\\overline{DE}\\perp\\overline{DF}$, 즉 삼각형 $DEF$는 $\\angle EDF=\\dfrac{\\pi}{2}$인 직각삼각형이다. 따라서 넓이는 $$S(\\theta)=\\frac{1}{2}\\,\\overline{DE}\\cdot\\overline{DF}=\\frac{1}{2}\\cdot\\frac{1}{2}\\sec\\theta\\tan\\theta\\cdot\\sec\\theta\\left(1-\\frac{1}{2}\\sec^{2}\\theta\\right)=\\frac{1}{4}\\sec^{2}\\theta\\tan\\theta\\left(1-\\frac{1}{2}\\sec^{2}\\theta\\right).$$\n극한을 분리하기 위해 $\\dfrac{S(\\theta)}{\\theta}$를 $\\dfrac{\\tan\\theta}{\\theta}$가 드러나도록 정리하면 $$\\frac{S(\\theta)}{\\theta}=\\frac{1}{4}\\sec^{2}\\theta\\cdot\\frac{\\tan\\theta}{\\theta}\\cdot\\left(1-\\frac{1}{2}\\sec^{2}\\theta\\right).$$\n$\\theta\\to 0+$일 때 $\\sec\\theta\\to 1$, $\\dfrac{\\tan\\theta}{\\theta}\\to 1$, $1-\\dfrac{1}{2}\\sec^{2}\\theta\\to \\dfrac{1}{2}$이므로 $$\\lim_{\\theta\\to 0+}\\frac{S(\\theta)}{\\theta}=\\frac{1}{4}\\cdot 1\\cdot 1\\cdot\\frac{1}{2}=\\frac{1}{8}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/151a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{(sqrt(2)-1)/2}}$$ 입니다.",
-  "finalAnswer": "(sqrt(2)-1)/2",
-  "correctAnswer": "(sqrt(2)-1)/2",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{1}{8}}}$$ 입니다.",
+  "finalAnswer": "1/8",
+  "correctAnswer": "1/8",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

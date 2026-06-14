@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 수열의 극한 60번 명품 해설",
   "type": "calculus",
-  "P": "수열의 극한값과 급수의 수렴·발산을 판별합니다.",
-  "C": "최고차항으로 나누기, 샌드위치 정리, 등비수열 극한 조건을 활용합니다.",
-  "B": "수열의 극한:\n\n1) $$\\lim_{n \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교\n2) $$|r| < 1 \\Rightarrow \\lim_{n \\to \\infty} r^n = 0$$\n3) 수렴 조건: 단조 수렴 정리, 샌드위치 정리\n4) $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle \\lim_{n\\to\\infty}\\frac{1}{n^2}\\sum_{k=1}^{n}a_k$ 의 값을 구한다. 여기서 $a_n$ 은 원 $C_n$ 위의 점 $\\mathrm{P}$ 중 선분 $\\mathrm{OP}$ 의 길이가 자연수가 되는 점의 개수이다.",
+  "C": "원 $C_n$ 은 점 $(4n,\\ 3n)$ 을 중심으로 하고 $x$축에 접한다. 원 위의 점 $\\mathrm{P}$ 에 대해 $\\overline{\\mathrm{OP}}$ 가 자연수인 $\\mathrm{P}$ 의 개수가 $a_n$ 이며, $\\mathrm{O}$ 는 원점이다.",
+  "B": "원이 $x$축에 접하면 중심에서 $x$축까지의 거리가 반지름과 같다. 또한 원점 $\\mathrm{O}$ 와 원 위의 점 사이 거리는, 중심까지의 거리를 $d$, 반지름을 $r$ 라 할 때 $d-r$ 이상 $d+r$ 이하의 모든 값을 연속적으로 가진다. 이때 거리 함수는 최솟값과 최댓값을 정확히 한 번씩, 그 사이의 값은 각각 두 번씩 취한다.",
+  "S": "원 $C_n$ 이 $x$축에 접하므로 중심 $(4n,\\ 3n)$ 의 $y$좌표가 곧 반지름이다. 따라서 반지름은 $$r=3n.$$\n원점에서 중심 $\\mathrm{G}_n(4n,\\ 3n)$ 까지의 거리를 구하면 $$\\overline{\\mathrm{OG}_n}=\\sqrt{(4n)^2+(3n)^2}=\\sqrt{16n^2+9n^2}=\\sqrt{25n^2}=5n.$$\n원 위의 점 $\\mathrm{P}$ 에서 $\\overline{\\mathrm{OP}}$ 가 가질 수 있는 값의 범위는 중심을 지나는 직선이 원과 만나는 두 점에서 최소·최대가 되므로 $$\\overline{\\mathrm{OG}_n}-r\\le\\overline{\\mathrm{OP}}\\le\\overline{\\mathrm{OG}_n}+r,$$ 즉 $$2n\\le\\overline{\\mathrm{OP}}\\le 8n.$$\n거리 $\\overline{\\mathrm{OP}}$ 는 $2n$ 에서 $8n$ 까지 연속적으로 변하는데, 양 끝값 $\\overline{\\mathrm{OP}}=2n$ 과 $\\overline{\\mathrm{OP}}=8n$ 은 각각 단 한 점에서만 나타나고, 그 사이의 한 값에 대해서는 직선 위·아래로 대칭인 두 점이 대응한다.\n끝값 $2n,\\ 8n$ 에서 자연수 길이를 주는 점은 각각 $1$개이고, 사잇값 중 자연수는 $2n+1\\le \\overline{\\mathrm{OP}}\\le 8n-1$ 인 정수들로 그 개수는 $$(8n-1)-(2n+1)+1=6n-1$$ 이며 각각 점이 $2$개씩이다.\n따라서 자연수 길이를 주는 점의 총개수는 $$a_n=2+2(6n-1)=12n.$$\n부분합을 구하면 $$\\sum_{k=1}^{n}a_k=\\sum_{k=1}^{n}12k=12\\cdot\\frac{n(n+1)}{2}=6n(n+1).$$\n구하는 극한은 $$\\lim_{n\\to\\infty}\\frac{1}{n^2}\\sum_{k=1}^{n}a_k=\\lim_{n\\to\\infty}\\frac{6n(n+1)}{n^2}=\\lim_{n\\to\\infty}6\\left(1+\\frac{1}{n}\\right)=6.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/01수열의극한/061a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{sqrt(5)/5}}$$ 입니다.",
-  "finalAnswer": "sqrt(5)/5",
-  "correctAnswer": "sqrt(5)/5",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{6}}$$ 입니다.",
+  "finalAnswer": "6",
+  "correctAnswer": "6",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

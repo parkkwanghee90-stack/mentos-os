@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 117번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "같은 규칙으로 한없이 만들어지는 색칠한 부분의 넓이의 합 $\\displaystyle\\sum_{n=1}^{\\infty}S_n$의 값을 구한다.",
+  "C": "한 변의 길이가 $2$인 정사각형 $A_1B_1C_1D_1$에서 $E_1$, $F_1$은 각각 $\\overline{B_1C_1}$, $\\overline{C_1D_1}$의 중점이고, $\\overline{A_1E_1}$, $\\overline{A_1C_1}$이 $\\overline{B_1F_1}$과 만나는 점이 $G_1$, $B_2$이며, $S_1$은 세 삼각형 $A_1G_1B_2$, $B_1E_1G_1$, $C_1F_1B_2$의 넓이의 합이다. $B_2$를 지나 $\\overline{A_1B_2}$에 수직인 직선이 $\\overline{C_1D_1}$과 만나는 점이 $C_2$, 이어서 같은 직각 조건으로 $D_2$, $A_2$를 정해 정사각형 $A_2B_2C_2D_2$를 만들고, 같은 과정을 반복한다.",
+  "B": "한 도형에서 다음 도형이 일정한 닮음비 $k$로 줄어드는 자기닮음 구조에서는 넓이가 닮음비의 제곱 $k^2$로 줄어들어 $S_{n+1}=k^2 S_n$인 등비수열을 이룬다. 첫째항 $a$, 공비 $r$($0<r<1$)인 무한등비급수의 합은 $\\displaystyle\\sum_{n=1}^{\\infty}ar^{n-1}=\\frac{a}{1-r}$이다.",
+  "S": "좌표를 도입해 그림의 배치대로 $A_1(0,2)$, $B_1(0,0)$, $C_1(2,0)$, $D_1(2,2)$로 두면 중점은 $E_1(1,0)$, $F_1(2,1)$이다.\n직선 $A_1C_1$은 $y=-x+2$, 직선 $B_1F_1$은 $y=\\dfrac{1}{2}x$이므로 두 식을 연립하면 $-x+2=\\dfrac{1}{2}x$에서 $x=\\dfrac{4}{3}$, 즉 $$B_2=\\left(\\frac{4}{3},\\,\\frac{2}{3}\\right).$$\n직선 $A_1E_1$은 $y=-2x+2$이고 이것과 $B_1F_1$($y=\\dfrac{1}{2}x$)을 연립하면 $x=\\dfrac{4}{5}$, 즉 $$G_1=\\left(\\frac{4}{5},\\,\\frac{2}{5}\\right).$$\n세 삼각형의 넓이를 각각 구하면 $$\\triangle A_1G_1B_2=\\frac{8}{15},\\quad \\triangle B_1E_1G_1=\\frac{1}{5},\\quad \\triangle C_1F_1B_2=\\frac{1}{3}$$이므로 그 합 $$S_1=\\frac{8}{15}+\\frac{1}{5}+\\frac{1}{3}=\\frac{16}{15}.$$\n다음 정사각형의 변을 구하기 위해 $B_2$에서 $\\overline{A_1B_2}$에 수직인 직선이 $\\overline{C_1D_1}$($x=2$)과 만나는 점을 구하면 $C_2\\left(2,\\dfrac{4}{3}\\right)$, 이어 같은 직각 조건으로 $D_2\\left(\\dfrac{4}{3},2\\right)$, $A_2\\left(\\dfrac{2}{3},\\dfrac{4}{3}\\right)$를 얻는다.\n정사각형 $A_2B_2C_2D_2$의 한 변의 길이는 $$\\overline{A_2B_2}=\\sqrt{\\left(\\tfrac{2}{3}\\right)^2+\\left(\\tfrac{2}{3}\\right)^2}=\\frac{2\\sqrt{2}}{3}$$이므로 처음 정사각형(한 변 $2$)에 대한 닮음비는 $$k=\\frac{1}{2}\\cdot\\frac{2\\sqrt{2}}{3}=\\frac{\\sqrt{2}}{3}.$$\n전체 그림이 같은 규칙으로 반복되므로 넓이의 합은 닮음비의 제곱만큼 줄어들어 $$\\frac{S_{n+1}}{S_n}=k^2=\\left(\\frac{\\sqrt{2}}{3}\\right)^{2}=\\frac{2}{9}$$인 공비 $\\dfrac{2}{9}$의 등비수열을 이룬다.\n따라서 첫째항 $\\dfrac{16}{15}$, 공비 $\\dfrac{2}{9}$인 무한등비급수의 합은 $$\\sum_{n=1}^{\\infty}S_n=\\frac{\\dfrac{16}{15}}{1-\\dfrac{2}{9}}=\\frac{\\dfrac{16}{15}}{\\dfrac{7}{9}}=\\frac{16}{15}\\cdot\\frac{9}{7}=\\frac{48}{35}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/118a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{④번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{48}{35}}}$$ 입니다.",
   "finalAnswer": "4",
   "correctAnswer": "4",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

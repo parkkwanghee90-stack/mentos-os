@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 수열의 극한 18번 명품 해설",
   "type": "calculus",
-  "P": "수열의 극한값과 급수의 수렴·발산을 판별합니다.",
-  "C": "최고차항으로 나누기, 샌드위치 정리, 등비수열 극한 조건을 활용합니다.",
-  "B": "수열의 극한:\n\n1) $$\\lim_{n \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교\n2) $$|r| < 1 \\Rightarrow \\lim_{n \\to \\infty} r^n = 0$$\n3) 수렴 조건: 단조 수렴 정리, 샌드위치 정리\n4) $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\lim\\limits_{n\\to\\infty}\\dfrac{S_n}{n}$의 값. 여기서 $S_n$은 직선 $y=2nx$가 곡선 $y=x^2+n^2-1$과 만나는 두 점 $A_n,\\ B_n$과 원 $(x-2)^2+y^2=1$ 위의 점 $P$로 이루어진 삼각형 $A_nB_nP$의 넓이의 최댓값이다.",
+  "C": "자연수 $n$에 대하여 직선 $y=2nx$가 곡선 $y=x^2+n^2-1$과 두 점 $A_n,\\ B_n$에서 만난다. 원 $(x-2)^2+y^2=1$ 위의 점 $P$ 중 삼각형 $A_nB_nP$의 넓이를 최대로 하는 점이 $P_n$이고, 그때의 넓이가 $S_n$이다.",
+  "B": "삼각형의 넓이는 밑변 $\\overline{A_nB_n}$을 고정하면 높이에 비례하므로, 밑변을 두 교점 사이 거리로 잡고 높이를 점 $P$에서 직선 $y=2nx$까지의 거리로 본다. 직선과 원 위의 점 사이 거리는 원의 중심에서 직선까지의 거리에 반지름을 더한 값까지 커질 수 있으므로, 높이의 최댓값은 (중심-직선 거리)$+$(반지름)이다. 점 $(x_0,y_0)$에서 직선 $ax+by+c=0$까지의 거리는 $\\dfrac{|ax_0+by_0+c|}{\\sqrt{a^2+b^2}}$이다.",
+  "S": "두 교점은 직선과 곡선을 연립하여 얻으므로, $2nx=x^2+n^2-1$에서 $x^2-2nx+(n+1)(n-1)=0$, 즉 $(x-n-1)(x-n+1)=0$이다.\n각 $x$를 $y=2nx$에 대입하면 두 교점은 $A_n(n-1,\\ 2n^2-2n)$, $B_n(n+1,\\ 2n^2+2n)$이다.\n밑변의 길이를 구하면 $$\\overline{A_nB_n}=\\sqrt{(n+1-(n-1))^2+\\big((2n^2+2n)-(2n^2-2n)\\big)^2}=\\sqrt{2^2+(4n)^2}=2\\sqrt{4n^2+1}.$$\n높이는 원 위의 점에서 직선까지의 거리이므로, 먼저 원의 중심 $(2,0)$에서 직선 $2nx-y=0$까지의 거리를 구하면 $$\\frac{|2n\\cdot 2-0|}{\\sqrt{(2n)^2+(-1)^2}}=\\frac{4n}{\\sqrt{4n^2+1}}.$$\n원 위의 점이 직선에서 가장 멀어지면 넓이가 최대가 되므로, 높이의 최댓값은 중심까지의 거리에 반지름 $1$을 더한 $$\\frac{4n}{\\sqrt{4n^2+1}}+1$$이며, 이때의 점이 $P_n$이다.\n넓이를 정리하면 $$S_n=\\frac12\\times 2\\sqrt{4n^2+1}\\times\\left(\\frac{4n}{\\sqrt{4n^2+1}}+1\\right)=4n+\\sqrt{4n^2+1}.$$\n구하는 극한에서 분자와 분모를 $n$으로 나누면 $$\\lim_{n\\to\\infty}\\frac{S_n}{n}=\\lim_{n\\to\\infty}\\frac{4n+\\sqrt{4n^2+1}}{n}=\\lim_{n\\to\\infty}\\left(4+\\sqrt{4+\\frac{1}{n^2}}\\right).$$\n$n\\to\\infty$일 때 $\\dfrac{1}{n^2}\\to 0$이므로 극한값은 $4+\\sqrt{4}=4+2=6$이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/01수열의극한/019a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{5/12}}$$ 입니다.",
-  "finalAnswer": "5/12",
-  "correctAnswer": "5/12",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{6}}$$ 입니다.",
+  "finalAnswer": "6",
+  "correctAnswer": "6",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }
