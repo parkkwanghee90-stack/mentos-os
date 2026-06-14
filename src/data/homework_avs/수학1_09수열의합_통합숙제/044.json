@@ -1,20 +1,20 @@
 {
   "title": "[통합숙제] 수학1 - 수열의 합 44번 명품 해설",
   "type": "algebra",
-  "P": "주어진 조건을 이용하여 보기 ㄱ, ㄴ, ㄷ의 참 거짓을 판별하고, 특히 ㄷ 보기의 수열의 합을 계산합니다.",
-  "C": "자연수 $n$에 대하여 두 실수 $a, b$가 다음 관계를 만족합니다.\n$$2^a = 5^b = 10^n$$",
-  "B": "이 문제를 푸는 데 다음 개념과 공식이 사용됩니다.\n*   로그의 정의: $A^x = B \\iff x = \\log_A B$\n*   로그의 성질: $\\log_A M - \\log_A N = \\log_A \\frac{M}{N}$, $\\log_A M^k = k \\log_A M$\n*   로그의 밑변환 공식: $\\log_A B \\cdot \\log_B A = 1$\n*   자연수의 합 공식: $\\sum_{k=1}^{m} k = \\frac{m(m+1)}{2}$",
-  "S": "먼저, 주어진 조건 $2^a = 10^n$을 이용하여 $a-n$을 $n$에 대한 식으로 표현합니다.\n$$2^a = 10^n \\implies a = \\log_2 10^n$$\n$$a-n = \\log_2 10^n - n = \\log_2 10^n - \\log_2 2^n = \\log_2 \\left(\\frac{10^n}{2^n}\\right) = \\log_2 \\left(\\left(\\frac{10}{2}\\right)^n\\right) = \\log_2 5^n = n \\log_2 5$$\n다음으로, 주어진 조건 $5^b = 10^n$을 이용하여 $b-n$을 $n$에 대한 식으로 표현합니다.\n$$5^b = 10^n \\implies b = \\log_5 10^n$$\n$$b-n = \\log_5 10^n - n = \\log_5 10^n - \\log_5 5^n = \\log_5 \\left(\\frac{10^n}{5^n}\\right) = \\log_5 \\left(\\left(\\frac{10}{5}\\right)^n\\right) = \\log_5 2^n = n \\log_5 2$$\n이제 $a-n$과 $b-n$의 식을 이용하여 $(a-n)(b-n)$을 간단히 합니다.\n$$(a-n)(b-n) = (n \\log_2 5) \\cdot (n \\log_5 2) = n^2 (\\log_2 5 \\cdot \\log_5 2)$$\n로그의 밑변환 공식 $\\log_A B \\cdot \\log_B A = 1$을 적용하면\n$$(a-n)(b-n) = n^2 \\cdot 1 = n^2$$\n마지막으로, ㄷ 보기의 수열의 합 $\\sum_{n=1}^{20} \\frac{(a-n)(b-n)}{n}$을 계산합니다.\n$$\\sum_{n=1}^{20} \\frac{(a-n)(b-n)}{n} = \\sum_{n=1}^{20} \\frac{n^2}{n} = \\sum_{n=1}^{20} n$$\n자연수의 합 공식을 이용하여 계산하면\n$$\\sum_{n=1}^{20} n = \\frac{20(20+1)}{2} = \\frac{20 \\cdot 21}{2} = 10 \\cdot 21 = 210$$",
+  "P": "자연수 $n$에 대하여 두 실수 $a$와 $b$가 $2^a=5^b=10^n$을 만족시킬 때, |보기|에서 옳은 것만을 있는 대로 고른 것은?\n\n$$\\text{ㄱ. } n=1 \\text{이면 } a-1=\\log_2 5 \\text{이다.}$$\n$$\\text{ㄴ. } n=2 \\text{이면 } (a-2)(b-2)=4 \\text{이다.}$$\n$$\\text{ㄷ. } \\sum_{n=1}^{20}\\frac{(a-n)(b-n)}{n}=210 \\text{이다.}$$\n\n$$\\text{① ㄱ} \\qquad \\text{② ㄱ, ㄴ} \\qquad \\text{③ ㄱ, ㄷ} \\qquad \\text{④ ㄴ, ㄷ} \\qquad \\text{⑤ ㄱ, ㄴ, ㄷ}$$",
+  "C": "로그의 정의에서 $2^a=10^n \\Rightarrow a=\\log_2 10^n=n\\log_2 10$, $5^b=10^n \\Rightarrow b=\\log_5 10^n=n\\log_5 10$. 이때 $a-n=n\\log_2 10-n=n\\log_2\\dfrac{10}{2}=n\\log_2 5$, $b-n=n\\log_5 10-n=n\\log_5\\dfrac{10}{5}=n\\log_5 2$ 이고, $\\log_2 5\\cdot\\log_5 2=1$ 이므로 $(a-n)(b-n)=n^2\\log_2 5\\cdot\\log_5 2=n^2$ 이라는 핵심 항등식을 얻는다. ㄱ·ㄴ·ㄷ을 각각 이 결과로 검증한다.",
+  "B": "기존 힌트는 보기 ㄷ의 부분합 $210$만을 정답으로 잘못 저장하고, ㄱ($a-1=\\log_2 5$, 참)과 ㄴ($(a-2)(b-2)=4$, 참)의 검증을 누락했다. 세 명제 모두 옳으므로 정답은 보기 ⑤(ㄱ, ㄴ, ㄷ 모두 옳음)이며, SSOT 저장값은 보기번호 \"5\"로 정정되어야 한다.",
+  "S": "[공통 셋업] 로그의 정의에 의해 $2^a=10^n$에서 $a=\\log_2 10^n=n\\log_2 10$, $5^b=10^n$에서 $b=\\log_5 10^n=n\\log_5 10$. 따라서 $a-n=n\\log_2 10-n\\log_2 2=n\\log_2\\dfrac{10}{2}=n\\log_2 5$, $b-n=n\\log_5 10-n\\log_5 5=n\\log_5\\dfrac{10}{5}=n\\log_5 2$ 이다.\n[ㄱ 검증] $n=1$일 때 $2^a=10$이므로 로그의 정의에 의해 $a=\\log_2 10$. 따라서 $$a-1=\\log_2 10-\\log_2 2=\\log_2\\frac{10}{2}=\\log_2 5.$$ 명제 ㄱ은 참이다.\n[ㄴ 검증] $n=2$일 때 $2^a=10^2$에서 $a=\\log_2 10^2$이므로 $$a-2=\\log_2 10^2-\\log_2 2^2=\\log_2\\frac{10^2}{2^2}=\\log_2 5^2=2\\log_2 5.$$ 또 $5^b=10^2$에서 $b=\\log_5 10^2$이므로 $$b-2=\\log_5 10^2-\\log_5 5^2=\\log_5\\frac{10^2}{5^2}=\\log_5 2^2=2\\log_5 2.$$ 따라서 $$(a-2)(b-2)=2\\log_2 5\\times 2\\log_5 2=4(\\log_2 5\\cdot\\log_5 2)=4\\cdot 1=4.$$ 명제 ㄴ은 참이다.\n[ㄷ 검증] ㄴ과 같은 방법으로 일반 $n$에 대해 $a-n=\\log_2 10^n-\\log_2 2^n=n\\log_2 5$, $b-n=\\log_5 10^n-\\log_5 5^n=n\\log_5 2$. 따라서 $$(a-n)(b-n)=n\\log_2 5\\times n\\log_5 2=n^2\\cdot\\frac{\\log 5}{\\log 2}\\cdot\\frac{\\log 2}{\\log 5}=n^2.$$ 그러므로 $$\\sum_{n=1}^{20}\\frac{(a-n)(b-n)}{n}=\\sum_{n=1}^{20}\\frac{n^2}{n}=\\sum_{n=1}^{20}n=\\frac{20\\cdot 21}{2}=210.$$ 명제 ㄷ은 참이다.\n[결론] ㄱ, ㄴ, ㄷ이 모두 옳으므로 옳은 것은 $\\text{ㄱ, ㄴ, ㄷ}$ 이고, 정답은 보기 ⑤이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/수학1/09수열의합/044a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{210}}$$ 입니다.",
-  "finalAnswer": "210",
-  "correctAnswer": "210",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\text{ㄱ, ㄴ, ㄷ}}}$$ 입니다.",
+  "finalAnswer": "5",
+  "correctAnswer": "5",
   "pcbsa_completed": true,
   "vision_generated": true,
-  "vision_model": "gemini-2.5-flash"
+  "vision_model": "manual-claude-fable-5"
 }
