@@ -2802,3 +2802,13 @@ No character metrics for '①' in style 'Main-Regular' and mode 'text'
 
 결과: 성공 3 | 불일치 보류 0 | 검증 실패 3 | 오류 2 | dry 0
 GEN_RUN_DONE_DETACHED
+=== GEN_RUN START 2026-06-14 10:11:16 KST ===
+◇ injected env (20) from .env // tip: ⌁ auth for agents [www.vestauth.com]
+
+=== 06삼각함수그래프 (72문제) ===
+  ⏳ 전체 키 제한 — 90초 대기 (1/6)
+  ⏳ 전체 키 제한 — 90초 대기 (2/6)
+  ⏳ 전체 키 제한 — 90초 대기 (3/6)
+  ❌ 050: UNREACHABLE
+  ⏳ 전체 키 제한 — 90초 대기 (4/6)
+=== GEN KILLED (burst hard-limit, manual authoring 전환) 2026-06-14 10:17:33 ===

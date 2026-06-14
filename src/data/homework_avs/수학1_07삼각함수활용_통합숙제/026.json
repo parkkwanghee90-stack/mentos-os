@@ -11,7 +11,7 @@
       "src": "/math_crops/숙제/수학1/07삼각함수활용/026a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\sqrt{3}-2/7\\sqrt{21}}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\sqrt{3}-\\frac{2}{7}\\sqrt{21}}}$$ 입니다.",
   "finalAnswer": "sqrt(3)-2/7sqrt(21)",
   "correctAnswer": "sqrt(3)-2/7sqrt(21)",
   "pcbsa_completed": true,
