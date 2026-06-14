@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 수학2 - 함수의 극한 13번 명품 해설",
   "type": "calculus",
-  "P": "함수의 극한값을 구하고, 극한의 성질을 활용하여 미지수를 결정합니다.",
-  "C": "$$0/0$$ 꼴 부정형을 인수분해·유리화로 해소하고, 좌극한·우극한을 비교합니다.",
-  "B": "함수의 극한:\n\n1) $$\\lim_{x \\to a} f(x) = L$$ ⟺ $$\\lim_{x \\to a^-} f(x) = \\lim_{x \\to a^+} f(x) = L$$\n2) $$\\lim_{x \\to a} \\frac{f(x)}{g(x)}$$: $$0/0$$ 꼴 → 인수분해 또는 유리화\n3) $$\\lim_{x \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "주어진 함수와 직선으로 정의된 삼각형의 넓이 $S(t)$와 원의 넓이 $C(t)$를 이용하여, $t \\to 0^+$일 때 $\\frac{C(t)}{t \\cdot S(t)}$의 극한값을 구하는 문제입니다.",
+  "C": "함수 f(x) = sqrt(x+2)와 직선 x=t (t>0)가 주어졌습니다. 점 P는 y=f(x)와 x=t의 교점, 점 Q는 x=t와 x축의 교점, O는 원점입니다. S(t)는 삼각형 POQ의 넓이이고, C(t)는 선분 OQ를 지름으로 하는 원의 넓이입니다.",
+  "B": "삼각형의 넓이는 밑변과 높이를 이용하여 S = (1/2) * 밑변 * 높이로 구합니다. 원의 넓이는 반지름을 이용하여 C = pi * (반지름)^2으로 구합니다. 함수의 극한은 분모가 0이 되지 않는 경우, 해당 값을 대입하여 계산할 수 있습니다.",
+  "S": "삼각형 POQ의 넓이 S(t)를 구하기 위해 밑변 OQ의 길이와 높이 PQ의 길이를 t에 대한 식으로 나타냅니다. 점 P의 좌표는 (t, f(t)) = (t, sqrt(t+2))이고, 점 Q의 좌표는 (t, 0), 원점 O의 좌표는 (0, 0)이므로, 밑변 OQ의 길이는 t, 높이 PQ의 길이는 sqrt(t+2)입니다.\n$$S(t) = \\frac{1}{2} \\times \\overline{\\text{OQ}} \\times \\overline{\\text{PQ}} = \\frac{1}{2} \\times t \\times \\sqrt{t+2}$$\n선분 OQ를 지름으로 하는 원의 넓이 C(t)를 구하기 위해 원의 반지름을 t에 대한 식으로 나타냅니다. 선분 OQ의 길이는 t이므로, 원의 지름은 t이고 반지름은 t/2입니다.\n$$C(t) = \\pi \\times \\left(\\frac{\\overline{\\text{OQ}}}{2}\\right)^2 = \\pi \\times \\left(\\frac{t}{2}\\right)^2 = \\frac{t^2}{4}\\pi$$\n극한을 계산하기 전에 C(t) / (t * S(t)) 식을 t에 대한 간단한 형태로 정리합니다. 구한 S(t)와 C(t)를 대입하여 식을 정리하면 다음과 같습니다.\n$$\\frac{C(t)}{t \\times S(t)} = \\frac{\\frac{t^2}{4}\\pi}{t \\times \\left(\\frac{1}{2} \\times t \\times \\sqrt{t+2}\\right)} = \\frac{\\frac{t^2}{4}\\pi}{\\frac{t^2}{2}\\sqrt{t+2}} = \\frac{t^2}{4}\\pi \\times \\frac{2}{t^2\\sqrt{t+2}} = \\frac{\\pi}{2\\sqrt{t+2}}$$\n정리된 식에 t가 0+로 갈 때의 극한을 적용하여 최종 값을 계산합니다. t=0을 대입하면 분모가 0이 되지 않으므로 직접 대입하여 극한값을 구할 수 있습니다.\n$$\\lim_{t\\to 0+} \\frac{C(t)}{t \\times S(t)} = \\lim_{t\\to 0+} \\frac{\\pi}{2\\sqrt{t+2}} = \\frac{\\pi}{2\\sqrt{0+2}} = \\frac{\\pi}{2\\sqrt{2}} = \\frac{\\pi\\sqrt{2}}{2\\sqrt{2}\\sqrt{2}} = \\frac{\\sqrt{2}}{4}\\pi$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/수학2/01함수의극한/013a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{③번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{③번}}$$ 입니다.",
   "finalAnswer": "3",
   "correctAnswer": "3",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "gemini-2.5-flash"
 }

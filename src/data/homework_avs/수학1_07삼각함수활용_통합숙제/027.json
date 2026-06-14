@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 수학1 - 삼각함수 활용 27번 명품 해설",
   "type": "trigonometry",
-  "P": "삼각함수의 덧셈정리, 배각·반각 공식을 활용하여 값을 구합니다.",
-  "C": "사인·코사인 법칙과 삼각형의 넓이 공식을 적용합니다.",
-  "B": "삼각함수 활용:\n\n1) 사인법칙: $$\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R$$\n2) 코사인법칙: $$a^2 = b^2 + c^2 - 2bc\\cos A$$\n3) 삼각형 넓이: $$S = \\frac{1}{2}ab\\sin C$$\n4) 덧셈정리: $$\\sin(\\alpha \\pm \\beta) = \\sin\\alpha\\cos\\beta \\pm \\cos\\alpha\\sin\\beta$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "지름이 $6$인 반원에서 호 위의 점들로 정의된 점 $\\mathrm{E}$에 대하여, 선분 $\\mathrm{CE}$의 길이를 구한다.",
+  "C": "선분 $\\mathrm{AB}$는 반원의 지름이고 $\\overline{\\mathrm{AB}}=6$이다. 호 $\\mathrm{AB}$ 위의 점 $\\mathrm{C}$는 $\\cos(\\angle\\mathrm{CAB})=\\dfrac{1}{3}$을 만족한다. 선분 $\\mathrm{AB}$ 위의 점 $\\mathrm{D}$는 $\\overline{\\mathrm{AC}}=\\overline{\\mathrm{DB}}$가 되도록 잡는다. 점 $\\mathrm{B}$를 지나고 선분 $\\mathrm{CD}$에 평행한 직선이 호 $\\mathrm{AB}$와 만나는 점 중 $\\mathrm{B}$가 아닌 점이 $\\mathrm{E}$이다.",
+  "B": "반원의 지름에 대한 원주각은 $90^\\circ$이다(탈레스 정리). 삼각형에서 두 변과 끼인각을 알 때 코사인법칙으로 나머지 변을, 한 변과 두 각을 알 때 사인법칙으로 다른 변을 구한다. 또한 삼각형의 외접원 지름은 $\\dfrac{a}{\\sin A}$로 주어진다(확장된 사인법칙).",
+  "S": "$\\overline{\\mathrm{AC}}=\\overline{\\mathrm{DB}}=x$, $\\angle\\mathrm{CAB}=\\alpha$로 놓는다. 점 $\\mathrm{C}$가 지름 $\\mathrm{AB}$에 대한 호 위의 점이므로 $\\angle\\mathrm{ACB}=90^\\circ$이고, 직각삼각형 $\\mathrm{ABC}$에서 $$\\cos\\alpha=\\frac{1}{3}=\\frac{\\overline{\\mathrm{AC}}}{\\overline{\\mathrm{AB}}}=\\frac{x}{6}$$이다.\n위 식에서 $x=2$이므로 $\\overline{\\mathrm{AC}}=\\overline{\\mathrm{DB}}=2$이고, $\\overline{\\mathrm{AD}}=\\overline{\\mathrm{AB}}-\\overline{\\mathrm{DB}}=6-2=4$이다.\n삼각형 $\\mathrm{ADC}$에서 $\\overline{\\mathrm{AD}}=4$, $\\overline{\\mathrm{AC}}=2$, 끼인각이 $\\alpha$이므로 코사인법칙으로 $\\overline{\\mathrm{CD}}$를 구한다. $$\\overline{\\mathrm{CD}}^{\\,2}=4^2+2^2-2\\times4\\times2\\times\\cos\\alpha=20-16\\cdot\\frac{1}{3}=\\frac{44}{3}.$$\n따라서 $$\\overline{\\mathrm{CD}}=\\sqrt{\\frac{44}{3}}=\\frac{2\\sqrt{33}}{3}$$이다.\n$\\angle\\mathrm{CBE}=\\beta$로 놓으면, $\\overline{\\mathrm{BE}}\\parallel\\overline{\\mathrm{CD}}$이므로 엇각에 의해 $\\angle\\mathrm{DCB}=\\angle\\mathrm{CBE}=\\beta$이다. 또한 $\\angle\\mathrm{ACB}=90^\\circ$에서 삼각형 $\\mathrm{ABC}$의 각의 합으로 $\\angle\\mathrm{DBC}=\\angle\\mathrm{ABC}=90^\\circ-\\alpha$이다.\n삼각형 $\\mathrm{DBC}$에서 사인법칙을 적용하면 $$\\frac{\\overline{\\mathrm{DB}}}{\\sin(\\angle\\mathrm{DCB})}=\\frac{\\overline{\\mathrm{CD}}}{\\sin(\\angle\\mathrm{DBC})}$$이고, $\\sin(90^\\circ-\\alpha)=\\cos\\alpha=\\dfrac{1}{3}$을 이용한다.\n값을 대입하여 $\\sin\\beta$를 구하면 $$\\sin\\beta=\\frac{\\overline{\\mathrm{DB}}\\cdot\\sin(\\angle\\mathrm{DBC})}{\\overline{\\mathrm{CD}}}=\\frac{2\\times\\dfrac{1}{3}}{\\dfrac{2\\sqrt{33}}{3}}=\\frac{2}{2\\sqrt{33}}=\\frac{\\sqrt{33}}{33}.$$\n점 $\\mathrm{C}$, $\\mathrm{B}$, $\\mathrm{E}$가 모두 지름 $6$인 반원 위에 있으므로 삼각형 $\\mathrm{CBE}$의 외접원 지름은 $6$이다. 확장된 사인법칙에 의해 $$\\frac{\\overline{\\mathrm{CE}}}{\\sin(\\angle\\mathrm{CBE})}=6.$$\n따라서 $$\\overline{\\mathrm{CE}}=6\\sin\\beta=6\\times\\frac{\\sqrt{33}}{33}=\\frac{2\\sqrt{33}}{11}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/수학1/07삼각함수활용/027a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2/11sqrt(33)}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{2\\sqrt{33}}{11}}}$$ 입니다.",
   "finalAnswer": "2/11sqrt(33)",
   "correctAnswer": "2/11sqrt(33)",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

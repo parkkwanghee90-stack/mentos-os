@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 수학1 - 삼각함수 정의 29번 명품 해설",
   "type": "trigonometry",
-  "P": "호도법과 삼각함수의 정의를 이용하여 삼각함수값을 구합니다.",
-  "C": "단위원 위의 점 좌표와 삼각함수의 관계를 활용합니다.",
-  "B": "삼각함수의 정의:\n\n1) 호도법: $$180° = \\pi$$ (rad), 부채꼴 호의 길이 $$l = r\\theta$$, 넓이 $$S = \\frac{1}{2}r^2\\theta$$\n2) 단위원: $$P(\\cos\\theta, \\sin\\theta)$$\n3) $$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$$\n4) $$\\sin^2\\theta + \\cos^2\\theta = 1$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "주어진 삼각함수 관계식 $3\\sin\\theta - 4\\tan\\theta = 4$를 이용하여 $\\sin\\theta + \\cos\\theta$의 값을 구해야 합니다.",
+  "C": "주어진 조건은 $3\\sin\\theta - 4\\tan\\theta = 4$ 입니다.",
+  "B": "이 문제를 해결하기 위해 다음 삼각함수 관계식과 항등식을 활용합니다. $$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$$ $$\\sin^2\\theta + \\cos^2\\theta = 1$$ $$(a+b)^2 = a^2 + 2ab + b^2$$ 또한, $\\sin\\theta$와 $\\cos\\theta$의 값의 범위는 각각 $[-1, 1]$이므로, $\\sin\\theta + \\cos\\theta$의 값의 범위는 $[-\\sqrt{2}, \\sqrt{2}]$임을 이용합니다.",
+  "S": "주어진 식을 $\\sin\\theta$와 $\\cos\\theta$에 대한 식으로 만들기 위해 $\\tan\\theta$를 $\\frac{\\sin\\theta}{\\cos\\theta}$로 바꾸고, 분모를 없애기 위해 양변에 $\\cos\\theta$를 곱하여 정리합니다.\n$$3\\sin\\theta - 4\\frac{\\sin\\theta}{\\cos\\theta} = 4$$ $$3\\sin\\theta\\cos\\theta - 4\\sin\\theta = 4\\cos\\theta$$ $$3\\sin\\theta\\cos\\theta = 4\\sin\\theta + 4\\cos\\theta$$ $$3\\sin\\theta\\cos\\theta = 4(\\sin\\theta + \\cos\\theta) \\quad \\cdots \\quad \\text{(ㄱ)}$$\n구하고자 하는 값인 $\\sin\\theta + \\cos\\theta$와 (ㄱ)에서 얻은 $\\sin\\theta\\cos\\theta$ 사이의 관계를 이용하기 위해 $(\\sin\\theta + \\cos\\theta)^2$ 공식을 전개합니다.\n$$(\\sin\\theta + \\cos\\theta)^2 = \\sin^2\\theta + 2\\sin\\theta\\cos\\theta + \\cos^2\\theta$$ $$(\\sin\\theta + \\cos\\theta)^2 = 1 + 2\\sin\\theta\\cos\\theta$$\n(ㄱ) 식에서 $\\sin\\theta\\cos\\theta = \\frac{4}{3}(\\sin\\theta + \\cos\\theta)$를 위 식에 대입하여 $\\sin\\theta + \\cos\\theta$에 대한 이차방정식을 만듭니다.\n$$(\\sin\\theta + \\cos\\theta)^2 = 1 + 2 \\cdot \\frac{4}{3}(\\sin\\theta + \\cos\\theta)$$ $$(\\sin\\theta + \\cos\\theta)^2 = 1 + \\frac{8}{3}(\\sin\\theta + \\cos\\theta)$$\n$\\sin\\theta + \\cos\\theta = t$로 치환하고 이차방정식을 정리하여 인수분해합니다.\n$$t^2 = 1 + \\frac{8}{3}t$$ $$3t^2 = 3 + 8t$$ $$3t^2 - 8t - 3 = 0$$ $$(3t+1)(t-3) = 0$$ $$t = -\\frac{1}{3} \\quad \\text{또는} \\quad t = 3$$\n$\\sin\\theta$와 $\\cos\\theta$의 값의 범위가 각각 $[-1, 1]$이므로, $\\sin\\theta + \\cos\\theta$의 값의 범위는 $[-\\sqrt{2}, \\sqrt{2}]$입니다. 이 범위에 맞는 $t$ 값을 선택합니다.\n$$-\\sqrt{2} \\le \\sin\\theta + \\cos\\theta \\le \\sqrt{2}$$ $$\\text{약} -1.414 \\le \\sin\\theta + \\cos\\theta \\le \\text{약} 1.414$$ $t=3$은 이 범위에 속하지 않으므로 해가 될 수 없습니다. 따라서 $t = -\\frac{1}{3}$이 구하는 값입니다.\n$$\\sin\\theta + \\cos\\theta = -\\frac{1}{3}$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{-1/3}}$$ 입니다.",
   "finalAnswer": "-1/3",
   "correctAnswer": "-1/3",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "gemini-2.5-flash"
 }

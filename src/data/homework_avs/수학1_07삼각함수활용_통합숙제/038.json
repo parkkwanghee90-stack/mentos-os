@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 수학1 - 삼각함수 활용 38번 명품 해설",
   "type": "trigonometry",
-  "P": "삼각함수의 덧셈정리, 배각·반각 공식을 활용하여 값을 구합니다.",
-  "C": "사인·코사인 법칙과 삼각형의 넓이 공식을 적용합니다.",
-  "B": "삼각함수 활용:\n\n1) 사인법칙: $$\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R$$\n2) 코사인법칙: $$a^2 = b^2 + c^2 - 2bc\\cos A$$\n3) 삼각형 넓이: $$S = \\frac{1}{2}ab\\sin C$$\n4) 덧셈정리: $$\\sin(\\alpha \\pm \\beta) = \\sin\\alpha\\cos\\beta \\pm \\cos\\alpha\\sin\\beta$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "주어진 조건을 활용하여 사각형 ABCP의 넓이를 구해야 합니다.",
+  "C": "반지름의 길이가 $$3$$인 원의 둘레를 $$6$$등분하는 점 중 연속된 세 점이 A, B, C이고, 점 B를 포함하지 않는 호 AC 위의 점 P에 대하여 $$ \\overline{AP} + \\overline{CP} = 8 $$입니다.",
+  "B": "원에 내접하는 사각형의 성질: 마주보는 두 각의 합은 $$\\pi$$($$180^\\circ$$)이다.\n코사인법칙: 삼각형 ABC에서 변의 길이가 $$a, b, c$$이고 각 C의 대각이 $$\\gamma$$일 때, $$ c^2 = a^2 + b^2 - 2ab \\cos \\gamma $$\n삼각형의 넓이 공식: 두 변의 길이 $$a, b$$와 그 끼인각 $$\\theta$$가 주어졌을 때, 넓이는 $$ \\frac{1}{2}ab \\sin \\theta $$",
+  "S": "원주를 6등분한 점들의 특성을 이용하여 삼각형 ABC의 변의 길이와 각을 구합니다. 원의 중심을 O라 하면, A, B, C가 연속된 6등분점이므로 $$\\angle AOB = \\angle BOC = \\frac{2\\pi}{6} = \\frac{\\pi}{3}$$입니다. 반지름이 $$3$$이므로 $$\\triangle OAB$$와 $$\\triangle OBC$$는 한 변의 길이가 $$3$$인 정삼각형이 되어 $$\\overline{AB} = \\overline{BC} = 3$$입니다. 따라서 $$\\angle ABC = \\angle ABO + \\angle OBC = \\frac{\\pi}{3} + \\frac{\\pi}{3} = \\frac{2\\pi}{3}$$입니다.\n삼각형 ABC에서 코사인법칙을 이용하여 변 AC의 길이를 구합니다. $$\\overline{AC}^2 = \\overline{AB}^2 + \\overline{BC}^2 - 2 \\cdot \\overline{AB} \\cdot \\overline{BC} \\cos(\\angle ABC)$$이므로, $$\\overline{AC}^2 = 3^2 + 3^2 - 2 \\cdot 3 \\cdot 3 \\cos\\left(\\frac{2\\pi}{3}\\right) = 9 + 9 - 18 \\cdot \\left(-\\frac{1}{2}\\right) = 18 + 9 = 27$$입니다. 따라서 $$\\overline{AC} = \\sqrt{27} = 3\\sqrt{3}$$입니다.\n사각형 ABCP가 원에 내접하므로 마주보는 각의 합이 $$\\pi$$임을 이용하여 $$\\angle APC$$의 크기를 구합니다. $$\\angle ABC + \\angle APC = \\pi$$이므로, $$\\frac{2\\pi}{3} + \\angle APC = \\pi$$에서 $$\\angle APC = \\pi - \\frac{2\\pi}{3} = \\frac{\\pi}{3}$$입니다.\n삼각형 ACP에서 코사인법칙과 주어진 조건을 이용하여 $$\\overline{AP} \\cdot \\overline{CP}$$의 값을 구합니다. $$\\overline{AP} = x, \\overline{CP} = y$$라 하면 $$\\overline{AC}^2 = x^2 + y^2 - 2xy \\cos(\\angle APC)$$이므로, $$(3\\sqrt{3})^2 = x^2 + y^2 - 2xy \\cos\\left(\\frac{\\pi}{3}\\right)$$입니다. 이를 정리하면 $$27 = x^2 + y^2 - 2xy \\cdot \\frac{1}{2} = x^2 + y^2 - xy$$입니다. 또한, $$(x+y)^2 = x^2 + y^2 + 2xy$$이므로, $$x^2 + y^2 = (x+y)^2 - 2xy$$를 위 식에 대입하면 $$27 = (x+y)^2 - 2xy - xy = (x+y)^2 - 3xy$$입니다. 문제에서 $$\\overline{AP} + \\overline{CP} = x+y = 8$$이라 했으므로, $$27 = 8^2 - 3xy = 64 - 3xy$$입니다. 따라서 $$3xy = 64 - 27 = 37$$이므로, $$xy = \\frac{37}{3}$$입니다.\n삼각형 ABC의 넓이를 구합니다. 삼각형의 넓이 공식에 따라 $$\\triangle ABC = \\frac{1}{2} \\cdot \\overline{AB} \\cdot \\overline{BC} \\sin(\\angle ABC)$$이므로, $$\\triangle ABC = \\frac{1}{2} \\cdot 3 \\cdot 3 \\sin\\left(\\frac{2\\pi}{3}\\right) = \\frac{9}{2} \\cdot \\frac{\\sqrt{3}}{2} = \\frac{9\\sqrt{3}}{4}$$입니다.\n삼각형 ACP의 넓이를 구합니다. 삼각형의 넓이 공식에 따라 $$\\triangle ACP = \\frac{1}{2} \\cdot \\overline{AP} \\cdot \\overline{CP} \\sin(\\angle APC)$$이므로, $$\\triangle ACP = \\frac{1}{2} \\cdot xy \\sin\\left(\\frac{\\pi}{3}\\right) = \\frac{1}{2} \\cdot \\frac{37}{3} \\cdot \\frac{\\sqrt{3}}{2} = \\frac{37\\sqrt{3}}{12}$$입니다.\n사각형 ABCP의 넓이는 두 삼각형의 넓이의 합이므로, 이를 계산합니다. 사각형 ABCP의 넓이 = $$\\triangle ABC + \\triangle ACP = \\frac{9\\sqrt{3}}{4} + \\frac{37\\sqrt{3}}{12}$$입니다. 이를 통분하여 계산하면 $$\\frac{27\\sqrt{3}}{12} + \\frac{37\\sqrt{3}}{12} = \\frac{(27+37)\\sqrt{3}}{12} = \\frac{64\\sqrt{3}}{12} = \\frac{16\\sqrt{3}}{3}$$입니다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/수학1/07삼각함수활용/038a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{16sqrt(3)/3}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{16\\sqrt{3}/3}}$$ 입니다.",
   "finalAnswer": "16sqrt(3)/3",
   "correctAnswer": "16sqrt(3)/3",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "gemini-2.5-flash"
 }

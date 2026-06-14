@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 수학1 - 삼각함수 정의 13번 명품 해설",
   "type": "trigonometry",
-  "P": "호도법과 삼각함수의 정의를 이용하여 삼각함수값을 구합니다.",
-  "C": "단위원 위의 점 좌표와 삼각함수의 관계를 활용합니다.",
-  "B": "삼각함수의 정의:\n\n1) 호도법: $$180° = \\pi$$ (rad), 부채꼴 호의 길이 $$l = r\\theta$$, 넓이 $$S = \\frac{1}{2}r^2\\theta$$\n2) 단위원: $$P(\\cos\\theta, \\sin\\theta)$$\n3) $$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$$\n4) $$\\sin^2\\theta + \\cos^2\\theta = 1$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "좌표평면 위의 점 P의 좌표와 원점으로부터의 거리를 이용하여 삼각함수 정의와 삼각함수 사이의 관계식을 활용하여 $a+r$의 값을 구해야 합니다.",
+  "C": "원점 O와 점 P$(5, a)$를 지나는 동경 OP가 나타내는 각의 크기는 $\\theta$이고, 선분 OP의 길이는 $r$입니다. 또한, $\\sin\\theta + 2\\cos\\theta = 1$이라는 조건이 주어졌습니다.",
+  "B": "1. 좌표평면 위의 점 $(x, y)$에 대해 동경의 길이를 $r$이라 할 때, $\\sin\\theta = \\frac{y}{r}$, $\\cos\\theta = \\frac{x}{r}$입니다. 2. 삼각함수의 피타고라스 항등식: $\\sin^2\\theta + \\cos^2\\theta = 1$.",
+  "S": "점 P의 좌표와 동경의 길이를 이용하여 $\\sin\\theta$와 $\\cos\\theta$를 $a$와 $r$에 대한 식으로 나타냅니다. 점 P의 좌표가 $(5, a)$이고 동경의 길이가 $r$이므로 삼각함수의 정의에 따라 다음과 같습니다. $$\\sin\\theta = \\frac{a}{r}$$ $$\\cos\\theta = \\frac{5}{r}$$\n주어진 조건식 $\\sin\\theta + 2\\cos\\theta = 1$에 위에서 구한 $\\sin\\theta$와 $\\cos\\theta$의 식을 대입하여 $a$와 $r$ 사이의 첫 번째 관계식을 얻습니다. $$\\frac{a}{r} + 2\\left(\\frac{5}{r}\\right) = 1$$ $$\\frac{a+10}{r} = 1$$ $$a+10 = r \\quad \\cdots \\text{㉠}$$\n삼각함수의 피타고라스 항등식 $\\sin^2\\theta + \\cos^2\\theta = 1$에 $\\sin\\theta$와 $\\cos\\theta$의 식을 대입하여 $a$와 $r$ 사이의 두 번째 관계식을 얻습니다. $$\\left(\\frac{a}{r}\\right)^2 + \\left(\\frac{5}{r}\\right)^2 = 1$$ $$\\frac{a^2}{r^2} + \\frac{25}{r^2} = 1$$ $$a^2 + 25 = r^2 \\quad \\cdots \\text{㉡}$$\n두 관계식 ㉠과 ㉡을 연립하여 $a$와 $r$의 값을 구합니다. ㉠의 $r=a+10$을 ㉡에 대입합니다. $$a^2 + 25 = (a+10)^2$$ $$a^2 + 25 = a^2 + 20a + 100$$ $$25 = 20a + 100$$ $$20a = -75$$ $$a = -\\frac{75}{20} = -\\frac{15}{4}$$ 구한 $a$의 값을 ㉠에 대입하여 $r$을 구합니다. $$r = -\\frac{15}{4} + 10 = -\\frac{15}{4} + \\frac{40}{4} = \\frac{25}{4}$$\n문제에서 요구하는 $a+r$의 값을 계산합니다. $$a+r = -\\frac{15}{4} + \\frac{25}{4} = \\frac{10}{4} = \\frac{5}{2}$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{5/2}}$$ 입니다.",
   "finalAnswer": "5/2",
   "correctAnswer": "5/2",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "gemini-2.5-flash"
 }

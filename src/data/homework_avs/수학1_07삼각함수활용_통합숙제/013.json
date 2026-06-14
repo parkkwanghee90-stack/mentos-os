@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 수학1 - 삼각함수 활용 13번 명품 해설",
   "type": "trigonometry",
-  "P": "삼각함수의 덧셈정리, 배각·반각 공식을 활용하여 값을 구합니다.",
-  "C": "사인·코사인 법칙과 삼각형의 넓이 공식을 적용합니다.",
-  "B": "삼각함수 활용:\n\n1) 사인법칙: $$\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R$$\n2) 코사인법칙: $$a^2 = b^2 + c^2 - 2bc\\cos A$$\n3) 삼각형 넓이: $$S = \\frac{1}{2}ab\\sin C$$\n4) 덧셈정리: $$\\sin(\\alpha \\pm \\beta) = \\sin\\alpha\\cos\\beta \\pm \\cos\\alpha\\sin\\beta$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "주어진 조건을 활용하여 삼각형 BDE의 넓이를 구해야 합니다.",
+  "C": "한 변의 길이가 1인 정삼각형 ABC에서, 선분 AB의 연장선 위에 점 D, 선분 AC의 연장선 위에 점 E가 있습니다. 이때 $\\overline{AD} = \\overline{CE}$ 이고 $\\overline{DE} = \\sqrt{13}$ 입니다.",
+  "B": "코사인법칙: 삼각형 ABC에서 두 변의 길이 $b, c$와 그 끼인각 $A$를 알 때, 나머지 변의 길이 $a$는 $a^2 = b^2 + c^2 - 2bc \\cos A$ 입니다.\n삼각형의 넓이 공식: 삼각형 ABC에서 두 변의 길이 $b, c$와 그 끼인각 $A$를 알 때, 넓이는 $\\frac{1}{2}bc \\sin A$ 입니다.\n정삼각형의 성질: 모든 내각의 크기는 $60^\\circ$ ($=\\frac{\\pi}{3}$) 입니다.",
+  "S": "미지수 $\\overline{AD}$를 $a$로 설정하고, 삼각형 ADE에서 코사인법칙을 적용하여 $a$에 대한 식을 세웁니다. $\\overline{AD} = a$라고 하면, 정삼각형 ABC의 한 변의 길이가 1이므로 $\\overline{AB}=1$입니다. $\\overline{CE} = a$이고 $\\overline{AC}=1$이므로 $\\overline{AE} = \\overline{AC} + \\overline{CE} = 1+a$ 입니다. 정삼각형 ABC의 내각 $\\angle BAC = \\frac{\\pi}{3}$ 이므로, 삼각형 ADE의 $\\angle DAE = \\frac{\\pi}{3}$ 입니다. 삼각형 ADE에서 코사인법칙을 적용하면 다음과 같습니다. $$ (\\sqrt{13})^2 = a^2 + (a+1)^2 - 2a(a+1)\\cos\\left(\\frac{\\pi}{3}\\right) $$\n위에서 세운 $a$에 대한 방정식을 풀어 $a$의 값을 구합니다. $\\cos\\left(\\frac{\\pi}{3}\\right) = \\frac{1}{2}$ 이므로 방정식을 정리하면 다음과 같습니다. $$ 13 = a^2 + (a^2+2a+1) - 2a(a+1)\\left(\\frac{1}{2}\\right) $$ $$ 13 = a^2 + a^2+2a+1 - (a^2+a) $$ $$ 13 = a^2+a+1 $$ $$ a^2+a-12=0 $$ 이 이차방정식을 인수분해하면 $(a+4)(a-3)=0$ 이고, 길이는 양수이므로 $a>0$ 이므로 $a=3$ 입니다.\n삼각형 ADE의 넓이를 구합니다. $\\overline{AD}=a=3$ 이고 $\\overline{AE}=a+1=4$ 이며 끼인각 $\\angle DAE = \\frac{\\pi}{3}$ 이므로, 삼각형의 넓이 공식을 사용하여 넓이를 계산합니다. $$ (\\triangle ADE \\text{의 넓이}) = \\frac{1}{2} \\cdot \\overline{AD} \\cdot \\overline{AE} \\cdot \\sin(\\angle DAE) $$ $$ = \\frac{1}{2} \\cdot 3 \\cdot 4 \\cdot \\sin\\left(\\frac{\\pi}{3}\\right) $$ $$ = \\frac{1}{2} \\cdot 3 \\cdot 4 \\cdot \\frac{\\sqrt{3}}{2} $$ $$ = 3\\sqrt{3} $$\n삼각형 ABE의 넓이를 구합니다. $\\overline{AB}=1$ 이고 $\\overline{AE}=a+1=4$ 이며 끼인각 $\\angle BAE = \\frac{\\pi}{3}$ 이므로, 삼각형의 넓이 공식을 사용하여 넓이를 계산합니다. $$ (\\triangle ABE \\text{의 넓이}) = \\frac{1}{2} \\cdot \\overline{AB} \\cdot \\overline{AE} \\cdot \\sin(\\angle BAE) $$ $$ = \\frac{1}{2} \\cdot 1 \\cdot 4 \\cdot \\sin\\left(\\frac{\\pi}{3}\\right) $$ $$ = \\frac{1}{2} \\cdot 1 \\cdot 4 \\cdot \\frac{\\sqrt{3}}{2} $$ $$ = \\sqrt{3} $$\n삼각형 BDE의 넓이를 구합니다. 삼각형 BDE의 넓이는 삼각형 ADE의 넓이에서 삼각형 ABE의 넓이를 뺀 것과 같습니다. $$ (\\triangle BDE \\text{의 넓이}) = (\\triangle ADE \\text{의 넓이}) - (\\triangle ABE \\text{의 넓이}) $$ $$ = 3\\sqrt{3} - \\sqrt{3} $$ $$ = 2\\sqrt{3} $$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/수학1/07삼각함수활용/013a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{$2\\sqrt{3}$}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2\\sqrt{3}}}$$ 입니다.",
   "finalAnswer": "$2\\sqrt{3}$",
   "correctAnswer": "$2\\sqrt{3}$",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "gemini-2.5-flash"
 }

@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 수학1 - 삼각함수 활용 31번 명품 해설",
   "type": "trigonometry",
-  "P": "삼각함수의 덧셈정리, 배각·반각 공식을 활용하여 값을 구합니다.",
-  "C": "사인·코사인 법칙과 삼각형의 넓이 공식을 적용합니다.",
-  "B": "삼각함수 활용:\n\n1) 사인법칙: $$\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R$$\n2) 코사인법칙: $$a^2 = b^2 + c^2 - 2bc\\cos A$$\n3) 삼각형 넓이: $$S = \\frac{1}{2}ab\\sin C$$\n4) 덧셈정리: $$\\sin(\\alpha \\pm \\beta) = \\sin\\alpha\\cos\\beta \\pm \\cos\\alpha\\sin\\beta$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "주어진 조건을 활용하여 삼각형 ABC의 넓이를 구해야 합니다.",
+  "C": "삼각형 ABC에서 $2\\overline{AB} = \\overline{AC}$이고, 점 M은 선분 AB의 중점, 점 N은 선분 AC를 3:5로 내분하는 점입니다. 또한, $\\overline{MN} = \\overline{AB}$이며, 삼각형 AMN의 외접원의 넓이는 $16\\pi$입니다.",
+  "B": "선분의 중점과 내분점의 정의\n코사인 법칙: 삼각형 ABC에서 세 변의 길이가 $a, b, c$이고 각 C의 대각이 $\\theta$일 때, $c^2 = a^2 + b^2 - 2ab\\cos\\theta$ 또는 $\\cos\\theta = \\frac{a^2+b^2-c^2}{2ab}$\n삼각함수 관계: $\\sin^2\\theta + \\cos^2\\theta = 1$\n원의 넓이: 반지름이 $R$인 원의 넓이는 $\\pi R^2$\n사인 법칙: 삼각형 ABC의 외접원의 반지름을 $R$이라 할 때, $\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R$\n삼각형의 넓이: 두 변의 길이 $a, b$와 그 끼인각 $\\theta$를 알 때, 넓이는 $\\frac{1}{2}ab\\sin\\theta$",
+  "S": "삼각형의 각 변의 길이를 하나의 미지수 $k$로 표현하기 위해, $\\overline{AB}=k$로 설정하고 주어진 조건을 이용하여 $\\overline{AC}$, $\\overline{AM}$, $\\overline{AN}$의 길이를 $k$에 대한 식으로 나타냅니다.\n$$ \\overline{AB}=k \\implies \\overline{AC}=2k $$ $$ \\overline{AM} = \\frac{1}{2}\\overline{AB} = \\frac{k}{2} $$ $$ \\overline{AN} = \\frac{3}{3+5}\\overline{AC} = \\frac{3}{8}(2k) = \\frac{3}{4}k $$\n삼각형 AMN의 세 변의 길이를 $k$로 표현했으므로, 코사인 법칙을 이용하여 $\\angle A$에 대한 $\\cos A$ 값을 구합니다.\n$$ \\overline{MN} = \\overline{AB} = k $$ $$ \\cos A = \\frac{\\overline{AM}^2 + \\overline{AN}^2 - \\overline{MN}^2}{2\\overline{AM}\\overline{AN}} = \\frac{(\\frac{k}{2})^2 + (\\frac{3}{4}k)^2 - k^2}{2 \\times \\frac{k}{2} \\times \\frac{3}{4}k} = \\frac{\\frac{k^2}{4} + \\frac{9k^2}{16} - k^2}{\\frac{3k^2}{4}} = \\frac{\\frac{4k^2+9k^2-16k^2}{16}}{\\frac{3k^2}{4}} = \\frac{-\\frac{3k^2}{16}}{\\frac{3k^2}{4}} = -\\frac{1}{4} $$\n삼각형 ABC의 넓이를 구하려면 $\\sin A$ 값이 필요하므로, $\\cos A$ 값을 이용하여 $\\sin A$ 값을 계산합니다. (단, $A$는 삼각형의 내각이므로 $\\sin A > 0$입니다.)\n$$ \\sin A = \\sqrt{1 - \\cos^2 A} = \\sqrt{1 - \\left(-\\frac{1}{4}\\right)^2} = \\sqrt{1 - \\frac{1}{16}} = \\sqrt{\\frac{15}{16}} = \\frac{\\sqrt{15}}{4} $$\n삼각형 AMN의 외접원 넓이를 이용하여 외접원의 반지름 $R$을 구하고, 사인 법칙을 이용하여 $k$의 값을 결정합니다.\n$$ \\pi R^2 = 16\\pi \\implies R^2 = 16 \\implies R = 4 $$ $$ \\frac{\\overline{MN}}{\\sin A} = 2R \\implies \\frac{k}{\\frac{\\sqrt{15}}{4}} = 2 \\times 4 = 8 $$ $$ k = 8 \\times \\frac{\\sqrt{15}}{4} = 2\\sqrt{15} $$\n이제 $\\overline{AB}$, $\\overline{AC}$의 실제 길이와 $\\sin A$ 값을 알게 되었으므로, 삼각형 ABC의 넓이를 계산합니다.\n$$ \\overline{AB} = k = 2\\sqrt{15} $$ $$ \\overline{AC} = 2k = 2(2\\sqrt{15}) = 4\\sqrt{15} $$ $$ \\text{Area}(\\triangle ABC) = \\frac{1}{2} \\times \\overline{AB} \\times \\overline{AC} \\times \\sin A $$ $$ = \\frac{1}{2} \\times (2\\sqrt{15}) \\times (4\\sqrt{15}) \\times \\frac{\\sqrt{15}}{4} $$ $$ = \\frac{1}{2} \\times 8 \\times 15 \\times \\frac{\\sqrt{15}}{4} = 4 \\times 15 \\times \\frac{\\sqrt{15}}{4} = 15\\sqrt{15} $$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/수학1/07삼각함수활용/031a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{15√15}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{15\\sqrt{15}}}$$ 입니다.",
   "finalAnswer": "15√15",
   "correctAnswer": "15√15",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "gemini-2.5-flash"
 }

@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 수학1 - 삼각함수 활용 24번 명품 해설",
   "type": "trigonometry",
-  "P": "삼각함수의 덧셈정리, 배각·반각 공식을 활용하여 값을 구합니다.",
-  "C": "사인·코사인 법칙과 삼각형의 넓이 공식을 적용합니다.",
-  "B": "삼각함수 활용:\n\n1) 사인법칙: $$\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R$$\n2) 코사인법칙: $$a^2 = b^2 + c^2 - 2bc\\cos A$$\n3) 삼각형 넓이: $$S = \\frac{1}{2}ab\\sin C$$\n4) 덧셈정리: $$\\sin(\\alpha \\pm \\beta) = \\sin\\alpha\\cos\\beta \\pm \\cos\\alpha\\sin\\beta$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "삼각형 ABC의 외접원과 삼각형 ADE의 외접원의 넓이 차이를 이용하여, 삼각형 PDE의 외접원의 넓이를 구하고, 그 값을 aπ라고 할 때 55a의 값을 구해야 합니다.",
+  "C": "삼각형 ABC에서 AB=3, AC=4이고, 점 B에서 AC에 내린 수선의 발을 D, 점 C에서 AB에 내린 수선의 발을 E라 합니다. 두 선분 BD, CE의 교점을 P라 하고, 삼각형 ABC의 외접원의 넓이와 삼각형 ADE의 외접원의 넓이의 차이는 4π입니다.",
+  "B": "삼각형의 세 변의 길이와 한 각의 코사인 값을 알 때 나머지 한 변의 길이를 구하는 코사인 법칙: $$c^2 = a^2 + b^2 - 2ab\\cos C$$\n삼각형의 한 변의 길이와 그 대각의 사인 값을 알 때 외접원의 반지름을 구하는 사인 법칙: $$\\frac{a}{\\sin A} = 2R$$\n삼각형의 외접원의 넓이 공식: $$\\pi R^2$$\n직각삼각형에서 삼각비의 정의: $$\\cos\\theta = \\frac{\\text{밑변}}{\\text{빗변}}, \\sin\\theta = \\frac{\\text{높이}}{\\text{빗변}}$$\n삼각함수의 항등식: $$\\sin^2\\theta + \\cos^2\\theta = 1$$",
+  "S": "삼각형 ABC에서 ∠BAC를 θ라고 할 때, 코사인 법칙을 이용하여 변 BC의 길이를 θ에 대한 식으로 나타냅니다.\n$$BC^2 = AB^2 + AC^2 - 2AB \\cdot AC \\cos\\theta$$ $$\\quad = 3^2 + 4^2 - 2 \\cdot 3 \\cdot 4 \\cos\\theta$$ $$\\quad = 9 + 16 - 24 \\cos\\theta = 25 - 24 \\cos\\theta$$ $$\\therefore BC = \\sqrt{25 - 24 \\cos\\theta}$$\n삼각형 ABC의 외접원의 반지름을 R₁이라고 할 때, 사인 법칙을 이용하여 R₁을 θ에 대한 식으로 나타냅니다.\n$$\\frac{BC}{\\sin\\theta} = 2R_1$$ $$R_1 = \\frac{BC}{2\\sin\\theta} = \\frac{\\sqrt{25 - 24 \\cos\\theta}}{2\\sin\\theta}$$\n직각삼각형 ABD와 AEC에서 변 AD와 AE의 길이를 θ에 대한 식으로 나타냅니다. 이후 삼각형 ADE에서 코사인 법칙을 이용하여 변 DE의 길이를 θ에 대한 식으로 나타냅니다.\n$$AD = AB \\cos\\theta = 3\\cos\\theta$$ $$AE = AC \\cos\\theta = 4\\cos\\theta$$ $$DE^2 = AD^2 + AE^2 - 2AD \\cdot AE \\cos\\theta$$ $$\\quad = (3\\cos\\theta)^2 + (4\\cos\\theta)^2 - 2(3\\cos\\theta)(4\\cos\\theta)\\cos\\theta$$ $$\\quad = 9\\cos^2\\theta + 16\\cos^2\\theta - 24\\cos^3\\theta = 25\\cos^2\\theta - 24\\cos^3\\theta$$ $$\\therefore DE = \\sqrt{25\\cos^2\\theta - 24\\cos^3\\theta} = \\cos\\theta\\sqrt{25 - 24\\cos\\theta}$$\n삼각형 ADE의 외접원의 반지름을 R₂라고 할 때, 사인 법칙을 이용하여 R₂를 θ에 대한 식으로 나타냅니다.\n$$\\frac{DE}{\\sin\\theta} = 2R_2$$ $$R_2 = \\frac{DE}{2\\sin\\theta} = \\frac{\\cos\\theta\\sqrt{25 - 24\\cos\\theta}}{2\\sin\\theta}$$\n주어진 외접원 넓이의 차이 조건을 이용하여 cosθ의 값을 구합니다.\n$$\\pi R_1^2 - \\pi R_2^2 = 4\\pi$$ $$R_1^2 - R_2^2 = 4$$ $$\\left(\\frac{\\sqrt{25 - 24\\cos\\theta}}{2\\sin\\theta}\\right)^2 - \\left(\\frac{\\cos\\theta\\sqrt{25 - 24\\cos\\theta}}{2\\sin\\theta}\\right)^2 = 4$$ $$\\frac{25 - 24\\cos\\theta}{4\\sin^2\\theta} - \\frac{\\cos^2\\theta(25 - 24\\cos\\theta)}{4\\sin^2\\theta} = 4$$ $$\\frac{(25 - 24\\cos\\theta)(1 - \\cos^2\\theta)}{4\\sin^2\\theta} = 4$$ $$\\frac{(25 - 24\\cos\\theta)\\sin^2\\theta}{4\\sin^2\\theta} = 4$$ $$25 - 24\\cos\\theta = 16$$ $$24\\cos\\theta = 9$$ $$\\cos\\theta = \\frac{9}{24} = \\frac{3}{8}$$\ncosθ 값을 이용하여 sinθ 값을 구하고, 사각형 AEPD가 원에 내접함을 확인하여 삼각형 PDE의 외접원이 삼각형 ADE의 외접원과 같음을 파악합니다. 이후 삼각형 PDE의 외접원 넓이를 계산합니다.\n$$\\sin\\theta = \\sqrt{1 - \\cos^2\\theta} = \\sqrt{1 - \\left(\\frac{3}{8}\\right)^2} = \\sqrt{1 - \\frac{9}{64}} = \\sqrt{\\frac{55}{64}} = \\frac{\\sqrt{55}}{8}$$ 사각형 AEPD에서 ∠AEP = 90° (CE ⊥ AB)이고 ∠ADP = 90° (BD ⊥ AC)이므로, ∠AEP + ∠ADP = 180°입니다. 따라서 사각형 AEPD는 한 원에 내접하며, 이 원의 지름은 AP입니다. 이 원은 점 P를 포함하므로 삼각형 PDE의 외접원은 삼각형 ADE의 외접원과 동일합니다. 따라서 삼각형 PDE의 외접원의 넓이는 $\\pi R_2^2$입니다. $$\\pi R_2^2 = \\pi \\left(\\frac{\\cos\\theta\\sqrt{25 - 24\\cos\\theta}}{2\\sin\\theta}\\right)^2$$ $$\\quad = \\pi \\frac{\\cos^2\\theta(25 - 24\\cos\\theta)}{4\\sin^2\\theta}$$ $$\\quad = \\pi \\frac{(3/8)^2(25 - 24 \\cdot 3/8)}{4(\\sqrt{55}/8)^2}$$ $$\\quad = \\pi \\frac{(9/64)(25 - 9)}{4(55/64)}$$ $$\\quad = \\pi \\frac{(9/64)(16)}{4(55/64)}$$ $$\\quad = \\pi \\frac{9 \\cdot 16}{4 \\cdot 55} = \\pi \\frac{9 \\cdot 4}{55} = \\frac{36}{55}\\pi$$\n구한 삼각형 PDE의 외접원 넓이와 aπ를 비교하여 a 값을 찾고, 55a의 값을 계산합니다.\n삼각형 PDE의 외접원의 넓이가 $\\frac{36}{55}\\pi$이므로, $a = \\frac{36}{55}$입니다. 따라서 구하는 $55a$의 값은 다음과 같습니다. $$55a = 55 \\cdot \\frac{36}{55} = 36$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{36}}$$ 입니다.",
   "finalAnswer": "36",
   "correctAnswer": "36",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "gemini-2.5-flash"
 }

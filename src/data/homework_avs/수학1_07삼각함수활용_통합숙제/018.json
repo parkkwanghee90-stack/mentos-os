@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 수학1 - 삼각함수 활용 18번 명품 해설",
   "type": "trigonometry",
-  "P": "삼각함수의 덧셈정리, 배각·반각 공식을 활용하여 값을 구합니다.",
-  "C": "사인·코사인 법칙과 삼각형의 넓이 공식을 적용합니다.",
-  "B": "삼각함수 활용:\n\n1) 사인법칙: $$\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R$$\n2) 코사인법칙: $$a^2 = b^2 + c^2 - 2bc\\cos A$$\n3) 삼각형 넓이: $$S = \\frac{1}{2}ab\\sin C$$\n4) 덧셈정리: $$\\sin(\\alpha \\pm \\beta) = \\sin\\alpha\\cos\\beta \\pm \\cos\\alpha\\sin\\beta$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "주어진 조건을 활용하여 선분 OH의 길이를 제곱한 값인 $\\overline{OH}^2$을 $m + n\\sqrt{3}$ 꼴로 나타낸 후, $m^2 + n^2$의 값을 구하는 문제입니다.",
+  "C": "원의 반지름은 $\\overline{OA} = \\overline{OB} = 2$입니다. 점 O에서 선분 AB에 내린 수선의 발을 M이라 할 때, 삼각형 OAB는 직각이등변삼각형이므로 $\\angle AOB = \\frac{\\pi}{2}$입니다. 호 BA 위에 점 P가 있고, $\\angle BAP = \\frac{\\pi}{6}$입니다. 점 B에서 선분 AP에 내린 수선의 발은 H입니다.",
+  "B": "직각이등변삼각형의 성질: 두 변의 길이가 같고, 두 밑각의 크기가 각각 $\\frac{\\pi}{4}$이다.\n원주각과 중심각의 관계: 같은 호에 대한 원주각의 크기는 중심각의 크기의 절반이다.\n정삼각형의 성질: 세 변의 길이가 같고, 세 내각의 크기가 각각 $\\frac{\\pi}{3}$이다.\n코사인 법칙: 삼각형의 두 변의 길이와 그 끼인각을 알 때, 나머지 한 변의 길이를 구하는 공식. 삼각형 ABC에서 $c^2 = a^2 + b^2 - 2ab \\cos C$.",
+  "S": "삼각형 OAB의 성질을 파악하고, 점 O에서 AB에 내린 수선의 발 M을 이용하여 필요한 길이를 계산합니다. 삼각형 OAB는 $\\overline{OA}=\\overline{OB}=2$인 직각이등변삼각형이므로, $\\overline{AM} = \\overline{BM} = \\overline{OM}$은 빗변이 아닌 변의 길이를 $\\sqrt{2}$로 나눈 값과 같습니다.\n주어진 $\\angle BAP = \\frac{\\pi}{6}$를 이용하여 직각삼각형 ABH에서 선분 BH의 길이를 계산합니다. $\\overline{AB}$의 길이는 $\\overline{AM}$과 $\\overline{BM}$의 합이므로 $2\\sqrt{2}$입니다.\n삼각형 BHM의 각과 변의 관계를 파악하여 $\\angle MBH$의 크기를 구하고, 이를 통해 삼각형 BHM이 정삼각형임을 확인하여 $\\overline{HM}$의 길이를 계산합니다. $\\angle AOB = \\frac{\\pi}{2}$이므로 호 AB에 대한 원주각인 $\\angle APB = \\frac{1}{2} \\angle AOB = \\frac{\\pi}{4}$입니다. 삼각형 ABP에서 $\\angle ABP = \\pi - (\\angle BAP + \\angle APB) = \\pi - (\\frac{\\pi}{6} + \\frac{\\pi}{4}) = \\pi - \\frac{5\\pi}{12} = \\frac{7\\pi}{12}$입니다. $\\angle ABM = \\frac{\\pi}{4}$이므로 $\\angle HBM = \\angle ABP - \\angle ABM = \\frac{7\\pi}{12} - \\frac{\\pi}{4} = \\frac{7\\pi}{12} - \\frac{3\\pi}{12} = \\frac{4\\pi}{12} = \\frac{\\pi}{3}$입니다. 삼각형 BHM에서 $\\overline{BM} = \\overline{BH} = \\sqrt{2}$이고 끼인각 $\\angle HBM = \\frac{\\pi}{3}$이므로, 삼각형 BHM은 정삼각형입니다.\n정삼각형 BHM의 성질을 이용하여 $\\overline{HM}$의 길이를 확정하고, $\\angle BMH$의 크기를 구합니다.\n삼각형 OMH에서 코사인 법칙을 적용하기 위해 $\\angle OMH$의 크기를 계산합니다. $\\angle OMA = \\frac{\\pi}{2}$이고 $\\angle BMH = \\frac{\\pi}{3}$이므로, $\\angle OMH = \\angle OMA - \\angle BMH$입니다.\n삼각형 OMH에서 코사인 법칙을 이용하여 $\\overline{OH}^2$의 값을 계산합니다. $\\overline{OM} = \\sqrt{2}$, $\\overline{MH} = \\sqrt{2}$이고 끼인각 $\\angle OMH = \\frac{\\pi}{6}$입니다.\n계산된 $\\overline{OH}^2$의 값을 $m + n\\sqrt{3}$ 꼴과 비교하여 $m$과 $n$의 값을 찾습니다.\n마지막으로 $m$과 $n$의 값을 이용하여 $m^2 + n^2$의 값을 계산합니다.\n$$ \\overline{AM} = \\overline{BM} = \\overline{OM} = \\frac{2}{\\sqrt{2}} = \\sqrt{2} $$\n$$ \\overline{AB} = \\overline{AM} + \\overline{BM} = \\sqrt{2} + \\sqrt{2} = 2\\sqrt{2} $$\n$$ \\overline{BH} = \\overline{AB} \\sin\\left(\\frac{\\pi}{6}\\right) = 2\\sqrt{2} \\times \\frac{1}{2} = \\sqrt{2} $$\n$$ \\angle APB = \\frac{1}{2} \\angle AOB = \\frac{1}{2} \\times \\frac{\\pi}{2} = \\frac{\\pi}{4} $$\n$$ \\angle ABP = \\pi - \\left(\\angle BAP + \\angle APB\\right) = \\pi - \\left(\\frac{\\pi}{6} + \\frac{\\pi}{4}\\right) = \\pi - \\frac{5\\pi}{12} = \\frac{7\\pi}{12} $$\n$$ \\angle ABM = \\angle OAB = \\frac{\\pi}{4} $$\n$$ \\angle HBM = \\angle ABP - \\angle ABM = \\frac{7\\pi}{12} - \\frac{\\pi}{4} = \\frac{7\\pi}{12} - \\frac{3\\pi}{12} = \\frac{4\\pi}{12} = \\frac{\\pi}{3} $$\n삼각형 BHM에서 $\\overline{BM} = \\overline{BH} = \\sqrt{2}$이고 $\\angle HBM = \\frac{\\pi}{3}$이므로, 삼각형 BHM은 정삼각형입니다. 따라서 $\\overline{HM} = \\sqrt{2}$이고 $\\angle BMH = \\frac{\\pi}{3}$입니다.\n$$ \\angle OMH = \\angle OMA - \\angle BMH = \\frac{\\pi}{2} - \\frac{\\pi}{3} = \\frac{3\\pi}{6} - \\frac{2\\pi}{6} = \\frac{\\pi}{6} $$\n삼각형 OMH에서 코사인 법칙에 의해\n$$ \\overline{OH}^2 = \\overline{OM}^2 + \\overline{MH}^2 - 2 \\overline{OM} \\cdot \\overline{MH} \\cos(\\angle OMH) $$\n$$ \\overline{OH}^2 = (\\sqrt{2})^2 + (\\sqrt{2})^2 - 2 \\times \\sqrt{2} \\times \\sqrt{2} \\times \\cos\\left(\\frac{\\pi}{6}\\right) $$\n$$ \\overline{OH}^2 = 2 + 2 - 2 \\times 2 \\times \\frac{\\sqrt{3}}{2} $$\n$$ \\overline{OH}^2 = 4 - 2\\sqrt{3} $$\n따라서 $m = 4$, $n = -2$입니다.\n$$ m^2 + n^2 = 4^2 + (-2)^2 = 16 + 4 = 20 $$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{20}}$$ 입니다.",
   "finalAnswer": "20",
   "correctAnswer": "20",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "gemini-2.5-flash"
 }
