@@ -8,7 +8,7 @@ const SUPABASE_URL = process.env.VITE_SUPABASE_URL || 'https://trvqgqvwhqvlgqzls
 const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRydnFncXZ3aHF2bGdxemxzeGJ1Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3ODY1NzA1MywiZXhwIjoyMDk0MjMzMDUzfQ.a76V1LYSItB48fXQN2in-rXfy8oD4o7KJteAMCyX9so';
 const BUCKET = 'mentos-assets';
 
-const TARGET_UNITS = ['원의방정식2단계', '원의방정식3단계', '원의방정식4단계', '도형의이동2단계', '도형의이동3단계', '도형의이동4단계', '점과좌표2단계', '점과좌표3단계', '점과좌표4단계', '삼각함수활용2단계'];
+const TARGET_UNITS = ['원의방정식2단계', '원의방정식3단계', '원의방정식4단계', '도형의이동2단계', '도형의이동3단계', '도형의이동4단계', '점과좌표2단계', '점과좌표3단계', '점과좌표4단계', '삼각함수활용2단계', '삼각함수활용3단계'];
 const BASE_DIR = path.join(__dirname, '..', 'public', 'math_hints');
 const CONCURRENCY = 10;
 

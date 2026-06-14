@@ -16215,14 +16215,14 @@
     "unit": "삼각함수활용3단계",
     "stage": 3,
     "problem": 1,
-    "answer": "(고난도 그림/보기 - 검수)",
+    "answer": "\\frac{2\\sin\\frac{\\beta}{2}}{\\sin\\frac{\\alpha}{2}}",
     "type": "objective"
   },
   {
     "unit": "삼각함수활용3단계",
     "stage": 3,
     "problem": 2,
-    "answer": "(고난도 그림/보기 - 검수)",
+    "answer": "\\frac{5\\sin\\beta}{\\sin\\frac{\\alpha-\\beta}{2}}",
     "type": "objective"
   },
   {
@@ -16243,8 +16243,8 @@
     "unit": "삼각함수활용3단계",
     "stage": 3,
     "problem": 5,
-    "answer": "(고난도 그림/보기 - 검수)",
-    "type": "objective"
+    "answer": "1",
+    "type": "subjective"
   },
   {
     "unit": "삼각함수활용3단계",
@@ -16257,7 +16257,7 @@
     "unit": "삼각함수활용3단계",
     "stage": 3,
     "problem": 7,
-    "answer": "(고난도 그림/보기 - 검수)",
+    "answer": "\\frac{5\\sqrt{55}}{11}",
     "type": "objective"
   },
   {
@@ -16271,7 +16271,7 @@
     "unit": "삼각함수활용3단계",
     "stage": 3,
     "problem": 9,
-    "answer": "(고난도 그림/보기 - 검수)",
+    "answer": "\\frac{97}{3}",
     "type": "objective"
   },
   {
@@ -16285,7 +16285,7 @@
     "unit": "삼각함수활용3단계",
     "stage": 3,
     "problem": 11,
-    "answer": "(고난도 그림/보기 - 검수)",
+    "answer": "\\frac{-6+2\\sqrt{21}}{3}",
     "type": "objective"
   },
   {
@@ -16299,7 +16299,7 @@
     "unit": "삼각함수활용3단계",
     "stage": 3,
     "problem": 13,
-    "answer": "(고난도 그림/보기 - 검수)",
+    "answer": "3",
     "type": "objective"
   },
   {
@@ -16313,15 +16313,15 @@
     "unit": "삼각함수활용3단계",
     "stage": 3,
     "problem": 15,
-    "answer": "(고난도 그림/보기 - 검수)",
+    "answer": "\\frac{3}{2}ab",
     "type": "objective"
   },
   {
     "unit": "삼각함수활용3단계",
     "stage": 3,
     "problem": 16,
-    "answer": "(고난도 그림/보기 - 검수)",
-    "type": "objective"
+    "answer": "8",
+    "type": "subjective"
   },
   {
     "unit": "삼각함수활용3단계",
@@ -16376,15 +16376,15 @@
     "unit": "삼각함수활용3단계",
     "stage": 3,
     "problem": 24,
-    "answer": "(고난도 그림/보기 - 검수)",
+    "answer": "\\frac{40\\sqrt{91}}{91}",
     "type": "objective"
   },
   {
     "unit": "삼각함수활용3단계",
     "stage": 3,
     "problem": 25,
-    "answer": "(고난도 그림/보기 - 검수)",
-    "type": "objective"
+    "answer": "17",
+    "type": "subjective"
   },
   {
     "unit": "삼각함수활용3단계",
@@ -16397,8 +16397,8 @@
     "unit": "삼각함수활용3단계",
     "stage": 3,
     "problem": 27,
-    "answer": "(고난도 그림/보기 - 검수)",
-    "type": "objective"
+    "answer": "37",
+    "type": "subjective"
   },
   {
     "unit": "삼각함수활용3단계",
