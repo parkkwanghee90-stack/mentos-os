@@ -14915,5 +14915,278 @@
     "problem": 29,
     "answer": "\\frac{2}{3}",
     "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 1,
+    "answer": "25",
+    "type": "subjective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 2,
+    "answer": "15",
+    "type": "subjective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 3,
+    "answer": "\\sqrt{445}",
+    "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 4,
+    "answer": "\\sqrt{5}",
+    "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 5,
+    "answer": "\\frac{\\sqrt{5}}{5}",
+    "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 6,
+    "answer": "8",
+    "type": "subjective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 7,
+    "answer": "(-1, -1)",
+    "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 8,
+    "answer": "5",
+    "type": "subjective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 9,
+    "answer": "1",
+    "type": "subjective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 13,
+    "answer": "500",
+    "type": "subjective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 14,
+    "answer": "-1",
+    "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 15,
+    "answer": "\\sqrt{82}",
+    "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 19,
+    "answer": "-1",
+    "type": "subjective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 20,
+    "answer": "7x-y-16=0",
+    "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 21,
+    "answer": "x+2y+3=0",
+    "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 22,
+    "answer": "4\\sqrt{2}",
+    "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 23,
+    "answer": "4\\sqrt{10}",
+    "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 24,
+    "answer": "34",
+    "type": "subjective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 25,
+    "answer": "7",
+    "type": "subjective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 26,
+    "answer": "56",
+    "type": "subjective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 27,
+    "answer": "\\sqrt{17}",
+    "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 28,
+    "answer": "16\\sqrt{3}",
+    "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 29,
+    "answer": "35",
+    "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 30,
+    "answer": "6",
+    "type": "subjective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 31,
+    "answer": "-1",
+    "type": "subjective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 33,
+    "answer": "1",
+    "type": "subjective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 34,
+    "answer": "5+\\sqrt{17}",
+    "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 35,
+    "answer": "(그림 의존 - 검수)",
+    "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 36,
+    "answer": "-8",
+    "type": "subjective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 37,
+    "answer": "(그림 의존 - 검수)",
+    "type": "subjective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 39,
+    "answer": "20\\pi",
+    "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 40,
+    "answer": "4",
+    "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 41,
+    "answer": "9\\sqrt{2}",
+    "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 42,
+    "answer": "8",
+    "type": "subjective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 43,
+    "answer": "5",
+    "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 44,
+    "answer": "(그림 의존 - 검수)",
+    "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 45,
+    "answer": "4\\sqrt{3}",
+    "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 46,
+    "answer": "\\frac{2\\sqrt{2}}{3}",
+    "type": "objective"
+  },
+  {
+    "unit": "도형의이동4단계",
+    "stage": 4,
+    "problem": 47,
+    "answer": "\\frac{2\\sqrt{2}}{3}",
+    "type": "objective"
   }
 ]
