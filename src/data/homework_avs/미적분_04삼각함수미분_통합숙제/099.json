@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 99번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "사각형 $\\mathrm{ABCD}$의 넓이가 최대가 되도록 하는 $\\theta$에 대하여 $60\\sin^2\\theta$의 값.",
+  "C": "$\\overline{\\mathrm{AB}}=\\overline{\\mathrm{AD}}=1$, $\\overline{\\mathrm{BC}}=\\overline{\\mathrm{CD}}=\\overline{\\mathrm{DB}}$, $\\angle\\mathrm{DAB}=\\theta$, $0<\\theta<\\pi$.",
+  "B": "대각선 $\\overline{\\mathrm{BD}}$로 사각형을 두 삼각형으로 쪼개면, $\\triangle\\mathrm{ABD}$는 두 변의 길이와 끼인각으로, $\\triangle\\mathrm{BCD}$는 세 변이 같은 정삼각형으로 다룰 수 있다. 코사인법칙 $a^2=b^2+c^2-2bc\\cos A$, 정삼각형 넓이 공식 $\\dfrac{\\sqrt{3}}{4}(\\text{한 변})^2$, 그리고 삼각함수의 합성 $a\\sin\\theta+b\\cos\\theta=\\sqrt{a^2+b^2}\\,\\sin(\\theta+\\alpha)$를 결합한다.",
+  "S": "대각선 $\\overline{\\mathrm{BD}}$를 그으면 사각형이 $\\triangle\\mathrm{ABD}$와 $\\triangle\\mathrm{BCD}$로 나뉘므로, 먼저 두 삼각형이 공유하는 변 $\\overline{\\mathrm{BD}}$의 길이를 끼인각 $\\theta$로 표현한다. $\\triangle\\mathrm{ABD}$에서 $\\overline{\\mathrm{AB}}=\\overline{\\mathrm{AD}}=1$이고 $\\angle\\mathrm{DAB}=\\theta$이므로 코사인법칙에 의해 $$\\overline{\\mathrm{BD}}^{\\,2}=1^2+1^2-2\\cdot1\\cdot1\\cdot\\cos\\theta=2-2\\cos\\theta.$$\n조건 $\\overline{\\mathrm{BC}}=\\overline{\\mathrm{CD}}=\\overline{\\mathrm{DB}}$는 세 변이 모두 같다는 뜻이므로 $\\triangle\\mathrm{BCD}$는 정삼각형이다. 한 변이 $\\overline{\\mathrm{BD}}$인 정삼각형의 넓이 공식 $\\dfrac{\\sqrt{3}}{4}(\\text{한 변})^2$에 위 결과를 대입하면 $$\\triangle\\mathrm{BCD}=\\frac{\\sqrt{3}}{4}\\,\\overline{\\mathrm{BD}}^{\\,2}=\\frac{\\sqrt{3}}{4}(2-2\\cos\\theta)=\\frac{\\sqrt{3}}{2}(1-\\cos\\theta).$$\n$\\triangle\\mathrm{ABD}$는 두 변 $1,\\,1$과 그 끼인각 $\\theta$로 넓이가 정해지므로, 두 변과 끼인각 사인을 이용한 넓이 공식으로 $$\\triangle\\mathrm{ABD}=\\frac{1}{2}\\cdot1\\cdot1\\cdot\\sin\\theta=\\frac{1}{2}\\sin\\theta.$$\n두 삼각형의 넓이를 더하면 사각형 $\\mathrm{ABCD}$의 넓이 $S$가 $\\theta$만의 함수로 정리된다. $$S=\\frac{1}{2}\\sin\\theta+\\frac{\\sqrt{3}}{2}(1-\\cos\\theta)=\\frac{1}{2}\\sin\\theta-\\frac{\\sqrt{3}}{2}\\cos\\theta+\\frac{\\sqrt{3}}{2}.$$\n$\\dfrac{1}{2}\\sin\\theta-\\dfrac{\\sqrt{3}}{2}\\cos\\theta$의 최댓값을 한눈에 보기 위해 삼각함수를 합성한다. 진폭은 $\\sqrt{\\left(\\tfrac12\\right)^2+\\left(\\tfrac{\\sqrt3}{2}\\right)^2}=1$이고 위상은 $\\cos\\dfrac{\\pi}{3}=\\dfrac12,\\ \\sin\\dfrac{\\pi}{3}=\\dfrac{\\sqrt3}{2}$이므로 $$S=\\sin\\!\\left(\\theta-\\frac{\\pi}{3}\\right)+\\frac{\\sqrt{3}}{2}.$$\n$S$가 최대가 되려면 사인값이 $1$이어야 하므로 $\\theta-\\dfrac{\\pi}{3}=\\dfrac{\\pi}{2}$, 즉 $$\\theta=\\frac{5\\pi}{6}.$$ 이 값은 $0<\\theta<\\pi$를 만족하므로 적합하다.\n구한 $\\theta=\\dfrac{5\\pi}{6}$를 목표식에 대입한다. $\\sin\\dfrac{5\\pi}{6}=\\dfrac{1}{2}$이므로 $$60\\sin^2\\theta=60\\sin^2\\frac{5\\pi}{6}=60\\times\\left(\\frac{1}{2}\\right)^2=60\\times\\frac{1}{4}=15.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/100a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{18}}$$ 입니다.",
-  "finalAnswer": "18",
-  "correctAnswer": "18",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{15}}$$ 입니다.",
+  "finalAnswer": "15",
+  "correctAnswer": "15",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

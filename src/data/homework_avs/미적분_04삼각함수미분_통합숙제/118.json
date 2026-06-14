@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 118번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "한 변의 길이가 $1$인 정사각형 $ABCD$에서 변 $AD$ 위의 점 $E$와 내부의 점 $F$가 주어진 두 조건을 만족할 때 $\\tan(\\angle ABF)$의 값을 구한다.",
+  "C": "정사각형 $ABCD$의 한 변의 길이는 $1$이고, 점 $E$는 선분 $AD$ 위에, 점 $F$는 정사각형 내부에 있다. 두 삼각형 $ABE$와 $FBE$는 서로 합동이며, 사각형 $ABFE$의 넓이는 $\\dfrac{1}{3}$이다.",
+  "B": "합동인 두 도형은 대응하는 변의 길이와 대응하는 각의 크기가 모두 같다. 직각삼각형에서 한 예각의 탄젠트는 (대변)$\\div$(밑변)으로 정해지며, 두 각의 합에 대한 탄젠트는 덧셈정리 $\\tan(\\alpha+\\beta)=\\dfrac{\\tan\\alpha+\\tan\\beta}{1-\\tan\\alpha\\tan\\beta}$로 계산한다.",
+  "S": "대응각을 확정하기 위해 정사각형의 한 내각이 직각임을 이용한다. 삼각형 $ABE$에서 꼭짓점 $A$는 정사각형의 꼭짓점이므로 $\\angle BAE=\\dfrac{\\pi}{2}$이고, 합동인 삼각형 $FBE$에서 이에 대응하는 각도 직각이므로 $\\angle BFE=\\dfrac{\\pi}{2}$이다.\n두 삼각형의 넓이를 분리하기 위해 합동이면 넓이가 같다는 성질을 쓴다. 사각형 $ABFE$는 변 $BE$를 공유하는 두 삼각형 $ABE$와 $FBE$로 나뉘고 둘은 합동이므로, $$\\text{(삼각형 }ABE\\text{의 넓이)}=\\frac{1}{2}\\times\\frac{1}{3}=\\frac{1}{6}.$$\n각 $\\angle ABE$의 탄젠트를 넓이로부터 끌어내기 위해 직각삼각형 $ABE$의 두 변을 식으로 쓴다. $\\angle ABE=\\theta$라 하면 밑변 $\\overline{AB}=1$, 높이 $\\overline{AE}=\\overline{AB}\\tan\\theta=\\tan\\theta$이므로 $$\\frac{1}{2}\\times\\overline{AB}\\times\\overline{AE}=\\frac{1}{2}\\tan\\theta=\\frac{1}{6}.$$\n위 식을 풀어 기준각의 탄젠트값을 확정한다. $$\\tan\\theta=\\frac{1}{3}.$$\n구하려는 각을 기준각으로 표현하기 위해 합동에서 오는 각의 대응을 본다. 삼각형 $ABE\\equiv FBE$에서 $\\angle FBE=\\angle ABE=\\theta$이므로 $$\\angle ABF=\\angle ABE+\\angle FBE=2\\theta.$$\n탄젠트 덧셈정리로 $\\tan 2\\theta$를 계산한다. $$\\tan(\\angle ABF)=\\tan 2\\theta=\\frac{\\tan\\theta+\\tan\\theta}{1-\\tan\\theta\\,\\tan\\theta}=\\frac{\\frac{1}{3}+\\frac{1}{3}}{1-\\frac{1}{3}\\cdot\\frac{1}{3}}.$$\n분자와 분모를 정리하여 최종값을 얻는다. $$\\tan(\\angle ABF)=\\frac{\\frac{2}{3}}{\\frac{8}{9}}=\\frac{2}{3}\\times\\frac{9}{8}=\\frac{3}{4}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/119a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{(sqrt(6)-sqrt(2))/8}}$$ 입니다.",
-  "finalAnswer": "(sqrt(6)-sqrt(2))/8",
-  "correctAnswer": "(sqrt(6)-sqrt(2))/8",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{3}{4}}}$$ 입니다.",
+  "finalAnswer": "3/4",
+  "correctAnswer": "3/4",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

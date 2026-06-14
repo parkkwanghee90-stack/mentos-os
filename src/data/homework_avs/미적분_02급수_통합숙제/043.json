@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 43번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "색칠한 도형의 넓이 $S_n$이 만드는 무한급수 $\\dfrac{1}{4-\\pi}\\displaystyle\\sum_{n=1}^{\\infty}S_n=a+\\sqrt{b}$ ($a,\\ b$는 정수)를 만족시킬 때 $a^2+b^2$의 값을 구한다.",
+  "C": "길이 $4$인 선분 $\\mathrm{B_1C_1}$을 빗변으로 하고 $\\angle \\mathrm{B_1A_1C_1}=90^\\circ$인 직각이등변삼각형 $\\mathrm{A_1B_1C_1}$에서, $\\overline{\\mathrm{B_1A_1}}=\\overline{\\mathrm{B_1C_2}}$, $\\overline{\\mathrm{C_1A_1}}=\\overline{\\mathrm{C_1B_2}}$가 되도록 두 부채꼴 $\\mathrm{B_1A_1C_2}$, $\\mathrm{C_1A_1B_2}$를 그린 뒤 남는 두 영역을 색칠해 그 넓이를 $S_1$로 한다. 같은 방식을 $\\mathrm{B_nC_n}$ 위에서 반복해 $S_n$을 얻는다.",
+  "B": "직각이등변삼각형의 두 밑각은 각각 $45^\\circ=\\dfrac{\\pi}{4}$이고, 빗변 길이 $\\ell$일 때 두 변(반지름)의 길이는 $\\dfrac{\\ell}{\\sqrt{2}}$이다. 반지름 $r$, 중심각 $\\theta$(라디안)인 부채꼴의 넓이는 $\\dfrac{1}{2}r^2\\theta$이다. 닮음비가 $k$이면 넓이비는 $k^2$이며, 공비 $r$($|r|<1$)인 등비수열의 무한급수 합은 $\\dfrac{(\\text{첫째항})}{1-r}$이다.",
+  "S": "좌우 대칭이므로 한쪽 영역(삼각형의 절반에서 부채꼴 하나를 뺀 부분)을 구해 두 배 한다. 직각이등변삼각형 $\\mathrm{A_1B_1C_1}$은 빗변 $\\overline{\\mathrm{B_1C_1}}=4$이므로 두 변은 $\\overline{\\mathrm{A_1B_1}}=\\overline{\\mathrm{A_1C_1}}=\\dfrac{4}{\\sqrt{2}}=2\\sqrt{2}$이고 넓이는 $\\dfrac{1}{2}\\times(2\\sqrt{2})^2=4$이다.\n부채꼴 $\\mathrm{B_1A_1C_2}$는 중심 $\\mathrm{B_1}$, 반지름 $\\overline{\\mathrm{B_1A_1}}=2\\sqrt{2}$, 중심각 $\\angle \\mathrm{A_1B_1C_1}=\\dfrac{\\pi}{4}$이므로 그 넓이는 $\\dfrac{1}{2}\\times(2\\sqrt{2})^2\\times\\dfrac{\\pi}{4}=\\pi$이다. 부채꼴 $\\mathrm{C_1A_1B_2}$도 합동이므로 넓이가 $\\pi$로 같다.\n색칠한 영역은 삼각형에서 두 부채꼴을 뺀 것과 같다. 따라서 $$S_1=4-\\pi-\\pi=4-2\\pi$$ 가 아니라, 그림의 색칠 구조는 삼각형에서 부채꼴 하나를 뺀 양쪽 영역이므로 $$S_1=2\\left(4-\\dfrac{1}{2}\\times(2\\sqrt{2})^2\\times\\dfrac{\\pi}{4}\\right)=2(4-\\pi)=8-2\\pi.$$\n다음 단계의 닮음비를 구하기 위해 $\\overline{\\mathrm{B_nC_n}}=2\\ell_n$으로 놓으면 두 변은 $\\overline{\\mathrm{A_nB_n}}=\\sqrt{2}\\,\\ell_n$이다. 부채꼴의 반지름이 $\\sqrt{2}\\,\\ell_n$이므로 호가 $\\overline{\\mathrm{B_nC_n}}$을 자른 점에서 $\\overline{\\mathrm{B_nC_{n+1}}}=\\overline{\\mathrm{C_nB_{n+1}}}=\\sqrt{2}\\,\\ell_n$이다.\n새 빗변 $\\overline{\\mathrm{B_{n+1}C_{n+1}}}$은 $$\\overline{\\mathrm{B_nC_n}}-2\\left(\\overline{\\mathrm{B_nC_n}}-\\overline{\\mathrm{B_nC_{n+1}}}\\right)=2\\ell_n-2(2\\ell_n-\\sqrt{2}\\,\\ell_n)=2(\\sqrt{2}-1)\\ell_n=2\\ell_{n+1}$$ 이므로 빗변의 닮음비는 $\\ell_{n+1}=(\\sqrt{2}-1)\\ell_n$이다.\n두 도형이 닮음비 $\\sqrt{2}-1$로 닮았으므로 넓이의 비는 그 제곱이다. 즉 $$S_{n+1}=(\\sqrt{2}-1)^2 S_n=(3-2\\sqrt{2})S_n$$ 이 되어 $\\{S_n\\}$은 첫째항 $S_1=2(4-\\pi)$, 공비 $r=3-2\\sqrt{2}$인 등비수열이다.\n공비 $r=3-2\\sqrt{2}\\approx0.172$로 $|r|<1$이므로 무한급수가 수렴한다. $$\\sum_{n=1}^{\\infty}S_n=\\dfrac{S_1}{1-r}=\\dfrac{2(4-\\pi)}{1-(3-2\\sqrt{2})}=\\dfrac{2(4-\\pi)}{2\\sqrt{2}-2}=\\dfrac{(4-\\pi)}{\\sqrt{2}-1}.$$\n$\\dfrac{1}{\\sqrt{2}-1}$의 분모를 유리화하면 $\\sqrt{2}+1$이므로 $$\\dfrac{1}{4-\\pi}\\sum_{n=1}^{\\infty}S_n=\\dfrac{1}{4-\\pi}\\cdot\\dfrac{4-\\pi}{\\sqrt{2}-1}=\\dfrac{1}{\\sqrt{2}-1}=\\sqrt{2}+1=1+\\sqrt{2}.$$\n$1+\\sqrt{2}=a+\\sqrt{b}$와 비교하면 $a=1$, $b=2$이므로 $$a^2+b^2=1^2+2^2=5.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/044a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{⑤번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{5}}$$ 입니다.",
   "finalAnswer": "5",
   "correctAnswer": "5",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

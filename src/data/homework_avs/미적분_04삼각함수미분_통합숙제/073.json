@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 73번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "사각형 $BCDE$의 넓이 $S(\\theta)$에 대하여 극한값 $\\displaystyle\\lim_{\\theta\\to 0+}\\dfrac{S(\\theta)}{\\theta^{3}}$을 구한다.",
+  "C": "빗변 $\\overline{AC}=1$, $\\angle BAC=\\theta$인 직각삼각형 $ABC$(직각은 $B$)에서 $\\overline{AB}=\\cos\\theta$, $\\overline{BC}=\\sin\\theta$이다. 점 $B$를 중심으로 점 $C$를 지나는 원(반지름 $\\sin\\theta$)이 선분 $AC$와 다시 만나는 점이 $D$이고, $D$에서 선분 $AB$에 내린 수선의 발이 $E$이다. 단 $0<\\theta<\\dfrac{\\pi}{4}$.",
+  "B": "원의 반지름이 모두 같다는 사실에서 $\\overline{BC}=\\overline{BD}$가 되어 이등변삼각형이 만들어지고, 삼각함수의 정의로 변의 길이를 $\\theta$로 표현한 뒤, 사다리꼴 넓이 공식과 배각공식 $\\sin 2\\theta=2\\sin\\theta\\cos\\theta$, $1+\\cos 2\\theta=2\\cos^{2}\\theta$로 정리한다. 극한은 $\\displaystyle\\lim_{\\theta\\to 0}\\frac{\\sin\\theta}{\\theta}=1$을 이용해 계산한다.",
+  "S": "직각삼각형 $ABC$에서 빗변이 $1$이고 $\\angle A=\\theta$이므로 두 변의 길이가 바로 결정된다. $$\\overline{AB}=\\cos\\theta,\\qquad \\overline{BC}=\\sin\\theta.$$\n원이 점 $C$를 지나고 중심이 $B$이므로 반지름은 $\\overline{BC}=\\sin\\theta$이고, $D$도 같은 원 위의 점이라 반지름이 같다. 따라서 삼각형 $BCD$는 $\\overline{BC}=\\overline{BD}=\\sin\\theta$인 이등변삼각형이다.\n이등변삼각형의 두 밑각은 같고, 삼각형 $ABD$에서 외각을 따지면 밑각 $\\angle BDC$의 크기를 구할 수 있어 꼭지각이 정해진다. $$\\angle BDC=\\angle BCD=\\frac{\\pi}{2}-\\theta,\\qquad \\angle DBC=\\pi-2\\!\\left(\\frac{\\pi}{2}-\\theta\\right)=2\\theta.$$\n직선 $AC$가 가로축과 이루는 각이 $\\theta$이고 $\\overline{BD}=\\sin\\theta$이므로, $D$에서 $AB$에 내린 수선과 그 발 $E$의 위치로부터 $\\overline{DE}$와 $\\overline{BE}$를 각 $2\\theta$로 표현한다. $$\\overline{DE}=\\sin\\theta\\cos 2\\theta,\\qquad \\overline{BE}=\\sin\\theta\\sin 2\\theta.$$\n$\\overline{DE}$와 $\\overline{CB}$는 모두 $AB$에 수직이라 서로 평행하므로 사각형 $BCDE$는 사다리꼴이고, 두 평행변은 $\\overline{DE},\\ \\overline{CB}=\\sin\\theta$, 높이는 $\\overline{BE}$이다. $$S(\\theta)=\\frac{1}{2}\\left(\\overline{DE}+\\overline{CB}\\right)\\overline{BE}=\\frac{1}{2}\\left(\\sin\\theta\\cos 2\\theta+\\sin\\theta\\right)\\sin\\theta\\sin 2\\theta.$$\n공통인수 $\\sin\\theta$를 묶고 $1+\\cos 2\\theta=2\\cos^{2}\\theta$를 적용하면 넓이가 한층 간단해진다. $$S(\\theta)=\\frac{1}{2}\\sin^{2}\\theta\\,\\sin 2\\theta\\,(1+\\cos 2\\theta).$$\n극한식을 $\\theta^{3}$로 나누되, $\\sin^{2}\\theta=\\theta^{2}\\!\\left(\\dfrac{\\sin\\theta}{\\theta}\\right)^{2}$, $\\sin 2\\theta=\\theta\\cdot\\dfrac{\\sin 2\\theta}{2\\theta}\\cdot 2$로 갈라 기본극한이 드러나게 묶는다. $$\\frac{S(\\theta)}{\\theta^{3}}=\\left(\\frac{\\sin\\theta}{\\theta}\\right)^{2}\\cdot\\frac{\\sin 2\\theta}{2\\theta}\\cdot(1+\\cos 2\\theta).$$\n$\\theta\\to 0+$일 때 $\\dfrac{\\sin\\theta}{\\theta}\\to 1$, $\\dfrac{\\sin 2\\theta}{2\\theta}\\to 1$, $1+\\cos 2\\theta\\to 2$이므로 극한값이 결정된다. $$\\lim_{\\theta\\to 0+}\\frac{S(\\theta)}{\\theta^{3}}=1^{2}\\times 1\\times 2=2.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/074a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{1/2+sqrt(2)/2}}$$ 입니다.",
-  "finalAnswer": "1/2+sqrt(2)/2",
-  "correctAnswer": "1/2+sqrt(2)/2",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2}}$$ 입니다.",
+  "finalAnswer": "2",
+  "correctAnswer": "2",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

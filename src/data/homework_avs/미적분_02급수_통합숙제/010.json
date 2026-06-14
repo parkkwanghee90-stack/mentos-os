@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 10번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "극한 $\\lim\\limits_{n\\to\\infty}\\dfrac{5n+a_n}{3n-1}$ 의 값을 구한다.",
+  "C": "수열 $\\{a_n\\}$ 이 $\\displaystyle\\sum_{n=1}^{\\infty}\\dfrac{a_n-4n}{n}=1$ 을 만족한다.",
+  "B": "급수 $\\displaystyle\\sum_{n=1}^{\\infty}b_n$ 이 수렴하면 그 일반항은 반드시 $0$ 으로 수렴한다($\\lim\\limits_{n\\to\\infty}b_n=0$). 또한 분자·분모가 모두 $n$ 의 일차식으로 발산하는 극한은 분모의 최고차항 $n$ 으로 분자·분모를 나누어 각 항의 극한으로 분해해 구한다.",
+  "S": "주어진 급수가 값 $1$ 로 수렴하므로 일반항은 $0$ 으로 수렴해야 한다. 따라서 $$\\lim_{n\\to\\infty}\\frac{a_n-4n}{n}=0.$$\n이 일반항을 $n$ 으로 나누어 정리하면 $\\dfrac{a_n-4n}{n}=\\dfrac{a_n}{n}-4$ 이므로 $$\\lim_{n\\to\\infty}\\left(\\frac{a_n}{n}-4\\right)=0.$$\n극한의 합·차 성질로 상수 $4$ 를 분리하면 $\\dfrac{a_n}{n}$ 의 극한이 드러난다. $$\\lim_{n\\to\\infty}\\frac{a_n}{n}=\\lim_{n\\to\\infty}\\left\\{\\left(\\frac{a_n}{n}-4\\right)+4\\right\\}=0+4=4.$$\n구하려는 식은 분자·분모가 모두 $n$ 차로 발산하므로 분모의 최고차항 $n$ 으로 분자·분모를 동시에 나눈다. $$\\frac{5n+a_n}{3n-1}=\\frac{5+\\dfrac{a_n}{n}}{3-\\dfrac{1}{n}}.$$\n$\\dfrac{a_n}{n}\\to 4$ 이고 $\\dfrac{1}{n}\\to 0$ 이므로 각 항의 극한을 대입한다. $$\\lim_{n\\to\\infty}\\frac{5+\\dfrac{a_n}{n}}{3-\\dfrac{1}{n}}=\\frac{5+4}{3-0}=\\frac{9}{3}=3.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/011a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{③번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{3}}$$ 입니다.",
   "finalAnswer": "3",
   "correctAnswer": "3",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 정적분 2번 명품 해설",
   "type": "calculus",
-  "P": "정적분의 다양한 성질과 활용(넓이, 부피, 속도)을 다룹니다.",
-  "C": "구분구적법, 정적분과 급수의 관계, 회전체의 부피를 적용합니다.",
-  "B": "정적분의 활용:\n\n1) 넓이: $$S = \\int_a^b |f(x) - g(x)| dx$$\n2) 회전체 부피: $$V = \\pi \\int_a^b \\{f(x)\\}^2 dx$$\n3) 구분구적법: $$\\lim_{n \\to \\infty} \\sum_{k=1}^{n} f\\left(\\frac{k}{n}\\right) \\cdot \\frac{1}{n} = \\int_0^1 f(x)dx$$\n4) 속도와 거리: $$\\int_{t_1}^{t_2} |v(t)| dt$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "정적분 $\\int_1^5\\left(\\dfrac{1}{x+1}+\\dfrac{1}{x}\\right)dx$ 의 값이 $\\ln\\alpha$ 로 주어졌을 때, 실수 $\\alpha$ 의 값을 구한다.",
+  "C": "적분 구간은 $x=1$ 부터 $x=5$ 까지이고, 이 구간에서 $x>0$, $x+1>0$ 이므로 피적분함수 $\\dfrac{1}{x+1}+\\dfrac{1}{x}$ 는 연속이며 적분값은 $\\ln\\alpha$ 와 같다.",
+  "B": "$\\dfrac{1}{x}$ 의 부정적분은 $\\ln|x|$ 이고, 일반적으로 $\\dfrac{1}{x+a}$ 의 부정적분은 $\\ln|x+a|$ 이다. 또한 로그의 성질 $\\ln p+\\ln q=\\ln(pq)$, $\\ln p-\\ln q=\\ln\\dfrac{p}{q}$ 를 이용하면 여러 로그 값을 하나의 $\\ln$ 으로 묶을 수 있다.",
+  "S": "피적분함수가 두 분수의 합이므로 각 항을 따로 적분하기 위해 적분을 분리한다. $$\\int_1^5\\left(\\frac{1}{x+1}+\\frac{1}{x}\\right)dx=\\int_1^5\\frac{1}{x+1}\\,dx+\\int_1^5\\frac{1}{x}\\,dx$$\n$\\dfrac{1}{x+1}$ 의 부정적분은 $\\ln|x+1|$, $\\dfrac{1}{x}$ 의 부정적분은 $\\ln|x|$ 이므로 두 부정적분을 합쳐 하나의 대괄호로 쓴다. $$\\int_1^5\\left(\\frac{1}{x+1}+\\frac{1}{x}\\right)dx=\\Big[\\ln|x+1|+\\ln|x|\\Big]_1^5$$\n적분 구간 $1\\le x\\le 5$ 에서 $x+1>0$, $x>0$ 이므로 절댓값을 벗겨 위끝 $x=5$ 의 값을 대입한다. $$\\ln|5+1|+\\ln|5|=\\ln 6+\\ln 5$$\n아래끝 $x=1$ 의 값을 대입한다. $\\ln 1=0$ 이므로 이 항은 $\\ln 2$ 만 남는다. $$\\ln|1+1|+\\ln|1|=\\ln 2+\\ln 1=\\ln 2$$\n위끝 값에서 아래끝 값을 빼서 정적분 값을 구한다. $$\\Big[\\ln|x+1|+\\ln|x|\\Big]_1^5=(\\ln 6+\\ln 5)-\\ln 2$$\n로그의 합·차 성질로 하나의 $\\ln$ 으로 정리한다. $\\ln 6+\\ln 5=\\ln 30$ 이고 여기서 $\\ln 2$ 를 빼면 진수가 $\\dfrac{30}{2}=15$ 가 된다. $$\\ln 6+\\ln 5-\\ln 2=\\ln\\frac{6\\cdot 5}{2}=\\ln 15$$\n정적분 값이 $\\ln\\alpha$ 와 같다는 조건과 비교하면 진수가 서로 같아야 한다. $$\\ln 15=\\ln\\alpha\\ \\Rightarrow\\ \\alpha=15$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/09정적분/003a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{15}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\alpha = 15}}$$ 입니다.",
   "finalAnswer": "15",
   "correctAnswer": "15",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

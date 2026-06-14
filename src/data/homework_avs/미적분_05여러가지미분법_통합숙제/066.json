@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 여러 가지 미분법 66번 명품 해설",
   "type": "calculus",
-  "P": "합성함수, 매개변수, 음함수의 미분법을 활용합니다.",
-  "C": "연쇄 법칙, 몫의 미분법, 매개변수 미분을 적용합니다.",
-  "B": "여러 가지 미분법:\n\n1) 합성함수: $$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$$\n2) 매개변수: $$\\frac{dy}{dx} = \\frac{\\frac{dy}{dt}}{\\frac{dx}{dt}}$$\n3) 음함수: 양변을 $$x$$로 미분, $$y' = \\frac{dy}{dx}$$로 놓고 정리\n4) 역함수 미분: $$\\frac{dx}{dy} = \\frac{1}{\\frac{dy}{dx}}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "삼차함수 $f(x)=x^3+3x^2+4x+5$의 역함수 $g(x)$에 대하여 $\\displaystyle\\lim_{n\\to\\infty} n\\left\\{g\\!\\left(1+\\dfrac{1}{n}\\right)-g\\!\\left(1-\\dfrac{2}{n}\\right)\\right\\}$의 값을 $p$라 할 때, $4p$의 값을 구한다.",
+  "C": "$f(x)=x^3+3x^2+4x+5$이고, $g$는 $f$의 역함수이다. 극한값을 $p$라 하고 최종적으로 $4p$를 구한다.",
+  "B": "역함수의 미분법은 거울처럼 입력과 출력을 맞바꾼다. 함수 $y=f(x)$ 위의 점 $(a,\\,b)$는 역함수 $y=g(x)$ 위에서는 점 $(b,\\,a)$가 되고, 두 그래프는 직선 $y=x$에 대칭이라 한 점에서의 접선 기울기도 서로 역수가 된다. 따라서 $b=f(a)$이면 $g(b)=a$이고, $f'(a)\\neq 0$일 때 $g'(b)=\\dfrac{1}{f'(a)}=\\dfrac{1}{f'(g(b))}$이다. 또한 미분계수의 정의 $\\displaystyle\\lim_{h\\to 0}\\dfrac{g(c+h)-g(c)}{h}=g'(c)$를 이용하면, $n\\to\\infty$에서 $\\dfrac{1}{n}\\to 0$인 꼴의 극한을 도함수값으로 바꿀 수 있다.",
+  "S": "주어진 극한은 $x=1$ 근방에서의 변화량 비교이므로, 먼저 $g(1)$의 값을 정한다. $g$가 $f$의 역함수이므로 $g(1)=a$라 하면 $f(a)=1$이다. $$a^3+3a^2+4a+5=1 \\;\\Longrightarrow\\; a^3+3a^2+4a+4=0.$$\n이 삼차방정식을 인수분해하면 $$a^3+3a^2+4a+4=(a+2)(a^2+a+2)=0$$ 이고, $a^2+a+2=0$은 판별식 $1-8<0$으로 실근이 없으므로 실근은 $a=-2$뿐이다. 따라서 $g(1)=-2$이다.\n역함수의 미분법을 쓰기 위해 $f'(x)$를 구하고 $x=-2$에서의 값을 계산한다. 미분하면 $$f'(x)=3x^2+6x+4,\\qquad f'(-2)=12-12+4=4.$$ ($f'(x)$의 판별식이 $36-48<0$이라 $f$는 항상 증가하므로 역함수가 존재함도 보장된다.)\n역함수의 미분법 $g'(1)=\\dfrac{1}{f'(g(1))}=\\dfrac{1}{f'(-2)}$에 의해 $$g'(1)=\\dfrac{1}{4}.$$\n극한을 미분계수로 분해한다. $h=\\dfrac{1}{n}$으로 두면 $n\\to\\infty$일 때 $h\\to 0^{+}$이고, 두 항을 각각 $g(1)$을 기준으로 빼고 더해 정리하면 $$n\\!\\left\\{g\\!\\left(1+\\tfrac{1}{n}\\right)-g\\!\\left(1-\\tfrac{2}{n}\\right)\\right\\}=\\frac{g(1+h)-g(1)}{h}+\\frac{g(1)-g(1-2h)}{h}.$$\n첫째 항은 미분계수의 정의에 의해 $\\displaystyle\\lim_{h\\to 0}\\dfrac{g(1+h)-g(1)}{h}=g'(1)$이다. 둘째 항은 분자·분모에 $2$를 맞추어 $$\\frac{g(1)-g(1-2h)}{h}=2\\cdot\\frac{g(1)-g(1-2h)}{2h}\\;\\xrightarrow[h\\to 0]{}\\;2g'(1)$$ 이 된다.\n두 극한을 더하면 $$p=\\lim_{n\\to\\infty} n\\!\\left\\{g\\!\\left(1+\\tfrac{1}{n}\\right)-g\\!\\left(1-\\tfrac{2}{n}\\right)\\right\\}=g'(1)+2g'(1)=3g'(1)=3\\times\\frac{1}{4}=\\frac{3}{4}.$$\n구하는 값은 $4p$이므로 $$4p=4\\times\\frac{3}{4}=3.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/05여러가지미분법/067a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{③번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{3}}$$ 입니다.",
   "finalAnswer": "3",
   "correctAnswer": "3",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

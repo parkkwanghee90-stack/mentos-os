@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 지수로그함수의 미분 7번 명품 해설",
   "type": "calculus",
-  "P": "지수함수·로그함수의 도함수를 구하고 응용합니다.",
-  "C": "자연로그의 밑 $$e$$와 로그 미분법을 활용합니다.",
-  "B": "지수·로그함수의 미분:\n\n1) $$(e^x)' = e^x$$, $$(a^x)' = a^x \\ln a$$\n2) $$(\\ln x)' = \\frac{1}{x}$$, $$(\\log_a x)' = \\frac{1}{x \\ln a}$$\n3) $$(e^{f(x)})' = f'(x) e^{f(x)}$$\n4) $$\\lim_{x \\to 0} \\frac{e^x - 1}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\ln(1+x)}{x} = 1$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$x \\to 0$일 때 분수식 $\\dfrac{e^{2x^2}-1}{\\tan x\\,\\sin 2x}$의 극한값을 구하는 것.",
+  "C": "분자는 $e^{2x^2}-1$, 분모는 $\\tan x$와 $\\sin 2x$의 곱이며, $x \\to 0$에서 분자와 분모가 모두 $0$으로 수렴하는 $\\dfrac{0}{0}$ 꼴이다.",
+  "B": "$x \\to 0$일 때 성립하는 세 가지 기본 극한 $\\displaystyle\\lim_{t\\to 0}\\frac{e^{t}-1}{t}=1$, $\\displaystyle\\lim_{t\\to 0}\\frac{\\tan t}{t}=1$, $\\displaystyle\\lim_{t\\to 0}\\frac{\\sin t}{t}=1$을 이용한다. 곱과 몫으로 이루어진 식은 각 인수를 $\\dfrac{\\square}{x}$ 꼴의 표준 극한으로 분리하면 극한값을 따로따로 구해 곱할 수 있다.",
+  "S": "분자와 분모가 모두 $0$으로 가는 부정형이므로, 분자·분모를 각각 $x^2$으로 나누어 표준 극한 꼴로 정리한다. $$\\frac{e^{2x^2}-1}{\\tan x\\,\\sin 2x}=\\frac{\\dfrac{e^{2x^2}-1}{x^2}}{\\dfrac{\\tan x}{x}\\cdot\\dfrac{\\sin 2x}{x}}$$\n분자 $\\dfrac{e^{2x^2}-1}{x^2}$를 지수함수 표준 극한에 맞추기 위해 지수 $2x^2$로 묶는다. $$\\frac{e^{2x^2}-1}{x^2}=\\frac{e^{2x^2}-1}{2x^2}\\cdot 2$$ $x\\to 0$이면 $2x^2\\to 0$이므로 $\\displaystyle\\lim_{x\\to 0}\\frac{e^{2x^2}-1}{2x^2}=1$이고, 따라서 이 부분은 $1\\cdot 2=2$로 수렴한다.\n분모의 첫 인수는 탄젠트 표준 극한에서 $\\displaystyle\\lim_{x\\to 0}\\frac{\\tan x}{x}=1$이다.\n분모의 둘째 인수 $\\dfrac{\\sin 2x}{x}$는 사인 표준 극한에 맞추기 위해 각 $2x$로 묶는다. $$\\frac{\\sin 2x}{x}=\\frac{\\sin 2x}{2x}\\cdot 2$$ $x\\to 0$이면 $2x\\to 0$이므로 $\\displaystyle\\lim_{x\\to 0}\\frac{\\sin 2x}{2x}=1$이고, 따라서 이 부분은 $1\\cdot 2=2$로 수렴한다.\n각 인수의 극한이 모두 유한한 값으로 존재하므로 몫의 극한 법칙에 의해 분자·분모의 극한을 그대로 대입한다. $$\\lim_{x\\to 0}\\frac{e^{2x^2}-1}{\\tan x\\,\\sin 2x}=\\frac{2}{1\\cdot 2}=1$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/03지수로그함수미분/008a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{③번}}$$ 입니다.",
-  "finalAnswer": "3",
-  "correctAnswer": "3",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{1}}$$ 입니다.",
+  "finalAnswer": "1",
+  "correctAnswer": "1",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 정적분 62번 명품 해설",
   "type": "calculus",
-  "P": "정적분의 다양한 성질과 활용(넓이, 부피, 속도)을 다룹니다.",
-  "C": "구분구적법, 정적분과 급수의 관계, 회전체의 부피를 적용합니다.",
-  "B": "정적분의 활용:\n\n1) 넓이: $$S = \\int_a^b |f(x) - g(x)| dx$$\n2) 회전체 부피: $$V = \\pi \\int_a^b \\{f(x)\\}^2 dx$$\n3) 구분구적법: $$\\lim_{n \\to \\infty} \\sum_{k=1}^{n} f\\left(\\frac{k}{n}\\right) \\cdot \\frac{1}{n} = \\int_0^1 f(x)dx$$\n4) 속도와 거리: $$\\int_{t_1}^{t_2} |v(t)| dt$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "정적분 $\\displaystyle\\int_0^a \\{f(2x)+f(2a-x)\\}\\,dx$ 의 값을 구한다.",
+  "C": "연속함수 $f(x)$ 가 두 조건을 만족한다. 첫째, 모든 실수 $x$ 에 대하여 $f(a-x)=f(a+x)$ 이다. 둘째, $\\displaystyle\\int_0^a f(x)\\,dx=8$ 이다. ($a$ 는 상수)",
+  "B": "치환적분에서 $u=g(x)$ 로 바꾸면 $\\int f(g(x))g'(x)\\,dx$ 가 $\\int f(u)\\,du$ 로 단순화되고, 구간도 함께 옮겨 적는다. 또한 $f(a-x)=f(a+x)$ 는 그래프가 직선 $x=a$ 에 대해 대칭임을 뜻하므로, $x=a$ 를 기준으로 좌우 같은 폭의 구간에서 적분값이 서로 같다.",
+  "S": "구하려는 적분을 두 조각으로 나눈다. 두 항을 따로 변형하기 위해 $$\\int_0^a \\{f(2x)+f(2a-x)\\}\\,dx=\\int_0^a f(2x)\\,dx+\\int_0^a f(2a-x)\\,dx.$$\n첫째 항은 $u=2x$ 로 치환한다. $du=2\\,dx$ 이고 $x=0,a$ 일 때 $u=0,2a$ 이므로 $$\\int_0^a f(2x)\\,dx=\\frac{1}{2}\\int_0^{2a} f(u)\\,du.$$\n둘째 항은 $t=2a-x$ 로 치환한다. $dt=-dx$ 이고 $x=0,a$ 일 때 $t=2a,a$ 이므로 부호와 구간을 정리하면 $$\\int_0^a f(2a-x)\\,dx=\\int_a^{2a} f(t)\\,dt.$$\n조건 $f(a-x)=f(a+x)$ 로 대칭성을 쓴다. 그래프가 $x=a$ 에 대해 대칭이므로 $x=a$ 의 오른쪽 구간 $[a,2a]$ 의 적분은 왼쪽 구간 $[0,a]$ 의 적분과 같다. 따라서 조건 (나)에 의해 $$\\int_a^{2a} f(t)\\,dt=\\int_0^a f(x)\\,dx=8.$$\n구간 $[0,2a]$ 의 적분을 둘로 쪼개어 값을 구한다. 앞에서 얻은 두 적분값을 더하면 $$\\int_0^{2a} f(u)\\,du=\\int_0^a f(u)\\,du+\\int_a^{2a} f(u)\\,du=8+8=16.$$\n변형한 두 항의 값을 합쳐 최종값을 계산한다. $$\\int_0^a \\{f(2x)+f(2a-x)\\}\\,dx=\\frac{1}{2}\\int_0^{2a} f(u)\\,du+\\int_a^{2a} f(t)\\,dt=\\frac{1}{2}\\times 16+8=16.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/09정적분/063a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{②번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{16}}$$ 입니다.",
   "finalAnswer": "2",
   "correctAnswer": "2",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

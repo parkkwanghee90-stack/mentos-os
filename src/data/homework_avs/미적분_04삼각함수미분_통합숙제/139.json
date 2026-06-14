@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 139번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$p+q$의 값. 단, 사다리꼴 $ABCD$의 넓이 $S(\\theta)$에 대하여 $\\displaystyle\\lim_{\\theta\\to 0+}\\dfrac{S(\\theta)}{\\theta^{3}}=\\dfrac{q}{p}$ ($p,\\ q$는 서로소인 자연수)이다.",
+  "C": "$\\overline{AD}\\parallel\\overline{BC}$인 사다리꼴 $ABCD$에서 $\\angle B=2\\theta$, $\\angle C=3\\theta$, $\\overline{BC}=2\\sin\\theta$, $\\overline{AD}=\\sin\\theta$이고 $0<\\theta<\\dfrac{\\pi}{6}$이다.",
+  "B": "사다리꼴의 넓이는 $\\dfrac12\\times(\\text{두 평행변의 합})\\times(\\text{높이})$로 구하며, 높이는 꼭짓점에서 밑변에 내린 수선과 직각삼각형의 삼각비로 표현한다. 극한 계산에는 $\\displaystyle\\lim_{x\\to 0}\\dfrac{\\sin x}{x}=1$, $\\displaystyle\\lim_{x\\to 0}\\dfrac{\\tan x}{x}=1$을 이용한다.",
+  "S": "두 점 $A,\\ D$에서 밑변 $BC$에 내린 수선의 발을 각각 $E,\\ F$라 하면 두 수선의 길이(사다리꼴의 높이)가 같으므로 이를 한 문자로 묶을 수 있다. $\\overline{BE}=x$로 놓으면 직각삼각형 $ABE$에서 $\\angle B=2\\theta$이므로 높이는 $\\overline{AE}=x\\tan 2\\theta$이다.\n오른쪽 직각삼각형 $DFC$에서도 높이를 표현하기 위해 $\\overline{FC}$를 구한다. $\\overline{EF}=\\overline{AD}=\\sin\\theta$이고 $\\overline{BC}=2\\sin\\theta$이므로 $$\\overline{FC}=\\overline{BC}-\\overline{BE}-\\overline{EF}=2\\sin\\theta-x-\\sin\\theta=\\sin\\theta-x,$$ 따라서 높이는 $\\overline{DF}=(\\sin\\theta-x)\\tan 3\\theta$이다.\n두 직각삼각형의 높이가 같다는 조건 $\\overline{AE}=\\overline{DF}$에서 $x$가 결정된다. $$x\\tan 2\\theta=(\\sin\\theta-x)\\tan 3\\theta\\ \\Rightarrow\\ x=\\frac{\\sin\\theta\\,\\tan 3\\theta}{\\tan 2\\theta+\\tan 3\\theta}.$$\n넓이를 두 평행변과 높이로 쓴다. 평행변의 합은 $\\overline{AD}+\\overline{BC}=\\sin\\theta+2\\sin\\theta=3\\sin\\theta$이고 높이는 $x\\tan 2\\theta$이므로 $$S(\\theta)=\\frac12\\,(3\\sin\\theta)\\,(x\\tan 2\\theta)=\\frac32\\cdot\\frac{\\sin^{2}\\theta\\,\\tan 2\\theta\\,\\tan 3\\theta}{\\tan 2\\theta+\\tan 3\\theta}.$$\n$\\theta\\to 0+$에서 분모 $\\tan 2\\theta+\\tan 3\\theta$가 $0$으로 가므로, 기본 극한 $\\dfrac{\\sin x}{x}\\to1,\\ \\dfrac{\\tan x}{x}\\to1$을 쓰기 위해 $\\dfrac{S(\\theta)}{\\theta^{3}}$의 분자·분모를 $\\theta$의 거듭제곱으로 정리한다. 분모는 $\\tan 2\\theta+\\tan 3\\theta=\\theta\\!\\left(2\\cdot\\dfrac{\\tan 2\\theta}{2\\theta}+3\\cdot\\dfrac{\\tan 3\\theta}{3\\theta}\\right)$로 쓴다.\n이제 각 인수를 표준 극한 꼴로 분리한다. $$\\frac{S(\\theta)}{\\theta^{3}}=\\frac32\\cdot\\frac{\\sin^{2}\\theta}{\\theta^{2}}\\cdot\\frac{\\tan 2\\theta}{2\\theta}\\cdot 2\\cdot\\frac{\\tan 3\\theta}{3\\theta}\\cdot 3\\cdot\\frac{1}{\\,2\\cdot\\frac{\\tan 2\\theta}{2\\theta}+3\\cdot\\frac{\\tan 3\\theta}{3\\theta}\\,}.$$\n$\\theta\\to 0+$일 때 $\\dfrac{\\sin^{2}\\theta}{\\theta^{2}}\\to1$, $\\dfrac{\\tan 2\\theta}{2\\theta}\\to1$, $\\dfrac{\\tan 3\\theta}{3\\theta}\\to1$이므로 분모의 괄호는 $2\\cdot1+3\\cdot1=5$로 수렴한다. 따라서 $$\\lim_{\\theta\\to 0+}\\frac{S(\\theta)}{\\theta^{3}}=\\frac32\\cdot 1\\cdot 1\\cdot 2\\cdot 1\\cdot 3\\cdot\\frac15=\\frac{9}{5}.$$\n$\\dfrac{q}{p}=\\dfrac{9}{5}$에서 $p=5,\\ q=9$이고 두 수는 서로소인 자연수이므로 $$p+q=5+9=14.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/140a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{π}}$$ 입니다.",
-  "finalAnswer": "π",
-  "correctAnswer": "π",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{14}}$$ 입니다.",
+  "finalAnswer": "14",
+  "correctAnswer": "14",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

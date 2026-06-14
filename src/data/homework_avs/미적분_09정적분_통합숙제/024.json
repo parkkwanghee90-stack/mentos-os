@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 정적분 24번 명품 해설",
   "type": "calculus",
-  "P": "정적분의 다양한 성질과 활용(넓이, 부피, 속도)을 다룹니다.",
-  "C": "구분구적법, 정적분과 급수의 관계, 회전체의 부피를 적용합니다.",
-  "B": "정적분의 활용:\n\n1) 넓이: $$S = \\int_a^b |f(x) - g(x)| dx$$\n2) 회전체 부피: $$V = \\pi \\int_a^b \\{f(x)\\}^2 dx$$\n3) 구분구적법: $$\\lim_{n \\to \\infty} \\sum_{k=1}^{n} f\\left(\\frac{k}{n}\\right) \\cdot \\frac{1}{n} = \\int_0^1 f(x)dx$$\n4) 속도와 거리: $$\\int_{t_1}^{t_2} |v(t)| dt$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "정적분 $\\displaystyle\\int_{\\pi/4}^{3\\pi/4} \\cos\\left(x-\\frac{\\pi}{4}\\right) e^{\\sin\\left(x-\\frac{\\pi}{4}\\right)}\\, dx$ 의 값을 구한다.",
+  "C": "적분 구간은 $x=\\dfrac{\\pi}{4}$ 부터 $x=\\dfrac{3\\pi}{4}$ 까지이고, 피적분함수는 $\\cos\\left(x-\\dfrac{\\pi}{4}\\right)$ 와 지수함수 $e^{\\sin\\left(x-\\pi/4\\right)}$ 의 곱이다. 지수의 지수부는 $\\sin\\left(x-\\dfrac{\\pi}{4}\\right)$ 이다.",
+  "B": "치환적분의 핵심은 '안쪽 함수의 도함수가 밖에 곱해져 있는가'를 보는 것이다. 합성함수 $e^{\\sin(\\cdot)}$ 의 안쪽 함수 $u=\\sin\\left(x-\\dfrac{\\pi}{4}\\right)$ 를 미분하면 $\\dfrac{du}{dx}=\\cos\\left(x-\\dfrac{\\pi}{4}\\right)$ 가 되어, 피적분함수에 이미 곱해져 있는 인수와 정확히 일치한다. 따라서 $u=\\sin\\left(x-\\dfrac{\\pi}{4}\\right)$ 로 치환하면 $\\displaystyle\\int e^{u}\\,du$ 라는 가장 단순한 꼴로 바뀐다. 정적분에서는 치환과 동시에 적분 구간도 $u$ 의 값으로 바꾸어 주면 다시 $x$ 로 되돌릴 필요가 없다.",
+  "S": "피적분함수에서 합성된 지수의 안쪽 함수를 치환 변수로 잡는다. $u=\\sin\\left(x-\\dfrac{\\pi}{4}\\right)$ 로 놓는다.\n치환 변수를 미분하여 $du$ 와 $dx$ 의 관계를 만든다. 양변을 $x$ 로 미분하면 $\\dfrac{du}{dx}=\\cos\\left(x-\\dfrac{\\pi}{4}\\right)$ 이므로 $du=\\cos\\left(x-\\dfrac{\\pi}{4}\\right)\\,dx$ 가 되어, 피적분함수의 $\\cos\\left(x-\\dfrac{\\pi}{4}\\right)dx$ 부분이 통째로 $du$ 로 바뀐다.\n적분 구간을 $x$ 의 값에서 $u$ 의 값으로 바꾼다. $x=\\dfrac{\\pi}{4}$ 일 때 $u=\\sin 0=0$ 이고, $x=\\dfrac{3\\pi}{4}$ 일 때 $u=\\sin\\dfrac{\\pi}{2}=1$ 이다.\n치환 결과 적분이 가장 단순한 지수함수의 정적분으로 정리된다. $$\\int_{\\pi/4}^{3\\pi/4} \\cos\\left(x-\\frac{\\pi}{4}\\right) e^{\\sin\\left(x-\\pi/4\\right)}\\, dx=\\int_{0}^{1} e^{u}\\,du$$\n지수함수의 부정적분은 자기 자신이므로 정적분을 계산한다. $$\\int_{0}^{1} e^{u}\\,du=\\Big[\\,e^{u}\\,\\Big]_{0}^{1}=e^{1}-e^{0}=e-1$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/09정적분/025a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{④번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{e-1}}$$ 입니다.",
   "finalAnswer": "4",
   "correctAnswer": "4",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

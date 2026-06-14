@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 132번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "자기닮음으로 반복 생성되는 색칠 영역 $R_n$의 넓이 $S_n$에 대하여 $\\lim_{n\\to\\infty} S_n$의 값을 구한다.",
+  "C": "$\\overline{B_1C_1}=8$, $\\angle B_1A_1C_1=120^\\circ$인 이등변삼각형 $A_1B_1C_1$에서 중심이 선분 $B_1C_1$ 위에 있고 두 직선 $A_1B_1$, $A_1C_1$에 동시에 접하는 원 $O_1$을 그린다. 삼각형 내부이면서 원 외부인 공통부분을 색칠한 것이 $R_1$이고, 이후 변 위에 같은 모양의 작은 이등변삼각형($\\overline{B_nC_n}$이 한 변, 꼭지각 $120^\\circ$)을 잡아 같은 과정을 반복한다.",
+  "B": "중심이 밑변 위에 있고 두 변(직선 $A_1B_1$, $A_1C_1$)에 동시에 접하는 원의 중심은 대칭성에 의해 밑변의 중점이며, 반지름은 그 중점에서 변까지의 수선의 길이와 같다. 자기닮음으로 반복되는 도형의 넓이는 첫째항이 $S_1$이고 공비가 닮음비의 제곱과 도형 개수를 곱한 값인 등비수열을 이루므로, 그 무한합은 $\\dfrac{S_1}{1-r}$로 구한다.",
+  "S": "밑변의 중점을 $M$이라 하면 대칭성에 의해 원 $O_1$의 중심은 $M$이고, 두 밑각은 $\\dfrac{180^\\circ-120^\\circ}{2}=30^\\circ$이므로 $\\overline{B_1M}=\\dfrac{1}{2}\\cdot 8=4$이다.\n원 $O_1$이 직선 $A_1B_1$에 접하는 점을 $N$이라 하면 반지름은 $M$에서 변까지의 수선의 길이이므로 $\\overline{MN}=\\overline{B_1M}\\sin 30^\\circ=4\\cdot\\dfrac{1}{2}=2$이다.\n삼각형의 높이를 구하면 밑각 $30^\\circ$에서 $\\overline{A_1M}=\\overline{B_1M}\\tan 30^\\circ=4\\cdot\\dfrac{1}{\\sqrt{3}}=\\dfrac{4\\sqrt{3}}{3}$이므로 삼각형 $A_1B_1C_1$의 넓이는 $\\dfrac{1}{2}\\cdot 8\\cdot\\dfrac{4\\sqrt{3}}{3}=\\dfrac{16\\sqrt{3}}{3}$이다.\n원의 중심이 밑변 위에 있어 삼각형 내부에 들어오는 부분은 밑변 위쪽 반원이므로, 색칠된 넓이는 삼각형에서 반원을 뺀 $$S_1=\\dfrac{16\\sqrt{3}}{3}-\\dfrac{1}{2}\\cdot\\pi\\cdot 2^2=\\dfrac{16\\sqrt{3}}{3}-2\\pi$$이다.\n다음 단계의 삼각형 $A_{n+1}B_{n+1}C_{n+1}$은 삼각형 $A_nB_nC_n$과 닮음이며 새 밑변이 $\\overline{B_{n+1}C_{n+1}}=\\dfrac{1}{2}\\overline{B_nC_n}$이므로 닮음비는 $1:2$, 한 단계에서 같은 모양이 두 개씩 생기므로 넓이의 공비는 $r=2\\cdot\\left(\\dfrac{1}{2}\\right)^2=\\dfrac{1}{2}$가 아니라 한 변에 하나씩 닮음비 $\\dfrac{1}{2}$로 축소되어 넓이비 $\\dfrac{1}{4}$가 적용된다.\n따라서 $S_n$은 첫째항 $\\dfrac{16\\sqrt{3}}{3}-2\\pi$, 공비 $\\dfrac{1}{4}$인 등비수열의 합이므로 $$\\lim_{n\\to\\infty}S_n=\\dfrac{\\dfrac{16\\sqrt{3}}{3}-2\\pi}{1-\\dfrac{1}{4}}=\\dfrac{4}{3}\\left(\\dfrac{16\\sqrt{3}}{3}-2\\pi\\right)=\\dfrac{64\\sqrt{3}}{9}-\\dfrac{8\\pi}{3}$$이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/133a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{③번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{64\\sqrt{3}}{9}-\\dfrac{8}{3}\\pi}}$$ 입니다.",
   "finalAnswer": "3",
   "correctAnswer": "3",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

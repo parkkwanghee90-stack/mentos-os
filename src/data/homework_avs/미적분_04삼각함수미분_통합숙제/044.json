@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 44번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "원점에서 $x$축에 접하는 원 $C$와 직선 $y=\\dfrac{2}{3}x$의 원점이 아닌 교점 P에서, 원 $C$의 접선의 기울기를 구한다.",
+  "C": "원 $C$는 원점에서 $x$축에 접하므로 중심이 $y$축 위에 있고, 점 P는 직선 $y=\\dfrac{2}{3}x$ 위의 원점이 아닌 교점이다.",
+  "B": "$x$축에 접하며 원점을 지나는 원은 중심이 $(0,\\,r)$, 반지름이 $r$이어서 $x^2+(y-r)^2=r^2$로 나타난다. 원 위의 점에서의 접선의 기울기는 음함수 미분 $2x+2(y-r)y'=0$에서 $y'=-\\dfrac{x}{\\,y-r\\,}$로 얻고, 같은 값을 직선의 기울기 $\\tan\\theta=\\dfrac{2}{3}$에 대한 배각공식 $\\tan 2\\theta=\\dfrac{2\\tan\\theta}{1-\\tan^2\\theta}$로도 구할 수 있다.",
+  "S": "원점에서 $x$축에 접하므로 중심을 $y$축 위 $(0,\\,r)$로 두면 원의 방정식이 정해진다. $$x^2+(y-r)^2=r^2 \\iff x^2+y^2-2ry=0$$\n교점 P는 직선 위의 점이므로 $y=\\dfrac{2}{3}x$를 대입해 원점이 아닌 $x$좌표를 찾는다. $$x^2+\\frac{4}{9}x^2-2r\\cdot\\frac{2}{3}x=0 \\;\\Rightarrow\\; \\frac{13}{9}x^2=\\frac{4}{3}rx$$\n$x\\neq 0$인 해를 구하면 P의 좌표가 $r$로 표현된다. $$x=\\frac{12r}{13},\\qquad y=\\frac{2}{3}\\cdot\\frac{12r}{13}=\\frac{8r}{13}$$ 따라서 $\\mathrm{P}\\!\\left(\\dfrac{12r}{13},\\,\\dfrac{8r}{13}\\right)$이다.\n원 위의 점에서의 접선의 기울기를 얻기 위해 음함수 미분으로 $y'$을 구한다. $$2x+2(y-r)y'=0 \\;\\Rightarrow\\; y'=-\\frac{x}{\\,y-r\\,}$$\nP의 좌표를 대입해 접선의 기울기를 계산한다. $$y'=-\\frac{\\dfrac{12r}{13}}{\\dfrac{8r}{13}-r}=-\\frac{\\dfrac{12r}{13}}{-\\dfrac{5r}{13}}=\\frac{12}{5}$$\n직선의 기울기를 $\\tan\\theta=\\dfrac{2}{3}$로 보면, 원의 중심·접점의 성질로 접선이 직선과 이루는 각이 두 배가 되어 같은 값이 배각공식으로도 확인된다. $$\\tan 2\\theta=\\frac{2\\tan\\theta}{1-\\tan^2\\theta}=\\frac{2\\cdot\\dfrac{2}{3}}{1-\\dfrac{4}{9}}=\\frac{\\dfrac{4}{3}}{\\dfrac{5}{9}}=\\frac{12}{5}$$\n두 방법이 일치하므로 점 P에서의 접선의 기울기는 $\\dfrac{12}{5}$이고, 이는 보기 ⑤이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/045a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{1/20}}$$ 입니다.",
-  "finalAnswer": "1/20",
-  "correctAnswer": "1/20",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{12}{5}}}$$ 입니다.",
+  "finalAnswer": "12/5",
+  "correctAnswer": "12/5",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

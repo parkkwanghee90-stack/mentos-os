@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 여러 가지 미분법 59번 명품 해설",
   "type": "calculus",
-  "P": "합성함수, 매개변수, 음함수의 미분법을 활용합니다.",
-  "C": "연쇄 법칙, 몫의 미분법, 매개변수 미분을 적용합니다.",
-  "B": "여러 가지 미분법:\n\n1) 합성함수: $$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$$\n2) 매개변수: $$\\frac{dy}{dx} = \\frac{\\frac{dy}{dt}}{\\frac{dx}{dt}}$$\n3) 음함수: 양변을 $$x$$로 미분, $$y' = \\frac{dy}{dx}$$로 놓고 정리\n4) 역함수 미분: $$\\frac{dx}{dy} = \\frac{1}{\\frac{dy}{dx}}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "곡선 $y=\\ln\\left(1+e^{2x}-e^{-2t}\\right)$ 과 직선 $y=x+t$ 가 만나는 두 점 사이의 거리 $f(t)$ 에 대하여 $f'(\\ln 2)=\\dfrac{q}{p}\\sqrt{2}$ 일 때, 서로소인 자연수 $p,\\,q$ 의 합 $p+q$ 의 값.",
+  "C": "$t>\\dfrac{1}{2}\\ln 2$ 인 실수 $t$ 에 대하여 두 그래프가 서로 다른 두 점에서 만나며, 그 두 점 사이의 거리를 $f(t)$ 로 정의한다. 또한 $f'(\\ln 2)=\\dfrac{q}{p}\\sqrt{2}$ 이고 $p,\\,q$ 는 서로소인 자연수이다.",
+  "B": "두 그래프의 교점은 두 식을 연립해 얻는 방정식의 해이고, 로그의 진수끼리 같다는 조건 $\\ln A=\\ln B \\iff A=B$ 로 지수방정식을 만든다. 기울기가 $1$ 인 직선 위의 두 점은 $x$ 좌표 차가 $\\Delta x$ 일 때 거리가 $\\sqrt{2}\\,\\lvert\\Delta x\\rvert$ 이다. 마지막으로 $\\dfrac{d}{dt}\\ln g(t)=\\dfrac{g'(t)}{g(t)}$ 와 합성함수 미분을 이용한다.",
+  "S": "교점은 두 식을 연립해 얻으므로 진수와 직선의 $y$ 값을 같게 놓는다. $\\ln\\left(1+e^{2x}-e^{-2t}\\right)=x+t$ 에서 진수가 $e^{x+t}$ 와 같아야 하므로 $$1+e^{2x}-e^{-2t}=e^{x+t}.$$\n이 식을 $e^{x}$ 에 대한 이차식으로 정리하면 $$e^{2x}-e^{t}\\,e^{x}+\\left(1-e^{-2t}\\right)=0.$$\n인수분해를 위해 상수항을 $1-e^{-2t}=\\left(1+e^{-t}\\right)\\left(1-e^{-t}\\right)$ 꼴로 보고 묶으면 $$\\left(e^{x}+e^{-t}\\right)\\left(e^{x}-e^{-t}\\right)-e^{t}\\left(e^{x}-e^{-t}\\right)=0,$$ 즉 $$\\left(e^{x}-e^{-t}\\right)\\left(e^{x}+e^{-t}-e^{t}\\right)=0.$$\n두 인수를 각각 $0$ 으로 놓아 교점의 $x$ 좌표를 구하면 $e^{x}=e^{-t}$ 또는 $e^{x}=e^{t}-e^{-t}$ 이다. 조건 $t>\\dfrac{1}{2}\\ln 2$ 에서 $e^{2t}>2$ 이므로 $e^{t}-e^{-t}>e^{-t}>0$ 이 되어 두 값이 서로 다른 양수이고, 따라서 서로 다른 두 점이 존재한다. 그 $x$ 좌표는 $$x=-t \\quad \\text{또는} \\quad x=\\ln\\left(e^{t}-e^{-t}\\right).$$\n두 교점은 기울기 $1$ 인 직선 $y=x+t$ 위에 있으므로 두 점 사이의 거리는 $x$ 좌표 차에 $\\sqrt{2}$ 를 곱한 값이다. $$f(t)=\\sqrt{2}\\,\\Bigl\\{\\ln\\left(e^{t}-e^{-t}\\right)-(-t)\\Bigr\\}=\\sqrt{2}\\,\\Bigl\\{\\ln\\left(e^{t}-e^{-t}\\right)+t\\Bigr\\}.$$\n로그 안으로 $t$ 를 넣어 식을 간단히 한다. $t=\\ln e^{t}$ 이므로 $$f(t)=\\sqrt{2}\\,\\ln\\!\\Bigl\\{\\left(e^{t}-e^{-t}\\right)e^{t}\\Bigr\\}=\\sqrt{2}\\,\\ln\\left(e^{2t}-1\\right).$$\n$\\dfrac{d}{dt}\\ln\\left(e^{2t}-1\\right)=\\dfrac{2e^{2t}}{e^{2t}-1}$ 이므로 도함수는 $$f'(t)=\\sqrt{2}\\cdot\\frac{2e^{2t}}{e^{2t}-1}=\\frac{2\\sqrt{2}\\,e^{2t}}{e^{2t}-1}.$$\n$t=\\ln 2$ 를 대입하면 $e^{2t}=e^{2\\ln 2}=4$ 이므로 $$f'(\\ln 2)=\\frac{2\\sqrt{2}\\times 4}{4-1}=\\frac{8\\sqrt{2}}{3}=\\frac{8}{3}\\sqrt{2}.$$\n$\\dfrac{q}{p}\\sqrt{2}=\\dfrac{8}{3}\\sqrt{2}$ 와 비교하면 $p=3,\\ q=8$ 이고 두 수는 서로소이므로 $$p+q=3+8=11.$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{11}}$$ 입니다.",
   "finalAnswer": "11",
   "correctAnswer": "11",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

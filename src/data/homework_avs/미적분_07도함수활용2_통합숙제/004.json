@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 도함수의 활용 2 4번 명품 해설",
   "type": "calculus",
-  "P": "도함수를 활용한 방정식·부등식의 풀이와 최적화 문제를 해결합니다.",
-  "C": "함수의 그래프를 분석하여 근의 개수를 판별하고, 최댓값·최솟값을 구합니다.",
-  "B": "도함수의 활용 2:\n\n1) $$f(x) = g(x)$$의 실근 개수: 두 그래프의 교점\n2) 부등식 증명: 차함수의 최솟값 ≥ 0\n3) 평균값 정리: $$f'(c) = \\frac{f(b) - f(a)}{b - a}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "수직선 위를 움직이는 점 $\\mathrm{P}$의 시각 $t$에서의 위치가 $x(t)=t+\\dfrac{20}{\\pi^2}\\cos(2\\pi t)$일 때, $t=\\dfrac{1}{3}$에서의 가속도의 크기를 구한다.",
+  "C": "점 $\\mathrm{P}$의 위치는 $x(t)=t+\\dfrac{20}{\\pi^2}\\cos(2\\pi t)$이고, 구하는 시각은 $t=\\dfrac{1}{3}$이다.",
+  "B": "수직선 위를 움직이는 점의 위치가 $x(t)$일 때, 속도는 위치의 도함수 $v(t)=x'(t)$, 가속도는 속도의 도함수 $a(t)=v'(t)=x''(t)$이다. 가속도의 크기는 $|a(t)|$이다. 또한 합성함수의 미분에서 $\\dfrac{d}{dt}\\cos(2\\pi t)=-2\\pi\\sin(2\\pi t)$, $\\dfrac{d}{dt}\\sin(2\\pi t)=2\\pi\\cos(2\\pi t)$이다.",
+  "S": "속도를 얻기 위해 위치를 한 번 미분한다. $\\cos(2\\pi t)$의 도함수가 $-2\\pi\\sin(2\\pi t)$이므로 $$v(t)=x'(t)=1+\\frac{20}{\\pi^2}\\cdot(-2\\pi\\sin(2\\pi t))=1-\\frac{40}{\\pi}\\sin(2\\pi t).$$\n가속도를 얻기 위해 속도를 다시 미분한다. $\\sin(2\\pi t)$의 도함수가 $2\\pi\\cos(2\\pi t)$이므로 $$a(t)=v'(t)=-\\frac{40}{\\pi}\\cdot 2\\pi\\cos(2\\pi t)=-80\\cos(2\\pi t).$$\n주어진 시각을 대입하기 위해 $t=\\dfrac{1}{3}$에서의 각을 계산하면 $$2\\pi t=2\\pi\\cdot\\frac{1}{3}=\\frac{2\\pi}{3}.$$\n이 값에서의 코사인 값을 구한다. 제2사분면의 각이므로 $$\\cos\\frac{2\\pi}{3}=-\\frac{1}{2}.$$\n가속도 식에 대입하여 $t=\\dfrac{1}{3}$에서의 가속도를 구한다. $$a\\!\\left(\\frac{1}{3}\\right)=-80\\cdot\\left(-\\frac{1}{2}\\right)=40.$$\n가속도의 크기는 절댓값이므로 $$\\left|\\,a\\!\\left(\\frac{1}{3}\\right)\\right|=|40|=40.$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{40}}$$ 입니다.",
   "finalAnswer": "40",
   "correctAnswer": "40",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

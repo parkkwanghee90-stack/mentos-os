@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 106번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$80a$의 값. 여기서 $a=\\displaystyle\\lim_{\\theta\\to 0+}\\dfrac{f(\\theta)-g(\\theta)}{\\theta^{3}}$이고, $f(\\theta)$는 삼각형 $CDE$의 넓이, $g(\\theta)$는 삼각형 $MEH$의 넓이이다.",
+  "C": "$\\overline{AB}=1$, $\\overline{BC}=2$이고 $M$은 $\\overline{BC}$의 중점, $H$는 점 $M$에서 선분 $AB$에 내린 수선의 발이다. 중심이 $M$이고 반지름이 $\\overline{MH}$인 원이 선분 $AM$과 만나는 점이 $D$, 선분 $HC$가 선분 $DM$과 만나는 점이 $E$이며 $\\angle ABC=\\theta\\ \\left(0<\\theta<\\dfrac{\\pi}{2}\\right)$이다.",
+  "B": "두 삼각형이 한 꼭짓점에서 공통부분을 공유하면, 넓이의 차는 큰 삼각형끼리의 차로 바꿔 계산할 수 있다. 또한 한 각을 낀 두 변의 길이를 알면 넓이는 $\\dfrac{1}{2}ab\\sin C$로 구하고, $\\theta\\to 0$에서의 극한은 $\\dfrac{\\sin\\theta}{\\theta}\\to 1$과 차수 비교(분자·분모의 최저차항)로 처리한다.",
+  "S": "점 $E$가 두 선분 $HC$와 $DM$의 교점이므로, 공통으로 겹치는 부분을 소거하면 두 삼각형의 넓이의 차를 큰 삼각형끼리의 차로 정리할 수 있다. 즉 $$f(\\theta)-g(\\theta)=\\triangle CDE-\\triangle MEH=\\triangle DMC-\\triangle HMC.$$\n반지름 $\\overline{MH}$를 구한다. $M$에서 선분 $AB$에 내린 수선의 발이 $H$이므로 $\\angle MHB=\\dfrac{\\pi}{2}$이고, $\\overline{BM}=\\dfrac{1}{2}\\overline{BC}=1$, $\\angle HBM=\\theta$인 직각삼각형 $BHM$에서 $$\\overline{HM}=\\overline{BM}\\sin\\theta=\\sin\\theta.$$ 점 $D$는 반지름 $\\overline{MH}$인 원과 선분 $AM$의 교점이므로 $\\overline{DM}=\\overline{HM}=\\sin\\theta$이다.\n두 삼각형의 끼인각을 구한다. 직각삼각형 $BHM$에서 $\\angle BMH=\\dfrac{\\pi}{2}-\\theta$이므로 $$\\angle HMC=\\pi-\\left(\\dfrac{\\pi}{2}-\\theta\\right)=\\dfrac{\\pi}{2}+\\theta.$$ 한편 삼각형 $ABM$은 $\\overline{AB}=\\overline{BM}=1$인 이등변삼각형이고 꼭지각이 $\\theta$이므로 밑각 $\\angle AMB=\\dfrac{\\pi}{2}-\\dfrac{\\theta}{2}$이고, $D$가 반직선 $MA$ 위에 있으므로 $$\\angle DMC=\\pi-\\angle AMB=\\dfrac{\\pi}{2}+\\dfrac{\\theta}{2}.$$\n$\\overline{MC}=1$임을 이용해 두 삼각형의 넓이를 끼인각 공식으로 쓰면 $$\\triangle DMC=\\dfrac{1}{2}\\,\\overline{DM}\\,\\overline{MC}\\sin(\\angle DMC)=\\dfrac{\\sin\\theta\\,\\sin\\!\\left(\\frac{\\pi}{2}+\\frac{\\theta}{2}\\right)}{2}=\\dfrac{\\sin\\theta\\cos\\frac{\\theta}{2}}{2},$$ $$\\triangle HMC=\\dfrac{1}{2}\\,\\overline{HM}\\,\\overline{MC}\\sin(\\angle HMC)=\\dfrac{\\sin\\theta\\,\\sin\\!\\left(\\frac{\\pi}{2}+\\theta\\right)}{2}=\\dfrac{\\sin\\theta\\cos\\theta}{2}.$$\n두 넓이를 빼면 $$f(\\theta)-g(\\theta)=\\dfrac{\\sin\\theta}{2}\\left(\\cos\\dfrac{\\theta}{2}-\\cos\\theta\\right).$$\n$\\theta\\to 0+$의 극한에서 분모 차수를 맞추기 위해 분자·분모에 $\\left(\\cos\\dfrac{\\theta}{2}+\\cos\\theta\\right)$를 곱해 코사인 차를 사인 차로 바꾼다. $$\\cos^{2}\\dfrac{\\theta}{2}-\\cos^{2}\\theta=\\left(1-\\sin^{2}\\dfrac{\\theta}{2}\\right)-\\left(1-\\sin^{2}\\theta\\right)=\\sin^{2}\\theta-\\sin^{2}\\dfrac{\\theta}{2},$$ 이므로 $$\\dfrac{f(\\theta)-g(\\theta)}{\\theta^{3}}=\\dfrac{\\sin\\theta\\left(\\sin^{2}\\theta-\\sin^{2}\\frac{\\theta}{2}\\right)}{2\\,\\theta^{3}\\left(\\cos\\frac{\\theta}{2}+\\cos\\theta\\right)}.$$\n$\\dfrac{\\sin\\theta}{\\theta}\\to 1$, $\\dfrac{\\sin^{2}\\theta}{\\theta^{2}}\\to 1$, $\\dfrac{\\sin^{2}\\frac{\\theta}{2}}{\\theta^{2}}\\to\\dfrac{1}{4}$, 그리고 $\\cos\\dfrac{\\theta}{2}+\\cos\\theta\\to 2$이므로 $$a=\\lim_{\\theta\\to 0+}\\dfrac{\\sin\\theta}{\\theta}\\cdot\\dfrac{\\frac{\\sin^{2}\\theta}{\\theta^{2}}-\\frac{\\sin^{2}\\frac{\\theta}{2}}{\\theta^{2}}}{2\\left(\\cos\\frac{\\theta}{2}+\\cos\\theta\\right)}=\\dfrac{1\\cdot\\left(1-\\frac{1}{4}\\right)}{2\\cdot 2}=\\dfrac{3}{16}.$$\n따라서 $$80a=80\\times\\dfrac{3}{16}=15.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/107a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{9}}$$ 입니다.",
-  "finalAnswer": "9",
-  "correctAnswer": "9",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{15}}$$ 입니다.",
+  "finalAnswer": "15",
+  "correctAnswer": "15",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

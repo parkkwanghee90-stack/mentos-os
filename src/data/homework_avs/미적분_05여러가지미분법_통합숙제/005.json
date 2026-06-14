@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 여러 가지 미분법 5번 명품 해설",
   "type": "calculus",
-  "P": "합성함수, 매개변수, 음함수의 미분법을 활용합니다.",
-  "C": "연쇄 법칙, 몫의 미분법, 매개변수 미분을 적용합니다.",
-  "B": "여러 가지 미분법:\n\n1) 합성함수: $$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$$\n2) 매개변수: $$\\frac{dy}{dx} = \\frac{\\frac{dy}{dt}}{\\frac{dx}{dt}}$$\n3) 음함수: 양변을 $$x$$로 미분, $$y' = \\frac{dy}{dx}$$로 놓고 정리\n4) 역함수 미분: $$\\frac{dx}{dy} = \\frac{1}{\\frac{dy}{dx}}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "조건 $g'(\\pi)=e^{\\pi}g(\\pi)$ 를 만족시킬 때 $\\dfrac{f'(\\pi)}{f(\\pi)}$ 의 값을 구한다.",
+  "C": "$f(x)$ 는 실수 전체에서 미분가능하고 $f(\\pi)\\neq 0$ 이며, $g(x)=\\dfrac{f(x)\\cos x}{e^{x}}$ 이다. 또한 $g'(\\pi)=e^{\\pi}g(\\pi)$ 가 성립한다.",
+  "B": "세 함수의 곱 $f(x)\\cos x\\cdot e^{-x}$ 형태이므로 곱의 미분법과 몫의 미분법을 함께 활용한다. 곱의 미분법은 $(uv)'=u'v+uv'$ 이고, 지수함수는 $(e^{-x})'=-e^{-x}$, 삼각함수는 $(\\cos x)'=-\\sin x$ 임을 사용한다.",
+  "S": "분자에 $\\cos x$ 와 $f(x)$ 가 함께 있어 곱·몫의 미분법을 한 번에 적용하기 위해 $g(x)$ 를 $f(x)$, $\\cos x$, $e^{-x}$ 의 곱으로 정리한다. $$g(x)=f(x)\\cos x\\,e^{-x}.$$\n세 인수의 곱이므로 한 인수씩 미분한 항을 더해 $g'(x)$ 를 구한다. $$g'(x)=f'(x)\\cos x\\,e^{-x}+f(x)(-\\sin x)e^{-x}+f(x)\\cos x(-e^{-x}).$$\n공통인수 $e^{-x}$ 로 묶어 식을 간결하게 만든다. $$g'(x)=e^{-x}\\bigl(f'(x)\\cos x-f(x)\\sin x-f(x)\\cos x\\bigr).$$\n조건이 $x=\\pi$ 에서의 값을 묻고 있으므로 $\\cos\\pi=-1$, $\\sin\\pi=0$ 을 대입한다. $$g'(\\pi)=e^{-\\pi}\\bigl(-f'(\\pi)+f(\\pi)\\bigr).$$\n같은 방식으로 $g(\\pi)$ 도 $\\cos\\pi=-1$ 을 대입해 구한다. $$g(\\pi)=f(\\pi)\\cos\\pi\\,e^{-\\pi}=-f(\\pi)e^{-\\pi}.$$\n주어진 조건 $g'(\\pi)=e^{\\pi}g(\\pi)$ 에 두 값을 대입한다. $$e^{-\\pi}\\bigl(f(\\pi)-f'(\\pi)\\bigr)=e^{\\pi}\\cdot\\bigl(-f(\\pi)e^{-\\pi}\\bigr).$$\n우변을 정리하면 $-f(\\pi)$ 가 되고, 양변에 $e^{\\pi}$ 을 곱해 지수를 없앤다. $$f(\\pi)-f'(\\pi)=-e^{\\pi}f(\\pi).$$\n$f(\\pi)\\neq 0$ 이므로 양변을 $f(\\pi)$ 로 나누어 구하는 비를 분리한다. $$1-\\frac{f'(\\pi)}{f(\\pi)}=-e^{\\pi}.$$\n$\\dfrac{f'(\\pi)}{f(\\pi)}$ 에 대해 정리하면 답을 얻는다. $$\\frac{f'(\\pi)}{f(\\pi)}=1+e^{\\pi}=e^{\\pi}+1.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/05여러가지미분법/006a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{④번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{e^{\\pi}+1}}$$ 입니다.",
   "finalAnswer": "4",
   "correctAnswer": "4",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 정적분 18번 명품 해설",
   "type": "calculus",
-  "P": "정적분의 다양한 성질과 활용(넓이, 부피, 속도)을 다룹니다.",
-  "C": "구분구적법, 정적분과 급수의 관계, 회전체의 부피를 적용합니다.",
-  "B": "정적분의 활용:\n\n1) 넓이: $$S = \\int_a^b |f(x) - g(x)| dx$$\n2) 회전체 부피: $$V = \\pi \\int_a^b \\{f(x)\\}^2 dx$$\n3) 구분구적법: $$\\lim_{n \\to \\infty} \\sum_{k=1}^{n} f\\left(\\frac{k}{n}\\right) \\cdot \\frac{1}{n} = \\int_0^1 f(x)dx$$\n4) 속도와 거리: $$\\int_{t_1}^{t_2} |v(t)| dt$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle\\int_1^{e^2}\\frac{(\\ln x)^3}{x}\\,dx$ 의 값을 구한다.",
+  "C": "피적분함수는 $\\dfrac{(\\ln x)^3}{x}$ 이며 적분구간은 $1\\le x\\le e^2$ 이다.",
+  "B": "피적분함수 안에 어떤 함수 $\\ln x$ 와 그 도함수 $\\dfrac{1}{x}$ 가 함께 들어 있으므로 치환적분이 즉시 통한다. $t=\\ln x$ 로 두면 $\\dfrac{dt}{dx}=\\dfrac{1}{x}$ 이어서 $\\dfrac{1}{x}\\,dx=dt$ 가 되고, 정적분은 새 변수 $t$ 의 구간으로 바꿔 끝까지 계산한다.",
+  "S": "피적분함수에 $\\ln x$ 와 그 도함수 $\\dfrac{1}{x}$ 가 동시에 보이므로 $t=\\ln x$ 로 치환한다. 그러면 $dt=\\dfrac{1}{x}\\,dx$ 이다.\n치환에 맞춰 적분구간도 바꿔야 하므로 양 끝을 $t$ 로 환산한다. $x=1$ 이면 $t=\\ln 1=0$, $x=e^2$ 이면 $t=\\ln e^2=2$ 이다.\n원래 식을 $t$ 로 다시 쓰면 $\\dfrac{(\\ln x)^3}{x}\\,dx=t^3\\,dt$ 이므로 $$\\int_1^{e^2}\\frac{(\\ln x)^3}{x}\\,dx=\\int_0^2 t^3\\,dt.$$\n$t^3$ 의 부정적분은 $\\dfrac{t^4}{4}$ 이므로 $$\\int_0^2 t^3\\,dt=\\left[\\frac{t^4}{4}\\right]_0^2.$$\n양 끝값을 대입해 계산을 마무리하면 $$\\left[\\frac{t^4}{4}\\right]_0^2=\\frac{2^4}{4}-\\frac{0^4}{4}=\\frac{16}{4}=4.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/09정적분/019a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{④번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{4}}$$ 입니다.",
   "finalAnswer": "4",
   "correctAnswer": "4",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

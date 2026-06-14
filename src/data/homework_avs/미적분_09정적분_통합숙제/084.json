@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 정적분 84번 명품 해설",
   "type": "calculus",
-  "P": "정적분의 다양한 성질과 활용(넓이, 부피, 속도)을 다룹니다.",
-  "C": "구분구적법, 정적분과 급수의 관계, 회전체의 부피를 적용합니다.",
-  "B": "정적분의 활용:\n\n1) 넓이: $$S = \\int_a^b |f(x) - g(x)| dx$$\n2) 회전체 부피: $$V = \\pi \\int_a^b \\{f(x)\\}^2 dx$$\n3) 구분구적법: $$\\lim_{n \\to \\infty} \\sum_{k=1}^{n} f\\left(\\frac{k}{n}\\right) \\cdot \\frac{1}{n} = \\int_0^1 f(x)dx$$\n4) 속도와 거리: $$\\int_{t_1}^{t_2} |v(t)| dt$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle\\int_{7/2}^{11/2}\\frac{f(x)}{x}\\,dx=\\frac{q}{p}$ 로 나타낼 때 서로소인 자연수 $p,\\ q$ 에 대하여 $p+q$ 의 값을 구한다.",
+  "C": "실수 전체에서 감소하고 연속인 함수 $f(x)$ 가 다음을 만족한다. 모든 양의 실수 $x$ 에서 $f(x)>0$ 이고, 임의의 양의 실수 $t$ 에 대하여 세 점 $(0,0),\\ (t,\\,f(t)),\\ (t+1,\\,f(t+1))$ 을 꼭짓점으로 하는 삼각형의 넓이가 $\\dfrac{t+1}{t}$ 이며, $\\displaystyle\\int_{1}^{2}\\frac{f(x)}{x}\\,dx=2$ 이다.",
+  "B": "원점과 두 점을 꼭짓점으로 하는 삼각형의 넓이는 $\\dfrac12\\,\\lvert x_1 y_2-x_2 y_1\\rvert$ 로 구한다. 구간 $[t,\\,t+1]$ 위의 정적분 $\\displaystyle F(t)=\\int_{t}^{t+1}\\frac{f(x)}{x}\\,dx$ 를 $t$ 에 대해 미분하면 미적분의 기본정리에 의해 $F'(t)=\\dfrac{f(t+1)}{t+1}-\\dfrac{f(t)}{t}$ 이므로, 넓이 조건을 이 도함수 꼴로 바꾸어 $F(t)$ 를 직접 적분으로 복원한다.",
+  "S": "원점이 한 꼭짓점이므로 넓이 공식을 그대로 적용해 조건 (나)를 식으로 옮긴다. 세 점 $(0,0),\\ (t,\\,f(t)),\\ (t+1,\\,f(t+1))$ 의 넓이는 $$\\frac12\\,\\bigl\\lvert\\,t\\,f(t+1)-(t+1)\\,f(t)\\,\\bigr\\rvert=\\frac{t+1}{t}.$$\n각 항을 $\\dfrac{f}{x}$ 형태로 만들기 위해 양변을 $t(t+1)$ 로 나눈다. $$\\frac12\\,\\left\\lvert\\,\\frac{f(t+1)}{t+1}-\\frac{f(t)}{t}\\,\\right\\rvert=\\frac{1}{t^{2}}\\ \\Longrightarrow\\ \\left\\lvert\\,\\frac{f(t)}{t}-\\frac{f(t+1)}{t+1}\\,\\right\\rvert=\\frac{2}{t^{2}}.$$\n절댓값을 풀어 부호를 정한다. $f$ 가 감소하고 양수이므로 $t<t+1$ 에서 $f(t)>f(t+1)>0$ 이고 분모도 더 작아 $\\dfrac{f(t)}{t}>\\dfrac{f(t+1)}{t+1}$ 이다. 따라서 $$\\frac{f(t+1)}{t+1}-\\frac{f(t)}{t}=-\\frac{2}{t^{2}}.$$\n좌변이 곧 $F(t)=\\displaystyle\\int_{t}^{t+1}\\frac{f(x)}{x}\\,dx$ 의 도함수임을 알아챈다. 미적분의 기본정리로 $$F'(t)=\\frac{f(t+1)}{t+1}-\\frac{f(t)}{t}=-\\frac{2}{t^{2}}.$$\n도함수를 적분해 $F(t)$ 를 복원한다. $-\\dfrac{2}{t^{2}}$ 의 부정적분이 $\\dfrac{2}{t}$ 이므로 적분상수 $c$ 에 대하여 $$F(t)=\\int_{t}^{t+1}\\frac{f(x)}{x}\\,dx=\\frac{2}{t}+c.$$\n조건 (다)로 적분상수를 확정한다. $t=1$ 을 대입하면 $F(1)=\\displaystyle\\int_{1}^{2}\\frac{f(x)}{x}\\,dx=2$ 이므로 $\\dfrac{2}{1}+c=2$, 즉 $c=0$ 이다. 따라서 모든 양의 실수 $t$ 에서 $$\\int_{t}^{t+1}\\frac{f(x)}{x}\\,dx=\\frac{2}{t}.$$\n구하는 구간 $\\left[\\dfrac72,\\ \\dfrac{11}{2}\\right]$ 은 길이가 $1$ 인 두 구간으로 나뉘므로 두 번 적용한다. $$\\int_{7/2}^{11/2}\\frac{f(x)}{x}\\,dx=\\int_{7/2}^{9/2}\\frac{f(x)}{x}\\,dx+\\int_{9/2}^{11/2}\\frac{f(x)}{x}\\,dx=\\frac{2}{\\,7/2\\,}+\\frac{2}{\\,9/2\\,}.$$\n값을 계산하고 약분한다. $$\\frac{2}{\\,7/2\\,}+\\frac{2}{\\,9/2\\,}=\\frac{4}{7}+\\frac{4}{9}=\\frac{36+28}{63}=\\frac{64}{63}.$$ 따라서 $\\dfrac{q}{p}=\\dfrac{64}{63}$ 에서 서로소인 자연수 $p=63,\\ q=64$ 이므로 $$p+q=63+64=127.$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{127}}$$ 입니다.",
   "finalAnswer": "127",
   "correctAnswer": "127",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

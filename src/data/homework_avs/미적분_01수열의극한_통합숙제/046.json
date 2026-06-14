@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 수열의 극한 46번 명품 해설",
   "type": "calculus",
-  "P": "수열의 극한값과 급수의 수렴·발산을 판별합니다.",
-  "C": "최고차항으로 나누기, 샌드위치 정리, 등비수열 극한 조건을 활용합니다.",
-  "B": "수열의 극한:\n\n1) $$\\lim_{n \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교\n2) $$|r| < 1 \\Rightarrow \\lim_{n \\to \\infty} r^n = 0$$\n3) 수렴 조건: 단조 수렴 정리, 샌드위치 정리\n4) $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$2$ 이상의 자연수 $n$과 두 정수 $a$, $b$에 대하여 세 점 $A(a,\\,b)$, $B(0,\\,2)$, $C(0,\\,2^n)$을 꼭짓점으로 하는 직각삼각형 $ABC$의 넓이의 합을 $S_n$이라 할 때, $\\displaystyle\\lim_{n\\to\\infty}\\dfrac{S_n}{8^{n-2}}$의 값을 구하는 것이다.",
+  "C": "세 꼭짓점은 $A(a,\\,b)$, $B(0,\\,2)$, $C(0,\\,2^n)$이고 $a$, $b$는 정수, $n$은 $2$ 이상의 자연수이다. 조건 (가)에서 $\\angle B=90^\\circ$인 직각삼각형이고, 조건 (나)에서 $|ab|\\le 2^{n+1}$이다.",
+  "B": "두 점 $B(0,\\,2)$, $C(0,\\,2^n)$은 모두 $y$축 위에 있어 선분 $BC$는 세로선이다. 한 직선 위가 아닌 두 점으로부터 떨어진 점 $A$를 잡아 삼각형을 만들 때, 밑변을 $BC$로 보면 높이는 점 $A$에서 $y$축까지의 거리 $|a|$와 같으므로 넓이는 $\\dfrac{1}{2}\\times\\overline{BC}\\times|a|$로 계산한다. 또 $\\dfrac{8^n-4^n-2^{n+1}}{8^{n-2}}$ 꼴은 분자·분모를 $8^n$으로 나누면 $\\dfrac{8^n}{8^{n-2}}=8^2=64$가 상수로 남고 나머지 항은 $\\left(\\dfrac12\\right)^n$, $\\left(\\dfrac14\\right)^n$ 형태가 되어 $0$으로 수렴한다.",
+  "S": "밑변 $BC$가 세로선이므로 $\\angle B=90^\\circ$이려면 변 $BA$가 $BC$에 수직, 즉 가로선이어야 한다. 따라서 $A$의 $y$좌표는 $B$와 같아야 하고 $b=2$이며, 삼각형이 되려면 $a\\neq 0$이다.\n조건 (나)에 $b=2$를 대입하면 $$|ab|=|2a|=2|a|\\le 2^{n+1}\\ \\Longrightarrow\\ |a|\\le 2^n$$ 이므로 정수 $a$는 $1\\le a\\le 2^n$ 또는 $-2^n\\le a\\le -1$의 범위를 가진다.\n삼각형 $ABC$의 넓이는 밑변 $\\overline{BC}=2^n-2$, 높이 $|a|$이므로 $$\\triangle ABC=\\frac{1}{2}\\times(2^n-2)\\times|a|$$ 가 되어 각 넓이는 $|a|$에 비례한다.\n$1\\le a\\le 2^n$인 경우의 넓이의 합은 $|a|=1,2,\\dots,2^n$을 모두 더하여 $$\\frac{1}{2}(2^n-2)\\bigl(1+2+\\cdots+2^n\\bigr)=\\frac{1}{2}(2^n-2)\\cdot\\frac{2^n(1+2^n)}{2}$$ 이다.\n이를 정리하면 $$\\frac{1}{2}(2^n-2)\\cdot\\frac{2^n(1+2^n)}{2}=\\frac{1}{4}\\bigl(8^n-4^n-2^{n+1}\\bigr)$$ 을 얻는다.\n$-2^n\\le a\\le -1$인 경우는 $|a|$의 값들이 앞과 똑같으므로 넓이의 합도 동일하다. 따라서 전체 넓이의 합은 두 경우를 더해 $$S_n=2\\times\\frac{1}{4}\\bigl(8^n-4^n-2^{n+1}\\bigr)=\\frac{1}{2}\\bigl(8^n-4^n-2^{n+1}\\bigr)$$ 이다.\n구하는 극한은 $8^{n-2}=\\dfrac{8^n}{64}$임을 이용하여 $$\\frac{S_n}{8^{n-2}}=\\frac{1}{2}\\cdot\\frac{8^n-4^n-2^{n+1}}{8^n/64}=32\\left(1-\\frac{1}{2^n}-\\frac{2}{4^n}\\right)$$ 로 변형한다.\n$n\\to\\infty$일 때 $\\dfrac{1}{2^n}\\to 0$, $\\dfrac{2}{4^n}\\to 0$이므로 $$\\lim_{n\\to\\infty}\\frac{S_n}{8^{n-2}}=32\\times(1-0-0)=32$$ 이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/01수열의극한/047a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{-1/4}}$$ 입니다.",
-  "finalAnswer": "-1/4",
-  "correctAnswer": "-1/4",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{32}}$$ 입니다.",
+  "finalAnswer": "32",
+  "correctAnswer": "32",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

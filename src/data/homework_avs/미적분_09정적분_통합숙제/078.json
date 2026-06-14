@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 정적분 78번 명품 해설",
   "type": "calculus",
-  "P": "정적분의 다양한 성질과 활용(넓이, 부피, 속도)을 다룹니다.",
-  "C": "구분구적법, 정적분과 급수의 관계, 회전체의 부피를 적용합니다.",
-  "B": "정적분의 활용:\n\n1) 넓이: $$S = \\int_a^b |f(x) - g(x)| dx$$\n2) 회전체 부피: $$V = \\pi \\int_a^b \\{f(x)\\}^2 dx$$\n3) 구분구적법: $$\\lim_{n \\to \\infty} \\sum_{k=1}^{n} f\\left(\\frac{k}{n}\\right) \\cdot \\frac{1}{n} = \\int_0^1 f(x)dx$$\n4) 속도와 거리: $$\\int_{t_1}^{t_2} |v(t)| dt$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$F'(a)=\\ln 10$을 만족시키는 상수 $a$의 값을 구한다.",
+  "C": "$f(x)=\\dfrac{1}{1+x}$이고, $x\\ge 0$에서 $F(x)=\\displaystyle\\int_0^x t\\,f(x-t)\\,dt$로 정의된다.",
+  "B": "합성꼴 $f(x-t)$가 들어 있는 적분은 변수 자체에 $x$가 섞여 있어 곧바로 미분할 수 없으므로, 치환으로 적분구간을 정리해 피적분함수를 $x$와 적분변수로 분리한 뒤 미적분의 기본정리($\\frac{d}{dx}\\int_0^x g(u)\\,du=g(x)$)를 적용한다. 핵심은 $u=x-t$ 치환으로 적분기호 안의 인수를 $(x-u)f(u)$ 형태로 바꾸어 상수처럼 빼낼 수 있는 $x$를 분리하는 것이다.",
+  "S": "피적분함수의 $f(x-t)$를 단순한 $f(u)$로 바꾸기 위해 $u=x-t$로 치환하면 $du=-dt$이고, $t=0$일 때 $u=x$, $t=x$일 때 $u=0$, 또한 $t=x-u$이므로 $$F(x)=\\int_0^x t\\,f(x-t)\\,dt=-\\int_x^0 (x-u)\\,f(u)\\,du=\\int_0^x (x-u)\\,f(u)\\,du.$$\n적분변수 $u$에 대해 $x$는 상수로 취급되므로 적분 밖으로 분리하면 $$F(x)=x\\int_0^x f(u)\\,du-\\int_0^x u\\,f(u)\\,du.$$\n각 항을 $x$로 미분한다. 첫째 항은 곱의 미분과 미적분의 기본정리로 $$\\frac{d}{dx}\\Big(x\\int_0^x f(u)\\,du\\Big)=\\int_0^x f(u)\\,du+x\\,f(x),$$ 둘째 항은 기본정리로 $\\dfrac{d}{dx}\\displaystyle\\int_0^x u\\,f(u)\\,du=x\\,f(x)$이다.\n두 결과를 빼면 $x\\,f(x)$가 상쇄되어 $$F'(x)=\\int_0^x f(u)\\,du+x\\,f(x)-x\\,f(x)=\\int_0^x f(u)\\,du.$$\n$f(u)=\\dfrac{1}{1+u}$를 대입해 정적분을 계산하면 $$F'(x)=\\int_0^x \\frac{1}{1+u}\\,du=\\Big[\\ln(1+u)\\Big]_0^x=\\ln(1+x).$$\n조건 $F'(a)=\\ln 10$에 대입하면 $\\ln(1+a)=\\ln 10$이므로 로그의 진수를 비교하여 $$1+a=10,\\qquad a=9.$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{9}}$$ 입니다.",
   "finalAnswer": "9",
   "correctAnswer": "9",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

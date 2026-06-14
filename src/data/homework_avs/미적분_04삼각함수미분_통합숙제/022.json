@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 22번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "한 변의 길이가 정해지지 않은 정삼각형 $\\text{ABC}$가 직선 위에 놓여 있고, $\\overline{\\text{CD}}=1$, $\\angle\\text{ACD}=\\dfrac{\\pi}{4}$일 때, 점 $\\text{D}$에서 직선 $\\text{BC}$까지의 거리를 구한다.",
+  "C": "$\\angle\\text{ACD}=\\dfrac{\\pi}{4}$, $\\overline{\\text{CD}}=1$이다. 또한 삼각형 $\\text{ABC}$가 정삼각형이므로 $\\angle\\text{ACB}=\\dfrac{\\pi}{3}$이고, 선분 $\\text{CD}$가 삼각형 $\\text{ABC}$의 내부를 지나지 않으므로 점 $\\text{D}$는 변 $\\text{CA}$를 기준으로 점 $\\text{B}$의 반대쪽에 놓인다.",
+  "B": "점에서 직선까지의 거리는 그 점에서 직선에 내린 수선의 발까지의 길이이며, 빗변의 길이가 $r$이고 그 빗변이 기준선과 이루는 각이 $\\theta$인 직각삼각형에서 기준선에 대한 높이는 $r\\sin\\theta$이다. 또한 직선 위의 한 점을 꼭짓점으로 갖는 각에 대해 $\\sin(\\pi-\\theta)=\\sin\\theta$가 성립한다. 두 각의 합의 사인공식 $\\sin(\\alpha+\\beta)=\\sin\\alpha\\cos\\beta+\\cos\\alpha\\sin\\beta$를 이용한다.",
+  "S": "점 $\\text{D}$에서 직선 $\\text{BC}$까지의 거리를 길이로 다루기 위해, 점 $\\text{D}$에서 직선 $\\text{BC}$에 내린 수선의 발을 $\\text{H}$라 하면 구하는 거리는 $\\overline{\\text{DH}}$와 같다.\n직각삼각형 $\\text{DCH}$에서 빗변이 $\\overline{\\text{CD}}=1$이고 $\\overline{\\text{DH}}$는 $\\angle\\text{DCH}$를 마주 보므로, 높이는 빗변에 그 각의 사인을 곱한 값이 되어 $$\\overline{\\text{DH}}=\\overline{\\text{CD}}\\times\\sin(\\angle\\text{DCH})=\\sin(\\angle\\text{DCH})$$이다.\n꼭짓점 $\\text{C}$ 둘레의 각을 정리하면, 점 $\\text{D}$가 변 $\\text{CA}$ 너머에 있으므로 직선 $\\text{BC}$에서 $\\text{CD}$까지 벌어진 각은 $\\angle\\text{BCD}=\\angle\\text{BCA}+\\angle\\text{ACD}=\\dfrac{\\pi}{3}+\\dfrac{\\pi}{4}$이다.\n$\\angle\\text{DCH}$는 점 $\\text{H}$가 놓인 직선 $\\text{BC}$ 쪽에서 잰 각이므로 $\\angle\\text{BCD}$의 보각이 되어 $$\\angle\\text{DCH}=\\pi-\\left(\\dfrac{\\pi}{3}+\\dfrac{\\pi}{4}\\right)$$로 표현된다.\n보각의 사인은 원래 각의 사인과 같다는 성질로 식을 간단히 하면 $$\\overline{\\text{DH}}=\\sin\\!\\left(\\pi-\\left(\\dfrac{\\pi}{3}+\\dfrac{\\pi}{4}\\right)\\right)=\\sin\\!\\left(\\dfrac{\\pi}{3}+\\dfrac{\\pi}{4}\\right)$$이 된다.\n두 각의 합의 사인공식을 적용하면 $$\\sin\\!\\left(\\dfrac{\\pi}{3}+\\dfrac{\\pi}{4}\\right)=\\sin\\dfrac{\\pi}{3}\\cos\\dfrac{\\pi}{4}+\\cos\\dfrac{\\pi}{3}\\sin\\dfrac{\\pi}{4}$$이다.\n특수각의 삼각비 $\\sin\\dfrac{\\pi}{3}=\\dfrac{\\sqrt{3}}{2}$, $\\cos\\dfrac{\\pi}{4}=\\sin\\dfrac{\\pi}{4}=\\dfrac{\\sqrt{2}}{2}$, $\\cos\\dfrac{\\pi}{3}=\\dfrac{1}{2}$를 대입하면 $$\\overline{\\text{DH}}=\\dfrac{\\sqrt{3}}{2}\\cdot\\dfrac{\\sqrt{2}}{2}+\\dfrac{1}{2}\\cdot\\dfrac{\\sqrt{2}}{2}=\\dfrac{\\sqrt{6}}{4}+\\dfrac{\\sqrt{2}}{4}$$이다.\n두 항을 합치면 점 $\\text{D}$에서 직선 $\\text{BC}$까지의 거리는 $$\\overline{\\text{DH}}=\\dfrac{\\sqrt{6}+\\sqrt{2}}{4}$$로 결정된다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/023a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{sqrt(2)/10}}$$ 입니다.",
-  "finalAnswer": "sqrt(2)/10",
-  "correctAnswer": "sqrt(2)/10",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{\\sqrt{6}+\\sqrt{2}}{4}}}$$ 입니다.",
+  "finalAnswer": "(sqrt(6)+sqrt(2))/4",
+  "correctAnswer": "(sqrt(6)+sqrt(2))/4",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

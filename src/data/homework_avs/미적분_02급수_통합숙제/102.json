@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 급수 102번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "첫째항이 $10$이고 증가하는 수열 $\\{a_n\\}$의 극한값 $\\lim\\limits_{n\\to\\infty} a_n$을 구한다.",
+  "C": "$a_1=10$이고 모든 자연수 $n$에 대하여 $a_n < a_{n+1}$이며 $\\displaystyle\\sum_{k=1}^{n}\\left(a_{k+1}-a_k\\right)^2 = 2\\left(1-\\dfrac{1}{9^{\\,n}}\\right)$이다.",
+  "B": "계차 $b_k=a_{k+1}-a_k$를 도입하면 주어진 합은 $\\sum_{k=1}^{n} b_k^{\\,2}$이다. 부분합 $S_n$의 차 $S_n-S_{n-1}$로 일반항 $b_n^{\\,2}$을 복원하고, $a_n<a_{n+1}$에서 $b_n>0$이므로 양의 제곱근으로 $b_n$을 정한다. 극한값은 $\\lim a_n = a_1 + \\sum_{k=1}^{\\infty} b_k$이며, 이 무한등비급수의 합으로 계산한다.",
+  "S": "계차를 한 덩어리로 보면 합의 구조가 드러나므로 $b_k=a_{k+1}-a_k$로 놓는다. 그러면 조건은 $$\\sum_{k=1}^{n} b_k^{\\,2} = 2\\left(1-\\frac{1}{9^{\\,n}}\\right)$$ 이고, 이 우변을 $S_n$이라 한다.\n특정 항의 제곱은 인접한 부분합의 차로 뽑아낼 수 있으므로 $n\\ge 2$에서 $b_n^{\\,2}=S_n-S_{n-1}$을 계산한다. $$b_n^{\\,2} = 2\\left(1-\\frac{1}{9^{\\,n}}\\right)-2\\left(1-\\frac{1}{9^{\\,n-1}}\\right) = 2\\left(\\frac{1}{9^{\\,n-1}}-\\frac{1}{9^{\\,n}}\\right).$$\n괄호 안을 묶어 등비 꼴로 정리한다. $$b_n^{\\,2} = 2\\cdot\\frac{1}{9^{\\,n-1}}\\left(1-\\frac{1}{9}\\right) = 2\\cdot\\frac{8}{9}\\cdot\\frac{1}{9^{\\,n-1}} = \\frac{16}{9}\\cdot\\left(\\frac{1}{9}\\right)^{n-1}.$$\n$n=1$도 같은 식을 따르는지 직접 확인한다. $b_1^{\\,2}=S_1=2\\left(1-\\frac{1}{9}\\right)=\\frac{16}{9}$이고, 위 식에 $n=1$을 넣으면 $\\frac{16}{9}\\cdot\\left(\\frac{1}{9}\\right)^{0}=\\frac{16}{9}$로 일치하므로 모든 자연수 $n$에서 $b_n^{\\,2}=\\dfrac{16}{9}\\left(\\dfrac{1}{9}\\right)^{n-1}$이다.\n$a_n<a_{n+1}$이면 $b_n=a_{n+1}-a_n>0$이므로 양의 제곱근만 취한다. $$b_n = \\sqrt{\\frac{16}{9}\\left(\\frac{1}{9}\\right)^{n-1}} = \\frac{4}{3}\\left(\\frac{1}{3}\\right)^{n-1}.$$\n각 항은 직전 항에 계차를 더해 만들어지므로 $a_{n}=a_1+\\sum_{k=1}^{n-1} b_k$이고, 극한을 취하면 극한값은 첫째항에 계차들의 무한합을 더한 것이다. $$\\lim_{n\\to\\infty} a_n = a_1 + \\sum_{k=1}^{\\infty} b_k = 10 + \\sum_{k=1}^{\\infty}\\frac{4}{3}\\left(\\frac{1}{3}\\right)^{k-1}.$$\n공비가 $\\dfrac{1}{3}$로 $|r|<1$이므로 무한등비급수의 합 공식 $\\dfrac{\\text{첫째항}}{1-r}$을 쓴다. $$\\sum_{k=1}^{\\infty}\\frac{4}{3}\\left(\\frac{1}{3}\\right)^{k-1} = \\frac{\\frac{4}{3}}{1-\\frac{1}{3}} = \\frac{\\frac{4}{3}}{\\frac{2}{3}} = 2.$$\n따라서 극한값은 $$\\lim_{n\\to\\infty} a_n = 10 + 2 = 12$$ 이다.",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{12}}$$ 입니다.",
   "finalAnswer": "12",
   "correctAnswer": "12",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

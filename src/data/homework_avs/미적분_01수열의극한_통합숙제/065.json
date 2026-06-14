@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 수열의 극한 65번 명품 해설",
   "type": "calculus",
-  "P": "수열의 극한값과 급수의 수렴·발산을 판별합니다.",
-  "C": "최고차항으로 나누기, 샌드위치 정리, 등비수열 극한 조건을 활용합니다.",
-  "B": "수열의 극한:\n\n1) $$\\lim_{n \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교\n2) $$|r| < 1 \\Rightarrow \\lim_{n \\to \\infty} r^n = 0$$\n3) 수렴 조건: 단조 수렴 정리, 샌드위치 정리\n4) $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "주기가 $2$인 함수 $f(x)$에 대하여 $g(k)=\\displaystyle\\int_{2k}^{4k} f(x)\\,dx$로 정의할 때, $\\displaystyle\\lim_{n\\to\\infty}\\frac{1}{n^{2}}\\sum_{k=1}^{n} g(k)$의 값을 구한다.",
+  "C": "$0\\le x\\le 2$에서 $f(x)=2|x-1|$이고, 모든 실수 $x$에 대하여 $f(x+2)=f(x)$이므로 $f$는 주기가 $2$인 주기함수이다. $g(k)=\\displaystyle\\int_{2k}^{4k} f(x)\\,dx$이며 구하는 값은 $\\displaystyle\\lim_{n\\to\\infty}\\frac{1}{n^{2}}\\sum_{k=1}^{n} g(k)$이다.",
+  "B": "주기가 $T$인 함수의 정적분은 적분구간을 한 주기씩 끊어 합치면 같은 넓이가 반복되므로, 길이가 $T$의 정수배인 구간에서의 정적분은 (한 주기 정적분)$\\times$(주기 개수)로 계산된다. 또한 $\\displaystyle\\sum_{k=1}^{n} k=\\frac{n(n+1)}{2}$이고, 다항식 형태의 극한은 분자와 분모의 최고차항으로 결정된다.",
+  "S": "한 주기 $[0,\\,2]$에서의 정적분을 먼저 구하면 이후 계산의 기준값이 된다. $f(x)=2|x-1|$이 만드는 두 직각삼각형은 각각 밑변 $1$, 높이 $2$이므로 $$\\int_{0}^{2} f(x)\\,dx=\\frac{1}{2}\\cdot 1\\cdot 2+\\frac{1}{2}\\cdot 1\\cdot 2=2.$$\n적분구간 $[2k,\\,4k]$가 몇 개의 주기로 이루어지는지 확인하면 $g(k)$를 한 주기 넓이로 환원할 수 있다. 구간의 길이는 $4k-2k=2k$이고 주기가 $2$이므로 이 구간은 정확히 $k$개의 주기를 포함한다.\n주기함수의 정적분은 시작점과 무관하게 한 주기마다 같은 값을 가지므로, $k$개의 주기에 대한 정적분은 한 주기 정적분의 $k$배가 된다. $$g(k)=\\int_{2k}^{4k} f(x)\\,dx=k\\int_{0}^{2} f(x)\\,dx=2k.$$\n이제 부분합 $\\displaystyle\\sum_{k=1}^{n} g(k)$를 자연수의 합 공식으로 정리한다. $$\\sum_{k=1}^{n} g(k)=\\sum_{k=1}^{n} 2k=2\\cdot\\frac{n(n+1)}{2}=n(n+1).$$\n구하는 극한식에 대입하여 $n$에 대한 유리식으로 바꾼다. $$\\frac{1}{n^{2}}\\sum_{k=1}^{n} g(k)=\\frac{n(n+1)}{n^{2}}=\\frac{n+1}{n}=1+\\frac{1}{n}.$$\n$n\\to\\infty$일 때 $\\dfrac{1}{n}\\to 0$이므로 극한값이 확정된다. $$\\lim_{n\\to\\infty}\\left(1+\\frac{1}{n}\\right)=1.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/01수열의극한/066a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{②번}}$$ 입니다.",
-  "finalAnswer": "2",
-  "correctAnswer": "2",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{1}}$$ 입니다.",
+  "finalAnswer": "1",
+  "correctAnswer": "1",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

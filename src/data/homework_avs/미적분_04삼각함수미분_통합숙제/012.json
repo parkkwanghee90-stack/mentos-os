@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 12번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "함수 $f(x)=\\cos 2x\\cos x-\\sin 2x\\sin x$ 의 (양의) 주기를 구하고, 보기 ①~⑤ 중 해당하는 것을 고른다.",
+  "C": "$f(x)=\\cos 2x\\cos x-\\sin 2x\\sin x$ 이며, 보기는 ① $2\\pi$, ② $\\dfrac{5}{3}\\pi$, ③ $\\dfrac{4}{3}\\pi$, ④ $\\pi$, ⑤ $\\dfrac{2}{3}\\pi$ 이다.",
+  "B": "두 각의 합에 대한 코사인 덧셈정리 $\\cos(A+B)=\\cos A\\cos B-\\sin A\\sin B$ 로 식을 하나의 코사인으로 합성한 뒤, $\\cos(kx)$ 꼴 함수의 기본 주기가 $\\dfrac{2\\pi}{|k|}$ 임을 이용한다.",
+  "S": "주어진 식이 코사인 덧셈정리 $\\cos A\\cos B-\\sin A\\sin B=\\cos(A+B)$ 의 우변과 정확히 같은 모양이므로, $A=2x,\\ B=x$ 로 두어 하나의 코사인으로 합친다. $$f(x)=\\cos 2x\\cos x-\\sin 2x\\sin x=\\cos(2x+x)=\\cos 3x$$\n주기를 직접 확인하기 위해, 코사인이 $2\\pi$ 주기를 가짐을 이용해 각에 $2\\pi$ 를 더해 본다. $$f(x)=\\cos 3x=\\cos(3x+2\\pi)$$\n더해진 $2\\pi$ 를 계수 $3$ 으로 묶어내면 독립변수 $x$ 가 얼마만큼 평행이동했을 때 함숫값이 같아지는지가 드러난다. $$\\cos(3x+2\\pi)=\\cos 3\\!\\left(x+\\frac{2}{3}\\pi\\right)=f\\!\\left(x+\\frac{2}{3}\\pi\\right)$$\n따라서 모든 $x$ 에 대하여 $f\\!\\left(x+\\dfrac{2}{3}\\pi\\right)=f(x)$ 가 성립하므로, $\\dfrac{2}{3}\\pi$ 는 $f$ 의 주기이다. 일반적으로 $\\cos(kx)$ 의 기본 주기는 $\\dfrac{2\\pi}{|k|}$ 이고 여기서 $k=3$ 이므로 $$T=\\frac{2\\pi}{3}$$ 이 가장 작은 양의 주기이다.\n그러므로 함수 $f(x)$ 의 주기는 $\\dfrac{2}{3}\\pi$ 이고, 이는 보기 ⑤ 와 일치한다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/013a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{-4sqrt(2)/9}}$$ 입니다.",
-  "finalAnswer": "-4sqrt(2)/9",
-  "correctAnswer": "-4sqrt(2)/9",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{2}{3}\\pi}}$$ 입니다.",
+  "finalAnswer": "2/3π",
+  "correctAnswer": "2/3π",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

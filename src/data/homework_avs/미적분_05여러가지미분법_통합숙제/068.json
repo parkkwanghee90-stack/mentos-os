@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 여러 가지 미분법 68번 명품 해설",
   "type": "calculus",
-  "P": "합성함수, 매개변수, 음함수의 미분법을 활용합니다.",
-  "C": "연쇄 법칙, 몫의 미분법, 매개변수 미분을 적용합니다.",
-  "B": "여러 가지 미분법:\n\n1) 합성함수: $$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$$\n2) 매개변수: $$\\frac{dy}{dx} = \\frac{\\frac{dy}{dt}}{\\frac{dx}{dt}}$$\n3) 음함수: 양변을 $$x$$로 미분, $$y' = \\frac{dy}{dx}$$로 놓고 정리\n4) 역함수 미분: $$\\frac{dx}{dy} = \\frac{1}{\\frac{dy}{dx}}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "열린구간 $\\left(-\\dfrac{\\pi}{2},\\ \\dfrac{\\pi}{2}\\right)$에서 정의된 함수 $f(x)=\\ln\\!\\left(\\dfrac{\\sec x+\\tan x}{a}\\right)$의 역함수를 $g(x)$라 할 때, $\\displaystyle\\lim_{x\\to-2}\\dfrac{g(x)}{x+2}=b$를 만족시키는 두 상수 $a,\\ b$의 곱 $ab$의 값을 구한다. (단, $a>0$)",
+  "C": "$f(x)=\\ln\\!\\left(\\dfrac{\\sec x+\\tan x}{a}\\right)$이고 $g$는 $f$의 역함수이다. 극한 $\\displaystyle\\lim_{x\\to-2}\\dfrac{g(x)}{x+2}$가 실수 $b$로 수렴하며, $a>0$이다.",
+  "B": "분모 $x+2$가 $0$으로 가는데 극한이 수렴하려면 분자도 $0$으로 가야 하므로 $g(-2)=0$, 즉 $f(0)=-2$가 되어 상수 $a$가 결정된다. 그러면 극한은 미분계수 $g'(-2)$가 되고, 역함수의 미분법 $g'(p)=\\dfrac{1}{f'(g(p))}$로 $b$를 구한다. 여기서 $\\dfrac{d}{dx}\\ln(\\sec x+\\tan x)=\\sec x$가 핵심 도함수이다.",
+  "S": "분모가 $0$에 수렴하는데 극한이 유한하므로 분자도 같이 $0$이어야 한다. 따라서 $\\displaystyle\\lim_{x\\to-2}g(x)=g(-2)=0$이고, 역함수의 정의에서 $g(-2)=0$은 $f(0)=-2$와 동치이다.\n$f(0)=-2$를 직접 대입한다. $\\sec 0=1,\\ \\tan 0=0$이므로 $$f(0)=\\ln\\!\\left(\\dfrac{\\sec 0+\\tan 0}{a}\\right)=\\ln\\!\\left(\\dfrac{1}{a}\\right)=-\\ln a.$$\n이를 $-2$와 같게 놓아 $a$를 구한다. $$-\\ln a=-2 \\;\\Rightarrow\\; \\ln a=2 \\;\\Rightarrow\\; a=e^{2}.$$ 이는 조건 $a>0$을 만족한다.\n$g(-2)=0$을 이용해 주어진 극한을 미분계수로 바꾼다. 분자에 $-g(-2)=0$을 더해 평균변화율 꼴로 만들면 $$\\lim_{x\\to-2}\\dfrac{g(x)}{x+2}=\\lim_{x\\to-2}\\dfrac{g(x)-g(-2)}{x-(-2)}=g'(-2)=b.$$\n역함수의 미분법을 적용하기 위해 $f'$를 구한다. 곱·합의 미분에서 $(\\sec x)'=\\sec x\\tan x,\\ (\\tan x)'=\\sec^{2}x$이므로 $$f'(x)=\\dfrac{\\sec x\\tan x+\\sec^{2}x}{\\sec x+\\tan x}=\\dfrac{\\sec x(\\tan x+\\sec x)}{\\sec x+\\tan x}=\\sec x.$$ (상수 $a$는 로그의 차로 분리되어 미분하면 사라진다.)\n$g(-2)=0$이므로 역함수의 미분법 $g'(-2)=\\dfrac{1}{f'(g(-2))}=\\dfrac{1}{f'(0)}$를 쓴다. $f'(0)=\\sec 0=1$이므로 $$b=g'(-2)=\\dfrac{1}{f'(0)}=\\dfrac{1}{1}=1.$$\n두 상수의 곱을 구한다. $$ab=e^{2}\\times 1=e^{2}.$$ 이는 보기 ③ $e^{2}$에 해당한다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/05여러가지미분법/069a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{③번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{e^2}}$$ 입니다.",
   "finalAnswer": "3",
   "correctAnswer": "3",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 도함수의 활용 2 25번 명품 해설",
   "type": "calculus",
-  "P": "도함수를 활용한 방정식·부등식의 풀이와 최적화 문제를 해결합니다.",
-  "C": "함수의 그래프를 분석하여 근의 개수를 판별하고, 최댓값·최솟값을 구합니다.",
-  "B": "도함수의 활용 2:\n\n1) $$f(x) = g(x)$$의 실근 개수: 두 그래프의 교점\n2) 부등식 증명: 차함수의 최솟값 ≥ 0\n3) 평균값 정리: $$f'(c) = \\frac{f(b) - f(a)}{b - a}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "점 $\\mathrm{P}(0,2)$에서 출발해 $y$축 양의 방향으로 매초 $1$의 일정한 속도로 움직이는 점 $\\mathrm{P}$가 점 $(0,4)$를 지나는 순간, 삼각형 $\\mathrm{ADC}$의 넓이의 시간 $t$(초)에 대한 순간변화율을 구한다.",
+  "C": "점 $\\mathrm{P}$의 $y$좌표를 $a$라 하면 $a=2+t$이므로 $\\dfrac{da}{dt}=1$이다. 점 $\\mathrm{P}(0,a)$를 지나 $x$축과 평행한 직선이 $y=4^{x}$, $y=2^{x}$와 만나는 점이 각각 $\\mathrm{A}$, $\\mathrm{B}$이고, 점 $\\mathrm{B}$를 지나 $y$축과 평행한 직선이 $y=4^{x}$와 만나는 점이 $\\mathrm{C}$, 점 $\\mathrm{C}$를 지나 $x$축과 평행한 직선이 $y=2^{x}$와 만나는 점이 $\\mathrm{D}$이다.",
+  "B": "곡선 위의 점의 좌표는 지수·로그의 역관계로 구한다. $4^{x}=a$이면 $x=\\log_{4}a=\\dfrac{\\ln a}{2\\ln 2}$이고, $2^{x}=a$이면 $x=\\log_{2}a=\\dfrac{\\ln a}{\\ln 2}$이다. 넓이 $S$를 $a$의 식으로 나타낸 뒤, 합성함수의 미분과 매개변수 미분 $\\dfrac{dS}{dt}=\\dfrac{dS}{da}\\cdot\\dfrac{da}{dt}$로 시간에 대한 순간변화율을 얻는다.",
+  "S": "네 점의 좌표를 $a$로 나타내기 위해 각 곡선 방정식을 푼다. $y=a$를 $y=4^{x}$, $y=2^{x}$에 대입하면 $\\mathrm{A}\\!\\left(\\dfrac{\\ln a}{2\\ln 2},\\,a\\right)$, $\\mathrm{B}\\!\\left(\\dfrac{\\ln a}{\\ln 2},\\,a\\right)$이다.\n점 $\\mathrm{C}$는 점 $\\mathrm{B}$와 $x$좌표가 같으므로 $y=4^{x}$에 $x=\\dfrac{\\ln a}{\\ln 2}$를 넣으면 $$y=4^{\\frac{\\ln a}{\\ln 2}}=\\left(2^{\\frac{\\ln a}{\\ln 2}}\\right)^{2}=a^{2}$$ 이어서 $\\mathrm{C}\\!\\left(\\dfrac{\\ln a}{\\ln 2},\\,a^{2}\\right)$이다.\n점 $\\mathrm{D}$는 점 $\\mathrm{C}$와 $y$좌표가 같으므로 $2^{x}=a^{2}$에서 $x=\\log_{2}a^{2}=\\dfrac{2\\ln a}{\\ln 2}$가 되어 $\\mathrm{D}\\!\\left(\\dfrac{2\\ln a}{\\ln 2},\\,a^{2}\\right)$이다. 두 점 $\\mathrm{C}$, $\\mathrm{D}$의 $y$좌표가 $a^{2}$로 같으므로 선분 $\\mathrm{CD}$는 $x$축과 평행하다.\n선분 $\\mathrm{CD}$를 밑변으로 삼으면 길이는 $\\overline{\\mathrm{CD}}=\\dfrac{2\\ln a}{\\ln 2}-\\dfrac{\\ln a}{\\ln 2}=\\dfrac{\\ln a}{\\ln 2}$이고, 높이는 점 $\\mathrm{A}$에서 직선 $y=a^{2}$까지의 거리 $a^{2}-a$이다. 따라서 넓이는 $$S=\\dfrac{1}{2}\\cdot\\dfrac{\\ln a}{\\ln 2}\\cdot\\left(a^{2}-a\\right)=\\dfrac{a(a-1)\\ln a}{2\\ln 2}.$$\n시간에 대한 순간변화율은 $\\dfrac{da}{dt}=1$이므로 $\\dfrac{dS}{dt}=\\dfrac{dS}{da}$이다. 곱의 미분으로 $$\\dfrac{dS}{da}=\\dfrac{1}{2\\ln 2}\\Big\\{(2a-1)\\ln a+(a^{2}-a)\\cdot\\dfrac{1}{a}\\Big\\}=\\dfrac{(2a-1)\\ln a+(a-1)}{2\\ln 2}.$$\n점 $\\mathrm{P}$가 점 $(0,4)$를 지나는 순간은 $a=4$이다. 이를 대입하면 $\\ln 4=2\\ln 2$이므로 $$\\dfrac{dS}{dt}=\\dfrac{(2\\cdot 4-1)\\cdot 2\\ln 2+(4-1)}{2\\ln 2}=\\dfrac{14\\ln 2+3}{2\\ln 2}=7+\\dfrac{3}{2\\ln 2}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/07도함수활용2/026a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{④번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{7 + \\dfrac{3}{2\\ln 2}}}$$ 입니다.",
   "finalAnswer": "4",
   "correctAnswer": "4",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

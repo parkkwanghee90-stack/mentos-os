@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 여러 가지 미분법 60번 명품 해설",
   "type": "calculus",
-  "P": "합성함수, 매개변수, 음함수의 미분법을 활용합니다.",
-  "C": "연쇄 법칙, 몫의 미분법, 매개변수 미분을 적용합니다.",
-  "B": "여러 가지 미분법:\n\n1) 합성함수: $$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$$\n2) 매개변수: $$\\frac{dy}{dx} = \\frac{\\frac{dy}{dt}}{\\frac{dx}{dt}}$$\n3) 음함수: 양변을 $$x$$로 미분, $$y' = \\frac{dy}{dx}$$로 놓고 정리\n4) 역함수 미분: $$\\frac{dx}{dy} = \\frac{1}{\\frac{dy}{dx}}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$-7 \\times S'\\!\\left(\\dfrac{\\pi}{4}\\right)$의 값. 여기서 $S(\\theta)$는 삼각형 $\\mathrm{PCQ}$의 넓이이다.",
+  "C": "지름 $\\overline{\\mathrm{AB}}=10$인 원 위에서 $\\overline{\\mathrm{AC}}=4$인 점 $\\mathrm{C}$를 잡고, 원 위의 점 $\\mathrm{P}$를 $\\angle \\mathrm{PCB}=\\theta$가 되게 정한다. 점 $\\mathrm{P}$를 지나고 $\\overline{\\mathrm{AB}}$에 수직인 직선이 원과 다시 만나는 점을 $\\mathrm{Q}$라 한다.",
+  "B": "원의 지름 $\\overline{\\mathrm{AB}}$에 수직인 현은 지름에 의해 이등분되므로 $\\mathrm{Q}$는 $\\mathrm{P}$를 $\\overline{\\mathrm{AB}}$에 대해 대칭이동한 점이고, $\\overline{\\mathrm{PQ}}$의 중점이 $\\mathrm{AB}$ 위에 놓인다. 한 점에서 원에 그은 직선이 원과 만나는 거리는 이차방정식의 근으로 주어지며, 넓이 함수는 곱의 미분법과 합성함수의 미분법으로 미분한다.",
+  "S": "원의 중심 $\\mathrm{O}$를 원점, $\\overline{\\mathrm{AB}}$를 $x$축으로 두면 반지름이 $5$이므로 $\\mathrm{A}(-5,\\,0)$, $\\mathrm{B}(5,\\,0)$이고, $\\overline{\\mathrm{AC}}=4$에서 $\\mathrm{C}(-1,\\,0)$이다. 점 $\\mathrm{C}$는 중심에서 거리 $1$만큼 떨어져 있다.\n점 $\\mathrm{P}$는 $\\mathrm{C}$에서 $\\overline{\\mathrm{CB}}$ 방향과 각 $\\theta$를 이루는 반직선 위에 있으므로 $\\overline{\\mathrm{CP}}=r$라 하면 $\\mathrm{P}(-1+r\\cos\\theta,\\ r\\sin\\theta)$이다. 이 점을 원의 방정식 $x^{2}+y^{2}=25$에 대입하면 $$r^{2}-2r\\cos\\theta-24=0$$ 이고, $r>0$이므로 $$\\overline{\\mathrm{CP}}=r=\\cos\\theta+\\sqrt{\\cos^{2}\\theta+24}.$$\n$\\mathrm{Q}$는 $\\mathrm{P}$를 $x$축에 대해 대칭이동한 점이므로 $\\overline{\\mathrm{PQ}}$는 $x$축에 수직이고 그 중점은 $\\mathrm{P}$의 발이다. 따라서 밑변 $\\overline{\\mathrm{PQ}}=2\\,r\\sin\\theta$, 점 $\\mathrm{C}$에서 직선 $\\mathrm{PQ}$까지의 거리(높이)는 $r\\cos\\theta$이다.\n삼각형 $\\mathrm{PCQ}$의 넓이는 $$S(\\theta)=\\frac{1}{2}\\cdot 2r\\sin\\theta\\cdot r\\cos\\theta=r^{2}\\sin\\theta\\cos\\theta=\\frac{1}{2}\\,r^{2}\\sin 2\\theta,\\qquad r=\\overline{\\mathrm{CP}}.$$\n곱의 미분법으로 $r$과 $\\sin 2\\theta$를 함께 미분하면 $$S'(\\theta)=r\\,r'\\sin 2\\theta+\\frac{1}{2}r^{2}\\cdot 2\\cos 2\\theta=r\\,r'\\sin 2\\theta+r^{2}\\cos 2\\theta.$$ 여기서 $$r'=\\frac{dr}{d\\theta}=-\\sin\\theta-\\frac{\\sin\\theta\\cos\\theta}{\\sqrt{\\cos^{2}\\theta+24}}.$$\n$\\theta=\\dfrac{\\pi}{4}$에서 $\\cos^{2}\\theta=\\dfrac{1}{2}$이므로 $\\sqrt{\\cos^{2}\\theta+24}=\\sqrt{\\dfrac{49}{2}}=\\dfrac{7}{\\sqrt{2}}$이고 $$r=\\frac{\\sqrt{2}}{2}+\\frac{7}{\\sqrt{2}}=\\frac{1+7}{\\sqrt{2}}=4\\sqrt{2},\\qquad r'=-\\frac{\\sqrt{2}}{2}\\left(1+\\frac{1}{7}\\right)=-\\frac{4\\sqrt{2}}{7}.$$\n$\\theta=\\dfrac{\\pi}{4}$이면 $\\sin 2\\theta=\\sin\\dfrac{\\pi}{2}=1$, $\\cos 2\\theta=\\cos\\dfrac{\\pi}{2}=0$이므로 둘째 항이 사라져 $$S'\\!\\left(\\frac{\\pi}{4}\\right)=r\\,r'\\cdot 1+r^{2}\\cdot 0=4\\sqrt{2}\\cdot\\left(-\\frac{4\\sqrt{2}}{7}\\right)=-\\frac{32}{7}.$$\n따라서 $$-7\\times S'\\!\\left(\\frac{\\pi}{4}\\right)=-7\\times\\left(-\\frac{32}{7}\\right)=32.$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{32}}$$ 입니다.",
   "finalAnswer": "32",
   "correctAnswer": "32",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

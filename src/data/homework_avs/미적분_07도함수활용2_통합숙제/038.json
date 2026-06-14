@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 도함수의 활용 2 38번 명품 해설",
   "type": "calculus",
-  "P": "도함수를 활용한 방정식·부등식의 풀이와 최적화 문제를 해결합니다.",
-  "C": "함수의 그래프를 분석하여 근의 개수를 판별하고, 최댓값·최솟값을 구합니다.",
-  "B": "도함수의 활용 2:\n\n1) $$f(x) = g(x)$$의 실근 개수: 두 그래프의 교점\n2) 부등식 증명: 차함수의 최솟값 ≥ 0\n3) 평균값 정리: $$f'(c) = \\frac{f(b) - f(a)}{b - a}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\overline{AQ}=4\\,(\\mathrm{m})$가 되는 순간, 선분 $\\overline{BQ}$의 길이의 시간에 대한 변화율 $\\dfrac{d\\,\\overline{BQ}}{dt}$를 구한다.",
+  "C": "두 정점 $P,\\ Q$ 사이의 거리는 $\\overline{PQ}=3\\,(\\mathrm{m})$이고, 점 $Q$를 지나며 $\\overline{PQ}$에 수직인 직선이 $l$이다. 점 $A$는 점 $Q$에서 출발하여 직선 $l$을 따라 초속 $1\\,\\mathrm{m}$로 움직이고, 직선 $l$ 위의 점 $B$는 $\\overline{AP}+\\overline{PB}=20\\,(\\mathrm{m})$를 만족시키며 점 $Q$ 쪽으로 움직인다.",
+  "B": "직각삼각형에서 빗변의 길이는 피타고라스 정리로 두 변의 길이로 표현되고, 길이가 시간 $t$의 함수일 때 그 길이의 변화율은 합성함수의 미분법으로 $\\dfrac{d}{dt}\\sqrt{f(t)}=\\dfrac{f'(t)}{2\\sqrt{f(t)}}$를 이용해 구한다.",
+  "S": "점 $Q$를 원점, 직선 $l$을 $x$축으로 놓으면 $\\overline{PQ}\\perp l$이므로 점 $P$의 좌표는 $(0,\\ 3)$이다. 점 $A$는 점 $Q$에서 초속 $1\\,\\mathrm{m}$로 움직이므로 시각 $t$초에서 $\\overline{AQ}=t$이고, 두 점 $A,\\ B$는 직선 $l$ 위에 있다.\n직각삼각형 $APQ$에서 피타고라스 정리로 점 $A$와 점 $P$ 사이의 거리를 시각 $t$로 나타내면 $$\\overline{AP}=\\sqrt{\\overline{AQ}^{\\,2}+\\overline{PQ}^{\\,2}}=\\sqrt{t^{2}+9}.$$\n조건 $\\overline{AP}+\\overline{PB}=20$에서 $\\overline{PB}$를 시각 $t$로 나타내면 $$\\overline{PB}=20-\\overline{AP}=20-\\sqrt{t^{2}+9}.$$\n직각삼각형 $BPQ$에서 다시 피타고라스 정리를 적용하면 $\\overline{PB}^{\\,2}=\\overline{BQ}^{\\,2}+\\overline{PQ}^{\\,2}$이므로 선분 $\\overline{BQ}$의 길이는 $$\\overline{BQ}=\\sqrt{\\overline{PB}^{\\,2}-9}=\\sqrt{\\left(20-\\sqrt{t^{2}+9}\\right)^{2}-9}.$$\n합성함수의 미분법으로 양변을 시각 $t$에 대해 미분한다. 먼저 $\\dfrac{d\\,\\overline{AP}}{dt}=\\dfrac{t}{\\sqrt{t^{2}+9}}$이고 $\\dfrac{d\\,\\overline{PB}}{dt}=-\\dfrac{t}{\\sqrt{t^{2}+9}}$이므로 $$\\frac{d\\,\\overline{BQ}}{dt}=\\frac{\\overline{PB}\\cdot\\dfrac{d\\,\\overline{PB}}{dt}}{\\sqrt{\\overline{PB}^{\\,2}-9}}=\\frac{\\overline{PB}}{\\overline{BQ}}\\cdot\\left(-\\frac{t}{\\sqrt{t^{2}+9}}\\right).$$\n$\\overline{AQ}=4$가 되는 순간은 $t=4$이다. 이때 $$\\overline{AP}=\\sqrt{16+9}=5,\\qquad \\overline{PB}=20-5=15,$$ 이고 $$\\overline{BQ}=\\sqrt{15^{2}-9}=\\sqrt{216}=6\\sqrt{6}.$$\n또한 $t=4$일 때 $\\dfrac{d\\,\\overline{PB}}{dt}=-\\dfrac{4}{5}$이므로, 구하는 변화율은 $$\\frac{d\\,\\overline{BQ}}{dt}=\\frac{\\overline{PB}}{\\overline{BQ}}\\cdot\\frac{d\\,\\overline{PB}}{dt}=\\frac{15}{6\\sqrt{6}}\\cdot\\left(-\\frac{4}{5}\\right)=-\\frac{2}{\\sqrt{6}}=-\\frac{\\sqrt{6}}{3}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/07도함수활용2/039a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{①번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{-\\dfrac{\\sqrt{6}}{3}}}$$ 입니다.",
   "finalAnswer": "1",
   "correctAnswer": "1",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

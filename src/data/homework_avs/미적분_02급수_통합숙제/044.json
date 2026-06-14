@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 44번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "색칠된 부분의 넓이 $S_n$이 만드는 무한급수의 합 $\\displaystyle\\lim_{n\\to\\infty}S_n$을 구한다.",
+  "C": "한 변의 길이가 $4$인 정사각형 $\\mathrm{OA_1B_1C_1}$에서 대각선 $\\mathrm{OB_1}$을 $3:1$로 내분하는 점이 $\\mathrm{D_1}$이고, 네 선분 $\\mathrm{A_1B_1},\\ \\mathrm{B_1C_1},\\ \\mathrm{C_1D_1},\\ \\mathrm{D_1A_1}$로 둘러싸인 도형을 색칠한 것이 $R_1$이다. 중심이 $\\mathrm{O}$이고 두 직선 $\\mathrm{A_1D_1},\\ \\mathrm{C_1D_1}$에 동시에 접하는 원이 선분 $\\mathrm{OB_1}$과 만나는 점을 $\\mathrm{B_2}$로 하여, $\\mathrm{OB_2}$를 대각선으로 하는 정사각형 $\\mathrm{OA_2B_2C_2}$ 안에 같은 방식으로 도형을 그려 $R_2$를 얻으며, 이 과정을 한없이 반복한다.",
+  "B": "매 단계의 그림은 직전 그림을 일정한 비율로 축소한 닮음꼴이다. 따라서 색칠된 넓이 $S_n$은 첫째항 $S_1$, 공비가 (닮음비)$^2$인 등비수열을 이루고, $\\lvert$공비$\\rvert<1$이면 무한등비급수의 합 공식 $\\displaystyle\\sum_{n=1}^{\\infty}ar^{n-1}=\\dfrac{a}{1-r}$로 전체 넓이를 구할 수 있다.",
+  "S": "첫 단계 넓이를 좌표로 확정한다. $\\mathrm{O}(0,0),\\ \\mathrm{A_1}(4,0),\\ \\mathrm{B_1}(4,4),\\ \\mathrm{C_1}(0,4)$로 두면 $\\mathrm{D_1}$은 $\\mathrm{OB_1}$을 $3:1$로 내분하므로 $\\mathrm{D_1}=\\left(\\tfrac34\\cdot4,\\ \\tfrac34\\cdot4\\right)=(3,3)$이다.\n색칠 영역을 두 삼각형으로 갈라 넓이를 합한다. 사각형 $\\mathrm{A_1B_1C_1D_1}$은 대각선 $\\mathrm{B_1D_1}$로 나뉘는데, 두 삼각형 $\\mathrm{A_1B_1D_1},\\ \\mathrm{B_1C_1D_1}$의 넓이가 각각 $2$이므로 $$S_1=2+2=4.$$\n다음 정사각형의 크기를 결정할 원의 반지름을 구한다. 중심 $\\mathrm{O}$에서 직선 $\\mathrm{A_1D_1}$까지의 거리가 곧 반지름 $r$이다. $\\mathrm{A_1}(4,0),\\ \\mathrm{D_1}(3,3)$을 지나는 직선은 $3x+y-12=0$이므로 $$r=\\frac{\\lvert 3\\cdot0+0-12\\rvert}{\\sqrt{3^2+1^2}}=\\frac{12}{\\sqrt{10}}=\\frac{6\\sqrt{10}}{5}.$$ 대칭성에 의해 직선 $\\mathrm{C_1D_1}$까지의 거리도 같아 한 원이 두 직선에 동시에 접한다.\n새 정사각형의 대각선 길이를 읽는다. 이 원이 대각선 $\\mathrm{OB_1}$ 위에서 만나는 점이 $\\mathrm{B_2}$이고 중심이 $\\mathrm{O}$이므로 $$\\mathrm{OB_2}=r=\\frac{6\\sqrt{10}}{5}.$$ 이것이 정사각형 $\\mathrm{OA_2B_2C_2}$의 대각선이다.\n닮음비(한 변의 비)를 계산한다. 정사각형의 한 변은 대각선의 $\\dfrac{1}{\\sqrt2}$배이므로 $$\\mathrm{OA_2}=\\frac{1}{\\sqrt2}\\cdot\\frac{6\\sqrt{10}}{5}=\\frac{6\\sqrt{5}}{5}=\\frac{3\\sqrt5}{5}\\cdot2.$$ 처음 변 $\\mathrm{OA_1}=4$와 비교하면 닮음비는 $$\\frac{\\mathrm{OA_2}}{\\mathrm{OA_1}}=\\frac{1}{4}\\cdot\\frac{6\\sqrt5}{5}=\\frac{3\\sqrt5}{10}.$$\n넓이의 공비를 구한다. 넓이비는 닮음비의 제곱이므로 $$\\left(\\frac{3\\sqrt5}{10}\\right)^2=\\frac{9\\cdot5}{100}=\\frac{9}{20}.$$ 즉 $S_n$은 첫째항 $S_1=4$, 공비 $\\dfrac{9}{20}$인 등비수열이다.\n무한등비급수의 합을 구한다. 공비 $\\dfrac{9}{20}<1$이므로 $$\\lim_{n\\to\\infty}S_n=\\sum_{n=1}^{\\infty}4\\left(\\frac{9}{20}\\right)^{n-1}=\\frac{4}{1-\\dfrac{9}{20}}=\\frac{4}{\\dfrac{11}{20}}=\\frac{80}{11}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/045a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{③번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{80}{11}}}$$ 입니다.",
   "finalAnswer": "3",
   "correctAnswer": "3",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

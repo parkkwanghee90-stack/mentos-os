@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 101번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\lim\\limits_{n\\to\\infty}\\left(\\overline{OQ}\\times\\overline{HP}\\right)$의 값을 구한다.",
+  "C": "중심이 원점 $O$이고 점 $\\mathrm{P}(2^{n},\\,0)$을 지나는 원 $C$ 위에서, 호 $PQ$의 길이가 $\\pi$가 되도록 점 $Q$를 잡는다. 점 $Q$에서 $x$축에 내린 수선의 발이 $H$이다.",
+  "B": "반지름 $r$인 원에서 중심각 $\\theta$에 대한 호의 길이는 $r\\theta$이고, 원 위의 점은 중심각 $\\theta$를 이용해 $(r\\cos\\theta,\\ r\\sin\\theta)$로 나타난다. 또한 $\\theta\\to 0$일 때 $\\dfrac{1-\\cos\\theta}{\\theta^{2}}\\to\\dfrac{1}{2}$이다.",
+  "S": "원의 반지름을 정한다. 원 $C$는 점 $\\mathrm{P}(2^{n},\\,0)$을 지나므로 반지름은 $r=\\overline{OP}=2^{n}$이고, 점 $Q$도 원 위에 있으므로 $\\overline{OQ}=2^{n}$이다.\n호의 길이로 중심각을 구한다. 호 $PQ$의 길이가 $\\pi$이므로 중심각을 $\\theta$라 하면 $r\\theta=\\pi$, 즉 $$\\theta=\\frac{\\pi}{2^{n}}.$$\n점 $Q$의 좌표를 중심각으로 나타낸다. 점 $Q$는 양의 $x$축과 이루는 각이 $\\theta$이므로 $$Q=\\left(2^{n}\\cos\\theta,\\ 2^{n}\\sin\\theta\\right).$$\n수선의 발 $H$와 $\\overline{HP}$를 구한다. $H$는 $Q$의 $x$좌표를 갖고 $x$축 위에 있으므로 $H=\\left(2^{n}\\cos\\theta,\\ 0\\right)$이고, $0<\\theta<\\dfrac{\\pi}{2}$에서 $H$는 $O$와 $P$ 사이에 있으므로 $$\\overline{HP}=2^{n}-2^{n}\\cos\\theta=2^{n}(1-\\cos\\theta).$$\n구하는 곱을 식으로 정리한다. $\\overline{OQ}=2^{n}$이므로 $$\\overline{OQ}\\times\\overline{HP}=2^{n}\\cdot 2^{n}(1-\\cos\\theta)=2^{2n}\\left(1-\\cos\\frac{\\pi}{2^{n}}\\right).$$\n극한 계산을 위해 $\\theta$로 치환한다. $\\theta=\\dfrac{\\pi}{2^{n}}$이면 $2^{n}=\\dfrac{\\pi}{\\theta}$이고 $n\\to\\infty$일 때 $\\theta\\to 0^{+}$이므로 $$2^{2n}(1-\\cos\\theta)=\\frac{\\pi^{2}}{\\theta^{2}}\\,(1-\\cos\\theta)=\\pi^{2}\\cdot\\frac{1-\\cos\\theta}{\\theta^{2}}.$$\n기본 극한을 적용해 값을 확정한다. $\\theta\\to 0$일 때 $\\dfrac{1-\\cos\\theta}{\\theta^{2}}\\to\\dfrac{1}{2}$이므로 $$\\lim_{n\\to\\infty}\\left(\\overline{OQ}\\times\\overline{HP}\\right)=\\pi^{2}\\times\\frac{1}{2}=\\frac{\\pi^{2}}{2}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/102a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{③번}}$$ 입니다.",
-  "finalAnswer": "3",
-  "correctAnswer": "3",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{\\pi^{2}}{2}}}$$ 입니다.",
+  "finalAnswer": "pi^2/2",
+  "correctAnswer": "pi^2/2",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

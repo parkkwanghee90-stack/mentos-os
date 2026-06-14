@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 61번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle\\sum_{n=1}^{\\infty} S_n$의 값을 구한다. 여기서 $S_n$은 같은 방법으로 반복해 얻은 $n$번째 도형 $R_n$의 넓이이다.",
+  "C": "한 변의 길이가 $3$인 정사각형 $A_1B_1C_1D_1$에서 네 변 $A_1B_1,\\,B_1C_1,\\,C_1D_1,\\,D_1A_1$을 각각 $1:2$로 내분하는 점을 $E_1,\\,F_1,\\,G_1,\\,H_1$이라 한다. 네 꼭짓점 $A_1,\\,B_1,\\,C_1,\\,D_1$을 중심으로 하고 $A_1E_1,\\,B_1F_1,\\,C_1G_1,\\,D_1H_1$을 반지름으로 하는 사분원 $4$개를 잘라내어 도형 $R_1$을 얻는다. 정사각형 $E_1F_1G_1H_1$ 안에서 같은 과정을 반복해 $R_2,\\,R_3,\\,\\dots$를 만든다.",
+  "B": "서로 닮은 도형을 같은 방법으로 무한히 반복해 만들 때, 각 단계의 넓이 $S_n$은 등비수열을 이룬다. 이때 공비는 한 단계에서 다음 단계로 갈 때의 (길이의 닮음비)$^2$와 같다. 첫째항 $S_1$과 공비 $r\\,(|r|<1)$을 구하면 무한등비급수의 합은 $\\dfrac{S_1}{1-r}$로 계산한다.",
+  "S": "네 변을 $1:2$로 내분하므로 각 사분원의 반지름은 변의 길이의 $\\dfrac13$, 즉 $A_1E_1=B_1F_1=C_1G_1=D_1H_1=\\dfrac13\\times 3=1$이다.\n잘라낸 네 사분원은 모두 반지름 $1$인 사분원이므로 그 넓이의 합은 반지름 $1$인 온전한 원 하나의 넓이와 같다. $$4\\times\\frac14\\pi\\times 1^2=\\pi$$ 따라서 $$S_1=3^2-\\pi=9-\\pi.$$\n$A_1E_1=1,\\ E_1B_1=2$이므로 직각삼각형 $A_1E_1H_1$에서 안쪽 정사각형 $E_1F_1G_1H_1$의 한 변의 길이는 $$E_1F_1=\\sqrt{2^2+1^2}=\\sqrt5$$ 이다. 일반화하여 $n$단계에서 $B_nF_n=\\ell_n$이라 하면 $E_nB_n=2\\ell_n$이므로 $$E_nF_n=\\sqrt5\\,\\ell_n.$$\n점 $B_n$에서 선분 $F_nA_{n+1}$에 내린 수선의 발을 $T_n$이라 하면 $\\triangle B_nF_nT_n$과 $\\triangle E_nF_nB_n$이 닮음이어서 $B_nF_n:F_nT_n=E_nF_n:F_nB_n$이다. 따라서 $$F_nT_n=\\frac{(B_nF_n)^2}{E_nF_n}=\\frac{\\ell_n^2}{\\sqrt5\\,\\ell_n}=\\frac{\\sqrt5}{5}\\,\\ell_n.$$\n$\\triangle B_nF_nA_{n+1}$이 이등변삼각형이므로 $$F_nA_{n+1}=2F_nT_n=\\frac{2\\sqrt5}{5}\\,\\ell_n,\\qquad A_{n+1}E_n=E_nF_n-F_nA_{n+1}=\\sqrt5\\,\\ell_n-\\frac{2\\sqrt5}{5}\\,\\ell_n=\\frac{3\\sqrt5}{5}\\,\\ell_n.$$\n$\\triangle A_{n+1}E_nD_{n+1}\\equiv\\triangle B_{n+1}F_nA_{n+1}$이므로 $F_nB_{n+1}=\\dfrac{3\\sqrt5}{5}\\,\\ell_n$이고, 직각삼각형 $A_{n+1}F_nB_{n+1}$에서 다음 정사각형의 한 변의 길이는 $$A_{n+1}B_{n+1}=\\sqrt{\\left(\\frac{2\\sqrt5}{5}\\ell_n\\right)^2+\\left(\\frac{3\\sqrt5}{5}\\ell_n\\right)^2}=\\frac{\\sqrt{65}}{5}\\,\\ell_n.$$\n처음 단계에서 $E_1F_1=\\sqrt5\\,\\ell_1=\\sqrt5$이므로 $\\ell_1=1$이고 바깥 정사각형의 한 변은 $A_1B_1=3=3\\ell_1$, 일반적으로 $A_nB_n=3\\ell_n$이다. 따라서 정사각형 $A_nB_nC_nD_n$과 $A_{n+1}B_{n+1}C_{n+1}D_{n+1}$의 길이의 닮음비는 $$\\frac{A_{n+1}B_{n+1}}{A_nB_n}=\\frac{\\dfrac{\\sqrt{65}}{5}\\ell_n}{3\\ell_n}=\\frac{\\sqrt{65}}{15}.$$\n도형 $R_n$과 $R_{n+1}$도 같은 닮음비를 가지므로 넓이의 비, 곧 $\\{S_n\\}$의 공비는 $$r=\\left(\\frac{\\sqrt{65}}{15}\\right)^2=\\frac{65}{225}=\\frac{13}{45}.$$\n$\\{S_n\\}$은 첫째항 $S_1=9-\\pi$, 공비 $r=\\dfrac{13}{45}\\ (0<r<1)$인 등비수열이므로 무한등비급수의 합은 $$\\sum_{n=1}^{\\infty}S_n=\\frac{S_1}{1-r}=\\frac{9-\\pi}{1-\\dfrac{13}{45}}=\\frac{9-\\pi}{\\dfrac{32}{45}}=\\frac{45}{32}(9-\\pi).$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/062a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{⑤번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{45}{32}(9-\\pi)}}$$ 입니다.",
   "finalAnswer": "5",
   "correctAnswer": "5",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

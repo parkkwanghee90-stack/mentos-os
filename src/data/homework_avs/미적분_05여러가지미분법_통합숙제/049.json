@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 여러 가지 미분법 49번 명품 해설",
   "type": "calculus",
-  "P": "합성함수, 매개변수, 음함수의 미분법을 활용합니다.",
-  "C": "연쇄 법칙, 몫의 미분법, 매개변수 미분을 적용합니다.",
-  "B": "여러 가지 미분법:\n\n1) 합성함수: $$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$$\n2) 매개변수: $$\\frac{dy}{dx} = \\frac{\\frac{dy}{dt}}{\\frac{dx}{dt}}$$\n3) 음함수: 양변을 $$x$$로 미분, $$y' = \\frac{dy}{dx}$$로 놓고 정리\n4) 역함수 미분: $$\\frac{dx}{dy} = \\frac{1}{\\frac{dy}{dx}}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "역함수 $g(x)$의 도함숫값 $g'(2)$를 구한다.",
+  "C": "정의역 $0 \\le x \\le \\dfrac{\\pi}{2}$에서 정의된 함수 $f(x)=2\\sin x+1$의 역함수가 $g(x)$이다.",
+  "B": "역함수의 미분법에서, $g$가 $f$의 역함수이고 $g(a)=b$ 즉 $f(b)=a$이면 $g'(a)=\\dfrac{1}{f'(b)}$가 성립한다. 따라서 $g'(2)$를 직접 구하지 않고 $f(b)=2$가 되는 $b$를 먼저 찾은 뒤 그 점에서의 $f'(b)$로 환산한다.",
+  "S": "역함수 미분법을 적용하기 위해 $g(2)=b$, 즉 $f(b)=2$가 되는 정의역의 값 $b$를 찾는다. $$f(b)=2\\sin b+1=2 \\implies \\sin b=\\dfrac{1}{2}$$\n정의역 $0 \\le b \\le \\dfrac{\\pi}{2}$에서 $\\sin b=\\dfrac{1}{2}$를 만족하는 값은 하나뿐이므로 $b$가 유일하게 정해진다. $$b=\\dfrac{\\pi}{6}$$\n역함수의 도함숫값 공식 $g'(a)=\\dfrac{1}{f'(g(a))}$를 쓰기 위해 $f(x)$를 미분한다. $$f'(x)=2\\cos x$$\n앞에서 구한 $b=\\dfrac{\\pi}{6}$를 $f'(x)$에 대입해 분모에 들어갈 값을 계산한다. $$f'\\!\\left(\\dfrac{\\pi}{6}\\right)=2\\cos\\dfrac{\\pi}{6}=2\\cdot\\dfrac{\\sqrt{3}}{2}=\\sqrt{3}$$\n역함수 미분법에 따라 $g'(2)=\\dfrac{1}{f'(b)}$이므로 위 값을 대입한다. $$g'(2)=\\dfrac{1}{f'\\!\\left(\\frac{\\pi}{6}\\right)}=\\dfrac{1}{\\sqrt{3}}$$\n분모를 유리화하여 정답 꼴로 정리한다. $$g'(2)=\\dfrac{1}{\\sqrt{3}}=\\dfrac{\\sqrt{3}}{3}$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/05여러가지미분법/050a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{③번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{\\sqrt{3}}{3}}}$$ 입니다.",
   "finalAnswer": "3",
   "correctAnswer": "3",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

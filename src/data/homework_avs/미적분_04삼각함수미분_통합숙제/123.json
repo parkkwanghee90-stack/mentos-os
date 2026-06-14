@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 123번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "반지름이 1, 2, 4인 세 반원 위를 같은 속력으로 움직이는 점 $P_1, P_2, P_3$가 만드는 세 삼각형의 넓이가 $3S_3 = 2(S_1+S_2)$를 만족할 때, $\\cos^3\\theta$의 값을 구한다.",
+  "C": "세 반원의 반지름은 각각 $1, 2, 4$이고 중심은 원점 O이다. 세 점은 선분 OB 위의 한 점에서 동시에 출발해 같은 속력으로 시계 반대 방향으로 움직인다. $A(-4,0)$, $B(4,0)$이며 $\\angle \\text{BOP}_3 = \\theta$이고 $0 < \\theta < \\dfrac{\\pi}{4}$이다. 세 삼각형은 모두 밑변 AB를 공유한다.",
+  "B": "같은 속력으로 움직이면 같은 시간 동안 이동한 호의 길이가 모두 같다. 호의 길이는 (반지름)$\\times$(중심각)이므로, 반지름이 작을수록 중심각은 커진다. 또한 밑변 AB가 $x$축 위에 고정되어 있으므로 각 삼각형의 넓이는 꼭짓점의 $y$좌표(높이)에만 비례한다.",
+  "S": "같은 속력이므로 출발 후 세 점이 지난 호의 길이가 같다. 그 길이를 $\\ell$이라 하면 각 점의 중심각은 $\\dfrac{\\ell}{(\\text{반지름})}$이다. $P_3$의 중심각이 $\\theta$이고 반지름이 $4$이므로 $\\ell = 4\\theta$이고, 따라서 $P_1$의 중심각은 $\\dfrac{4\\theta}{1}=4\\theta$, $P_2$의 중심각은 $\\dfrac{4\\theta}{2}=2\\theta$이다.\n각 점의 $y$좌표는 (반지름)$\\times \\sin(\\text{중심각})$이므로 $$P_1\\text{의 높이}=\\sin 4\\theta,\\quad P_2\\text{의 높이}=2\\sin 2\\theta,\\quad P_3\\text{의 높이}=4\\sin\\theta.$$\n세 삼각형은 밑변 $\\overline{\\text{AB}}=8$을 공유하므로 넓이는 $\\dfrac{1}{2}\\times 8\\times(\\text{높이})=4\\times(\\text{높이})$로 계산된다. 따라서 $$S_1=4\\sin 4\\theta,\\quad S_2=8\\sin 2\\theta,\\quad S_3=16\\sin\\theta.$$\n조건 $3S_3=2(S_1+S_2)$에 대입하면 $$48\\sin\\theta = 8\\sin 4\\theta + 16\\sin 2\\theta$$ 이고, 양변을 $8$로 나누면 $6\\sin\\theta = \\sin 4\\theta + 2\\sin 2\\theta$이다.\n배각·삼배각으로 우변을 정리하기 위해 $\\sin 4\\theta = 2\\sin 2\\theta\\cos 2\\theta = 4\\sin\\theta\\cos\\theta\\cos 2\\theta$, $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$를 쓰면 $$6\\sin\\theta = 4\\sin\\theta\\cos\\theta\\cos 2\\theta + 4\\sin\\theta\\cos\\theta.$$\n$0<\\theta<\\dfrac{\\pi}{4}$에서 $\\sin\\theta\\neq 0$이므로 양변을 $\\sin\\theta$로 나누면 $$6 = 4\\cos\\theta(\\cos 2\\theta + 1).$$\n$\\cos 2\\theta + 1 = 2\\cos^2\\theta$이므로 $$6 = 4\\cos\\theta\\cdot 2\\cos^2\\theta = 8\\cos^3\\theta.$$\n따라서 $$\\cos^3\\theta = \\dfrac{6}{8} = \\dfrac{3}{4}.$$ 이때 $\\cos\\theta = \\sqrt[3]{3/4}\\approx 0.909$로 $\\theta\\approx 24.7^\\circ$이므로 조건 $0<\\theta<\\dfrac{\\pi}{4}$를 만족한다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/124a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{17}}$$ 입니다.",
-  "finalAnswer": "17",
-  "correctAnswer": "17",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{3}{4}}}$$ 입니다.",
+  "finalAnswer": "3/4",
+  "correctAnswer": "3/4",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

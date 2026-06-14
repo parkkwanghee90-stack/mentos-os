@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 64번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "중심각이 $\\dfrac{\\pi}{3}$, 반지름이 $6$인 부채꼴에서 시작하여, 매 단계마다 내접원과 두 반지름·호로 만들어지는 $\\bigtriangledown$ 모양 공통부분의 넓이 $S_n$을 정의할 때, 무한급수 $\\displaystyle\\sum_{n=1}^{\\infty} S_n$의 값을 구한다.",
+  "C": "부채꼴 $\\mathrm{OAB}$는 중심각 $\\dfrac{\\pi}{3}$, 반지름 $6$이고, 내접원 $O_1$이 두 반지름 $\\mathrm{OA},\\ \\mathrm{OB}$와 호 $\\mathrm{AB}$에 닿는 점이 각각 $\\mathrm{A_1},\\ \\mathrm{B_1},\\ \\mathrm{C_1}$이다. $S_1$은 부채꼴 $\\mathrm{OA_1B_1}$의 외부와 삼각형 $\\mathrm{A_1C_1B_1}$의 내부의 공통부분 넓이이고, 같은 과정을 반복하여 $n$번째 도형의 공통부분 넓이를 $S_n$이라 한다.",
+  "B": "대칭성에 의해 내접원의 중심은 중심각의 이등분선 위에 있어, 중심까지의 거리와 반지름·반지름 길이 $6$ 사이의 관계로 닮음의 첫 단계를 확정한다. 한 변의 길이가 $\\ell$인 정삼각형의 넓이는 $\\dfrac{\\sqrt{3}}{4}\\ell^2$, 반지름 $r$·중심각 $\\theta$인 부채꼴의 넓이는 $\\dfrac{1}{2}r^2\\theta$이며, 각 단계의 도형이 일정한 닮음비로 줄어들면 $\\{S_n\\}$은 등비수열을 이루어 $\\displaystyle\\sum_{n=1}^{\\infty}S_n=\\dfrac{S_1}{1-r}$ (공비 $r$, $|r|<1$)로 합산된다.",
+  "S": "내접원의 반지름을 정하기 위해 중심 $O_1$을 이등분선 위에 두면 반각이 $\\dfrac{\\pi}{6}$이므로, 반지름 $a$에 대해 $\\overline{\\mathrm{OO_1}}=\\dfrac{a}{\\sin\\frac{\\pi}{6}}=2a$이고 호에 접하므로 $\\overline{\\mathrm{OC_1}}=\\overline{\\mathrm{OO_1}}+a=3a=6$, 따라서 $a=2$이다.\n접점까지의 길이를 구하면 $\\overline{\\mathrm{OA_1}}=\\overline{\\mathrm{OO_1}}\\cos\\dfrac{\\pi}{6}=2a\\cdot\\dfrac{\\sqrt{3}}{2}=\\sqrt{3}\\,a=2\\sqrt{3}$이다.\n$\\angle\\mathrm{A_1OB_1}=\\dfrac{\\pi}{3}$이고 $\\overline{\\mathrm{OA_1}}=\\overline{\\mathrm{OB_1}}$이므로 삼각형 $\\mathrm{OA_1B_1}$은 한 변이 $2\\sqrt{3}$인 정삼각형이고, 같은 길이로 $\\overline{\\mathrm{A_1C_1}}=\\overline{\\mathrm{B_1C_1}}=\\overline{\\mathrm{A_1B_1}}=2\\sqrt{3}$이어서 삼각형 $\\mathrm{A_1C_1B_1}$도 한 변이 $2\\sqrt{3}$인 정삼각형이다.\n$\\bigtriangledown$ 모양 도형 $\\mathrm{A_1C_1B_1}$의 넓이 $S_1$은 두 정삼각형 $\\mathrm{OA_1B_1},\\ \\mathrm{A_1C_1B_1}$의 넓이의 합에서 부채꼴 $\\mathrm{OA_1B_1}$의 넓이를 빼면 되므로, $$S_1=2\\times\\dfrac{\\sqrt{3}}{4}\\times(2\\sqrt{3})^2-\\dfrac{1}{2}\\times(2\\sqrt{3})^2\\times\\dfrac{\\pi}{3}=6\\sqrt{3}-2\\pi.$$\n다음 단계의 닮음비를 구하기 위해 새 부채꼴 $\\mathrm{OA_1B_1}$에서 같은 과정을 반복하면, 반지름 $r_n$과 $r_{n+1}$ 사이에 $\\angle\\mathrm{OA_{n+1}C_{n+1}}=\\dfrac{2}{3}\\pi$에서 코사인법칙으로 $r_n^{\\,2}=r_{n+1}^{\\,2}+r_{n+1}^{\\,2}-2r_{n+1}^{\\,2}\\cos\\dfrac{2}{3}\\pi=3r_{n+1}^{\\,2}$가 되어 $r_{n+1}=\\dfrac{1}{\\sqrt{3}}\\,r_n$이다.\n닮음비가 $\\dfrac{1}{\\sqrt{3}}$이므로 넓이의 비, 즉 공비는 $\\left(\\dfrac{1}{\\sqrt{3}}\\right)^2=\\dfrac{1}{3}$이고, 따라서 $\\{S_n\\}$은 첫째항 $6\\sqrt{3}-2\\pi$, 공비 $\\dfrac{1}{3}$인 등비수열이다.\n공비가 $\\dfrac{1}{3}$로 $|r|<1$이므로 무한급수는 수렴하여 $$\\sum_{n=1}^{\\infty}S_n=\\dfrac{6\\sqrt{3}-2\\pi}{1-\\dfrac{1}{3}}=\\dfrac{6\\sqrt{3}-2\\pi}{\\dfrac{2}{3}}=9\\sqrt{3}-3\\pi.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/065a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{③번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{9\\sqrt{3}-3\\pi}}$$ 입니다.",
   "finalAnswer": "3",
   "correctAnswer": "3",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

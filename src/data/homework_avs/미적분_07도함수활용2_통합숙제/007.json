@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 도함수의 활용 2 7번 명품 해설",
   "type": "calculus",
-  "P": "도함수를 활용한 방정식·부등식의 풀이와 최적화 문제를 해결합니다.",
-  "C": "함수의 그래프를 분석하여 근의 개수를 판별하고, 최댓값·최솟값을 구합니다.",
-  "B": "도함수의 활용 2:\n\n1) $$f(x) = g(x)$$의 실근 개수: 두 그래프의 교점\n2) 부등식 증명: 차함수의 최솟값 ≥ 0\n3) 평균값 정리: $$f'(c) = \\frac{f(b) - f(a)}{b - a}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "시각 $t=\\dfrac{1}{2}$에서 점 $\\mathrm{P}$의 속력을 구한다.",
+  "C": "점 $\\mathrm{P}$의 시각 $t\\,(t>0)$에서의 위치 $(x,\\,y)$는 $x=3t-\\dfrac{2}{\\pi}\\cos\\pi t$, $y=6\\ln t-\\dfrac{2}{\\pi}\\sin\\pi t$로 주어진다.",
+  "B": "평면 위를 움직이는 점의 속도는 위치를 시각으로 미분한 $\\left(\\dfrac{dx}{dt},\\,\\dfrac{dy}{dt}\\right)$이고, 속력은 그 속도 벡터의 크기 $v=\\sqrt{\\left(\\dfrac{dx}{dt}\\right)^2+\\left(\\dfrac{dy}{dt}\\right)^2}$이다.",
+  "S": "속력은 속도 벡터의 크기이므로 먼저 두 성분 $\\dfrac{dx}{dt}$, $\\dfrac{dy}{dt}$가 필요하다. $x$를 $t$로 미분하면 합성함수 미분에서 $-\\dfrac{2}{\\pi}\\cos\\pi t$의 도함수가 $-\\dfrac{2}{\\pi}\\cdot(-\\sin\\pi t)\\cdot\\pi=2\\sin\\pi t$이므로 $$\\frac{dx}{dt}=3+2\\sin\\pi t.$$\n같은 방법으로 $y$를 미분하면 $6\\ln t$의 도함수는 $\\dfrac{6}{t}$이고, $-\\dfrac{2}{\\pi}\\sin\\pi t$의 도함수는 $-\\dfrac{2}{\\pi}\\cdot\\cos\\pi t\\cdot\\pi=-2\\cos\\pi t$이므로 $$\\frac{dy}{dt}=\\frac{6}{t}-2\\cos\\pi t.$$\n주어진 시각 $t=\\dfrac{1}{2}$를 대입하기 위해 삼각함수 값을 먼저 구하면 $\\sin\\dfrac{\\pi}{2}=1$, $\\cos\\dfrac{\\pi}{2}=0$이다. 이를 $\\dfrac{dx}{dt}$에 넣으면 $$\\left.\\frac{dx}{dt}\\right|_{t=\\frac{1}{2}}=3+2\\cdot 1=5.$$\n이어서 $t=\\dfrac{1}{2}$를 $\\dfrac{dy}{dt}$에 대입하면 $\\dfrac{6}{1/2}=12$이고 $\\cos\\dfrac{\\pi}{2}=0$이므로 $$\\left.\\frac{dy}{dt}\\right|_{t=\\frac{1}{2}}=12-2\\cdot 0=12.$$\n속력은 두 속도 성분으로 이루어진 직각삼각형의 빗변 길이와 같으므로, 구한 두 값을 속력 공식에 대입하면 $$v=\\sqrt{\\left(\\frac{dx}{dt}\\right)^2+\\left(\\frac{dy}{dt}\\right)^2}=\\sqrt{5^2+12^2}.$$\n근호 안을 정리하면 $5^2+12^2=25+144=169$이고, $169=13^2$이므로 $$v=\\sqrt{169}=13.$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{13}}$$ 입니다.",
   "finalAnswer": "13",
   "correctAnswer": "13",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

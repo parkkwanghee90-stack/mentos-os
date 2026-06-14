@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 93번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\angle\\text{PAB}=\\theta$일 때 $60\\tan 2\\theta$의 값을 구한다.",
+  "C": "$\\overline{\\text{AB}}=3$, $\\overline{\\text{BC}}=1$, $\\angle\\text{ABC}=\\dfrac{\\pi}{2}$인 직각삼각형 ABC에서 $\\overline{\\text{AB}}$를 지름으로 하는 반원 위의 점 P의 접선이 $\\overline{\\text{AC}}$의 연장선과 만나는 점을 Q라 하고, $\\angle\\text{PQA}=\\dfrac{\\pi}{4}$, $0<\\theta<\\dfrac{\\pi}{6}$이다.",
+  "B": "반지름이 만드는 접점에서의 접선은 그 반지름과 수직이고, 두 변의 길이가 같은 이등변삼각형의 두 밑각은 서로 같다. 한 직선 위의 각의 합과 삼각형의 외각 관계로 각을 모으면 $\\tan$의 차 공식 $\\tan(\\alpha-\\beta)=\\dfrac{\\tan\\alpha-\\tan\\beta}{1+\\tan\\alpha\\tan\\beta}$로 값을 구할 수 있다.",
+  "S": "밑변 AQ가 기준선이므로 먼저 그 기준선이 변 AB와 이루는 각을 직각삼각형 ABC에서 읽는다. 직각이 B에 있으므로 $$\\tan(\\angle\\text{BAC})=\\frac{\\overline{\\text{BC}}}{\\overline{\\text{AB}}}=\\frac{1}{3}.$$\n반원의 중심 O는 $\\overline{\\text{AB}}$의 중점이고 $\\overline{\\text{OA}}=\\overline{\\text{OP}}$인 이등변삼각형 OAP가 생기므로 두 밑각이 같아 $$\\angle\\text{OPA}=\\angle\\text{OAP}=\\angle\\text{PAB}=\\theta.$$\n점 P에서의 접선 PQ는 반지름 OP에 수직이다. 직각삼각형 OPQ에서 $$\\angle\\text{OQP}+\\angle\\text{QOP}=\\frac{\\pi}{2},\\quad \\angle\\text{OQP}=\\angle\\text{PQA}=\\frac{\\pi}{4}$$ 이므로 접선 PQ가 기준선 AQ와 이루는 각도 $\\dfrac{\\pi}{4}$이다.\n접선과 기준선이 이루는 각이 $\\dfrac{\\pi}{4}$이고 OP가 그 접선과 수직이므로, 반지름 OP는 기준선 AQ와 $\\dfrac{\\pi}{4}$의 각을 이룬다. 즉 OP가 기준선 위로 기울어진 각의 크기가 $$\\angle\\text{BAC}+2\\theta=\\frac{\\pi}{4}.$$\n위 등식에서 $\\theta$에 대한 각을 분리하면 $$2\\theta=\\frac{\\pi}{4}-\\angle\\text{BAC}.$$\n구하는 양이 $\\tan 2\\theta$이므로 차 공식에 $\\tan\\dfrac{\\pi}{4}=1$, $\\tan(\\angle\\text{BAC})=\\dfrac{1}{3}$을 대입한다. $$\\tan 2\\theta=\\tan\\!\\left(\\frac{\\pi}{4}-\\angle\\text{BAC}\\right)=\\frac{1-\\dfrac{1}{3}}{1+1\\cdot\\dfrac{1}{3}}=\\frac{\\dfrac{2}{3}}{\\dfrac{4}{3}}=\\frac{1}{2}.$$\n따라서 $$60\\tan 2\\theta=60\\cdot\\frac{1}{2}=30.$$ 조건 $0<\\theta<\\dfrac{\\pi}{6}$에서 $2\\theta=\\dfrac{\\pi}{4}-\\arctan\\dfrac{1}{3}\\approx 0.4636\\,(\\text{rad})$이 범위를 만족한다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/094a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{(-1+sqrt(5))/2}}$$ 입니다.",
-  "finalAnswer": "(-1+sqrt(5))/2",
-  "correctAnswer": "(-1+sqrt(5))/2",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{30}}$$ 입니다.",
+  "finalAnswer": "30",
+  "correctAnswer": "30",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

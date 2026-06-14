@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 127번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle \\lim_{\\theta \\to 0+} \\dfrac{\\theta^2 \\times S(\\theta)}{T(\\theta)}$ 의 값을 구한다.",
+  "C": "원 $C_1$ 은 중심이 $\\mathrm{O}(0,\\,0)$ 이고 점 $\\mathrm{A}(1,\\,0)$ 을 지나므로 반지름이 $1$ 이다. 제1사분면의 호 위의 점 $\\mathrm{P}$ 에 대하여 $\\angle \\mathrm{POA}=\\theta$ 이고, $\\mathrm{Q}$ 는 $\\mathrm{P}$ 를 원점에 대하여 대칭이동한 점, $\\mathrm{R}$ 는 $x$ 축에 대하여 대칭이동한 점이다. 원 $C_2$ 는 $\\overline{\\mathrm{QR}}$ 를 지름으로 하고, $\\mathrm{M}$ 은 $C_2$ 와 선분 $\\mathrm{PQ}$ 의 교점, $\\mathrm{N}$ 은 $C_2$ 와 선분 $\\mathrm{AQ}$ 의 교점이다. $S(\\theta)$ 는 삼각형 $\\mathrm{MQN}$ 의 넓이, $T(\\theta)$ 는 삼각형 $\\mathrm{PNR}$ 의 넓이이다.",
+  "B": "반지름 $1$ 인 단위원에서 $\\mathrm{P}=(\\cos\\theta,\\,\\sin\\theta)$ 로 두면 두 대칭점은 $\\mathrm{Q}=(-\\cos\\theta,\\,-\\sin\\theta)$, $\\mathrm{R}=(\\cos\\theta,\\,-\\sin\\theta)$ 이다. 지름에 대한 원주각은 $\\dfrac{\\pi}{2}$ 라는 원주각 정리, 대칭으로 생기는 각의 이등분, 직각삼각형에서 빗변에 정사영한 변의 길이 공식, 그리고 $\\displaystyle \\lim_{x\\to 0}\\dfrac{\\sin x}{x}=1$ 을 이용한다.",
+  "S": "좌표로 길이를 확정하기 위해 세 점을 성분으로 적으면 $\\mathrm{P}=(\\cos\\theta,\\,\\sin\\theta)$, $\\mathrm{Q}=(-\\cos\\theta,\\,-\\sin\\theta)$, $\\mathrm{R}=(\\cos\\theta,\\,-\\sin\\theta)$ 이므로 $$\\overline{\\mathrm{QR}}=2\\cos\\theta,\\qquad \\overline{\\mathrm{PR}}=2\\sin\\theta.$$\n각의 크기를 정하기 위해 $\\mathrm{P}$ 와 $\\mathrm{R}$ 가 $x$ 축에 대칭이고 $\\mathrm{Q}$ 가 $\\mathrm{P}$ 의 원점대칭점임을 쓰면, $\\mathrm{Q}$ 에서 본 각은 $$\\angle \\mathrm{PQR}=\\theta,\\qquad \\angle \\mathrm{PQA}=\\angle \\mathrm{AQR}=\\frac{\\theta}{2}$$ 로 이등분된다.\n$\\overline{\\mathrm{QR}}$ 가 $C_2$ 의 지름이라 지름에 대한 원주각이 직각이므로 $\\angle \\mathrm{QMR}=\\angle \\mathrm{QNR}=\\dfrac{\\pi}{2}$ 이고, 직각삼각형에서 빗변 $\\overline{\\mathrm{QR}}$ 에 정사영하면 $$\\overline{\\mathrm{QM}}=\\overline{\\mathrm{QR}}\\cos\\theta=2\\cos\\theta\\cos\\theta,\\qquad \\overline{\\mathrm{QN}}=\\overline{\\mathrm{QR}}\\cos\\frac{\\theta}{2}=2\\cos\\theta\\cos\\frac{\\theta}{2}.$$\n삼각형 $\\mathrm{MQN}$ 은 끼인각이 $\\angle \\mathrm{MQN}=\\dfrac{\\theta}{2}$ 이므로 두 변과 사잇각으로 넓이를 구하면 $$S(\\theta)=\\frac{1}{2}\\,\\overline{\\mathrm{QM}}\\cdot\\overline{\\mathrm{QN}}\\sin\\frac{\\theta}{2}=2\\cos^{3}\\theta\\,\\cos\\frac{\\theta}{2}\\sin\\frac{\\theta}{2}.$$\n$T(\\theta)$ 를 밑변 $\\overline{\\mathrm{PR}}$ 로 잡기 위해 $\\mathrm{N}$ 에서 직선 $\\mathrm{QR}$ 에 내린 수선의 발 $\\mathrm{H}$ 까지의 높이를 구하면, $\\overline{\\mathrm{QH}}=\\overline{\\mathrm{QN}}\\cos\\dfrac{\\theta}{2}=2\\cos\\theta\\cos^{2}\\dfrac{\\theta}{2}$ 이므로 $$\\overline{\\mathrm{HR}}=\\overline{\\mathrm{QR}}-\\overline{\\mathrm{QH}}=2\\cos\\theta\\left(1-\\cos^{2}\\frac{\\theta}{2}\\right)=2\\cos\\theta\\sin^{2}\\frac{\\theta}{2}.$$\n삼각형 $\\mathrm{PNR}$ 는 밑변 $\\overline{\\mathrm{PR}}=2\\sin\\theta$ 이고 $\\mathrm{N}$ 에서의 높이가 $\\overline{\\mathrm{HR}}$ 이므로 $$T(\\theta)=\\frac{1}{2}\\,\\overline{\\mathrm{PR}}\\cdot\\overline{\\mathrm{HR}}=2\\sin\\theta\\cos\\theta\\,\\sin^{2}\\frac{\\theta}{2}.$$\n구하는 극한에 두 넓이를 대입하면 $$\\frac{\\theta^{2}\\,S(\\theta)}{T(\\theta)}=\\frac{\\theta^{2}\\cdot 2\\cos^{3}\\theta\\,\\cos\\dfrac{\\theta}{2}\\sin\\dfrac{\\theta}{2}}{2\\sin\\theta\\cos\\theta\\,\\sin^{2}\\dfrac{\\theta}{2}}=\\cos^{2}\\theta\\cos\\frac{\\theta}{2}\\cdot\\frac{\\theta^{2}}{\\sin\\theta\\,\\sin\\dfrac{\\theta}{2}}.$$\n$\\theta\\to 0+$ 일 때 $\\cos^{2}\\theta\\cos\\dfrac{\\theta}{2}\\to 1$ 이고, 나머지는 $\\dfrac{\\theta}{\\sin\\theta}\\to 1$, $\\dfrac{\\theta/2}{\\sin(\\theta/2)}\\to 1$ 을 이용해 $$\\lim_{\\theta\\to 0+}\\frac{\\theta^{2}}{\\sin\\theta\\,\\sin\\dfrac{\\theta}{2}}=\\lim_{\\theta\\to 0+}\\left(2\\cdot\\frac{\\theta}{\\sin\\theta}\\cdot\\frac{\\dfrac{\\theta}{2}}{\\sin\\dfrac{\\theta}{2}}\\right)=2,$$ 따라서 $$\\lim_{\\theta\\to 0+}\\frac{\\theta^{2}\\,S(\\theta)}{T(\\theta)}=1\\times 2=2.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/128a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{(1+sqrt(17))/8}}$$ 입니다.",
-  "finalAnswer": "(1+sqrt(17))/8",
-  "correctAnswer": "(1+sqrt(17))/8",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2}}$$ 입니다.",
+  "finalAnswer": "2",
+  "correctAnswer": "2",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

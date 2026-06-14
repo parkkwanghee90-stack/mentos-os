@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 110번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle\\lim_{\\theta\\to0+}\\dfrac{S(\\theta)}{\\theta^{2}}=p$로 두고 $300p^{2}$의 값을 구한다.",
+  "C": "빗변 $\\overline{\\mathrm{AB}}=1$, $\\angle\\mathrm{BAC}=\\theta\\ \\left(0<\\theta<\\dfrac{\\pi}{6}\\right)$인 직각삼각형 $\\mathrm{ABC}$(직각은 $\\mathrm{C}$)이고, 점 $\\mathrm{D}$는 $\\angle\\mathrm{ACD}=\\dfrac{2}{3}\\pi$, $\\angle\\mathrm{CAD}=2\\theta$를 만족한다. $S(\\theta)$는 삼각형 $\\mathrm{BCD}$의 넓이이다.",
+  "B": "직각삼각형의 변은 빗변에 삼각비를 곱해 얻고, 일반삼각형의 변은 사인법칙 $\\dfrac{a}{\\sin A}=\\dfrac{b}{\\sin B}$로 구한다. 두 변과 끼인각을 알면 넓이는 $\\dfrac12 ab\\sin C$이다. 극한은 $\\displaystyle\\lim_{x\\to0}\\dfrac{\\sin x}{x}=1$로 처리한다.",
+  "S": "직각삼각형 $\\mathrm{ABC}$에서 직각이 $\\mathrm{C}$이고 빗변이 $\\overline{\\mathrm{AB}}=1$이므로, 빗변에 삼각비를 곱해 두 변을 얻는다. $$\\overline{\\mathrm{AC}}=\\cos\\theta,\\qquad \\overline{\\mathrm{BC}}=\\sin\\theta.$$\n삼각형 $\\mathrm{ACD}$의 세 각의 합이 $\\pi$이므로 나머지 한 각을 구한다. $$\\angle\\mathrm{ADC}=\\pi-\\left(2\\theta+\\dfrac{2}{3}\\pi\\right)=\\dfrac{\\pi}{3}-2\\theta.$$\n삼각형 $\\mathrm{ACD}$에서 $\\overline{\\mathrm{CD}}$를 마주 보는 각은 $\\angle\\mathrm{CAD}=2\\theta$, $\\overline{\\mathrm{AC}}$를 마주 보는 각은 $\\angle\\mathrm{ADC}$이므로 사인법칙을 적용한다. $$\\dfrac{\\overline{\\mathrm{AC}}}{\\sin\\angle\\mathrm{ADC}}=\\dfrac{\\overline{\\mathrm{CD}}}{\\sin\\angle\\mathrm{CAD}}\\ \\Longrightarrow\\ \\overline{\\mathrm{CD}}=\\dfrac{\\cos\\theta\\,\\sin2\\theta}{\\sin\\!\\left(\\dfrac{\\pi}{3}-2\\theta\\right)}.$$\n점 $\\mathrm{C}$ 둘레의 각이 한 바퀴를 이루므로, $\\angle\\mathrm{BCD}$를 $\\angle\\mathrm{ACB}=\\dfrac{\\pi}{2}$와 $\\angle\\mathrm{ACD}=\\dfrac{2}{3}\\pi$로부터 구한다. $$\\angle\\mathrm{BCD}=2\\pi-\\left(\\dfrac{2}{3}\\pi+\\dfrac{\\pi}{2}\\right)=\\dfrac{5}{6}\\pi.$$\n두 변 $\\overline{\\mathrm{CD}}$, $\\overline{\\mathrm{CB}}$와 끼인각 $\\angle\\mathrm{BCD}$로 넓이를 세운다. $\\sin\\dfrac{5}{6}\\pi=\\dfrac12$이므로 $$S(\\theta)=\\dfrac12\\,\\overline{\\mathrm{CD}}\\;\\overline{\\mathrm{CB}}\\,\\sin\\angle\\mathrm{BCD}=\\dfrac14\\cdot\\dfrac{\\cos\\theta\\,\\sin2\\theta\\,\\sin\\theta}{\\sin\\!\\left(\\dfrac{\\pi}{3}-2\\theta\\right)}.$$\n극한을 $\\dfrac{\\sin x}{x}\\to1$ 꼴로 분해하기 위해 분모에 $\\theta^{2}$를 만든다. $$\\dfrac{S(\\theta)}{\\theta^{2}}=\\dfrac12\\cdot\\dfrac{\\sin2\\theta}{2\\theta}\\cdot\\dfrac{\\sin\\theta}{\\theta}\\cdot\\dfrac{\\cos\\theta}{\\sin\\!\\left(\\dfrac{\\pi}{3}-2\\theta\\right)}.$$\n$\\theta\\to0+$이면 앞의 두 인수는 각각 $1$로, 마지막 인수는 $\\dfrac{1}{\\sin\\dfrac{\\pi}{3}}=\\dfrac{1}{\\frac{\\sqrt{3}}{2}}$로 수렴한다. $$p=\\lim_{\\theta\\to0+}\\dfrac{S(\\theta)}{\\theta^{2}}=\\dfrac12\\cdot1\\cdot1\\cdot\\dfrac{2}{\\sqrt{3}}=\\dfrac{1}{\\sqrt{3}}.$$\n구한 $p$로 최종값을 계산한다. $$300p^{2}=300\\cdot\\dfrac{1}{3}=100.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/111a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{1/2}}$$ 입니다.",
-  "finalAnswer": "1/2",
-  "correctAnswer": "1/2",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{100}}$$ 입니다.",
+  "finalAnswer": "100",
+  "correctAnswer": "100",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

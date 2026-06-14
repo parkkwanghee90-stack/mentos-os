@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 140번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\theta \\to 0+$ 일 때 두 삼각형 넓이의 비 $\\dfrac{T_1}{T_2}$ 의 극한값을 구한다.",
+  "C": "평행한 두 직선 $l_1,\\,l_2$ 사이의 거리는 $1$ 이고, $\\text{A}$ 는 $l_1$ 위, $\\text{B}$ 는 $l_2$ 위의 점으로 $\\angle\\text{BAC}=\\theta$ 이다. $\\text{C}$ 는 $l_1$ 위의 점으로 $\\angle\\text{ABC}=4\\theta$ 이며, $\\text{D}$ 는 $l_2$ 위의 점으로 $\\angle\\text{BCD}=2\\theta$ 이다. $T_1$ 은 삼각형 $\\text{ABC}$ 의 넓이, $T_2$ 는 삼각형 $\\text{BCD}$ 의 넓이이고 $0<\\theta<\\dfrac{\\pi}{10}$ 이다.",
+  "B": "두 직선이 평행하므로 한 직선과 이루는 각은 엇각으로 다른 직선에도 그대로 옮겨지고, 삼각형의 세 내각의 합은 $\\pi$ 이다. 평행선 사이 거리가 일정하므로 밑변을 각 직선 위에 두면 두 삼각형의 높이는 모두 $1$ 로 같다. 변의 길이는 사인법칙 $\\dfrac{a}{\\sin A}=\\dfrac{b}{\\sin B}$ 로 구하고, 극한은 $\\displaystyle\\lim_{x\\to 0}\\dfrac{\\sin x}{x}=1$ 을 이용한다.",
+  "S": "삼각형 $\\text{ABC}$ 의 세 내각을 정한다. $\\angle\\text{BAC}=\\theta,\\ \\angle\\text{ABC}=4\\theta$ 이므로 $\\angle\\text{BCA}=\\pi-5\\theta$ 이다.\n점 $\\text{B}$ 에서 $l_1$ 까지의 거리가 $1$ 이고 이 거리가 삼각형 $\\text{ABC}$ 의 밑변 $\\overline{\\text{AC}}$ 에 대한 높이이므로, $\\overline{\\text{AB}}\\sin\\theta=1$ 에서 $\\overline{\\text{AB}}=\\dfrac{1}{\\sin\\theta}$ 이다.\n밑변 $\\overline{\\text{AC}}$ 의 길이를 사인법칙으로 구한다. $\\dfrac{\\overline{\\text{AC}}}{\\sin 4\\theta}=\\dfrac{\\overline{\\text{AB}}}{\\sin(\\pi-5\\theta)}$ 이므로 $\\overline{\\text{AC}}=\\dfrac{\\sin 4\\theta}{\\sin\\theta\\,\\sin 5\\theta}$ 이고, 높이가 $1$ 이므로 $$T_1=\\frac{1}{2}\\cdot\\overline{\\text{AC}}\\cdot 1=\\frac{\\sin 4\\theta}{2\\sin\\theta\\,\\sin 5\\theta}.$$\n변 $\\overline{\\text{BC}}$ 의 길이를 구해 둔다. 사인법칙 $\\dfrac{\\overline{\\text{BC}}}{\\sin\\theta}=\\dfrac{\\overline{\\text{AB}}}{\\sin(\\pi-5\\theta)}$ 에서 $\\overline{\\text{BC}}=\\dfrac{1}{\\sin 5\\theta}$ 이다.\n삼각형 $\\text{BCD}$ 의 각을 정한다. $\\overline{\\text{CB}}$ 가 $l_1$ 과 이루는 각이 $5\\theta$ 이므로 엇각으로 $l_2$ 와도 $5\\theta$ 를 이루어 $\\angle\\text{DBC}=5\\theta$ 이고, $\\angle\\text{BCD}=2\\theta$ 이므로 $\\angle\\text{BDC}=\\pi-7\\theta$ 이다.\n밑변 $\\overline{\\text{BD}}$ 를 사인법칙으로 구한다. $\\dfrac{\\overline{\\text{BD}}}{\\sin 2\\theta}=\\dfrac{\\overline{\\text{BC}}}{\\sin(\\pi-7\\theta)}$ 이므로 $\\overline{\\text{BD}}=\\dfrac{\\sin 2\\theta}{\\sin 5\\theta\\,\\sin 7\\theta}$ 이고, $\\text{C}$ 에서 $l_2$ 까지의 높이가 $1$ 이므로 $$T_2=\\frac{1}{2}\\cdot\\overline{\\text{BD}}\\cdot 1=\\frac{\\sin 2\\theta}{2\\sin 5\\theta\\,\\sin 7\\theta}.$$\n두 넓이의 비를 정리한다. 공통인 $\\dfrac{1}{2\\sin 5\\theta}$ 가 약분되어 $$\\frac{T_1}{T_2}=\\frac{\\sin 4\\theta}{\\sin\\theta}\\cdot\\frac{\\sin 7\\theta}{\\sin 2\\theta}$$ 이다.\n$\\dfrac{\\sin x}{x}\\to 1$ 을 쓰기 위해 각 인수를 변형한다. $$\\frac{\\sin 4\\theta}{\\sin\\theta}=\\frac{\\dfrac{\\sin 4\\theta}{4\\theta}\\cdot 4}{\\dfrac{\\sin\\theta}{\\theta}},\\qquad \\frac{\\sin 7\\theta}{\\sin 2\\theta}=\\frac{\\dfrac{\\sin 7\\theta}{7\\theta}\\cdot 7}{\\dfrac{\\sin 2\\theta}{2\\theta}\\cdot 2}.$$\n$\\theta\\to 0+$ 의 극한을 취한다. $$\\lim_{\\theta\\to 0+}\\frac{\\sin 4\\theta}{\\sin\\theta}=4,\\qquad \\lim_{\\theta\\to 0+}\\frac{\\sin 7\\theta}{\\sin 2\\theta}=\\frac{7}{2}$$ 이므로 $$\\lim_{\\theta\\to 0+}\\frac{T_1}{T_2}=4\\times\\frac{7}{2}=14.$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{14}}$$ 입니다.",
   "finalAnswer": "14",
   "correctAnswer": "14",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

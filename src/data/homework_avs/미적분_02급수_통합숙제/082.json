@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 82번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "삼각형 ABC에서 $\\overline{AB}=2$, $\\overline{BC}=4$, $\\angle ABC=60^\\circ$이다. 변 AB, BC, CA 위의 점 $D_1, E_1, F_1$로 사각형 $D_1BE_1F_1$이 마름모가 되도록 잡고, 마름모의 내부와 중심이 B인 부채꼴 $BE_1D_1$의 외부의 공통부분에 색칠한 것을 $R_1$이라 한다. 이어 삼각형 $F_1E_1C$ 안에서 같은 방법을 반복하여 $R_2, R_3, \\cdots$를 만들 때, $R_n$의 색칠된 넓이를 $S_n$이라 한다. $\\lim_{n\\to\\infty}S_n$을 구하여라.",
+  "C": "마름모는 네 변이 같고 한 꼭짓점에서 두 변이 같은 길이로 뻗어 나간 평행사변형이다. 부채꼴은 그 꼭짓점을 중심으로 반지름이 변의 길이인 부채를 펼친 것이다. 따라서 \"마름모 − (그 꼭짓점이 중심인 부채꼴)\"이 한 단계의 색칠 넓이 $a_1$이고, 다음 단계는 남은 작은 닮은 삼각형($F_1E_1C \\sim ABC$) 안에서 똑같이 반복되므로 $\\lim S_n$은 첫째항 $a_1$, 공비 $\\left(\\dfrac{\\text{닮음비}}{1}\\right)^2$인 무한등비급수의 합이다.",
+  "B": "핵심은 세 가지. (1) 마름모 한 변의 길이 $x$는 $\\triangle ABC \\sim \\triangle F_1E_1C$에서 대응변 비례 $2:x=4:(4-x)$로 구한다. (2) 한 단계 색칠 넓이 $a_1$ = (마름모 넓이 $x^2\\sin 60^\\circ$) − (반지름 $x$, 중심각 $60^\\circ$인 부채꼴 넓이 $\\pi x^2\\cdot\\frac{60}{360}$). (3) 다음 삼각형 $F_1E_1C$가 $ABC$와 길이비 $\\overline{E_1C}:\\overline{BC}=\\frac{8}{3}:4=\\frac{2}{3}$로 닮으므로 넓이(=색칠 넓이)의 공비는 $\\left(\\frac{2}{3}\\right)^2=\\frac{4}{9}$이다.",
+  "S": "마름모 한 변의 길이를 $x$로 놓는다. $\\triangle ABC \\sim \\triangle F_1E_1C$이고 대응변 $\\overline{AB}:\\overline{F_1E_1}=\\overline{BC}:\\overline{E_1C}$이므로 $2:x=4:(4-x)$, 즉 $2(4-x)=4x$에서 $x=\\dfrac{4}{3}$. 왜냐하면 마름모의 변 $\\overline{F_1E_1}$이 $\\overline{AB}$와 평행해 두 삼각형이 닮기 때문이다.\n마름모 $D_1BE_1F_1$의 넓이를 구한다. 두 변이 $x$이고 끼인각이 $\\angle ABC=60^\\circ$이므로 $\\text{(마름모)}=x^2\\sin 60^\\circ=\\left(\\dfrac{4}{3}\\right)^2\\cdot\\dfrac{\\sqrt{3}}{2}$. 왜냐하면 평행사변형 넓이는 두 변과 끼인각의 사인의 곱이기 때문이다.\n중심 B, 반지름 $x=\\dfrac{4}{3}$, 중심각 $60^\\circ$인 부채꼴 $BE_1D_1$의 넓이를 구한다. $\\text{(부채꼴)}=\\pi x^2\\cdot\\dfrac{60^\\circ}{360^\\circ}=\\pi\\left(\\dfrac{4}{3}\\right)^2\\cdot\\dfrac{1}{6}$. 왜냐하면 부채꼴 넓이는 원 넓이 $\\pi x^2$에 중심각 비율 $\\dfrac{60}{360}$을 곱한 값이기 때문이다.\n$R_1$의 색칠 넓이 $a_1$은 마름모에서 부채꼴을 뺀 것이다. $a_1=\\left(\\dfrac{4}{3}\\right)^2\\left(\\dfrac{\\sqrt{3}}{2}-\\dfrac{\\pi}{6}\\right)=\\dfrac{16}{9}\\cdot\\dfrac{3\\sqrt{3}-\\pi}{6}=\\dfrac{8(3\\sqrt{3}-\\pi)}{27}$. 왜냐하면 색칠 영역이 마름모 내부에서 부채꼴 외부인 공통부분이기 때문이다.\n다음 단계의 닮음비를 구한다. $\\overline{E_1C}=\\overline{BC}-\\overline{BE_1}=4-\\dfrac{4}{3}=\\dfrac{8}{3}$이고 $\\triangle F_1E_1C\\sim\\triangle ABC$의 길이비는 $\\overline{E_1C}:\\overline{BC}=\\dfrac{8}{3}:4=\\dfrac{2}{3}$. 왜냐하면 대응변 $\\overline{E_1C}$와 $\\overline{BC}$가 같은 변 위에 있는 대응변이기 때문이다.\n모든 도형이 길이비 $\\dfrac{2}{3}$로 축소 반복되므로 색칠 넓이의 공비는 $r=\\left(\\dfrac{2}{3}\\right)^2=\\dfrac{4}{9}$이다. 따라서 $a_{n+1}=\\dfrac{4}{9}a_n$. 왜냐하면 닮은 도형의 넓이비는 길이비의 제곱이기 때문이다.\n$\\{a_n\\}$은 첫째항 $\\dfrac{8(3\\sqrt{3}-\\pi)}{27}$, 공비 $\\dfrac{4}{9}\\;(|r|<1)$인 무한등비급수이므로 $\\displaystyle\\lim_{n\\to\\infty}S_n=\\sum_{n=1}^{\\infty}a_n=\\dfrac{\\dfrac{8(3\\sqrt{3}-\\pi)}{27}}{1-\\dfrac{4}{9}}=\\dfrac{8(3\\sqrt{3}-\\pi)}{27}\\cdot\\dfrac{9}{5}=\\dfrac{8(3\\sqrt{3}-\\pi)}{15}$. 왜냐하면 $\\sum a_n=\\dfrac{a_1}{1-r}$이기 때문이다.\n따라서 $\\displaystyle\\lim_{n\\to\\infty}S_n=\\dfrac{8(3\\sqrt{3}-\\pi)}{15}$로 보기 ②와 일치한다. 왜냐하면 보기 ②가 $\\dfrac{8(3\\sqrt{3}-\\pi)}{15}$이기 때문이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/083a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{③번}}$$ 입니다.",
-  "finalAnswer": "3",
-  "correctAnswer": "3",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{8(3\\sqrt{3}-\\pi)}{15}}}$$ 입니다.",
+  "finalAnswer": "2",
+  "correctAnswer": "2",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

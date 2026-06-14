@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 135번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "직선 AP가 작은 원과 만나는 두 점 중 P에 가까운 점을 Q라 할 때, $\\angle\\text{OAP}=\\theta$에 대하여 $\\displaystyle\\lim_{\\theta\\to 0+}\\dfrac{\\overline{\\text{PQ}}}{\\theta^2}$의 값을 구한다.",
+  "C": "점 $\\text{A}(-2,\\,0)$이고 점 P는 원 $x^2+y^2=4$ 위의 점이며, 직선 AP가 원 $(x-1)^2+y^2=1$과 만나는 두 점 중 P에 가까운 점이 Q이다. $\\angle\\text{OAP}=\\theta$이고 $\\theta\\to 0+$이다.",
+  "B": "지름에 대한 원주각은 직각이다. 큰 원에서 선분 AB는 지름이고 작은 원에서 선분 OB는 지름이므로, 이 성질로 직각삼각형을 만들어 변의 길이를 $\\theta$로 나타낸 뒤, $\\displaystyle\\lim_{\\theta\\to 0}\\dfrac{\\sin\\theta}{\\theta}=1$을 이용해 극한을 계산한다.",
+  "S": "큰 원의 중심이 O이고 반지름이 $2$이므로 점 $\\text{B}(2,\\,0)$은 큰 원 위의 점이고 선분 AB는 길이 $4$인 지름이다. 점 P가 큰 원 위에 있으므로 지름에 대한 원주각의 성질에서 $\\angle\\text{APB}=90^\\circ$이고, $\\angle\\text{OAP}=\\theta$이므로 직각삼각형 ABP에서 $\\overline{\\text{AP}}=4\\cos\\theta,\\ \\overline{\\text{BP}}=4\\sin\\theta$이다.\n작은 원은 중심이 $(1,\\,0)$이고 반지름이 $1$이므로 두 점 $\\text{O}(0,\\,0)$, $\\text{B}(2,\\,0)$을 지나고 선분 OB가 작은 원의 지름이다. 점 Q가 작은 원 위에 있으므로 $\\angle\\text{OQB}=90^\\circ$이고, 따라서 점 B에서 직선 AP에 내린 점 Q에 대하여 $\\angle\\text{BQP}=90^\\circ$이다.\n$\\overline{\\text{OQ}}=a,\\ \\overline{\\text{BQ}}=b,\\ \\overline{\\text{PQ}}=x$로 두면 직각삼각형 OQB에서 $a^2+b^2=\\overline{\\text{OB}}^2=4$이고, 직각삼각형 PQB에서 $b^2=x^2+\\overline{\\text{BP}}^2=x^2+16\\sin^2\\theta$이다.\n점 A, Q, P가 한 직선 위에 있으므로 $\\overline{\\text{AQ}}=\\overline{\\text{AP}}-\\overline{\\text{PQ}}=4\\cos\\theta-x$이고, 삼각형 OAQ에서 $\\angle\\text{OAQ}=\\theta$, $\\overline{\\text{OA}}=2$이므로 코사인법칙으로 $a^2=2^2+(4\\cos\\theta-x)^2-2\\cdot 2\\cdot(4\\cos\\theta-x)\\cos\\theta=x^2-4x\\cos\\theta+4$를 얻는다.\n두 식을 $a^2+b^2=4$에 대입하면 $(x^2-4x\\cos\\theta+4)+(x^2+16\\sin^2\\theta)=4$이고, 정리하면 $x^2-2x\\cos\\theta+8\\sin^2\\theta=0$이다.\n이차방정식을 $x$에 대하여 풀면 $x=\\cos\\theta\\pm\\sqrt{\\cos^2\\theta-8\\sin^2\\theta}$인데, $\\theta\\to 0+$일 때 점 Q는 점 P에 가까워 $\\overline{\\text{PQ}}\\to 0$이므로 작은 근을 택하여 $\\overline{\\text{PQ}}=\\cos\\theta-\\sqrt{\\cos^2\\theta-8\\sin^2\\theta}$이다.\n분자를 유리화하면 $\\cos\\theta-\\sqrt{\\cos^2\\theta-8\\sin^2\\theta}=\\dfrac{\\cos^2\\theta-(\\cos^2\\theta-8\\sin^2\\theta)}{\\cos\\theta+\\sqrt{\\cos^2\\theta-8\\sin^2\\theta}}=\\dfrac{8\\sin^2\\theta}{\\cos\\theta+\\sqrt{\\cos^2\\theta-8\\sin^2\\theta}}$이다.\n따라서 $$\\lim_{\\theta\\to 0+}\\frac{\\overline{\\text{PQ}}}{\\theta^2}=\\lim_{\\theta\\to 0+}\\frac{8\\sin^2\\theta}{\\theta^2\\left(\\cos\\theta+\\sqrt{\\cos^2\\theta-8\\sin^2\\theta}\\right)}=8\\left(\\lim_{\\theta\\to 0+}\\frac{\\sin\\theta}{\\theta}\\right)^2\\cdot\\frac{1}{\\cos 0+\\sqrt{\\cos^2 0-0}}=8\\cdot 1^2\\cdot\\frac{1}{1+1}=4$$이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/136a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{ㄱ,ㄷ}}$$ 입니다.",
-  "finalAnswer": "ㄱ,ㄷ",
-  "correctAnswer": "ㄱ,ㄷ",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{4}}$$ 입니다.",
+  "finalAnswer": "4",
+  "correctAnswer": "4",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

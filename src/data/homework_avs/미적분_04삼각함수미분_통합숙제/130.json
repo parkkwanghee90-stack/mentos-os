@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 130번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$7\\pi$보다 작은 두 양수 $a$, $b$에 대하여 $f(x)=\\sin(a+b\\cos x)$가 두 조건을 만족시킬 때, $a+b$의 값을 구한다.",
+  "C": "조건은 두 가지다. (가) 방정식 $f'(x)=b$가 해를 가진다. (나) $\\lim\\limits_{x\\to 0}\\dfrac{1}{x}\\sin\\!\\left(f(a)\\left(\\pi+\\dfrac{x}{4}\\right)\\right)=\\dfrac{b}{a}$. 또한 $0<a<7\\pi$, $0<b<7\\pi$이다.",
+  "B": "합성함수의 미분과 삼각함수의 유계성($-1\\le\\sin\\theta\\le1$, $-1\\le\\cos\\theta\\le1$), 그리고 분모가 $0$으로 가는 극한이 유한하면 분자도 $0$으로 가야 한다는 원리($\\lim\\frac{g(x)}{x}$가 존재하면 $g(0)=0$), 그리고 $\\lim\\limits_{t\\to0}\\dfrac{\\sin t}{t}=1$을 사용한다.",
+  "S": "합성함수의 미분으로 $f'(x)$를 구한다. $f(x)=\\sin(a+b\\cos x)$이므로 $$f'(x)=\\cos(a+b\\cos x)\\cdot(-b\\sin x)=-b\\sin x\\,\\cos(a+b\\cos x).$$\n조건 (가)에서 $f'(x)=b$를 정리하면 $-b\\sin x\\,\\cos(a+b\\cos x)=b$이고 $b>0$이므로 양변을 $b$로 나누어 $$\\sin x\\,\\cos(a+b\\cos x)=-1$$ 을 얻는다.\n두 인수의 절댓값이 각각 $1$ 이하이므로 곱이 $-1$이 되려면 부호와 크기가 모두 극값이어야 한다. 즉 $\\sin x=1,\\ \\cos(a+b\\cos x)=-1$ 또는 $\\sin x=-1,\\ \\cos(a+b\\cos x)=1$이다. 두 경우 모두 $\\sin x=\\pm1$이므로 $\\cos x=0$, 따라서 $b\\cos x=0$이 되어 $a+b\\cos x=a$이다. 그러므로 $\\cos a=-1$ 또는 $\\cos a=1$이고, $0<a<7\\pi$에서 $a=(2n-1)\\pi$ 또는 $a=2n\\pi$ ($n$은 $3$ 이하의 자연수)이다.\n조건 (나)에서 $x\\to0$일 때 분모 $x\\to0$이고 극한값이 유한하므로 분자도 $0$으로 가야 한다. 즉 $$\\lim_{x\\to0}\\sin\\!\\left(f(a)\\left(\\pi+\\tfrac{x}{4}\\right)\\right)=\\sin\\big(f(a)\\,\\pi\\big)=0$$ 이어야 하고, $-1\\le f(a)\\le1$이므로 $f(a)=-1$ 또는 $f(a)=0$ 또는 $f(a)=1$이다.\n세 경우의 극한값을 직접 계산해 어느 값이 (나)를 만족하는지 가린다. $f(a)=1$이면 $\\sin\\!\\left(\\pi+\\tfrac{x}{4}\\right)=-\\sin\\tfrac{x}{4}$이므로 $$\\lim_{x\\to0}\\frac{-\\sin\\frac{x}{4}}{x}=-\\frac{1}{4}<0,$$ $f(a)=0$이면 극한값이 $0$이 되어 둘 다 $\\dfrac{b}{a}>0$과 맞지 않는다. $f(a)=-1$이면 $\\sin\\!\\left(-\\pi-\\tfrac{x}{4}\\right)=\\sin\\tfrac{x}{4}$이므로 $$\\lim_{x\\to0}\\frac{\\sin\\frac{x}{4}}{x}=\\frac{1}{4}>0.$$ 따라서 $f(a)=-1$이고 $\\dfrac{b}{a}=\\dfrac{1}{4}$, 곧 $a=4b$, 즉 $b=\\dfrac{a}{4}$이다.\n$b=\\dfrac{a}{4}$를 $f(a)=\\sin(a+b\\cos a)$에 대입해 $f(a)=-1$이 되는 $a$를 찾는다. $a=(2n-1)\\pi$이면 $\\cos a=-1$이므로 $$f(a)=\\sin\\!\\left(a-\\frac{a}{4}\\right)=\\sin\\frac{3a}{4}=\\sin\\frac{(6n-3)\\pi}{4},$$ 이 값은 $n=1,2,3$에서 각각 $\\dfrac{\\sqrt2}{2},\\,\\dfrac{\\sqrt2}{2},\\,-\\dfrac{\\sqrt2}{2}$가 되어 $-1$이 될 수 없다.\n$a=2n\\pi$이면 $\\cos a=1$이므로 $$f(a)=\\sin\\!\\left(a+\\frac{a}{4}\\right)=\\sin\\frac{5a}{4}=\\sin\\frac{5n\\pi}{2}.$$ $n=1,2,3$에서 값은 각각 $1,\\,0,\\,-1$이므로 $f(a)=-1$은 $n=3$일 때만 성립한다. 따라서 $a=2\\cdot3\\cdot\\pi=6\\pi$이고 $0<6\\pi<7\\pi$를 만족한다.\n$a=6\\pi$이므로 $b=\\dfrac{a}{4}=\\dfrac{6\\pi}{4}=\\dfrac{3}{2}\\pi$이고 $0<\\dfrac{3}{2}\\pi<7\\pi$도 만족한다. 그러므로 $$a+b=6\\pi+\\frac{3}{2}\\pi=\\frac{15}{2}\\pi.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/131a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{135}}$$ 입니다.",
-  "finalAnswer": "135",
-  "correctAnswer": "135",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{15}{2}\\pi}}$$ 입니다.",
+  "finalAnswer": "15/2π",
+  "correctAnswer": "15/2π",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

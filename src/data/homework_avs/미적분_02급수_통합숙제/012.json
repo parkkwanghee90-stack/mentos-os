@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 급수 12번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle\\lim_{n\\to\\infty}(2a_n+3S_n)$의 값",
+  "C": "수열 $\\{a_n\\}$의 첫째항부터 제$n$항까지의 합이 $S_n$이고, $\\displaystyle\\lim_{n\\to\\infty}S_n=7$이다.",
+  "B": "부분합 $S_n=a_1+a_2+\\cdots+a_n$은 무한급수 $\\displaystyle\\sum_{n=1}^{\\infty}a_n$의 부분합이다. 수렴하는 수열은 그 자체와 한 칸 옮긴 수열이 같은 값으로 모이므로, $\\{S_n\\}$이 수렴하면 $a_n=S_n-S_{n-1}$의 극한은 $0$이 된다. 또한 두 수렴수열의 합·상수배의 극한은 각각의 극한으로 나누어 계산할 수 있다.",
+  "S": "부분합 $S_n$은 각 항을 누적한 합이므로, 인접한 두 부분합의 차가 곧 그 항이다: $$a_n=S_n-S_{n-1}.$$\n$\\{S_n\\}$이 $7$로 수렴하면 한 항 앞선 $\\{S_{n-1}\\}$도 같은 값 $7$로 모이므로, 그 차의 극한은 $$\\lim_{n\\to\\infty}a_n=\\lim_{n\\to\\infty}(S_n-S_{n-1})=7-7=0.$$\n구하는 극한은 수렴하는 두 수열 $\\{a_n\\}$, $\\{S_n\\}$의 상수배의 합이므로, 극한을 항별로 분리한다: $$\\lim_{n\\to\\infty}(2a_n+3S_n)=2\\lim_{n\\to\\infty}a_n+3\\lim_{n\\to\\infty}S_n.$$\n앞에서 얻은 $\\displaystyle\\lim_{n\\to\\infty}a_n=0$과 주어진 $\\displaystyle\\lim_{n\\to\\infty}S_n=7$을 대입하면 $$2\\times 0+3\\times 7=21.$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{21}}$$ 입니다.",
   "finalAnswer": "21",
   "correctAnswer": "21",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

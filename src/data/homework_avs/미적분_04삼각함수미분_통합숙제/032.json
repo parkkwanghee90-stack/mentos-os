@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 32번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$0 < x < \\dfrac{\\pi}{2}$에서 정의된 함수 $f(x)=\\dfrac{(\\cos x+\\sin x)^2}{\\sin 2x}$의 최솟값을 구하는 문제다.",
+  "C": "정의역은 $0 < x < \\dfrac{\\pi}{2}$이고, 함수는 $f(x)=\\dfrac{(\\cos x+\\sin x)^2}{\\sin 2x}$이다. 보기는 $1,\\ \\dfrac{3}{2},\\ 2,\\ \\dfrac{5}{2},\\ 3$의 다섯 가지다.",
+  "B": "분자를 전개할 때 핵심은 두 항등식이다. 첫째, $\\sin^2 x+\\cos^2 x=1$이고 둘째, 배각공식 $2\\sin x\\cos x=\\sin 2x$다. 이 둘을 쓰면 분자가 분모와 같은 꼴인 $\\sin 2x$로 정리되어 식이 극적으로 단순해진다. 마지막으로 $0 < x < \\dfrac{\\pi}{2}$이면 $0 < 2x < \\pi$이므로 $\\sin 2x$가 양수이고 그 최댓값은 $1$이라는 사실에서, 분모가 클수록 분수항이 작아진다는 성질로 최솟값을 잡는다.",
+  "S": "분자를 곱셈공식으로 펼쳐 항등식을 쓰기 위해, 완전제곱을 전개한다. $$(\\cos x+\\sin x)^2=\\cos^2 x+2\\sin x\\cos x+\\sin^2 x.$$\n$\\sin^2 x+\\cos^2 x=1$과 배각공식 $2\\sin x\\cos x=\\sin 2x$를 대입하면 분자가 분모와 같은 항을 품게 되므로, 분자를 다음과 같이 바꾼다. $$(\\cos x+\\sin x)^2=1+\\sin 2x.$$\n바꾼 분자를 원래 식에 넣어 분수를 두 조각으로 나누면, 변수가 한 곳에만 남아 다루기 쉬워진다. $$f(x)=\\dfrac{1+\\sin 2x}{\\sin 2x}=\\dfrac{1}{\\sin 2x}+1.$$\n$\\dfrac{1}{\\sin 2x}$의 크기는 오직 $\\sin 2x$에 달려 있으므로, 정의역에서 $\\sin 2x$가 가질 수 있는 값의 범위부터 정한다. $0 < x < \\dfrac{\\pi}{2}$이면 $0 < 2x < \\pi$이므로 $$0 < \\sin 2x \\le 1.$$\n$\\sin 2x$가 최대인 $1$일 때 분수항 $\\dfrac{1}{\\sin 2x}$가 최소인 $1$이 되므로, $f(x)$가 가장 작아진다. $$\\sin 2x=1 \\ \\Rightarrow\\ \\dfrac{1}{\\sin 2x}=1.$$\n이때 $2x=\\dfrac{\\pi}{2}$, 즉 $x=\\dfrac{\\pi}{4}$가 정의역 $0 < x < \\dfrac{\\pi}{2}$ 안에 실제로 존재하므로 이 최솟값은 달성 가능하다. 따라서 $$f\\!\\left(\\dfrac{\\pi}{4}\\right)=\\dfrac{1}{1}+1=2.$$\n그러므로 $f(x)$의 최솟값은 $2$이고, 이는 보기 ③에 해당한다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/033a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{3π}}$$ 입니다.",
-  "finalAnswer": "3π",
-  "correctAnswer": "3π",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2}}$$ 입니다.",
+  "finalAnswer": "2",
+  "correctAnswer": "2",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

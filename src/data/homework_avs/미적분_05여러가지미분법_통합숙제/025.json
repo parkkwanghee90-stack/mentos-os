@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 여러 가지 미분법 25번 명품 해설",
   "type": "calculus",
-  "P": "합성함수, 매개변수, 음함수의 미분법을 활용합니다.",
-  "C": "연쇄 법칙, 몫의 미분법, 매개변수 미분을 적용합니다.",
-  "B": "여러 가지 미분법:\n\n1) 합성함수: $$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$$\n2) 매개변수: $$\\frac{dy}{dx} = \\frac{\\frac{dy}{dt}}{\\frac{dx}{dt}}$$\n3) 음함수: 양변을 $$x$$로 미분, $$y' = \\frac{dy}{dx}$$로 놓고 정리\n4) 역함수 미분: $$\\frac{dx}{dy} = \\frac{1}{\\frac{dy}{dx}}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "매개변수 $t\\,(t>0)$로 나타낸 곡선에서 $\\dfrac{dy}{dx}$를 $t$의 함수로 표현한 뒤, 그 값이 최대가 되는 순간의 매개변수 $a$를 구한다.",
+  "C": "$x=\\ln t+t,\\quad y=-t^3+3t,\\quad t>0$이고, $\\dfrac{dy}{dx}$가 $t=a$에서 최댓값을 갖는다.",
+  "B": "매개변수로 주어진 곡선의 도함수는 $\\dfrac{dy}{dx}=\\dfrac{\\,dy/dt\\,}{\\,dx/dt\\,}$로 구한다. 이렇게 얻은 $\\dfrac{dy}{dx}$를 다시 $t$에 대한 함수로 보고, 그 함수를 미분하여 극값을 찾으면 최댓값을 주는 $t$를 결정할 수 있다.",
+  "S": "각 변수를 $t$로 미분해 두 속도를 먼저 확보한다. $x=\\ln t+t$에서 $\\dfrac{dx}{dt}=\\dfrac{1}{t}+1=\\dfrac{t+1}{t}$이고, $y=-t^3+3t$에서 $\\dfrac{dy}{dt}=-3t^2+3=3(1-t^2)$이다.\n두 속도의 비로 곡선의 기울기를 만든다. $$\\frac{dy}{dx}=\\frac{dy/dt}{dx/dt}=\\frac{3(1-t^2)}{\\dfrac{t+1}{t}}=\\frac{3t(1-t)(1+t)}{t+1}.$$\n$t>0$이므로 $t+1\\neq 0$이어서 약분이 가능하고, 기울기가 $t$에 대한 간단한 이차식으로 정리된다. $$\\frac{dy}{dx}=3t(1-t)=3t-3t^2.$$\n최댓값을 찾기 위해 이 기울기를 $t$로 한 번 더 미분한다. $f(t)=3t-3t^2$로 두면 $f'(t)=3-6t$이다.\n기울기가 극값을 가지려면 $f'(t)=0$이어야 하므로 $3-6t=0$에서 $t=\\dfrac{1}{2}$를 얻는다.\n이 점이 최댓값인지 확인한다. $f''(t)=-6<0$이므로 $t=\\dfrac{1}{2}$에서 위로 볼록한 꼭짓점, 즉 극대이자 최대이다. 또한 $t\\to 0^+$일 때 $f(t)\\to 0$, $t\\to\\infty$일 때 $f(t)\\to-\\infty$이므로 $t=\\dfrac{1}{2}$가 $t>0$ 전체에서의 최댓값을 준다.\n따라서 $\\dfrac{dy}{dx}$가 최댓값 $f\\!\\left(\\dfrac{1}{2}\\right)=\\dfrac{3}{4}$를 갖는 순간의 매개변수는 $a=\\dfrac{1}{2}$이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/05여러가지미분법/026a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{⑤번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{a=\\dfrac{1}{2}}}$$ 입니다.",
   "finalAnswer": "5",
   "correctAnswer": "5",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 17번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$2\\cos\\alpha = 3\\sin\\alpha$이고 $\\tan(\\alpha+\\beta)=1$일 때 $\\tan\\beta$의 값을 구한다.",
+  "C": "두 각 $\\alpha,\\ \\beta$에 대하여 $2\\cos\\alpha = 3\\sin\\alpha$가 성립하고, 두 각의 합에 대해 $\\tan(\\alpha+\\beta)=1$이다.",
+  "B": "한 각에 대한 사인과 코사인의 비례식은 그 각의 탄젠트로 직결된다. $\\cos\\alpha\\neq 0$이면 양변을 $\\cos\\alpha$로 나누어 $\\tan\\alpha$를 얻는다. 또한 두 각의 합의 탄젠트는 덧셈정리 $\\tan(\\alpha+\\beta)=\\dfrac{\\tan\\alpha+\\tan\\beta}{1-\\tan\\alpha\\tan\\beta}$로 전개되므로, $\\tan\\alpha$가 정해지면 미지수 $\\tan\\beta$에 대한 일차방정식이 만들어진다.",
+  "S": "주어진 등식에서 곧바로 $\\tan\\alpha$를 끌어내기 위해, $2\\cos\\alpha=3\\sin\\alpha$의 양변을 $\\cos\\alpha$로 나눈다. $$\\frac{2\\cos\\alpha}{\\cos\\alpha}=\\frac{3\\sin\\alpha}{\\cos\\alpha}\\ \\Longrightarrow\\ 2=3\\tan\\alpha$$\n이로부터 한 각의 탄젠트값이 확정된다. $$\\tan\\alpha=\\frac{2}{3}$$\n구하려는 값을 미지수로 놓아 덧셈정리에 대입할 준비를 한다. $\\tan\\beta=x$로 두면 조건은 다음과 같이 쓸 수 있다. $$\\tan(\\alpha+\\beta)=\\frac{\\tan\\alpha+x}{1-\\tan\\alpha\\,x}=1$$\n$\\tan\\alpha=\\dfrac{2}{3}$를 대입하여 $x$에 대한 방정식을 만든다. $$\\frac{\\dfrac{2}{3}+x}{1-\\dfrac{2}{3}x}=1$$\n분모를 없애기 위해 양변에 $1-\\dfrac{2}{3}x$를 곱한다. $$\\frac{2}{3}+x=1-\\frac{2}{3}x$$\n$x$ 항을 한쪽으로 모으면 일차방정식이 정리된다. $$x+\\frac{2}{3}x=1-\\frac{2}{3}\\ \\Longrightarrow\\ \\frac{5}{3}x=\\frac{1}{3}$$\n양변에 $\\dfrac{3}{5}$를 곱하여 $x$를 구한다. $$x=\\frac{1}{3}\\cdot\\frac{3}{5}=\\frac{1}{5}$$\n따라서 구하는 값은 다음과 같다. $$\\tan\\beta=\\frac{1}{5}$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/018a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{15}}$$ 입니다.",
-  "finalAnswer": "15",
-  "correctAnswer": "15",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{1}{5}}}$$ 입니다.",
+  "finalAnswer": "1/5",
+  "correctAnswer": "1/5",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

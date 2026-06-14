@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 여러 가지 미분법 30번 명품 해설",
   "type": "calculus",
-  "P": "합성함수, 매개변수, 음함수의 미분법을 활용합니다.",
-  "C": "연쇄 법칙, 몫의 미분법, 매개변수 미분을 적용합니다.",
-  "B": "여러 가지 미분법:\n\n1) 합성함수: $$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$$\n2) 매개변수: $$\\frac{dy}{dx} = \\frac{\\frac{dy}{dt}}{\\frac{dx}{dt}}$$\n3) 음함수: 양변을 $$x$$로 미분, $$y' = \\frac{dy}{dx}$$로 놓고 정리\n4) 역함수 미분: $$\\frac{dx}{dy} = \\frac{1}{\\frac{dy}{dx}}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "매개변수 $t$로 정의된 곡선 $x=t+\\sin t$, $y=-4\\cos t+2\\sin^2 t$ 위에서 $t=\\dfrac{\\pi}{3}$일 때 접선의 기울기 $\\dfrac{dy}{dx}$의 값을 구한다.",
+  "C": "$x$와 $y$가 모두 매개변수 $t$의 함수로 주어져 있고, 구하는 순간은 $t=\\dfrac{\\pi}{3}$이다. 이때 $\\cos\\dfrac{\\pi}{3}=\\dfrac{1}{2}$, $\\sin\\dfrac{\\pi}{3}=\\dfrac{\\sqrt{3}}{2}$이다.",
+  "B": "매개변수로 나타낸 함수에서 접선의 기울기는 $\\dfrac{dy}{dx}=\\dfrac{\\,dy/dt\\,}{\\,dx/dt\\,}$ (단, $\\dfrac{dx}{dt}\\neq 0$)로 구한다. 합성함수 미분으로 $\\dfrac{d}{dt}(\\sin^2 t)=2\\sin t\\cos t$임을 이용한다.",
+  "S": "$x$를 $t$로 미분해 분모를 만든다. $\\sin t$의 도함수는 $\\cos t$이므로 $$\\frac{dx}{dt}=\\frac{d}{dt}\\left(t+\\sin t\\right)=1+\\cos t.$$\n$y$를 $t$로 미분해 분자를 만든다. $-4\\cos t$의 도함수는 $4\\sin t$이고, $2\\sin^2 t$의 도함수는 연쇄법칙으로 $2\\cdot 2\\sin t\\cos t=4\\sin t\\cos t$이므로 $$\\frac{dy}{dt}=4\\sin t+4\\sin t\\cos t=4\\sin t\\left(1+\\cos t\\right).$$\n접선의 기울기 공식에 대입하면 분모의 $1+\\cos t$가 약분되어 식이 간단해진다. $1+\\cos t\\neq 0$인 구간에서 $$\\frac{dy}{dx}=\\frac{dy/dt}{dx/dt}=\\frac{4\\sin t\\left(1+\\cos t\\right)}{1+\\cos t}=4\\sin t.$$\n구하는 순간 $t=\\dfrac{\\pi}{3}$에서 $\\cos\\dfrac{\\pi}{3}=\\dfrac{1}{2}>-1$이므로 $1+\\cos\\dfrac{\\pi}{3}=\\dfrac{3}{2}\\neq 0$이어서 위 약분이 정당하다.\n$\\sin\\dfrac{\\pi}{3}=\\dfrac{\\sqrt{3}}{2}$를 대입해 값을 확정한다. $$\\frac{dy}{dx}\\Big|_{t=\\pi/3}=4\\sin\\frac{\\pi}{3}=4\\cdot\\frac{\\sqrt{3}}{2}=2\\sqrt{3}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/05여러가지미분법/031a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{④번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2\\sqrt{3}}}$$ 입니다.",
   "finalAnswer": "4",
   "correctAnswer": "4",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

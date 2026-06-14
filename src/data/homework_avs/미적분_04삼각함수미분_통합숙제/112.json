@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 112번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "두 내접원 반지름 $r_1,\\ r_2$가 $\\theta$에 따라 어떻게 변하는지 구하고, $\\theta\\to0+$일 때 $\\dfrac{r_1 r_2}{\\theta^2}$의 극한값을 구한다.",
+  "C": "$\\overline{AB}=8$, $\\overline{AC}=\\overline{BC}$, $\\angle ABC=\\theta$인 이등변삼각형 $ABC$가 있다. 선분 $BC$의 연장선 위에 $\\overline{AC}=\\overline{AD}$인 점 $D$를 잡고, 삼각형 $ABC$의 내접원 반지름을 $r_1$, 삼각형 $ACD$의 내접원 반지름을 $r_2$라 한다.",
+  "B": "삼각형의 내접원 반지름은 $r=\\dfrac{\\text{넓이}}{s}$($s$는 둘레의 절반)로 구하거나, 꼭짓점과 내심·접점이 이루는 직각삼각형에서 직접 길이비로 구할 수 있다. 또 $\\theta\\to0$에서 $\\dfrac{\\tan\\theta}{\\theta}\\to1$이 성립하여 미세각 극한을 처리한다.",
+  "S": "삼각형 $ABC$는 $\\overline{AC}=\\overline{BC}$인 이등변삼각형이고 밑변 $\\overline{AB}=8$의 두 밑각이 $\\theta$이므로, $\\overline{AB}$의 중점을 $M$이라 하면 $\\overline{BM}=4$인 직각삼각형 $BCM$에서 $\\overline{BC}=\\dfrac{\\overline{BM}}{\\cos\\theta}=\\dfrac{4}{\\cos\\theta}=\\overline{AC}$이다.\n삼각형 $ABC$의 내심 $O_1$은 밑변의 수직이등분선 위에 있고 $\\angle O_1BM=\\dfrac{\\theta}{2}$이므로, 직각삼각형 $BO_1M$에서 내접원 반지름은 $$r_1=\\overline{BM}\\tan\\dfrac{\\theta}{2}=4\\tan\\dfrac{\\theta}{2}.$$\n꼭지각 $\\angle ACB=\\pi-2\\theta$이고 점 $D$가 $\\overline{BC}$의 연장선 위에 있으므로, 삼각형 $ACD$의 밑각 $\\angle ACD=\\pi-(\\pi-2\\theta)=2\\theta$이다. $\\overline{AC}=\\overline{AD}$이므로 삼각형 $ACD$도 이등변삼각형이고 $\\angle ADC=2\\theta$이다.\n점 $A$에서 밑변 $\\overline{CD}$에 내린 수선의 발을 $N$이라 하면 직각삼각형 $ACN$에서 $$\\overline{CN}=\\overline{AC}\\cos 2\\theta=\\dfrac{4}{\\cos\\theta}\\cos 2\\theta.$$\n삼각형 $ACD$의 내심 $O_2$는 수선 $\\overline{AN}$ 위에 있고 $\\angle O_2CN=\\dfrac{1}{2}\\angle ACD=\\theta$이므로, 직각삼각형 $CNO_2$에서 $$r_2=\\overline{CN}\\tan\\theta=\\dfrac{4\\cos 2\\theta\\,\\tan\\theta}{\\cos\\theta}.$$\n두 반지름을 곱한 뒤 극한식을 정리하면 $$\\frac{r_1 r_2}{\\theta^2}=\\frac{1}{\\theta^2}\\cdot 4\\tan\\frac{\\theta}{2}\\cdot\\frac{4\\cos 2\\theta\\,\\tan\\theta}{\\cos\\theta}=\\frac{16\\cos 2\\theta}{\\cos\\theta}\\cdot\\frac{\\tan\\frac{\\theta}{2}}{\\theta}\\cdot\\frac{\\tan\\theta}{\\theta}.$$\n$\\theta\\to0+$에서 $\\dfrac{\\tan\\frac{\\theta}{2}}{\\theta}=\\dfrac{1}{2}\\cdot\\dfrac{\\tan\\frac{\\theta}{2}}{\\frac{\\theta}{2}}\\to\\dfrac{1}{2}$, $\\dfrac{\\tan\\theta}{\\theta}\\to1$, $\\dfrac{\\cos 2\\theta}{\\cos\\theta}\\to1$이므로 $$\\lim_{\\theta\\to0+}\\frac{r_1 r_2}{\\theta^2}=16\\cdot 1\\cdot\\frac{1}{2}\\cdot1=8.$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{8}}$$ 입니다.",
   "finalAnswer": "8",
   "correctAnswer": "8",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

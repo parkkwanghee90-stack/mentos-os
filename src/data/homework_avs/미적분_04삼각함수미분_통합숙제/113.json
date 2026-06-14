@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 113번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "중심이 원점 O이고 반지름이 1인 원 $C$에서, 양의 $x$축과 만나는 점을 $A$, 제1사분면 위의 점 $P$에 대해 $\\angle POA=\\theta$, $P$에서 $x$축에 내린 수선의 발을 $H$라 할 때, 삼각형 $APH$에 내접하는 원의 반지름 $r(\\theta)$에 대하여 $\\displaystyle\\lim_{\\theta\\to0+}\\frac{r(\\theta)}{\\theta^2}$의 값을 구하는 것이다.",
+  "C": "원 $C$는 중심 $O$, 반지름 $1$이므로 $A=(1,\\,0)$이고, $\\angle POA=\\theta$인 점 $P$는 $P=(\\cos\\theta,\\ \\sin\\theta)$이다. $H$는 $P$에서 $x$축에 내린 수선의 발이므로 $H=(\\cos\\theta,\\ 0)$이다. 삼각형 $APH$의 한 변 $PH$는 $x$축에 수직이고 $HA$는 $x$축 위에 있으므로, 이 삼각형은 $H$에서 직각인 직각삼각형이다.",
+  "B": "직각삼각형의 두 변 $a,\\,b$와 빗변 $c$에 대하여 내접원의 반지름은 $r=\\dfrac{a+b-c}{2}$이다. 또한 $\\theta\\to0$일 때 $\\dfrac{\\sin\\theta}{\\theta}\\to1$, $1-\\cos\\theta=2\\sin^2\\frac\\theta2\\sim\\dfrac{\\theta^2}{2}$의 근삿값을 이용한다.",
+  "S": "세 꼭짓점의 좌표로 변의 길이를 구하면 삼각형의 모양이 정해진다. $A=(1,0)$, $P=(\\cos\\theta,\\sin\\theta)$, $H=(\\cos\\theta,0)$이므로 수직변 $\\overline{PH}=\\sin\\theta$, 수평변 $\\overline{HA}=1-\\cos\\theta$, 빗변 $\\overline{AP}=\\sqrt{(1-\\cos\\theta)^2+\\sin^2\\theta}$이다.\n빗변을 반각으로 정리하면 극한 계산이 깔끔해진다. $$\\overline{AP}=\\sqrt{2-2\\cos\\theta}=\\sqrt{4\\sin^2\\tfrac{\\theta}{2}}=2\\sin\\tfrac{\\theta}{2}.$$\n직각삼각형의 내접원 반지름 공식을 적용한다. $H$가 직각이므로 두 직각변 $\\overline{PH},\\ \\overline{HA}$와 빗변 $\\overline{AP}$에 대해 $$r(\\theta)=\\frac{\\overline{PH}+\\overline{HA}-\\overline{AP}}{2}=\\frac{\\sin\\theta+(1-\\cos\\theta)-2\\sin\\frac{\\theta}{2}}{2}.$$\n구하는 극한에 대입하여 항별로 분리한다. $$\\frac{r(\\theta)}{\\theta^2}=\\frac{1}{2}\\left(\\frac{\\sin\\theta}{\\theta^2}+\\frac{1-\\cos\\theta}{\\theta^2}-\\frac{2\\sin\\frac{\\theta}{2}}{\\theta^2}\\right).$$\n각 항의 차수를 맞추기 위해 $\\theta\\to0$에서의 주도항을 본다. $\\sin\\theta=\\theta-\\frac{\\theta^3}{6}+\\cdots$, $1-\\cos\\theta=\\frac{\\theta^2}{2}-\\cdots$, $2\\sin\\frac{\\theta}{2}=\\theta-\\frac{\\theta^3}{24}+\\cdots$ 이므로 분자는 $$\\sin\\theta-2\\sin\\tfrac{\\theta}{2}+(1-\\cos\\theta)=\\frac{\\theta^2}{2}+\\Big(-\\frac{1}{6}+\\frac{1}{24}\\Big)\\theta^3+\\cdots=\\frac{\\theta^2}{2}-\\frac{\\theta^3}{8}+\\cdots.$$\n$\\theta^2$의 계수만 극한에 남으므로 결론을 얻는다. $$\\lim_{\\theta\\to0+}\\frac{r(\\theta)}{\\theta^2}=\\frac{1}{2}\\cdot\\frac{1}{2}=\\frac{1}{4}.$$ 따라서 구하는 값은 $\\dfrac{1}{4}$이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/114a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{8}}$$ 입니다.",
-  "finalAnswer": "8",
-  "correctAnswer": "8",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{1}{4}}}$$ 입니다.",
+  "finalAnswer": "1/4",
+  "correctAnswer": "1/4",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

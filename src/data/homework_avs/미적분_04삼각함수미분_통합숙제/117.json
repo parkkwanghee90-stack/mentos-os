@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 117번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle\\lim_{\\theta\\to 0+}\\dfrac{g(\\theta)}{f(\\theta)}$의 값을 구한다. 여기서 $f(\\theta)$는 삼각형 $BOQ$의 넓이, $g(\\theta)$는 삼각형 $PRS$의 넓이이다.",
+  "C": "원의 반지름이 $1$이므로 $\\overline{OA}=\\overline{OB}=\\overline{OQ}=1$, 지름 $\\overline{RQ}=2$이다. 점 $A$에서 그은 두 직선이 지름 $AB$와 이루는 각이 각각 $\\theta$, $2\\theta$이고, 이로부터 $\\angle PAQ=3\\theta$, $\\angle QAB=2\\theta$의 관계가 도형에 주어져 있다.",
+  "B": "반지름 $1$인 원에서 중심 $O$를 지나는 두 지름 $AB$, $RQ$가 그려져 있다. 반원에 대한 원주각은 직각이고($\\angle RPQ=\\dfrac{\\pi}{2}$), 같은 호에 대한 원주각은 서로 같으며, 한 변이 지름인 직각삼각형에서 인접변은 $(\\text{빗변})\\times\\cos(\\text{끼인각})$으로 구한다. 삼각형의 넓이는 두 변과 그 끼인각으로 $\\dfrac{1}{2}ab\\sin C$이고, 변과 마주보는 각 사이에는 사인법칙이 성립한다. 극한 계산에서는 $\\theta\\to 0$일 때 $\\dfrac{\\sin k\\theta}{k\\theta}\\to 1$임을 이용한다.",
+  "S": "삼각형 $OAQ$는 $\\overline{OA}=\\overline{OQ}=1$인 이등변삼각형이므로 밑각이 같아 $\\angle OQA=\\angle OAQ=2\\theta$이고, 외각 정리로 중심각은 $\\angle BOQ=\\angle OAQ+\\angle OQA=4\\theta$이다.\n삼각형 $BOQ$의 넓이는 두 변 $\\overline{OB}=\\overline{OQ}=1$과 끼인각 $\\angle BOQ=4\\theta$로 구하므로 $$f(\\theta)=\\frac{1}{2}\\times\\overline{OB}\\times\\overline{OQ}\\times\\sin(\\angle BOQ)=\\frac{1}{2}\\sin 4\\theta.$$\n선분 $RQ$가 원의 지름이므로 반원에 대한 원주각은 직각이 되어 $\\angle RPQ=\\dfrac{\\pi}{2}$이고, 호 $PQ$에 대한 원주각이 서로 같으므로 $\\angle PRQ=\\angle PAQ=3\\theta$이다.\n직각삼각형 $RPQ$에서 빗변이 지름 $\\overline{RQ}=2$이고 $\\angle PRQ=3\\theta$이므로 $$\\overline{RP}=\\overline{RQ}\\cos 3\\theta=2\\cos 3\\theta.$$\n호 $PA$에 대한 원주각이 같아 $\\angle PRA=\\angle PQA$이고 도형의 각 구성에서 $\\angle SRP=2\\theta$, 삼각형 $PRS$의 세 각의 합이 $\\pi$이므로 나머지 한 각은 $\\angle PSR=\\pi-(3\\theta+2\\theta)=\\pi-5\\theta$이다.\n삼각형 $PRS$에서 변 $\\overline{RS}$의 대각이 $\\angle RPS=2\\theta$, 변 $\\overline{RP}$의 대각이 $\\angle PSR=\\pi-5\\theta$이므로 사인법칙으로 $$\\frac{\\overline{RS}}{\\sin 2\\theta}=\\frac{\\overline{RP}}{\\sin(\\pi-5\\theta)}.$$\n$\\sin(\\pi-5\\theta)=\\sin 5\\theta$이므로 $\\overline{RS}$를 정리하면 $$\\overline{RS}=\\frac{2\\cos 3\\theta\\,\\sin 2\\theta}{\\sin 5\\theta}.$$\n삼각형 $PRS$의 넓이는 두 변 $\\overline{RP}$, $\\overline{RS}$와 끼인각 $\\angle PRS=3\\theta$로 구하므로 $$g(\\theta)=\\frac{1}{2}\\times\\overline{RP}\\times\\overline{RS}\\times\\sin 3\\theta=\\frac{2\\cos^{2}3\\theta\\,\\sin 2\\theta\\,\\sin 3\\theta}{\\sin 5\\theta}.$$\n두 넓이의 비를 정리하면 $$\\frac{g(\\theta)}{f(\\theta)}=\\frac{\\dfrac{2\\cos^{2}3\\theta\\,\\sin 2\\theta\\,\\sin 3\\theta}{\\sin 5\\theta}}{\\dfrac{1}{2}\\sin 4\\theta}=\\frac{4\\cos^{2}3\\theta\\,\\sin 2\\theta\\,\\sin 3\\theta}{\\sin 4\\theta\\,\\sin 5\\theta}.$$\n분모와 분자를 $\\theta$의 거듭제곱이 같아지도록 표준 극한 꼴로 묶으면 $$\\frac{g(\\theta)}{f(\\theta)}=\\frac{24\\cos^{2}3\\theta\\times\\dfrac{\\sin 2\\theta}{2\\theta}\\times\\dfrac{\\sin 3\\theta}{3\\theta}}{20\\times\\dfrac{\\sin 4\\theta}{4\\theta}\\times\\dfrac{\\sin 5\\theta}{5\\theta}}$$이고, $\\theta\\to 0+$에서 모든 $\\dfrac{\\sin k\\theta}{k\\theta}\\to 1$, $\\cos^{2}3\\theta\\to 1$이므로 $$\\lim_{\\theta\\to 0+}\\frac{g(\\theta)}{f(\\theta)}=\\frac{24}{20}=\\frac{6}{5}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/118a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{6/5}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{6}{5}}}$$ 입니다.",
   "finalAnswer": "6/5",
   "correctAnswer": "6/5",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

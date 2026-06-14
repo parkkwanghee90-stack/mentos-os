@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 74번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "색칠된 부채꼴-삼각형 합성 영역의 넓이 $S_n$이 만드는 등비급수의 합 $\\lim_{n\\to\\infty} S_n$을 구한다.",
+  "C": "직사각형 $A_1B_1C_1D_1$은 $A_1B_1=1$, $B_1C_1=2$이다. 중심이 $B_1$인 부채꼴 $B_1E_1C_1$과 중심이 $C_1$인 부채꼴 $C_1F_1B_1$을 그려, 두 부채꼴이 겹쳐 만드는 나비 모양 영역을 색칠한다. 이후 닮은 직사각형 $A_2B_2C_2D_2$를 $\\overline{A_2D_2}:\\overline{A_2B_2}=2:1$로 내부에 그려 같은 방법을 반복한다.",
+  "B": "자기닮음 도형의 색칠 넓이는 첫째항 $S_1$, 공비 $r=(\\text{닮음비})^2$인 등비급수를 이루며, 그 합은 $\\dfrac{S_1}{1-r}$로 구한다. 부채꼴 넓이는 $\\dfrac{\\text{중심각}}{360^\\circ}\\times \\pi(\\text{반지름})^2$, 삼각형 넓이는 $\\dfrac12\\times(\\text{밑변})\\times(\\text{높이})$로 계산한다.",
+  "S": "색칠 영역의 구성을 분해하면, 나비 모양 넓이 $S_1$은 두 부채꼴의 넓이 합에서 가운데에서 두 번 겹치는 삼각형 $G_1B_1C_1$의 넓이를 두 번 빼야 한다. 즉 $S_1=(\\text{부채꼴 }F_1C_1B_1)+(\\text{부채꼴 }E_1B_1C_1)-2\\times(\\triangle G_1B_1C_1)$이다.\n부채꼴의 중심각을 정하기 위해 $F_1$에서 $\\overline{B_1C_1}$에 내린 수선의 발을 $H$라 하면, $F_1$은 윗변 위의 점이므로 $\\overline{F_1H}=\\overline{A_1B_1}=1$이고 반지름 $\\overline{C_1F_1}=\\overline{B_1C_1}=2$이다. 따라서 $\\overline{C_1F_1}:\\overline{F_1H}=2:1$이 되어 $\\angle F_1C_1H=30^\\circ$, 즉 부채꼴의 중심각은 $30^\\circ$이다.\n중심각과 반지름을 부채꼴 공식에 넣으면, 부채꼴 $F_1C_1B_1$의 넓이는 $\\dfrac{30}{360}\\times \\pi\\times 2^2=\\dfrac{\\pi}{3}$이다. 두 부채꼴 $F_1C_1B_1$과 $E_1B_1C_1$은 합동이므로 부채꼴 $E_1B_1C_1$의 넓이도 $\\dfrac{\\pi}{3}$이다.\n겹치는 삼각형의 넓이를 구하기 위해 $G_1$에서 $\\overline{B_1C_1}$에 내린 수선의 발을 $M$이라 하면, 대칭성에서 $\\overline{C_1M}=1$이고 $\\angle G_1C_1M=30^\\circ$이므로 $\\overline{G_1M}=\\overline{C_1M}\\tan 30^\\circ=\\dfrac{\\sqrt{3}}{3}$이다. 따라서 $\\triangle G_1B_1C_1=\\dfrac12\\times \\overline{B_1C_1}\\times \\overline{G_1M}=\\dfrac12\\times 2\\times \\dfrac{\\sqrt{3}}{3}=\\dfrac{\\sqrt{3}}{3}$이다.\n세 값을 결합하면 첫째항은 $$S_1=\\dfrac{\\pi}{3}+\\dfrac{\\pi}{3}-2\\times\\dfrac{\\sqrt{3}}{3}=\\dfrac{2\\pi-2\\sqrt{3}}{3}$$ 이다.\n닮음비를 구하기 위해 새 직사각형 $A_2B_2C_2D_2$의 위치를 보면 $\\overline{B_1B_2}:\\overline{B_2A_2}=\\sqrt{3}:1$이고 $\\overline{B_1A_2}=x_n-x_{n+1}$, $\\overline{B_2A_2}=x_{n+1}$ 꼴이므로 $(x_n-x_{n+1}):x_{n+1}=\\sqrt{3}:1$이 성립한다. 이를 풀면 $x_{n+1}=\\dfrac{\\sqrt{3}-1}{2}\\,x_n$이다.\n넓이는 길이의 제곱에 비례하므로 인접한 두 도형의 색칠 넓이의 비, 곧 등비급수의 공비는 $$r=\\left(\\dfrac{\\sqrt{3}-1}{2}\\right)^2=\\dfrac{2-\\sqrt{3}}{2}$$ 이고, 이때 $1-r=\\dfrac{\\sqrt{3}}{2}$이다.\n마지막으로 등비급수의 합 공식에 대입하면 $$\\lim_{n\\to\\infty}S_n=\\dfrac{S_1}{1-r}=\\dfrac{\\dfrac{2\\pi-2\\sqrt{3}}{3}}{\\dfrac{\\sqrt{3}}{2}}=\\dfrac{2(2\\pi-2\\sqrt{3})}{3\\sqrt{3}}=\\dfrac{4\\sqrt{3}\\,\\pi-12}{9}$$ 이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/075a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{②번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{4\\sqrt{3}\\,\\pi-12}{9}}}$$ 입니다.",
   "finalAnswer": "2",
   "correctAnswer": "2",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

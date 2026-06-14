@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 66번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "반지름이 1인 원에서 $\\angle \\mathrm{PAB}=\\theta$로 정해지는 점 P에 대해, 중심 O를 지나며 직선 AP와 평행한 직선이 만드는 두 점 Q, R을 지름의 양 끝으로 하는 원의 넓이 $S(\\theta)$에 대하여 $\\displaystyle\\lim_{\\theta\\to 0+}\\dfrac{S(\\theta)}{\\theta^{4}}=\\dfrac{q}{p}\\pi$일 때 $p+q$의 값을 구한다.",
+  "C": "원 $C$의 중심은 O, 반지름은 1이고 $\\overline{\\mathrm{AB}}$는 지름이다. 점 P는 원 위의 점이고 $\\angle \\mathrm{PAB}=\\theta\\ \\left(0<\\theta<\\dfrac{\\pi}{2}\\right)$이다. 점 O를 지나고 직선 AP와 평행한 직선이 선분 PB와 만나는 점이 Q, 호 PB와 만나는 점이 R이다. 두 점 Q, R을 지름의 양 끝으로 하는 원의 넓이가 $S(\\theta)$이고 $\\overline{\\mathrm{QR}}<1$이며 $p,\\ q$는 서로소인 자연수이다.",
+  "B": "지름에 대한 원주각은 직각이므로 $\\angle \\mathrm{APB}=\\dfrac{\\pi}{2}$이고, 삼각형의 한 변에 평행하고 다른 한 변의 중점을 지나는 직선은 나머지 변의 중점을 지난다는 중점연결정리, 그리고 $\\theta\\to 0+$일 때 $1-\\cos\\theta \\sim \\dfrac{\\theta^{2}}{2}$인 미분계수(극한) 근사를 사용한다.",
+  "S": "좌표를 잡아 P의 위치를 확정하기 위해, 중심을 원점에 두고 $\\mathrm{A}=(-1,0)$, $\\mathrm{B}=(1,0)$으로 놓는다. $\\overline{\\mathrm{AB}}$가 지름이므로 $\\angle \\mathrm{APB}=\\dfrac{\\pi}{2}$이고, 직각삼각형 ABP에서 $\\angle \\mathrm{PAB}=\\theta$이므로 변 AP는 $x$축과 각 $\\theta$를 이루고 $\\overline{\\mathrm{AP}}=\\overline{\\mathrm{AB}}\\cos\\theta=2\\cos\\theta$이다. 따라서 $$\\mathrm{P}=(-1,0)+2\\cos\\theta\\,(\\cos\\theta,\\ \\sin\\theta)=(\\cos 2\\theta,\\ \\sin 2\\theta).$$\n중심을 지나며 AP와 평행한 직선을 구하기 위해, 그 직선의 방향을 AP의 단위벡터 $(\\cos\\theta,\\ \\sin\\theta)$로 잡으면 직선은 $$\\ell:\\ (x,y)=t(\\cos\\theta,\\ \\sin\\theta)\\quad(t\\in\\mathbb{R})$$로 표현된다. 방향이 단위벡터이므로 매개변수 $t$는 곧 O로부터의 부호 있는 거리이다.\nR가 호 PB 위의 점임을 이용해 R를 정한다. $\\ell$ 위의 점이 원 $x^{2}+y^{2}=1$ 위에 있으려면 $t^{2}=1$이어야 하고, 호 PB 쪽(위쪽)에서는 $t=1$이므로 $$\\mathrm{R}=(\\cos\\theta,\\ \\sin\\theta),\\qquad \\overline{\\mathrm{OR}}=1.$$\nQ가 선분 PB의 중점임을 보여 Q를 정한다. O는 $\\overline{\\mathrm{AB}}$의 중점이고 $\\ell$은 변 AP와 평행하므로, 삼각형 ABP에서 중점연결정리에 의해 $\\ell$은 변 PB의 중점을 지난다. 따라서 $$\\mathrm{Q}=\\dfrac{\\mathrm{P}+\\mathrm{B}}{2}=\\left(\\dfrac{\\cos 2\\theta+1}{2},\\ \\dfrac{\\sin 2\\theta}{2}\\right)=(\\cos^{2}\\theta,\\ \\sin\\theta\\cos\\theta).$$\nQ의 O로부터의 거리를 구해 $\\overline{\\mathrm{QR}}$를 얻는다. Q$=\\cos\\theta\\,(\\cos\\theta,\\ \\sin\\theta)$이므로 Q는 $\\ell$ 위에서 $t=\\cos\\theta$인 점이다. 즉 $\\overline{\\mathrm{OQ}}=\\cos\\theta$이고, Q와 R는 같은 반직선 위에 있으므로 $$\\overline{\\mathrm{QR}}=\\overline{\\mathrm{OR}}-\\overline{\\mathrm{OQ}}=1-\\cos\\theta.$$\nQR를 지름으로 하는 원의 넓이를 세운다. 반지름이 $\\dfrac{\\overline{\\mathrm{QR}}}{2}$이므로 $$S(\\theta)=\\pi\\left(\\dfrac{1-\\cos\\theta}{2}\\right)^{2}=\\dfrac{\\pi}{4}(1-\\cos\\theta)^{2}.$$\n극한을 계산하기 위해 $\\theta\\to 0+$에서 $\\dfrac{1-\\cos\\theta}{\\theta^{2}}\\to\\dfrac{1}{2}$를 이용한다. $$\\lim_{\\theta\\to 0+}\\dfrac{S(\\theta)}{\\theta^{4}}=\\dfrac{\\pi}{4}\\lim_{\\theta\\to 0+}\\left(\\dfrac{1-\\cos\\theta}{\\theta^{2}}\\right)^{2}=\\dfrac{\\pi}{4}\\cdot\\left(\\dfrac{1}{2}\\right)^{2}=\\dfrac{\\pi}{16}.$$\n값을 비교해 $p,\\ q$를 정하고 답을 구한다. $\\dfrac{q}{p}\\pi=\\dfrac{1}{16}\\pi$에서 서로소인 자연수 $p=16,\\ q=1$이므로 $$p+q=16+1=17.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/067a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{50}}$$ 입니다.",
-  "finalAnswer": "50",
-  "correctAnswer": "50",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{17}}$$ 입니다.",
+  "finalAnswer": "17",
+  "correctAnswer": "17",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

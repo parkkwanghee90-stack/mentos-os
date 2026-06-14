@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 수열의 극한 19번 명품 해설",
   "type": "calculus",
-  "P": "수열의 극한값과 급수의 수렴·발산을 판별합니다.",
-  "C": "최고차항으로 나누기, 샌드위치 정리, 등비수열 극한 조건을 활용합니다.",
-  "B": "수열의 극한:\n\n1) $$\\lim_{n \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교\n2) $$|r| < 1 \\Rightarrow \\lim_{n \\to \\infty} r^n = 0$$\n3) 수렴 조건: 단조 수렴 정리, 샌드위치 정리\n4) $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "사다리꼴 $\\mathrm{ABQ_nP_n}$의 넓이 $S_n$에 대하여 $\\displaystyle\\lim_{n\\to\\infty}\\dfrac{S_n}{n}$의 값을 구한다.",
+  "C": "직선 $x=1$이 두 곡선 $y=\\dfrac{4}{x}$, $y=-\\dfrac{6}{x}$과 만나는 점이 각각 $\\mathrm{A}$, $\\mathrm{B}$이고, 자연수 $n$에 대하여 직선 $x=n+1$이 두 곡선 $y=\\dfrac{4}{x}$, $y=-\\dfrac{6}{x}$과 만나는 점이 각각 $\\mathrm{P_n}$, $\\mathrm{Q_n}$이다.",
+  "B": "네 점이 두 세로선 $x=1$과 $x=n+1$ 위에 있어 $\\overline{\\mathrm{AB}}$와 $\\overline{\\mathrm{P_nQ_n}}$이 서로 평행하므로 이 둘을 평행한 두 변으로 보는 사다리꼴이다. 평행한 두 변의 길이가 $a,\\ b$, 두 변 사이의 거리가 $h$인 사다리꼴의 넓이는 $\\dfrac{1}{2}(a+b)h$이고, 극한은 분자·분모를 $n$의 최고차항으로 나누어 계산한다.",
+  "S": "각 직선 위의 교점을 곡선의 식에 대입해 좌표를 구하면, $x=1$에서 $\\mathrm{A}\\left(1,\\ 4\\right)$, $\\mathrm{B}\\left(1,\\ -6\\right)$이고 $x=n+1$에서 $\\mathrm{P_n}\\left(n+1,\\ \\dfrac{4}{n+1}\\right)$, $\\mathrm{Q_n}\\left(n+1,\\ -\\dfrac{6}{n+1}\\right)$이다.\n두 점이 같은 세로선 $x=1$ 위에 있어 거리는 $y$좌표 차이로 정해지므로, 평행한 한 변의 길이는 $$\\overline{\\mathrm{AB}}=4-\\left(-6\\right)=10$$이다.\n마찬가지로 같은 세로선 $x=n+1$ 위의 두 점이므로, 다른 한 변의 길이는 $$\\overline{\\mathrm{P_nQ_n}}=\\frac{4}{n+1}-\\left(-\\frac{6}{n+1}\\right)=\\frac{10}{n+1}$$이다.\n평행한 두 변은 모두 세로선이므로 그 사이의 거리는 두 직선의 $x$좌표 차이로 정해져 $$h=\\left(n+1\\right)-1=n$$이다.\n사다리꼴 넓이 공식에 대입하면 $$S_n=\\frac{1}{2}\\left(\\overline{\\mathrm{AB}}+\\overline{\\mathrm{P_nQ_n}}\\right)\\cdot h=\\frac{1}{2}\\left(10+\\frac{10}{n+1}\\right)n$$이다.\n괄호 안을 통분해 정리하면 $$S_n=\\frac{1}{2}\\cdot\\frac{10\\left(n+2\\right)}{n+1}\\cdot n=\\frac{5n\\left(n+2\\right)}{n+1}$$이다.\n구하는 값을 만들기 위해 양변을 $n$으로 나누면 $$\\frac{S_n}{n}=\\frac{5\\left(n+2\\right)}{n+1}$$이다.\n분자와 분모를 각각 $n$으로 나누어 극한을 계산하면 $$\\lim_{n\\to\\infty}\\frac{S_n}{n}=\\lim_{n\\to\\infty}\\frac{5\\left(1+\\dfrac{2}{n}\\right)}{1+\\dfrac{1}{n}}=\\frac{5\\left(1+0\\right)}{1+0}=5$$이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/01수열의극한/020a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{6}}$$ 입니다.",
-  "finalAnswer": "6",
-  "correctAnswer": "6",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{5}}$$ 입니다.",
+  "finalAnswer": "5",
+  "correctAnswer": "5",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

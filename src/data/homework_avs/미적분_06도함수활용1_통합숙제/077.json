@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 도함수의 활용 1 77번 명품 해설",
   "type": "calculus",
-  "P": "이계도함수를 이용하여 곡선의 볼록성, 변곡점을 분석합니다.",
-  "C": "$$f''(x)$$의 부호로 아래/위로 볼록을 판별하고, 변곡점을 구합니다.",
-  "B": "도함수의 활용 1:\n\n1) $$f''(x) > 0$$: 아래로 볼록, $$f''(x) < 0$$: 위로 볼록\n2) 변곡점: $$f''(x) = 0$$이고 볼록성이 바뀌는 점\n3) 접선·법선의 방정식\n4) 속도·가속도 문제",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "두 삼각형 $\\mathrm{OQP}$와 $\\mathrm{ORS}$의 넓이의 합을 $\\theta$에 대한 함수로 나타내고, 그 합이 최대가 되도록 하는 $\\theta$에서의 $\\cos\\theta$ 값을 구한다.",
+  "C": "점 $\\mathrm{P}$는 제1사분면의 점이고 $\\overline{\\mathrm{OP}}=1$이며, 원 $C_1$은 $\\mathrm{P}$를 중심으로 원점을 지난다. 점 $\\mathrm{Q}$는 $C_1$과 $x$축의 교점 중 원점이 아닌 점이고 $\\angle\\mathrm{POQ}=\\theta$이다. 점 $\\mathrm{R}$는 제4사분면의 점이고 $\\overline{\\mathrm{OR}}=2$이며 $\\angle\\mathrm{ROQ}=\\frac{1}{2}\\angle\\mathrm{POQ}=\\frac{\\theta}{2}$이다. 원 $C_2$는 $\\mathrm{R}$를 중심으로 원점을 지나고, 점 $\\mathrm{S}$는 $C_2$와 $x$축의 교점 중 원점이 아닌 점이며 $0<\\theta<\\frac{\\pi}{2}$이다.",
+  "B": "한 원의 중심에서 그 원 위의 두 점에 이르는 거리는 모두 반지름과 같으므로, 중심과 두 교점이 이루는 삼각형은 이등변삼각형이다. 두 변의 길이가 $a,\\,b$이고 그 끼인각이 $\\gamma$인 삼각형의 넓이는 $\\frac{1}{2}ab\\sin\\gamma$이다. 닫힌구간에서 미분가능한 함수의 최댓값은 도함수가 $0$이 되는 점에서 찾는다.",
+  "S": "삼각형 $\\mathrm{OQP}$는 $\\mathrm{P}$가 $C_1$의 중심이고 $\\mathrm{O},\\,\\mathrm{Q}$가 $C_1$ 위의 점이므로 $\\overline{\\mathrm{PO}}=\\overline{\\mathrm{PQ}}=1$인 이등변삼각형이고, 밑변 $\\mathrm{OQ}$가 $x$축 위에 있어 밑각 $\\angle\\mathrm{POQ}=\\theta$와 $\\angle\\mathrm{PQO}=\\theta$가 같으므로 꼭지각은 $\\angle\\mathrm{OPQ}=\\pi-2\\theta$이다.\n두 변 $\\overline{\\mathrm{PO}},\\,\\overline{\\mathrm{PQ}}$와 그 끼인각 $\\angle\\mathrm{OPQ}$로 넓이를 계산하면 $$\\triangle\\mathrm{OQP}=\\frac{1}{2}\\cdot 1\\cdot 1\\cdot\\sin(\\pi-2\\theta)=\\frac{1}{2}\\sin 2\\theta.$$\n삼각형 $\\mathrm{ORS}$도 $\\mathrm{R}$가 $C_2$의 중심이고 $\\mathrm{O},\\,\\mathrm{S}$가 $C_2$ 위의 점이므로 $\\overline{\\mathrm{RO}}=\\overline{\\mathrm{RS}}=2$인 이등변삼각형이고, 밑변 $\\mathrm{OS}$가 $x$축 위에 있어 밑각 $\\angle\\mathrm{ROS}=\\frac{\\theta}{2}$와 $\\angle\\mathrm{RSO}=\\frac{\\theta}{2}$가 같으므로 꼭지각은 $\\angle\\mathrm{ORS}=\\pi-\\theta$이다.\n같은 방법으로 두 변 $\\overline{\\mathrm{RO}},\\,\\overline{\\mathrm{RS}}$와 끼인각 $\\angle\\mathrm{ORS}$로 넓이를 구하면 $$\\triangle\\mathrm{ORS}=\\frac{1}{2}\\cdot 2\\cdot 2\\cdot\\sin(\\pi-\\theta)=2\\sin\\theta.$$\n두 넓이의 합을 $f(\\theta)$로 두면 $$f(\\theta)=\\frac{1}{2}\\sin 2\\theta+2\\sin\\theta,\\qquad 0<\\theta<\\frac{\\pi}{2}$$이다.\n최댓값을 찾기 위해 미분하면 $$f'(\\theta)=\\cos 2\\theta+2\\cos\\theta$$이고, $\\cos 2\\theta=2\\cos^2\\theta-1$을 대입하면 $$f'(\\theta)=2\\cos^2\\theta+2\\cos\\theta-1.$$\n$f'(\\theta)=0$에서 $\\cos\\theta=t$로 놓으면 $2t^2+2t-1=0$이므로 $$t=\\frac{-2\\pm\\sqrt{4+8}}{4}=\\frac{-1\\pm\\sqrt{3}}{2}$$이고, $0<\\theta<\\frac{\\pi}{2}$에서 $0<\\cos\\theta<1$이므로 $\\cos\\theta=\\dfrac{-1+\\sqrt{3}}{2}$이다.\n이 $\\theta$의 좌우에서 $f'(\\theta)$의 부호가 양에서 음으로 바뀌므로 $f(\\theta)$는 이때 극대이자 최대가 된다. 따라서 넓이의 합을 최대로 하는 $\\theta$에 대하여 $$\\cos\\theta=\\frac{-1+\\sqrt{3}}{2}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/06도함수활용1/078a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{⑤번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{-1+\\sqrt{3}}{2}}}$$ 입니다.",
   "finalAnswer": "5",
   "correctAnswer": "5",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

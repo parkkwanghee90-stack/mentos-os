@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 52번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "함수 $y = 2\\sin x + \\cos x - 1$이 최댓값을 갖는 $x = \\alpha$에 대하여 $30\\sin 2\\alpha$의 값을 구한다.",
+  "C": "$y = 2\\sin x + \\cos x - 1$이고, 이 함수가 $x = \\alpha$에서 최댓값을 가진다.",
+  "B": "$a\\sin x + b\\cos x$ 꼴은 $\\sqrt{a^2+b^2}\\,\\sin(x+\\theta)$로 합성된다. 이때 $\\theta$는 $\\cos\\theta = \\dfrac{a}{\\sqrt{a^2+b^2}}$, $\\sin\\theta = \\dfrac{b}{\\sqrt{a^2+b^2}}$로 정해진다. $\\sin(x+\\theta)$가 최대 $1$이 되는 곳에서 함수가 최댓값을 가지며, 그 위치 정보를 이용해 $\\sin 2\\alpha = 2\\sin\\alpha\\cos\\alpha$ 형태의 값을 구한다.",
+  "S": "삼각함수의 합성을 적용하기 위해 계수로부터 진폭을 정한다. $\\sqrt{2^2 + 1^2} = \\sqrt{5}$이므로 $$y = 2\\sin x + \\cos x - 1 = \\sqrt{5}\\,\\sin(x + \\theta) - 1.$$\n합성에서 보조각 $\\theta$를 계수에 대응시켜 결정한다. $$\\cos\\theta = \\frac{2}{\\sqrt{5}},\\qquad \\sin\\theta = \\frac{1}{\\sqrt{5}}.$$\n$-1$은 상수라 최댓값 위치에 영향을 주지 않으므로, $\\sin(x+\\theta)$가 최대 $1$이 되는 $x$에서 $y$가 최대다. 따라서 $x = \\alpha$에서 $$\\alpha + \\theta = 2n\\pi + \\frac{\\pi}{2}\\quad(n\\text{은 정수}).$$\n구하려는 식에 넣기 위해 $\\alpha$를 정리한다. $$\\alpha = 2n\\pi + \\frac{\\pi}{2} - \\theta.$$\n주기성 $\\sin(4n\\pi + \\cdot) = \\sin(\\cdot)$과 $\\sin(\\pi - x) = \\sin x$를 차례로 써서 $\\theta$만의 식으로 바꾼다. $$30\\sin 2\\alpha = 30\\sin\\!\\left(4n\\pi + \\pi - 2\\theta\\right) = 30\\sin(\\pi - 2\\theta) = 30\\sin 2\\theta.$$\n배각공식 $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$를 적용한다. $$30\\sin 2\\theta = 30\\cdot 2\\sin\\theta\\cos\\theta = 60\\sin\\theta\\cos\\theta.$$\n$\\sin\\theta = \\dfrac{1}{\\sqrt{5}},\\ \\cos\\theta = \\dfrac{2}{\\sqrt{5}}$를 대입해 값을 계산한다. $$60\\cdot\\frac{1}{\\sqrt{5}}\\cdot\\frac{2}{\\sqrt{5}} = 60\\cdot\\frac{2}{5} = 24.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/053a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{④번}}$$ 입니다.",
-  "finalAnswer": "4",
-  "correctAnswer": "4",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{24}}$$ 입니다.",
+  "finalAnswer": "24",
+  "correctAnswer": "24",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

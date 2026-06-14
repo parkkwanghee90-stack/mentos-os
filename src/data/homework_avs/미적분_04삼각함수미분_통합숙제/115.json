@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 115번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle\\lim_{\\theta\\to0+}\\dfrac{f(\\theta)+g(\\theta)}{\\theta^{3}}$ 의 값",
+  "C": "지름 $\\mathrm{AB}=2$ 인 반원의 호 위에 점 $\\mathrm{P}$ 가 있고, 호 $\\mathrm{AP}$ 위에 호 $\\mathrm{PB}$ 와 호 $\\mathrm{PQ}$ 의 길이가 같도록 점 $\\mathrm{Q}$ 를 잡는다. 두 선분 $\\mathrm{AP}$, $\\mathrm{BQ}$ 가 만나는 점을 $\\mathrm{R}$, 점 $\\mathrm{B}$ 를 지나 $\\mathrm{AB}$ 에 수직인 직선이 직선 $\\mathrm{AP}$ 와 만나는 점을 $\\mathrm{S}$ 라 한다. $\\angle\\mathrm{BAP}=\\theta$ 이고, $f(\\theta)$ 는 두 선분 $\\mathrm{PR},\\ \\mathrm{QR}$ 와 호 $\\mathrm{PQ}$ 로 둘러싸인 부분의 넓이, $g(\\theta)$ 는 두 선분 $\\mathrm{PS},\\ \\mathrm{BS}$ 와 호 $\\mathrm{BP}$ 로 둘러싸인 부분의 넓이이다. (단, $0<\\theta<\\dfrac{\\pi}{4}$)",
+  "B": "지름에 대한 원주각은 $\\dfrac{\\pi}{2}$ 이고, 같은 길이의 호에 대한 원주각의 크기는 서로 같다. 또한 길이 $a,b$ 인 두 변의 끼인각이 $C$ 인 삼각형의 넓이는 $\\dfrac{1}{2}ab\\sin C$ 이며, 극한 계산에는 $\\displaystyle\\lim_{x\\to0}\\dfrac{\\sin x}{x}=1$ 을 이용한다.",
+  "S": "같은 길이의 호에 대한 원주각의 크기가 같다는 성질로 각의 크기를 옮긴다. 호 $\\mathrm{PB}$ 와 호 $\\mathrm{PQ}$ 의 길이가 같으므로 이 두 호에 대한 원주각인 $\\angle\\mathrm{PAB}$ 와 $\\angle\\mathrm{QBP}$ 가 같아 $\\angle\\mathrm{PAB}=\\angle\\mathrm{QBP}=\\theta$ 이다.\n지름에 대한 원주각으로 직각을 찾아 두 삼각형의 합동을 끌어낸다. $\\mathrm{AB}$ 가 지름이므로 $\\angle\\mathrm{APB}=\\dfrac{\\pi}{2}$ 이고, $\\mathrm{BS}\\perp\\mathrm{AB}$ 에서 $\\angle\\mathrm{ABS}=\\dfrac{\\pi}{2}$ 이다. 직각삼각형 $\\mathrm{APB}$ 에서 $\\angle\\mathrm{PBA}=\\dfrac{\\pi}{2}-\\theta$ 이므로 $\\angle\\mathrm{SBP}=\\angle\\mathrm{ABS}-\\angle\\mathrm{PBA}=\\theta$ 이다.\n넓이가 같은 조각끼리 맞바꾸어 $f(\\theta)+g(\\theta)$ 를 하나의 삼각형 넓이로 모은다. 두 삼각형 $\\mathrm{SPB}$, $\\mathrm{RPB}$ 는 변 $\\mathrm{PB}$ 를 공유하고 $\\angle\\mathrm{SBP}=\\angle\\mathrm{PAB}=\\theta$, $\\angle\\mathrm{SPB}=\\angle\\mathrm{RPB}=\\dfrac{\\pi}{2}$ 로 $\\mathrm{ASA}$ 합동이어서 넓이가 같고, 선분 $\\mathrm{PQ}$ 와 호 $\\mathrm{PQ}$ 로 둘러싸인 활꼴은 선분 $\\mathrm{PB}$ 와 호 $\\mathrm{PB}$ 로 둘러싸인 활꼴과 합동이다. 따라서 $f(\\theta)+g(\\theta)$ 는 삼각형 $\\mathrm{QBP}$ 의 넓이와 같다.\n직각삼각형에서 두 현의 길이를 $\\theta$ 로 나타낸다. 직각삼각형 $\\mathrm{APB}$ 에서 빗변 $\\mathrm{AB}=2$ 이므로 $\\overline{\\mathrm{PB}}=\\mathrm{AB}\\sin\\theta=2\\sin\\theta$ 이고, $\\overline{\\mathrm{PQ}}=\\overline{\\mathrm{PB}}=2\\sin\\theta$ 이다. 두 변 $\\mathrm{PB}$, $\\mathrm{PQ}$ 의 끼인각은 $\\angle\\mathrm{QPB}=\\pi-2\\theta$ 이다.\n삼각형 넓이 공식으로 $f(\\theta)+g(\\theta)$ 를 정리한다. $$f(\\theta)+g(\\theta)=\\tfrac{1}{2}\\times\\overline{\\mathrm{PB}}\\times\\overline{\\mathrm{PQ}}\\times\\sin(\\pi-2\\theta)=\\tfrac{1}{2}(2\\sin\\theta)^{2}\\sin2\\theta=2\\sin^{2}\\theta\\sin2\\theta.$$\n구하는 식을 $\\dfrac{\\sin x}{x}\\to1$ 꼴로 분해할 수 있도록 변형한다. $$\\frac{f(\\theta)+g(\\theta)}{\\theta^{3}}=\\frac{2\\sin^{2}\\theta\\,\\sin2\\theta}{\\theta^{3}}=2\\times\\left(\\frac{\\sin\\theta}{\\theta}\\right)^{2}\\times\\frac{\\sin2\\theta}{2\\theta}\\times2.$$\n각 극한에 기본 극한을 적용해 값을 계산한다. $\\theta\\to0+$ 일 때 $\\dfrac{\\sin\\theta}{\\theta}\\to1$, $\\dfrac{\\sin2\\theta}{2\\theta}\\to1$ 이므로 $$\\lim_{\\theta\\to0+}\\frac{f(\\theta)+g(\\theta)}{\\theta^{3}}=2\\times1^{2}\\times1\\times2=4.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/116a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{1/4}}$$ 입니다.",
-  "finalAnswer": "1/4",
-  "correctAnswer": "1/4",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{4}}$$ 입니다.",
+  "finalAnswer": "4",
+  "correctAnswer": "4",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

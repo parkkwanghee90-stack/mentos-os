@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 정적분 109번 명품 해설",
   "type": "calculus",
-  "P": "정적분의 다양한 성질과 활용(넓이, 부피, 속도)을 다룹니다.",
-  "C": "구분구적법, 정적분과 급수의 관계, 회전체의 부피를 적용합니다.",
-  "B": "정적분의 활용:\n\n1) 넓이: $$S = \\int_a^b |f(x) - g(x)| dx$$\n2) 회전체 부피: $$V = \\pi \\int_a^b \\{f(x)\\}^2 dx$$\n3) 구분구적법: $$\\lim_{n \\to \\infty} \\sum_{k=1}^{n} f\\left(\\frac{k}{n}\\right) \\cdot \\frac{1}{n} = \\int_0^1 f(x)dx$$\n4) 속도와 거리: $$\\int_{t_1}^{t_2} |v(t)| dt$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "정적분 $\\int_1^2 x\\,g(x)\\,dx$의 값을 구한다.",
+  "C": "실수 전체에서 미분가능한 두 함수 $f(x),\\,g(x)$가 다음을 만족한다. (가) 모든 양의 실수 $x$에 대하여 $g(x)=\\displaystyle\\int_1^x \\frac{f(t^2+1)}{t}\\,dt$, (나) $\\displaystyle\\int_2^5 f(x)\\,dx=16$, 그리고 $g(2)=3$.",
+  "B": "정적분으로 정의된 함수는 미적분의 기본정리로 미분한다. 적분 구간의 아래끝과 같은 점을 대입하면 적분값이 $0$이 되어 함숫값을 얻고, $\\dfrac{d}{dx}\\displaystyle\\int_a^x h(t)\\,dt=h(x)$로 도함수를 얻는다. 또 두 함수의 곱의 정적분은 부분적분 $\\displaystyle\\int u'v\\,dx=\\big[uv\\big]-\\displaystyle\\int uv'\\,dx$로 처리하고, 남는 정적분은 치환적분으로 주어진 조건의 적분과 연결한다.",
+  "S": "조건 (가)의 적분식에서 위끝과 아래끝이 같아지는 값을 먼저 확보하기 위해 $x=1$을 대입하면 적분 구간이 한 점으로 같아진다. $$g(1)=\\int_1^1 \\frac{f(t^2+1)}{t}\\,dt=0$$\n피적분함수를 직접 다루는 대신 도함수를 얻으면 뒤의 부분적분이 깔끔해지므로, 미적분의 기본정리로 $g(x)$를 미분한다. $$g'(x)=\\frac{f(x^2+1)}{x}$$\n곱 $x\\,g(x)$의 정적분은 $g$를 적분하기 어려우므로 미분이 쉬운 $g$를 그대로 두고 $x$를 적분하는 부분적분을 적용한다. $u'(x)=x,\\ v(x)=g(x)$로 놓으면 $u(x)=\\dfrac{1}{2}x^2,\\ v'(x)=g'(x)$이다. $$\\int_1^2 x\\,g(x)\\,dx=\\left[\\frac{1}{2}x^2 g(x)\\right]_1^2-\\int_1^2 \\frac{1}{2}x^2\\,g'(x)\\,dx$$\n대입 항은 $g(1)=0,\\ g(2)=3$을 넣어 값으로 확정한다. $$\\left[\\frac{1}{2}x^2 g(x)\\right]_1^2=\\frac{1}{2}\\cdot 4\\cdot g(2)-\\frac{1}{2}\\cdot 1\\cdot g(1)=2\\cdot 3-\\frac{1}{2}\\cdot 0=6$$\n남은 적분에는 $g'(x)=\\dfrac{f(x^2+1)}{x}$를 대입하여 미지의 $g$를 조건 (나)에 쓰인 $f$로 바꾼다. $$\\int_1^2 \\frac{1}{2}x^2\\,g'(x)\\,dx=\\int_1^2 \\frac{1}{2}x^2\\cdot\\frac{f(x^2+1)}{x}\\,dx=\\frac{1}{2}\\int_1^2 x\\,f(x^2+1)\\,dx$$\n$f$의 인수가 $x^2+1$이므로 $x^2+1=t$로 치환하여 조건 (나)의 적분 형태로 맞춘다. $dt=2x\\,dx$이고 $x:1\\to 2$일 때 $t:2\\to 5$이다. $$\\frac{1}{2}\\int_1^2 x\\,f(x^2+1)\\,dx=\\frac{1}{2}\\int_2^5 f(t)\\cdot\\frac{1}{2}\\,dt=\\frac{1}{4}\\int_2^5 f(t)\\,dt$$\n조건 (나) $\\displaystyle\\int_2^5 f(x)\\,dx=16$을 대입해 남은 적분의 값을 확정한다. $$\\frac{1}{4}\\int_2^5 f(t)\\,dt=\\frac{1}{4}\\cdot 16=4$$\n두 부분을 합쳐 최종값을 얻는다. $$\\int_1^2 x\\,g(x)\\,dx=6-4=2$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/09정적분/110a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{①번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2}}$$ 입니다.",
   "finalAnswer": "1",
   "correctAnswer": "1",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

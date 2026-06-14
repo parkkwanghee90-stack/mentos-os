@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 수열의 극한 90번 명품 해설",
   "type": "calculus",
-  "P": "수열의 극한값과 급수의 수렴·발산을 판별합니다.",
-  "C": "최고차항으로 나누기, 샌드위치 정리, 등비수열 극한 조건을 활용합니다.",
-  "B": "수열의 극한:\n\n1) $$\\lim_{n \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교\n2) $$|r| < 1 \\Rightarrow \\lim_{n \\to \\infty} r^n = 0$$\n3) 수렴 조건: 단조 수렴 정리, 샌드위치 정리\n4) $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "넓이가 $M$인 삼각형 $\\mathrm{ABC}$에서 변 $\\mathrm{AC}$ 위의 점 $\\mathrm{D}$, $\\mathrm{E}$가 $\\overline{\\mathrm{AD}}:\\overline{\\mathrm{DE}}:\\overline{\\mathrm{EC}}=n:(2n+1):(3n+2)$이고 $\\overline{\\mathrm{DF}}\\parallel\\overline{\\mathrm{AB}}$, $\\overline{\\mathrm{GE}}\\parallel\\overline{\\mathrm{BC}}$, $\\overline{\\mathrm{DF}}$와 $\\overline{\\mathrm{GE}}$의 교점을 지나는 $\\overline{\\mathrm{HI}}\\parallel\\overline{\\mathrm{AC}}$일 때, 어두운 세 부분의 넓이의 합 $S_n$에 대해 $\\lim\\limits_{n\\to\\infty}S_n=\\dfrac{q}{p}M$를 만족하는 서로소인 자연수 $p,\\ q$의 합 $p+q$를 구한다.",
+  "C": "삼각형 $\\mathrm{ABC}$의 넓이는 $M$이다. 변 $\\mathrm{AC}$ 위에서 $\\overline{\\mathrm{AD}}:\\overline{\\mathrm{DE}}:\\overline{\\mathrm{EC}}=n:(2n+1):(3n+2)$이다. $\\overline{\\mathrm{DF}}\\parallel\\overline{\\mathrm{AB}}$이고 점 $\\mathrm{F}$는 변 $\\mathrm{BC}$ 위에, $\\overline{\\mathrm{GE}}\\parallel\\overline{\\mathrm{BC}}$이고 점 $\\mathrm{G}$는 변 $\\mathrm{AB}$ 위에 있다. $\\overline{\\mathrm{DF}}$와 $\\overline{\\mathrm{GE}}$의 교점을 지나고 $\\overline{\\mathrm{AC}}$에 평행한 직선이 변 $\\mathrm{AB}$, $\\mathrm{BC}$와 만나는 점이 각각 $\\mathrm{H}$, $\\mathrm{I}$이다. $\\lim\\limits_{n\\to\\infty}S_n=\\dfrac{q}{p}M$이고 $p,\\ q$는 서로소인 자연수이다.",
+  "B": "한 변이 평행한 직선으로 잘려 만들어지는 삼각형은 원래 삼각형과 닮음이며, 닮음비가 $k$이면 넓이비는 $k^2$이다. 변 $\\mathrm{AC}$ 위의 세 분할 길이의 비가 그대로 세 닮은 삼각형의 닮음비가 되도록 어두운 부분이 구성되어, 각 어두운 삼각형의 넓이는 $\\overline{\\mathrm{AC}}$를 밑변으로 보았을 때의 길이비의 제곱에 $M$을 곱한 값이 된다. 마지막에 $n\\to\\infty$인 분수의 극한은 분자와 분모의 최고차항 계수의 비로 결정된다.",
+  "S": "변 $\\mathrm{AC}$ 전체를 길이비로 다루기 위해 세 비를 더하면 $n+(2n+1)+(3n+2)=6n+3$이므로, $\\overline{\\mathrm{AC}}$의 길이를 $6n+3$으로 놓으면 $\\overline{\\mathrm{AD}}=n$, $\\overline{\\mathrm{DE}}=2n+1$, $\\overline{\\mathrm{EC}}=3n+2$이다.\n$\\overline{\\mathrm{GE}}\\parallel\\overline{\\mathrm{BC}}$이고 $\\overline{\\mathrm{HI}}\\parallel\\overline{\\mathrm{AC}}$이므로 세 변이 각각 원래 삼각형의 세 변과 평행한 어두운 삼각형들이 생기고, 이들은 모두 삼각형 $\\mathrm{ABC}$와 닮음이다. 어두운 삼각형 중 점 $\\mathrm{D}$, $\\mathrm{E}$를 두 꼭짓점으로 하는 삼각형은 $\\overline{\\mathrm{DE}}$를 $\\overline{\\mathrm{AC}}$에 대응하는 변으로 가지므로 닮음비는 $\\dfrac{\\overline{\\mathrm{DE}}}{\\overline{\\mathrm{AC}}}=\\dfrac{2n+1}{6n+3}$이다.\n같은 평행 구조에서 점 $\\mathrm{H}$, $\\mathrm{G}$ 쪽 어두운 삼각형은 $\\overline{\\mathrm{AD}}$에, 점 $\\mathrm{F}$, $\\mathrm{I}$ 쪽 어두운 삼각형은 $\\overline{\\mathrm{EC}}$에 대응하므로 두 삼각형의 닮음비는 각각 $\\dfrac{\\overline{\\mathrm{AD}}}{\\overline{\\mathrm{AC}}}=\\dfrac{n}{6n+3}$, $\\dfrac{\\overline{\\mathrm{EC}}}{\\overline{\\mathrm{AC}}}=\\dfrac{3n+2}{6n+3}$이다.\n닮음비가 $k$인 삼각형의 넓이는 $k^2M$이므로 세 어두운 부분의 넓이를 모두 더하면 $$S_n=\\frac{n^2}{(6n+3)^2}M+\\frac{(2n+1)^2}{(6n+3)^2}M+\\frac{(3n+2)^2}{(6n+3)^2}M.$$\n공통분모로 묶어 정리하면 $$S_n=\\frac{n^2+(2n+1)^2+(3n+2)^2}{(6n+3)^2}\\,M=\\frac{14n^2+16n+5}{(6n+3)^2}\\,M.$$\n$n\\to\\infty$일 때 분자와 분모는 모두 $n^2$이 최고차항이므로 극한은 최고차항 계수의 비로 결정되어 $$\\lim_{n\\to\\infty}S_n=\\frac{14}{36}\\,M=\\frac{7}{18}\\,M.$$\n$\\lim\\limits_{n\\to\\infty}S_n=\\dfrac{q}{p}M=\\dfrac{7}{18}M$이고 $7$과 $18$은 서로소이므로 $p=18$, $q=7$이다. 따라서 $p+q=18+7=25$이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/01수열의극한/091a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2/3}}$$ 입니다.",
-  "finalAnswer": "2/3",
-  "correctAnswer": "2/3",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{p+q=25}}$$ 입니다.",
+  "finalAnswer": "25",
+  "correctAnswer": "25",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 103번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle\\lim_{\\theta\\to 0+}\\dfrac{S(\\theta)}{\\theta}$의 값. 여기서 $S(\\theta)$는 두 선분 $\\mathrm{PQ}$, $\\mathrm{QB}$와 호 $\\mathrm{BP}$로 둘러싸인 부분의 넓이.",
+  "C": "지름 $\\mathrm{AB}=12$인 반원의 호 위의 점 $\\mathrm{P}$에 대하여 $\\angle \\mathrm{PAB}=\\theta\\ \\left(0<\\theta<\\dfrac{\\pi}{6}\\right)$이고, 선분 $\\mathrm{AB}$ 위의 점 $\\mathrm{Q}$는 $\\angle \\mathrm{APQ}=3\\theta$를 만족한다.",
+  "B": "반원에 내접하는 각의 성질로 지름에 대한 원주각 $\\angle \\mathrm{APB}=\\dfrac{\\pi}{2}$임을 쓴다. 삼각형의 내각의 합과 사인법칙으로 변의 길이를 구하고, 곡선 경계는 중심각 $2\\theta$인 활꼴(부채꼴$-$삼각형)의 넓이로 처리한다. 극한은 $\\displaystyle\\lim_{x\\to 0}\\dfrac{\\sin x}{x}=1$, $\\displaystyle\\lim_{x\\to 0}\\dfrac{\\tan x}{x}=1$로 계산한다.",
+  "S": "지름 $\\mathrm{AB}$에 대한 원주각이므로 $\\angle \\mathrm{APB}=\\dfrac{\\pi}{2}$이고, 직각삼각형 $\\mathrm{APB}$에서 빗변이 $\\mathrm{AB}=12$, $\\angle \\mathrm{PAB}=\\theta$이므로 $$\\overline{\\mathrm{PB}}=12\\sin\\theta,\\qquad \\angle \\mathrm{ABP}=\\frac{\\pi}{2}-\\theta.$$\n점 $\\mathrm{Q}$에서의 각을 구하기 위해 $\\angle \\mathrm{QPB}=\\angle \\mathrm{APB}-\\angle \\mathrm{APQ}=\\dfrac{\\pi}{2}-3\\theta$를 쓰면, 삼각형 $\\mathrm{PQB}$의 세 각은 $$\\angle \\mathrm{QBP}=\\frac{\\pi}{2}-\\theta,\\quad \\angle \\mathrm{QPB}=\\frac{\\pi}{2}-3\\theta,\\quad \\angle \\mathrm{PQB}=4\\theta.$$\n삼각형 $\\mathrm{PQB}$에 사인법칙을 적용하여 변 $\\mathrm{PQ}$를 구한다. $$\\frac{\\overline{\\mathrm{PQ}}}{\\sin\\angle \\mathrm{QBP}}=\\frac{\\overline{\\mathrm{PB}}}{\\sin\\angle \\mathrm{PQB}}\\ \\Rightarrow\\ \\overline{\\mathrm{PQ}}=\\frac{12\\sin\\theta\\cdot\\cos\\theta}{\\sin 4\\theta}=\\frac{3}{\\cos 2\\theta}.$$\n삼각형 $\\mathrm{PQB}$의 넓이는 두 변 $\\mathrm{PQ}$, $\\mathrm{PB}$와 끼인각 $\\angle \\mathrm{QPB}=\\dfrac{\\pi}{2}-3\\theta$로 계산한다. $$\\triangle \\mathrm{PQB}=\\frac{1}{2}\\cdot\\frac{3}{\\cos 2\\theta}\\cdot 12\\sin\\theta\\cdot\\cos 3\\theta=18\\sin 2\\theta-9\\tan 2\\theta.$$\n곡선 경계인 호 $\\mathrm{BP}$ 쪽은 현 $\\mathrm{PB}$와 호 사이의 활꼴이다. 반원의 중심을 $\\mathrm{O}$, 반지름 $6$이라 하면 중심각 $\\angle \\mathrm{POB}=2\\theta$이므로 $$(\\text{활꼴 넓이})=\\frac{1}{2}\\cdot 6^{2}\\,(2\\theta-\\sin 2\\theta)=36\\theta-18\\sin 2\\theta.$$\n두 부분을 합하면 구하는 넓이는 $$S(\\theta)=\\big(18\\sin 2\\theta-9\\tan 2\\theta\\big)+\\big(36\\theta-18\\sin 2\\theta\\big)=36\\theta-9\\tan 2\\theta.$$\n이제 극한을 계산한다. $\\dfrac{\\tan 2\\theta}{\\theta}=2\\cdot\\dfrac{\\tan 2\\theta}{2\\theta}\\to 2$이므로 $$\\lim_{\\theta\\to 0+}\\frac{S(\\theta)}{\\theta}=\\lim_{\\theta\\to 0+}\\left(36-\\frac{9\\tan 2\\theta}{\\theta}\\right)=36-9\\cdot 2=18.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/104a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{②번}}$$ 입니다.",
-  "finalAnswer": "2",
-  "correctAnswer": "2",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{18}}$$ 입니다.",
+  "finalAnswer": "18",
+  "correctAnswer": "18",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

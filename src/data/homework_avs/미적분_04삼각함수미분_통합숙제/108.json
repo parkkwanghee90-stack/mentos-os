@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 108번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "반지름 1, 중심각 $\\dfrac{\\pi}{2}$인 부채꼴 OAB에서 호 위의 점 P로부터 정의된 두 삼각형의 넓이 $f(\\theta)=\\triangle\\mathrm{AQH}$, $g(\\theta)=\\triangle\\mathrm{PSR}$에 대하여 $\\displaystyle\\lim_{\\theta\\to0+}\\dfrac{\\theta^{3}\\,g(\\theta)}{f(\\theta)}=k$일 때, $100k$의 값을 구한다.",
+  "C": "반지름 $\\overline{\\mathrm{OA}}=\\overline{\\mathrm{OP}}=1$, 중심각 $\\angle\\mathrm{AOB}=\\dfrac{\\pi}{2}$이고 $0<\\theta<\\dfrac{\\pi}{4}$이다. 점 P는 호 AB 위의 점, H는 P에서 선분 OA에 내린 수선의 발이며 $\\angle\\mathrm{APH}=\\theta$이다. $\\angle\\mathrm{OAP}$의 이등분선이 선분 HP, OP, OB와 만나는 점이 각각 Q, R, S이다.",
+  "B": "직각삼각형의 예각 관계와 이등변삼각형의 성질로 각 점의 위치를 길이로 나타낸 뒤, $\\theta\\to0$에서 $\\dfrac{\\sin x}{x}\\to1$임을 이용해 $f(\\theta)$, $g(\\theta)$의 최저차항 차수를 맞추어 극한을 계산한다.",
+  "S": "점 P의 위치를 각으로 고정한다. 직각삼각형 AHP에서 $\\angle\\mathrm{APH}=\\theta$이므로 $\\angle\\mathrm{HAP}=\\dfrac{\\pi}{2}-\\theta$이고, $\\overline{\\mathrm{OP}}=\\overline{\\mathrm{OA}}=1$인 이등변삼각형 OPA에서 $\\angle\\mathrm{AOP}=\\pi-2\\left(\\dfrac{\\pi}{2}-\\theta\\right)=2\\theta$이다.\nH의 위치로 $\\overline{\\mathrm{AH}}$를 구한다. $\\overline{\\mathrm{OH}}=\\overline{\\mathrm{OP}}\\cos2\\theta=\\cos2\\theta$이므로 $$\\overline{\\mathrm{AH}}=1-\\overline{\\mathrm{OH}}=1-\\cos2\\theta.$$\n이등분선으로 $\\overline{\\mathrm{HQ}}$를 구한다. $\\angle\\mathrm{HAQ}=\\dfrac12\\angle\\mathrm{HAP}=\\dfrac{\\pi}{4}-\\dfrac{\\theta}{2}$이므로 직각삼각형 AHQ에서 $$\\overline{\\mathrm{HQ}}=\\overline{\\mathrm{AH}}\\tan\\!\\left(\\dfrac{\\pi}{4}-\\dfrac{\\theta}{2}\\right)=(1-\\cos2\\theta)\\tan\\!\\left(\\dfrac{\\pi}{4}-\\dfrac{\\theta}{2}\\right).$$\n$f(\\theta)$를 정리한다. $1-\\cos2\\theta=2\\sin^{2}\\theta$를 쓰면 $$f(\\theta)=\\frac12\\,\\overline{\\mathrm{AH}}\\cdot\\overline{\\mathrm{HQ}}=\\frac12(1-\\cos2\\theta)^{2}\\tan\\!\\left(\\dfrac{\\pi}{4}-\\dfrac{\\theta}{2}\\right)=\\frac12\\cdot\\frac{\\sin^{4}2\\theta}{(1+\\cos2\\theta)^{2}}\\tan\\!\\left(\\dfrac{\\pi}{4}-\\dfrac{\\theta}{2}\\right).$$\n$f(\\theta)$의 4차 극한을 구한다. $\\dfrac{\\sin2\\theta}{2\\theta}\\to1$이므로 $$\\lim_{\\theta\\to0+}\\frac{f(\\theta)}{\\theta^{4}}=\\frac12\\cdot16\\cdot1^{2}\\cdot\\frac{1}{(1+1)^{2}}\\cdot\\tan\\dfrac{\\pi}{4}=\\frac12\\cdot16\\cdot\\frac14\\cdot1=2.$$\n$g(\\theta)$에 필요한 길이를 구한다. 이등변삼각형 OPA에서 O에서 PA에 내린 수선의 발을 $\\mathrm{H}'$라 하면 $\\overline{\\mathrm{AP}}=2\\overline{\\mathrm{PH}'}=2\\sin\\theta$이고, $\\angle\\mathrm{OAP}$의 이등분선이 OP와 만나는 점 R에 대하여 $\\overline{\\mathrm{AO}}:\\overline{\\mathrm{AP}}=\\overline{\\mathrm{OR}}:\\overline{\\mathrm{RP}}$에서 $$\\overline{\\mathrm{OR}}=\\frac{1}{1+2\\sin\\theta},\\qquad \\overline{\\mathrm{OS}}=\\overline{\\mathrm{OA}}\\tan\\!\\left(\\dfrac{\\pi}{4}-\\dfrac{\\theta}{2}\\right)=\\tan\\!\\left(\\dfrac{\\pi}{4}-\\dfrac{\\theta}{2}\\right).$$\n$g(\\theta)$를 정리한다. $\\angle\\mathrm{POS}=\\dfrac{\\pi}{2}-2\\theta$이고 $\\triangle\\mathrm{PSR}=\\triangle\\mathrm{OSP}-\\triangle\\mathrm{OSR}=\\dfrac12\\,\\overline{\\mathrm{OS}}\\cdot\\sin(\\angle\\mathrm{POS})\\,(\\overline{\\mathrm{OP}}-\\overline{\\mathrm{OR}})$이므로 $$g(\\theta)=\\frac12\\tan\\!\\left(\\dfrac{\\pi}{4}-\\dfrac{\\theta}{2}\\right)\\sin\\!\\left(\\dfrac{\\pi}{2}-2\\theta\\right)\\cdot\\frac{2\\sin\\theta}{2\\sin\\theta+1}.$$\n$g(\\theta)$의 1차 극한을 구한다. $\\dfrac{\\sin\\theta}{\\theta}\\to1$이므로 $$\\lim_{\\theta\\to0+}\\frac{g(\\theta)}{\\theta}=\\frac12\\cdot\\tan\\dfrac{\\pi}{4}\\cdot\\sin\\dfrac{\\pi}{2}\\cdot 2\\cdot1\\cdot\\frac{1}{0+1}=\\frac12\\cdot1\\cdot1\\cdot2\\cdot1=1.$$\n두 극한을 결합한다. $$k=\\lim_{\\theta\\to0+}\\frac{\\theta^{3}g(\\theta)}{f(\\theta)}=\\lim_{\\theta\\to0+}\\frac{\\dfrac{g(\\theta)}{\\theta}}{\\dfrac{f(\\theta)}{\\theta^{4}}}=\\frac{1}{2}.$$\n구하는 값을 마무리한다. $$100k=100\\times\\frac12=50.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/109a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{1/4}}$$ 입니다.",
-  "finalAnswer": "1/4",
-  "correctAnswer": "1/4",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{50}}$$ 입니다.",
+  "finalAnswer": "50",
+  "correctAnswer": "50",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

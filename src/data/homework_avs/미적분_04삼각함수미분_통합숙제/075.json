@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 75번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\theta\\to 0+$일 때 사각형 $ORBQ$의 넓이 $S(\\theta)$에 대하여 $\\displaystyle\\lim_{\\theta\\to 0+}\\frac{S(\\theta)}{\\theta}$의 값을 구한다.",
+  "C": "길이 $2$인 선분 $AB$를 지름으로 하는 원 $C_1$의 중심은 $AB$의 중점 $O$이고 반지름은 $1$이다. 점 $B$를 중심으로 하고 $C_1$ 위의 점 $P$를 지나는 원이 $C_2$이며, $\\angle PAB=\\theta\\ \\left(0<\\theta<\\dfrac{\\pi}{6}\\right)$이다. 중심 $O$에서 원 $C_2$에 그은 두 접선의 접점이 각각 $Q$, $R$이다.",
+  "B": "지름에 대한 원주각은 직각이므로 $C_1$ 위의 점 $P$에 대해 $\\angle APB=\\dfrac{\\pi}{2}$이고, 원의 접선은 접점에서 반지름과 수직이다($OQ\\perp BQ$). 또한 $\\sin\\theta\\to\\theta$ 꼴의 극한 $\\displaystyle\\lim_{\\theta\\to 0}\\frac{\\sin\\theta}{\\theta}=1$을 이용한다.",
+  "S": "원 $C_2$의 반지름을 구하기 위해 직각삼각형 $APB$를 본다. 점 $P$는 지름 $AB$에 대한 원 $C_1$ 위의 점이므로 $\\angle APB=\\dfrac{\\pi}{2}$이고, $AB=2$에서 $$\\overline{BP}=\\overline{AB}\\sin\\theta=2\\sin\\theta.$$\n$C_2$는 점 $B$를 중심으로 점 $P$를 지나므로 그 반지름은 $\\overline{BP}$와 같다. 따라서 두 접점까지의 반지름도 $$\\overline{BQ}=\\overline{BR}=2\\sin\\theta.$$\n접선과 반지름은 접점에서 수직이므로 삼각형 $OQB$는 $\\angle OQB=\\dfrac{\\pi}{2}$인 직각삼각형이다. $\\overline{OB}=1$이므로 피타고라스 정리로 접선의 길이는 $$\\overline{OQ}=\\sqrt{\\overline{OB}^{\\,2}-\\overline{BQ}^{\\,2}}=\\sqrt{1-4\\sin^2\\theta}.$$\n두 접선의 길이가 같아 사각형 $ORBQ$는 대각선 $OB$에 대해 대칭인 연꼴이고, 합동인 두 직각삼각형 $OQB$, $ORB$로 나뉜다. 그 넓이를 더하면 $$S(\\theta)=2\\times\\frac{1}{2}\\,\\overline{OQ}\\cdot\\overline{BQ}=2\\sin\\theta\\sqrt{1-4\\sin^2\\theta}.$$\n구하는 극한에 대입하고 $\\dfrac{\\sin\\theta}{\\theta}$ 꼴을 만들기 위해 식을 정리한다. $$\\frac{S(\\theta)}{\\theta}=\\frac{2\\sin\\theta\\sqrt{1-4\\sin^2\\theta}}{\\theta}=2\\cdot\\frac{\\sin\\theta}{\\theta}\\cdot\\sqrt{1-4\\sin^2\\theta}.$$\n$\\theta\\to 0+$일 때 $\\dfrac{\\sin\\theta}{\\theta}\\to 1$이고 $\\sqrt{1-4\\sin^2\\theta}\\to\\sqrt{1-0}=1$이므로 $$\\lim_{\\theta\\to 0+}\\frac{S(\\theta)}{\\theta}=2\\times 1\\times 1=2.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/076a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{1/2}}$$ 입니다.",
-  "finalAnswer": "1/2",
-  "correctAnswer": "1/2",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2}}$$ 입니다.",
+  "finalAnswer": "2",
+  "correctAnswer": "2",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

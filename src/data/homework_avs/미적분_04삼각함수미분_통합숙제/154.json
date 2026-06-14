@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 154번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle\\lim_{\\theta\\to 0+}\\dfrac{S(\\theta)}{\\theta}$ 의 값. 여기서 $S(\\theta)$ 는 삼각형 $DEP$ 의 넓이이다.",
+  "C": "지름 $\\overline{AB}=2$ 인 반원에서 호 $AB$ 위의 점 $P$, 선분 $AB$ 위의 점 $C$ 에 대하여 $\\angle PAC=\\theta$, $\\angle APC=2\\theta$ 이다. 점 $D$ 는 $\\angle ADC=\\angle PCD=\\dfrac{\\pi}{2}$ 를 만족하고, 두 선분 $AP$ 와 $CD$ 가 만나는 점을 $E$ 라 한다. $\\left(0<\\theta<\\dfrac{\\pi}{6}\\right)$",
+  "B": "반원에 내접한 직각(지름에 대한 원주각은 직각)과 삼각형의 내각의 합, 사인법칙으로 변의 길이를 각의 함수로 나타낸다. 넓이는 $\\dfrac{1}{2}\\,ab\\sin C$ 로 잡고, 극한은 $\\displaystyle\\lim_{x\\to0}\\dfrac{\\sin x}{x}=1$ 을 쓰도록 식을 $\\dfrac{\\sin(\\square)}{\\square}$ 꼴로 분해한다.",
+  "S": "삼각형 $APB$ 에서 $\\angle APB$ 는 지름 $AB$ 에 대한 원주각이므로 $\\angle APB=\\dfrac{\\pi}{2}$ 이고 $\\angle PAB=\\theta$ 이다. 따라서 $$\\overline{AP}=\\overline{AB}\\cos\\theta=2\\cos\\theta.$$\n삼각형 $ACP$ 의 내각의 합에서 $\\angle ACP=\\pi-(\\theta+2\\theta)=\\pi-3\\theta$ 이므로, 사인법칙 $\\dfrac{\\overline{AC}}{\\sin 2\\theta}=\\dfrac{\\overline{AP}}{\\sin(\\pi-3\\theta)}$ 에서 $$\\overline{AC}=\\frac{2\\cos\\theta\\,\\sin 2\\theta}{\\sin 3\\theta}.$$\n$\\angle PCD=\\dfrac{\\pi}{2}$ 에서 $\\angle ACE=\\angle ACP-\\dfrac{\\pi}{2}=\\dfrac{\\pi}{2}-3\\theta$ 이고, 삼각형 $ACE$ 에서 $\\angle CEA=\\pi-\\theta-\\left(\\dfrac{\\pi}{2}-3\\theta\\right)=\\dfrac{\\pi}{2}+2\\theta$ 이다. 사인법칙 $\\dfrac{\\overline{EC}}{\\sin\\theta}=\\dfrac{\\overline{EA}}{\\sin\\left(\\frac{\\pi}{2}-3\\theta\\right)}=\\dfrac{\\overline{AC}}{\\sin\\left(\\frac{\\pi}{2}+2\\theta\\right)}$ 을 쓴다.\n위 비례식에서 $\\overline{EC},\\ \\overline{EA}$ 를 $\\overline{AC}$ 로 정리하면 $$\\overline{EC}=\\frac{\\overline{AC}\\,\\sin\\theta}{\\cos 2\\theta}=\\frac{2\\sin 2\\theta\\,\\sin\\theta\\cos\\theta}{\\sin 3\\theta\\,\\cos 2\\theta},\\qquad \\overline{EA}=\\frac{\\overline{AC}\\,\\cos 3\\theta}{\\cos 2\\theta}=\\frac{2\\sin 2\\theta\\,\\cos\\theta\\cos 3\\theta}{\\sin 3\\theta\\,\\cos 2\\theta}.$$\n두 직각삼각형 $PCE$ 와 $ADE$ 는 $\\angle PEC=\\angle AED$(맞꼭지각)와 직각을 공유하여 닮음이므로 $\\overline{EP}:\\overline{EA}=\\overline{EC}:\\overline{ED}$, 즉 $$\\overline{EP}\\times\\overline{ED}=\\overline{EA}\\times\\overline{EC}.$$\n$\\angle DEP$ 는 $\\angle AEC=\\dfrac{\\pi}{2}+2\\theta$ 와 맞꼭지각이므로 $\\angle DEP=\\dfrac{\\pi}{2}+2\\theta$ 이고, $\\sin\\left(\\dfrac{\\pi}{2}+2\\theta\\right)=\\cos 2\\theta$ 이다. 따라서 $$S(\\theta)=\\frac{1}{2}\\,\\overline{EP}\\times\\overline{ED}\\,\\sin\\!\\left(\\frac{\\pi}{2}+2\\theta\\right)=\\frac{1}{2}\\,\\overline{EA}\\times\\overline{EC}\\,\\cos 2\\theta.$$\n앞에서 구한 $\\overline{EA},\\ \\overline{EC}$ 를 대입하면 $$S(\\theta)=\\frac{1}{2}\\cdot\\frac{2\\sin 2\\theta\\,\\cos\\theta\\cos 3\\theta}{\\sin 3\\theta\\,\\cos 2\\theta}\\cdot\\frac{2\\sin 2\\theta\\,\\sin\\theta\\cos\\theta}{\\sin 3\\theta\\,\\cos 2\\theta}\\cdot\\cos 2\\theta=\\frac{2\\sin^2 2\\theta\\,\\sin\\theta\\,\\cos^2\\theta\\,\\cos 3\\theta}{\\sin^2 3\\theta\\,\\cos 2\\theta}.$$\n$\\dfrac{S(\\theta)}{\\theta}$ 를 표준극한 꼴로 분해한다. $$\\frac{S(\\theta)}{\\theta}=\\frac{2\\sin^2 2\\theta\\,\\sin\\theta\\,\\cos^2\\theta\\,\\cos 3\\theta}{\\theta\\,\\sin^2 3\\theta\\,\\cos 2\\theta}=\\frac{8}{9}\\left(\\frac{\\sin 2\\theta}{2\\theta}\\right)^2\\left(\\frac{\\sin\\theta}{\\theta}\\right)^2\\left(\\frac{3\\theta}{\\sin 3\\theta}\\right)^2\\frac{\\cos^2\\theta\\,\\cos 3\\theta}{\\cos 2\\theta}.$$\n$\\theta\\to 0+$ 일 때 $\\dfrac{\\sin 2\\theta}{2\\theta}\\to 1,\\ \\dfrac{\\sin\\theta}{\\theta}\\to 1,\\ \\dfrac{3\\theta}{\\sin 3\\theta}\\to 1$ 이고 $\\dfrac{\\cos^2\\theta\\,\\cos 3\\theta}{\\cos 2\\theta}\\to 1$ 이므로 $$\\lim_{\\theta\\to 0+}\\frac{S(\\theta)}{\\theta}=\\frac{8}{9}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/155a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{23}}$$ 입니다.",
-  "finalAnswer": "23",
-  "correctAnswer": "23",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{8}{9}}}$$ 입니다.",
+  "finalAnswer": "8/9",
+  "correctAnswer": "8/9",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

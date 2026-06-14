@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 147번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\angle BAC=\\theta$일 때 극한 $\\displaystyle\\lim_{\\theta\\to0+}\\dfrac{S(\\theta)}{\\theta}$의 값을 구한다. 여기서 $S(\\theta)$는 삼각형 $APQ$의 넓이이다.",
+  "C": "$\\overline{AB}=2$이고 $\\angle ABC=2\\angle BAC$이다. 선분 $AC$를 지름으로 하는 원이 직선 $AB$와 만나는 점 중 $A$가 아닌 점이 $P$이고, 점 $P$를 지나며 선분 $BC$에 평행한 직선이 선분 $AC$와 만나는 점이 $Q$이다. $\\angle BAC=\\theta$로 두며 $0<\\theta<\\dfrac{\\pi}{4}$이다.",
+  "B": "반원에 대한 원주각은 직각이므로 지름 $AC$가 만드는 원주각 $\\angle APC$는 $\\dfrac{\\pi}{2}$이다. 또한 평행선으로 생긴 삼각형의 닮음(삼각형 $APQ$와 삼각형 $ABC$)과 직각삼각형의 변 관계 $\\tan=\\dfrac{대변}{밑변}$, 그리고 넓이 공식 $\\dfrac12\\cdot(두 변)\\cdot\\sin(\\text{낀각})$을 함께 사용한다. 마지막으로 $\\displaystyle\\lim_{x\\to0}\\dfrac{\\tan x}{x}=1$로 극한을 정리한다.",
+  "S": "선분 $AC$가 원의 지름이므로 그 위의 원주각인 $\\angle APC$는 직각이다. 따라서 $CP\\perp AB$이고 점 $P$는 직선 $AB$ 위에서 점 $C$에서 내린 수선의 발이 되어, $\\overline{AP}=a$로 두면 직각삼각형 $APC$에서 $$\\overline{CP}=a\\tan\\theta.$$\n삼각형의 내각의 합으로부터 $\\angle PBC=2\\theta$이고 $\\overline{BP}=\\overline{AB}-\\overline{AP}=2-a$이므로, 직각삼각형 $BPC$에서 같은 변 $CP$를 다시 표현하면 $$\\overline{CP}=(2-a)\\tan 2\\theta.$$\n두 식의 $\\overline{CP}$를 같게 놓고 $a$에 대하여 풀면, 한 변의 길이가 $\\theta$의 식으로 결정된다. $$a\\tan\\theta=(2-a)\\tan 2\\theta\\;\\Longrightarrow\\; a=\\frac{2\\tan 2\\theta}{\\tan\\theta+\\tan 2\\theta}.$$\n직각삼각형 $APC$에서 $\\overline{AQ}$를 위한 빗변을 먼저 구하면 $\\overline{AC}=\\dfrac{\\overline{AP}}{\\cos\\theta}=\\dfrac{a}{\\cos\\theta}$이다.\n$PQ\\parallel BC$이므로 삼각형 $APQ$와 삼각형 $ABC$가 닮음이고 $\\overline{AP}:\\overline{AB}=\\overline{AQ}:\\overline{AC}$가 성립한다. 이로부터 $\\overline{AQ}$를 구하면 $$\\overline{AQ}=\\overline{AP}\\cdot\\frac{\\overline{AC}}{\\overline{AB}}=a\\cdot\\frac{a/\\cos\\theta}{2}=\\frac{a^{2}}{2\\cos\\theta}.$$\n낀각이 $\\theta$인 두 변 $\\overline{AP},\\,\\overline{AQ}$로 넓이를 쓰면 $S(\\theta)$가 $a$와 $\\tan\\theta$만으로 정리된다. $$S(\\theta)=\\frac12\\cdot\\overline{AP}\\cdot\\overline{AQ}\\cdot\\sin\\theta=\\frac12\\cdot a\\cdot\\frac{a^{2}}{2\\cos\\theta}\\cdot\\sin\\theta=\\frac14\\,a^{3}\\tan\\theta.$$\n극한을 위해 $a$를 $\\dfrac{\\tan x}{x}$ 꼴이 드러나도록 변형한다. 분모·분자를 각각 $\\theta$로 정리하면 $$a=\\frac{2\\tan 2\\theta}{\\tan\\theta+\\tan 2\\theta}=\\frac{\\dfrac{2\\tan 2\\theta}{2\\theta}\\cdot 2}{\\dfrac{\\tan\\theta}{\\theta}+\\dfrac{\\tan 2\\theta}{2\\theta}\\cdot 2}\\;\\xrightarrow[\\theta\\to0+]{}\\;\\frac{1\\cdot 2}{1+1\\cdot 2}=\\frac{4}{3}.$$\n따라서 $\\displaystyle\\frac{S(\\theta)}{\\theta}=\\frac14\\,a^{3}\\cdot\\frac{\\tan\\theta}{\\theta}$에서 $a\\to\\dfrac43$, $\\dfrac{\\tan\\theta}{\\theta}\\to1$을 대입하면 $$\\lim_{\\theta\\to0+}\\frac{S(\\theta)}{\\theta}=\\frac14\\left(\\frac{4}{3}\\right)^{3}\\cdot 1=\\frac14\\cdot\\frac{64}{27}=\\frac{16}{27}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/148a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{20}}$$ 입니다.",
-  "finalAnswer": "20",
-  "correctAnswer": "20",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{16}{27}}}$$ 입니다.",
+  "finalAnswer": "16/27",
+  "correctAnswer": "16/27",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

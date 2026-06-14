@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 2번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "무한급수 $\\displaystyle\\sum_{n=1}^{\\infty}\\dfrac{2}{n(n+2)}$ 의 값을 구한다.",
+  "C": "일반항이 $\\dfrac{2}{n(n+2)}$ 인 양항급수이며, 분모가 연속하지 않은 두 자연수 $n$ 과 $n+2$ 의 곱으로 이루어져 있다.",
+  "B": "분모가 두 인수의 곱인 분수는 부분분수로 분해하여 $\\dfrac{1}{A}-\\dfrac{1}{B}$ 꼴로 바꾸면, 부분합에서 중간 항들이 서로 상쇄되는 망원급수(telescoping)가 된다. 무한급수의 값은 부분합 $S_N$ 의 $N\\to\\infty$ 극한으로 정의된다.",
+  "S": "분모의 두 인수 차가 $2$ 이므로 그 차를 분자에 맞춰 부분분수로 분해한다. $$\\frac{2}{n(n+2)}=\\frac{1}{n}-\\frac{1}{n+2}$$\n유한합 $S_N=\\displaystyle\\sum_{n=1}^{N}\\left(\\frac{1}{n}-\\frac{1}{n+2}\\right)$ 를 항으로 나열하면 두 칸 떨어진 항끼리 맞물려 상쇄됨이 보인다. $$S_N=\\left(\\frac{1}{1}-\\frac{1}{3}\\right)+\\left(\\frac{1}{2}-\\frac{1}{4}\\right)+\\left(\\frac{1}{3}-\\frac{1}{5}\\right)+\\cdots+\\left(\\frac{1}{N}-\\frac{1}{N+2}\\right)$$\n상쇄되고 남는 항은 앞쪽 두 개 $\\dfrac{1}{1},\\ \\dfrac{1}{2}$ 와 뒤쪽 두 개 $-\\dfrac{1}{N+1},\\ -\\dfrac{1}{N+2}$ 뿐이다. $$S_N=1+\\frac{1}{2}-\\frac{1}{N+1}-\\frac{1}{N+2}$$\n무한급수의 값은 부분합의 극한이므로 $N\\to\\infty$ 를 취하면 $\\dfrac{1}{N+1}\\to 0,\\ \\dfrac{1}{N+2}\\to 0$ 이다. $$\\sum_{n=1}^{\\infty}\\frac{2}{n(n+2)}=\\lim_{N\\to\\infty}\\left(1+\\frac{1}{2}-\\frac{1}{N+1}-\\frac{1}{N+2}\\right)=1+\\frac{1}{2}=\\frac{3}{2}$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/003a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{②번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{3}{2}}}$$ 입니다.",
   "finalAnswer": "2",
   "correctAnswer": "2",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

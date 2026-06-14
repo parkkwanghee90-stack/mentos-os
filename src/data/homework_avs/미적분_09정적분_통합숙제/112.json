@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 정적분 112번 명품 해설",
   "type": "calculus",
-  "P": "정적분의 다양한 성질과 활용(넓이, 부피, 속도)을 다룹니다.",
-  "C": "구분구적법, 정적분과 급수의 관계, 회전체의 부피를 적용합니다.",
-  "B": "정적분의 활용:\n\n1) 넓이: $$S = \\int_a^b |f(x) - g(x)| dx$$\n2) 회전체 부피: $$V = \\pi \\int_a^b \\{f(x)\\}^2 dx$$\n3) 구분구적법: $$\\lim_{n \\to \\infty} \\sum_{k=1}^{n} f\\left(\\frac{k}{n}\\right) \\cdot \\frac{1}{n} = \\int_0^1 f(x)dx$$\n4) 속도와 거리: $$\\int_{t_1}^{t_2} |v(t)| dt$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "정적분으로 정의된 함수 $f(x)=\\displaystyle\\int_x^{x+2}\\lvert 2^t-5\\rvert\\,dt$ 의 최솟값 $m$ 을 구하고, 그 값으로 $2^m$ 을 계산한다.",
+  "C": "적분구간은 항상 폭이 $2$ 로 고정된 $[x,\\,x+2]$ 이고, 피적분함수는 절댓값을 포함한 $\\lvert 2^t-5\\rvert$ 이다. 보기는 모두 $\\left(\\dfrac{5}{4}\\right)^k$ 꼴($k=8,9,10,11,12$)로 주어진다.",
+  "B": "구간의 양 끝이 변수 $x$ 에 함께 의존하는 정적분의 미분에는 다음 공식을 쓴다. $\\dfrac{d}{dx}\\displaystyle\\int_{u(x)}^{v(x)} g(t)\\,dt = g\\big(v(x)\\big)v'(x)-g\\big(u(x)\\big)u'(x)$. 또 지수 $2^m=2^{a\\log_2 5 + b}$ 는 $2^{\\log_2 5}=5$ 를 이용해 $5$ 와 $2$ 의 거듭제곱으로 정리한다.",
+  "S": "피적분함수의 부호 경계를 먼저 잡기 위해, $2^t-5=0$ 이 되는 지점을 구하면 $2^t=5$, 즉 $t=\\log_2 5$ 이다. 이때 $t<\\log_2 5$ 이면 $\\lvert 2^t-5\\rvert=5-2^t$, $t>\\log_2 5$ 이면 $\\lvert 2^t-5\\rvert=2^t-5$ 이다.\n최솟값의 위치를 찾기 위해 $g(t)=\\lvert 2^t-5\\rvert$ 로 두고 $f(x)$ 를 미분한다. 끝점이 모두 변하므로 $$f'(x)=g(x+2)-g(x)=\\lvert 2^{x+2}-5\\rvert-\\lvert 2^x-5\\rvert.$$\n임계점은 두 끝점에서의 함숫값이 같아질 때 생기므로, 경계 $\\log_2 5$ 가 구간 안쪽에 오는 범위 $-2+\\log_2 5 < x < \\log_2 5$(즉 $2^x<5<2^{x+2}$)에서 식을 풀면 $$f'(x)=\\big(2^{x+2}-5\\big)-\\big(5-2^x\\big)=4\\cdot 2^x+2^x-10=5\\cdot 2^x-10.$$\n$f'(x)=0$ 에서 $5\\cdot 2^x=10$, 곧 $2^x=2$ 이므로 $x=1$ 이다. 이 점의 좌우에서 $f'(x)=5\\cdot 2^x-10$ 은 음$(x<1)$에서 양$(x>1)$으로 바뀌므로 $x=1$ 에서 $f(x)$ 는 극소이자 최소가 된다.\n최솟값 $m=f(1)=\\displaystyle\\int_1^3 \\lvert 2^t-5\\rvert\\,dt$ 를 경계 $\\log_2 5$ 에서 나누어 적는다. $$m=\\int_1^{\\log_2 5}\\!\\!\\big(5-2^t\\big)\\,dt+\\int_{\\log_2 5}^{3}\\!\\!\\big(2^t-5\\big)\\,dt.$$\n$\\displaystyle\\int 2^t\\,dt=\\dfrac{2^t}{\\ln 2}$ 와 $2^{\\log_2 5}=5$ 를 이용해 각 항을 계산하면, 첫 항은 $\\Big[5t-\\dfrac{2^t}{\\ln 2}\\Big]_1^{\\log_2 5}$, 둘째 항은 $\\Big[\\dfrac{2^t}{\\ln 2}-5t\\Big]_{\\log_2 5}^{3}$ 이다. 두 적분을 더하면 $\\dfrac{1}{\\ln 2}$ 항이 모두 상쇄되어 $$m=10\\log_2 5-20.$$\n이제 $2^m$ 을 구한다. $$2^m=2^{\\,10\\log_2 5-20}=\\frac{\\big(2^{\\log_2 5}\\big)^{10}}{2^{20}}=\\frac{5^{10}}{4^{10}}=\\left(\\frac{5}{4}\\right)^{10}.$$\n따라서 $2^m=\\left(\\dfrac{5}{4}\\right)^{10}$ 이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/09정적분/113a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{③번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\left(\\dfrac{5}{4}\\right)^{10}}}$$ 입니다.",
   "finalAnswer": "3",
   "correctAnswer": "3",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

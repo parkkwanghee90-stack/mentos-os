@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 76번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle\\lim_{\\theta\\to 0+}\\dfrac{g(\\theta)}{\\theta^{4}\\times f(\\theta)}$ 의 값. 여기서 $f(\\theta)$ 는 삼각형 $OAP$ 의 넓이, $g(\\theta)$ 는 삼각형 $PQR$ 의 넓이이다.",
+  "C": "지름 $AB=2$ 인 반원에서 $O$ 는 $AB$ 의 중점(반지름 $1$), 점 $P$ 는 반원 위의 점이며 $\\angle OAP=\\theta$ 이다. 점 $B$ 를 지나 $AB$ 에 수직인 직선과 직선 $OP$ 의 교점이 $Q$, $\\angle OQB$ 의 이등분선과 직선 $AP$ 의 교점이 $R$ 이다. 단, $0<\\theta<\\dfrac{\\pi}{4}$.",
+  "B": "반지름이 같으므로 $\\overline{OA}=\\overline{OP}=1$ 인 이등변삼각형에서 밑각이 같고, 한 삼각형의 외각은 이웃하지 않는 두 내각의 합과 같다. 또한 삼각형의 넓이는 두 변과 그 끼인각의 사인으로 $\\frac{1}{2}ab\\sin C$ 로 구한다. 사인법칙 $\\dfrac{a}{\\sin A}=\\dfrac{b}{\\sin B}$ 와, $\\theta\\to 0$ 에서 $\\sin\\theta\\sim\\theta$, $1-\\cos2\\theta\\sim 2\\theta^{2}$ 인 극한 비교를 이용한다.",
+  "S": "$\\overline{OA}=\\overline{OP}=1$ 이라 삼각형 $OAP$ 는 이등변삼각형이고 밑각이 같으므로 $\\angle OPA=\\angle OAP=\\theta$ 이다. 두 변 $\\overline{OA}=1$, $\\overline{AP}$ 와 끼인각 $\\theta$ 로 넓이를 구하기 위해 직각삼각형 $APB$($\\angle APB=90^\\circ$)에서 $\\overline{AP}=\\overline{AB}\\cos\\theta=2\\cos\\theta$ 를 얻는다.\n삼각형 $OAP$ 의 넓이는 $f(\\theta)=\\dfrac{1}{2}\\cdot\\overline{OA}\\cdot\\overline{AP}\\cdot\\sin\\theta=\\dfrac{1}{2}\\cdot 1\\cdot 2\\cos\\theta\\cdot\\sin\\theta=\\sin\\theta\\cos\\theta=\\dfrac{1}{2}\\sin 2\\theta$ 이다.\n이등변삼각형 $OAP$ 의 외각에서 $\\angle POB=\\angle OAP+\\angle OPA=2\\theta$ 이므로, 직선 $OP$ 와 $\\angle OBQ=90^\\circ$ 인 직각삼각형 $OBQ$ 에서 $\\overline{OB}=1$ 을 빗변 쪽으로 보면 $$\\overline{OQ}=\\frac{\\overline{OB}}{\\cos 2\\theta}=\\frac{1}{\\cos 2\\theta}.$$ 세 점 $O,\\,P,\\,Q$ 는 한 직선 위에 있고 $\\overline{OP}=1$ 이므로 $$\\overline{PQ}=\\overline{OQ}-\\overline{OP}=\\frac{1}{\\cos 2\\theta}-1=\\frac{1-\\cos 2\\theta}{\\cos 2\\theta}.$$\n직각삼각형 $OBQ$ 에서 $\\angle OQB=\\dfrac{\\pi}{2}-2\\theta$ 이고, 그 이등분선이 직선 $AP$ 와 만나는 점이 $R$ 이므로 삼각형 $PQR$ 의 꼭짓점 $Q$ 에서의 각은 $$\\angle PQR=\\frac{1}{2}\\angle OQB=\\frac{\\pi}{4}-\\theta.$$ 점 $R$ 는 직선 $AP$ 위(점 $P$ 너머)에 있어 $\\angle QPR$ 은 $\\angle OPA$ 의 맞꼭지각과 같으므로 $\\angle QPR=\\theta$ 이다.\n삼각형 $PQR$ 의 내각의 합이 $\\pi$ 이므로 나머지 각은 $$\\angle PRQ=\\pi-\\theta-\\Big(\\frac{\\pi}{4}-\\theta\\Big)=\\frac{3\\pi}{4}$$ 로 일정하다. 사인법칙으로 변 $\\overline{PR}$ 을 구하면 $$\\overline{PR}=\\overline{PQ}\\cdot\\frac{\\sin\\angle PQR}{\\sin\\angle PRQ}=\\overline{PQ}\\cdot\\frac{\\sin\\!\\big(\\frac{\\pi}{4}-\\theta\\big)}{\\sin\\frac{3\\pi}{4}}.$$\n두 변 $\\overline{PQ},\\,\\overline{PR}$ 와 끼인각 $\\angle QPR=\\theta$ 로 넓이를 구하면 $$g(\\theta)=\\frac{1}{2}\\,\\overline{PQ}\\cdot\\overline{PR}\\cdot\\sin\\theta=\\frac{1}{2}\\,\\overline{PQ}^{\\,2}\\cdot\\frac{\\sin\\theta\\,\\sin\\!\\big(\\frac{\\pi}{4}-\\theta\\big)}{\\sin\\frac{3\\pi}{4}}.$$ 여기서 $\\overline{PQ}=\\dfrac{1-\\cos 2\\theta}{\\cos 2\\theta}=\\dfrac{2\\sin^{2}\\theta}{\\cos 2\\theta}$ 이다.\n구하는 극한을 정리하면 $$\\frac{g(\\theta)}{\\theta^{4}f(\\theta)}=\\frac{\\dfrac{1}{2}\\,\\overline{PQ}^{\\,2}\\,\\dfrac{\\sin\\theta\\,\\sin(\\frac{\\pi}{4}-\\theta)}{\\sin\\frac{3\\pi}{4}}}{\\theta^{4}\\cdot\\dfrac{1}{2}\\sin 2\\theta}=\\frac{\\overline{PQ}^{\\,2}\\,\\sin\\theta\\,\\sin(\\frac{\\pi}{4}-\\theta)}{\\theta^{4}\\,\\sin 2\\theta\\,\\sin\\frac{3\\pi}{4}}.$$\n$\\overline{PQ}=\\dfrac{2\\sin^{2}\\theta}{\\cos 2\\theta}$ 를 대입하고 $\\theta\\to 0+$ 에서 $\\dfrac{\\sin\\theta}{\\theta}\\to 1$, $\\dfrac{\\sin 2\\theta}{2\\theta}\\to 1$, $\\cos 2\\theta\\to 1$ 을 적용하면 $$\\overline{PQ}^{\\,2}=\\frac{4\\sin^{4}\\theta}{\\cos^{2}2\\theta}\\sim 4\\theta^{4},\\quad \\sin\\theta\\sim\\theta,\\quad \\sin 2\\theta\\sim 2\\theta,$$ 이고 $\\sin\\!\\big(\\frac{\\pi}{4}-\\theta\\big)\\to\\dfrac{\\sqrt2}{2}$, $\\sin\\dfrac{3\\pi}{4}=\\dfrac{\\sqrt2}{2}$ 이므로 $$\\lim_{\\theta\\to0+}\\frac{4\\theta^{4}\\cdot\\theta\\cdot\\frac{\\sqrt2}{2}}{\\theta^{4}\\cdot 2\\theta\\cdot\\frac{\\sqrt2}{2}}=\\frac{4}{2}=2.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/077a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{②번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{2}}$$ 입니다.",
   "finalAnswer": "2",
   "correctAnswer": "2",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

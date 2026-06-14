@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 수열의 극한 69번 명품 해설",
   "type": "calculus",
-  "P": "수열의 극한값과 급수의 수렴·발산을 판별합니다.",
-  "C": "최고차항으로 나누기, 샌드위치 정리, 등비수열 극한 조건을 활용합니다.",
-  "B": "수열의 극한:\n\n1) $$\\lim_{n \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교\n2) $$|r| < 1 \\Rightarrow \\lim_{n \\to \\infty} r^n = 0$$\n3) 수렴 조건: 단조 수렴 정리, 샌드위치 정리\n4) $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "곡선 $y=-(x-n)(x-n-2)$ 에 원점에서 그은 접선의 접점 $x$좌표 $a_n=f(n)$, 접선의 기울기 $b_n=g(n)$ 을 구하고, $\\alpha=\\displaystyle\\lim_{n\\to\\infty}a_nb_n$ 일 때 $2f(\\alpha)+g(\\alpha)$ 의 값을 구한다.",
+  "C": "$y=-(x-n)(x-n-2)$ 는 제1사분면에서 원점을 지나는 직선과 접하며, 그 직선의 기울기는 $b_n$, 접점의 $x$좌표는 $a_n>0$ 이다. $f(n)=a_n,\\ g(n)=b_n,\\ \\alpha=\\displaystyle\\lim_{n\\to\\infty}a_nb_n$ 으로 둔다.",
+  "B": "두 곡선(또는 곡선과 직선)이 접한다는 것은 두 식을 연립한 방정식이 중근을 가진다는 것과 같다. 이차방정식 $x^2+px+q=0$ 이 중근 $x=r$ 을 가지면 $x^2+px+q=(x-r)^2$ 으로 완전제곱이 되어 $q=r^2,\\ p=-2r$ 이 성립한다. 무리식의 극한 $\\sqrt{A}-\\sqrt{B}$ 꼴은 분모를 1로 보고 켤레 $\\sqrt{A}+\\sqrt{B}$ 를 곱해 유리화한 뒤 최고차항으로 나누어 처리한다.",
+  "S": "원점을 지나고 기울기가 $b_n$ 인 직선은 $y=b_nx$ 이므로, 곡선과의 접점을 찾기 위해 두 식을 연립한다. $b_nx=-(x-n)(x-n-2)$ 의 근이 곧 접점의 $x$좌표이다.\n우변을 전개하면 $-(x-n)(x-n-2)=-x^2+2(n+1)x-n(n+2)$ 이므로 연립식은 $x^2+\\{b_n-2(n+1)\\}x+n(n+2)=0$ 으로 정리된다.\n접한다는 것은 이 이차방정식이 중근을 가진다는 뜻이므로 좌변은 완전제곱식이다. 따라서 $x^2+\\{b_n-2(n+1)\\}x+n(n+2)=(x-a_n)^2$ 으로 쓸 수 있고, 상수항을 비교하면 $a_n^2=n(n+2)$ 이다. $a_n>0$ 이므로 $$a_n=\\sqrt{n(n+2)}.$$\n일차항을 비교하면 $b_n-2(n+1)=-2a_n$ 이므로 기울기는 $$b_n=2(n+1)-2\\sqrt{n(n+2)}=2\\left\\{n+1-\\sqrt{n(n+2)}\\right\\}.$$ 즉 $f(n)=\\sqrt{n(n+2)},\\ g(n)=2\\left\\{n+1-\\sqrt{n(n+2)}\\right\\}.$\n$\\alpha$ 를 구하기 위해 $a_nb_n$ 을 정리하면 $$a_nb_n=2\\sqrt{n(n+2)}\\left\\{(n+1)-\\sqrt{n(n+2)}\\right\\}.$$ 무리식 차 $(n+1)-\\sqrt{n(n+2)}$ 는 켤레 $(n+1)+\\sqrt{n(n+2)}$ 를 곱해 유리화한다.\n유리화하면 $(n+1)-\\sqrt{n(n+2)}=\\dfrac{(n+1)^2-n(n+2)}{(n+1)+\\sqrt{n(n+2)}}=\\dfrac{1}{(n+1)+\\sqrt{n(n+2)}}$ 이므로 $$a_nb_n=\\frac{2\\sqrt{n(n+2)}}{(n+1)+\\sqrt{n(n+2)}}.$$\n분자·분모를 $n$ 으로 나누면 $\\dfrac{2\\sqrt{1+\\frac{2}{n}}}{1+\\frac{1}{n}+\\sqrt{1+\\frac{2}{n}}}$ 이고, $n\\to\\infty$ 일 때 $\\dfrac{2}{n},\\dfrac{1}{n}\\to0$ 이므로 $$\\alpha=\\lim_{n\\to\\infty}a_nb_n=\\frac{2\\cdot1}{1+1}=1.$$\n이제 $\\alpha=1$ 을 두 함수에 대입한다. $f(1)=\\sqrt{1\\cdot3}=\\sqrt{3}$ 이고 $g(1)=2\\left\\{1+1-\\sqrt{1\\cdot3}\\right\\}=2(2-\\sqrt{3})$ 이다.\n따라서 구하는 값은 $$2f(1)+g(1)=2\\sqrt{3}+2(2-\\sqrt{3})=2\\sqrt{3}+4-2\\sqrt{3}=4.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/01수열의극한/070a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{-3}}$$ 입니다.",
-  "finalAnswer": "-3",
-  "correctAnswer": "-3",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{4}}$$ 입니다.",
+  "finalAnswer": "4",
+  "correctAnswer": "4",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

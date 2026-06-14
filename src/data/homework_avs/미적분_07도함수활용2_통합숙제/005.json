@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 도함수의 활용 2 5번 명품 해설",
   "type": "calculus",
-  "P": "도함수를 활용한 방정식·부등식의 풀이와 최적화 문제를 해결합니다.",
-  "C": "함수의 그래프를 분석하여 근의 개수를 판별하고, 최댓값·최솟값을 구합니다.",
-  "B": "도함수의 활용 2:\n\n1) $$f(x) = g(x)$$의 실근 개수: 두 그래프의 교점\n2) 부등식 증명: 차함수의 최솟값 ≥ 0\n3) 평균값 정리: $$f'(c) = \\frac{f(b) - f(a)}{b - a}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "두 점 $\\mathrm{P}$, $\\mathrm{Q}$가 서로 반대 방향으로 움직이는 시각 $t$의 범위가 $\\dfrac{1}{2} < t < 2$가 되도록 하는 실수 $a$의 값을 구한다.",
+  "C": "두 점의 위치는 $x_{\\mathrm{P}} = t^2 - at$, $x_{\\mathrm{Q}} = \\ln\\!\\left(t^2 - t + 1\\right)$이고, 두 점이 반대 방향으로 움직이는 시각의 범위가 정확히 $\\dfrac{1}{2} < t < 2$이다.",
+  "B": "수직선 위를 움직이는 점의 운동 방향은 속도의 부호로 결정된다. 속도는 위치를 시각 $t$로 미분한 값이며, 두 점이 서로 반대 방향으로 움직인다는 것은 두 속도의 부호가 서로 반대, 즉 $v_{\\mathrm{P}} \\cdot v_{\\mathrm{Q}} < 0$임을 뜻한다.",
+  "S": "각 점의 속도를 구하기 위해 위치를 미분한다. $$v_{\\mathrm{P}} = \\frac{dx_{\\mathrm{P}}}{dt} = 2t - a$$ $$v_{\\mathrm{Q}} = \\frac{dx_{\\mathrm{Q}}}{dt} = \\frac{2t - 1}{t^2 - t + 1}$$\n$v_{\\mathrm{Q}}$의 부호를 판별하기 위해 분모를 살핀다. $$t^2 - t + 1 = \\left(t - \\frac{1}{2}\\right)^2 + \\frac{3}{4} > 0$$ 분모는 항상 양수이므로 $v_{\\mathrm{Q}}$의 부호는 분자 $2t - 1$의 부호와 같다. 따라서 $t > \\dfrac{1}{2}$이면 $v_{\\mathrm{Q}} > 0$, $t < \\dfrac{1}{2}$이면 $v_{\\mathrm{Q}} < 0$이다.\n두 점이 반대 방향으로 움직이려면 $v_{\\mathrm{P}} \\cdot v_{\\mathrm{Q}} < 0$이어야 한다. 주어진 범위 $\\dfrac{1}{2} < t < 2$에서는 $v_{\\mathrm{Q}} > 0$이므로, 이 구간 전체에서 반대 방향이 되려면 $v_{\\mathrm{P}} < 0$이 성립해야 한다. 즉 $$2t - a < 0 \\quad\\Longleftrightarrow\\quad t < \\frac{a}{2}$$\n$v_{\\mathrm{P}} = 2t - a$는 $t = \\dfrac{a}{2}$를 경계로 부호가 바뀌므로, $v_{\\mathrm{Q}} > 0$인 영역 $t > \\dfrac{1}{2}$에서 반대 방향이 되는 시각의 범위는 $$\\frac{1}{2} < t < \\frac{a}{2}$$ 이다. ($t > \\dfrac{a}{2}$에서는 $v_{\\mathrm{P}} > 0$, $v_{\\mathrm{Q}} > 0$으로 같은 방향이 된다.)\n이 반대 방향 구간이 주어진 범위 $\\dfrac{1}{2} < t < 2$와 정확히 일치해야 하므로 윗 경계를 비교한다. $$\\frac{a}{2} = 2 \\quad\\Longrightarrow\\quad a = 4$$\n경계점에서 운동이 멈추는지 확인한다. $t = \\dfrac{1}{2}$에서는 $v_{\\mathrm{Q}} = 0$, $t = 2$에서는 $v_{\\mathrm{P}} = 2\\cdot 2 - 4 = 0$이 되어 두 끝점에서는 반대 방향이 성립하지 않으므로, 반대 방향 범위가 열린구간 $\\dfrac{1}{2} < t < 2$로 정확히 맞아떨어진다. 따라서 $a = 4$이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/07도함수활용2/006a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{⑤번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{4}}$$ 입니다.",
   "finalAnswer": "5",
   "correctAnswer": "5",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

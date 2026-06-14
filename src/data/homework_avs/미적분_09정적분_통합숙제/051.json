@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 정적분 51번 명품 해설",
   "type": "calculus",
-  "P": "정적분의 다양한 성질과 활용(넓이, 부피, 속도)을 다룹니다.",
-  "C": "구분구적법, 정적분과 급수의 관계, 회전체의 부피를 적용합니다.",
-  "B": "정적분의 활용:\n\n1) 넓이: $$S = \\int_a^b |f(x) - g(x)| dx$$\n2) 회전체 부피: $$V = \\pi \\int_a^b \\{f(x)\\}^2 dx$$\n3) 구분구적법: $$\\lim_{n \\to \\infty} \\sum_{k=1}^{n} f\\left(\\frac{k}{n}\\right) \\cdot \\frac{1}{n} = \\int_0^1 f(x)dx$$\n4) 속도와 거리: $$\\int_{t_1}^{t_2} |v(t)| dt$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$f(x)=a\\cos(\\pi x^2)$이 주어진 극한 조건을 만족시킬 때, 상수 $a$를 결정하고 $f(a)$의 값을 구한다.",
+  "C": "$f(x)=a\\cos(\\pi x^2)$이고 $a$는 상수이며, $\\displaystyle\\lim_{x\\to 0}\\left\\{\\frac{x^2+1}{x}\\int_1^{x+1} f(t)\\,dt\\right\\}=3$이다.",
+  "B": "정적분으로 정의된 함수 $\\displaystyle g(x)=\\int_1^{x+1} f(t)\\,dt$는 적분의 위끝이 $x$에 따라 변하므로, 미적분의 기본정리와 합성함수 미분법에 의해 $g'(x)=f(x+1)$이다. 또한 $\\displaystyle\\lim_{x\\to 0}\\frac{g(x)-g(0)}{x}=g'(0)$이라는 미분계수의 정의를 이용해 $\\tfrac{0}{0}$ 꼴의 극한을 처리한다.",
+  "S": "위끝이 변하는 정적분 함수의 변화를 추적하기 위해 $\\displaystyle g(x)=\\int_1^{x+1} f(t)\\,dt$로 놓는다. 적분의 아래끝과 위끝이 같아지는 $x=0$에서 $\\displaystyle g(0)=\\int_1^{1} f(t)\\,dt=0$이다.\n주어진 식을 미분계수 형태로 드러내기 위해 $\\dfrac{1}{x}$를 결합한다. $g(0)=0$이므로 $$\\frac{x^2+1}{x}\\,g(x)=(x^2+1)\\cdot\\frac{g(x)-g(0)}{x}.$$\n각 인수의 극한을 따로 구한다. $\\displaystyle\\lim_{x\\to 0}(x^2+1)=1$이고, 나머지 인수는 $x=0$에서의 미분계수이므로 $$\\lim_{x\\to 0}\\frac{g(x)-g(0)}{x}=g'(0).$$\n미적분의 기본정리와 합성함수 미분법으로 $g'(x)$를 구한다. 위끝 $x+1$의 도함수가 $1$이므로 $$g'(x)=f(x+1)\\cdot 1=f(x+1)\\ \\Rightarrow\\ g'(0)=f(1).$$\n두 극한을 곱하면 주어진 조건은 $1\\cdot f(1)=3$, 즉 $f(1)=3$이 된다. $f(x)=a\\cos(\\pi x^2)$에 $x=1$을 대입하면 $$f(1)=a\\cos(\\pi)=a\\cdot(-1)=-a.$$\n따라서 $-a=3$에서 $a=-3$을 얻는다.\n구하는 값 $f(a)=f(-3)$을 계산한다. $$f(-3)=-3\\cos\\big(\\pi\\cdot(-3)^2\\big)=-3\\cos(9\\pi).$$\n$\\cos(9\\pi)=\\cos(\\pi)=-1$이므로 $$f(-3)=-3\\cdot(-1)=3.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/09정적분/052a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{⑤번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{3}}$$ 입니다.",
   "finalAnswer": "5",
   "correctAnswer": "5",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

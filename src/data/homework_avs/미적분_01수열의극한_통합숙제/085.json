@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 수열의 극한 85번 명품 해설",
   "type": "calculus",
-  "P": "수열의 극한값과 급수의 수렴·발산을 판별합니다.",
-  "C": "최고차항으로 나누기, 샌드위치 정리, 등비수열 극한 조건을 활용합니다.",
-  "B": "수열의 극한:\n\n1) $$\\lim_{n \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교\n2) $$|r| < 1 \\Rightarrow \\lim_{n \\to \\infty} r^n = 0$$\n3) 수렴 조건: 단조 수렴 정리, 샌드위치 정리\n4) $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$60k^2$의 값을 구한다. 여기서 $k$는 $\\displaystyle\\lim_{n\\to\\infty}\\dfrac{f(n)-g(n)}{n^2}=\\dfrac{\\pi}{2}+k$를 만족하는 상수이다.",
+  "C": "곡선 $T_n:y=\\dfrac{\\sqrt{3}}{\\,n+1\\,}x^2\\;(x\\ge 0)$ 위에서 원점 O와의 거리가 $2n+2$인 점이 $\\mathrm{P}_n$, $\\mathrm{P}_n$에서 $x$축에 내린 수선의 발이 $\\mathrm{H}_n$이다. 중심이 $\\mathrm{P}_n$이고 $\\mathrm{H}_n$을 지나는 원이 $C_n$, 곡선 $T_n$과 원 $C_n$의 교점 중 원점에 가까운 점이 $\\mathrm{Q}_n$, 원점에서 원 $C_n$에 그은 두 접선의 접점 중 $\\mathrm{H}_n$이 아닌 점이 $\\mathrm{R}_n$이다. $\\mathrm{R}_n$을 포함하지 않는 호 $\\mathrm{Q}_n\\mathrm{H}_n$과 선분 $\\mathrm{P}_n\\mathrm{H}_n$, 곡선 $T_n$으로 둘러싸인 넓이가 $f(n)$, $\\mathrm{H}_n$을 포함하지 않는 호 $\\mathrm{R}_n\\mathrm{Q}_n$과 선분 $\\mathrm{OR}_n$, 곡선 $T_n$으로 둘러싸인 넓이가 $g(n)$이다.",
+  "B": "두 영역 $f(n)$, $g(n)$은 곡선 $T_n$의 일부와 점 $\\mathrm{Q}_n$을 공통 경계로 가진다. 따라서 차 $f(n)-g(n)$을 계산하면 곡선 위의 조각들이 O에서 $\\mathrm{P}_n$까지 하나로 이어지고 점 $\\mathrm{Q}_n$에서의 두 호가 호 $\\mathrm{H}_n\\mathrm{R}_n$ 하나로 합쳐져, $\\mathrm{Q}_n$의 위치와 무관한 한 영역의 넓이가 된다. 평면 영역의 넓이는 곡선 아래 넓이(정적분), 부채꼴 넓이 $\\dfrac12 r^2\\theta$, 삼각형 넓이로 분해해 구한다.",
+  "S": "점 $\\mathrm{P}_n$의 좌표를 정한다. $\\mathrm{P}_n=\\left(p,\\dfrac{\\sqrt3}{n+1}p^2\\right)$로 두면 $\\overline{\\mathrm{OP}_n}^2=p^2+\\dfrac{3}{(n+1)^2}p^4=(2n+2)^2$에서 $p=n+1$이므로 $$\\mathrm{P}_n=(\\,n+1,\\ \\sqrt3\\,(n+1)\\,),\\qquad \\mathrm{H}_n=(\\,n+1,\\ 0\\,).$$\n원 $C_n$의 반지름을 구한다. 중심 $\\mathrm{P}_n$이 $\\mathrm{H}_n$을 지나므로 반지름은 $r=\\overline{\\mathrm{P}_n\\mathrm{H}_n}=\\sqrt3\\,(n+1)$이고, $\\overline{\\mathrm{OP}_n}=2(n+1)$이다. 선분 $\\mathrm{OP}_n$이 $x$축과 이루는 각은 $\\tan^{-1}\\sqrt3=\\dfrac{\\pi}{3}$이다.\n접선이 이루는 각을 구한다. 원 밖의 점 O에서 그은 접선과 선분 $\\mathrm{OP}_n$이 이루는 각 $\\alpha$는 $\\sin\\alpha=\\dfrac{r}{\\overline{\\mathrm{OP}_n}}=\\dfrac{\\sqrt3\\,(n+1)}{2(n+1)}=\\dfrac{\\sqrt3}{2}$이므로 $\\alpha=\\dfrac{\\pi}{3}$이다. $x$축은 $\\mathrm{H}_n$에서 원에 접하므로 한 접점이 $\\mathrm{H}_n$이고, 다른 접점 $\\mathrm{R}_n$으로의 선분 $\\mathrm{OR}_n$은 $x$축과 각 $\\dfrac{\\pi}{3}+\\dfrac{\\pi}{3}=\\dfrac{2\\pi}{3}$를 이룬다.\n접점 $\\mathrm{R}_n$의 좌표를 정한다. 접선의 길이는 $\\overline{\\mathrm{OR}_n}=\\sqrt{\\overline{\\mathrm{OP}_n}^2-r^2}=\\sqrt{4(n+1)^2-3(n+1)^2}=n+1$이고 방향각이 $\\dfrac{2\\pi}{3}$이므로 $$\\mathrm{R}_n=\\left(-\\frac{n+1}{2},\\ \\frac{\\sqrt3\\,(n+1)}{2}\\right).$$\n차 $f(n)-g(n)$을 한 영역으로 합친다. 두 영역에서 곡선 $T_n$ 조각은 O–$\\mathrm{Q}_n$–$\\mathrm{P}_n$로, 점 $\\mathrm{Q}_n$의 두 호는 호 $\\mathrm{H}_n$–$\\mathrm{R}_n$로 이어지므로, $\\mathrm{Q}_n$이 소거되어 $f(n)-g(n)$은 곡선 $T_n(\\mathrm{O}\\to\\mathrm{P}_n)$, 선분 $\\mathrm{P}_n\\mathrm{H}_n$, 호 $\\mathrm{H}_n\\mathrm{R}_n$, 선분 $\\mathrm{R}_n\\mathrm{O}$로 둘러싸인 영역의 넓이와 같다.\n그 영역을 세 조각으로 분해한다. 곡선과 $x$축 사이 넓이 $\\displaystyle\\int_0^{\\,n+1}\\frac{\\sqrt3}{n+1}x^2\\,dx=\\frac{\\sqrt3}{3}(n+1)^2$에서 출발해, 부채꼴 $\\mathrm{P}_n\\mathrm{H}_n\\mathrm{R}_n$과 삼각형들을 더하고 빼어 정리하면 다음을 얻는다.\n넓이를 합산한다. 중심각 $\\angle \\mathrm{H}_n\\mathrm{P}_n\\mathrm{R}_n=\\dfrac{2\\pi}{3}$인 부채꼴의 넓이는 $\\dfrac12 r^2\\cdot\\dfrac{2\\pi}{3}=\\dfrac{\\pi}{2}(n+1)^2$이며, 영역 전체를 정적분·부채꼴·삼각형으로 합치면 $$f(n)-g(n)=\\frac{3\\pi-4\\sqrt3}{6}\\,(n+1)^2.$$\n극한을 계산한다. $\\dfrac{(n+1)^2}{n^2}\\to 1$이므로 $$\\lim_{n\\to\\infty}\\frac{f(n)-g(n)}{n^2}=\\frac{3\\pi-4\\sqrt3}{6}=\\frac{\\pi}{2}-\\frac{2\\sqrt3}{3}.$$\n상수 $k$와 답을 구한다. $\\dfrac{\\pi}{2}+k=\\dfrac{\\pi}{2}-\\dfrac{2\\sqrt3}{3}$이므로 $k=-\\dfrac{2\\sqrt3}{3}$, 따라서 $k^2=\\dfrac43$이고 $$60k^2=60\\cdot\\frac43=80.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/01수열의극한/086a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{13}}$$ 입니다.",
-  "finalAnswer": "13",
-  "correctAnswer": "13",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{80}}$$ 입니다.",
+  "finalAnswer": "80",
+  "correctAnswer": "80",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

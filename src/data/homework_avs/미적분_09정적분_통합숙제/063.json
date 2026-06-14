@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 정적분 63번 명품 해설",
   "type": "calculus",
-  "P": "정적분의 다양한 성질과 활용(넓이, 부피, 속도)을 다룹니다.",
-  "C": "구분구적법, 정적분과 급수의 관계, 회전체의 부피를 적용합니다.",
-  "B": "정적분의 활용:\n\n1) 넓이: $$S = \\int_a^b |f(x) - g(x)| dx$$\n2) 회전체 부피: $$V = \\pi \\int_a^b \\{f(x)\\}^2 dx$$\n3) 구분구적법: $$\\lim_{n \\to \\infty} \\sum_{k=1}^{n} f\\left(\\frac{k}{n}\\right) \\cdot \\frac{1}{n} = \\int_0^1 f(x)dx$$\n4) 속도와 거리: $$\\int_{t_1}^{t_2} |v(t)| dt$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "실수 전체에서 미분가능한 두 함수 $f(x)$, $g(x)$에 대하여 $g(x)$는 $f(x)$의 역함수이고 $g(2)=1$, $g(5)=5$이다. 이때 $\\int_1^5 \\dfrac{40}{g'(f(x))\\{f(x)\\}^2}\\,dx$의 값을 구하는 문제다.",
+  "C": "역함수의 미분법으로 분모의 $g'(f(x))$를 $f'(x)$로 바꾸면 피적분함수가 완전미분 꼴이 되어, 정적분 값은 끝점에서의 $f$값만으로 결정된다.",
+  "B": "필요 무기는 두 가지다. 첫째, 역함수의 미분법 $g'(y)=\\dfrac{1}{f'(g(y))}$ (단, $f'(g(y))\\neq 0$). 둘째, $g$가 $f$의 역함수이면 $g(f(x))=x$이고, 역함수 조건 $g(a)=b \\Leftrightarrow f(b)=a$로 함숫값을 옮길 수 있다는 점이다.",
+  "S": "역함수 미분법으로 분모를 정리하기 위해, $g'(y)=\\dfrac{1}{f'(g(y))}$에 $y=f(x)$를 대입하면 $g(f(x))=x$이므로 $g'(f(x))=\\dfrac{1}{f'(g(f(x)))}=\\dfrac{1}{f'(x)}$이다.\n이 결과를 피적분함수에 넣으면 분모의 역수가 분자로 올라와 $\\dfrac{40}{g'(f(x))\\{f(x)\\}^2}=\\dfrac{40\\,f'(x)}{\\{f(x)\\}^2}$로 간단해진다.\n이 식이 완전미분 꼴임을 보기 위해, $\\dfrac{d}{dx}\\!\\left(\\dfrac{1}{f(x)}\\right)=-\\dfrac{f'(x)}{\\{f(x)\\}^2}$이므로 $\\dfrac{40\\,f'(x)}{\\{f(x)\\}^2}=-40\\,\\dfrac{d}{dx}\\!\\left(\\dfrac{1}{f(x)}\\right)$이다.\n끝점의 $f$값을 역함수 조건으로 구하면, $g(2)=1\\Rightarrow f(1)=2$이고 $g(5)=5\\Rightarrow f(5)=5$이다.\n따라서 미적분의 기본정리로 $\\int_1^5 \\dfrac{40\\,f'(x)}{\\{f(x)\\}^2}\\,dx=-40\\left[\\dfrac{1}{f(x)}\\right]_1^5=-40\\left(\\dfrac{1}{f(5)}-\\dfrac{1}{f(1)}\\right)$이다.\n끝점 값을 대입하면 $-40\\left(\\dfrac{1}{5}-\\dfrac{1}{2}\\right)=-40\\cdot\\left(-\\dfrac{3}{10}\\right)=12$이므로 구하는 값은 $12$이다.",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{12}}$$ 입니다.",
   "finalAnswer": "12",
   "correctAnswer": "12",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

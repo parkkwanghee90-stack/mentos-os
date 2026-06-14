@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 여러 가지 미분법 19번 명품 해설",
   "type": "calculus",
-  "P": "합성함수, 매개변수, 음함수의 미분법을 활용합니다.",
-  "C": "연쇄 법칙, 몫의 미분법, 매개변수 미분을 적용합니다.",
-  "B": "여러 가지 미분법:\n\n1) 합성함수: $$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$$\n2) 매개변수: $$\\frac{dy}{dx} = \\frac{\\frac{dy}{dt}}{\\frac{dx}{dt}}$$\n3) 음함수: 양변을 $$x$$로 미분, $$y' = \\frac{dy}{dx}$$로 놓고 정리\n4) 역함수 미분: $$\\frac{dx}{dy} = \\frac{1}{\\frac{dy}{dx}}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$f(x)=\\tan 2x+3\\sin x$일 때 극한 $\\lim\\limits_{h\\to 0}\\dfrac{f(\\pi+h)-f(\\pi-h)}{h}$의 값을 구한다.",
+  "C": "$f(x)=\\tan 2x+3\\sin x$로 주어지며, 분자가 $f(\\pi+h)$와 $f(\\pi-h)$의 차로 이루어진 대칭형 극한이다.",
+  "B": "미분계수의 정의에서 한 점 $a$ 근방의 대칭차분 $\\dfrac{f(a+h)-f(a-h)}{2h}$는 $h\\to 0$일 때 $f'(a)$로 수렴한다. 또한 $\\tan x$의 도함수는 $\\sec^2 x$, 합성함수 $\\tan 2x$에는 연쇄법칙으로 안쪽 함수 $2x$의 도함수 $2$가 곱해지고, $\\sin x$의 도함수는 $\\cos x$이다.",
+  "S": "분모를 미분계수 정의에 맞추기 위해 분자와 분모를 $2$로 조절하면, 대칭차분 꼴이 드러난다. $$\\lim_{h\\to 0}\\frac{f(\\pi+h)-f(\\pi-h)}{h}=\\lim_{h\\to 0}\\left[2\\cdot\\frac{f(\\pi+h)-f(\\pi-h)}{2h}\\right].$$\n기준점 $\\pi$에서 더하고 빼는 대칭차분이므로 그 극한은 미분계수 $f'(\\pi)$가 되어, 구하는 값은 $2f'(\\pi)$로 정리된다. $$\\lim_{h\\to 0}\\frac{f(\\pi+h)-f(\\pi-h)}{2h}=f'(\\pi)\\ \\Rightarrow\\ \\lim_{h\\to 0}\\frac{f(\\pi+h)-f(\\pi-h)}{h}=2f'(\\pi).$$\n도함수를 구하기 위해 $\\tan 2x$에는 연쇄법칙을, $3\\sin x$에는 기본 공식을 적용한다. $$f'(x)=2\\sec^2 2x+3\\cos x.$$\n$x=\\pi$를 대입하기 위해 각각의 삼각함수 값을 계산하면, $2\\pi$는 $\\sec$의 기준각이라 $\\sec 2\\pi=1$이고 $\\cos\\pi=-1$이다. $$f'(\\pi)=2\\sec^2 2\\pi+3\\cos\\pi=2\\cdot 1^2+3\\cdot(-1)=2-3=-1.$$\n따라서 구하는 극한값은 $2f'(\\pi)$이므로 다음을 얻는다. $$2f'(\\pi)=2\\cdot(-1)=-2.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/05여러가지미분법/020a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{①번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{-2}}$$ 입니다.",
   "finalAnswer": "1",
   "correctAnswer": "1",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

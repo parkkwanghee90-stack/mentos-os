@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 9번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\sin\\theta=\\dfrac{\\sqrt{3}}{3}$이고 $0<\\theta<\\dfrac{\\pi}{2}$일 때 $2\\sin\\left(\\theta-\\dfrac{\\pi}{6}\\right)+\\cos\\theta$의 값을 구한다.",
+  "C": "$\\sin\\theta=\\dfrac{\\sqrt{3}}{3}$, 각의 범위는 $0<\\theta<\\dfrac{\\pi}{2}$.",
+  "B": "두 각의 차에 대한 사인 덧셈정리 $\\sin(A-B)=\\sin A\\cos B-\\cos A\\sin B$와 특수각 $\\dfrac{\\pi}{6}$의 삼각비 $\\cos\\dfrac{\\pi}{6}=\\dfrac{\\sqrt{3}}{2}$, $\\sin\\dfrac{\\pi}{6}=\\dfrac{1}{2}$를 이용한다.",
+  "S": "복잡한 합성각을 풀어내야 계산이 가능하므로, 먼저 $\\sin\\left(\\theta-\\dfrac{\\pi}{6}\\right)$에 사인의 차 공식을 적용한다. $$\\sin\\left(\\theta-\\frac{\\pi}{6}\\right)=\\sin\\theta\\cos\\frac{\\pi}{6}-\\cos\\theta\\sin\\frac{\\pi}{6}.$$\n특수각의 값을 그대로 대입해 식을 구체화한다. $$\\sin\\left(\\theta-\\frac{\\pi}{6}\\right)=\\sin\\theta\\cdot\\frac{\\sqrt{3}}{2}-\\cos\\theta\\cdot\\frac{1}{2}=\\frac{\\sqrt{3}}{2}\\sin\\theta-\\frac{1}{2}\\cos\\theta.$$\n구하는 식 전체에 위 결과를 넣고 계수 $2$를 분배해 정리한다. $$2\\sin\\left(\\theta-\\frac{\\pi}{6}\\right)+\\cos\\theta=2\\left(\\frac{\\sqrt{3}}{2}\\sin\\theta-\\frac{1}{2}\\cos\\theta\\right)+\\cos\\theta=\\sqrt{3}\\sin\\theta-\\cos\\theta+\\cos\\theta.$$\n$-\\cos\\theta$와 $+\\cos\\theta$가 상쇄되어 $\\cos\\theta$ 값이 필요 없어진다는 점이 핵심이며, 식은 $\\sin\\theta$만으로 결정된다. $$2\\sin\\left(\\theta-\\frac{\\pi}{6}\\right)+\\cos\\theta=\\sqrt{3}\\sin\\theta.$$\n주어진 $\\sin\\theta=\\dfrac{\\sqrt{3}}{3}$을 대입하면 값이 정해진다. $$\\sqrt{3}\\sin\\theta=\\sqrt{3}\\times\\frac{\\sqrt{3}}{3}=\\frac{3}{3}=1.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/010a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{(4-sqrt(14))/12}}$$ 입니다.",
-  "finalAnswer": "(4-sqrt(14))/12",
-  "correctAnswer": "(4-sqrt(14))/12",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{1}}$$ 입니다.",
+  "finalAnswer": "1",
+  "correctAnswer": "1",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

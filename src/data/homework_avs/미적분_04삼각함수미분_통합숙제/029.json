@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 29번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$0<\\theta<\\dfrac{\\pi}{4}$이고 $(1+\\tan\\theta)\\tan 2\\theta=3$일 때 $\\tan\\theta$의 값을 구한다.",
+  "C": "$0<\\theta<\\dfrac{\\pi}{4}$이므로 $0<\\tan\\theta<1$이다. 그리고 $(1+\\tan\\theta)\\tan 2\\theta=3$이 주어져 있다.",
+  "B": "탄젠트의 배각공식은 $\\tan 2\\theta=\\dfrac{2\\tan\\theta}{1-\\tan^2\\theta}$이다. 또한 분모 $1-\\tan^2\\theta=(1-\\tan\\theta)(1+\\tan\\theta)$로 인수분해되어, 분자·분모에 공통으로 나타나는 $(1+\\tan\\theta)$가 약분되는 것이 이 문제의 열쇠이다.",
+  "S": "미지수를 하나로 모으기 위해 $t=\\tan\\theta$로 놓으면 조건은 $(1+t)\\tan 2\\theta=3$이 된다.\n배각공식을 대입해 좌변을 $t$만의 식으로 바꾼다. $$(1+t)\\cdot\\dfrac{2t}{1-t^2}=3$$\n분모를 인수분해하면 $1-t^2=(1-t)(1+t)$이므로 분자의 $(1+t)$와 약분된다. $$\\dfrac{2t(1+t)}{(1-t)(1+t)}=\\dfrac{2t}{1-t}=3$$\n분수방정식을 풀기 위해 양변에 $1-t$를 곱한다. $$2t=3(1-t)=3-3t$$\n$t$항을 한쪽으로 모은다. $$2t+3t=3\\ \\Rightarrow\\ 5t=3\\ \\Rightarrow\\ t=\\dfrac{3}{5}$$\n조건 $0<\\tan\\theta<1$을 확인한다. $\\dfrac{3}{5}=0.6$은 $0$과 $1$ 사이에 있으므로 적합하다. 따라서 $\\tan\\theta=\\dfrac{3}{5}$이며 이는 보기 5번이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/030a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{8/17}}$$ 입니다.",
-  "finalAnswer": "8/17",
-  "correctAnswer": "8/17",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{3}{5}}}$$ 입니다.",
+  "finalAnswer": "3/5",
+  "correctAnswer": "3/5",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

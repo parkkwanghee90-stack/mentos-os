@@ -154,3 +154,15 @@ node_modules
 
 # 백업 파일(마이그레이션 러너 생성, 어느 경로든)
 **/*.bak
+
+# 미적분 AVS 작업 중간 산출물 (scratch — 재현 가능, 커밋 제외)
+scripts/out_*.json
+scripts/jobs_cal*.json
+scripts/jobs_stragglers.json
+scripts/jobs_adj.json
+scripts/keyfix*.json
+scripts/shift_report.json
+scripts/verify_*.json
+scripts/*_wave_run.mjs
+scripts/recover_*.json
+.claude/handoff.md

@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 18번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$0 \\le x < \\dfrac{\\pi}{2}$ 범위에서 부등식 $\\cos x \\le \\sin(x+\\alpha) \\le 2\\cos x$ 를 만족시키는 $x$ 에 대하여 $\\tan x$ 의 최댓값과 최솟값의 합.",
+  "C": "$\\tan\\alpha = -\\dfrac{5}{12}$ 이고 $\\dfrac{3}{2}\\pi < \\alpha < 2\\pi$ 이며, $0 \\le x < \\dfrac{\\pi}{2}$ 이다.",
+  "B": "덧셈정리 $\\sin(x+\\alpha) = \\sin x\\cos\\alpha + \\cos x\\sin\\alpha$ 로 $\\sin(x+\\alpha)$ 를 분해한 뒤, $0 \\le x < \\dfrac{\\pi}{2}$ 에서 $\\cos x > 0$ 이므로 부등식 전체를 $\\cos x$ 로 나누어 $\\tan x$ 에 대한 일차부등식으로 바꾼다. 각 $\\alpha$ 의 위치(사분면)는 $\\sin\\alpha,\\ \\cos\\alpha$ 의 부호를 결정한다.",
+  "S": "$\\dfrac{3}{2}\\pi < \\alpha < 2\\pi$ 이면 $\\alpha$ 는 제4사분면 각이므로 $\\sin\\alpha < 0,\\ \\cos\\alpha > 0$ 이고, $\\tan\\alpha = -\\dfrac{5}{12}$ 로부터 빗변이 $13$ 인 직각삼각형 비율을 이용해 $$\\sin\\alpha = -\\frac{5}{13},\\quad \\cos\\alpha = \\frac{12}{13}.$$\n덧셈정리로 좌변의 합성각을 분해하면 $$\\sin(x+\\alpha) = \\sin x\\cos\\alpha + \\cos x\\sin\\alpha = \\frac{12}{13}\\sin x - \\frac{5}{13}\\cos x.$$\n이를 주어진 부등식에 대입하면 $$\\cos x \\le \\frac{12}{13}\\sin x - \\frac{5}{13}\\cos x \\le 2\\cos x.$$\n$0 \\le x < \\dfrac{\\pi}{2}$ 에서 $\\cos x > 0$ 이므로 부등호 방향을 바꾸지 않고 모든 변을 $\\cos x$ 로 나눌 수 있어 $$1 \\le \\frac{12}{13}\\tan x - \\frac{5}{13} \\le 2.$$\n양변에 $\\dfrac{5}{13}$ 을 더해 $\\tan x$ 항을 고립시키면 $$\\frac{18}{13} \\le \\frac{12}{13}\\tan x \\le \\frac{31}{13}.$$\n각 변에 $\\dfrac{13}{12}$ 을 곱하면 $\\tan x$ 의 범위가 $$\\frac{3}{2} \\le \\tan x \\le \\frac{31}{12}$$ 으로 정해지고, 두 경곗값은 모두 $0 \\le x < \\dfrac{\\pi}{2}$ 안에서 실현된다.\n따라서 최댓값은 $\\dfrac{31}{12}$, 최솟값은 $\\dfrac{3}{2}$ 이므로 그 합은 $$\\frac{31}{12} + \\frac{3}{2} = \\frac{31}{12} + \\frac{18}{12} = \\frac{49}{12}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/019a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{1/5}}$$ 입니다.",
-  "finalAnswer": "1/5",
-  "correctAnswer": "1/5",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{49}{12}}}$$ 입니다.",
+  "finalAnswer": "49/12",
+  "correctAnswer": "49/12",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

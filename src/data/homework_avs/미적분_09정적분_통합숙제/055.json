@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 정적분 55번 명품 해설",
   "type": "calculus",
-  "P": "정적분의 다양한 성질과 활용(넓이, 부피, 속도)을 다룹니다.",
-  "C": "구분구적법, 정적분과 급수의 관계, 회전체의 부피를 적용합니다.",
-  "B": "정적분의 활용:\n\n1) 넓이: $$S = \\int_a^b |f(x) - g(x)| dx$$\n2) 회전체 부피: $$V = \\pi \\int_a^b \\{f(x)\\}^2 dx$$\n3) 구분구적법: $$\\lim_{n \\to \\infty} \\sum_{k=1}^{n} f\\left(\\frac{k}{n}\\right) \\cdot \\frac{1}{n} = \\int_0^1 f(x)dx$$\n4) 속도와 거리: $$\\int_{t_1}^{t_2} |v(t)| dt$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "정적분 $\\displaystyle\\int_0^{\\frac{3}{2}\\pi} f(x)\\,dx$ 가 최대가 되도록 하는 정수 $l,\\ m,\\ n$ 에 대하여 $l+2m+3n$ 의 값을 구하는 것",
+  "C": "$l,\\ m,\\ n$ 은 $0$ 이 아닌 정수이고 $|l|+|m|+|n|\\le 10$ 을 만족한다. $0\\le x\\le\\frac32\\pi$ 에서 연속함수 $f(x)$ 가 $f(0)=0,\\ f\\!\\left(\\frac32\\pi\\right)=1$ 이며, $f'(x)$ 는 $(0,\\frac{\\pi}{2})$ 에서 $l\\cos x$, $(\\frac{\\pi}{2},\\pi)$ 에서 $m\\cos x$, $(\\pi,\\frac32\\pi)$ 에서 $n\\cos x$ 이다.",
+  "B": "도함수가 구간별로 주어진 함수는 각 구간에서 부정적분하고 이음매에서의 연속 조건으로 적분상수를 정한다. 또한 한 점의 함숫값과 다른 점의 함숫값 차이는 도함수의 정적분이므로, $\\int_0^{\\frac32\\pi} f'(x)\\,dx = f\\!\\left(\\frac32\\pi\\right)-f(0)$ 이 성립한다. 정수 제약 $|l|+|m|+|n|\\le 10$ 아래에서 목표식을 최대화하려면 절댓값 부등식 $|x-a|+|x-b|\\le c$ 의 해 $\\dfrac{a+b-c}{2}\\le x\\le\\dfrac{a+b+c}{2}$ 를 이용해 변수의 허용 범위를 좁힌 뒤 경우를 나누어 비교한다.",
+  "S": "세 구간의 도함수 정적분이 곧 끝점 함숫값의 차이를 만들어내므로, 미적분의 기본정리로 각각을 계산하면 $$\\int_0^{\\frac{\\pi}{2}} l\\cos x\\,dx=l,\\quad \\int_{\\frac{\\pi}{2}}^{\\pi} m\\cos x\\,dx=-m,\\quad \\int_{\\pi}^{\\frac{3}{2}\\pi} n\\cos x\\,dx=-n$$ 이다.\n세 정적분의 합은 양 끝 함숫값의 차이와 같으므로, $f(0)=0,\\ f\\!\\left(\\frac32\\pi\\right)=1$ 을 대입하면 $$f\\!\\left(\\tfrac32\\pi\\right)-f(0)=l-m-n=1$$ 이라는 조건이 나온다.\n$f(x)$ 자체를 적분하려면 구간별 식이 필요하므로, 각 구간에서 $f'(x)$ 를 적분하고 $f(0)=0$ 과 이음매 연속을 이용하면 $$f(x)=\\begin{cases} l\\sin x & \\left(0\\le x\\le \\tfrac{\\pi}{2}\\right)\\\\[2pt] m\\sin x+l-m & \\left(\\tfrac{\\pi}{2}\\le x\\le \\pi\\right)\\\\[2pt] n\\sin x+l-m & \\left(\\pi\\le x\\le \\tfrac32\\pi\\right)\\end{cases}$$ 가 된다.\n구간별로 정적분을 계산해 더하면 $$\\int_0^{\\frac{3}{2}\\pi} f(x)\\,dx=\\int_0^{\\frac{\\pi}{2}} l\\sin x\\,dx+\\int_{\\frac{\\pi}{2}}^{\\pi}(m\\sin x+l-m)\\,dx+\\int_{\\pi}^{\\frac{3}{2}\\pi}(n\\sin x+l-m)\\,dx$$ 이고, 이를 정리하면 $$=l+m-n+\\pi(l-m)$$ 이다.\n조건 $l-m-n=1$, 즉 $l=1+m+n$ 을 대입해 변수를 줄이면 $$\\int_0^{\\frac{3}{2}\\pi} f(x)\\,dx=n\\pi+2m+\\pi+1$$ 이 되어, $\\pi$ 와 $1$ 은 상수이므로 $n\\pi+2m$ 의 최댓값만 찾으면 된다.\n제약식에 $l=m+n+1$ 을 넣으면 $$|m+n+1|+|m|+|n|\\le 10$$ 인데, $m$ 에 대한 절댓값 부등식 $|m-(-n-1)|+|m-0|\\le 10-|n|$ 로 보고 공식 $\\dfrac{a+b-c}{2}\\le m\\le\\dfrac{a+b+c}{2}$ 를 적용하면 $$\\frac{-11-n-|n|}{2}\\le m\\le \\frac{9-n-|n|}{2}$$ 를 얻는다.\n$n\\pi+2m$ 은 $n$ 이 클수록, 그리고 $m$ 의 상한이 클수록 유리하므로 각 $n$ 에서 허용되는 가장 큰 $m$ 을 골라 비교한다. $n\\ge 5$ 이면 $l-m=1+n\\ge 6$ 이라 $|l|+|m|\\ge 6$ 이 되어 제약과 모순이고, $n=4$ 이면 $m\\le\\tfrac12$ 에서 $(l,m,n)=(4,-1,4)$ 로 $n\\pi+2m=4\\pi-2$, $n=3$ 이면 $m\\le\\tfrac32$ 에서 $(l,m,n)=(5,1,3)$ 로 $n\\pi+2m=3\\pi+2$ 이다.\n남은 경우도 같은 방식으로 $n=2$ 에서 $(l,m,n)=(5,2,2)$ 로 $2\\pi+4$, $n=1$ 에서 $(l,m,n)=(5,3,1)$ 로 $\\pi+6$, $n<0$ 에서 $(l,m,n)=(4,4,-1)$ 로 $-\\pi+8$ 을 얻는다.\n$\\pi=3.14\\cdots$ 로 다섯 후보값 $4\\pi-2=10.5\\cdots,\\ 3\\pi+2=11.4\\cdots,\\ 2\\pi+4=10.2\\cdots,\\ \\pi+6=9.1\\cdots,\\ -\\pi+8=4.8\\cdots$ 를 비교하면 최댓값은 $3\\pi+2$ 이고, 이때 $$(l,m,n)=(5,1,3)$$ 에서 정적분이 최대가 된다.\n따라서 구하는 값은 $$l+2m+3n=5+2\\cdot 1+3\\cdot 3=16$$ 이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/09정적분/056a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{⑤번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{16}}$$ 입니다.",
   "finalAnswer": "5",
   "correctAnswer": "5",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

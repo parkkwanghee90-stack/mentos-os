@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 급수 106번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$32 \\times (a_3 + p)$의 값을 구한다. 여기서 $\\{a_n\\}$은 공비가 $0$이 아닌 등비수열이고, $\\{b_n\\}$은 $|a_n|$의 크기에 따라 두 가지로 정의된 수열이며, $p$는 $\\displaystyle\\sum_{n=1}^{m}\\dfrac{a_n}{b_n}$을 최소로 만드는 자연수 $m$이다.",
+  "C": "$\\{a_n\\}$의 첫째항을 $a$, 공비를 $r$이라 하면 $a_n=a r^{n-1}$이다. 양의 상수 $\\alpha$에 대하여 $|a_n|<\\alpha$이면 $b_n=a_n$, $|a_n|\\ge\\alpha$이면 $b_n=-\\dfrac{5}{a_n}$이다. (가) $\\displaystyle\\sum_{n=1}^{\\infty}a_n=4$. (나) $\\displaystyle\\sum_{n=1}^{m}\\dfrac{a_n}{b_n}$을 최소로 하는 $m$이 $p$이고, $\\displaystyle\\sum_{n=1}^{p}b_n=51$, $\\displaystyle\\sum_{n=p+1}^{\\infty}b_n=\\dfrac{1}{64}$이다.",
+  "B": "등비급수 $\\displaystyle\\sum_{n=1}^{\\infty}ar^{n-1}$은 $|r|<1$일 때 $\\dfrac{a}{1-r}$로 수렴한다. 또한 $b_n$의 정의를 $\\dfrac{a_n}{b_n}$으로 옮기면 $|a_n|<\\alpha$일 때 $\\dfrac{a_n}{b_n}=1$, $|a_n|\\ge\\alpha$일 때 $\\dfrac{a_n}{b_n}=\\dfrac{a_n}{-5/a_n}=-\\dfrac{a_n^{2}}{5}$이다. $|r|<1$이면 $|a_n|$이 감소하므로 처음 몇 항만 $|a_n|\\ge\\alpha$, 그 뒤로는 $|a_n|<\\alpha$가 되어 부호 구조가 정해진다.",
+  "S": "급수가 수렴하려면 $|r|<1$이어야 하므로 조건 (가)에서 첫째항과 공비의 관계를 얻는다. $$\\frac{a}{1-r}=4 \\quad\\cdots\\ \\bigcirc$$\n$\\dfrac{a_n}{b_n}$의 값을 구분한다. $|a_n|<\\alpha$이면 $\\dfrac{a_n}{b_n}=1>0$이고, $|a_n|\\ge\\alpha$이면 $\\dfrac{a_n}{b_n}=-\\dfrac{a_n^{2}}{5}<0$이다. $|r|<1$이므로 $|a_n|$은 감소하여 처음 $k$개 항만 $|a_n|\\ge\\alpha$, $n\\ge k+1$부터 $|a_n|<\\alpha$인 자연수 $k$가 존재한다.\n부분합 $\\displaystyle\\sum_{n=1}^{m}\\dfrac{a_n}{b_n}$은 $n\\le k$에서 음수만 더해 줄어들다가 $n\\ge k+1$에서 $+1$씩 더해 늘어나므로 $m=k$에서 최소가 된다. 따라서 $$p=k$$이다.\n꼬리합 조건을 등비급수로 정리한다. $n\\ge k+1$에서 $b_n=a_n$이므로 $$\\sum_{n=p+1}^{\\infty}b_n=\\sum_{n=k+1}^{\\infty}ar^{n-1}=\\frac{ar^{k}}{1-r}=\\frac{1}{64}$$이고, $\\bigcirc$의 $\\dfrac{a}{1-r}=4$를 대입하면 $4r^{k}=\\dfrac{1}{64}$, 즉 $$r^{k}=\\frac{1}{256}$$을 얻는다.\n앞부분 합 조건을 정리한다. $1\\le n\\le k$에서 $b_n=-\\dfrac{5}{a_n}=-\\dfrac{5}{a}\\left(\\dfrac{1}{r}\\right)^{n-1}$이므로 공비 $\\dfrac{1}{r}$인 등비수열의 합으로 $$\\sum_{n=1}^{p}b_n=\\frac{-\\dfrac{5}{a}\\left\\{1-\\left(\\dfrac{1}{r}\\right)^{k}\\right\\}}{1-\\dfrac{1}{r}}=51$$이 된다.\n$\\left(\\dfrac{1}{r}\\right)^{k}=\\dfrac{1}{r^{k}}=256$을 대입해 정리하면 $$\\frac{-\\dfrac{5}{a}(1-256)}{1-\\dfrac{1}{r}}=\\frac{\\dfrac{1275}{a}}{\\dfrac{r-1}{r}}=51$$이고, 양변을 정리하면 $$a(r-1)=25r$$를 얻는다.\n$\\bigcirc$에서 $a=4(1-r)$을 대입한다. $$4(1-r)(r-1)=25r \\;\\Longrightarrow\\; 4r^{2}+17r+4=0$$이고 인수분해하면 $(4r+1)(r+4)=0$이므로 $r=-\\dfrac{1}{4}$ 또는 $r=-4$이다. 수렴 조건 $-1<r<1$에 의해 $$r=-\\frac{1}{4},\\quad a=4\\left(1+\\frac{1}{4}\\right)=5$$이다.\n$r^{k}=\\dfrac{1}{256}$에 $r=-\\dfrac{1}{4}$를 넣으면 $\\left(-\\dfrac{1}{4}\\right)^{k}=\\dfrac{1}{256}=\\left(\\dfrac{1}{4}\\right)^{4}$이고 값이 양수이므로 $k$는 짝수, 즉 $$p=k=4$$이다.\n필요한 항을 구해 답을 계산한다. $a_3=ar^{2}=5\\times\\left(-\\dfrac{1}{4}\\right)^{2}=\\dfrac{5}{16}$이므로 $$32\\times(a_3+p)=32\\times\\left(\\frac{5}{16}+4\\right)=32\\times\\frac{69}{16}=138$$이다.",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{138}}$$ 입니다.",
   "finalAnswer": "138",
   "correctAnswer": "138",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

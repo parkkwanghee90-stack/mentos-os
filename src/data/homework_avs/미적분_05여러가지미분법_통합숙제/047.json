@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 여러 가지 미분법 47번 명품 해설",
   "type": "calculus",
-  "P": "합성함수, 매개변수, 음함수의 미분법을 활용합니다.",
-  "C": "연쇄 법칙, 몫의 미분법, 매개변수 미분을 적용합니다.",
-  "B": "여러 가지 미분법:\n\n1) 합성함수: $$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$$\n2) 매개변수: $$\\frac{dy}{dx} = \\frac{\\frac{dy}{dt}}{\\frac{dx}{dt}}$$\n3) 음함수: 양변을 $$x$$로 미분, $$y' = \\frac{dy}{dx}$$로 놓고 정리\n4) 역함수 미분: $$\\frac{dx}{dy} = \\frac{1}{\\frac{dy}{dx}}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "함수 $f(x)=\\dfrac{1}{e^x+2}$의 역함수 $g(x)$에 대하여 $g'\\!\\left(\\dfrac{1}{4}\\right)$의 값을 구하는 것이 목표이다.",
+  "C": "$f(x)=\\dfrac{1}{e^x+2}$이고 $g$는 $f$의 역함수이다. 구하려는 값은 $x=\\dfrac{1}{4}$에서의 역함수 도함수 값이다.",
+  "B": "역함수의 미분법에 따르면 $g=f^{-1}$일 때 $g'(a)=\\dfrac{1}{f'(g(a))}$이다. 즉 $f(b)=a$를 만족하는 $b$를 먼저 찾은 뒤(이때 $g(a)=b$), 그 $b$에서의 $f'$ 값의 역수를 취하면 된다. 핵심은 역함수를 직접 구하지 않고도, 대응되는 정의역의 점 $b$만 알면 도함수 값을 얻을 수 있다는 점이다.",
+  "S": "$g\\!\\left(\\dfrac{1}{4}\\right)$를 직접 구하기 위해 그 값을 $k$로 놓으면, 역함수의 정의에 의해 $f(k)=\\dfrac{1}{4}$가 성립한다. $$g\\!\\left(\\tfrac{1}{4}\\right)=k \\iff f(k)=\\tfrac{1}{4}$$\n$f(k)=\\dfrac{1}{4}$에 $f$의 식을 대입해 $k$를 결정한다. $$\\frac{1}{e^{k}+2}=\\frac{1}{4} \\implies e^{k}+2=4 \\implies e^{k}=2$$\n$e^{k}=2$의 양변에 자연로그를 취해 대응점 $k$를 확정한다. $$k=\\ln 2,\\qquad \\text{즉}\\quad g\\!\\left(\\tfrac{1}{4}\\right)=\\ln 2$$\n역함수 도함수 공식 $g'(a)=\\dfrac{1}{f'(g(a))}$를 쓰기 위해 먼저 $f'(x)$가 필요하므로, $f(x)=(e^{x}+2)^{-1}$를 연쇄법칙으로 미분한다. $$f'(x)=-(e^{x}+2)^{-2}\\cdot e^{x}=-\\frac{e^{x}}{(e^{x}+2)^{2}}$$\n구한 대응점 $k=\\ln 2$를 $f'$에 대입한다. 이때 $e^{\\ln 2}=2$이므로 분모는 $(2+2)^2=16$이 된다. $$f'(\\ln 2)=-\\frac{2}{(2+2)^{2}}=-\\frac{2}{16}=-\\frac{1}{8}$$\n역함수 미분법으로 $g'\\!\\left(\\dfrac{1}{4}\\right)$는 $f'(\\ln 2)$의 역수이다. $$g'\\!\\left(\\tfrac{1}{4}\\right)=\\frac{1}{f'\\!\\left(g\\!\\left(\\tfrac{1}{4}\\right)\\right)}=\\frac{1}{f'(\\ln 2)}=\\frac{1}{-\\tfrac{1}{8}}=-8$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/05여러가지미분법/048a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{④번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{-8}}$$ 입니다.",
   "finalAnswer": "4",
   "correctAnswer": "4",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

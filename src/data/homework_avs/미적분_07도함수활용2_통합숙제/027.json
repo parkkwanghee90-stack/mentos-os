@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 도함수의 활용 2 27번 명품 해설",
   "type": "calculus",
-  "P": "도함수를 활용한 방정식·부등식의 풀이와 최적화 문제를 해결합니다.",
-  "C": "함수의 그래프를 분석하여 근의 개수를 판별하고, 최댓값·최솟값을 구합니다.",
-  "B": "도함수의 활용 2:\n\n1) $$f(x) = g(x)$$의 실근 개수: 두 그래프의 교점\n2) 부등식 증명: 차함수의 최솟값 ≥ 0\n3) 평균값 정리: $$f'(c) = \\frac{f(b) - f(a)}{b - a}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "4시 정각이 되는 순간, 삼각형 $\\text{OPQ}$의 넓이 $S$의 시간(분)에 대한 순간변화율이 $\\dfrac{q}{p}\\pi$로 주어질 때, 서로소인 자연수 $p$, $q$에 대하여 $p+q$의 값을 구한다.",
+  "C": "시계의 중심이 $\\text{O}$이고, 길이 $2$인 시침의 끝점이 $\\text{P}$, 길이 $3$인 분침의 끝점이 $\\text{Q}$이다. 시침은 $12$시간($720$분)에 한 바퀴, 분침은 $60$분에 한 바퀴 회전하며, 두 침이 이루는 각을 $\\theta$라 할 때 삼각형 $\\text{OPQ}$의 넓이는 $S$이다.",
+  "B": "두 변의 길이와 끼인각으로 삼각형의 넓이를 나타내면 $S=\\dfrac{1}{2}\\,\\overline{\\text{OP}}\\cdot\\overline{\\text{OQ}}\\,\\sin\\theta$이다. 두 침의 각속도(라디안/분)는 회전 주기로부터 결정되고, 끼인각 $\\theta$가 시간 $t$의 함수이므로 합성함수의 미분으로 $\\dfrac{dS}{dt}=\\dfrac{dS}{d\\theta}\\cdot\\dfrac{d\\theta}{dt}$를 적용한다.",
+  "S": "넓이를 끼인각만의 함수로 정리하기 위해 두 변과 끼인각 공식을 쓰면 $$S=\\frac{1}{2}\\cdot\\overline{\\text{OP}}\\cdot\\overline{\\text{OQ}}\\cdot\\sin\\theta=\\frac{1}{2}\\cdot 2\\cdot 3\\cdot\\sin\\theta=3\\sin\\theta$$이다.\n두 침의 각속도를 구하기 위해 각 주기로 한 바퀴($2\\pi$)를 나누면, 분침은 $\\dfrac{2\\pi}{60}=\\dfrac{\\pi}{30}$, 시침은 $\\dfrac{2\\pi}{720}=\\dfrac{\\pi}{360}$ (라디안/분)이다.\n두 침이 같은 방향으로 돌므로 끼인각의 변화율은 두 각속도의 차로 결정되어 $$\\left|\\frac{d\\theta}{dt}\\right|=\\frac{\\pi}{30}-\\frac{\\pi}{360}=\\frac{12\\pi-\\pi}{360}=\\frac{11\\pi}{360}$$이다.\n$4$시 정각에서의 끼인각을 정하기 위해 $12$시 방향에서 시침까지 잰 각을 보면, 시침은 숫자 $4$ 위치에 있어 $4\\times 30^\\circ=120^\\circ$이고 분침은 $12$ 위치($0^\\circ$)이므로 $$\\theta=120^\\circ=\\frac{2}{3}\\pi$$이다.\n넓이의 변화율을 합성함수 미분으로 나타내면 $$\\frac{dS}{dt}=3\\cos\\theta\\cdot\\frac{d\\theta}{dt}$$이고, $4$시 정각에서는 끼인각 $120^\\circ$가 넓이가 최대가 되는 $90^\\circ$ 쪽으로 줄어들어 넓이가 커지므로 변화율의 크기는 $$\\left|\\frac{dS}{dt}\\right|=3\\left|\\cos\\frac{2}{3}\\pi\\right|\\cdot\\frac{11\\pi}{360}=3\\cdot\\frac{1}{2}\\cdot\\frac{11\\pi}{360}=\\frac{11}{240}\\pi$$이다.\n순간변화율을 $\\dfrac{q}{p}\\pi$ 꼴과 비교하면 $\\dfrac{q}{p}=\\dfrac{11}{240}$이고 $11$과 $240$은 서로소이므로 $q=11$, $p=240$이다. 따라서 $$p+q=240+11=251$$이다.",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{251}}$$ 입니다.",
   "finalAnswer": "251",
   "correctAnswer": "251",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

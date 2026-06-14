@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 수열의 극한 97번 명품 해설",
   "type": "calculus",
-  "P": "수열의 극한값과 급수의 수렴·발산을 판별합니다.",
-  "C": "최고차항으로 나누기, 샌드위치 정리, 등비수열 극한 조건을 활용합니다.",
-  "B": "수열의 극한:\n\n1) $$\\lim_{n \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교\n2) $$|r| < 1 \\Rightarrow \\lim_{n \\to \\infty} r^n = 0$$\n3) 수렴 조건: 단조 수렴 정리, 샌드위치 정리\n4) $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\angle CAB=\\angle PQR$, $\\overline{CP}=\\sqrt{15n^2+16n+4}$, $\\overline{DR}:\\overline{DC}=1:2$인 사각형에서 $\\displaystyle\\lim_{n\\to\\infty}\\left(\\overline{DR}-\\frac{4}{3}n\\right)=\\frac{q}{p}$ 일 때 $p+q$의 값을 구한다.",
+  "C": "$\\overline{AC}=\\overline{BC}=4n+2$, P는 $\\overline{AB}$의 중점, Q는 $\\overline{BC}$의 중점, R은 $\\overline{DQ}$와 $\\overline{AC}$의 교점, $\\angle CAB=\\angle PQR$, $\\overline{CP}=\\sqrt{15n^2+16n+4}$, $\\overline{DR}:\\overline{DC}=1:2$, $p$와 $q$는 서로소인 자연수.",
+  "B": "이등변삼각형의 꼭짓각에서 밑변의 중점으로 내린 선분은 밑변과 수직이다. 삼각형의 두 변의 중점을 잇는 중점연결선은 나머지 한 변과 평행하고 그 길이는 절반이며, 평행선의 동위각과 엇각은 서로 같다. 두 변과 그 끼인각을 알 때 코사인법칙 $c^2=a^2+b^2-2ab\\cos C$로 나머지 변을 결정한다. $\\infty-\\infty$ 꼴의 무리식 극한은 분자를 유리화하여 최고차항으로 정리한다.",
+  "S": "삼각형 ABC가 $\\overline{AC}=\\overline{BC}=4n+2$인 이등변삼각형이고 P가 밑변 $\\overline{AB}$의 중점이므로 $\\overline{CP}\\perp\\overline{AB}$, 즉 $\\angle CPB=\\dfrac{\\pi}{2}$이다.\n직각삼각형 CPB에서 $\\overline{BP}^2=\\overline{BC}^2-\\overline{CP}^2=(4n+2)^2-(15n^2+16n+4)=n^2$이므로 $\\overline{AP}=\\overline{BP}=n$이고 $\\overline{AB}=2n$이다.\nP, Q가 각각 $\\overline{AB}$, $\\overline{BC}$의 중점이므로 중점연결정리에 의해 $\\overline{PQ}\\parallel\\overline{AC}$이고 동위각으로 $\\angle CAB=\\angle PQB$이다. 조건 $\\angle CAB=\\angle PQR$와 합치면 $\\angle PQB=\\angle PQR$이 되어 점 R는 $\\overline{DQ}$ 위에서 직선 PQ에 대해 B와 같은 쪽 방향을 결정하고, 엇각이 같으므로 $\\overline{DQ}\\parallel\\overline{AB}$이다.\n$\\overline{DQ}\\parallel\\overline{AB}$에서 $\\angle ABC=\\angle RQC$이고 Q가 $\\overline{BC}$의 중점이므로 삼각형 CRQ와 삼각형 CAB는 닮음비 $1:2$인 닮음이며, R는 $\\overline{AC}$의 중점이다. 따라서 $\\overline{RQ}=\\dfrac{1}{2}\\overline{AB}=n$, $\\overline{CQ}=\\dfrac{1}{2}\\overline{BC}=2n+1$이다.\n$\\overline{DR}=x\\,(x>0)$로 놓으면 $\\overline{DC}=2x$, $\\overline{DQ}=\\overline{DR}+\\overline{RQ}=x+n$이다. 직각삼각형 CPB에서 $\\cos(\\angle PBC)=\\dfrac{\\overline{BP}}{\\overline{BC}}=\\dfrac{n}{4n+2}$이고, $\\overline{DQ}\\parallel\\overline{AB}$이므로 $\\angle DQC=\\angle PBC$이다.\n삼각형 CDQ에서 코사인법칙을 적용하면 $$\\overline{DC}^2=\\overline{DQ}^2+\\overline{CQ}^2-2\\,\\overline{DQ}\\cdot\\overline{CQ}\\cos(\\angle DQC)$$ 즉 $(2x)^2=(x+n)^2+(2n+1)^2-2(x+n)(2n+1)\\cdot\\dfrac{n}{4n+2}$이다.\n이 식을 정리하면 $3x^2-nx-4n^2-4n-1=0$이고, $x>0$이므로 근의 공식에서 $$\\overline{DR}=x=\\frac{n+\\sqrt{49n^2+48n+12}}{6}$$ 이다.\n따라서 $$\\overline{DR}-\\frac{4}{3}n=\\frac{n+\\sqrt{49n^2+48n+12}-8n}{6}=\\frac{1}{6}\\left(\\sqrt{49n^2+48n+12}-7n\\right)$$ 이다.\n분자를 유리화하면 $$\\lim_{n\\to\\infty}\\frac{1}{6}\\cdot\\frac{48n+12}{\\sqrt{49n^2+48n+12}+7n}=\\lim_{n\\to\\infty}\\frac{1}{6}\\cdot\\frac{48+\\frac{12}{n}}{\\sqrt{49+\\frac{48}{n}+\\frac{12}{n^2}}+7}=\\frac{1}{6}\\cdot\\frac{48}{7+7}=\\frac{4}{7}$$ 이다.\n$\\dfrac{q}{p}=\\dfrac{4}{7}$이고 $p$, $q$가 서로소인 자연수이므로 $p=7$, $q=4$이다. 따라서 $p+q=11$이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/01수열의극한/098a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{⑤번}}$$ 입니다.",
-  "finalAnswer": "5",
-  "correctAnswer": "5",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{11}}$$ 입니다.",
+  "finalAnswer": "11",
+  "correctAnswer": "11",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

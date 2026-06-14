@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 63번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "중심이 $\\mathrm{O}$, 반지름 $1$, 중심각 $\\dfrac{2}{3}\\pi$ 인 부채꼴에서 시작해, 닮은 부채꼴 안에 직사각형을 내접시키고 그 바깥 공통부분을 칠하는 과정을 무한히 반복할 때, $n$ 번째 그림 $R_n$ 에서 색칠된 부분의 넓이 $S_n$ 의 극한 $\\displaystyle\\lim_{n\\to\\infty}S_n$ 을 구한다.",
+  "C": "부채꼴 $\\mathrm{OAB}$ 는 반지름 $1$, 중심각 $\\angle\\mathrm{AOB}=\\dfrac{2}{3}\\pi$ 이고, 점 $\\mathrm{M}$ 은 호 $\\mathrm{AB}$ 의 이등분점이다. 직사각형은 두 위쪽 꼭짓점이 호 위에, 두 아래쪽 꼭짓점이 두 반지름 위에 놓이도록 부채꼴에 내접하며, 매 단계 새 직사각형의 네 변의 중점을 모두 지나는 닮은 부채꼴을 그려 같은 방식을 반복한다.",
+  "B": "닮음을 이용한 등비급수 문제다. 한 단계의 색칠 넓이는 부채꼴 넓이에서 내접 직사각형 넓이를 뺀 값이며, 부채꼴 넓이는 $\\dfrac{1}{2}r^2\\theta$ 로 구한다. 각 단계의 도형은 모두 닮은꼴이므로 색칠 넓이는 공비 $r$ 인 등비수열을 이루고, 닮음비가 $k$ 이면 넓이의 비(=공비)는 $k^2$ 이다. 따라서 첫째항 $S_1$ 과 공비 $r$ 을 구해 $\\displaystyle\\lim_{n\\to\\infty}S_n=\\dfrac{S_1}{1-r}$ 로 합을 계산한다.",
+  "S": "대칭축을 세워 좌표로 다루기 위해 $\\mathrm{O}$ 를 원점, 호의 이등분점 방향 $\\mathrm{OM}$ 을 $y$ 축 양의 방향으로 둔다. 그러면 $\\angle\\mathrm{AOM}=\\angle\\mathrm{BOM}=\\dfrac{1}{3}\\pi$ 이고 $\\mathrm{A}=\\left(\\dfrac{\\sqrt{3}}{2},\\,\\dfrac{1}{2}\\right)$, $\\mathrm{B}=\\left(-\\dfrac{\\sqrt{3}}{2},\\,\\dfrac{1}{2}\\right)$ 이다.\n내접 직사각형의 위쪽 오른쪽 꼭짓점 $\\mathrm{C}$ 는 호 위에 있고 대칭축과 이루는 각이 $\\dfrac{\\pi}{6}$ 이므로, 그 위치를 단위원 위의 점으로 나타내면 $$\\mathrm{C}=\\left(\\sin\\frac{\\pi}{6},\\ \\cos\\frac{\\pi}{6}\\right)=\\left(\\frac{1}{2},\\ \\frac{\\sqrt{3}}{2}\\right).$$ 좌우 대칭이므로 직사각형의 가로 길이는 $2\\times\\dfrac{1}{2}=1$ 이다.\n아래쪽 오른쪽 꼭짓점 $\\mathrm{G}$ 는 직사각형의 수직변 조건상 $\\mathrm{C}$ 와 같은 $x$ 좌표 $\\dfrac{1}{2}$ 를 가지면서 반지름 $\\mathrm{OA}$ 위에 있어야 한다. $\\mathrm{OA}$ 위의 점을 $t\\left(\\dfrac{\\sqrt{3}}{2},\\dfrac{1}{2}\\right)$ 로 두고 $x$ 좌표를 맞추면 $t\\cdot\\dfrac{\\sqrt{3}}{2}=\\dfrac{1}{2}$ 에서 $$\\overline{\\mathrm{OG}}=t=\\frac{1}{\\sqrt{3}}=\\frac{\\sqrt{3}}{3},\\qquad \\mathrm{G}=\\left(\\frac{1}{2},\\ \\frac{\\sqrt{3}}{6}\\right).$$\n세로 길이는 두 꼭짓점의 $y$ 좌표 차이이므로 $$\\overline{\\mathrm{CG}}=\\frac{\\sqrt{3}}{2}-\\frac{\\sqrt{3}}{6}=\\frac{\\sqrt{3}}{3}.$$ 따라서 내접 직사각형의 넓이는 $$1\\times\\frac{\\sqrt{3}}{3}=\\frac{\\sqrt{3}}{3}.$$\n첫 색칠 넓이는 부채꼴에서 직사각형을 뺀 값이다. 부채꼴 넓이가 $\\dfrac{1}{2}\\cdot 1^2\\cdot\\dfrac{2}{3}\\pi=\\dfrac{\\pi}{3}$ 이므로 $$S_1=\\frac{\\pi}{3}-\\frac{\\sqrt{3}}{3}=\\frac{\\pi-\\sqrt{3}}{3}.$$\n공비를 구하기 위해 닮음비를 본다. 새 부채꼴은 직사각형의 두 변에 맞춰 닮은꼴로 줄어들며, 대응 길이의 비는 $$\\cos\\frac{\\pi}{6}:\\sin\\frac{\\pi}{6}=1:\\frac{1}{\\sqrt{3}}$$ 이므로 닮음비가 $\\dfrac{1}{\\sqrt{3}}$ 이다. 넓이의 비는 그 제곱이므로 공비는 $$r=\\left(\\frac{1}{\\sqrt{3}}\\right)^2=\\frac{1}{3}.$$\n두 번째 부채꼴의 반지름이 $\\overline{\\mathrm{OC}}=\\dfrac{1}{2}\\cdot\\dfrac{2}{\\sqrt{3}}=\\dfrac{1}{\\sqrt{3}}$ 임을 직접 확인해도 길이의 비 $\\dfrac{\\overline{\\mathrm{OC}}}{\\overline{\\mathrm{OA}}}=\\dfrac{1}{\\sqrt{3}}$, 넓이의 비 $\\dfrac{1}{3}$ 로 같은 공비를 얻는다.\n$0<r<1$ 이므로 무한등비급수의 합 공식을 적용하면 $$\\lim_{n\\to\\infty}S_n=\\frac{S_1}{1-r}=\\frac{\\dfrac{\\pi-\\sqrt{3}}{3}}{1-\\dfrac{1}{3}}=\\frac{\\dfrac{\\pi-\\sqrt{3}}{3}}{\\dfrac{2}{3}}=\\frac{\\pi-\\sqrt{3}}{2}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/064a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{④번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{\\pi-\\sqrt{3}}{2}}}$$ 입니다.",
   "finalAnswer": "4",
   "correctAnswer": "4",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

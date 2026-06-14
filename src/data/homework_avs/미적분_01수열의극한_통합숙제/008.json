@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 수열의 극한 8번 명품 해설",
   "type": "calculus",
-  "P": "수열의 극한값과 급수의 수렴·발산을 판별합니다.",
-  "C": "최고차항으로 나누기, 샌드위치 정리, 등비수열 극한 조건을 활용합니다.",
-  "B": "수열의 극한:\n\n1) $$\\lim_{n \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교\n2) $$|r| < 1 \\Rightarrow \\lim_{n \\to \\infty} r^n = 0$$\n3) 수렴 조건: 단조 수렴 정리, 샌드위치 정리\n4) $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "함수 $f(x)=\\lim\\limits_{n\\to\\infty}\\dfrac{ax^{n+2}+7x}{3x^n+2}$ 가 $x=1$에서 연속이 되도록 하는 상수 $a$를 정하고, $20a$의 값을 구한다.",
+  "C": "정의역은 양의 실수 전체이고 $a$는 상수이다. 극한식 안의 $x^n$이 $x$의 크기에 따라 다르게 행동하므로, $f$는 $0<x<1$, $x=1$, $x>1$의 세 구간에서 서로 다른 식이 된다. 여기에 $x=1$에서의 연속 조건 $\\lim\\limits_{x\\to1^-}f(x)=\\lim\\limits_{x\\to1^+}f(x)=f(1)$ 을 부과한다.",
+  "B": "밑이 $x>0$인 거듭제곱수열 $x^n$의 극한은 $0<x<1$이면 $0$, $x=1$이면 $1$, $x>1$이면 $\\infty$로 갈린다. 분모·분자가 모두 발산하는 $x>1$ 구간에서는 최고차항 $x^n$으로 분모·분자를 나누어 극한을 구한다. 또한 함수가 한 점에서 연속이라는 것은 그 점에서 좌극한·우극한·함숫값이 모두 같다는 뜻이다.",
+  "S": "$0<x<1$이면 $\\lim\\limits_{n\\to\\infty}x^n=0$이므로 분모의 $3x^n$과 분자의 $ax^{n+2}$가 사라져, $$f(x)=\\frac{0+7x}{0+2}=\\frac{7}{2}x.$$\n$x=1$이면 $\\lim\\limits_{n\\to\\infty}x^n=1$이므로 식에 그대로 대입하여 $$f(1)=\\frac{a\\cdot 1+7\\cdot 1}{3\\cdot 1+2}=\\frac{a+7}{5}.$$\n$x>1$이면 $x^n\\to\\infty$이므로 분모·분자를 $x^n$으로 나누어 발산을 정리하면 $$f(x)=\\lim_{n\\to\\infty}\\frac{ax^2+\\dfrac{7}{x^{\\,n-1}}}{3+\\dfrac{2}{x^{\\,n}}}=\\frac{a}{3}x^2.$$\n세 구간을 모으면 $$f(x)=\\begin{cases}\\dfrac{7}{2}x & (0<x<1)\\\\[4pt]\\dfrac{a+7}{5} & (x=1)\\\\[4pt]\\dfrac{a}{3}x^2 & (x>1)\\end{cases}$$ 이고, $x=1$ 양쪽에서 식이 달라 연속이 자동으로 보장되지 않는다.\n$x=1$에서 연속이려면 좌극한·우극한·함숫값이 모두 같아야 하므로 $$\\lim_{x\\to1^-}\\frac{7}{2}x=\\lim_{x\\to1^+}\\frac{a}{3}x^2=f(1)$$ 즉 $\\dfrac{7}{2}=\\dfrac{a}{3}=\\dfrac{a+7}{5}$ 가 성립해야 한다.\n좌극한과 우극한을 맞추는 식 $\\dfrac{7}{2}=\\dfrac{a}{3}$ 에서 $$a=\\frac{3\\cdot 7}{2}=\\frac{21}{2}.$$\n이 $a$가 함숫값 조건도 만족하는지 확인하면 $\\dfrac{a+7}{5}=\\dfrac{\\frac{21}{2}+7}{5}=\\dfrac{\\frac{35}{2}}{5}=\\dfrac{7}{2}$ 로 좌·우극한과 일치하므로, $x=1$에서 연속이라는 조건을 모두 충족한다.\n따라서 $$20a=20\\times\\frac{21}{2}=210.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/01수열의극한/009a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{-4/3}}$$ 입니다.",
-  "finalAnswer": "-4/3",
-  "correctAnswer": "-4/3",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{20a=210}}$$ 입니다.",
+  "finalAnswer": "210",
+  "correctAnswer": "210",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

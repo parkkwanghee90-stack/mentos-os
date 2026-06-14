@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 정적분 107번 명품 해설",
   "type": "calculus",
-  "P": "정적분의 다양한 성질과 활용(넓이, 부피, 속도)을 다룹니다.",
-  "C": "구분구적법, 정적분과 급수의 관계, 회전체의 부피를 적용합니다.",
-  "B": "정적분의 활용:\n\n1) 넓이: $$S = \\int_a^b |f(x) - g(x)| dx$$\n2) 회전체 부피: $$V = \\pi \\int_a^b \\{f(x)\\}^2 dx$$\n3) 구분구적법: $$\\lim_{n \\to \\infty} \\sum_{k=1}^{n} f\\left(\\frac{k}{n}\\right) \\cdot \\frac{1}{n} = \\int_0^1 f(x)dx$$\n4) 속도와 거리: $$\\int_{t_1}^{t_2} |v(t)| dt$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$f(2)-g(2)$의 값을 구한다.",
+  "C": "미분가능한 두 함수 $f(x)$, $g(x)$가 모든 양의 실수 $x$에 대하여 $\\left(\\dfrac{f(x)}{x}\\right)' = x^2 e^{-x^2}$ (조건 가)와 $g(x) = \\dfrac{4}{e^4}\\displaystyle\\int_1^x e^{t^2}f(t)\\,dt$ (조건 나)를 만족하고, $f(1)=\\dfrac{1}{e}$이다.",
+  "B": "정적분으로 정의된 함수를 직접 계산하기 어려울 때는, 피적분함수를 이미 알고 있는 조건의 도함수 꼴이 드러나도록 변형한 뒤 부분적분법 $\\displaystyle\\int u'v\\,dt = \\big[uv\\big] - \\int uv'\\,dt$를 적용한다. 핵심은 조건 (가)가 $\\dfrac{f(t)}{t}$의 도함수를 알려준다는 점이며, 이를 부분적분의 한 인수로 끌어내면 미지의 $f$가 상쇄된다.",
+  "S": "부분적분의 발판을 만들기 위해, 피적분함수 $e^{t^2}f(t)$를 조건 (가)에 등장하는 $\\dfrac{f(t)}{t}$가 보이도록 쪼갠다. $$g(x)=\\frac{4}{e^4}\\int_1^x e^{t^2}f(t)\\,dt=\\frac{2}{e^4}\\int_1^x 2t\\,e^{t^2}\\cdot\\frac{f(t)}{t}\\,dt$$\n부분적분을 적용하기 위해 두 인수를 정한다. $u'=2t\\,e^{t^2}$로 두면 $u=e^{t^2}$이고, $v=\\dfrac{f(t)}{t}$로 두면 조건 (가)에 의하여 $v'=t^2 e^{-t^2}$이다.\n부분적분법 $\\displaystyle\\int u'v\\,dt=\\big[uv\\big]-\\int uv'\\,dt$를 적용하면, $u\\,v'=e^{t^2}\\cdot t^2 e^{-t^2}=t^2$으로 지수항이 깔끔하게 소거된다. $$g(x)=\\frac{2}{e^4}\\left\\{\\left[e^{t^2}\\frac{f(t)}{t}\\right]_1^x-\\int_1^x t^2\\,dt\\right\\}$$\n경계항을 대입하고 남은 정적분 $\\displaystyle\\int_1^x t^2\\,dt=\\dfrac{1}{3}x^3-\\dfrac{1}{3}$을 계산하면, $$g(x)=\\frac{2}{e^4}\\left\\{e^{x^2}\\frac{f(x)}{x}-e\\,f(1)-\\left(\\frac{1}{3}x^3-\\frac{1}{3}\\right)\\right\\}$$\n$f(1)=\\dfrac{1}{e}$를 대입하면 경계항이 $e\\,f(1)=e\\cdot\\dfrac{1}{e}=1$로 정리된다. 또한 $\\dfrac{1}{3}-1=-\\dfrac{2}{3}$이다.\n이제 $x=2$를 대입한다. $e^{2^2}\\dfrac{f(2)}{2}=e^4\\dfrac{f(2)}{2}$이고 $\\dfrac{1}{3}\\cdot 2^3=\\dfrac{8}{3}$이므로, 중괄호 안의 상수항은 $-1-\\dfrac{8}{3}+\\dfrac{1}{3}=-\\dfrac{10}{3}$이다. $$g(2)=\\frac{2}{e^4}\\left(e^4\\frac{f(2)}{2}-\\frac{10}{3}\\right)=f(2)-\\frac{20}{3e^4}$$\n구하는 값은 $f(2)$가 그대로 소거된다. $$f(2)-g(2)=f(2)-\\left(f(2)-\\frac{20}{3e^4}\\right)=\\frac{20}{3e^4}$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/09정적분/108a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{③번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{20}{3e^4}}}$$ 입니다.",
   "finalAnswer": "3",
   "correctAnswer": "3",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

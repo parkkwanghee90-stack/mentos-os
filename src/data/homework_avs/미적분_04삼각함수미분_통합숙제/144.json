@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 144번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\angle\\mathrm{BOP}=\\theta$일 때 삼각형 $\\mathrm{RQB}$에 내접하는 원의 반지름 $r(\\theta)$에 대하여 $\\displaystyle\\lim_{\\theta\\to 0+}\\dfrac{r(\\theta)}{\\theta^2}$의 값을 구한다.",
+  "C": "반지름 $1$, 중심각 $\\dfrac{\\pi}{2}$인 부채꼴 $\\mathrm{OAB}$에서 호 $\\mathrm{AB}$ 위의 점 $\\mathrm{P}$에 대하여 $\\mathrm{B}$에서 $\\mathrm{OP}$에 내린 수선의 발이 $\\mathrm{Q}$, $\\mathrm{Q}$에서 $\\mathrm{OB}$에 내린 수선의 발이 $\\mathrm{R}$이고, $0<\\theta<\\dfrac{\\pi}{2}$이다.",
+  "B": "직각을 낀 두 변의 길이가 $a$, $b$이고 빗변이 $c$인 직각삼각형의 내접원 반지름은 $r=\\dfrac{a+b-c}{2}$이다. 또한 $\\theta\\to 0$일 때 $\\dfrac{\\sin\\theta}{\\theta}\\to 1$임을 이용한다.",
+  "S": "직각삼각형 $\\mathrm{OQB}$에서 빗변 $\\mathrm{OB}=1$이고 $\\angle\\mathrm{OBQ}$를 파악하기 위해, $\\angle\\mathrm{QOB}=\\angle\\mathrm{BOP}=\\theta$이므로 $\\angle\\mathrm{OBQ}=\\dfrac{\\pi}{2}-\\theta$이고, 따라서 $$\\overline{\\mathrm{BQ}}=\\overline{\\mathrm{OB}}\\sin\\theta=\\sin\\theta.$$\n직각삼각형 $\\mathrm{QRB}$의 변을 얻기 위해 $\\angle\\mathrm{RBQ}$를 구하면, $\\angle\\mathrm{RQB}=\\dfrac{\\pi}{2}-\\angle\\mathrm{QBR}$이고 $\\angle\\mathrm{QOR}=\\theta$에서 $\\angle\\mathrm{RBQ}=\\theta$이므로, 빗변 $\\overline{\\mathrm{BQ}}=\\sin\\theta$를 두 변에 분배하면 $$\\overline{\\mathrm{BR}}=\\sin\\theta\\cos\\theta\\ \\text{가 아니라}\\ \\overline{\\mathrm{BR}}=\\sin\\theta\\cdot\\sin\\theta=\\sin^2\\theta.$$\n같은 직각삼각형 $\\mathrm{QRB}$에서 나머지 한 변을 구하면, $\\angle\\mathrm{RBQ}=\\theta$이므로 $$\\overline{\\mathrm{RQ}}=\\overline{\\mathrm{BQ}}\\sin\\theta=\\sin\\theta\\cos\\theta.$$ 이때 $\\angle\\mathrm{QRB}=\\dfrac{\\pi}{2}$이므로 $\\mathrm{QRB}$는 $\\mathrm{R}$가 직각인 직각삼각형이다.\n직각삼각형의 내접원 반지름 공식을 적용하기 위해 두 직각변 $\\overline{\\mathrm{BR}}=\\sin^2\\theta$, $\\overline{\\mathrm{RQ}}=\\sin\\theta\\cos\\theta$와 빗변 $\\overline{\\mathrm{BQ}}=\\sin\\theta$를 넣으면 $$r(\\theta)=\\frac{\\sin^2\\theta+\\sin\\theta\\cos\\theta-\\sin\\theta}{2}=\\frac{\\sin\\theta\\,(\\sin\\theta+\\cos\\theta-1)}{2}.$$\n극한 계산에서 분자를 유리화해 $\\sin^2\\theta$ 꼴을 만들기 위해 $\\sin\\theta+\\cos\\theta-1$에 켤레식을 곱하면 $$r(\\theta)=\\frac{\\sin\\theta}{2}\\cdot\\frac{(\\sin\\theta+\\cos\\theta)^2-1}{\\sin\\theta+\\cos\\theta+1}=\\frac{\\sin\\theta}{2}\\cdot\\frac{2\\sin\\theta\\cos\\theta}{1+\\sin\\theta+\\cos\\theta}=\\frac{\\sin^2\\theta\\cos\\theta}{1+\\sin\\theta+\\cos\\theta}.$$\n구하는 극한을 $\\dfrac{\\sin\\theta}{\\theta}$가 드러나도록 분리하면 $$\\lim_{\\theta\\to 0+}\\frac{r(\\theta)}{\\theta^2}=\\lim_{\\theta\\to 0+}\\left(\\frac{\\sin\\theta}{\\theta}\\right)^{2}\\cdot\\frac{\\cos\\theta}{1+\\sin\\theta+\\cos\\theta}.$$\n각 인수의 극한을 대입하면 $\\left(\\dfrac{\\sin\\theta}{\\theta}\\right)^2\\to 1$이고 $\\dfrac{\\cos\\theta}{1+\\sin\\theta+\\cos\\theta}\\to\\dfrac{1}{1+0+1}=\\dfrac{1}{2}$이므로 $$\\lim_{\\theta\\to 0+}\\frac{r(\\theta)}{\\theta^2}=1\\times\\frac{1}{2}=\\frac{1}{2}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/145a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{pi^3}}$$ 입니다.",
-  "finalAnswer": "pi^3",
-  "correctAnswer": "pi^3",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{1}{2}}}$$ 입니다.",
+  "finalAnswer": "1/2",
+  "correctAnswer": "1/2",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

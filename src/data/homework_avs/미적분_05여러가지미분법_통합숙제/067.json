@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 미적분 - 여러 가지 미분법 67번 명품 해설",
   "type": "calculus",
-  "P": "합성함수, 매개변수, 음함수의 미분법을 활용합니다.",
-  "C": "연쇄 법칙, 몫의 미분법, 매개변수 미분을 적용합니다.",
-  "B": "여러 가지 미분법:\n\n1) 합성함수: $$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$$\n2) 매개변수: $$\\frac{dy}{dx} = \\frac{\\frac{dy}{dt}}{\\frac{dx}{dt}}$$\n3) 음함수: 양변을 $$x$$로 미분, $$y' = \\frac{dy}{dx}$$로 놓고 정리\n4) 역함수 미분: $$\\frac{dx}{dy} = \\frac{1}{\\frac{dy}{dx}}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$f(x)=\\ln(\\tan x)$ $\\left(0<x<\\dfrac{\\pi}{2}\\right)$의 역함수 $g(x)$에 대하여 $\\displaystyle\\lim_{h\\to 0}\\dfrac{4g(8h)-\\pi}{h}$의 값을 구한다.",
+  "C": "$f(x)=\\ln(\\tan x)$이고 정의역은 $0<x<\\dfrac{\\pi}{2}$이다. $g$는 $f$의 역함수이므로 $g=f^{-1}$이며, $f(g(x))=x$가 성립한다.",
+  "B": "역함수의 미분: $f(g(x))=x$의 양변을 미분하면 $f'(g(x))\\,g'(x)=1$이므로 $g'(a)=\\dfrac{1}{f'(g(a))}$이다. 또한 미분계수의 정의 $\\displaystyle\\lim_{t\\to 0}\\dfrac{g(b+t)-g(b)}{t}=g'(b)$를 이용해 주어진 극한을 $g'$ 값으로 환원한다.",
+  "S": "분자에 나타난 상수 $\\pi$를 $g$의 함숫값으로 해석하기 위해 $g(0)$을 먼저 구한다. $g(0)=c$라 하면 $f(c)=0$, 즉 $\\ln(\\tan c)=0$이므로 $\\tan c=1$이고 $0<c<\\dfrac{\\pi}{2}$에서 $c=\\dfrac{\\pi}{4}$, 따라서 $g(0)=\\dfrac{\\pi}{4}$이다.\n이제 $\\pi=4g(0)$이므로 분자를 $g(0)$ 기준의 차분으로 바꾼다. $$4g(8h)-\\pi=4g(8h)-4g(0)=4\\{g(8h)-g(0)\\}.$$\n주어진 극한을 미분계수 정의 형태로 만들기 위해 분모·분자에 $8$을 맞춰 정리한다. $$\\lim_{h\\to 0}\\frac{4g(8h)-\\pi}{h}=\\lim_{h\\to 0}\\frac{4\\{g(8h)-g(0)\\}}{h}=32\\lim_{h\\to 0}\\frac{g(8h)-g(0)}{8h}=32\\,g'(0).$$\n$g'(0)$을 역함수 미분으로 구하기 위해 $f'(x)$를 계산한다. $f(x)=\\ln(\\tan x)$에서 $$f'(x)=\\frac{(\\tan x)'}{\\tan x}=\\frac{\\sec^2 x}{\\tan x}=\\frac{1}{\\sin x\\cos x}.$$\n$g'(0)=\\dfrac{1}{f'(g(0))}$이고 $g(0)=\\dfrac{\\pi}{4}$이므로 $f'\\!\\left(\\dfrac{\\pi}{4}\\right)$을 대입한다. $\\sin\\dfrac{\\pi}{4}\\cos\\dfrac{\\pi}{4}=\\dfrac{\\sqrt{2}}{2}\\cdot\\dfrac{\\sqrt{2}}{2}=\\dfrac{1}{2}$이므로 $$f'\\!\\left(\\frac{\\pi}{4}\\right)=\\frac{1}{1/2}=2,\\qquad g'(0)=\\frac{1}{f'(\\pi/4)}=\\frac{1}{2}.$$\n구한 값을 극한식에 대입하여 마무리한다. $$\\lim_{h\\to 0}\\frac{4g(8h)-\\pi}{h}=32\\,g'(0)=32\\times\\frac{1}{2}=16.$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{16}}$$ 입니다.",
   "finalAnswer": "16",
   "correctAnswer": "16",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

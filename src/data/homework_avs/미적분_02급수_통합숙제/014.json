@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 14번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "모든 항이 양수인 수열 $\\{a_n\\}$에 대하여 급수 $\\sum_{n=1}^{\\infty}(3^n a_n - 2)$가 수렴할 때, $\\lim\\limits_{n\\to\\infty}\\dfrac{6a_n + 5\\times 4^{-n}}{a_n + 3^{-n}}$의 값을 구하는 문제이다.",
+  "C": "$\\{a_n\\}$의 모든 항은 양수이고, 급수 $\\sum_{n=1}^{\\infty}(3^n a_n - 2)$가 수렴한다.",
+  "B": "급수가 수렴하면 그 일반항은 반드시 $0$으로 수렴한다는 사실($\\sum b_n$ 수렴 $\\Rightarrow \\lim_{n\\to\\infty} b_n = 0$)을 이용해 $3^n a_n$의 극한값을 먼저 확정한다. 이어서 분모와 분자에 같은 양수 $3^n$을 곱해 식을 $3^n a_n$과 $\\left(\\tfrac{3}{4}\\right)^n$, $3^{-n}$의 꼴로 정리하면, $|r|<1$인 등비수열은 $0$으로 수렴한다는 성질로 극한을 계산할 수 있다.",
+  "S": "수렴하는 급수의 일반항은 0으로 가야 하므로, $\\sum_{n=1}^{\\infty}(3^n a_n - 2)$가 수렴한다는 조건에서 $$\\lim_{n\\to\\infty}(3^n a_n - 2)=0.$$\n따라서 핵심 극한값이 먼저 확정된다. $$\\lim_{n\\to\\infty} 3^n a_n = 2.$$\n분수의 분자와 분모에 양수 $3^n$을 똑같이 곱해도 값이 변하지 않으므로, 구하는 식을 $3^n a_n$이 드러나도록 변형한다. $$\\frac{6a_n + 5\\times 4^{-n}}{a_n + 3^{-n}}=\\frac{3^n\\left(6a_n + 5\\times 4^{-n}\\right)}{3^n\\left(a_n + 3^{-n}\\right)}=\\frac{6\\cdot 3^n a_n + 5\\left(\\dfrac{3}{4}\\right)^{n}}{3^n a_n + 1}.$$\n$3^{-n}\\times 3^{n}=1$이고 $4^{-n}\\times 3^{n}=\\left(\\dfrac{3}{4}\\right)^{n}$이 됨을 확인한다. 공비가 $\\dfrac{3}{4}$로 $\\left|\\dfrac{3}{4}\\right|<1$이므로 이 등비수열은 $0$으로 수렴한다. $$\\lim_{n\\to\\infty}\\left(\\frac{3}{4}\\right)^{n}=0.$$\n앞에서 구한 $\\lim_{n\\to\\infty}3^n a_n = 2$와 위 결과를 변형한 식에 대입하면 분자와 분모의 극한이 모두 유한한 값으로 정해진다. $$\\lim_{n\\to\\infty}\\frac{6\\cdot 3^n a_n + 5\\left(\\dfrac{3}{4}\\right)^{n}}{3^n a_n + 1}=\\frac{6\\times 2 + 5\\times 0}{2 + 1}.$$\n분자와 분모를 정리하여 최종 극한값을 얻는다. $$\\frac{12}{3}=4.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/015a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{④번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{4}}$$ 입니다.",
   "finalAnswer": "4",
   "correctAnswer": "4",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

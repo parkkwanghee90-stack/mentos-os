@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 72번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "중심각이 $\\dfrac{\\pi}{2}$이고 반지름이 $1$인 부채꼴에서, 호 위의 점 $\\mathrm{P}$의 위치를 $\\angle\\mathrm{POH}=\\theta$로 정하고, $\\angle\\mathrm{PHQ}=\\theta$가 되도록 호 위에 잡은 점 $\\mathrm{Q}$로 만든 삼각형 $\\mathrm{OHQ}$의 넓이 $S(\\theta)$에 대하여 $\\displaystyle\\lim_{\\theta\\to0+}\\dfrac{S(\\theta)}{\\theta}$의 값을 구한다.",
+  "C": "반지름 $1$, 중심각 $\\dfrac{\\pi}{2}$인 부채꼴 $\\mathrm{OAB}$에서 $\\overline{\\mathrm{OA}}$를 $x$축으로 놓으면 $\\mathrm{P}=(\\cos\\theta,\\ \\sin\\theta)$, $\\mathrm{H}=(\\cos\\theta,\\ 0)$이다. 점 $\\mathrm{Q}$는 호 $\\mathrm{BP}$ 위의 점으로 $\\angle\\mathrm{PHQ}=\\theta$를 만족하고 $\\overline{\\mathrm{OQ}}=1$이며, $0<\\theta<\\dfrac{\\pi}{6}$이다.",
+  "B": "$\\angle\\mathrm{POH}=\\theta$이므로 직각삼각형 $\\mathrm{POH}$에서 $\\overline{\\mathrm{OH}}=\\cos\\theta$이다. 선분 $\\mathrm{OP}$와 선분 $\\mathrm{HQ}$의 교점을 $\\mathrm{R}$라 하면 두 직선이 이루는 각이 직각이어서 $\\overline{\\mathrm{OP}}\\perp\\overline{\\mathrm{HQ}}$이고, 이때 삼각형 $\\mathrm{OHQ}$가 선분 $\\mathrm{OR}$로 두 직각삼각형 $\\mathrm{OHR}$, $\\mathrm{ORQ}$로 나누어진다. 삼각함수의 극한 $\\displaystyle\\lim_{\\theta\\to0}\\dfrac{\\sin\\theta}{\\theta}=1$이 도구가 된다.",
+  "S": "선분 $\\mathrm{HP}$는 $y$축과 평행하고 $\\angle\\mathrm{PHQ}=\\theta$이므로 선분 $\\mathrm{HQ}$는 $x$축과 각 $\\dfrac{\\pi}{2}+\\theta$를 이룬다. 직선 $\\mathrm{OP}$의 방향 $(\\cos\\theta,\\ \\sin\\theta)$와 직선 $\\mathrm{HQ}$의 방향 $(-\\sin\\theta,\\ \\cos\\theta)$의 내적이 $0$이므로 교점 $\\mathrm{R}$에서 $\\overline{\\mathrm{OP}}\\perp\\overline{\\mathrm{HQ}}$이다.\n직각삼각형 $\\mathrm{OHR}$에서 빗변이 $\\overline{\\mathrm{OH}}=\\cos\\theta$이고 $\\angle\\mathrm{HOR}=\\theta$이므로, 빗변에 정사영을 내리면 $$\\overline{\\mathrm{OR}}=\\cos\\theta\\cos\\theta=\\cos^{2}\\theta,\\qquad \\overline{\\mathrm{HR}}=\\cos\\theta\\sin\\theta=\\tfrac{1}{2}\\sin 2\\theta.$$\n점 $\\mathrm{Q}$는 반지름 위의 점이라 $\\overline{\\mathrm{OQ}}=1$이고 $\\angle\\mathrm{ORQ}=\\dfrac{\\pi}{2}$이므로, 피타고라스 정리로 $$\\overline{\\mathrm{QR}}=\\sqrt{\\overline{\\mathrm{OQ}}^{2}-\\overline{\\mathrm{OR}}^{2}}=\\sqrt{1-\\cos^{4}\\theta}.$$\n삼각형 $\\mathrm{OHQ}$를 선분 $\\mathrm{OR}$가 두 직각삼각형으로 나누므로 넓이를 더하면 $$S(\\theta)=\\tfrac{1}{2}\\,\\overline{\\mathrm{OR}}\\cdot\\overline{\\mathrm{HR}}+\\tfrac{1}{2}\\,\\overline{\\mathrm{OR}}\\cdot\\overline{\\mathrm{QR}}=\\tfrac{1}{2}\\cos^{2}\\theta\\cdot\\tfrac{1}{2}\\sin 2\\theta+\\tfrac{1}{2}\\cos^{2}\\theta\\sqrt{1-\\cos^{4}\\theta}.$$\n근호 안을 인수분해하면 $1-\\cos^{4}\\theta=(1-\\cos^{2}\\theta)(1+\\cos^{2}\\theta)=\\sin^{2}\\theta\\,(1+\\cos^{2}\\theta)$이므로 $$\\sqrt{1-\\cos^{4}\\theta}=\\sin\\theta\\,\\sqrt{1+\\cos^{2}\\theta}.$$\n이제 $\\dfrac{S(\\theta)}{\\theta}$를 두 항으로 나누어 극한을 취한다. 첫 항은 $\\sin 2\\theta=2\\sin\\theta\\cos\\theta$를 이용하면 $$\\frac{1}{\\theta}\\cdot\\tfrac{1}{4}\\cos^{2}\\theta\\sin 2\\theta=\\tfrac{1}{2}\\cos^{3}\\theta\\cdot\\frac{\\sin\\theta}{\\theta}\\ \\xrightarrow{\\ \\theta\\to0+\\ }\\ \\tfrac{1}{2}.$$\n둘째 항은 $$\\frac{1}{\\theta}\\cdot\\tfrac{1}{2}\\cos^{2}\\theta\\,\\sin\\theta\\sqrt{1+\\cos^{2}\\theta}=\\tfrac{1}{2}\\cos^{2}\\theta\\sqrt{1+\\cos^{2}\\theta}\\cdot\\frac{\\sin\\theta}{\\theta}\\ \\xrightarrow{\\ \\theta\\to0+\\ }\\ \\tfrac{1}{2}\\cdot 1\\cdot\\sqrt{2}=\\frac{\\sqrt{2}}{2}.$$\n두 극한을 더하면 $$\\lim_{\\theta\\to0+}\\frac{S(\\theta)}{\\theta}=\\frac{1}{2}+\\frac{\\sqrt{2}}{2}=\\frac{1+\\sqrt{2}}{2}.$$ 이 값은 보기 ①과 일치한다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/073a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{sqrt(3)/3}}$$ 입니다.",
-  "finalAnswer": "sqrt(3)/3",
-  "correctAnswer": "sqrt(3)/3",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{1+\\sqrt{2}}{2}}}$$ 입니다.",
+  "finalAnswer": "1/2+sqrt(2)/2",
+  "correctAnswer": "1/2+sqrt(2)/2",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

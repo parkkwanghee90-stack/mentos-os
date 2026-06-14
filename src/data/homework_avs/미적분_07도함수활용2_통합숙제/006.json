@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 도함수의 활용 2 6번 명품 해설",
   "type": "calculus",
-  "P": "도함수를 활용한 방정식·부등식의 풀이와 최적화 문제를 해결합니다.",
-  "C": "함수의 그래프를 분석하여 근의 개수를 판별하고, 최댓값·최솟값을 구합니다.",
-  "B": "도함수의 활용 2:\n\n1) $$f(x) = g(x)$$의 실근 개수: 두 그래프의 교점\n2) 부등식 증명: 차함수의 최솟값 ≥ 0\n3) 평균값 정리: $$f'(c) = \\frac{f(b) - f(a)}{b - a}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "시각 $t=\\dfrac{\\pi}{3}$일 때 점 $\\mathrm{P}$의 속력을 구한다.",
+  "C": "점 $\\mathrm{P}$의 시각 $t$에서의 위치 $(x,\\,y)$가 $x=2t+\\sin t$, $y=1-\\cos t$로 주어져 있다.",
+  "B": "평면 위를 움직이는 점의 속도는 위치를 시각으로 미분한 벡터 $\\left(\\dfrac{dx}{dt},\\,\\dfrac{dy}{dt}\\right)$이고, 속력은 그 크기 $\\sqrt{\\left(\\dfrac{dx}{dt}\\right)^{2}+\\left(\\dfrac{dy}{dt}\\right)^{2}}$이다.",
+  "S": "속도의 두 성분을 얻기 위해 각 좌표를 $t$로 미분한다. $$\\frac{dx}{dt}=2+\\cos t,\\qquad \\frac{dy}{dt}=\\sin t$$\n주어진 시각 $t=\\dfrac{\\pi}{3}$를 대입해 속도 성분의 값을 정한다. $$\\frac{dx}{dt}=2+\\cos\\frac{\\pi}{3}=2+\\frac{1}{2}=\\frac{5}{2}$$ $$\\frac{dy}{dt}=\\sin\\frac{\\pi}{3}=\\frac{\\sqrt{3}}{2}$$\n속력은 속도 벡터의 크기이므로 두 성분의 제곱의 합에 제곱근을 씌운다. $$\\sqrt{\\left(\\frac{5}{2}\\right)^{2}+\\left(\\frac{\\sqrt{3}}{2}\\right)^{2}}=\\sqrt{\\frac{25}{4}+\\frac{3}{4}}$$\n분자를 모아 정리하면 근호 안이 정수가 되어 속력이 확정된다. $$\\sqrt{\\frac{25+3}{4}}=\\sqrt{\\frac{28}{4}}=\\sqrt{7}$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/07도함수활용2/007a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{⑤번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\sqrt{7}}}$$ 입니다.",
   "finalAnswer": "5",
   "correctAnswer": "5",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

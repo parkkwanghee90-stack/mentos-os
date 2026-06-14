@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 급수 78번 명품 해설",
   "type": "calculus",
-  "P": "무한급수의 수렴·발산을 판별하고, 등비급수 공식을 활용합니다.",
-  "C": "부분합 $$S_n$$을 구하고 극한을 취하거나, 수렴 조건을 확인합니다.",
-  "B": "무한급수:\n\n1) $$\\sum_{n=1}^{\\infty} a_n = \\lim_{n \\to \\infty} S_n$$\n2) 등비급수: $$\\sum_{n=1}^{\\infty} ar^{n-1} = \\frac{a}{1-r}$$ ($$|r| < 1$$)\n3) 수렴 필요조건: $$\\lim_{n \\to \\infty} a_n = 0$$\n4) 순환소수와 급수: $$0.\\dot{a}\\dot{b} = \\frac{ab}{99}$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle\\lim_{n\\to\\infty}S_n$의 값을 구한다. 여기서 $S_n$은 $n$번째 그림 $R_n$에서 색칠된 부분의 넓이다.",
+  "C": "중심이 $O_1$, 반지름의 길이가 $2$, 중심각의 크기가 $90^\\circ$인 부채꼴 $O_1A_1B_1$에서 $\\overline{O_1M_1}=\\dfrac{\\sqrt2}{2}\\,\\overline{O_1A_1}$, $\\overline{O_1O_2}=\\dfrac{\\sqrt2}{2}\\,\\overline{O_1B_1}$이고, 호 $A_1B_1$ 위의 점 $C_1,\\ A_2$에 대하여 $O_2M_1C_1A_2$가 직사각형이다. $R_1$은 직사각형 $O_2M_1C_1A_2$와 삼각형 $O_1C_1A_2$의 공통부분이며, 같은 과정이 중심 $O_2$, 반지름 $\\overline{O_2A_2}$인 부채꼴로 반복된다.",
+  "B": "두 도형이 닮음일 때 길이의 비가 $k$이면 넓이의 비는 $k^2$이고, 매 단계가 같은 닮음비 $k$로 반복되면 각 단계의 넓이는 공비가 $k^2$인 등비수열을 이룬다. 무한등비급수 $\\sum a_n$은 $|k^2|<1$일 때 $\\dfrac{a_1}{1-k^2}$로 수렴한다.",
+  "S": "좌표를 잡아 계산을 시작한다. $O_1$을 원점, $O_1A_1$을 $x$축, $O_1B_1$을 $y$축으로 두면 $A_1(2,0)$, $B_1(0,2)$이고 $\\overline{O_1M_1}=\\overline{O_1O_2}=\\dfrac{\\sqrt2}{2}\\cdot2=\\sqrt2$이므로 $M_1(\\sqrt2,\\,0)$, $O_2(0,\\,\\sqrt2)$이다.\n직사각형의 변 길이를 구한다. 변 $O_2M_1$은 $\\overline{O_2M_1}=\\sqrt{(\\sqrt2)^2+(\\sqrt2)^2}=2$이고, 이 변에 수직이며 호 쪽을 향하는 단위벡터는 $\\left(\\dfrac{\\sqrt2}{2},\\,\\dfrac{\\sqrt2}{2}\\right)$이다.\n꼭짓점 $C_1$이 호 위에 오도록 변의 길이 $t$를 정한다. $C_1=\\left(\\sqrt2+\\dfrac{\\sqrt2}{2}t,\\ \\dfrac{\\sqrt2}{2}t\\right)$가 $|C_1|=2$를 만족해야 하므로 $\\left(\\sqrt2+\\tfrac{\\sqrt2}{2}t\\right)^2+\\left(\\tfrac{\\sqrt2}{2}t\\right)^2=4$, 즉 $t^2+2t-2=0$에서 $t=\\sqrt3-1$이다.\n두 호 위의 꼭짓점 좌표를 확정한다. $C_1=\\left(\\dfrac{\\sqrt2+\\sqrt6}{2},\\ \\dfrac{\\sqrt6-\\sqrt2}{2}\\right)$, $A_2=\\left(\\dfrac{\\sqrt6-\\sqrt2}{2},\\ \\dfrac{\\sqrt2+\\sqrt6}{2}\\right)$로 직선 $y=x$에 대칭이며 둘 다 $|C_1|=|A_2|=2$이다.\n$R_1$의 모양을 잡는다. 직사각형 $O_2M_1C_1A_2$와 삼각형 $O_1C_1A_2$의 공통부분은 변 $A_2C_1$, 변 $O_2M_1$, 그리고 원점에서 나가는 두 직선 $O_1A_2$, $O_1C_1$로 둘러싸인 사각형이다. 변 $O_2M_1$ 위에서 $O_1A_2$, $O_1C_1$이 만나는 두 점을 각각 $P_1,\\ P_2$라 하면 공통부분은 사각형 $A_2P_1P_2C_1$이다.\n신발끈 공식으로 $R_1$의 넓이를 구한다. $P_1\\!\\left(\\dfrac{3-\\sqrt3}{... }\\right)$를 직접 대입해 계산하면 사각형 $A_2P_1P_2C_1$의 넓이는 $a_1=\\dfrac{2\\sqrt3}{3}$이다.\n닮음비를 구해 공비를 정한다. 다음 부채꼴의 반지름은 $\\overline{O_2A_2}=\\sqrt3-1$이고 처음 반지름은 $2$이므로 닮음비는 $k=\\dfrac{\\sqrt3-1}{2}$, 따라서 넓이의 공비는 $$k^2=\\frac{(\\sqrt3-1)^2}{4}=\\frac{4-2\\sqrt3}{4}=1-\\frac{\\sqrt3}{2}.$$\n무한등비급수의 합으로 마무리한다. $0<k^2<1$이므로 $$\\lim_{n\\to\\infty}S_n=\\frac{a_1}{1-k^2}=\\frac{\\dfrac{2\\sqrt3}{3}}{\\dfrac{\\sqrt3}{2}}=\\frac{2\\sqrt3}{3}\\cdot\\frac{2}{\\sqrt3}=\\frac{4}{3}.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/02급수/079a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{②번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{4}{3}}}$$ 입니다.",
   "finalAnswer": "2",
   "correctAnswer": "2",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

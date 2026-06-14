@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 도함수의 활용 1 36번 명품 해설",
   "type": "calculus",
-  "P": "이계도함수를 이용하여 곡선의 볼록성, 변곡점을 분석합니다.",
-  "C": "$$f''(x)$$의 부호로 아래/위로 볼록을 판별하고, 변곡점을 구합니다.",
-  "B": "도함수의 활용 1:\n\n1) $$f''(x) > 0$$: 아래로 볼록, $$f''(x) < 0$$: 위로 볼록\n2) 변곡점: $$f''(x) = 0$$이고 볼록성이 바뀌는 점\n3) 접선·법선의 방정식\n4) 속도·가속도 문제",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "접선의 $x$절편 함수 $g(t)$를 $t$로 미분한 도함수의 특정 값 $g'\\!\\left(\\dfrac{2\\sqrt{2}}{3}\\right)$을 구한다.",
+  "C": "$0<t<1$인 $t$에 대하여 직선 $y=t$가 $f(x)=\\sin x$ $\\left(0<x<\\dfrac{\\pi}{2}\\right)$의 그래프와 만나는 점이 P이고, 곡선 $y=f(x)$ 위의 점 P에서 그은 접선의 $x$절편이 $g(t)$이다.",
+  "B": "접점의 좌표를 $t$로 나타낸 뒤 미분계수로 접선의 기울기를 구하고, 접선의 방정식에서 $y=0$을 대입해 $x$절편을 $t$의 함수로 표현한 다음 그 함수를 다시 $t$에 대해 미분한다.",
+  "S": "교점 P의 좌표를 $t$로 표현하기 위해 $\\sin x=t$를 풀면, $0<x<\\dfrac{\\pi}{2}$에서 $x=\\arcsin t$이므로 $\\mathrm{P}\\left(\\arcsin t,\\; t\\right)$이다.\n점 P에서의 접선 기울기를 얻기 위해 $f'(x)=\\cos x$를 P에서 계산하면 $$f'(\\arcsin t)=\\cos(\\arcsin t)=\\sqrt{1-t^{2}}.$$\n기울기와 점 P로 접선의 방정식을 세우면 $$y-t=\\sqrt{1-t^{2}}\\,\\bigl(x-\\arcsin t\\bigr).$$\n$x$절편은 $y=0$일 때의 $x$이므로 $-t=\\sqrt{1-t^{2}}\\,\\bigl(x-\\arcsin t\\bigr)$에서 $$g(t)=\\arcsin t-\\dfrac{t}{\\sqrt{1-t^{2}}}.$$\n$g(t)$를 $t$에 대해 미분하기 위해 두 항을 각각 미분하면, $\\dfrac{d}{dt}\\arcsin t=\\dfrac{1}{\\sqrt{1-t^{2}}}$이고 $$\\dfrac{d}{dt}\\!\\left(\\dfrac{t}{\\sqrt{1-t^{2}}}\\right)=\\dfrac{1}{\\sqrt{1-t^{2}}}+\\dfrac{t^{2}}{(1-t^{2})^{3/2}}.$$\n두 결과를 빼면 $\\dfrac{1}{\\sqrt{1-t^{2}}}$ 항이 상쇄되어 $$g'(t)=-\\dfrac{t^{2}}{(1-t^{2})^{3/2}}.$$\n주어진 값을 대입하기 위해 $t=\\dfrac{2\\sqrt{2}}{3}$에서 $t^{2}=\\dfrac{8}{9}$, $1-t^{2}=\\dfrac{1}{9}$, $(1-t^{2})^{3/2}=\\dfrac{1}{27}$임을 구한다.\n이를 대입하면 $$g'\\!\\left(\\dfrac{2\\sqrt{2}}{3}\\right)=-\\dfrac{\\frac{8}{9}}{\\frac{1}{27}}=-24.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/06도함수활용1/037a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{②번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{-24}}$$ 입니다.",
   "finalAnswer": "2",
   "correctAnswer": "2",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

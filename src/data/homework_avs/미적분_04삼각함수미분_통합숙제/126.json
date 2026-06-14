@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 126번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "접는 각 $\\theta=\\alpha$에서 포개어지는 부분의 넓이 $S(\\theta)$가 최댓값을 가질 때, $\\cos 2\\alpha$의 값을 구한다.",
+  "C": "지름 $\\mathrm{AB}=2$인 반원에서 호 위의 점 $\\mathrm P$에 대해 $\\angle \\mathrm{PAB}=\\theta$이고, 선분 $\\mathrm{AP}$를 접는 선으로 하여 색종이를 접는다. 단, $0<\\theta<\\dfrac{\\pi}{4}$이다.",
+  "B": "중심각은 호에 대한 원주각의 $2$배이고, 반지름 $r$, 중심각 $\\beta$인 활꼴(현과 호로 둘러싸인 부분)의 넓이는 $\\dfrac{1}{2}r^{2}(\\beta-\\sin\\beta)$이다. 또한 미분으로 최댓값을 찾을 때는 $S'(\\theta)=0$을 만족하는 점에서 부호 변화를 확인한다.",
+  "S": "반원의 반지름을 정하기 위해 지름 길이를 이용한다. $\\mathrm{AB}=2$이므로 반지름은 $r=1$이다.\n접은 종이를 다시 폈을 때 호 $\\mathrm{AP}$와 선분 $\\mathrm{AB}$의 교점을 $\\mathrm Q$, 점 $\\mathrm Q$가 호 $\\mathrm{AB}$ 위로 옮겨진 점을 $\\mathrm{Q'}$라 하면 도형 $\\mathrm{AQP}$와 도형 $\\mathrm{APQ'}$가 합동이므로, $S(\\theta)$는 현 $\\mathrm{AP}$가 만드는 활꼴의 넓이에서 현 $\\mathrm{AQ'}$가 만드는 활꼴의 넓이를 뺀 값과 같다.\n각 현이 중심에서 이루는 중심각을 원주각으로부터 구한다. 호 $\\mathrm{BP}$에 대한 원주각이 $\\theta$이므로 호 $\\mathrm{AP}$의 중심각은 $\\pi-2\\theta$이고, 같은 방식으로 호 $\\mathrm{AQ'}$의 중심각은 $\\pi-4\\theta$이다.\n활꼴 넓이 공식 $\\dfrac{1}{2}r^{2}(\\beta-\\sin\\beta)$에 $r=1$을 대입하여 두 활꼴의 넓이 차로 $S(\\theta)$를 세운다. $$S(\\theta)=\\frac{1}{2}\\{(\\pi-2\\theta)-\\sin(\\pi-2\\theta)\\}-\\frac{1}{2}\\{(\\pi-4\\theta)-\\sin(\\pi-4\\theta)\\}$$\n$\\sin(\\pi-x)=\\sin x$로 정리하면 $\\pi$항이 소거되어 식이 간단해진다. $$S(\\theta)=\\frac{1}{2}(2\\theta-\\sin 2\\theta+\\sin 4\\theta)$$\n최댓값을 찾기 위해 미분한다. 합성함수 미분으로 $$S'(\\theta)=2\\cos 4\\theta-\\cos 2\\theta+1$$\n$\\cos 2\\theta$에 대한 식으로 통일하기 위해 $\\cos 4\\theta=2\\cos^{2}2\\theta-1$을 대입한다. $$S'(\\theta)=2(2\\cos^{2}2\\theta-1)-\\cos 2\\theta+1=4\\cos^{2}2\\theta-\\cos 2\\theta-1$$\n$S'(\\theta)=0$을 풀기 위해 $\\cos 2\\theta=t$로 보면 이차방정식 $4t^{2}-t-1=0$을 얻고, 근의 공식으로 $$t=\\frac{1\\pm\\sqrt{17}}{8}$$\n$0<\\theta<\\dfrac{\\pi}{4}$에서 $0<2\\theta<\\dfrac{\\pi}{2}$이므로 $0<\\cos 2\\theta<1$이다. 두 근 중 음수인 $\\dfrac{1-\\sqrt{17}}{8}$은 버리고 $$\\cos 2\\theta=\\frac{1+\\sqrt{17}}{8}$$만 남는다.\n이 값을 주는 $\\theta$를 $\\theta_{0}$이라 하면 $\\theta<\\theta_{0}$에서 $S'(\\theta)>0$, $\\theta>\\theta_{0}$에서 $S'(\\theta)<0$이므로 $S(\\theta)$는 $\\theta=\\theta_{0}$에서 최댓값을 갖는다. 따라서 $\\theta_{0}=\\alpha$이고 $$\\cos 2\\alpha=\\frac{1+\\sqrt{17}}{8}$$이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/127a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{1/4}}$$ 입니다.",
-  "finalAnswer": "1/4",
-  "correctAnswer": "1/4",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{1+\\sqrt{17}}{8}}}$$ 입니다.",
+  "finalAnswer": "(1+sqrt(17))/8",
+  "correctAnswer": "(1+sqrt(17))/8",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

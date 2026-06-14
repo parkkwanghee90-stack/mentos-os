@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 수열의 극한 72번 명품 해설",
   "type": "calculus",
-  "P": "수열의 극한값과 급수의 수렴·발산을 판별합니다.",
-  "C": "최고차항으로 나누기, 샌드위치 정리, 등비수열 극한 조건을 활용합니다.",
-  "B": "수열의 극한:\n\n1) $$\\lim_{n \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교\n2) $$|r| < 1 \\Rightarrow \\lim_{n \\to \\infty} r^n = 0$$\n3) 수렴 조건: 단조 수렴 정리, 샌드위치 정리\n4) $$\\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n = e$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$p+q+h(4)$의 값을 구한다.",
+  "C": "$f(x)=\\dfrac{1}{2}x^3-\\dfrac{3}{2}x^2+5$, $g(x)=\\dfrac{1}{2}px^2+\\dfrac{1}{2}qx+5\\ (x<0)$이고 $x\\ge 0$에서 $g(x)=5$이며, $h(x)=\\displaystyle\\lim_{n\\to\\infty}\\dfrac{(f(x))^{2n+1}+5^{2n}\\times g(x)}{(f(x))^{2n}+5^{2n}}$가 실수 전체에서 연속이다. 또한 직선 $y=\\left(k-\\dfrac{1}{2^n}\\right)x+5$가 $y=h(x)$와 만나는 점의 개수 $a_n$이 $\\displaystyle\\lim_{n\\to\\infty}a_n=4$를 만족하는 자연수 $k$가 $7$개이다.",
+  "B": "$\\left|\\dfrac{5}{f(x)}\\right|<1$이면 $\\left(\\dfrac{5}{f(x)}\\right)^{2n}\\to 0$, $\\left|\\dfrac{5}{f(x)}\\right|>1$이면 발산하므로, $r^{2n}$ 꼴이 든 극한은 밑의 절댓값이 $1$보다 큰지 작은지로 경우를 나눈다. 또한 두 함수가 한 점에서 같은 값을 가지며 그 점에서 연속이 되려면 좌극한·우극한·함숫값이 모두 일치해야 한다.",
+  "S": "$h(x)$를 $\\left(\\dfrac{5}{f(x)}\\right)^{2n}$으로 정리하기 위해 $|f(x)|$와 $5$의 대소로 나누면, $|f(x)|>5$일 때 $h(x)=f(x)$, $|f(x)|=5$일 때 $h(x)=\\dfrac{f(x)+g(x)}{2}$, $|f(x)|<5$일 때 $h(x)=g(x)$이다.\n$f(x)$의 극값을 찾으면 $f'(x)=\\dfrac{3}{2}x^2-3x=\\dfrac{3}{2}x(x-2)$이므로 $x=0$에서 극댓값 $5$, $x=2$에서 극솟값 $3$을 가지고, $x<0$에서 $g(x)\\to g(0)=5$이므로 $g$는 연속이다.\n$h(x)$가 실수 전체에서 연속이려면 경계점에서 좌우 극한이 같아야 하는데, $f(-2)=\\dfrac{1}{2}(-8)-\\dfrac{3}{2}(4)+5=-5$로 $|f(-2)|=5$이므로 $x=-2$에서 $f(-2)=g(-2)$가 성립해야 한다.\n조건 $f(-2)=g(-2)$를 대입하면 $-5=2p-q+5$이므로 $q=2p+10$을 얻는다.\n직선 $y=\\left(k-\\dfrac{1}{2^n}\\right)x+5$는 항상 점 $(0,5)$를 지나고 기울기가 $k-\\dfrac{1}{2^n}$이어서 $k-1<k-\\dfrac{1}{2^n}<k$를 만족하므로, $h(x)$의 그래프가 $(0,5)$ 부근과 $(-2,-5)$ 부근에서 갖는 기울기와 비교해 교점 수가 정해진다. $(-2,-5),(0,5)$를 지나는 직선의 기울기는 $5$이고 $\\displaystyle\\lim_{x\\to 0^-}\\dfrac{h(x)-h(0)}{x}=\\dfrac{q}{2}$, $\\displaystyle\\lim_{x\\to -2^-}\\dfrac{h(x)-h(-2)}{x+2}=\\dfrac{1}{2}(4+10+ \\cdots)=12$이다.\n기울기 임계값으로 경우를 나누면, $k\\le 5$이면 모든 $n$에서 $a_n=2$라 $\\displaystyle\\lim a_n=2$, $5<k\\le\\dfrac{q}{2}$이면 $a_n=4$라 $\\displaystyle\\lim a_n=4$, $k>\\dfrac{q}{2}$이면 $a_n=3$이라 $\\displaystyle\\lim a_n=3$이다.\n$\\displaystyle\\lim_{n\\to\\infty}a_n=4$인 자연수 $k$가 $7$개이려면 $5<k\\le\\dfrac{q}{2}$에 정수 $k$가 정확히 $7$개여야 하므로 $12\\le\\dfrac{q}{2}<13$, 즉 $24\\le q<26$이고, $p=\\dfrac{q-10}{2}$이 자연수가 되려면 $q=24$, $p=7$이다.\n$x=4$에서 $f(4)=\\dfrac{1}{2}(64)-\\dfrac{3}{2}(16)+5=32-24+5=13$이고 $|f(4)|=13>5$이므로 $h(4)=f(4)=13$, 따라서 $p+q+h(4)=7+24+13=44$이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/01수열의극한/073a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{sqrt(2)/2}}$$ 입니다.",
-  "finalAnswer": "sqrt(2)/2",
-  "correctAnswer": "sqrt(2)/2",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{44}}$$ 입니다.",
+  "finalAnswer": "44",
+  "correctAnswer": "44",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

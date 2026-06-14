@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 48번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "닫힌구간 $[0,\\,2\\pi]$에서 삼각방정식 $(\\sqrt{3}\\sin x+\\cos x)^2-2\\sin\\!\\left(x+\\dfrac{\\pi}{6}\\right)=0$의 모든 해의 합을 구한다.",
+  "C": "$x$의 범위는 $0\\le x\\le 2\\pi$이고, 식 안에는 $\\sqrt{3}\\sin x+\\cos x$와 $\\sin\\!\\left(x+\\dfrac{\\pi}{6}\\right)$이 함께 들어 있다.",
+  "B": "서로 다른 모양의 두 항을 하나의 각으로 묶으면 방정식이 단일 변수의 이차식으로 정리된다. 삼각함수의 합성에서 $a\\sin x+b\\cos x=\\sqrt{a^2+b^2}\\,\\sin(x+\\alpha)$이며, 여기서 $\\sqrt{3}\\sin x+\\cos x$는 진폭 $\\sqrt{(\\sqrt{3})^2+1^2}=2$로 $\\sin\\!\\left(x+\\dfrac{\\pi}{6}\\right)$ 꼴로 합성된다. 합성으로 두 항의 각이 일치하면 $t=\\sin\\!\\left(x+\\dfrac{\\pi}{6}\\right)$ 치환으로 인수분해된다.",
+  "S": "두 항의 각을 통일하기 위해 첫 항을 합성한다. 진폭이 $\\sqrt{(\\sqrt{3})^2+1^2}=2$이므로 $$\\sqrt{3}\\sin x+\\cos x=2\\sin\\!\\left(x+\\frac{\\pi}{6}\\right).$$\n합성식을 대입하면 방정식이 같은 각 $x+\\dfrac{\\pi}{6}$만으로 표현된다. $$\\left(2\\sin\\!\\left(x+\\frac{\\pi}{6}\\right)\\right)^2-2\\sin\\!\\left(x+\\frac{\\pi}{6}\\right)=4\\sin^2\\!\\left(x+\\frac{\\pi}{6}\\right)-2\\sin\\!\\left(x+\\frac{\\pi}{6}\\right)=0.$$\n공통인수 $2\\sin\\!\\left(x+\\dfrac{\\pi}{6}\\right)$로 묶어 인수분해한다. $$2\\sin\\!\\left(x+\\frac{\\pi}{6}\\right)\\left(2\\sin\\!\\left(x+\\frac{\\pi}{6}\\right)-1\\right)=0.$$\n각 인수가 $0$이 되는 경우로 나눈다. $$\\sin\\!\\left(x+\\frac{\\pi}{6}\\right)=0 \\quad \\text{또는} \\quad \\sin\\!\\left(x+\\frac{\\pi}{6}\\right)=\\frac{1}{2}.$$\n$x$의 범위 $0\\le x\\le 2\\pi$를 각 $x+\\dfrac{\\pi}{6}$로 옮기면 새 변수의 범위가 정해진다. $$\\frac{\\pi}{6}\\le x+\\frac{\\pi}{6}\\le \\frac{13}{6}\\pi.$$\n이 범위에서 $\\sin\\!\\left(x+\\dfrac{\\pi}{6}\\right)=0$이 되는 각을 찾는다. $$x+\\frac{\\pi}{6}=\\pi,\\ 2\\pi \\ \\Longrightarrow\\ x=\\frac{5}{6}\\pi,\\ \\frac{11}{6}\\pi.$$\n같은 범위에서 $\\sin\\!\\left(x+\\dfrac{\\pi}{6}\\right)=\\dfrac{1}{2}$이 되는 각을 찾는다. $$x+\\frac{\\pi}{6}=\\frac{\\pi}{6},\\ \\frac{5}{6}\\pi,\\ \\frac{13}{6}\\pi \\ \\Longrightarrow\\ x=0,\\ \\frac{2}{3}\\pi,\\ 2\\pi.$$\n구간 안의 모든 해를 모아 합한다. 다섯 해 $x=0,\\ \\dfrac{2}{3}\\pi,\\ \\dfrac{5}{6}\\pi,\\ \\dfrac{11}{6}\\pi,\\ 2\\pi$의 합은 $$0+\\frac{2}{3}\\pi+\\frac{5}{6}\\pi+\\frac{11}{6}\\pi+2\\pi=\\frac{16}{3}\\pi.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/049a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{⑤번}}$$ 입니다.",
-  "finalAnswer": "5",
-  "correctAnswer": "5",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{16}{3}\\pi}}$$ 입니다.",
+  "finalAnswer": "16/3",
+  "correctAnswer": "16/3",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

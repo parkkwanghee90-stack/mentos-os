@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 105번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle\\lim_{\\theta\\to 0+}\\dfrac{8f(\\theta)}{\\theta^{3}}$의 값. 여기서 $f(\\theta)$는 삼각형 $PQR$의 넓이이다.",
+  "C": "한 변의 길이가 $3$인 정사각형 $ABCD$ 안에, 중심이 $B$이고 중심각이 $\\dfrac{\\pi}{2}$, 반지름이 $3$인 부채꼴 $BCA$가 있다. 호 $AC$ 위의 점 $P$에서 $\\angle PBC=\\theta$이고, 점 $P$에서의 접선이 선분 $CD$와 만나는 점이 $Q$, 선분 $BP$의 연장선이 선분 $CD$와 만나는 점이 $R$이다. $0<\\theta<\\dfrac{\\pi}{4}$.",
+  "B": "원 밖의 한 점에서 원에 그은 두 접선의 길이는 서로 같고, 각 접점과 외부 점, 중심으로 이루어진 두 직각삼각형은 합동이다. 또한 $\\theta\\to 0+$일 때 $\\tan\\theta$와 $\\theta$는 같은 차수의 무한소이므로 $\\dfrac{\\tan(a\\theta)}{\\theta}\\to a$를 이용해 극한을 구한다.",
+  "S": "접선의 길이를 점 $C$ 기준으로 모으기 위해 두 접선을 비교한다. 점 $C$는 부채꼴의 호의 끝점이자 정사각형의 꼭짓점이므로 변 $CD$는 점 $C$에서 원(중심 $B$, 반지름 $3$)에 그은 접선이고, 점 $P$에서의 접선도 같은 외부 점 $C$를 지나 $Q$에서 만나므로 $C$에서 그은 두 접선의 접점은 각각 $C$와 $P$이다.\n두 접선의 길이는 같다는 성질에서 $\\overline{QP}=\\overline{QC}$이고, 직각삼각형 $BPQ$와 $BCQ$는 빗변 $BQ$를 공유하며 $\\overline{BP}=\\overline{BC}=3$이므로 서로 합동이다. 따라서 $\\angle QBC=\\dfrac{1}{2}\\angle PBC=\\dfrac{\\theta}{2}$.\n직각삼각형 $BCQ$($\\angle BCQ=\\dfrac{\\pi}{2}$)에서 밑변 $\\overline{BC}=3$, 끼인각 $\\angle QBC=\\dfrac{\\theta}{2}$이므로 접선의 길이를 직접 얻는다. $$\\overline{PQ}=\\overline{QC}=\\overline{BC}\\tan\\frac{\\theta}{2}=3\\tan\\frac{\\theta}{2}.$$\n선분 $BP$의 연장선이 $CD$와 만나는 점이 $R$이므로 직각삼각형 $RPQ$에서 직각을 끼는 각을 찾는다. $PQ\\perp BP$(접선과 반지름의 수직), 즉 $\\angle QPR=\\dfrac{\\pi}{2}$이고 $\\angle RQP=\\theta$이므로 $$\\overline{PR}=\\overline{PQ}\\tan\\theta=3\\tan\\frac{\\theta}{2}\\tan\\theta.$$\n삼각형 $PQR$은 $\\angle QPR=\\dfrac{\\pi}{2}$인 직각삼각형이므로 두 직각변의 곱의 절반이 넓이이다. $$f(\\theta)=\\frac{1}{2}\\,\\overline{PQ}\\cdot\\overline{PR}=\\frac{1}{2}\\cdot 3\\tan\\frac{\\theta}{2}\\cdot 3\\tan\\frac{\\theta}{2}\\tan\\theta=\\frac{9}{2}\\tan^{2}\\frac{\\theta}{2}\\tan\\theta.$$\n구하는 극한에 대입한 뒤, 무한소 비교를 위해 $\\tan$을 각도로 바꾸는 인자를 분리한다. $$\\frac{8f(\\theta)}{\\theta^{3}}=\\frac{36\\tan^{2}\\dfrac{\\theta}{2}\\tan\\theta}{\\theta^{3}}=36\\left(\\frac{\\tan\\dfrac{\\theta}{2}}{\\theta}\\right)^{2}\\cdot\\frac{\\tan\\theta}{\\theta}.$$\n$\\theta\\to 0+$일 때 $\\dfrac{\\tan\\dfrac{\\theta}{2}}{\\theta}\\to\\dfrac{1}{2}$, $\\dfrac{\\tan\\theta}{\\theta}\\to 1$이므로 $$\\lim_{\\theta\\to 0+}\\frac{8f(\\theta)}{\\theta^{3}}=36\\cdot\\left(\\frac{1}{2}\\right)^{2}\\cdot 1=36\\cdot\\frac{1}{4}=9.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/106a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{80}}$$ 입니다.",
-  "finalAnswer": "80",
-  "correctAnswer": "80",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{9}}$$ 입니다.",
+  "finalAnswer": "9",
+  "correctAnswer": "9",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

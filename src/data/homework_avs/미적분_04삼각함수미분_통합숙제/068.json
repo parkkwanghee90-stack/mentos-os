@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 68번 명품 해설",
   "type": "calculus",
-  "P": "삼각함수의 극한과 도함수를 구합니다.",
-  "C": "$$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$ 등 기본 극한을 활용합니다.",
-  "B": "삼각함수의 미분:\n\n1) $$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$$, $$\\lim_{x \\to 0} \\frac{\\tan x}{x} = 1$$\n2) $$(\\sin x)' = \\cos x$$, $$(\\cos x)' = -\\sin x$$\n3) $$(\\tan x)' = \\sec^2 x$$\n4) $$(\\sin f(x))' = f'(x) \\cos f(x)$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle \\lim_{\\theta \\to 0+} \\frac{S(\\theta)}{\\theta^3}$의 값. 여기서 $S(\\theta)$는 삼각형 $PRQ$의 넓이.",
+  "C": "길이가 $2$인 선분 $AB$를 지름으로 하는 반원 위에 점 $P$가 있고, $\\angle PAB = \\theta$ $\\left(0<\\theta<\\dfrac{\\pi}{4}\\right)$이다. 점 $B$를 지나 $AB$에 수직인 직선이 직선 $AP$와 만나는 점이 $Q$, 점 $P$에서 반원에 접하는 직선이 선분 $BQ$와 만나는 점이 $R$이다.",
+  "B": "지름에 대한 원주각은 직각이므로 $\\angle APB = 90^\\circ$이고, 직각삼각형에서 변의 길이는 빗변과 삼각비로 구한다. 또 한 점에서 원에 그은 두 접선의 길이는 서로 같다(접선의 길이 정리). 미세각 극한은 $\\sin\\theta \\sim \\theta,\\ \\tan\\theta \\sim \\theta$를 이용한다.",
+  "S": "$AB$가 지름이므로 $\\angle APB=90^\\circ$이고, 직각삼각형 $APB$에서 빗변 $AB=2$이므로 $\\overline{AP}=2\\cos\\theta,\\ \\overline{BP}=2\\sin\\theta$이다.\n좌표를 $A(0,0),\\ B(2,0)$으로 두면 $B$를 지나 $AB$에 수직인 직선은 $x=2$이고, 직선 $AP$의 기울기는 $\\tan\\theta$이므로 그 교점은 $$Q=(2,\\ 2\\tan\\theta).$$\n점 $P$는 직선 $AP$ 위에서 $\\overline{AP}=2\\cos\\theta$이므로 $$P=(2\\cos^2\\theta,\\ 2\\sin\\theta\\cos\\theta).$$\n지름의 끝점 $B$에서의 접선은 $AB$에 수직, 즉 직선 $x=2$ 자체이므로 직선 $BQ$는 $B$에서의 접선이다. 따라서 $R$는 점 $P$에서의 접선과 점 $B$에서의 접선의 교점이고, 접선의 길이 정리에 의해 $\\overline{RP}=\\overline{RB}$이다.\n이 조건으로 $R$를 구하면 $R=(2,\\ \\tan\\theta)$이고, 따라서 밑변 $$\\overline{RQ}=2\\tan\\theta-\\tan\\theta=\\tan\\theta.$$\n삼각형 $PRQ$에서 밑변 $RQ$는 직선 $x=2$ 위에 있으므로 높이는 점 $P$에서 이 직선까지의 거리 $$2-2\\cos^2\\theta=2\\sin^2\\theta$$ 이다.\n넓이는 $$S(\\theta)=\\frac12\\cdot\\overline{RQ}\\cdot(\\text{높이})=\\frac12\\cdot\\tan\\theta\\cdot 2\\sin^2\\theta=\\sin^2\\theta\\,\\tan\\theta.$$\n$\\theta\\to 0+$에서 $\\sin\\theta\\sim\\theta,\\ \\tan\\theta\\sim\\theta$이므로 $$\\lim_{\\theta\\to 0+}\\frac{S(\\theta)}{\\theta^3}=\\lim_{\\theta\\to 0+}\\frac{\\sin^2\\theta\\,\\tan\\theta}{\\theta^3}=\\left(\\lim_{\\theta\\to0+}\\frac{\\sin\\theta}{\\theta}\\right)^2\\cdot\\lim_{\\theta\\to0+}\\frac{\\tan\\theta}{\\theta}=1^2\\cdot 1=1.$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/미적분/04삼각함수미분/069a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{②번}}$$ 입니다.",
-  "finalAnswer": "2",
-  "correctAnswer": "2",
-  "pcbsa_completed": true
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{1}}$$ 입니다.",
+  "finalAnswer": "1",
+  "correctAnswer": "1",
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }
