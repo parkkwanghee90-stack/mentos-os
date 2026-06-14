@@ -4,6 +4,7 @@ import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import {
   Eye, BrainCircuit, Target, ClipboardList, BarChart3, Bot, ArrowRight,
 } from "lucide-react";
+import LandingHeroAvs from "@/components/home/LandingHeroAvs";
 
 /* 히어로 액션 영역 로테이션 카피 (자유롭게 추가/수정 가능) */
 const ROTATE = [
@@ -123,25 +124,22 @@ export default function LandingHero() {
       <div className="hv-wrap hv-hero-inner">
         <div className="hv-hero-copy">
           <p className="hv-eyebrow">분당 25년 수학 노하우 × AI 기술의 만남</p>
-          <h1 className="hv-hero-title">
-            수학을 외우지 마세요.<br />
-            <span className="hv-accent-blue">이해하게 하세요.</span>
+          <h1 className="hv-hero-title" style={{ wordBreak: "keep-all" }}>
+            정답만 보여주지 않습니다.<br />
+            <span className="hv-accent-blue">생각의 순서를 보여줍니다.</span>
           </h1>
           <p className="hv-hero-lead">
-            AVS(Animated Visual Solution)기반 AI가<br className="hv-br-pc" />
-            학생의 사고과정을 분석하고, 이해를 시각화합니다.
+            AVS는 문제를 푸는 <b>사고의 단계</b>를<br className="hv-br-pc" />
+            애니메이션과 음성으로 보여주는 AI 풀이입니다.
           </p>
           <div className="hv-hero-actions">
-            <Link to="/login" className="hv-btn hv-btn-primary hv-btn-lg">무료 체험 시작 <ArrowRight size={18} /></Link>
+            <Link to="/grade-select" className="hv-btn hv-btn-primary hv-btn-lg">무료 체험 시작 <ArrowRight size={18} /></Link>
           </div>
           <RotatingTagline />
         </div>
 
         <div className="hv-hero-visual">
-          <div className="hv-laptop">
-            <div className="hv-laptop-screen"><ProductUI /></div>
-            <div className="hv-laptop-base" />
-          </div>
+          <LandingHeroAvs />
         </div>
       </div>
 

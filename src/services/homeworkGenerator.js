@@ -2,6 +2,60 @@ import { mathTextsData, avsAnswersData } from './mathDataLoader.js';
 import { HOMEWORK_UNITS, getHomeworkRange } from '../data/homeworkSSOT.js';
 import { resolveAnswer } from './answerResolver.js';
 
+/**
+ * 도형의 방정식 단원(통합숙제 SSOT 미수록) — 단계별 크롭/정답에 직접 연결.
+ * 문제 이미지: Supabase /math_crops/<folder>/<pid>.webp, 정답: avs_answers[answerKey][pid]
+ * pid 목록은 avs_answers의 키에서 동적으로 추출(실재 문항만 → 404 방지).
+ */
+const GEOMETRY_HOMEWORK_UNITS = [
+  { match: ['점과좌표', '점과 좌표'],     title: '점과 좌표',     folder: 'point_coord_step3', answerKey: '점과좌표3단계' },
+  { match: ['직선의방정식', '직선의 방정식'], title: '직선의 방정식', folder: 'line_eq_step2',     answerKey: '직선의방정식2단계' },
+  { match: ['원의방정식', '원의 방정식'],   title: '원의 방정식',   folder: 'circle_eq_step4',   answerKey: '원의방정식4단계' },
+  { match: ['도형의이동', '도형의 이동'],   title: '도형의 이동',   folder: 'shape_move_step2',  answerKey: '도형의이동2단계' },
+];
+
+/** 도형 단원이면 단계별 크롭으로 dynamic 숙제를 만들어 반환. 아니면 null. */
+function tryGenerateGeometryHomework(currentUnitName, courseName, teacherName, homeworkId, assignedAt, shortDateStr) {
+  const clean = (currentUnitName || '').replace(/\s+/g, '');
+  const geo = GEOMETRY_HOMEWORK_UNITS.find(g =>
+    g.match.some(m => { const mc = m.replace(/\s+/g, ''); return clean.includes(mc) || mc.includes(clean); }));
+  if (!geo) return null;
+
+  const ansMap = (avsAnswersData && avsAnswersData[geo.answerKey]) || {};
+  const allPids = Object.keys(ansMap).filter(k => /^\d{3}$/.test(k)).sort();
+  if (allPids.length === 0) return null;
+
+  // 등급별 문항 수: 1~2/3등급은 전체(최대 21), 4~5등급은 10문항
+  const studentLevel = localStorage.getItem('studentLevel') || '4~5등급';
+  const cap = (studentLevel.includes('1~2') || studentLevel.includes('3')) ? 21 : 10;
+  const pids = allPids.slice(0, Math.min(cap, allPids.length));
+
+  const problems = pids.map((pid, i) => ({
+    problemId: `${homeworkId}_p_${i}`,
+    unit: geo.answerKey,
+    questionText: `[${geo.title} 보강] 다음 문제 이미지를 분석하고 정확한 정답을 입력하시오.`,
+    problemImage: `/math_crops/${geo.folder}/${pid}.webp`,
+    answer: ansMap[pid] != null ? String(ansMap[pid]) : '',
+    sourceProblemId: parseInt(pid, 10),
+    isHomework: true,
+  }));
+
+  const homeworkTitle = `[취약단원 보강] ${geo.title} 핵심 과제`;
+  const localHwList = JSON.parse(localStorage.getItem('mentosHomework') || '[]');
+  localHwList.unshift({
+    homeworkId, title: homeworkTitle, assignedAt, status: 'assigned',
+    subject: 'math', teacherId: teacherName || 'AI 튜터', unitKey: geo.answerKey,
+  });
+  localStorage.setItem('mentosHomework', JSON.stringify(localHwList));
+
+  const localHwDb = JSON.parse(localStorage.getItem('mentos_math_homework_db') || '[]');
+  localHwDb.push({ homeworkId, title: homeworkTitle, date: shortDateStr, problems });
+  localStorage.setItem('mentos_math_homework_db', JSON.stringify(localHwDb));
+
+  console.log(`[HOMEWORK GENERATOR] 도형 숙제 생성: ${geo.title} (${geo.folder}) ${problems.length}문항`);
+  return { homeworkId, problemsCount: problems.length };
+}
+
 
 /**
  * Scrambles and clones a math problem based on its type.
@@ -267,6 +321,10 @@ export function generateMathHomework(sessionHistory, courseName, teacherName, op
 
   console.log(`[HOMEWORK GENERATOR] Generating unified homework for ${currentUnitName} (Course: ${courseName}, Teacher: ${teacherName}).`);
 
+  // 0. 도형의 방정식 단원(통합숙제 SSOT 미수록) → 단계별 크롭으로 직접 생성
+  const geometryResult = tryGenerateGeometryHomework(currentUnitName, courseName, teacherName, homeworkId, assignedAt, shortDateStr);
+  if (geometryResult) return geometryResult;
+
   // 2. Identify matching homework unit inside homeworkSSOT.js
   const cleanUnitName = currentUnitName.replace(/\s+/g, '').replace(/[(]/g, '').replace(/[)]/g, '').replace(/단계/g, '').replace(/[\[\]\·]/g, '').replace(/개념/g, '');
   
@@ -290,21 +348,12 @@ export function generateMathHomework(sessionHistory, courseName, teacherName, op
            cleanFolder.includes(cleanUnitName) || cleanUnitName.includes(cleanFolder);
   });
 
-  // Secondary fallback matching by course subject
-  if (!matchedUnit && courseName) {
-    const cleanCourse = courseName.replace(/\s+/g, '').toLowerCase();
-    matchedUnit = HOMEWORK_UNITS.find(u => {
-      const cleanSubj = (u.subject || '수학상').replace(/\s+/g, '').toLowerCase();
-      if (cleanCourse.includes('미적분')) return cleanSubj.includes('미적분');
-      if (cleanCourse.includes('수학1') || cleanCourse.includes('수1') || cleanCourse.includes('대수')) return cleanSubj.includes('수학1');
-      if (cleanCourse.includes('수학2') || cleanCourse.includes('수2')) return cleanSubj.includes('수학2');
-      return cleanSubj.includes('수학상') || !u.subject;
-    });
-  }
-
-  // Ultimate fallback
+  // 단원명이 어떤 통합숙제 단원과도 매칭되지 않으면 숙제를 만들지 않는다.
+  // (이전엔 '첫 과목단원' / HOMEWORK_UNITS[0]로 폴백 → 예: '원의 방정식' 수업인데
+  //  엉뚱하게 '다항식' 숙제가 나가던 버그. 미커버 단원은 차라리 건너뛴다.)
   if (!matchedUnit) {
-    matchedUnit = HOMEWORK_UNITS[0];
+    console.warn(`[HOMEWORK GENERATOR] '${currentUnitName}'에 매칭되는 통합숙제 단원이 없어 숙제 생성을 건너뜁니다(엉뚱한 단원 발송 방지).`);
+    return null;
   }
 
   // 3. Determine problem range based on student rank stage configs

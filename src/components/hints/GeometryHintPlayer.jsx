@@ -101,7 +101,8 @@ function preprocessLatexString(latex) {
 
     // 한글이 있고, \text{ 가 없는가? -> 일반 평문 텍스트 내에서 x^4 = 1 등 쌩 수식 감지하여 $...$로 감싸기
     let result = part;
-    const mathCandidateRegex = /([a-zA-Z0-9\^_\+\-\*\/\=\<\>\(\)\\]+(?:\s*[a-zA-Z0-9\^_\+\-\*\/\=\<\>\(\)\\]+)*)/g;
+    // {} 포함: \sqrt{3}, \frac{1}{3} 등이 명령어와 인자가 분리돼 "$\sqrt$" + "{3}"로 깨지던 버그 방지
+    const mathCandidateRegex = /([a-zA-Z0-9\^_\+\-\*\/\=\<\>\(\)\\{}]+(?:\s*[a-zA-Z0-9\^_\+\-\*\/\=\<\>\(\)\\{}]+)*)/g;
     
     result = part.replace(mathCandidateRegex, (match) => {
       const trimmedMatch = match.trim();
@@ -435,7 +436,7 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
         .avs-text-col { min-width: 0 !important; }
         .avs-card-body, .avs-rich-text {
           min-width: 0 !important; max-width: 100% !important;
-          overflow-wrap: anywhere !important; word-break: break-word !important;
+          overflow-wrap: anywhere !important; word-break: keep-all !important;
         }
         /* 한 개의 초장문 수식만 그 블록 내부에서 스크롤(보드 자체는 안 늘어남) */
         .avs-katex-block, .avs-text-col .katex-display {
@@ -449,6 +450,8 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
         .avs-body-wrapper {
           display: flex !important;
           flex-direction: row !important;
+          flex-wrap: wrap !important;
+          container-type: inline-size;
           gap: 1.5rem !important;
           align-items: flex-start !important;
           width: 100% !important;
@@ -487,6 +490,13 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
         }
         .avs-canvas-col.order-last {
           order: 1 !important;
+        }
+        /* ── 컨테이너(뷰포트 아님)가 좁으면 세로 stack: 인스펙터/교실 사이드바 등
+           넓은 뷰포트+좁은 컨테이너에서 텍스트 컬럼이 ~90px로 줄어 한글이
+           한 글자씩 세로로 깨지던 버그 방지. (definitions 뒤에 와야 override됨) ── */
+        @container (max-width: 560px) {
+          .avs-text-col { width: 100% !important; order: 2 !important; }
+          .avs-canvas-col { width: 100% !important; order: 1 !important; height: auto !important; }
         }
 
         @media (max-width: 768px) {

@@ -72,7 +72,7 @@ export default function LandingPricing() {
           <span className="hv-pricing-eyebrow">AI 1:1 과외</span>
           <h2 className="hv-h2">학원·과외보다 똑똑하게,<br />매쓰멘토스 AI 과외</h2>
           <p className="hv-sub">사고력 AVS로 직접 가르치는 AI 1:1 과외.<br />학원 월 20~40만 · 과외 회당 5~10만 → 매쓰멘토스 <b>월 89,000원</b>.</p>
-          <button type="button" onClick={() => navigate("/login")} className="hv-btn hv-btn-primary hv-btn-lg">지금 무료로 시작하기 <ArrowRight size={18} /></button>
+          <button type="button" onClick={() => navigate("/grade-select")} className="hv-btn hv-btn-primary hv-btn-lg">지금 무료로 시작하기 <ArrowRight size={18} /></button>
           <p className="hv-guarantee"><ShieldCheck size={16} /> 1개월 안에 성적 변화 없으면 <b>100% 환불 보장</b></p>
           <p className="hv-pricing-note">· 선착순 100명 첫 1개월 무료 → 1,000명 얼리버드 월 49,000원 → 이후 정가 월 89,000원</p>
         </div>

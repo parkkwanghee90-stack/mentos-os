@@ -769,7 +769,12 @@ function LessonRenderer({ session, setSession, ssot, timeLeft, selectedUnit, set
 
       setTimeout(() => {
         const pendingHw = getPendingMathHomework(session.userId, ssot.id);
-        const result = finalizeMathSession(session);
+        const result = finalizeMathSession(session, {
+          gradingHistory: history,
+          courseName: teacher?.courseName || '고등 수학',
+          teacherName: teacher?.name || 'AI 튜터',
+          teacherId: teacher?.id || 'default',
+        });
         setMessages(prev => [
           ...prev, 
           { role: 'assistant', content: '[시스템] 숙제가 생성되고 학부모 전송용 메시지 준비가 완료되었습니다.' },

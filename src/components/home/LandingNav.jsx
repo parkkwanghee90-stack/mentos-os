@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 
 const NAV = [
   { label: "매쓰멘토스는?", href: "#about" },
-  { label: "AVS 풀이", href: "#avs" },
+  { label: "학교별 분석", href: "#schools" },
   { label: "AI 분석", href: "#showcase" },
   { label: "학부모 리포트", href: "#report" },
   { label: "가격", href: "#pricing" },
@@ -57,7 +57,7 @@ export default function LandingNav() {
 
         <div className="hv-nav-cta">
           <Link to="/login" className="hv-btn hv-btn-ghost hv-nav-login">로그인</Link>
-          <Link to="/login" className="hv-btn hv-btn-primary">무료 체험 시작</Link>
+          <Link to="/grade-select" className="hv-btn hv-btn-primary">무료 체험 시작</Link>
         </div>
 
         <button
@@ -80,7 +80,7 @@ export default function LandingNav() {
             ))}
             <div className="hv-nav-drawer-cta">
               <Link to="/login" className="hv-btn hv-btn-outline hv-btn-block" onClick={() => setOpen(false)}>로그인</Link>
-              <Link to="/login" className="hv-btn hv-btn-primary hv-btn-block" onClick={() => setOpen(false)}>무료 체험 시작</Link>
+              <Link to="/grade-select" className="hv-btn hv-btn-primary hv-btn-block" onClick={() => setOpen(false)}>무료 체험 시작</Link>
             </div>
           </div>
         </div>
