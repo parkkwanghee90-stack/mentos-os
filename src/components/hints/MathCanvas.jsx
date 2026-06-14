@@ -91,7 +91,7 @@ function footOfPerpendicular(P, L1, L2) {
 
 // ─── 개별 객체 렌더러 ────────────────────────────────────────
 function MathObject({ obj, triVerts }) {
-  const color = obj.color || '#111827';
+  const color = obj.color || '#60a5fa';
 
   switch (obj.type) {
 
@@ -111,23 +111,23 @@ function MathObject({ obj, triVerts }) {
           />
           {lblConfig.vertices !== false && (
             <>
-              <LaTeX at={[verts.A[0], verts.A[1] + 0.4]} tex="A" color="#111827" />
-              <LaTeX at={[verts.B[0] - 0.4, verts.B[1] - 0.3]} tex="B" color="#111827" />
-              <LaTeX at={[verts.C[0] + 0.3, verts.C[1] - 0.3]} tex="C" color="#111827" />
+              <LaTeX at={[verts.A[0], verts.A[1] + 0.4]} tex="A" color="#4ade80" />
+              <LaTeX at={[verts.B[0] - 0.4, verts.B[1] - 0.3]} tex="B" color="#4ade80" />
+              <LaTeX at={[verts.C[0] + 0.3, verts.C[1] - 0.3]} tex="C" color="#4ade80" />
             </>
           )}
           {lblConfig.angles !== false && obj.angles && (
             <>
-              {obj.angles.A && <LaTeX at={[verts.A[0], verts.A[1] - 0.6]} tex={`${obj.angles.A}^{\\circ}`} color="#111827" size={0.9} />}
-              {obj.angles.B && <LaTeX at={[verts.B[0] + 0.8, verts.B[1] + 0.3]} tex={`${obj.angles.B}^{\\circ}`} color="#111827" size={0.9} />}
-              {obj.angles.C && <LaTeX at={[verts.C[0] - 0.8, verts.C[1] + 0.3]} tex={`${obj.angles.C}^{\\circ}`} color="#111827" size={0.9} />}
+              {obj.angles.A && <LaTeX at={[verts.A[0], verts.A[1] - 0.6]} tex={`${obj.angles.A}^{\\circ}`} color="#f59e0b" size={0.9} />}
+              {obj.angles.B && <LaTeX at={[verts.B[0] + 0.8, verts.B[1] + 0.3]} tex={`${obj.angles.B}^{\\circ}`} color="#f59e0b" size={0.9} />}
+              {obj.angles.C && <LaTeX at={[verts.C[0] - 0.8, verts.C[1] + 0.3]} tex={`${obj.angles.C}^{\\circ}`} color="#f59e0b" size={0.9} />}
             </>
           )}
           {lblConfig.sides !== false && (
             <>
-              <LaTeX at={[(verts.B[0]+verts.C[0])/2, (verts.B[1]+verts.C[1])/2 - 0.5]} tex={obj.side?.name === 'a' || obj.side?.name === 'BC' ? 'a='+obj.side.value : 'a=' + verts.sides.a.toFixed(1).replace('.0','')} color="#374151" size={0.9} />
-              <LaTeX at={[(verts.A[0]+verts.C[0])/2 + 0.5, (verts.A[1]+verts.C[1])/2 + 0.5]} tex={obj.side?.name === 'b' || obj.side?.name === 'AC' ? 'b='+obj.side.value : 'b=' + verts.sides.b.toFixed(1).replace('.0','')} color="#374151" size={0.9} />
-              <LaTeX at={[(verts.A[0]+verts.B[0])/2 - 0.6, (verts.A[1]+verts.B[1])/2 + 0.3]} tex={obj.side?.name === 'c' || obj.side?.name === 'AB' ? 'c='+obj.side.value : 'c=' + verts.sides.c.toFixed(1).replace('.0','')} color="#374151" size={0.9} />
+              <LaTeX at={[(verts.B[0]+verts.C[0])/2, (verts.B[1]+verts.C[1])/2 - 0.5]} tex={obj.side?.name === 'a' || obj.side?.name === 'BC' ? 'a='+obj.side.value : 'a=' + verts.sides.a.toFixed(1).replace('.0','')} color="#3b82f6" size={0.9} />
+              <LaTeX at={[(verts.A[0]+verts.C[0])/2 + 0.5, (verts.A[1]+verts.C[1])/2 + 0.5]} tex={obj.side?.name === 'b' || obj.side?.name === 'AC' ? 'b='+obj.side.value : 'b=' + verts.sides.b.toFixed(1).replace('.0','')} color="#3b82f6" size={0.9} />
+              <LaTeX at={[(verts.A[0]+verts.B[0])/2 - 0.6, (verts.A[1]+verts.B[1])/2 + 0.3]} tex={obj.side?.name === 'c' || obj.side?.name === 'AB' ? 'c='+obj.side.value : 'c=' + verts.sides.c.toFixed(1).replace('.0','')} color="#3b82f6" size={0.9} />
             </>
           )}
         </>
@@ -156,8 +156,8 @@ function MathObject({ obj, triVerts }) {
       if (isNaN(x) || isNaN(y)) return null;
       return (
         <>
-          <Point x={x} y={y} color={obj.color || '#111827'} size={15} />
-          {obj.label && <LaTeX at={[x + 0.35, y + 0.3]} tex={obj.label} color={obj.color || '#111827'} />}
+          <Point x={x} y={y} color={obj.color || '#4ade80'} size={15} />
+          {obj.label && <LaTeX at={[x + 0.35, y + 0.3]} tex={obj.label} color={obj.color || '#4ade80'} />}
         </>
       );
     }
@@ -175,7 +175,7 @@ function MathObject({ obj, triVerts }) {
         <>
           <Line.Segment
             point1={pt1} point2={pt2}
-            color={obj.color || '#111827'}
+            color={obj.color || '#f59e0b'}
             style={obj.style === 'dashed' ? 'dashed' : 'solid'}
             weight={obj.weight || 2}
           />
@@ -197,10 +197,10 @@ function MathObject({ obj, triVerts }) {
         <>
           <Line.Segment
             point1={obj.from} point2={foot}
-            color={obj.color || '#111827'}
+            color={obj.color || '#f59e0b'}
             style="dashed" weight={2}
           />
-          <Point x={foot[0]} y={foot[1]} color={obj.color || '#111827'} />
+          <Point x={foot[0]} y={foot[1]} color={obj.color || '#f59e0b'} />
           {obj.foot_label && <LaTeX at={[foot[0] + 0.2, foot[1] - 0.2]} tex={obj.foot_label} />}
         </>
       );
@@ -213,7 +213,7 @@ function MathObject({ obj, triVerts }) {
         <Circle
           center={[cx, cy]}
           radius={obj.radius || 1}
-          color={obj.color || '#111827'}
+          color={obj.color || '#ec4899'}
           fillOpacity={obj.fillOpacity ?? 0}
           strokeStyle={obj.strokeStyle ?? 'solid'}
         />
@@ -234,17 +234,17 @@ function MathObject({ obj, triVerts }) {
       return (
         <>
           <Polygon points={pts} color={color} fillOpacity={obj.fillOpacity ?? 0.08} strokeStyle={obj.strokeStyle ?? 'solid'} />
-          <LaTeX at={lA} tex="A" color="#111827" />
-          <LaTeX at={lB} tex="B" color="#111827" />
-          <LaTeX at={lC} tex="C" color="#111827" />
+          <LaTeX at={lA} tex="A" color="#4ade80" />
+          <LaTeX at={lB} tex="B" color="#4ade80" />
+          <LaTeX at={lC} tex="C" color="#4ade80" />
           
-          {obj.angles?.A && <LaTeX at={[obj.points.A[0], obj.points.A[1] - 0.8]} tex={`${obj.angles.A}^{\\circ}`} color="#111827" />}
-          {obj.angles?.B && <LaTeX at={[obj.points.B[0] + 0.8, obj.points.B[1] + 0.3]} tex={`${obj.angles.B}^{\\circ}`} color="#111827" />}
-          {obj.angles?.C && <LaTeX at={[obj.points.C[0] - 0.8, obj.points.C[1] + 0.3]} tex={`${obj.angles.C}^{\\circ}`} color="#111827" />}
+          {obj.angles?.A && <LaTeX at={[obj.points.A[0], obj.points.A[1] - 0.8]} tex={`${obj.angles.A}^{\\circ}`} color="#f59e0b" />}
+          {obj.angles?.B && <LaTeX at={[obj.points.B[0] + 0.8, obj.points.B[1] + 0.3]} tex={`${obj.angles.B}^{\\circ}`} color="#f59e0b" />}
+          {obj.angles?.C && <LaTeX at={[obj.points.C[0] - 0.8, obj.points.C[1] + 0.3]} tex={`${obj.angles.C}^{\\circ}`} color="#f59e0b" />}
 
-          {obj.sides?.c && <LaTeX at={[midAB[0] - 0.5, midAB[1] + 0.5]} tex={`${obj.sides.c}`} color="#374151" />}
-          {obj.sides?.a && <LaTeX at={[midBC[0], midBC[1] - 0.6]} tex={`${obj.sides.a}`} color="#374151" />}
-          {obj.sides?.b && <LaTeX at={[midCA[0] + 0.5, midCA[1] + 0.5]} tex={`${obj.sides.b}`} color="#374151" />}
+          {obj.sides?.c && <LaTeX at={[midAB[0] - 0.5, midAB[1] + 0.5]} tex={`${obj.sides.c}`} color="#3b82f6" />}
+          {obj.sides?.a && <LaTeX at={[midBC[0], midBC[1] - 0.6]} tex={`${obj.sides.a}`} color="#3b82f6" />}
+          {obj.sides?.b && <LaTeX at={[midCA[0] + 0.5, midCA[1] + 0.5]} tex={`${obj.sides.b}`} color="#3b82f6" />}
         </>
       );
     }
@@ -271,7 +271,7 @@ function MathObject({ obj, triVerts }) {
       const rawText = obj.tex || obj.text || obj.content || '';
       const cleanText = rawText.replace(/^\\\(|^\\\[/, '').replace(/\\\)$|\\\]$/, '').trim();
       const isAlpha = /^[A-Za-z]$/.test(cleanText); 
-      const defaultColor = isAlpha ? '#111827' : '#111827'; 
+      const defaultColor = isAlpha ? '#4ade80' : '#f8fafc'; 
       const defaultSize = isAlpha ? 1.5 : (obj.size || 1.1);
       const coord = obj.at || obj.position || [obj.x || 0, obj.y || 0];
       return <LaTeX at={coord} tex={cleanText} size={defaultSize} color={obj.color || defaultColor} />;
@@ -282,7 +282,7 @@ function MathObject({ obj, triVerts }) {
       return (
         <>
           <Circle center={obj.center || [0,0]} radius={obj.radius || 1} color={color} fillOpacity={0} />
-          {obj.center_label && <LaTeX at={[(obj.center?.[0]||0)+0.2, (obj.center?.[1]||0)-0.2]} tex={obj.center_label} color="#111827" />}
+          {obj.center_label && <LaTeX at={[(obj.center?.[0]||0)+0.2, (obj.center?.[1]||0)-0.2]} tex={obj.center_label} color="#4ade80" />}
         </>
       );
     }
@@ -300,7 +300,7 @@ function MathObject({ obj, triVerts }) {
         <>
           <Polygon points={pts} color={color} fillOpacity={0.05} />
           {obj.labels && pts.map((p, i) => (
-             <LaTeX key={i} at={[p[0]*1.15, p[1]*1.15]} tex={obj.labels[i]} color="#111827" />
+             <LaTeX key={i} at={[p[0]*1.15, p[1]*1.15]} tex={obj.labels[i]} color="#4ade80" />
           ))}
         </>
       );
@@ -308,13 +308,13 @@ function MathObject({ obj, triVerts }) {
     case 'markLength': {
        const mid = [(obj.p1[0]+obj.p2[0])/2, (obj.p1[1]+obj.p2[1])/2];
        const offset = obj.offset || [0, 0.3];
-       return <LaTeX at={[mid[0]+offset[0], mid[1]+offset[1]]} tex={obj.value} color="#374151" />;
+       return <LaTeX at={[mid[0]+offset[0], mid[1]+offset[1]]} tex={obj.value} color="#3b82f6" />;
     }
     case 'markAngle': {
        // Since native mafs Angle requires a lot of math, we just place text near vertex
        const vx = obj.vertex[0], vy = obj.vertex[1];
        const offset = obj.offset || [0.4, 0.4];
-       return <LaTeX at={[vx+offset[0], vy+offset[1]]} tex={obj.value} color="#111827" />;
+       return <LaTeX at={[vx+offset[0], vy+offset[1]]} tex={obj.value} color="#f59e0b" />;
     }
 
     // Removed duplicate label_text cases

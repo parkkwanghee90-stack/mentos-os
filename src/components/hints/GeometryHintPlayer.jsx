@@ -472,11 +472,7 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId }) {
         }
         .avs-canvas-col {
           width: 40% !important;
-          background: #ffffff !important;
-          --mafs-bg: #ffffff;
-          --mafs-fg: #111827;
-          --mafs-line-color: #d1d5db;
-          --mafs-origin-color: #111827;
+          background: #1e293b !important;
           border-radius: 12px !important;
           position: -webkit-sticky !important;
           position: sticky !important;
