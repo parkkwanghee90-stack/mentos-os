@@ -20,6 +20,7 @@ const INSPECT_MENUS = [
   { id: 15, label: '15. 고1 도형의 이동 3단계', unit: '도형의이동3단계', problemCount: 29 },
   { id: 16, label: '16. 고1 도형의 이동 4단계', unit: '도형의이동4단계', problemCount: 47 },
   { id: 17, label: '17. 고1 점과 좌표 2단계', unit: '점과좌표2단계', problemCount: 44 },
+  { id: 18, label: '18. 고1 점과 좌표 3단계', unit: '점과좌표3단계', problemCount: 21 },
 ];
 
 export default function LocalInspector() {
