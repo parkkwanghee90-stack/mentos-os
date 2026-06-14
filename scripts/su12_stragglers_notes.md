@@ -190,3 +190,8 @@
 - **교훈 ③(스톨·중대)**: 에이전트가 백그라운드 검산 서브태스크를 `until grep ...; do sleep; done`으로 폴링하면 서브태스크가 0바이트 출력 시 **무한 대기→워크플로우 전체 정지**(Wave C 15건 멈춤). 복구: `pkill -f "until grep"`로 폴링 죽이면 Bash 반환되어 에이전트 재개·워크플로우 완료. 빌더에 **until/sleep 폴링·run_in_background 금지, python3 -c 동기검산** 명시로 예방.
 - **교훈 ④(빌더 백틱)**: 프롬프트 템플릿이 백틱 리터럴이라 추가 문구에 백틱 쓰면 조기종료 파싱오류. 작은따옴표 사용.
 - **도구**: `build_manual_wave.py <jobs> <label> <desc>` → manual_author_wave.mjs 생성. `assemble_manual_hints.cjs <wf_out> <jobs>` 조립·업로드. `mismatch_verify_wave.mjs` 객관식 위양성 검증.
+
+## ★ 746/746 전건 생성 완료 (2026-06-14, bd15da2)
+- Wave A 37·B 40·C 40·D 67·E 19 = **수동저작 203건** + 기존 543 = **746 전 단원 100%**.
+- 수동저작 중 발굴 SSOT오염: 수2_04/025(단답 1→486, 16건째), 수2_06/059(ㄱㄴㄷ합답형 ②→⑤, 17건째). 객관식 위양성은 보기번호 규약으로 해소.
+- **잔여(PR 전)**: ① 수동저작분 컨솔리데이션 적대적 QA(주로 수2_04~07 166 신규 미검수분) → major _qa_주입·재저작 ② Gemini 충전 시 --qa 재생성 큐(구버전 major들) ③ PR #24 ready 전환(유령21·SSOT17·QA통계 본문).
