@@ -14,6 +14,8 @@ const INSPECT_MENUS = [
   { id: 9, label: '9. 2025 6월 확통', unit: 'CSAT_2025_6월_확통', problemCount: 30 },
   { id: 10, label: '10. 2024 6월 모의고사', unit: 'CSAT_2024_6월_미적분', problemCount: 30 },
   { id: 11, label: '11. 2023 6월 모의고사', unit: 'CSAT_2023_6월_미적분', problemCount: 30 },
+  { id: 12, label: '12. 고1 원의 방정식 3단계', unit: '원의방정식3단계', problemCount: 28 },
+  { id: 13, label: '13. 고1 원의 방정식 4단계', unit: '원의방정식4단계', problemCount: 90 },
 ];
 
 export default function LocalInspector() {

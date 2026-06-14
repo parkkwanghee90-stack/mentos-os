@@ -57,6 +57,18 @@ function safeNum(val, fallback) {
   return fallback;
 }
 
+// 좌표 정규화: [x,y] | {x,y} | ["1","2"] → [x,y] (없으면 null)
+function toXY(v) {
+  if (v == null) return null;
+  let x, y;
+  if (Array.isArray(v)) { x = v[0]; y = v[1]; }
+  else if (typeof v === 'object') { x = v.x; y = v.y; }
+  else return null;
+  if (typeof x === 'string') x = parseFloat(x);
+  if (typeof y === 'string') y = parseFloat(y);
+  return (typeof x === 'number' && isFinite(x) && typeof y === 'number' && isFinite(y)) ? [x, y] : null;
+}
+
 // ─── 각도 + 변 → 꼭짓점 계산 ─────────────────────────────────
 export function calcTriangle(angles, side = { name: 'BC', value: 4 }) {
   const A = safeNum(angles.A, 60);
@@ -148,12 +160,10 @@ function MathObject({ obj, triVerts }) {
     }
 
     case 'point': {
-      const cArr = obj.coordinates || obj.coords || obj.coord; // Added obj.coord support
-      let x = cArr ? cArr[0] : (obj.x || 0);
-      let y = cArr ? cArr[1] : (obj.y || 0);
-      x = typeof x === 'string' ? (parseFloat(x) || 0) : x;
-      y = typeof y === 'string' ? (parseFloat(y) || 0) : y;
-      if (isNaN(x) || isNaN(y)) return null;
+      // [x,y] 배열, {x,y} 객체, 또는 obj.x/obj.y 모두 허용
+      const c = toXY(obj.coordinates || obj.coords || obj.coord) || toXY([obj.x, obj.y]);
+      if (!c) return null;
+      const [x, y] = c;
       return (
         <>
           <Point x={x} y={y} color={obj.color || '#4ade80'} size={15} />
@@ -164,13 +174,13 @@ function MathObject({ obj, triVerts }) {
 
     case 'line':
     case 'segment': {
-      let pt1 = obj.from || obj.start || (obj.points && obj.points[0]); // Added obj.start
-      let pt2 = obj.to || obj.end || (obj.points && obj.points[1]); // Added obj.end
+      let pt1 = toXY(obj.from || obj.start || (obj.points && obj.points[0]));
+      let pt2 = toXY(obj.to || obj.end || (obj.points && obj.points[1]));
       if (obj.x1 !== undefined && obj.y1 !== undefined) {
-        pt1 = [obj.x1, obj.y1];
-        pt2 = [obj.x2, obj.y2];
+        pt1 = toXY([obj.x1, obj.y1]);
+        pt2 = toXY([obj.x2, obj.y2]);
       }
-      if (!Array.isArray(pt1) || !Array.isArray(pt2)) return null;
+      if (!pt1 || !pt2) return null;
       return (
         <>
           <Line.Segment
@@ -207,8 +217,7 @@ function MathObject({ obj, triVerts }) {
     }
 
     case 'circle': {
-      if (obj.center && !Array.isArray(obj.center)) return null;
-      const [cx, cy] = obj.center || [0,0];
+      const [cx, cy] = toXY(obj.center) || [0, 0];
       return (
         <Circle
           center={[cx, cy]}
@@ -325,6 +334,34 @@ function MathObject({ obj, triVerts }) {
   }
 }
 
+// 객체가 차지하는 좌표점들을 모은다(자동 보기창 계산용)
+function collectExtent(obj) {
+  const pts = [];
+  const add = v => { const p = toXY(v); if (p) pts.push(p); };
+  switch (obj.type) {
+    case 'point': add(obj.coordinates || obj.coords || obj.coord); add([obj.x, obj.y]); break;
+    case 'circle':
+    case 'drawCircle': {
+      const c = toXY(obj.center); const r = obj.radius || 1;
+      if (c) pts.push([c[0] - r, c[1] - r], [c[0] + r, c[1] + r]);
+      break;
+    }
+    case 'segment':
+    case 'line':
+      add(obj.from || obj.start || (obj.points && obj.points[0]));
+      add(obj.to || obj.end || (obj.points && obj.points[1]));
+      if (obj.x1 !== undefined) { add([obj.x1, obj.y1]); add([obj.x2, obj.y2]); }
+      break;
+    case 'drawSegment': add(obj.p1); add(obj.p2); break;
+    case 'polygon': (obj.points || []).forEach(add); break;
+    case 'triangle':
+      if (obj.points) { add(obj.points.A); add(obj.points.B); add(obj.points.C); }
+      break;
+    default: break;
+  }
+  return pts;
+}
+
 // ─── 메인 컴포넌트 ───────────────────────────────────────────
 export default function MathCanvas({ objects = [], viewBox, height = 280 }) {
   const triangleObj = objects.find(o => o.type === 'triangle_angles');
@@ -335,6 +372,21 @@ export default function MathCanvas({ objects = [], viewBox, height = 280 }) {
   }, [triangleObj]);
 
   const autoBox = useMemo(() => {
+    // 1순위: 실제 도형이 차지하는 범위에 맞춰 자동으로 보기창을 잡는다.
+    //   데이터의 viewBox/좌표 스케일이 틀려도 도형이 항상 화면 안에 보이도록 한다.
+    const pts = objects.flatMap(collectExtent);
+    if (triVerts) pts.push(triVerts.A, triVerts.B, triVerts.C);
+    if (pts.length > 0) {
+      const xs = pts.map(p => p[0]), ys = pts.map(p => p[1]);
+      const minX = Math.min(...xs), maxX = Math.max(...xs);
+      const minY = Math.min(...ys), maxY = Math.max(...ys);
+      // 정사각 비율 유지(preserveAspectRatio) + 여백 25%
+      const span = Math.max(maxX - minX, maxY - minY, 2);
+      const pad = span * 0.25;
+      const cx = (minX + maxX) / 2, cy = (minY + maxY) / 2;
+      const half = span / 2 + pad;
+      return { x: [cx - half, cx + half], y: [cy - half, cy + half] };
+    }
     if (viewBox) {
       const dx = viewBox.x[1] - viewBox.x[0];
       const dy = viewBox.y[1] - viewBox.y[0];
@@ -355,7 +407,7 @@ export default function MathCanvas({ objects = [], viewBox, height = 280 }) {
       };
     }
     return { x: [-8, 8], y: [-6, 10] };
-  }, [triVerts, viewBox]);
+  }, [triVerts, viewBox, objects]);
 
   const showAxes = objects.some(o => o.type === 'axes' || o.type === 'function_plot' || o.type === 'function');
   const hasObjects = objects.length > 0;
