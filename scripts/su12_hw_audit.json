@@ -1,0 +1,515 @@
+{
+  "generatedAt": "2026-06-11T13:56:15.002Z",
+  "units": {
+    "수학1_01지수_통합숙제": {
+      "subject": "수학1",
+      "folderName": "01지수",
+      "prefix": "math_crops/homework/math1/01_exponent",
+      "skeletonCount": 44,
+      "pidRange": "001~045",
+      "missingProb": [],
+      "missingSol": [],
+      "extraSlots": [
+        "036",
+        "046"
+      ],
+      "dupGroups": [
+        [
+          "035a.webp",
+          "036.webp"
+        ],
+        [
+          "045a.webp",
+          "046.webp"
+        ]
+      ],
+      "holes": [
+        "036"
+      ],
+      "htmls": []
+    },
+    "수학1_02로그_통합숙제": {
+      "subject": "수학1",
+      "folderName": "02로그",
+      "prefix": "math_crops/homework/math1/02_logarithm",
+      "skeletonCount": 41,
+      "pidRange": "001~042",
+      "missingProb": [],
+      "missingSol": [],
+      "extraSlots": [
+        "024",
+        "043"
+      ],
+      "dupGroups": [
+        [
+          "023a.webp",
+          "024.webp"
+        ],
+        [
+          "042a.webp",
+          "043.webp"
+        ]
+      ],
+      "holes": [
+        "024"
+      ],
+      "htmls": []
+    },
+    "수학1_03지수로그함수_통합숙제": {
+      "subject": "수학1",
+      "folderName": "03지수로그함수",
+      "prefix": "math_crops/homework/math1/03_explog_func",
+      "skeletonCount": 70,
+      "pidRange": "001~071",
+      "missingProb": [],
+      "missingSol": [],
+      "extraSlots": [
+        "036",
+        "072"
+      ],
+      "dupGroups": [
+        [
+          "035a.webp",
+          "036.webp"
+        ],
+        [
+          "071a.webp",
+          "072.webp"
+        ]
+      ],
+      "holes": [
+        "036"
+      ],
+      "htmls": []
+    },
+    "수학1_04지수로그함수활용_통합숙제": {
+      "subject": "수학1",
+      "folderName": "04지수로그함수활용",
+      "prefix": "math_crops/homework/math1/04_explog_func_util",
+      "skeletonCount": 30,
+      "pidRange": "001~031",
+      "missingProb": [],
+      "missingSol": [],
+      "extraSlots": [
+        "017",
+        "032"
+      ],
+      "dupGroups": [
+        [
+          "016a.webp",
+          "017.webp"
+        ],
+        [
+          "031a.webp",
+          "032.webp"
+        ]
+      ],
+      "holes": [
+        "017"
+      ],
+      "htmls": []
+    },
+    "수학1_05삼각함수정의_통합숙제": {
+      "subject": "수학1",
+      "folderName": "05삼각함수정의",
+      "prefix": "math_crops/homework/math1/05_trig_def",
+      "skeletonCount": 31,
+      "pidRange": "001~032",
+      "missingProb": [],
+      "missingSol": [],
+      "extraSlots": [
+        "019",
+        "033"
+      ],
+      "dupGroups": [
+        [
+          "012.webp",
+          "022.webp"
+        ],
+        [
+          "012a.webp",
+          "022a.webp"
+        ],
+        [
+          "013.webp",
+          "023.webp"
+        ],
+        [
+          "013a.webp",
+          "023a.webp"
+        ],
+        [
+          "014.webp",
+          "024.webp"
+        ],
+        [
+          "014a.webp",
+          "024a.webp"
+        ],
+        [
+          "015.webp",
+          "025.webp"
+        ],
+        [
+          "015a.webp",
+          "025a.webp"
+        ],
+        [
+          "017.webp",
+          "026.webp"
+        ],
+        [
+          "017a.webp",
+          "026a.webp"
+        ],
+        [
+          "018a.webp",
+          "019.webp"
+        ],
+        [
+          "032a.webp",
+          "033.webp"
+        ]
+      ],
+      "holes": [
+        "019"
+      ],
+      "htmls": []
+    },
+    "수학1_06삼각함수그래프_통합숙제": {
+      "subject": "수학1",
+      "folderName": "06삼각함수그래프",
+      "prefix": "math_crops/homework/math1/06_trig_graph",
+      "skeletonCount": 72,
+      "pidRange": "001~073",
+      "missingProb": [],
+      "missingSol": [],
+      "extraSlots": [
+        "038",
+        "074"
+      ],
+      "dupGroups": [
+        [
+          "037a.webp",
+          "038.webp"
+        ],
+        [
+          "073a.webp",
+          "074.webp"
+        ]
+      ],
+      "holes": [
+        "038"
+      ],
+      "htmls": []
+    },
+    "수학1_07삼각함수활용_통합숙제": {
+      "subject": "수학1",
+      "folderName": "07삼각함수활용",
+      "prefix": "math_crops/homework/math1/07_trig_util",
+      "skeletonCount": 42,
+      "pidRange": "001~043",
+      "missingProb": [],
+      "missingSol": [],
+      "extraSlots": [
+        "016",
+        "044"
+      ],
+      "dupGroups": [
+        [
+          "015a.webp",
+          "016.webp"
+        ],
+        [
+          "043a.webp",
+          "044.webp"
+        ]
+      ],
+      "holes": [
+        "016"
+      ],
+      "htmls": []
+    },
+    "수학1_08등차등비수열_통합숙제": {
+      "subject": "수학1",
+      "folderName": "08등차등비수열",
+      "prefix": "math_crops/homework/math1/08_seq_apgp",
+      "skeletonCount": 29,
+      "pidRange": "001~030",
+      "missingProb": [],
+      "missingSol": [],
+      "extraSlots": [
+        "018",
+        "031"
+      ],
+      "dupGroups": [
+        [
+          "017a.webp",
+          "018.webp"
+        ],
+        [
+          "030a.webp",
+          "031.webp"
+        ]
+      ],
+      "holes": [
+        "018"
+      ],
+      "htmls": []
+    },
+    "수학1_09수열의합_통합숙제": {
+      "subject": "수학1",
+      "folderName": "09수열의합",
+      "prefix": "math_crops/homework/math1/09_seq_sum",
+      "skeletonCount": 67,
+      "pidRange": "001~068",
+      "missingProb": [],
+      "missingSol": [],
+      "extraSlots": [
+        "042",
+        "069"
+      ],
+      "dupGroups": [
+        [
+          "041a.webp",
+          "042.webp"
+        ],
+        [
+          "068a.webp",
+          "069.webp"
+        ]
+      ],
+      "holes": [
+        "042"
+      ],
+      "htmls": []
+    },
+    "수학1_10수학적귀납법_통합숙제": {
+      "subject": "수학1",
+      "folderName": "10수학적귀납법",
+      "prefix": "math_crops/homework/math1/10_induction",
+      "skeletonCount": 43,
+      "pidRange": "001~044",
+      "missingProb": [],
+      "missingSol": [],
+      "extraSlots": [
+        "025",
+        "045"
+      ],
+      "dupGroups": [
+        [
+          "024a.webp",
+          "025.webp"
+        ],
+        [
+          "044a.webp",
+          "045.webp"
+        ]
+      ],
+      "holes": [
+        "025"
+      ],
+      "htmls": []
+    },
+    "수학2_01함수의극한_통합숙제": {
+      "subject": "수학2",
+      "folderName": "01함수의극한",
+      "prefix": "math_crops/homework/math2/01_limit",
+      "skeletonCount": 44,
+      "pidRange": "001~045",
+      "missingProb": [],
+      "missingSol": [],
+      "extraSlots": [
+        "020",
+        "046"
+      ],
+      "dupGroups": [
+        [
+          "019a.webp",
+          "020.webp"
+        ],
+        [
+          "045a.webp",
+          "046.webp"
+        ]
+      ],
+      "holes": [
+        "020"
+      ],
+      "htmls": [
+        "step2_.html",
+        "step3_.html"
+      ]
+    },
+    "수학2_02함수의연속_통합숙제": {
+      "subject": "수학2",
+      "folderName": "02함수의연속",
+      "prefix": "math_crops/homework/math2/02_continuity",
+      "skeletonCount": 32,
+      "pidRange": "001~033",
+      "missingProb": [],
+      "missingSol": [],
+      "extraSlots": [
+        "016",
+        "034"
+      ],
+      "dupGroups": [
+        [
+          "015a.webp",
+          "016.webp"
+        ],
+        [
+          "033a.webp",
+          "034.webp"
+        ]
+      ],
+      "holes": [
+        "016"
+      ],
+      "htmls": [
+        "3.step4_.html",
+        "step2_.html"
+      ]
+    },
+    "수학2_03미분계수_통합숙제": {
+      "subject": "수학2",
+      "folderName": "03미분계수",
+      "prefix": "math_crops/homework/math2/03_derivative_coeff",
+      "skeletonCount": 35,
+      "pidRange": "001~036",
+      "missingProb": [],
+      "missingSol": [],
+      "extraSlots": [
+        "016",
+        "037"
+      ],
+      "dupGroups": [
+        [
+          "015a.webp",
+          "016.webp"
+        ],
+        [
+          "036a.webp",
+          "037.webp"
+        ]
+      ],
+      "holes": [
+        "016"
+      ],
+      "htmls": [
+        "3.step4_.html",
+        "step2_.html"
+      ]
+    },
+    "수학2_04도함수활용12_통합숙제": {
+      "subject": "수학2",
+      "folderName": "04도함수활용12",
+      "prefix": "math_crops/homework/math2/04_derivative_util_12",
+      "skeletonCount": 40,
+      "pidRange": "001~042",
+      "missingProb": [],
+      "missingSol": [],
+      "extraSlots": [
+        "009",
+        "021",
+        "043"
+      ],
+      "dupGroups": [
+        [
+          "020a.webp",
+          "021.webp"
+        ],
+        [
+          "042a.webp",
+          "043.webp"
+        ]
+      ],
+      "holes": [
+        "009",
+        "021"
+      ],
+      "htmls": []
+    },
+    "수학2_05도함수활용3_통합숙제": {
+      "subject": "수학2",
+      "folderName": "05도함수활용3",
+      "prefix": "math_crops/homework/math2/05_derivative_util_3",
+      "skeletonCount": 40,
+      "pidRange": "001~041",
+      "missingProb": [],
+      "missingSol": [],
+      "extraSlots": [
+        "012",
+        "042"
+      ],
+      "dupGroups": [
+        [
+          "011a.webp",
+          "012.webp"
+        ],
+        [
+          "041a.webp",
+          "042.webp"
+        ]
+      ],
+      "holes": [
+        "012"
+      ],
+      "htmls": []
+    },
+    "수학2_06부정적분정적분_통합숙제": {
+      "subject": "수학2",
+      "folderName": "06부정적분정적분",
+      "prefix": "math_crops/homework/math2/06_integral",
+      "skeletonCount": 67,
+      "pidRange": "001~068",
+      "missingProb": [],
+      "missingSol": [],
+      "extraSlots": [
+        "024",
+        "069"
+      ],
+      "dupGroups": [
+        [
+          "023a.webp",
+          "024.webp"
+        ],
+        [
+          "068a.webp",
+          "069.webp"
+        ]
+      ],
+      "holes": [
+        "024"
+      ],
+      "htmls": []
+    },
+    "수학2_07정적분활용_통합숙제": {
+      "subject": "수학2",
+      "folderName": "07정적분활용",
+      "prefix": "math_crops/homework/math2/07_def_integral_util",
+      "skeletonCount": 19,
+      "pidRange": "001~020",
+      "missingProb": [],
+      "missingSol": [],
+      "extraSlots": [
+        "013",
+        "021"
+      ],
+      "dupGroups": [
+        [
+          "012a.webp",
+          "013.webp"
+        ],
+        [
+          "020a.webp",
+          "021.webp"
+        ]
+      ],
+      "holes": [
+        "013"
+      ],
+      "htmls": []
+    }
+  }
+}

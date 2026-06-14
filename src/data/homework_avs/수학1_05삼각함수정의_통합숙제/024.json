@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 수학1 - 삼각함수 정의 24번 명품 해설",
   "type": "trigonometry",
-  "P": "호도법과 삼각함수의 정의를 이용하여 삼각함수값을 구합니다.",
-  "C": "단위원 위의 점 좌표와 삼각함수의 관계를 활용합니다.",
-  "B": "삼각함수의 정의:\n\n1) 호도법: $$180° = \\pi$$ (rad), 부채꼴 호의 길이 $$l = r\\theta$$, 넓이 $$S = \\frac{1}{2}r^2\\theta$$\n2) 단위원: $$P(\\cos\\theta, \\sin\\theta)$$\n3) $$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$$\n4) $$\\sin^2\\theta + \\cos^2\\theta = 1$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "원 $x^2+y^2=r^2$과 직선 $x=-2$가 만나는 두 점 A, B에 대해, 두 동경 OA, OB가 나타내는 각을 각각 $\\alpha, \\beta$라 할 때, 주어진 조건 $2\\cos\\alpha = 3\\sin\\beta$를 이용하여 $r(\\sin\\alpha+\\cos\\beta)$의 값을 구해야 합니다.",
+  "C": "주어진 원의 방정식은 $x^2+y^2=r^2$ ($r>2$)이고, 직선 $x=-2$와 만나는 두 점 중 $y$좌표가 양수인 점이 A, 음수인 점이 B입니다. 또한, $2\\cos\\alpha = 3\\sin\\beta$라는 관계식이 주어져 있습니다.",
+  "B": "이 문제는 원 위의 점의 좌표를 이용하여 삼각함수의 값을 정의하는 개념을 활용합니다. 동경이 나타내는 각이 $\\theta$이고, 동경과 원의 교점의 좌표가 $(x, y)$일 때, $\\cos\\theta = \\frac{x}{r}$이고 $\\sin\\theta = \\frac{y}{r}$입니다.",
+  "S": "문제에서 주어진 조건에 따라 점 A와 B의 좌표를 미지수를 사용하여 설정합니다. 점 A는 $y$좌표가 양수이고 점 B는 $y$좌표가 음수이므로, 직선 $x=-2$ 위에 있는 두 점 A, B의 좌표를 각각 $(-2, a)$와 $(-2, -a)$로 둘 수 있으며, 이때 $a>0$입니다. 원의 정의에 따라 원점 O로부터 두 점 A, B까지의 거리는 반지름 $r$과 같습니다.\n삼각함수의 정의를 이용하여 각 $\\alpha$와 $\\beta$에 대한 $\\cos\\alpha$와 $\\sin\\beta$의 값을 $a$와 $r$로 표현합니다. 점 A의 좌표가 $(-2, a)$이므로 $\\cos\\alpha = \\frac{-2}{r}$이고, 점 B의 좌표가 $(-2, -a)$이므로 $\\sin\\beta = \\frac{-a}{r}$입니다.\n주어진 조건식 $2\\cos\\alpha = 3\\sin\\beta$에 앞서 구한 $\\cos\\alpha$와 $\\sin\\beta$의 표현을 대입하여 $a$와 $r$ 사이의 관계식을 세웁니다. $2 \\times \\left(-\\frac{2}{r}\\right) = 3 \\times \\left(-\\frac{a}{r}\\right)$ 입니다.\n이전 단계에서 세운 $a$와 $r$에 대한 관계식을 정리하여 $a$의 값을 구합니다. 식을 정리하면 $-\\frac{4}{r} = -\\frac{3a}{r}$ 이 되고, 양변에 $-r$을 곱하면 $4 = 3a$가 되어 $a = \\frac{4}{3}$을 얻습니다.\n최종적으로 구해야 하는 식 $r(\\sin\\alpha+\\cos\\beta)$의 값을 계산하기 위해 $\\sin\\alpha$와 $\\cos\\beta$를 $a$와 $r$로 표현합니다. 점 A의 좌표가 $(-2, a)$이므로 $\\sin\\alpha = \\frac{a}{r}$이고, 점 B의 좌표가 $(-2, -a)$이므로 $\\cos\\beta = \\frac{-2}{r}$입니다.\n앞서 구한 $\\sin\\alpha$, $\\cos\\beta$의 표현과 $a$의 값을 최종적으로 구해야 하는 식 $r(\\sin\\alpha+\\cos\\beta)$에 대입하여 계산을 완료합니다. $r\\left(\\frac{a}{r} + \\left(-\\frac{2}{r}\\right)\\right) = r\\left(\\frac{a-2}{r}\\right) = a-2$ 이고, 여기에 $a = \\frac{4}{3}$을 대입하면 $\\frac{4}{3} - 2 = \\frac{4}{3} - \\frac{6}{3} = -\\frac{2}{3}$ 입니다.",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{-2/3}}$$ 입니다.",
   "finalAnswer": "-2/3",
   "correctAnswer": "-2/3",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "gemini-2.5-flash"
 }

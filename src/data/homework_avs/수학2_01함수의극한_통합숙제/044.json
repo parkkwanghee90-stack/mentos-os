@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 수학2 - 함수의 극한 44번 명품 해설",
   "type": "calculus",
-  "P": "함수의 극한값을 구하고, 극한의 성질을 활용하여 미지수를 결정합니다.",
-  "C": "$$0/0$$ 꼴 부정형을 인수분해·유리화로 해소하고, 좌극한·우극한을 비교합니다.",
-  "B": "함수의 극한:\n\n1) $$\\lim_{x \\to a} f(x) = L$$ ⟺ $$\\lim_{x \\to a^-} f(x) = \\lim_{x \\to a^+} f(x) = L$$\n2) $$\\lim_{x \\to a} \\frac{f(x)}{g(x)}$$: $$0/0$$ 꼴 → 인수분해 또는 유리화\n3) $$\\lim_{x \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "이 문제는 주어진 기하학적 조건들을 이용하여 선분 AQ의 길이를 $t$에 대한 식으로 표현한 후, 주어진 극한값을 계산하는 문제입니다.",
+  "C": "선분 AB의 길이는 2이고, O는 AB의 중점입니다. 점 P는 호 AB 위의 점이며, $\\overline{BP}=t$입니다. 점 P를 지나고 직선 AB에 평행한 직선과 점 B를 지나고 직선 OP에 평행한 직선이 만나는 점을 Q라고 합니다.",
+  "B": "**피타고라스 정리:** 직각삼각형에서 빗변의 제곱은 나머지 두 변의 제곱의 합과 같습니다. 즉, $a^2+b^2=c^2$.\n**평행사변형의 성질:** 두 쌍의 대변이 각각 평행한 사각형은 평행사변형이며, 대변의 길이는 서로 같습니다.\n**무리식의 극한:** $\\lim_{x \\to a} \\frac{f(x)}{g(x)}$ 꼴에서 $f(a)=0, g(a)=0$인 경우, 분자 또는 분모에 무리식이 있다면 유리화를 통해 극한값을 계산할 수 있습니다.",
+  "S": "점 P에서 선분 AB에 내린 수선의 발을 H1이라 할 때, $\\overline{OH_1}$과 $\\overline{PH_1}$의 길이를 $t$에 대한 식으로 표현합니다. 직각삼각형 APB에서 $\\overline{AP}^2 = \\overline{AB}^2 - \\overline{BP}^2 = 2^2 - t^2 = 4-t^2$이고, $\\overline{OP}=1$이므로 $\\overline{OP}^2 = \\overline{OH_1}^2 + \\overline{PH_1}^2 = 1$입니다. 또한, 직각삼각형 $\\text{AH}_1\\text{P}$에서 $\\overline{AP}^2 = (\\overline{AO} + \\overline{OH_1})^2 + \\overline{PH_1}^2 = (1+\\overline{OH_1})^2 + \\overline{PH_1}^2$이므로, 이 식들을 연립하여 $\\overline{OH_1}$과 $\\overline{PH_1}$을 구합니다.\n위 식들을 정리하면 $\\overline{AP}^2 = (1+\\overline{OH_1})^2 + (1-\\overline{OH_1}^2) = 1+2\\overline{OH_1}+\\overline{OH_1}^2 + 1-\\overline{OH_1}^2 = 2+2\\overline{OH_1}$이 됩니다. 따라서 $4-t^2 = 2+2\\overline{OH_1}$에서 $\\overline{OH_1}$을 구하고, 이를 이용하여 $\\overline{PH_1}$을 구합니다.\n점 Q의 위치를 파악하고, Q에서 선분 AB에 내린 수선의 발을 H2라 할 때, $\\overline{BH_2}$와 $\\overline{QH_2}$의 길이를 $t$에 대한 식으로 표현합니다. P를 지나고 AB에 평행한 직선과 B를 지나고 OP에 평행한 직선이 만나는 점이 Q이므로, 사각형 OPQB는 평행사변형입니다. 따라서 $\\overline{BQ} = \\overline{OP} = 1$이고, $\\overline{PQ} = \\overline{OB} = 1$입니다. 또한, $\\overline{PQ} \\parallel \\overline{AB}$이므로 $\\overline{QH_2} = \\overline{PH_1}$이고, $\\overline{BH_2} = \\overline{OH_1}$이 됩니다.\n이제 직각삼각형 $\\text{AH}_2\\text{Q}$에서 $\\overline{AQ}$의 길이를 $t$에 대한 식으로 표현합니다. $\\overline{AQ}^2 = \\overline{AH_2}^2 + \\overline{QH_2}^2$이고, $\\overline{AH_2} = \\overline{AO} + \\overline{OB} + \\overline{BH_2} = 1+1+\\overline{BH_2} = 2+\\overline{BH_2}$이므로, $\\overline{AQ} = \\sqrt{(2+\\overline{BH_2})^2 + \\overline{QH_2}^2}$입니다.\n앞서 구한 $\\overline{OH_1} = 1-\\frac{t^2}{2}$와 $\\overline{PH_1} = \\frac{t}{2}\\sqrt{4-t^2}$를 이용하여 $\\overline{BH_2}$와 $\\overline{QH_2}$를 대입하여 $\\overline{AQ}$를 $t$에 대한 식으로 나타냅니다.\n구하고자 하는 극한식 $\\lim_{t \\to 0+} \\frac{3-\\overline{AQ}}{t^2}$에 $\\overline{AQ}$를 대입합니다. $t \\to 0+$일 때 $0/0$ 꼴의 극한이므로, 분자를 유리화하여 극한값을 계산합니다.\n분모와 분자에 $3+\\sqrt{9-2t^2}$를 곱하여 유리화하면, 분자는 $3^2 - (\\sqrt{9-2t^2})^2 = 9 - (9-2t^2) = 2t^2$이 됩니다. 분모는 $t^2(3+\\sqrt{9-2t^2})$가 됩니다.\n분자와 분모에서 $t^2$을 약분한 후, $t \\to 0+$를 대입하여 극한값을 계산합니다.\n$\\lim_{t \\to 0+} \\frac{2}{3+\\sqrt{9-2t^2}} = \\frac{2}{3+\\sqrt{9-0}} = \\frac{2}{3+3} = \\frac{2}{6} = \\frac{1}{3}$입니다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/수학2/01함수의극한/044a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{②번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{②번}}$$ 입니다.",
   "finalAnswer": "2",
   "correctAnswer": "2",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "gemini-2.5-flash"
 }

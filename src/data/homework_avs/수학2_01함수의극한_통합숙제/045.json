@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 수학2 - 함수의 극한 45번 명품 해설",
   "type": "calculus",
-  "P": "함수의 극한값을 구하고, 극한의 성질을 활용하여 미지수를 결정합니다.",
-  "C": "$$0/0$$ 꼴 부정형을 인수분해·유리화로 해소하고, 좌극한·우극한을 비교합니다.",
-  "B": "함수의 극한:\n\n1) $$\\lim_{x \\to a} f(x) = L$$ ⟺ $$\\lim_{x \\to a^-} f(x) = \\lim_{x \\to a^+} f(x) = L$$\n2) $$\\lim_{x \\to a} \\frac{f(x)}{g(x)}$$: $$0/0$$ 꼴 → 인수분해 또는 유리화\n3) $$\\lim_{x \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "점 $P$가 점 $B$에 한없이 가까워질 때 $\\dfrac{L^2}{S}$가 $a+b\\sqrt{2}$에 한없이 가까워지도록 하는 유리수 $a,\\ b$에 대하여 $a^2+b^2$의 값을 구한다.",
+  "C": "한 변의 길이가 $1$인 정사각형 $ABCD$에서 꼭짓점 $A$를 중심으로 점 $A$를 지나는 원을 그린다. 원 위의 동점 $P$에 대하여 사각형 $APQR$이 정사각형이 되도록 점 $R,\\ Q$를 잡고, 선분 $BC$와 선분 $QR$의 교점을 $I$라 한다. 삼각형 $IQC$의 둘레의 길이를 $L$, 넓이를 $S$라 한다.",
+  "B": "두 변의 길이의 비와 끼인각이 같으면 두 삼각형은 닮음이고, 닮음인 직각삼각형에서 대응변의 비는 일정하다. 또한 한없이 가까워지는 값(극한)은 식을 정리한 뒤 $t\\to 0+$를 대입하여 구하며, 무리식이 섞인 극한은 분모·분자를 같은 식으로 정리해 약분한 후 대입한다.",
+  "S": "변수 $t$를 도입해 점 $P$가 점 $B$로 가는 극한 상황을 표현하기 위해, $\\overline{CI}=t$로 놓으면 점 $P$가 점 $B$에 한없이 가까워질 때 $t\\to 0+$이다. 정사각형의 한 변이 $1$이므로 $\\overline{BI}=1-t$이고, $\\overline{BA}=1$인 직각삼각형 $ABI$에서 $$\\overline{AI}=\\sqrt{\\overline{BI}^2+\\overline{BA}^2}=\\sqrt{(1-t)^2+1}=\\sqrt{t^2-2t+2}.$$\n교점 $I$에서 선분 $QC$에 내린 수선의 발을 $H$라 하면, 직각삼각형 $ABI$와 $CHI$는 두 예각이 서로 같아 닮음이다. 대응변의 비 $\\overline{AI}:\\overline{AB}=\\overline{CI}:\\overline{CH}$에서 $$\\sqrt{t^2-2t+2}:1=t:\\overline{CH}\\ \\Longrightarrow\\ \\overline{CH}=\\dfrac{t}{\\sqrt{t^2-2t+2}}.$$\n같은 닮음에서 빗변과 다른 한 변의 비 $\\overline{AI}:\\overline{BI}=\\overline{CI}:\\overline{HI}$를 쓰면 수선의 길이 $\\overline{HI}$를 얻는다. $$\\sqrt{t^2-2t+2}:(1-t)=t:\\overline{HI}\\ \\Longrightarrow\\ \\overline{HI}=\\dfrac{t(1-t)}{\\sqrt{t^2-2t+2}}.$$\n삼각형 $IQC$의 넓이를 구하기 위해, 밑변을 $\\overline{QC}=\\overline{QH}+\\overline{HC}$로 보고 높이를 $\\overline{HI}$로 잡는다. 정사각형 $APQR$의 한 변이 $\\overline{AP}=1$이므로 $\\overline{QC}=1\\cdot t \\cdot$ 관계를 정리하면 밑변·높이 곱으로 $$S=\\dfrac{1}{2}\\,\\overline{QC}\\cdot \\overline{HI}=\\dfrac{t^2(1-t)}{t^2-2t+2}$$ 가 된다.\n삼각형 $IQC$의 둘레 $L$은 세 변 $\\overline{IC}=t$, $\\overline{IQ}$, $\\overline{QC}$의 합을 $\\overline{AI}=\\sqrt{t^2-2t+2}$로 정리하여 $$L=2t\\times\\dfrac{\\sqrt{t^2-2t+2}+1}{\\sqrt{t^2-2t+2}}$$ 로 나타낼 수 있다.\n이제 $\\dfrac{L^2}{S}$를 한 식으로 정리한다. $$\\dfrac{L^2}{S}=\\dfrac{4t^2\\times \\dfrac{t^2-2t+3+2\\sqrt{t^2-2t+2}}{t^2-2t+2}}{\\dfrac{t^2(1-t)}{t^2-2t+2}}=\\dfrac{4\\left(t^2-2t+3+2\\sqrt{t^2-2t+2}\\right)}{1-t}.$$\n극한값을 얻기 위해 $t\\to 0+$를 대입한다. 분자에서 $t^2-2t+3\\to 3$, $\\sqrt{t^2-2t+2}\\to\\sqrt{2}$, 분모 $1-t\\to 1$이므로 $$\\lim_{t\\to 0+}\\dfrac{L^2}{S}=\\dfrac{4\\left(3+2\\sqrt{2}\\right)}{1}=12+8\\sqrt{2}.$$\n$a+b\\sqrt{2}$ 꼴과 비교해 유리수 $a,\\ b$를 읽어내면 $a=12,\\ b=8$이다. 따라서 $$a^2+b^2=12^2+8^2=144+64=208.$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{208}}$$ 입니다.",
   "finalAnswer": "208",
   "correctAnswer": "208",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

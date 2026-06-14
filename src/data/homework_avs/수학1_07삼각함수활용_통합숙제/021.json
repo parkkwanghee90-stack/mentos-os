@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 수학1 - 삼각함수 활용 21번 명품 해설",
   "type": "trigonometry",
-  "P": "삼각함수의 덧셈정리, 배각·반각 공식을 활용하여 값을 구합니다.",
-  "C": "사인·코사인 법칙과 삼각형의 넓이 공식을 적용합니다.",
-  "B": "삼각함수 활용:\n\n1) 사인법칙: $$\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R$$\n2) 코사인법칙: $$a^2 = b^2 + c^2 - 2bc\\cos A$$\n3) 삼각형 넓이: $$S = \\frac{1}{2}ab\\sin C$$\n4) 덧셈정리: $$\\sin(\\alpha \\pm \\beta) = \\sin\\alpha\\cos\\beta \\pm \\cos\\alpha\\sin\\beta$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\overline{AC}>2\\sqrt{7}$인 삼각형 $ABC$에서 선분 $AC$ 위의 점 $D$가 $\\overline{CD}=2\\sqrt{7}$, $\\cos(\\angle BDA)=\\dfrac{\\sqrt{7}}{4}$를 만족하고, 두 삼각형 $ABC$, $ABD$의 외접원 반지름을 각각 $R_1$, $R_2$라 할 때 $R_1:R_2=4:3$인 조건에서 $\\overline{BC}+\\overline{BD}$의 값을 구한다.",
+  "C": "$\\overline{CD}=2\\sqrt{7}$, $\\cos(\\angle BDA)=\\dfrac{\\sqrt{7}}{4}$, 점 $D$는 선분 $AC$ 위의 점, $R_1:R_2=4:3$.",
+  "B": "사인법칙 $\\dfrac{a}{\\sin A}=2R$로 각 삼각형의 외접원 반지름과 대변·대각을 연결한다. 두 삼각형 $ABC$, $ABD$는 꼭짓점 $A$의 각을 공유하므로 외접원 반지름의 비가 대변의 비로 직접 옮겨진다. 점 $D$가 선분 $AC$ 위에 있어 $\\angle BDA$와 $\\angle BDC$는 보각이므로 $\\cos(\\angle BDC)=-\\cos(\\angle BDA)$이고, 삼각형 $BCD$에 코사인법칙을 적용해 미지수를 푼다.",
+  "S": "삼각형 $ABC$의 외접원 반지름을 사인법칙으로 표현한다. 변 $\\overline{BC}$는 각 $A(=\\angle BAC)$의 대변이므로 $$\\frac{\\overline{BC}}{\\sin A}=2R_1,\\qquad R_1=\\frac{\\overline{BC}}{2\\sin A}.$$\n삼각형 $ABD$에서도 변 $\\overline{BD}$가 같은 각 $A(=\\angle BAD)$의 대변이므로 사인법칙으로 $$\\frac{\\overline{BD}}{\\sin A}=2R_2,\\qquad R_2=\\frac{\\overline{BD}}{2\\sin A}.$$\n두 식의 비를 잡으면 공통인 $\\sin A$가 약분되어 외접원 반지름의 비가 곧 변의 비가 된다. $R_1:R_2=4:3$이므로 $$\\frac{\\overline{BC}}{2\\sin A}:\\frac{\\overline{BD}}{2\\sin A}=4:3,\\quad\\text{즉}\\quad \\overline{BC}:\\overline{BD}=4:3.$$\n비를 매개변수로 놓아 변의 길이를 한 문자로 표현한다. $$\\overline{BC}=4k,\\qquad \\overline{BD}=3k\\quad(k>0).$$\n삼각형 $BCD$에서 $\\angle CDB$에 대해 코사인법칙을 세운다. 세 변은 $\\overline{CD}=2\\sqrt{7}$, $\\overline{BD}=3k$, $\\overline{BC}=4k$이므로 $$\\cos(\\angle CDB)=\\frac{(2\\sqrt{7})^2+(3k)^2-(4k)^2}{2\\cdot 2\\sqrt{7}\\cdot 3k}=\\frac{-7k^2+28}{12\\sqrt{7}\\,k}.$$\n점 $D$가 선분 $AC$ 위에 있어 $\\angle CDB$와 $\\angle BDA$는 보각이므로 $$\\cos(\\angle CDB)=\\cos(\\pi-\\angle BDA)=-\\cos(\\angle BDA)=-\\frac{\\sqrt{7}}{4}.$$\n두 표현을 같게 두고 정리한다. $$\\frac{-7k^2+28}{12\\sqrt{7}\\,k}=-\\frac{\\sqrt{7}}{4}.$$ 양변에 $12\\sqrt{7}\\,k$를 곱하면 $-7k^2+28=-\\frac{\\sqrt{7}}{4}\\cdot 12\\sqrt{7}\\,k=-21k$, 즉 $$7k^2-21k-28=7(k+1)(k-4)=0.$$\n$k>0$이므로 $k+1>0$, 따라서 $k=4$. 이때 $\\overline{BC}=16$, $\\overline{BD}=12$이며 $\\overline{AC}=\\overline{AD}+\\overline{CD}>2\\sqrt{7}$ 조건과도 모순이 없다.\n구하는 값은 $$\\overline{BC}+\\overline{BD}=4k+3k=7k=7\\times 4=28.$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{28}}$$ 입니다.",
   "finalAnswer": "28",
   "correctAnswer": "28",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }

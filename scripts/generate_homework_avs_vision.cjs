@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * 수학상 통합숙제 AVS 비전 생성기 (고차방정식 이후 5개 단원)
+ * 통합숙제 AVS 비전 생성기 (수학상 고차방정식 이후 5단원 + 수학1 10단원 + 수학2 7단원)
  *
  * 문제 이미지({NNN}.webp) + 해설 이미지({NNN}a.webp)를 Gemini 비전으로 분석하여
  * 문제별 PCBSA 단계별 힌트 JSON을 생성한다.
@@ -12,9 +12,13 @@
  *       + Supabase math_hints/{safeKey}/{NNN}.json 업서트 (앱 서빙 경로)
  * 재개: scripts/homework_avs_manifest.json
  *
- * 사용: node scripts/generate_homework_avs_vision.cjs <unitKey|all> [--dry-run] [--limit N] [--force] [--pids NNN,NNN] [--qa]
- *   unitKey: 09고차방정식 | 10일차부등식 | 11이차부등식 | 12경우의수 | 13행렬
+ * 사용: node scripts/generate_homework_avs_vision.cjs <unitKey|sang|su1|su2|all> [--dry-run] [--limit N] [--force] [--pids NNN,NNN] [--qa]
+ *   unitKey: 09고차방정식 … 13행렬 | 01지수 … 10수학적귀납법(수1) | 01함수의극한 … 07정적분활용(수2)
+ *   그룹: sang=수학상 5단원, su1=수학1 10단원, su2=수학2 7단원, all=전체
  *   --pids: 특정 문제만 처리 / --qa: _qa_*.json의 검수 지적을 프롬프트에 주입해 재생성
+ *
+ *   문제 번호는 스켈레톤 디렉터리(src/data/homework_avs/{hintKey}/NNN.json)에서 도출한다.
+ *   유령 슬롯은 스켈레톤 삭제로 제외되며, 번호 구멍(수학1_06 038, 수학2_04 009)도 자연 대응된다.
  */
 const fs = require('fs');
 const path = require('path');
@@ -33,17 +37,50 @@ const API_KEYS = [
   process.env.VITE_GEMINI_API_KEY_3,
 ].filter(Boolean);
 
-const UNITS = {
-  '09고차방정식': { hintKey: '수학상_09고차방정식_통합숙제', problemCount: 20 }, // 021·022는 유령 슬롯(원본 20문제)
-  '10일차부등식': { hintKey: '수학상_10일차부등식_통합숙제', problemCount: 13 }, // 꼬리 2개는 유령 슬롯
-  '11이차부등식': { hintKey: '수학상_11이차부등식_통합숙제', problemCount: 30 }, // 꼬리 2개는 유령 슬롯
-  '12경우의수': { hintKey: '수학상_12경우의수_통합숙제', problemCount: 36 }, // 꼬리 2개는 유령 슬롯
-  '13행렬': { hintKey: '수학상_13행렬_통합숙제', problemCount: 40 }, // 꼬리 2개는 유령 슬롯
+// subjectPath=버킷 경로(math_crops/homework/{subjectPath}), koSubject=S_objects 폴백 경로, subjectLabel=프롬프트 과목명
+const SUBJECTS = {
+  sang: { subjectPath: 'math_sang', koSubject: '수학상', subjectLabel: '수학(상)' },
+  su1: { subjectPath: 'math1', koSubject: '수학1', subjectLabel: '수학Ⅰ' },
+  su2: { subjectPath: 'math2', koSubject: '수학2', subjectLabel: '수학Ⅱ' },
 };
+
+const UNITS = {
+  '09고차방정식': { group: 'sang', hintKey: '수학상_09고차방정식_통합숙제' }, // 021·022는 유령 슬롯(원본 20문제)
+  '10일차부등식': { group: 'sang', hintKey: '수학상_10일차부등식_통합숙제' }, // 꼬리 2개는 유령 슬롯
+  '11이차부등식': { group: 'sang', hintKey: '수학상_11이차부등식_통합숙제' }, // 꼬리 2개는 유령 슬롯
+  '12경우의수': { group: 'sang', hintKey: '수학상_12경우의수_통합숙제' }, // 꼬리 2개는 유령 슬롯
+  '13행렬': { group: 'sang', hintKey: '수학상_13행렬_통합숙제' }, // 꼬리 2개는 유령 슬롯
+  // 수학1 — 유령 슬롯은 스켈레톤 삭제로 제외 (scripts/su12_hw_audit.json·homework_avs_asset_issues.json 참조)
+  '01지수': { group: 'su1', hintKey: '수학1_01지수_통합숙제' },
+  '02로그': { group: 'su1', hintKey: '수학1_02로그_통합숙제' },
+  '03지수로그함수': { group: 'su1', hintKey: '수학1_03지수로그함수_통합숙제' },
+  '04지수로그함수활용': { group: 'su1', hintKey: '수학1_04지수로그함수활용_통합숙제' },
+  '05삼각함수정의': { group: 'su1', hintKey: '수학1_05삼각함수정의_통합숙제' },
+  '06삼각함수그래프': { group: 'su1', hintKey: '수학1_06삼각함수그래프_통합숙제' }, // 038 구멍(기처리 유령)
+  '07삼각함수활용': { group: 'su1', hintKey: '수학1_07삼각함수활용_통합숙제' },
+  '08등차등비수열': { group: 'su1', hintKey: '수학1_08등차등비수열_통합숙제' },
+  '09수열의합': { group: 'su1', hintKey: '수학1_09수열의합_통합숙제' },
+  '10수학적귀납법': { group: 'su1', hintKey: '수학1_10수학적귀납법_통합숙제' },
+  // 수학2
+  '01함수의극한': { group: 'su2', hintKey: '수학2_01함수의극한_통합숙제' },
+  '02함수의연속': { group: 'su2', hintKey: '수학2_02함수의연속_통합숙제' },
+  '03미분계수': { group: 'su2', hintKey: '수학2_03미분계수_통합숙제' },
+  '04도함수활용12': { group: 'su2', hintKey: '수학2_04도함수활용12_통합숙제' }, // 009 구멍(기처리 유령)
+  '05도함수활용3': { group: 'su2', hintKey: '수학2_05도함수활용3_통합숙제' },
+  '06부정적분정적분': { group: 'su2', hintKey: '수학2_06부정적분정적분_통합숙제' },
+  '07정적분활용': { group: 'su2', hintKey: '수학2_07정적분활용_통합숙제' },
+};
+
+const GROUP_KEYS = ['sang', 'su1', 'su2'];
+
+// 스켈레톤 디렉터리에서 문제 번호 목록 도출 (유령 슬롯 삭제·번호 구멍 자연 반영)
+function unitPids(unit) {
+  const dir = path.join(__dirname, '..', 'src', 'data', 'homework_avs', unit.hintKey);
+  return fs.readdirSync(dir).filter(f => /^\d{3}\.json$/.test(f)).map(f => f.slice(0, 3)).sort();
+}
 
 const MANIFEST_PATH = path.join(__dirname, 'homework_avs_manifest.json');
 const MISMATCH_PATH = path.join(__dirname, 'homework_avs_mismatch.json');
-const pad = n => String(n).padStart(3, '0');
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // ── CLI ──
@@ -57,15 +94,16 @@ const pidsIdx = args.indexOf('--pids');
 const PIDS = pidsIdx !== -1 ? new Set(args[pidsIdx + 1].split(',')) : null; // 특정 문제만 (예: --pids 003,015)
 const USE_QA = args.includes('--qa'); // _qa_*.json의 지적사항을 프롬프트에 주입
 
-if (!unitArg || (!UNITS[unitArg] && unitArg !== 'all')) {
-  console.error(`사용법: node ${path.basename(__filename)} <${Object.keys(UNITS).join('|')}|all> [--dry-run] [--limit N] [--force] [--pids NNN,NNN] [--qa]`);
+if (!unitArg || (!UNITS[unitArg] && unitArg !== 'all' && !GROUP_KEYS.includes(unitArg))) {
+  console.error(`사용법: node ${path.basename(__filename)} <unitKey|${GROUP_KEYS.join('|')}|all> [--dry-run] [--limit N] [--force] [--pids NNN,NNN] [--qa]`);
+  console.error(`unitKey: ${Object.keys(UNITS).join(' | ')}`);
   process.exit(1);
 }
 if (API_KEYS.length === 0) { console.error('VITE_GEMINI_API_KEY 미설정'); process.exit(1); }
 if (!DRY_RUN && !SERVICE_KEY) { console.error('SUPABASE_SERVICE_ROLE_KEY 미설정'); process.exit(1); }
 
 // ── 프롬프트 ──
-const buildPrompt = (unitTitle, knownAnswer) => `너는 한국 고등학교 수학(상) 전문 강사다. 첫 번째 이미지는 [문제], 두 번째 이미지는 선생님의 손글씨/판서 [해설]이다. 단원: ${unitTitle}. 검증된 정답: "${knownAnswer}".
+const buildPrompt = (subjectLabel, unitTitle, knownAnswer) => `너는 한국 고등학교 ${subjectLabel} 전문 강사다. 첫 번째 이미지는 [문제], 두 번째 이미지는 선생님의 손글씨/판서 [해설]이다. 단원: ${unitTitle}. 검증된 정답: "${knownAnswer}".
 
 해설 이미지의 풀이 과정을 충실히 따라가며, 학생이 단계별로 따라올 수 있는 PCBSA 해설을 만들어라.
 
@@ -136,7 +174,11 @@ function tolerantJsonParse(text) {
     const fixed = text
       .replace(/\\(?!["\\\/bfnrtu])/g, '\\\\')
       .replace(/\\u(?![0-9a-fA-F]{4})/g, '\\\\u'); // \underline 등 4자리 hex가 아닌 \u
-    return JSON.parse(fixed);
+    try { return JSON.parse(fixed); }
+    catch {
+      // 긴 응답에서 문자열 내부 raw 제어문자가 간헐 발생(01지수 045 2회 실패) — 공백 치환 복구
+      return JSON.parse(fixed.replace(/[\u0000-\u001f]+/g, ' '));
+    }
   }
 }
 
@@ -154,6 +196,26 @@ function normalizeAnswer(v) {
   let s = String(v).trim();
   const circled = { '①': '1', '②': '2', '③': '3', '④': '4', '⑤': '5' };
   s = s.replace(/[①②③④⑤]/g, m => circled[m]).replace(/번$/, '').trim();
+  // 수식 표기 동치 정규화(02로그/020 위양성): 양변 동일 규칙이므로 비교 일관성 유지
+  s = s.replace(/\$+/g, '')
+    ;
+  // \frac 중첩 중괄호 지원 (1단계 중첩 패턴을 수렴까지 반복 — 03지수로그함수/043 \frac{7\sqrt{6}}{16} 위양성)
+  for (let prev = ''; prev !== s; ) {
+    prev = s;
+    s = s.replace(/\\d?frac\s*\{((?:[^{}]|\{[^{}]*\})*)\}\s*\{((?:[^{}]|\{[^{}]*\})*)\}/g, '($1)/($2)');
+  }
+  s = s
+    .replace(/\\left|\\right/g, '')
+    .replace(/\\sqrt/g, '√')
+    .replace(/\\(?=[a-zA-Z])/g, '')
+    .replace(/[{}]/g, '')
+    ;
+  for (let prev = ''; prev !== s; ) { prev = s; s = s.replace(/\(([^()]*)\)/g, '$1'); } // 중첩 괄호 수렴 제거
+  s = s
+    // 캐노니컬 토큰화: sqrt(x)/√x/\sqrt, π/pi 표기 차이 흡수 (05삼각함수정의 위양성 6건)
+    .replace(/√/g, 'sqrt')
+    .replace(/π/g, 'pi')
+    .replace(/\s+/g, '');
   return s;
 }
 
@@ -164,7 +226,7 @@ function answerCandidates(r) {
   return list.map(normalizeAnswer).filter(s => s !== '' && s !== 'null');
 }
 
-const META_PHRASES = ['해설 이미지', '해설이미지', '판서', '로 보입니다', '따르겠습니다', '잘못 해석', '잘못된 것으'];
+const META_PHRASES = ['해설 이미지', '해설이미지', '해설에', '판서', '로 보입니다', '따르겠습니다', '잘못 해석', '잘못된 것으', '가정하고 풀이'];
 
 function validateResult(r) {
   const issues = [];
@@ -199,14 +261,19 @@ function katexErrors(text) {
 // ── 텍스트 정리 ──
 // 1) \times·\frac 등이 JSON 유효 이스케이프(\t,\f,\b,\r)로 오인 파싱된 제어문자를 LaTeX로 복원
 // 2) 백틱 등 렌더러에 노출되는 마크다운 잔재 제거
+// 3) 수식 블록($…$/$$…$$) 내부의 과잉 이중 백슬래시(\\frac 등)를 단일로 정규화 (QA wave1 지적)
+function normalizeMathEscapes(s) {
+  return s.replace(/(\${1,2})([^$]+?)\1/gs, (m, d, body) => d + body.replace(/\\\\(?=[a-zA-Z])/g, '\\') + d);
+}
+
 function sanitizeText(s) {
-  return String(s)
+  return normalizeMathEscapes(String(s)
     .replace(/\u0009/g, '\\t')
     .replace(/\u000c/g, '\\f')
     .replace(/\u0008/g, '\\b')
     .replace(/\u000d/g, '\\r')
-    .replace(/\n(eq|abla|otin)\b/g, (m, g) => '\\n' + g)
-    .replace(/`/g, '')
+    .replace(/\n(eq|abla|otin|e)\b/g, (m, g) => '\\n' + g)
+    .replace(/`/g, ''))
     .trim();
 }
 
@@ -219,6 +286,24 @@ function sanitizeResult(r) {
   }
   if (Array.isArray(out.S_steps)) out.S_steps = out.S_steps.map(sanitizeText).filter(Boolean);
   return out;
+}
+
+// ── 정답 LaTeX 정제 (QA wave3a: \boxed 안 $ 중첩·평문 √/^()/log_ 깨짐 방지) ──
+function latexifyAnswer(s) {
+  let t = String(s).trim().replace(/^\$+|\$+$/g, '');
+  t = t
+    .replace(/√\(([^)]+)\)/g, '\\sqrt{$1}')
+    .replace(/√(\d+|[a-zA-Z])/g, '\\sqrt{$1}')
+    .replace(/(?<![A-Za-z\\])sqrt\(([^)]+)\)/g, '\\sqrt{$1}')
+    .replace(/(\d+)\/(\d+)π/g, '\\frac{$1}{$2}\\pi')
+    .replace(/π/g, '\\pi ')
+    .replace(/(?<![a-zA-Z\\])pi(?![a-zA-Z])/g, '\\pi ')
+    .replace(/\*/g, ' \\cdot ')
+    .replace(/\^\(([^)]+)\)/g, '^{$1}')
+    .replace(/\^(\d{2,})/g, '^{$1}')
+    .replace(/(?<!\\)log_\{([^{}]+)\}/g, '\\log_{$1}')
+    .replace(/(?<!\\)log_(10|\d)/g, '\\log_{$1}');
+  return t;
 }
 
 // ── 정답 표기 (①~⑤번 또는 값) ──
@@ -264,8 +349,9 @@ async function processProblem(unitName, unit, pid, manifest, mismatches) {
   const existing = loadJson(localPath, null);
   if (!existing) { console.log(`  ⚠️ ${pid}: 기존 JSON 없음 — 건너뜀`); return 'skip'; }
 
+  const subject = SUBJECTS[unit.group];
   const safeFolder = getSafePath(unitName);
-  const imgBase = `${PUBLIC_BASE}/math_crops/homework/math_sang/${safeFolder}`;
+  const imgBase = `${PUBLIC_BASE}/math_crops/homework/${subject.subjectPath}/${safeFolder}`;
   const [probB64, solB64] = await Promise.all([
     fetchImageB64(`${imgBase}/${pid}.webp`),
     fetchImageB64(`${imgBase}/${pid}a.webp`),
@@ -280,7 +366,7 @@ async function processProblem(unitName, unit, pid, manifest, mismatches) {
       qaFeedback = `\n\n[검수 피드백 — 반드시 반영] 이전 해설이 검수에서 다음 지적을 받았다:\n- ${hit.issues.join('\n- ').slice(0, 1500)}\n지적된 논리 오류·누락을 바로잡되, 해설 이미지의 전체 흐름과 검증된 정답은 유지하라.`;
     }
   }
-  const basePrompt = buildPrompt(unitName.replace(/^\d+/, ''), existing.finalAnswer) + qaFeedback;
+  const basePrompt = buildPrompt(subject.subjectLabel, unitName.replace(/^\d+/, ''), existing.finalAnswer) + qaFeedback;
   let r = sanitizeResult(await callVision(basePrompt, [probB64, solB64]));
   let issues = validateResult(r);
   if (issues.length) {
@@ -298,15 +384,37 @@ async function processProblem(unitName, unit, pid, manifest, mismatches) {
     return 'mismatch';
   }
 
+  // 정답 표기: 1~5 값이라도 단답형이면 "○번"으로 포장하면 안 됨 —
+  // 비전이 객관식(choice)으로 확인한 경우에만 ○번 표기, 그 외엔 값 그대로 (QA wave0 지적)
+  const visionChoice = (r.answer && typeof r.answer === 'object') ? normalizeAnswer(r.answer.choice) : '';
+  const visionValue = (r.answer && typeof r.answer === 'object') ? normalizeAnswer(r.answer.value) : '';
+  // ○번 표기는 비전 choice가 저장 정답과 일치하고 value와는 구분될 때만 — 비전이 choice를
+  // 값으로 오보고하면 잘못된 보기 번호가 노출됨 (02로그 008·034 QA major). 모호하면 값 표기가 안전.
+  const isChoiceQuestion = visionChoice !== '' && visionChoice === normalizeAnswer(existing.finalAnswer) && visionValue !== normalizeAnswer(existing.finalAnswer);
+  // 박스 내용: 객관식이면 ○번, 아니면 비전 value(모델이 쓴 LaTeX)가 저장 정답과 동치일 때 그것을 우선
+  // 사용하고 latexify로 정제. 조립 후 KaTeX 검증 실패 시 평문 폴백 (QA wave3a 렌더 깨짐 방지).
+  let display;
+  if (isChoiceQuestion) {
+    display = answerDisplay(existing.finalAnswer);
+  } else {
+    const visionValRaw = (r.answer && typeof r.answer === 'object' && r.answer.value != null) ? String(r.answer.value) : '';
+    const useVision = visionValRaw && normalizeAnswer(visionValRaw) === normalizeAnswer(existing.finalAnswer);
+    display = latexifyAnswer(useVision ? visionValRaw : existing.finalAnswer);
+  }
+  let answerLine = `따라서 최종 정답은 $$\\mathbf{\\boxed{${display}}}$$ 입니다.`;
+  if (katexErrors(answerLine)) {
+    answerLine = `따라서 최종 정답은 [ ${String(existing.finalAnswer).replace(/\$/g, '')} ] 입니다.`;
+  }
+
   const out = {
     title: existing.title,
-    type: 'algebra',
+    type: existing.type || 'algebra',
     P: sanitizeText(r.P),
     C: sanitizeText(r.C),
     B: sanitizeText(r.B),
     S: r.S_steps.map(sanitizeText).filter(Boolean).join('\n'),
-    S_objects: existing.S_objects || [{ type: 'image', src: `/math_crops/숙제/수학상/${unitName}/${pid}a.webp` }],
-    A: `따라서 최종 정답은 $$\\mathbf{\\boxed{${answerDisplay(existing.finalAnswer)}}}$$ 입니다.`,
+    S_objects: existing.S_objects || [{ type: 'image', src: `/math_crops/숙제/${subject.koSubject}/${unitName}/${pid}a.webp` }],
+    A: answerLine,
     finalAnswer: existing.finalAnswer,
     correctAnswer: existing.correctAnswer ?? existing.finalAnswer,
     pcbsa_completed: true,
@@ -329,7 +437,9 @@ async function processProblem(unitName, unit, pid, manifest, mismatches) {
 
 // ── 메인 ──
 (async () => {
-  const targets = unitArg === 'all' ? Object.keys(UNITS) : [unitArg];
+  const targets = unitArg === 'all' ? Object.keys(UNITS)
+    : GROUP_KEYS.includes(unitArg) ? Object.keys(UNITS).filter(k => UNITS[k].group === unitArg)
+    : [unitArg];
   const manifest = loadJson(MANIFEST_PATH, {});
   const mismatches = loadJson(MISMATCH_PATH, []);
   const stats = { ok: 0, mismatch: 0, invalid: 0, skip: 0, dry: 0 };
@@ -338,9 +448,9 @@ async function processProblem(unitName, unit, pid, manifest, mismatches) {
   outer:
   for (const unitName of targets) {
     const unit = UNITS[unitName];
-    console.log(`\n=== ${unitName} (${unit.problemCount}문제) ===`);
-    for (let n = 1; n <= unit.problemCount; n++) {
-      const pid = pad(n);
+    const pids = unitPids(unit);
+    console.log(`\n=== ${unitName} (${pids.length}문제) ===`);
+    for (const pid of pids) {
       if (PIDS && !PIDS.has(pid)) continue;
       if (!FORCE && manifest[`${unit.hintKey}/${pid}`]) continue;
       if (LIMIT && processed >= LIMIT) break outer;

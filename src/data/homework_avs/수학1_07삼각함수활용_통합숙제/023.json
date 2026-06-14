@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 수학1 - 삼각함수 활용 23번 명품 해설",
   "type": "trigonometry",
-  "P": "삼각함수의 덧셈정리, 배각·반각 공식을 활용하여 값을 구합니다.",
-  "C": "사인·코사인 법칙과 삼각형의 넓이 공식을 적용합니다.",
-  "B": "삼각함수 활용:\n\n1) 사인법칙: $$\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R$$\n2) 코사인법칙: $$a^2 = b^2 + c^2 - 2bc\\cos A$$\n3) 삼각형 넓이: $$S = \\frac{1}{2}ab\\sin C$$\n4) 덧셈정리: $$\\sin(\\alpha \\pm \\beta) = \\sin\\alpha\\cos\\beta \\pm \\cos\\alpha\\sin\\beta$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "주어진 삼각형 ABC 모양의 종이를 접었을 때, 삼각형 BDE와 삼각형 DCF의 외접원의 반지름 길이 비를 이용하여 선분 DF의 길이를 구하는 문제입니다.",
+  "C": "삼각형 ABC는 AB=AC=1, ∠BAC=π/2인 직각이등변삼각형입니다. 점 A를 선분 BC 위의 점 D에 겹치도록 선분 EF를 따라 접었으며, 삼각형 BDE와 삼각형 DCF의 외접원의 반지름 길이 비는 2:1입니다.",
+  "B": "1. 사인법칙: 삼각형의 한 변의 길이를 그 대각의 사인 값으로 나눈 것은 외접원의 지름과 같습니다. 즉, $$\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R$$\n2. 코사인법칙: 삼각형의 한 변의 길이는 다른 두 변의 길이와 그 끼인각을 이용하여 구할 수 있습니다. 즉, $$a^2 = b^2 + c^2 - 2bc \\cos A$$",
+  "S": "종이를 접었을 때 생기는 각의 관계를 파악하고, 삼각형 BDE와 DCF의 각을 정의합니다. 점 A를 D로 접었으므로 AE=DE, AF=DF이고, ∠AED와 ∠AFD는 보각 관계에 있습니다. ∠AED를 θ로 두면, ∠BED는 π-θ가 되고, ∠AFD는 π-θ가 되어 ∠CFD는 θ가 됩니다.\n삼각형 BDE에 사인법칙을 적용하여 BD의 길이를 외접원 반지름 r1과 θ에 대한 식으로 나타냅니다. ∠BED = π-θ이므로, $$\\frac{\\overline{BD}}{\\sin(\\pi - \\theta)} = 2r_1 \\implies \\frac{\\overline{BD}}{\\sin \\theta} = 2r_1 \\implies \\overline{BD} = 2r_1 \\sin \\theta$$\n삼각형 DCF에 사인법칙을 적용하여 CD의 길이를 외접원 반지름 r2와 θ에 대한 식으로 나타냅니다. ∠CFD = θ이므로, $$\\frac{\\overline{CD}}{\\sin \\theta} = 2r_2 \\implies \\overline{CD} = 2r_2 \\sin \\theta$$\n두 삼각형의 외접원 반지름 비를 이용하여 선분 BD와 CD의 길이 비를 구합니다. 위에서 구한 BD와 CD 식을 통해 $$\\overline{BD} : \\overline{CD} = 2r_1 \\sin \\theta : 2r_2 \\sin \\theta = r_1 : r_2$$ 문제에서 주어진 외접원 반지름 비가 2:1이므로, BD : CD = 2 : 1입니다.\n삼각형 ABC의 변의 길이를 이용하여 BC의 길이를 구하고, 이를 통해 CD의 길이를 계산합니다. 삼각형 ABC는 직각이등변삼각형이므로 피타고라스 정리에 의해 BC = $$\\sqrt{1^2 + 1^2} = \\sqrt{2}$$ 이고, BD : CD = 2 : 1이므로 CD = $$\\frac{1}{3}\\overline{BC} = \\frac{\\sqrt{2}}{3}$$ 입니다.\n선분 DF의 길이를 x로 두고, 삼각형 DCF에 코사인법칙을 적용하여 x에 대한 방정식을 세웁니다. AF=DF=x이므로 CF = AC - AF = 1 - x입니다. 삼각형 ABC에서 ∠C = π/4이므로, 삼각형 DCF에서 코사인법칙을 적용하면 $$\\overline{DF}^2 = \\overline{CD}^2 + \\overline{CF}^2 - 2 \\cdot \\overline{CD} \\cdot \\overline{CF} \\cdot \\cos C$$ $$x^2 = \\left(\\frac{\\sqrt{2}}{3}\\right)^2 + (1-x)^2 - 2 \\left(\\frac{\\sqrt{2}}{3}\\right) (1-x) \\cos \\frac{\\pi}{4}$$\n위에서 세운 방정식을 풀어 x의 값을 구합니다. $$\\begin{aligned} x^2 &= \\frac{2}{9} + (1-2x+x^2) - 2 \\left(\\frac{\\sqrt{2}}{3}\\right) (1-x) \\left(\\frac{\\sqrt{2}}{2}\\right) \\\\ x^2 &= \\frac{2}{9} + 1 - 2x + x^2 - \\frac{2}{3}(1-x) \\\\ 0 &= \\frac{2}{9} + \\frac{9}{9} - 2x - \\frac{6}{9} + \\frac{2}{3}x \\\\ 0 &= \\frac{5}{9} - 2x + \\frac{2}{3}x \\\\ 0 &= \\frac{5}{9} - \\frac{4}{3}x \\\\ \\frac{4}{3}x &= \\frac{5}{9} \\\\ x &= \\frac{5}{9} \\cdot \\frac{3}{4} = \\frac{5}{12} \\end{aligned}$$ 따라서 DF의 길이는 5/12입니다.\n구한 DF의 길이를 p/q 형태로 나타내고 p+q의 값을 계산합니다. DF = 5/12이므로 p=12, q=5입니다. p와 q는 서로소인 자연수이므로, p+q = 12+5 = 17입니다.",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{17}}$$ 입니다.",
   "finalAnswer": "17",
   "correctAnswer": "17",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "gemini-2.5-flash"
 }

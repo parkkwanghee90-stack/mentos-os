@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 수학1 - 삼각함수 정의 5번 명품 해설",
   "type": "trigonometry",
-  "P": "호도법과 삼각함수의 정의를 이용하여 삼각함수값을 구합니다.",
-  "C": "단위원 위의 점 좌표와 삼각함수의 관계를 활용합니다.",
-  "B": "삼각함수의 정의:\n\n1) 호도법: $$180° = \\pi$$ (rad), 부채꼴 호의 길이 $$l = r\\theta$$, 넓이 $$S = \\frac{1}{2}r^2\\theta$$\n2) 단위원: $$P(\\cos\\theta, \\sin\\theta)$$\n3) $$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$$\n4) $$\\sin^2\\theta + \\cos^2\\theta = 1$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "부채꼴의 반지름 길이와 중심각에 대한 조건이 주어졌을 때, 이 부채꼴의 넓이를 구해야 합니다.",
+  "C": "반지름의 길이 $r=2$이고 중심각의 크기가 $\\theta$인 부채꼴이 있습니다. 중심각 $\\theta$는 다음 두 조건을 만족합니다. (가) $0 < \\theta < \\frac{\\pi}{2}$ (나) 각 $\\theta$를 나타내는 동경과 각 $8\\theta$를 나타내는 동경이 일치합니다.",
+  "B": "두 각 $\\alpha$, $\\beta$를 나타내는 동경이 일치할 때, $\\alpha - \\beta = 2n\\pi$ (단, $n$은 정수)입니다. 반지름의 길이가 $r$이고 중심각의 크기가 $\\theta$ (라디안)인 부채꼴의 넓이 $S$는 $$S = \\frac{1}{2}r^2\\theta$$ 입니다.",
+  "S": "두 각의 동경이 일치한다는 조건 (나)를 이용하여 $8\\theta$와 $\\theta$ 사이의 관계식을 세웁니다.\n$$8\\theta - \\theta = 2n\\pi \\quad (\\text{단, } n\\text{은 정수})$$\n위 관계식을 정리하여 중심각 $\\theta$를 정수 $n$에 대한 식으로 나타냅니다.\n$$7\\theta = 2n\\pi$$ $$\\theta = \\frac{2n}{7}\\pi$$\n조건 (가)의 $\\theta$ 범위에 위에서 구한 $\\theta$의 식을 대입하여 정수 $n$의 범위를 찾습니다.\n$$0 < \\frac{2n}{7}\\pi < \\frac{\\pi}{2}$$ 각 변을 $\\pi$로 나누고 $2/7$의 역수를 곱하여 $n$의 범위를 구합니다. $$0 < \\frac{2n}{7} < \\frac{1}{2}$$ $$0 < 2n < \\frac{7}{2}$$ $$0 < n < \\frac{7}{4}$$\n정수 $n$의 범위에 해당하는 $n$의 값을 찾고, 이를 이용하여 중심각 $\\theta$의 값을 결정합니다.\n$0 < n < \\frac{7}{4}$를 만족하는 정수 $n$은 $n=1$입니다. $n=1$을 $\\theta = \\frac{2n}{7}\\pi$에 대입하면 $$\\theta = \\frac{2 \\times 1}{7}\\pi = \\frac{2}{7}\\pi$$\n반지름의 길이 $r=2$와 구한 중심각 $\\theta = \\frac{2}{7}\\pi$를 이용하여 부채꼴의 넓이 공식을 적용합니다.\n$$S = \\frac{1}{2}r^2\\theta = \\frac{1}{2} \\times 2^2 \\times \\frac{2}{7}\\pi = \\frac{1}{2} \\times 4 \\times \\frac{2}{7}\\pi = 2 \\times \\frac{2}{7}\\pi = \\frac{4}{7}\\pi$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/수학1/05삼각함수정의/005a.webp"
     }
   ],
-  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{4/7π}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\frac{4}{7}\\pi}}$$ 입니다.",
   "finalAnswer": "4/7π",
   "correctAnswer": "4/7π",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "gemini-2.5-flash"
 }

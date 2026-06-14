@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 수학2 - 함수의 극한 19번 명품 해설",
   "type": "calculus",
-  "P": "함수의 극한값을 구하고, 극한의 성질을 활용하여 미지수를 결정합니다.",
-  "C": "$$0/0$$ 꼴 부정형을 인수분해·유리화로 해소하고, 좌극한·우극한을 비교합니다.",
-  "B": "함수의 극한:\n\n1) $$\\lim_{x \\to a} f(x) = L$$ ⟺ $$\\lim_{x \\to a^-} f(x) = \\lim_{x \\to a^+} f(x) = L$$\n2) $$\\lim_{x \\to a} \\frac{f(x)}{g(x)}$$: $$0/0$$ 꼴 → 인수분해 또는 유리화\n3) $$\\lim_{x \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots}$$: 최고차항 비교",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "주어진 곡선과 직선의 교점 A, B를 이용하여 원점 O로부터의 거리 차이에 대한 극한값 k를 구하고, 최종적으로 30k^2의 값을 계산하는 것이 목표입니다.",
+  "C": "곡선 $y = \\frac{2t}{x}$와 직선 $y = -\\frac{1}{t}x + 3$이 만나는 두 점을 $A$, $B$라 하며, $t > 1$입니다. 원점 $O$에 대해 $$k = \\lim_{t \\to 1+} \\frac{\\overline{OB} - \\overline{OA}}{t-1}$$ 로 정의되고, 점 $B$의 $x$좌표는 점 $A$의 $x$좌표보다 큽니다.",
+  "B": "1. 두 함수의 교점 구하기: 두 함수의 식을 연립하여 해를 구합니다.\n2. 두 점 사이의 거리 공식: 원점 O(0,0)과 점 P(x,y) 사이의 거리는 $\\overline{OP} = \\sqrt{x^2+y^2}$ 입니다.\n3. 미정계수의 극한: \\lim_{x \\to a} \\frac{f(x)}{g(x)} 꼴에서 \\frac{0}{0} 꼴인 경우, 분자 또는 분모를 인수분해하거나 유리화하여 약분한 후 극한값을 계산합니다. 특히, \\sqrt{A} - \\sqrt{B} 꼴은 \\frac{\\sqrt{A} - \\sqrt{B}}{1} \\times \\frac{\\sqrt{A} + \\sqrt{B}}{\\sqrt{A} + \\sqrt{B}} = \\frac{A-B}{\\sqrt{A} + \\sqrt{B}} 로 유리화합니다.",
+  "S": "교점 A, B의 좌표를 구하기 위해 두 함수의 식을 연립하여 x에 대한 방정식을 세웁니다. 주어진 조건에 따라 x좌표를 결정하고, 해당 x값을 원래 식에 대입하여 y좌표를 찾습니다.\n$$\\frac{2t}{x} = -\\frac{1}{t}x + 3$$ $$\\Rightarrow 2t^2 = -x^2 + 3tx$$ $$\\Rightarrow x^2 - 3tx + 2t^2 = 0$$ $$\\Rightarrow (x-t)(x-2t) = 0$$따라서 x좌표는 $$t$$ 또는 $$2t$$입니다. 점 B의 x좌표가 점 A의 x좌표보다 크다는 조건에 따라 A의 x좌표는 $$t$$, B의 x좌표는 $$2t$$입니다. 각 x좌표에 해당하는 y좌표를 구하면 A$$(t, 2)$$, B$$(2t, 1)$$입니다.\n원점 O(0,0)과 교점 A, B 사이의 거리를 두 점 사이의 거리 공식을 이용하여 각각 나타냅니다.\n$$\\overline{OA} = \\sqrt{(t-0)^2 + (2-0)^2} = \\sqrt{t^2+4}$$ $$\\overline{OB} = \\sqrt{(2t-0)^2 + (1-0)^2} = \\sqrt{4t^2+1}$$\n주어진 극한식에 $\\overline{OA}$와 $\\overline{OB}$를 대입하여 k에 대한 식을 세웁니다. t가 1로 갈 때 \\frac{0}{0} 꼴이 되므로, 분자를 유리화하여 극한값을 계산할 수 있는 형태로 변형합니다.\n$$k = \\lim_{t \\to 1+} \\frac{\\overline{OB} - \\overline{OA}}{t-1} = \\lim_{t \\to 1+} \\frac{\\sqrt{4t^2+1} - \\sqrt{t^2+4}}{t-1}$$ $$= \\lim_{t \\to 1+} \\frac{(\\sqrt{4t^2+1} - \\sqrt{t^2+4})(\\sqrt{4t^2+1} + \\sqrt{t^2+4})}{(t-1)(\\sqrt{4t^2+1} + \\sqrt{t^2+4})}$$ $$= \\lim_{t \\to 1+} \\frac{(4t^2+1) - (t^2+4)}{(t-1)(\\sqrt{4t^2+1} + \\sqrt{t^2+4})}$$ $$= \\lim_{t \\to 1+} \\frac{3t^2-3}{(t-1)(\\sqrt{4t^2+1} + \\sqrt{t^2+4})}$$\n분자를 인수분해하여 (t-1) 항을 약분하고, t=1을 대입하여 극한값을 계산합니다.\n$$k = \\lim_{t \\to 1+} \\frac{3(t^2-1)}{(t-1)(\\sqrt{4t^2+1} + \\sqrt{t^2+4})}$$ $$= \\lim_{t \\to 1+} \\frac{3(t-1)(t+1)}{(t-1)(\\sqrt{4t^2+1} + \\sqrt{t^2+4})}$$ $$= \\lim_{t \\to 1+} \\frac{3(t+1)}{\\sqrt{4t^2+1} + \\sqrt{t^2+4}}$$ $$= \\frac{3(1+1)}{\\sqrt{4(1)^2+1} + \\sqrt{(1)^2+4}} = \\frac{3 \\times 2}{\\sqrt{5} + \\sqrt{5}} = \\frac{6}{2\\sqrt{5}} = \\frac{3}{\\sqrt{5}}$$\n구한 k 값을 이용하여 최종적으로 30k^2의 값을 계산합니다.\n$$30k^2 = 30 \\times \\left(\\frac{3}{\\sqrt{5}}\\right)^2 = 30 \\times \\frac{9}{5} = 6 \\times 9 = 54$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{54}}$$ 입니다.",
   "finalAnswer": "54",
   "correctAnswer": "54",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "gemini-2.5-flash"
 }

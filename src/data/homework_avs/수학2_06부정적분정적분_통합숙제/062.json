@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 수학2 - 부정적분과 정적분 62번 명품 해설",
   "type": "calculus",
-  "P": "부정적분과 정적분의 계산법을 활용하여 넓이, 적분값을 구합니다.",
-  "C": "역미분(부정적분) 공식과 정적분의 기본 정리를 적용합니다.",
-  "B": "부정적분과 정적분:\n\n1) $$\\int x^n dx = \\frac{x^{n+1}}{n+1} + C$$ ($$n \\neq -1$$)\n2) $$\\int_a^b f(x) dx = F(b) - F(a)$$\n3) $$\\frac{d}{dx} \\int_a^x f(t) dt = f(x)$$\n4) 우함수: $$\\int_{-a}^{a} f(x)dx = 2\\int_0^a f(x)dx$$, 기함수: $$= 0$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "최고차항의 계수가 $4$이고 $f(0)=f'(0)=0$을 만족시키는 삼차함수 $f(x)$에 대하여 함수 $g(x)$를 $$g(x)=\\begin{cases}\\displaystyle\\int_0^x f(t)\\,dt+5 & (x<c)\\\\[2mm]\\left|\\displaystyle\\int_0^x f(t)\\,dt-\\dfrac{13}{3}\\right| & (x\\ge c)\\end{cases}$$ 라 하자. 함수 $g(x)$가 실수 전체의 집합에서 연속이 되도록 하는 실수 $c$의 개수가 $1$이다. 그때의 $c$값에 대하여 $g(1)$의 최댓값은?",
+  "C": "미정계수가 포함된 삼차함수의 부정적분으로 정의된 조각함수가 연속이 될 조건을, 평행이동한 두 곡선의 극값이 일치하는 상황으로 해석해 미정계수 $a$와 분기점 $c$를 결정하고 $g(1)$의 최댓값을 구하는 문제이다.",
+  "B": "삼차함수를 $f(x)=4x^3+ax^2+bx$로 놓고 $f(0)=f'(0)=0$으로 계수를 정한다. $F(x)=\\int_0^x f(t)\\,dt=x^4+\\dfrac{a}{3}x^3$이라 하면, $y=F(x)+5$와 $y=\\left|F(x)-\\dfrac{13}{3}\\right|$가 만나 연속이 되는 $c$가 유일하려면 두 곡선의 극값이 서로 같아야 한다. $f(x)=0$의 근 $x=0,\\ x=-\\dfrac{a}{4}$에서 극값을 가지므로 $c=-\\dfrac{a}{4}$이고, 극값 일치 방정식을 풀면 $(a,c)$가 두 쌍 나온다.",
+  "S": "최고차항 계수가 $4$이므로 $f(x)=4x^3+ax^2+bx$로 놓는다. $f'(x)=12x^2+2ax+b$에서 $f'(0)=b=0$이고 $f(0)=0$은 자동으로 성립하므로 $$f(x)=4x^3+ax^2=x^2(4x+a)$$\n부정적분을 구하면 $$\\int_0^x f(t)\\,dt=x^4+\\frac{a}{3}x^3$$ 이므로 $F(x)=x^4+\\dfrac{a}{3}x^3$이라 하면 $$g(x)=\\begin{cases}F(x)+5 & (x<c)\\\\[1mm]\\left|F(x)-\\dfrac{13}{3}\\right| & (x\\ge c)\\end{cases}$$\n$y=F(x)+5$는 곡선 $y=F(x)$를 $y$축 방향으로 $+5$만큼, $y=F(x)-\\dfrac{13}{3}$은 $-\\dfrac{13}{3}$만큼 평행이동한 것이다. 두 곡선이 만나 연속을 이루는 분기점 $c$가 오직 하나뿐이려면, $y=F(x)+5$의 극솟값과 $y=-\\left(F(x)-\\dfrac{13}{3}\\right)$의 극댓값이 서로 같아야 한다.\n이 두 함수의 도함수는 각각 $f(x)$, $-f(x)$이고 $$f(x)=x^2(4x+a)=0$$ 에서 $x=0$ 또는 $x=-\\dfrac{a}{4}$에서 극값을 가지므로 분기점은 $$c=-\\frac{a}{4}$$\n$x=-\\dfrac{a}{4}$에서의 극값을 일치시키면 $$\\left(-\\frac{a}{4}\\right)^4+\\frac{a}{3}\\left(-\\frac{a}{4}\\right)^3+5=-\\left\\{\\left(-\\frac{a}{4}\\right)^4+\\frac{a}{3}\\left(-\\frac{a}{4}\\right)^3-\\frac{13}{3}\\right\\}$$ 이를 정리하여 풀면 $$\\begin{cases}a=4\\\\ c=-1\\end{cases}\\quad\\text{또는}\\quad\\begin{cases}a=-4\\\\ c=1\\end{cases}$$\n$a=4,\\ c=-1$일 때 $1\\ge c$이므로 절댓값 분기를 사용한다. $$g(1)=\\left|1+\\frac{4}{3}-\\frac{13}{3}\\right|=\\left|-2\\right|=2$$\n$a=-4,\\ c=1$일 때 $1\\ge c$이므로 역시 절댓값 분기를 사용하며, 이때 $\\dfrac{a}{3}=-\\dfrac{4}{3}$이므로 $$g(1)=\\left|1-\\frac{4}{3}-\\frac{13}{3}\\right|=\\left|-\\frac{14}{3}\\right|=\\frac{14}{3}$$\n두 경우의 $g(1)$ 값 $2$와 $\\dfrac{14}{3}$ 중 큰 값이 최댓값이므로 $$g(1)\\text{의 최댓값}=\\frac{14}{3}$$ 따라서 정답은 ⑤이다.",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/수학2/06부정적분정적분/062a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{⑤번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{\\dfrac{14}{3}}}$$ 입니다.",
   "finalAnswer": "5",
   "correctAnswer": "5",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }
