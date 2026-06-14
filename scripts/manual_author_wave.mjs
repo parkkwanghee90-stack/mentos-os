@@ -115,7 +115,7 @@ const results = await parallel(JOBS.map(job => () => agent(`
 - display 수식 $$...$$, 인라인 $...$. 평문 LaTeX(log_2, 2^(a/b), 유니코드 √/π/첨자/시그마)·\\unicode{} 금지. ① 등 동그라미 숫자는 산문/\\text{}로.
 - 메타발언 절대 금지("해설", "이미지", "판서", "~로 보입니다", "가정하고", "이 풀이에서는").
 - 단계 안 raw 줄바꿈 금지. 모든 수식 KaTeX 파싱 가능해야 함(중괄호 집합 표기는 $\\{ \\}$ 이스케이프).
-- 가능하면 python으로 핵심 수치를 검산해 notes에 기록. **검산은 반드시 `python3 -c`로 동기 실행해 즉시 결과를 받아라. 절대 백그라운드 실행 + `until grep` 폴링/`sleep` 루프로 기다리지 말 것**(워크플로우가 멈춘다). run_in_background 금지.
+- 가능하면 python으로 핵심 수치를 검산해 notes에 기록. **검산은 반드시 python3 -c 로 동기 실행해 즉시 결과를 받아라. 절대 백그라운드 실행 + until/grep 폴링이나 sleep 루프로 기다리지 말 것**(워크플로우가 멈춘다). run_in_background 금지.
 
 pid는 "${job.pid}"로 보고. answerLatex는 도출된 "값"의 순수 KaTeX(달러기호 $ 절대 포함 금지 — \\boxed 안에 들어가므로).
 `, { label: `mw:${job.img.split('/')[1]}/${job.pid}`, phase: 'Author', schema: SCHEMA, agentType: 'general-purpose' })))
