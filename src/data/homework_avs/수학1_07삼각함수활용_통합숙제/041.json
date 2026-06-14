@@ -1,18 +1,20 @@
 {
   "title": "[통합숙제] 수학1 - 삼각함수 활용 41번 명품 해설",
   "type": "trigonometry",
-  "P": "삼각함수의 덧셈정리, 배각·반각 공식을 활용하여 값을 구합니다.",
-  "C": "사인·코사인 법칙과 삼각형의 넓이 공식을 적용합니다.",
-  "B": "삼각함수 활용:\n\n1) 사인법칙: $$\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R$$\n2) 코사인법칙: $$a^2 = b^2 + c^2 - 2bc\\cos A$$\n3) 삼각형 넓이: $$S = \\frac{1}{2}ab\\sin C$$\n4) 덧셈정리: $$\\sin(\\alpha \\pm \\beta) = \\sin\\alpha\\cos\\beta \\pm \\cos\\alpha\\sin\\beta$$",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "주어진 조건을 활용하여 보기 ㄱ, ㄴ, ㄷ 중 옳은 것을 모두 찾아야 합니다.",
+  "C": "한 변의 길이가 1인 정삼각형 ABC에서, 선분 AB, BC, CA 위에 각각 점 P, Q, R이 있습니다. AP + BQ + CR = 1이고 PQ = PR입니다. (단, 점 P, Q, R은 각각 점 A, B, C가 아닙니다.)",
+  "B": "삼각형의 두 변의 길이와 그 끼인각을 알 때 나머지 한 변의 길이를 구하는 데 코사인 법칙을 사용합니다: $$c^2 = a^2 + b^2 - 2ab \\cos C$$\n삼각형의 한 변의 길이와 그 대각의 크기를 알 때 외접원의 반지름을 구하는 데 사인 법칙을 사용합니다: $$\\frac{a}{\\sin A} = 2R$$\n직각삼각형에서 두 변의 길이를 알 때 나머지 한 변의 길이를 구하는 데 피타고라스 정리를 사용합니다: $$a^2 + b^2 = c^2$$",
+  "S": "**1단계: 변의 길이 설정 및 관계식 도출** 주어진 조건 AP + BQ + CR = 1을 활용하기 위해 AP = a, BQ = b로 설정하고, 정삼각형의 한 변의 길이가 1임을 이용하여 나머지 변의 길이를 a와 b로 표현합니다. 또한, 삼각형 APR과 PBQ에서 코사인 법칙을 적용하여 PR²과 PQ²을 구한 후, PQ = PR 조건으로부터 a와 b 사이의 관계식을 도출합니다.\n$$AP = a, BQ = b$$ $$\\Rightarrow CR = 1 - a - b$$ $$\\Rightarrow BP = 1 - a, CQ = 1 - b, AR = 1 - CR = 1 - (1 - a - b) = a + b$$ $$ \\triangle APR \\text{에서 코사인 법칙에 의해: } PR^2 = AR^2 + AP^2 - 2AR \\cdot AP \\cos(\\pi/3) = (a+b)^2 + a^2 - 2(a+b)a(1/2) = a^2 + ab + b^2 \\quad \\cdots \\text{①}$$ $$ \\triangle PBQ \\text{에서 코사인 법칙에 의해: } PQ^2 = BP^2 + BQ^2 - 2BP \\cdot BQ \\cos(\\pi/3) = (1-a)^2 + b^2 - 2(1-a)b(1/2) = a^2 + ab - 2a + b^2 - b + 1 \\quad \\cdots \\text{②}$$ $$PQ = PR \\text{이므로 } PQ^2 = PR^2 \\text{에서 } a^2 + ab + b^2 = a^2 + ab - 2a + b^2 - b + 1$$ $$0 = -2a - b + 1 \\Rightarrow 2a + b = 1 \\quad \\cdots \\text{③}$$\n**2단계: 보기 ㄱ 검증** 1단계에서 얻은 a와 b 사이의 관계식 (2a + b = 1)을 이용하여 보기 ㄱ의 참/거짓을 판별합니다.\n$$2a + b = 1 \\text{에서 } b = 1 - 2a$$ $$3AP + 2BQ = 3a + 2b = 3a + 2(1 - 2a) = 3a + 2 - 4a = 2 - a$$ $$P \\text{는 A가 아니므로 } a > 0 \\text{입니다. 따라서 } 2 - a < 2$$ $$ \\text{즉, } 3AP + 2BQ < 2 \\text{이므로 보기 ㄱ은 거짓입니다.}$$\n**3단계: 보기 ㄴ 검증** 1단계에서 얻은 관계식 (2a + b = 1)을 이용하여 삼각형 CRQ의 변의 길이를 a로 표현하고, 코사인 법칙을 적용하여 QR의 길이를 구한 후 보기 ㄴ의 참/거짓을 판별합니다.\n$$b = 1 - 2a \\text{이므로 } CQ = 1 - b = 1 - (1 - 2a) = 2a$$ $$CR = 1 - a - b = 1 - a - (1 - 2a) = a$$ $$ \\triangle CRQ \\text{에서 } \\angle RCQ = \\pi/3 \\text{이고 } CR = a, CQ = 2a \\text{입니다.}$$ $$ \\text{코사인 법칙에 의해 } QR^2 = CR^2 + CQ^2 - 2CR \\cdot CQ \\cos(\\pi/3) = a^2 + (2a)^2 - 2(a)(2a)(1/2) = a^2 + 4a^2 - 2a^2 = 3a^2$$ $$QR = \\sqrt{3a^2} = \\sqrt{3}a \\quad (\\because a > 0)$$ $$ \\text{따라서 } QR = \\sqrt{3}AP \\text{이므로 보기 ㄴ은 참입니다.}$$\n**4단계: 보기 ㄷ 검증 - 외접원의 넓이 관계식 활용** 삼각형 PBQ의 외접원의 반지름을 R₁, 삼각형 CRQ의 외접원의 반지름을 R₂라 하고, 외접원의 넓이 관계를 이용하여 R₁과 R₂ 사이의 관계식을 도출합니다. 사인 법칙을 사용하여 R₁과 R₂를 PQ와 QR로 표현하고, PQ와 QR 사이의 관계식을 얻습니다.\n$$ \\triangle PBQ \\text{의 외접원의 넓이가 } \\triangle CRQ \\text{의 외접원의 넓이의 2배이므로 } \\pi R_1^2 = 2 \\pi R_2^2 \\Rightarrow R_1^2 = 2R_2^2 \\Rightarrow R_1 = \\sqrt{2}R_2$$ $$ \\triangle PBQ \\text{에서 사인 법칙에 의해 } \\frac{PQ}{\\sin(\\pi/3)} = 2R_1 \\Rightarrow R_1 = \\frac{PQ}{2\\sin(\\pi/3)}$$ $$ \\triangle CRQ \\text{에서 사인 법칙에 의해 } \\frac{QR}{\\sin(\\pi/3)} = 2R_2 \\Rightarrow R_2 = \\frac{QR}{2\\sin(\\pi/3)}$$ $$ \\text{위 식들을 } R_1 = \\sqrt{2}R_2 \\text{에 대입하면 } \\frac{PQ}{2\\sin(\\pi/3)} = \\sqrt{2} \\frac{QR}{2\\sin(\\pi/3)}$$ $$PQ = \\sqrt{2}QR \\Rightarrow PQ^2 = 2QR^2 \\quad \\cdots \\text{④}$$\n**5단계: 보기 ㄷ 검증 - AP 값 계산** 1단계의 ①, ② 식과 3단계의 QR² 식, 그리고 4단계의 ④ 식을 연립하여 a에 대한 이차방정식을 만들고, 이를 풀어 AP의 값을 구하여 보기 ㄷ의 참/거짓을 판별합니다.\n$$ \\text{①, ②, ③을 이용하여 } PQ^2 \\text{을 } a \\text{로 표현하면:}$$ $$b = 1 - 2a \\text{를 ②에 대입하면 } PQ^2 = a^2 + a(1-2a) - 2a + (1-2a)^2 - (1-2a) + 1$$ $$PQ^2 = a^2 + a - 2a^2 - 2a + 1 - 4a + 4a^2 - 1 + 2a + 1 = 3a^2 - 3a + 1$$ $$ \\text{3단계에서 } QR^2 = 3a^2 \\text{임을 알았습니다.}$$ $$ \\text{④에 } PQ^2 = 3a^2 - 3a + 1 \\text{과 } QR^2 = 3a^2 \\text{을 대입하면:}$$ $$3a^2 - 3a + 1 = 2(3a^2)$$ $$3a^2 - 3a + 1 = 6a^2$$ $$3a^2 + 3a - 1 = 0$$ $$ \\text{근의 공식에 의해 } a = \\frac{-3 \\pm \\sqrt{3^2 - 4(3)(-1)}}{2(3)} = \\frac{-3 \\pm \\sqrt{9 + 12}}{6} = \\frac{-3 \\pm \\sqrt{21}}{6}$$ $$P \\text{는 A가 아니므로 } a > 0 \\text{이어야 합니다. 따라서 } AP = a = \\frac{-3 + \\sqrt{21}}{6}$$ $$ \\text{보기 ㄷ의 } AP = \\frac{\\sqrt{21} - 3}{6} \\text{과 일치하므로 보기 ㄷ은 참입니다.}$$\n**6단계: 최종 정답 도출** 보기 ㄱ, ㄴ, ㄷ의 검증 결과를 종합하여 옳은 보기를 선택합니다.\n$$ \\text{보기 ㄱ은 거짓, 보기 ㄴ은 참, 보기 ㄷ은 참입니다.}$$ $$ \\text{따라서 옳은 것은 ㄴ, ㄷ입니다.}$$",
   "S_objects": [
     {
       "type": "image",
       "src": "/math_crops/숙제/수학1/07삼각함수활용/041a.webp"
     }
   ],
-  "A": "따라서 문제의 논리 구조에 따른 최종 정답은 $$\\mathbf{\\boxed{④번}}$$ 입니다.",
+  "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{④번}}$$ 입니다.",
   "finalAnswer": "4",
   "correctAnswer": "4",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "gemini-2.5-flash"
 }
