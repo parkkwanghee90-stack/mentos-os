@@ -2142,62 +2142,6 @@
     "type": "objective"
   },
   {
-    "unit": "삼각함수활용2단계",
-    "stage": 2,
-    "problem": 5,
-    "answer": "6",
-    "type": "subjective"
-  },
-  {
-    "unit": "삼각함수활용2단계",
-    "stage": 2,
-    "problem": 8,
-    "answer": "1",
-    "type": "objective"
-  },
-  {
-    "unit": "삼각함수활용2단계",
-    "stage": 2,
-    "problem": 21,
-    "answer": "4",
-    "type": "objective"
-  },
-  {
-    "unit": "삼각함수활용2단계",
-    "stage": 2,
-    "problem": 25,
-    "answer": "4",
-    "type": "objective"
-  },
-  {
-    "unit": "삼각함수활용2단계",
-    "stage": 2,
-    "problem": 25,
-    "answer": "4",
-    "type": "objective"
-  },
-  {
-    "unit": "삼각함수활용2단계",
-    "stage": 2,
-    "problem": 35,
-    "answer": "2",
-    "type": "objective"
-  },
-  {
-    "unit": "삼각함수활용2단계",
-    "stage": 2,
-    "problem": 37,
-    "answer": "1",
-    "type": "objective"
-  },
-  {
-    "unit": "삼각함수활용2단계",
-    "stage": 2,
-    "problem": 54,
-    "answer": "1",
-    "type": "objective"
-  },
-  {
     "unit": "삼각함수활용3단계",
     "stage": 3,
     "problem": 19,
@@ -15832,5 +15776,453 @@
     "problem": 32,
     "answer": "5",
     "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 1,
+    "answer": "\\frac{\\sqrt{6}+\\sqrt{2}}{4}",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 2,
+    "answer": "\\sqrt{3}:2:1",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 3,
+    "answer": "(그림 의존 - 검수)",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 4,
+    "answer": "\\frac{5}{9}",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 5,
+    "answer": "6",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 6,
+    "answer": "3",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 7,
+    "answer": "10",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 8,
+    "answer": "6",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 9,
+    "answer": "3",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 10,
+    "answer": "4\\sin\\theta",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 11,
+    "answer": "3:4:1",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 12,
+    "answer": "2:3:4",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 13,
+    "answer": "191",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 14,
+    "answer": "a=b인 이등변삼각형",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 15,
+    "answer": "a=b인 이등변삼각형",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 16,
+    "answer": "∠B=90°인 직각삼각형",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 17,
+    "answer": "(측량값 의존 - 검수)",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 18,
+    "answer": "900\\pi",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 19,
+    "answer": "180",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 20,
+    "answer": "(그림 의존 - 검수)",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 21,
+    "answer": "4",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 22,
+    "answer": "6",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 23,
+    "answer": "\\frac{24}{25}",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 24,
+    "answer": "120^\\circ",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 25,
+    "answer": "\\frac{37}{40}",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 26,
+    "answer": "\\sqrt{46}",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 27,
+    "answer": "60^\\circ",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 28,
+    "answer": "60^\\circ",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 29,
+    "answer": "1",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 30,
+    "answer": "105^\\circ",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 31,
+    "answer": "\\frac{11}{21}",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 32,
+    "answer": "\\frac{7\\sqrt{3}}{2}",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 33,
+    "answer": "15^\\circ",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 34,
+    "answer": "\\frac{13}{15}",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 35,
+    "answer": "b=c인 이등변삼각형",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 36,
+    "answer": "a=b인 이등변삼각형",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 37,
+    "answer": "a=c인 이등변삼각형",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 38,
+    "answer": "(측량 그림 - 검수)",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 39,
+    "answer": "\\sqrt{7}",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 40,
+    "answer": "(측량 그림 - 검수)",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 41,
+    "answer": "\\frac{\\sqrt{11}}{6}",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 42,
+    "answer": "(원뿔/원기둥 - 검수)",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 43,
+    "answer": "\\sqrt{3}",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 44,
+    "answer": "(사다리꼴 그림 - 검수)",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 45,
+    "answer": "\\frac{11\\sqrt{3}}{4}",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 46,
+    "answer": "2\\sqrt{6}",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 47,
+    "answer": "62",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 48,
+    "answer": "9(\\sqrt{3}+1)",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 49,
+    "answer": "(OCR 불명 - 검수)",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 50,
+    "answer": "6\\sqrt{6}",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 51,
+    "answer": "15",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 52,
+    "answer": "24",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 53,
+    "answer": "56",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 54,
+    "answer": "9",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 55,
+    "answer": "(야영장 그림 - 검수)",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 56,
+    "answer": "5",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 57,
+    "answer": "3\\sqrt{2}",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 58,
+    "answer": "10\\sqrt{3}",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 59,
+    "answer": "\\sqrt{21}",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 60,
+    "answer": "20\\sqrt{3}-6\\pi",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 61,
+    "answer": "\\frac{1}{2}",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 62,
+    "answer": "(그림 - 검수)",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 63,
+    "answer": "(그림 - 검수)",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용2단계",
+    "stage": 2,
+    "problem": 64,
+    "answer": "\\frac{4}{7}",
+    "type": "objective"
   }
 ]

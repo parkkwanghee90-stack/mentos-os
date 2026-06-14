@@ -8,7 +8,7 @@ const INSPECT_MENUS = [
   { id: 3, label: '3. 수2', unit: '(7)수학2', problemCount: 30 },
   { id: 4, label: '4. 미적분', unit: 'CSAT_2024수능_미적분', problemCount: 30 },
   { id: 5, label: '5. 확통', unit: '확통수능', problemCount: 30 },
-  { id: 6, label: '6. 고2 삼각함수의 활용 2단계', unit: '삼각함수활용2단계', problemCount: 30 },
+  { id: 6, label: '6. 고2 삼각함수의 활용 2단계', unit: '삼각함수활용2단계', problemCount: 64 },
   { id: 7, label: '7. 고1 원의 방정식 2단계', unit: '원의방정식2단계', problemCount: 30 },
   { id: 8, label: '8. 2025 6월 미적분', unit: 'CSAT_2025_6월_미적분', problemCount: 30 },
   { id: 9, label: '9. 2025 6월 확통', unit: 'CSAT_2025_6월_확통', problemCount: 30 },
