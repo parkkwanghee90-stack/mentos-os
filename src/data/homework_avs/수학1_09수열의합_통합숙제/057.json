@@ -1,10 +1,10 @@
 {
   "title": "[통합숙제] 수학1 - 수열의 합 57번 명품 해설",
   "type": "algebra",
-  "P": "시그마($$\\Sigma$$) 기호의 성질과 여러 가지 수열의 합 공식을 활용합니다.",
-  "C": "부분분수 분해, 군수열, 계차수열 등의 기법을 적용합니다.",
-  "B": "수열의 합:\n\n1) $$\\sum_{k=1}^{n} k = \\frac{n(n+1)}{2}$$\n2) $$\\sum_{k=1}^{n} k^2 = \\frac{n(n+1)(2n+1)}{6}$$\n3) $$\\sum_{k=1}^{n} k^3 = \\left\\{\\frac{n(n+1)}{2}\\right\\}^2$$\n4) $$a_n = S_n - S_{n-1}$$ ($$n \\geq 2$$)",
-  "S": "[단계별 풀이 흐름]\n아래 선생님의 정밀 판서 및 해설 이미지를 정독하여 논리 전개 과정을 완벽히 마스터하세요.",
+  "P": "$\\displaystyle\\sum_{n=1}^{10}\\dfrac{b_n}{n(n+1)}$ 의 값을 구한다.",
+  "C": "첫째항이 $1$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $b_n=a_1+2a_2+3a_3+\\cdots+na_n=\\displaystyle\\sum_{k=1}^{n}k\\,a_k$ 로 정의하고, $b_{10}=715$ 이다.",
+  "B": "등차수열의 일반항은 $a_n=1+(n-1)d$ 이고, 자연수 거듭제곱의 합 공식 $\\displaystyle\\sum_{k=1}^{n}k=\\dfrac{n(n+1)}{2}$, $\\displaystyle\\sum_{k=1}^{n}k^2=\\dfrac{n(n+1)(2n+1)}{6}$ 을 이용해 $b_n$ 을 $n$ 에 대한 식으로 정리한다.",
+  "S": "공차를 $d$ 라 하면 일반항이 결정되므로, $$a_n=1+(n-1)d$$ 이고 $$b_n=\\sum_{k=1}^{n}k\\,a_k=\\sum_{k=1}^{n}k\\{1+(k-1)d\\}=\\sum_{k=1}^{n}\\{dk^2+(1-d)k\\}.$$\n합을 거듭제곱 합으로 분리하면 공식을 그대로 대입할 수 있으므로, $$b_n=d\\sum_{k=1}^{n}k^2+(1-d)\\sum_{k=1}^{n}k=\\frac{dn(n+1)(2n+1)}{6}+\\frac{(1-d)n(n+1)}{2}.$$\n공통인수 $\\dfrac{n(n+1)}{6}$ 으로 묶어 한 식으로 만들면, $$b_n=\\frac{n(n+1)}{6}\\{d(2n+1)+3(1-d)\\}=\\frac{n(n+1)}{6}(2dn-2d+3).$$\n주어진 $b_{10}=715$ 를 대입하면 $d$ 를 구할 수 있으므로, $$\\frac{10\\times 11}{6}(20d-2d+3)=715\\ \\Rightarrow\\ 18d+3=39\\ \\Rightarrow\\ 18d=36,\\quad d=2.$$\n$d=2$ 를 일반항에 넣어 $b_n$ 을 확정하면, $$b_n=\\frac{n(n+1)}{6}(2\\cdot 2\\cdot n-2\\cdot 2+3)=\\frac{n(n+1)}{6}(4n-1).$$\n구하는 합의 일반항을 만들기 위해 $n(n+1)$ 로 나누면 $$\\frac{b_n}{n(n+1)}=\\frac{1}{6}(4n-1)$$ 로 간단해진다.\n이를 $n=1$ 부터 $10$ 까지 더하면, $$\\sum_{n=1}^{10}\\frac{b_n}{n(n+1)}=\\sum_{n=1}^{10}\\frac{1}{6}(4n-1)=\\frac{1}{6}\\left(4\\sum_{n=1}^{10}n-\\sum_{n=1}^{10}1\\right)=\\frac{1}{6}(220-10)=35.$$",
   "S_objects": [
     {
       "type": "image",
@@ -14,5 +14,7 @@
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{35}}$$ 입니다.",
   "finalAnswer": "35",
   "correctAnswer": "35",
-  "pcbsa_completed": true
+  "pcbsa_completed": true,
+  "vision_generated": true,
+  "vision_model": "manual-claude-fable-5"
 }
