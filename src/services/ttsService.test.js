@@ -34,4 +34,14 @@ describe('speakText 런타임', () => {
     expect(calledUrls.some(u => u.includes('openai') || u.includes('tts-1'))).toBe(false);
     expect(onError).toHaveBeenCalled();
   });
+
+  it('실패 시 브라우저 speechSynthesis.speak 로도 말하지 않는다(무음)', async () => {
+    const speak = vi.fn();
+    global.speechSynthesis = { speak, cancel: vi.fn() };
+    global.SpeechSynthesisUtterance = vi.fn();
+    global.fetch.mockResolvedValue({ ok: false, status: 429, json: async () => ({ error: { message: 'quota' } }) });
+    const { speakText } = await import('./ttsService.js');
+    await speakText('테스트', { isReplay: true });
+    expect(speak).not.toHaveBeenCalled();
+  });
 });
