@@ -12,6 +12,7 @@
 require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
+const audit = require('./lib/ttsAudit.cjs');
 
 const SUPABASE_URL = process.env.VITE_SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -102,5 +103,42 @@ async function diagnose() {
     await diagnose();
     return;
   }
-  console.log('분류 모드는 Task 9에서 구현됩니다. 지금은 --diagnose 만 지원합니다.');
+  // 1. manifest 로드
+  const manifest = JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf8'));
+
+  // 2. 진단 스냅샷에서 bucketKeys 로드 (없으면 버킷 실시간 수집)
+  let bucketKeys;
+  if (fs.existsSync(DIAGNOSE_OUT)) {
+    const snap = JSON.parse(fs.readFileSync(DIAGNOSE_OUT, 'utf8'));
+    bucketKeys = snap.bucketKeys;
+  } else {
+    console.log('diagnose 스냅샷 없음 — 버킷 실시간 수집 중...');
+    const result = await collectBucketMp3();
+    bucketKeys = result.bucketKeys;
+  }
+
+  // 3. confirmed / suspect 분류
+  const { confirmed, suspect } = audit.classifyClips({ bucketKeys, manifest, knownLegacy: [] });
+
+  // 4. suspect 중 4과목 범위만 필터 (u<digit>_* 제외)
+  const suspectInScope = suspect.filter(key => audit.inFourSubjectScope(key));
+
+  // 5. worklist 작성
+  const worklist = {
+    note: 'counts/keys는 진단 스냅샷 기준. suspect는 4과목(u_* 제외)만.',
+    scope: 'four-subjects (excludes u<digit>_*)',
+    counts: {
+      bucketTotal: bucketKeys.length,
+      confirmed: confirmed.length,
+      suspectAll: suspect.length,
+      suspectOutOfScope: suspect.length - suspectInScope.length,
+      suspectInScope: suspectInScope.length,
+    },
+    suspect: suspectInScope.map(key => {
+      const [ttsDir, file] = key.split('/');
+      return { key, ttsDir, pid: file.replace('.mp3', '') };
+    }),
+  };
+  fs.writeFileSync(path.join('scripts', 'tts_regen_worklist.json'), JSON.stringify(worklist, null, 2));
+  console.log('confirmed:', confirmed.length, '| suspect(all):', suspect.length, '| suspect(4과목):', suspectInScope.length);
 })().catch(e => { console.error('ERROR', e.message); process.exit(1); });
