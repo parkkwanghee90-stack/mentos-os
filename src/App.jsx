@@ -206,6 +206,7 @@ function AppContent() {
             <Route path="/class/naesin" element={<NaesinCourse />} />
             <Route path="/class/go2" element={<Go2Course />} />
             <Route path="/class/exam-predict" element={<ExamPredictCourse />} />
+            <Route path="/class/exam-predict/:grade/:slug" element={<ExamPredictCourse />} />
             <Route path="/lab/circle-eq" element={<CircleEqLab />} />
             
             <Route path="/login" element={<Login />} />

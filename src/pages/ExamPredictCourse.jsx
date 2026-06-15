@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { ArrowLeft, Search, Lock, Sparkles, CheckCircle, X, Share2, Gift } from 'lucide-react';
 import { MathText } from '@/components/MathProblemRenderer';
 import ClassroomBoard from '@/components/hints/ClassroomBoard';
@@ -68,6 +68,19 @@ function unlockedRoundsFor(slug, { master, entitlements, owned }) {
 }
 
 const stars = n => '★★★★★'.slice(0, n) + '☆☆☆☆☆'.slice(0, 5 - n);
+
+// SEO: 학교 상세 진입 시 문서 head(title·description·OG·canonical)를 동적으로 갱신.
+const DEFAULT_TITLE = '수학의빛 — 학교별 기말 수학 예상문제 (고1·고2)';
+function setMetaTag(attr, key, content) {
+  let el = document.head.querySelector(`meta[${attr}="${key}"]`);
+  if (!el) { el = document.createElement('meta'); el.setAttribute(attr, key); document.head.appendChild(el); }
+  el.setAttribute('content', content);
+}
+function setCanonical(href) {
+  let el = document.head.querySelector('link[rel="canonical"]');
+  if (!el) { el = document.createElement('link'); el.setAttribute('rel', 'canonical'); document.head.appendChild(el); }
+  el.setAttribute('href', href);
+}
 
 const C = {
   bg: '#0b1020', card: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)',
@@ -183,6 +196,7 @@ function PurchaseOptions({ school, schools, price, onConfirm, onClose }) {
 
 export default function ExamPredictCourse() {
   const navigate = useNavigate();
+  const params = useParams(); // /class/exam-predict/:grade/:slug (SEO 경로)
   const { user } = useAuth();
   const [q, setQ] = useState('');
   const [selected, setSelected] = useState(null);
@@ -230,10 +244,41 @@ export default function ExamPredictCourse() {
     } catch { /* URL/스토리지 차단 무시 */ }
   }, []);
 
+  // SEO 경로 /class/exam-predict/:grade/:slug 진입 시 해당 학교 자동 선택.
+  useEffect(() => {
+    const ps = params.slug;
+    if (!ps) return;
+    const decoded = (() => { try { return decodeURIComponent(ps); } catch { return ps; } })();
+    const inGo2 = (GO2_BUNDLE.schools || []).some(x => x.slug === decoded);
+    const inGo1 = (BUNDLE.schools || []).some(x => x.slug === decoded);
+    const g = inGo2 ? 'go2' : inGo1 ? 'go1' : (GRADE_META[params.grade] ? params.grade : 'go1');
+    const s = (GRADE_META[g].bundle.schools || []).find(x => x.slug === decoded);
+    if (s) { setGrade(g); setSelected(s); }
+  }, [params.grade, params.slug]);
+
+  // SEO: 학교 상세 진입 시 문서 head 동적 갱신, 목록 복귀/언마운트 시 기본값 복원.
+  useEffect(() => {
+    if (selected) {
+      const m = GRADE_META[grade];
+      const title = `${selected.school} 2025 1학기 기말 ${m.subject} 예상문제 | 수학의빛`;
+      const desc = (selected.analysis?.summary || `${selected.school} 기출 분석과 AI 예상문제 3회.`).slice(0, 155);
+      const url = `${window.location.origin}/class/exam-predict/${grade}/${encodeURIComponent(selected.slug)}`;
+      document.title = title;
+      setMetaTag('name', 'description', desc);
+      setMetaTag('property', 'og:title', title);
+      setMetaTag('property', 'og:description', desc);
+      setMetaTag('property', 'og:url', url);
+      setCanonical(url);
+    } else {
+      document.title = DEFAULT_TITLE;
+    }
+    return () => { document.title = DEFAULT_TITLE; };
+  }, [selected, grade]);
+
   // 학교별 공유: 네이티브 공유시트(카카오톡·인스타 등) → 폴백 클립보드 복사.
   const shareSchool = (s) => {
-    const ref = user?.id ? `&ref=${user.id}` : '';
-    const url = `${window.location.origin}/class/exam-predict?grade=${grade}&school=${encodeURIComponent(s.slug)}${ref}`;
+    const ref = user?.id ? `?ref=${user.id}` : '';
+    const url = `${window.location.origin}/class/exam-predict/${grade}/${encodeURIComponent(s.slug)}${ref}`;
     const title = `${s.school} 기말 수학 예상문제`;
     const text = `${s.school} 2025 1학기 기말 ${gm.subject} 예상문제 — 1회차 무료로 풀어보기! 🎯`;
     if (navigator.share) { navigator.share({ title, text, url }).catch(() => {}); }
