@@ -34,7 +34,8 @@ function normAns(s) { return String(s ?? '').replace(/\s/g, '').replace(/[①②
 export default function NaesinCourse() {
   const navigate = useNavigate();
   const { user } = useAuth();
-  const isPaid = !!user || localStorage.getItem('mentos_is_paid') === 'true' || localStorage.getItem('mentos_premium') === 'true' || localStorage.getItem('mentos_super_pass') === 'true';
+  // mentos_super_pass(관리자 우회) 신뢰 제거. is_paid/premium 비회원 폴백은 H2 후속에서 서버검증 전환 예정.
+  const isPaid = !!user || localStorage.getItem('mentos_is_paid') === 'true' || localStorage.getItem('mentos_premium') === 'true';
 
   const [level, setLevel] = useState('필수');
   const [unit, setUnit] = useState(null);

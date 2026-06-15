@@ -216,8 +216,8 @@ export default function GradeSelect() {
         {step === 'manual' && (
           <LessonManual onComplete={() => {
             localStorage.setItem('mentos_manual_seen', 'true');
-            // 이미 로그인(또는 슈퍼패스)된 경우 재로그인 요구하지 않고 학년 선택으로 이어감
-            const loggedIn = !!user || localStorage.getItem('mentos_super_pass') === 'true';
+            // 이미 로그인된 경우 재로그인 요구하지 않고 학년 선택으로 이어감
+            const loggedIn = !!user;
             if (loggedIn) {
               setStep('grade');
             } else {

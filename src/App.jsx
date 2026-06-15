@@ -41,29 +41,21 @@ const DesignCheck = lazy(() => import("@/pages/DesignCheck"));
 // 진입 플로우: 매뉴얼 미확인 → /grade-select(매뉴얼) → /login → /dashboard
 function RootRedirect() {
   const manualSeen = localStorage.getItem('mentos_manual_seen') === 'true';
-  const isSuperPass = localStorage.getItem('mentos_super_pass') === 'true';
 
   if (!manualSeen) {
     // 1단계: 매뉴얼을 아직 안 봤으면 매뉴얼부터
     return <Navigate to="/grade-select" replace />;
   }
 
-  // 2단계: 매뉴얼은 봤지만 로그인 안 됐으면 → 로그인으로
-  // 3단계: 매뉴얼 봤고 로그인도 됐으면 → 대시보드로
-  // (LoginGate가 /dashboard에서 로그인 여부를 체크하므로 /dashboard로 보내면 됨)
-  if (isSuperPass) {
-    return <Navigate to="/dashboard" replace />;
-  }
-
+  // 매뉴얼을 봤으면 /dashboard로 (LoginGate가 로그인 여부를 체크)
   return <Navigate to="/dashboard" replace />;
 }
 
 // 홈("/") 진입 게이트: 비회원 → 랜딩 먼저, 회원 → 대시보드
 function RootGate() {
   const { user, loading } = useAuth();
-  const isSuperPass = localStorage.getItem('mentos_super_pass') === 'true';
   if (loading) return null; // 인증 확인 중 깜빡임 방지
-  if (user || isSuperPass) return <Navigate to="/dashboard" replace />;
+  if (user) return <Navigate to="/dashboard" replace />;
   return <Landing />;
 }
 
@@ -188,7 +180,7 @@ function AppContent() {
             <Route path="/class/naesin" element={<NaesinCourse />} />
             
             <Route path="/login" element={<Login />} />
-            <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/admin" element={<LoginGate required={true} requiredRole="admin"><AdminDashboard /></LoginGate>} />
             
             {/* 로그인 필수 라우트: LoginGate 적용 */}
             <Route path="/dashboard" element={<LoginGate required={true}><Dashboard /></LoginGate>} />
