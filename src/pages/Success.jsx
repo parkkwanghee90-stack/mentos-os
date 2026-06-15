@@ -36,31 +36,17 @@ export default function Success() {
 
         console.log('[PaymentSuccess] Confirming payment with parameters:', { finalPaymentKey, finalOrderId, finalAmount });
         
-        // 1. Supabase Database `payments` 테이블에 승인 성공 기록 삽입 (Upsert)
+        // 보안: 결제 기록(payments 행)과 프리미엄 부여는 모두 결제완료 웹훅
+        //   (payapp-feedback Edge Function)이 서버 권위 가격(PLAN_PRICES)으로 검증해 처리한다.
+        //   클라이언트는 결제 정보를 DB에 쓰지 않는다 — URL 쿼리파라미터의 금액/성공여부는
+        //   위조 가능(예: ?payapp_success=true&amount=1)하므로 신뢰하지 않는다.
+        //   (위조 결제기록 생성·중복행 차단)
         if (user) {
-          console.log('[PaymentSuccess] Recording payment invoice inside Supabase DB...');
-          const { error: dbError } = await supabase
-            .from('payments')
-            .upsert({
-              user_id: user.id,
-              payment_key: finalPaymentKey,
-              order_id: finalOrderId,
-              amount: parseFloat(finalAmount),
-              status: 'success',
-              approved_at: new Date().toISOString()
-            });
-
-          if (dbError) {
-            console.error('[PaymentSuccess] Failed to save invoice to Supabase DB:', dbError);
-          }
-
-          // 2. 보안: 클라이언트가 직접 프리미엄을 부여하지 않는다(결제 우회 차단).
-          //    프리미엄 부여는 결제 완료 웹훅(payapp-feedback)이 서버에서 처리한다.
-          //    여기서는 세션을 새로고침해 서버가 부여한 권한 메타데이터를 반영만 한다.
+          // 서버 웹훅이 부여한 권한 메타데이터를 반영하기 위해 세션만 새로고침.
           console.log('[PaymentSuccess] Refreshing session to reflect server-granted premium...');
           try { await supabase.auth.refreshSession(); } catch (e) { /* best-effort */ }
         } else {
-          // 비회원 결제 시나리오 fallback (테스트 목적)
+          // 비회원 결제 시나리오 fallback (테스트 목적) — TODO: 서버 검증으로 전환 필요
           localStorage.setItem('mentos_is_paid', 'true');
           localStorage.setItem('mentos_premium', 'true');
         }
