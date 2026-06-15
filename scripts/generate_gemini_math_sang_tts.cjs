@@ -24,8 +24,7 @@ const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const BUCKET = 'math-tts';
 const LOCAL_OUTPUT_DIR = path.join('public', 'audio', 'math_hints');
 const MANIFEST_PATH = path.join('scripts', 'tts_manifest.json');
-const TTS_MODEL = 'gemini-3.1-flash-tts-preview';
-const TTS_VOICE = 'Aoede';
+const { TTS_MODEL, TTS_VOICE } = require('./lib/ttsVoice.cjs');
 
 // Tag each freshly generated clip with its engine/model in a manifest, so future
 // "overwrite legacy" runs can rely on recorded metadata instead of audio-header sniffing.
@@ -267,7 +266,7 @@ ${text}`;
 
       let response;
       try {
-        response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-tts-preview:generateContent?key=${currentKey}`, {
+        response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${TTS_MODEL}:generateContent?key=${currentKey}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           signal: controller.signal,
@@ -277,7 +276,7 @@ ${text}`;
               responseModalities: ["AUDIO"],
               speechConfig: {
                 voiceConfig: {
-                  prebuiltVoiceConfig: { voiceName: "Aoede" }
+                  prebuiltVoiceConfig: { voiceName: TTS_VOICE }
                 }
               }
             }

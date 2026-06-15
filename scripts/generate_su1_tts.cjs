@@ -43,8 +43,7 @@ const HINT_CACHE_DIR = path.join('scripts', '.su1_hint_cache');
 const MANIFEST_PATH = path.join('scripts', 'tts_manifest.json');
 // 음색 일관성: 기존 수1 TTS는 전부 gemini-3.1-flash-tts-preview + Aoede.
 // 새 클립도 반드시 동일 모델/보이스로만 생성(다른 모델은 같은 Aoede라도 음색이 달라 혼재 금지).
-const TTS_MODEL = 'gemini-3.1-flash-tts-preview';
-const TTS_VOICE = 'Aoede';
+const { TTS_MODEL, TTS_VOICE } = require('./lib/ttsVoice.cjs');
 
 // 수1 스테이지: hintDir = mentos-assets/math_hints/ 하위 폴더(getSafePath(단원) 결과),
 // ttsDir = math-tts 버킷 폴더(src/data/tts_map.json 과 일치해야 함).
