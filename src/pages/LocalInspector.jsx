@@ -23,6 +23,7 @@ const INSPECT_MENUS = [
   { id: 18, label: '18. 고1 점과 좌표 3단계', unit: '점과좌표3단계', problemCount: 21 },
   { id: 19, label: '19. 고1 점과 좌표 4단계', unit: '점과좌표4단계', problemCount: 32 },
   { id: 20, label: '20. 고2 삼각함수의 활용 3단계', unit: '삼각함수활용3단계', problemCount: 32 },
+  { id: 21, label: '21. 고2 삼각함수의 활용 4단계', unit: '삼각함수활용4단계', problemCount: 33 },
 ];
 
 export default function LocalInspector() {

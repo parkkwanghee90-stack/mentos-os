@@ -30,6 +30,7 @@ const UNITS = [
   { key: '점과좌표4단계', stage: 4 },
   { key: '삼각함수활용2단계', stage: 2 },
   { key: '삼각함수활용3단계', stage: 3 },
+  { key: '삼각함수활용4단계', stage: 4 },
 ];
 
 const CIRCLED = { '①': '1', '②': '2', '③': '3', '④': '4', '⑤': '5' };
@@ -72,6 +73,9 @@ for (const { key, stage } of UNITS) {
     const doc = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
     const ans = answerForGrading(doc);
     const type = doc.answerType === 'multiple_choice' ? 'objective' : 'subjective';
+
+    // 검수 플레이스홀더(정답 미확정)는 채점 정답으로 연결하지 않는다.
+    if (/검수|그림\/보기|원문 없음|\?/.test(ans)) { summary[key].push(`${num}:(검수-skip)`); continue; }
 
     avs[key][num] = ans;
     avsCount++;

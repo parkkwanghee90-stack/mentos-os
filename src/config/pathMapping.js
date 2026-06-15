@@ -186,6 +186,7 @@ const PATH_MAP = {
   '삼각함수성질2단계': 'trig_prop_step2',
   '삼각함수활용2단계': 'trig_util_step2',
   '삼각함수활용3단계': 'trig_util_step3',
+  '삼각함수활용4단계': 'trig_util_step4',
   '삼각함수활용 4단계(68)': 'trig_util_step4',
   '등차등비2단계': 'arith_geom_seqstep2',
   '등차등비3단계': 'arith_geom_seqstep3',
