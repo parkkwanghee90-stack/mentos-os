@@ -1,0 +1,2043 @@
+{
+  "schema": "go2-v1",
+  "school": "대성고",
+  "region": "서울 은평구",
+  "year": 2025,
+  "grade": "고2",
+  "term": "1학기 기말",
+  "subject": "수학1",
+  "analysis": {
+    "school": "대성고",
+    "region": "서울 은평구",
+    "year": 2025,
+    "grade": "고2",
+    "term": "1학기 기말",
+    "subject": "수학1",
+    "total_problems": 20,
+    "analyzed_by": "claude-direct-go2",
+    "unit_share": [
+      {
+        "unit": "삼각함수의 활용",
+        "count": 5,
+        "percent": 25
+      },
+      {
+        "unit": "삼각함수",
+        "count": 5,
+        "percent": 25
+      },
+      {
+        "unit": "지수와 로그",
+        "count": 5,
+        "percent": 25
+      },
+      {
+        "unit": "등차수열과 등비수열",
+        "count": 3,
+        "percent": 15
+      },
+      {
+        "unit": "여러 가지 수열",
+        "count": 2,
+        "percent": 10
+      }
+    ],
+    "top_units": [
+      "삼각함수의 활용",
+      "삼각함수",
+      "지수와 로그"
+    ],
+    "objective_ratio": 90,
+    "subjective_ratio": 10,
+    "advanced_ratio": 60,
+    "difficulty_stars": 4,
+    "discrimination_stars": 4,
+    "summary": "대성고 2025학년도 1학기 기말 수학Ⅰ은 지수와 로그, 삼각함수, 삼각함수의 활용에 고른 비중(각 25%)을 두고 수열을 마무리 단원으로 배치한 균형형 출제이다. 1~16번이 객관식, 마지막 단답형 2문항을 제외하면 대부분 객관식으로 객관식 비율이 90%에 달한다. 로그방정식의 근, 등비수열의 실생활(테니스공 반발) 모형과 상용로그 근삿값 계산, 이차방정식의 두 근이 sinθ·cosθ인 삼각함수 결합형, 삼각부등식의 정수해 개수, 마름모·삼각형의 대각선과 코사인법칙·넓이 결합, 반원 위의 점과 평행선을 이용한 길이 계산이 핵심 출제 패턴이다. 삼각함수의 활용에서 코사인법칙과 넓이 공식을 도형 상황과 결합한 변별 문항이 다수 출제되어 난이도 ★4, 변별력 ★4 수준이며, 예상문제 역시 단원 비율과 객관식 90% 비율을 재현하고 심화 비율 60%로 원본 변별력을 유지하도록 구성하였다."
+  },
+  "predicted": {
+    "count": 20,
+    "problems": [
+      {
+        "num": 1,
+        "unit": "지수와 로그",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "방정식 $\\log_{2} x=\\log_{4}(3x-2)$ 의 모든 근의 합은?",
+        "choices": [
+          "$3$",
+          "$1$",
+          "$2$",
+          "$4$",
+          "$5$"
+        ],
+        "answer": 1,
+        "solution": "$\\log_{4}(3x-2)=\\dfrac{1}{2}\\log_{2}(3x-2)$ 이므로 방정식은 $2\\log_{2} x=\\log_{2}(3x-2)$, 즉 $x^{2}=3x-2$ 이다. 정리하면 $x^{2}-3x+2=0$ 이고 진수조건 $x>0$, $3x-2>0$ 을 두 근이 모두 만족하므로 근의 합은 근과 계수의 관계에 의해 $3$ 이다."
+      },
+      {
+        "num": 2,
+        "unit": "지수와 로그",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "이차방정식 $x^{2}-5x+3=0$ 의 두 근을 $\\alpha$, $\\beta$ 라 할 때, $2^{\\alpha}\\times 2^{\\beta}$ 의 값은?",
+        "choices": [
+          "$16$",
+          "$24$",
+          "$32$",
+          "$40$",
+          "$48$"
+        ],
+        "answer": 3,
+        "solution": "근과 계수의 관계에서 $\\alpha+\\beta=5$ 이다. 따라서 $2^{\\alpha}\\times 2^{\\beta}=2^{\\alpha+\\beta}=2^{5}=32$ 이다."
+      },
+      {
+        "num": 3,
+        "unit": "지수와 로그",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\log_{2} 3\\times\\log_{3} 4\\times\\log_{4} 5\\times\\cdots\\times\\log_{15} 16$ 의 값은?",
+        "choices": [
+          "$2$",
+          "$3$",
+          "$5$",
+          "$6$",
+          "$4$"
+        ],
+        "answer": 5,
+        "solution": "로그의 밑변환 공식 $\\log_{a} b=\\dfrac{\\log b}{\\log a}$ 를 적용하면 연속한 분자·분모가 약분되어 $\\dfrac{\\log 16}{\\log 2}=\\log_{2} 16=4$ 이다."
+      },
+      {
+        "num": 4,
+        "unit": "지수와 로그",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$6^{20}$ 은 몇 자리의 정수인가? (단, $\\log 2=0.3010$, $\\log 3=0.4771$ 로 계산한다.)",
+        "choices": [
+          "$14\\text{자리}$",
+          "$16\\text{자리}$",
+          "$15\\text{자리}$",
+          "$17\\text{자리}$",
+          "$18\\text{자리}$"
+        ],
+        "answer": 2,
+        "solution": "$\\log 6=\\log 2+\\log 3=0.3010+0.4771=0.7781$ 이므로 $\\log 6^{20}=20\\times0.7781=15.5620$ 이다. 따라서 $6^{20}$ 은 $16$ 자리의 정수이다."
+      },
+      {
+        "num": 5,
+        "unit": "지수와 로그",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "부등식 $4^{x}-5\\cdot 2^{x}+4\\le 0$ 을 만족시키는 모든 정수 $x$ 의 개수는?",
+        "choices": [
+          "$2$",
+          "$4$",
+          "$5$",
+          "$3$",
+          "$6$"
+        ],
+        "answer": 4,
+        "solution": "$t=2^{x}\\ (t>0)$ 로 놓으면 부등식은 $t^{2}-5t+4\\le 0$, 즉 $(t-1)(t-4)\\le 0$ 이므로 $1\\le t\\le 4$ 이다. 따라서 $0\\le x\\le 2$ 이고 정수 $x$ 는 $3$ 개이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "지수에 대한 이차형 부등식을 만족시키는 정수 $x$ 의 개수를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "밑이 같은 지수를 한 문자 $t$ 로 치환하면 $t>0$ 인 범위에서 이차부등식이 된다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$t$ 로 치환한 이차부등식을 인수분해하여 $t$ 의 범위를 구한 뒤, 다시 $x$ 의 범위로 되돌린다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$t=2^{x}\\ (t>0)$ 로 놓으면 부등식은 $t^{2}-5t+4\\le 0$, 즉 $(t-1)(t-4)\\le 0$ 이므로 $1\\le t\\le 4$ 이다. 따라서 $0\\le x\\le 2$ 이고 정수 $x$ 는 $3$ 개이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "조건을 만족시키는 정수 $x$ 의 개수는 보기 ②이다."
+          }
+        ]
+      },
+      {
+        "num": 6,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$0<\\theta<\\pi$ 인 $\\theta$ 에 대하여 $\\sin\\theta+\\cos\\theta=\\dfrac{1}{2}$ 일 때, $\\sin\\theta\\cos\\theta$ 의 값은?",
+        "choices": [
+          "$-\\dfrac{3}{8}$",
+          "$-\\dfrac{5}{8}$",
+          "$-\\dfrac{1}{2}$",
+          "$-\\dfrac{1}{4}$",
+          "$-\\dfrac{1}{8}$"
+        ],
+        "answer": 1,
+        "solution": "$(\\sin\\theta+\\cos\\theta)^{2}=1+2\\sin\\theta\\cos\\theta$ 이므로 $\\dfrac{1}{4}=1+2\\sin\\theta\\cos\\theta$ 이다. 따라서 $\\sin\\theta\\cos\\theta=\\dfrac{1}{2}\\left(\\dfrac{1}{4}-1\\right)=-\\dfrac{3}{8}$ 이다."
+      },
+      {
+        "num": 7,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\theta$ 에 대한 이차방정식 $25x^{2}-35x+k=0$ 의 두 근이 $\\sin\\theta$, $\\cos\\theta$ 일 때, 상수 $k$ 의 값은?",
+        "choices": [
+          "$10$",
+          "$11$",
+          "$12$",
+          "$13$",
+          "$14$"
+        ],
+        "answer": 3,
+        "solution": "근과 계수의 관계에서 $\\sin\\theta+\\cos\\theta=\\dfrac{35}{25}$, $\\sin\\theta\\cos\\theta=\\dfrac{k}{25}$ 이다. $(\\sin\\theta+\\cos\\theta)^{2}=1+2\\sin\\theta\\cos\\theta$ 에 대입하면 $\\left(\\dfrac{35}{25}\\right)^{2}=1+\\dfrac{2k}{25}$ 이므로 $k=12$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "두 근이 $\\sin\\theta$, $\\cos\\theta$ 인 이차방정식에서 상수 $k$ 의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "근과 계수의 관계로 $\\sin\\theta+\\cos\\theta$ 와 $\\sin\\theta\\cos\\theta$ 를 계수로 나타낸다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "항등식 $(\\sin\\theta+\\cos\\theta)^{2}=1+2\\sin\\theta\\cos\\theta$ 를 이용해 $k$ 에 대한 식을 세운다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "근과 계수의 관계에서 $\\sin\\theta+\\cos\\theta=\\dfrac{35}{25}$, $\\sin\\theta\\cos\\theta=\\dfrac{k}{25}$ 이다. $(\\sin\\theta+\\cos\\theta)^{2}=1+2\\sin\\theta\\cos\\theta$ 에 대입하면 $\\left(\\dfrac{35}{25}\\right)^{2}=1+\\dfrac{2k}{25}$ 이므로 $k=12$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "따라서 $k$ 는 보기 ③이다."
+          }
+        ]
+      },
+      {
+        "num": 8,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$0\\le x<2\\pi$ 일 때, 방정식 $2\\sin^{2}x-3\\sin x+1=0$ 의 모든 해의 합은?",
+        "choices": [
+          "$\\dfrac{1}{2}\\pi$",
+          "$1\\pi$",
+          "$2\\pi$",
+          "$\\dfrac{5}{2}\\pi$",
+          "$\\dfrac{3}{2}\\pi$"
+        ],
+        "answer": 5,
+        "solution": "주어진 식을 인수분해하면 $\\sin x=1\\text{ 또는 }\\sin x=\\dfrac{1}{2}$ 이다. $0\\le x<2\\pi$ 에서 해는 $x=\\dfrac{\\pi}{2},\\ \\dfrac{\\pi}{6},\\ \\dfrac{5\\pi}{6}$ 이므로 모든 해의 합은 $\\dfrac{3}{2}\\pi$ 이다."
+      },
+      {
+        "num": 9,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "평행사변형 $ABCD$ 에서 두 대각선 $AC$, $BD$ 의 길이가 각각 $8$, $6\\sqrt{3}$ 이고 두 대각선이 이루는 예각의 크기를 $\\theta$ 라 하자. 평행사변형 $ABCD$ 의 넓이가 $12\\sqrt{3}$ 일 때, $\\theta$ 의 크기는?",
+        "choices": [
+          "$45^{\\circ}$",
+          "$30^{\\circ}$",
+          "$60^{\\circ}$",
+          "$90^{\\circ}$",
+          "$120^{\\circ}$"
+        ],
+        "answer": 2,
+        "solution": "두 대각선의 길이가 $p$, $q$ 이고 이루는 각이 $\\theta$ 인 평행사변형의 넓이는 $\\dfrac{1}{2}pq\\sin\\theta$ 이다. $\\dfrac{1}{2}\\times8\\times6\\sqrt{3}\\times\\sin\\theta=12\\sqrt{3}$ 에서 $\\sin\\theta=\\dfrac{1}{2}$ 이므로 $\\theta=30^{\\circ}$ 이다."
+      },
+      {
+        "num": 10,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $A=120^{\\circ}$, $\\overline{BC}=13$, $\\overline{CA}=7$ 이다. 삼각형 $ABC$ 의 넓이가 $c\\sqrt{3}$ 일 때, 상수 $c$ 의 값은?",
+        "choices": [
+          "$12$",
+          "$13$",
+          "$15$",
+          "$14$",
+          "$16$"
+        ],
+        "answer": 4,
+        "solution": "코사인법칙에서 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{CA}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{CA}\\cos120^{\\circ}$ 이므로 $169=\\overline{AB}^{2}+49+7\\,\\overline{AB}$ 이다. 정리하면 $\\overline{AB}^{2}+7\\,\\overline{AB}-120=0$ 에서 $\\overline{AB}=8$ 이다. 넓이는 $\\dfrac{1}{2}\\cdot8\\cdot7\\cdot\\sin120^{\\circ}=14\\sqrt{3}$ 이므로 $c=14$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "$A=120^{\\circ}$ 인 삼각형에서 코사인법칙으로 변을 구하고 넓이를 $c\\sqrt{3}$ 꼴로 나타내 $c$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\cos120^{\\circ}=-\\dfrac{1}{2}$, $\\sin120^{\\circ}=\\dfrac{\\sqrt{3}}{2}$ 임을 정리한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "코사인법칙으로 미지의 변을 구한 뒤 넓이 공식 $\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{CA}\\sin A$ 를 적용한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "코사인법칙에서 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{CA}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{CA}\\cos120^{\\circ}$ 이므로 $169=\\overline{AB}^{2}+49+7\\,\\overline{AB}$ 이다. 정리하면 $\\overline{AB}^{2}+7\\,\\overline{AB}-120=0$ 에서 $\\overline{AB}=8$ 이다. 넓이는 $\\dfrac{1}{2}\\cdot8\\cdot7\\cdot\\sin120^{\\circ}=14\\sqrt{3}$ 이므로 $c=14$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "따라서 $c$ 는 보기 ③이다."
+          }
+        ]
+      },
+      {
+        "num": 11,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\theta$ 가 제$2$사분면의 각이고 $\\sin\\theta=\\dfrac{3}{5}$ 일 때, $\\tan\\theta$ 의 값은?",
+        "choices": [
+          "$-\\dfrac{3}{4}$",
+          "$-\\dfrac{4}{3}$",
+          "$-\\dfrac{4}{5}$",
+          "$\\dfrac{3}{4}$",
+          "$\\dfrac{4}{3}$"
+        ],
+        "answer": 1,
+        "solution": "제$2$사분면에서 $\\cos\\theta<0$ 이므로 $\\cos\\theta=-\\sqrt{1-\\sin^{2}\\theta}=-\\dfrac{4}{5}$ 이다. 따라서 $\\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}=-\\dfrac{3}{4}$ 이다."
+      },
+      {
+        "num": 12,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{BC}=7$, $\\overline{CA}=5$, $\\overline{AB}=3$ 일 때, 각 $A$ 의 크기는?",
+        "choices": [
+          "$30^{\\circ}$",
+          "$45^{\\circ}$",
+          "$120^{\\circ}$",
+          "$60^{\\circ}$",
+          "$90^{\\circ}$"
+        ],
+        "answer": 3,
+        "solution": "코사인법칙에서 $\\cos A=\\dfrac{\\overline{CA}^{2}+\\overline{AB}^{2}-\\overline{BC}^{2}}{2\\cdot\\overline{CA}\\cdot\\overline{AB}}=\\dfrac{25+9-49}{30}=-\\dfrac{1}{2}$ 이므로 $A=120^{\\circ}$ 이다."
+      },
+      {
+        "num": 13,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "지름의 길이가 $10$ 인 반원의 지름을 $AB$ 라 하고, 반원 위의 점 $C$ 에 대하여 $\\cos(\\angle CAB)=\\dfrac{3}{5}$ 이다. 삼각형 $ABC$ 의 넓이는?",
+        "choices": [
+          "$22$",
+          "$23$",
+          "$25$",
+          "$26$",
+          "$24$"
+        ],
+        "answer": 5,
+        "solution": "$AB$ 가 반원의 지름이므로 $\\angle ACB=90^{\\circ}$ 이다. $\\overline{AC}=10\\times\\dfrac{3}{5}=6$, $\\overline{BC}=10\\times\\dfrac{4}{5}=8$ 이므로 넓이는 $\\dfrac{1}{2}\\cdot6\\cdot8=24$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "지름이 $10$ 인 반원 위의 점 $C$ 와 $\\cos(\\angle CAB)=\\dfrac{3}{5}$ 로부터 삼각형 $ABC$ 의 넓이를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$AB$ 가 반원의 지름이므로 반원 위의 점 $C$ 에 대하여 $\\angle ACB=90^{\\circ}$ 인 직각삼각형이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "직각삼각형에서 $\\overline{AC}=\\overline{AB}\\cos(\\angle CAB)$, $\\overline{BC}=\\overline{AB}\\sin(\\angle CAB)$ 이고 $\\sin(\\angle CAB)=\\sqrt{1-\\cos^{2}(\\angle CAB)}$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{AC}=6$, $\\overline{BC}=8$ 이므로 넓이는 $\\dfrac{1}{2}\\cdot6\\cdot8=24$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "삼각형 $ABC$ 의 넓이는 $24$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 14,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "첫째항이 $207$ 이고 제$9$항이 $87$ 인 등차수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합을 $S_n$ 이라 할 때, $S_n$ 이 최대가 되도록 하는 자연수 $n$ 의 값은?",
+        "choices": [
+          "$12$",
+          "$14$",
+          "$13$",
+          "$15$",
+          "$16$"
+        ],
+        "answer": 2,
+        "solution": "공차 $d=\\dfrac{87-207}{9-1}=-15$ 이므로 $a_n=207+(n-1)(-15)=222-15n$ 이다. $a_n\\ge 0$ 인 마지막 항까지 더할 때 $S_n$ 이 최대이고, $222-15n\\ge 0$ 에서 $n=14$ 일 때 최대이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열의 부분합 $S_n$ 이 최대가 되는 자연수 $n$ 을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "첫째항과 한 항의 값으로 공차를 구해 일반항 $a_n$ 을 세운다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "공차가 음수인 등차수열에서는 $a_n\\ge 0$ 인 마지막 항까지 더할 때 $S_n$ 이 최대가 된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "공차 $d=\\dfrac{87-207}{9-1}=-15$ 이므로 $a_n=207+(n-1)(-15)=222-15n$ 이다. $a_n\\ge 0$ 인 마지막 항까지 더할 때 $S_n$ 이 최대이고, $222-15n\\ge 0$ 에서 $n=14$ 일 때 최대이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "따라서 $n$ 은 보기 ③이다."
+          }
+        ]
+      },
+      {
+        "num": 15,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=n^{2}+7n+5$ 일 때, $a_{2}+a_{8}$ 의 값은?",
+        "choices": [
+          "$28$",
+          "$30$",
+          "$34$",
+          "$32$",
+          "$36$"
+        ],
+        "answer": 4,
+        "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=2n-1+7=2n+6$ 이다. 따라서 $a_{2}=10$, $a_{8}=22$ 이므로 $a_{2}+a_{8}=32$ 이다."
+      },
+      {
+        "num": 16,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "함수 $y=2\\sin^{2}x+2\\cos x-1$ 의 최댓값은?",
+        "choices": [
+          "$\\dfrac{3}{2}$",
+          "$\\dfrac{1}{2}$",
+          "$1$",
+          "$2$",
+          "$\\dfrac{5}{2}$"
+        ],
+        "answer": 1,
+        "solution": "$\\sin^{2}x+\\cos^{2}x=1$ 을 이용하여 한 문자로 정리하면 $y=2(1-t^{2})+2t-1=-2t^{2}+2t+1$ 이다. 이는 위로 볼록한 이차함수이고 정의역 $[-1,1]$ 안의 꼭짓점 $t=\\dfrac{1}{2}$ 에서 최댓값 $\\dfrac{3}{2}$ 을 가진다."
+      },
+      {
+        "num": 17,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=8$, $\\overline{AC}=3$, $A=60^{\\circ}$ 이다. 변 $BC$ 의 길이 $\\overline{BC}$ 와 삼각형 $ABC$ 의 넓이의 곱 $\\overline{BC}\\times(\\triangle ABC\\text{의 넓이})$ 를 $p\\sqrt{q}$ 꼴로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $q$ 는 가장 작은 자연수)",
+        "answer": "45",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "코사인법칙으로 $\\overline{BC}$ 를, 넓이 공식으로 삼각형의 넓이를 구해 그 곱을 $p\\sqrt{q}$ 꼴로 나타낸 뒤 $p+q$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=8$, $\\overline{AC}=3$, $A=60^{\\circ}$ 이고 $\\cos60^{\\circ}=\\dfrac{1}{2}$, $\\sin60^{\\circ}=\\dfrac{\\sqrt{3}}{2}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A$, 넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{BC}^{2}=64+9-2\\cdot24\\cdot\\dfrac{1}{2}=49$ 이므로 $\\overline{BC}=7$ 이다. 넓이는 $\\dfrac{1}{2}\\cdot8\\cdot3\\cdot\\dfrac{\\sqrt{3}}{2}=6\\sqrt{3}$ 이다. 곱은 $7\\times6\\sqrt{3}=42\\sqrt{3}$ 이므로 $p=42$, $q=3$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=42+3=45$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 18,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "첫째항이 $3$, 공비가 $2$ 인 등비수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합을 $T_n$ 이라 할 때, $T_n>3000$ 을 만족시키는 자연수 $n$ 의 최솟값은?",
+        "choices": [
+          "$8$",
+          "$9$",
+          "$10$",
+          "$11$",
+          "$12$"
+        ],
+        "answer": 3,
+        "solution": "$T_n=3(2^{n}-1)$ 이므로 $T_n>3000$ 은 $2^{n}>1001$ 과 같다. $2^{10}=1024$ 이므로 최솟값은 $n=10$ 이다."
+      },
+      {
+        "num": 19,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "첫째항이 $2$, 공차가 $3$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{16}\\dfrac{1}{a_k\\,a_{k+1}}$ 의 값을 $\\dfrac{q}{p}$ 로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+        "answer": "29",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열의 이웃한 두 항의 곱의 역수로 이루어진 시그마를 부분분수로 분해하여 값을 구한 뒤 $p+q$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_n=2+(n-1)\\times3=3n-1$ 이고 공차는 $3$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{3}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 부분분수 분해하면 망원급수가 되어 중간 항이 소거된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{16}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{3}\\left(\\dfrac{1}{a_1}-\\dfrac{1}{a_{17}}\\right)=\\dfrac{1}{3}\\left(\\dfrac{1}{2}-\\dfrac{1}{50}\\right)=\\dfrac{4}{25}$ 이다. 따라서 $p=25$, $q=4$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=25+4=29$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "등차수열 $7,\\ 10,\\ 13,\\ 16,\\ \\cdots$ 의 일반항이 $a_n=pn+q$ 일 때, $p+q$ 의 값은? (단, $p$, $q$ 는 상수)",
+        "choices": [
+          "$5$",
+          "$6$",
+          "$8$",
+          "$9$",
+          "$7$"
+        ],
+        "answer": 5,
+        "solution": "첫째항이 $7$, 공차가 $3$ 이므로 $a_n=7+(n-1)\\times3=3n+4$ 이다. 따라서 $p=3$, $q=4$ 이고 $p+q=7$ 이다."
+      }
+    ],
+    "rounds": [
+      [
+        {
+          "num": 1,
+          "unit": "지수와 로그",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "방정식 $\\log_{2} x=\\log_{4}(3x-2)$ 의 모든 근의 합은?",
+          "choices": [
+            "$3$",
+            "$1$",
+            "$2$",
+            "$4$",
+            "$5$"
+          ],
+          "answer": 1,
+          "solution": "$\\log_{4}(3x-2)=\\dfrac{1}{2}\\log_{2}(3x-2)$ 이므로 방정식은 $2\\log_{2} x=\\log_{2}(3x-2)$, 즉 $x^{2}=3x-2$ 이다. 정리하면 $x^{2}-3x+2=0$ 이고 진수조건 $x>0$, $3x-2>0$ 을 두 근이 모두 만족하므로 근의 합은 근과 계수의 관계에 의해 $3$ 이다."
+        },
+        {
+          "num": 2,
+          "unit": "지수와 로그",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "이차방정식 $x^{2}-5x+3=0$ 의 두 근을 $\\alpha$, $\\beta$ 라 할 때, $2^{\\alpha}\\times 2^{\\beta}$ 의 값은?",
+          "choices": [
+            "$16$",
+            "$24$",
+            "$32$",
+            "$40$",
+            "$48$"
+          ],
+          "answer": 3,
+          "solution": "근과 계수의 관계에서 $\\alpha+\\beta=5$ 이다. 따라서 $2^{\\alpha}\\times 2^{\\beta}=2^{\\alpha+\\beta}=2^{5}=32$ 이다."
+        },
+        {
+          "num": 3,
+          "unit": "지수와 로그",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\log_{2} 3\\times\\log_{3} 4\\times\\log_{4} 5\\times\\cdots\\times\\log_{15} 16$ 의 값은?",
+          "choices": [
+            "$2$",
+            "$3$",
+            "$5$",
+            "$6$",
+            "$4$"
+          ],
+          "answer": 5,
+          "solution": "로그의 밑변환 공식 $\\log_{a} b=\\dfrac{\\log b}{\\log a}$ 를 적용하면 연속한 분자·분모가 약분되어 $\\dfrac{\\log 16}{\\log 2}=\\log_{2} 16=4$ 이다."
+        },
+        {
+          "num": 4,
+          "unit": "지수와 로그",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$6^{20}$ 은 몇 자리의 정수인가? (단, $\\log 2=0.3010$, $\\log 3=0.4771$ 로 계산한다.)",
+          "choices": [
+            "$14\\text{자리}$",
+            "$16\\text{자리}$",
+            "$15\\text{자리}$",
+            "$17\\text{자리}$",
+            "$18\\text{자리}$"
+          ],
+          "answer": 2,
+          "solution": "$\\log 6=\\log 2+\\log 3=0.3010+0.4771=0.7781$ 이므로 $\\log 6^{20}=20\\times0.7781=15.5620$ 이다. 따라서 $6^{20}$ 은 $16$ 자리의 정수이다."
+        },
+        {
+          "num": 5,
+          "unit": "지수와 로그",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "부등식 $4^{x}-5\\cdot 2^{x}+4\\le 0$ 을 만족시키는 모든 정수 $x$ 의 개수는?",
+          "choices": [
+            "$2$",
+            "$4$",
+            "$5$",
+            "$3$",
+            "$6$"
+          ],
+          "answer": 4,
+          "solution": "$t=2^{x}\\ (t>0)$ 로 놓으면 부등식은 $t^{2}-5t+4\\le 0$, 즉 $(t-1)(t-4)\\le 0$ 이므로 $1\\le t\\le 4$ 이다. 따라서 $0\\le x\\le 2$ 이고 정수 $x$ 는 $3$ 개이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "지수에 대한 이차형 부등식을 만족시키는 정수 $x$ 의 개수를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "밑이 같은 지수를 한 문자 $t$ 로 치환하면 $t>0$ 인 범위에서 이차부등식이 된다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$t$ 로 치환한 이차부등식을 인수분해하여 $t$ 의 범위를 구한 뒤, 다시 $x$ 의 범위로 되돌린다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$t=2^{x}\\ (t>0)$ 로 놓으면 부등식은 $t^{2}-5t+4\\le 0$, 즉 $(t-1)(t-4)\\le 0$ 이므로 $1\\le t\\le 4$ 이다. 따라서 $0\\le x\\le 2$ 이고 정수 $x$ 는 $3$ 개이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "조건을 만족시키는 정수 $x$ 의 개수는 보기 ②이다."
+            }
+          ]
+        },
+        {
+          "num": 6,
+          "unit": "삼각함수",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$0<\\theta<\\pi$ 인 $\\theta$ 에 대하여 $\\sin\\theta+\\cos\\theta=\\dfrac{1}{2}$ 일 때, $\\sin\\theta\\cos\\theta$ 의 값은?",
+          "choices": [
+            "$-\\dfrac{3}{8}$",
+            "$-\\dfrac{5}{8}$",
+            "$-\\dfrac{1}{2}$",
+            "$-\\dfrac{1}{4}$",
+            "$-\\dfrac{1}{8}$"
+          ],
+          "answer": 1,
+          "solution": "$(\\sin\\theta+\\cos\\theta)^{2}=1+2\\sin\\theta\\cos\\theta$ 이므로 $\\dfrac{1}{4}=1+2\\sin\\theta\\cos\\theta$ 이다. 따라서 $\\sin\\theta\\cos\\theta=\\dfrac{1}{2}\\left(\\dfrac{1}{4}-1\\right)=-\\dfrac{3}{8}$ 이다."
+        },
+        {
+          "num": 7,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\theta$ 에 대한 이차방정식 $25x^{2}-35x+k=0$ 의 두 근이 $\\sin\\theta$, $\\cos\\theta$ 일 때, 상수 $k$ 의 값은?",
+          "choices": [
+            "$10$",
+            "$11$",
+            "$12$",
+            "$13$",
+            "$14$"
+          ],
+          "answer": 3,
+          "solution": "근과 계수의 관계에서 $\\sin\\theta+\\cos\\theta=\\dfrac{35}{25}$, $\\sin\\theta\\cos\\theta=\\dfrac{k}{25}$ 이다. $(\\sin\\theta+\\cos\\theta)^{2}=1+2\\sin\\theta\\cos\\theta$ 에 대입하면 $\\left(\\dfrac{35}{25}\\right)^{2}=1+\\dfrac{2k}{25}$ 이므로 $k=12$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "두 근이 $\\sin\\theta$, $\\cos\\theta$ 인 이차방정식에서 상수 $k$ 의 값을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "근과 계수의 관계로 $\\sin\\theta+\\cos\\theta$ 와 $\\sin\\theta\\cos\\theta$ 를 계수로 나타낸다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "항등식 $(\\sin\\theta+\\cos\\theta)^{2}=1+2\\sin\\theta\\cos\\theta$ 를 이용해 $k$ 에 대한 식을 세운다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "근과 계수의 관계에서 $\\sin\\theta+\\cos\\theta=\\dfrac{35}{25}$, $\\sin\\theta\\cos\\theta=\\dfrac{k}{25}$ 이다. $(\\sin\\theta+\\cos\\theta)^{2}=1+2\\sin\\theta\\cos\\theta$ 에 대입하면 $\\left(\\dfrac{35}{25}\\right)^{2}=1+\\dfrac{2k}{25}$ 이므로 $k=12$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "따라서 $k$ 는 보기 ③이다."
+            }
+          ]
+        },
+        {
+          "num": 8,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$0\\le x<2\\pi$ 일 때, 방정식 $2\\sin^{2}x-3\\sin x+1=0$ 의 모든 해의 합은?",
+          "choices": [
+            "$\\dfrac{1}{2}\\pi$",
+            "$1\\pi$",
+            "$2\\pi$",
+            "$\\dfrac{5}{2}\\pi$",
+            "$\\dfrac{3}{2}\\pi$"
+          ],
+          "answer": 5,
+          "solution": "주어진 식을 인수분해하면 $\\sin x=1\\text{ 또는 }\\sin x=\\dfrac{1}{2}$ 이다. $0\\le x<2\\pi$ 에서 해는 $x=\\dfrac{\\pi}{2},\\ \\dfrac{\\pi}{6},\\ \\dfrac{5\\pi}{6}$ 이므로 모든 해의 합은 $\\dfrac{3}{2}\\pi$ 이다."
+        },
+        {
+          "num": 9,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "평행사변형 $ABCD$ 에서 두 대각선 $AC$, $BD$ 의 길이가 각각 $8$, $6\\sqrt{3}$ 이고 두 대각선이 이루는 예각의 크기를 $\\theta$ 라 하자. 평행사변형 $ABCD$ 의 넓이가 $12\\sqrt{3}$ 일 때, $\\theta$ 의 크기는?",
+          "choices": [
+            "$45^{\\circ}$",
+            "$30^{\\circ}$",
+            "$60^{\\circ}$",
+            "$90^{\\circ}$",
+            "$120^{\\circ}$"
+          ],
+          "answer": 2,
+          "solution": "두 대각선의 길이가 $p$, $q$ 이고 이루는 각이 $\\theta$ 인 평행사변형의 넓이는 $\\dfrac{1}{2}pq\\sin\\theta$ 이다. $\\dfrac{1}{2}\\times8\\times6\\sqrt{3}\\times\\sin\\theta=12\\sqrt{3}$ 에서 $\\sin\\theta=\\dfrac{1}{2}$ 이므로 $\\theta=30^{\\circ}$ 이다."
+        },
+        {
+          "num": 10,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$ 에서 $A=120^{\\circ}$, $\\overline{BC}=13$, $\\overline{CA}=7$ 이다. 삼각형 $ABC$ 의 넓이가 $c\\sqrt{3}$ 일 때, 상수 $c$ 의 값은?",
+          "choices": [
+            "$12$",
+            "$13$",
+            "$15$",
+            "$14$",
+            "$16$"
+          ],
+          "answer": 4,
+          "solution": "코사인법칙에서 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{CA}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{CA}\\cos120^{\\circ}$ 이므로 $169=\\overline{AB}^{2}+49+7\\,\\overline{AB}$ 이다. 정리하면 $\\overline{AB}^{2}+7\\,\\overline{AB}-120=0$ 에서 $\\overline{AB}=8$ 이다. 넓이는 $\\dfrac{1}{2}\\cdot8\\cdot7\\cdot\\sin120^{\\circ}=14\\sqrt{3}$ 이므로 $c=14$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "$A=120^{\\circ}$ 인 삼각형에서 코사인법칙으로 변을 구하고 넓이를 $c\\sqrt{3}$ 꼴로 나타내 $c$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$\\cos120^{\\circ}=-\\dfrac{1}{2}$, $\\sin120^{\\circ}=\\dfrac{\\sqrt{3}}{2}$ 임을 정리한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "코사인법칙으로 미지의 변을 구한 뒤 넓이 공식 $\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{CA}\\sin A$ 를 적용한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "코사인법칙에서 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{CA}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{CA}\\cos120^{\\circ}$ 이므로 $169=\\overline{AB}^{2}+49+7\\,\\overline{AB}$ 이다. 정리하면 $\\overline{AB}^{2}+7\\,\\overline{AB}-120=0$ 에서 $\\overline{AB}=8$ 이다. 넓이는 $\\dfrac{1}{2}\\cdot8\\cdot7\\cdot\\sin120^{\\circ}=14\\sqrt{3}$ 이므로 $c=14$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "따라서 $c$ 는 보기 ③이다."
+            }
+          ]
+        },
+        {
+          "num": 11,
+          "unit": "삼각함수",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\theta$ 가 제$2$사분면의 각이고 $\\sin\\theta=\\dfrac{3}{5}$ 일 때, $\\tan\\theta$ 의 값은?",
+          "choices": [
+            "$-\\dfrac{3}{4}$",
+            "$-\\dfrac{4}{3}$",
+            "$-\\dfrac{4}{5}$",
+            "$\\dfrac{3}{4}$",
+            "$\\dfrac{4}{3}$"
+          ],
+          "answer": 1,
+          "solution": "제$2$사분면에서 $\\cos\\theta<0$ 이므로 $\\cos\\theta=-\\sqrt{1-\\sin^{2}\\theta}=-\\dfrac{4}{5}$ 이다. 따라서 $\\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}=-\\dfrac{3}{4}$ 이다."
+        },
+        {
+          "num": 12,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$ 에서 $\\overline{BC}=7$, $\\overline{CA}=5$, $\\overline{AB}=3$ 일 때, 각 $A$ 의 크기는?",
+          "choices": [
+            "$30^{\\circ}$",
+            "$45^{\\circ}$",
+            "$120^{\\circ}$",
+            "$60^{\\circ}$",
+            "$90^{\\circ}$"
+          ],
+          "answer": 3,
+          "solution": "코사인법칙에서 $\\cos A=\\dfrac{\\overline{CA}^{2}+\\overline{AB}^{2}-\\overline{BC}^{2}}{2\\cdot\\overline{CA}\\cdot\\overline{AB}}=\\dfrac{25+9-49}{30}=-\\dfrac{1}{2}$ 이므로 $A=120^{\\circ}$ 이다."
+        },
+        {
+          "num": 13,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "지름의 길이가 $10$ 인 반원의 지름을 $AB$ 라 하고, 반원 위의 점 $C$ 에 대하여 $\\cos(\\angle CAB)=\\dfrac{3}{5}$ 이다. 삼각형 $ABC$ 의 넓이는?",
+          "choices": [
+            "$22$",
+            "$23$",
+            "$25$",
+            "$26$",
+            "$24$"
+          ],
+          "answer": 5,
+          "solution": "$AB$ 가 반원의 지름이므로 $\\angle ACB=90^{\\circ}$ 이다. $\\overline{AC}=10\\times\\dfrac{3}{5}=6$, $\\overline{BC}=10\\times\\dfrac{4}{5}=8$ 이므로 넓이는 $\\dfrac{1}{2}\\cdot6\\cdot8=24$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "지름이 $10$ 인 반원 위의 점 $C$ 와 $\\cos(\\angle CAB)=\\dfrac{3}{5}$ 로부터 삼각형 $ABC$ 의 넓이를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$AB$ 가 반원의 지름이므로 반원 위의 점 $C$ 에 대하여 $\\angle ACB=90^{\\circ}$ 인 직각삼각형이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "직각삼각형에서 $\\overline{AC}=\\overline{AB}\\cos(\\angle CAB)$, $\\overline{BC}=\\overline{AB}\\sin(\\angle CAB)$ 이고 $\\sin(\\angle CAB)=\\sqrt{1-\\cos^{2}(\\angle CAB)}$ 이다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\overline{AC}=6$, $\\overline{BC}=8$ 이므로 넓이는 $\\dfrac{1}{2}\\cdot6\\cdot8=24$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "삼각형 $ABC$ 의 넓이는 $24$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 14,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "첫째항이 $207$ 이고 제$9$항이 $87$ 인 등차수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합을 $S_n$ 이라 할 때, $S_n$ 이 최대가 되도록 하는 자연수 $n$ 의 값은?",
+          "choices": [
+            "$12$",
+            "$14$",
+            "$13$",
+            "$15$",
+            "$16$"
+          ],
+          "answer": 2,
+          "solution": "공차 $d=\\dfrac{87-207}{9-1}=-15$ 이므로 $a_n=207+(n-1)(-15)=222-15n$ 이다. $a_n\\ge 0$ 인 마지막 항까지 더할 때 $S_n$ 이 최대이고, $222-15n\\ge 0$ 에서 $n=14$ 일 때 최대이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "등차수열의 부분합 $S_n$ 이 최대가 되는 자연수 $n$ 을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "첫째항과 한 항의 값으로 공차를 구해 일반항 $a_n$ 을 세운다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "공차가 음수인 등차수열에서는 $a_n\\ge 0$ 인 마지막 항까지 더할 때 $S_n$ 이 최대가 된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "공차 $d=\\dfrac{87-207}{9-1}=-15$ 이므로 $a_n=207+(n-1)(-15)=222-15n$ 이다. $a_n\\ge 0$ 인 마지막 항까지 더할 때 $S_n$ 이 최대이고, $222-15n\\ge 0$ 에서 $n=14$ 일 때 최대이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "따라서 $n$ 은 보기 ③이다."
+            }
+          ]
+        },
+        {
+          "num": 15,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=n^{2}+7n+5$ 일 때, $a_{2}+a_{8}$ 의 값은?",
+          "choices": [
+            "$28$",
+            "$30$",
+            "$34$",
+            "$32$",
+            "$36$"
+          ],
+          "answer": 4,
+          "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=2n-1+7=2n+6$ 이다. 따라서 $a_{2}=10$, $a_{8}=22$ 이므로 $a_{2}+a_{8}=32$ 이다."
+        },
+        {
+          "num": 16,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "함수 $y=2\\sin^{2}x+2\\cos x-1$ 의 최댓값은?",
+          "choices": [
+            "$\\dfrac{3}{2}$",
+            "$\\dfrac{1}{2}$",
+            "$1$",
+            "$2$",
+            "$\\dfrac{5}{2}$"
+          ],
+          "answer": 1,
+          "solution": "$\\sin^{2}x+\\cos^{2}x=1$ 을 이용하여 한 문자로 정리하면 $y=2(1-t^{2})+2t-1=-2t^{2}+2t+1$ 이다. 이는 위로 볼록한 이차함수이고 정의역 $[-1,1]$ 안의 꼭짓점 $t=\\dfrac{1}{2}$ 에서 최댓값 $\\dfrac{3}{2}$ 을 가진다."
+        },
+        {
+          "num": 17,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=8$, $\\overline{AC}=3$, $A=60^{\\circ}$ 이다. 변 $BC$ 의 길이 $\\overline{BC}$ 와 삼각형 $ABC$ 의 넓이의 곱 $\\overline{BC}\\times(\\triangle ABC\\text{의 넓이})$ 를 $p\\sqrt{q}$ 꼴로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $q$ 는 가장 작은 자연수)",
+          "answer": "45",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "코사인법칙으로 $\\overline{BC}$ 를, 넓이 공식으로 삼각형의 넓이를 구해 그 곱을 $p\\sqrt{q}$ 꼴로 나타낸 뒤 $p+q$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$\\overline{AB}=8$, $\\overline{AC}=3$, $A=60^{\\circ}$ 이고 $\\cos60^{\\circ}=\\dfrac{1}{2}$, $\\sin60^{\\circ}=\\dfrac{\\sqrt{3}}{2}$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A$, 넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A$ 를 쓴다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\overline{BC}^{2}=64+9-2\\cdot24\\cdot\\dfrac{1}{2}=49$ 이므로 $\\overline{BC}=7$ 이다. 넓이는 $\\dfrac{1}{2}\\cdot8\\cdot3\\cdot\\dfrac{\\sqrt{3}}{2}=6\\sqrt{3}$ 이다. 곱은 $7\\times6\\sqrt{3}=42\\sqrt{3}$ 이므로 $p=42$, $q=3$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$p+q=42+3=45$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 18,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "첫째항이 $3$, 공비가 $2$ 인 등비수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합을 $T_n$ 이라 할 때, $T_n>3000$ 을 만족시키는 자연수 $n$ 의 최솟값은?",
+          "choices": [
+            "$8$",
+            "$9$",
+            "$10$",
+            "$11$",
+            "$12$"
+          ],
+          "answer": 3,
+          "solution": "$T_n=3(2^{n}-1)$ 이므로 $T_n>3000$ 은 $2^{n}>1001$ 과 같다. $2^{10}=1024$ 이므로 최솟값은 $n=10$ 이다."
+        },
+        {
+          "num": 19,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "첫째항이 $2$, 공차가 $3$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{16}\\dfrac{1}{a_k\\,a_{k+1}}$ 의 값을 $\\dfrac{q}{p}$ 로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+          "answer": "29",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "등차수열의 이웃한 두 항의 곱의 역수로 이루어진 시그마를 부분분수로 분해하여 값을 구한 뒤 $p+q$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a_n=2+(n-1)\\times3=3n-1$ 이고 공차는 $3$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{3}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 부분분수 분해하면 망원급수가 되어 중간 항이 소거된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\displaystyle\\sum_{k=1}^{16}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{3}\\left(\\dfrac{1}{a_1}-\\dfrac{1}{a_{17}}\\right)=\\dfrac{1}{3}\\left(\\dfrac{1}{2}-\\dfrac{1}{50}\\right)=\\dfrac{4}{25}$ 이다. 따라서 $p=25$, $q=4$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$p+q=25+4=29$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 20,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "등차수열 $7,\\ 10,\\ 13,\\ 16,\\ \\cdots$ 의 일반항이 $a_n=pn+q$ 일 때, $p+q$ 의 값은? (단, $p$, $q$ 는 상수)",
+          "choices": [
+            "$5$",
+            "$6$",
+            "$8$",
+            "$9$",
+            "$7$"
+          ],
+          "answer": 5,
+          "solution": "첫째항이 $7$, 공차가 $3$ 이므로 $a_n=7+(n-1)\\times3=3n+4$ 이다. 따라서 $p=3$, $q=4$ 이고 $p+q=7$ 이다."
+        }
+      ],
+      [
+        {
+          "num": 1,
+          "unit": "지수와 로그",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "방정식 $\\log_{2} x=\\log_{4}(4x-3)$ 의 모든 근의 합은?",
+          "choices": [
+            "$4$",
+            "$2$",
+            "$3$",
+            "$5$",
+            "$6$"
+          ],
+          "answer": 1,
+          "solution": "$\\log_{4}(4x-3)=\\dfrac{1}{2}\\log_{2}(4x-3)$ 이므로 방정식은 $2\\log_{2} x=\\log_{2}(4x-3)$, 즉 $x^{2}=4x-3$ 이다. 정리하면 $x^{2}-4x+3=0$ 이고 진수조건 $x>0$, $4x-3>0$ 을 두 근이 모두 만족하므로 근의 합은 근과 계수의 관계에 의해 $4$ 이다."
+        },
+        {
+          "num": 2,
+          "unit": "지수와 로그",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "이차방정식 $x^{2}-6x+7=0$ 의 두 근을 $\\alpha$, $\\beta$ 라 할 때, $2^{\\alpha}\\times 2^{\\beta}$ 의 값은?",
+          "choices": [
+            "$32$",
+            "$48$",
+            "$64$",
+            "$80$",
+            "$96$"
+          ],
+          "answer": 3,
+          "solution": "근과 계수의 관계에서 $\\alpha+\\beta=6$ 이다. 따라서 $2^{\\alpha}\\times 2^{\\beta}=2^{\\alpha+\\beta}=2^{6}=64$ 이다."
+        },
+        {
+          "num": 3,
+          "unit": "지수와 로그",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\log_{2} 3\\times\\log_{3} 4\\times\\log_{4} 5\\times\\cdots\\times\\log_{31} 32$ 의 값은?",
+          "choices": [
+            "$3$",
+            "$4$",
+            "$6$",
+            "$7$",
+            "$5$"
+          ],
+          "answer": 5,
+          "solution": "로그의 밑변환 공식 $\\log_{a} b=\\dfrac{\\log b}{\\log a}$ 를 적용하면 연속한 분자·분모가 약분되어 $\\dfrac{\\log 32}{\\log 2}=\\log_{2} 32=5$ 이다."
+        },
+        {
+          "num": 4,
+          "unit": "지수와 로그",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$12^{15}$ 은 몇 자리의 정수인가? (단, $\\log 2=0.3010$, $\\log 3=0.4771$ 로 계산한다.)",
+          "choices": [
+            "$15\\text{자리}$",
+            "$17\\text{자리}$",
+            "$16\\text{자리}$",
+            "$18\\text{자리}$",
+            "$19\\text{자리}$"
+          ],
+          "answer": 2,
+          "solution": "$\\log 12=2\\log 2+\\log 3=2(0.3010)+0.4771=1.0791$ 이므로 $\\log 12^{15}=15\\times1.0791=16.1865$ 이다. 따라서 $12^{15}$ 은 $17$ 자리의 정수이다."
+        },
+        {
+          "num": 5,
+          "unit": "지수와 로그",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "부등식 $4^{x}-10\\cdot 2^{x}+16\\le 0$ 을 만족시키는 모든 정수 $x$ 의 개수는?",
+          "choices": [
+            "$2$",
+            "$4$",
+            "$5$",
+            "$3$",
+            "$6$"
+          ],
+          "answer": 4,
+          "solution": "$t=2^{x}\\ (t>0)$ 로 놓으면 부등식은 $t^{2}-10t+16\\le 0$, 즉 $(t-2)(t-8)\\le 0$ 이므로 $2\\le t\\le 8$ 이다. 따라서 $1\\le x\\le 3$ 이고 정수 $x$ 는 $3$ 개이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "지수에 대한 이차형 부등식을 만족시키는 정수 $x$ 의 개수를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "밑이 같은 지수를 한 문자 $t$ 로 치환하면 $t>0$ 인 범위에서 이차부등식이 된다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$t$ 로 치환한 이차부등식을 인수분해하여 $t$ 의 범위를 구한 뒤, 다시 $x$ 의 범위로 되돌린다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$t=2^{x}\\ (t>0)$ 로 놓으면 부등식은 $t^{2}-10t+16\\le 0$, 즉 $(t-2)(t-8)\\le 0$ 이므로 $2\\le t\\le 8$ 이다. 따라서 $1\\le x\\le 3$ 이고 정수 $x$ 는 $3$ 개이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "조건을 만족시키는 정수 $x$ 의 개수는 보기 ②이다."
+            }
+          ]
+        },
+        {
+          "num": 6,
+          "unit": "삼각함수",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$0<\\theta<\\pi$ 인 $\\theta$ 에 대하여 $\\sin\\theta+\\cos\\theta=\\dfrac{1}{3}$ 일 때, $\\sin\\theta\\cos\\theta$ 의 값은?",
+          "choices": [
+            "$-\\dfrac{4}{9}$",
+            "$-\\dfrac{2}{3}$",
+            "$-\\dfrac{5}{9}$",
+            "$-\\dfrac{1}{3}$",
+            "$-\\dfrac{2}{9}$"
+          ],
+          "answer": 1,
+          "solution": "$(\\sin\\theta+\\cos\\theta)^{2}=1+2\\sin\\theta\\cos\\theta$ 이므로 $\\dfrac{1}{9}=1+2\\sin\\theta\\cos\\theta$ 이다. 따라서 $\\sin\\theta\\cos\\theta=\\dfrac{1}{2}\\left(\\dfrac{1}{9}-1\\right)=-\\dfrac{4}{9}$ 이다."
+        },
+        {
+          "num": 7,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\theta$ 에 대한 이차방정식 $50x^{2}-70x+k=0$ 의 두 근이 $\\sin\\theta$, $\\cos\\theta$ 일 때, 상수 $k$ 의 값은?",
+          "choices": [
+            "$22$",
+            "$23$",
+            "$24$",
+            "$25$",
+            "$26$"
+          ],
+          "answer": 3,
+          "solution": "근과 계수의 관계에서 $\\sin\\theta+\\cos\\theta=\\dfrac{70}{50}$, $\\sin\\theta\\cos\\theta=\\dfrac{k}{50}$ 이다. $(\\sin\\theta+\\cos\\theta)^{2}=1+2\\sin\\theta\\cos\\theta$ 에 대입하면 $\\left(\\dfrac{70}{50}\\right)^{2}=1+\\dfrac{2k}{50}$ 이므로 $k=24$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "두 근이 $\\sin\\theta$, $\\cos\\theta$ 인 이차방정식에서 상수 $k$ 의 값을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "근과 계수의 관계로 $\\sin\\theta+\\cos\\theta$ 와 $\\sin\\theta\\cos\\theta$ 를 계수로 나타낸다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "항등식 $(\\sin\\theta+\\cos\\theta)^{2}=1+2\\sin\\theta\\cos\\theta$ 를 이용해 $k$ 에 대한 식을 세운다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "근과 계수의 관계에서 $\\sin\\theta+\\cos\\theta=\\dfrac{70}{50}$, $\\sin\\theta\\cos\\theta=\\dfrac{k}{50}$ 이다. $(\\sin\\theta+\\cos\\theta)^{2}=1+2\\sin\\theta\\cos\\theta$ 에 대입하면 $\\left(\\dfrac{70}{50}\\right)^{2}=1+\\dfrac{2k}{50}$ 이므로 $k=24$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "따라서 $k$ 는 보기 ③이다."
+            }
+          ]
+        },
+        {
+          "num": 8,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$0\\le x<2\\pi$ 일 때, 방정식 $2\\cos^{2}x-3\\cos x+1=0$ 의 모든 해의 합은?",
+          "choices": [
+            "$1\\pi$",
+            "$\\dfrac{3}{2}\\pi$",
+            "$\\dfrac{5}{2}\\pi$",
+            "$3\\pi$",
+            "$2\\pi$"
+          ],
+          "answer": 5,
+          "solution": "주어진 식을 인수분해하면 $\\cos x=1\\text{ 또는 }\\cos x=\\dfrac{1}{2}$ 이다. $0\\le x<2\\pi$ 에서 해는 $x=0,\\ \\dfrac{\\pi}{3},\\ \\dfrac{5\\pi}{3}$ 이므로 모든 해의 합은 $2\\pi$ 이다."
+        },
+        {
+          "num": 9,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "평행사변형 $ABCD$ 에서 두 대각선 $AC$, $BD$ 의 길이가 각각 $6$, $8$ 이고 두 대각선이 이루는 예각의 크기를 $\\theta$ 라 하자. 평행사변형 $ABCD$ 의 넓이가 $12\\sqrt{3}$ 일 때, $\\theta$ 의 크기는?",
+          "choices": [
+            "$30^{\\circ}$",
+            "$60^{\\circ}$",
+            "$45^{\\circ}$",
+            "$90^{\\circ}$",
+            "$120^{\\circ}$"
+          ],
+          "answer": 2,
+          "solution": "두 대각선의 길이가 $p$, $q$ 이고 이루는 각이 $\\theta$ 인 평행사변형의 넓이는 $\\dfrac{1}{2}pq\\sin\\theta$ 이다. $\\dfrac{1}{2}\\times6\\times8\\times\\sin\\theta=12\\sqrt{3}$ 에서 $\\sin\\theta=\\dfrac{\\sqrt{3}}{2}$ 이므로 $\\theta=60^{\\circ}$ 이다."
+        },
+        {
+          "num": 10,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$ 에서 $A=120^{\\circ}$, $\\overline{BC}=14$, $\\overline{CA}=10$ 이다. 삼각형 $ABC$ 의 넓이가 $c\\sqrt{3}$ 일 때, 상수 $c$ 의 값은?",
+          "choices": [
+            "$13$",
+            "$14$",
+            "$16$",
+            "$15$",
+            "$17$"
+          ],
+          "answer": 4,
+          "solution": "코사인법칙에서 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{CA}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{CA}\\cos120^{\\circ}$ 이므로 $196=\\overline{AB}^{2}+100+10\\,\\overline{AB}$ 이다. 정리하면 $\\overline{AB}^{2}+10\\,\\overline{AB}-96=0$ 에서 $\\overline{AB}=6$ 이다. 넓이는 $\\dfrac{1}{2}\\cdot6\\cdot10\\cdot\\sin120^{\\circ}=15\\sqrt{3}$ 이므로 $c=15$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "$A=120^{\\circ}$ 인 삼각형에서 코사인법칙으로 변을 구하고 넓이를 $c\\sqrt{3}$ 꼴로 나타내 $c$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$\\cos120^{\\circ}=-\\dfrac{1}{2}$, $\\sin120^{\\circ}=\\dfrac{\\sqrt{3}}{2}$ 임을 정리한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "코사인법칙으로 미지의 변을 구한 뒤 넓이 공식 $\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{CA}\\sin A$ 를 적용한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "코사인법칙에서 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{CA}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{CA}\\cos120^{\\circ}$ 이므로 $196=\\overline{AB}^{2}+100+10\\,\\overline{AB}$ 이다. 정리하면 $\\overline{AB}^{2}+10\\,\\overline{AB}-96=0$ 에서 $\\overline{AB}=6$ 이다. 넓이는 $\\dfrac{1}{2}\\cdot6\\cdot10\\cdot\\sin120^{\\circ}=15\\sqrt{3}$ 이므로 $c=15$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "따라서 $c$ 는 보기 ③이다."
+            }
+          ]
+        },
+        {
+          "num": 11,
+          "unit": "삼각함수",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\theta$ 가 제$2$사분면의 각이고 $\\sin\\theta=\\dfrac{5}{13}$ 일 때, $\\tan\\theta$ 의 값은?",
+          "choices": [
+            "$-\\dfrac{5}{12}$",
+            "$-\\dfrac{12}{5}$",
+            "$-\\dfrac{12}{13}$",
+            "$\\dfrac{5}{12}$",
+            "$\\dfrac{12}{5}$"
+          ],
+          "answer": 1,
+          "solution": "제$2$사분면에서 $\\cos\\theta<0$ 이므로 $\\cos\\theta=-\\sqrt{1-\\sin^{2}\\theta}=-\\dfrac{12}{13}$ 이다. 따라서 $\\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}=-\\dfrac{5}{12}$ 이다."
+        },
+        {
+          "num": 12,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$ 에서 $\\overline{BC}=7$, $\\overline{CA}=3$, $\\overline{AB}=8$ 일 때, 각 $A$ 의 크기는?",
+          "choices": [
+            "$30^{\\circ}$",
+            "$45^{\\circ}$",
+            "$60^{\\circ}$",
+            "$90^{\\circ}$",
+            "$120^{\\circ}$"
+          ],
+          "answer": 3,
+          "solution": "코사인법칙에서 $\\cos A=\\dfrac{\\overline{CA}^{2}+\\overline{AB}^{2}-\\overline{BC}^{2}}{2\\cdot\\overline{CA}\\cdot\\overline{AB}}=\\dfrac{9+64-49}{48}=\\dfrac{1}{2}$ 이므로 $A=60^{\\circ}$ 이다."
+        },
+        {
+          "num": 13,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "지름의 길이가 $13$ 인 반원의 지름을 $AB$ 라 하고, 반원 위의 점 $C$ 에 대하여 $\\cos(\\angle CAB)=\\dfrac{5}{13}$ 이다. 삼각형 $ABC$ 의 넓이는?",
+          "choices": [
+            "$28$",
+            "$29$",
+            "$31$",
+            "$32$",
+            "$30$"
+          ],
+          "answer": 5,
+          "solution": "$AB$ 가 반원의 지름이므로 $\\angle ACB=90^{\\circ}$ 이다. $\\overline{AC}=13\\times\\dfrac{5}{13}=5$, $\\overline{BC}=13\\times\\dfrac{12}{13}=12$ 이므로 넓이는 $\\dfrac{1}{2}\\cdot5\\cdot12=30$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "지름이 $13$ 인 반원 위의 점 $C$ 와 $\\cos(\\angle CAB)=\\dfrac{5}{13}$ 로부터 삼각형 $ABC$ 의 넓이를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$AB$ 가 반원의 지름이므로 반원 위의 점 $C$ 에 대하여 $\\angle ACB=90^{\\circ}$ 인 직각삼각형이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "직각삼각형에서 $\\overline{AC}=\\overline{AB}\\cos(\\angle CAB)$, $\\overline{BC}=\\overline{AB}\\sin(\\angle CAB)$ 이고 $\\sin(\\angle CAB)=\\sqrt{1-\\cos^{2}(\\angle CAB)}$ 이다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\overline{AC}=5$, $\\overline{BC}=12$ 이므로 넓이는 $\\dfrac{1}{2}\\cdot5\\cdot12=30$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "삼각형 $ABC$ 의 넓이는 $30$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 14,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "첫째항이 $100$ 이고 제$6$항이 $70$ 인 등차수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합을 $S_n$ 이라 할 때, $S_n$ 이 최대가 되도록 하는 자연수 $n$ 의 값은?",
+          "choices": [
+            "$15$",
+            "$17$",
+            "$16$",
+            "$18$",
+            "$19$"
+          ],
+          "answer": 2,
+          "solution": "공차 $d=\\dfrac{70-100}{6-1}=-6$ 이므로 $a_n=100+(n-1)(-6)=106-6n$ 이다. $a_n\\ge 0$ 인 마지막 항까지 더할 때 $S_n$ 이 최대이고, $106-6n\\ge 0$ 에서 $n=17$ 일 때 최대이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "등차수열의 부분합 $S_n$ 이 최대가 되는 자연수 $n$ 을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "첫째항과 한 항의 값으로 공차를 구해 일반항 $a_n$ 을 세운다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "공차가 음수인 등차수열에서는 $a_n\\ge 0$ 인 마지막 항까지 더할 때 $S_n$ 이 최대가 된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "공차 $d=\\dfrac{70-100}{6-1}=-6$ 이므로 $a_n=100+(n-1)(-6)=106-6n$ 이다. $a_n\\ge 0$ 인 마지막 항까지 더할 때 $S_n$ 이 최대이고, $106-6n\\ge 0$ 에서 $n=17$ 일 때 최대이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "따라서 $n$ 은 보기 ③이다."
+            }
+          ]
+        },
+        {
+          "num": 15,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=n^{2}+5n+3$ 일 때, $a_{3}+a_{7}$ 의 값은?",
+          "choices": [
+            "$24$",
+            "$26$",
+            "$30$",
+            "$28$",
+            "$32$"
+          ],
+          "answer": 4,
+          "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=2n-1+5=2n+4$ 이다. 따라서 $a_{3}=10$, $a_{7}=18$ 이므로 $a_{3}+a_{7}=28$ 이다."
+        },
+        {
+          "num": 16,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "함수 $y=\\cos^{2}x-2\\sin x+1$ 의 최댓값은?",
+          "choices": [
+            "$3$",
+            "$1$",
+            "$2$",
+            "$4$",
+            "$5$"
+          ],
+          "answer": 1,
+          "solution": "$\\sin^{2}x+\\cos^{2}x=1$ 을 이용하여 한 문자로 정리하면 $y=(1-t^{2})-2t+1\\ (t=\\sin x)=-t^{2}-2t+2$ 이다. 이는 위로 볼록한 이차함수이고 정의역 $[-1,1]$ 안의 꼭짓점 $t=-1$ 에서 최댓값 $3$ 을 가진다."
+        },
+        {
+          "num": 17,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=8$, $\\overline{AC}=5$, $A=60^{\\circ}$ 이다. 변 $BC$ 의 길이 $\\overline{BC}$ 와 삼각형 $ABC$ 의 넓이의 곱 $\\overline{BC}\\times(\\triangle ABC\\text{의 넓이})$ 를 $p\\sqrt{q}$ 꼴로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $q$ 는 가장 작은 자연수)",
+          "answer": "73",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "코사인법칙으로 $\\overline{BC}$ 를, 넓이 공식으로 삼각형의 넓이를 구해 그 곱을 $p\\sqrt{q}$ 꼴로 나타낸 뒤 $p+q$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$\\overline{AB}=8$, $\\overline{AC}=5$, $A=60^{\\circ}$ 이고 $\\cos60^{\\circ}=\\dfrac{1}{2}$, $\\sin60^{\\circ}=\\dfrac{\\sqrt{3}}{2}$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A$, 넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A$ 를 쓴다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\overline{BC}^{2}=64+25-2\\cdot40\\cdot\\dfrac{1}{2}=49$ 이므로 $\\overline{BC}=7$ 이다. 넓이는 $\\dfrac{1}{2}\\cdot8\\cdot5\\cdot\\dfrac{\\sqrt{3}}{2}=10\\sqrt{3}$ 이다. 곱은 $7\\times10\\sqrt{3}=70\\sqrt{3}$ 이므로 $p=70$, $q=3$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$p+q=70+3=73$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 18,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "첫째항이 $2$, 공비가 $3$ 인 등비수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합을 $T_n$ 이라 할 때, $T_n>4000$ 을 만족시키는 자연수 $n$ 의 최솟값은?",
+          "choices": [
+            "$6$",
+            "$7$",
+            "$8$",
+            "$9$",
+            "$10$"
+          ],
+          "answer": 3,
+          "solution": "$T_n=3^{n}-1$ 이므로 $T_n>4000$ 은 $3^{n}>4001$ 과 같다. $3^{8}=6561$ 이므로 최솟값은 $n=8$ 이다."
+        },
+        {
+          "num": 19,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "첫째항이 $1$, 공차가 $2$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{24}\\dfrac{1}{a_k\\,a_{k+1}}$ 의 값을 $\\dfrac{q}{p}$ 로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+          "answer": "73",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "등차수열의 이웃한 두 항의 곱의 역수로 이루어진 시그마를 부분분수로 분해하여 값을 구한 뒤 $p+q$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a_n=1+(n-1)\\times2=2n-1$ 이고 공차는 $2$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{2}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 부분분수 분해하면 망원급수가 되어 중간 항이 소거된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\displaystyle\\sum_{k=1}^{24}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{2}\\left(\\dfrac{1}{a_1}-\\dfrac{1}{a_{25}}\\right)=\\dfrac{1}{2}\\left(1-\\dfrac{1}{49}\\right)=\\dfrac{24}{49}$ 이다. 따라서 $p=49$, $q=24$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$p+q=49+24=73$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 20,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "등차수열 $5,\\ 9,\\ 13,\\ 17,\\ \\cdots$ 의 일반항이 $a_n=pn+q$ 일 때, $p+q$ 의 값은? (단, $p$, $q$ 는 상수)",
+          "choices": [
+            "$3$",
+            "$4$",
+            "$6$",
+            "$7$",
+            "$5$"
+          ],
+          "answer": 5,
+          "solution": "첫째항이 $5$, 공차가 $4$ 이므로 $a_n=5+(n-1)\\times4=4n+1$ 이다. 따라서 $p=4$, $q=1$ 이고 $p+q=5$ 이다."
+        }
+      ],
+      [
+        {
+          "num": 1,
+          "unit": "지수와 로그",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "방정식 $\\log_{2} x=\\log_{4}(5x-4)$ 의 모든 근의 합은?",
+          "choices": [
+            "$5$",
+            "$3$",
+            "$4$",
+            "$6$",
+            "$7$"
+          ],
+          "answer": 1,
+          "solution": "$\\log_{4}(5x-4)=\\dfrac{1}{2}\\log_{2}(5x-4)$ 이므로 방정식은 $2\\log_{2} x=\\log_{2}(5x-4)$, 즉 $x^{2}=5x-4$ 이다. 정리하면 $x^{2}-5x+4=0$ 이고 진수조건 $x>0$, $5x-4>0$ 을 두 근이 모두 만족하므로 근의 합은 근과 계수의 관계에 의해 $5$ 이다."
+        },
+        {
+          "num": 2,
+          "unit": "지수와 로그",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "이차방정식 $x^{2}-4x+2=0$ 의 두 근을 $\\alpha$, $\\beta$ 라 할 때, $2^{\\alpha}\\times 2^{\\beta}$ 의 값은?",
+          "choices": [
+            "$8$",
+            "$12$",
+            "$16$",
+            "$20$",
+            "$24$"
+          ],
+          "answer": 3,
+          "solution": "근과 계수의 관계에서 $\\alpha+\\beta=4$ 이다. 따라서 $2^{\\alpha}\\times 2^{\\beta}=2^{\\alpha+\\beta}=2^{4}=16$ 이다."
+        },
+        {
+          "num": 3,
+          "unit": "지수와 로그",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\log_{2} 3\\times\\log_{3} 4\\times\\log_{4} 5\\times\\cdots\\times\\log_{63} 64$ 의 값은?",
+          "choices": [
+            "$4$",
+            "$5$",
+            "$7$",
+            "$8$",
+            "$6$"
+          ],
+          "answer": 5,
+          "solution": "로그의 밑변환 공식 $\\log_{a} b=\\dfrac{\\log b}{\\log a}$ 를 적용하면 연속한 분자·분모가 약분되어 $\\dfrac{\\log 64}{\\log 2}=\\log_{2} 64=6$ 이다."
+        },
+        {
+          "num": 4,
+          "unit": "지수와 로그",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$15^{25}$ 은 몇 자리의 정수인가? (단, $\\log 2=0.3010$, $\\log 3=0.4771$ 로 계산한다.)",
+          "choices": [
+            "$28\\text{자리}$",
+            "$30\\text{자리}$",
+            "$29\\text{자리}$",
+            "$31\\text{자리}$",
+            "$32\\text{자리}$"
+          ],
+          "answer": 2,
+          "solution": "$\\log 15=\\log 3+\\log 5=0.4771+(1-0.3010)=1.1761$ 이므로 $\\log 15^{25}=25\\times1.1761=29.4025$ 이다. 따라서 $15^{25}$ 은 $30$ 자리의 정수이다."
+        },
+        {
+          "num": 5,
+          "unit": "지수와 로그",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "부등식 $9^{x}-28\\cdot 3^{x}+27\\le 0$ 을 만족시키는 모든 정수 $x$ 의 개수는?",
+          "choices": [
+            "$3$",
+            "$5$",
+            "$6$",
+            "$4$",
+            "$7$"
+          ],
+          "answer": 4,
+          "solution": "$t=3^{x}\\ (t>0)$ 로 놓으면 부등식은 $t^{2}-28t+27\\le 0$, 즉 $(t-1)(t-27)\\le 0$ 이므로 $1\\le t\\le 27$ 이다. 따라서 $0\\le x\\le 3$ 이고 정수 $x$ 는 $4$ 개이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "지수에 대한 이차형 부등식을 만족시키는 정수 $x$ 의 개수를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "밑이 같은 지수를 한 문자 $t$ 로 치환하면 $t>0$ 인 범위에서 이차부등식이 된다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$t$ 로 치환한 이차부등식을 인수분해하여 $t$ 의 범위를 구한 뒤, 다시 $x$ 의 범위로 되돌린다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$t=3^{x}\\ (t>0)$ 로 놓으면 부등식은 $t^{2}-28t+27\\le 0$, 즉 $(t-1)(t-27)\\le 0$ 이므로 $1\\le t\\le 27$ 이다. 따라서 $0\\le x\\le 3$ 이고 정수 $x$ 는 $4$ 개이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "조건을 만족시키는 정수 $x$ 의 개수는 보기 ②이다."
+            }
+          ]
+        },
+        {
+          "num": 6,
+          "unit": "삼각함수",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$0<\\theta<\\pi$ 인 $\\theta$ 에 대하여 $\\sin\\theta+\\cos\\theta=\\dfrac{1}{4}$ 일 때, $\\sin\\theta\\cos\\theta$ 의 값은?",
+          "choices": [
+            "$-\\dfrac{15}{32}$",
+            "$-\\dfrac{17}{32}$",
+            "$-\\dfrac{1}{2}$",
+            "$-\\dfrac{7}{16}$",
+            "$-\\dfrac{13}{32}$"
+          ],
+          "answer": 1,
+          "solution": "$(\\sin\\theta+\\cos\\theta)^{2}=1+2\\sin\\theta\\cos\\theta$ 이므로 $\\dfrac{1}{16}=1+2\\sin\\theta\\cos\\theta$ 이다. 따라서 $\\sin\\theta\\cos\\theta=\\dfrac{1}{2}\\left(\\dfrac{1}{16}-1\\right)=-\\dfrac{15}{32}$ 이다."
+        },
+        {
+          "num": 7,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\theta$ 에 대한 이차방정식 $18x^{2}-24x+k=0$ 의 두 근이 $\\sin\\theta$, $\\cos\\theta$ 일 때, 상수 $k$ 의 값은?",
+          "choices": [
+            "$5$",
+            "$6$",
+            "$7$",
+            "$8$",
+            "$9$"
+          ],
+          "answer": 3,
+          "solution": "근과 계수의 관계에서 $\\sin\\theta+\\cos\\theta=\\dfrac{24}{18}$, $\\sin\\theta\\cos\\theta=\\dfrac{k}{18}$ 이다. $(\\sin\\theta+\\cos\\theta)^{2}=1+2\\sin\\theta\\cos\\theta$ 에 대입하면 $\\left(\\dfrac{24}{18}\\right)^{2}=1+\\dfrac{2k}{18}$ 이므로 $k=7$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "두 근이 $\\sin\\theta$, $\\cos\\theta$ 인 이차방정식에서 상수 $k$ 의 값을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "근과 계수의 관계로 $\\sin\\theta+\\cos\\theta$ 와 $\\sin\\theta\\cos\\theta$ 를 계수로 나타낸다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "항등식 $(\\sin\\theta+\\cos\\theta)^{2}=1+2\\sin\\theta\\cos\\theta$ 를 이용해 $k$ 에 대한 식을 세운다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "근과 계수의 관계에서 $\\sin\\theta+\\cos\\theta=\\dfrac{24}{18}$, $\\sin\\theta\\cos\\theta=\\dfrac{k}{18}$ 이다. $(\\sin\\theta+\\cos\\theta)^{2}=1+2\\sin\\theta\\cos\\theta$ 에 대입하면 $\\left(\\dfrac{24}{18}\\right)^{2}=1+\\dfrac{2k}{18}$ 이므로 $k=7$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "따라서 $k$ 는 보기 ③이다."
+            }
+          ]
+        },
+        {
+          "num": 8,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$0\\le x<2\\pi$ 일 때, 방정식 $2\\sin^{2}x-\\sin x-1=0$ 의 모든 해의 합은?",
+          "choices": [
+            "$\\dfrac{5}{2}\\pi$",
+            "$3\\pi$",
+            "$4\\pi$",
+            "$\\dfrac{9}{2}\\pi$",
+            "$\\dfrac{7}{2}\\pi$"
+          ],
+          "answer": 5,
+          "solution": "주어진 식을 인수분해하면 $\\sin x=1\\text{ 또는 }\\sin x=-\\dfrac{1}{2}$ 이다. $0\\le x<2\\pi$ 에서 해는 $x=\\dfrac{\\pi}{2},\\ \\dfrac{7\\pi}{6},\\ \\dfrac{11\\pi}{6}$ 이므로 모든 해의 합은 $\\dfrac{7}{2}\\pi$ 이다."
+        },
+        {
+          "num": 9,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "평행사변형 $ABCD$ 에서 두 대각선 $AC$, $BD$ 의 길이가 각각 $10$, $6$ 이고 두 대각선이 이루는 예각의 크기를 $\\theta$ 라 하자. 평행사변형 $ABCD$ 의 넓이가 $15\\sqrt{2}$ 일 때, $\\theta$ 의 크기는?",
+          "choices": [
+            "$30^{\\circ}$",
+            "$45^{\\circ}$",
+            "$60^{\\circ}$",
+            "$90^{\\circ}$",
+            "$120^{\\circ}$"
+          ],
+          "answer": 2,
+          "solution": "두 대각선의 길이가 $p$, $q$ 이고 이루는 각이 $\\theta$ 인 평행사변형의 넓이는 $\\dfrac{1}{2}pq\\sin\\theta$ 이다. $\\dfrac{1}{2}\\times10\\times6\\times\\sin\\theta=15\\sqrt{2}$ 에서 $\\sin\\theta=\\dfrac{\\sqrt{2}}{2}$ 이므로 $\\theta=45^{\\circ}$ 이다."
+        },
+        {
+          "num": 10,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$ 에서 $A=120^{\\circ}$, $\\overline{BC}=19$, $\\overline{CA}=5$ 이다. 삼각형 $ABC$ 의 넓이가 $c\\sqrt{3}$ 일 때, 상수 $c$ 의 값은?",
+          "choices": [
+            "$18$",
+            "$19$",
+            "$21$",
+            "$20$",
+            "$22$"
+          ],
+          "answer": 4,
+          "solution": "코사인법칙에서 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{CA}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{CA}\\cos120^{\\circ}$ 이므로 $361=\\overline{AB}^{2}+25+5\\,\\overline{AB}$ 이다. 정리하면 $\\overline{AB}^{2}+5\\,\\overline{AB}-336=0$ 에서 $\\overline{AB}=16$ 이다. 넓이는 $\\dfrac{1}{2}\\cdot16\\cdot5\\cdot\\sin120^{\\circ}=20\\sqrt{3}$ 이므로 $c=20$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "$A=120^{\\circ}$ 인 삼각형에서 코사인법칙으로 변을 구하고 넓이를 $c\\sqrt{3}$ 꼴로 나타내 $c$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$\\cos120^{\\circ}=-\\dfrac{1}{2}$, $\\sin120^{\\circ}=\\dfrac{\\sqrt{3}}{2}$ 임을 정리한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "코사인법칙으로 미지의 변을 구한 뒤 넓이 공식 $\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{CA}\\sin A$ 를 적용한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "코사인법칙에서 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{CA}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{CA}\\cos120^{\\circ}$ 이므로 $361=\\overline{AB}^{2}+25+5\\,\\overline{AB}$ 이다. 정리하면 $\\overline{AB}^{2}+5\\,\\overline{AB}-336=0$ 에서 $\\overline{AB}=16$ 이다. 넓이는 $\\dfrac{1}{2}\\cdot16\\cdot5\\cdot\\sin120^{\\circ}=20\\sqrt{3}$ 이므로 $c=20$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "따라서 $c$ 는 보기 ③이다."
+            }
+          ]
+        },
+        {
+          "num": 11,
+          "unit": "삼각함수",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\theta$ 가 제$2$사분면의 각이고 $\\sin\\theta=\\dfrac{8}{17}$ 일 때, $\\tan\\theta$ 의 값은?",
+          "choices": [
+            "$-\\dfrac{8}{15}$",
+            "$-\\dfrac{15}{8}$",
+            "$-\\dfrac{15}{17}$",
+            "$\\dfrac{8}{15}$",
+            "$\\dfrac{15}{8}$"
+          ],
+          "answer": 1,
+          "solution": "제$2$사분면에서 $\\cos\\theta<0$ 이므로 $\\cos\\theta=-\\sqrt{1-\\sin^{2}\\theta}=-\\dfrac{15}{17}$ 이다. 따라서 $\\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}=-\\dfrac{8}{15}$ 이다."
+        },
+        {
+          "num": 12,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$ 에서 $\\overline{BC}=10$, $\\overline{CA}=6$, $\\overline{AB}=8$ 일 때, 각 $A$ 의 크기는?",
+          "choices": [
+            "$30^{\\circ}$",
+            "$45^{\\circ}$",
+            "$90^{\\circ}$",
+            "$60^{\\circ}$",
+            "$120^{\\circ}$"
+          ],
+          "answer": 3,
+          "solution": "코사인법칙에서 $\\cos A=\\dfrac{\\overline{CA}^{2}+\\overline{AB}^{2}-\\overline{BC}^{2}}{2\\cdot\\overline{CA}\\cdot\\overline{AB}}=\\dfrac{36+64-100}{96}=0$ 이므로 $A=90^{\\circ}$ 이다."
+        },
+        {
+          "num": 13,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "지름의 길이가 $15$ 인 반원의 지름을 $AB$ 라 하고, 반원 위의 점 $C$ 에 대하여 $\\cos(\\angle CAB)=\\dfrac{4}{5}$ 이다. 삼각형 $ABC$ 의 넓이는?",
+          "choices": [
+            "$52$",
+            "$53$",
+            "$55$",
+            "$56$",
+            "$54$"
+          ],
+          "answer": 5,
+          "solution": "$AB$ 가 반원의 지름이므로 $\\angle ACB=90^{\\circ}$ 이다. $\\overline{AC}=15\\times\\dfrac{4}{5}=12$, $\\overline{BC}=15\\times\\dfrac{3}{5}=9$ 이므로 넓이는 $\\dfrac{1}{2}\\cdot12\\cdot9=54$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "지름이 $15$ 인 반원 위의 점 $C$ 와 $\\cos(\\angle CAB)=\\dfrac{4}{5}$ 로부터 삼각형 $ABC$ 의 넓이를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$AB$ 가 반원의 지름이므로 반원 위의 점 $C$ 에 대하여 $\\angle ACB=90^{\\circ}$ 인 직각삼각형이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "직각삼각형에서 $\\overline{AC}=\\overline{AB}\\cos(\\angle CAB)$, $\\overline{BC}=\\overline{AB}\\sin(\\angle CAB)$ 이고 $\\sin(\\angle CAB)=\\sqrt{1-\\cos^{2}(\\angle CAB)}$ 이다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\overline{AC}=12$, $\\overline{BC}=9$ 이므로 넓이는 $\\dfrac{1}{2}\\cdot12\\cdot9=54$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "삼각형 $ABC$ 의 넓이는 $54$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 14,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "첫째항이 $140$ 이고 제$8$항이 $77$ 인 등차수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합을 $S_n$ 이라 할 때, $S_n$ 이 최대가 되도록 하는 자연수 $n$ 의 값은?",
+          "choices": [
+            "$14$",
+            "$16$",
+            "$15$",
+            "$17$",
+            "$18$"
+          ],
+          "answer": 2,
+          "solution": "공차 $d=\\dfrac{77-140}{8-1}=-9$ 이므로 $a_n=140+(n-1)(-9)=149-9n$ 이다. $a_n\\ge 0$ 인 마지막 항까지 더할 때 $S_n$ 이 최대이고, $149-9n\\ge 0$ 에서 $n=16$ 일 때 최대이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "등차수열의 부분합 $S_n$ 이 최대가 되는 자연수 $n$ 을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "첫째항과 한 항의 값으로 공차를 구해 일반항 $a_n$ 을 세운다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "공차가 음수인 등차수열에서는 $a_n\\ge 0$ 인 마지막 항까지 더할 때 $S_n$ 이 최대가 된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "공차 $d=\\dfrac{77-140}{8-1}=-9$ 이므로 $a_n=140+(n-1)(-9)=149-9n$ 이다. $a_n\\ge 0$ 인 마지막 항까지 더할 때 $S_n$ 이 최대이고, $149-9n\\ge 0$ 에서 $n=16$ 일 때 최대이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "따라서 $n$ 은 보기 ③이다."
+            }
+          ]
+        },
+        {
+          "num": 15,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=n^{2}+9n+2$ 일 때, $a_{4}+a_{6}$ 의 값은?",
+          "choices": [
+            "$32$",
+            "$34$",
+            "$38$",
+            "$36$",
+            "$40$"
+          ],
+          "answer": 4,
+          "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=2n-1+9=2n+8$ 이다. 따라서 $a_{4}=16$, $a_{6}=20$ 이므로 $a_{4}+a_{6}=36$ 이다."
+        },
+        {
+          "num": 16,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "함수 $y=2\\cos^{2}x+2\\sin x-1$ 의 최댓값은?",
+          "choices": [
+            "$\\dfrac{3}{2}$",
+            "$\\dfrac{1}{2}$",
+            "$1$",
+            "$2$",
+            "$\\dfrac{5}{2}$"
+          ],
+          "answer": 1,
+          "solution": "$\\sin^{2}x+\\cos^{2}x=1$ 을 이용하여 한 문자로 정리하면 $y=2(1-t^{2})+2t-1=-2t^{2}+2t+1\\ (t=\\sin x)$ 이다. 이는 위로 볼록한 이차함수이고 정의역 $[-1,1]$ 안의 꼭짓점 $t=\\dfrac{1}{2}$ 에서 최댓값 $\\dfrac{3}{2}$ 을 가진다."
+        },
+        {
+          "num": 17,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=8$, $\\overline{AC}=8$, $A=60^{\\circ}$ 이다. 변 $BC$ 의 길이 $\\overline{BC}$ 와 삼각형 $ABC$ 의 넓이의 곱 $\\overline{BC}\\times(\\triangle ABC\\text{의 넓이})$ 를 $p\\sqrt{q}$ 꼴로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $q$ 는 가장 작은 자연수)",
+          "answer": "131",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "코사인법칙으로 $\\overline{BC}$ 를, 넓이 공식으로 삼각형의 넓이를 구해 그 곱을 $p\\sqrt{q}$ 꼴로 나타낸 뒤 $p+q$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$\\overline{AB}=8$, $\\overline{AC}=8$, $A=60^{\\circ}$ 이고 $\\cos60^{\\circ}=\\dfrac{1}{2}$, $\\sin60^{\\circ}=\\dfrac{\\sqrt{3}}{2}$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A$, 넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A$ 를 쓴다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\overline{BC}^{2}=64+64-2\\cdot64\\cdot\\dfrac{1}{2}=64$ 이므로 $\\overline{BC}=8$ 이다. 넓이는 $\\dfrac{1}{2}\\cdot8\\cdot8\\cdot\\dfrac{\\sqrt{3}}{2}=16\\sqrt{3}$ 이다. 곱은 $8\\times16\\sqrt{3}=128\\sqrt{3}$ 이므로 $p=128$, $q=3$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$p+q=128+3=131$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 18,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "첫째항이 $5$, 공비가 $2$ 인 등비수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합을 $T_n$ 이라 할 때, $T_n>2000$ 을 만족시키는 자연수 $n$ 의 최솟값은?",
+          "choices": [
+            "$7$",
+            "$8$",
+            "$9$",
+            "$10$",
+            "$11$"
+          ],
+          "answer": 3,
+          "solution": "$T_n=5(2^{n}-1)$ 이므로 $T_n>2000$ 은 $2^{n}>401$ 과 같다. $2^{9}=512$ 이므로 최솟값은 $n=9$ 이다."
+        },
+        {
+          "num": 19,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "첫째항이 $3$, 공차가 $4$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{12}\\dfrac{1}{a_k\\,a_{k+1}}$ 의 값을 $\\dfrac{q}{p}$ 로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+          "answer": "55",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "등차수열의 이웃한 두 항의 곱의 역수로 이루어진 시그마를 부분분수로 분해하여 값을 구한 뒤 $p+q$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a_n=3+(n-1)\\times4=4n-1$ 이고 공차는 $4$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{4}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 부분분수 분해하면 망원급수가 되어 중간 항이 소거된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\displaystyle\\sum_{k=1}^{12}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{4}\\left(\\dfrac{1}{a_1}-\\dfrac{1}{a_{13}}\\right)=\\dfrac{1}{4}\\left(\\dfrac{1}{3}-\\dfrac{1}{51}\\right)=\\dfrac{4}{51}$ 이다. 따라서 $p=51$, $q=4$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$p+q=51+4=55$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 20,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "등차수열 $4,\\ 9,\\ 14,\\ 19,\\ \\cdots$ 의 일반항이 $a_n=pn+q$ 일 때, $p+q$ 의 값은? (단, $p$, $q$ 는 상수)",
+          "choices": [
+            "$2$",
+            "$3$",
+            "$5$",
+            "$6$",
+            "$4$"
+          ],
+          "answer": 5,
+          "solution": "첫째항이 $4$, 공차가 $5$ 이므로 $a_n=4+(n-1)\\times5=5n-1$ 이다. 따라서 $p=5$, $q=-1$ 이고 $p+q=4$ 이다."
+        }
+      ]
+    ]
+  },
+  "built_at": "2026-06-15T06:00:41.173Z"
+}

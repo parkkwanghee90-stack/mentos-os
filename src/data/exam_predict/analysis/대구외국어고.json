@@ -1,0 +1,29 @@
+{
+  "school": "대구외국어고",
+  "region": "대구",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "total_problems": 20,
+  "analyzed_by": "claude-direct",
+  "unit_share": [
+    { "unit": "이차함수", "count": 5, "percent": 25 },
+    { "unit": "행렬", "count": 4, "percent": 20 },
+    { "unit": "이차부등식", "count": 3, "percent": 15 },
+    { "unit": "연립방정식", "count": 2, "percent": 10 },
+    { "unit": "복소수", "count": 1, "percent": 5 },
+    { "unit": "이차방정식", "count": 1, "percent": 5 },
+    { "unit": "여러가지방정식", "count": 1, "percent": 5 },
+    { "unit": "절댓값부등식", "count": 1, "percent": 5 },
+    { "unit": "연립부등식", "count": 1, "percent": 5 },
+    { "unit": "고차방정식", "count": 1, "percent": 5 }
+  ],
+  "top_units": ["이차함수", "행렬", "이차부등식"],
+  "objective_ratio": 80,
+  "subjective_ratio": 20,
+  "advanced_ratio": 75,
+  "difficulty_stars": 5,
+  "discrimination_stars": 5,
+  "summary": "대구외국어고 2025 1학기 기말 공통수학1(범위: 방정식과 부등식, 행렬)은 객관식 16 + 서술형 4(17~20) 구조의 고변별 시험이다. 이차함수(최대·최소, 접선, 근의 분리)와 행렬(성분 규칙, 행렬방정식, AB-BA 비가환, 거듭제곱 주기성)이 양대 축이며, 이차/연립/절댓값부등식, 정수해 분석, 1의 세제곱근 omega, 대칭식을 이용한 삼차방정식, 함수 그래프 합성 킬러(20번)까지 다단계 사고를 요구한다. 단순 계산보다 조건 해석·경우 나누기·미정계수가 핵심이라 난도 별 5, 변별력 별 5로 평가한다. 예상문제는 같은 단원비중·객관식80%/서술형20% 비율을 유지하며 심화 75%로 원본 수준 이상을 반영했다."
+}

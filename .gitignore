@@ -53,6 +53,20 @@ android/
 # Math Hints resource files (Uploaded to Supabase Storage)
 /public/math_hints/
 
+# 기출 예상문제: 원본 기출 스캔/디지털사본은 저작권상 커밋 금지(내부 분석 전용, 수 GB).
+#   앱이 쓰는 cards/predicted/analysis/bundle 만 커밋.
+/src/data/exam_predict/raw_png/
+/src/data/exam_predict/extracted/
+/src/data/exam_predict/_batch.log
+/src/data/exam_predict/failed.json
+/src/data/exam_predict_go2/raw_png/
+/src/data/exam_predict_go2/extracted/
+/src/data/exam_predict_go2/_batch.log
+/src/data/exam_predict_go2/failed.json
+
+# Playwright MCP 디버그 로그
+/.playwright-mcp/
+
 # Temporary and backup scripts
 /scripts/*backup*.cjs
 /scripts/fix_*.cjs

@@ -1,0 +1,33 @@
+{
+  "school": "이산고",
+  "region": "경기 성남시",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "total_problems": 20,
+  "analyzed_by": "claude-direct",
+  "unit_share": [
+    { "unit": "행렬", "count": 6, "percent": 30 },
+    { "unit": "경우의수", "count": 3, "percent": 15 },
+    { "unit": "순열", "count": 3, "percent": 15 },
+    { "unit": "이차부등식", "count": 3, "percent": 15 },
+    { "unit": "조합", "count": 2, "percent": 10 },
+    { "unit": "연립부등식", "count": 1, "percent": 5 },
+    { "unit": "이차함수", "count": 1, "percent": 5 },
+    { "unit": "절댓값부등식", "count": 1, "percent": 5 }
+  ],
+  "top_units": [
+    "행렬",
+    "경우의수",
+    "순열",
+    "이차부등식",
+    "조합"
+  ],
+  "objective_ratio": 100,
+  "subjective_ratio": 0,
+  "advanced_ratio": 55,
+  "difficulty_stars": 4,
+  "discrimination_stars": 5,
+  "summary": "이산고 기말(범위 '이차부등식~행렬')은 전 문항 객관식(25문항, 서술형 0)으로 행렬 비중이 압도적으로 높고(8/25, 약 32%) 경우의수·순열·조합(9/25, 약 36%)이 그 다음을 차지한다. 행렬은 단순 성분합·상등에서 시작해 거듭제곱의 주기성(A^k 합), A^2=E 만족 행렬 개수, (A+B)^2 전개의 교환법칙, 실생활 행렬해석(표→행렬곱)까지 폭넓게 변별한다. 부등식(이차·연립·절댓값)에서는 보기결합형(ㄱ/ㄴ/ㄷ)과 조건 해석형 고난도 문항으로 등급을 가른다. 격자점 삼각형·색칠·중복조합 등 경우의수 응용도 후반 고배점에 배치되어, 단순 계산력보다 '조건을 정확히 식으로 옮기는' 능력이 핵심이다."
+}

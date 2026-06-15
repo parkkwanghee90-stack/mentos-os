@@ -1,0 +1,25 @@
+{
+  "school": "풍산고",
+  "region": "경기 하남시",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "total_problems": 20,
+  "analyzed_by": "claude-direct",
+  "unit_share": [
+    { "unit": "경우의수/순열/조합", "count": 9, "percent": 45 },
+    { "unit": "행렬", "count": 4, "percent": 20 },
+    { "unit": "이차함수", "count": 3, "percent": 15 },
+    { "unit": "이차부등식", "count": 2, "percent": 10 },
+    { "unit": "연립부등식", "count": 1, "percent": 5 },
+    { "unit": "절댓값부등식", "count": 1, "percent": 5 }
+  ],
+  "top_units": ["경우의수/순열/조합", "행렬", "이차함수", "이차부등식", "연립부등식"],
+  "objective_ratio": 85,
+  "subjective_ratio": 15,
+  "advanced_ratio": 60,
+  "difficulty_stars": 4,
+  "discrimination_stars": 5,
+  "summary": "풍산고 기말은 경우의수·순열·조합(약 45%)과 행렬(약 20%)의 비중이 압도적으로 높고, 부등식(절댓값·연립·이차)에서 조건 해석형 문항으로 변별한다. 계산보다 ‘조건을 정확히 식으로 옮기는’ 능력이 등급을 가른다."
+}

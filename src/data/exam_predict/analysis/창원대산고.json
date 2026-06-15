@@ -1,0 +1,69 @@
+{
+  "school": "창원대산고",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "total_problems": 19,
+  "unit_share": [
+    {
+      "unit": "행렬",
+      "count": 5,
+      "percent": 26
+    },
+    {
+      "unit": "순열",
+      "count": 3,
+      "percent": 16
+    },
+    {
+      "unit": "경우의수",
+      "count": 2,
+      "percent": 11
+    },
+    {
+      "unit": "연립방정식",
+      "count": 2,
+      "percent": 11
+    },
+    {
+      "unit": "연립부등식",
+      "count": 2,
+      "percent": 11
+    },
+    {
+      "unit": "이차부등식",
+      "count": 2,
+      "percent": 11
+    },
+    {
+      "unit": "여러가지방정식",
+      "count": 1,
+      "percent": 5
+    },
+    {
+      "unit": "조합",
+      "count": 1,
+      "percent": 5
+    },
+    {
+      "unit": "고차방정식",
+      "count": 1,
+      "percent": 5
+    }
+  ],
+  "top_units": [
+    "행렬",
+    "순열",
+    "경우의수",
+    "연립방정식",
+    "연립부등식"
+  ],
+  "objective_ratio": 53,
+  "subjective_ratio": 47,
+  "advanced_ratio": 74,
+  "difficulty_stars": 5,
+  "discrimination_stars": 5,
+  "summary": "창원대산고 기말은 행렬·순열 비중이 높고 서술형 47%·심화 74% 로 변별력이 큰 시험.",
+  "analyzed_at": "2026-06-11T18:45:35.915Z"
+}

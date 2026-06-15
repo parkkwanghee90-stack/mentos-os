@@ -1,0 +1,2043 @@
+{
+  "schema": "go2-v1",
+  "school": "초지고",
+  "region": "경기 안산시",
+  "year": 2025,
+  "grade": "고2",
+  "term": "1학기 기말",
+  "subject": "수학1",
+  "analysis": {
+    "school": "초지고",
+    "region": "경기 안산시",
+    "year": 2025,
+    "grade": "고2",
+    "term": "1학기 기말",
+    "subject": "수학1",
+    "total_problems": 20,
+    "analyzed_by": "claude-direct-go2",
+    "unit_share": [
+      {
+        "unit": "삼각함수",
+        "count": 7,
+        "percent": 35
+      },
+      {
+        "unit": "여러 가지 수열",
+        "count": 7,
+        "percent": 35
+      },
+      {
+        "unit": "삼각함수의 활용",
+        "count": 3,
+        "percent": 15
+      },
+      {
+        "unit": "등차수열과 등비수열",
+        "count": 2,
+        "percent": 10
+      },
+      {
+        "unit": "지수와 로그",
+        "count": 1,
+        "percent": 5
+      }
+    ],
+    "top_units": [
+      "삼각함수",
+      "여러 가지 수열",
+      "삼각함수의 활용"
+    ],
+    "objective_ratio": 90,
+    "subjective_ratio": 10,
+    "advanced_ratio": 55,
+    "difficulty_stars": 4,
+    "discrimination_stars": 4,
+    "summary": "초지고 2025학년도 1학기 기말 대수(수학Ⅰ)는 삼각함수와 여러 가지 수열을 각각 35%로 양대 축에 두고 삼각함수의 활용(코사인법칙·외접원·각의 이등분)을 변별 문항으로 배치한 경기권 일반고의 균형형 출제 경향을 보인다. 1~18번이 객관식, 19~20번이 서술형으로 객관식과 서술형이 9:1이며, 서술형 두 문항은 삼각함수 그래프의 최댓값·주기 결정과 부분합 점화식에서 일반항 도출을 요구하는 다단계 추론형이다. 삼각방정식·부등식의 해, 시그마 계산, 점화식 처리, 삼각함수 그래프의 성질이 핵심 출제 패턴이며 지수와 로그는 방정식 한 문항으로 가볍게 출제된다. 난이도는 ★4 수준으로 최상위권 변별을 노린 후반부 삼각함수·수열 결합형이 변별의 핵심이므로 예상문제도 심화 비율 55%, 객관식 90% 비중과 단원분포를 그대로 재현하여 구성하였다."
+  },
+  "predicted": {
+    "count": 20,
+    "problems": [
+      {
+        "num": 1,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "첫째항이 $3$, 공비가 $2$ 인 등비수열 $\\{a_n\\}$ 에 대하여 $a_5$ 의 값은?",
+        "choices": [
+          "$24$",
+          "$36$",
+          "$48$",
+          "$60$",
+          "$72$"
+        ],
+        "answer": 3,
+        "solution": "$a_n=3\\cdot 2^{n-1}$ 이므로 $a_5=3\\cdot 2^{4}=3\\cdot 16=48$ 이다."
+      },
+      {
+        "num": 2,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=6$, $A=30^{\\circ}$, $B=90^{\\circ}$ 일 때, 변 $BC$ 의 길이는?",
+        "choices": [
+          "$2\\sqrt{3}$",
+          "$2\\sqrt{2}$",
+          "$3\\sqrt{2}$",
+          "$3\\sqrt{3}$",
+          "$4\\sqrt{3}$"
+        ],
+        "answer": 1,
+        "solution": "$C=180^{\\circ}-30^{\\circ}-90^{\\circ}=60^{\\circ}$ 이다. 사인법칙에서 $\\dfrac{\\overline{BC}}{\\sin A}=\\dfrac{\\overline{AB}}{\\sin C}$ 이므로 $\\overline{BC}=\\dfrac{\\overline{AB}\\sin A}{\\sin C}=\\dfrac{6\\cdot\\sin 30^{\\circ}}{\\sin 60^{\\circ}}=\\dfrac{6\\cdot\\frac{1}{2}}{\\frac{\\sqrt{3}}{2}}=\\dfrac{3}{\\frac{\\sqrt{3}}{2}}=\\dfrac{6}{\\sqrt{3}}=2\\sqrt{3}$ 이다."
+      },
+      {
+        "num": 3,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "함수 $f(x)=2\\sin 3x+1$ 의 최댓값을 $M$, 주기를 $p$ 라 할 때, $M\\times p$ 의 값은?",
+        "choices": [
+          "$\\pi$",
+          "$3\\pi$",
+          "$\\dfrac{2\\pi}{3}$",
+          "$\\dfrac{4\\pi}{3}$",
+          "$2\\pi$"
+        ],
+        "answer": 5,
+        "solution": "$f(x)=2\\sin 3x+1$ 의 최댓값은 $2\\cdot 1+1=3$ 이므로 $M=3$, 주기는 $\\dfrac{2\\pi}{3}$ 이므로 $p=\\dfrac{2\\pi}{3}$ 이다. 따라서 $M\\times p=3\\cdot\\dfrac{2\\pi}{3}=2\\pi$ 이다."
+      },
+      {
+        "num": 4,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{8} a_k=15$ 일 때, $\\displaystyle\\sum_{k=1}^{8}\\left(3a_k-2\\right)$ 의 값은?",
+        "choices": [
+          "$25$",
+          "$29$",
+          "$33$",
+          "$37$",
+          "$41$"
+        ],
+        "answer": 2,
+        "solution": "$\\displaystyle\\sum_{k=1}^{8}(3a_k-2)=3\\sum_{k=1}^{8}a_k-\\sum_{k=1}^{8}2=3\\cdot 15-2\\cdot 8=45-16=29$ 이다."
+      },
+      {
+        "num": 5,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\sin\\theta+\\cos\\theta=\\dfrac{1}{2}$ 일 때, $\\sin^{3}\\theta+\\cos^{3}\\theta$ 의 값은?",
+        "choices": [
+          "$\\dfrac{7}{16}$",
+          "$\\dfrac{9}{16}$",
+          "$\\dfrac{13}{16}$",
+          "$\\dfrac{11}{16}$",
+          "$\\dfrac{15}{16}$"
+        ],
+        "answer": 4,
+        "solution": "$\\sin\\theta+\\cos\\theta=\\dfrac{1}{2}$ 의 양변을 제곱하면 $1+2\\sin\\theta\\cos\\theta=\\dfrac{1}{4}$ 이므로 $\\sin\\theta\\cos\\theta=-\\dfrac{3}{8}$ 이다. $\\sin^{3}\\theta+\\cos^{3}\\theta=(\\sin\\theta+\\cos\\theta)(1-\\sin\\theta\\cos\\theta)=\\dfrac{1}{2}\\left(1+\\dfrac{3}{8}\\right)=\\dfrac{1}{2}\\cdot\\dfrac{11}{8}=\\dfrac{11}{16}$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "$\\sin\\theta+\\cos\\theta$ 의 값이 주어졌을 때 $\\sin^{3}\\theta+\\cos^{3}\\theta$ 의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\sin\\theta+\\cos\\theta$ 를 제곱하면 $\\sin^{2}\\theta+\\cos^{2}\\theta=1$ 과 $2\\sin\\theta\\cos\\theta$ 의 합이 됨을 이용한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "세제곱의 합 공식 $\\sin^{3}\\theta+\\cos^{3}\\theta=(\\sin\\theta+\\cos\\theta)(1-\\sin\\theta\\cos\\theta)$ 를 사용한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\sin\\theta+\\cos\\theta=\\dfrac{1}{2}$ 의 양변을 제곱하면 $1+2\\sin\\theta\\cos\\theta=\\dfrac{1}{4}$ 이므로 $\\sin\\theta\\cos\\theta=-\\dfrac{3}{8}$ 이다. $\\sin^{3}\\theta+\\cos^{3}\\theta=(\\sin\\theta+\\cos\\theta)(1-\\sin\\theta\\cos\\theta)=\\dfrac{1}{2}\\left(1+\\dfrac{3}{8}\\right)=\\dfrac{1}{2}\\cdot\\dfrac{11}{8}=\\dfrac{11}{16}$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "보기 ④ 가 정답이다."
+          }
+        ]
+      },
+      {
+        "num": 6,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "공차가 $0$ 이 아닌 등차수열 $\\{a_n\\}$ 에 대하여 세 항 $a_1,\\ a_2,\\ a_6$ 이 이 순서대로 등비수열을 이룰 때, 그 등비수열의 공비의 값은?",
+        "choices": [
+          "$2$",
+          "$3$",
+          "$4$",
+          "$5$",
+          "$6$"
+        ],
+        "answer": 3,
+        "solution": "공차를 $d\\ (d\\ne 0)$ 라 하면 $a_2=a_1+d$, $a_6=a_1+5d$ 이고 등비조건 $a_2^{2}=a_1 a_6$ 에서 $(a_1+d)^{2}=a_1(a_1+5d)$ 이다. 전개하면 $a_1^{2}+2a_1 d+d^{2}=a_1^{2}+5a_1 d$ 이므로 $d^{2}=3a_1 d$, 즉 $d=3a_1$ 이다. 따라서 공비는 $\\dfrac{a_2}{a_1}=\\dfrac{a_1+d}{a_1}=1+\\dfrac{d}{a_1}=1+3=4$ 이다."
+      },
+      {
+        "num": 7,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{n}(2k-1)=64$ 를 만족시키는 자연수 $n$ 의 값은?",
+        "choices": [
+          "$8$",
+          "$6$",
+          "$7$",
+          "$9$",
+          "$10$"
+        ],
+        "answer": 1,
+        "solution": "$\\displaystyle\\sum_{k=1}^{n}(2k-1)=2\\cdot\\dfrac{n(n+1)}{2}-n=n^{2}$ 이므로 $n^{2}=64$ 에서 $n=8$ 이다."
+      },
+      {
+        "num": 8,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$0\\le x<2\\pi$ 일 때, 방정식 $2\\cos^{2}x+\\sin x-1=0$ 의 모든 해의 합은?",
+        "choices": [
+          "$2\\pi$",
+          "$\\dfrac{5\\pi}{2}$",
+          "$3\\pi$",
+          "$4\\pi$",
+          "$\\dfrac{7\\pi}{2}$"
+        ],
+        "answer": 5,
+        "solution": "$\\cos^{2}x=1-\\sin^{2}x$ 를 대입하면 $2(1-\\sin^{2}x)+\\sin x-1=0$, 즉 $2\\sin^{2}x-\\sin x-1=0$, $(2\\sin x+1)(\\sin x-1)=0$ 이다. $\\sin x=1$ 에서 $x=\\dfrac{\\pi}{2}$, $\\sin x=-\\dfrac{1}{2}$ 에서 $x=\\dfrac{7\\pi}{6},\\ \\dfrac{11\\pi}{6}$ 이다. 합은 $\\dfrac{\\pi}{2}+\\dfrac{7\\pi}{6}+\\dfrac{11\\pi}{6}=\\dfrac{3\\pi+7\\pi+11\\pi}{6}=\\dfrac{21\\pi}{6}=\\dfrac{7\\pi}{2}$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "주어진 구간에서 삼각방정식을 풀어 모든 해의 합을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\sin^{2}x+\\cos^{2}x=1$ 을 이용해 한 종류의 삼각비로 통일한 뒤 이차방정식으로 정리한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "이차식을 인수분해하여 각 인수가 $0$ 이 되는 해를 구간 안에서 모두 찾는다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\cos^{2}x=1-\\sin^{2}x$ 를 대입하면 $2(1-\\sin^{2}x)+\\sin x-1=0$, 즉 $2\\sin^{2}x-\\sin x-1=0$, $(2\\sin x+1)(\\sin x-1)=0$ 이다. $\\sin x=1$ 에서 $x=\\dfrac{\\pi}{2}$, $\\sin x=-\\dfrac{1}{2}$ 에서 $x=\\dfrac{7\\pi}{6},\\ \\dfrac{11\\pi}{6}$ 이다. 합은 $\\dfrac{\\pi}{2}+\\dfrac{7\\pi}{6}+\\dfrac{11\\pi}{6}=\\dfrac{3\\pi+7\\pi+11\\pi}{6}=\\dfrac{21\\pi}{6}=\\dfrac{7\\pi}{2}$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "보기 ⑤ 가 정답이다."
+          }
+        ]
+      },
+      {
+        "num": 9,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "이차방정식 $x^{2}-7x+10=0$ 의 두 근을 $\\alpha,\\ \\beta$ 라 할 때, $\\displaystyle\\sum_{k=1}^{10}(k-\\alpha)(k-\\beta)$ 의 값은?",
+        "choices": [
+          "$80$",
+          "$100$",
+          "$90$",
+          "$110$",
+          "$120$"
+        ],
+        "answer": 2,
+        "solution": "근과 계수의 관계에서 $\\alpha+\\beta=7$, $\\alpha\\beta=10$ 이다. $(k-\\alpha)(k-\\beta)=k^{2}-(\\alpha+\\beta)k+\\alpha\\beta=k^{2}-7k+10$ 이므로 $\\displaystyle\\sum_{k=1}^{10}(k^{2}-7k+10)=\\dfrac{10\\cdot 11\\cdot 21}{6}-7\\cdot\\dfrac{10\\cdot 11}{2}+10\\cdot 10=385-385+100=100$ 이다."
+      },
+      {
+        "num": 10,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 변 $BC$ 의 대각이 $A$ 이다. $\\overline{BC}=6$, $\\cos A=\\dfrac{1}{2}$ 일 때, 삼각형 $ABC$ 의 외접원의 넓이는?",
+        "choices": [
+          "$9\\pi$",
+          "$10\\pi$",
+          "$15\\pi$",
+          "$12\\pi$",
+          "$16\\pi$"
+        ],
+        "answer": 4,
+        "solution": "$\\cos A=\\dfrac{1}{2}$ 이고 $0<A<\\pi$ 이므로 $A=\\dfrac{\\pi}{3}$, $\\sin A=\\dfrac{\\sqrt{3}}{2}$ 이다. 외접원의 반지름을 $R$ 라 하면 사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=2R$ 에서 $2R=\\dfrac{6}{\\frac{\\sqrt{3}}{2}}=\\dfrac{12}{\\sqrt{3}}=4\\sqrt{3}$ 이므로 $R=2\\sqrt{3}$ 이다. 따라서 외접원의 넓이는 $\\pi R^{2}=\\pi\\cdot 12=12\\pi$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "변 $BC$ 와 그 대각의 코사인값으로 삼각형의 외접원의 넓이를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\cos A$ 로부터 $A$ 와 $\\sin A$ 를 구한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=2R$ 로 외접원의 반지름 $R$ 를 구하고 넓이 $\\pi R^{2}$ 을 계산한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\cos A=\\dfrac{1}{2}$ 이고 $0<A<\\pi$ 이므로 $A=\\dfrac{\\pi}{3}$, $\\sin A=\\dfrac{\\sqrt{3}}{2}$ 이다. 외접원의 반지름을 $R$ 라 하면 사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=2R$ 에서 $2R=\\dfrac{6}{\\frac{\\sqrt{3}}{2}}=\\dfrac{12}{\\sqrt{3}}=4\\sqrt{3}$ 이므로 $R=2\\sqrt{3}$ 이다. 따라서 외접원의 넓이는 $\\pi R^{2}=\\pi\\cdot 12=12\\pi$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "보기 ④ 가 정답이다."
+          }
+        ]
+      },
+      {
+        "num": 11,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$0\\le x<2\\pi$ 일 때, 부등식 $2\\sin x-\\sqrt{2}\\ge 0$ 을 만족시키는 $x$ 의 값의 범위가 $\\alpha\\le x\\le\\beta$ 일 때, $\\alpha+\\beta$ 의 값은?",
+        "choices": [
+          "$\\pi$",
+          "$\\dfrac{3\\pi}{2}$",
+          "$2\\pi$",
+          "$\\dfrac{5\\pi}{2}$",
+          "$3\\pi$"
+        ],
+        "answer": 1,
+        "solution": "$2\\sin x\\ge\\sqrt{2}$ 에서 $\\sin x\\ge\\dfrac{\\sqrt{2}}{2}$ 이다. $0\\le x<2\\pi$ 에서 해는 $\\dfrac{\\pi}{4}\\le x\\le\\dfrac{3\\pi}{4}$ 이므로 $\\alpha=\\dfrac{\\pi}{4}$, $\\beta=\\dfrac{3\\pi}{4}$ 이고 $\\alpha+\\beta=\\dfrac{\\pi}{4}+\\dfrac{3\\pi}{4}=\\pi$ 이다."
+      },
+      {
+        "num": 12,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "이차방정식 $x^{2}-6x+4=0$ 의 두 근을 $a,\\ b$ 라 할 때, $\\displaystyle\\sum_{k=1}^{5}\\dfrac{1}{a^{2}+b^{2}}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{1}{4}$",
+          "$\\dfrac{5}{28}$",
+          "$\\dfrac{5}{27}$",
+          "$\\dfrac{1}{6}$",
+          "$\\dfrac{5}{29}$"
+        ],
+        "answer": 2,
+        "solution": "근과 계수의 관계에서 $a+b=6$, $ab=4$ 이므로 $a^{2}+b^{2}=(a+b)^{2}-2ab=36-8=28$ 이다. $\\dfrac{1}{a^{2}+b^{2}}=\\dfrac{1}{28}$ 은 $k$ 에 무관한 상수이므로 $\\displaystyle\\sum_{k=1}^{5}\\dfrac{1}{28}=\\dfrac{5}{28}$ 이다."
+      },
+      {
+        "num": 13,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합을 $S_n$ 이라 하자. $a_1=2$, $a_2=5$ 이고 모든 자연수 $n\\ (n\\ge 2)$ 에 대하여 $S_{n+1}-S_{n-1}=4n+1$ 일 때, $S_5$ 의 값은?",
+        "choices": [
+          "$26$",
+          "$30$",
+          "$28$",
+          "$32$",
+          "$34$"
+        ],
+        "answer": 3,
+        "solution": "$S_{n+1}-S_{n-1}=a_{n+1}+a_n=4n+1$ 이다. $n=2$: $a_3+a_2=9$ 이므로 $a_3=4$. $n=3$: $a_4+a_3=13$ 이므로 $a_4=9$. $n=4$: $a_5+a_4=17$ 이므로 $a_5=8$. 따라서 $S_5=2+5+4+9+8=28$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "부분합의 점화 관계 $S_{n+1}-S_{n-1}=4n+1$ 로부터 $S_5$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$S_{n+1}-S_{n-1}=a_{n+1}+a_n$ 임을 이용해 항을 차례로 구한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$n=2,3,4$ 를 대입하여 $a_3,a_4,a_5$ 를 순차적으로 결정한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$S_{n+1}-S_{n-1}=a_{n+1}+a_n=4n+1$ 이다. $n=2$: $a_3+a_2=9$ 이므로 $a_3=4$. $n=3$: $a_4+a_3=13$ 이므로 $a_4=9$. $n=4$: $a_5+a_4=17$ 이므로 $a_5=8$. 따라서 $S_5=2+5+4+9+8=28$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "보기 ③ 가 정답이다."
+          }
+        ]
+      },
+      {
+        "num": 14,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$0\\le x\\le 2\\pi$ 에서 함수 $f(x)=\\sin^{2}x+\\cos x+1$ 의 최댓값을 $M$, 최솟값을 $m$ 이라 할 때, $4(M-m)$ 의 값은?",
+        "choices": [
+          "$7$",
+          "$8$",
+          "$10$",
+          "$9$",
+          "$11$"
+        ],
+        "answer": 4,
+        "solution": "$\\sin^{2}x=1-\\cos^{2}x$ 를 대입하면 $f(x)=-\\cos^{2}x+\\cos x+2$ 이다. $t=\\cos x\\ (-1\\le t\\le 1)$ 로 두면 $g(t)=-t^{2}+t+2=-\\left(t-\\dfrac{1}{2}\\right)^{2}+\\dfrac{9}{4}$ 이다. 최댓값은 $t=\\dfrac{1}{2}$ 에서 $M=\\dfrac{9}{4}$, 최솟값은 $t=-1$ 에서 $m=-1-1+2=0$ 이다. 따라서 $4(M-m)=4\\cdot\\dfrac{9}{4}=9$ 이다."
+      },
+      {
+        "num": 15,
+        "unit": "지수와 로그",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "방정식 $\\log_{2}(x-1)+\\log_{2}(x+2)=2$ 의 실근을 $\\alpha$ 라 할 때, $\\alpha^{2}+\\alpha$ 의 값은?",
+        "choices": [
+          "$4$",
+          "$5$",
+          "$7$",
+          "$8$",
+          "$6$"
+        ],
+        "answer": 5,
+        "solution": "진수조건 $x>1$ 이다. $\\log_{2}\\{(x-1)(x+2)\\}=2$ 에서 $(x-1)(x+2)=4$, 즉 $x^{2}+x-6=0$, $(x+3)(x-2)=0$ 이다. $x>1$ 이므로 $\\alpha=2$ 이고 $\\alpha^{2}+\\alpha=4+2=6$ 이다."
+      },
+      {
+        "num": 16,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$0\\le x<2\\pi$ 에서 방정식 $\\sin 2x=\\dfrac{1}{2}$ 의 서로 다른 실근의 개수는?",
+        "choices": [
+          "$2$",
+          "$3$",
+          "$4$",
+          "$5$",
+          "$6$"
+        ],
+        "answer": 3,
+        "solution": "$0\\le x<2\\pi$ 이면 $0\\le 2x<4\\pi$ 이다. $\\sin t=\\dfrac{1}{2}$ 의 해는 한 주기 $[0,2\\pi)$ 에서 $2$개이므로 $[0,4\\pi)$ 에서는 $4$개이다. 따라서 $x$ 의 서로 다른 실근의 개수는 $4$ 이다."
+      },
+      {
+        "num": 17,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "부등식 $n^{2}-10n+9\\le 0$ 을 만족시키는 모든 자연수 $n$ 을 작은 것부터 차례로 $a_1,\\ a_2,\\ \\cdots,\\ a_9$ 라 할 때, $\\displaystyle\\sum_{k=1}^{8}\\dfrac{1}{a_k a_{k+1}}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{1}{9}$",
+          "$\\dfrac{2}{9}$",
+          "$\\dfrac{4}{9}$",
+          "$\\dfrac{8}{9}$",
+          "$\\dfrac{5}{9}$"
+        ],
+        "answer": 4,
+        "solution": "$n^{2}-10n+9\\le 0$ 은 $(n-1)(n-9)\\le 0$ 이므로 $1\\le n\\le 9$ 이고 $a_k=k\\ (k=1,\\cdots,9)$ 이다. $\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 이므로 $\\displaystyle\\sum_{k=1}^{8}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{9}=\\dfrac{8}{9}$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "이차부등식의 자연수 해로 수열을 만들고 부분분수 시그마의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "이차부등식을 인수분해하여 자연수 해의 범위를 정하면 $a_k=k$ 임을 확인한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 로 부분분수 분해하면 망원급수(소거)가 된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$n^{2}-10n+9\\le 0$ 은 $(n-1)(n-9)\\le 0$ 이므로 $1\\le n\\le 9$ 이고 $a_k=k\\ (k=1,\\cdots,9)$ 이다. $\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 이므로 $\\displaystyle\\sum_{k=1}^{8}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{9}=\\dfrac{8}{9}$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "보기 ④ 가 정답이다."
+          }
+        ]
+      },
+      {
+        "num": 18,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\angle A$ 의 이등분선이 변 $BC$ 와 만나는 점을 $D$ 라 하자. $\\overline{AB}=4$, $\\overline{AC}=6$, $\\overline{BD}=2$ 일 때, $\\overline{DC}$ 의 값은?",
+        "choices": [
+          "$2$",
+          "$\\dfrac{5}{2}$",
+          "$\\dfrac{7}{2}$",
+          "$4$",
+          "$3$"
+        ],
+        "answer": 5,
+        "solution": "각의 이등분선의 성질에 의해 $\\overline{BD}:\\overline{DC}=\\overline{AB}:\\overline{AC}=4:6=2:3$ 이다. $\\overline{BD}=2$ 이므로 $2:\\overline{DC}=2:3$ 에서 $\\overline{DC}=3$ 이다."
+      },
+      {
+        "num": 19,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "함수 $f(x)=a\\sin bx+c$ 의 최댓값이 $7$, 최솟값이 $-1$ 이고 주기가 $\\pi$ 이다. 양수 $a,\\ b$ 와 상수 $c$ 에 대하여 $a+b+c$ 의 값을 구하시오.",
+        "answer": "9",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "삼각함수 $f(x)=a\\sin bx+c$ 의 최댓값·최솟값·주기 조건으로 $a,\\ b,\\ c$ 를 정하고 $a+b+c$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a>0$ 이므로 최댓값은 $a+c=7$, 최솟값은 $-a+c=-1$, 주기는 $\\dfrac{2\\pi}{b}=\\pi$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$a\\sin bx$ 의 진폭이 $a$, 세로 평행이동량이 $c$ 이므로 최댓값과 최솟값의 합·차로 $a,\\ c$ 를, 주기 공식 $\\dfrac{2\\pi}{b}$ 로 $b$ 를 구한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$a+c=7$ 과 $-a+c=-1$ 을 더하면 $2c=6$ 이므로 $c=3$, 빼면 $2a=8$ 이므로 $a=4$ 이다. $\\dfrac{2\\pi}{b}=\\pi$ 에서 $b=2$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a+b+c=4+2+3=9$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합을 $S_n$ 이라 하자. $a_1=2$, $a_2=7$ 이고 모든 자연수 $n\\ (n\\ge 2)$ 에 대하여 $\\left(S_{n+1}-S_{n-1}\\right)^{2}=4a_n a_{n+1}+9$ 가 성립한다. $a_1<a_2<a_3<\\cdots$ 일 때, $a_5$ 의 값을 구하시오.",
+        "answer": "16",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "부분합 점화식 $\\left(S_{n+1}-S_{n-1}\\right)^{2}=4a_n a_{n+1}+9$ 로부터 계차를 추론하여 $a_5$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$S_{n+1}-S_{n-1}=a_{n+1}+a_n$ 이므로 주어진 식은 $(a_{n+1}+a_n)^{2}=4a_n a_{n+1}+9$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$(a_{n+1}+a_n)^{2}-4a_n a_{n+1}=(a_{n+1}-a_n)^{2}$ 이므로 $(a_{n+1}-a_n)^{2}=9$ 이고, 증가수열이므로 $n\\ge 2$ 에서 $a_{n+1}-a_n=3$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$n\\ge 2$ 에서 계차가 $3$ 으로 일정하다. $a_2=7$ 이므로 $a_3=10$, $a_4=13$, $a_5=16$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a_5=16$ 이다."
+          }
+        ]
+      }
+    ],
+    "rounds": [
+      [
+        {
+          "num": 1,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "첫째항이 $3$, 공비가 $2$ 인 등비수열 $\\{a_n\\}$ 에 대하여 $a_5$ 의 값은?",
+          "choices": [
+            "$24$",
+            "$36$",
+            "$48$",
+            "$60$",
+            "$72$"
+          ],
+          "answer": 3,
+          "solution": "$a_n=3\\cdot 2^{n-1}$ 이므로 $a_5=3\\cdot 2^{4}=3\\cdot 16=48$ 이다."
+        },
+        {
+          "num": 2,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=6$, $A=30^{\\circ}$, $B=90^{\\circ}$ 일 때, 변 $BC$ 의 길이는?",
+          "choices": [
+            "$2\\sqrt{3}$",
+            "$2\\sqrt{2}$",
+            "$3\\sqrt{2}$",
+            "$3\\sqrt{3}$",
+            "$4\\sqrt{3}$"
+          ],
+          "answer": 1,
+          "solution": "$C=180^{\\circ}-30^{\\circ}-90^{\\circ}=60^{\\circ}$ 이다. 사인법칙에서 $\\dfrac{\\overline{BC}}{\\sin A}=\\dfrac{\\overline{AB}}{\\sin C}$ 이므로 $\\overline{BC}=\\dfrac{\\overline{AB}\\sin A}{\\sin C}=\\dfrac{6\\cdot\\sin 30^{\\circ}}{\\sin 60^{\\circ}}=\\dfrac{6\\cdot\\frac{1}{2}}{\\frac{\\sqrt{3}}{2}}=\\dfrac{3}{\\frac{\\sqrt{3}}{2}}=\\dfrac{6}{\\sqrt{3}}=2\\sqrt{3}$ 이다."
+        },
+        {
+          "num": 3,
+          "unit": "삼각함수",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "함수 $f(x)=2\\sin 3x+1$ 의 최댓값을 $M$, 주기를 $p$ 라 할 때, $M\\times p$ 의 값은?",
+          "choices": [
+            "$\\pi$",
+            "$3\\pi$",
+            "$\\dfrac{2\\pi}{3}$",
+            "$\\dfrac{4\\pi}{3}$",
+            "$2\\pi$"
+          ],
+          "answer": 5,
+          "solution": "$f(x)=2\\sin 3x+1$ 의 최댓값은 $2\\cdot 1+1=3$ 이므로 $M=3$, 주기는 $\\dfrac{2\\pi}{3}$ 이므로 $p=\\dfrac{2\\pi}{3}$ 이다. 따라서 $M\\times p=3\\cdot\\dfrac{2\\pi}{3}=2\\pi$ 이다."
+        },
+        {
+          "num": 4,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{8} a_k=15$ 일 때, $\\displaystyle\\sum_{k=1}^{8}\\left(3a_k-2\\right)$ 의 값은?",
+          "choices": [
+            "$25$",
+            "$29$",
+            "$33$",
+            "$37$",
+            "$41$"
+          ],
+          "answer": 2,
+          "solution": "$\\displaystyle\\sum_{k=1}^{8}(3a_k-2)=3\\sum_{k=1}^{8}a_k-\\sum_{k=1}^{8}2=3\\cdot 15-2\\cdot 8=45-16=29$ 이다."
+        },
+        {
+          "num": 5,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\sin\\theta+\\cos\\theta=\\dfrac{1}{2}$ 일 때, $\\sin^{3}\\theta+\\cos^{3}\\theta$ 의 값은?",
+          "choices": [
+            "$\\dfrac{7}{16}$",
+            "$\\dfrac{9}{16}$",
+            "$\\dfrac{13}{16}$",
+            "$\\dfrac{11}{16}$",
+            "$\\dfrac{15}{16}$"
+          ],
+          "answer": 4,
+          "solution": "$\\sin\\theta+\\cos\\theta=\\dfrac{1}{2}$ 의 양변을 제곱하면 $1+2\\sin\\theta\\cos\\theta=\\dfrac{1}{4}$ 이므로 $\\sin\\theta\\cos\\theta=-\\dfrac{3}{8}$ 이다. $\\sin^{3}\\theta+\\cos^{3}\\theta=(\\sin\\theta+\\cos\\theta)(1-\\sin\\theta\\cos\\theta)=\\dfrac{1}{2}\\left(1+\\dfrac{3}{8}\\right)=\\dfrac{1}{2}\\cdot\\dfrac{11}{8}=\\dfrac{11}{16}$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "$\\sin\\theta+\\cos\\theta$ 의 값이 주어졌을 때 $\\sin^{3}\\theta+\\cos^{3}\\theta$ 의 값을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$\\sin\\theta+\\cos\\theta$ 를 제곱하면 $\\sin^{2}\\theta+\\cos^{2}\\theta=1$ 과 $2\\sin\\theta\\cos\\theta$ 의 합이 됨을 이용한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "세제곱의 합 공식 $\\sin^{3}\\theta+\\cos^{3}\\theta=(\\sin\\theta+\\cos\\theta)(1-\\sin\\theta\\cos\\theta)$ 를 사용한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\sin\\theta+\\cos\\theta=\\dfrac{1}{2}$ 의 양변을 제곱하면 $1+2\\sin\\theta\\cos\\theta=\\dfrac{1}{4}$ 이므로 $\\sin\\theta\\cos\\theta=-\\dfrac{3}{8}$ 이다. $\\sin^{3}\\theta+\\cos^{3}\\theta=(\\sin\\theta+\\cos\\theta)(1-\\sin\\theta\\cos\\theta)=\\dfrac{1}{2}\\left(1+\\dfrac{3}{8}\\right)=\\dfrac{1}{2}\\cdot\\dfrac{11}{8}=\\dfrac{11}{16}$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "보기 ④ 가 정답이다."
+            }
+          ]
+        },
+        {
+          "num": 6,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "공차가 $0$ 이 아닌 등차수열 $\\{a_n\\}$ 에 대하여 세 항 $a_1,\\ a_2,\\ a_6$ 이 이 순서대로 등비수열을 이룰 때, 그 등비수열의 공비의 값은?",
+          "choices": [
+            "$2$",
+            "$3$",
+            "$4$",
+            "$5$",
+            "$6$"
+          ],
+          "answer": 3,
+          "solution": "공차를 $d\\ (d\\ne 0)$ 라 하면 $a_2=a_1+d$, $a_6=a_1+5d$ 이고 등비조건 $a_2^{2}=a_1 a_6$ 에서 $(a_1+d)^{2}=a_1(a_1+5d)$ 이다. 전개하면 $a_1^{2}+2a_1 d+d^{2}=a_1^{2}+5a_1 d$ 이므로 $d^{2}=3a_1 d$, 즉 $d=3a_1$ 이다. 따라서 공비는 $\\dfrac{a_2}{a_1}=\\dfrac{a_1+d}{a_1}=1+\\dfrac{d}{a_1}=1+3=4$ 이다."
+        },
+        {
+          "num": 7,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\displaystyle\\sum_{k=1}^{n}(2k-1)=64$ 를 만족시키는 자연수 $n$ 의 값은?",
+          "choices": [
+            "$8$",
+            "$6$",
+            "$7$",
+            "$9$",
+            "$10$"
+          ],
+          "answer": 1,
+          "solution": "$\\displaystyle\\sum_{k=1}^{n}(2k-1)=2\\cdot\\dfrac{n(n+1)}{2}-n=n^{2}$ 이므로 $n^{2}=64$ 에서 $n=8$ 이다."
+        },
+        {
+          "num": 8,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$0\\le x<2\\pi$ 일 때, 방정식 $2\\cos^{2}x+\\sin x-1=0$ 의 모든 해의 합은?",
+          "choices": [
+            "$2\\pi$",
+            "$\\dfrac{5\\pi}{2}$",
+            "$3\\pi$",
+            "$4\\pi$",
+            "$\\dfrac{7\\pi}{2}$"
+          ],
+          "answer": 5,
+          "solution": "$\\cos^{2}x=1-\\sin^{2}x$ 를 대입하면 $2(1-\\sin^{2}x)+\\sin x-1=0$, 즉 $2\\sin^{2}x-\\sin x-1=0$, $(2\\sin x+1)(\\sin x-1)=0$ 이다. $\\sin x=1$ 에서 $x=\\dfrac{\\pi}{2}$, $\\sin x=-\\dfrac{1}{2}$ 에서 $x=\\dfrac{7\\pi}{6},\\ \\dfrac{11\\pi}{6}$ 이다. 합은 $\\dfrac{\\pi}{2}+\\dfrac{7\\pi}{6}+\\dfrac{11\\pi}{6}=\\dfrac{3\\pi+7\\pi+11\\pi}{6}=\\dfrac{21\\pi}{6}=\\dfrac{7\\pi}{2}$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "주어진 구간에서 삼각방정식을 풀어 모든 해의 합을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$\\sin^{2}x+\\cos^{2}x=1$ 을 이용해 한 종류의 삼각비로 통일한 뒤 이차방정식으로 정리한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "이차식을 인수분해하여 각 인수가 $0$ 이 되는 해를 구간 안에서 모두 찾는다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\cos^{2}x=1-\\sin^{2}x$ 를 대입하면 $2(1-\\sin^{2}x)+\\sin x-1=0$, 즉 $2\\sin^{2}x-\\sin x-1=0$, $(2\\sin x+1)(\\sin x-1)=0$ 이다. $\\sin x=1$ 에서 $x=\\dfrac{\\pi}{2}$, $\\sin x=-\\dfrac{1}{2}$ 에서 $x=\\dfrac{7\\pi}{6},\\ \\dfrac{11\\pi}{6}$ 이다. 합은 $\\dfrac{\\pi}{2}+\\dfrac{7\\pi}{6}+\\dfrac{11\\pi}{6}=\\dfrac{3\\pi+7\\pi+11\\pi}{6}=\\dfrac{21\\pi}{6}=\\dfrac{7\\pi}{2}$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "보기 ⑤ 가 정답이다."
+            }
+          ]
+        },
+        {
+          "num": 9,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "이차방정식 $x^{2}-7x+10=0$ 의 두 근을 $\\alpha,\\ \\beta$ 라 할 때, $\\displaystyle\\sum_{k=1}^{10}(k-\\alpha)(k-\\beta)$ 의 값은?",
+          "choices": [
+            "$80$",
+            "$100$",
+            "$90$",
+            "$110$",
+            "$120$"
+          ],
+          "answer": 2,
+          "solution": "근과 계수의 관계에서 $\\alpha+\\beta=7$, $\\alpha\\beta=10$ 이다. $(k-\\alpha)(k-\\beta)=k^{2}-(\\alpha+\\beta)k+\\alpha\\beta=k^{2}-7k+10$ 이므로 $\\displaystyle\\sum_{k=1}^{10}(k^{2}-7k+10)=\\dfrac{10\\cdot 11\\cdot 21}{6}-7\\cdot\\dfrac{10\\cdot 11}{2}+10\\cdot 10=385-385+100=100$ 이다."
+        },
+        {
+          "num": 10,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$ 에서 변 $BC$ 의 대각이 $A$ 이다. $\\overline{BC}=6$, $\\cos A=\\dfrac{1}{2}$ 일 때, 삼각형 $ABC$ 의 외접원의 넓이는?",
+          "choices": [
+            "$9\\pi$",
+            "$10\\pi$",
+            "$15\\pi$",
+            "$12\\pi$",
+            "$16\\pi$"
+          ],
+          "answer": 4,
+          "solution": "$\\cos A=\\dfrac{1}{2}$ 이고 $0<A<\\pi$ 이므로 $A=\\dfrac{\\pi}{3}$, $\\sin A=\\dfrac{\\sqrt{3}}{2}$ 이다. 외접원의 반지름을 $R$ 라 하면 사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=2R$ 에서 $2R=\\dfrac{6}{\\frac{\\sqrt{3}}{2}}=\\dfrac{12}{\\sqrt{3}}=4\\sqrt{3}$ 이므로 $R=2\\sqrt{3}$ 이다. 따라서 외접원의 넓이는 $\\pi R^{2}=\\pi\\cdot 12=12\\pi$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "변 $BC$ 와 그 대각의 코사인값으로 삼각형의 외접원의 넓이를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$\\cos A$ 로부터 $A$ 와 $\\sin A$ 를 구한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=2R$ 로 외접원의 반지름 $R$ 를 구하고 넓이 $\\pi R^{2}$ 을 계산한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\cos A=\\dfrac{1}{2}$ 이고 $0<A<\\pi$ 이므로 $A=\\dfrac{\\pi}{3}$, $\\sin A=\\dfrac{\\sqrt{3}}{2}$ 이다. 외접원의 반지름을 $R$ 라 하면 사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=2R$ 에서 $2R=\\dfrac{6}{\\frac{\\sqrt{3}}{2}}=\\dfrac{12}{\\sqrt{3}}=4\\sqrt{3}$ 이므로 $R=2\\sqrt{3}$ 이다. 따라서 외접원의 넓이는 $\\pi R^{2}=\\pi\\cdot 12=12\\pi$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "보기 ④ 가 정답이다."
+            }
+          ]
+        },
+        {
+          "num": 11,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$0\\le x<2\\pi$ 일 때, 부등식 $2\\sin x-\\sqrt{2}\\ge 0$ 을 만족시키는 $x$ 의 값의 범위가 $\\alpha\\le x\\le\\beta$ 일 때, $\\alpha+\\beta$ 의 값은?",
+          "choices": [
+            "$\\pi$",
+            "$\\dfrac{3\\pi}{2}$",
+            "$2\\pi$",
+            "$\\dfrac{5\\pi}{2}$",
+            "$3\\pi$"
+          ],
+          "answer": 1,
+          "solution": "$2\\sin x\\ge\\sqrt{2}$ 에서 $\\sin x\\ge\\dfrac{\\sqrt{2}}{2}$ 이다. $0\\le x<2\\pi$ 에서 해는 $\\dfrac{\\pi}{4}\\le x\\le\\dfrac{3\\pi}{4}$ 이므로 $\\alpha=\\dfrac{\\pi}{4}$, $\\beta=\\dfrac{3\\pi}{4}$ 이고 $\\alpha+\\beta=\\dfrac{\\pi}{4}+\\dfrac{3\\pi}{4}=\\pi$ 이다."
+        },
+        {
+          "num": 12,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "이차방정식 $x^{2}-6x+4=0$ 의 두 근을 $a,\\ b$ 라 할 때, $\\displaystyle\\sum_{k=1}^{5}\\dfrac{1}{a^{2}+b^{2}}$ 의 값은?",
+          "choices": [
+            "$\\dfrac{1}{4}$",
+            "$\\dfrac{5}{28}$",
+            "$\\dfrac{5}{27}$",
+            "$\\dfrac{1}{6}$",
+            "$\\dfrac{5}{29}$"
+          ],
+          "answer": 2,
+          "solution": "근과 계수의 관계에서 $a+b=6$, $ab=4$ 이므로 $a^{2}+b^{2}=(a+b)^{2}-2ab=36-8=28$ 이다. $\\dfrac{1}{a^{2}+b^{2}}=\\dfrac{1}{28}$ 은 $k$ 에 무관한 상수이므로 $\\displaystyle\\sum_{k=1}^{5}\\dfrac{1}{28}=\\dfrac{5}{28}$ 이다."
+        },
+        {
+          "num": 13,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합을 $S_n$ 이라 하자. $a_1=2$, $a_2=5$ 이고 모든 자연수 $n\\ (n\\ge 2)$ 에 대하여 $S_{n+1}-S_{n-1}=4n+1$ 일 때, $S_5$ 의 값은?",
+          "choices": [
+            "$26$",
+            "$30$",
+            "$28$",
+            "$32$",
+            "$34$"
+          ],
+          "answer": 3,
+          "solution": "$S_{n+1}-S_{n-1}=a_{n+1}+a_n=4n+1$ 이다. $n=2$: $a_3+a_2=9$ 이므로 $a_3=4$. $n=3$: $a_4+a_3=13$ 이므로 $a_4=9$. $n=4$: $a_5+a_4=17$ 이므로 $a_5=8$. 따라서 $S_5=2+5+4+9+8=28$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "부분합의 점화 관계 $S_{n+1}-S_{n-1}=4n+1$ 로부터 $S_5$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$S_{n+1}-S_{n-1}=a_{n+1}+a_n$ 임을 이용해 항을 차례로 구한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$n=2,3,4$ 를 대입하여 $a_3,a_4,a_5$ 를 순차적으로 결정한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$S_{n+1}-S_{n-1}=a_{n+1}+a_n=4n+1$ 이다. $n=2$: $a_3+a_2=9$ 이므로 $a_3=4$. $n=3$: $a_4+a_3=13$ 이므로 $a_4=9$. $n=4$: $a_5+a_4=17$ 이므로 $a_5=8$. 따라서 $S_5=2+5+4+9+8=28$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "보기 ③ 가 정답이다."
+            }
+          ]
+        },
+        {
+          "num": 14,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$0\\le x\\le 2\\pi$ 에서 함수 $f(x)=\\sin^{2}x+\\cos x+1$ 의 최댓값을 $M$, 최솟값을 $m$ 이라 할 때, $4(M-m)$ 의 값은?",
+          "choices": [
+            "$7$",
+            "$8$",
+            "$10$",
+            "$9$",
+            "$11$"
+          ],
+          "answer": 4,
+          "solution": "$\\sin^{2}x=1-\\cos^{2}x$ 를 대입하면 $f(x)=-\\cos^{2}x+\\cos x+2$ 이다. $t=\\cos x\\ (-1\\le t\\le 1)$ 로 두면 $g(t)=-t^{2}+t+2=-\\left(t-\\dfrac{1}{2}\\right)^{2}+\\dfrac{9}{4}$ 이다. 최댓값은 $t=\\dfrac{1}{2}$ 에서 $M=\\dfrac{9}{4}$, 최솟값은 $t=-1$ 에서 $m=-1-1+2=0$ 이다. 따라서 $4(M-m)=4\\cdot\\dfrac{9}{4}=9$ 이다."
+        },
+        {
+          "num": 15,
+          "unit": "지수와 로그",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "방정식 $\\log_{2}(x-1)+\\log_{2}(x+2)=2$ 의 실근을 $\\alpha$ 라 할 때, $\\alpha^{2}+\\alpha$ 의 값은?",
+          "choices": [
+            "$4$",
+            "$5$",
+            "$7$",
+            "$8$",
+            "$6$"
+          ],
+          "answer": 5,
+          "solution": "진수조건 $x>1$ 이다. $\\log_{2}\\{(x-1)(x+2)\\}=2$ 에서 $(x-1)(x+2)=4$, 즉 $x^{2}+x-6=0$, $(x+3)(x-2)=0$ 이다. $x>1$ 이므로 $\\alpha=2$ 이고 $\\alpha^{2}+\\alpha=4+2=6$ 이다."
+        },
+        {
+          "num": 16,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$0\\le x<2\\pi$ 에서 방정식 $\\sin 2x=\\dfrac{1}{2}$ 의 서로 다른 실근의 개수는?",
+          "choices": [
+            "$2$",
+            "$3$",
+            "$4$",
+            "$5$",
+            "$6$"
+          ],
+          "answer": 3,
+          "solution": "$0\\le x<2\\pi$ 이면 $0\\le 2x<4\\pi$ 이다. $\\sin t=\\dfrac{1}{2}$ 의 해는 한 주기 $[0,2\\pi)$ 에서 $2$개이므로 $[0,4\\pi)$ 에서는 $4$개이다. 따라서 $x$ 의 서로 다른 실근의 개수는 $4$ 이다."
+        },
+        {
+          "num": 17,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "부등식 $n^{2}-10n+9\\le 0$ 을 만족시키는 모든 자연수 $n$ 을 작은 것부터 차례로 $a_1,\\ a_2,\\ \\cdots,\\ a_9$ 라 할 때, $\\displaystyle\\sum_{k=1}^{8}\\dfrac{1}{a_k a_{k+1}}$ 의 값은?",
+          "choices": [
+            "$\\dfrac{1}{9}$",
+            "$\\dfrac{2}{9}$",
+            "$\\dfrac{4}{9}$",
+            "$\\dfrac{8}{9}$",
+            "$\\dfrac{5}{9}$"
+          ],
+          "answer": 4,
+          "solution": "$n^{2}-10n+9\\le 0$ 은 $(n-1)(n-9)\\le 0$ 이므로 $1\\le n\\le 9$ 이고 $a_k=k\\ (k=1,\\cdots,9)$ 이다. $\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 이므로 $\\displaystyle\\sum_{k=1}^{8}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{9}=\\dfrac{8}{9}$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "이차부등식의 자연수 해로 수열을 만들고 부분분수 시그마의 값을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "이차부등식을 인수분해하여 자연수 해의 범위를 정하면 $a_k=k$ 임을 확인한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 로 부분분수 분해하면 망원급수(소거)가 된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$n^{2}-10n+9\\le 0$ 은 $(n-1)(n-9)\\le 0$ 이므로 $1\\le n\\le 9$ 이고 $a_k=k\\ (k=1,\\cdots,9)$ 이다. $\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 이므로 $\\displaystyle\\sum_{k=1}^{8}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{9}=\\dfrac{8}{9}$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "보기 ④ 가 정답이다."
+            }
+          ]
+        },
+        {
+          "num": 18,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$ 에서 $\\angle A$ 의 이등분선이 변 $BC$ 와 만나는 점을 $D$ 라 하자. $\\overline{AB}=4$, $\\overline{AC}=6$, $\\overline{BD}=2$ 일 때, $\\overline{DC}$ 의 값은?",
+          "choices": [
+            "$2$",
+            "$\\dfrac{5}{2}$",
+            "$\\dfrac{7}{2}$",
+            "$4$",
+            "$3$"
+          ],
+          "answer": 5,
+          "solution": "각의 이등분선의 성질에 의해 $\\overline{BD}:\\overline{DC}=\\overline{AB}:\\overline{AC}=4:6=2:3$ 이다. $\\overline{BD}=2$ 이므로 $2:\\overline{DC}=2:3$ 에서 $\\overline{DC}=3$ 이다."
+        },
+        {
+          "num": 19,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "함수 $f(x)=a\\sin bx+c$ 의 최댓값이 $7$, 최솟값이 $-1$ 이고 주기가 $\\pi$ 이다. 양수 $a,\\ b$ 와 상수 $c$ 에 대하여 $a+b+c$ 의 값을 구하시오.",
+          "answer": "9",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "삼각함수 $f(x)=a\\sin bx+c$ 의 최댓값·최솟값·주기 조건으로 $a,\\ b,\\ c$ 를 정하고 $a+b+c$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a>0$ 이므로 최댓값은 $a+c=7$, 최솟값은 $-a+c=-1$, 주기는 $\\dfrac{2\\pi}{b}=\\pi$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$a\\sin bx$ 의 진폭이 $a$, 세로 평행이동량이 $c$ 이므로 최댓값과 최솟값의 합·차로 $a,\\ c$ 를, 주기 공식 $\\dfrac{2\\pi}{b}$ 로 $b$ 를 구한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$a+c=7$ 과 $-a+c=-1$ 을 더하면 $2c=6$ 이므로 $c=3$, 빼면 $2a=8$ 이므로 $a=4$ 이다. $\\dfrac{2\\pi}{b}=\\pi$ 에서 $b=2$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a+b+c=4+2+3=9$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 20,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합을 $S_n$ 이라 하자. $a_1=2$, $a_2=7$ 이고 모든 자연수 $n\\ (n\\ge 2)$ 에 대하여 $\\left(S_{n+1}-S_{n-1}\\right)^{2}=4a_n a_{n+1}+9$ 가 성립한다. $a_1<a_2<a_3<\\cdots$ 일 때, $a_5$ 의 값을 구하시오.",
+          "answer": "16",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "부분합 점화식 $\\left(S_{n+1}-S_{n-1}\\right)^{2}=4a_n a_{n+1}+9$ 로부터 계차를 추론하여 $a_5$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$S_{n+1}-S_{n-1}=a_{n+1}+a_n$ 이므로 주어진 식은 $(a_{n+1}+a_n)^{2}=4a_n a_{n+1}+9$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$(a_{n+1}+a_n)^{2}-4a_n a_{n+1}=(a_{n+1}-a_n)^{2}$ 이므로 $(a_{n+1}-a_n)^{2}=9$ 이고, 증가수열이므로 $n\\ge 2$ 에서 $a_{n+1}-a_n=3$ 이다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$n\\ge 2$ 에서 계차가 $3$ 으로 일정하다. $a_2=7$ 이므로 $a_3=10$, $a_4=13$, $a_5=16$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a_5=16$ 이다."
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "num": 1,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "첫째항이 $2$, 공비가 $3$ 인 등비수열 $\\{a_n\\}$ 에 대하여 $a_5$ 의 값은?",
+          "choices": [
+            "$108$",
+            "$120$",
+            "$162$",
+            "$144$",
+            "$180$"
+          ],
+          "answer": 3,
+          "solution": "$a_n=2\\cdot 3^{n-1}$ 이므로 $a_5=2\\cdot 3^{4}=2\\cdot 81=162$ 이다."
+        },
+        {
+          "num": 2,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=8$, $A=30^{\\circ}$, $B=90^{\\circ}$ 일 때, 변 $BC$ 의 길이는?",
+          "choices": [
+            "$\\dfrac{8\\sqrt{3}}{3}$",
+            "$2\\sqrt{3}$",
+            "$4\\sqrt{3}$",
+            "$\\dfrac{4\\sqrt{3}}{3}$",
+            "$\\dfrac{16\\sqrt{3}}{3}$"
+          ],
+          "answer": 1,
+          "solution": "$C=180^{\\circ}-30^{\\circ}-90^{\\circ}=60^{\\circ}$ 이다. 사인법칙에서 $\\overline{BC}=\\dfrac{\\overline{AB}\\sin A}{\\sin C}=\\dfrac{8\\cdot\\frac{1}{2}}{\\frac{\\sqrt{3}}{2}}=\\dfrac{4}{\\frac{\\sqrt{3}}{2}}=\\dfrac{8}{\\sqrt{3}}=\\dfrac{8\\sqrt{3}}{3}$ 이다."
+        },
+        {
+          "num": 3,
+          "unit": "삼각함수",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "함수 $f(x)=3\\sin 2x+2$ 의 최댓값을 $M$, 주기를 $p$ 라 할 때, $M\\times p$ 의 값은?",
+          "choices": [
+            "$3\\pi$",
+            "$4\\pi$",
+            "$6\\pi$",
+            "$8\\pi$",
+            "$5\\pi$"
+          ],
+          "answer": 5,
+          "solution": "$f(x)=3\\sin 2x+2$ 의 최댓값은 $3\\cdot 1+2=5$ 이므로 $M=5$, 주기는 $\\dfrac{2\\pi}{2}=\\pi$ 이므로 $p=\\pi$ 이다. 따라서 $M\\times p=5\\cdot\\pi=5\\pi$ 이다."
+        },
+        {
+          "num": 4,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{8} a_k=20$ 일 때, $\\displaystyle\\sum_{k=1}^{8}\\left(4a_k-3\\right)$ 의 값은?",
+          "choices": [
+            "$52$",
+            "$56$",
+            "$54$",
+            "$58$",
+            "$60$"
+          ],
+          "answer": 2,
+          "solution": "$\\displaystyle\\sum_{k=1}^{8}(4a_k-3)=4\\sum_{k=1}^{8}a_k-\\sum_{k=1}^{8}3=4\\cdot 20-3\\cdot 8=80-24=56$ 이다."
+        },
+        {
+          "num": 5,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\sin\\theta+\\cos\\theta=\\dfrac{1}{3}$ 일 때, $\\sin^{3}\\theta+\\cos^{3}\\theta$ 의 값은?",
+          "choices": [
+            "$\\dfrac{11}{27}$",
+            "$\\dfrac{12}{27}$",
+            "$\\dfrac{14}{27}$",
+            "$\\dfrac{13}{27}$",
+            "$\\dfrac{16}{27}$"
+          ],
+          "answer": 4,
+          "solution": "양변을 제곱하면 $1+2\\sin\\theta\\cos\\theta=\\dfrac{1}{9}$ 이므로 $\\sin\\theta\\cos\\theta=-\\dfrac{4}{9}$ 이다. $\\sin^{3}\\theta+\\cos^{3}\\theta=(\\sin\\theta+\\cos\\theta)(1-\\sin\\theta\\cos\\theta)=\\dfrac{1}{3}\\left(1+\\dfrac{4}{9}\\right)=\\dfrac{1}{3}\\cdot\\dfrac{13}{9}=\\dfrac{13}{27}$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "$\\sin\\theta+\\cos\\theta$ 의 값이 주어졌을 때 $\\sin^{3}\\theta+\\cos^{3}\\theta$ 의 값을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$\\sin\\theta+\\cos\\theta$ 를 제곱하면 $\\sin^{2}\\theta+\\cos^{2}\\theta=1$ 과 $2\\sin\\theta\\cos\\theta$ 의 합이 됨을 이용한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "세제곱의 합 공식 $\\sin^{3}\\theta+\\cos^{3}\\theta=(\\sin\\theta+\\cos\\theta)(1-\\sin\\theta\\cos\\theta)$ 를 사용한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "양변을 제곱하면 $1+2\\sin\\theta\\cos\\theta=\\dfrac{1}{9}$ 이므로 $\\sin\\theta\\cos\\theta=-\\dfrac{4}{9}$ 이다. $\\sin^{3}\\theta+\\cos^{3}\\theta=(\\sin\\theta+\\cos\\theta)(1-\\sin\\theta\\cos\\theta)=\\dfrac{1}{3}\\left(1+\\dfrac{4}{9}\\right)=\\dfrac{1}{3}\\cdot\\dfrac{13}{9}=\\dfrac{13}{27}$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "보기 ④ 가 정답이다."
+            }
+          ]
+        },
+        {
+          "num": 6,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "공차가 $0$ 이 아닌 등차수열 $\\{a_n\\}$ 에 대하여 세 항 $a_1,\\ a_2,\\ a_8$ 이 이 순서대로 등비수열을 이룰 때, 그 등비수열의 공비의 값은?",
+          "choices": [
+            "$4$",
+            "$5$",
+            "$6$",
+            "$7$",
+            "$8$"
+          ],
+          "answer": 3,
+          "solution": "공차를 $d\\ (d\\ne 0)$ 라 하면 $(a_1+d)^{2}=a_1(a_1+7d)$ 이다. 전개하면 $d^{2}=5a_1 d$, 즉 $d=5a_1$ 이다. 따라서 공비는 $\\dfrac{a_1+d}{a_1}=1+5=6$ 이다."
+        },
+        {
+          "num": 7,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\displaystyle\\sum_{k=1}^{n}(2k-1)=100$ 를 만족시키는 자연수 $n$ 의 값은?",
+          "choices": [
+            "$10$",
+            "$8$",
+            "$9$",
+            "$11$",
+            "$12$"
+          ],
+          "answer": 1,
+          "solution": "$\\displaystyle\\sum_{k=1}^{n}(2k-1)=n^{2}$ 이므로 $n^{2}=100$ 에서 $n=10$ 이다."
+        },
+        {
+          "num": 8,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$0\\le x<2\\pi$ 일 때, 방정식 $2\\sin^{2}x+\\cos x-1=0$ 의 모든 해의 합은?",
+          "choices": [
+            "$\\pi$",
+            "$\\dfrac{3\\pi}{2}$",
+            "$\\dfrac{5\\pi}{2}$",
+            "$3\\pi$",
+            "$2\\pi$"
+          ],
+          "answer": 5,
+          "solution": "$\\sin^{2}x=1-\\cos^{2}x$ 를 대입하면 $2(1-\\cos^{2}x)+\\cos x-1=0$, 즉 $2\\cos^{2}x-\\cos x-1=0$, $(2\\cos x+1)(\\cos x-1)=0$ 이다. $\\cos x=1$ 에서 $x=0$, $\\cos x=-\\dfrac{1}{2}$ 에서 $x=\\dfrac{2\\pi}{3},\\ \\dfrac{4\\pi}{3}$ 이다. 합은 $0+\\dfrac{2\\pi}{3}+\\dfrac{4\\pi}{3}=2\\pi$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "주어진 구간에서 삼각방정식을 풀어 모든 해의 합을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$\\sin^{2}x+\\cos^{2}x=1$ 을 이용해 한 종류의 삼각비로 통일한 뒤 이차방정식으로 정리한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "이차식을 인수분해하여 각 인수가 $0$ 이 되는 해를 구간 안에서 모두 찾는다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\sin^{2}x=1-\\cos^{2}x$ 를 대입하면 $2(1-\\cos^{2}x)+\\cos x-1=0$, 즉 $2\\cos^{2}x-\\cos x-1=0$, $(2\\cos x+1)(\\cos x-1)=0$ 이다. $\\cos x=1$ 에서 $x=0$, $\\cos x=-\\dfrac{1}{2}$ 에서 $x=\\dfrac{2\\pi}{3},\\ \\dfrac{4\\pi}{3}$ 이다. 합은 $0+\\dfrac{2\\pi}{3}+\\dfrac{4\\pi}{3}=2\\pi$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "보기 ⑤ 가 정답이다."
+            }
+          ]
+        },
+        {
+          "num": 9,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "이차방정식 $x^{2}-9x+14=0$ 의 두 근을 $\\alpha,\\ \\beta$ 라 할 때, $\\displaystyle\\sum_{k=1}^{10}(k-\\alpha)(k-\\beta)$ 의 값은?",
+          "choices": [
+            "$10$",
+            "$30$",
+            "$20$",
+            "$40$",
+            "$50$"
+          ],
+          "answer": 2,
+          "solution": "근과 계수의 관계에서 $\\alpha+\\beta=9$, $\\alpha\\beta=14$ 이다. $(k-\\alpha)(k-\\beta)=k^{2}-9k+14$ 이므로 $\\displaystyle\\sum_{k=1}^{10}(k^{2}-9k+14)=385-9\\cdot 55+14\\cdot 10=385-495+140=30$ 이다."
+        },
+        {
+          "num": 10,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$ 에서 변 $BC$ 의 대각이 $A$ 이다. $\\overline{BC}=4$, $\\cos A=\\dfrac{1}{2}$ 일 때, 삼각형 $ABC$ 의 외접원의 넓이는?",
+          "choices": [
+            "$\\dfrac{14\\pi}{3}$",
+            "$5\\pi$",
+            "$6\\pi$",
+            "$\\dfrac{16\\pi}{3}$",
+            "$\\dfrac{20\\pi}{3}$"
+          ],
+          "answer": 4,
+          "solution": "$\\cos A=\\dfrac{1}{2}$ 이므로 $A=\\dfrac{\\pi}{3}$, $\\sin A=\\dfrac{\\sqrt{3}}{2}$ 이다. $2R=\\dfrac{\\overline{BC}}{\\sin A}=\\dfrac{4}{\\frac{\\sqrt{3}}{2}}=\\dfrac{8}{\\sqrt{3}}$ 이므로 $R=\\dfrac{4}{\\sqrt{3}}$ 이고 $R^{2}=\\dfrac{16}{3}$ 이다. 따라서 외접원의 넓이는 $\\pi R^{2}=\\dfrac{16\\pi}{3}$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "변 $BC$ 와 그 대각의 코사인값으로 삼각형의 외접원의 넓이를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$\\cos A$ 로부터 $A$ 와 $\\sin A$ 를 구한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=2R$ 로 외접원의 반지름 $R$ 를 구하고 넓이 $\\pi R^{2}$ 을 계산한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\cos A=\\dfrac{1}{2}$ 이므로 $A=\\dfrac{\\pi}{3}$, $\\sin A=\\dfrac{\\sqrt{3}}{2}$ 이다. $2R=\\dfrac{\\overline{BC}}{\\sin A}=\\dfrac{4}{\\frac{\\sqrt{3}}{2}}=\\dfrac{8}{\\sqrt{3}}$ 이므로 $R=\\dfrac{4}{\\sqrt{3}}$ 이고 $R^{2}=\\dfrac{16}{3}$ 이다. 따라서 외접원의 넓이는 $\\pi R^{2}=\\dfrac{16\\pi}{3}$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "보기 ④ 가 정답이다."
+            }
+          ]
+        },
+        {
+          "num": 11,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$0\\le x<2\\pi$ 일 때, 부등식 $2\\sin x-1\\ge 0$ 을 만족시키는 $x$ 의 값의 범위가 $\\alpha\\le x\\le\\beta$ 일 때, $\\alpha+\\beta$ 의 값은?",
+          "choices": [
+            "$\\pi$",
+            "$\\dfrac{3\\pi}{2}$",
+            "$2\\pi$",
+            "$\\dfrac{5\\pi}{2}$",
+            "$3\\pi$"
+          ],
+          "answer": 1,
+          "solution": "$\\sin x\\ge\\dfrac{1}{2}$ 이므로 $0\\le x<2\\pi$ 에서 해는 $\\dfrac{\\pi}{6}\\le x\\le\\dfrac{5\\pi}{6}$ 이다. 따라서 $\\alpha+\\beta=\\dfrac{\\pi}{6}+\\dfrac{5\\pi}{6}=\\pi$ 이다."
+        },
+        {
+          "num": 12,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "이차방정식 $x^{2}-8x+5=0$ 의 두 근을 $a,\\ b$ 라 할 때, $\\displaystyle\\sum_{k=1}^{6}\\dfrac{1}{a^{2}+b^{2}}$ 의 값은?",
+          "choices": [
+            "$\\dfrac{1}{8}$",
+            "$\\dfrac{1}{9}$",
+            "$\\dfrac{1}{10}$",
+            "$\\dfrac{6}{53}$",
+            "$\\dfrac{6}{55}$"
+          ],
+          "answer": 2,
+          "solution": "근과 계수의 관계에서 $a+b=8$, $ab=5$ 이므로 $a^{2}+b^{2}=64-10=54$ 이다. $\\displaystyle\\sum_{k=1}^{6}\\dfrac{1}{54}=\\dfrac{6}{54}=\\dfrac{1}{9}$ 이다."
+        },
+        {
+          "num": 13,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합을 $S_n$ 이라 하자. $a_1=3$, $a_2=4$ 이고 모든 자연수 $n\\ (n\\ge 2)$ 에 대하여 $S_{n+1}-S_{n-1}=4n+1$ 일 때, $S_5$ 의 값은?",
+          "choices": [
+            "$27$",
+            "$31$",
+            "$29$",
+            "$33$",
+            "$35$"
+          ],
+          "answer": 3,
+          "solution": "$a_{n+1}+a_n=4n+1$ 이다. $n=2$: $a_3=9-4=5$. $n=3$: $a_4=13-5=8$. $n=4$: $a_5=17-8=9$. 따라서 $S_5=3+4+5+8+9=29$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "부분합의 점화 관계 $S_{n+1}-S_{n-1}=4n+1$ 로부터 $S_5$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$S_{n+1}-S_{n-1}=a_{n+1}+a_n$ 임을 이용해 항을 차례로 구한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$n=2,3,4$ 를 대입하여 $a_3,a_4,a_5$ 를 순차적으로 결정한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$a_{n+1}+a_n=4n+1$ 이다. $n=2$: $a_3=9-4=5$. $n=3$: $a_4=13-5=8$. $n=4$: $a_5=17-8=9$. 따라서 $S_5=3+4+5+8+9=29$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "보기 ③ 가 정답이다."
+            }
+          ]
+        },
+        {
+          "num": 14,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$0\\le x\\le 2\\pi$ 에서 함수 $f(x)=2\\sin^{2}x+\\cos x$ 의 최댓값을 $M$, 최솟값을 $m$ 이라 할 때, $8(M-m)$ 의 값은?",
+          "choices": [
+            "$21$",
+            "$23$",
+            "$27$",
+            "$25$",
+            "$29$"
+          ],
+          "answer": 4,
+          "solution": "$\\sin^{2}x=1-\\cos^{2}x$ 를 대입하면 $f(x)=2-2\\cos^{2}x+\\cos x$ 이다. $t=\\cos x\\ (-1\\le t\\le 1)$ 로 두면 $g(t)=-2t^{2}+t+2$ 이다. $g\\left(\\dfrac{1}{4}\\right)=\\dfrac{17}{8}=M$, $g(-1)=-2-1+2=-1=m$ 이다. 따라서 $8(M-m)=8\\left(\\dfrac{17}{8}+1\\right)=17+8=25$ 이다."
+        },
+        {
+          "num": 15,
+          "unit": "지수와 로그",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "방정식 $\\log_{2}(x-1)+\\log_{2}(x+4)=4$ 의 실근을 $\\alpha$ 라 할 때, $\\alpha^{2}+\\alpha$ 의 값은?",
+          "choices": [
+            "$12$",
+            "$16$",
+            "$24$",
+            "$30$",
+            "$20$"
+          ],
+          "answer": 5,
+          "solution": "진수조건 $x>1$ 이다. $(x-1)(x+4)=16$ 에서 $x^{2}+3x-20=0$, $(x+5)(x-4)=0$ 이다. $x>1$ 이므로 $\\alpha=4$ 이고 $\\alpha^{2}+\\alpha=16+4=20$ 이다."
+        },
+        {
+          "num": 16,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$0\\le x<2\\pi$ 에서 방정식 $\\sin 3x=\\dfrac{1}{2}$ 의 서로 다른 실근의 개수는?",
+          "choices": [
+            "$3$",
+            "$4$",
+            "$6$",
+            "$5$",
+            "$7$"
+          ],
+          "answer": 3,
+          "solution": "$0\\le x<2\\pi$ 이면 $0\\le 3x<6\\pi$ 이다. $\\sin t=\\dfrac{1}{2}$ 의 해는 한 주기마다 $2$개이고 $[0,6\\pi)$ 는 $3$개 주기이므로 실근은 $2\\times 3=6$ 개이다."
+        },
+        {
+          "num": 17,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "부등식 $n^{2}-12n+11\\le 0$ 을 만족시키는 모든 자연수 $n$ 을 작은 것부터 차례로 $a_1,\\ a_2,\\ \\cdots,\\ a_{11}$ 이라 할 때, $\\displaystyle\\sum_{k=1}^{10}\\dfrac{1}{a_k a_{k+1}}$ 의 값은?",
+          "choices": [
+            "$\\dfrac{8}{11}$",
+            "$\\dfrac{9}{11}$",
+            "$\\dfrac{1}{11}$",
+            "$\\dfrac{10}{11}$",
+            "$\\dfrac{5}{11}$"
+          ],
+          "answer": 4,
+          "solution": "$(n-1)(n-11)\\le 0$ 이므로 $1\\le n\\le 11$ 이고 $a_k=k$ 이다. $\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 이므로 $\\displaystyle\\sum_{k=1}^{10}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{11}=\\dfrac{10}{11}$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "이차부등식의 자연수 해로 수열을 만들고 부분분수 시그마의 값을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "이차부등식을 인수분해하여 자연수 해의 범위를 정하면 $a_k=k$ 임을 확인한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 로 부분분수 분해하면 망원급수(소거)가 된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$(n-1)(n-11)\\le 0$ 이므로 $1\\le n\\le 11$ 이고 $a_k=k$ 이다. $\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 이므로 $\\displaystyle\\sum_{k=1}^{10}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{11}=\\dfrac{10}{11}$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "보기 ④ 가 정답이다."
+            }
+          ]
+        },
+        {
+          "num": 18,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$ 에서 $\\angle A$ 의 이등분선이 변 $BC$ 와 만나는 점을 $D$ 라 하자. $\\overline{AB}=6$, $\\overline{AC}=9$, $\\overline{BD}=4$ 일 때, $\\overline{DC}$ 의 값은?",
+          "choices": [
+            "$5$",
+            "$\\dfrac{11}{2}$",
+            "$\\dfrac{13}{2}$",
+            "$7$",
+            "$6$"
+          ],
+          "answer": 5,
+          "solution": "각의 이등분선의 성질에 의해 $\\overline{BD}:\\overline{DC}=\\overline{AB}:\\overline{AC}=6:9=2:3$ 이다. $\\overline{BD}=4$ 이므로 $4:\\overline{DC}=2:3$ 에서 $\\overline{DC}=6$ 이다."
+        },
+        {
+          "num": 19,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "함수 $f(x)=a\\sin bx+c$ 의 최댓값이 $9$, 최솟값이 $1$ 이고 주기가 $\\dfrac{2\\pi}{3}$ 이다. 양수 $a,\\ b$ 와 상수 $c$ 에 대하여 $a+b+c$ 의 값을 구하시오.",
+          "answer": "12",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "$f(x)=a\\sin bx+c$ 의 최댓값·최솟값·주기 조건으로 $a,\\ b,\\ c$ 를 정하고 $a+b+c$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a>0$ 이므로 최댓값은 $a+c=9$, 최솟값은 $-a+c=1$, 주기는 $\\dfrac{2\\pi}{b}=\\dfrac{2\\pi}{3}$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "최댓값과 최솟값의 합·차로 $a,\\ c$ 를, 주기 공식 $\\dfrac{2\\pi}{b}$ 로 $b$ 를 구한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$a+c=9$ 와 $-a+c=1$ 을 더하면 $2c=10$ 이므로 $c=5$, 빼면 $2a=8$ 이므로 $a=4$ 이다. $\\dfrac{2\\pi}{b}=\\dfrac{2\\pi}{3}$ 에서 $b=3$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a+b+c=4+3+5=12$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 20,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합을 $S_n$ 이라 하자. $a_1=3$, $a_2=9$ 이고 모든 자연수 $n\\ (n\\ge 2)$ 에 대하여 $\\left(S_{n+1}-S_{n-1}\\right)^{2}=4a_n a_{n+1}+16$ 가 성립한다. $a_1<a_2<a_3<\\cdots$ 일 때, $a_5$ 의 값을 구하시오.",
+          "answer": "21",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "점화식 $\\left(S_{n+1}-S_{n-1}\\right)^{2}=4a_n a_{n+1}+16$ 으로부터 계차를 추론하여 $a_5$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$S_{n+1}-S_{n-1}=a_{n+1}+a_n$ 이므로 주어진 식은 $(a_{n+1}+a_n)^{2}=4a_n a_{n+1}+16$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$(a_{n+1}+a_n)^{2}-4a_n a_{n+1}=(a_{n+1}-a_n)^{2}$ 이므로 $(a_{n+1}-a_n)^{2}=16$ 이고, 증가수열이므로 $n\\ge 2$ 에서 $a_{n+1}-a_n=4$ 이다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$a_2=9$ 이므로 $a_3=13$, $a_4=17$, $a_5=21$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a_5=21$ 이다."
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "num": 1,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "첫째항이 $5$, 공비가 $2$ 인 등비수열 $\\{a_n\\}$ 에 대하여 $a_5$ 의 값은?",
+          "choices": [
+            "$60$",
+            "$72$",
+            "$80$",
+            "$96$",
+            "$120$"
+          ],
+          "answer": 3,
+          "solution": "$a_n=5\\cdot 2^{n-1}$ 이므로 $a_5=5\\cdot 2^{4}=5\\cdot 16=80$ 이다."
+        },
+        {
+          "num": 2,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=10$, $A=30^{\\circ}$, $B=90^{\\circ}$ 일 때, 변 $BC$ 의 길이는?",
+          "choices": [
+            "$\\dfrac{10\\sqrt{3}}{3}$",
+            "$\\dfrac{5\\sqrt{3}}{3}$",
+            "$5\\sqrt{3}$",
+            "$\\dfrac{20\\sqrt{3}}{3}$",
+            "$10\\sqrt{3}$"
+          ],
+          "answer": 1,
+          "solution": "$C=60^{\\circ}$ 이다. 사인법칙에서 $\\overline{BC}=\\dfrac{\\overline{AB}\\sin A}{\\sin C}=\\dfrac{10\\cdot\\frac{1}{2}}{\\frac{\\sqrt{3}}{2}}=\\dfrac{10}{\\sqrt{3}}=\\dfrac{10\\sqrt{3}}{3}$ 이다."
+        },
+        {
+          "num": 3,
+          "unit": "삼각함수",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "함수 $f(x)=4\\sin 2x+1$ 의 최댓값을 $M$, 주기를 $p$ 라 할 때, $M\\times p$ 의 값은?",
+          "choices": [
+            "$3\\pi$",
+            "$4\\pi$",
+            "$6\\pi$",
+            "$8\\pi$",
+            "$5\\pi$"
+          ],
+          "answer": 5,
+          "solution": "최댓값은 $4\\cdot 1+1=5$ 이므로 $M=5$, 주기는 $\\dfrac{2\\pi}{2}=\\pi$ 이므로 $p=\\pi$ 이다. 따라서 $M\\times p=5\\pi$ 이다."
+        },
+        {
+          "num": 4,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{8} a_k=12$ 일 때, $\\displaystyle\\sum_{k=1}^{8}\\left(5a_k-1\\right)$ 의 값은?",
+          "choices": [
+            "$48$",
+            "$52$",
+            "$50$",
+            "$54$",
+            "$56$"
+          ],
+          "answer": 2,
+          "solution": "$\\displaystyle\\sum_{k=1}^{8}(5a_k-1)=5\\cdot 12-1\\cdot 8=60-8=52$ 이다."
+        },
+        {
+          "num": 5,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\sin\\theta+\\cos\\theta=\\dfrac{1}{4}$ 일 때, $\\sin^{3}\\theta+\\cos^{3}\\theta$ 의 값은?",
+          "choices": [
+            "$\\dfrac{43}{128}$",
+            "$\\dfrac{45}{128}$",
+            "$\\dfrac{49}{128}$",
+            "$\\dfrac{47}{128}$",
+            "$\\dfrac{51}{128}$"
+          ],
+          "answer": 4,
+          "solution": "양변을 제곱하면 $1+2\\sin\\theta\\cos\\theta=\\dfrac{1}{16}$ 이므로 $\\sin\\theta\\cos\\theta=-\\dfrac{15}{32}$ 이다. $\\sin^{3}\\theta+\\cos^{3}\\theta=\\dfrac{1}{4}\\left(1+\\dfrac{15}{32}\\right)=\\dfrac{1}{4}\\cdot\\dfrac{47}{32}=\\dfrac{47}{128}$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "$\\sin\\theta+\\cos\\theta$ 의 값이 주어졌을 때 $\\sin^{3}\\theta+\\cos^{3}\\theta$ 의 값을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$\\sin\\theta+\\cos\\theta$ 를 제곱하면 $\\sin^{2}\\theta+\\cos^{2}\\theta=1$ 과 $2\\sin\\theta\\cos\\theta$ 의 합이 됨을 이용한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "세제곱의 합 공식 $\\sin^{3}\\theta+\\cos^{3}\\theta=(\\sin\\theta+\\cos\\theta)(1-\\sin\\theta\\cos\\theta)$ 를 사용한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "양변을 제곱하면 $1+2\\sin\\theta\\cos\\theta=\\dfrac{1}{16}$ 이므로 $\\sin\\theta\\cos\\theta=-\\dfrac{15}{32}$ 이다. $\\sin^{3}\\theta+\\cos^{3}\\theta=\\dfrac{1}{4}\\left(1+\\dfrac{15}{32}\\right)=\\dfrac{1}{4}\\cdot\\dfrac{47}{32}=\\dfrac{47}{128}$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "보기 ④ 가 정답이다."
+            }
+          ]
+        },
+        {
+          "num": 6,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "공차가 $0$ 이 아닌 등차수열 $\\{a_n\\}$ 에 대하여 세 항 $a_1,\\ a_2,\\ a_{10}$ 이 이 순서대로 등비수열을 이룰 때, 그 등비수열의 공비의 값은?",
+          "choices": [
+            "$6$",
+            "$7$",
+            "$8$",
+            "$9$",
+            "$10$"
+          ],
+          "answer": 3,
+          "solution": "공차를 $d\\ (d\\ne 0)$ 라 하면 $(a_1+d)^{2}=a_1(a_1+9d)$ 이다. 전개하면 $d^{2}=7a_1 d$, 즉 $d=7a_1$ 이다. 따라서 공비는 $1+7=8$ 이다."
+        },
+        {
+          "num": 7,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\displaystyle\\sum_{k=1}^{n}(2k-1)=121$ 를 만족시키는 자연수 $n$ 의 값은?",
+          "choices": [
+            "$11$",
+            "$9$",
+            "$10$",
+            "$12$",
+            "$13$"
+          ],
+          "answer": 1,
+          "solution": "$\\displaystyle\\sum_{k=1}^{n}(2k-1)=n^{2}$ 이므로 $n^{2}=121$ 에서 $n=11$ 이다."
+        },
+        {
+          "num": 8,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$0\\le x<2\\pi$ 일 때, 방정식 $2\\sin^{2}x-\\cos x-1=0$ 의 모든 해의 합은?",
+          "choices": [
+            "$2\\pi$",
+            "$\\dfrac{5\\pi}{2}$",
+            "$\\dfrac{7\\pi}{2}$",
+            "$4\\pi$",
+            "$3\\pi$"
+          ],
+          "answer": 5,
+          "solution": "$\\sin^{2}x=1-\\cos^{2}x$ 를 대입하면 $2(1-\\cos^{2}x)-\\cos x-1=0$, 즉 $2\\cos^{2}x+\\cos x-1=0$, $(2\\cos x-1)(\\cos x+1)=0$ 이다. $\\cos x=\\dfrac{1}{2}$ 에서 $x=\\dfrac{\\pi}{3},\\ \\dfrac{5\\pi}{3}$, $\\cos x=-1$ 에서 $x=\\pi$ 이다. 합은 $\\dfrac{\\pi}{3}+\\dfrac{5\\pi}{3}+\\pi=2\\pi+\\pi=3\\pi$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "주어진 구간에서 삼각방정식을 풀어 모든 해의 합을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$\\sin^{2}x+\\cos^{2}x=1$ 을 이용해 한 종류의 삼각비로 통일한 뒤 이차방정식으로 정리한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "이차식을 인수분해하여 각 인수가 $0$ 이 되는 해를 구간 안에서 모두 찾는다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\sin^{2}x=1-\\cos^{2}x$ 를 대입하면 $2(1-\\cos^{2}x)-\\cos x-1=0$, 즉 $2\\cos^{2}x+\\cos x-1=0$, $(2\\cos x-1)(\\cos x+1)=0$ 이다. $\\cos x=\\dfrac{1}{2}$ 에서 $x=\\dfrac{\\pi}{3},\\ \\dfrac{5\\pi}{3}$, $\\cos x=-1$ 에서 $x=\\pi$ 이다. 합은 $\\dfrac{\\pi}{3}+\\dfrac{5\\pi}{3}+\\pi=2\\pi+\\pi=3\\pi$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "보기 ⑤ 가 정답이다."
+            }
+          ]
+        },
+        {
+          "num": 9,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "이차방정식 $x^{2}-9x+20=0$ 의 두 근을 $\\alpha,\\ \\beta$ 라 할 때, $\\displaystyle\\sum_{k=1}^{10}(k-\\alpha)(k-\\beta)$ 의 값은?",
+          "choices": [
+            "$70$",
+            "$90$",
+            "$80$",
+            "$100$",
+            "$110$"
+          ],
+          "answer": 2,
+          "solution": "근과 계수의 관계에서 $\\alpha+\\beta=9$, $\\alpha\\beta=20$ 이다. $(k-\\alpha)(k-\\beta)=k^{2}-9k+20$ 이므로 $\\displaystyle\\sum_{k=1}^{10}(k^{2}-9k+20)=385-495+200=90$ 이다."
+        },
+        {
+          "num": 10,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$ 에서 변 $BC$ 의 대각이 $A$ 이다. $\\overline{BC}=8$, $\\cos A=\\dfrac{1}{2}$ 일 때, 삼각형 $ABC$ 의 외접원의 넓이는?",
+          "choices": [
+            "$\\dfrac{56\\pi}{3}$",
+            "$20\\pi$",
+            "$22\\pi$",
+            "$\\dfrac{64\\pi}{3}$",
+            "$\\dfrac{68\\pi}{3}$"
+          ],
+          "answer": 4,
+          "solution": "$\\cos A=\\dfrac{1}{2}$ 이므로 $A=\\dfrac{\\pi}{3}$, $\\sin A=\\dfrac{\\sqrt{3}}{2}$ 이다. $2R=\\dfrac{8}{\\frac{\\sqrt{3}}{2}}=\\dfrac{16}{\\sqrt{3}}$ 이므로 $R=\\dfrac{8}{\\sqrt{3}}$, $R^{2}=\\dfrac{64}{3}$ 이다. 따라서 외접원의 넓이는 $\\dfrac{64\\pi}{3}$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "변 $BC$ 와 그 대각의 코사인값으로 삼각형의 외접원의 넓이를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$\\cos A$ 로부터 $A$ 와 $\\sin A$ 를 구한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=2R$ 로 외접원의 반지름 $R$ 를 구하고 넓이 $\\pi R^{2}$ 을 계산한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\cos A=\\dfrac{1}{2}$ 이므로 $A=\\dfrac{\\pi}{3}$, $\\sin A=\\dfrac{\\sqrt{3}}{2}$ 이다. $2R=\\dfrac{8}{\\frac{\\sqrt{3}}{2}}=\\dfrac{16}{\\sqrt{3}}$ 이므로 $R=\\dfrac{8}{\\sqrt{3}}$, $R^{2}=\\dfrac{64}{3}$ 이다. 따라서 외접원의 넓이는 $\\dfrac{64\\pi}{3}$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "보기 ④ 가 정답이다."
+            }
+          ]
+        },
+        {
+          "num": 11,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$0\\le x<2\\pi$ 일 때, 부등식 $2\\sin x-\\sqrt{3}\\ge 0$ 을 만족시키는 $x$ 의 값의 범위가 $\\alpha\\le x\\le\\beta$ 일 때, $\\alpha+\\beta$ 의 값은?",
+          "choices": [
+            "$\\pi$",
+            "$\\dfrac{3\\pi}{2}$",
+            "$2\\pi$",
+            "$\\dfrac{5\\pi}{2}$",
+            "$3\\pi$"
+          ],
+          "answer": 1,
+          "solution": "$\\sin x\\ge\\dfrac{\\sqrt{3}}{2}$ 이므로 $0\\le x<2\\pi$ 에서 해는 $\\dfrac{\\pi}{3}\\le x\\le\\dfrac{2\\pi}{3}$ 이다. 따라서 $\\alpha+\\beta=\\dfrac{\\pi}{3}+\\dfrac{2\\pi}{3}=\\pi$ 이다."
+        },
+        {
+          "num": 12,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "이차방정식 $x^{2}-10x+7=0$ 의 두 근을 $a,\\ b$ 라 할 때, $\\displaystyle\\sum_{k=1}^{4}\\dfrac{1}{a^{2}+b^{2}}$ 의 값은?",
+          "choices": [
+            "$\\dfrac{1}{43}$",
+            "$\\dfrac{2}{43}$",
+            "$\\dfrac{3}{43}$",
+            "$\\dfrac{4}{43}$",
+            "$\\dfrac{2}{45}$"
+          ],
+          "answer": 2,
+          "solution": "근과 계수의 관계에서 $a+b=10$, $ab=7$ 이므로 $a^{2}+b^{2}=100-14=86$ 이다. $\\displaystyle\\sum_{k=1}^{4}\\dfrac{1}{86}=\\dfrac{4}{86}=\\dfrac{2}{43}$ 이다."
+        },
+        {
+          "num": 13,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합을 $S_n$ 이라 하자. $a_1=1$, $a_2=6$ 이고 모든 자연수 $n\\ (n\\ge 2)$ 에 대하여 $S_{n+1}-S_{n-1}=4n+1$ 일 때, $S_5$ 의 값은?",
+          "choices": [
+            "$25$",
+            "$29$",
+            "$27$",
+            "$31$",
+            "$33$"
+          ],
+          "answer": 3,
+          "solution": "$a_{n+1}+a_n=4n+1$ 이다. $n=2$: $a_3=9-6=3$. $n=3$: $a_4=13-3=10$. $n=4$: $a_5=17-10=7$. 따라서 $S_5=1+6+3+10+7=27$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "부분합의 점화 관계 $S_{n+1}-S_{n-1}=4n+1$ 로부터 $S_5$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$S_{n+1}-S_{n-1}=a_{n+1}+a_n$ 임을 이용해 항을 차례로 구한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$n=2,3,4$ 를 대입하여 $a_3,a_4,a_5$ 를 순차적으로 결정한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$a_{n+1}+a_n=4n+1$ 이다. $n=2$: $a_3=9-6=3$. $n=3$: $a_4=13-3=10$. $n=4$: $a_5=17-10=7$. 따라서 $S_5=1+6+3+10+7=27$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "보기 ③ 가 정답이다."
+            }
+          ]
+        },
+        {
+          "num": 14,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$0\\le x\\le 2\\pi$ 에서 함수 $f(x)=3\\sin^{2}x+\\cos x$ 의 최댓값을 $M$, 최솟값을 $m$ 이라 할 때, $12(M-m)$ 의 값은?",
+          "choices": [
+            "$45$",
+            "$47$",
+            "$51$",
+            "$49$",
+            "$53$"
+          ],
+          "answer": 4,
+          "solution": "$\\sin^{2}x=1-\\cos^{2}x$ 를 대입하면 $f(x)=3-3\\cos^{2}x+\\cos x$ 이다. $t=\\cos x\\ (-1\\le t\\le 1)$ 로 두면 $g(t)=-3t^{2}+t+3$ 이다. $g\\left(\\dfrac{1}{6}\\right)=\\dfrac{37}{12}=M$, $g(-1)=-3-1+3=-1=m$ 이다. 따라서 $12(M-m)=12\\left(\\dfrac{37}{12}+1\\right)=37+12=49$ 이다."
+        },
+        {
+          "num": 15,
+          "unit": "지수와 로그",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "방정식 $\\log_{2}(x-2)+\\log_{2}(x+1)=2$ 의 실근을 $\\alpha$ 라 할 때, $\\alpha^{2}+\\alpha$ 의 값은?",
+          "choices": [
+            "$6$",
+            "$8$",
+            "$10$",
+            "$14$",
+            "$12$"
+          ],
+          "answer": 5,
+          "solution": "진수조건 $x>2$ 이다. $(x-2)(x+1)=4$ 에서 $x^{2}-x-6=0$, $(x-3)(x+2)=0$ 이다. $x>2$ 이므로 $\\alpha=3$ 이고 $\\alpha^{2}+\\alpha=9+3=12$ 이다."
+        },
+        {
+          "num": 16,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$0\\le x<2\\pi$ 에서 방정식 $\\sin 4x=\\dfrac{1}{2}$ 의 서로 다른 실근의 개수는?",
+          "choices": [
+            "$4$",
+            "$6$",
+            "$8$",
+            "$7$",
+            "$10$"
+          ],
+          "answer": 3,
+          "solution": "$0\\le x<2\\pi$ 이면 $0\\le 4x<8\\pi$ 이다. $\\sin t=\\dfrac{1}{2}$ 의 해는 한 주기마다 $2$개이고 $[0,8\\pi)$ 는 $4$개 주기이므로 실근은 $2\\times 4=8$ 개이다."
+        },
+        {
+          "num": 17,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "부등식 $n^{2}-14n+13\\le 0$ 을 만족시키는 모든 자연수 $n$ 을 작은 것부터 차례로 $a_1,\\ a_2,\\ \\cdots,\\ a_{13}$ 이라 할 때, $\\displaystyle\\sum_{k=1}^{12}\\dfrac{1}{a_k a_{k+1}}$ 의 값은?",
+          "choices": [
+            "$\\dfrac{10}{13}$",
+            "$\\dfrac{11}{13}$",
+            "$\\dfrac{1}{13}$",
+            "$\\dfrac{12}{13}$",
+            "$\\dfrac{6}{13}$"
+          ],
+          "answer": 4,
+          "solution": "$(n-1)(n-13)\\le 0$ 이므로 $1\\le n\\le 13$ 이고 $a_k=k$ 이다. $\\displaystyle\\sum_{k=1}^{12}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{13}=\\dfrac{12}{13}$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "이차부등식의 자연수 해로 수열을 만들고 부분분수 시그마의 값을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "이차부등식을 인수분해하여 자연수 해의 범위를 정하면 $a_k=k$ 임을 확인한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 로 부분분수 분해하면 망원급수(소거)가 된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$(n-1)(n-13)\\le 0$ 이므로 $1\\le n\\le 13$ 이고 $a_k=k$ 이다. $\\displaystyle\\sum_{k=1}^{12}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{13}=\\dfrac{12}{13}$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "보기 ④ 가 정답이다."
+            }
+          ]
+        },
+        {
+          "num": 18,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$ 에서 $\\angle A$ 의 이등분선이 변 $BC$ 와 만나는 점을 $D$ 라 하자. $\\overline{AB}=10$, $\\overline{AC}=15$, $\\overline{BD}=6$ 일 때, $\\overline{DC}$ 의 값은?",
+          "choices": [
+            "$8$",
+            "$\\dfrac{17}{2}$",
+            "$\\dfrac{19}{2}$",
+            "$10$",
+            "$9$"
+          ],
+          "answer": 5,
+          "solution": "각의 이등분선의 성질에 의해 $\\overline{BD}:\\overline{DC}=\\overline{AB}:\\overline{AC}=10:15=2:3$ 이다. $\\overline{BD}=6$ 이므로 $6:\\overline{DC}=2:3$ 에서 $\\overline{DC}=9$ 이다."
+        },
+        {
+          "num": 19,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "함수 $f(x)=a\\sin bx+c$ 의 최댓값이 $11$, 최솟값이 $3$ 이고 주기가 $\\dfrac{\\pi}{2}$ 이다. 양수 $a,\\ b$ 와 상수 $c$ 에 대하여 $a+b+c$ 의 값을 구하시오.",
+          "answer": "15",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "$f(x)=a\\sin bx+c$ 의 최댓값·최솟값·주기 조건으로 $a,\\ b,\\ c$ 를 정하고 $a+b+c$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a>0$ 이므로 최댓값은 $a+c=11$, 최솟값은 $-a+c=3$, 주기는 $\\dfrac{2\\pi}{b}=\\dfrac{\\pi}{2}$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "최댓값과 최솟값의 합·차로 $a,\\ c$ 를, 주기 공식 $\\dfrac{2\\pi}{b}$ 로 $b$ 를 구한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$a+c=11$ 과 $-a+c=3$ 을 더하면 $2c=14$ 이므로 $c=7$, 빼면 $2a=8$ 이므로 $a=4$ 이다. $\\dfrac{2\\pi}{b}=\\dfrac{\\pi}{2}$ 에서 $b=4$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a+b+c=4+4+7=15$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 20,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합을 $S_n$ 이라 하자. $a_1=4$, $a_2=11$ 이고 모든 자연수 $n\\ (n\\ge 2)$ 에 대하여 $\\left(S_{n+1}-S_{n-1}\\right)^{2}=4a_n a_{n+1}+25$ 가 성립한다. $a_1<a_2<a_3<\\cdots$ 일 때, $a_5$ 의 값을 구하시오.",
+          "answer": "26",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "점화식 $\\left(S_{n+1}-S_{n-1}\\right)^{2}=4a_n a_{n+1}+25$ 로부터 계차를 추론하여 $a_5$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$S_{n+1}-S_{n-1}=a_{n+1}+a_n$ 이므로 주어진 식은 $(a_{n+1}+a_n)^{2}=4a_n a_{n+1}+25$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$(a_{n+1}+a_n)^{2}-4a_n a_{n+1}=(a_{n+1}-a_n)^{2}$ 이므로 $(a_{n+1}-a_n)^{2}=25$ 이고, 증가수열이므로 $n\\ge 2$ 에서 $a_{n+1}-a_n=5$ 이다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$a_2=11$ 이므로 $a_3=16$, $a_4=21$, $a_5=26$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a_5=26$ 이다."
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  "built_at": "2026-06-15T06:20:10.765Z"
+}

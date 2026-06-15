@@ -1,0 +1,1907 @@
+{
+  "schema": "go2-v1",
+  "school": "가림고",
+  "region": "인천 남동구",
+  "year": 2025,
+  "grade": "고2",
+  "term": "1학기 기말",
+  "subject": "수학1",
+  "analysis": {
+    "school": "가림고",
+    "region": "인천 남동구",
+    "year": 2025,
+    "grade": "고2",
+    "term": "1학기 기말",
+    "subject": "수학1",
+    "total_problems": 20,
+    "analyzed_by": "claude-direct-go2",
+    "unit_share": [
+      {
+        "unit": "여러 가지 수열",
+        "count": 8,
+        "percent": 40
+      },
+      {
+        "unit": "등차수열과 등비수열",
+        "count": 6,
+        "percent": 30
+      },
+      {
+        "unit": "삼각함수의 활용",
+        "count": 3,
+        "percent": 15
+      },
+      {
+        "unit": "수학적 귀납법",
+        "count": 2,
+        "percent": 10
+      },
+      {
+        "unit": "지수와 로그",
+        "count": 1,
+        "percent": 5
+      }
+    ],
+    "top_units": [
+      "여러 가지 수열",
+      "등차수열과 등비수열",
+      "삼각함수의 활용"
+    ],
+    "objective_ratio": 50,
+    "subjective_ratio": 50,
+    "advanced_ratio": 70,
+    "difficulty_stars": 4,
+    "discrimination_stars": 5,
+    "summary": "가림고 2025학년도 1학기 기말 수학Ⅰ은 수열(여러 가지 수열·등차등비수열)에 전체의 70%를 배정하고 삼각함수의 활용(사인·코사인법칙·넓이·도형 결합)을 변별 문항으로 배치한 균형 잡힌 출제 경향을 보인다. 원본은 객관식 18문항·서술형 3문항 구성이나 예상문제는 표준 형태에 맞춰 객관식 10문항(1~10번)·서술형 10문항(11~20번)으로 5:5 비율을 재현하였다. 시그마의 다항식 합과 부분분수 분해, 점화식에서 일반항 도출, 등차·등비수열의 합과 최솟값, 코사인법칙과 넓이 결합, 정삼각형 내부 선분 길이 등 도형 결합형이 핵심 패턴이며, 수학적 귀납법은 빈칸 채우기 증명으로 출제된다. 연이율을 등비수열의 합과 로그로 처리하는 실생활 활용형도 서술형에 포함되어 지수와 로그 단원이 연계된다. 단순 공식 적용보다 다단계 추론과 도형 작도를 요구하는 변별 문항이 다수여서 심화 비율 70%, 난이도 ★4, 변별력 ★5로 원본 변별력을 유지하도록 구성하였다."
+  },
+  "predicted": {
+    "count": 20,
+    "problems": [
+      {
+        "num": 1,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{8}\\left(3k^{2}-2k\\right)$ 의 값은?",
+        "choices": [
+          "$540$",
+          "$520$",
+          "$530$",
+          "$550$",
+          "$560$"
+        ],
+        "answer": 1,
+        "solution": "$\\displaystyle\\sum_{k=1}^{8} 3k^{2}=3\\cdot\\dfrac{8\\cdot 9\\cdot 17}{6}=612$, $\\displaystyle\\sum_{k=1}^{8} 2k=2\\cdot\\dfrac{8\\cdot 9}{2}=72$ 이므로 $612-72=540$ 이다."
+      },
+      {
+        "num": 2,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "등차수열 $\\{a_n\\}$ 에 대하여 $a_2=7$, $a_6=23$ 일 때, $\\displaystyle\\sum_{k=1}^{12} a_k$ 의 값은?",
+        "choices": [
+          "$280$",
+          "$300$",
+          "$290$",
+          "$310$",
+          "$320$"
+        ],
+        "answer": 2,
+        "solution": "공차 $d=\\dfrac{23-7}{6-2}=4$, $a_1=7-4=3$ 이므로 $a_{12}=3+11\\cdot 4=47$. 따라서 $\\displaystyle\\sum_{k=1}^{12} a_k=\\dfrac{12(3+47)}{2}=300$ 이다."
+      },
+      {
+        "num": 3,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "첫째항이 $5$, 공차가 $4$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $a_n>200$ 을 만족시키는 자연수 $n$ 의 최솟값은?",
+        "choices": [
+          "$48$",
+          "$49$",
+          "$50$",
+          "$51$",
+          "$52$"
+        ],
+        "answer": 3,
+        "solution": "$a_n=5+4(n-1)=4n+1$. $4n+1>200$ 에서 $n>\\dfrac{199}{4}=49.75$ 이므로 최솟값은 $n=50$ 이다."
+      },
+      {
+        "num": 4,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{12}\\left(2^{k}-3\\right)$ 의 값은?",
+        "choices": [
+          "$8134$",
+          "$8144$",
+          "$8164$",
+          "$8154$",
+          "$8174$"
+        ],
+        "answer": 4,
+        "solution": "$\\displaystyle\\sum_{k=1}^{12} 2^{k}=2^{13}-2=8190$, $\\displaystyle\\sum_{k=1}^{12} 3=36$ 이므로 $8190-36=8154$ 이다."
+      },
+      {
+        "num": 5,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=8$, $\\overline{AC}=5$, $A=120^{\\circ}$ 일 때, 삼각형 $ABC$ 의 넓이는?",
+        "choices": [
+          "$8\\sqrt{3}$",
+          "$9\\sqrt{3}$",
+          "$11\\sqrt{3}$",
+          "$12\\sqrt{3}$",
+          "$10\\sqrt{3}$"
+        ],
+        "answer": 5,
+        "solution": "넓이는 $\\dfrac{1}{2}\\cdot\\overline{AB}\\cdot\\overline{AC}\\cdot\\sin A=\\dfrac{1}{2}\\cdot 8\\cdot 5\\cdot\\sin 120^{\\circ}=20\\cdot\\dfrac{\\sqrt{3}}{2}=10\\sqrt{3}$ 이다."
+      },
+      {
+        "num": 6,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=7$, $\\overline{AC}=3$, $A=60^{\\circ}$ 일 때, 변 $BC$ 의 길이 $\\overline{BC}$ 는?",
+        "choices": [
+          "$\\sqrt{37}$",
+          "$\\sqrt{35}$",
+          "$\\sqrt{39}$",
+          "$\\sqrt{41}$",
+          "$\\sqrt{43}$"
+        ],
+        "answer": 1,
+        "solution": "코사인법칙에 의해 $\\overline{BC}^{2}=7^{2}+3^{2}-2\\cdot 7\\cdot 3\\cdot\\cos 60^{\\circ}=49+9-42\\cdot\\dfrac{1}{2}=58-21=37$ 이다. 따라서 $\\overline{BC}=\\sqrt{37}$ 이다."
+      },
+      {
+        "num": 7,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{40}\\dfrac{1}{k(k+1)}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{38}{39}$",
+          "$\\dfrac{40}{41}$",
+          "$\\dfrac{39}{40}$",
+          "$\\dfrac{41}{42}$",
+          "$\\dfrac{20}{21}$"
+        ],
+        "answer": 2,
+        "solution": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 이므로 $\\displaystyle\\sum_{k=1}^{40}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{41}=\\dfrac{40}{41}$ 이다."
+      },
+      {
+        "num": 8,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=3$, $a_{n+1}=a_n+4n-1$ 을 만족시킬 때, $a_{10}$ 의 값은?",
+        "choices": [
+          "$170$",
+          "$172$",
+          "$176$",
+          "$174$",
+          "$178$"
+        ],
+        "answer": 4,
+        "solution": "$a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}(4k-1)=3+4\\cdot\\dfrac{(n-1)n}{2}-(n-1)=2n^2-3n+4$ 이다. 따라서 $a_{10}=200-30+4=174$ 이다."
+      },
+      {
+        "num": 9,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "첫째항이 $2$, 공비가 $3$ 인 등비수열 $\\{a_n\\}$ 에 대하여 $a_1+a_3+a_5$ 의 값은?",
+        "choices": [
+          "$162$",
+          "$172$",
+          "$192$",
+          "$202$",
+          "$182$"
+        ],
+        "answer": 5,
+        "solution": "$a_1=2$, $a_3=2\\cdot 3^{2}=18$, $a_5=2\\cdot 3^{4}=162$ 이므로 $a_1+a_3+a_5=2+18+162=182$ 이다."
+      },
+      {
+        "num": 10,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "첫째항이 $-15$, 공차가 $2$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{16}|a_k|$ 의 값은?",
+        "choices": [
+          "$118$",
+          "$128$",
+          "$122$",
+          "$126$",
+          "$132$"
+        ],
+        "answer": 2,
+        "solution": "$a_k=-15+2(k-1)=2k-17$ 이다. $k\\le 8$ 이면 $a_k\\le -1<0$, $k\\ge 9$ 이면 $a_k\\ge 1>0$ 이다. $k=1,\\cdots,8$ 의 절댓값 합은 $15+13+\\cdots+1=64$, $k=9,\\cdots,16$ 의 합은 $1+3+\\cdots+15=64$ 이므로 합은 $128$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열의 절댓값의 합 $\\displaystyle\\sum_{k=1}^{16}|a_k|$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "첫째항 $-15$, 공차 $2$ 이므로 일반항은 $a_k=-15+2(k-1)=2k-17$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$a_k$ 의 부호가 바뀌는 지점을 찾는다. $2k-17<0$ 은 $k\\le 8$, $2k-17>0$ 은 $k\\ge 9$ 이므로 두 구간으로 나누어 절댓값을 처리한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$k=1,\\cdots,8$ 에서 $|a_k|=17-2k$ 이고 그 합은 $15+13+11+9+7+5+3+1=64$ 이다. $k=9,\\cdots,16$ 에서 $a_k=2k-17$ 이고 그 합은 $1+3+5+7+9+11+13+15=64$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$64+64=128$ 이므로 보기 ④이다."
+          }
+        ]
+      },
+      {
+        "num": 11,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=3n^2+2n$ 을 만족시킬 때, $a_{12}$ 의 값을 구하시오.",
+        "answer": "71",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "부분합 $S_n=3n^2+2n$ 이 주어졌을 때 제$12$항 $a_{12}$ 의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$S_n$ 은 첫째항부터 제$n$항까지의 합이므로 $n\\ge 2$ 에서 $a_n=S_n-S_{n-1}$ 이 성립한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$a_n=S_n-S_{n-1}=(3n^2+2n)-\\left(3(n-1)^2+2(n-1)\\right)$ 을 전개하여 정리한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$a_n=3n^2+2n-3(n-1)^2-2(n-1)=3(2n-1)+2=6n-1$ 이다. 따라서 $a_{12}=6\\cdot 12-1=71$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a_{12}=71$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 12,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=2$, $a_{n+1}=a_n+3^{n}$ 으로 정의될 때, $a_6$ 의 값을 구하시오.",
+        "answer": "365",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "점화식으로 정의된 수열의 제$6$항 $a_6$ 의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_1=2$ 이고 $a_{n+1}-a_n=3^{n}$ 이므로 계차수열이 등비수열 $3^{n}$ 임을 이용한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$n\\ge 2$ 에서 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1} 3^{k}$ 로 일반항을 구할 수 있다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{n-1} 3^{k}=\\dfrac{3^{n}-3}{2}$ 이므로 $a_6=2+\\dfrac{3^{6}-3}{2}=2+\\dfrac{726}{2}=2+363=365$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a_6=365$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 13,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=40$, $a_{n+1}=|a_n-9|$ 로 정의될 때, $\\displaystyle\\sum_{k=1}^{12} a_k$ 의 값을 구하시오.",
+        "answer": "142",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "절댓값 점화식으로 정의된 수열의 처음 $12$개 항의 합을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_1=40$ 에서 시작하여 $9$ 씩 줄어들다가 $a_5=4$ 이후 절댓값에 의해 주기적으로 변한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "항을 직접 나열한다. $40,31,22,13,4$ 까지 감소한 후 $a_6=|4-9|=5$, $a_7=|5-9|=4$ 로 $5,4$ 가 반복된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "항은 $40,31,22,13,4,5,4,5,4,5,4,5$ 이다. 앞 $5$개의 합은 $40+31+22+13+4=110$, 뒤 $7$개의 합은 $5+4+5+4+5+4+5=32$ 이므로 전체 합은 $110+32=142$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\displaystyle\\sum_{k=1}^{12} a_k=142$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 14,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=5$, $a_{n+1}=a_n+2n$ 으로 정의될 때, $\\displaystyle\\sum_{k=1}^{10} a_k$ 의 값을 구하시오.",
+        "answer": "380",
+        "solution": "$n\\ge 2$ 에서 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1} 2k=5+n(n-1)=n^2-n+5$ 이다. 따라서 $\\displaystyle\\sum_{k=1}^{10} a_k=\\displaystyle\\sum_{k=1}^{10}(k^2-k+5)=\\dfrac{10\\cdot 11\\cdot 21}{6}-\\dfrac{10\\cdot 11}{2}+50=385-55+50=380$ 이다."
+      },
+      {
+        "num": 15,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "두 집합 $A=\\{\\,4n\\mid n=1,\\,2,\\,\\cdots,\\,15\\,\\}$, $B=\\{\\,6n\\mid n=1,\\,2,\\,\\cdots,\\,15\\,\\}$ 에 대하여 집합 $A\\cap B$ 의 원소의 개수를 구하시오.",
+        "answer": "5",
+        "solution": "$A=\\{4,8,\\cdots,60\\}$, $B=\\{6,12,\\cdots,90\\}$ 이다. 공통원소는 $12$ 의 배수이고 $A$ 의 최댓값 $60$ 이하의 $12$ 의 배수 $12,24,36,48,60$ 이 모두 $B$ 에도 속하므로 $5$ 개이다."
+      },
+      {
+        "num": 16,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "$\\displaystyle\\sum_{k=1}^{80}\\log_{3}\\dfrac{k+1}{k}$ 의 값을 구하시오.",
+        "answer": "4",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "로그가 포함된 시그마의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "로그의 합을 곱의 로그로 바꾸어 망원급수(소거) 형태로 변형한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\displaystyle\\sum_{k=1}^{80}\\log_{3}\\dfrac{k+1}{k}=\\log_{3}\\left(\\prod_{k=1}^{80}\\dfrac{k+1}{k}\\right)$ 이고 곱은 연속해서 약분된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\prod_{k=1}^{80}\\dfrac{k+1}{k}=\\dfrac{2}{1}\\cdot\\dfrac{3}{2}\\cdots\\dfrac{81}{80}=81$ 이므로 값은 $\\log_{3} 81=4$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\displaystyle\\sum_{k=1}^{80}\\log_{3}\\dfrac{k+1}{k}=4$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 17,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=8$, $\\overline{AC}=5$, $A=60^{\\circ}$ 일 때, 변 $BC$ 의 길이 $\\overline{BC}$ 와 삼각형 $ABC$ 의 넓이의 곱 $\\overline{BC}\\times(\\triangle ABC\\text{의 넓이})$ 를 $p\\sqrt{q}$ 꼴로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $q$ 는 가장 작은 자연수)",
+        "answer": "73",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "코사인법칙으로 $\\overline{BC}$ 를, 넓이 공식으로 삼각형의 넓이를 구해 그 곱을 정리한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=8$, $\\overline{AC}=5$, $A=60^{\\circ}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A$, 넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{BC}^{2}=64+25-2\\cdot 40\\cdot\\dfrac{1}{2}=89-40=49$ 이므로 $\\overline{BC}=7$ 이다. 넓이는 $\\dfrac{1}{2}\\cdot 8\\cdot 5\\cdot\\dfrac{\\sqrt{3}}{2}=10\\sqrt{3}$ 이다. 곱은 $7\\cdot 10\\sqrt{3}=70\\sqrt{3}$ 이므로 $p=70$, $q=3$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=70+3=73$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 18,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "첫째항이 $1$, 공비가 $3$ 인 등비수열 $\\{b_n\\}$ 의 첫째항부터 제$n$항까지의 합을 $T_n$ 이라 할 때, $T_n>2000$ 을 만족시키는 자연수 $n$ 의 최솟값을 구하시오.",
+        "answer": "8",
+        "solution": "$T_n=\\dfrac{3^{n}-1}{3-1}=\\dfrac{3^{n}-1}{2}$ 이므로 $T_n>2000$ 은 $3^{n}>4001$ 과 같다. $3^{7}=2187$, $3^{8}=6561$ 이므로 최솟값은 $n=8$ 이다."
+      },
+      {
+        "num": 19,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "첫째항이 $2$, 공차가 $5$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k\\,a_{k+1}}$ 의 값을 $\\dfrac{q}{p}$ 로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+        "answer": "56",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열의 곱으로 이루어진 분수를 부분분수로 분해하여 시그마의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_n=2+5(n-1)=5n-3$ 이고 공차는 $5$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{5}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 부분분수 분해하면 망원급수가 된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{5}\\left(\\dfrac{1}{a_1}-\\dfrac{1}{a_{21}}\\right)=\\dfrac{1}{5}\\left(\\dfrac{1}{2}-\\dfrac{1}{102}\\right)=\\dfrac{1}{5}\\cdot\\dfrac{50}{102}=\\dfrac{1}{5}\\cdot\\dfrac{25}{51}=\\dfrac{5}{51}$ 이다. 따라서 $p=51$, $q=5$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=51+5=56$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "지수와 로그",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "매년 초에 $100$ 만 원씩 연이율 $10\\%$, $1$ 년마다 복리로 적립할 때, $5$ 년째 말의 적립금의 원리합계를 구하시오. (단, $1.1^{5}=1.61$ 로 계산한다. 단위는 만 원)",
+        "answer": "671",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "매년 초 일정 금액을 복리로 적립할 때 $5$ 년째 말의 원리합계를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "연이율 $10\\%$, $1$ 년마다 복리이므로 매년 적립금은 $1.1$ 배씩 불어난다. 매년 초 $100$ 만 원을 $5$ 회 적립한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "첫해 초 적립금은 $5$ 년 동안 $1.1^{5}$ 배, 둘째해 초 적립금은 $1.1^{4}$ 배, $\\cdots$, 다섯째해 초 적립금은 $1.1$ 배가 되어 등비수열의 합으로 계산된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "원리합계는 $100\\left(1.1+1.1^{2}+\\cdots+1.1^{5}\\right)=100\\cdot\\dfrac{1.1\\left(1.1^{5}-1\\right)}{1.1-1}=100\\cdot\\dfrac{1.1(1.61-1)}{0.1}=100\\cdot\\dfrac{1.1\\cdot 0.61}{0.1}=100\\cdot 6.71=671$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "원리합계는 $671$ 만 원이다."
+          }
+        ]
+      }
+    ],
+    "rounds": [
+      [
+        {
+          "num": 1,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\displaystyle\\sum_{k=1}^{8}\\left(3k^{2}-2k\\right)$ 의 값은?",
+          "choices": [
+            "$540$",
+            "$520$",
+            "$530$",
+            "$550$",
+            "$560$"
+          ],
+          "answer": 1,
+          "solution": "$\\displaystyle\\sum_{k=1}^{8} 3k^{2}=3\\cdot\\dfrac{8\\cdot 9\\cdot 17}{6}=612$, $\\displaystyle\\sum_{k=1}^{8} 2k=2\\cdot\\dfrac{8\\cdot 9}{2}=72$ 이므로 $612-72=540$ 이다."
+        },
+        {
+          "num": 2,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "등차수열 $\\{a_n\\}$ 에 대하여 $a_2=7$, $a_6=23$ 일 때, $\\displaystyle\\sum_{k=1}^{12} a_k$ 의 값은?",
+          "choices": [
+            "$280$",
+            "$300$",
+            "$290$",
+            "$310$",
+            "$320$"
+          ],
+          "answer": 2,
+          "solution": "공차 $d=\\dfrac{23-7}{6-2}=4$, $a_1=7-4=3$ 이므로 $a_{12}=3+11\\cdot 4=47$. 따라서 $\\displaystyle\\sum_{k=1}^{12} a_k=\\dfrac{12(3+47)}{2}=300$ 이다."
+        },
+        {
+          "num": 3,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "첫째항이 $5$, 공차가 $4$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $a_n>200$ 을 만족시키는 자연수 $n$ 의 최솟값은?",
+          "choices": [
+            "$48$",
+            "$49$",
+            "$50$",
+            "$51$",
+            "$52$"
+          ],
+          "answer": 3,
+          "solution": "$a_n=5+4(n-1)=4n+1$. $4n+1>200$ 에서 $n>\\dfrac{199}{4}=49.75$ 이므로 최솟값은 $n=50$ 이다."
+        },
+        {
+          "num": 4,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\displaystyle\\sum_{k=1}^{12}\\left(2^{k}-3\\right)$ 의 값은?",
+          "choices": [
+            "$8134$",
+            "$8144$",
+            "$8164$",
+            "$8154$",
+            "$8174$"
+          ],
+          "answer": 4,
+          "solution": "$\\displaystyle\\sum_{k=1}^{12} 2^{k}=2^{13}-2=8190$, $\\displaystyle\\sum_{k=1}^{12} 3=36$ 이므로 $8190-36=8154$ 이다."
+        },
+        {
+          "num": 5,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=8$, $\\overline{AC}=5$, $A=120^{\\circ}$ 일 때, 삼각형 $ABC$ 의 넓이는?",
+          "choices": [
+            "$8\\sqrt{3}$",
+            "$9\\sqrt{3}$",
+            "$11\\sqrt{3}$",
+            "$12\\sqrt{3}$",
+            "$10\\sqrt{3}$"
+          ],
+          "answer": 5,
+          "solution": "넓이는 $\\dfrac{1}{2}\\cdot\\overline{AB}\\cdot\\overline{AC}\\cdot\\sin A=\\dfrac{1}{2}\\cdot 8\\cdot 5\\cdot\\sin 120^{\\circ}=20\\cdot\\dfrac{\\sqrt{3}}{2}=10\\sqrt{3}$ 이다."
+        },
+        {
+          "num": 6,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=7$, $\\overline{AC}=3$, $A=60^{\\circ}$ 일 때, 변 $BC$ 의 길이 $\\overline{BC}$ 는?",
+          "choices": [
+            "$\\sqrt{37}$",
+            "$\\sqrt{35}$",
+            "$\\sqrt{39}$",
+            "$\\sqrt{41}$",
+            "$\\sqrt{43}$"
+          ],
+          "answer": 1,
+          "solution": "코사인법칙에 의해 $\\overline{BC}^{2}=7^{2}+3^{2}-2\\cdot 7\\cdot 3\\cdot\\cos 60^{\\circ}=49+9-42\\cdot\\dfrac{1}{2}=58-21=37$ 이다. 따라서 $\\overline{BC}=\\sqrt{37}$ 이다."
+        },
+        {
+          "num": 7,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\displaystyle\\sum_{k=1}^{40}\\dfrac{1}{k(k+1)}$ 의 값은?",
+          "choices": [
+            "$\\dfrac{38}{39}$",
+            "$\\dfrac{40}{41}$",
+            "$\\dfrac{39}{40}$",
+            "$\\dfrac{41}{42}$",
+            "$\\dfrac{20}{21}$"
+          ],
+          "answer": 2,
+          "solution": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 이므로 $\\displaystyle\\sum_{k=1}^{40}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{41}=\\dfrac{40}{41}$ 이다."
+        },
+        {
+          "num": 8,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "수열 $\\{a_n\\}$ 이 $a_1=3$, $a_{n+1}=a_n+4n-1$ 을 만족시킬 때, $a_{10}$ 의 값은?",
+          "choices": [
+            "$170$",
+            "$172$",
+            "$176$",
+            "$174$",
+            "$178$"
+          ],
+          "answer": 4,
+          "solution": "$a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}(4k-1)=3+4\\cdot\\dfrac{(n-1)n}{2}-(n-1)=2n^2-3n+4$ 이다. 따라서 $a_{10}=200-30+4=174$ 이다."
+        },
+        {
+          "num": 9,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "첫째항이 $2$, 공비가 $3$ 인 등비수열 $\\{a_n\\}$ 에 대하여 $a_1+a_3+a_5$ 의 값은?",
+          "choices": [
+            "$162$",
+            "$172$",
+            "$192$",
+            "$202$",
+            "$182$"
+          ],
+          "answer": 5,
+          "solution": "$a_1=2$, $a_3=2\\cdot 3^{2}=18$, $a_5=2\\cdot 3^{4}=162$ 이므로 $a_1+a_3+a_5=2+18+162=182$ 이다."
+        },
+        {
+          "num": 10,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "첫째항이 $-15$, 공차가 $2$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{16}|a_k|$ 의 값은?",
+          "choices": [
+            "$118$",
+            "$128$",
+            "$122$",
+            "$126$",
+            "$132$"
+          ],
+          "answer": 2,
+          "solution": "$a_k=-15+2(k-1)=2k-17$ 이다. $k\\le 8$ 이면 $a_k\\le -1<0$, $k\\ge 9$ 이면 $a_k\\ge 1>0$ 이다. $k=1,\\cdots,8$ 의 절댓값 합은 $15+13+\\cdots+1=64$, $k=9,\\cdots,16$ 의 합은 $1+3+\\cdots+15=64$ 이므로 합은 $128$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "등차수열의 절댓값의 합 $\\displaystyle\\sum_{k=1}^{16}|a_k|$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "첫째항 $-15$, 공차 $2$ 이므로 일반항은 $a_k=-15+2(k-1)=2k-17$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$a_k$ 의 부호가 바뀌는 지점을 찾는다. $2k-17<0$ 은 $k\\le 8$, $2k-17>0$ 은 $k\\ge 9$ 이므로 두 구간으로 나누어 절댓값을 처리한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$k=1,\\cdots,8$ 에서 $|a_k|=17-2k$ 이고 그 합은 $15+13+11+9+7+5+3+1=64$ 이다. $k=9,\\cdots,16$ 에서 $a_k=2k-17$ 이고 그 합은 $1+3+5+7+9+11+13+15=64$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$64+64=128$ 이므로 보기 ④이다."
+            }
+          ]
+        },
+        {
+          "num": 11,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=3n^2+2n$ 을 만족시킬 때, $a_{12}$ 의 값을 구하시오.",
+          "answer": "71",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "부분합 $S_n=3n^2+2n$ 이 주어졌을 때 제$12$항 $a_{12}$ 의 값을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$S_n$ 은 첫째항부터 제$n$항까지의 합이므로 $n\\ge 2$ 에서 $a_n=S_n-S_{n-1}$ 이 성립한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$a_n=S_n-S_{n-1}=(3n^2+2n)-\\left(3(n-1)^2+2(n-1)\\right)$ 을 전개하여 정리한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$a_n=3n^2+2n-3(n-1)^2-2(n-1)=3(2n-1)+2=6n-1$ 이다. 따라서 $a_{12}=6\\cdot 12-1=71$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a_{12}=71$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 12,
+          "unit": "수학적 귀납법",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "수열 $\\{a_n\\}$ 이 $a_1=2$, $a_{n+1}=a_n+3^{n}$ 으로 정의될 때, $a_6$ 의 값을 구하시오.",
+          "answer": "365",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "점화식으로 정의된 수열의 제$6$항 $a_6$ 의 값을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a_1=2$ 이고 $a_{n+1}-a_n=3^{n}$ 이므로 계차수열이 등비수열 $3^{n}$ 임을 이용한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$n\\ge 2$ 에서 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1} 3^{k}$ 로 일반항을 구할 수 있다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\displaystyle\\sum_{k=1}^{n-1} 3^{k}=\\dfrac{3^{n}-3}{2}$ 이므로 $a_6=2+\\dfrac{3^{6}-3}{2}=2+\\dfrac{726}{2}=2+363=365$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a_6=365$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 13,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "수열 $\\{a_n\\}$ 이 $a_1=40$, $a_{n+1}=|a_n-9|$ 로 정의될 때, $\\displaystyle\\sum_{k=1}^{12} a_k$ 의 값을 구하시오.",
+          "answer": "142",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "절댓값 점화식으로 정의된 수열의 처음 $12$개 항의 합을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a_1=40$ 에서 시작하여 $9$ 씩 줄어들다가 $a_5=4$ 이후 절댓값에 의해 주기적으로 변한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "항을 직접 나열한다. $40,31,22,13,4$ 까지 감소한 후 $a_6=|4-9|=5$, $a_7=|5-9|=4$ 로 $5,4$ 가 반복된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "항은 $40,31,22,13,4,5,4,5,4,5,4,5$ 이다. 앞 $5$개의 합은 $40+31+22+13+4=110$, 뒤 $7$개의 합은 $5+4+5+4+5+4+5=32$ 이므로 전체 합은 $110+32=142$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$\\displaystyle\\sum_{k=1}^{12} a_k=142$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 14,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "수열 $\\{a_n\\}$ 이 $a_1=5$, $a_{n+1}=a_n+2n$ 으로 정의될 때, $\\displaystyle\\sum_{k=1}^{10} a_k$ 의 값을 구하시오.",
+          "answer": "380",
+          "solution": "$n\\ge 2$ 에서 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1} 2k=5+n(n-1)=n^2-n+5$ 이다. 따라서 $\\displaystyle\\sum_{k=1}^{10} a_k=\\displaystyle\\sum_{k=1}^{10}(k^2-k+5)=\\dfrac{10\\cdot 11\\cdot 21}{6}-\\dfrac{10\\cdot 11}{2}+50=385-55+50=380$ 이다."
+        },
+        {
+          "num": 15,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "두 집합 $A=\\{\\,4n\\mid n=1,\\,2,\\,\\cdots,\\,15\\,\\}$, $B=\\{\\,6n\\mid n=1,\\,2,\\,\\cdots,\\,15\\,\\}$ 에 대하여 집합 $A\\cap B$ 의 원소의 개수를 구하시오.",
+          "answer": "5",
+          "solution": "$A=\\{4,8,\\cdots,60\\}$, $B=\\{6,12,\\cdots,90\\}$ 이다. 공통원소는 $12$ 의 배수이고 $A$ 의 최댓값 $60$ 이하의 $12$ 의 배수 $12,24,36,48,60$ 이 모두 $B$ 에도 속하므로 $5$ 개이다."
+        },
+        {
+          "num": 16,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "$\\displaystyle\\sum_{k=1}^{80}\\log_{3}\\dfrac{k+1}{k}$ 의 값을 구하시오.",
+          "answer": "4",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "로그가 포함된 시그마의 값을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "로그의 합을 곱의 로그로 바꾸어 망원급수(소거) 형태로 변형한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$\\displaystyle\\sum_{k=1}^{80}\\log_{3}\\dfrac{k+1}{k}=\\log_{3}\\left(\\prod_{k=1}^{80}\\dfrac{k+1}{k}\\right)$ 이고 곱은 연속해서 약분된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\displaystyle\\prod_{k=1}^{80}\\dfrac{k+1}{k}=\\dfrac{2}{1}\\cdot\\dfrac{3}{2}\\cdots\\dfrac{81}{80}=81$ 이므로 값은 $\\log_{3} 81=4$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$\\displaystyle\\sum_{k=1}^{80}\\log_{3}\\dfrac{k+1}{k}=4$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 17,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=8$, $\\overline{AC}=5$, $A=60^{\\circ}$ 일 때, 변 $BC$ 의 길이 $\\overline{BC}$ 와 삼각형 $ABC$ 의 넓이의 곱 $\\overline{BC}\\times(\\triangle ABC\\text{의 넓이})$ 를 $p\\sqrt{q}$ 꼴로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $q$ 는 가장 작은 자연수)",
+          "answer": "73",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "코사인법칙으로 $\\overline{BC}$ 를, 넓이 공식으로 삼각형의 넓이를 구해 그 곱을 정리한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$\\overline{AB}=8$, $\\overline{AC}=5$, $A=60^{\\circ}$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A$, 넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A$ 를 쓴다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\overline{BC}^{2}=64+25-2\\cdot 40\\cdot\\dfrac{1}{2}=89-40=49$ 이므로 $\\overline{BC}=7$ 이다. 넓이는 $\\dfrac{1}{2}\\cdot 8\\cdot 5\\cdot\\dfrac{\\sqrt{3}}{2}=10\\sqrt{3}$ 이다. 곱은 $7\\cdot 10\\sqrt{3}=70\\sqrt{3}$ 이므로 $p=70$, $q=3$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$p+q=70+3=73$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 18,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "첫째항이 $1$, 공비가 $3$ 인 등비수열 $\\{b_n\\}$ 의 첫째항부터 제$n$항까지의 합을 $T_n$ 이라 할 때, $T_n>2000$ 을 만족시키는 자연수 $n$ 의 최솟값을 구하시오.",
+          "answer": "8",
+          "solution": "$T_n=\\dfrac{3^{n}-1}{3-1}=\\dfrac{3^{n}-1}{2}$ 이므로 $T_n>2000$ 은 $3^{n}>4001$ 과 같다. $3^{7}=2187$, $3^{8}=6561$ 이므로 최솟값은 $n=8$ 이다."
+        },
+        {
+          "num": 19,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "첫째항이 $2$, 공차가 $5$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k\\,a_{k+1}}$ 의 값을 $\\dfrac{q}{p}$ 로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+          "answer": "56",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "등차수열의 곱으로 이루어진 분수를 부분분수로 분해하여 시그마의 값을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a_n=2+5(n-1)=5n-3$ 이고 공차는 $5$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{5}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 부분분수 분해하면 망원급수가 된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{5}\\left(\\dfrac{1}{a_1}-\\dfrac{1}{a_{21}}\\right)=\\dfrac{1}{5}\\left(\\dfrac{1}{2}-\\dfrac{1}{102}\\right)=\\dfrac{1}{5}\\cdot\\dfrac{50}{102}=\\dfrac{1}{5}\\cdot\\dfrac{25}{51}=\\dfrac{5}{51}$ 이다. 따라서 $p=51$, $q=5$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$p+q=51+5=56$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 20,
+          "unit": "지수와 로그",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "매년 초에 $100$ 만 원씩 연이율 $10\\%$, $1$ 년마다 복리로 적립할 때, $5$ 년째 말의 적립금의 원리합계를 구하시오. (단, $1.1^{5}=1.61$ 로 계산한다. 단위는 만 원)",
+          "answer": "671",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "매년 초 일정 금액을 복리로 적립할 때 $5$ 년째 말의 원리합계를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "연이율 $10\\%$, $1$ 년마다 복리이므로 매년 적립금은 $1.1$ 배씩 불어난다. 매년 초 $100$ 만 원을 $5$ 회 적립한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "첫해 초 적립금은 $5$ 년 동안 $1.1^{5}$ 배, 둘째해 초 적립금은 $1.1^{4}$ 배, $\\cdots$, 다섯째해 초 적립금은 $1.1$ 배가 되어 등비수열의 합으로 계산된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "원리합계는 $100\\left(1.1+1.1^{2}+\\cdots+1.1^{5}\\right)=100\\cdot\\dfrac{1.1\\left(1.1^{5}-1\\right)}{1.1-1}=100\\cdot\\dfrac{1.1(1.61-1)}{0.1}=100\\cdot\\dfrac{1.1\\cdot 0.61}{0.1}=100\\cdot 6.71=671$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "원리합계는 $671$ 만 원이다."
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "num": 1,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\displaystyle\\sum_{k=1}^{10}\\left(2k^{2}-3k\\right)$ 의 값은?",
+          "choices": [
+            "$605$",
+            "$585$",
+            "$595$",
+            "$615$",
+            "$625$"
+          ],
+          "answer": 1,
+          "solution": "$\\displaystyle\\sum_{k=1}^{10} 2k^{2}=2\\cdot\\dfrac{10\\cdot 11\\cdot 21}{6}=770$, $\\displaystyle\\sum_{k=1}^{10} 3k=3\\cdot\\dfrac{10\\cdot 11}{2}=165$ 이므로 $770-165=605$ 이다."
+        },
+        {
+          "num": 2,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "등차수열 $\\{a_n\\}$ 에 대하여 $a_2=5$, $a_7=25$ 일 때, $\\displaystyle\\sum_{k=1}^{10} a_k$ 의 값은?",
+          "choices": [
+            "$170$",
+            "$190$",
+            "$180$",
+            "$200$",
+            "$210$"
+          ],
+          "answer": 2,
+          "solution": "공차 $d=\\dfrac{25-5}{7-2}=4$, $a_1=5-4=1$ 이므로 $a_{10}=1+9\\cdot 4=37$. 따라서 $\\displaystyle\\sum_{k=1}^{10} a_k=\\dfrac{10(1+37)}{2}=190$ 이다."
+        },
+        {
+          "num": 3,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "첫째항이 $7$, 공차가 $5$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $a_n>300$ 을 만족시키는 자연수 $n$ 의 최솟값은?",
+          "choices": [
+            "$58$",
+            "$59$",
+            "$60$",
+            "$61$",
+            "$62$"
+          ],
+          "answer": 3,
+          "solution": "$a_n=7+5(n-1)=5n+2$. $5n+2>300$ 에서 $n>59.6$ 이므로 최솟값은 $n=60$ 이다."
+        },
+        {
+          "num": 4,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\displaystyle\\sum_{k=1}^{10}\\left(2^{k}-5\\right)$ 의 값은?",
+          "choices": [
+            "$1976$",
+            "$1986$",
+            "$2006$",
+            "$1996$",
+            "$2016$"
+          ],
+          "answer": 4,
+          "solution": "$\\displaystyle\\sum_{k=1}^{10} 2^{k}=2^{11}-2=2046$, $\\displaystyle\\sum_{k=1}^{10} 5=50$ 이므로 $2046-50=1996$ 이다."
+        },
+        {
+          "num": 5,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=6$, $\\overline{AC}=4$, $A=120^{\\circ}$ 일 때, 삼각형 $ABC$ 의 넓이는?",
+          "choices": [
+            "$5\\sqrt{3}$",
+            "$7\\sqrt{3}$",
+            "$8\\sqrt{3}$",
+            "$9\\sqrt{3}$",
+            "$6\\sqrt{3}$"
+          ],
+          "answer": 5,
+          "solution": "넓이는 $\\dfrac{1}{2}\\cdot 6\\cdot 4\\cdot\\sin 120^{\\circ}=12\\cdot\\dfrac{\\sqrt{3}}{2}=6\\sqrt{3}$ 이다."
+        },
+        {
+          "num": 6,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=5$, $\\overline{AC}=3$, $A=60^{\\circ}$ 일 때, 변 $BC$ 의 길이 $\\overline{BC}$ 는?",
+          "choices": [
+            "$\\sqrt{19}$",
+            "$\\sqrt{17}$",
+            "$\\sqrt{21}$",
+            "$\\sqrt{23}$",
+            "$\\sqrt{25}$"
+          ],
+          "answer": 1,
+          "solution": "코사인법칙에 의해 $\\overline{BC}^{2}=25+9-2\\cdot 5\\cdot 3\\cdot\\dfrac{1}{2}=34-15=19$ 이므로 $\\overline{BC}=\\sqrt{19}$ 이다."
+        },
+        {
+          "num": 7,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\displaystyle\\sum_{k=1}^{30}\\dfrac{1}{k(k+1)}$ 의 값은?",
+          "choices": [
+            "$\\dfrac{28}{29}$",
+            "$\\dfrac{30}{31}$",
+            "$\\dfrac{29}{30}$",
+            "$\\dfrac{31}{32}$",
+            "$\\dfrac{15}{16}$"
+          ],
+          "answer": 2,
+          "solution": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 이므로 $\\displaystyle\\sum_{k=1}^{30}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{31}=\\dfrac{30}{31}$ 이다."
+        },
+        {
+          "num": 8,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "수열 $\\{a_n\\}$ 이 $a_1=2$, $a_{n+1}=a_n+4n-1$ 을 만족시킬 때, $a_{10}$ 의 값은?",
+          "choices": [
+            "$169$",
+            "$171$",
+            "$175$",
+            "$173$",
+            "$177$"
+          ],
+          "answer": 4,
+          "solution": "$a_n=2+\\displaystyle\\sum_{k=1}^{n-1}(4k-1)=2+2n(n-1)-(n-1)=2n^2-3n+3$ 이다. 따라서 $a_{10}=200-30+3=173$ 이다."
+        },
+        {
+          "num": 9,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "첫째항이 $3$, 공비가 $2$ 인 등비수열 $\\{a_n\\}$ 에 대하여 $a_1+a_3+a_5$ 의 값은?",
+          "choices": [
+            "$53$",
+            "$58$",
+            "$68$",
+            "$73$",
+            "$63$"
+          ],
+          "answer": 5,
+          "solution": "$a_1=3$, $a_3=3\\cdot 2^{2}=12$, $a_5=3\\cdot 2^{4}=48$ 이므로 $a_1+a_3+a_5=3+12+48=63$ 이다."
+        },
+        {
+          "num": 10,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "첫째항이 $-13$, 공차가 $2$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{14}|a_k|$ 의 값은?",
+          "choices": [
+            "$92$",
+            "$98$",
+            "$94$",
+            "$96$",
+            "$100$"
+          ],
+          "answer": 2,
+          "solution": "$a_k=2k-15$ 이다. $k\\le 7$ 이면 $a_k\\le -1<0$, $k\\ge 8$ 이면 $a_k\\ge 1>0$ 이다. $k=1,\\cdots,7$ 의 절댓값 합은 $13+11+\\cdots+1=49$, $k=8,\\cdots,14$ 의 합은 $1+3+\\cdots+13=49$ 이므로 합은 $98$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "등차수열의 절댓값의 합 $\\displaystyle\\sum_{k=1}^{14}|a_k|$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "첫째항 $-13$, 공차 $2$ 이므로 일반항은 $a_k=-13+2(k-1)=2k-15$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$2k-15<0$ 은 $k\\le 7$, $2k-15>0$ 은 $k\\ge 8$ 이므로 두 구간으로 나누어 절댓값을 처리한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$k=1,\\cdots,7$ 에서 $|a_k|=15-2k$ 이고 그 합은 $13+11+9+7+5+3+1=49$ 이다. $k=8,\\cdots,14$ 에서 $a_k=2k-15$ 이고 그 합은 $1+3+5+7+9+11+13=49$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$49+49=98$ 이므로 보기 ④이다."
+            }
+          ]
+        },
+        {
+          "num": 11,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=2n^2+5n$ 을 만족시킬 때, $a_{12}$ 의 값을 구하시오.",
+          "answer": "51",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "부분합 $S_n=2n^2+5n$ 이 주어졌을 때 제$12$항 $a_{12}$ 의 값을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$S_n$ 은 첫째항부터 제$n$항까지의 합이므로 $n\\ge 2$ 에서 $a_n=S_n-S_{n-1}$ 이 성립한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$a_n=S_n-S_{n-1}=(2n^2+5n)-\\left(2(n-1)^2+5(n-1)\\right)$ 을 전개하여 정리한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$a_n=2n^2+5n-2(n-1)^2-5(n-1)=2(2n-1)+5=4n+3$ 이다. 따라서 $a_{12}=4\\cdot 12+3=51$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a_{12}=51$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 12,
+          "unit": "수학적 귀납법",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "수열 $\\{a_n\\}$ 이 $a_1=3$, $a_{n+1}=a_n+2^{n}$ 으로 정의될 때, $a_6$ 의 값을 구하시오.",
+          "answer": "65",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "점화식으로 정의된 수열의 제$6$항 $a_6$ 의 값을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a_1=3$ 이고 $a_{n+1}-a_n=2^{n}$ 이므로 계차수열이 등비수열 $2^{n}$ 임을 이용한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$n\\ge 2$ 에서 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1} 2^{k}$ 로 일반항을 구할 수 있다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\displaystyle\\sum_{k=1}^{n-1} 2^{k}=2^{n}-2$ 이므로 $a_n=3+(2^{n}-2)=2^{n}+1$ 이다. 따라서 $a_6=2^{6}+1=65$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a_6=65$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 13,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "수열 $\\{a_n\\}$ 이 $a_1=50$, $a_{n+1}=|a_n-8|$ 로 정의될 때, $\\displaystyle\\sum_{k=1}^{12} a_k$ 의 값을 구하시오.",
+          "answer": "204",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "절댓값 점화식으로 정의된 수열의 처음 $12$개 항의 합을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a_1=50$ 에서 시작하여 $8$ 씩 줄어들다가 $a_7=2$ 이후 절댓값에 의해 주기적으로 변한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "항을 직접 나열한다. $50,42,34,26,18,10,2$ 까지 감소한 후 $a_8=|2-8|=6$, $a_9=|6-8|=2$ 로 $6,2$ 가 반복된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "항은 $50,42,34,26,18,10,2,6,2,6,2,6$ 이다. 앞 $7$개의 합은 $50+42+34+26+18+10+2=182$, 뒤 $5$개의 합은 $6+2+6+2+6=22$ 이므로 전체 합은 $182+22=204$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$\\displaystyle\\sum_{k=1}^{12} a_k=204$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 14,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "수열 $\\{a_n\\}$ 이 $a_1=4$, $a_{n+1}=a_n+2n$ 으로 정의될 때, $\\displaystyle\\sum_{k=1}^{10} a_k$ 의 값을 구하시오.",
+          "answer": "370",
+          "solution": "$n\\ge 2$ 에서 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1} 2k=4+n(n-1)=n^2-n+4$ 이다. 따라서 $\\displaystyle\\sum_{k=1}^{10} a_k=\\displaystyle\\sum_{k=1}^{10}(k^2-k+4)=385-55+40=370$ 이다."
+        },
+        {
+          "num": 15,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "두 집합 $A=\\{\\,5n\\mid n=1,\\,2,\\,\\cdots,\\,12\\,\\}$, $B=\\{\\,3n\\mid n=1,\\,2,\\,\\cdots,\\,20\\,\\}$ 에 대하여 집합 $A\\cap B$ 의 원소의 개수를 구하시오.",
+          "answer": "4",
+          "solution": "$A=\\{5,10,\\cdots,60\\}$, $B=\\{3,6,\\cdots,60\\}$ 이다. 공통원소는 $15$ 의 배수이고 $60$ 이하의 $15$ 의 배수 $15,30,45,60$ 이 모두 두 집합에 속하므로 $4$ 개이다."
+        },
+        {
+          "num": 16,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "$\\displaystyle\\sum_{k=1}^{63}\\log_{2}\\dfrac{k+1}{k}$ 의 값을 구하시오.",
+          "answer": "6",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "로그가 포함된 시그마의 값을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "로그의 합을 곱의 로그로 바꾸어 망원급수(소거) 형태로 변형한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$\\displaystyle\\sum_{k=1}^{63}\\log_{2}\\dfrac{k+1}{k}=\\log_{2}\\left(\\prod_{k=1}^{63}\\dfrac{k+1}{k}\\right)$ 이고 곱은 연속해서 약분된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\displaystyle\\prod_{k=1}^{63}\\dfrac{k+1}{k}=\\dfrac{2}{1}\\cdot\\dfrac{3}{2}\\cdots\\dfrac{64}{63}=64$ 이므로 값은 $\\log_{2} 64=6$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$\\displaystyle\\sum_{k=1}^{63}\\log_{2}\\dfrac{k+1}{k}=6$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 17,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=6$, $\\overline{AC}=4$, $A=60^{\\circ}$ 일 때, 변 $BC$ 의 길이 $\\overline{BC}$ 와 삼각형 $ABC$ 의 넓이의 곱 $\\overline{BC}\\times(\\triangle ABC\\text{의 넓이})$ 를 $p\\sqrt{q}$ 꼴로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $q$ 는 가장 작은 자연수)",
+          "answer": "33",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "코사인법칙으로 $\\overline{BC}$ 를, 넓이 공식으로 삼각형의 넓이를 구해 그 곱을 정리한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$\\overline{AB}=6$, $\\overline{AC}=4$, $A=60^{\\circ}$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A$, 넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A$ 를 쓴다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\overline{BC}^{2}=36+16-2\\cdot 24\\cdot\\dfrac{1}{2}=28$ 이므로 $\\overline{BC}=2\\sqrt{7}$ 이다. 넓이는 $\\dfrac{1}{2}\\cdot 6\\cdot 4\\cdot\\dfrac{\\sqrt{3}}{2}=6\\sqrt{3}$ 이다. 곱은 $2\\sqrt{7}\\cdot 6\\sqrt{3}=12\\sqrt{21}$ 이므로 $p=12$, $q=21$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$p+q=12+21=33$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 18,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "첫째항이 $1$, 공비가 $2$ 인 등비수열 $\\{b_n\\}$ 의 첫째항부터 제$n$항까지의 합을 $T_n$ 이라 할 때, $T_n>1000$ 을 만족시키는 자연수 $n$ 의 최솟값을 구하시오.",
+          "answer": "10",
+          "solution": "$T_n=\\dfrac{2^{n}-1}{2-1}=2^{n}-1$ 이므로 $T_n>1000$ 은 $2^{n}>1001$ 과 같다. $2^{9}=512$, $2^{10}=1024$ 이므로 최솟값은 $n=10$ 이다."
+        },
+        {
+          "num": 19,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "첫째항이 $3$, 공차가 $4$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k\\,a_{k+1}}$ 의 값을 $\\dfrac{q}{p}$ 로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+          "answer": "269",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "등차수열의 곱으로 이루어진 분수를 부분분수로 분해하여 시그마의 값을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a_n=3+4(n-1)=4n-1$ 이고 공차는 $4$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{4}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 부분분수 분해하면 망원급수가 된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{4}\\left(\\dfrac{1}{a_1}-\\dfrac{1}{a_{21}}\\right)=\\dfrac{1}{4}\\left(\\dfrac{1}{3}-\\dfrac{1}{83}\\right)=\\dfrac{1}{4}\\cdot\\dfrac{80}{249}=\\dfrac{20}{249}$ 이다. 따라서 $p=249$, $q=20$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$p+q=249+20=269$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 20,
+          "unit": "지수와 로그",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "매년 초에 $200$ 만 원씩 연이율 $10\\%$, $1$ 년마다 복리로 적립할 때, $5$ 년째 말의 적립금의 원리합계를 구하시오. (단, $1.1^{5}=1.61$ 로 계산한다. 단위는 만 원)",
+          "answer": "1342",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "매년 초 일정 금액을 복리로 적립할 때 $5$ 년째 말의 원리합계를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "연이율 $10\\%$, $1$ 년마다 복리이므로 매년 적립금은 $1.1$ 배씩 불어난다. 매년 초 $200$ 만 원을 $5$ 회 적립한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "첫해 초 적립금은 $1.1^{5}$ 배, $\\cdots$, 다섯째해 초 적립금은 $1.1$ 배가 되어 등비수열의 합으로 계산된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "원리합계는 $200\\left(1.1+1.1^{2}+\\cdots+1.1^{5}\\right)=200\\cdot\\dfrac{1.1\\left(1.61-1\\right)}{0.1}=200\\cdot 6.71=1342$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "원리합계는 $1342$ 만 원이다."
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "num": 1,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\displaystyle\\sum_{k=1}^{9}\\left(3k^{2}-k\\right)$ 의 값은?",
+          "choices": [
+            "$810$",
+            "$790$",
+            "$800$",
+            "$820$",
+            "$830$"
+          ],
+          "answer": 1,
+          "solution": "$\\displaystyle\\sum_{k=1}^{9} 3k^{2}=3\\cdot\\dfrac{9\\cdot 10\\cdot 19}{6}=855$, $\\displaystyle\\sum_{k=1}^{9} k=\\dfrac{9\\cdot 10}{2}=45$ 이므로 $855-45=810$ 이다."
+        },
+        {
+          "num": 2,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "등차수열 $\\{a_n\\}$ 에 대하여 $a_3=11$, $a_7=27$ 일 때, $\\displaystyle\\sum_{k=1}^{14} a_k$ 의 값은?",
+          "choices": [
+            "$386$",
+            "$406$",
+            "$396$",
+            "$416$",
+            "$426$"
+          ],
+          "answer": 2,
+          "solution": "공차 $d=\\dfrac{27-11}{7-3}=4$, $a_1=11-2\\cdot 4=3$ 이므로 $a_{14}=3+13\\cdot 4=55$. 따라서 $\\displaystyle\\sum_{k=1}^{14} a_k=\\dfrac{14(3+55)}{2}=406$ 이다."
+        },
+        {
+          "num": 3,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "첫째항이 $4$, 공차가 $3$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $a_n>150$ 을 만족시키는 자연수 $n$ 의 최솟값은?",
+          "choices": [
+            "$48$",
+            "$49$",
+            "$50$",
+            "$51$",
+            "$52$"
+          ],
+          "answer": 3,
+          "solution": "$a_n=4+3(n-1)=3n+1$. $3n+1>150$ 에서 $n>49.67$ 이므로 최솟값은 $n=50$ 이다."
+        },
+        {
+          "num": 4,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\displaystyle\\sum_{k=1}^{11}\\left(2^{k}-2\\right)$ 의 값은?",
+          "choices": [
+            "$4052$",
+            "$4062$",
+            "$4082$",
+            "$4072$",
+            "$4092$"
+          ],
+          "answer": 4,
+          "solution": "$\\displaystyle\\sum_{k=1}^{11} 2^{k}=2^{12}-2=4094$, $\\displaystyle\\sum_{k=1}^{11} 2=22$ 이므로 $4094-22=4072$ 이다."
+        },
+        {
+          "num": 5,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=12$, $\\overline{AC}=5$, $A=120^{\\circ}$ 일 때, 삼각형 $ABC$ 의 넓이는?",
+          "choices": [
+            "$13\\sqrt{3}$",
+            "$14\\sqrt{3}$",
+            "$16\\sqrt{3}$",
+            "$17\\sqrt{3}$",
+            "$15\\sqrt{3}$"
+          ],
+          "answer": 5,
+          "solution": "넓이는 $\\dfrac{1}{2}\\cdot 12\\cdot 5\\cdot\\sin 120^{\\circ}=30\\cdot\\dfrac{\\sqrt{3}}{2}=15\\sqrt{3}$ 이다."
+        },
+        {
+          "num": 6,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=8$, $\\overline{AC}=3$, $A=60^{\\circ}$ 일 때, 변 $BC$ 의 길이 $\\overline{BC}$ 는?",
+          "choices": [
+            "$7$",
+            "$5$",
+            "$6$",
+            "$8$",
+            "$9$"
+          ],
+          "answer": 1,
+          "solution": "코사인법칙에 의해 $\\overline{BC}^{2}=64+9-2\\cdot 8\\cdot 3\\cdot\\dfrac{1}{2}=73-24=49$ 이므로 $\\overline{BC}=7$ 이다."
+        },
+        {
+          "num": 7,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\displaystyle\\sum_{k=1}^{50}\\dfrac{1}{k(k+1)}$ 의 값은?",
+          "choices": [
+            "$\\dfrac{48}{49}$",
+            "$\\dfrac{50}{51}$",
+            "$\\dfrac{49}{50}$",
+            "$\\dfrac{51}{52}$",
+            "$\\dfrac{25}{26}$"
+          ],
+          "answer": 2,
+          "solution": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 이므로 $\\displaystyle\\sum_{k=1}^{50}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{51}=\\dfrac{50}{51}$ 이다."
+        },
+        {
+          "num": 8,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "수열 $\\{a_n\\}$ 이 $a_1=4$, $a_{n+1}=a_n+4n-1$ 을 만족시킬 때, $a_{10}$ 의 값은?",
+          "choices": [
+            "$171$",
+            "$173$",
+            "$177$",
+            "$175$",
+            "$179$"
+          ],
+          "answer": 4,
+          "solution": "$a_n=4+\\displaystyle\\sum_{k=1}^{n-1}(4k-1)=4+2n(n-1)-(n-1)=2n^2-3n+5$ 이다. 따라서 $a_{10}=200-30+5=175$ 이다."
+        },
+        {
+          "num": 9,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "첫째항이 $2$, 공비가 $4$ 인 등비수열 $\\{a_n\\}$ 에 대하여 $a_1+a_3+a_5$ 의 값은?",
+          "choices": [
+            "$526$",
+            "$536$",
+            "$556$",
+            "$566$",
+            "$546$"
+          ],
+          "answer": 5,
+          "solution": "$a_1=2$, $a_3=2\\cdot 4^{2}=32$, $a_5=2\\cdot 4^{4}=512$ 이므로 $a_1+a_3+a_5=2+32+512=546$ 이다."
+        },
+        {
+          "num": 10,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "첫째항이 $-17$, 공차가 $2$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{18}|a_k|$ 의 값은?",
+          "choices": [
+            "$156$",
+            "$162$",
+            "$158$",
+            "$160$",
+            "$164$"
+          ],
+          "answer": 2,
+          "solution": "$a_k=2k-19$ 이다. $k\\le 9$ 이면 $a_k\\le -1<0$, $k\\ge 10$ 이면 $a_k\\ge 1>0$ 이다. $k=1,\\cdots,9$ 의 절댓값 합은 $17+15+\\cdots+1=81$, $k=10,\\cdots,18$ 의 합은 $1+3+\\cdots+17=81$ 이므로 합은 $162$ 이다.",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "등차수열의 절댓값의 합 $\\displaystyle\\sum_{k=1}^{18}|a_k|$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "첫째항 $-17$, 공차 $2$ 이므로 일반항은 $a_k=-17+2(k-1)=2k-19$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$2k-19<0$ 은 $k\\le 9$, $2k-19>0$ 은 $k\\ge 10$ 이므로 두 구간으로 나누어 절댓값을 처리한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$k=1,\\cdots,9$ 에서 $|a_k|=19-2k$ 이고 그 합은 $17+15+13+11+9+7+5+3+1=81$ 이다. $k=10,\\cdots,18$ 에서 $a_k=2k-19$ 이고 그 합은 $1+3+5+7+9+11+13+15+17=81$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$81+81=162$ 이므로 보기 ④이다."
+            }
+          ]
+        },
+        {
+          "num": 11,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=4n^2+n$ 을 만족시킬 때, $a_{12}$ 의 값을 구하시오.",
+          "answer": "93",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "부분합 $S_n=4n^2+n$ 이 주어졌을 때 제$12$항 $a_{12}$ 의 값을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$S_n$ 은 첫째항부터 제$n$항까지의 합이므로 $n\\ge 2$ 에서 $a_n=S_n-S_{n-1}$ 이 성립한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$a_n=S_n-S_{n-1}=(4n^2+n)-\\left(4(n-1)^2+(n-1)\\right)$ 을 전개하여 정리한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$a_n=4n^2+n-4(n-1)^2-(n-1)=4(2n-1)+1=8n-3$ 이다. 따라서 $a_{12}=8\\cdot 12-3=93$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a_{12}=93$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 12,
+          "unit": "수학적 귀납법",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "수열 $\\{a_n\\}$ 이 $a_1=1$, $a_{n+1}=a_n+3^{n}$ 으로 정의될 때, $a_6$ 의 값을 구하시오.",
+          "answer": "364",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "점화식으로 정의된 수열의 제$6$항 $a_6$ 의 값을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a_1=1$ 이고 $a_{n+1}-a_n=3^{n}$ 이므로 계차수열이 등비수열 $3^{n}$ 임을 이용한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$n\\ge 2$ 에서 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1} 3^{k}$ 로 일반항을 구할 수 있다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\displaystyle\\sum_{k=1}^{n-1} 3^{k}=\\dfrac{3^{n}-3}{2}$ 이므로 $a_6=1+\\dfrac{3^{6}-3}{2}=1+363=364$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a_6=364$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 13,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "수열 $\\{a_n\\}$ 이 $a_1=45$, $a_{n+1}=|a_n-7|$ 로 정의될 때, $\\displaystyle\\sum_{k=1}^{12} a_k$ 의 값을 구하시오.",
+          "answer": "186",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "절댓값 점화식으로 정의된 수열의 처음 $12$개 항의 합을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a_1=45$ 에서 시작하여 $7$ 씩 줄어들다가 $a_7=3$ 이후 절댓값에 의해 주기적으로 변한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "항을 직접 나열한다. $45,38,31,24,17,10,3$ 까지 감소한 후 $a_8=|3-7|=4$, $a_9=|4-7|=3$ 으로 $4,3$ 이 반복된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "항은 $45,38,31,24,17,10,3,4,3,4,3,4$ 이다. 앞 $7$개의 합은 $45+38+31+24+17+10+3=168$, 뒤 $5$개의 합은 $4+3+4+3+4=18$ 이므로 전체 합은 $168+18=186$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$\\displaystyle\\sum_{k=1}^{12} a_k=186$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 14,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "수열 $\\{a_n\\}$ 이 $a_1=6$, $a_{n+1}=a_n+2n$ 으로 정의될 때, $\\displaystyle\\sum_{k=1}^{10} a_k$ 의 값을 구하시오.",
+          "answer": "390",
+          "solution": "$n\\ge 2$ 에서 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1} 2k=6+n(n-1)=n^2-n+6$ 이다. 따라서 $\\displaystyle\\sum_{k=1}^{10} a_k=\\displaystyle\\sum_{k=1}^{10}(k^2-k+6)=385-55+60=390$ 이다."
+        },
+        {
+          "num": 15,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "두 집합 $A=\\{\\,6n\\mid n=1,\\,2,\\,\\cdots,\\,10\\,\\}$, $B=\\{\\,4n\\mid n=1,\\,2,\\,\\cdots,\\,15\\,\\}$ 에 대하여 집합 $A\\cap B$ 의 원소의 개수를 구하시오.",
+          "answer": "5",
+          "solution": "$A=\\{6,12,\\cdots,60\\}$, $B=\\{4,8,\\cdots,60\\}$ 이다. 공통원소는 $12$ 의 배수이고 $60$ 이하의 $12$ 의 배수 $12,24,36,48,60$ 이 모두 두 집합에 속하므로 $5$ 개이다."
+        },
+        {
+          "num": 16,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "$\\displaystyle\\sum_{k=1}^{124}\\log_{5}\\dfrac{k+1}{k}$ 의 값을 구하시오.",
+          "answer": "3",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "로그가 포함된 시그마의 값을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "로그의 합을 곱의 로그로 바꾸어 망원급수(소거) 형태로 변형한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$\\displaystyle\\sum_{k=1}^{124}\\log_{5}\\dfrac{k+1}{k}=\\log_{5}\\left(\\prod_{k=1}^{124}\\dfrac{k+1}{k}\\right)$ 이고 곱은 연속해서 약분된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\displaystyle\\prod_{k=1}^{124}\\dfrac{k+1}{k}=\\dfrac{2}{1}\\cdot\\dfrac{3}{2}\\cdots\\dfrac{125}{124}=125$ 이므로 값은 $\\log_{5} 125=3$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$\\displaystyle\\sum_{k=1}^{124}\\log_{5}\\dfrac{k+1}{k}=3$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 17,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=10$, $\\overline{AC}=6$, $A=60^{\\circ}$ 일 때, 변 $BC$ 의 길이 $\\overline{BC}$ 와 삼각형 $ABC$ 의 넓이의 곱 $\\overline{BC}\\times(\\triangle ABC\\text{의 넓이})$ 를 $p\\sqrt{q}$ 꼴로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $q$ 는 가장 작은 자연수)",
+          "answer": "87",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "코사인법칙으로 $\\overline{BC}$ 를, 넓이 공식으로 삼각형의 넓이를 구해 그 곱을 정리한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$\\overline{AB}=10$, $\\overline{AC}=6$, $A=60^{\\circ}$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A$, 넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A$ 를 쓴다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\overline{BC}^{2}=100+36-2\\cdot 60\\cdot\\dfrac{1}{2}=76$ 이므로 $\\overline{BC}=2\\sqrt{19}$ 이다. 넓이는 $\\dfrac{1}{2}\\cdot 10\\cdot 6\\cdot\\dfrac{\\sqrt{3}}{2}=15\\sqrt{3}$ 이다. 곱은 $2\\sqrt{19}\\cdot 15\\sqrt{3}=30\\sqrt{57}$ 이므로 $p=30$, $q=57$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$p+q=30+57=87$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 18,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "첫째항이 $1$, 공비가 $3$ 인 등비수열 $\\{b_n\\}$ 의 첫째항부터 제$n$항까지의 합을 $T_n$ 이라 할 때, $T_n>5000$ 을 만족시키는 자연수 $n$ 의 최솟값을 구하시오.",
+          "answer": "9",
+          "solution": "$T_n=\\dfrac{3^{n}-1}{3-1}=\\dfrac{3^{n}-1}{2}$ 이므로 $T_n>5000$ 은 $3^{n}>10001$ 과 같다. $3^{8}=6561$, $3^{9}=19683$ 이므로 최솟값은 $n=9$ 이다."
+        },
+        {
+          "num": 19,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "첫째항이 $1$, 공차가 $6$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k\\,a_{k+1}}$ 의 값을 $\\dfrac{q}{p}$ 로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+          "answer": "141",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "등차수열의 곱으로 이루어진 분수를 부분분수로 분해하여 시그마의 값을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a_n=1+6(n-1)=6n-5$ 이고 공차는 $6$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{6}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 부분분수 분해하면 망원급수가 된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{6}\\left(\\dfrac{1}{a_1}-\\dfrac{1}{a_{21}}\\right)=\\dfrac{1}{6}\\left(1-\\dfrac{1}{121}\\right)=\\dfrac{1}{6}\\cdot\\dfrac{120}{121}=\\dfrac{20}{121}$ 이다. 따라서 $p=121$, $q=20$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$p+q=121+20=141$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 20,
+          "unit": "지수와 로그",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "매년 초에 $100$ 만 원씩 연이율 $20\\%$, $1$ 년마다 복리로 적립할 때, $5$ 년째 말의 적립금의 원리합계를 구하시오. (단, $1.2^{5}=2.49$ 로 계산한다. 단위는 만 원)",
+          "answer": "894",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "매년 초 일정 금액을 복리로 적립할 때 $5$ 년째 말의 원리합계를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "연이율 $20\\%$, $1$ 년마다 복리이므로 매년 적립금은 $1.2$ 배씩 불어난다. 매년 초 $100$ 만 원을 $5$ 회 적립한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "첫해 초 적립금은 $1.2^{5}$ 배, $\\cdots$, 다섯째해 초 적립금은 $1.2$ 배가 되어 등비수열의 합으로 계산된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "원리합계는 $100\\left(1.2+1.2^{2}+\\cdots+1.2^{5}\\right)=100\\cdot\\dfrac{1.2\\left(2.49-1\\right)}{0.2}=100\\cdot\\dfrac{1.2\\cdot 1.49}{0.2}=100\\cdot 8.94=894$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "원리합계는 $894$ 만 원이다."
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  "built_at": "2026-06-15T05:45:51.886Z"
+}

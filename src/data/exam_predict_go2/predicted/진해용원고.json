@@ -1,0 +1,2020 @@
+{
+  "school": "진해용원고",
+  "region": "경상남도 창원시",
+  "year": 2025,
+  "grade": "고2",
+  "term": "1학기 기말",
+  "subject": "수학1",
+  "generated_by": "claude-direct-go2",
+  "generated_at": "2026-06-14",
+  "source_note": "원본 출제경향 기반 오리지널",
+  "count": 20,
+  "blueprint": {
+    "difficulty_stars": 4,
+    "subjective_ratio": 25,
+    "allocation": [
+      {
+        "unit": "삼각함수",
+        "n": 5
+      },
+      {
+        "unit": "삼각함수의 활용",
+        "n": 3
+      },
+      {
+        "unit": "등차수열과 등비수열",
+        "n": 6
+      },
+      {
+        "unit": "여러 가지 수열",
+        "n": 4
+      },
+      {
+        "unit": "수학적 귀납법",
+        "n": 2
+      }
+    ]
+  },
+  "problems": [
+    {
+      "num": 1,
+      "unit": "삼각함수",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "$\\sin\\dfrac{\\pi}{6}+\\cos\\dfrac{\\pi}{3}-\\tan\\dfrac{\\pi}{4}$ 의 값은?",
+      "choices": [
+        "$-2$",
+        "$-1$",
+        "$0$",
+        "$1$",
+        "$2$"
+      ],
+      "answer": 3,
+      "solution": "$\\sin\\dfrac{\\pi}{6}=\\dfrac12,\\ \\cos\\dfrac{\\pi}{3}=\\dfrac12,\\ \\tan\\dfrac{\\pi}{4}=1$ 이므로 $\\dfrac12+\\dfrac12-1=0$ 이다."
+    },
+    {
+      "num": 2,
+      "unit": "삼각함수",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "$0\\le x<2\\pi$ 일 때, 방정식 $\\tan x=1$ 의 모든 해의 합은?",
+      "choices": [
+        "$\\dfrac{\\pi}{2}$",
+        "$\\pi$",
+        "$\\dfrac{5\\pi}{4}$",
+        "$\\dfrac{7\\pi}{4}$",
+        "$\\dfrac{3\\pi}{2}$"
+      ],
+      "answer": 5,
+      "solution": "$\\tan x=1$ 의 해는 $x=\\dfrac{\\pi}{4},\\ \\dfrac{5\\pi}{4}$ 이므로 합은 $\\dfrac{\\pi}{4}+\\dfrac{5\\pi}{4}=\\dfrac{3\\pi}{2}$ 이다."
+    },
+    {
+      "num": 3,
+      "unit": "삼각함수",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "두 양수 $a,\\ b$ 에 대하여 함수 $y=a\\cos bx-1$ 의 최댓값이 $1$ 이고 주기가 $\\pi$ 일 때, $a+b$ 의 값은? (단, $b>0$)",
+      "choices": [
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$"
+      ],
+      "answer": 2,
+      "solution": "최댓값 조건에서 $a-1=1$ 이므로 $a=2$ 이고, 주기 조건 $\\dfrac{2\\pi}{b}=\\pi$ 에서 $b=2$ 이므로 $a+b=4$ 이다."
+    },
+    {
+      "num": 4,
+      "unit": "삼각함수",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "$\\dfrac{1}{\\sin^2 30^\\circ}-\\dfrac{1}{\\tan^2 30^\\circ}$ 의 값은?",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$"
+      ],
+      "answer": 1,
+      "solution": "$\\dfrac{1}{\\sin^2\\theta}-\\dfrac{1}{\\tan^2\\theta}=\\dfrac{1}{\\sin^2\\theta}-\\dfrac{\\cos^2\\theta}{\\sin^2\\theta}=\\dfrac{1-\\cos^2\\theta}{\\sin^2\\theta}=1$ 이다."
+    },
+    {
+      "num": 5,
+      "unit": "삼각함수",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "$\\tan 1^\\circ \\times \\tan 2^\\circ \\times \\tan 3^\\circ \\times \\cdots \\times \\tan 89^\\circ$ 의 값은?",
+      "choices": [
+        "$\\dfrac12$",
+        "$\\dfrac{\\sqrt{3}}{2}$",
+        "$1$",
+        "$\\sqrt{3}$",
+        "$2$"
+      ],
+      "answer": 3,
+      "solution": "$\\tan(90^\\circ-\\theta)=\\dfrac{1}{\\tan\\theta}$ 이므로 합이 $90^\\circ$ 인 각의 곱은 각각 $1$ 이고, 가운데 $\\tan 45^\\circ=1$ 이므로 전체 곱은 $1$ 이다."
+    },
+    {
+      "num": 6,
+      "unit": "등차수열과 등비수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "첫째항이 $5$, 공차가 $4$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $a_n>100$ 을 만족시키는 자연수 $n$ 의 최솟값은?",
+      "choices": [
+        "$22$",
+        "$23$",
+        "$24$",
+        "$25$",
+        "$26$"
+      ],
+      "answer": 4,
+      "solution": "$a_n=5+(n-1)\\cdot4=4n+1$ 이고 $4n+1>100$ 이면 $n>24.75$ 이므로 최솟값은 $n=25$ 이다."
+    },
+    {
+      "num": 7,
+      "unit": "삼각함수",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "$0\\le\\theta<2\\pi$ 일 때, $x$ 에 대한 이차방정식 $x^2+2x+2\\cos\\theta=0$ 이 실근을 갖지 않도록 하는 $\\theta$ 의 값의 범위는?",
+      "choices": [
+        "$0\\le\\theta<\\dfrac{\\pi}{3}$",
+        "$0\\le\\theta<\\dfrac{\\pi}{3}\\ \\text{또는}\\ \\dfrac{5\\pi}{3}<\\theta<2\\pi$",
+        "$\\dfrac{\\pi}{3}<\\theta<\\dfrac{5\\pi}{3}$",
+        "$\\dfrac{\\pi}{3}\\le\\theta\\le\\dfrac{5\\pi}{3}$",
+        "$\\dfrac{5\\pi}{3}<\\theta<2\\pi$"
+      ],
+      "answer": 2,
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "이차방정식이 실근을 갖지 않을 조건을 판별식으로 세우고, 이를 만족하는 $\\theta$ 의 범위를 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$0\\le\\theta<2\\pi$ 이고 방정식 $x^2+2x+2\\cos\\theta=0$ 이 실근을 갖지 않으려면 판별식 $D<0$ 이어야 한다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "이차방정식 $x^2+2x+2\\cos\\theta=0$ 의 판별식은 $D/4=1-2\\cos\\theta$ 이고, 실근을 갖지 않을 조건은 $D<0$ 이다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\dfrac{D}{4}=1-2\\cos\\theta<0$ 에서 $\\cos\\theta>\\dfrac12$ 이다. $0\\le\\theta<2\\pi$ 에서 $\\cos\\theta>\\dfrac12$ 인 범위는 $0\\le\\theta<\\dfrac{\\pi}{3}$ 또는 $\\dfrac{5\\pi}{3}<\\theta<2\\pi$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "범위는 $0\\le\\theta<\\dfrac{\\pi}{3}$ 또는 $\\dfrac{5\\pi}{3}<\\theta<2\\pi$ 이므로 보기 ②이다."
+        }
+      ]
+    },
+    {
+      "num": 8,
+      "unit": "여러 가지 수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "첫째항이 $2$, 공차가 $3$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{10} a_k$ 의 값은?",
+      "choices": [
+        "$135$",
+        "$145$",
+        "$155$",
+        "$165$",
+        "$175$"
+      ],
+      "answer": 3,
+      "solution": "$a_k=3k-1$ 이므로 $\\displaystyle\\sum_{k=1}^{10}(3k-1)=3\\cdot\\dfrac{10\\cdot11}{2}-10=165-10=155$ 이다."
+    },
+    {
+      "num": 9,
+      "unit": "등차수열과 등비수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "$3$ 과 $18$ 사이에 $4$ 개의 수 $x_1,\\ x_2,\\ x_3,\\ x_4$ 를 넣어 $3,\\ x_1,\\ x_2,\\ x_3,\\ x_4,\\ 18$ 이 이 순서대로 등차수열을 이룰 때, $x_1+x_2+x_3+x_4$ 의 값은?",
+      "choices": [
+        "$36$",
+        "$38$",
+        "$40$",
+        "$41$",
+        "$42$"
+      ],
+      "answer": 5,
+      "solution": "공차 $d=\\dfrac{18-3}{5}=3$ 이므로 $3,6,9,12,15,18$ 이고 $x_1+x_2+x_3+x_4=6+9+12+15=42$ 이다."
+    },
+    {
+      "num": 10,
+      "unit": "등차수열과 등비수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "첫째항이 $3$, 공비가 $\\sqrt{3}$ 인 등비수열 $\\{a_n\\}$ 에 대하여 $\\log_3(a_1 a_2 a_3 \\cdots a_{10})$ 의 값은?",
+      "choices": [
+        "$\\dfrac{55}{2}$",
+        "$30$",
+        "$\\dfrac{61}{2}$",
+        "$\\dfrac{65}{2}$",
+        "$35$"
+      ],
+      "answer": 4,
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "등비수열의 첫째항부터 제 $10$ 항까지의 곱에 밑이 $3$ 인 로그를 취한 값을 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$a_1=3,$ 공비 $r=\\sqrt{3}$ 이므로 일반항은 $a_k=3\\cdot(\\sqrt{3})^{k-1}$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$3=3^1,\\ \\sqrt{3}=3^{\\frac12}$ 이므로 $a_k=3^{1+\\frac{k-1}{2}}$ 이고, $\\log_3$ 의 곱은 지수의 합으로 바뀐다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\log_3(a_1\\cdots a_{10})=\\displaystyle\\sum_{k=1}^{10}\\left(1+\\dfrac{k-1}{2}\\right)=10+\\dfrac12\\cdot\\dfrac{9\\cdot10}{2}=10+\\dfrac{45}{2}=\\dfrac{65}{2}$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$\\log_3(a_1\\cdots a_{10})=\\dfrac{65}{2}$ 이므로 보기 ④이다."
+        }
+      ]
+    },
+    {
+      "num": 11,
+      "unit": "등차수열과 등비수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "공비가 $1$ 보다 큰 등비수열 $\\{a_n\\}$ 에 대하여 $a_3=12,\\ a_5=48$ 일 때, $a_4$ 의 값은?",
+      "choices": [
+        "$18$",
+        "$24$",
+        "$30$",
+        "$36$",
+        "$42$"
+      ],
+      "answer": 2,
+      "solution": "$\\dfrac{a_5}{a_3}=r^2=4$ 이고 $r>1$ 이므로 $r=2$ 이다. 따라서 $a_4=a_3\\cdot r=12\\cdot2=24$ 이다."
+    },
+    {
+      "num": 12,
+      "unit": "삼각함수의 활용",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "원에 내접하는 사각형 $ABCD$ 에서 $\\overline{AB}=1,\\ \\overline{BC}=2,\\ \\overline{CD}=2,\\ \\overline{DA}=3$ 일 때, 사각형 $ABCD$ 의 넓이는?",
+      "choices": [
+        "$\\sqrt{3}$",
+        "$\\dfrac{3\\sqrt{3}}{2}$",
+        "$2\\sqrt{3}$",
+        "$\\dfrac{5\\sqrt{3}}{2}$",
+        "$3\\sqrt{3}$"
+      ],
+      "answer": 3,
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "원에 내접하는 사각형의 네 변의 길이가 주어졌을 때 넓이를 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$\\overline{AB}=1,\\ \\overline{BC}=2,\\ \\overline{CD}=2,\\ \\overline{DA}=3$ 이고, 마주 보는 두 내각의 합은 $180^\\circ$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "대각선 $BD$ 를 그어 두 삼각형으로 나누고, 코사인법칙으로 $BD^2$ 을 두 가지로 표현한 뒤 $\\cos B+\\cos D=0$ 을 이용한다. 넓이는 $\\dfrac12 ab\\sin\\theta$ 로 더한다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$B+D=180^\\circ$ 이므로 $\\cos D=-\\cos B,\\ \\sin D=\\sin B$ 이다. $BD^2=1^2+2^2-2\\cdot1\\cdot2\\cos B=3^2+2^2-2\\cdot3\\cdot2\\cos D$ 에서 $5-4\\cos B=13+12\\cos B$, 즉 $\\cos B=-\\dfrac12$ 이고 $B=120^\\circ,\\ \\sin B=\\dfrac{\\sqrt3}{2}$ 이다. 넓이는 $\\dfrac12\\cdot1\\cdot2\\sin B+\\dfrac12\\cdot3\\cdot2\\sin D=\\dfrac{\\sqrt3}{2}+\\dfrac{3\\sqrt3}{2}=2\\sqrt3$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "사각형 $ABCD$ 의 넓이는 $2\\sqrt{3}$ 이므로 보기 ③이다."
+        }
+      ]
+    },
+    {
+      "num": 13,
+      "unit": "등차수열과 등비수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "어떤 배양액에서 박테리아의 수는 한 시간마다 처음의 $3$ 배가 된다. 처음 박테리아의 수가 $50$ 마리일 때, $4$ 시간 후의 박테리아의 수는?",
+      "choices": [
+        "$450$",
+        "$1350$",
+        "$2700$",
+        "$3600$",
+        "$4050$"
+      ],
+      "answer": 5,
+      "solution": "한 시간마다 $3$ 배가 되는 등비수열이므로 $4$ 시간 후는 $50\\times3^4=50\\times81=4050$ 마리이다."
+    },
+    {
+      "num": 14,
+      "unit": "삼각함수의 활용",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "삼각형 $ABC$ 에서 $\\overline{BC}=a,\\ \\overline{CA}=b,\\ \\overline{AB}=c$ 라 하자. $a=2,\\ b=3,\\ C=60^\\circ$ 일 때, $c^2$ 의 값은?",
+      "choices": [
+        "$7$",
+        "$8$",
+        "$9$",
+        "$10$",
+        "$11$"
+      ],
+      "answer": 1,
+      "solution": "코사인법칙에 의해 $c^2=a^2+b^2-2ab\\cos C=4+9-2\\cdot2\\cdot3\\cdot\\cos60^\\circ=13-6=7$ 이다."
+    },
+    {
+      "num": 15,
+      "unit": "여러 가지 수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "$\\displaystyle\\sum_{k=1}^{8}(k^2+k)$ 의 값은?",
+      "choices": [
+        "$200$",
+        "$216$",
+        "$228$",
+        "$240$",
+        "$252$"
+      ],
+      "answer": 4,
+      "solution": "$\\displaystyle\\sum_{k=1}^{8}k^2+\\sum_{k=1}^{8}k=\\dfrac{8\\cdot9\\cdot17}{6}+\\dfrac{8\\cdot9}{2}=204+36=240$ 이다."
+    },
+    {
+      "num": 16,
+      "unit": "등차수열과 등비수열",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "첫째항부터 제 $n$ 항까지의 합을 $S_n$ 이라 할 때, 첫째항이 $3$, 공차가 $2$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $S_8$ 의 값을 구하시오.",
+      "answer": "80",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "등차수열의 첫째항부터 제 $8$ 항까지의 합 $S_8$ 을 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "첫째항 $a_1=3$, 공차 $d=2$ 이므로 일반항은 $a_n=2n+1$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "등차수열의 합은 $S_n=\\dfrac{n}{2}\\{2a_1+(n-1)d\\}=\\dfrac{n}{2}(a_1+a_n)$ 이다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$a_8=2\\cdot8+1=17$ 이므로 $S_8=\\dfrac{8}{2}(a_1+a_8)=4\\cdot(3+17)=4\\cdot20=80$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$S_8=80$ 이다."
+        }
+      ]
+    },
+    {
+      "num": 17,
+      "unit": "등차수열과 등비수열",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "세 수 $2,\\ a,\\ b$ 가 이 순서대로 등차수열을 이루고, 세 수 $a,\\ b,\\ 9$ 가 이 순서대로 등비수열을 이룬다. $a+b$ 의 값을 구하시오. (단, $a,\\ b$ 는 양수)",
+      "answer": "10",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "등차수열 조건과 등비수열 조건을 동시에 만족하는 양수 $a,\\ b$ 를 구해 $a+b$ 를 계산한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$2,\\ a,\\ b$ 가 등차수열이고 $a,\\ b,\\ 9$ 가 등비수열이며 $a>0,\\ b>0$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "등차중항 조건 $2a=2+b$, 등비중항 조건 $b^2=9a$ 를 세운다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$2a=2+b$ 에서 $b=2a-2$ 이다. 이를 $b^2=9a$ 에 대입하면 $(2a-2)^2=9a$, 즉 $4a^2-17a+4=0$, $(4a-1)(a-4)=0$ 이다. $a$ 가 양수이고 $b>0$ 이 되려면 $a=4$, 이때 $b=2\\cdot4-2=6$ 이다. 따라서 $a+b=10$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$a+b=10$ 이다."
+        }
+      ]
+    },
+    {
+      "num": 18,
+      "unit": "삼각함수의 활용",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "반지름의 길이가 $\\sqrt{2}$ 인 원 위의 네 점 $A,\\ B,\\ C,\\ D$ 에 대하여 사각형 $ABCD$ 의 네 변의 길이가 모두 $2$ 일 때, 사각형 $ABCD$ 의 넓이를 구하시오.",
+      "answer": "4",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "반지름이 $\\sqrt{2}$ 인 원에 내접하고 네 변의 길이가 모두 $2$ 인 사각형의 넓이를 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "네 변의 길이가 모두 $2$ 로 같고 원에 내접하므로 사각형 $ABCD$ 는 마름모이면서 원에 내접한다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "원에 내접하는 마름모는 정사각형이다. 정사각형의 대각선은 외접원의 지름과 같다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "외접원의 지름은 $2\\sqrt{2}$ 이고 이는 정사각형의 대각선과 같다. 한 변의 길이가 $2$ 인 정사각형의 대각선은 $2\\sqrt{2}$ 로 조건과 일치한다. 따라서 넓이는 $2\\times2=4$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "사각형 $ABCD$ 의 넓이는 $4$ 이다."
+        }
+      ]
+    },
+    {
+      "num": 19,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "첫째항이 $1$, 공차가 $3$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{16}\\dfrac{1}{\\sqrt{a_{k+1}}+\\sqrt{a_k}}$ 의 값을 구하시오.",
+      "answer": "2",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "분모에 근호가 있는 분수의 합을 유리화하여 계산한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$a_1=1$, 공차 $d=3$ 이므로 $a_k=3k-2$ 이고 $a_{k+1}-a_k=3$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "분모를 유리화하면 $\\dfrac{1}{\\sqrt{a_{k+1}}+\\sqrt{a_k}}=\\dfrac{\\sqrt{a_{k+1}}-\\sqrt{a_k}}{a_{k+1}-a_k}=\\dfrac{\\sqrt{a_{k+1}}-\\sqrt{a_k}}{3}$ 이다. 이는 망원합(부분소거) 형태이다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\displaystyle\\sum_{k=1}^{16}\\dfrac{\\sqrt{a_{k+1}}-\\sqrt{a_k}}{3}=\\dfrac{1}{3}(\\sqrt{a_{17}}-\\sqrt{a_1})$ 이다. $a_{17}=3\\cdot17-2=49,\\ a_1=1$ 이므로 $\\dfrac{1}{3}(\\sqrt{49}-\\sqrt{1})=\\dfrac{1}{3}(7-1)=2$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "주어진 합의 값은 $2$ 이다."
+        }
+      ]
+    },
+    {
+      "num": 20,
+      "unit": "수학적 귀납법",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "$n\\ge4$ 인 자연수 $n$ 에 대하여 다음 부등식이 성립함을 수학적 귀납법으로 증명하시오. $$1\\times2\\times3\\times\\cdots\\times n>2^n$$",
+      "answer": "n≥4 인 모든 자연수에서 n! > 2^n 이 성립한다.",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "$n\\ge4$ 인 모든 자연수 $n$ 에 대하여 $n!>2^n$ 임을 수학적 귀납법으로 증명한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$1\\times2\\times\\cdots\\times n=n!$ 으로 두고, 증명할 명제를 $P(n):\\ n!>2^n$ 이라 한다. 단, $n\\ge4$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "수학적 귀납법은 (i) $n=4$ 일 때 성립함을 보이고, (ii) $n=k\\ (k\\ge4)$ 일 때 성립한다고 가정하면 $n=k+1$ 일 때도 성립함을 보이는 두 단계로 이루어진다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "(i) $n=4$ 일 때 좌변 $=4!=24$, 우변 $=2^4=16$ 이므로 $24>16$ 이 성립한다. (ii) $n=k\\ (k\\ge4)$ 일 때 $k!>2^k$ 이 성립한다고 가정한다. 양변에 $k+1$ 을 곱하면 $(k+1)!>(k+1)\\cdot2^k$ 이다. $k\\ge4$ 이면 $k+1\\ge5>2$ 이므로 $(k+1)\\cdot2^k>2\\cdot2^k=2^{k+1}$ 이다. 따라서 $(k+1)!>2^{k+1}$ 이 성립한다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "(i), (ii)에 의해 $n\\ge4$ 인 모든 자연수 $n$ 에 대하여 $n!>2^n$ 이 성립한다."
+        }
+      ]
+    }
+  ],
+  "rounds": [
+    [
+      {
+        "num": 1,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\sin\\dfrac{\\pi}{6}+\\cos\\dfrac{\\pi}{3}-\\tan\\dfrac{\\pi}{4}$ 의 값은?",
+        "choices": [
+          "$-2$",
+          "$-1$",
+          "$0$",
+          "$1$",
+          "$2$"
+        ],
+        "answer": 3,
+        "solution": "$\\sin\\dfrac{\\pi}{6}=\\dfrac12,\\ \\cos\\dfrac{\\pi}{3}=\\dfrac12,\\ \\tan\\dfrac{\\pi}{4}=1$ 이므로 $\\dfrac12+\\dfrac12-1=0$ 이다."
+      },
+      {
+        "num": 2,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$0\\le x<2\\pi$ 일 때, 방정식 $\\tan x=1$ 의 모든 해의 합은?",
+        "choices": [
+          "$\\dfrac{\\pi}{2}$",
+          "$\\pi$",
+          "$\\dfrac{5\\pi}{4}$",
+          "$\\dfrac{7\\pi}{4}$",
+          "$\\dfrac{3\\pi}{2}$"
+        ],
+        "answer": 5,
+        "solution": "$\\tan x=1$ 의 해는 $x=\\dfrac{\\pi}{4},\\ \\dfrac{5\\pi}{4}$ 이므로 합은 $\\dfrac{\\pi}{4}+\\dfrac{5\\pi}{4}=\\dfrac{3\\pi}{2}$ 이다."
+      },
+      {
+        "num": 3,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "두 양수 $a,\\ b$ 에 대하여 함수 $y=a\\cos bx-1$ 의 최댓값이 $1$ 이고 주기가 $\\pi$ 일 때, $a+b$ 의 값은? (단, $b>0$)",
+        "choices": [
+          "$3$",
+          "$4$",
+          "$5$",
+          "$6$",
+          "$7$"
+        ],
+        "answer": 2,
+        "solution": "최댓값 조건에서 $a-1=1$ 이므로 $a=2$ 이고, 주기 조건 $\\dfrac{2\\pi}{b}=\\pi$ 에서 $b=2$ 이므로 $a+b=4$ 이다."
+      },
+      {
+        "num": 4,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\dfrac{1}{\\sin^2 30^\\circ}-\\dfrac{1}{\\tan^2 30^\\circ}$ 의 값은?",
+        "choices": [
+          "$1$",
+          "$2$",
+          "$3$",
+          "$4$",
+          "$5$"
+        ],
+        "answer": 1,
+        "solution": "$\\dfrac{1}{\\sin^2\\theta}-\\dfrac{1}{\\tan^2\\theta}=\\dfrac{1}{\\sin^2\\theta}-\\dfrac{\\cos^2\\theta}{\\sin^2\\theta}=\\dfrac{1-\\cos^2\\theta}{\\sin^2\\theta}=1$ 이다."
+      },
+      {
+        "num": 5,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\tan 1^\\circ \\times \\tan 2^\\circ \\times \\tan 3^\\circ \\times \\cdots \\times \\tan 89^\\circ$ 의 값은?",
+        "choices": [
+          "$\\dfrac12$",
+          "$\\dfrac{\\sqrt{3}}{2}$",
+          "$1$",
+          "$\\sqrt{3}$",
+          "$2$"
+        ],
+        "answer": 3,
+        "solution": "$\\tan(90^\\circ-\\theta)=\\dfrac{1}{\\tan\\theta}$ 이므로 합이 $90^\\circ$ 인 각의 곱은 각각 $1$ 이고, 가운데 $\\tan 45^\\circ=1$ 이므로 전체 곱은 $1$ 이다."
+      },
+      {
+        "num": 6,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "첫째항이 $5$, 공차가 $4$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $a_n>100$ 을 만족시키는 자연수 $n$ 의 최솟값은?",
+        "choices": [
+          "$22$",
+          "$23$",
+          "$24$",
+          "$25$",
+          "$26$"
+        ],
+        "answer": 4,
+        "solution": "$a_n=5+(n-1)\\cdot4=4n+1$ 이고 $4n+1>100$ 이면 $n>24.75$ 이므로 최솟값은 $n=25$ 이다."
+      },
+      {
+        "num": 7,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$0\\le\\theta<2\\pi$ 일 때, $x$ 에 대한 이차방정식 $x^2+2x+2\\cos\\theta=0$ 이 실근을 갖지 않도록 하는 $\\theta$ 의 값의 범위는?",
+        "choices": [
+          "$0\\le\\theta<\\dfrac{\\pi}{3}$",
+          "$0\\le\\theta<\\dfrac{\\pi}{3}\\ \\text{또는}\\ \\dfrac{5\\pi}{3}<\\theta<2\\pi$",
+          "$\\dfrac{\\pi}{3}<\\theta<\\dfrac{5\\pi}{3}$",
+          "$\\dfrac{\\pi}{3}\\le\\theta\\le\\dfrac{5\\pi}{3}$",
+          "$\\dfrac{5\\pi}{3}<\\theta<2\\pi$"
+        ],
+        "answer": 2,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "이차방정식이 실근을 갖지 않을 조건을 판별식으로 세우고, 이를 만족하는 $\\theta$ 의 범위를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$0\\le\\theta<2\\pi$ 이고 방정식 $x^2+2x+2\\cos\\theta=0$ 이 실근을 갖지 않으려면 판별식 $D<0$ 이어야 한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "이차방정식 $x^2+2x+2\\cos\\theta=0$ 의 판별식은 $D/4=1-2\\cos\\theta$ 이고, 실근을 갖지 않을 조건은 $D<0$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\dfrac{D}{4}=1-2\\cos\\theta<0$ 에서 $\\cos\\theta>\\dfrac12$ 이다. $0\\le\\theta<2\\pi$ 에서 $\\cos\\theta>\\dfrac12$ 인 범위는 $0\\le\\theta<\\dfrac{\\pi}{3}$ 또는 $\\dfrac{5\\pi}{3}<\\theta<2\\pi$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "범위는 $0\\le\\theta<\\dfrac{\\pi}{3}$ 또는 $\\dfrac{5\\pi}{3}<\\theta<2\\pi$ 이므로 보기 ②이다."
+          }
+        ]
+      },
+      {
+        "num": 8,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "첫째항이 $2$, 공차가 $3$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{10} a_k$ 의 값은?",
+        "choices": [
+          "$135$",
+          "$145$",
+          "$155$",
+          "$165$",
+          "$175$"
+        ],
+        "answer": 3,
+        "solution": "$a_k=3k-1$ 이므로 $\\displaystyle\\sum_{k=1}^{10}(3k-1)=3\\cdot\\dfrac{10\\cdot11}{2}-10=165-10=155$ 이다."
+      },
+      {
+        "num": 9,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$3$ 과 $18$ 사이에 $4$ 개의 수 $x_1,\\ x_2,\\ x_3,\\ x_4$ 를 넣어 $3,\\ x_1,\\ x_2,\\ x_3,\\ x_4,\\ 18$ 이 이 순서대로 등차수열을 이룰 때, $x_1+x_2+x_3+x_4$ 의 값은?",
+        "choices": [
+          "$36$",
+          "$38$",
+          "$40$",
+          "$41$",
+          "$42$"
+        ],
+        "answer": 5,
+        "solution": "공차 $d=\\dfrac{18-3}{5}=3$ 이므로 $3,6,9,12,15,18$ 이고 $x_1+x_2+x_3+x_4=6+9+12+15=42$ 이다."
+      },
+      {
+        "num": 10,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "첫째항이 $3$, 공비가 $\\sqrt{3}$ 인 등비수열 $\\{a_n\\}$ 에 대하여 $\\log_3(a_1 a_2 a_3 \\cdots a_{10})$ 의 값은?",
+        "choices": [
+          "$\\dfrac{55}{2}$",
+          "$30$",
+          "$\\dfrac{61}{2}$",
+          "$\\dfrac{65}{2}$",
+          "$35$"
+        ],
+        "answer": 4,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등비수열의 첫째항부터 제 $10$ 항까지의 곱에 밑이 $3$ 인 로그를 취한 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_1=3,$ 공비 $r=\\sqrt{3}$ 이므로 일반항은 $a_k=3\\cdot(\\sqrt{3})^{k-1}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$3=3^1,\\ \\sqrt{3}=3^{\\frac12}$ 이므로 $a_k=3^{1+\\frac{k-1}{2}}$ 이고, $\\log_3$ 의 곱은 지수의 합으로 바뀐다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\log_3(a_1\\cdots a_{10})=\\displaystyle\\sum_{k=1}^{10}\\left(1+\\dfrac{k-1}{2}\\right)=10+\\dfrac12\\cdot\\dfrac{9\\cdot10}{2}=10+\\dfrac{45}{2}=\\dfrac{65}{2}$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\log_3(a_1\\cdots a_{10})=\\dfrac{65}{2}$ 이므로 보기 ④이다."
+          }
+        ]
+      },
+      {
+        "num": 11,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "공비가 $1$ 보다 큰 등비수열 $\\{a_n\\}$ 에 대하여 $a_3=12,\\ a_5=48$ 일 때, $a_4$ 의 값은?",
+        "choices": [
+          "$18$",
+          "$24$",
+          "$30$",
+          "$36$",
+          "$42$"
+        ],
+        "answer": 2,
+        "solution": "$\\dfrac{a_5}{a_3}=r^2=4$ 이고 $r>1$ 이므로 $r=2$ 이다. 따라서 $a_4=a_3\\cdot r=12\\cdot2=24$ 이다."
+      },
+      {
+        "num": 12,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "원에 내접하는 사각형 $ABCD$ 에서 $\\overline{AB}=1,\\ \\overline{BC}=2,\\ \\overline{CD}=2,\\ \\overline{DA}=3$ 일 때, 사각형 $ABCD$ 의 넓이는?",
+        "choices": [
+          "$\\sqrt{3}$",
+          "$\\dfrac{3\\sqrt{3}}{2}$",
+          "$2\\sqrt{3}$",
+          "$\\dfrac{5\\sqrt{3}}{2}$",
+          "$3\\sqrt{3}$"
+        ],
+        "answer": 3,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "원에 내접하는 사각형의 네 변의 길이가 주어졌을 때 넓이를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=1,\\ \\overline{BC}=2,\\ \\overline{CD}=2,\\ \\overline{DA}=3$ 이고, 마주 보는 두 내각의 합은 $180^\\circ$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "대각선 $BD$ 를 그어 두 삼각형으로 나누고, 코사인법칙으로 $BD^2$ 을 두 가지로 표현한 뒤 $\\cos B+\\cos D=0$ 을 이용한다. 넓이는 $\\dfrac12 ab\\sin\\theta$ 로 더한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$B+D=180^\\circ$ 이므로 $\\cos D=-\\cos B,\\ \\sin D=\\sin B$ 이다. $BD^2=1^2+2^2-2\\cdot1\\cdot2\\cos B=3^2+2^2-2\\cdot3\\cdot2\\cos D$ 에서 $5-4\\cos B=13+12\\cos B$, 즉 $\\cos B=-\\dfrac12$ 이고 $B=120^\\circ,\\ \\sin B=\\dfrac{\\sqrt3}{2}$ 이다. 넓이는 $\\dfrac12\\cdot1\\cdot2\\sin B+\\dfrac12\\cdot3\\cdot2\\sin D=\\dfrac{\\sqrt3}{2}+\\dfrac{3\\sqrt3}{2}=2\\sqrt3$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "사각형 $ABCD$ 의 넓이는 $2\\sqrt{3}$ 이므로 보기 ③이다."
+          }
+        ]
+      },
+      {
+        "num": 13,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "어떤 배양액에서 박테리아의 수는 한 시간마다 처음의 $3$ 배가 된다. 처음 박테리아의 수가 $50$ 마리일 때, $4$ 시간 후의 박테리아의 수는?",
+        "choices": [
+          "$450$",
+          "$1350$",
+          "$2700$",
+          "$3600$",
+          "$4050$"
+        ],
+        "answer": 5,
+        "solution": "한 시간마다 $3$ 배가 되는 등비수열이므로 $4$ 시간 후는 $50\\times3^4=50\\times81=4050$ 마리이다."
+      },
+      {
+        "num": 14,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{BC}=a,\\ \\overline{CA}=b,\\ \\overline{AB}=c$ 라 하자. $a=2,\\ b=3,\\ C=60^\\circ$ 일 때, $c^2$ 의 값은?",
+        "choices": [
+          "$7$",
+          "$8$",
+          "$9$",
+          "$10$",
+          "$11$"
+        ],
+        "answer": 1,
+        "solution": "코사인법칙에 의해 $c^2=a^2+b^2-2ab\\cos C=4+9-2\\cdot2\\cdot3\\cdot\\cos60^\\circ=13-6=7$ 이다."
+      },
+      {
+        "num": 15,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{8}(k^2+k)$ 의 값은?",
+        "choices": [
+          "$200$",
+          "$216$",
+          "$228$",
+          "$240$",
+          "$252$"
+        ],
+        "answer": 4,
+        "solution": "$\\displaystyle\\sum_{k=1}^{8}k^2+\\sum_{k=1}^{8}k=\\dfrac{8\\cdot9\\cdot17}{6}+\\dfrac{8\\cdot9}{2}=204+36=240$ 이다."
+      },
+      {
+        "num": 16,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "첫째항부터 제 $n$ 항까지의 합을 $S_n$ 이라 할 때, 첫째항이 $3$, 공차가 $2$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $S_8$ 의 값을 구하시오.",
+        "answer": "80",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열의 첫째항부터 제 $8$ 항까지의 합 $S_8$ 을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "첫째항 $a_1=3$, 공차 $d=2$ 이므로 일반항은 $a_n=2n+1$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "등차수열의 합은 $S_n=\\dfrac{n}{2}\\{2a_1+(n-1)d\\}=\\dfrac{n}{2}(a_1+a_n)$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$a_8=2\\cdot8+1=17$ 이므로 $S_8=\\dfrac{8}{2}(a_1+a_8)=4\\cdot(3+17)=4\\cdot20=80$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$S_8=80$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 17,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "세 수 $2,\\ a,\\ b$ 가 이 순서대로 등차수열을 이루고, 세 수 $a,\\ b,\\ 9$ 가 이 순서대로 등비수열을 이룬다. $a+b$ 의 값을 구하시오. (단, $a,\\ b$ 는 양수)",
+        "answer": "10",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열 조건과 등비수열 조건을 동시에 만족하는 양수 $a,\\ b$ 를 구해 $a+b$ 를 계산한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$2,\\ a,\\ b$ 가 등차수열이고 $a,\\ b,\\ 9$ 가 등비수열이며 $a>0,\\ b>0$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "등차중항 조건 $2a=2+b$, 등비중항 조건 $b^2=9a$ 를 세운다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$2a=2+b$ 에서 $b=2a-2$ 이다. 이를 $b^2=9a$ 에 대입하면 $(2a-2)^2=9a$, 즉 $4a^2-17a+4=0$, $(4a-1)(a-4)=0$ 이다. $a$ 가 양수이고 $b>0$ 이 되려면 $a=4$, 이때 $b=2\\cdot4-2=6$ 이다. 따라서 $a+b=10$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a+b=10$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 18,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "반지름의 길이가 $\\sqrt{2}$ 인 원 위의 네 점 $A,\\ B,\\ C,\\ D$ 에 대하여 사각형 $ABCD$ 의 네 변의 길이가 모두 $2$ 일 때, 사각형 $ABCD$ 의 넓이를 구하시오.",
+        "answer": "4",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "반지름이 $\\sqrt{2}$ 인 원에 내접하고 네 변의 길이가 모두 $2$ 인 사각형의 넓이를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "네 변의 길이가 모두 $2$ 로 같고 원에 내접하므로 사각형 $ABCD$ 는 마름모이면서 원에 내접한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "원에 내접하는 마름모는 정사각형이다. 정사각형의 대각선은 외접원의 지름과 같다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "외접원의 지름은 $2\\sqrt{2}$ 이고 이는 정사각형의 대각선과 같다. 한 변의 길이가 $2$ 인 정사각형의 대각선은 $2\\sqrt{2}$ 로 조건과 일치한다. 따라서 넓이는 $2\\times2=4$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "사각형 $ABCD$ 의 넓이는 $4$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 19,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "첫째항이 $1$, 공차가 $3$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{16}\\dfrac{1}{\\sqrt{a_{k+1}}+\\sqrt{a_k}}$ 의 값을 구하시오.",
+        "answer": "2",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "분모에 근호가 있는 분수의 합을 유리화하여 계산한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_1=1$, 공차 $d=3$ 이므로 $a_k=3k-2$ 이고 $a_{k+1}-a_k=3$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "분모를 유리화하면 $\\dfrac{1}{\\sqrt{a_{k+1}}+\\sqrt{a_k}}=\\dfrac{\\sqrt{a_{k+1}}-\\sqrt{a_k}}{a_{k+1}-a_k}=\\dfrac{\\sqrt{a_{k+1}}-\\sqrt{a_k}}{3}$ 이다. 이는 망원합(부분소거) 형태이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{16}\\dfrac{\\sqrt{a_{k+1}}-\\sqrt{a_k}}{3}=\\dfrac{1}{3}(\\sqrt{a_{17}}-\\sqrt{a_1})$ 이다. $a_{17}=3\\cdot17-2=49,\\ a_1=1$ 이므로 $\\dfrac{1}{3}(\\sqrt{49}-\\sqrt{1})=\\dfrac{1}{3}(7-1)=2$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "주어진 합의 값은 $2$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "$n\\ge4$ 인 자연수 $n$ 에 대하여 다음 부등식이 성립함을 수학적 귀납법으로 증명하시오. $$1\\times2\\times3\\times\\cdots\\times n>2^n$$",
+        "answer": "n≥4 인 모든 자연수에서 n! > 2^n 이 성립한다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "$n\\ge4$ 인 모든 자연수 $n$ 에 대하여 $n!>2^n$ 임을 수학적 귀납법으로 증명한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$1\\times2\\times\\cdots\\times n=n!$ 으로 두고, 증명할 명제를 $P(n):\\ n!>2^n$ 이라 한다. 단, $n\\ge4$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "수학적 귀납법은 (i) $n=4$ 일 때 성립함을 보이고, (ii) $n=k\\ (k\\ge4)$ 일 때 성립한다고 가정하면 $n=k+1$ 일 때도 성립함을 보이는 두 단계로 이루어진다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "(i) $n=4$ 일 때 좌변 $=4!=24$, 우변 $=2^4=16$ 이므로 $24>16$ 이 성립한다. (ii) $n=k\\ (k\\ge4)$ 일 때 $k!>2^k$ 이 성립한다고 가정한다. 양변에 $k+1$ 을 곱하면 $(k+1)!>(k+1)\\cdot2^k$ 이다. $k\\ge4$ 이면 $k+1\\ge5>2$ 이므로 $(k+1)\\cdot2^k>2\\cdot2^k=2^{k+1}$ 이다. 따라서 $(k+1)!>2^{k+1}$ 이 성립한다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "(i), (ii)에 의해 $n\\ge4$ 인 모든 자연수 $n$ 에 대하여 $n!>2^n$ 이 성립한다."
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "num": 1,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\cos\\dfrac{\\pi}{6}+\\sin\\dfrac{\\pi}{3}-\\tan\\dfrac{\\pi}{3}$ 의 값은?",
+        "choices": [
+          "$-\\sqrt{3}$",
+          "$-1$",
+          "$0$",
+          "$1$",
+          "$\\sqrt{3}$"
+        ],
+        "answer": 3,
+        "solution": "$\\cos\\dfrac{\\pi}{6}=\\dfrac{\\sqrt3}{2},\\ \\sin\\dfrac{\\pi}{3}=\\dfrac{\\sqrt3}{2},\\ \\tan\\dfrac{\\pi}{3}=\\sqrt3$ 이므로 $\\dfrac{\\sqrt3}{2}+\\dfrac{\\sqrt3}{2}-\\sqrt3=0$ 이다."
+      },
+      {
+        "num": 2,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$0\\le x<2\\pi$ 일 때, 방정식 $\\tan x=\\sqrt{3}$ 의 모든 해의 합은?",
+        "choices": [
+          "$\\dfrac{\\pi}{3}$",
+          "$\\dfrac{4\\pi}{3}$",
+          "$\\dfrac{7\\pi}{4}$",
+          "$2\\pi$",
+          "$\\dfrac{5\\pi}{3}$"
+        ],
+        "answer": 5,
+        "solution": "$\\tan x=\\sqrt{3}$ 의 해는 $x=\\dfrac{\\pi}{3},\\ \\dfrac{4\\pi}{3}$ 이므로 합은 $\\dfrac{\\pi}{3}+\\dfrac{4\\pi}{3}=\\dfrac{5\\pi}{3}$ 이다."
+      },
+      {
+        "num": 3,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "두 양수 $a,\\ b$ 에 대하여 함수 $y=a\\cos bx-1$ 의 최댓값이 $2$ 이고 주기가 $\\dfrac{2\\pi}{3}$ 일 때, $a+b$ 의 값은? (단, $b>0$)",
+        "choices": [
+          "$6$",
+          "$4$",
+          "$5$",
+          "$7$",
+          "$8$"
+        ],
+        "answer": 1,
+        "solution": "최댓값 조건에서 $a-1=2$ 이므로 $a=3$ 이고, 주기 조건 $\\dfrac{2\\pi}{b}=\\dfrac{2\\pi}{3}$ 에서 $b=3$ 이므로 $a+b=6$ 이다."
+      },
+      {
+        "num": 4,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\dfrac{1}{\\sin^2 60^\\circ}-\\dfrac{1}{\\tan^2 60^\\circ}$ 의 값은?",
+        "choices": [
+          "$2$",
+          "$1$",
+          "$3$",
+          "$4$",
+          "$5$"
+        ],
+        "answer": 2,
+        "solution": "$\\dfrac{1}{\\sin^2\\theta}-\\dfrac{1}{\\tan^2\\theta}=\\dfrac{1-\\cos^2\\theta}{\\sin^2\\theta}=1$ 이다."
+      },
+      {
+        "num": 5,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\tan 5^\\circ \\times \\tan 10^\\circ \\times \\tan 15^\\circ \\times \\cdots \\times \\tan 85^\\circ$ 의 값은? (단, $5^\\circ$ 간격)",
+        "choices": [
+          "$\\dfrac12$",
+          "$\\dfrac{\\sqrt{3}}{2}$",
+          "$\\sqrt{3}$",
+          "$1$",
+          "$2$"
+        ],
+        "answer": 4,
+        "solution": "$\\tan(90^\\circ-\\theta)=\\dfrac{1}{\\tan\\theta}$ 이므로 합이 $90^\\circ$ 인 각의 곱은 각각 $1$ 이고, 가운데 $\\tan 45^\\circ=1$ 이므로 전체 곱은 $1$ 이다."
+      },
+      {
+        "num": 6,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "첫째항이 $7$, 공차가 $3$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $a_n>100$ 을 만족시키는 자연수 $n$ 의 최솟값은?",
+        "choices": [
+          "$31$",
+          "$32$",
+          "$34$",
+          "$35$",
+          "$33$"
+        ],
+        "answer": 5,
+        "solution": "$a_n=7+(n-1)\\cdot3=3n+4$ 이고 $3n+4>100$ 이면 $n>32$ 이므로 최솟값은 $n=33$ 이다."
+      },
+      {
+        "num": 7,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$0\\le\\theta<2\\pi$ 일 때, $x$ 에 대한 이차방정식 $x^2+4x+8\\cos\\theta=0$ 이 실근을 갖지 않도록 하는 $\\theta$ 의 값의 범위는?",
+        "choices": [
+          "$0\\le\\theta<\\dfrac{\\pi}{3}$",
+          "$0\\le\\theta<\\dfrac{\\pi}{3}\\ \\text{또는}\\ \\dfrac{5\\pi}{3}<\\theta<2\\pi$",
+          "$\\dfrac{\\pi}{3}<\\theta<\\dfrac{5\\pi}{3}$",
+          "$\\dfrac{\\pi}{3}\\le\\theta\\le\\dfrac{5\\pi}{3}$",
+          "$\\dfrac{5\\pi}{3}<\\theta<2\\pi$"
+        ],
+        "answer": 2,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "이차방정식이 실근을 갖지 않을 조건을 판별식으로 세우고, 이를 만족하는 $\\theta$ 의 범위를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$0\\le\\theta<2\\pi$ 이고 방정식 $x^2+4x+8\\cos\\theta=0$ 이 실근을 갖지 않으려면 판별식 $D<0$ 이어야 한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "이차방정식 $x^2+4x+8\\cos\\theta=0$ 의 판별식은 $D/4=4-8\\cos\\theta$ 이고, 실근을 갖지 않을 조건은 $D<0$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\dfrac{D}{4}=4-8\\cos\\theta<0$ 에서 $\\cos\\theta>\\dfrac12$ 이다. $0\\le\\theta<2\\pi$ 에서 $\\cos\\theta>\\dfrac12$ 인 범위는 $0\\le\\theta<\\dfrac{\\pi}{3}$ 또는 $\\dfrac{5\\pi}{3}<\\theta<2\\pi$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "범위는 $0\\le\\theta<\\dfrac{\\pi}{3}$ 또는 $\\dfrac{5\\pi}{3}<\\theta<2\\pi$ 이므로 보기 ②이다."
+          }
+        ]
+      },
+      {
+        "num": 8,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "첫째항이 $3$, 공차가 $4$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{10} a_k$ 의 값은?",
+        "choices": [
+          "$210$",
+          "$190$",
+          "$200$",
+          "$220$",
+          "$230$"
+        ],
+        "answer": 1,
+        "solution": "$a_k=4k-1$ 이므로 $\\displaystyle\\sum_{k=1}^{10}(4k-1)=4\\cdot\\dfrac{10\\cdot11}{2}-10=220-10=210$ 이다."
+      },
+      {
+        "num": 9,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$4$ 와 $24$ 사이에 $4$ 개의 수 $x_1,\\ x_2,\\ x_3,\\ x_4$ 를 넣어 $4,\\ x_1,\\ x_2,\\ x_3,\\ x_4,\\ 24$ 가 이 순서대로 등차수열을 이룰 때, $x_1+x_2+x_3+x_4$ 의 값은?",
+        "choices": [
+          "$48$",
+          "$52$",
+          "$56$",
+          "$60$",
+          "$64$"
+        ],
+        "answer": 3,
+        "solution": "공차 $d=\\dfrac{24-4}{5}=4$ 이므로 $4,8,12,16,20,24$ 이고 $x_1+x_2+x_3+x_4=8+12+16+20=56$ 이다."
+      },
+      {
+        "num": 10,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "첫째항이 $9$, 공비가 $\\sqrt{3}$ 인 등비수열 $\\{a_n\\}$ 에 대하여 $\\log_3(a_1 a_2 a_3 \\cdots a_{10})$ 의 값은?",
+        "choices": [
+          "$\\dfrac{75}{2}$",
+          "$40$",
+          "$\\dfrac{81}{2}$",
+          "$\\dfrac{85}{2}$",
+          "$45$"
+        ],
+        "answer": 4,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등비수열의 첫째항부터 제 $10$ 항까지의 곱에 밑이 $3$ 인 로그를 취한 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_1=9,$ 공비 $r=\\sqrt{3}$ 이므로 일반항은 $a_k=9\\cdot(\\sqrt{3})^{k-1}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$9=3^2,\\ \\sqrt{3}=3^{\\frac12}$ 이므로 $a_k=3^{2+\\frac{k-1}{2}}$ 이고, $\\log_3$ 의 곱은 지수의 합으로 바뀐다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\log_3(a_1\\cdots a_{10})=\\displaystyle\\sum_{k=1}^{10}\\left(2+\\dfrac{k-1}{2}\\right)=20+\\dfrac12\\cdot\\dfrac{9\\cdot10}{2}=20+\\dfrac{45}{2}=\\dfrac{85}{2}$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\log_3(a_1\\cdots a_{10})=\\dfrac{85}{2}$ 이므로 보기 ④이다."
+          }
+        ]
+      },
+      {
+        "num": 11,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "공비가 $1$ 보다 큰 등비수열 $\\{a_n\\}$ 에 대하여 $a_2=8,\\ a_4=32$ 일 때, $a_3$ 의 값은?",
+        "choices": [
+          "$12$",
+          "$16$",
+          "$20$",
+          "$24$",
+          "$28$"
+        ],
+        "answer": 2,
+        "solution": "$\\dfrac{a_4}{a_2}=r^2=4$ 이고 $r>1$ 이므로 $r=2$ 이다. 따라서 $a_3=a_2\\cdot r=8\\cdot2=16$ 이다."
+      },
+      {
+        "num": 12,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "원에 내접하는 사각형 $ABCD$ 에서 $\\overline{AB}=2,\\ \\overline{BC}=2,\\ \\overline{CD}=2,\\ \\overline{DA}=4$ 일 때, 사각형 $ABCD$ 의 넓이는?",
+        "choices": [
+          "$2\\sqrt{3}$",
+          "$\\dfrac{5\\sqrt{3}}{2}$",
+          "$\\dfrac{7\\sqrt{3}}{2}$",
+          "$4\\sqrt{3}$",
+          "$3\\sqrt{3}$"
+        ],
+        "answer": 5,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "원에 내접하는 사각형의 네 변의 길이가 주어졌을 때 넓이를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=2,\\ \\overline{BC}=2,\\ \\overline{CD}=2,\\ \\overline{DA}=4$ 이고, 마주 보는 두 내각의 합은 $180^\\circ$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "대각선 $AC$ 를 그어 두 삼각형으로 나누고, 코사인법칙으로 $AC^2$ 을 두 가지로 표현한 뒤 $\\cos B+\\cos D=0$ 을 이용한다. 넓이는 $\\dfrac12 ab\\sin\\theta$ 로 더한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$B+D=180^\\circ$ 이므로 $\\cos D=-\\cos B,\\ \\sin D=\\sin B$ 이다. $AC^2=2^2+2^2-2\\cdot2\\cdot2\\cos B=2^2+4^2-2\\cdot2\\cdot4\\cos D$ 에서 $8-8\\cos B=20+16\\cos B$, 즉 $\\cos B=-\\dfrac12$ 이고 $B=120^\\circ,\\ \\sin B=\\dfrac{\\sqrt3}{2}$ 이다. 넓이는 $\\dfrac12\\cdot2\\cdot2\\sin B+\\dfrac12\\cdot2\\cdot4\\sin D=\\sqrt3+2\\sqrt3=3\\sqrt3$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "사각형 $ABCD$ 의 넓이는 $3\\sqrt{3}$ 이므로 보기 ⑤이다."
+          }
+        ]
+      },
+      {
+        "num": 13,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "어떤 배양액에서 박테리아의 수는 한 시간마다 처음의 $2$ 배가 된다. 처음 박테리아의 수가 $40$ 마리일 때, $4$ 시간 후의 박테리아의 수는?",
+        "choices": [
+          "$640$",
+          "$160$",
+          "$320$",
+          "$480$",
+          "$800$"
+        ],
+        "answer": 1,
+        "solution": "한 시간마다 $2$ 배가 되는 등비수열이므로 $4$ 시간 후는 $40\\times2^4=40\\times16=640$ 마리이다."
+      },
+      {
+        "num": 14,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{BC}=a,\\ \\overline{CA}=b,\\ \\overline{AB}=c$ 라 하자. $a=3,\\ b=4,\\ C=60^\\circ$ 일 때, $c^2$ 의 값은?",
+        "choices": [
+          "$11$",
+          "$12$",
+          "$13$",
+          "$14$",
+          "$15$"
+        ],
+        "answer": 3,
+        "solution": "코사인법칙에 의해 $c^2=a^2+b^2-2ab\\cos C=9+16-2\\cdot3\\cdot4\\cdot\\cos60^\\circ=25-12=13$ 이다."
+      },
+      {
+        "num": 15,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{6}(k^2+k)$ 의 값은?",
+        "choices": [
+          "$98$",
+          "$105$",
+          "$119$",
+          "$112$",
+          "$126$"
+        ],
+        "answer": 4,
+        "solution": "$\\displaystyle\\sum_{k=1}^{6}k^2+\\sum_{k=1}^{6}k=\\dfrac{6\\cdot7\\cdot13}{6}+\\dfrac{6\\cdot7}{2}=91+21=112$ 이다."
+      },
+      {
+        "num": 16,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "첫째항부터 제 $n$ 항까지의 합을 $S_n$ 이라 할 때, 첫째항이 $5$, 공차가 $3$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $S_{10}$ 의 값을 구하시오.",
+        "answer": "185",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열의 첫째항부터 제 $10$ 항까지의 합 $S_{10}$ 을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "첫째항 $a_1=5$, 공차 $d=3$ 이므로 일반항은 $a_n=3n+2$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "등차수열의 합은 $S_n=\\dfrac{n}{2}\\{2a_1+(n-1)d\\}=\\dfrac{n}{2}(a_1+a_n)$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$a_{10}=3\\cdot10+2=32$ 이므로 $S_{10}=\\dfrac{10}{2}(a_1+a_{10})=5\\cdot(5+32)=5\\cdot37=185$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$S_{10}=185$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 17,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "세 수 $4,\\ a,\\ b$ 가 이 순서대로 등차수열을 이루고, 세 수 $a,\\ b,\\ 18$ 이 이 순서대로 등비수열을 이룬다. $a+b$ 의 값을 구하시오. (단, $a,\\ b$ 는 양수)",
+        "answer": "20",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열 조건과 등비수열 조건을 동시에 만족하는 양수 $a,\\ b$ 를 구해 $a+b$ 를 계산한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$4,\\ a,\\ b$ 가 등차수열이고 $a,\\ b,\\ 18$ 이 등비수열이며 $a>0,\\ b>0$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "등차중항 조건 $2a=4+b$, 등비중항 조건 $b^2=18a$ 를 세운다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$2a=4+b$ 에서 $b=2a-4$ 이다. 이를 $b^2=18a$ 에 대입하면 $(2a-4)^2=18a$, 즉 $4a^2-34a+16=0$, $2a^2-17a+8=0$, $(2a-1)(a-8)=0$ 이다. $a$ 가 양수이고 $b>0$ 이 되려면 $a=8$, 이때 $b=2\\cdot8-4=12$ 이다. 따라서 $a+b=20$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a+b=20$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 18,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "반지름의 길이가 $2$ 인 원 위의 네 점 $A,\\ B,\\ C,\\ D$ 에 대하여 사각형 $ABCD$ 의 네 변의 길이가 모두 $2\\sqrt{2}$ 일 때, 사각형 $ABCD$ 의 넓이를 구하시오.",
+        "answer": "8",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "반지름이 $2$ 인 원에 내접하고 네 변의 길이가 모두 $2\\sqrt{2}$ 인 사각형의 넓이를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "네 변의 길이가 모두 $2\\sqrt{2}$ 로 같고 원에 내접하므로 사각형 $ABCD$ 는 마름모이면서 원에 내접한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "원에 내접하는 마름모는 정사각형이다. 정사각형의 대각선은 외접원의 지름과 같다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "외접원의 지름은 $4$ 이고 이는 정사각형의 대각선과 같다. 한 변의 길이가 $2\\sqrt{2}$ 인 정사각형의 대각선은 $2\\sqrt{2}\\cdot\\sqrt{2}=4$ 로 조건과 일치한다. 따라서 넓이는 $(2\\sqrt{2})^2=8$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "사각형 $ABCD$ 의 넓이는 $8$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 19,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "첫째항이 $4$, 공차가 $5$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{9}\\dfrac{1}{\\sqrt{a_{k+1}}+\\sqrt{a_k}}$ 의 값을 구하시오.",
+        "answer": "1",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "분모에 근호가 있는 분수의 합을 유리화하여 계산한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_1=4$, 공차 $d=5$ 이므로 $a_k=5k-1$ 이고 $a_{k+1}-a_k=5$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "분모를 유리화하면 $\\dfrac{1}{\\sqrt{a_{k+1}}+\\sqrt{a_k}}=\\dfrac{\\sqrt{a_{k+1}}-\\sqrt{a_k}}{a_{k+1}-a_k}=\\dfrac{\\sqrt{a_{k+1}}-\\sqrt{a_k}}{5}$ 이다. 이는 망원합(부분소거) 형태이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{9}\\dfrac{\\sqrt{a_{k+1}}-\\sqrt{a_k}}{5}=\\dfrac{1}{5}(\\sqrt{a_{10}}-\\sqrt{a_1})$ 이다. $a_{10}=5\\cdot10-1=49,\\ a_1=4$ 이므로 $\\dfrac{1}{5}(\\sqrt{49}-\\sqrt{4})=\\dfrac{1}{5}(7-2)=1$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "주어진 합의 값은 $1$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "$n\\ge5$ 인 자연수 $n$ 에 대하여 다음 부등식이 성립함을 수학적 귀납법으로 증명하시오. $$2^n>n^2$$",
+        "answer": "n≥5 인 모든 자연수에서 2^n > n^2 이 성립한다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "$n\\ge5$ 인 모든 자연수 $n$ 에 대하여 $2^n>n^2$ 임을 수학적 귀납법으로 증명한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "증명할 명제를 $P(n):\\ 2^n>n^2$ 이라 한다. 단, $n\\ge5$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "수학적 귀납법은 (i) $n=5$ 일 때 성립함을 보이고, (ii) $n=k\\ (k\\ge5)$ 일 때 성립한다고 가정하면 $n=k+1$ 일 때도 성립함을 보이는 두 단계로 이루어진다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "(i) $n=5$ 일 때 좌변 $=2^5=32$, 우변 $=5^2=25$ 이므로 $32>25$ 가 성립한다. (ii) $n=k\\ (k\\ge5)$ 일 때 $2^k>k^2$ 이 성립한다고 가정한다. 양변에 $2$ 를 곱하면 $2^{k+1}>2k^2$ 이다. $k\\ge5$ 이면 $2k^2-(k+1)^2=k^2-2k-1=(k-1)^2-2>0$ 이므로 $2k^2>(k+1)^2$ 이다. 따라서 $2^{k+1}>(k+1)^2$ 이 성립한다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "(i), (ii)에 의해 $n\\ge5$ 인 모든 자연수 $n$ 에 대하여 $2^n>n^2$ 이 성립한다."
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "num": 1,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\sin\\dfrac{\\pi}{4}+\\cos\\dfrac{\\pi}{4}-\\tan\\dfrac{\\pi}{4}$ 의 값은?",
+        "choices": [
+          "$\\sqrt{2}-2$",
+          "$\\sqrt{2}-1$",
+          "$0$",
+          "$1$",
+          "$\\sqrt{2}$"
+        ],
+        "answer": 2,
+        "solution": "$\\sin\\dfrac{\\pi}{4}=\\dfrac{\\sqrt2}{2},\\ \\cos\\dfrac{\\pi}{4}=\\dfrac{\\sqrt2}{2},\\ \\tan\\dfrac{\\pi}{4}=1$ 이므로 $\\dfrac{\\sqrt2}{2}+\\dfrac{\\sqrt2}{2}-1=\\sqrt2-1$ 이다."
+      },
+      {
+        "num": 2,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$0\\le x<2\\pi$ 일 때, 방정식 $\\tan x=\\dfrac{1}{\\sqrt{3}}$ 의 모든 해의 합은?",
+        "choices": [
+          "$\\dfrac{\\pi}{6}$",
+          "$\\dfrac{7\\pi}{6}$",
+          "$\\dfrac{3\\pi}{2}$",
+          "$\\dfrac{4\\pi}{3}$",
+          "$\\dfrac{11\\pi}{6}$"
+        ],
+        "answer": 4,
+        "solution": "$\\tan x=\\dfrac{1}{\\sqrt{3}}$ 의 해는 $x=\\dfrac{\\pi}{6},\\ \\dfrac{7\\pi}{6}$ 이므로 합은 $\\dfrac{\\pi}{6}+\\dfrac{7\\pi}{6}=\\dfrac{4\\pi}{3}$ 이다."
+      },
+      {
+        "num": 3,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "두 양수 $a,\\ b$ 에 대하여 함수 $y=a\\sin bx+2$ 의 최댓값이 $5$ 이고 주기가 $4\\pi$ 일 때, $a+b$ 의 값은? (단, $b>0$)",
+        "choices": [
+          "$\\dfrac{7}{2}$",
+          "$3$",
+          "$4$",
+          "$\\dfrac{9}{2}$",
+          "$5$"
+        ],
+        "answer": 1,
+        "solution": "최댓값 조건에서 $a+2=5$ 이므로 $a=3$ 이고, 주기 조건 $\\dfrac{2\\pi}{b}=4\\pi$ 에서 $b=\\dfrac12$ 이므로 $a+b=\\dfrac72$ 이다."
+      },
+      {
+        "num": 4,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\dfrac{1}{\\sin^2 45^\\circ}-\\dfrac{1}{\\tan^2 45^\\circ}$ 의 값은?",
+        "choices": [
+          "$2$",
+          "$3$",
+          "$4$",
+          "$5$",
+          "$1$"
+        ],
+        "answer": 5,
+        "solution": "$\\dfrac{1}{\\sin^2\\theta}-\\dfrac{1}{\\tan^2\\theta}=\\dfrac{1-\\cos^2\\theta}{\\sin^2\\theta}=1$ 이다."
+      },
+      {
+        "num": 5,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\tan 10^\\circ \\times \\tan 20^\\circ \\times \\tan 30^\\circ \\times \\cdots \\times \\tan 80^\\circ$ 의 값은? (단, $10^\\circ$ 간격)",
+        "choices": [
+          "$\\dfrac12$",
+          "$\\dfrac{\\sqrt{3}}{2}$",
+          "$1$",
+          "$\\sqrt{3}$",
+          "$2$"
+        ],
+        "answer": 3,
+        "solution": "$\\tan(90^\\circ-\\theta)=\\dfrac{1}{\\tan\\theta}$ 이므로 합이 $90^\\circ$ 인 각의 곱은 각각 $1$ 이다. $\\tan10^\\circ\\tan80^\\circ=\\tan20^\\circ\\tan70^\\circ=\\cdots=1$ 이므로 전체 곱은 $1$ 이다."
+      },
+      {
+        "num": 6,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "첫째항이 $2$, 공차가 $5$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $a_n>200$ 을 만족시키는 자연수 $n$ 의 최솟값은?",
+        "choices": [
+          "$40$",
+          "$41$",
+          "$42$",
+          "$43$",
+          "$44$"
+        ],
+        "answer": 2,
+        "solution": "$a_n=2+(n-1)\\cdot5=5n-3$ 이고 $5n-3>200$ 이면 $n>40.6$ 이므로 최솟값은 $n=41$ 이다."
+      },
+      {
+        "num": 7,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$0\\le\\theta<2\\pi$ 일 때, $x$ 에 대한 이차방정식 $x^2-2x+2\\cos\\theta=0$ 이 서로 다른 두 실근을 갖도록 하는 $\\theta$ 의 값의 범위는?",
+        "choices": [
+          "$0\\le\\theta<\\dfrac{\\pi}{3}$",
+          "$0\\le\\theta<\\dfrac{\\pi}{3}\\ \\text{또는}\\ \\dfrac{5\\pi}{3}<\\theta<2\\pi$",
+          "$\\dfrac{\\pi}{3}<\\theta<\\dfrac{5\\pi}{3}$",
+          "$\\dfrac{\\pi}{3}\\le\\theta\\le\\dfrac{5\\pi}{3}$",
+          "$\\dfrac{5\\pi}{3}<\\theta<2\\pi$"
+        ],
+        "answer": 3,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "이차방정식이 서로 다른 두 실근을 가질 조건을 판별식으로 세우고, 이를 만족하는 $\\theta$ 의 범위를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$0\\le\\theta<2\\pi$ 이고 방정식 $x^2-2x+2\\cos\\theta=0$ 이 서로 다른 두 실근을 가지려면 판별식 $D>0$ 이어야 한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "이차방정식 $x^2-2x+2\\cos\\theta=0$ 의 판별식은 $D/4=1-2\\cos\\theta$ 이고, 서로 다른 두 실근을 가질 조건은 $D>0$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\dfrac{D}{4}=1-2\\cos\\theta>0$ 에서 $\\cos\\theta<\\dfrac12$ 이다. $0\\le\\theta<2\\pi$ 에서 $\\cos\\theta<\\dfrac12$ 인 범위는 $\\dfrac{\\pi}{3}<\\theta<\\dfrac{5\\pi}{3}$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "범위는 $\\dfrac{\\pi}{3}<\\theta<\\dfrac{5\\pi}{3}$ 이므로 보기 ③이다."
+          }
+        ]
+      },
+      {
+        "num": 8,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "첫째항이 $1$, 공차가 $2$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{10} a_k$ 의 값은?",
+        "choices": [
+          "$80$",
+          "$90$",
+          "$110$",
+          "$120$",
+          "$100$"
+        ],
+        "answer": 5,
+        "solution": "$a_k=2k-1$ 이므로 $\\displaystyle\\sum_{k=1}^{10}(2k-1)=2\\cdot\\dfrac{10\\cdot11}{2}-10=110-10=100$ 이다."
+      },
+      {
+        "num": 9,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$2$ 와 $32$ 사이에 $4$ 개의 수 $x_1,\\ x_2,\\ x_3,\\ x_4$ 를 넣어 $2,\\ x_1,\\ x_2,\\ x_3,\\ x_4,\\ 32$ 가 이 순서대로 등차수열을 이룰 때, $x_1+x_2+x_3+x_4$ 의 값은?",
+        "choices": [
+          "$68$",
+          "$60$",
+          "$64$",
+          "$72$",
+          "$76$"
+        ],
+        "answer": 1,
+        "solution": "공차 $d=\\dfrac{32-2}{5}=6$ 이므로 $2,8,14,20,26,32$ 이고 $x_1+x_2+x_3+x_4=8+14+20+26=68$ 이다."
+      },
+      {
+        "num": 10,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "첫째항이 $27$, 공비가 $\\sqrt{3}$ 인 등비수열 $\\{a_n\\}$ 에 대하여 $\\log_3(a_1 a_2 a_3 \\cdots a_{10})$ 의 값은?",
+        "choices": [
+          "$\\dfrac{95}{2}$",
+          "$50$",
+          "$55$",
+          "$\\dfrac{105}{2}$",
+          "$\\dfrac{115}{2}$"
+        ],
+        "answer": 4,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등비수열의 첫째항부터 제 $10$ 항까지의 곱에 밑이 $3$ 인 로그를 취한 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_1=27,$ 공비 $r=\\sqrt{3}$ 이므로 일반항은 $a_k=27\\cdot(\\sqrt{3})^{k-1}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$27=3^3,\\ \\sqrt{3}=3^{\\frac12}$ 이므로 $a_k=3^{3+\\frac{k-1}{2}}$ 이고, $\\log_3$ 의 곱은 지수의 합으로 바뀐다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\log_3(a_1\\cdots a_{10})=\\displaystyle\\sum_{k=1}^{10}\\left(3+\\dfrac{k-1}{2}\\right)=30+\\dfrac12\\cdot\\dfrac{9\\cdot10}{2}=30+\\dfrac{45}{2}=\\dfrac{105}{2}$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\log_3(a_1\\cdots a_{10})=\\dfrac{105}{2}$ 이므로 보기 ④이다."
+          }
+        ]
+      },
+      {
+        "num": 11,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "공비가 $1$ 보다 큰 등비수열 $\\{a_n\\}$ 에 대하여 $a_3=5,\\ a_5=45$ 일 때, $a_4$ 의 값은?",
+        "choices": [
+          "$10$",
+          "$20$",
+          "$15$",
+          "$25$",
+          "$30$"
+        ],
+        "answer": 3,
+        "solution": "$\\dfrac{a_5}{a_3}=r^2=9$ 이고 $r>1$ 이므로 $r=3$ 이다. 따라서 $a_4=a_3\\cdot r=5\\cdot3=15$ 이다."
+      },
+      {
+        "num": 12,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "원에 내접하는 사각형 $ABCD$ 에서 $\\overline{AB}=2,\\ \\overline{BC}=3,\\ \\overline{CD}=5,\\ \\overline{DA}=2$ 일 때, 사각형 $ABCD$ 의 넓이는?",
+        "choices": [
+          "$2\\sqrt{3}$",
+          "$3\\sqrt{3}$",
+          "$\\dfrac{7\\sqrt{3}}{2}$",
+          "$\\dfrac{9\\sqrt{3}}{2}$",
+          "$4\\sqrt{3}$"
+        ],
+        "answer": 5,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "원에 내접하는 사각형의 네 변의 길이가 주어졌을 때 넓이를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=2,\\ \\overline{BC}=3,\\ \\overline{CD}=5,\\ \\overline{DA}=2$ 이고, 마주 보는 두 내각의 합은 $180^\\circ$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "대각선 $AC$ 를 그어 두 삼각형으로 나누고, 코사인법칙으로 $AC^2$ 을 두 가지로 표현한 뒤 $\\cos B+\\cos D=0$ 을 이용한다. 넓이는 $\\dfrac12 ab\\sin\\theta$ 로 더한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$B+D=180^\\circ$ 이므로 $\\cos D=-\\cos B,\\ \\sin D=\\sin B$ 이다. $AC^2=2^2+3^2-2\\cdot2\\cdot3\\cos B=5^2+2^2-2\\cdot5\\cdot2\\cos D$ 에서 $13-12\\cos B=29+20\\cos B$, 즉 $\\cos B=-\\dfrac12$ 이고 $B=120^\\circ,\\ \\sin B=\\dfrac{\\sqrt3}{2}$ 이다. 넓이는 $\\dfrac12\\cdot2\\cdot3\\sin B+\\dfrac12\\cdot5\\cdot2\\sin D=\\dfrac{3\\sqrt3}{2}+\\dfrac{5\\sqrt3}{2}=4\\sqrt3$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "사각형 $ABCD$ 의 넓이는 $4\\sqrt{3}$ 이므로 보기 ⑤이다."
+          }
+        ]
+      },
+      {
+        "num": 13,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "어떤 배양액에서 박테리아의 수는 한 시간마다 처음의 $4$ 배가 된다. 처음 박테리아의 수가 $20$ 마리일 때, $3$ 시간 후의 박테리아의 수는?",
+        "choices": [
+          "$320$",
+          "$1280$",
+          "$640$",
+          "$960$",
+          "$1600$"
+        ],
+        "answer": 2,
+        "solution": "한 시간마다 $4$ 배가 되는 등비수열이므로 $3$ 시간 후는 $20\\times4^3=20\\times64=1280$ 마리이다."
+      },
+      {
+        "num": 14,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{BC}=a,\\ \\overline{CA}=b,\\ \\overline{AB}=c$ 라 하자. $a=2,\\ b=5,\\ C=60^\\circ$ 일 때, $c^2$ 의 값은?",
+        "choices": [
+          "$19$",
+          "$17$",
+          "$18$",
+          "$20$",
+          "$21$"
+        ],
+        "answer": 1,
+        "solution": "코사인법칙에 의해 $c^2=a^2+b^2-2ab\\cos C=4+25-2\\cdot2\\cdot5\\cdot\\cos60^\\circ=29-10=19$ 이다."
+      },
+      {
+        "num": 15,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{7}(k^2+k)$ 의 값은?",
+        "choices": [
+          "$154$",
+          "$161$",
+          "$168$",
+          "$175$",
+          "$182$"
+        ],
+        "answer": 3,
+        "solution": "$\\displaystyle\\sum_{k=1}^{7}k^2+\\sum_{k=1}^{7}k=\\dfrac{7\\cdot8\\cdot15}{6}+\\dfrac{7\\cdot8}{2}=140+28=168$ 이다."
+      },
+      {
+        "num": 16,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "첫째항부터 제 $n$ 항까지의 합을 $S_n$ 이라 할 때, 첫째항이 $4$, 공차가 $5$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $S_{12}$ 의 값을 구하시오.",
+        "answer": "378",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열의 첫째항부터 제 $12$ 항까지의 합 $S_{12}$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "첫째항 $a_1=4$, 공차 $d=5$ 이므로 일반항은 $a_n=5n-1$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "등차수열의 합은 $S_n=\\dfrac{n}{2}\\{2a_1+(n-1)d\\}=\\dfrac{n}{2}(a_1+a_n)$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$a_{12}=5\\cdot12-1=59$ 이므로 $S_{12}=\\dfrac{12}{2}(a_1+a_{12})=6\\cdot(4+59)=6\\cdot63=378$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$S_{12}=378$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 17,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "세 수 $6,\\ a,\\ b$ 가 이 순서대로 등차수열을 이루고, 세 수 $a,\\ b,\\ 32$ 가 이 순서대로 등비수열을 이룬다. $a+b$ 의 값을 구하시오. (단, $a,\\ b$ 는 양수)",
+        "answer": "21",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열 조건과 등비수열 조건을 동시에 만족하는 양수 $a,\\ b$ 를 구해 $a+b$ 를 계산한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$6,\\ a,\\ b$ 가 등차수열이고 $a,\\ b,\\ 16$ 이 등비수열이며 $a>0,\\ b>0$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "등차중항 조건 $2a=6+b$, 등비중항 조건 $b^2=16a$ 를 세운다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$2a=6+b$ 에서 $b=2a-6$ 이다. 이를 $b^2=16a$ 에 대입하면 $(2a-6)^2=16a$, 즉 $4a^2-40a+36=0$, $a^2-10a+9=0$, $(a-1)(a-9)=0$ 이다. $a$ 가 양수이고 $b>0$ 이 되려면 $a=9$, 이때 $b=2\\cdot9-6=12$ 이다. 따라서 $a+b=21$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a+b=21$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 18,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "반지름의 길이가 $\\sqrt{3}$ 인 원 위의 네 점 $A,\\ B,\\ C,\\ D$ 에 대하여 사각형 $ABCD$ 의 네 변의 길이가 모두 $\\sqrt{6}$ 일 때, 사각형 $ABCD$ 의 넓이를 구하시오.",
+        "answer": "6",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "반지름이 $\\sqrt{3}$ 인 원에 내접하고 네 변의 길이가 모두 $\\sqrt{6}$ 인 사각형의 넓이를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "네 변의 길이가 모두 $\\sqrt{6}$ 으로 같고 원에 내접하므로 사각형 $ABCD$ 는 마름모이면서 원에 내접한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "원에 내접하는 마름모는 정사각형이다. 정사각형의 대각선은 외접원의 지름과 같다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "외접원의 지름은 $2\\sqrt{3}$ 이고 이는 정사각형의 대각선과 같다. 한 변의 길이가 $\\sqrt{6}$ 인 정사각형의 대각선은 $\\sqrt{6}\\cdot\\sqrt{2}=2\\sqrt{3}$ 으로 조건과 일치한다. 따라서 넓이는 $(\\sqrt{6})^2=6$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "사각형 $ABCD$ 의 넓이는 $6$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 19,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "첫째항이 $1$, 공차가 $2$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{24}\\dfrac{1}{\\sqrt{a_{k+1}}+\\sqrt{a_k}}$ 의 값을 구하시오.",
+        "answer": "3",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "분모에 근호가 있는 분수의 합을 유리화하여 계산한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_1=1$, 공차 $d=2$ 이므로 $a_k=2k-1$ 이고 $a_{k+1}-a_k=2$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "분모를 유리화하면 $\\dfrac{1}{\\sqrt{a_{k+1}}+\\sqrt{a_k}}=\\dfrac{\\sqrt{a_{k+1}}-\\sqrt{a_k}}{a_{k+1}-a_k}=\\dfrac{\\sqrt{a_{k+1}}-\\sqrt{a_k}}{2}$ 이다. 이는 망원합(부분소거) 형태이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{24}\\dfrac{\\sqrt{a_{k+1}}-\\sqrt{a_k}}{2}=\\dfrac{1}{2}(\\sqrt{a_{25}}-\\sqrt{a_1})$ 이다. $a_{25}=2\\cdot25-1=49,\\ a_1=1$ 이므로 $\\dfrac{1}{2}(\\sqrt{49}-\\sqrt{1})=\\dfrac{1}{2}(7-1)=3$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "주어진 합의 값은 $3$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "$n\\ge3$ 인 자연수 $n$ 에 대하여 다음 부등식이 성립함을 수학적 귀납법으로 증명하시오. $$2^n>2n+1$$",
+        "answer": "n≥3 인 모든 자연수에서 2^n > 2n+1 이 성립한다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "$n\\ge3$ 인 모든 자연수 $n$ 에 대하여 $2^n>2n+1$ 임을 수학적 귀납법으로 증명한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "증명할 명제를 $P(n):\\ 2^n>2n+1$ 이라 한다. 단, $n\\ge3$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "수학적 귀납법은 (i) $n=3$ 일 때 성립함을 보이고, (ii) $n=k\\ (k\\ge3)$ 일 때 성립한다고 가정하면 $n=k+1$ 일 때도 성립함을 보이는 두 단계로 이루어진다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "(i) $n=3$ 일 때 좌변 $=2^3=8$, 우변 $=2\\cdot3+1=7$ 이므로 $8>7$ 이 성립한다. (ii) $n=k\\ (k\\ge3)$ 일 때 $2^k>2k+1$ 이 성립한다고 가정한다. 양변에 $2$ 를 곱하면 $2^{k+1}>2(2k+1)=4k+2$ 이다. $k\\ge3$ 이면 $4k+2-(2k+3)=2k-1>0$ 이므로 $4k+2>2(k+1)+1$ 이다. 따라서 $2^{k+1}>2(k+1)+1$ 이 성립한다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "(i), (ii)에 의해 $n\\ge3$ 인 모든 자연수 $n$ 에 대하여 $2^n>2n+1$ 이 성립한다."
+          }
+        ]
+      }
+    ]
+  ]
+}

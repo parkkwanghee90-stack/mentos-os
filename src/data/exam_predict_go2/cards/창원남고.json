@@ -1,0 +1,2024 @@
+{
+  "schema": "go2-v1",
+  "school": "창원남고",
+  "region": "경남 창원",
+  "year": 2025,
+  "grade": "고2",
+  "term": "1학기 기말",
+  "subject": "수학1",
+  "analysis": {
+    "school": "창원남고",
+    "region": "경남 창원",
+    "year": 2025,
+    "grade": "고2",
+    "term": "1학기 기말",
+    "subject": "수학1",
+    "total_problems": 20,
+    "analyzed_by": "claude-direct-go2",
+    "unit_share": [
+      {
+        "unit": "삼각함수",
+        "count": 2,
+        "percent": 10
+      },
+      {
+        "unit": "삼각함수의 활용",
+        "count": 5,
+        "percent": 25
+      },
+      {
+        "unit": "등차수열과 등비수열",
+        "count": 4,
+        "percent": 20
+      },
+      {
+        "unit": "여러 가지 수열",
+        "count": 6,
+        "percent": 30
+      },
+      {
+        "unit": "수학적 귀납법",
+        "count": 3,
+        "percent": 15
+      }
+    ],
+    "top_units": [
+      "여러 가지 수열",
+      "삼각함수의 활용",
+      "등차수열과 등비수열",
+      "수학적 귀납법"
+    ],
+    "objective_ratio": 90,
+    "subjective_ratio": 10,
+    "advanced_ratio": 65,
+    "difficulty_stars": 4,
+    "discrimination_stars": 4,
+    "summary": "창원남고 2025학년도 1학기 기말 수학Ⅰ은 수열 단원(등차·등비수열, 시그마·계차수열, 수학적 귀납법)에 출제 비중이 크게 쏠려 있으며, 삼각함수의 활용(사인·코사인법칙, 삼각형 넓이, 원에 내접하는 사각형)이 그 다음 비중을 차지한다. 객관식은 점화식·계차수열·군수열 등 변별력 높은 심화 문항이 다수 포함되고, 서술형 6문항이 등차·등비수열의 일반항과 합, 점화식으로 정의된 수열, 부분합과 일반항의 관계를 묻는 형태로 구성된다. 단순 공식 적용보다 조건을 연립하거나 점화식을 변형해 일반항을 유도하는 능력을 평가한다. 본 예상문제는 원본의 단원 비중과 심화 비율을 따르되 객관식 18문항·서술형 2문항으로 재구성하여 심화 비율을 65%로 높였다."
+  },
+  "predicted": {
+    "count": 20,
+    "problems": [
+      {
+        "num": 1,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\theta$가 제2사분면의 각이고 $\\sin\\theta=\\dfrac{3}{5}$일 때, $\\tan\\theta$의 값은?",
+        "choices": [
+          "$-\\dfrac{3}{4}$",
+          "$-\\dfrac{4}{3}$",
+          "$-\\dfrac{1}{2}$",
+          "$\\dfrac{3}{4}$",
+          "$\\dfrac{4}{3}$"
+        ],
+        "answer": 1,
+        "solution": "제2사분면에서 $\\cos\\theta=-\\dfrac{4}{5}$이므로 $\\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}=-\\dfrac{3}{4}$이다."
+      },
+      {
+        "num": 2,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\cos\\dfrac{2}{3}\\pi$의 값은?",
+        "choices": [
+          "$-1$",
+          "$-\\dfrac{\\sqrt{3}}{2}$",
+          "$\\dfrac{1}{2}$",
+          "$\\dfrac{\\sqrt{3}}{2}$",
+          "$-\\dfrac{1}{2}$"
+        ],
+        "answer": 5,
+        "solution": "$\\cos\\dfrac{2}{3}\\pi=\\cos\\left(\\pi-\\dfrac{\\pi}{3}\\right)=-\\cos\\dfrac{\\pi}{3}=-\\dfrac{1}{2}$이다."
+      },
+      {
+        "num": 3,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$에서 $a=6$, $A=30^{\\circ}$일 때, 외접원의 반지름 $R$의 값은?",
+        "choices": [
+          "$3$",
+          "$4$",
+          "$5$",
+          "$6$",
+          "$8$"
+        ],
+        "answer": 4,
+        "solution": "사인법칙에 의해 $\\dfrac{a}{\\sin A}=2R$이므로 $2R=\\dfrac{6}{\\sin 30^{\\circ}}=12$, 따라서 $R=6$이다."
+      },
+      {
+        "num": 4,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$에서 $b=5$, $c=8$, $A=60^{\\circ}$일 때, 변 $a$의 길이는?",
+        "choices": [
+          "$7$",
+          "$6$",
+          "$\\sqrt{39}$",
+          "$\\sqrt{129}$",
+          "$9$"
+        ],
+        "answer": 1,
+        "solution": "코사인법칙에 의해 $a^2=b^2+c^2-2bc\\cos A=25+64-2\\cdot5\\cdot8\\cdot\\dfrac{1}{2}=49$, 따라서 $a=7$이다."
+      },
+      {
+        "num": 5,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$에서 두 변의 길이가 $a=8$, $b=5$이고 그 끼인각이 $C=120^{\\circ}$일 때, 삼각형 $ABC$의 넓이는?",
+        "choices": [
+          "$10$",
+          "$10\\sqrt{2}$",
+          "$10\\sqrt{3}$",
+          "$20$",
+          "$20\\sqrt{3}$"
+        ],
+        "answer": 3,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "두 변과 끼인각이 주어진 삼각형의 넓이를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a=8$, $b=5$, 끼인각 $C=120^{\\circ}$이다. 넓이 공식 $S=\\dfrac{1}{2}ab\\sin C$를 쓸 수 있다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "두 변 $a,b$와 그 끼인각 $C$를 알 때 삼각형의 넓이는 $S=\\dfrac{1}{2}ab\\sin C$이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\sin 120^{\\circ}=\\dfrac{\\sqrt{3}}{2}$이므로 $S=\\dfrac{1}{2}\\cdot8\\cdot5\\cdot\\dfrac{\\sqrt{3}}{2}=10\\sqrt{3}$이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "넓이는 $10\\sqrt{3}$이므로 정답은 보기 ③이다."
+          }
+        ]
+      },
+      {
+        "num": 6,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "원에 내접하는 사각형 $ABCD$에서 $\\overline{AB}=3$, $\\overline{BC}=5$이고 $\\angle ABC=120^{\\circ}$일 때, 대각선 $\\overline{AC}$의 길이는?",
+        "choices": [
+          "$5$",
+          "$7$",
+          "$6$",
+          "$\\sqrt{34}$",
+          "$8$"
+        ],
+        "answer": 2,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "두 변과 끼인각이 주어진 삼각형 $ABC$에서 대각선 $\\overline{AC}$의 길이를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "삼각형 $ABC$에서 $\\overline{AB}=3$, $\\overline{BC}=5$, $\\angle ABC=120^{\\circ}$이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "두 변과 끼인각을 알 때 코사인법칙 $\\overline{AC}^2=\\overline{AB}^2+\\overline{BC}^2-2\\cdot\\overline{AB}\\cdot\\overline{BC}\\cos B$를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\cos 120^{\\circ}=-\\dfrac{1}{2}$이므로 $\\overline{AC}^2=9+25-2\\cdot3\\cdot5\\cdot\\left(-\\dfrac{1}{2}\\right)=34+15=49$, 따라서 $\\overline{AC}=7$이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "대각선의 길이는 $7$이므로 정답은 보기 ②이다."
+          }
+        ]
+      },
+      {
+        "num": 7,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "등차수열 $\\{a_n\\}$에서 $a_3=7$, $a_4+a_6=34$일 때, $a_8$의 값은?",
+        "choices": [
+          "$27$",
+          "$30$",
+          "$35$",
+          "$37$",
+          "$32$"
+        ],
+        "answer": 5,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열의 두 조건으로 첫째항과 공차를 구해 $a_8$을 계산한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "첫째항을 $a$, 공차를 $d$라 하면 $a_3=a+2d=7$, $a_4+a_6=(a+3d)+(a+5d)=2a+8d=34$이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "등차수열의 일반항은 $a_n=a+(n-1)d$이다. 연립방정식으로 $a,d$를 구한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$2a+8d=34$에서 $a+4d=17$. $a+2d=7$과 빼면 $2d=10$, $d=5$, $a=-3$이다. 따라서 $a_8=a+7d=-3+35=32$이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a_8=32$이므로 정답은 보기 ⑤이다."
+          }
+        ]
+      },
+      {
+        "num": 8,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "첫째항이 $2$, 공비가 $3$인 등비수열의 첫째항부터 제$5$항까지의 합은?",
+        "choices": [
+          "$242$",
+          "$160$",
+          "$200$",
+          "$280$",
+          "$364$"
+        ],
+        "answer": 1,
+        "solution": "$S_5=\\dfrac{2(3^5-1)}{3-1}=3^5-1=242$이다."
+      },
+      {
+        "num": 9,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{10}(2k-1)$의 값은?",
+        "choices": [
+          "$90$",
+          "$100$",
+          "$110$",
+          "$120$",
+          "$132$"
+        ],
+        "answer": 2,
+        "solution": "$\\displaystyle\\sum_{k=1}^{10}(2k-1)=2\\cdot\\dfrac{10\\cdot11}{2}-10=110-10=100$이다."
+      },
+      {
+        "num": 10,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{9}\\dfrac{1}{k(k+1)}$의 값은?",
+        "choices": [
+          "$\\dfrac{7}{10}$",
+          "$\\dfrac{4}{5}$",
+          "$\\dfrac{17}{20}$",
+          "$\\dfrac{9}{10}$",
+          "$1$"
+        ],
+        "answer": 4,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "분모가 곱으로 된 분수의 시그마 합을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "일반항이 $\\dfrac{1}{k(k+1)}$이고 $k=1$부터 $9$까지 더한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "부분분수 분해 $\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$를 이용하면 망원합(telescoping)이 된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{9}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{10}=\\dfrac{9}{10}$이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "합은 $\\dfrac{9}{10}$이므로 정답은 보기 ④이다."
+          }
+        ]
+      },
+      {
+        "num": 11,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$이 $a_1=2$이고 $a_{n+1}-a_n=2n+1$을 만족할 때, $a_{10}$의 값은?",
+        "choices": [
+          "$81$",
+          "$91$",
+          "$111$",
+          "$121$",
+          "$101$"
+        ],
+        "answer": 5,
+        "solution": "$a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}(2k+1)=2+(n^2-1)=n^2+1$이므로 $a_{10}=101$이다."
+      },
+      {
+        "num": 12,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$이 $a_1=3$, $a_{n+1}=2a_n+1\\ (n=1,2,3,\\cdots)$을 만족할 때, $a_5$의 값은?",
+        "choices": [
+          "$31$",
+          "$47$",
+          "$63$",
+          "$95$",
+          "$127$"
+        ],
+        "answer": 3,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "점화식으로 정의된 수열의 제$5$항을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_1=3$이고 $a_{n+1}=2a_n+1$이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "점화식의 양변에 $1$을 더하면 $a_{n+1}+1=2(a_n+1)$로 등비수열을 이룬다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$a_n+1$은 첫째항 $4$, 공비 $2$인 등비수열이므로 $a_n+1=4\\cdot2^{n-1}=2^{n+1}$, $a_n=2^{n+1}-1$이다. 따라서 $a_5=2^6-1=63$이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a_5=63$이므로 정답은 보기 ③이다."
+          }
+        ]
+      },
+      {
+        "num": 13,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$이 $a_1=1$, $a_{n+1}=\\dfrac{a_n}{1+a_n}\\ (n=1,2,3,\\cdots)$을 만족할 때, $a_{10}$의 값은?",
+        "choices": [
+          "$\\dfrac{1}{10}$",
+          "$\\dfrac{1}{12}$",
+          "$\\dfrac{1}{11}$",
+          "$\\dfrac{1}{9}$",
+          "$\\dfrac{1}{8}$"
+        ],
+        "answer": 1,
+        "solution": "양변의 역수를 취하면 $\\dfrac{1}{a_{n+1}}=\\dfrac{1}{a_n}+1$이므로 $\\dfrac{1}{a_n}$은 첫째항 $1$, 공차 $1$인 등차수열이다. $\\dfrac{1}{a_n}=n$이므로 $a_{10}=\\dfrac{1}{10}$이다."
+      },
+      {
+        "num": 14,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "첫째항이 $20$, 공차가 $-3$인 등차수열 $\\{a_n\\}$의 첫째항부터 제$n$항까지의 합 $S_n$이 최대가 되도록 하는 자연수 $n$에 대하여 $S_n$의 값은?",
+        "choices": [
+          "$72$",
+          "$77$",
+          "$75$",
+          "$80$",
+          "$84$"
+        ],
+        "answer": 2,
+        "solution": "$a_n=20-3(n-1)\\ge0$에서 $n\\le\\dfrac{23}{3}=7.6\\cdots$이므로 $n=7$일 때 합이 최대이다. $S_7=\\dfrac{7}{2}(2\\cdot20+6\\cdot(-3))=\\dfrac{7}{2}\\cdot22=77$이다."
+      },
+      {
+        "num": 15,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "등비수열 $\\{a_n\\}$에서 $a_2=6$, $a_5=48$일 때, $a_6$의 값은?",
+        "choices": [
+          "$72$",
+          "$84$",
+          "$108$",
+          "$96$",
+          "$120$"
+        ],
+        "answer": 4,
+        "solution": "$\\dfrac{a_5}{a_2}=r^3=8$이므로 $r=2$, $a_1=3$이다. 따라서 $a_6=3\\cdot2^5=96$이다."
+      },
+      {
+        "num": 16,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{8}k^2$의 값은?",
+        "choices": [
+          "$168$",
+          "$186$",
+          "$220$",
+          "$240$",
+          "$204$"
+        ],
+        "answer": 5,
+        "solution": "$\\displaystyle\\sum_{k=1}^{8}k^2=\\dfrac{8\\cdot9\\cdot17}{6}=204$이다."
+      },
+      {
+        "num": 17,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $1,\\,2,\\,2,\\,3,\\,3,\\,3,\\,4,\\,4,\\,4,\\,4,\\,\\cdots$와 같이 자연수 $m$이 $m$번 나열될 때, 제$50$항의 값은?",
+        "choices": [
+          "$8$",
+          "$10$",
+          "$9$",
+          "$11$",
+          "$12$"
+        ],
+        "answer": 2,
+        "solution": "$m$까지의 항의 개수는 $\\dfrac{m(m+1)}{2}$이다. $\\dfrac{9\\cdot10}{2}=45<50\\le\\dfrac{10\\cdot11}{2}=55$이므로 제$50$항은 $10$이다."
+      },
+      {
+        "num": 18,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$에서 세 변의 길이가 $a=7$, $b=8$, $c=9$일 때, $\\cos A$의 값은?",
+        "choices": [
+          "$\\dfrac{1}{3}$",
+          "$\\dfrac{1}{2}$",
+          "$\\dfrac{2}{3}$",
+          "$\\dfrac{11}{16}$",
+          "$\\dfrac{3}{4}$"
+        ],
+        "answer": 3,
+        "solution": "코사인법칙에 의해 $\\cos A=\\dfrac{b^2+c^2-a^2}{2bc}=\\dfrac{64+81-49}{2\\cdot8\\cdot9}=\\dfrac{96}{144}=\\dfrac{2}{3}$이다."
+      },
+      {
+        "num": 19,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$이 $a_1=2$이고 $a_{n+1}=a_n+3\\cdot2^n\\ (n=1,2,3,\\cdots)$을 만족할 때, $a_5$의 값을 구하시오.",
+        "answer": "92",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "점화식으로 정의된 수열의 제$5$항을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_1=2$이고 $a_{n+1}-a_n=3\\cdot2^n$이다. 즉 계차수열이 등비수열로 주어졌다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$n\\ge2$일 때 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}(a_{k+1}-a_k)=a_1+\\sum_{k=1}^{n-1}3\\cdot2^k$이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{n-1}3\\cdot2^k=3\\cdot(2^n-2)=3\\cdot2^n-6$이므로 $a_n=2+3\\cdot2^n-6=3\\cdot2^n-4$이다. 따라서 $a_5=3\\cdot32-4=92$이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a_5=92$이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$의 첫째항부터 제$n$항까지의 합 $S_n$이 $S_n=2n^2-n$일 때, $a_{10}$의 값을 구하시오.",
+        "answer": "37",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "부분합 $S_n$이 주어졌을 때 일반항 $a_{10}$을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$S_n=2n^2-n$이다. 구할 것은 제$10$항 $a_{10}$이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$n\\ge2$일 때 $a_n=S_n-S_{n-1}$이고, $a_1=S_1$이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$a_{10}=S_{10}-S_9=(2\\cdot100-10)-(2\\cdot81-9)=190-153=37$이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a_{10}=37$이다."
+          }
+        ]
+      }
+    ],
+    "rounds": [
+      [
+        {
+          "num": 1,
+          "unit": "삼각함수",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\theta$가 제2사분면의 각이고 $\\sin\\theta=\\dfrac{3}{5}$일 때, $\\tan\\theta$의 값은?",
+          "choices": [
+            "$-\\dfrac{3}{4}$",
+            "$-\\dfrac{4}{3}$",
+            "$-\\dfrac{1}{2}$",
+            "$\\dfrac{3}{4}$",
+            "$\\dfrac{4}{3}$"
+          ],
+          "answer": 1,
+          "solution": "제2사분면에서 $\\cos\\theta=-\\dfrac{4}{5}$이므로 $\\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}=-\\dfrac{3}{4}$이다."
+        },
+        {
+          "num": 2,
+          "unit": "삼각함수",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\cos\\dfrac{2}{3}\\pi$의 값은?",
+          "choices": [
+            "$-1$",
+            "$-\\dfrac{\\sqrt{3}}{2}$",
+            "$\\dfrac{1}{2}$",
+            "$\\dfrac{\\sqrt{3}}{2}$",
+            "$-\\dfrac{1}{2}$"
+          ],
+          "answer": 5,
+          "solution": "$\\cos\\dfrac{2}{3}\\pi=\\cos\\left(\\pi-\\dfrac{\\pi}{3}\\right)=-\\cos\\dfrac{\\pi}{3}=-\\dfrac{1}{2}$이다."
+        },
+        {
+          "num": 3,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$에서 $a=6$, $A=30^{\\circ}$일 때, 외접원의 반지름 $R$의 값은?",
+          "choices": [
+            "$3$",
+            "$4$",
+            "$5$",
+            "$6$",
+            "$8$"
+          ],
+          "answer": 4,
+          "solution": "사인법칙에 의해 $\\dfrac{a}{\\sin A}=2R$이므로 $2R=\\dfrac{6}{\\sin 30^{\\circ}}=12$, 따라서 $R=6$이다."
+        },
+        {
+          "num": 4,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$에서 $b=5$, $c=8$, $A=60^{\\circ}$일 때, 변 $a$의 길이는?",
+          "choices": [
+            "$7$",
+            "$6$",
+            "$\\sqrt{39}$",
+            "$\\sqrt{129}$",
+            "$9$"
+          ],
+          "answer": 1,
+          "solution": "코사인법칙에 의해 $a^2=b^2+c^2-2bc\\cos A=25+64-2\\cdot5\\cdot8\\cdot\\dfrac{1}{2}=49$, 따라서 $a=7$이다."
+        },
+        {
+          "num": 5,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$에서 두 변의 길이가 $a=8$, $b=5$이고 그 끼인각이 $C=120^{\\circ}$일 때, 삼각형 $ABC$의 넓이는?",
+          "choices": [
+            "$10$",
+            "$10\\sqrt{2}$",
+            "$10\\sqrt{3}$",
+            "$20$",
+            "$20\\sqrt{3}$"
+          ],
+          "answer": 3,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "두 변과 끼인각이 주어진 삼각형의 넓이를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a=8$, $b=5$, 끼인각 $C=120^{\\circ}$이다. 넓이 공식 $S=\\dfrac{1}{2}ab\\sin C$를 쓸 수 있다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "두 변 $a,b$와 그 끼인각 $C$를 알 때 삼각형의 넓이는 $S=\\dfrac{1}{2}ab\\sin C$이다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\sin 120^{\\circ}=\\dfrac{\\sqrt{3}}{2}$이므로 $S=\\dfrac{1}{2}\\cdot8\\cdot5\\cdot\\dfrac{\\sqrt{3}}{2}=10\\sqrt{3}$이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "넓이는 $10\\sqrt{3}$이므로 정답은 보기 ③이다."
+            }
+          ]
+        },
+        {
+          "num": 6,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "원에 내접하는 사각형 $ABCD$에서 $\\overline{AB}=3$, $\\overline{BC}=5$이고 $\\angle ABC=120^{\\circ}$일 때, 대각선 $\\overline{AC}$의 길이는?",
+          "choices": [
+            "$5$",
+            "$7$",
+            "$6$",
+            "$\\sqrt{34}$",
+            "$8$"
+          ],
+          "answer": 2,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "두 변과 끼인각이 주어진 삼각형 $ABC$에서 대각선 $\\overline{AC}$의 길이를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "삼각형 $ABC$에서 $\\overline{AB}=3$, $\\overline{BC}=5$, $\\angle ABC=120^{\\circ}$이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "두 변과 끼인각을 알 때 코사인법칙 $\\overline{AC}^2=\\overline{AB}^2+\\overline{BC}^2-2\\cdot\\overline{AB}\\cdot\\overline{BC}\\cos B$를 쓴다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\cos 120^{\\circ}=-\\dfrac{1}{2}$이므로 $\\overline{AC}^2=9+25-2\\cdot3\\cdot5\\cdot\\left(-\\dfrac{1}{2}\\right)=34+15=49$, 따라서 $\\overline{AC}=7$이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "대각선의 길이는 $7$이므로 정답은 보기 ②이다."
+            }
+          ]
+        },
+        {
+          "num": 7,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "등차수열 $\\{a_n\\}$에서 $a_3=7$, $a_4+a_6=34$일 때, $a_8$의 값은?",
+          "choices": [
+            "$27$",
+            "$30$",
+            "$35$",
+            "$37$",
+            "$32$"
+          ],
+          "answer": 5,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "등차수열의 두 조건으로 첫째항과 공차를 구해 $a_8$을 계산한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "첫째항을 $a$, 공차를 $d$라 하면 $a_3=a+2d=7$, $a_4+a_6=(a+3d)+(a+5d)=2a+8d=34$이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "등차수열의 일반항은 $a_n=a+(n-1)d$이다. 연립방정식으로 $a,d$를 구한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$2a+8d=34$에서 $a+4d=17$. $a+2d=7$과 빼면 $2d=10$, $d=5$, $a=-3$이다. 따라서 $a_8=a+7d=-3+35=32$이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a_8=32$이므로 정답은 보기 ⑤이다."
+            }
+          ]
+        },
+        {
+          "num": 8,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "첫째항이 $2$, 공비가 $3$인 등비수열의 첫째항부터 제$5$항까지의 합은?",
+          "choices": [
+            "$242$",
+            "$160$",
+            "$200$",
+            "$280$",
+            "$364$"
+          ],
+          "answer": 1,
+          "solution": "$S_5=\\dfrac{2(3^5-1)}{3-1}=3^5-1=242$이다."
+        },
+        {
+          "num": 9,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\displaystyle\\sum_{k=1}^{10}(2k-1)$의 값은?",
+          "choices": [
+            "$90$",
+            "$100$",
+            "$110$",
+            "$120$",
+            "$132$"
+          ],
+          "answer": 2,
+          "solution": "$\\displaystyle\\sum_{k=1}^{10}(2k-1)=2\\cdot\\dfrac{10\\cdot11}{2}-10=110-10=100$이다."
+        },
+        {
+          "num": 10,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\displaystyle\\sum_{k=1}^{9}\\dfrac{1}{k(k+1)}$의 값은?",
+          "choices": [
+            "$\\dfrac{7}{10}$",
+            "$\\dfrac{4}{5}$",
+            "$\\dfrac{17}{20}$",
+            "$\\dfrac{9}{10}$",
+            "$1$"
+          ],
+          "answer": 4,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "분모가 곱으로 된 분수의 시그마 합을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "일반항이 $\\dfrac{1}{k(k+1)}$이고 $k=1$부터 $9$까지 더한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "부분분수 분해 $\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$를 이용하면 망원합(telescoping)이 된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\displaystyle\\sum_{k=1}^{9}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{10}=\\dfrac{9}{10}$이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "합은 $\\dfrac{9}{10}$이므로 정답은 보기 ④이다."
+            }
+          ]
+        },
+        {
+          "num": 11,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "수열 $\\{a_n\\}$이 $a_1=2$이고 $a_{n+1}-a_n=2n+1$을 만족할 때, $a_{10}$의 값은?",
+          "choices": [
+            "$81$",
+            "$91$",
+            "$111$",
+            "$121$",
+            "$101$"
+          ],
+          "answer": 5,
+          "solution": "$a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}(2k+1)=2+(n^2-1)=n^2+1$이므로 $a_{10}=101$이다."
+        },
+        {
+          "num": 12,
+          "unit": "수학적 귀납법",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "수열 $\\{a_n\\}$이 $a_1=3$, $a_{n+1}=2a_n+1\\ (n=1,2,3,\\cdots)$을 만족할 때, $a_5$의 값은?",
+          "choices": [
+            "$31$",
+            "$47$",
+            "$63$",
+            "$95$",
+            "$127$"
+          ],
+          "answer": 3,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "점화식으로 정의된 수열의 제$5$항을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a_1=3$이고 $a_{n+1}=2a_n+1$이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "점화식의 양변에 $1$을 더하면 $a_{n+1}+1=2(a_n+1)$로 등비수열을 이룬다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$a_n+1$은 첫째항 $4$, 공비 $2$인 등비수열이므로 $a_n+1=4\\cdot2^{n-1}=2^{n+1}$, $a_n=2^{n+1}-1$이다. 따라서 $a_5=2^6-1=63$이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a_5=63$이므로 정답은 보기 ③이다."
+            }
+          ]
+        },
+        {
+          "num": 13,
+          "unit": "수학적 귀납법",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "수열 $\\{a_n\\}$이 $a_1=1$, $a_{n+1}=\\dfrac{a_n}{1+a_n}\\ (n=1,2,3,\\cdots)$을 만족할 때, $a_{10}$의 값은?",
+          "choices": [
+            "$\\dfrac{1}{10}$",
+            "$\\dfrac{1}{12}$",
+            "$\\dfrac{1}{11}$",
+            "$\\dfrac{1}{9}$",
+            "$\\dfrac{1}{8}$"
+          ],
+          "answer": 1,
+          "solution": "양변의 역수를 취하면 $\\dfrac{1}{a_{n+1}}=\\dfrac{1}{a_n}+1$이므로 $\\dfrac{1}{a_n}$은 첫째항 $1$, 공차 $1$인 등차수열이다. $\\dfrac{1}{a_n}=n$이므로 $a_{10}=\\dfrac{1}{10}$이다."
+        },
+        {
+          "num": 14,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "첫째항이 $20$, 공차가 $-3$인 등차수열 $\\{a_n\\}$의 첫째항부터 제$n$항까지의 합 $S_n$이 최대가 되도록 하는 자연수 $n$에 대하여 $S_n$의 값은?",
+          "choices": [
+            "$72$",
+            "$77$",
+            "$75$",
+            "$80$",
+            "$84$"
+          ],
+          "answer": 2,
+          "solution": "$a_n=20-3(n-1)\\ge0$에서 $n\\le\\dfrac{23}{3}=7.6\\cdots$이므로 $n=7$일 때 합이 최대이다. $S_7=\\dfrac{7}{2}(2\\cdot20+6\\cdot(-3))=\\dfrac{7}{2}\\cdot22=77$이다."
+        },
+        {
+          "num": 15,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "등비수열 $\\{a_n\\}$에서 $a_2=6$, $a_5=48$일 때, $a_6$의 값은?",
+          "choices": [
+            "$72$",
+            "$84$",
+            "$108$",
+            "$96$",
+            "$120$"
+          ],
+          "answer": 4,
+          "solution": "$\\dfrac{a_5}{a_2}=r^3=8$이므로 $r=2$, $a_1=3$이다. 따라서 $a_6=3\\cdot2^5=96$이다."
+        },
+        {
+          "num": 16,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\displaystyle\\sum_{k=1}^{8}k^2$의 값은?",
+          "choices": [
+            "$168$",
+            "$186$",
+            "$220$",
+            "$240$",
+            "$204$"
+          ],
+          "answer": 5,
+          "solution": "$\\displaystyle\\sum_{k=1}^{8}k^2=\\dfrac{8\\cdot9\\cdot17}{6}=204$이다."
+        },
+        {
+          "num": 17,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "수열 $1,\\,2,\\,2,\\,3,\\,3,\\,3,\\,4,\\,4,\\,4,\\,4,\\,\\cdots$와 같이 자연수 $m$이 $m$번 나열될 때, 제$50$항의 값은?",
+          "choices": [
+            "$8$",
+            "$10$",
+            "$9$",
+            "$11$",
+            "$12$"
+          ],
+          "answer": 2,
+          "solution": "$m$까지의 항의 개수는 $\\dfrac{m(m+1)}{2}$이다. $\\dfrac{9\\cdot10}{2}=45<50\\le\\dfrac{10\\cdot11}{2}=55$이므로 제$50$항은 $10$이다."
+        },
+        {
+          "num": 18,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$에서 세 변의 길이가 $a=7$, $b=8$, $c=9$일 때, $\\cos A$의 값은?",
+          "choices": [
+            "$\\dfrac{1}{3}$",
+            "$\\dfrac{1}{2}$",
+            "$\\dfrac{2}{3}$",
+            "$\\dfrac{11}{16}$",
+            "$\\dfrac{3}{4}$"
+          ],
+          "answer": 3,
+          "solution": "코사인법칙에 의해 $\\cos A=\\dfrac{b^2+c^2-a^2}{2bc}=\\dfrac{64+81-49}{2\\cdot8\\cdot9}=\\dfrac{96}{144}=\\dfrac{2}{3}$이다."
+        },
+        {
+          "num": 19,
+          "unit": "수학적 귀납법",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "수열 $\\{a_n\\}$이 $a_1=2$이고 $a_{n+1}=a_n+3\\cdot2^n\\ (n=1,2,3,\\cdots)$을 만족할 때, $a_5$의 값을 구하시오.",
+          "answer": "92",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "점화식으로 정의된 수열의 제$5$항을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a_1=2$이고 $a_{n+1}-a_n=3\\cdot2^n$이다. 즉 계차수열이 등비수열로 주어졌다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$n\\ge2$일 때 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}(a_{k+1}-a_k)=a_1+\\sum_{k=1}^{n-1}3\\cdot2^k$이다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\displaystyle\\sum_{k=1}^{n-1}3\\cdot2^k=3\\cdot(2^n-2)=3\\cdot2^n-6$이므로 $a_n=2+3\\cdot2^n-6=3\\cdot2^n-4$이다. 따라서 $a_5=3\\cdot32-4=92$이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a_5=92$이다."
+            }
+          ]
+        },
+        {
+          "num": 20,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "수열 $\\{a_n\\}$의 첫째항부터 제$n$항까지의 합 $S_n$이 $S_n=2n^2-n$일 때, $a_{10}$의 값을 구하시오.",
+          "answer": "37",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "부분합 $S_n$이 주어졌을 때 일반항 $a_{10}$을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$S_n=2n^2-n$이다. 구할 것은 제$10$항 $a_{10}$이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$n\\ge2$일 때 $a_n=S_n-S_{n-1}$이고, $a_1=S_1$이다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$a_{10}=S_{10}-S_9=(2\\cdot100-10)-(2\\cdot81-9)=190-153=37$이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a_{10}=37$이다."
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "num": 1,
+          "unit": "삼각함수",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\theta$가 제2사분면의 각이고 $\\sin\\theta=\\dfrac{5}{13}$일 때, $\\tan\\theta$의 값은?",
+          "choices": [
+            "$-\\dfrac{5}{12}$",
+            "$-\\dfrac{12}{5}$",
+            "$-\\dfrac{1}{2}$",
+            "$\\dfrac{5}{12}$",
+            "$\\dfrac{12}{5}$"
+          ],
+          "answer": 1,
+          "solution": "제2사분면에서 $\\cos\\theta=-\\dfrac{12}{13}$이므로 $\\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}=-\\dfrac{5}{12}$이다."
+        },
+        {
+          "num": 2,
+          "unit": "삼각함수",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\cos\\dfrac{3}{4}\\pi$의 값은?",
+          "choices": [
+            "$-1$",
+            "$-\\dfrac{\\sqrt{2}}{2}$",
+            "$\\dfrac{1}{2}$",
+            "$\\dfrac{\\sqrt{2}}{2}$",
+            "$-\\dfrac{1}{2}$"
+          ],
+          "answer": 2,
+          "solution": "$\\cos\\dfrac{3}{4}\\pi=\\cos\\left(\\pi-\\dfrac{\\pi}{4}\\right)=-\\cos\\dfrac{\\pi}{4}=-\\dfrac{\\sqrt{2}}{2}$이다."
+        },
+        {
+          "num": 3,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$에서 $a=10$, $A=30^{\\circ}$일 때, 외접원의 반지름 $R$의 값은?",
+          "choices": [
+            "$5$",
+            "$8$",
+            "$10$",
+            "$12$",
+            "$15$"
+          ],
+          "answer": 3,
+          "solution": "사인법칙에 의해 $\\dfrac{a}{\\sin A}=2R$이므로 $2R=\\dfrac{10}{\\sin 30^{\\circ}}=20$, 따라서 $R=10$이다."
+        },
+        {
+          "num": 4,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$에서 $b=3$, $c=8$, $A=60^{\\circ}$일 때, 변 $a$의 길이는?",
+          "choices": [
+            "$6$",
+            "$\\sqrt{37}$",
+            "$\\sqrt{61}$",
+            "$7$",
+            "$8$"
+          ],
+          "answer": 4,
+          "solution": "코사인법칙에 의해 $a^2=b^2+c^2-2bc\\cos A=9+64-2\\cdot3\\cdot8\\cdot\\dfrac{1}{2}=49$, 따라서 $a=7$이다."
+        },
+        {
+          "num": 5,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$에서 두 변의 길이가 $a=6$, $b=4$이고 그 끼인각이 $C=120^{\\circ}$일 때, 삼각형 $ABC$의 넓이는?",
+          "choices": [
+            "$6$",
+            "$6\\sqrt{2}$",
+            "$12$",
+            "$12\\sqrt{3}$",
+            "$6\\sqrt{3}$"
+          ],
+          "answer": 5,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "두 변과 끼인각이 주어진 삼각형의 넓이를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a=6$, $b=4$, 끼인각 $C=120^{\\circ}$이다. 넓이 공식 $S=\\dfrac{1}{2}ab\\sin C$를 쓸 수 있다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "두 변 $a,b$와 그 끼인각 $C$를 알 때 삼각형의 넓이는 $S=\\dfrac{1}{2}ab\\sin C$이다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\sin 120^{\\circ}=\\dfrac{\\sqrt{3}}{2}$이므로 $S=\\dfrac{1}{2}\\cdot6\\cdot4\\cdot\\dfrac{\\sqrt{3}}{2}=6\\sqrt{3}$이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "넓이는 $6\\sqrt{3}$이므로 정답은 보기 ⑤이다."
+            }
+          ]
+        },
+        {
+          "num": 6,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "원에 내접하는 사각형 $ABCD$에서 $\\overline{AB}=2$, $\\overline{BC}=3$이고 $\\angle ABC=120^{\\circ}$일 때, 대각선 $\\overline{AC}$의 길이는?",
+          "choices": [
+            "$\\sqrt{19}$",
+            "$\\sqrt{13}$",
+            "$5$",
+            "$\\sqrt{7}$",
+            "$\\sqrt{21}$"
+          ],
+          "answer": 1,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "두 변과 끼인각이 주어진 삼각형 $ABC$에서 대각선 $\\overline{AC}$의 길이를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "삼각형 $ABC$에서 $\\overline{AB}=2$, $\\overline{BC}=3$, $\\angle ABC=120^{\\circ}$이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "두 변과 끼인각을 알 때 코사인법칙 $\\overline{AC}^2=\\overline{AB}^2+\\overline{BC}^2-2\\cdot\\overline{AB}\\cdot\\overline{BC}\\cos B$를 쓴다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\cos 120^{\\circ}=-\\dfrac{1}{2}$이므로 $\\overline{AC}^2=4+9-2\\cdot2\\cdot3\\cdot\\left(-\\dfrac{1}{2}\\right)=13+6=19$, 따라서 $\\overline{AC}=\\sqrt{19}$이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "대각선의 길이는 $\\sqrt{19}$이므로 정답은 보기 ①이다."
+            }
+          ]
+        },
+        {
+          "num": 7,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "등차수열 $\\{a_n\\}$에서 $a_2=5$, $a_3+a_5=30$일 때, $a_8$의 값은?",
+          "choices": [
+            "$30$",
+            "$35$",
+            "$33$",
+            "$38$",
+            "$40$"
+          ],
+          "answer": 2,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "등차수열의 두 조건으로 첫째항과 공차를 구해 $a_8$을 계산한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "첫째항을 $a$, 공차를 $d$라 하면 $a_2=a+d=5$, $a_3+a_5=(a+2d)+(a+4d)=2a+6d=30$이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "등차수열의 일반항은 $a_n=a+(n-1)d$이다. 연립방정식으로 $a,d$를 구한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$2a+6d=30$에서 $a+3d=15$. $a+d=5$와 빼면 $2d=10$, $d=5$, $a=0$이다. 따라서 $a_8=a+7d=0+35=35$이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a_8=35$이므로 정답은 보기 ②이다."
+            }
+          ]
+        },
+        {
+          "num": 8,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "첫째항이 $3$, 공비가 $2$인 등비수열의 첫째항부터 제$5$항까지의 합은?",
+          "choices": [
+            "$96$",
+            "$100$",
+            "$93$",
+            "$120$",
+            "$124$"
+          ],
+          "answer": 3,
+          "solution": "$S_5=\\dfrac{3(2^5-1)}{2-1}=3\\cdot31=93$이다."
+        },
+        {
+          "num": 9,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\displaystyle\\sum_{k=1}^{12}(2k-1)$의 값은?",
+          "choices": [
+            "$120$",
+            "$132$",
+            "$156$",
+            "$144$",
+            "$168$"
+          ],
+          "answer": 4,
+          "solution": "$\\displaystyle\\sum_{k=1}^{12}(2k-1)=2\\cdot\\dfrac{12\\cdot13}{2}-12=156-12=144$이다."
+        },
+        {
+          "num": 10,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\displaystyle\\sum_{k=1}^{11}\\dfrac{1}{k(k+1)}$의 값은?",
+          "choices": [
+            "$\\dfrac{5}{6}$",
+            "$\\dfrac{9}{10}$",
+            "$\\dfrac{10}{11}$",
+            "$1$",
+            "$\\dfrac{11}{12}$"
+          ],
+          "answer": 5,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "분모가 곱으로 된 분수의 시그마 합을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "일반항이 $\\dfrac{1}{k(k+1)}$이고 $k=1$부터 $11$까지 더한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "부분분수 분해 $\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$를 이용하면 망원합(telescoping)이 된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\displaystyle\\sum_{k=1}^{11}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{12}=\\dfrac{11}{12}$이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "합은 $\\dfrac{11}{12}$이므로 정답은 보기 ⑤이다."
+            }
+          ]
+        },
+        {
+          "num": 11,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "수열 $\\{a_n\\}$이 $a_1=3$이고 $a_{n+1}-a_n=2n$을 만족할 때, $a_{10}$의 값은?",
+          "choices": [
+            "$93$",
+            "$83$",
+            "$90$",
+            "$103$",
+            "$113$"
+          ],
+          "answer": 1,
+          "solution": "$a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}2k=3+(n-1)n=n^2-n+3$이므로 $a_{10}=100-10+3=93$이다."
+        },
+        {
+          "num": 12,
+          "unit": "수학적 귀납법",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "수열 $\\{a_n\\}$이 $a_1=2$, $a_{n+1}=2a_n+1\\ (n=1,2,3,\\cdots)$을 만족할 때, $a_5$의 값은?",
+          "choices": [
+            "$23$",
+            "$47$",
+            "$31$",
+            "$63$",
+            "$95$"
+          ],
+          "answer": 2,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "점화식으로 정의된 수열의 제$5$항을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a_1=2$이고 $a_{n+1}=2a_n+1$이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "점화식의 양변에 $1$을 더하면 $a_{n+1}+1=2(a_n+1)$로 등비수열을 이룬다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$a_n+1$은 첫째항 $3$, 공비 $2$인 등비수열이므로 $a_n+1=3\\cdot2^{n-1}$, $a_n=3\\cdot2^{n-1}-1$이다. 따라서 $a_5=3\\cdot16-1=47$이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a_5=47$이므로 정답은 보기 ②이다."
+            }
+          ]
+        },
+        {
+          "num": 13,
+          "unit": "수학적 귀납법",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "수열 $\\{a_n\\}$이 $a_1=1$, $a_{n+1}=\\dfrac{a_n}{1+2a_n}\\ (n=1,2,3,\\cdots)$을 만족할 때, $a_{10}$의 값은?",
+          "choices": [
+            "$\\dfrac{1}{21}$",
+            "$\\dfrac{1}{20}$",
+            "$\\dfrac{1}{19}$",
+            "$\\dfrac{1}{18}$",
+            "$\\dfrac{1}{17}$"
+          ],
+          "answer": 3,
+          "solution": "양변의 역수를 취하면 $\\dfrac{1}{a_{n+1}}=\\dfrac{1}{a_n}+2$이므로 $\\dfrac{1}{a_n}$은 첫째항 $1$, 공차 $2$인 등차수열이다. $\\dfrac{1}{a_n}=2n-1$이므로 $a_{10}=\\dfrac{1}{19}$이다."
+        },
+        {
+          "num": 14,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "첫째항이 $30$, 공차가 $-4$인 등차수열 $\\{a_n\\}$의 첫째항부터 제$n$항까지의 합 $S_n$이 최대가 되도록 하는 자연수 $n$에 대하여 $S_n$의 값은?",
+          "choices": [
+            "$120$",
+            "$124$",
+            "$132$",
+            "$128$",
+            "$136$"
+          ],
+          "answer": 4,
+          "solution": "$a_n=30-4(n-1)\\ge0$에서 $n\\le\\dfrac{34}{4}=8.5$이므로 $n=8$일 때 합이 최대이다. $S_8=\\dfrac{8}{2}(2\\cdot30+7\\cdot(-4))=4\\cdot32=128$이다."
+        },
+        {
+          "num": 15,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "등비수열 $\\{a_n\\}$에서 $a_2=4$, $a_5=32$일 때, $a_6$의 값은?",
+          "choices": [
+            "$48$",
+            "$56$",
+            "$72$",
+            "$80$",
+            "$64$"
+          ],
+          "answer": 5,
+          "solution": "$\\dfrac{a_5}{a_2}=r^3=8$이므로 $r=2$, $a_1=2$이다. 따라서 $a_6=2\\cdot2^5=64$이다."
+        },
+        {
+          "num": 16,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\displaystyle\\sum_{k=1}^{10}k^2$의 값은?",
+          "choices": [
+            "$385$",
+            "$330$",
+            "$355$",
+            "$420$",
+            "$440$"
+          ],
+          "answer": 1,
+          "solution": "$\\displaystyle\\sum_{k=1}^{10}k^2=\\dfrac{10\\cdot11\\cdot21}{6}=385$이다."
+        },
+        {
+          "num": 17,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "수열 $1,\\,2,\\,2,\\,3,\\,3,\\,3,\\,4,\\,4,\\,4,\\,4,\\,\\cdots$와 같이 자연수 $m$이 $m$번 나열될 때, 제$40$항의 값은?",
+          "choices": [
+            "$7$",
+            "$9$",
+            "$8$",
+            "$10$",
+            "$11$"
+          ],
+          "answer": 2,
+          "solution": "$m$까지의 항의 개수는 $\\dfrac{m(m+1)}{2}$이다. $\\dfrac{8\\cdot9}{2}=36<40\\le\\dfrac{9\\cdot10}{2}=45$이므로 제$40$항은 $9$이다."
+        },
+        {
+          "num": 18,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$에서 세 변의 길이가 $a=6$, $b=5$, $c=4$일 때, $\\cos A$의 값은?",
+          "choices": [
+            "$\\dfrac{1}{4}$",
+            "$\\dfrac{3}{8}$",
+            "$\\dfrac{1}{8}$",
+            "$\\dfrac{1}{2}$",
+            "$\\dfrac{5}{8}$"
+          ],
+          "answer": 3,
+          "solution": "코사인법칙에 의해 $\\cos A=\\dfrac{b^2+c^2-a^2}{2bc}=\\dfrac{25+16-36}{2\\cdot5\\cdot4}=\\dfrac{5}{40}=\\dfrac{1}{8}$이다."
+        },
+        {
+          "num": 19,
+          "unit": "수학적 귀납법",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "수열 $\\{a_n\\}$이 $a_1=1$이고 $a_{n+1}=a_n+2\\cdot2^n\\ (n=1,2,3,\\cdots)$을 만족할 때, $a_5$의 값을 구하시오.",
+          "answer": "61",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "점화식으로 정의된 수열의 제$5$항을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a_1=1$이고 $a_{n+1}-a_n=2\\cdot2^n$이다. 즉 계차수열이 등비수열로 주어졌다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$n\\ge2$일 때 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}(a_{k+1}-a_k)=a_1+\\sum_{k=1}^{n-1}2\\cdot2^k$이다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\displaystyle\\sum_{k=1}^{n-1}2\\cdot2^k=2\\cdot(2^n-2)=2^{n+1}-4$이므로 $a_n=1+2^{n+1}-4=2^{n+1}-3$이다. 따라서 $a_5=64-3=61$이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a_5=61$이다."
+            }
+          ]
+        },
+        {
+          "num": 20,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "수열 $\\{a_n\\}$의 첫째항부터 제$n$항까지의 합 $S_n$이 $S_n=3n^2-2n$일 때, $a_{10}$의 값을 구하시오.",
+          "answer": "55",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "부분합 $S_n$이 주어졌을 때 일반항 $a_{10}$을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$S_n=3n^2-2n$이다. 구할 것은 제$10$항 $a_{10}$이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$n\\ge2$일 때 $a_n=S_n-S_{n-1}$이고, $a_1=S_1$이다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$a_{10}=S_{10}-S_9=(3\\cdot100-20)-(3\\cdot81-18)=280-225=55$이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a_{10}=55$이다."
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "num": 1,
+          "unit": "삼각함수",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\theta$가 제2사분면의 각이고 $\\sin\\theta=\\dfrac{8}{17}$일 때, $\\tan\\theta$의 값은?",
+          "choices": [
+            "$-\\dfrac{15}{8}$",
+            "$-\\dfrac{1}{2}$",
+            "$\\dfrac{8}{15}$",
+            "$-\\dfrac{8}{15}$",
+            "$\\dfrac{15}{8}$"
+          ],
+          "answer": 4,
+          "solution": "제2사분면에서 $\\cos\\theta=-\\dfrac{15}{17}$이므로 $\\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}=-\\dfrac{8}{15}$이다."
+        },
+        {
+          "num": 2,
+          "unit": "삼각함수",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\sin\\dfrac{5}{6}\\pi$의 값은?",
+          "choices": [
+            "$-1$",
+            "$-\\dfrac{\\sqrt{3}}{2}$",
+            "$\\dfrac{\\sqrt{3}}{2}$",
+            "$-\\dfrac{1}{2}$",
+            "$\\dfrac{1}{2}$"
+          ],
+          "answer": 5,
+          "solution": "$\\sin\\dfrac{5}{6}\\pi=\\sin\\left(\\pi-\\dfrac{\\pi}{6}\\right)=\\sin\\dfrac{\\pi}{6}=\\dfrac{1}{2}$이다."
+        },
+        {
+          "num": 3,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$에서 $a=4$, $A=45^{\\circ}$일 때, 외접원의 반지름 $R$의 값은?",
+          "choices": [
+            "$2\\sqrt{2}$",
+            "$2$",
+            "$3$",
+            "$4$",
+            "$3\\sqrt{2}$"
+          ],
+          "answer": 1,
+          "solution": "사인법칙에 의해 $\\dfrac{a}{\\sin A}=2R$이므로 $2R=\\dfrac{4}{\\sin 45^{\\circ}}=4\\sqrt{2}$, 따라서 $R=2\\sqrt{2}$이다."
+        },
+        {
+          "num": 4,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$에서 $b=2$, $c=5$, $A=120^{\\circ}$일 때, 변 $a$의 길이는?",
+          "choices": [
+            "$6$",
+            "$\\sqrt{39}$",
+            "$7$",
+            "$\\sqrt{19}$",
+            "$\\sqrt{29}$"
+          ],
+          "answer": 2,
+          "solution": "코사인법칙에 의해 $a^2=b^2+c^2-2bc\\cos A=4+25-2\\cdot2\\cdot5\\cdot\\left(-\\dfrac{1}{2}\\right)=39$, 따라서 $a=\\sqrt{39}$이다."
+        },
+        {
+          "num": 5,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$에서 두 변의 길이가 $a=10$, $b=3$이고 그 끼인각이 $C=150^{\\circ}$일 때, 삼각형 $ABC$의 넓이는?",
+          "choices": [
+            "$\\dfrac{15\\sqrt{3}}{2}$",
+            "$15$",
+            "$\\dfrac{15}{2}$",
+            "$15\\sqrt{3}$",
+            "$\\dfrac{15}{4}$"
+          ],
+          "answer": 3,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "두 변과 끼인각이 주어진 삼각형의 넓이를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a=10$, $b=3$, 끼인각 $C=150^{\\circ}$이다. 넓이 공식 $S=\\dfrac{1}{2}ab\\sin C$를 쓸 수 있다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "두 변 $a,b$와 그 끼인각 $C$를 알 때 삼각형의 넓이는 $S=\\dfrac{1}{2}ab\\sin C$이다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\sin 150^{\\circ}=\\dfrac{1}{2}$이므로 $S=\\dfrac{1}{2}\\cdot10\\cdot3\\cdot\\dfrac{1}{2}=\\dfrac{15}{2}$이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "넓이는 $\\dfrac{15}{2}$이므로 정답은 보기 ③이다."
+            }
+          ]
+        },
+        {
+          "num": 6,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "원에 내접하는 사각형 $ABCD$에서 $\\overline{AB}=4$, $\\overline{BC}=6$이고 $\\angle ABC=120^{\\circ}$일 때, 대각선 $\\overline{AC}$의 길이는?",
+          "choices": [
+            "$2\\sqrt{13}$",
+            "$10$",
+            "$2\\sqrt{7}$",
+            "$2\\sqrt{19}$",
+            "$8$"
+          ],
+          "answer": 4,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "두 변과 끼인각이 주어진 삼각형 $ABC$에서 대각선 $\\overline{AC}$의 길이를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "삼각형 $ABC$에서 $\\overline{AB}=4$, $\\overline{BC}=6$, $\\angle ABC=120^{\\circ}$이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "두 변과 끼인각을 알 때 코사인법칙 $\\overline{AC}^2=\\overline{AB}^2+\\overline{BC}^2-2\\cdot\\overline{AB}\\cdot\\overline{BC}\\cos B$를 쓴다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\cos 120^{\\circ}=-\\dfrac{1}{2}$이므로 $\\overline{AC}^2=16+36-2\\cdot4\\cdot6\\cdot\\left(-\\dfrac{1}{2}\\right)=52+24=76$, 따라서 $\\overline{AC}=2\\sqrt{19}$이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "대각선의 길이는 $2\\sqrt{19}$이므로 정답은 보기 ④이다."
+            }
+          ]
+        },
+        {
+          "num": 7,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "등차수열 $\\{a_n\\}$에서 $a_3=4$, $a_5+a_7=44$일 때, $a_8$의 값은?",
+          "choices": [
+            "$30$",
+            "$32$",
+            "$36$",
+            "$40$",
+            "$34$"
+          ],
+          "answer": 5,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "등차수열의 두 조건으로 첫째항과 공차를 구해 $a_8$을 계산한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "첫째항을 $a$, 공차를 $d$라 하면 $a_3=a+2d=4$, $a_5+a_7=(a+4d)+(a+6d)=2a+10d=44$이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "등차수열의 일반항은 $a_n=a+(n-1)d$이다. 연립방정식으로 $a,d$를 구한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$2a+10d=44$에서 $a+5d=22$. $a+2d=4$와 빼면 $3d=18$, $d=6$, $a=-8$이다. 따라서 $a_8=a+7d=-8+42=34$이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a_8=34$이므로 정답은 보기 ⑤이다."
+            }
+          ]
+        },
+        {
+          "num": 8,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "첫째항이 $1$, 공비가 $4$인 등비수열의 첫째항부터 제$5$항까지의 합은?",
+          "choices": [
+            "$341$",
+            "$256$",
+            "$300$",
+            "$320$",
+            "$400$"
+          ],
+          "answer": 1,
+          "solution": "$S_5=\\dfrac{1\\cdot(4^5-1)}{4-1}=\\dfrac{1023}{3}=341$이다."
+        },
+        {
+          "num": 9,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\displaystyle\\sum_{k=1}^{8}(2k+1)$의 값은?",
+          "choices": [
+            "$72$",
+            "$80$",
+            "$88$",
+            "$96$",
+            "$100$"
+          ],
+          "answer": 2,
+          "solution": "$\\displaystyle\\sum_{k=1}^{8}(2k+1)=2\\cdot\\dfrac{8\\cdot9}{2}+8=72+8=80$이다."
+        },
+        {
+          "num": 10,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\displaystyle\\sum_{k=1}^{7}\\dfrac{1}{k(k+1)}$의 값은?",
+          "choices": [
+            "$\\dfrac{5}{8}$",
+            "$\\dfrac{3}{4}$",
+            "$\\dfrac{7}{8}$",
+            "$\\dfrac{6}{7}$",
+            "$1$"
+          ],
+          "answer": 3,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "분모가 곱으로 된 분수의 시그마 합을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "일반항이 $\\dfrac{1}{k(k+1)}$이고 $k=1$부터 $7$까지 더한다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "부분분수 분해 $\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$를 이용하면 망원합(telescoping)이 된다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\displaystyle\\sum_{k=1}^{7}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{8}=\\dfrac{7}{8}$이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "합은 $\\dfrac{7}{8}$이므로 정답은 보기 ③이다."
+            }
+          ]
+        },
+        {
+          "num": 11,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "수열 $\\{a_n\\}$이 $a_1=1$이고 $a_{n+1}-a_n=3n+1$을 만족할 때, $a_{10}$의 값은?",
+          "choices": [
+            "$135$",
+            "$140$",
+            "$150$",
+            "$145$",
+            "$155$"
+          ],
+          "answer": 4,
+          "solution": "$a_{10}=a_1+\\displaystyle\\sum_{k=1}^{9}(3k+1)=1+\\left(3\\cdot\\dfrac{9\\cdot10}{2}+9\\right)=1+144=145$이다."
+        },
+        {
+          "num": 12,
+          "unit": "수학적 귀납법",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "수열 $\\{a_n\\}$이 $a_1=1$, $a_{n+1}=3a_n+1\\ (n=1,2,3,\\cdots)$을 만족할 때, $a_5$의 값은?",
+          "choices": [
+            "$40$",
+            "$364$",
+            "$13$",
+            "$94$",
+            "$121$"
+          ],
+          "answer": 5,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "점화식으로 정의된 수열의 제$5$항을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a_1=1$이고 $a_{n+1}=3a_n+1$이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "양변에 $\\dfrac{1}{2}$을 더하면 $a_{n+1}+\\dfrac{1}{2}=3\\left(a_n+\\dfrac{1}{2}\\right)$로 등비수열을 이룬다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$a_n+\\dfrac{1}{2}$은 첫째항 $\\dfrac{3}{2}$, 공비 $3$인 등비수열이므로 $a_n+\\dfrac{1}{2}=\\dfrac{3^n}{2}$, $a_n=\\dfrac{3^n-1}{2}$이다. 따라서 $a_5=\\dfrac{243-1}{2}=121$이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a_5=121$이므로 정답은 보기 ⑤이다."
+            }
+          ]
+        },
+        {
+          "num": 13,
+          "unit": "수학적 귀납법",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "수열 $\\{a_n\\}$이 $a_1=2$, $a_{n+1}=\\dfrac{a_n}{1+a_n}\\ (n=1,2,3,\\cdots)$을 만족할 때, $a_{10}$의 값은?",
+          "choices": [
+            "$\\dfrac{2}{19}$",
+            "$\\dfrac{2}{21}$",
+            "$\\dfrac{1}{10}$",
+            "$\\dfrac{2}{17}$",
+            "$\\dfrac{1}{9}$"
+          ],
+          "answer": 1,
+          "solution": "양변의 역수를 취하면 $\\dfrac{1}{a_{n+1}}=\\dfrac{1}{a_n}+1$이므로 $\\dfrac{1}{a_n}$은 첫째항 $\\dfrac{1}{2}$, 공차 $1$인 등차수열이다. $\\dfrac{1}{a_n}=\\dfrac{2n-1}{2}$이므로 $a_{10}=\\dfrac{2}{19}$이다."
+        },
+        {
+          "num": 14,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "첫째항이 $25$, 공차가 $-3$인 등차수열 $\\{a_n\\}$의 첫째항부터 제$n$항까지의 합 $S_n$이 최대가 되도록 하는 자연수 $n$에 대하여 $S_n$의 값은?",
+          "choices": [
+            "$108$",
+            "$117$",
+            "$112$",
+            "$120$",
+            "$125$"
+          ],
+          "answer": 2,
+          "solution": "$a_n=25-3(n-1)\\ge0$에서 $n\\le\\dfrac{28}{3}=9.33\\cdots$이므로 $n=9$일 때 합이 최대이다. $S_9=\\dfrac{9}{2}(2\\cdot25+8\\cdot(-3))=\\dfrac{9}{2}\\cdot26=117$이다."
+        },
+        {
+          "num": 15,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "등비수열 $\\{a_n\\}$에서 $a_3=12$, $a_6=96$일 때, $a_7$의 값은?",
+          "choices": [
+            "$160$",
+            "$176$",
+            "$192$",
+            "$208$",
+            "$224$"
+          ],
+          "answer": 3,
+          "solution": "$\\dfrac{a_6}{a_3}=r^3=8$이므로 $r=2$, $a_1=3$이다. 따라서 $a_7=3\\cdot2^6=192$이다."
+        },
+        {
+          "num": 16,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\displaystyle\\sum_{k=1}^{7}k^2$의 값은?",
+          "choices": [
+            "$120$",
+            "$132$",
+            "$154$",
+            "$140$",
+            "$168$"
+          ],
+          "answer": 4,
+          "solution": "$\\displaystyle\\sum_{k=1}^{7}k^2=\\dfrac{7\\cdot8\\cdot15}{6}=140$이다."
+        },
+        {
+          "num": 17,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "수열 $1,\\,2,\\,2,\\,3,\\,3,\\,3,\\,4,\\,4,\\,4,\\,4,\\,\\cdots$와 같이 자연수 $m$이 $m$번 나열될 때, 제$70$항의 값은?",
+          "choices": [
+            "$10$",
+            "$11$",
+            "$13$",
+            "$14$",
+            "$12$"
+          ],
+          "answer": 5,
+          "solution": "$m$까지의 항의 개수는 $\\dfrac{m(m+1)}{2}$이다. $\\dfrac{11\\cdot12}{2}=66<70\\le\\dfrac{12\\cdot13}{2}=78$이므로 제$70$항은 $12$이다."
+        },
+        {
+          "num": 18,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "삼각형 $ABC$에서 세 변의 길이가 $a=4$, $b=5$, $c=6$일 때, $\\cos A$의 값은?",
+          "choices": [
+            "$\\dfrac{3}{4}$",
+            "$\\dfrac{1}{2}$",
+            "$\\dfrac{9}{16}$",
+            "$\\dfrac{5}{8}$",
+            "$\\dfrac{13}{16}$"
+          ],
+          "answer": 1,
+          "solution": "코사인법칙에 의해 $\\cos A=\\dfrac{b^2+c^2-a^2}{2bc}=\\dfrac{25+36-16}{2\\cdot5\\cdot6}=\\dfrac{45}{60}=\\dfrac{3}{4}$이다."
+        },
+        {
+          "num": 19,
+          "unit": "수학적 귀납법",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "수열 $\\{a_n\\}$이 $a_1=3$이고 $a_{n+1}=a_n+4\\cdot2^n\\ (n=1,2,3,\\cdots)$을 만족할 때, $a_5$의 값을 구하시오.",
+          "answer": "123",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "점화식으로 정의된 수열의 제$5$항을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a_1=3$이고 $a_{n+1}-a_n=4\\cdot2^n$이다. 즉 계차수열이 등비수열로 주어졌다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$n\\ge2$일 때 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}(a_{k+1}-a_k)=a_1+\\sum_{k=1}^{n-1}4\\cdot2^k$이다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\displaystyle\\sum_{k=1}^{n-1}4\\cdot2^k=4\\cdot(2^n-2)=2^{n+2}-8$이므로 $a_n=3+2^{n+2}-8=2^{n+2}-5$이다. 따라서 $a_5=128-5=123$이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a_5=123$이다."
+            }
+          ]
+        },
+        {
+          "num": 20,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "수열 $\\{a_n\\}$의 첫째항부터 제$n$항까지의 합 $S_n$이 $S_n=n^2+2n$일 때, $a_{10}$의 값을 구하시오.",
+          "answer": "21",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "부분합 $S_n$이 주어졌을 때 일반항 $a_{10}$을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$S_n=n^2+2n$이다. 구할 것은 제$10$항 $a_{10}$이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$n\\ge2$일 때 $a_n=S_n-S_{n-1}$이고, $a_1=S_1$이다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$a_{10}=S_{10}-S_9=(100+20)-(81+18)=120-99=21$이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "$a_{10}=21$이다."
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  "built_at": "2026-06-14"
+}

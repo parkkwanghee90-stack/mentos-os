@@ -1,0 +1,69 @@
+{
+  "school": "창원신월고",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "total_problems": 18,
+  "unit_share": [
+    {
+      "unit": "고차방정식",
+      "count": 3,
+      "percent": 17
+    },
+    {
+      "unit": "순열",
+      "count": 2,
+      "percent": 11
+    },
+    {
+      "unit": "행렬",
+      "count": 2,
+      "percent": 11
+    },
+    {
+      "unit": "절댓값부등식",
+      "count": 2,
+      "percent": 11
+    },
+    {
+      "unit": "연립부등식",
+      "count": 2,
+      "percent": 11
+    },
+    {
+      "unit": "이차함수",
+      "count": 2,
+      "percent": 11
+    },
+    {
+      "unit": "경우의수",
+      "count": 2,
+      "percent": 11
+    },
+    {
+      "unit": "조합",
+      "count": 2,
+      "percent": 11
+    },
+    {
+      "unit": "연립방정식",
+      "count": 1,
+      "percent": 6
+    }
+  ],
+  "top_units": [
+    "고차방정식",
+    "순열",
+    "행렬",
+    "절댓값부등식",
+    "연립부등식"
+  ],
+  "objective_ratio": 67,
+  "subjective_ratio": 33,
+  "advanced_ratio": 44,
+  "difficulty_stars": 4,
+  "discrimination_stars": 5,
+  "summary": "창원신월고 기말은 고차방정식·순열 비중이 높고 서술형 33%·심화 44% 로 변별력이 큰 시험.",
+  "analyzed_at": "2026-06-11T18:45:35.916Z"
+}

@@ -1,6 +1,9 @@
 /* 섹션 — 학교별 기출 분석 & 예상문제 (실제 학교 분석 포스터) */
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import LandingExamCarousel from "./LandingExamCarousel";
+import { HERO_EXAM_SHOWCASE } from "@/data/heroExamShowcase";
+import { HERO_EXAM_SHOWCASE_GO2 } from "@/data/heroExamShowcaseGo2";
 
 const SCHOOLS = [
   { img: "/school_exam/nakdong.webp",    name: "낙동고",   tag: "기출 분석" },
@@ -23,19 +26,27 @@ export default function LandingShowcase() {
           그리고 적중 예상문제까지 제공합니다.
         </p>
 
-        <div className="hv-schools-grid">
-          {SCHOOLS.map((s) => (
-            <article key={s.name} className="hv-school-card">
-              <a className="hv-school-imgwrap" href={s.img} target="_blank" rel="noreferrer">
-                <img src={s.img} alt={`${s.name} 기출 분석`} loading="lazy" />
-                <span className="hv-school-tag">{s.tag}</span>
-              </a>
-              <div className="hv-school-foot">
-                <b>{s.name}</b>
-                <span>2025 · 고1 1학기 기말 · 수학</span>
-              </div>
-            </article>
-          ))}
+        <div className="hv-schools-layout">
+          <div className="hv-schools-grid">
+            {SCHOOLS.map((s) => (
+              <article key={s.name} className="hv-school-card">
+                <a className="hv-school-imgwrap" href={s.img} target="_blank" rel="noreferrer">
+                  <img src={s.img} alt={`${s.name} 기출 분석`} loading="lazy" />
+                  <span className="hv-school-tag">{s.tag}</span>
+                </a>
+                <div className="hv-school-foot">
+                  <b>{s.name}</b>
+                  <span>2025 · 고1 1학기 기말 · 수학</span>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          {/* 라이브 예상문제 자동 캐러셀 (실데이터·KaTeX·AVS) — 고1 · 고2 나란히 */}
+          <div className="hv-schools-live">
+            <LandingExamCarousel data={HERO_EXAM_SHOWCASE} tag="고1 공통수학1" />
+            <LandingExamCarousel data={HERO_EXAM_SHOWCASE_GO2} tag="고2 수학Ⅰ" />
+          </div>
         </div>
 
         <div className="hv-schools-cta">
@@ -57,7 +68,13 @@ const SCHOOLS_CSS = `
 .hv-schools-badge b{color:#fff;font-weight:900;}
 .hv-schools-badge em{color:#a78bfa;font-style:normal;font-weight:900;letter-spacing:0.5px;}
 .hv-schools .hv-sub-center{text-align:center;margin:10px auto 0;max-width:560px;}
-.hv-schools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:30px;}
+/* 위: 분석 포스터 5개 한 줄 / 아래: 예상문제 캐러셀 가운데 */
+.hv-schools-layout{margin-top:30px;}
+.hv-schools-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
+.hv-schools-live{display:flex;justify-content:center;gap:20px;margin:30px auto 0;flex-wrap:wrap;}
+.hv-schools-live > *{flex:1 1 380px;max-width:460px;min-width:300px;}
+@media(max-width:900px){.hv-schools-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:560px){.hv-schools-grid{grid-template-columns:repeat(2,1fr);}}
 .hv-school-card{background:rgba(255,255,255,0.03);border:1px solid rgba(148,163,184,0.16);
   border-radius:16px;overflow:hidden;transition:.2s;}
 .hv-school-card:hover{transform:translateY(-4px);border-color:rgba(139,92,246,0.4);

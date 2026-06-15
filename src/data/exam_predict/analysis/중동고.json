@@ -1,0 +1,64 @@
+{
+  "school": "중동고",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "total_problems": 20,
+  "unit_share": [
+    {
+      "unit": "행렬",
+      "count": 5,
+      "percent": 25
+    },
+    {
+      "unit": "순열",
+      "count": 3,
+      "percent": 15
+    },
+    {
+      "unit": "이차부등식",
+      "count": 3,
+      "percent": 15
+    },
+    {
+      "unit": "연립부등식",
+      "count": 3,
+      "percent": 15
+    },
+    {
+      "unit": "경우의수",
+      "count": 3,
+      "percent": 15
+    },
+    {
+      "unit": "조합",
+      "count": 1,
+      "percent": 5
+    },
+    {
+      "unit": "절댓값부등식",
+      "count": 1,
+      "percent": 5
+    },
+    {
+      "unit": "여러가지방정식",
+      "count": 1,
+      "percent": 5
+    }
+  ],
+  "top_units": [
+    "행렬",
+    "순열",
+    "이차부등식",
+    "연립부등식",
+    "경우의수"
+  ],
+  "objective_ratio": 70,
+  "subjective_ratio": 30,
+  "advanced_ratio": 60,
+  "difficulty_stars": 4,
+  "discrimination_stars": 5,
+  "summary": "중동고 기말은 행렬·순열 비중이 높고 서술형 30%·심화 60% 로 변별력이 큰 시험.",
+  "analyzed_at": "2026-06-11T18:45:35.915Z"
+}

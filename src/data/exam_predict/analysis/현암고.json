@@ -1,0 +1,29 @@
+{
+  "school": "현암고",
+  "region": "경기 용인시",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "total_problems": 20,
+  "analyzed_by": "claude-direct",
+  "unit_share": [
+    { "unit": "고차방정식", "count": 4, "percent": 20 },
+    { "unit": "행렬", "count": 4, "percent": 20 },
+    { "unit": "순열", "count": 4, "percent": 20 },
+    { "unit": "연립부등식", "count": 2, "percent": 10 },
+    { "unit": "복소수", "count": 1, "percent": 5 },
+    { "unit": "이차방정식", "count": 1, "percent": 5 },
+    { "unit": "이차부등식", "count": 1, "percent": 5 },
+    { "unit": "연립방정식", "count": 1, "percent": 5 },
+    { "unit": "경우의수", "count": 1, "percent": 5 },
+    { "unit": "절댓값부등식", "count": 1, "percent": 5 }
+  ],
+  "top_units": ["고차방정식", "행렬", "순열"],
+  "objective_ratio": 90,
+  "subjective_ratio": 10,
+  "advanced_ratio": 70,
+  "difficulty_stars": 5,
+  "discrimination_stars": 5,
+  "summary": "2025년 용인시 현암고 1-1 기말 공통수학1 기출은 총 20문항(객관식 18 + 서술형 2, 서술형 비율 10%)으로 구성된다. 단원 비중은 고차방정식·행렬·순열이 각 4문항(각 20%)으로 가장 크고, 연립부등식 2문항, 그 외 복소수·이차방정식·이차부등식·연립방정식·경우의수·절댓값부등식이 각 1문항씩이다. 전반적으로 난도가 매우 높아(5점) 켤레근을 이용한 고차방정식, 이차방정식 근의 분리, 행렬 다항식(A^2-3A+2E=O)·행렬의 비가환성, 원순열, 5x3 메뉴판 비밀번호 같은 경우의수, 절댓값부등식 서술형 등 변별력 높은 고난도 문항(advanced 약 70%)이 다수 배치되었다. 단순 계산형보다 조건 분석·경우 나눔·검산이 요구되는 문항이 많아 변별도(5점)가 높은 편이다. 본 예상문제 세트는 이 비중과 난이도를 그대로 반영해 고차방정식·행렬·순열을 각 4문항으로 두고 절댓값부등식·고차방정식을 서술형으로 배치하였다."
+}

@@ -1,0 +1,27 @@
+{
+  "school": "돌마고",
+  "region": "경기 성남시",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "total_problems": 20,
+  "analyzed_by": "claude-direct",
+  "unit_share": [
+    { "unit": "고차방정식", "count": 4, "percent": 20 },
+    { "unit": "경우의수", "count": 4, "percent": 20 },
+    { "unit": "행렬", "count": 3, "percent": 15 },
+    { "unit": "순열", "count": 2, "percent": 10 },
+    { "unit": "조합", "count": 2, "percent": 10 },
+    { "unit": "이차부등식", "count": 2, "percent": 10 },
+    { "unit": "연립부등식", "count": 2, "percent": 10 },
+    { "unit": "연립방정식", "count": 1, "percent": 5 }
+  ],
+  "top_units": ["고차방정식", "경우의수", "행렬"],
+  "objective_ratio": 85,
+  "subjective_ratio": 15,
+  "advanced_ratio": 80,
+  "difficulty_stars": 4,
+  "discrimination_stars": 4,
+  "summary": "돌마고 2025 1학기 기말(공통수학1)은 총 21문항(객관식 18 + 서술형 3, 서술형 약 14%)으로, 고차방정식(삼차·사차방정식, 켤레허근 ω, 근과 계수의 관계)과 경우의수·순열·조합(약수의 개수, 지도 색칠, 정검다리 건너기 등 활용형)의 비중이 가장 높다. 행렬(같음·곱셈·성분합)은 기본·중상 난이도로 고르게 출제되고, 이차부등식·연립부등식·연립방정식이 마무리를 이룬다. ㄱㄴㄷ 보기형 합답형(10·11·16·18번)과 실생활/도형 활용 문항(8·15·17번)이 변별 장치로 쓰여 난이도·변별도 모두 상(별 4)에 해당한다. 본 예상문제 20선은 이 단원 비중과 객관식:서술형≈85:15 비율, 합답형·활용형 출제 패턴을 그대로 반영해 창작했다."
+}

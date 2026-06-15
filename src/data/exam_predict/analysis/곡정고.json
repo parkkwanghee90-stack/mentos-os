@@ -1,0 +1,27 @@
+{
+  "school": "곡정고",
+  "region": "경기 김포시",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "total_problems": 20,
+  "analyzed_by": "claude-direct",
+  "unit_share": [
+    { "unit": "행렬", "count": 5, "percent": 25 },
+    { "unit": "경우의수", "count": 4, "percent": 20 },
+    { "unit": "고차방정식", "count": 3, "percent": 15 },
+    { "unit": "순열", "count": 3, "percent": 15 },
+    { "unit": "이차부등식", "count": 2, "percent": 10 },
+    { "unit": "절댓값부등식", "count": 1, "percent": 5 },
+    { "unit": "조합", "count": 1, "percent": 5 },
+    { "unit": "연립부등식", "count": 1, "percent": 5 }
+  ],
+  "top_units": ["행렬", "경우의수", "고차방정식"],
+  "objective_ratio": 80,
+  "subjective_ratio": 20,
+  "advanced_ratio": 85,
+  "difficulty_stars": 4,
+  "discrimination_stars": 4,
+  "summary": "곡정고 2025 1학기 기말(공통수학1)은 객관식 18문항 + 서술형 4문항으로, 행렬(성분 비교·실수배·곱·거듭제곱)과 경우의수·순열·조합, 고차방정식이 핵심 축을 이룬다. 행렬에 복소수 허근 ω를 결합한 거듭제곱 문항, 절댓값·연립부등식의 정수해 개수, 자릿수 조건 경우의수, 사차방정식의 실근/허근 분류 등 여러 개념을 결합하고 경우를 나누는 변별 심화가 다수 출제되어 난도가 높다. 예상문제 20문항은 원본의 단원비중과 객관식·서술형 비율(80:20)을 그대로 반영하고, 심화 비중을 85%로 두어 원본의 변별·사고 깊이를 유지했다. 모든 객관식은 끝까지 풀어 정답을 검산했고, 서술형은 풀이 과정 서술형으로 구성했다."
+}

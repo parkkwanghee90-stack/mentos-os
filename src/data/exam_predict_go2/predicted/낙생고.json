@@ -1,0 +1,536 @@
+{
+  "school": "낙생고",
+  "region": "경기 성남",
+  "year": 2025,
+  "grade": "고2",
+  "term": "1학기 기말",
+  "subject": "수학1",
+  "generated_by": "claude-direct-go2",
+  "generated_at": "2026-06-14",
+  "source_note": "원본 출제경향 기반 오리지널",
+  "count": 20,
+  "blueprint": {
+    "difficulty_stars": 4,
+    "subjective_ratio": 10,
+    "allocation": [
+      {
+        "unit": "삼각함수의 활용",
+        "n": 5
+      },
+      {
+        "unit": "등차수열과 등비수열",
+        "n": 4
+      },
+      {
+        "unit": "삼각함수",
+        "n": 3
+      },
+      {
+        "unit": "여러 가지 수열",
+        "n": 3
+      },
+      {
+        "unit": "지수와 로그",
+        "n": 2
+      },
+      {
+        "unit": "지수함수와 로그함수",
+        "n": 2
+      },
+      {
+        "unit": "수학적 귀납법",
+        "n": 1
+      }
+    ]
+  },
+  "problems": [
+    {
+      "num": 1,
+      "unit": "지수와 로그",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "$\\log_2 24 - \\log_2 3$의 값은?",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$"
+      ],
+      "answer": 3,
+      "solution": "$\\log_2 24 - \\log_2 3 = \\log_2 8 = 3$"
+    },
+    {
+      "num": 2,
+      "unit": "지수와 로그",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "$a + \\dfrac{1}{a} = 7$일 때, $\\left(a^{\\frac{1}{2}} + a^{-\\frac{1}{2}}\\right)^2$의 값은? (단, $a>0$)",
+      "choices": [
+        "$6$",
+        "$7$",
+        "$8$",
+        "$9$",
+        "$10$"
+      ],
+      "answer": 4,
+      "solution": "$\\left(a^{\\frac{1}{2}}+a^{-\\frac{1}{2}}\\right)^2 = a + 2 + \\dfrac{1}{a} = 7+2 = 9$"
+    },
+    {
+      "num": 3,
+      "unit": "지수함수와 로그함수",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "함수 $y = 4^{x} - 2^{\\,x+1} + 5$의 최솟값은?",
+      "choices": [
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$"
+      ],
+      "answer": 2,
+      "solution": "$t=2^{x}>0$로 놓으면 $y=t^2-2t+5=(t-1)^2+4$이므로 $t=1$에서 최솟값 $4$"
+    },
+    {
+      "num": 4,
+      "unit": "지수함수와 로그함수",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "부등식 $\\log_{\\frac{1}{2}}(x-1) \\ge -2$를 만족시키는 정수 $x$의 개수는?",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$"
+      ],
+      "answer": 4,
+      "solution": "진수조건 $x>1$, $\\log_{\\frac12}(x-1)\\ge-2 \\Rightarrow x-1\\le 4$이므로 $1<x\\le5$. 정수 $x=2,3,4,5$로 $4$개"
+    },
+    {
+      "num": 5,
+      "unit": "삼각함수",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "$\\sin\\theta\\cos\\theta = \\dfrac{1}{4}$일 때, $\\sin\\theta + \\cos\\theta$의 값은? (단, $0<\\theta<\\dfrac{\\pi}{2}$)",
+      "choices": [
+        "$\\dfrac{\\sqrt{6}}{2}$",
+        "$\\dfrac{\\sqrt{3}}{2}$",
+        "$\\dfrac{\\sqrt{2}}{2}$",
+        "$\\dfrac{\\sqrt{5}}{2}$",
+        "$1$"
+      ],
+      "answer": 1,
+      "solution": "$(\\sin\\theta+\\cos\\theta)^2 = 1 + 2\\sin\\theta\\cos\\theta = 1+\\dfrac{1}{2}=\\dfrac{3}{2}$이고 $0<\\theta<\\dfrac{\\pi}{2}$에서 양수이므로 $\\dfrac{\\sqrt{6}}{2}$"
+    },
+    {
+      "num": 6,
+      "unit": "삼각함수",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "$\\sin\\theta - \\cos\\theta = \\dfrac{1}{2}$일 때, $\\sin\\theta\\cos\\theta$의 값은?",
+      "choices": [
+        "$\\dfrac{1}{8}$",
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{3}{8}$",
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{5}{8}$"
+      ],
+      "answer": 3,
+      "solution": "$(\\sin\\theta-\\cos\\theta)^2 = 1 - 2\\sin\\theta\\cos\\theta = \\dfrac{1}{4}$이므로 $\\sin\\theta\\cos\\theta = \\dfrac{3}{8}$"
+    },
+    {
+      "num": 7,
+      "unit": "삼각함수",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "함수 $y = 3\\cos\\dfrac{\\pi}{2}x + 1$의 최댓값을 $M$, 주기를 $p$라 할 때, $M+p$의 값은?",
+      "choices": [
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$",
+        "$8$"
+      ],
+      "answer": 5,
+      "solution": "최댓값 $M = 3+1 = 4$, 주기 $p = \\dfrac{2\\pi}{\\pi/2} = 4$이므로 $M+p=8$"
+    },
+    {
+      "num": 8,
+      "unit": "삼각함수의 활용",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "삼각형 $\\mathrm{ABC}$에서 $b=7$, $c=5$, $A=60^\\circ$일 때, 변 $a$의 길이는?",
+      "choices": [
+        "$\\sqrt{37}$",
+        "$\\sqrt{39}$",
+        "$\\sqrt{41}$",
+        "$\\sqrt{43}$",
+        "$\\sqrt{45}$"
+      ],
+      "answer": 2,
+      "solution": "$a^2 = b^2+c^2-2bc\\cos A = 49+25-2\\cdot7\\cdot5\\cdot\\dfrac12 = 39$이므로 $a=\\sqrt{39}$"
+    },
+    {
+      "num": 9,
+      "unit": "삼각함수의 활용",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "삼각형 $\\mathrm{ABC}$에서 $a=6$, $A=30^\\circ$일 때, 이 삼각형의 외접원의 반지름의 길이는?",
+      "choices": [
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$"
+      ],
+      "answer": 4,
+      "solution": "사인법칙에 의해 $2R = \\dfrac{a}{\\sin A} = \\dfrac{6}{\\sin 30^\\circ} = 12$이므로 $R=6$"
+    },
+    {
+      "num": 10,
+      "unit": "삼각함수의 활용",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "삼각형 $\\mathrm{ABC}$에서 $b=8$, $c=5$, $A=120^\\circ$일 때, 삼각형 $\\mathrm{ABC}$의 넓이는?",
+      "choices": [
+        "$10\\sqrt{3}$",
+        "$12\\sqrt{3}$",
+        "$15\\sqrt{3}$",
+        "$18\\sqrt{3}$",
+        "$20\\sqrt{3}$"
+      ],
+      "answer": 1,
+      "solution": "$S = \\dfrac12 bc\\sin A = \\dfrac12\\cdot8\\cdot5\\cdot\\sin120^\\circ = 20\\cdot\\dfrac{\\sqrt3}{2} = 10\\sqrt{3}$"
+    },
+    {
+      "num": 11,
+      "unit": "등차수열과 등비수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "등차수열 $\\{a_n\\}$에서 $a_3 = 7$, $a_7 = 19$일 때, $a_{10}$의 값은?",
+      "choices": [
+        "$22$",
+        "$25$",
+        "$28$",
+        "$31$",
+        "$34$"
+      ],
+      "answer": 3,
+      "solution": "공차 $d = \\dfrac{19-7}{7-3} = 3$, $a_1 = a_3 - 2d = 1$이므로 $a_{10} = 1 + 9\\cdot3 = 28$"
+    },
+    {
+      "num": 12,
+      "unit": "등차수열과 등비수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "등비수열 $\\{a_n\\}$에서 $a_2 = 6$, $a_5 = 48$일 때, 첫째항부터 제$5$항까지의 합은? (단, 공비는 실수)",
+      "choices": [
+        "$45$",
+        "$57$",
+        "$69$",
+        "$81$",
+        "$93$"
+      ],
+      "answer": 5,
+      "solution": "$r^3 = \\dfrac{a_5}{a_2} = 8$이므로 $r=2$, $a_1 = \\dfrac{a_2}{r} = 3$. $S_5 = \\dfrac{3(2^5-1)}{2-1} = 93$"
+    },
+    {
+      "num": 13,
+      "unit": "등차수열과 등비수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "수열 $\\{a_n\\}$의 첫째항부터 제$n$항까지의 합 $S_n = 2n^2 + 3n$일 때, $a_5$의 값은?",
+      "choices": [
+        "$19$",
+        "$21$",
+        "$23$",
+        "$25$",
+        "$27$"
+      ],
+      "answer": 2,
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "부분합 $S_n$이 주어진 수열에서 특정 항 $a_5$를 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "첫째항부터 제$n$항까지의 합이 $S_n = 2n^2+3n$으로 주어졌다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$n\\ge2$일 때 $a_n = S_n - S_{n-1}$이다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$a_5 = S_5 - S_4 = (2\\cdot25+3\\cdot5) - (2\\cdot16+3\\cdot4) = 65 - 44 = 21$"
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$a_5 = 21$이므로 정답은 보기 ②이다."
+        }
+      ]
+    },
+    {
+      "num": 14,
+      "unit": "여러 가지 수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "$\\displaystyle\\sum_{k=1}^{10} (2k-1)$의 값은?",
+      "choices": [
+        "$80$",
+        "$90$",
+        "$95$",
+        "$100$",
+        "$110$"
+      ],
+      "answer": 4,
+      "solution": "$\\displaystyle\\sum_{k=1}^{10}(2k-1) = 2\\cdot\\dfrac{10\\cdot11}{2} - 10 = 110-10 = 100$"
+    },
+    {
+      "num": 15,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "$\\displaystyle\\sum_{k=1}^{9} \\dfrac{1}{k(k+1)}$의 값은?",
+      "choices": [
+        "$\\dfrac{9}{10}$",
+        "$\\dfrac{8}{9}$",
+        "$\\dfrac{4}{5}$",
+        "$\\dfrac{5}{6}$",
+        "$\\dfrac{10}{11}$"
+      ],
+      "answer": 1,
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "분모가 곱으로 된 분수의 합을 부분분수 분해로 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "구할 값은 $\\displaystyle\\sum_{k=1}^{9} \\dfrac{1}{k(k+1)}$이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$\\dfrac{1}{k(k+1)} = \\dfrac{1}{k} - \\dfrac{1}{k+1}$로 분해하면 이웃한 항이 소거되는 망원급수가 된다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\displaystyle\\sum_{k=1}^{9}\\left(\\dfrac1k - \\dfrac1{k+1}\\right) = \\left(1-\\dfrac12\\right)+\\left(\\dfrac12-\\dfrac13\\right)+\\cdots+\\left(\\dfrac19-\\dfrac1{10}\\right) = 1 - \\dfrac{1}{10} = \\dfrac{9}{10}$"
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "합은 $\\dfrac{9}{10}$이므로 정답은 보기 ①이다."
+        }
+      ]
+    },
+    {
+      "num": 16,
+      "unit": "삼각함수의 활용",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "삼각형 $\\mathrm{ABC}$에서 $\\overline{\\mathrm{AB}} = 6$, $\\overline{\\mathrm{BC}} = 10$, $\\angle\\mathrm{B} = 60^\\circ$일 때, 삼각형 $\\mathrm{ABC}$의 넓이는?",
+      "choices": [
+        "$10\\sqrt{3}$",
+        "$12\\sqrt{3}$",
+        "$\\dfrac{25\\sqrt{3}}{2}$",
+        "$13\\sqrt{3}$",
+        "$15\\sqrt{3}$"
+      ],
+      "answer": 5,
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "두 변과 그 끼인각이 주어진 삼각형의 넓이를 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$\\overline{\\mathrm{AB}}=6$, $\\overline{\\mathrm{BC}}=10$이고 그 끼인각은 $\\angle\\mathrm{B}=60^\\circ$이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "두 변의 길이 $a$, $c$와 끼인각 $B$를 알 때 넓이는 $S=\\dfrac12 \\cdot ac \\cdot \\sin B$이다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$S = \\dfrac12 \\cdot \\overline{\\mathrm{AB}} \\cdot \\overline{\\mathrm{BC}} \\cdot \\sin\\mathrm{B} = \\dfrac12 \\cdot 6 \\cdot 10 \\cdot \\sin60^\\circ = 30 \\cdot \\dfrac{\\sqrt3}{2}$"
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "넓이는 $15\\sqrt{3}$이므로 정답은 보기 ⑤이다."
+        }
+      ]
+    },
+    {
+      "num": 17,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "수열 $\\{a_n\\}$이 $2,\\ 5,\\ 10,\\ 17,\\ 26,\\ \\cdots$일 때, $a_{10}$의 값은?",
+      "choices": [
+        "$82$",
+        "$91$",
+        "$101$",
+        "$110$",
+        "$122$"
+      ],
+      "answer": 3,
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "계차수열을 이용하여 일반항을 구하고 $a_{10}$을 계산한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "이웃한 항의 차는 $3,\\ 5,\\ 7,\\ 9,\\ \\cdots$로 계차수열 $\\{b_n\\}$은 $b_n = 2n+1$인 등차수열이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "계차수열이 $\\{b_n\\}$일 때 $n\\ge2$에서 $a_n = a_1 + \\displaystyle\\sum_{k=1}^{n-1} b_k$이다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$a_n = 2 + \\displaystyle\\sum_{k=1}^{n-1}(2k+1) = 2 + (n-1)n + (n-1) = n^2+1$이므로 $a_{10} = 10^2+1 = 101$"
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$a_{10}=101$이므로 정답은 보기 ③이다."
+        }
+      ]
+    },
+    {
+      "num": 18,
+      "unit": "등차수열과 등비수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "수열 $\\{a_n\\}$이 $a_1 = 1$, $a_{n+1} = a_n + 2n\\ (n\\ge1)$을 만족시킬 때, $a_{10}$의 값은?",
+      "choices": [
+        "$82$",
+        "$91$",
+        "$100$",
+        "$109$",
+        "$118$"
+      ],
+      "answer": 2,
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "점화식으로 정의된 수열의 일반항을 구하여 $a_{10}$을 계산한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$a_1=1$이고 $a_{n+1}-a_n = 2n$이므로 계차가 $2n$인 수열이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$a_{n+1}-a_n = f(n)$이면 $a_n = a_1 + \\displaystyle\\sum_{k=1}^{n-1} f(k)$이다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$a_n = 1 + \\displaystyle\\sum_{k=1}^{n-1} 2k = 1 + (n-1)n$이므로 $a_{10} = 1 + 9\\cdot10 = 91$"
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$a_{10}=91$이므로 정답은 보기 ②이다."
+        }
+      ]
+    },
+    {
+      "num": 19,
+      "unit": "삼각함수의 활용",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "삼각형 $\\mathrm{ABC}$에서 $\\overline{\\mathrm{AB}} = 8$, $\\overline{\\mathrm{AC}} = 5$, $\\angle\\mathrm{A} = 60^\\circ$이다. 변 $\\overline{\\mathrm{BC}}$의 길이와 삼각형 $\\mathrm{ABC}$의 외접원의 반지름의 길이 $R$를 구하고, 그 과정을 서술하시오.",
+      "answer": "BC = 7, R = (7√3)/3",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "두 변과 끼인각으로 나머지 변 $\\overline{\\mathrm{BC}}$를 구한 뒤 외접원의 반지름 $R$를 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$\\overline{\\mathrm{AB}}=8$, $\\overline{\\mathrm{AC}}=5$, 끼인각 $\\angle\\mathrm{A}=60^\\circ$이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "코사인법칙 $a^2 = b^2+c^2-2bc\\cos A$로 변의 길이를, 사인법칙 $\\dfrac{a}{\\sin A} = 2R$로 외접원 반지름을 구한다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\overline{\\mathrm{BC}}^2 = 8^2+5^2-2\\cdot8\\cdot5\\cos60^\\circ = 64+25-40 = 49$이므로 $\\overline{\\mathrm{BC}} = 7$. 사인법칙에서 $2R = \\dfrac{\\overline{\\mathrm{BC}}}{\\sin A} = \\dfrac{7}{\\sin60^\\circ} = \\dfrac{14}{\\sqrt3}$이므로 $R = \\dfrac{7}{\\sqrt3} = \\dfrac{7\\sqrt3}{3}$"
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$\\overline{\\mathrm{BC}} = 7$, $R = \\dfrac{7\\sqrt3}{3}$이다."
+        }
+      ]
+    },
+    {
+      "num": 20,
+      "unit": "수학적 귀납법",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "모든 자연수 $n$에 대하여 등식 $\\displaystyle\\sum_{k=1}^{n} k\\cdot 2^{k} = (n-1)\\cdot 2^{\\,n+1} + 2$가 성립함을 수학적 귀납법으로 증명하시오.",
+      "answer": "수학적 귀납법으로 증명 (n=1 성립, n=m 가정 후 n=m+1 성립)",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "주어진 등식이 모든 자연수 $n$에서 성립함을 수학적 귀납법으로 증명한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "증명할 명제는 $P(n):\\ \\displaystyle\\sum_{k=1}^{n} k\\cdot2^{k} = (n-1)\\cdot2^{\\,n+1}+2$이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "수학적 귀납법은 $(\\,\\text{i}\\,)$ $n=1$일 때 성립함을 보이고, $(\\,\\text{ii}\\,)$ $n=m$일 때 성립한다고 가정하여 $n=m+1$일 때도 성립함을 보인다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$(\\,\\text{i}\\,)$ $n=1$일 때 좌변 $= 1\\cdot2 = 2$, 우변 $= 0\\cdot2^2+2 = 2$로 성립한다. $(\\,\\text{ii}\\,)$ $n=m$일 때 성립한다고 가정하면 $\\displaystyle\\sum_{k=1}^{m} k\\cdot2^{k} = (m-1)\\cdot2^{\\,m+1}+2$이다. 양변에 $(m+1)\\cdot2^{\\,m+1}$을 더하면 $\\displaystyle\\sum_{k=1}^{m+1} k\\cdot2^{k} = (m-1)\\cdot2^{\\,m+1}+2 + (m+1)\\cdot2^{\\,m+1} = 2m\\cdot2^{\\,m+1}+2 = m\\cdot2^{\\,m+2}+2$이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "이는 $n=m+1$일 때의 등식 $\\{(m+1)-1\\}\\cdot2^{\\,(m+1)+1}+2 = m\\cdot2^{\\,m+2}+2$와 같으므로 성립한다. 따라서 $(\\,\\text{i}\\,)$, $(\\,\\text{ii}\\,)$에 의해 모든 자연수 $n$에서 등식이 성립한다."
+        }
+      ]
+    }
+  ]
+}

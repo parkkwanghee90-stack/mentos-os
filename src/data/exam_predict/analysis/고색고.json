@@ -1,0 +1,28 @@
+{
+  "school": "고색고",
+  "region": "경기 수원시",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "total_problems": 20,
+  "analyzed_by": "claude-direct",
+  "unit_share": [
+    {"unit": "행렬", "count": 7, "percent": 35},
+    {"unit": "경우의수", "count": 4, "percent": 20},
+    {"unit": "연립방정식", "count": 2, "percent": 10},
+    {"unit": "연립부등식", "count": 2, "percent": 10},
+    {"unit": "순열", "count": 1, "percent": 5},
+    {"unit": "조합", "count": 1, "percent": 5},
+    {"unit": "이차부등식", "count": 1, "percent": 5},
+    {"unit": "절댓값부등식", "count": 1, "percent": 5},
+    {"unit": "고차방정식", "count": 1, "percent": 5}
+  ],
+  "top_units": ["행렬", "경우의수", "연립방정식"],
+  "objective_ratio": 100,
+  "subjective_ratio": 0,
+  "advanced_ratio": 75,
+  "difficulty_stars": 4,
+  "discrimination_stars": 4,
+  "summary": "고색고 2025 1학기 기말은 23문항 전부 객관식(보기 5개)으로, 행렬 단원이 8문항으로 압도적이다. 성분 비교·행렬 곱·실수배 같은 기본형부터 A^2=kA+lE 관계식, 행렬 거듭제곱 주기로 자연수 개수 세기, 모든 X와 교환되는 스칼라 행렬, 표(유나바움 가격·재고)를 행렬곱으로 해석하는 실생활 융합까지 폭넓게 출제됐다. 경우의수는 배수의 합집합, 자릿값(짝수 만들기), 색칠 같은 조건 분기형이 다수다. 변별 킬러로 대칭식 연립방정식(x+y·xy 치환), 연립부등식 미정계수 결정, 절댓값부등식 정수해 개수, 이차부등식 항상 성립 조건이 배치돼 사고 깊이가 높다. 예상문제는 이 비중(행렬 7·경우의수 4·연립방정식 2·연립부등식 2·순열/조합 각1·이차/절댓값부등식·고차방정식 각1)과 전 문항 객관식 구성을 그대로 반영하고, 심화 비중 75%로 원본 변별력 수준 이상을 유지했다. 난이도 별 4, 변별도 별 4."
+}

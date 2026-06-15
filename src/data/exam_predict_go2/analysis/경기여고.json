@@ -1,0 +1,48 @@
+{
+  "school": "경기여고",
+  "region": "서울 강남구",
+  "year": 2025,
+  "grade": "고2",
+  "term": "1학기 기말",
+  "subject": "수학1",
+  "total_problems": 20,
+  "analyzed_by": "claude-direct-go2",
+  "unit_share": [
+    {
+      "unit": "여러 가지 수열",
+      "count": 5,
+      "percent": 25
+    },
+    {
+      "unit": "삼각함수의 활용",
+      "count": 5,
+      "percent": 25
+    },
+    {
+      "unit": "등차수열과 등비수열",
+      "count": 5,
+      "percent": 25
+    },
+    {
+      "unit": "삼각함수",
+      "count": 4,
+      "percent": 20
+    },
+    {
+      "unit": "수학적 귀납법",
+      "count": 1,
+      "percent": 5
+    }
+  ],
+  "top_units": [
+    "여러 가지 수열",
+    "삼각함수의 활용",
+    "등차수열과 등비수열"
+  ],
+  "objective_ratio": 70,
+  "subjective_ratio": 30,
+  "advanced_ratio": 75,
+  "difficulty_stars": 5,
+  "discrimination_stars": 5,
+  "summary": "경기여고 2025 고2 1학기 기말은 삼각함수의 활용과 여러 가지 수열, 등차·등비수열, 수학적 귀납법을 중심으로 한 매우 높은 난이도의 시험이다. 객관식과 서술형이 함께 출제되며 코사인법칙·사인법칙·외접원/내접원, 망원급수·점화식·시그마, 삼각방정식과 부등식이 변별 문항으로 나온다. 단순 공식 적용보다 여러 개념을 결합한 심화 문제 비중이 크고, 서술형은 외접원 넓이·귀납법 증명 등 완결된 논증을 요구한다. 본 예상문제는 원본의 단원 비중과 변별력을 따라 심화 비율 75%로 오리지널 20문항을 구성하였다."
+}

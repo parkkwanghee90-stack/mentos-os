@@ -1,0 +1,1964 @@
+{
+  "school": "진주고",
+  "region": "경남 진주시",
+  "year": 2025,
+  "grade": "고2",
+  "term": "1학기 기말",
+  "subject": "수학1",
+  "generated_by": "claude-direct-go2",
+  "generated_at": "2026-06-15",
+  "source_note": "원본 출제경향 기반 오리지널",
+  "count": 20,
+  "blueprint": {
+    "difficulty_stars": 4,
+    "subjective_ratio": 35,
+    "allocation": [
+      {
+        "unit": "여러 가지 수열",
+        "n": 10
+      },
+      {
+        "unit": "삼각함수의 활용",
+        "n": 7
+      },
+      {
+        "unit": "수학적 귀납법",
+        "n": 2
+      },
+      {
+        "unit": "삼각함수",
+        "n": 1
+      }
+    ]
+  },
+  "problems": [
+    {
+      "num": 1,
+      "unit": "여러 가지 수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "수열 $\\{a_n\\}$ 이 $a_1=3$, $a_{n+1}=a_n+2n+1$ 을 만족시킬 때, $a_{10}$ 의 값은?",
+      "choices": [
+        "$101$",
+        "$102$",
+        "$103$",
+        "$104$",
+        "$105$"
+      ],
+      "answer": 2,
+      "solution": "$a_{n+1}-a_n=2n+1$ 이므로 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}(2k+1)=3+2\\cdot\\dfrac{(n-1)n}{2}+1(n-1)$ 이다. $n=10$ 을 대입하면 $a_{10}=102$ 이다."
+    },
+    {
+      "num": 2,
+      "unit": "여러 가지 수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{20} a_k=100$ 일 때, $\\displaystyle\\sum_{k=1}^{20}(2a_k+3)$ 의 값은?",
+      "choices": [
+        "$245$",
+        "$250$",
+        "$255$",
+        "$260$",
+        "$265$"
+      ],
+      "answer": 4,
+      "solution": "$\\displaystyle\\sum_{k=1}^{20}(2a_k+3)=2\\sum_{k=1}^{20}a_k+3\\cdot 20=2\\cdot 100+60=260$ 이다."
+    },
+    {
+      "num": 3,
+      "unit": "삼각함수의 활용",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "삼각형 $ABC$ 에서 $A=60^{\\circ}$, $B=75^{\\circ}$, $\\overline{AB}=6$ 일 때, 변 $BC$ 의 길이는?",
+      "choices": [
+        "$1\\sqrt{6}$",
+        "$2\\sqrt{6}$",
+        "$3\\sqrt{6}$",
+        "$4\\sqrt{6}$",
+        "$5\\sqrt{6}$"
+      ],
+      "answer": 3,
+      "solution": "$C=180^{\\circ}-60^{\\circ}-75^{\\circ}=45^{\\circ}$ 이다. 사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=\\dfrac{\\overline{AB}}{\\sin C}$ 에서 $\\overline{BC}=\\overline{AB}\\cdot\\dfrac{\\sin 60^{\\circ}}{\\sin 45^{\\circ}}=6\\cdot\\dfrac{\\dfrac{\\sqrt{3}}{2}}{\\dfrac{\\sqrt{2}}{2}}=3\\sqrt{6}$ 이다."
+    },
+    {
+      "num": 4,
+      "unit": "수학적 귀납법",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "다음은 $n\\ge 5$ 인 모든 자연수 $n$ 에 대하여 $2^{n}>n^{2}$ 이 성립함을 수학적 귀납법으로 증명한 것이다. \\\\ (i) $n=5$ 일 때, $2^{5}=32$, $5^{2}=25$ 이므로 $2^{5}>5^{2}$ 이고 그 차는 $\\boxed{(\\text{가})}$ 이다. \\\\ (ii) $n=k\\,(k\\ge 5)$ 일 때 $2^{k}>k^{2}$ 이 성립한다고 가정하면 $2^{k+1}=2\\cdot 2^{k}>2k^{2}$ 이고, $k\\ge 5$ 이면 $2k^{2}-(k+1)^{2}=k^{2}-2k-1>0$ 이므로 $2^{k+1}>(k+1)^{2}$ 이 성립한다. \\\\ 위의 $\\boxed{(\\text{가})}$ 에 알맞은 수는?",
+      "choices": [
+        "$6$",
+        "$7$",
+        "$8$",
+        "$9$",
+        "$10$"
+      ],
+      "answer": 2,
+      "solution": "$n=5$ 일 때 $2^{5}-5^{2}=32-25=7$ 이므로 $\\boxed{(\\text{가})}=7$ 이다.",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "수학적 귀납법으로 $2^{n}>n^{2}\\,(n\\ge 5)$ 을 증명하는 과정에서 빈칸 $\\boxed{(\\text{가})}$ 의 값을 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "(i) 단계에서 $n=5$ 을 대입해 $2^{5}$ 과 $5^{2}$ 의 차를 계산해야 한다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$2^{5}=32$ 이고 $5^{2}=25$ 이므로 두 값의 차가 $\\boxed{(\\text{가})}$ 이다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$2^{5}-5^{2}=32-25=7$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$\\boxed{(\\text{가})}=7$ 이므로 보기 ② 이다."
+        }
+      ]
+    },
+    {
+      "num": 5,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "수열 $\\{a_n\\}$ 이 $a_1=1$, $a_{n+1}=3a_n+1$ 로 정의될 때, $a_{4}$ 의 값은?",
+      "choices": [
+        "$20$",
+        "$25$",
+        "$30$",
+        "$35$",
+        "$40$"
+      ],
+      "answer": 5,
+      "solution": "점화식 $a_{n+1}=3a_n+1$ 을 $a_{n+1}+1/(3-1)=3\\left(a_n+1/(3-1)\\right)$ 꼴로 변형하면 $a_n+\\dfrac{1}{2}$ 은 첫째항 $a_1+\\dfrac{1}{2}=1.5$, 공비 $3$ 인 등비수열이다. 직접 계산하면 $a_4=40$ 이다."
+    },
+    {
+      "num": 6,
+      "unit": "삼각함수의 활용",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=5$, $\\overline{AC}=8$, $A=60^{\\circ}$ 일 때, 변 $BC$ 의 길이는?",
+      "choices": [
+        "$7$",
+        "$8$",
+        "$9$",
+        "$10$",
+        "$11$"
+      ],
+      "answer": 1,
+      "solution": "코사인법칙에 의해 $\\overline{BC}^{2}=\\overline{AC}^{2}+\\overline{AB}^{2}-2\\cdot\\overline{AC}\\cdot\\overline{AB}\\cos A=8^{2}+5^{2}-2\\cdot 8\\cdot 5\\cdot(\\dfrac{1}{2})=49$ 이므로 $\\overline{BC}=7$ 이다."
+    },
+    {
+      "num": 7,
+      "unit": "삼각함수의 활용",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "반지름의 길이가 $5$ 인 원에 내접하는 삼각형 $ABC$ 에서 $\\sin A=\\dfrac{3}{5}$ 일 때, 변 $BC$ 의 길이는?",
+      "choices": [
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$",
+        "$8$"
+      ],
+      "answer": 3,
+      "solution": "사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=2R$ 에서 $2R=10$ 이므로 $\\overline{BC}=2R\\sin A=10\\cdot\\dfrac{3}{5}=6$ 이다."
+    },
+    {
+      "num": 8,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "수열 $\\{a_n\\}$ 이 $a_1=50$, $a_{n+1}=|a_n-3|$ 로 정의될 때, $a_{6}$ 의 값은?",
+      "choices": [
+        "$32$",
+        "$33$",
+        "$34$",
+        "$35$",
+        "$36$"
+      ],
+      "answer": 4,
+      "solution": "항을 차례로 구하면 $50,\\ 47,\\ 44,\\ 41,\\ 38,\\ 35$ 이므로 $a_{6}=35$ 이다."
+    },
+    {
+      "num": 9,
+      "unit": "삼각함수의 활용",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "$\\overline{AB}=\\overline{AC}=4$ 이고 $A=120^{\\circ}$ 인 이등변삼각형 $ABC$ 에서 변 $BC$ 의 길이는?",
+      "choices": [
+        "$4\\sqrt{3}$",
+        "$5\\sqrt{3}$",
+        "$6\\sqrt{3}$",
+        "$7\\sqrt{3}$",
+        "$8\\sqrt{3}$"
+      ],
+      "answer": 1,
+      "solution": "코사인법칙에서 $\\overline{BC}^{2}=4^{2}+4^{2}-2\\cdot 4\\cdot 4\\cos 120^{\\circ}=2\\cdot 16-2\\cdot 16\\cdot\\left(-\\dfrac{1}{2}\\right)=48$ 이므로 $\\overline{BC}=4\\sqrt{3}$ 이다."
+    },
+    {
+      "num": 10,
+      "unit": "삼각함수",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "$0<x<\\dfrac{\\pi}{2}$ 이고 $\\sin x=\\dfrac{3}{5}$ 일 때, $\\tan x$ 의 값은?",
+      "choices": [
+        "$\\dfrac{-1}{4}$",
+        "$\\dfrac{0}{4}$",
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{2}{4}$",
+        "$\\dfrac{3}{4}$"
+      ],
+      "answer": 5,
+      "solution": "$0<x<\\dfrac{\\pi}{2}$ 에서 $\\cos x>0$ 이므로 $\\cos x=\\sqrt{1-\\sin^{2}x}=\\dfrac{4}{5}$ 이다. 따라서 $\\tan x=\\dfrac{\\sin x}{\\cos x}=\\dfrac{3}{4}=\\dfrac{3}{4}$ 이다."
+    },
+    {
+      "num": 11,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "한 변을 $n$ 등분하여 정삼각형을 합동인 작은 정삼각형으로 잘게 나눌 때 생기는 작은 정삼각형의 개수를 $a_n$ 이라 하면 $a_1=1$, $a_2=4$, $a_3=9$, $\\cdots$ 이다. $a_{5}$ 의 값은?",
+      "choices": [
+        "$23$",
+        "$25$",
+        "$27$",
+        "$29$",
+        "$31$"
+      ],
+      "answer": 2,
+      "solution": "$a_n=n^{2}$ 이므로 $a_{5}=5^{2}=25$ 이다."
+    },
+    {
+      "num": 12,
+      "unit": "삼각함수의 활용",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "삼각형 $ABC$ 의 외접원의 반지름을 $R$ 라 하자. $\\overline{BC}=6$, $\\sin A=\\dfrac{3}{5}$ 일 때, $2R$ 의 값은?",
+      "choices": [
+        "$8$",
+        "$9$",
+        "$10$",
+        "$11$",
+        "$12$"
+      ],
+      "answer": 3,
+      "solution": "사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=2R$ 에서 $2R=\\dfrac{6}{\\frac{3}{5}}=6\\cdot\\dfrac{5}{3}=10$ 이다."
+    },
+    {
+      "num": 13,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "$\\displaystyle\\sum_{k=1}^{10}\\dfrac{1}{k(k+1)}$ 의 값은?",
+      "choices": [
+        "$\\dfrac{7}{11}$",
+        "$\\dfrac{8}{11}$",
+        "$\\dfrac{9}{11}$",
+        "$\\dfrac{10}{11}$",
+        "$\\dfrac{11}{11}$"
+      ],
+      "answer": 4,
+      "solution": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 이므로 부분분수 분해로 $\\displaystyle\\sum_{k=1}^{10}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{11}=\\dfrac{10}{11}$ 이다."
+    },
+    {
+      "num": 14,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=2n^{2}+3n$ 을 만족시킬 때, $a_{10}$ 의 값을 구하시오.",
+      "answer": "41",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "부분합 $S_n=2n^{2}+3n$ 이 주어졌을 때 제$10$항 $a_{10}$ 의 값을 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$S_n$ 은 첫째항부터 제$n$항까지의 합이므로 $n\\ge 2$ 에서 $a_n=S_n-S_{n-1}$ 이 성립한다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$a_n=S_n-S_{n-1}=(2n^{2}+3n)-\\left(2(n-1)^{2}+3(n-1)\\right)$ 을 전개하여 정리한다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$a_n=2\\,(2n-1)+3=4n+1$ 이다. 따라서 $a_{10}=4\\cdot 10+1=41$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$a_{10}=41$ 이다."
+        }
+      ]
+    },
+    {
+      "num": 15,
+      "unit": "삼각함수의 활용",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=6$, $\\overline{AC}=4$, $A=60^{\\circ}$ 이다. 변 $BC$ 의 길이 $\\overline{BC}$ 와 삼각형 $ABC$ 의 넓이의 곱 $\\overline{BC}\\times(\\triangle ABC\\text{의 넓이})$ 를 $p\\sqrt{q}$ 꼴로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 자연수이고 $q$ 는 가장 작은 값)",
+      "answer": "33",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "코사인법칙으로 $\\overline{BC}$ 를, 넓이 공식으로 삼각형의 넓이를 구해 그 곱을 $p\\sqrt{q}$ 꼴로 정리한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$\\overline{AB}=6$, $\\overline{AC}=4$, $A=60^{\\circ}$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A$, 넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A$ 를 쓴다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\overline{BC}^{2}=6^{2}+4^{2}-2\\cdot 6\\cdot 4\\cdot(\\dfrac{1}{2})=28$ 이므로 $\\overline{BC}=2\\sqrt{7}$ 이다. 넓이는 $\\dfrac{1}{2}\\cdot 6\\cdot 4\\cdot \\dfrac{\\sqrt{3}}{2}=6\\sqrt{3}$ 이다. 곱은 $12\\sqrt{21}$ 이므로 $p=12$, $q=21$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$p+q=12+21=33$ 이다."
+        }
+      ]
+    },
+    {
+      "num": 16,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "첫째항이 $2$, 공차가 $3$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{15}\\dfrac{1}{a_k\\,a_{k+1}}$ 의 값을 $\\dfrac{q}{p}$ 로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+      "answer": "109",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "등차수열의 곱으로 이루어진 분수를 부분분수로 분해하여 시그마의 값을 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$a_n=2+3(n-1)=3n-1$ 이고 공차는 $3$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{3}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 부분분수 분해하면 망원급수가 된다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\displaystyle\\sum_{k=1}^{15}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{3}\\left(\\dfrac{1}{a_1}-\\dfrac{1}{a_{16}}\\right)=\\dfrac{1}{3}\\left(\\dfrac{1}{2}-\\dfrac{1}{47}\\right)=\\dfrac{15}{94}$ 이다. 따라서 $p=94$, $q=15$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$p+q=94+15=109$ 이다."
+        }
+      ]
+    },
+    {
+      "num": 17,
+      "unit": "삼각함수의 활용",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "평행사변형 $ABCD$ 에서 $\\overline{AB}=8$, $\\overline{BC}=5$ 이고 $\\angle ABC=60^{\\circ}$ 이다. 평행사변형 $ABCD$ 의 넓이를 $p\\sqrt{q}$ 꼴로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 자연수이고 $q$ 는 가장 작은 값)",
+      "answer": "23",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "평행사변형의 넓이 공식 $S=\\overline{AB}\\cdot\\overline{BC}\\sin(\\angle ABC)$ 를 이용해 넓이를 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$\\overline{AB}=8$, $\\overline{BC}=5$, $\\angle ABC=60^{\\circ}$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "평행사변형의 넓이는 이웃한 두 변과 그 끼인각을 이용해 $\\overline{AB}\\cdot\\overline{BC}\\sin(\\angle ABC)$ 로 구한다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$S=8\\cdot 5\\cdot\\sin 60^{\\circ}=8\\cdot 5\\cdot \\dfrac{\\sqrt{3}}{2}=20\\sqrt{3}$ 이므로 $p=20$, $q=3$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$p+q=20+3=23$ 이다."
+        }
+      ]
+    },
+    {
+      "num": 18,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "$\\displaystyle\\sum_{k=1}^{63}\\log_{2}\\dfrac{k+1}{k}$ 의 값을 구하시오.",
+      "answer": "6",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "로그가 포함된 시그마의 값을 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "로그의 합을 곱의 로그로 바꾸어 망원급수(소거) 형태로 변형한다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$\\displaystyle\\sum_{k=1}^{63}\\log_{2}\\dfrac{k+1}{k}=\\log_{2}\\left(\\prod_{k=1}^{63}\\dfrac{k+1}{k}\\right)$ 이고 곱은 연속해서 약분된다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\displaystyle\\prod_{k=1}^{63}\\dfrac{k+1}{k}=\\dfrac{2}{1}\\cdot\\dfrac{3}{2}\\cdots\\dfrac{64}{63}=64$ 이므로 값은 $\\log_{2} 64=6$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$\\displaystyle\\sum_{k=1}^{63}\\log_{2}\\dfrac{k+1}{k}=6$ 이다."
+        }
+      ]
+    },
+    {
+      "num": 19,
+      "unit": "수학적 귀납법",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "수열 $\\{a_n\\}$ 이 $a_1=1$, $a_{n+1}=a_n+2^{n}$ 으로 정의될 때, $a_{7}$ 의 값을 구하시오.",
+      "answer": "127",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "점화식으로 정의된 수열의 제$7$항 $a_{7}$ 의 값을 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$a_1=1$ 이고 $a_{n+1}-a_n=2^{n}$ 이므로 계차수열이 등비수열 $2^{n}$ 임을 이용한다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$n\\ge 2$ 에서 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1} 2^{k}=1+(2^{n}-2)$ 로 일반항을 구할 수 있다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\displaystyle\\sum_{k=1}^{n-1} 2^{k}=2^{n}-2$ 이므로 $a_n=1+2^{n}-2=2^{n}+-1$ 이다. 따라서 $a_{7}=2^{7}+-1=127$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$a_{7}=127$ 이다."
+        }
+      ]
+    },
+    {
+      "num": 20,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "수열 $\\{a_n\\}$ 의 일반항이 $a_n=n^{2}-n$ 일 때, $\\displaystyle\\sum_{k=1}^{10} a_k$ 의 값을 구하시오.",
+      "answer": "330",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "일반항이 $a_n=n^{2}-n$ 인 수열의 처음 $10$개 항의 합을 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$\\displaystyle\\sum_{k=1}^{10} a_k=\\sum_{k=1}^{10}(k^{2}-k)=\\sum_{k=1}^{10}k^{2}-\\sum_{k=1}^{10}k$ 로 나누어 계산한다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "자연수 거듭제곱의 합 공식 $\\displaystyle\\sum_{k=1}^{n}k^{2}=\\dfrac{n(n+1)(2n+1)}{6}$, $\\displaystyle\\sum_{k=1}^{n}k=\\dfrac{n(n+1)}{2}$ 를 이용한다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\displaystyle\\sum_{k=1}^{10}k^{2}=\\dfrac{10\\cdot 11\\cdot 21}{6}=385$, $\\displaystyle\\sum_{k=1}^{10}k=\\dfrac{10\\cdot 11}{2}=55$ 이므로 합은 $385-55=330$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$\\displaystyle\\sum_{k=1}^{10} a_k=330$ 이다."
+        }
+      ]
+    }
+  ],
+  "rounds": [
+    [
+      {
+        "num": 1,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=3$, $a_{n+1}=a_n+2n+1$ 을 만족시킬 때, $a_{10}$ 의 값은?",
+        "choices": [
+          "$101$",
+          "$102$",
+          "$103$",
+          "$104$",
+          "$105$"
+        ],
+        "answer": 2,
+        "solution": "$a_{n+1}-a_n=2n+1$ 이므로 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}(2k+1)=3+2\\cdot\\dfrac{(n-1)n}{2}+1(n-1)$ 이다. $n=10$ 을 대입하면 $a_{10}=102$ 이다."
+      },
+      {
+        "num": 2,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{20} a_k=100$ 일 때, $\\displaystyle\\sum_{k=1}^{20}(2a_k+3)$ 의 값은?",
+        "choices": [
+          "$245$",
+          "$250$",
+          "$255$",
+          "$260$",
+          "$265$"
+        ],
+        "answer": 4,
+        "solution": "$\\displaystyle\\sum_{k=1}^{20}(2a_k+3)=2\\sum_{k=1}^{20}a_k+3\\cdot 20=2\\cdot 100+60=260$ 이다."
+      },
+      {
+        "num": 3,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $A=60^{\\circ}$, $B=75^{\\circ}$, $\\overline{AB}=6$ 일 때, 변 $BC$ 의 길이는?",
+        "choices": [
+          "$1\\sqrt{6}$",
+          "$2\\sqrt{6}$",
+          "$3\\sqrt{6}$",
+          "$4\\sqrt{6}$",
+          "$5\\sqrt{6}$"
+        ],
+        "answer": 3,
+        "solution": "$C=180^{\\circ}-60^{\\circ}-75^{\\circ}=45^{\\circ}$ 이다. 사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=\\dfrac{\\overline{AB}}{\\sin C}$ 에서 $\\overline{BC}=\\overline{AB}\\cdot\\dfrac{\\sin 60^{\\circ}}{\\sin 45^{\\circ}}=6\\cdot\\dfrac{\\dfrac{\\sqrt{3}}{2}}{\\dfrac{\\sqrt{2}}{2}}=3\\sqrt{6}$ 이다."
+      },
+      {
+        "num": 4,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "다음은 $n\\ge 5$ 인 모든 자연수 $n$ 에 대하여 $2^{n}>n^{2}$ 이 성립함을 수학적 귀납법으로 증명한 것이다. \\\\ (i) $n=5$ 일 때, $2^{5}=32$, $5^{2}=25$ 이므로 $2^{5}>5^{2}$ 이고 그 차는 $\\boxed{(\\text{가})}$ 이다. \\\\ (ii) $n=k\\,(k\\ge 5)$ 일 때 $2^{k}>k^{2}$ 이 성립한다고 가정하면 $2^{k+1}=2\\cdot 2^{k}>2k^{2}$ 이고, $k\\ge 5$ 이면 $2k^{2}-(k+1)^{2}=k^{2}-2k-1>0$ 이므로 $2^{k+1}>(k+1)^{2}$ 이 성립한다. \\\\ 위의 $\\boxed{(\\text{가})}$ 에 알맞은 수는?",
+        "choices": [
+          "$6$",
+          "$7$",
+          "$8$",
+          "$9$",
+          "$10$"
+        ],
+        "answer": 2,
+        "solution": "$n=5$ 일 때 $2^{5}-5^{2}=32-25=7$ 이므로 $\\boxed{(\\text{가})}=7$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "수학적 귀납법으로 $2^{n}>n^{2}\\,(n\\ge 5)$ 을 증명하는 과정에서 빈칸 $\\boxed{(\\text{가})}$ 의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "(i) 단계에서 $n=5$ 을 대입해 $2^{5}$ 과 $5^{2}$ 의 차를 계산해야 한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$2^{5}=32$ 이고 $5^{2}=25$ 이므로 두 값의 차가 $\\boxed{(\\text{가})}$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$2^{5}-5^{2}=32-25=7$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\boxed{(\\text{가})}=7$ 이므로 보기 ② 이다."
+          }
+        ]
+      },
+      {
+        "num": 5,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=1$, $a_{n+1}=3a_n+1$ 로 정의될 때, $a_{4}$ 의 값은?",
+        "choices": [
+          "$20$",
+          "$25$",
+          "$30$",
+          "$35$",
+          "$40$"
+        ],
+        "answer": 5,
+        "solution": "점화식 $a_{n+1}=3a_n+1$ 을 $a_{n+1}+1/(3-1)=3\\left(a_n+1/(3-1)\\right)$ 꼴로 변형하면 $a_n+\\dfrac{1}{2}$ 은 첫째항 $a_1+\\dfrac{1}{2}=1.5$, 공비 $3$ 인 등비수열이다. 직접 계산하면 $a_4=40$ 이다."
+      },
+      {
+        "num": 6,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=5$, $\\overline{AC}=8$, $A=60^{\\circ}$ 일 때, 변 $BC$ 의 길이는?",
+        "choices": [
+          "$7$",
+          "$8$",
+          "$9$",
+          "$10$",
+          "$11$"
+        ],
+        "answer": 1,
+        "solution": "코사인법칙에 의해 $\\overline{BC}^{2}=\\overline{AC}^{2}+\\overline{AB}^{2}-2\\cdot\\overline{AC}\\cdot\\overline{AB}\\cos A=8^{2}+5^{2}-2\\cdot 8\\cdot 5\\cdot(\\dfrac{1}{2})=49$ 이므로 $\\overline{BC}=7$ 이다."
+      },
+      {
+        "num": 7,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "반지름의 길이가 $5$ 인 원에 내접하는 삼각형 $ABC$ 에서 $\\sin A=\\dfrac{3}{5}$ 일 때, 변 $BC$ 의 길이는?",
+        "choices": [
+          "$4$",
+          "$5$",
+          "$6$",
+          "$7$",
+          "$8$"
+        ],
+        "answer": 3,
+        "solution": "사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=2R$ 에서 $2R=10$ 이므로 $\\overline{BC}=2R\\sin A=10\\cdot\\dfrac{3}{5}=6$ 이다."
+      },
+      {
+        "num": 8,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=50$, $a_{n+1}=|a_n-3|$ 로 정의될 때, $a_{6}$ 의 값은?",
+        "choices": [
+          "$32$",
+          "$33$",
+          "$34$",
+          "$35$",
+          "$36$"
+        ],
+        "answer": 4,
+        "solution": "항을 차례로 구하면 $50,\\ 47,\\ 44,\\ 41,\\ 38,\\ 35$ 이므로 $a_{6}=35$ 이다."
+      },
+      {
+        "num": 9,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\overline{AB}=\\overline{AC}=4$ 이고 $A=120^{\\circ}$ 인 이등변삼각형 $ABC$ 에서 변 $BC$ 의 길이는?",
+        "choices": [
+          "$4\\sqrt{3}$",
+          "$5\\sqrt{3}$",
+          "$6\\sqrt{3}$",
+          "$7\\sqrt{3}$",
+          "$8\\sqrt{3}$"
+        ],
+        "answer": 1,
+        "solution": "코사인법칙에서 $\\overline{BC}^{2}=4^{2}+4^{2}-2\\cdot 4\\cdot 4\\cos 120^{\\circ}=2\\cdot 16-2\\cdot 16\\cdot\\left(-\\dfrac{1}{2}\\right)=48$ 이므로 $\\overline{BC}=4\\sqrt{3}$ 이다."
+      },
+      {
+        "num": 10,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$0<x<\\dfrac{\\pi}{2}$ 이고 $\\sin x=\\dfrac{3}{5}$ 일 때, $\\tan x$ 의 값은?",
+        "choices": [
+          "$\\dfrac{-1}{4}$",
+          "$\\dfrac{0}{4}$",
+          "$\\dfrac{1}{4}$",
+          "$\\dfrac{2}{4}$",
+          "$\\dfrac{3}{4}$"
+        ],
+        "answer": 5,
+        "solution": "$0<x<\\dfrac{\\pi}{2}$ 에서 $\\cos x>0$ 이므로 $\\cos x=\\sqrt{1-\\sin^{2}x}=\\dfrac{4}{5}$ 이다. 따라서 $\\tan x=\\dfrac{\\sin x}{\\cos x}=\\dfrac{3}{4}=\\dfrac{3}{4}$ 이다."
+      },
+      {
+        "num": 11,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "한 변을 $n$ 등분하여 정삼각형을 합동인 작은 정삼각형으로 잘게 나눌 때 생기는 작은 정삼각형의 개수를 $a_n$ 이라 하면 $a_1=1$, $a_2=4$, $a_3=9$, $\\cdots$ 이다. $a_{5}$ 의 값은?",
+        "choices": [
+          "$23$",
+          "$25$",
+          "$27$",
+          "$29$",
+          "$31$"
+        ],
+        "answer": 2,
+        "solution": "$a_n=n^{2}$ 이므로 $a_{5}=5^{2}=25$ 이다."
+      },
+      {
+        "num": 12,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 의 외접원의 반지름을 $R$ 라 하자. $\\overline{BC}=6$, $\\sin A=\\dfrac{3}{5}$ 일 때, $2R$ 의 값은?",
+        "choices": [
+          "$8$",
+          "$9$",
+          "$10$",
+          "$11$",
+          "$12$"
+        ],
+        "answer": 3,
+        "solution": "사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=2R$ 에서 $2R=\\dfrac{6}{\\frac{3}{5}}=6\\cdot\\dfrac{5}{3}=10$ 이다."
+      },
+      {
+        "num": 13,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{10}\\dfrac{1}{k(k+1)}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{7}{11}$",
+          "$\\dfrac{8}{11}$",
+          "$\\dfrac{9}{11}$",
+          "$\\dfrac{10}{11}$",
+          "$\\dfrac{11}{11}$"
+        ],
+        "answer": 4,
+        "solution": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 이므로 부분분수 분해로 $\\displaystyle\\sum_{k=1}^{10}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{11}=\\dfrac{10}{11}$ 이다."
+      },
+      {
+        "num": 14,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=2n^{2}+3n$ 을 만족시킬 때, $a_{10}$ 의 값을 구하시오.",
+        "answer": "41",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "부분합 $S_n=2n^{2}+3n$ 이 주어졌을 때 제$10$항 $a_{10}$ 의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$S_n$ 은 첫째항부터 제$n$항까지의 합이므로 $n\\ge 2$ 에서 $a_n=S_n-S_{n-1}$ 이 성립한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$a_n=S_n-S_{n-1}=(2n^{2}+3n)-\\left(2(n-1)^{2}+3(n-1)\\right)$ 을 전개하여 정리한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$a_n=2\\,(2n-1)+3=4n+1$ 이다. 따라서 $a_{10}=4\\cdot 10+1=41$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a_{10}=41$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 15,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=6$, $\\overline{AC}=4$, $A=60^{\\circ}$ 이다. 변 $BC$ 의 길이 $\\overline{BC}$ 와 삼각형 $ABC$ 의 넓이의 곱 $\\overline{BC}\\times(\\triangle ABC\\text{의 넓이})$ 를 $p\\sqrt{q}$ 꼴로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 자연수이고 $q$ 는 가장 작은 값)",
+        "answer": "33",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "코사인법칙으로 $\\overline{BC}$ 를, 넓이 공식으로 삼각형의 넓이를 구해 그 곱을 $p\\sqrt{q}$ 꼴로 정리한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=6$, $\\overline{AC}=4$, $A=60^{\\circ}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A$, 넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{BC}^{2}=6^{2}+4^{2}-2\\cdot 6\\cdot 4\\cdot(\\dfrac{1}{2})=28$ 이므로 $\\overline{BC}=2\\sqrt{7}$ 이다. 넓이는 $\\dfrac{1}{2}\\cdot 6\\cdot 4\\cdot \\dfrac{\\sqrt{3}}{2}=6\\sqrt{3}$ 이다. 곱은 $12\\sqrt{21}$ 이므로 $p=12$, $q=21$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=12+21=33$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 16,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "첫째항이 $2$, 공차가 $3$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{15}\\dfrac{1}{a_k\\,a_{k+1}}$ 의 값을 $\\dfrac{q}{p}$ 로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+        "answer": "109",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열의 곱으로 이루어진 분수를 부분분수로 분해하여 시그마의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_n=2+3(n-1)=3n-1$ 이고 공차는 $3$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{3}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 부분분수 분해하면 망원급수가 된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{15}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{3}\\left(\\dfrac{1}{a_1}-\\dfrac{1}{a_{16}}\\right)=\\dfrac{1}{3}\\left(\\dfrac{1}{2}-\\dfrac{1}{47}\\right)=\\dfrac{15}{94}$ 이다. 따라서 $p=94$, $q=15$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=94+15=109$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 17,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "평행사변형 $ABCD$ 에서 $\\overline{AB}=8$, $\\overline{BC}=5$ 이고 $\\angle ABC=60^{\\circ}$ 이다. 평행사변형 $ABCD$ 의 넓이를 $p\\sqrt{q}$ 꼴로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 자연수이고 $q$ 는 가장 작은 값)",
+        "answer": "23",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "평행사변형의 넓이 공식 $S=\\overline{AB}\\cdot\\overline{BC}\\sin(\\angle ABC)$ 를 이용해 넓이를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=8$, $\\overline{BC}=5$, $\\angle ABC=60^{\\circ}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "평행사변형의 넓이는 이웃한 두 변과 그 끼인각을 이용해 $\\overline{AB}\\cdot\\overline{BC}\\sin(\\angle ABC)$ 로 구한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$S=8\\cdot 5\\cdot\\sin 60^{\\circ}=8\\cdot 5\\cdot \\dfrac{\\sqrt{3}}{2}=20\\sqrt{3}$ 이므로 $p=20$, $q=3$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=20+3=23$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 18,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "$\\displaystyle\\sum_{k=1}^{63}\\log_{2}\\dfrac{k+1}{k}$ 의 값을 구하시오.",
+        "answer": "6",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "로그가 포함된 시그마의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "로그의 합을 곱의 로그로 바꾸어 망원급수(소거) 형태로 변형한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\displaystyle\\sum_{k=1}^{63}\\log_{2}\\dfrac{k+1}{k}=\\log_{2}\\left(\\prod_{k=1}^{63}\\dfrac{k+1}{k}\\right)$ 이고 곱은 연속해서 약분된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\prod_{k=1}^{63}\\dfrac{k+1}{k}=\\dfrac{2}{1}\\cdot\\dfrac{3}{2}\\cdots\\dfrac{64}{63}=64$ 이므로 값은 $\\log_{2} 64=6$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\displaystyle\\sum_{k=1}^{63}\\log_{2}\\dfrac{k+1}{k}=6$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 19,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=1$, $a_{n+1}=a_n+2^{n}$ 으로 정의될 때, $a_{7}$ 의 값을 구하시오.",
+        "answer": "127",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "점화식으로 정의된 수열의 제$7$항 $a_{7}$ 의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_1=1$ 이고 $a_{n+1}-a_n=2^{n}$ 이므로 계차수열이 등비수열 $2^{n}$ 임을 이용한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$n\\ge 2$ 에서 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1} 2^{k}=1+(2^{n}-2)$ 로 일반항을 구할 수 있다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{n-1} 2^{k}=2^{n}-2$ 이므로 $a_n=1+2^{n}-2=2^{n}+-1$ 이다. 따라서 $a_{7}=2^{7}+-1=127$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a_{7}=127$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$ 의 일반항이 $a_n=n^{2}-n$ 일 때, $\\displaystyle\\sum_{k=1}^{10} a_k$ 의 값을 구하시오.",
+        "answer": "330",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "일반항이 $a_n=n^{2}-n$ 인 수열의 처음 $10$개 항의 합을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\displaystyle\\sum_{k=1}^{10} a_k=\\sum_{k=1}^{10}(k^{2}-k)=\\sum_{k=1}^{10}k^{2}-\\sum_{k=1}^{10}k$ 로 나누어 계산한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "자연수 거듭제곱의 합 공식 $\\displaystyle\\sum_{k=1}^{n}k^{2}=\\dfrac{n(n+1)(2n+1)}{6}$, $\\displaystyle\\sum_{k=1}^{n}k=\\dfrac{n(n+1)}{2}$ 를 이용한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{10}k^{2}=\\dfrac{10\\cdot 11\\cdot 21}{6}=385$, $\\displaystyle\\sum_{k=1}^{10}k=\\dfrac{10\\cdot 11}{2}=55$ 이므로 합은 $385-55=330$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\displaystyle\\sum_{k=1}^{10} a_k=330$ 이다."
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "num": 1,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=5$, $a_{n+1}=a_n+2n+1$ 을 만족시킬 때, $a_{9}$ 의 값은?",
+        "choices": [
+          "$83$",
+          "$84$",
+          "$85$",
+          "$86$",
+          "$87$"
+        ],
+        "answer": 3,
+        "solution": "$a_{n+1}-a_n=2n+1$ 이므로 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}(2k+1)=5+2\\cdot\\dfrac{(n-1)n}{2}+1(n-1)$ 이다. $n=9$ 을 대입하면 $a_{9}=85$ 이다."
+      },
+      {
+        "num": 2,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{15} a_k=80$ 일 때, $\\displaystyle\\sum_{k=1}^{15}(3a_k+2)$ 의 값은?",
+        "choices": [
+          "$270$",
+          "$275$",
+          "$280$",
+          "$285$",
+          "$290$"
+        ],
+        "answer": 1,
+        "solution": "$\\displaystyle\\sum_{k=1}^{15}(3a_k+2)=3\\sum_{k=1}^{15}a_k+2\\cdot 15=3\\cdot 80+30=270$ 이다."
+      },
+      {
+        "num": 3,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $A=45^{\\circ}$, $B=75^{\\circ}$, $\\overline{AB}=8$ 일 때, 변 $BC$ 의 길이는?",
+        "choices": [
+          "$1.6666666666666665\\sqrt{6}$",
+          "$2.6666666666666665\\sqrt{6}$",
+          "$3.6666666666666665\\sqrt{6}$",
+          "$4.666666666666666\\sqrt{6}$",
+          "$5.666666666666666\\sqrt{6}$"
+        ],
+        "answer": 2,
+        "solution": "$C=180^{\\circ}-45^{\\circ}-75^{\\circ}=60^{\\circ}$ 이다. 사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=\\dfrac{\\overline{AB}}{\\sin C}$ 에서 $\\overline{BC}=\\overline{AB}\\cdot\\dfrac{\\sin 45^{\\circ}}{\\sin 60^{\\circ}}=8\\cdot\\dfrac{\\dfrac{\\sqrt{2}}{2}}{\\dfrac{\\sqrt{3}}{2}}=2.6666666666666665\\sqrt{6}$ 이다."
+      },
+      {
+        "num": 4,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "다음은 $n\\ge 5$ 인 모든 자연수 $n$ 에 대하여 $2^{n}>n^{2}$ 이 성립함을 수학적 귀납법으로 증명한 것이다. \\\\ (i) $n=5$ 일 때, $2^{5}=32$, $5^{2}=25$ 이므로 $2^{5}>5^{2}$ 이고 그 차는 $\\boxed{(\\text{가})}$ 이다. \\\\ (ii) $n=k\\,(k\\ge 5)$ 일 때 $2^{k}>k^{2}$ 이 성립한다고 가정하면 $2^{k+1}=2\\cdot 2^{k}>2k^{2}$ 이고, $k\\ge 5$ 이면 $2k^{2}-(k+1)^{2}=k^{2}-2k-1>0$ 이므로 $2^{k+1}>(k+1)^{2}$ 이 성립한다. \\\\ 위의 $\\boxed{(\\text{가})}$ 에 알맞은 수는?",
+        "choices": [
+          "$5$",
+          "$6$",
+          "$7$",
+          "$8$",
+          "$9$"
+        ],
+        "answer": 3,
+        "solution": "$n=5$ 일 때 $2^{5}-5^{2}=32-25=7$ 이므로 $\\boxed{(\\text{가})}=7$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "수학적 귀납법으로 $2^{n}>n^{2}\\,(n\\ge 5)$ 을 증명하는 과정에서 빈칸 $\\boxed{(\\text{가})}$ 의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "(i) 단계에서 $n=5$ 을 대입해 $2^{5}$ 과 $5^{2}$ 의 차를 계산해야 한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$2^{5}=32$ 이고 $5^{2}=25$ 이므로 두 값의 차가 $\\boxed{(\\text{가})}$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$2^{5}-5^{2}=32-25=7$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\boxed{(\\text{가})}=7$ 이므로 보기 ③ 이다."
+          }
+        ]
+      },
+      {
+        "num": 5,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=2$, $a_{n+1}=2a_n+3$ 로 정의될 때, $a_{5}$ 의 값은?",
+        "choices": [
+          "$62$",
+          "$67$",
+          "$72$",
+          "$77$",
+          "$82$"
+        ],
+        "answer": 4,
+        "solution": "점화식 $a_{n+1}=2a_n+3$ 을 $a_{n+1}+3/(2-1)=2\\left(a_n+3/(2-1)\\right)$ 꼴로 변형하면 $a_n+\\dfrac{3}{1}$ 은 첫째항 $a_1+\\dfrac{3}{1}=5$, 공비 $2$ 인 등비수열이다. 직접 계산하면 $a_5=77$ 이다."
+      },
+      {
+        "num": 6,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=3$, $\\overline{AC}=7$, $A=120^{\\circ}$ 일 때, 변 $BC$ 의 길이는?",
+        "choices": [
+          "$-3\\sqrt{79}$",
+          "$-2\\sqrt{79}$",
+          "$-1\\sqrt{79}$",
+          "$0\\sqrt{79}$",
+          "$1\\sqrt{79}$"
+        ],
+        "answer": 5,
+        "solution": "코사인법칙에 의해 $\\overline{BC}^{2}=\\overline{AC}^{2}+\\overline{AB}^{2}-2\\cdot\\overline{AC}\\cdot\\overline{AB}\\cos A=7^{2}+3^{2}-2\\cdot 7\\cdot 3\\cdot(-\\dfrac{1}{2})=79$ 이므로 $\\overline{BC}=\\sqrt{79}$ 이다."
+      },
+      {
+        "num": 7,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "반지름의 길이가 $6$ 인 원에 내접하는 삼각형 $ABC$ 에서 $\\sin A=\\dfrac{2}{3}$ 일 때, 변 $BC$ 의 길이는?",
+        "choices": [
+          "$8$",
+          "$9$",
+          "$10$",
+          "$11$",
+          "$12$"
+        ],
+        "answer": 1,
+        "solution": "사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=2R$ 에서 $2R=12$ 이므로 $\\overline{BC}=2R\\sin A=12\\cdot\\dfrac{2}{3}=8$ 이다."
+      },
+      {
+        "num": 8,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=40$, $a_{n+1}=|a_n-3|$ 로 정의될 때, $a_{6}$ 의 값은?",
+        "choices": [
+          "$24$",
+          "$25$",
+          "$26$",
+          "$27$",
+          "$28$"
+        ],
+        "answer": 2,
+        "solution": "항을 차례로 구하면 $40,\\ 37,\\ 34,\\ 31,\\ 28,\\ 25$ 이므로 $a_{6}=25$ 이다."
+      },
+      {
+        "num": 9,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\overline{AB}=\\overline{AC}=6$ 이고 $A=120^{\\circ}$ 인 이등변삼각형 $ABC$ 에서 변 $BC$ 의 길이는?",
+        "choices": [
+          "$4\\sqrt{3}$",
+          "$5\\sqrt{3}$",
+          "$6\\sqrt{3}$",
+          "$7\\sqrt{3}$",
+          "$8\\sqrt{3}$"
+        ],
+        "answer": 3,
+        "solution": "코사인법칙에서 $\\overline{BC}^{2}=6^{2}+6^{2}-2\\cdot 6\\cdot 6\\cos 120^{\\circ}=2\\cdot 36-2\\cdot 36\\cdot\\left(-\\dfrac{1}{2}\\right)=108$ 이므로 $\\overline{BC}=6\\sqrt{3}$ 이다."
+      },
+      {
+        "num": 10,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$0<x<\\dfrac{\\pi}{2}$ 이고 $\\sin x=\\dfrac{5}{13}$ 일 때, $\\tan x$ 의 값은?",
+        "choices": [
+          "$\\dfrac{2}{12}$",
+          "$\\dfrac{3}{12}$",
+          "$\\dfrac{4}{12}$",
+          "$\\dfrac{5}{12}$",
+          "$\\dfrac{6}{12}$"
+        ],
+        "answer": 4,
+        "solution": "$0<x<\\dfrac{\\pi}{2}$ 에서 $\\cos x>0$ 이므로 $\\cos x=\\sqrt{1-\\sin^{2}x}=\\dfrac{12}{13}$ 이다. 따라서 $\\tan x=\\dfrac{\\sin x}{\\cos x}=\\dfrac{5}{12}=\\dfrac{5}{12}$ 이다."
+      },
+      {
+        "num": 11,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "한 변을 $n$ 등분하여 정삼각형을 합동인 작은 정삼각형으로 잘게 나눌 때 생기는 작은 정삼각형의 개수를 $a_n$ 이라 하면 $a_1=1$, $a_2=4$, $a_3=9$, $\\cdots$ 이다. $a_{6}$ 의 값은?",
+        "choices": [
+          "$28$",
+          "$30$",
+          "$32$",
+          "$34$",
+          "$36$"
+        ],
+        "answer": 5,
+        "solution": "$a_n=n^{2}$ 이므로 $a_{6}=6^{2}=36$ 이다."
+      },
+      {
+        "num": 12,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 의 외접원의 반지름을 $R$ 라 하자. $\\overline{BC}=8$, $\\sin A=\\dfrac{4}{5}$ 일 때, $2R$ 의 값은?",
+        "choices": [
+          "$10$",
+          "$11$",
+          "$12$",
+          "$13$",
+          "$14$"
+        ],
+        "answer": 1,
+        "solution": "사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=2R$ 에서 $2R=\\dfrac{8}{\\frac{4}{5}}=8\\cdot\\dfrac{5}{4}=10$ 이다."
+      },
+      {
+        "num": 13,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{k(k+1)}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{19}{21}$",
+          "$\\dfrac{20}{21}$",
+          "$\\dfrac{21}{21}$",
+          "$\\dfrac{22}{21}$",
+          "$\\dfrac{23}{21}$"
+        ],
+        "answer": 2,
+        "solution": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 이므로 부분분수 분해로 $\\displaystyle\\sum_{k=1}^{20}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{21}=\\dfrac{20}{21}$ 이다."
+      },
+      {
+        "num": 14,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=3n^{2}+1n$ 을 만족시킬 때, $a_{8}$ 의 값을 구하시오.",
+        "answer": "46",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "부분합 $S_n=3n^{2}+1n$ 이 주어졌을 때 제$8$항 $a_{8}$ 의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$S_n$ 은 첫째항부터 제$n$항까지의 합이므로 $n\\ge 2$ 에서 $a_n=S_n-S_{n-1}$ 이 성립한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$a_n=S_n-S_{n-1}=(3n^{2}+1n)-\\left(3(n-1)^{2}+1(n-1)\\right)$ 을 전개하여 정리한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$a_n=3\\,(2n-1)+1=6n+-2$ 이다. 따라서 $a_{8}=6\\cdot 8+-2=46$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a_{8}=46$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 15,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=8$, $\\overline{AC}=5$, $A=60^{\\circ}$ 이다. 변 $BC$ 의 길이 $\\overline{BC}$ 와 삼각형 $ABC$ 의 넓이의 곱 $\\overline{BC}\\times(\\triangle ABC\\text{의 넓이})$ 를 $p\\sqrt{q}$ 꼴로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 자연수이고 $q$ 는 가장 작은 값)",
+        "answer": "73",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "코사인법칙으로 $\\overline{BC}$ 를, 넓이 공식으로 삼각형의 넓이를 구해 그 곱을 $p\\sqrt{q}$ 꼴로 정리한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=8$, $\\overline{AC}=5$, $A=60^{\\circ}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A$, 넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{BC}^{2}=8^{2}+5^{2}-2\\cdot 8\\cdot 5\\cdot(\\dfrac{1}{2})=49$ 이므로 $\\overline{BC}=7$ 이다. 넓이는 $\\dfrac{1}{2}\\cdot 8\\cdot 5\\cdot \\dfrac{\\sqrt{3}}{2}=10\\sqrt{3}$ 이다. 곱은 $70\\sqrt{3}$ 이므로 $p=70$, $q=3$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=70+3=73$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 16,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "첫째항이 $3$, 공차가 $4$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k\\,a_{k+1}}$ 의 값을 $\\dfrac{q}{p}$ 로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+        "answer": "269",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열의 곱으로 이루어진 분수를 부분분수로 분해하여 시그마의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_n=3+4(n-1)=4n-1$ 이고 공차는 $4$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{4}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 부분분수 분해하면 망원급수가 된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{4}\\left(\\dfrac{1}{a_1}-\\dfrac{1}{a_{21}}\\right)=\\dfrac{1}{4}\\left(\\dfrac{1}{3}-\\dfrac{1}{83}\\right)=\\dfrac{20}{249}$ 이다. 따라서 $p=249$, $q=20$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=249+20=269$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 17,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "평행사변형 $ABCD$ 에서 $\\overline{AB}=6$, $\\overline{BC}=4$ 이고 $\\angle ABC=120^{\\circ}$ 이다. 평행사변형 $ABCD$ 의 넓이를 $p\\sqrt{q}$ 꼴로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 자연수이고 $q$ 는 가장 작은 값)",
+        "answer": "15",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "평행사변형의 넓이 공식 $S=\\overline{AB}\\cdot\\overline{BC}\\sin(\\angle ABC)$ 를 이용해 넓이를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=6$, $\\overline{BC}=4$, $\\angle ABC=120^{\\circ}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "평행사변형의 넓이는 이웃한 두 변과 그 끼인각을 이용해 $\\overline{AB}\\cdot\\overline{BC}\\sin(\\angle ABC)$ 로 구한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$S=6\\cdot 4\\cdot\\sin 120^{\\circ}=6\\cdot 4\\cdot \\dfrac{\\sqrt{3}}{2}=12\\sqrt{3}$ 이므로 $p=12$, $q=3$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=12+3=15$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 18,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "$\\displaystyle\\sum_{k=1}^{80}\\log_{3}\\dfrac{k+1}{k}$ 의 값을 구하시오.",
+        "answer": "4",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "로그가 포함된 시그마의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "로그의 합을 곱의 로그로 바꾸어 망원급수(소거) 형태로 변형한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\displaystyle\\sum_{k=1}^{80}\\log_{3}\\dfrac{k+1}{k}=\\log_{3}\\left(\\prod_{k=1}^{80}\\dfrac{k+1}{k}\\right)$ 이고 곱은 연속해서 약분된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\prod_{k=1}^{80}\\dfrac{k+1}{k}=\\dfrac{2}{1}\\cdot\\dfrac{3}{2}\\cdots\\dfrac{81}{80}=81$ 이므로 값은 $\\log_{3} 81=4$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\displaystyle\\sum_{k=1}^{80}\\log_{3}\\dfrac{k+1}{k}=4$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 19,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=2$, $a_{n+1}=a_n+2^{n}$ 으로 정의될 때, $a_{8}$ 의 값을 구하시오.",
+        "answer": "256",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "점화식으로 정의된 수열의 제$8$항 $a_{8}$ 의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_1=2$ 이고 $a_{n+1}-a_n=2^{n}$ 이므로 계차수열이 등비수열 $2^{n}$ 임을 이용한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$n\\ge 2$ 에서 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1} 2^{k}=2+(2^{n}-2)$ 로 일반항을 구할 수 있다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{n-1} 2^{k}=2^{n}-2$ 이므로 $a_n=2+2^{n}-2=2^{n}+0$ 이다. 따라서 $a_{8}=2^{8}+0=256$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a_{8}=256$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$ 의 일반항이 $a_n=n^{2}-n$ 일 때, $\\displaystyle\\sum_{k=1}^{12} a_k$ 의 값을 구하시오.",
+        "answer": "572",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "일반항이 $a_n=n^{2}-n$ 인 수열의 처음 $12$개 항의 합을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\displaystyle\\sum_{k=1}^{12} a_k=\\sum_{k=1}^{12}(k^{2}-k)=\\sum_{k=1}^{12}k^{2}-\\sum_{k=1}^{12}k$ 로 나누어 계산한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "자연수 거듭제곱의 합 공식 $\\displaystyle\\sum_{k=1}^{n}k^{2}=\\dfrac{n(n+1)(2n+1)}{6}$, $\\displaystyle\\sum_{k=1}^{n}k=\\dfrac{n(n+1)}{2}$ 를 이용한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{12}k^{2}=\\dfrac{12\\cdot 13\\cdot 25}{6}=650$, $\\displaystyle\\sum_{k=1}^{12}k=\\dfrac{12\\cdot 13}{2}=78$ 이므로 합은 $650-78=572$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\displaystyle\\sum_{k=1}^{12} a_k=572$ 이다."
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "num": 1,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=4$, $a_{n+1}=a_n+2n+3$ 을 만족시킬 때, $a_{8}$ 의 값은?",
+        "choices": [
+          "$78$",
+          "$79$",
+          "$80$",
+          "$81$",
+          "$82$"
+        ],
+        "answer": 4,
+        "solution": "$a_{n+1}-a_n=2n+3$ 이므로 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}(2k+3)=4+2\\cdot\\dfrac{(n-1)n}{2}+3(n-1)$ 이다. $n=8$ 을 대입하면 $a_{8}=81$ 이다."
+      },
+      {
+        "num": 2,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{25} a_k=150$ 일 때, $\\displaystyle\\sum_{k=1}^{25}(2a_k+5)$ 의 값은?",
+        "choices": [
+          "$405$",
+          "$410$",
+          "$415$",
+          "$420$",
+          "$425$"
+        ],
+        "answer": 5,
+        "solution": "$\\displaystyle\\sum_{k=1}^{25}(2a_k+5)=2\\sum_{k=1}^{25}a_k+5\\cdot 25=2\\cdot 150+125=425$ 이다."
+      },
+      {
+        "num": 3,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $A=30^{\\circ}$, $B=105^{\\circ}$, $\\overline{AB}=10$ 일 때, 변 $BC$ 의 길이는?",
+        "choices": [
+          "$5\\sqrt{2}$",
+          "$6\\sqrt{2}$",
+          "$7\\sqrt{2}$",
+          "$8\\sqrt{2}$",
+          "$9\\sqrt{2}$"
+        ],
+        "answer": 1,
+        "solution": "$C=180^{\\circ}-30^{\\circ}-105^{\\circ}=45^{\\circ}$ 이다. 사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=\\dfrac{\\overline{AB}}{\\sin C}$ 에서 $\\overline{BC}=\\overline{AB}\\cdot\\dfrac{\\sin 30^{\\circ}}{\\sin 45^{\\circ}}=10\\cdot\\dfrac{\\dfrac{1}{2}}{\\dfrac{\\sqrt{2}}{2}}=5\\sqrt{2}$ 이다."
+      },
+      {
+        "num": 4,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "다음은 $n\\ge 5$ 인 모든 자연수 $n$ 에 대하여 $2^{n}>n^{2}$ 이 성립함을 수학적 귀납법으로 증명한 것이다. \\\\ (i) $n=5$ 일 때, $2^{5}=32$, $5^{2}=25$ 이므로 $2^{5}>5^{2}$ 이고 그 차는 $\\boxed{(\\text{가})}$ 이다. \\\\ (ii) $n=k\\,(k\\ge 5)$ 일 때 $2^{k}>k^{2}$ 이 성립한다고 가정하면 $2^{k+1}=2\\cdot 2^{k}>2k^{2}$ 이고, $k\\ge 5$ 이면 $2k^{2}-(k+1)^{2}=k^{2}-2k-1>0$ 이므로 $2^{k+1}>(k+1)^{2}$ 이 성립한다. \\\\ 위의 $\\boxed{(\\text{가})}$ 에 알맞은 수는?",
+        "choices": [
+          "$4$",
+          "$5$",
+          "$6$",
+          "$7$",
+          "$8$"
+        ],
+        "answer": 4,
+        "solution": "$n=5$ 일 때 $2^{5}-5^{2}=32-25=7$ 이므로 $\\boxed{(\\text{가})}=7$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "수학적 귀납법으로 $2^{n}>n^{2}\\,(n\\ge 5)$ 을 증명하는 과정에서 빈칸 $\\boxed{(\\text{가})}$ 의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "(i) 단계에서 $n=5$ 을 대입해 $2^{5}$ 과 $5^{2}$ 의 차를 계산해야 한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$2^{5}=32$ 이고 $5^{2}=25$ 이므로 두 값의 차가 $\\boxed{(\\text{가})}$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$2^{5}-5^{2}=32-25=7$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\boxed{(\\text{가})}=7$ 이므로 보기 ④ 이다."
+          }
+        ]
+      },
+      {
+        "num": 5,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=1$, $a_{n+1}=4a_n+2$ 로 정의될 때, $a_{4}$ 의 값은?",
+        "choices": [
+          "$96$",
+          "$101$",
+          "$106$",
+          "$111$",
+          "$116$"
+        ],
+        "answer": 3,
+        "solution": "점화식 $a_{n+1}=4a_n+2$ 을 $a_{n+1}+2/(4-1)=4\\left(a_n+2/(4-1)\\right)$ 꼴로 변형하면 $a_n+\\dfrac{2}{3}$ 은 첫째항 $a_1+\\dfrac{2}{3}=1.6666666666666665$, 공비 $4$ 인 등비수열이다. 직접 계산하면 $a_4=106$ 이다."
+      },
+      {
+        "num": 6,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=6$, $\\overline{AC}=10$, $A=60^{\\circ}$ 일 때, 변 $BC$ 의 길이는?",
+        "choices": [
+          "$1\\sqrt{19}$",
+          "$2\\sqrt{19}$",
+          "$3\\sqrt{19}$",
+          "$4\\sqrt{19}$",
+          "$5\\sqrt{19}$"
+        ],
+        "answer": 2,
+        "solution": "코사인법칙에 의해 $\\overline{BC}^{2}=\\overline{AC}^{2}+\\overline{AB}^{2}-2\\cdot\\overline{AC}\\cdot\\overline{AB}\\cos A=10^{2}+6^{2}-2\\cdot 10\\cdot 6\\cdot(\\dfrac{1}{2})=76$ 이므로 $\\overline{BC}=2\\sqrt{19}$ 이다."
+      },
+      {
+        "num": 7,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "반지름의 길이가 $10$ 인 원에 내접하는 삼각형 $ABC$ 에서 $\\sin A=\\dfrac{4}{5}$ 일 때, 변 $BC$ 의 길이는?",
+        "choices": [
+          "$13$",
+          "$14$",
+          "$15$",
+          "$16$",
+          "$17$"
+        ],
+        "answer": 4,
+        "solution": "사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=2R$ 에서 $2R=20$ 이므로 $\\overline{BC}=2R\\sin A=20\\cdot\\dfrac{4}{5}=16$ 이다."
+      },
+      {
+        "num": 8,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=60$, $a_{n+1}=|a_n-4|$ 로 정의될 때, $a_{6}$ 의 값은?",
+        "choices": [
+          "$36$",
+          "$37$",
+          "$38$",
+          "$39$",
+          "$40$"
+        ],
+        "answer": 5,
+        "solution": "항을 차례로 구하면 $60,\\ 56,\\ 52,\\ 48,\\ 44,\\ 40$ 이므로 $a_{6}=40$ 이다."
+      },
+      {
+        "num": 9,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\overline{AB}=\\overline{AC}=3$ 이고 $A=120^{\\circ}$ 인 이등변삼각형 $ABC$ 에서 변 $BC$ 의 길이는?",
+        "choices": [
+          "$2\\sqrt{3}$",
+          "$3\\sqrt{3}$",
+          "$4\\sqrt{3}$",
+          "$5\\sqrt{3}$",
+          "$6\\sqrt{3}$"
+        ],
+        "answer": 2,
+        "solution": "코사인법칙에서 $\\overline{BC}^{2}=3^{2}+3^{2}-2\\cdot 3\\cdot 3\\cos 120^{\\circ}=2\\cdot 9-2\\cdot 9\\cdot\\left(-\\dfrac{1}{2}\\right)=27$ 이므로 $\\overline{BC}=3\\sqrt{3}$ 이다."
+      },
+      {
+        "num": 10,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$0<x<\\dfrac{\\pi}{2}$ 이고 $\\sin x=\\dfrac{8}{17}$ 일 때, $\\tan x$ 의 값은?",
+        "choices": [
+          "$\\dfrac{8}{15}$",
+          "$\\dfrac{9}{15}$",
+          "$\\dfrac{10}{15}$",
+          "$\\dfrac{11}{15}$",
+          "$\\dfrac{12}{15}$"
+        ],
+        "answer": 1,
+        "solution": "$0<x<\\dfrac{\\pi}{2}$ 에서 $\\cos x>0$ 이므로 $\\cos x=\\sqrt{1-\\sin^{2}x}=\\dfrac{15}{17}$ 이다. 따라서 $\\tan x=\\dfrac{\\sin x}{\\cos x}=\\dfrac{8}{15}=\\dfrac{8}{15}$ 이다."
+      },
+      {
+        "num": 11,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "한 변을 $n$ 등분하여 정삼각형을 합동인 작은 정삼각형으로 잘게 나눌 때 생기는 작은 정삼각형의 개수를 $a_n$ 이라 하면 $a_1=1$, $a_2=4$, $a_3=9$, $\\cdots$ 이다. $a_{7}$ 의 값은?",
+        "choices": [
+          "$45$",
+          "$47$",
+          "$49$",
+          "$51$",
+          "$53$"
+        ],
+        "answer": 3,
+        "solution": "$a_n=n^{2}$ 이므로 $a_{7}=7^{2}=49$ 이다."
+      },
+      {
+        "num": 12,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 의 외접원의 반지름을 $R$ 라 하자. $\\overline{BC}=10$, $\\sin A=\\dfrac{5}{13}$ 일 때, $2R$ 의 값은?",
+        "choices": [
+          "$23$",
+          "$24$",
+          "$25$",
+          "$26$",
+          "$27$"
+        ],
+        "answer": 4,
+        "solution": "사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=2R$ 에서 $2R=\\dfrac{10}{\\frac{5}{13}}=10\\cdot\\dfrac{13}{5}=26$ 이다."
+      },
+      {
+        "num": 13,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{24}\\dfrac{1}{k(k+1)}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{20}{25}$",
+          "$\\dfrac{21}{25}$",
+          "$\\dfrac{22}{25}$",
+          "$\\dfrac{23}{25}$",
+          "$\\dfrac{24}{25}$"
+        ],
+        "answer": 5,
+        "solution": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 이므로 부분분수 분해로 $\\displaystyle\\sum_{k=1}^{24}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{25}=\\dfrac{24}{25}$ 이다."
+      },
+      {
+        "num": 14,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=2n^{2}+5n$ 을 만족시킬 때, $a_{12}$ 의 값을 구하시오.",
+        "answer": "51",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "부분합 $S_n=2n^{2}+5n$ 이 주어졌을 때 제$12$항 $a_{12}$ 의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$S_n$ 은 첫째항부터 제$n$항까지의 합이므로 $n\\ge 2$ 에서 $a_n=S_n-S_{n-1}$ 이 성립한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$a_n=S_n-S_{n-1}=(2n^{2}+5n)-\\left(2(n-1)^{2}+5(n-1)\\right)$ 을 전개하여 정리한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$a_n=2\\,(2n-1)+5=4n+3$ 이다. 따라서 $a_{12}=4\\cdot 12+3=51$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a_{12}=51$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 15,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=6$, $\\overline{AC}=10$, $A=120^{\\circ}$ 이다. 변 $BC$ 의 길이 $\\overline{BC}$ 와 삼각형 $ABC$ 의 넓이의 곱 $\\overline{BC}\\times(\\triangle ABC\\text{의 넓이})$ 를 $p\\sqrt{q}$ 꼴로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 자연수이고 $q$ 는 가장 작은 값)",
+        "answer": "213",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "코사인법칙으로 $\\overline{BC}$ 를, 넓이 공식으로 삼각형의 넓이를 구해 그 곱을 $p\\sqrt{q}$ 꼴로 정리한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=6$, $\\overline{AC}=10$, $A=120^{\\circ}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A$, 넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{BC}^{2}=6^{2}+10^{2}-2\\cdot 6\\cdot 10\\cdot(-\\dfrac{1}{2})=196$ 이므로 $\\overline{BC}=14$ 이다. 넓이는 $\\dfrac{1}{2}\\cdot 6\\cdot 10\\cdot \\dfrac{\\sqrt{3}}{2}=15\\sqrt{3}$ 이다. 곱은 $210\\sqrt{3}$ 이므로 $p=210$, $q=3$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=210+3=213$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 16,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "첫째항이 $1$, 공차가 $2$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{24}\\dfrac{1}{a_k\\,a_{k+1}}$ 의 값을 $\\dfrac{q}{p}$ 로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+        "answer": "73",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열의 곱으로 이루어진 분수를 부분분수로 분해하여 시그마의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_n=1+2(n-1)=2n-1$ 이고 공차는 $2$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{2}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 부분분수 분해하면 망원급수가 된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{24}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{2}\\left(\\dfrac{1}{a_1}-\\dfrac{1}{a_{25}}\\right)=\\dfrac{1}{2}\\left(\\dfrac{1}{1}-\\dfrac{1}{49}\\right)=\\dfrac{24}{49}$ 이다. 따라서 $p=49$, $q=24$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=49+24=73$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 17,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "평행사변형 $ABCD$ 에서 $\\overline{AB}=10$, $\\overline{BC}=6$ 이고 $\\angle ABC=60^{\\circ}$ 이다. 평행사변형 $ABCD$ 의 넓이를 $p\\sqrt{q}$ 꼴로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 자연수이고 $q$ 는 가장 작은 값)",
+        "answer": "33",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "평행사변형의 넓이 공식 $S=\\overline{AB}\\cdot\\overline{BC}\\sin(\\angle ABC)$ 를 이용해 넓이를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=10$, $\\overline{BC}=6$, $\\angle ABC=60^{\\circ}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "평행사변형의 넓이는 이웃한 두 변과 그 끼인각을 이용해 $\\overline{AB}\\cdot\\overline{BC}\\sin(\\angle ABC)$ 로 구한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$S=10\\cdot 6\\cdot\\sin 60^{\\circ}=10\\cdot 6\\cdot \\dfrac{\\sqrt{3}}{2}=30\\sqrt{3}$ 이므로 $p=30$, $q=3$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=30+3=33$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 18,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "$\\displaystyle\\sum_{k=1}^{255}\\log_{2}\\dfrac{k+1}{k}$ 의 값을 구하시오.",
+        "answer": "8",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "로그가 포함된 시그마의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "로그의 합을 곱의 로그로 바꾸어 망원급수(소거) 형태로 변형한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\displaystyle\\sum_{k=1}^{255}\\log_{2}\\dfrac{k+1}{k}=\\log_{2}\\left(\\prod_{k=1}^{255}\\dfrac{k+1}{k}\\right)$ 이고 곱은 연속해서 약분된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\prod_{k=1}^{255}\\dfrac{k+1}{k}=\\dfrac{2}{1}\\cdot\\dfrac{3}{2}\\cdots\\dfrac{256}{255}=256$ 이므로 값은 $\\log_{2} 256=8$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\displaystyle\\sum_{k=1}^{255}\\log_{2}\\dfrac{k+1}{k}=8$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 19,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=3$, $a_{n+1}=a_n+2^{n}$ 으로 정의될 때, $a_{6}$ 의 값을 구하시오.",
+        "answer": "65",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "점화식으로 정의된 수열의 제$6$항 $a_{6}$ 의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_1=3$ 이고 $a_{n+1}-a_n=2^{n}$ 이므로 계차수열이 등비수열 $2^{n}$ 임을 이용한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$n\\ge 2$ 에서 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1} 2^{k}=3+(2^{n}-2)$ 로 일반항을 구할 수 있다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{n-1} 2^{k}=2^{n}-2$ 이므로 $a_n=3+2^{n}-2=2^{n}+1$ 이다. 따라서 $a_{6}=2^{6}+1=65$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a_{6}=65$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$ 의 일반항이 $a_n=n^{2}-n$ 일 때, $\\displaystyle\\sum_{k=1}^{15} a_k$ 의 값을 구하시오.",
+        "answer": "1120",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "일반항이 $a_n=n^{2}-n$ 인 수열의 처음 $15$개 항의 합을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\displaystyle\\sum_{k=1}^{15} a_k=\\sum_{k=1}^{15}(k^{2}-k)=\\sum_{k=1}^{15}k^{2}-\\sum_{k=1}^{15}k$ 로 나누어 계산한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "자연수 거듭제곱의 합 공식 $\\displaystyle\\sum_{k=1}^{n}k^{2}=\\dfrac{n(n+1)(2n+1)}{6}$, $\\displaystyle\\sum_{k=1}^{n}k=\\dfrac{n(n+1)}{2}$ 를 이용한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{15}k^{2}=\\dfrac{15\\cdot 16\\cdot 31}{6}=1240$, $\\displaystyle\\sum_{k=1}^{15}k=\\dfrac{15\\cdot 16}{2}=120$ 이므로 합은 $1240-120=1120$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\displaystyle\\sum_{k=1}^{15} a_k=1120$ 이다."
+          }
+        ]
+      }
+    ]
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "school": "잠신고",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "total_problems": 21,
+  "unit_share": [
+    {
+      "unit": "행렬",
+      "count": 5,
+      "percent": 24
+    },
+    {
+      "unit": "조합",
+      "count": 3,
+      "percent": 14
+    },
+    {
+      "unit": "연립부등식",
+      "count": 3,
+      "percent": 14
+    },
+    {
+      "unit": "고차방정식",
+      "count": 2,
+      "percent": 10
+    },
+    {
+      "unit": "이차부등식",
+      "count": 2,
+      "percent": 10
+    },
+    {
+      "unit": "경우의수",
+      "count": 2,
+      "percent": 10
+    },
+    {
+      "unit": "연립방정식",
+      "count": 1,
+      "percent": 5
+    },
+    {
+      "unit": "절댓값부등식",
+      "count": 1,
+      "percent": 5
+    },
+    {
+      "unit": "복소수",
+      "count": 1,
+      "percent": 5
+    },
+    {
+      "unit": "순열",
+      "count": 1,
+      "percent": 5
+    }
+  ],
+  "top_units": [
+    "행렬",
+    "조합",
+    "연립부등식",
+    "고차방정식",
+    "이차부등식"
+  ],
+  "objective_ratio": 81,
+  "subjective_ratio": 19,
+  "advanced_ratio": 76,
+  "difficulty_stars": 5,
+  "discrimination_stars": 5,
+  "summary": "잠신고 기말은 행렬·조합 비중이 높고 서술형 19%·심화 76% 로 변별력이 큰 시험.",
+  "analyzed_at": "2026-06-11T18:45:35.915Z"
+}

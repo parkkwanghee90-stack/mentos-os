@@ -1,0 +1,28 @@
+{
+  "school": "진해고",
+  "region": "경남 창원시",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "total_problems": 20,
+  "analyzed_by": "claude-direct",
+  "unit_share": [
+    { "unit": "행렬", "count": 5, "percent": 25 },
+    { "unit": "경우의수", "count": 4, "percent": 20 },
+    { "unit": "이차부등식", "count": 3, "percent": 15 },
+    { "unit": "조합", "count": 2, "percent": 10 },
+    { "unit": "복소수", "count": 2, "percent": 10 },
+    { "unit": "순열", "count": 1, "percent": 5 },
+    { "unit": "고차방정식", "count": 1, "percent": 5 },
+    { "unit": "절댓값부등식", "count": 1, "percent": 5 },
+    { "unit": "연립방정식", "count": 1, "percent": 5 }
+  ],
+  "top_units": ["행렬", "경우의수", "이차부등식"],
+  "objective_ratio": 40,
+  "subjective_ratio": 60,
+  "advanced_ratio": 80,
+  "difficulty_stars": 4,
+  "discrimination_stars": 4,
+  "summary": "진해고 2025 1학기 기말(2회 지필평가) 기출은 선택형 8문항(40점)·단답형 4문항과 서술형 6문항(합 60점)으로 서술형 비중이 60%에 이르는 고난도 시험이다. 단원별로는 행렬(성분 비교, A^n=E, A^2-B^2, 조건식 정리)이 가장 큰 비중을 차지하고, 경우의수/조합(평행사변형 개수, 영역 색칠, 의자 배치, 조 나누기, 약수 개수, 계단 오르기)이 폭넓게 출제되었다. 복소수(x^3=1의 허근 ω 활용), 고차방정식(켤레근을 이용한 사차방정식), 이차부등식(항상 성립·해가 한 점·연립부등식 정수해 조절)도 단골이다. 한 점 해·정수해 개수 조절·행렬 비가환성 등 함정 요소가 많아 변별력이 높다. 예상문제는 이 비중과 함정 유형을 그대로 반영해 창작했으며, 기출 문항을 그대로 복제하지 않았다."
+}

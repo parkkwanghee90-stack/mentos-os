@@ -1,0 +1,2016 @@
+{
+  "school": "성일고",
+  "region": "경기 고양시",
+  "year": 2025,
+  "grade": "고2",
+  "term": "1학기 기말",
+  "subject": "수학1",
+  "generated_by": "claude-direct-go2",
+  "generated_at": "2026-06-15",
+  "source_note": "원본 출제경향 기반 오리지널",
+  "count": 20,
+  "blueprint": {
+    "difficulty_stars": 4,
+    "subjective_ratio": 15,
+    "allocation": [
+      {
+        "unit": "삼각함수의 활용",
+        "n": 7
+      },
+      {
+        "unit": "여러 가지 수열",
+        "n": 6
+      },
+      {
+        "unit": "등차수열과 등비수열",
+        "n": 5
+      },
+      {
+        "unit": "수학적 귀납법",
+        "n": 2
+      }
+    ]
+  },
+  "problems": [
+    {
+      "num": 1,
+      "unit": "삼각함수의 활용",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "삼각형 $ABC$ 에서 $A=30^{\\circ}$, $\\overline{BC}=8$ 일 때, 삼각형 $ABC$ 의 외접원의 반지름의 길이는?",
+      "choices": [
+        "$6$",
+        "$7$",
+        "$8$",
+        "$9$",
+        "$10$"
+      ],
+      "answer": 3,
+      "solution": "사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=2R$ 에서 $2R=\\dfrac{8}{\\sin 30^{\\circ}}=\\dfrac{8}{\\dfrac{1}{2}}=16$ 이므로 $R=8$ 이다."
+    },
+    {
+      "num": 2,
+      "unit": "삼각함수의 활용",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=5$, $\\overline{AC}=3$, $A=60^{\\circ}$ 일 때, 변 $BC$ 의 길이는?",
+      "choices": [
+        "$\\sqrt{19}$",
+        "$\\sqrt{18}$",
+        "$\\sqrt{20}$",
+        "$\\sqrt{21}$",
+        "$\\sqrt{22}$"
+      ],
+      "answer": 1,
+      "solution": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A=5^{2}+3^{2}-2\\cdot 5\\cdot 3\\cdot \\dfrac{1}{2}=19$ 이므로 $\\overline{BC}=\\sqrt{19}$ 이다."
+    },
+    {
+      "num": 3,
+      "unit": "삼각함수의 활용",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=8$, $\\overline{AC}=5$, $A=30^{\\circ}$ 일 때, 삼각형 $ABC$ 의 넓이는?",
+      "choices": [
+        "$8$",
+        "$9$",
+        "$11$",
+        "$12$",
+        "$10$"
+      ],
+      "answer": 5,
+      "solution": "삼각형의 넓이는 $\\dfrac{1}{2}\\cdot\\overline{AB}\\cdot\\overline{AC}\\cdot\\sin A=\\dfrac{1}{2}\\cdot 8\\cdot 5\\cdot \\dfrac{1}{2}=10$ 이다."
+    },
+    {
+      "num": 4,
+      "unit": "등차수열과 등비수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "등차수열 $\\{a_n\\}$ 에 대하여 $a_2=7$, $a_6=23$ 일 때, $a_{12}$ 의 값은?",
+      "choices": [
+        "$47$",
+        "$45$",
+        "$49$",
+        "$51$",
+        "$53$"
+      ],
+      "answer": 1,
+      "solution": "공차 $d=\\dfrac{23-7}{6-2}=4$, $a_1=7-4=3$ 이므로 $a_{12}=3+11\\cdot 4=47$ 이다."
+    },
+    {
+      "num": 5,
+      "unit": "등차수열과 등비수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "첫째항이 $2$, 공비가 $3$ 인 등비수열 $\\{a_n\\}$ 에 대하여 $a_4$ 의 값은?",
+      "choices": [
+        "$48$",
+        "$50$",
+        "$52$",
+        "$54$",
+        "$56$"
+      ],
+      "answer": 4,
+      "solution": "$a_4=2\\cdot 3^{3}=2\\cdot 27=54$ 이다."
+    },
+    {
+      "num": 6,
+      "unit": "여러 가지 수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "$\\displaystyle\\sum_{k=1}^{10}\\left(3k+2\\right)$ 의 값은?",
+      "choices": [
+        "$175$",
+        "$185$",
+        "$180$",
+        "$190$",
+        "$195$"
+      ],
+      "answer": 2,
+      "solution": "$\\displaystyle\\sum_{k=1}^{10}3k=3\\cdot\\dfrac{10\\cdot 11}{2}=165$, $\\displaystyle\\sum_{k=1}^{10}2=20$ 이므로 합은 $185$ 이다."
+    },
+    {
+      "num": 7,
+      "unit": "삼각함수의 활용",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "삼각형 $ABC$ 의 외접원의 반지름의 길이가 $5$ 이고 $\\overline{AB}=6$ 일 때, $\\sin C$ 의 값은?",
+      "choices": [
+        "$\\dfrac{2}{5}$",
+        "$\\dfrac{3}{5}$",
+        "$\\dfrac{3}{10}$",
+        "$\\dfrac{4}{5}$",
+        "$\\dfrac{1}{2}$"
+      ],
+      "answer": 2,
+      "solution": "사인법칙 $\\dfrac{\\overline{AB}}{\\sin C}=2R$ 에서 $\\sin C=\\dfrac{\\overline{AB}}{2R}=\\dfrac{6}{2\\cdot 5}=\\dfrac{3}{5}$ 이다."
+    },
+    {
+      "num": 8,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "$\\displaystyle\\sum_{k=1}^{9}\\dfrac{1}{k(k+1)}$ 의 값은?",
+      "choices": [
+        "$\\dfrac{7}{10}$",
+        "$\\dfrac{4}{5}$",
+        "$\\dfrac{8}{9}$",
+        "$1$",
+        "$\\dfrac{9}{10}$"
+      ],
+      "answer": 5,
+      "solution": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 이므로 $\\displaystyle\\sum_{k=1}^{9}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{10}=\\dfrac{9}{10}$ 이다.",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "부분분수 분해를 이용해 $\\displaystyle\\sum_{k=1}^{9}\\dfrac{1}{k(k+1)}$ 의 값을 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "분모가 연속한 두 자연수의 곱이므로 부분분수로 분해하여 망원급수(소거) 형태로 만든다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 로 분해하면 인접한 항이 연속해서 소거된다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\displaystyle\\sum_{k=1}^{9}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{10}=\\dfrac{9}{10}$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "값은 $\\dfrac{9}{10}$ 이므로 보기 ⑤이다."
+        }
+      ]
+    },
+    {
+      "num": 9,
+      "unit": "등차수열과 등비수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "첫째항이 $-15$, 공차가 $2$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{16}|a_k|$ 의 값은?",
+      "choices": [
+        "$120$",
+        "$124$",
+        "$128$",
+        "$132$",
+        "$136$"
+      ],
+      "answer": 3,
+      "solution": "$a_k=-15+2(k-1)=2k-17$ 이다. $k\\le 8$ 이면 $a_k<0$, $k\\ge 9$ 이면 $a_k>0$ 이다. 음수 부분의 절댓값 합은 $64$, 양수 부분의 합은 $64$ 이므로 합은 $128$ 이다.",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "등차수열에서 부호가 바뀌는 절댓값의 합 $\\displaystyle\\sum_{k=1}^{16}|a_k|$ 를 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$a_k=2k-17$ 이므로 $a_k=0$ 이 되는 지점을 기준으로 음수 구간과 양수 구간으로 나눈다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$k\\le 8$ 에서 $a_k<0$ 이고 $k\\ge 9$ 에서 $a_k>0$ 이므로 음수 부분은 부호를 바꾸어 더한다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "음수 부분의 절댓값 합은 $64$, 양수 부분의 합은 $64$ 이므로 전체 합은 $64+64=128$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$\\displaystyle\\sum_{k=1}^{16}|a_k|=128$ 이므로 보기 ③이다."
+        }
+      ]
+    },
+    {
+      "num": 10,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "수열 $1,\\ 2,\\ 2,\\ 3,\\ 3,\\ 3,\\ 4,\\ 4,\\ 4,\\ 4,\\ \\cdots$ 와 같이 자연수 $m$ 이 연속하여 $m$ 번 나타나도록 만든 수열의 제$55$항의 값은?",
+      "choices": [
+        "$7$",
+        "$8$",
+        "$9$",
+        "$10$",
+        "$11$"
+      ],
+      "answer": 4,
+      "solution": "자연수 $m$ 까지 나타난 항의 개수는 $\\dfrac{m(m+1)}{2}$ 이다. $\\dfrac{9\\cdot 10}{2}=45$, $\\dfrac{10\\cdot 11}{2}=55$ 이므로 제$55$항은 $10$ 가 나타나는 블록에 속한다. 따라서 제$55$항은 $10$ 이다.",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "자연수 $m$ 이 $m$ 번 반복되는 군수열에서 제$55$항의 값을 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$m$ 까지의 누적 항의 개수는 $1+2+\\cdots+m=\\dfrac{m(m+1)}{2}$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$\\dfrac{m(m+1)}{2}$ 가 처음으로 $55$ 이상이 되는 $m$ 을 찾으면 그 $m$ 이 제$55$항의 값이다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\dfrac{9\\cdot 10}{2}=45$, $\\dfrac{10\\cdot 11}{2}=55$ 이므로 제$55$항은 $10$ 가 나타나는 블록에 속한다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "제$55$항은 $10$ 이므로 보기 ④이다."
+        }
+      ]
+    },
+    {
+      "num": 11,
+      "unit": "삼각함수의 활용",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=7$, $\\overline{BC}=5$, $B=60^{\\circ}$ 일 때, 변 $CA$ 의 길이는?",
+      "choices": [
+        "$\\sqrt{38}$",
+        "$\\sqrt{39}$",
+        "$\\sqrt{40}$",
+        "$\\sqrt{41}$",
+        "$\\sqrt{42}$"
+      ],
+      "answer": 2,
+      "solution": "코사인법칙 $\\overline{CA}^{2}=\\overline{AB}^{2}+\\overline{BC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{BC}\\cos B=7^{2}+5^{2}-2\\cdot 7\\cdot 5\\cdot \\dfrac{1}{2}=39$ 이므로 $\\overline{CA}=\\sqrt{39}$ 이다.",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "두 변과 끼인각이 주어진 삼각형에서 코사인법칙으로 나머지 변 $\\overline{CA}$ 를 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$\\overline{AB}=7$, $\\overline{BC}=5$, 끼인각 $B=60^{\\circ}$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "코사인법칙 $\\overline{CA}^{2}=\\overline{AB}^{2}+\\overline{BC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{BC}\\cos B$ 를 적용한다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\overline{CA}^{2}=7^{2}+5^{2}-2\\cdot 7\\cdot 5\\cdot \\dfrac{1}{2}=39$ 이므로 $\\overline{CA}=\\sqrt{39}$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$\\overline{CA}=\\sqrt{39}$ 이므로 보기 ②이다."
+        }
+      ]
+    },
+    {
+      "num": 12,
+      "unit": "등차수열과 등비수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "첫째항이 $3$, 공비가 $2$ 인 등비수열 $\\{a_n\\}$ 의 첫째항부터 제$6$항까지의 합은?",
+      "choices": [
+        "$189$",
+        "$185$",
+        "$193$",
+        "$197$",
+        "$201$"
+      ],
+      "answer": 1,
+      "solution": "등비수열의 합 $S_6=\\dfrac{3(2^{6}-1)}{2-1}=\\dfrac{3(64-1)}{1}=189$ 이다."
+    },
+    {
+      "num": 13,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=3n^2+1n$ 일 때, $a_8$ 의 값은?",
+      "choices": [
+        "$42$",
+        "$44$",
+        "$46$",
+        "$48$",
+        "$50$"
+      ],
+      "answer": 3,
+      "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=(3n^2+1n)-(3(n-1)^2+1(n-1))=6n+-2=6n-2$ 이다. 따라서 $a_8=46$ 이다."
+    },
+    {
+      "num": 14,
+      "unit": "삼각함수의 활용",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "삼각형 $ABC$ 의 넓이가 $9$ 이고 $\\overline{AB}=6$, $\\overline{AC}=6$ 일 때, 예각 $A$ 의 크기는?",
+      "choices": [
+        "$30$",
+        "$45$",
+        "$60$",
+        "$90$",
+        "$120$"
+      ],
+      "answer": 1,
+      "solution": "넓이 $=\\dfrac{1}{2}\\cdot\\overline{AB}\\cdot\\overline{AC}\\cdot\\sin A=\\dfrac{1}{2}\\cdot 6\\cdot 6\\cdot\\sin A=9$ 에서 $\\sin A=\\dfrac{1}{2}$ 이다. $A$ 가 예각이므로 $A=30^{\\circ}$ 이다."
+    },
+    {
+      "num": 15,
+      "unit": "여러 가지 수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "$\\displaystyle\\sum_{k=1}^{10} k^2$ 의 값은?",
+      "choices": [
+        "$375$",
+        "$380$",
+        "$390$",
+        "$395$",
+        "$385$"
+      ],
+      "answer": 5,
+      "solution": "$\\displaystyle\\sum_{k=1}^{10} k^2=\\dfrac{10\\cdot 11\\cdot 21}{6}=385$ 이다."
+    },
+    {
+      "num": 16,
+      "unit": "수학적 귀납법",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "다음은 모든 자연수 $n$ 에 대하여 $5^{n}-1$ 이 $4$ 의 배수임을 수학적 귀납법으로 증명한 것이다. \\\\ (i) $n=1$ 일 때, $5^{1}-1=4$ 이므로 $4$ 의 배수이다. \\\\ (ii) $n=k$ 일 때 $5^{k}-1$ 이 $4$ 의 배수라 가정하면 $5^{k}-1=4m$ ($m$ 은 자연수) 으로 놓을 수 있다. $n=k+1$ 일 때 $5^{k+1}-1=5\\cdot 5^{k}-1=5(4m+1)-1=20m+\\boxed{(\\text{가})}=4(5m+\\boxed{(\\text{나})})$ 이므로 $4$ 의 배수이다. \\\\ 위의 $\\boxed{(\\text{가})}$ 에 알맞은 수를 $p$, $\\boxed{(\\text{나})}$ 에 알맞은 수를 $q$ 라 할 때, $p+q$ 의 값은?",
+      "choices": [
+        "$3$",
+        "$5$",
+        "$6$",
+        "$4$",
+        "$7$"
+      ],
+      "answer": 4,
+      "solution": "$5(4m+1)-1=20m+4$ 이므로 $(\\text{가})=4$, 즉 $p=4$ 이다. $20m+4=4(5m+1)$ 이므로 $(\\text{나})=1$, 즉 $q=1$ 이다. 따라서 $p+q=4+1=5$ 이다.",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "수학적 귀납법으로 $5^{n}-1$ 이 $4$ 의 배수임을 증명하는 과정의 빈칸 $p$, $q$ 를 구해 $p+q$ 를 계산한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "가정은 $5^{k}-1=4m$ ($m$ 은 자연수)이다. $n=k+1$ 에서 식을 가정으로 변형한다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$5^{k+1}=5\\cdot 5^{k}$ 이고 가정에서 $5^{k}=4m+1$ 임을 대입한다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$5(4m+1)-1=20m+4=4(5m+1)$ 이므로 $\\boxed{(\\text{가})}=4$ 에서 $p=4$, $\\boxed{(\\text{나})}=1$ 에서 $q=1$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$p+q=4+1=5$ 이므로 보기 ④이다."
+        }
+      ]
+    },
+    {
+      "num": 17,
+      "unit": "수학적 귀납법",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "수열 $\\{a_n\\}$ 이 $a_1=5$, $a_{n+1}=a_n+4$ 를 만족시킬 때, $a_11$ 의 값은?",
+      "choices": [
+        "$45$",
+        "$43$",
+        "$41$",
+        "$47$",
+        "$49$"
+      ],
+      "answer": 1,
+      "solution": "$a_{n+1}-a_n=4$ 이므로 $\\{a_n\\}$ 은 공차가 $4$ 인 등차수열이다. $a_n=5+4(n-1)$ 이므로 $a_11=5+4\\cdot 10=45$ 이다."
+    },
+    {
+      "num": 18,
+      "unit": "등차수열과 등비수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "두 수열 $\\{a_n\\}$, $\\{b_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{12} a_k=30$, $\\displaystyle\\sum_{k=1}^{12} b_k=8$ 일 때, $\\displaystyle\\sum_{k=1}^{12}(2a_k-3b_k)$ 의 값은?",
+      "choices": [
+        "$32$",
+        "$36$",
+        "$34$",
+        "$38$",
+        "$40$"
+      ],
+      "answer": 2,
+      "solution": "$\\displaystyle\\sum_{k=1}^{12}(2a_k-3b_k)=2\\sum_{k=1}^{12}a_k-3\\sum_{k=1}^{12}b_k=2\\cdot 30-3\\cdot 8=36$ 이다."
+    },
+    {
+      "num": 19,
+      "unit": "삼각함수의 활용",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=6$, $\\overline{AC}=4$, $A=60^{\\circ}$ 일 때, 변 $BC$ 의 길이 $\\overline{BC}$ 와 삼각형 $ABC$ 의 넓이 $S$ 의 곱 $\\overline{BC}\\times S$ 를 $p\\sqrt{q}$ 꼴로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $q$ 는 가장 작은 자연수)",
+      "answer": "33",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "코사인법칙으로 $\\overline{BC}$ 를, 넓이 공식으로 $S$ 를 구한 뒤 그 곱을 $p\\sqrt{q}$ 꼴로 정리하여 $p+q$ 를 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$\\overline{AB}=6$, $\\overline{AC}=4$, 끼인각 $A=60^{\\circ}$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A$, 넓이 $S=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A$ 를 쓴다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\overline{BC}^{2}=6^{2}+4^{2}-2\\cdot 6\\cdot 4\\cdot \\dfrac{1}{2}=28$ 이므로 $\\overline{BC}=2\\sqrt{7}$ 이다. $S=\\dfrac{1}{2}\\cdot 6\\cdot 4\\cdot \\dfrac{\\sqrt{3}}{2}=6\\sqrt{3}$ 이다. 곱은 $2\\sqrt{7}\\times 6\\sqrt{3}=12\\sqrt{21}$ 이므로 $p=12$, $q=21$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$p+q=12+21=33$ 이다."
+        }
+      ]
+    },
+    {
+      "num": 20,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "첫째항이 $3$, 공차가 $4$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{24}\\dfrac{1}{a_k\\,a_{k+1}}$ 의 값을 $\\dfrac{q}{p}$ 로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+      "answer": "107",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "등차수열의 곱으로 이루어진 분수를 부분분수로 분해하여 $\\displaystyle\\sum_{k=1}^{24}\\dfrac{1}{a_k a_{k+1}}$ 의 값을 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$a_n=3+4(n-1)=4n-1$ 이고 공차는 $4$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{4}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 분해하면 망원급수가 된다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\displaystyle\\sum_{k=1}^{24}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{4}\\left(\\dfrac{1}{a_1}-\\dfrac{1}{a_{25}}\\right)=\\dfrac{1}{4}\\left(\\dfrac{1}{3}-\\dfrac{1}{99}\\right)=\\dfrac{8}{99}$ 이다. 따라서 $p=99$, $q=8$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$p+q=99+8=107$ 이다."
+        }
+      ]
+    }
+  ],
+  "rounds": [
+    [
+      {
+        "num": 1,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $A=30^{\\circ}$, $\\overline{BC}=8$ 일 때, 삼각형 $ABC$ 의 외접원의 반지름의 길이는?",
+        "choices": [
+          "$6$",
+          "$7$",
+          "$8$",
+          "$9$",
+          "$10$"
+        ],
+        "answer": 3,
+        "solution": "사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=2R$ 에서 $2R=\\dfrac{8}{\\sin 30^{\\circ}}=\\dfrac{8}{\\dfrac{1}{2}}=16$ 이므로 $R=8$ 이다."
+      },
+      {
+        "num": 2,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=5$, $\\overline{AC}=3$, $A=60^{\\circ}$ 일 때, 변 $BC$ 의 길이는?",
+        "choices": [
+          "$\\sqrt{19}$",
+          "$\\sqrt{18}$",
+          "$\\sqrt{20}$",
+          "$\\sqrt{21}$",
+          "$\\sqrt{22}$"
+        ],
+        "answer": 1,
+        "solution": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A=5^{2}+3^{2}-2\\cdot 5\\cdot 3\\cdot \\dfrac{1}{2}=19$ 이므로 $\\overline{BC}=\\sqrt{19}$ 이다."
+      },
+      {
+        "num": 3,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=8$, $\\overline{AC}=5$, $A=30^{\\circ}$ 일 때, 삼각형 $ABC$ 의 넓이는?",
+        "choices": [
+          "$8$",
+          "$9$",
+          "$11$",
+          "$12$",
+          "$10$"
+        ],
+        "answer": 5,
+        "solution": "삼각형의 넓이는 $\\dfrac{1}{2}\\cdot\\overline{AB}\\cdot\\overline{AC}\\cdot\\sin A=\\dfrac{1}{2}\\cdot 8\\cdot 5\\cdot \\dfrac{1}{2}=10$ 이다."
+      },
+      {
+        "num": 4,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "등차수열 $\\{a_n\\}$ 에 대하여 $a_2=7$, $a_6=23$ 일 때, $a_{12}$ 의 값은?",
+        "choices": [
+          "$47$",
+          "$45$",
+          "$49$",
+          "$51$",
+          "$53$"
+        ],
+        "answer": 1,
+        "solution": "공차 $d=\\dfrac{23-7}{6-2}=4$, $a_1=7-4=3$ 이므로 $a_{12}=3+11\\cdot 4=47$ 이다."
+      },
+      {
+        "num": 5,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "첫째항이 $2$, 공비가 $3$ 인 등비수열 $\\{a_n\\}$ 에 대하여 $a_4$ 의 값은?",
+        "choices": [
+          "$48$",
+          "$50$",
+          "$52$",
+          "$54$",
+          "$56$"
+        ],
+        "answer": 4,
+        "solution": "$a_4=2\\cdot 3^{3}=2\\cdot 27=54$ 이다."
+      },
+      {
+        "num": 6,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{10}\\left(3k+2\\right)$ 의 값은?",
+        "choices": [
+          "$175$",
+          "$185$",
+          "$180$",
+          "$190$",
+          "$195$"
+        ],
+        "answer": 2,
+        "solution": "$\\displaystyle\\sum_{k=1}^{10}3k=3\\cdot\\dfrac{10\\cdot 11}{2}=165$, $\\displaystyle\\sum_{k=1}^{10}2=20$ 이므로 합은 $185$ 이다."
+      },
+      {
+        "num": 7,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 의 외접원의 반지름의 길이가 $5$ 이고 $\\overline{AB}=6$ 일 때, $\\sin C$ 의 값은?",
+        "choices": [
+          "$\\dfrac{2}{5}$",
+          "$\\dfrac{3}{5}$",
+          "$\\dfrac{3}{10}$",
+          "$\\dfrac{4}{5}$",
+          "$\\dfrac{1}{2}$"
+        ],
+        "answer": 2,
+        "solution": "사인법칙 $\\dfrac{\\overline{AB}}{\\sin C}=2R$ 에서 $\\sin C=\\dfrac{\\overline{AB}}{2R}=\\dfrac{6}{2\\cdot 5}=\\dfrac{3}{5}$ 이다."
+      },
+      {
+        "num": 8,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{9}\\dfrac{1}{k(k+1)}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{7}{10}$",
+          "$\\dfrac{4}{5}$",
+          "$\\dfrac{8}{9}$",
+          "$1$",
+          "$\\dfrac{9}{10}$"
+        ],
+        "answer": 5,
+        "solution": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 이므로 $\\displaystyle\\sum_{k=1}^{9}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{10}=\\dfrac{9}{10}$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "부분분수 분해를 이용해 $\\displaystyle\\sum_{k=1}^{9}\\dfrac{1}{k(k+1)}$ 의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "분모가 연속한 두 자연수의 곱이므로 부분분수로 분해하여 망원급수(소거) 형태로 만든다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 로 분해하면 인접한 항이 연속해서 소거된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{9}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{10}=\\dfrac{9}{10}$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "값은 $\\dfrac{9}{10}$ 이므로 보기 ⑤이다."
+          }
+        ]
+      },
+      {
+        "num": 9,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "첫째항이 $-15$, 공차가 $2$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{16}|a_k|$ 의 값은?",
+        "choices": [
+          "$120$",
+          "$124$",
+          "$128$",
+          "$132$",
+          "$136$"
+        ],
+        "answer": 3,
+        "solution": "$a_k=-15+2(k-1)=2k-17$ 이다. $k\\le 8$ 이면 $a_k<0$, $k\\ge 9$ 이면 $a_k>0$ 이다. 음수 부분의 절댓값 합은 $64$, 양수 부분의 합은 $64$ 이므로 합은 $128$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열에서 부호가 바뀌는 절댓값의 합 $\\displaystyle\\sum_{k=1}^{16}|a_k|$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_k=2k-17$ 이므로 $a_k=0$ 이 되는 지점을 기준으로 음수 구간과 양수 구간으로 나눈다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$k\\le 8$ 에서 $a_k<0$ 이고 $k\\ge 9$ 에서 $a_k>0$ 이므로 음수 부분은 부호를 바꾸어 더한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "음수 부분의 절댓값 합은 $64$, 양수 부분의 합은 $64$ 이므로 전체 합은 $64+64=128$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\displaystyle\\sum_{k=1}^{16}|a_k|=128$ 이므로 보기 ③이다."
+          }
+        ]
+      },
+      {
+        "num": 10,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $1,\\ 2,\\ 2,\\ 3,\\ 3,\\ 3,\\ 4,\\ 4,\\ 4,\\ 4,\\ \\cdots$ 와 같이 자연수 $m$ 이 연속하여 $m$ 번 나타나도록 만든 수열의 제$55$항의 값은?",
+        "choices": [
+          "$7$",
+          "$8$",
+          "$9$",
+          "$10$",
+          "$11$"
+        ],
+        "answer": 4,
+        "solution": "자연수 $m$ 까지 나타난 항의 개수는 $\\dfrac{m(m+1)}{2}$ 이다. $\\dfrac{9\\cdot 10}{2}=45$, $\\dfrac{10\\cdot 11}{2}=55$ 이므로 제$55$항은 $10$ 가 나타나는 블록에 속한다. 따라서 제$55$항은 $10$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "자연수 $m$ 이 $m$ 번 반복되는 군수열에서 제$55$항의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$m$ 까지의 누적 항의 개수는 $1+2+\\cdots+m=\\dfrac{m(m+1)}{2}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{m(m+1)}{2}$ 가 처음으로 $55$ 이상이 되는 $m$ 을 찾으면 그 $m$ 이 제$55$항의 값이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\dfrac{9\\cdot 10}{2}=45$, $\\dfrac{10\\cdot 11}{2}=55$ 이므로 제$55$항은 $10$ 가 나타나는 블록에 속한다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "제$55$항은 $10$ 이므로 보기 ④이다."
+          }
+        ]
+      },
+      {
+        "num": 11,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=7$, $\\overline{BC}=5$, $B=60^{\\circ}$ 일 때, 변 $CA$ 의 길이는?",
+        "choices": [
+          "$\\sqrt{38}$",
+          "$\\sqrt{39}$",
+          "$\\sqrt{40}$",
+          "$\\sqrt{41}$",
+          "$\\sqrt{42}$"
+        ],
+        "answer": 2,
+        "solution": "코사인법칙 $\\overline{CA}^{2}=\\overline{AB}^{2}+\\overline{BC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{BC}\\cos B=7^{2}+5^{2}-2\\cdot 7\\cdot 5\\cdot \\dfrac{1}{2}=39$ 이므로 $\\overline{CA}=\\sqrt{39}$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "두 변과 끼인각이 주어진 삼각형에서 코사인법칙으로 나머지 변 $\\overline{CA}$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=7$, $\\overline{BC}=5$, 끼인각 $B=60^{\\circ}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "코사인법칙 $\\overline{CA}^{2}=\\overline{AB}^{2}+\\overline{BC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{BC}\\cos B$ 를 적용한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{CA}^{2}=7^{2}+5^{2}-2\\cdot 7\\cdot 5\\cdot \\dfrac{1}{2}=39$ 이므로 $\\overline{CA}=\\sqrt{39}$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\overline{CA}=\\sqrt{39}$ 이므로 보기 ②이다."
+          }
+        ]
+      },
+      {
+        "num": 12,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "첫째항이 $3$, 공비가 $2$ 인 등비수열 $\\{a_n\\}$ 의 첫째항부터 제$6$항까지의 합은?",
+        "choices": [
+          "$189$",
+          "$185$",
+          "$193$",
+          "$197$",
+          "$201$"
+        ],
+        "answer": 1,
+        "solution": "등비수열의 합 $S_6=\\dfrac{3(2^{6}-1)}{2-1}=\\dfrac{3(64-1)}{1}=189$ 이다."
+      },
+      {
+        "num": 13,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=3n^2+1n$ 일 때, $a_8$ 의 값은?",
+        "choices": [
+          "$42$",
+          "$44$",
+          "$46$",
+          "$48$",
+          "$50$"
+        ],
+        "answer": 3,
+        "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=(3n^2+1n)-(3(n-1)^2+1(n-1))=6n+-2=6n-2$ 이다. 따라서 $a_8=46$ 이다."
+      },
+      {
+        "num": 14,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 의 넓이가 $9$ 이고 $\\overline{AB}=6$, $\\overline{AC}=6$ 일 때, 예각 $A$ 의 크기는?",
+        "choices": [
+          "$30$",
+          "$45$",
+          "$60$",
+          "$90$",
+          "$120$"
+        ],
+        "answer": 1,
+        "solution": "넓이 $=\\dfrac{1}{2}\\cdot\\overline{AB}\\cdot\\overline{AC}\\cdot\\sin A=\\dfrac{1}{2}\\cdot 6\\cdot 6\\cdot\\sin A=9$ 에서 $\\sin A=\\dfrac{1}{2}$ 이다. $A$ 가 예각이므로 $A=30^{\\circ}$ 이다."
+      },
+      {
+        "num": 15,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{10} k^2$ 의 값은?",
+        "choices": [
+          "$375$",
+          "$380$",
+          "$390$",
+          "$395$",
+          "$385$"
+        ],
+        "answer": 5,
+        "solution": "$\\displaystyle\\sum_{k=1}^{10} k^2=\\dfrac{10\\cdot 11\\cdot 21}{6}=385$ 이다."
+      },
+      {
+        "num": 16,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "다음은 모든 자연수 $n$ 에 대하여 $5^{n}-1$ 이 $4$ 의 배수임을 수학적 귀납법으로 증명한 것이다. \\\\ (i) $n=1$ 일 때, $5^{1}-1=4$ 이므로 $4$ 의 배수이다. \\\\ (ii) $n=k$ 일 때 $5^{k}-1$ 이 $4$ 의 배수라 가정하면 $5^{k}-1=4m$ ($m$ 은 자연수) 으로 놓을 수 있다. $n=k+1$ 일 때 $5^{k+1}-1=5\\cdot 5^{k}-1=5(4m+1)-1=20m+\\boxed{(\\text{가})}=4(5m+\\boxed{(\\text{나})})$ 이므로 $4$ 의 배수이다. \\\\ 위의 $\\boxed{(\\text{가})}$ 에 알맞은 수를 $p$, $\\boxed{(\\text{나})}$ 에 알맞은 수를 $q$ 라 할 때, $p+q$ 의 값은?",
+        "choices": [
+          "$3$",
+          "$5$",
+          "$6$",
+          "$4$",
+          "$7$"
+        ],
+        "answer": 4,
+        "solution": "$5(4m+1)-1=20m+4$ 이므로 $(\\text{가})=4$, 즉 $p=4$ 이다. $20m+4=4(5m+1)$ 이므로 $(\\text{나})=1$, 즉 $q=1$ 이다. 따라서 $p+q=4+1=5$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "수학적 귀납법으로 $5^{n}-1$ 이 $4$ 의 배수임을 증명하는 과정의 빈칸 $p$, $q$ 를 구해 $p+q$ 를 계산한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "가정은 $5^{k}-1=4m$ ($m$ 은 자연수)이다. $n=k+1$ 에서 식을 가정으로 변형한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$5^{k+1}=5\\cdot 5^{k}$ 이고 가정에서 $5^{k}=4m+1$ 임을 대입한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$5(4m+1)-1=20m+4=4(5m+1)$ 이므로 $\\boxed{(\\text{가})}=4$ 에서 $p=4$, $\\boxed{(\\text{나})}=1$ 에서 $q=1$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=4+1=5$ 이므로 보기 ④이다."
+          }
+        ]
+      },
+      {
+        "num": 17,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=5$, $a_{n+1}=a_n+4$ 를 만족시킬 때, $a_11$ 의 값은?",
+        "choices": [
+          "$45$",
+          "$43$",
+          "$41$",
+          "$47$",
+          "$49$"
+        ],
+        "answer": 1,
+        "solution": "$a_{n+1}-a_n=4$ 이므로 $\\{a_n\\}$ 은 공차가 $4$ 인 등차수열이다. $a_n=5+4(n-1)$ 이므로 $a_11=5+4\\cdot 10=45$ 이다."
+      },
+      {
+        "num": 18,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "두 수열 $\\{a_n\\}$, $\\{b_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{12} a_k=30$, $\\displaystyle\\sum_{k=1}^{12} b_k=8$ 일 때, $\\displaystyle\\sum_{k=1}^{12}(2a_k-3b_k)$ 의 값은?",
+        "choices": [
+          "$32$",
+          "$36$",
+          "$34$",
+          "$38$",
+          "$40$"
+        ],
+        "answer": 2,
+        "solution": "$\\displaystyle\\sum_{k=1}^{12}(2a_k-3b_k)=2\\sum_{k=1}^{12}a_k-3\\sum_{k=1}^{12}b_k=2\\cdot 30-3\\cdot 8=36$ 이다."
+      },
+      {
+        "num": 19,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=6$, $\\overline{AC}=4$, $A=60^{\\circ}$ 일 때, 변 $BC$ 의 길이 $\\overline{BC}$ 와 삼각형 $ABC$ 의 넓이 $S$ 의 곱 $\\overline{BC}\\times S$ 를 $p\\sqrt{q}$ 꼴로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $q$ 는 가장 작은 자연수)",
+        "answer": "33",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "코사인법칙으로 $\\overline{BC}$ 를, 넓이 공식으로 $S$ 를 구한 뒤 그 곱을 $p\\sqrt{q}$ 꼴로 정리하여 $p+q$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=6$, $\\overline{AC}=4$, 끼인각 $A=60^{\\circ}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A$, 넓이 $S=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{BC}^{2}=6^{2}+4^{2}-2\\cdot 6\\cdot 4\\cdot \\dfrac{1}{2}=28$ 이므로 $\\overline{BC}=2\\sqrt{7}$ 이다. $S=\\dfrac{1}{2}\\cdot 6\\cdot 4\\cdot \\dfrac{\\sqrt{3}}{2}=6\\sqrt{3}$ 이다. 곱은 $2\\sqrt{7}\\times 6\\sqrt{3}=12\\sqrt{21}$ 이므로 $p=12$, $q=21$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=12+21=33$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "첫째항이 $3$, 공차가 $4$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{24}\\dfrac{1}{a_k\\,a_{k+1}}$ 의 값을 $\\dfrac{q}{p}$ 로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+        "answer": "107",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열의 곱으로 이루어진 분수를 부분분수로 분해하여 $\\displaystyle\\sum_{k=1}^{24}\\dfrac{1}{a_k a_{k+1}}$ 의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_n=3+4(n-1)=4n-1$ 이고 공차는 $4$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{4}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 분해하면 망원급수가 된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{24}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{4}\\left(\\dfrac{1}{a_1}-\\dfrac{1}{a_{25}}\\right)=\\dfrac{1}{4}\\left(\\dfrac{1}{3}-\\dfrac{1}{99}\\right)=\\dfrac{8}{99}$ 이다. 따라서 $p=99$, $q=8$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=99+8=107$ 이다."
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "num": 1,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $A=45^{\\circ}$, $\\overline{BC}=10$ 일 때, 삼각형 $ABC$ 의 외접원의 반지름의 길이는?",
+        "choices": [
+          "$4\\sqrt{2}$",
+          "$5\\sqrt{2}$",
+          "$6\\sqrt{2}$",
+          "$10$",
+          "$5$"
+        ],
+        "answer": 2,
+        "solution": "사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=2R$ 에서 $2R=\\dfrac{10}{\\sin 45^{\\circ}}=\\dfrac{10}{\\dfrac{\\sqrt{2}}{2}}=10\\sqrt{2}$ 이므로 $R=5\\sqrt{2}$ 이다."
+      },
+      {
+        "num": 2,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=7$, $\\overline{AC}=5$, $A=120^{\\circ}$ 일 때, 변 $BC$ 의 길이는?",
+        "choices": [
+          "$\\sqrt{109}$",
+          "$\\sqrt{108}$",
+          "$\\sqrt{107}$",
+          "$\\sqrt{110}$",
+          "$\\sqrt{111}$"
+        ],
+        "answer": 1,
+        "solution": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A=7^{2}+5^{2}-2\\cdot 7\\cdot 5\\cdot \\left(-\\dfrac{1}{2}\\right)=109$ 이므로 $\\overline{BC}=\\sqrt{109}$ 이다."
+      },
+      {
+        "num": 3,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=10$, $\\overline{AC}=6$, $A=150^{\\circ}$ 일 때, 삼각형 $ABC$ 의 넓이는?",
+        "choices": [
+          "$13$",
+          "$15$",
+          "$14$",
+          "$16$",
+          "$17$"
+        ],
+        "answer": 2,
+        "solution": "삼각형의 넓이는 $\\dfrac{1}{2}\\cdot\\overline{AB}\\cdot\\overline{AC}\\cdot\\sin A=\\dfrac{1}{2}\\cdot 10\\cdot 6\\cdot \\dfrac{1}{2}=15$ 이다."
+      },
+      {
+        "num": 4,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "등차수열 $\\{a_n\\}$ 에 대하여 $a_2=5$, $a_6=21$ 일 때, $a_{12}$ 의 값은?",
+        "choices": [
+          "$45$",
+          "$43$",
+          "$41$",
+          "$47$",
+          "$49$"
+        ],
+        "answer": 1,
+        "solution": "공차 $d=\\dfrac{21-5}{6-2}=4$, $a_1=5-4=1$ 이므로 $a_{12}=1+11\\cdot 4=45$ 이다."
+      },
+      {
+        "num": 5,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "첫째항이 $3$, 공비가 $2$ 인 등비수열 $\\{a_n\\}$ 에 대하여 $a_4$ 의 값은?",
+        "choices": [
+          "$18$",
+          "$20$",
+          "$22$",
+          "$24$",
+          "$26$"
+        ],
+        "answer": 4,
+        "solution": "$a_4=3\\cdot 2^{3}=3\\cdot 8=24$ 이다."
+      },
+      {
+        "num": 6,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{12}\\left(2k+5\\right)$ 의 값은?",
+        "choices": [
+          "$206$",
+          "$216$",
+          "$211$",
+          "$221$",
+          "$226$"
+        ],
+        "answer": 2,
+        "solution": "$\\displaystyle\\sum_{k=1}^{12}2k=2\\cdot\\dfrac{12\\cdot 13}{2}=156$, $\\displaystyle\\sum_{k=1}^{12}5=60$ 이므로 합은 $216$ 이다."
+      },
+      {
+        "num": 7,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 의 외접원의 반지름의 길이가 $6$ 이고 $\\overline{AB}=9$ 일 때, $\\sin C$ 의 값은?",
+        "choices": [
+          "$\\dfrac{1}{2}$",
+          "$\\dfrac{2}{3}$",
+          "$\\dfrac{3}{4}$",
+          "$\\dfrac{3}{8}$",
+          "$\\dfrac{4}{5}$"
+        ],
+        "answer": 3,
+        "solution": "사인법칙 $\\dfrac{\\overline{AB}}{\\sin C}=2R$ 에서 $\\sin C=\\dfrac{\\overline{AB}}{2R}=\\dfrac{9}{2\\cdot 6}=\\dfrac{3}{4}$ 이다."
+      },
+      {
+        "num": 8,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{14}\\dfrac{1}{k(k+1)}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{12}{15}$",
+          "$\\dfrac{13}{15}$",
+          "$\\dfrac{13}{14}$",
+          "$1$",
+          "$\\dfrac{14}{15}$"
+        ],
+        "answer": 5,
+        "solution": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 이므로 $\\displaystyle\\sum_{k=1}^{14}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{15}=\\dfrac{14}{15}$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "부분분수 분해를 이용해 $\\displaystyle\\sum_{k=1}^{14}\\dfrac{1}{k(k+1)}$ 의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "분모가 연속한 두 자연수의 곱이므로 부분분수로 분해하여 망원급수(소거) 형태로 만든다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 로 분해하면 인접한 항이 연속해서 소거된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{14}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{15}=\\dfrac{14}{15}$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "값은 $\\dfrac{14}{15}$ 이므로 보기 ⑤이다."
+          }
+        ]
+      },
+      {
+        "num": 9,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "첫째항이 $-17$, 공차가 $2$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{18}|a_k|$ 의 값은?",
+        "choices": [
+          "$154$",
+          "$158$",
+          "$162$",
+          "$166$",
+          "$170$"
+        ],
+        "answer": 3,
+        "solution": "$a_k=-17+2(k-1)=2k-19$ 이다. $k\\le 9$ 이면 $a_k<0$, $k\\ge 10$ 이면 $a_k>0$ 이다. 음수 부분의 절댓값 합은 $81$, 양수 부분의 합은 $81$ 이므로 합은 $162$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열에서 부호가 바뀌는 절댓값의 합 $\\displaystyle\\sum_{k=1}^{18}|a_k|$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_k=2k-19$ 이므로 $a_k=0$ 이 되는 지점을 기준으로 음수 구간과 양수 구간으로 나눈다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$k\\le 9$ 에서 $a_k<0$ 이고 $k\\ge 10$ 에서 $a_k>0$ 이므로 음수 부분은 부호를 바꾸어 더한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "음수 부분의 절댓값 합은 $81$, 양수 부분의 합은 $81$ 이므로 전체 합은 $81+81=162$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\displaystyle\\sum_{k=1}^{18}|a_k|=162$ 이므로 보기 ③이다."
+          }
+        ]
+      },
+      {
+        "num": 10,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $1,\\ 2,\\ 2,\\ 3,\\ 3,\\ 3,\\ 4,\\ 4,\\ 4,\\ 4,\\ \\cdots$ 와 같이 자연수 $m$ 이 연속하여 $m$ 번 나타나도록 만든 수열의 제$70$항의 값은?",
+        "choices": [
+          "$9$",
+          "$10$",
+          "$11$",
+          "$12$",
+          "$13$"
+        ],
+        "answer": 4,
+        "solution": "자연수 $m$ 까지 나타난 항의 개수는 $\\dfrac{m(m+1)}{2}$ 이다. $\\dfrac{11\\cdot 12}{2}=66$, $\\dfrac{12\\cdot 13}{2}=78$ 이므로 제$70$항은 $12$ 가 나타나는 블록에 속한다. 따라서 제$70$항은 $12$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "자연수 $m$ 이 $m$ 번 반복되는 군수열에서 제$70$항의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$m$ 까지의 누적 항의 개수는 $1+2+\\cdots+m=\\dfrac{m(m+1)}{2}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{m(m+1)}{2}$ 가 처음으로 $70$ 이상이 되는 $m$ 을 찾으면 그 $m$ 이 제$70$항의 값이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\dfrac{11\\cdot 12}{2}=66$, $\\dfrac{12\\cdot 13}{2}=78$ 이므로 제$70$항은 $12$ 가 나타나는 블록에 속한다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "제$70$항은 $12$ 이므로 보기 ④이다."
+          }
+        ]
+      },
+      {
+        "num": 11,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=8$, $\\overline{BC}=6$, $B=120^{\\circ}$ 일 때, 변 $CA$ 의 길이는?",
+        "choices": [
+          "$2\\sqrt{35}$",
+          "$2\\sqrt{37}$",
+          "$2\\sqrt{36}$",
+          "$2\\sqrt{38}$",
+          "$2\\sqrt{39}$"
+        ],
+        "answer": 2,
+        "solution": "코사인법칙 $\\overline{CA}^{2}=\\overline{AB}^{2}+\\overline{BC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{BC}\\cos B=8^{2}+6^{2}-2\\cdot 8\\cdot 6\\cdot \\left(-\\dfrac{1}{2}\\right)=148$ 이므로 $\\overline{CA}=2\\sqrt{37}$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "두 변과 끼인각이 주어진 삼각형에서 코사인법칙으로 나머지 변 $\\overline{CA}$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=8$, $\\overline{BC}=6$, 끼인각 $B=120^{\\circ}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "코사인법칙 $\\overline{CA}^{2}=\\overline{AB}^{2}+\\overline{BC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{BC}\\cos B$ 를 적용한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{CA}^{2}=8^{2}+6^{2}-2\\cdot 8\\cdot 6\\cdot \\left(-\\dfrac{1}{2}\\right)=148$ 이므로 $\\overline{CA}=2\\sqrt{37}$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\overline{CA}=2\\sqrt{37}$ 이므로 보기 ②이다."
+          }
+        ]
+      },
+      {
+        "num": 12,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "첫째항이 $2$, 공비가 $3$ 인 등비수열 $\\{a_n\\}$ 의 첫째항부터 제$5$항까지의 합은?",
+        "choices": [
+          "$242$",
+          "$240$",
+          "$238$",
+          "$244$",
+          "$246$"
+        ],
+        "answer": 1,
+        "solution": "등비수열의 합 $S_5=\\dfrac{2(3^{5}-1)}{3-1}=\\dfrac{2(243-1)}{2}=242$ 이다."
+      },
+      {
+        "num": 13,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=2n^2+3n$ 일 때, $a_9$ 의 값은?",
+        "choices": [
+          "$33$",
+          "$35$",
+          "$37$",
+          "$39$",
+          "$41$"
+        ],
+        "answer": 3,
+        "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=(2n^2+3n)-(2(n-1)^2+3(n-1))=4n+1=4n+1$ 이다. 따라서 $a_9=37$ 이다."
+      },
+      {
+        "num": 14,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 의 넓이가 $18$ 이고 $\\overline{AB}=12$, $\\overline{AC}=6$ 일 때, 예각 $A$ 의 크기는?",
+        "choices": [
+          "$30$",
+          "$45$",
+          "$60$",
+          "$90$",
+          "$120$"
+        ],
+        "answer": 1,
+        "solution": "넓이 $=\\dfrac{1}{2}\\cdot\\overline{AB}\\cdot\\overline{AC}\\cdot\\sin A=\\dfrac{1}{2}\\cdot 12\\cdot 6\\cdot\\sin A=18$ 에서 $\\sin A=\\dfrac{1}{2}$ 이다. $A$ 가 예각이므로 $A=30^{\\circ}$ 이다."
+      },
+      {
+        "num": 15,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{12} k^2$ 의 값은?",
+        "choices": [
+          "$640$",
+          "$645$",
+          "$655$",
+          "$660$",
+          "$650$"
+        ],
+        "answer": 5,
+        "solution": "$\\displaystyle\\sum_{k=1}^{12} k^2=\\dfrac{12\\cdot 13\\cdot 25}{6}=650$ 이다."
+      },
+      {
+        "num": 16,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "다음은 모든 자연수 $n$ 에 대하여 $7^{n}-1$ 이 $6$ 의 배수임을 수학적 귀납법으로 증명한 것이다. \\\\ (i) $n=1$ 일 때, $7^{1}-1=6$ 이므로 $6$ 의 배수이다. \\\\ (ii) $n=k$ 일 때 $7^{k}-1$ 이 $6$ 의 배수라 가정하면 $7^{k}-1=6m$ ($m$ 은 자연수) 으로 놓을 수 있다. $n=k+1$ 일 때 $7^{k+1}-1=7\\cdot 7^{k}-1=7(6m+1)-1=42m+\\boxed{(\\text{가})}=6(7m+\\boxed{(\\text{나})})$ 이므로 $6$ 의 배수이다. \\\\ 위의 $\\boxed{(\\text{가})}$ 에 알맞은 수를 $p$, $\\boxed{(\\text{나})}$ 에 알맞은 수를 $q$ 라 할 때, $p+q$ 의 값은?",
+        "choices": [
+          "$3$",
+          "$5$",
+          "$6$",
+          "$7$",
+          "$8$"
+        ],
+        "answer": 4,
+        "solution": "$7(6m+1)-1=42m+6$ 이므로 $(\\text{가})=6$, 즉 $p=6$ 이다. $42m+6=6(7m+1)$ 이므로 $(\\text{나})=1$, 즉 $q=1$ 이다. 따라서 $p+q=6+1=7$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "수학적 귀납법으로 $7^{n}-1$ 이 $6$ 의 배수임을 증명하는 과정의 빈칸 $p$, $q$ 를 구해 $p+q$ 를 계산한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "가정은 $7^{k}-1=6m$ ($m$ 은 자연수)이다. $n=k+1$ 에서 식을 가정으로 변형한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$7^{k+1}=7\\cdot 7^{k}$ 이고 가정에서 $7^{k}=6m+1$ 임을 대입한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$7(6m+1)-1=42m+6=6(7m+1)$ 이므로 $\\boxed{(\\text{가})}=6$ 에서 $p=6$, $\\boxed{(\\text{나})}=1$ 에서 $q=1$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=6+1=7$ 이므로 보기 ④이다."
+          }
+        ]
+      },
+      {
+        "num": 17,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=3$, $a_{n+1}=a_n+5$ 를 만족시킬 때, $a_10$ 의 값은?",
+        "choices": [
+          "$48$",
+          "$46$",
+          "$44$",
+          "$50$",
+          "$52$"
+        ],
+        "answer": 1,
+        "solution": "$a_{n+1}-a_n=5$ 이므로 $\\{a_n\\}$ 은 공차가 $5$ 인 등차수열이다. $a_n=3+5(n-1)$ 이므로 $a_10=3+5\\cdot 9=48$ 이다."
+      },
+      {
+        "num": 18,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "두 수열 $\\{a_n\\}$, $\\{b_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{15} a_k=40$, $\\displaystyle\\sum_{k=1}^{15} b_k=10$ 일 때, $\\displaystyle\\sum_{k=1}^{15}(3a_k-4b_k)$ 의 값은?",
+        "choices": [
+          "$76$",
+          "$80$",
+          "$78$",
+          "$82$",
+          "$84$"
+        ],
+        "answer": 2,
+        "solution": "$\\displaystyle\\sum_{k=1}^{15}(3a_k-4b_k)=3\\sum_{k=1}^{15}a_k-4\\sum_{k=1}^{15}b_k=3\\cdot 40-4\\cdot 10=80$ 이다."
+      },
+      {
+        "num": 19,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=8$, $\\overline{AC}=5$, $A=120^{\\circ}$ 일 때, 변 $BC$ 의 길이 $\\overline{BC}$ 와 삼각형 $ABC$ 의 넓이 $S$ 의 곱 $\\overline{BC}\\times S$ 를 $p\\sqrt{q}$ 꼴로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $q$ 는 가장 작은 자연수)",
+        "answer": "397",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "코사인법칙으로 $\\overline{BC}$ 를, 넓이 공식으로 $S$ 를 구한 뒤 그 곱을 $p\\sqrt{q}$ 꼴로 정리하여 $p+q$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=8$, $\\overline{AC}=5$, 끼인각 $A=120^{\\circ}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A$, 넓이 $S=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{BC}^{2}=8^{2}+5^{2}-2\\cdot 8\\cdot 5\\cdot \\left(-\\dfrac{1}{2}\\right)=129$ 이므로 $\\overline{BC}=\\sqrt{129}$ 이다. $S=\\dfrac{1}{2}\\cdot 8\\cdot 5\\cdot \\dfrac{\\sqrt{3}}{2}=10\\sqrt{3}$ 이다. 곱은 $\\sqrt{129}\\times 10\\sqrt{3}=10\\sqrt{387}$ 이므로 $p=10$, $q=387$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=10+387=397$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "첫째항이 $2$, 공차가 $5$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k\\,a_{k+1}}$ 의 값을 $\\dfrac{q}{p}$ 로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+        "answer": "56",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열의 곱으로 이루어진 분수를 부분분수로 분해하여 $\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k a_{k+1}}$ 의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_n=2+5(n-1)=5n-3$ 이고 공차는 $5$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{5}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 분해하면 망원급수가 된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{5}\\left(\\dfrac{1}{a_1}-\\dfrac{1}{a_{21}}\\right)=\\dfrac{1}{5}\\left(\\dfrac{1}{2}-\\dfrac{1}{102}\\right)=\\dfrac{5}{51}$ 이다. 따라서 $p=51$, $q=5$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=51+5=56$ 이다."
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "num": 1,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $A=60^{\\circ}$, $\\overline{BC}=12$ 일 때, 삼각형 $ABC$ 의 외접원의 반지름의 길이는?",
+        "choices": [
+          "$2\\sqrt{3}$",
+          "$3\\sqrt{3}$",
+          "$4\\sqrt{3}$",
+          "$5\\sqrt{3}$",
+          "$6\\sqrt{3}$"
+        ],
+        "answer": 3,
+        "solution": "사인법칙 $\\dfrac{\\overline{BC}}{\\sin A}=2R$ 에서 $2R=\\dfrac{12}{\\sin 60^{\\circ}}=\\dfrac{12}{\\dfrac{\\sqrt{3}}{2}}=8\\sqrt{3}$ 이므로 $R=4\\sqrt{3}$ 이다."
+      },
+      {
+        "num": 2,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=4$, $\\overline{AC}=3$, $A=60^{\\circ}$ 일 때, 변 $BC$ 의 길이는?",
+        "choices": [
+          "$\\sqrt{13}$",
+          "$\\sqrt{12}$",
+          "$\\sqrt{11}$",
+          "$\\sqrt{14}$",
+          "$\\sqrt{15}$"
+        ],
+        "answer": 1,
+        "solution": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A=4^{2}+3^{2}-2\\cdot 4\\cdot 3\\cdot \\dfrac{1}{2}=13$ 이므로 $\\overline{BC}=\\sqrt{13}$ 이다."
+      },
+      {
+        "num": 3,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=6$, $\\overline{AC}=4$, $A=150^{\\circ}$ 일 때, 삼각형 $ABC$ 의 넓이는?",
+        "choices": [
+          "$4$",
+          "$6$",
+          "$5$",
+          "$7$",
+          "$8$"
+        ],
+        "answer": 2,
+        "solution": "삼각형의 넓이는 $\\dfrac{1}{2}\\cdot\\overline{AB}\\cdot\\overline{AC}\\cdot\\sin A=\\dfrac{1}{2}\\cdot 6\\cdot 4\\cdot \\dfrac{1}{2}=6$ 이다."
+      },
+      {
+        "num": 4,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "등차수열 $\\{a_n\\}$ 에 대하여 $a_2=9$, $a_6=25$ 일 때, $a_{12}$ 의 값은?",
+        "choices": [
+          "$49$",
+          "$47$",
+          "$45$",
+          "$51$",
+          "$53$"
+        ],
+        "answer": 1,
+        "solution": "공차 $d=\\dfrac{25-9}{6-2}=4$, $a_1=9-4=5$ 이므로 $a_{12}=5+11\\cdot 4=49$ 이다."
+      },
+      {
+        "num": 5,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "첫째항이 $4$, 공비가 $2$ 인 등비수열 $\\{a_n\\}$ 에 대하여 $a_4$ 의 값은?",
+        "choices": [
+          "$28$",
+          "$30$",
+          "$34$",
+          "$32$",
+          "$36$"
+        ],
+        "answer": 4,
+        "solution": "$a_4=4\\cdot 2^{3}=4\\cdot 8=32$ 이다."
+      },
+      {
+        "num": 6,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{8}\\left(4k+3\\right)$ 의 값은?",
+        "choices": [
+          "$160$",
+          "$168$",
+          "$164$",
+          "$172$",
+          "$176$"
+        ],
+        "answer": 2,
+        "solution": "$\\displaystyle\\sum_{k=1}^{8}4k=4\\cdot\\dfrac{8\\cdot 9}{2}=144$, $\\displaystyle\\sum_{k=1}^{8}3=24$ 이므로 합은 $168$ 이다."
+      },
+      {
+        "num": 7,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 의 외접원의 반지름의 길이가 $8$ 이고 $\\overline{AB}=8$ 일 때, $\\sin C$ 의 값은?",
+        "choices": [
+          "$\\dfrac{1}{3}$",
+          "$\\dfrac{1}{2}$",
+          "$\\dfrac{2}{3}$",
+          "$\\dfrac{1}{4}$",
+          "$\\dfrac{3}{4}$"
+        ],
+        "answer": 2,
+        "solution": "사인법칙 $\\dfrac{\\overline{AB}}{\\sin C}=2R$ 에서 $\\sin C=\\dfrac{\\overline{AB}}{2R}=\\dfrac{8}{2\\cdot 8}=\\dfrac{1}{2}$ 이다."
+      },
+      {
+        "num": 8,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{19}\\dfrac{1}{k(k+1)}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{17}{20}$",
+          "$\\dfrac{9}{10}$",
+          "$\\dfrac{18}{19}$",
+          "$1$",
+          "$\\dfrac{19}{20}$"
+        ],
+        "answer": 5,
+        "solution": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 이므로 $\\displaystyle\\sum_{k=1}^{19}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{20}=\\dfrac{19}{20}$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "부분분수 분해를 이용해 $\\displaystyle\\sum_{k=1}^{19}\\dfrac{1}{k(k+1)}$ 의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "분모가 연속한 두 자연수의 곱이므로 부분분수로 분해하여 망원급수(소거) 형태로 만든다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 로 분해하면 인접한 항이 연속해서 소거된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{19}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{20}=\\dfrac{19}{20}$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "값은 $\\dfrac{19}{20}$ 이므로 보기 ⑤이다."
+          }
+        ]
+      },
+      {
+        "num": 9,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "첫째항이 $-13$, 공차가 $2$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{14}|a_k|$ 의 값은?",
+        "choices": [
+          "$90$",
+          "$94$",
+          "$98$",
+          "$102$",
+          "$106$"
+        ],
+        "answer": 3,
+        "solution": "$a_k=-13+2(k-1)=2k-15$ 이다. $k\\le 7$ 이면 $a_k<0$, $k\\ge 8$ 이면 $a_k>0$ 이다. 음수 부분의 절댓값 합은 $49$, 양수 부분의 합은 $49$ 이므로 합은 $98$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열에서 부호가 바뀌는 절댓값의 합 $\\displaystyle\\sum_{k=1}^{14}|a_k|$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_k=2k-15$ 이므로 $a_k=0$ 이 되는 지점을 기준으로 음수 구간과 양수 구간으로 나눈다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$k\\le 7$ 에서 $a_k<0$ 이고 $k\\ge 8$ 에서 $a_k>0$ 이므로 음수 부분은 부호를 바꾸어 더한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "음수 부분의 절댓값 합은 $49$, 양수 부분의 합은 $49$ 이므로 전체 합은 $49+49=98$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\displaystyle\\sum_{k=1}^{14}|a_k|=98$ 이므로 보기 ③이다."
+          }
+        ]
+      },
+      {
+        "num": 10,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $1,\\ 2,\\ 2,\\ 3,\\ 3,\\ 3,\\ 4,\\ 4,\\ 4,\\ 4,\\ \\cdots$ 와 같이 자연수 $m$ 이 연속하여 $m$ 번 나타나도록 만든 수열의 제$90$항의 값은?",
+        "choices": [
+          "$11$",
+          "$12$",
+          "$13$",
+          "$14$",
+          "$15$"
+        ],
+        "answer": 3,
+        "solution": "자연수 $m$ 까지 나타난 항의 개수는 $\\dfrac{m(m+1)}{2}$ 이다. $\\dfrac{12\\cdot 13}{2}=78$, $\\dfrac{13\\cdot 14}{2}=91$ 이므로 제$90$항은 $13$ 가 나타나는 블록에 속한다. 따라서 제$90$항은 $13$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "자연수 $m$ 이 $m$ 번 반복되는 군수열에서 제$90$항의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$m$ 까지의 누적 항의 개수는 $1+2+\\cdots+m=\\dfrac{m(m+1)}{2}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{m(m+1)}{2}$ 가 처음으로 $90$ 이상이 되는 $m$ 을 찾으면 그 $m$ 이 제$90$항의 값이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\dfrac{12\\cdot 13}{2}=78$, $\\dfrac{13\\cdot 14}{2}=91$ 이므로 제$90$항은 $13$ 가 나타나는 블록에 속한다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "제$90$항은 $13$ 이므로 보기 ④이다."
+          }
+        ]
+      },
+      {
+        "num": 11,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=6$, $\\overline{BC}=5$, $B=120^{\\circ}$ 일 때, 변 $CA$ 의 길이는?",
+        "choices": [
+          "$\\sqrt{89}$",
+          "$\\sqrt{91}$",
+          "$\\sqrt{90}$",
+          "$\\sqrt{92}$",
+          "$\\sqrt{93}$"
+        ],
+        "answer": 2,
+        "solution": "코사인법칙 $\\overline{CA}^{2}=\\overline{AB}^{2}+\\overline{BC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{BC}\\cos B=6^{2}+5^{2}-2\\cdot 6\\cdot 5\\cdot \\left(-\\dfrac{1}{2}\\right)=91$ 이므로 $\\overline{CA}=\\sqrt{91}$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "두 변과 끼인각이 주어진 삼각형에서 코사인법칙으로 나머지 변 $\\overline{CA}$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=6$, $\\overline{BC}=5$, 끼인각 $B=120^{\\circ}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "코사인법칙 $\\overline{CA}^{2}=\\overline{AB}^{2}+\\overline{BC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{BC}\\cos B$ 를 적용한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{CA}^{2}=6^{2}+5^{2}-2\\cdot 6\\cdot 5\\cdot \\left(-\\dfrac{1}{2}\\right)=91$ 이므로 $\\overline{CA}=\\sqrt{91}$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\overline{CA}=\\sqrt{91}$ 이므로 보기 ②이다."
+          }
+        ]
+      },
+      {
+        "num": 12,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "첫째항이 $5$, 공비가 $2$ 인 등비수열 $\\{a_n\\}$ 의 첫째항부터 제$5$항까지의 합은?",
+        "choices": [
+          "$155$",
+          "$153$",
+          "$151$",
+          "$157$",
+          "$159$"
+        ],
+        "answer": 1,
+        "solution": "등비수열의 합 $S_5=\\dfrac{5(2^{5}-1)}{2-1}=\\dfrac{5(32-1)}{1}=155$ 이다."
+      },
+      {
+        "num": 13,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=4n^2+2n$ 일 때, $a_7$ 의 값은?",
+        "choices": [
+          "$50$",
+          "$52$",
+          "$54$",
+          "$56$",
+          "$58$"
+        ],
+        "answer": 3,
+        "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=(4n^2+2n)-(4(n-1)^2+2(n-1))=8n+-2=8n-2$ 이다. 따라서 $a_7=54$ 이다."
+      },
+      {
+        "num": 14,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 의 넓이가 $8$ 이고 $\\overline{AB}=8$, $\\overline{AC}=4$ 일 때, 예각 $A$ 의 크기는?",
+        "choices": [
+          "$30$",
+          "$45$",
+          "$60$",
+          "$90$",
+          "$120$"
+        ],
+        "answer": 1,
+        "solution": "넓이 $=\\dfrac{1}{2}\\cdot\\overline{AB}\\cdot\\overline{AC}\\cdot\\sin A=\\dfrac{1}{2}\\cdot 8\\cdot 4\\cdot\\sin A=8$ 에서 $\\sin A=\\dfrac{1}{2}$ 이다. $A$ 가 예각이므로 $A=30^{\\circ}$ 이다."
+      },
+      {
+        "num": 15,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{9} k^2$ 의 값은?",
+        "choices": [
+          "$275$",
+          "$280$",
+          "$290$",
+          "$295$",
+          "$285$"
+        ],
+        "answer": 5,
+        "solution": "$\\displaystyle\\sum_{k=1}^{9} k^2=\\dfrac{9\\cdot 10\\cdot 19}{6}=285$ 이다."
+      },
+      {
+        "num": 16,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "다음은 모든 자연수 $n$ 에 대하여 $4^{n}-1$ 이 $3$ 의 배수임을 수학적 귀납법으로 증명한 것이다. \\\\ (i) $n=1$ 일 때, $4^{1}-1=3$ 이므로 $3$ 의 배수이다. \\\\ (ii) $n=k$ 일 때 $4^{k}-1$ 이 $3$ 의 배수라 가정하면 $4^{k}-1=3m$ ($m$ 은 자연수) 으로 놓을 수 있다. $n=k+1$ 일 때 $4^{k+1}-1=4\\cdot 4^{k}-1=4(3m+1)-1=12m+\\boxed{(\\text{가})}=3(4m+\\boxed{(\\text{나})})$ 이므로 $3$ 의 배수이다. \\\\ 위의 $\\boxed{(\\text{가})}$ 에 알맞은 수를 $p$, $\\boxed{(\\text{나})}$ 에 알맞은 수를 $q$ 라 할 때, $p+q$ 의 값은?",
+        "choices": [
+          "$3$",
+          "$5$",
+          "$6$",
+          "$4$",
+          "$7$"
+        ],
+        "answer": 4,
+        "solution": "$4(3m+1)-1=12m+3$ 이므로 $(\\text{가})=3$, 즉 $p=3$ 이다. $12m+3=3(4m+1)$ 이므로 $(\\text{나})=1$, 즉 $q=1$ 이다. 따라서 $p+q=3+1=4$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "수학적 귀납법으로 $4^{n}-1$ 이 $3$ 의 배수임을 증명하는 과정의 빈칸 $p$, $q$ 를 구해 $p+q$ 를 계산한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "가정은 $4^{k}-1=3m$ ($m$ 은 자연수)이다. $n=k+1$ 에서 식을 가정으로 변형한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$4^{k+1}=4\\cdot 4^{k}$ 이고 가정에서 $4^{k}=3m+1$ 임을 대입한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$4(3m+1)-1=12m+3=3(4m+1)$ 이므로 $\\boxed{(\\text{가})}=3$ 에서 $p=3$, $\\boxed{(\\text{나})}=1$ 에서 $q=1$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=3+1=4$ 이므로 보기 ④이다."
+          }
+        ]
+      },
+      {
+        "num": 17,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=2$, $a_{n+1}=a_n+6$ 를 만족시킬 때, $a_9$ 의 값은?",
+        "choices": [
+          "$50$",
+          "$48$",
+          "$46$",
+          "$52$",
+          "$54$"
+        ],
+        "answer": 1,
+        "solution": "$a_{n+1}-a_n=6$ 이므로 $\\{a_n\\}$ 은 공차가 $6$ 인 등차수열이다. $a_n=2+6(n-1)$ 이므로 $a_9=2+6\\cdot 8=50$ 이다."
+      },
+      {
+        "num": 18,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "두 수열 $\\{a_n\\}$, $\\{b_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{10} a_k=25$, $\\displaystyle\\sum_{k=1}^{10} b_k=6$ 일 때, $\\displaystyle\\sum_{k=1}^{10}(4a_k-5b_k)$ 의 값은?",
+        "choices": [
+          "$66$",
+          "$70$",
+          "$68$",
+          "$72$",
+          "$74$"
+        ],
+        "answer": 2,
+        "solution": "$\\displaystyle\\sum_{k=1}^{10}(4a_k-5b_k)=4\\sum_{k=1}^{10}a_k-5\\sum_{k=1}^{10}b_k=4\\cdot 25-5\\cdot 6=70$ 이다."
+      },
+      {
+        "num": 19,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=5$, $\\overline{AC}=4$, $A=60^{\\circ}$ 일 때, 변 $BC$ 의 길이 $\\overline{BC}$ 와 삼각형 $ABC$ 의 넓이 $S$ 의 곱 $\\overline{BC}\\times S$ 를 $p\\sqrt{q}$ 꼴로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $q$ 는 가장 작은 자연수)",
+        "answer": "68",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "코사인법칙으로 $\\overline{BC}$ 를, 넓이 공식으로 $S$ 를 구한 뒤 그 곱을 $p\\sqrt{q}$ 꼴로 정리하여 $p+q$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=5$, $\\overline{AC}=4$, 끼인각 $A=60^{\\circ}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A$, 넓이 $S=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{BC}^{2}=5^{2}+4^{2}-2\\cdot 5\\cdot 4\\cdot \\dfrac{1}{2}=21$ 이므로 $\\overline{BC}=\\sqrt{21}$ 이다. $S=\\dfrac{1}{2}\\cdot 5\\cdot 4\\cdot \\dfrac{\\sqrt{3}}{2}=5\\sqrt{3}$ 이다. 곱은 $\\sqrt{21}\\times 5\\sqrt{3}=5\\sqrt{63}$ 이므로 $p=5$, $q=63$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=5+63=68$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "첫째항이 $1$, 공차가 $3$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{16}\\dfrac{1}{a_k\\,a_{k+1}}$ 의 값을 $\\dfrac{q}{p}$ 로 나타낼 때 $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+        "answer": "65",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열의 곱으로 이루어진 분수를 부분분수로 분해하여 $\\displaystyle\\sum_{k=1}^{16}\\dfrac{1}{a_k a_{k+1}}$ 의 값을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_n=1+3(n-1)=3n-2$ 이고 공차는 $3$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{3}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 분해하면 망원급수가 된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{16}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{3}\\left(\\dfrac{1}{a_1}-\\dfrac{1}{a_{17}}\\right)=\\dfrac{1}{3}\\left(\\dfrac{1}{1}-\\dfrac{1}{49}\\right)=\\dfrac{16}{49}$ 이다. 따라서 $p=49$, $q=16$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=49+16=65$ 이다."
+          }
+        ]
+      }
+    ]
+  ]
+}

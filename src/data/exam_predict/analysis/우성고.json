@@ -1,0 +1,30 @@
+{
+  "school": "우성고",
+  "region": "경기",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "total_problems": 20,
+  "analyzed_by": "claude-direct",
+  "unit_share": [
+    { "unit": "이차함수", "count": 3, "percent": 15 },
+    { "unit": "이차부등식", "count": 3, "percent": 15 },
+    { "unit": "행렬", "count": 3, "percent": 15 },
+    { "unit": "경우의수", "count": 3, "percent": 15 },
+    { "unit": "고차방정식", "count": 2, "percent": 10 },
+    { "unit": "연립부등식", "count": 2, "percent": 10 },
+    { "unit": "연립방정식", "count": 2, "percent": 10 },
+    { "unit": "순열", "count": 1, "percent": 5 },
+    { "unit": "조합", "count": 1, "percent": 5 },
+    { "unit": "여러가지방정식", "count": 1, "percent": 5 }
+  ],
+  "top_units": ["이차함수", "이차부등식", "행렬", "경우의수"],
+  "objective_ratio": 95,
+  "subjective_ratio": 5,
+  "advanced_ratio": 60,
+  "difficulty_stars": 4,
+  "discrimination_stars": 4,
+  "summary": "우성고 2025학년도 1학기 기말 공통수학1(시험범위 '여러 가지 부등식 ~ 행렬')은 총 22문항으로, 객관식 21 + 서술형 1(10점, 사용함 배정 경우의 수)인 객관식 위주 시험이다. 여러 가지 부등식(연립·절댓값·이차부등식), 여러 가지 방정식(삼차·사차·연립), 행렬(연산·상등·거듭제곱), 경우의수·순열·조합, 이차함수(최대·최소)가 단원별로 고르게 출제된다. 4점대 통합형 문항이 많아(순열을 이차방정식 근에 연결, 연립부등식과 절댓값 결합, 이차함수 그래프와 넓이 결합 등) 변별력이 높다. 본 예상문제 20문항은 동일 단원 비중·객관식 중심 구성·4점대 심화 난이도를 반영해 기출 수치를 복제하지 않고 오리지널로 창작했으며, 모든 객관식 정답 번호는 보기 안에 있고 출제자가 직접 검산했다.",
+  "analyzed_at": "2026-06-12T00:00:00.000Z"
+}

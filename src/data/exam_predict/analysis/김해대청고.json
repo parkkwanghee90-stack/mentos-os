@@ -1,0 +1,28 @@
+{
+  "school": "김해대청고",
+  "region": "경남 김해시",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "total_problems": 20,
+  "analyzed_by": "claude-direct",
+  "unit_share": [
+    { "unit": "행렬", "count": 5, "percent": 25 },
+    { "unit": "이차부등식", "count": 4, "percent": 20 },
+    { "unit": "연립부등식", "count": 2, "percent": 10 },
+    { "unit": "이차방정식", "count": 2, "percent": 10 },
+    { "unit": "고차방정식", "count": 2, "percent": 10 },
+    { "unit": "연립방정식", "count": 2, "percent": 10 },
+    { "unit": "절댓값부등식", "count": 1, "percent": 5 },
+    { "unit": "이차함수", "count": 1, "percent": 5 },
+    { "unit": "복소수", "count": 1, "percent": 5 }
+  ],
+  "top_units": ["행렬", "이차부등식", "연립부등식"],
+  "objective_ratio": 85,
+  "subjective_ratio": 15,
+  "advanced_ratio": 65,
+  "difficulty_stars": 4,
+  "discrimination_stars": 4,
+  "summary": "김해대청고 2025학년도 1학기 제2차 지필평가(공통수학1)는 행렬(연산·거듭제곱·성분 비교·행렬방정식)과 부등식 단원(이차·연립·절댓값)을 양대 축으로 출제되었다. 기출 원본에서 2A-B 성분합, A^2+B^2=2E 만족 행렬, x^2-4x+3≤0 정수해, |x-2|+|x+1|<5, x^2-2ax-2x+a^2+a≤0 정수해 조건, x+y=6·x^2+y^2=28 연립, x^3+2x+3 나눗셈 나머지, 조립제법 인수분해, 딸기·포도 밭 면적비 서술형 등이 확인된다. 객관식이 다수이며 서술형은 활용형(밭 면적비, 행렬 연산)으로 약 15% 비중. 곱셈공식·근과 계수의 관계·판별식·구간 끝값 처리 등에서 변별이 갈리는 중상 난이도(★4). 본 예상문제 20선은 이 비중을 그대로 반영하되 기출과 수치·맥락을 모두 새로 창작했다."
+}

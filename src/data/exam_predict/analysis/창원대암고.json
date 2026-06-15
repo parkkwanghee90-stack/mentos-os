@@ -1,0 +1,26 @@
+{
+  "school": "창원대암고",
+  "region": "경남 창원시",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "total_problems": 20,
+  "analyzed_by": "claude-direct",
+  "unit_share": [
+    { "unit": "경우의수", "count": 5, "percent": 25 },
+    { "unit": "행렬", "count": 5, "percent": 25 },
+    { "unit": "연립부등식", "count": 3, "percent": 15 },
+    { "unit": "고차방정식", "count": 3, "percent": 15 },
+    { "unit": "이차부등식", "count": 2, "percent": 10 },
+    { "unit": "순열", "count": 1, "percent": 5 },
+    { "unit": "조합", "count": 1, "percent": 5 }
+  ],
+  "top_units": ["경우의수", "행렬", "연립부등식", "고차방정식", "이차부등식"],
+  "objective_ratio": 75,
+  "subjective_ratio": 25,
+  "advanced_ratio": 70,
+  "difficulty_stars": 4,
+  "discrimination_stars": 4,
+  "summary": "창원대암고 2025 1학기 기말(2025.6.25)은 경우의수·행렬 비중이 각 25%로 가장 높고, 연립부등식·고차방정식(삼차/사차방정식 허근·근과 계수)·이차부등식이 뒤를 잇는다. 선택형 13·서술형 6 구성으로 서술형 비중이 약 30%(예상문제는 25%로 반영)이며, 심화 비율 약 70%·변별력 4점대 배점 차등으로 난이도가 높은 편이다. 행렬의 거듭제곱·성분 조건, 0을 포함한 숫자카드 자연수 만들기(짝수·순서대로 나열), 이차항 계수가 문자인 부등식의 항상 성립 조건 등이 핵심 변별 포인트."
+}

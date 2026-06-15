@@ -1,0 +1,34 @@
+{
+  "school": "천안중앙고",
+  "region": "충남 천안시",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "total_problems": 20,
+  "analyzed_by": "claude-direct",
+  "unit_share": [
+    { "unit": "행렬", "count": 5, "percent": 25 },
+    { "unit": "순열", "count": 3, "percent": 15 },
+    { "unit": "이차함수", "count": 2, "percent": 10 },
+    { "unit": "이차부등식", "count": 2, "percent": 10 },
+    { "unit": "연립방정식", "count": 2, "percent": 10 },
+    { "unit": "경우의수", "count": 2, "percent": 10 },
+    { "unit": "조합", "count": 2, "percent": 10 },
+    { "unit": "연립부등식", "count": 1, "percent": 5 },
+    { "unit": "절댓값부등식", "count": 1, "percent": 5 }
+  ],
+  "top_units": [
+    "행렬",
+    "순열",
+    "이차함수",
+    "이차부등식",
+    "연립방정식"
+  ],
+  "objective_ratio": 80,
+  "subjective_ratio": 20,
+  "advanced_ratio": 50,
+  "difficulty_stars": 3,
+  "discrimination_stars": 4,
+  "summary": "천안중앙고 기말은 시험범위(이차함수~행렬) 끝단원인 행렬의 비중이 가장 높고(25%), 순열·조합·경우의수 등 경우의수 영역(35%)이 그 뒤를 잇는다. 선택형 16·서답형 4로 서술형 비중이 20%이며, 기본 계산형 문항과 ‘조건을 식으로 옮겨 해의 존재/개수를 따지는’ 변별형 문항(연립부등식·이차부등식 미지수 범위, 행렬 거듭제곱 성분합 조건, 순열의 사전식 나열)이 고르게 섞여 있다. 절대적 난도는 중상이지만, 부등식의 끝점 처리와 행렬 거듭제곱의 규칙을 정확히 다루는지가 등급을 가른다."
+}

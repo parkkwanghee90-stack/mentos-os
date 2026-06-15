@@ -1,0 +1,28 @@
+{
+  "school": "김해율하고",
+  "region": "경남 김해시",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "total_problems": 20,
+  "analyzed_by": "claude-direct",
+  "unit_share": [
+    { "unit": "행렬", "count": 5, "percent": 25 },
+    { "unit": "조합", "count": 3, "percent": 15 },
+    { "unit": "이차부등식", "count": 3, "percent": 15 },
+    { "unit": "순열", "count": 2, "percent": 10 },
+    { "unit": "경우의수", "count": 2, "percent": 10 },
+    { "unit": "여러가지방정식", "count": 2, "percent": 10 },
+    { "unit": "연립부등식", "count": 1, "percent": 5 },
+    { "unit": "절댓값부등식", "count": 1, "percent": 5 },
+    { "unit": "이차함수", "count": 1, "percent": 5 }
+  ],
+  "top_units": ["행렬", "조합", "이차부등식", "순열", "경우의수"],
+  "objective_ratio": 85,
+  "subjective_ratio": 15,
+  "advanced_ratio": 65,
+  "difficulty_stars": 4,
+  "discrimination_stars": 4,
+  "summary": "김해율하고 2025학년도 1학기 기말 공통수학1 기출은 행렬(성분합·행렬방정식 AB-2X=2E+A·행렬 성분의 실생활 의미·a_ij 정의형)과 경우의수/순열/조합(격자경로 nCr 곱·세 자리 수·색칠·중복조합)이 양대 축을 이루고, 이차부등식(구간 항상성립·판별식 D<0), 연립부등식(정수해·수직선), 절댓값부등식, 여러가지방정식(고차·연립)이 고르게 배치된 고난도 시험이다. 배점이 4.1~4.6점으로 높고 객관식은 5지선다, 마지막에 두 주사위와 함수 |f(m)-g(n)|=1 순서쌍을 묻는 13점 서술형이 출제되어 변별력이 크다. 예상문제는 이 비중(행렬 5·경우의수계열 7·부등식계열 5·방정식 2·이차함수 1)과 서술형 약 20%(중복조합·끼인순열·행렬 비가환 AB-BA)를 그대로 반영해 창작했다. 인쇄 원본이 학생 풀이로 덧쓰여 일부 문항 수치는 흐릿했으나 단원·유형·난이도·배점 구조는 명확히 판독되었다."
+}

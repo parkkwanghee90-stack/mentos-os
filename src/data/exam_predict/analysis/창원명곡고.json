@@ -1,0 +1,31 @@
+{
+  "school": "창원명곡고",
+  "region": "경남 창원시",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "total_problems": 20,
+  "analyzed_by": "claude-direct",
+  "unit_share": [
+    { "unit": "조합", "count": 3, "percent": 15 },
+    { "unit": "행렬", "count": 3, "percent": 15 },
+    { "unit": "경우의수", "count": 2, "percent": 10 },
+    { "unit": "순열", "count": 2, "percent": 10 },
+    { "unit": "이차부등식", "count": 2, "percent": 10 },
+    { "unit": "연립부등식", "count": 2, "percent": 10 },
+    { "unit": "복소수", "count": 1, "percent": 5 },
+    { "unit": "이차방정식", "count": 1, "percent": 5 },
+    { "unit": "고차방정식", "count": 1, "percent": 5 },
+    { "unit": "연립방정식", "count": 1, "percent": 5 },
+    { "unit": "이차함수", "count": 1, "percent": 5 },
+    { "unit": "절댓값부등식", "count": 1, "percent": 5 }
+  ],
+  "top_units": ["조합", "행렬", "순열"],
+  "objective_ratio": 60,
+  "subjective_ratio": 40,
+  "advanced_ratio": 70,
+  "difficulty_stars": 4,
+  "discrimination_stars": 4,
+  "summary": "창원명곡고 2025학년도 1학기 기말은 선택형 10문항(50점)·서술형 8문항(50점) 구성으로, 서술형 배점 비중이 50%에 이르는 변별형 시험이다. 경우의수·순열·조합(원순열, 중복, 조건부 팀 구성, 점들로 만드는 도형, 색칠)이 가장 큰 비중을 차지하고, 행렬(성분 관계 a_2j=k·a_1j, A+B=E 꼴, A^3+B^3 등 곱셈 계산)이 3문항으로 핵심 단원이다. 방정식 영역은 삼차방정식 허근 ω, 상자 부피를 이용한 고차방정식, 한 쌍의 해 조건을 갖는 연립방정식으로, 부등식 영역은 해집합 변환형 이차부등식·비용수익 응용·절댓값부등식(|x+a|±|x-b|)·정수해 개수 조건의 연립부등식으로 출제된다. 단순 계산보다 조건 해석·곱셈공식·근과 계수의 관계·도형 활용이 결합된 중상 난도가 주를 이루어 난도 4점, 변별도 4점으로 평가한다. 예상문제 20선은 이 단원 비중과 객관식·서술형 6:4 비율, 조건부 경우의수와 행렬·부등식 변별 문항을 그대로 반영해 창작하였다."
+}

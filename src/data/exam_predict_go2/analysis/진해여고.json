@@ -1,0 +1,58 @@
+{
+  "school": "진해여고",
+  "region": "경상남도 창원시",
+  "year": 2025,
+  "grade": "고2",
+  "term": "1학기 기말",
+  "subject": "수학1",
+  "total_problems": 20,
+  "analyzed_by": "claude-direct-go2",
+  "unit_share": [
+    {
+      "unit": "지수와 로그",
+      "count": 3,
+      "percent": 15
+    },
+    {
+      "unit": "지수함수와 로그함수",
+      "count": 1,
+      "percent": 5
+    },
+    {
+      "unit": "삼각함수",
+      "count": 3,
+      "percent": 15
+    },
+    {
+      "unit": "삼각함수의 활용",
+      "count": 5,
+      "percent": 25
+    },
+    {
+      "unit": "등차수열과 등비수열",
+      "count": 4,
+      "percent": 20
+    },
+    {
+      "unit": "여러 가지 수열",
+      "count": 3,
+      "percent": 15
+    },
+    {
+      "unit": "수학적 귀납법",
+      "count": 1,
+      "percent": 5
+    }
+  ],
+  "top_units": [
+    "삼각함수의 활용",
+    "여러 가지 수열",
+    "등차수열과 등비수열"
+  ],
+  "objective_ratio": 85,
+  "subjective_ratio": 15,
+  "advanced_ratio": 50,
+  "difficulty_stars": 4,
+  "discrimination_stars": 4,
+  "summary": "진해여고 2025학년도 1학기 2차고사(수학1)는 삼각함수와 삼각함수의 활용(사인·코사인법칙, 삼각형 넓이) 비중이 가장 크고, 등차·등비수열과 시그마 등 여러 가지 수열이 그 뒤를 잇는다. 객관식이 다수이며 서술형으로 삼각형 모양 판별과 수열·귀납법 증명을 출제해 변별력을 확보한다. 삼각함수 그래프(y=a sin bx+c) 해석, 사인법칙을 이용한 외접원 반지름, 코사인법칙 변 길이 계산 등 표준 유형을 심화 수준으로 다룬다. 전반적으로 계산 정확성과 개념 종합력을 함께 요구하는 중상 난이도 시험이다."
+}

@@ -1,0 +1,25 @@
+{
+  "school": "경문고",
+  "region": null,
+  "year": 2025,
+  "grade": "고2",
+  "term": "1학기 기말",
+  "subject": "수학1",
+  "total_problems": 20,
+  "analyzed_by": "claude-direct-go2",
+  "unit_share": [
+    { "unit": "등차수열과 등비수열", "count": 6, "percent": 30 },
+    { "unit": "여러 가지 수열", "count": 7, "percent": 35 },
+    { "unit": "수학적 귀납법", "count": 3, "percent": 15 },
+    { "unit": "삼각함수의 활용", "count": 2, "percent": 10 },
+    { "unit": "지수함수와 로그함수", "count": 1, "percent": 5 },
+    { "unit": "삼각함수", "count": 1, "percent": 5 }
+  ],
+  "top_units": ["여러 가지 수열", "등차수열과 등비수열", "수학적 귀납법"],
+  "objective_ratio": 70,
+  "subjective_ratio": 30,
+  "advanced_ratio": 50,
+  "difficulty_stars": 4,
+  "discrimination_stars": 4,
+  "summary": "경문고 2025학년도 고2 1학기 기말 수학Ⅰ은 수열 단원이 전체의 약 65%를 차지하는 전형적인 기말 출제경향을 보인다. 등차·등비수열의 기본 계산에서 출발해 시그마 망원경합·부분분수·분모유리화, 계차수열, 그리고 로그 수열의 부분합이 자연수가 되는 조건을 묻는 심화 문항으로 변별력을 확보했다. 수학적 귀납법은 빈칸 채우기형 증명과 귀납적 정의 수열의 일반항 계산으로 출제되며, 삼각함수의 활용은 코사인법칙·사인법칙(외접원 반지름)과 삼각형 넓이로 마무리된다. 객관식 14문항(4~5점), 서술형 6문항(4~7점)으로 총 100점이며, 심화 비율이 약 50%로 상위권 변별을 노린 고난도 구성이다."
+}

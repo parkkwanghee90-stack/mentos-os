@@ -30,13 +30,20 @@ const PLAN_PRICES: Record<string, { price: number; name: string }> = {
   // 내신 완벽대비 풀코스 — 선착순 100명 특가 19,900원, 이후 정가 50,000원
   naesin_event:   { price: 19900, name: '기말 내신 완벽대비 풀코스 · 선착순 특가' },
   naesin_regular: { price: 50000, name: '기말 내신 완벽대비 풀코스' },
+  // 학교별 기말 예상문제 패키지 (학교 1곳, 예상문제 3회). 어떤 학교인지는 orderId 에 hex 로 실어 보냄.
+  exam_school:    { price: 5000,  name: '학교별 기말 예상문제 패키지' },
 };
+
+// 한글 학교명을 orderId(var2)에 안전하게 싣기 위한 hex 인코딩(ASCII 전용).
+function hexEncode(s: string): string {
+  return Array.from(new TextEncoder().encode(s)).map((b) => b.toString(16).padStart(2, '0')).join('');
+}
 
 Deno.serve(async (req: Request) => {
   if (req.method === 'OPTIONS') return new Response('ok', { headers: CORS });
   if (req.method !== 'POST') return json({ error: 'method not allowed' }, 405);
 
-  let payload: { userId?: string; phone?: string; orderId?: string; plan?: string };
+  let payload: { userId?: string; phone?: string; orderId?: string; plan?: string; school?: string; mode?: string; secondary?: string };
   try {
     payload = await req.json();
   } catch {
@@ -47,10 +54,15 @@ Deno.serve(async (req: Request) => {
   const orderId = (payload.orderId ?? '').trim();
   const phone = (payload.phone ?? '').replace(/\D/g, '');
   const plan = (payload.plan ?? '').trim();
+  const school = (payload.school ?? '').trim();
+  // A·B 결제 모드: A=내 학교 3회, B=내 학교 2회 + secondary 학교 2회
+  const mode = ((payload.mode ?? 'A').trim().toUpperCase() === 'B') ? 'B' : 'A';
+  const secondary = (payload.secondary ?? '').trim();
 
   if (!userId) return json({ error: '로그인 후 결제할 수 있습니다.' }, 400);
   if (!orderId) return json({ error: '주문번호가 없습니다.' }, 400);
   if (!isValidPhone(phone)) return json({ error: '올바른 휴대폰 번호가 필요합니다.' }, 400);
+  if (plan === 'exam_school' && !school) return json({ error: '학교 정보가 없습니다.' }, 400);
 
   // 테스트 모드: PAYAPP_TEST_PLAN=1 이면 plan 무시하고 EXPECTED_PRICE 사용
   const testMode = Deno.env.get('PAYAPP_TEST_PLAN') === '1';
@@ -61,9 +73,17 @@ Deno.serve(async (req: Request) => {
   const price = testMode
     ? Number(Deno.env.get('PAYAPP_EXPECTED_PRICE') ?? '1000')
     : planInfo!.price;
-  const goodname = testMode ? 'Mentos AI 프리미엄 (테스트 1,000원)' : planInfo!.name;
-  // feedback가 plan별 금액을 검증하도록 orderId에 plan 접두사 부착
-  const fullOrderId = testMode ? orderId : `${plan}__${orderId}`;
+  const goodname = testMode
+    ? 'Mentos AI 프리미엄 (테스트 1,000원)'
+    : (plan === 'exam_school' ? `${planInfo!.name} · ${school}` : planInfo!.name);
+  // feedback가 plan별 금액을 검증하도록 orderId에 plan 접두사 부착.
+  // 학교별 상품(A·B 모드): exam_school__<mode>__<hex내학교>__<hex추가학교>__<주문번호>
+  //   A 모드는 secondary 가 비어 hex 도 빈 세그먼트('')가 된다.
+  const fullOrderId = testMode
+    ? orderId
+    : (plan === 'exam_school'
+        ? `${plan}__${mode}__${hexEncode(school)}__${hexEncode(secondary)}__${orderId}`
+        : `${plan}__${orderId}`);
   const feedbackurl =
     Deno.env.get('PAYAPP_FEEDBACK_URL') ??
     `${Deno.env.get('SUPABASE_URL')}/functions/v1/payapp-feedback`;

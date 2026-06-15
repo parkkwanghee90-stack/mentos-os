@@ -1,0 +1,48 @@
+{
+  "school": "창원여고",
+  "region": "경남 창원",
+  "year": 2025,
+  "grade": "고2",
+  "term": "1학기 기말",
+  "subject": "수학1",
+  "total_problems": 20,
+  "analyzed_by": "claude-direct-go2",
+  "unit_share": [
+    {
+      "unit": "지수함수와 로그함수",
+      "count": 4,
+      "percent": 20
+    },
+    {
+      "unit": "등차수열과 등비수열",
+      "count": 4,
+      "percent": 20
+    },
+    {
+      "unit": "여러 가지 수열",
+      "count": 3,
+      "percent": 15
+    },
+    {
+      "unit": "수학적 귀납법",
+      "count": 5,
+      "percent": 25
+    },
+    {
+      "unit": "삼각함수의 활용",
+      "count": 4,
+      "percent": 20
+    }
+  ],
+  "top_units": [
+    "수학적 귀납법",
+    "등차수열과 등비수열",
+    "삼각함수의 활용"
+  ],
+  "objective_ratio": 55,
+  "subjective_ratio": 45,
+  "advanced_ratio": 65,
+  "difficulty_stars": 4,
+  "discrimination_stars": 4,
+  "summary": "창원여고 2025학년도 1학기 2차(기말) 수학Ⅰ은 객관식 11문항·서답형 7문항으로 수열 단원(등차·등비, 시그마, 점화식·수학적 귀납법)의 비중이 절반을 넘는다. 지수·로그는 방정식·부등식과 로그의 실생활 활용(빛의 감쇠) 위주이며, 삼각함수는 기본 그래프보다 사인·코사인법칙과 삼각형 넓이 등 '활용'에 집중된다. 점화식을 세워 일반항을 유도하거나(등비 점화식, 원 n등분 삼각형 개수) 코사인법칙으로 내접 사각형·삼각형 넓이를 구하는 고난도 변별 문항이 다수 포함되어 advanced 비율이 높다. 서답형은 풀이 과정 전체를 요구하여 서술 부담이 크다."
+}

@@ -11,7 +11,19 @@ const PLAN_PRICES: Record<string, number> = {
   // 내신 완벽대비 풀코스 — payapp-create와 동일 권위 가격
   naesin_event: 19900,
   naesin_regular: 50000,
+  // 학교별 기말 예상문제 패키지
+  exam_school: 5000,
 };
+
+// orderId(var2)의 hex 학교명 디코드: exam_school__<hex학교>__<주문번호>
+function hexDecode(hex: string): string {
+  try {
+    const bytes = new Uint8Array((hex.match(/.{1,2}/g) ?? []).map((h) => parseInt(h, 16)));
+    return new TextDecoder().decode(bytes);
+  } catch {
+    return '';
+  }
+}
 
 Deno.serve(async (req: Request) => {
   if (req.method !== 'POST') {
@@ -76,12 +88,41 @@ Deno.serve(async (req: Request) => {
   }
 
   if (action === 'success') {
-    const { error: adminErr } = await supabase.auth.admin.updateUserById(body.var1, {
-      user_metadata: { is_paid: true, premium: true, paid_at: now },
-    });
-    if (adminErr) {
-      console.error('[payapp-feedback] premium grant failed:', adminErr.message);
-      return new Response('FAIL', { status: 200 });
+    if (planKey === 'exam_school') {
+      // 학교별 상품: 전역 프리미엄이 아니라 해당 학교 회차 권한만 부여.
+      // 신형: exam_school__<mode A|B>__<hex내학교>__<hex추가학교>__<주문번호>
+      // 구형: exam_school__<hex학교>__<주문번호>  (전체 3회 = 모드 A 취급)
+      const parts = (body.var2 ?? '').split('__');
+      const isNew = parts[1] === 'A' || parts[1] === 'B';
+      const mode = isNew ? parts[1] : 'A';
+      const primary = hexDecode(isNew ? (parts[2] ?? '') : (parts[1] ?? ''));
+      const secondary = (isNew && mode === 'B') ? hexDecode(parts[3] ?? '') : '';
+      if (!primary) {
+        console.error('[payapp-feedback] exam_school: 학교 식별 실패', body.var2);
+        return new Response('FAIL', { status: 200 });
+      }
+      // A: 내 학교 3회 / B: 내 학교 2회 + 추가 학교 2회
+      const grants: Array<[string, number]> = mode === 'B'
+        ? [[primary, 2], [secondary, 2]]
+        : [[primary, 3]];
+      for (const [slug, rounds] of grants) {
+        if (!slug) continue;
+        const { error: passErr } = await supabase.rpc('grant_school_pass', {
+          p_user: body.var1, p_school: slug, p_rounds: rounds,
+        });
+        if (passErr) {
+          console.error('[payapp-feedback] school_pass grant failed:', slug, passErr.message);
+          return new Response('FAIL', { status: 200 });
+        }
+      }
+    } else {
+      const { error: adminErr } = await supabase.auth.admin.updateUserById(body.var1, {
+        user_metadata: { is_paid: true, premium: true, paid_at: now },
+      });
+      if (adminErr) {
+        console.error('[payapp-feedback] premium grant failed:', adminErr.message);
+        return new Response('FAIL', { status: 200 });
+      }
     }
   }
 

@@ -1,0 +1,1912 @@
+{
+  "school": "다정고",
+  "region": "세종특별자치시",
+  "year": 2025,
+  "grade": "고2",
+  "term": "1학기 기말",
+  "subject": "수학1",
+  "generated_by": "claude-direct-go2",
+  "generated_at": "2026-06-15",
+  "source_note": "원본 출제경향 기반 오리지널 (범위: 삼각함수의 활용 ~ 수학적 귀납법)",
+  "count": 20,
+  "blueprint": {
+    "difficulty_stars": 4,
+    "subjective_ratio": 30,
+    "allocation": [
+      {
+        "unit": "여러 가지 수열",
+        "n": 8
+      },
+      {
+        "unit": "삼각함수의 활용",
+        "n": 5
+      },
+      {
+        "unit": "등차수열과 등비수열",
+        "n": 4
+      },
+      {
+        "unit": "수학적 귀납법",
+        "n": 3
+      }
+    ]
+  },
+  "problems": [
+    {
+      "num": 1,
+      "unit": "등차수열과 등비수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "등차수열 $\\{a_n\\}$ 에 대하여 $a_{3}=13$, $a_{8}=33$ 일 때, $a_{12}$ 의 값은?",
+      "choices": [
+        "$49$",
+        "$45$",
+        "$47$",
+        "$51$",
+        "$53$"
+      ],
+      "answer": 1,
+      "solution": "공차 $d=\\dfrac{33-13}{8-3}=4$, $a_1=13-2\\cdot 4=5$ 이므로 $a_{12}=5+11\\cdot 4=49$ 이다."
+    },
+    {
+      "num": 2,
+      "unit": "등차수열과 등비수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "첫째항이 $7$ 이고 제$20$항이 $64$ 인 등차수열 $\\{a_n\\}$ 의 첫째항부터 제$20$항까지의 합은?",
+      "choices": [
+        "$690$",
+        "$700$",
+        "$720$",
+        "$730$",
+        "$710$"
+      ],
+      "answer": 5,
+      "solution": "첫째항부터 제$20$항까지의 합은 $\\dfrac{20(7+64)}{2}=710$ 이다."
+    },
+    {
+      "num": 3,
+      "unit": "수학적 귀납법",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "$a_1=1$, $a_{n+1}=3a_n+1$ $(n=1,\\,2,\\,3,\\,\\cdots)$ 과 같이 정의된 수열 $\\{a_n\\}$ 에서 $a_{5}$ 의 값은?",
+      "choices": [
+        "$119$",
+        "$121$",
+        "$120$",
+        "$122$",
+        "$123$"
+      ],
+      "answer": 2,
+      "solution": "$a_1=1$ 에서 점화식 $a_{n+1}=3a_n+1$ 를 차례로 적용하면 $a_2=4$, $a_3=13$, $\\cdots$ 이므로 $a_{5}=121$ 이다."
+    },
+    {
+      "num": 4,
+      "unit": "등차수열과 등비수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "모든 항이 양수인 등비수열 $\\{a_n\\}$ 에 대하여 $a_{3}=12$, $a_{5}=48$ 일 때, $a_{7}$ 의 값은?",
+      "choices": [
+        "$188$",
+        "$190$",
+        "$194$",
+        "$192$",
+        "$196$"
+      ],
+      "answer": 4,
+      "solution": "공비를 $r$ 이라 하면 $r^{2}=\\dfrac{48}{12}=4$ 이므로 $r=2$ 이고 $a_1=3$ 이다. 따라서 $a_{7}=3\\cdot 2^{6}=192$ 이다."
+    },
+    {
+      "num": 5,
+      "unit": "삼각함수의 활용",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "삼각형 $ABC$ 에서 $\\sin B=2\\cos A\\sin C$ 가 성립할 때, 이 삼각형은 어떤 삼각형인가?",
+      "choices": [
+        "$a=b$ 인 이등변삼각형",
+        "$b=c$ 인 이등변삼각형",
+        "$c=a$ 인 이등변삼각형",
+        "$\\angle A=90^{\\circ}$ 인 직각삼각형",
+        "$\\angle B=90^{\\circ}$ 인 직각삼각형"
+      ],
+      "answer": 3,
+      "solution": "사인법칙으로 $\\sin B=\\dfrac{b}{2R}$, $\\sin C=\\dfrac{c}{2R}$ 이고 코사인법칙으로 $\\cos A=\\dfrac{b^2+c^2-a^2}{2bc}$ 이다. 주어진 식에 대입하면 $\\dfrac{b}{2R}=2\\cdot\\dfrac{b^2+c^2-a^2}{2bc}\\cdot\\dfrac{c}{2R}$ 이고 정리하면 $b^2=b^2+c^2-a^2$, 즉 $a^2=c^2$ 이므로 $a=c$ 인 이등변삼각형이다."
+    },
+    {
+      "num": 6,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "$\\displaystyle\\sum_{k=1}^{12}\\left\\{\\sum_{j=1}^{k}\\left(\\sum_{i=1}^{j} 1\\right)\\right\\}$ 의 값은?",
+      "choices": [
+        "$364$",
+        "$324$",
+        "$344$",
+        "$384$",
+        "$404$"
+      ],
+      "answer": 1,
+      "solution": "$\\displaystyle\\sum_{i=1}^{j}1=j$, $\\displaystyle\\sum_{j=1}^{k} j=\\dfrac{k(k+1)}{2}$ 이고 $\\displaystyle\\sum_{k=1}^{12}\\dfrac{k(k+1)}{2}=\\dfrac{12(12+1)(12+2)}{6}=364$ 이다."
+    },
+    {
+      "num": 7,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "수열 $\\{a_n\\}$ 이 $a_n=\\displaystyle\\sum_{k=1}^{n}(4k-3)$ 로 정의될 때, $a_{10}$ 의 값은?",
+      "choices": [
+        "$188$",
+        "$189$",
+        "$191$",
+        "$192$",
+        "$190$"
+      ],
+      "answer": 5,
+      "solution": "$a_n=4\\cdot\\dfrac{n(n+1)}{2}-3n$ 이므로 $a_{10}=4\\cdot\\dfrac{10\\cdot 11}{2}-3\\cdot 10=190$ 이다."
+    },
+    {
+      "num": 8,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=6(3^{n}-1)$ 일 때, $\\dfrac{a_{4}}{a_{1}}$ 의 값은?",
+      "choices": [
+        "$25$",
+        "$27$",
+        "$26$",
+        "$28$",
+        "$29$"
+      ],
+      "answer": 2,
+      "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=6(3^{n}-3^{n-1})=6\\cdot 2\\cdot 3^{n-1}$ 이므로 $\\dfrac{a_{4}}{a_{1}}=3^{4-1}=3^{3}=27$ 이다."
+    },
+    {
+      "num": 9,
+      "unit": "삼각함수의 활용",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=6$, $\\overline{AC}=8$, $A=60^{\\circ}$ 이다. 삼각형 $ABC$ 의 넓이를 $S$ 라 할 때, $S^{2}$ 의 값은?",
+      "choices": [
+        "$404$",
+        "$418$",
+        "$446$",
+        "$432$",
+        "$460$"
+      ],
+      "answer": 4,
+      "solution": "$S=\\dfrac{1}{2}\\cdot 6\\cdot 8\\cdot\\sin 60^{\\circ}=\\dfrac{1}{2}\\cdot 6\\cdot 8\\cdot\\dfrac{\\sqrt{3}}{2}=12\\sqrt{3}$ 이므로 $S^{2}=12^{2}\\cdot 3=432$ 이다."
+    },
+    {
+      "num": 10,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "어떤 정수기를 한 번 통과할 때마다 물속 유해 물질의 양이 $20\\%$ 씩 줄어든다고 한다. 이 정수기를 $n$ 번 통과시킨 후 유해 물질의 양이 처음 양의 $10\\%$ 이하가 되도록 하는 자연수 $n$ 의 최솟값은? (단, $\\log 2=0.3010$ 으로 계산한다.)",
+      "choices": [
+        "$9$",
+        "$10$",
+        "$11$",
+        "$12$",
+        "$13$"
+      ],
+      "answer": 3,
+      "solution": "한 번 통과 후 남는 비율은 $0.8=\\dfrac{2^{3}}{10}$ 이다. $0.8^{n}\\le 0.1$ 에서 양변에 상용로그를 취하면 $n(3\\log 2-1)\\le -1$, 즉 $n\\ge\\dfrac{1}{1-3\\log 2}=\\dfrac{1}{0.097}=10.3\\cdots$ 이므로 최솟값은 $n=11$ 이다."
+    },
+    {
+      "num": 11,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "$\\displaystyle\\sum_{k=1}^{12}\\dfrac{1}{\\sqrt{2k-1}+\\sqrt{2k+1}}$ 의 값은?",
+      "choices": [
+        "$2$",
+        "$0$",
+        "$1$",
+        "$3$",
+        "$4$"
+      ],
+      "answer": 1,
+      "solution": "$\\dfrac{1}{\\sqrt{2k-1}+\\sqrt{2k+1}}=\\dfrac{\\sqrt{2k+1}-\\sqrt{2k-1}}{2}$ 이므로 망원급수가 되어 $\\dfrac{1}{2}(\\sqrt{2\\cdot 12+1}-1)=\\dfrac{1}{2}(5-1)=2$ 이다."
+    },
+    {
+      "num": 12,
+      "unit": "수학적 귀납법",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "$a_1=10$, $a_{n+1}=a_n+2n$ $(n=1,\\,2,\\,3,\\,\\cdots)$ 으로 정의된 수열 $\\{a_n\\}$ 에서 $a_{9}$ 의 값은?",
+      "choices": [
+        "$80$",
+        "$81$",
+        "$83$",
+        "$84$",
+        "$82$"
+      ],
+      "answer": 5,
+      "solution": "$a_{n+1}-a_n=2n$ 이므로 $n\\ge 2$ 에서 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}2k=10+2\\cdot\\dfrac{(n-1)n}{2}$ 이다. 따라서 $a_{9}=10+2\\cdot\\dfrac{8\\cdot 9}{2}=82$ 이다."
+    },
+    {
+      "num": 13,
+      "unit": "삼각함수의 활용",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "원에 내접하는 사각형 $ABCD$ 에서 $\\angle B=120^{\\circ}$ 이고 $\\overline{AB}=5$, $\\overline{BC}=8$ 일 때, 대각선 $\\overline{AC}^{2}$ 의 값은?",
+      "choices": [
+        "$127$",
+        "$129$",
+        "$128$",
+        "$130$",
+        "$131$"
+      ],
+      "answer": 2,
+      "solution": "삼각형 $ABC$ 에서 코사인법칙에 의하여 $\\overline{AC}^{2}=\\overline{AB}^{2}+\\overline{BC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{BC}\\cos B=5^{2}+8^{2}-2\\cdot 5\\cdot 8\\cdot\\left(-\\dfrac{1}{2}\\right)=129$ 이다.",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "원에 내접하는 사각형 $ABCD$ 에서 $\\angle B$ 와 두 변이 주어졌을 때 대각선 $\\overline{AC}^{2}$ 을 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$\\angle B=120^{\\circ}$, $\\overline{AB}=5$, $\\overline{BC}=8$ 이고, 대각선 $\\overline{AC}$ 는 삼각형 $ABC$ 의 한 변이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "삼각형 $ABC$ 에 코사인법칙 $\\overline{AC}^{2}=\\overline{AB}^{2}+\\overline{BC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{BC}\\cos B$ 를 적용한다. $\\cos 120^{\\circ}=-\\dfrac{1}{2}$ 이다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\overline{AC}^{2}=5^{2}+8^{2}-2\\cdot 5\\cdot 8\\cdot\\left(-\\dfrac{1}{2}\\right)=25+64+40=129$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$\\overline{AC}^{2}=129$ 이다."
+        }
+      ]
+    },
+    {
+      "num": 14,
+      "unit": "수학적 귀납법",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "다음은 모든 자연수 $n$ 에 대하여 등식 $\\displaystyle\\sum_{k=1}^{n} k(k+1)=\\dfrac{n(n+1)(n+2)}{3}\\ \\cdots\\cdots\\ (*)$ 이 성립함을 수학적 귀납법으로 증명한 것이다. \\\\ (i) $n=1$ 일 때, (좌변)$=1\\cdot 2=\\boxed{(\\text{가})}$, (우변)$=\\dfrac{1\\cdot 2\\cdot 3}{3}=2$ 이므로 $(*)$ 이 성립한다. \\\\ (ii) $n=k$ 일 때 $(*)$ 이 성립한다고 가정하면 $\\displaystyle\\sum_{l=1}^{k} l(l+1)=\\dfrac{k(k+1)(k+2)}{3}$ 이다. $n=k+1$ 일 때, $\\displaystyle\\sum_{l=1}^{k+1} l(l+1)=\\dfrac{k(k+1)(k+2)}{3}+\\boxed{(\\text{나})}=\\dfrac{(k+1)(k+2)(k+3)}{3}$ 이므로 $(*)$ 이 성립한다. \\\\ $\\boxed{(\\text{가})}$ 에 알맞은 수를 $p$, $\\boxed{(\\text{나})}$ 에 알맞은 식을 $f(k)$ 라 할 때, $p+f(5)$ 의 값은?",
+      "choices": [
+        "$42$",
+        "$43$",
+        "$45$",
+        "$44$",
+        "$46$"
+      ],
+      "answer": 4,
+      "solution": "(i)에서 (좌변)$=1\\cdot 2=2$ 이므로 $p=2$ 이다. (ii)에서 더해지는 항은 $\\displaystyle\\sum_{l=1}^{k+1}-\\sum_{l=1}^{k}=(k+1)(k+2)$ 이므로 $f(k)=(k+1)(k+2)$ 이다. 따라서 $f(5)=6\\cdot 7=42$ 이고 $p+f(5)=2+42=44$ 이다.",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "수학적 귀납법으로 $\\displaystyle\\sum_{k=1}^{n}k(k+1)=\\dfrac{n(n+1)(n+2)}{3}$ 을 증명하는 과정의 빈칸 $(\\text{가})$, $(\\text{나})$ 를 채우고 $p+f(5)$ 를 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$(\\text{가})$ 는 $n=1$ 일 때 좌변의 값이고, $(\\text{나})$ 는 $n=k$ 에서 $n=k+1$ 로 갈 때 새로 더해지는 항이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$n=1$ 좌변은 $1\\cdot 2$ 이고, 더해지는 항은 $\\displaystyle\\sum_{l=1}^{k+1}l(l+1)-\\sum_{l=1}^{k}l(l+1)=(k+1)(k+2)$ 이다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$p=1\\cdot 2=2$, $f(k)=(k+1)(k+2)$ 이므로 $f(5)=6\\cdot 7=42$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$p+f(5)=2+42=44$ 이다."
+        }
+      ]
+    },
+    {
+      "num": 15,
+      "unit": "여러 가지 수열",
+      "level": "기본",
+      "type": "서술형",
+      "latex": "수열 $\\{a_n\\}$, $\\{b_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{10} a_k=30$, $\\displaystyle\\sum_{k=1}^{10} b_k=20$ 일 때, $\\displaystyle\\sum_{k=1}^{10}(3a_k-2b_k+1)$ 의 값을 구하시오.",
+      "answer": "60",
+      "solution": "$\\displaystyle\\sum_{k=1}^{10}(3a_k-2b_k+1)=3\\sum a_k-2\\sum b_k+1\\cdot 10=3\\cdot 30-2\\cdot 20+10=60$ 이다."
+    },
+    {
+      "num": 16,
+      "unit": "등차수열과 등비수열",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "모든 항이 양수인 등비수열 $\\{a_n\\}$ 의 첫째항부터 제$3$항까지의 합이 $26$, 첫째항부터 제$4$항까지의 합이 $80$ 일 때, 이 수열의 공비를 구하시오.",
+      "answer": "3",
+      "solution": "제$4$항은 $a_4=S_4-S_3=80-26=54$ 이다. 한편 $S_3=26$ 이고 등비수열이므로 $a_4=a_1 r^{3}$ 이다. 첫째항을 $a_1$, 공비를 $r$ 이라 하면 $a_1\\dfrac{r^{3}-1}{r-1}=26$, $a_1 r^{3}=54$ 을 연립하여 풀면 $a_1=2$, $r=3$ 이다.",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "등비수열의 첫 $3$항·첫 $4$항의 합이 주어졌을 때 공비를 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$S_3=26$, $S_4=80$ 이고 모든 항이 양수이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "제$4$항 $a_4=S_4-S_3$ 이고, 등비수열에서 $a_4=a_1 r^{3}$, $S_3=a_1\\dfrac{r^{3}-1}{r-1}$ 임을 이용한다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$a_4=80-26=54$ 이다. $a_1\\dfrac{r^{3}-1}{r-1}=26$, $a_1 r^{3}=54$ 을 연립하면 $a_1=2$, $r=3$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "공비는 $r=3$ 이다."
+        }
+      ]
+    },
+    {
+      "num": 17,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "$k$ 에 대한 이차방정식 $x^{2}-2kx+3k=0$ 의 두 근을 $\\alpha_k$, $\\beta_k$ 라 할 때, $\\displaystyle\\sum_{k=1}^{8}(\\alpha_k^{2}+\\beta_k^{2})$ 의 값을 구하시오.",
+      "answer": "600",
+      "solution": "근과 계수의 관계에서 $\\alpha_k+\\beta_k=2k$, $\\alpha_k\\beta_k=3k$ 이므로 $\\alpha_k^{2}+\\beta_k^{2}=(2k)^{2}-2\\cdot 3k=4k^{2}-6k$ 이다. 따라서 $\\displaystyle\\sum_{k=1}^{8}(4k^{2}-6k)=4\\cdot\\dfrac{8\\cdot 9\\cdot 17}{6}-6\\cdot\\dfrac{8\\cdot 9}{2}=600$ 이다.",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "이차방정식의 두 근으로 이루어진 수열의 제곱합 시그마를 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$x^{2}-2kx+3k=0$ 의 두 근이 $\\alpha_k$, $\\beta_k$ 이므로 근과 계수의 관계를 적용한다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$\\alpha_k+\\beta_k=2k$, $\\alpha_k\\beta_k=3k$ 이고 $\\alpha_k^{2}+\\beta_k^{2}=(\\alpha_k+\\beta_k)^{2}-2\\alpha_k\\beta_k$ 이다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\alpha_k^{2}+\\beta_k^{2}=4k^{2}-6k$ 이므로 $\\displaystyle\\sum_{k=1}^{8}(4k^{2}-6k)=4\\cdot\\dfrac{8\\cdot 9\\cdot 17}{6}-6\\cdot\\dfrac{8\\cdot 9}{2}=600$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$\\displaystyle\\sum_{k=1}^{8}(\\alpha_k^{2}+\\beta_k^{2})=600$ 이다."
+        }
+      ]
+    },
+    {
+      "num": 18,
+      "unit": "삼각함수의 활용",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=6$, $\\overline{AC}=8$, $A=120^{\\circ}$ 일 때, $\\overline{BC}^{2}$ 의 값을 구하시오.",
+      "answer": "148",
+      "solution": "코사인법칙에 의하여 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A=6^{2}+8^{2}-2\\cdot 6\\cdot 8\\cdot(-0.5)=148$ 이다.",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "두 변과 끼인각이 주어진 삼각형에서 나머지 한 변의 제곱 $\\overline{BC}^{2}$ 을 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$\\overline{AB}=6$, $\\overline{AC}=8$, $A=120^{\\circ}$ 이고 $\\cos 120^{\\circ}=-0.5$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A$ 를 사용한다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\overline{BC}^{2}=6^{2}+8^{2}-2\\cdot 6\\cdot 8\\cdot(-0.5)=36+64--48=148$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$\\overline{BC}^{2}=148$ 이다."
+        }
+      ]
+    },
+    {
+      "num": 19,
+      "unit": "삼각함수의 활용",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=6$, $\\overline{AC}=8$ 이다. 변 $AC$ 위의 점 $D$ 에 대하여 $\\angle ABD=\\angle ACB$ 일 때, 선분 $AD$ 의 길이는 $\\dfrac{q}{p}$ 이다. $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+      "answer": "11",
+      "solution": "두 삼각형 $ABD$ 와 $ACB$ 는 $\\angle A$ 가 공통이고 $\\angle ABD=\\angle ACB$ 이므로 닮음이다. 따라서 $\\overline{AB}:\\overline{AC}=\\overline{AD}:\\overline{AB}$ 에서 $\\overline{AD}=\\dfrac{\\overline{AB}^{2}}{\\overline{AC}}=\\dfrac{36}{8}=\\dfrac{9}{2}$ 이다. 따라서 $p=2$, $q=9$ 이고 $p+q=11$ 이다.",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "각의 조건이 주어진 두 삼각형의 닮음을 이용해 선분 $AD$ 의 길이를 구하고 $p+q$ 를 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$\\overline{AB}=6$, $\\overline{AC}=8$ 이고, $D$ 는 변 $AC$ 위의 점으로 $\\angle ABD=\\angle ACB$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "삼각형 $ABD$ 와 $ACB$ 는 $\\angle A$ 가 공통이고 한 각이 같으므로 닮음이다. 대응변의 비 $\\overline{AB}:\\overline{AC}=\\overline{AD}:\\overline{AB}$ 가 성립한다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\overline{AD}=\\dfrac{\\overline{AB}^{2}}{\\overline{AC}}=\\dfrac{36}{8}=\\dfrac{9}{2}$ 이므로 $p=2$, $q=9$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$p+q=2+9=11$ 이다."
+        }
+      ]
+    },
+    {
+      "num": 20,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "수열 $\\{a_n\\}$ 이 모든 자연수 $n$ 에 대하여 $\\displaystyle\\sum_{k=1}^{n}\\dfrac{1}{(4k-3)a_k}=2n^{2}+3n+4$ 를 만족시킬 때, $\\displaystyle\\sum_{k=1}^{8} a_k=\\dfrac{q}{p}$ 이다. $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+      "answer": "571",
+      "solution": "$T_n=2n^{2}+3n+4$ 라 하면 $n\\ge 2$ 에서 $\\dfrac{1}{(4n-3)a_n}=T_n-T_{n-1}=2(2n-1)+3=4n+1$ 이므로 $a_n=\\dfrac{1}{(4n-3)(4n+1)}=\\dfrac{1}{4}\\left(\\dfrac{1}{4n-3}-\\dfrac{1}{4n+1}\\right)$ 이다. 또 $n=1$ 일 때 $\\dfrac{1}{1\\cdot a_1}=T_1=9$ 이므로 $a_1=\\dfrac{1}{9}$ 이다. 따라서 $\\displaystyle\\sum_{k=1}^{8} a_k=\\dfrac{1}{9}+\\dfrac{1}{4}\\left(\\dfrac{1}{5}-\\dfrac{1}{33}\\right)=\\dfrac{76}{495}$ 이므로 $p=495$, $q=76$ 이고 $p+q=571$ 이다.",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "부분합 꼴 조건으로 정의된 점화식에서 일반항 $a_n$ 을 구하고 $\\displaystyle\\sum_{k=1}^{8} a_k$ 의 값으로부터 $p+q$ 를 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$T_n=\\displaystyle\\sum_{k=1}^{n}\\dfrac{1}{(4k-3)a_k}=2n^{2}+3n+4$ 이므로 $n\\ge 2$ 에서 $\\dfrac{1}{(4n-3)a_n}=T_n-T_{n-1}$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$T_n-T_{n-1}=2(2n-1)+3=4n+1$ 이므로 $a_n=\\dfrac{1}{(4n-3)(4n+1)}$ 이고 부분분수 분해로 망원급수가 된다. $n=1$ 은 따로 처리한다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$a_n=\\dfrac{1}{4}\\left(\\dfrac{1}{4n-3}-\\dfrac{1}{4n+1}\\right)$ $(n\\ge 2)$, $a_1=\\dfrac{1}{9}$ 이다. $\\displaystyle\\sum_{k=1}^{8} a_k=\\dfrac{1}{9}+\\dfrac{1}{4}\\left(\\dfrac{1}{5}-\\dfrac{1}{33}\\right)=\\dfrac{76}{495}$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$p=495$, $q=76$ 이므로 $p+q=571$ 이다."
+        }
+      ]
+    }
+  ],
+  "rounds": [
+    [
+      {
+        "num": 1,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "등차수열 $\\{a_n\\}$ 에 대하여 $a_{3}=13$, $a_{8}=33$ 일 때, $a_{12}$ 의 값은?",
+        "choices": [
+          "$49$",
+          "$45$",
+          "$47$",
+          "$51$",
+          "$53$"
+        ],
+        "answer": 1,
+        "solution": "공차 $d=\\dfrac{33-13}{8-3}=4$, $a_1=13-2\\cdot 4=5$ 이므로 $a_{12}=5+11\\cdot 4=49$ 이다."
+      },
+      {
+        "num": 2,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "첫째항이 $7$ 이고 제$20$항이 $64$ 인 등차수열 $\\{a_n\\}$ 의 첫째항부터 제$20$항까지의 합은?",
+        "choices": [
+          "$690$",
+          "$700$",
+          "$720$",
+          "$730$",
+          "$710$"
+        ],
+        "answer": 5,
+        "solution": "첫째항부터 제$20$항까지의 합은 $\\dfrac{20(7+64)}{2}=710$ 이다."
+      },
+      {
+        "num": 3,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$a_1=1$, $a_{n+1}=3a_n+1$ $(n=1,\\,2,\\,3,\\,\\cdots)$ 과 같이 정의된 수열 $\\{a_n\\}$ 에서 $a_{5}$ 의 값은?",
+        "choices": [
+          "$119$",
+          "$121$",
+          "$120$",
+          "$122$",
+          "$123$"
+        ],
+        "answer": 2,
+        "solution": "$a_1=1$ 에서 점화식 $a_{n+1}=3a_n+1$ 를 차례로 적용하면 $a_2=4$, $a_3=13$, $\\cdots$ 이므로 $a_{5}=121$ 이다."
+      },
+      {
+        "num": 4,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "모든 항이 양수인 등비수열 $\\{a_n\\}$ 에 대하여 $a_{3}=12$, $a_{5}=48$ 일 때, $a_{7}$ 의 값은?",
+        "choices": [
+          "$188$",
+          "$190$",
+          "$194$",
+          "$192$",
+          "$196$"
+        ],
+        "answer": 4,
+        "solution": "공비를 $r$ 이라 하면 $r^{2}=\\dfrac{48}{12}=4$ 이므로 $r=2$ 이고 $a_1=3$ 이다. 따라서 $a_{7}=3\\cdot 2^{6}=192$ 이다."
+      },
+      {
+        "num": 5,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\sin B=2\\cos A\\sin C$ 가 성립할 때, 이 삼각형은 어떤 삼각형인가?",
+        "choices": [
+          "$a=b$ 인 이등변삼각형",
+          "$b=c$ 인 이등변삼각형",
+          "$c=a$ 인 이등변삼각형",
+          "$\\angle A=90^{\\circ}$ 인 직각삼각형",
+          "$\\angle B=90^{\\circ}$ 인 직각삼각형"
+        ],
+        "answer": 3,
+        "solution": "사인법칙으로 $\\sin B=\\dfrac{b}{2R}$, $\\sin C=\\dfrac{c}{2R}$ 이고 코사인법칙으로 $\\cos A=\\dfrac{b^2+c^2-a^2}{2bc}$ 이다. 주어진 식에 대입하면 $\\dfrac{b}{2R}=2\\cdot\\dfrac{b^2+c^2-a^2}{2bc}\\cdot\\dfrac{c}{2R}$ 이고 정리하면 $b^2=b^2+c^2-a^2$, 즉 $a^2=c^2$ 이므로 $a=c$ 인 이등변삼각형이다."
+      },
+      {
+        "num": 6,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{12}\\left\\{\\sum_{j=1}^{k}\\left(\\sum_{i=1}^{j} 1\\right)\\right\\}$ 의 값은?",
+        "choices": [
+          "$364$",
+          "$324$",
+          "$344$",
+          "$384$",
+          "$404$"
+        ],
+        "answer": 1,
+        "solution": "$\\displaystyle\\sum_{i=1}^{j}1=j$, $\\displaystyle\\sum_{j=1}^{k} j=\\dfrac{k(k+1)}{2}$ 이고 $\\displaystyle\\sum_{k=1}^{12}\\dfrac{k(k+1)}{2}=\\dfrac{12(12+1)(12+2)}{6}=364$ 이다."
+      },
+      {
+        "num": 7,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_n=\\displaystyle\\sum_{k=1}^{n}(4k-3)$ 로 정의될 때, $a_{10}$ 의 값은?",
+        "choices": [
+          "$188$",
+          "$189$",
+          "$191$",
+          "$192$",
+          "$190$"
+        ],
+        "answer": 5,
+        "solution": "$a_n=4\\cdot\\dfrac{n(n+1)}{2}-3n$ 이므로 $a_{10}=4\\cdot\\dfrac{10\\cdot 11}{2}-3\\cdot 10=190$ 이다."
+      },
+      {
+        "num": 8,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=6(3^{n}-1)$ 일 때, $\\dfrac{a_{4}}{a_{1}}$ 의 값은?",
+        "choices": [
+          "$25$",
+          "$27$",
+          "$26$",
+          "$28$",
+          "$29$"
+        ],
+        "answer": 2,
+        "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=6(3^{n}-3^{n-1})=6\\cdot 2\\cdot 3^{n-1}$ 이므로 $\\dfrac{a_{4}}{a_{1}}=3^{4-1}=3^{3}=27$ 이다."
+      },
+      {
+        "num": 9,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=6$, $\\overline{AC}=8$, $A=60^{\\circ}$ 이다. 삼각형 $ABC$ 의 넓이를 $S$ 라 할 때, $S^{2}$ 의 값은?",
+        "choices": [
+          "$404$",
+          "$418$",
+          "$446$",
+          "$432$",
+          "$460$"
+        ],
+        "answer": 4,
+        "solution": "$S=\\dfrac{1}{2}\\cdot 6\\cdot 8\\cdot\\sin 60^{\\circ}=\\dfrac{1}{2}\\cdot 6\\cdot 8\\cdot\\dfrac{\\sqrt{3}}{2}=12\\sqrt{3}$ 이므로 $S^{2}=12^{2}\\cdot 3=432$ 이다."
+      },
+      {
+        "num": 10,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "어떤 정수기를 한 번 통과할 때마다 물속 유해 물질의 양이 $20\\%$ 씩 줄어든다고 한다. 이 정수기를 $n$ 번 통과시킨 후 유해 물질의 양이 처음 양의 $10\\%$ 이하가 되도록 하는 자연수 $n$ 의 최솟값은? (단, $\\log 2=0.3010$ 으로 계산한다.)",
+        "choices": [
+          "$9$",
+          "$10$",
+          "$11$",
+          "$12$",
+          "$13$"
+        ],
+        "answer": 3,
+        "solution": "한 번 통과 후 남는 비율은 $0.8=\\dfrac{2^{3}}{10}$ 이다. $0.8^{n}\\le 0.1$ 에서 양변에 상용로그를 취하면 $n(3\\log 2-1)\\le -1$, 즉 $n\\ge\\dfrac{1}{1-3\\log 2}=\\dfrac{1}{0.097}=10.3\\cdots$ 이므로 최솟값은 $n=11$ 이다."
+      },
+      {
+        "num": 11,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{12}\\dfrac{1}{\\sqrt{2k-1}+\\sqrt{2k+1}}$ 의 값은?",
+        "choices": [
+          "$2$",
+          "$0$",
+          "$1$",
+          "$3$",
+          "$4$"
+        ],
+        "answer": 1,
+        "solution": "$\\dfrac{1}{\\sqrt{2k-1}+\\sqrt{2k+1}}=\\dfrac{\\sqrt{2k+1}-\\sqrt{2k-1}}{2}$ 이므로 망원급수가 되어 $\\dfrac{1}{2}(\\sqrt{2\\cdot 12+1}-1)=\\dfrac{1}{2}(5-1)=2$ 이다."
+      },
+      {
+        "num": 12,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$a_1=10$, $a_{n+1}=a_n+2n$ $(n=1,\\,2,\\,3,\\,\\cdots)$ 으로 정의된 수열 $\\{a_n\\}$ 에서 $a_{9}$ 의 값은?",
+        "choices": [
+          "$80$",
+          "$81$",
+          "$83$",
+          "$84$",
+          "$82$"
+        ],
+        "answer": 5,
+        "solution": "$a_{n+1}-a_n=2n$ 이므로 $n\\ge 2$ 에서 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}2k=10+2\\cdot\\dfrac{(n-1)n}{2}$ 이다. 따라서 $a_{9}=10+2\\cdot\\dfrac{8\\cdot 9}{2}=82$ 이다."
+      },
+      {
+        "num": 13,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "원에 내접하는 사각형 $ABCD$ 에서 $\\angle B=120^{\\circ}$ 이고 $\\overline{AB}=5$, $\\overline{BC}=8$ 일 때, 대각선 $\\overline{AC}^{2}$ 의 값은?",
+        "choices": [
+          "$127$",
+          "$129$",
+          "$128$",
+          "$130$",
+          "$131$"
+        ],
+        "answer": 2,
+        "solution": "삼각형 $ABC$ 에서 코사인법칙에 의하여 $\\overline{AC}^{2}=\\overline{AB}^{2}+\\overline{BC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{BC}\\cos B=5^{2}+8^{2}-2\\cdot 5\\cdot 8\\cdot\\left(-\\dfrac{1}{2}\\right)=129$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "원에 내접하는 사각형 $ABCD$ 에서 $\\angle B$ 와 두 변이 주어졌을 때 대각선 $\\overline{AC}^{2}$ 을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\angle B=120^{\\circ}$, $\\overline{AB}=5$, $\\overline{BC}=8$ 이고, 대각선 $\\overline{AC}$ 는 삼각형 $ABC$ 의 한 변이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "삼각형 $ABC$ 에 코사인법칙 $\\overline{AC}^{2}=\\overline{AB}^{2}+\\overline{BC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{BC}\\cos B$ 를 적용한다. $\\cos 120^{\\circ}=-\\dfrac{1}{2}$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{AC}^{2}=5^{2}+8^{2}-2\\cdot 5\\cdot 8\\cdot\\left(-\\dfrac{1}{2}\\right)=25+64+40=129$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\overline{AC}^{2}=129$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 14,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "다음은 모든 자연수 $n$ 에 대하여 등식 $\\displaystyle\\sum_{k=1}^{n} k(k+1)=\\dfrac{n(n+1)(n+2)}{3}\\ \\cdots\\cdots\\ (*)$ 이 성립함을 수학적 귀납법으로 증명한 것이다. \\\\ (i) $n=1$ 일 때, (좌변)$=1\\cdot 2=\\boxed{(\\text{가})}$, (우변)$=\\dfrac{1\\cdot 2\\cdot 3}{3}=2$ 이므로 $(*)$ 이 성립한다. \\\\ (ii) $n=k$ 일 때 $(*)$ 이 성립한다고 가정하면 $\\displaystyle\\sum_{l=1}^{k} l(l+1)=\\dfrac{k(k+1)(k+2)}{3}$ 이다. $n=k+1$ 일 때, $\\displaystyle\\sum_{l=1}^{k+1} l(l+1)=\\dfrac{k(k+1)(k+2)}{3}+\\boxed{(\\text{나})}=\\dfrac{(k+1)(k+2)(k+3)}{3}$ 이므로 $(*)$ 이 성립한다. \\\\ $\\boxed{(\\text{가})}$ 에 알맞은 수를 $p$, $\\boxed{(\\text{나})}$ 에 알맞은 식을 $f(k)$ 라 할 때, $p+f(5)$ 의 값은?",
+        "choices": [
+          "$42$",
+          "$43$",
+          "$45$",
+          "$44$",
+          "$46$"
+        ],
+        "answer": 4,
+        "solution": "(i)에서 (좌변)$=1\\cdot 2=2$ 이므로 $p=2$ 이다. (ii)에서 더해지는 항은 $\\displaystyle\\sum_{l=1}^{k+1}-\\sum_{l=1}^{k}=(k+1)(k+2)$ 이므로 $f(k)=(k+1)(k+2)$ 이다. 따라서 $f(5)=6\\cdot 7=42$ 이고 $p+f(5)=2+42=44$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "수학적 귀납법으로 $\\displaystyle\\sum_{k=1}^{n}k(k+1)=\\dfrac{n(n+1)(n+2)}{3}$ 을 증명하는 과정의 빈칸 $(\\text{가})$, $(\\text{나})$ 를 채우고 $p+f(5)$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$(\\text{가})$ 는 $n=1$ 일 때 좌변의 값이고, $(\\text{나})$ 는 $n=k$ 에서 $n=k+1$ 로 갈 때 새로 더해지는 항이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$n=1$ 좌변은 $1\\cdot 2$ 이고, 더해지는 항은 $\\displaystyle\\sum_{l=1}^{k+1}l(l+1)-\\sum_{l=1}^{k}l(l+1)=(k+1)(k+2)$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$p=1\\cdot 2=2$, $f(k)=(k+1)(k+2)$ 이므로 $f(5)=6\\cdot 7=42$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+f(5)=2+42=44$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 15,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$, $\\{b_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{10} a_k=30$, $\\displaystyle\\sum_{k=1}^{10} b_k=20$ 일 때, $\\displaystyle\\sum_{k=1}^{10}(3a_k-2b_k+1)$ 의 값을 구하시오.",
+        "answer": "60",
+        "solution": "$\\displaystyle\\sum_{k=1}^{10}(3a_k-2b_k+1)=3\\sum a_k-2\\sum b_k+1\\cdot 10=3\\cdot 30-2\\cdot 20+10=60$ 이다."
+      },
+      {
+        "num": 16,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "모든 항이 양수인 등비수열 $\\{a_n\\}$ 의 첫째항부터 제$3$항까지의 합이 $26$, 첫째항부터 제$4$항까지의 합이 $80$ 일 때, 이 수열의 공비를 구하시오.",
+        "answer": "3",
+        "solution": "제$4$항은 $a_4=S_4-S_3=80-26=54$ 이다. 한편 $S_3=26$ 이고 등비수열이므로 $a_4=a_1 r^{3}$ 이다. 첫째항을 $a_1$, 공비를 $r$ 이라 하면 $a_1\\dfrac{r^{3}-1}{r-1}=26$, $a_1 r^{3}=54$ 을 연립하여 풀면 $a_1=2$, $r=3$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등비수열의 첫 $3$항·첫 $4$항의 합이 주어졌을 때 공비를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$S_3=26$, $S_4=80$ 이고 모든 항이 양수이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "제$4$항 $a_4=S_4-S_3$ 이고, 등비수열에서 $a_4=a_1 r^{3}$, $S_3=a_1\\dfrac{r^{3}-1}{r-1}$ 임을 이용한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$a_4=80-26=54$ 이다. $a_1\\dfrac{r^{3}-1}{r-1}=26$, $a_1 r^{3}=54$ 을 연립하면 $a_1=2$, $r=3$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "공비는 $r=3$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 17,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "$k$ 에 대한 이차방정식 $x^{2}-2kx+3k=0$ 의 두 근을 $\\alpha_k$, $\\beta_k$ 라 할 때, $\\displaystyle\\sum_{k=1}^{8}(\\alpha_k^{2}+\\beta_k^{2})$ 의 값을 구하시오.",
+        "answer": "600",
+        "solution": "근과 계수의 관계에서 $\\alpha_k+\\beta_k=2k$, $\\alpha_k\\beta_k=3k$ 이므로 $\\alpha_k^{2}+\\beta_k^{2}=(2k)^{2}-2\\cdot 3k=4k^{2}-6k$ 이다. 따라서 $\\displaystyle\\sum_{k=1}^{8}(4k^{2}-6k)=4\\cdot\\dfrac{8\\cdot 9\\cdot 17}{6}-6\\cdot\\dfrac{8\\cdot 9}{2}=600$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "이차방정식의 두 근으로 이루어진 수열의 제곱합 시그마를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$x^{2}-2kx+3k=0$ 의 두 근이 $\\alpha_k$, $\\beta_k$ 이므로 근과 계수의 관계를 적용한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\alpha_k+\\beta_k=2k$, $\\alpha_k\\beta_k=3k$ 이고 $\\alpha_k^{2}+\\beta_k^{2}=(\\alpha_k+\\beta_k)^{2}-2\\alpha_k\\beta_k$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\alpha_k^{2}+\\beta_k^{2}=4k^{2}-6k$ 이므로 $\\displaystyle\\sum_{k=1}^{8}(4k^{2}-6k)=4\\cdot\\dfrac{8\\cdot 9\\cdot 17}{6}-6\\cdot\\dfrac{8\\cdot 9}{2}=600$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\displaystyle\\sum_{k=1}^{8}(\\alpha_k^{2}+\\beta_k^{2})=600$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 18,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=6$, $\\overline{AC}=8$, $A=120^{\\circ}$ 일 때, $\\overline{BC}^{2}$ 의 값을 구하시오.",
+        "answer": "148",
+        "solution": "코사인법칙에 의하여 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A=6^{2}+8^{2}-2\\cdot 6\\cdot 8\\cdot(-0.5)=148$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "두 변과 끼인각이 주어진 삼각형에서 나머지 한 변의 제곱 $\\overline{BC}^{2}$ 을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=6$, $\\overline{AC}=8$, $A=120^{\\circ}$ 이고 $\\cos 120^{\\circ}=-0.5$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A$ 를 사용한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{BC}^{2}=6^{2}+8^{2}-2\\cdot 6\\cdot 8\\cdot(-0.5)=36+64--48=148$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\overline{BC}^{2}=148$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 19,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=6$, $\\overline{AC}=8$ 이다. 변 $AC$ 위의 점 $D$ 에 대하여 $\\angle ABD=\\angle ACB$ 일 때, 선분 $AD$ 의 길이는 $\\dfrac{q}{p}$ 이다. $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+        "answer": "11",
+        "solution": "두 삼각형 $ABD$ 와 $ACB$ 는 $\\angle A$ 가 공통이고 $\\angle ABD=\\angle ACB$ 이므로 닮음이다. 따라서 $\\overline{AB}:\\overline{AC}=\\overline{AD}:\\overline{AB}$ 에서 $\\overline{AD}=\\dfrac{\\overline{AB}^{2}}{\\overline{AC}}=\\dfrac{36}{8}=\\dfrac{9}{2}$ 이다. 따라서 $p=2$, $q=9$ 이고 $p+q=11$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "각의 조건이 주어진 두 삼각형의 닮음을 이용해 선분 $AD$ 의 길이를 구하고 $p+q$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=6$, $\\overline{AC}=8$ 이고, $D$ 는 변 $AC$ 위의 점으로 $\\angle ABD=\\angle ACB$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "삼각형 $ABD$ 와 $ACB$ 는 $\\angle A$ 가 공통이고 한 각이 같으므로 닮음이다. 대응변의 비 $\\overline{AB}:\\overline{AC}=\\overline{AD}:\\overline{AB}$ 가 성립한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{AD}=\\dfrac{\\overline{AB}^{2}}{\\overline{AC}}=\\dfrac{36}{8}=\\dfrac{9}{2}$ 이므로 $p=2$, $q=9$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=2+9=11$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$ 이 모든 자연수 $n$ 에 대하여 $\\displaystyle\\sum_{k=1}^{n}\\dfrac{1}{(4k-3)a_k}=2n^{2}+3n+4$ 를 만족시킬 때, $\\displaystyle\\sum_{k=1}^{8} a_k=\\dfrac{q}{p}$ 이다. $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+        "answer": "571",
+        "solution": "$T_n=2n^{2}+3n+4$ 라 하면 $n\\ge 2$ 에서 $\\dfrac{1}{(4n-3)a_n}=T_n-T_{n-1}=2(2n-1)+3=4n+1$ 이므로 $a_n=\\dfrac{1}{(4n-3)(4n+1)}=\\dfrac{1}{4}\\left(\\dfrac{1}{4n-3}-\\dfrac{1}{4n+1}\\right)$ 이다. 또 $n=1$ 일 때 $\\dfrac{1}{1\\cdot a_1}=T_1=9$ 이므로 $a_1=\\dfrac{1}{9}$ 이다. 따라서 $\\displaystyle\\sum_{k=1}^{8} a_k=\\dfrac{1}{9}+\\dfrac{1}{4}\\left(\\dfrac{1}{5}-\\dfrac{1}{33}\\right)=\\dfrac{76}{495}$ 이므로 $p=495$, $q=76$ 이고 $p+q=571$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "부분합 꼴 조건으로 정의된 점화식에서 일반항 $a_n$ 을 구하고 $\\displaystyle\\sum_{k=1}^{8} a_k$ 의 값으로부터 $p+q$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$T_n=\\displaystyle\\sum_{k=1}^{n}\\dfrac{1}{(4k-3)a_k}=2n^{2}+3n+4$ 이므로 $n\\ge 2$ 에서 $\\dfrac{1}{(4n-3)a_n}=T_n-T_{n-1}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$T_n-T_{n-1}=2(2n-1)+3=4n+1$ 이므로 $a_n=\\dfrac{1}{(4n-3)(4n+1)}$ 이고 부분분수 분해로 망원급수가 된다. $n=1$ 은 따로 처리한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$a_n=\\dfrac{1}{4}\\left(\\dfrac{1}{4n-3}-\\dfrac{1}{4n+1}\\right)$ $(n\\ge 2)$, $a_1=\\dfrac{1}{9}$ 이다. $\\displaystyle\\sum_{k=1}^{8} a_k=\\dfrac{1}{9}+\\dfrac{1}{4}\\left(\\dfrac{1}{5}-\\dfrac{1}{33}\\right)=\\dfrac{76}{495}$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p=495$, $q=76$ 이므로 $p+q=571$ 이다."
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "num": 1,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "등차수열 $\\{a_n\\}$ 에 대하여 $a_{2}=11$, $a_{7}=31$ 일 때, $a_{13}$ 의 값은?",
+        "choices": [
+          "$55$",
+          "$51$",
+          "$53$",
+          "$57$",
+          "$59$"
+        ],
+        "answer": 1,
+        "solution": "공차 $d=\\dfrac{31-11}{7-2}=4$, $a_1=11-1\\cdot 4=7$ 이므로 $a_{13}=7+12\\cdot 4=55$ 이다."
+      },
+      {
+        "num": 2,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "첫째항이 $5$ 이고 제$18$항이 $73$ 인 등차수열 $\\{a_n\\}$ 의 첫째항부터 제$18$항까지의 합은?",
+        "choices": [
+          "$682$",
+          "$692$",
+          "$712$",
+          "$722$",
+          "$702$"
+        ],
+        "answer": 5,
+        "solution": "첫째항부터 제$18$항까지의 합은 $\\dfrac{18(5+73)}{2}=702$ 이다."
+      },
+      {
+        "num": 3,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$a_1=2$, $a_{n+1}=3a_n+2$ $(n=1,\\,2,\\,3,\\,\\cdots)$ 과 같이 정의된 수열 $\\{a_n\\}$ 에서 $a_{5}$ 의 값은?",
+        "choices": [
+          "$240$",
+          "$242$",
+          "$241$",
+          "$243$",
+          "$244$"
+        ],
+        "answer": 2,
+        "solution": "$a_1=2$ 에서 점화식 $a_{n+1}=3a_n+2$ 를 차례로 적용하면 $a_2=8$, $a_3=26$, $\\cdots$ 이므로 $a_{5}=242$ 이다."
+      },
+      {
+        "num": 4,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "모든 항이 양수인 등비수열 $\\{a_n\\}$ 에 대하여 $a_{2}=6$, $a_{5}=162$ 일 때, $a_{6}$ 의 값은?",
+        "choices": [
+          "$480$",
+          "$483$",
+          "$489$",
+          "$486$",
+          "$492$"
+        ],
+        "answer": 4,
+        "solution": "공비를 $r$ 이라 하면 $r^{3}=\\dfrac{162}{6}=27$ 이므로 $r=3$ 이고 $a_1=2$ 이다. 따라서 $a_{6}=2\\cdot 3^{5}=486$ 이다."
+      },
+      {
+        "num": 5,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\sin B=2\\cos A\\sin C$ 가 성립할 때, 이 삼각형은 어떤 삼각형인가?",
+        "choices": [
+          "$a=b$ 인 이등변삼각형",
+          "$b=c$ 인 이등변삼각형",
+          "$c=a$ 인 이등변삼각형",
+          "$\\angle A=90^{\\circ}$ 인 직각삼각형",
+          "$\\angle B=90^{\\circ}$ 인 직각삼각형"
+        ],
+        "answer": 3,
+        "solution": "사인법칙으로 $\\sin B=\\dfrac{b}{2R}$, $\\sin C=\\dfrac{c}{2R}$ 이고 코사인법칙으로 $\\cos A=\\dfrac{b^2+c^2-a^2}{2bc}$ 이다. 주어진 식에 대입하면 $\\dfrac{b}{2R}=2\\cdot\\dfrac{b^2+c^2-a^2}{2bc}\\cdot\\dfrac{c}{2R}$ 이고 정리하면 $b^2=b^2+c^2-a^2$, 즉 $a^2=c^2$ 이므로 $a=c$ 인 이등변삼각형이다."
+      },
+      {
+        "num": 6,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{14}\\left\\{\\sum_{j=1}^{k}\\left(\\sum_{i=1}^{j} 1\\right)\\right\\}$ 의 값은?",
+        "choices": [
+          "$560$",
+          "$520$",
+          "$540$",
+          "$580$",
+          "$600$"
+        ],
+        "answer": 1,
+        "solution": "$\\displaystyle\\sum_{i=1}^{j}1=j$, $\\displaystyle\\sum_{j=1}^{k} j=\\dfrac{k(k+1)}{2}$ 이고 $\\displaystyle\\sum_{k=1}^{14}\\dfrac{k(k+1)}{2}=\\dfrac{14(14+1)(14+2)}{6}=560$ 이다."
+      },
+      {
+        "num": 7,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_n=\\displaystyle\\sum_{k=1}^{n}(6k-5)$ 로 정의될 때, $a_{9}$ 의 값은?",
+        "choices": [
+          "$223$",
+          "$224$",
+          "$226$",
+          "$227$",
+          "$225$"
+        ],
+        "answer": 5,
+        "solution": "$a_n=6\\cdot\\dfrac{n(n+1)}{2}-5n$ 이므로 $a_{9}=6\\cdot\\dfrac{9\\cdot 10}{2}-5\\cdot 9=225$ 이다."
+      },
+      {
+        "num": 8,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=4(2^{n}-1)$ 일 때, $\\dfrac{a_{5}}{a_{1}}$ 의 값은?",
+        "choices": [
+          "$14$",
+          "$16$",
+          "$15$",
+          "$17$",
+          "$18$"
+        ],
+        "answer": 2,
+        "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=4(2^{n}-2^{n-1})=4\\cdot 1\\cdot 2^{n-1}$ 이므로 $\\dfrac{a_{5}}{a_{1}}=2^{5-1}=2^{4}=16$ 이다."
+      },
+      {
+        "num": 9,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=8$, $\\overline{AC}=10$, $A=120^{\\circ}$ 이다. 삼각형 $ABC$ 의 넓이를 $S$ 라 할 때, $S^{2}$ 의 값은?",
+        "choices": [
+          "$1172$",
+          "$1186$",
+          "$1214$",
+          "$1200$",
+          "$1228$"
+        ],
+        "answer": 4,
+        "solution": "$S=\\dfrac{1}{2}\\cdot 8\\cdot 10\\cdot\\sin 120^{\\circ}=\\dfrac{1}{2}\\cdot 8\\cdot 10\\cdot\\dfrac{\\sqrt{3}}{2}=20\\sqrt{3}$ 이므로 $S^{2}=20^{2}\\cdot 3=1200$ 이다."
+      },
+      {
+        "num": 10,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "어떤 정수기를 한 번 통과할 때마다 물속 유해 물질의 양이 $20\\%$ 씩 줄어든다고 한다. 이 정수기를 $n$ 번 통과시킨 후 유해 물질의 양이 처음 양의 $10\\%$ 이하가 되도록 하는 자연수 $n$ 의 최솟값은? (단, $\\log 2=0.3010$ 으로 계산한다.)",
+        "choices": [
+          "$9$",
+          "$10$",
+          "$11$",
+          "$12$",
+          "$13$"
+        ],
+        "answer": 3,
+        "solution": "한 번 통과 후 남는 비율은 $0.8=\\dfrac{2^{3}}{10}$ 이다. $0.8^{n}\\le 0.1$ 에서 양변에 상용로그를 취하면 $n(3\\log 2-1)\\le -1$, 즉 $n\\ge\\dfrac{1}{1-3\\log 2}=\\dfrac{1}{0.097}=10.3\\cdots$ 이므로 최솟값은 $n=11$ 이다."
+      },
+      {
+        "num": 11,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{24}\\dfrac{1}{\\sqrt{2k-1}+\\sqrt{2k+1}}$ 의 값은?",
+        "choices": [
+          "$3$",
+          "$1$",
+          "$2$",
+          "$4$",
+          "$5$"
+        ],
+        "answer": 1,
+        "solution": "$\\dfrac{1}{\\sqrt{2k-1}+\\sqrt{2k+1}}=\\dfrac{\\sqrt{2k+1}-\\sqrt{2k-1}}{2}$ 이므로 망원급수가 되어 $\\dfrac{1}{2}(\\sqrt{2\\cdot 24+1}-1)=\\dfrac{1}{2}(7-1)=3$ 이다."
+      },
+      {
+        "num": 12,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$a_1=7$, $a_{n+1}=a_n+4n$ $(n=1,\\,2,\\,3,\\,\\cdots)$ 으로 정의된 수열 $\\{a_n\\}$ 에서 $a_{8}$ 의 값은?",
+        "choices": [
+          "$117$",
+          "$118$",
+          "$120$",
+          "$121$",
+          "$119$"
+        ],
+        "answer": 5,
+        "solution": "$a_{n+1}-a_n=4n$ 이므로 $n\\ge 2$ 에서 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}4k=7+4\\cdot\\dfrac{(n-1)n}{2}$ 이다. 따라서 $a_{8}=7+4\\cdot\\dfrac{7\\cdot 8}{2}=119$ 이다."
+      },
+      {
+        "num": 13,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "원에 내접하는 사각형 $ABCD$ 에서 $\\angle B=120^{\\circ}$ 이고 $\\overline{AB}=6$, $\\overline{BC}=7$ 일 때, 대각선 $\\overline{AC}^{2}$ 의 값은?",
+        "choices": [
+          "$125$",
+          "$127$",
+          "$126$",
+          "$128$",
+          "$129$"
+        ],
+        "answer": 2,
+        "solution": "삼각형 $ABC$ 에서 코사인법칙에 의하여 $\\overline{AC}^{2}=\\overline{AB}^{2}+\\overline{BC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{BC}\\cos B=6^{2}+7^{2}-2\\cdot 6\\cdot 7\\cdot\\left(-\\dfrac{1}{2}\\right)=127$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "원에 내접하는 사각형 $ABCD$ 에서 $\\angle B$ 와 두 변이 주어졌을 때 대각선 $\\overline{AC}^{2}$ 을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\angle B=120^{\\circ}$, $\\overline{AB}=6$, $\\overline{BC}=7$ 이고, 대각선 $\\overline{AC}$ 는 삼각형 $ABC$ 의 한 변이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "삼각형 $ABC$ 에 코사인법칙 $\\overline{AC}^{2}=\\overline{AB}^{2}+\\overline{BC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{BC}\\cos B$ 를 적용한다. $\\cos 120^{\\circ}=-\\dfrac{1}{2}$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{AC}^{2}=6^{2}+7^{2}-2\\cdot 6\\cdot 7\\cdot\\left(-\\dfrac{1}{2}\\right)=36+49+42=127$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\overline{AC}^{2}=127$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 14,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "다음은 모든 자연수 $n$ 에 대하여 등식 $\\displaystyle\\sum_{k=1}^{n} k(k+1)=\\dfrac{n(n+1)(n+2)}{3}\\ \\cdots\\cdots\\ (*)$ 이 성립함을 수학적 귀납법으로 증명한 것이다. \\\\ (i) $n=1$ 일 때, (좌변)$=1\\cdot 2=\\boxed{(\\text{가})}$, (우변)$=\\dfrac{1\\cdot 2\\cdot 3}{3}=2$ 이므로 $(*)$ 이 성립한다. \\\\ (ii) $n=k$ 일 때 $(*)$ 이 성립한다고 가정하면 $\\displaystyle\\sum_{l=1}^{k} l(l+1)=\\dfrac{k(k+1)(k+2)}{3}$ 이다. $n=k+1$ 일 때, $\\displaystyle\\sum_{l=1}^{k+1} l(l+1)=\\dfrac{k(k+1)(k+2)}{3}+\\boxed{(\\text{나})}=\\dfrac{(k+1)(k+2)(k+3)}{3}$ 이므로 $(*)$ 이 성립한다. \\\\ $\\boxed{(\\text{가})}$ 에 알맞은 수를 $p$, $\\boxed{(\\text{나})}$ 에 알맞은 식을 $f(k)$ 라 할 때, $p+f(6)$ 의 값은?",
+        "choices": [
+          "$56$",
+          "$57$",
+          "$59$",
+          "$58$",
+          "$60$"
+        ],
+        "answer": 4,
+        "solution": "(i)에서 (좌변)$=1\\cdot 2=2$ 이므로 $p=2$ 이다. (ii)에서 더해지는 항은 $\\displaystyle\\sum_{l=1}^{k+1}-\\sum_{l=1}^{k}=(k+1)(k+2)$ 이므로 $f(k)=(k+1)(k+2)$ 이다. 따라서 $f(6)=7\\cdot 8=56$ 이고 $p+f(6)=2+56=58$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "수학적 귀납법으로 $\\displaystyle\\sum_{k=1}^{n}k(k+1)=\\dfrac{n(n+1)(n+2)}{3}$ 을 증명하는 과정의 빈칸 $(\\text{가})$, $(\\text{나})$ 를 채우고 $p+f(6)$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$(\\text{가})$ 는 $n=1$ 일 때 좌변의 값이고, $(\\text{나})$ 는 $n=k$ 에서 $n=k+1$ 로 갈 때 새로 더해지는 항이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$n=1$ 좌변은 $1\\cdot 2$ 이고, 더해지는 항은 $\\displaystyle\\sum_{l=1}^{k+1}l(l+1)-\\sum_{l=1}^{k}l(l+1)=(k+1)(k+2)$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$p=1\\cdot 2=2$, $f(k)=(k+1)(k+2)$ 이므로 $f(6)=7\\cdot 8=56$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+f(6)=2+56=58$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 15,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$, $\\{b_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{12} a_k=42$, $\\displaystyle\\sum_{k=1}^{12} b_k=18$ 일 때, $\\displaystyle\\sum_{k=1}^{12}(4a_k-3b_k+2)$ 의 값을 구하시오.",
+        "answer": "138",
+        "solution": "$\\displaystyle\\sum_{k=1}^{12}(4a_k-3b_k+2)=4\\sum a_k-3\\sum b_k+2\\cdot 12=4\\cdot 42-3\\cdot 18+24=138$ 이다."
+      },
+      {
+        "num": 16,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "모든 항이 양수인 등비수열 $\\{a_n\\}$ 의 첫째항부터 제$3$항까지의 합이 $21$, 첫째항부터 제$4$항까지의 합이 $45$ 일 때, 이 수열의 공비를 구하시오.",
+        "answer": "2",
+        "solution": "제$4$항은 $a_4=S_4-S_3=45-21=24$ 이다. 한편 $S_3=21$ 이고 등비수열이므로 $a_4=a_1 r^{3}$ 이다. 첫째항을 $a_1$, 공비를 $r$ 이라 하면 $a_1\\dfrac{r^{3}-1}{r-1}=21$, $a_1 r^{3}=24$ 을 연립하여 풀면 $a_1=3$, $r=2$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등비수열의 첫 $3$항·첫 $4$항의 합이 주어졌을 때 공비를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$S_3=21$, $S_4=45$ 이고 모든 항이 양수이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "제$4$항 $a_4=S_4-S_3$ 이고, 등비수열에서 $a_4=a_1 r^{3}$, $S_3=a_1\\dfrac{r^{3}-1}{r-1}$ 임을 이용한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$a_4=45-21=24$ 이다. $a_1\\dfrac{r^{3}-1}{r-1}=21$, $a_1 r^{3}=24$ 을 연립하면 $a_1=3$, $r=2$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "공비는 $r=2$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 17,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "$k$ 에 대한 이차방정식 $x^{2}-3kx+2k=0$ 의 두 근을 $\\alpha_k$, $\\beta_k$ 라 할 때, $\\displaystyle\\sum_{k=1}^{7}(\\alpha_k^{2}+\\beta_k^{2})$ 의 값을 구하시오.",
+        "answer": "1148",
+        "solution": "근과 계수의 관계에서 $\\alpha_k+\\beta_k=3k$, $\\alpha_k\\beta_k=2k$ 이므로 $\\alpha_k^{2}+\\beta_k^{2}=(3k)^{2}-2\\cdot 2k=9k^{2}-4k$ 이다. 따라서 $\\displaystyle\\sum_{k=1}^{7}(9k^{2}-4k)=9\\cdot\\dfrac{7\\cdot 8\\cdot 15}{6}-4\\cdot\\dfrac{7\\cdot 8}{2}=1148$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "이차방정식의 두 근으로 이루어진 수열의 제곱합 시그마를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$x^{2}-3kx+2k=0$ 의 두 근이 $\\alpha_k$, $\\beta_k$ 이므로 근과 계수의 관계를 적용한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\alpha_k+\\beta_k=3k$, $\\alpha_k\\beta_k=2k$ 이고 $\\alpha_k^{2}+\\beta_k^{2}=(\\alpha_k+\\beta_k)^{2}-2\\alpha_k\\beta_k$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\alpha_k^{2}+\\beta_k^{2}=9k^{2}-4k$ 이므로 $\\displaystyle\\sum_{k=1}^{7}(9k^{2}-4k)=9\\cdot\\dfrac{7\\cdot 8\\cdot 15}{6}-4\\cdot\\dfrac{7\\cdot 8}{2}=1148$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\displaystyle\\sum_{k=1}^{7}(\\alpha_k^{2}+\\beta_k^{2})=1148$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 18,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=5$, $\\overline{AC}=8$, $A=60^{\\circ}$ 일 때, $\\overline{BC}^{2}$ 의 값을 구하시오.",
+        "answer": "49",
+        "solution": "코사인법칙에 의하여 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A=5^{2}+8^{2}-2\\cdot 5\\cdot 8\\cdot(0.5)=49$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "두 변과 끼인각이 주어진 삼각형에서 나머지 한 변의 제곱 $\\overline{BC}^{2}$ 을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=5$, $\\overline{AC}=8$, $A=60^{\\circ}$ 이고 $\\cos 60^{\\circ}=0.5$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A$ 를 사용한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{BC}^{2}=5^{2}+8^{2}-2\\cdot 5\\cdot 8\\cdot(0.5)=25+64-40=49$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\overline{BC}^{2}=49$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 19,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=9$, $\\overline{AC}=6$ 이다. 변 $AC$ 위의 점 $D$ 에 대하여 $\\angle ABD=\\angle ACB$ 일 때, 선분 $AD$ 의 길이는 $\\dfrac{q}{p}$ 이다. $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+        "answer": "29",
+        "solution": "두 삼각형 $ABD$ 와 $ACB$ 는 $\\angle A$ 가 공통이고 $\\angle ABD=\\angle ACB$ 이므로 닮음이다. 따라서 $\\overline{AB}:\\overline{AC}=\\overline{AD}:\\overline{AB}$ 에서 $\\overline{AD}=\\dfrac{\\overline{AB}^{2}}{\\overline{AC}}=\\dfrac{81}{6}=\\dfrac{27}{2}$ 이다. 따라서 $p=2$, $q=27$ 이고 $p+q=29$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "각의 조건이 주어진 두 삼각형의 닮음을 이용해 선분 $AD$ 의 길이를 구하고 $p+q$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=9$, $\\overline{AC}=6$ 이고, $D$ 는 변 $AC$ 위의 점으로 $\\angle ABD=\\angle ACB$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "삼각형 $ABD$ 와 $ACB$ 는 $\\angle A$ 가 공통이고 한 각이 같으므로 닮음이다. 대응변의 비 $\\overline{AB}:\\overline{AC}=\\overline{AD}:\\overline{AB}$ 가 성립한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{AD}=\\dfrac{\\overline{AB}^{2}}{\\overline{AC}}=\\dfrac{81}{6}=\\dfrac{27}{2}$ 이므로 $p=2$, $q=27$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=2+27=29$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$ 이 모든 자연수 $n$ 에 대하여 $\\displaystyle\\sum_{k=1}^{n}\\dfrac{1}{(4k-3)a_k}=2n^{2}+3n+6$ 를 만족시킬 때, $\\displaystyle\\sum_{k=1}^{10} a_k=\\dfrac{q}{p}$ 이다. $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+        "answer": "2559",
+        "solution": "$T_n=2n^{2}+3n+6$ 라 하면 $n\\ge 2$ 에서 $\\dfrac{1}{(4n-3)a_n}=T_n-T_{n-1}=2(2n-1)+3=4n+1$ 이므로 $a_n=\\dfrac{1}{(4n-3)(4n+1)}=\\dfrac{1}{4}\\left(\\dfrac{1}{4n-3}-\\dfrac{1}{4n+1}\\right)$ 이다. 또 $n=1$ 일 때 $\\dfrac{1}{1\\cdot a_1}=T_1=11$ 이므로 $a_1=\\dfrac{1}{11}$ 이다. 따라서 $\\displaystyle\\sum_{k=1}^{10} a_k=\\dfrac{1}{11}+\\dfrac{1}{4}\\left(\\dfrac{1}{5}-\\dfrac{1}{41}\\right)=\\dfrac{304}{2255}$ 이므로 $p=2255$, $q=304$ 이고 $p+q=2559$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "부분합 꼴 조건으로 정의된 점화식에서 일반항 $a_n$ 을 구하고 $\\displaystyle\\sum_{k=1}^{10} a_k$ 의 값으로부터 $p+q$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$T_n=\\displaystyle\\sum_{k=1}^{n}\\dfrac{1}{(4k-3)a_k}=2n^{2}+3n+6$ 이므로 $n\\ge 2$ 에서 $\\dfrac{1}{(4n-3)a_n}=T_n-T_{n-1}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$T_n-T_{n-1}=2(2n-1)+3=4n+1$ 이므로 $a_n=\\dfrac{1}{(4n-3)(4n+1)}$ 이고 부분분수 분해로 망원급수가 된다. $n=1$ 은 따로 처리한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$a_n=\\dfrac{1}{4}\\left(\\dfrac{1}{4n-3}-\\dfrac{1}{4n+1}\\right)$ $(n\\ge 2)$, $a_1=\\dfrac{1}{11}$ 이다. $\\displaystyle\\sum_{k=1}^{10} a_k=\\dfrac{1}{11}+\\dfrac{1}{4}\\left(\\dfrac{1}{5}-\\dfrac{1}{41}\\right)=\\dfrac{304}{2255}$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p=2255$, $q=304$ 이므로 $p+q=2559$ 이다."
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "num": 1,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "등차수열 $\\{a_n\\}$ 에 대하여 $a_{4}=17$, $a_{9}=37$ 일 때, $a_{11}$ 의 값은?",
+        "choices": [
+          "$45$",
+          "$41$",
+          "$43$",
+          "$47$",
+          "$49$"
+        ],
+        "answer": 1,
+        "solution": "공차 $d=\\dfrac{37-17}{9-4}=4$, $a_1=17-3\\cdot 4=5$ 이므로 $a_{11}=5+10\\cdot 4=45$ 이다."
+      },
+      {
+        "num": 2,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "첫째항이 $9$ 이고 제$24$항이 $55$ 인 등차수열 $\\{a_n\\}$ 의 첫째항부터 제$24$항까지의 합은?",
+        "choices": [
+          "$748$",
+          "$758$",
+          "$778$",
+          "$788$",
+          "$768$"
+        ],
+        "answer": 5,
+        "solution": "첫째항부터 제$24$항까지의 합은 $\\dfrac{24(9+55)}{2}=768$ 이다."
+      },
+      {
+        "num": 3,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$a_1=1$, $a_{n+1}=2a_n+3$ $(n=1,\\,2,\\,3,\\,\\cdots)$ 과 같이 정의된 수열 $\\{a_n\\}$ 에서 $a_{6}$ 의 값은?",
+        "choices": [
+          "$123$",
+          "$125$",
+          "$124$",
+          "$126$",
+          "$127$"
+        ],
+        "answer": 2,
+        "solution": "$a_1=1$ 에서 점화식 $a_{n+1}=2a_n+3$ 를 차례로 적용하면 $a_2=5$, $a_3=13$, $\\cdots$ 이므로 $a_{6}=125$ 이다."
+      },
+      {
+        "num": 4,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "모든 항이 양수인 등비수열 $\\{a_n\\}$ 에 대하여 $a_{1}=5$, $a_{4}=135$ 일 때, $a_{3}$ 의 값은?",
+        "choices": [
+          "$39$",
+          "$42$",
+          "$48$",
+          "$45$",
+          "$51$"
+        ],
+        "answer": 4,
+        "solution": "공비를 $r$ 이라 하면 $r^{3}=\\dfrac{135}{5}=27$ 이므로 $r=3$ 이고 $a_1=5$ 이다. 따라서 $a_{3}=5\\cdot 3^{2}=45$ 이다."
+      },
+      {
+        "num": 5,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\sin B=2\\cos A\\sin C$ 가 성립할 때, 이 삼각형은 어떤 삼각형인가?",
+        "choices": [
+          "$a=b$ 인 이등변삼각형",
+          "$b=c$ 인 이등변삼각형",
+          "$c=a$ 인 이등변삼각형",
+          "$\\angle A=90^{\\circ}$ 인 직각삼각형",
+          "$\\angle B=90^{\\circ}$ 인 직각삼각형"
+        ],
+        "answer": 3,
+        "solution": "사인법칙으로 $\\sin B=\\dfrac{b}{2R}$, $\\sin C=\\dfrac{c}{2R}$ 이고 코사인법칙으로 $\\cos A=\\dfrac{b^2+c^2-a^2}{2bc}$ 이다. 주어진 식에 대입하면 $\\dfrac{b}{2R}=2\\cdot\\dfrac{b^2+c^2-a^2}{2bc}\\cdot\\dfrac{c}{2R}$ 이고 정리하면 $b^2=b^2+c^2-a^2$, 즉 $a^2=c^2$ 이므로 $a=c$ 인 이등변삼각형이다."
+      },
+      {
+        "num": 6,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{10}\\left\\{\\sum_{j=1}^{k}\\left(\\sum_{i=1}^{j} 1\\right)\\right\\}$ 의 값은?",
+        "choices": [
+          "$220$",
+          "$180$",
+          "$200$",
+          "$240$",
+          "$260$"
+        ],
+        "answer": 1,
+        "solution": "$\\displaystyle\\sum_{i=1}^{j}1=j$, $\\displaystyle\\sum_{j=1}^{k} j=\\dfrac{k(k+1)}{2}$ 이고 $\\displaystyle\\sum_{k=1}^{10}\\dfrac{k(k+1)}{2}=\\dfrac{10(10+1)(10+2)}{6}=220$ 이다."
+      },
+      {
+        "num": 7,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_n=\\displaystyle\\sum_{k=1}^{n}(3k-1)$ 로 정의될 때, $a_{11}$ 의 값은?",
+        "choices": [
+          "$185$",
+          "$186$",
+          "$188$",
+          "$189$",
+          "$187$"
+        ],
+        "answer": 5,
+        "solution": "$a_n=3\\cdot\\dfrac{n(n+1)}{2}-1n$ 이므로 $a_{11}=3\\cdot\\dfrac{11\\cdot 12}{2}-1\\cdot 11=187$ 이다."
+      },
+      {
+        "num": 8,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=5(4^{n}-1)$ 일 때, $\\dfrac{a_{5}}{a_{2}}$ 의 값은?",
+        "choices": [
+          "$62$",
+          "$64$",
+          "$63$",
+          "$65$",
+          "$66$"
+        ],
+        "answer": 2,
+        "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=5(4^{n}-4^{n-1})=5\\cdot 3\\cdot 4^{n-1}$ 이므로 $\\dfrac{a_{5}}{a_{2}}=4^{5-2}=4^{3}=64$ 이다."
+      },
+      {
+        "num": 9,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=4$, $\\overline{AC}=12$, $A=60^{\\circ}$ 이다. 삼각형 $ABC$ 의 넓이를 $S$ 라 할 때, $S^{2}$ 의 값은?",
+        "choices": [
+          "$404$",
+          "$418$",
+          "$446$",
+          "$432$",
+          "$460$"
+        ],
+        "answer": 4,
+        "solution": "$S=\\dfrac{1}{2}\\cdot 4\\cdot 12\\cdot\\sin 60^{\\circ}=\\dfrac{1}{2}\\cdot 4\\cdot 12\\cdot\\dfrac{\\sqrt{3}}{2}=12\\sqrt{3}$ 이므로 $S^{2}=12^{2}\\cdot 3=432$ 이다."
+      },
+      {
+        "num": 10,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "어떤 정수기를 한 번 통과할 때마다 물속 유해 물질의 양이 $20\\%$ 씩 줄어든다고 한다. 이 정수기를 $n$ 번 통과시킨 후 유해 물질의 양이 처음 양의 $10\\%$ 이하가 되도록 하는 자연수 $n$ 의 최솟값은? (단, $\\log 2=0.3010$ 으로 계산한다.)",
+        "choices": [
+          "$9$",
+          "$10$",
+          "$11$",
+          "$12$",
+          "$13$"
+        ],
+        "answer": 3,
+        "solution": "한 번 통과 후 남는 비율은 $0.8=\\dfrac{2^{3}}{10}$ 이다. $0.8^{n}\\le 0.1$ 에서 양변에 상용로그를 취하면 $n(3\\log 2-1)\\le -1$, 즉 $n\\ge\\dfrac{1}{1-3\\log 2}=\\dfrac{1}{0.097}=10.3\\cdots$ 이므로 최솟값은 $n=11$ 이다."
+      },
+      {
+        "num": 11,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{40}\\dfrac{1}{\\sqrt{2k-1}+\\sqrt{2k+1}}$ 의 값은?",
+        "choices": [
+          "$4$",
+          "$2$",
+          "$3$",
+          "$5$",
+          "$6$"
+        ],
+        "answer": 1,
+        "solution": "$\\dfrac{1}{\\sqrt{2k-1}+\\sqrt{2k+1}}=\\dfrac{\\sqrt{2k+1}-\\sqrt{2k-1}}{2}$ 이므로 망원급수가 되어 $\\dfrac{1}{2}(\\sqrt{2\\cdot 40+1}-1)=\\dfrac{1}{2}(9-1)=4$ 이다."
+      },
+      {
+        "num": 12,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$a_1=6$, $a_{n+1}=a_n+3n$ $(n=1,\\,2,\\,3,\\,\\cdots)$ 으로 정의된 수열 $\\{a_n\\}$ 에서 $a_{7}$ 의 값은?",
+        "choices": [
+          "$67$",
+          "$68$",
+          "$70$",
+          "$71$",
+          "$69$"
+        ],
+        "answer": 5,
+        "solution": "$a_{n+1}-a_n=3n$ 이므로 $n\\ge 2$ 에서 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}3k=6+3\\cdot\\dfrac{(n-1)n}{2}$ 이다. 따라서 $a_{7}=6+3\\cdot\\dfrac{6\\cdot 7}{2}=69$ 이다."
+      },
+      {
+        "num": 13,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "원에 내접하는 사각형 $ABCD$ 에서 $\\angle B=120^{\\circ}$ 이고 $\\overline{AB}=4$, $\\overline{BC}=9$ 일 때, 대각선 $\\overline{AC}^{2}$ 의 값은?",
+        "choices": [
+          "$131$",
+          "$133$",
+          "$132$",
+          "$134$",
+          "$135$"
+        ],
+        "answer": 2,
+        "solution": "삼각형 $ABC$ 에서 코사인법칙에 의하여 $\\overline{AC}^{2}=\\overline{AB}^{2}+\\overline{BC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{BC}\\cos B=4^{2}+9^{2}-2\\cdot 4\\cdot 9\\cdot\\left(-\\dfrac{1}{2}\\right)=133$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "원에 내접하는 사각형 $ABCD$ 에서 $\\angle B$ 와 두 변이 주어졌을 때 대각선 $\\overline{AC}^{2}$ 을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\angle B=120^{\\circ}$, $\\overline{AB}=4$, $\\overline{BC}=9$ 이고, 대각선 $\\overline{AC}$ 는 삼각형 $ABC$ 의 한 변이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "삼각형 $ABC$ 에 코사인법칙 $\\overline{AC}^{2}=\\overline{AB}^{2}+\\overline{BC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{BC}\\cos B$ 를 적용한다. $\\cos 120^{\\circ}=-\\dfrac{1}{2}$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{AC}^{2}=4^{2}+9^{2}-2\\cdot 4\\cdot 9\\cdot\\left(-\\dfrac{1}{2}\\right)=16+81+36=133$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\overline{AC}^{2}=133$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 14,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "다음은 모든 자연수 $n$ 에 대하여 등식 $\\displaystyle\\sum_{k=1}^{n} k(k+1)=\\dfrac{n(n+1)(n+2)}{3}\\ \\cdots\\cdots\\ (*)$ 이 성립함을 수학적 귀납법으로 증명한 것이다. \\\\ (i) $n=1$ 일 때, (좌변)$=1\\cdot 2=\\boxed{(\\text{가})}$, (우변)$=\\dfrac{1\\cdot 2\\cdot 3}{3}=2$ 이므로 $(*)$ 이 성립한다. \\\\ (ii) $n=k$ 일 때 $(*)$ 이 성립한다고 가정하면 $\\displaystyle\\sum_{l=1}^{k} l(l+1)=\\dfrac{k(k+1)(k+2)}{3}$ 이다. $n=k+1$ 일 때, $\\displaystyle\\sum_{l=1}^{k+1} l(l+1)=\\dfrac{k(k+1)(k+2)}{3}+\\boxed{(\\text{나})}=\\dfrac{(k+1)(k+2)(k+3)}{3}$ 이므로 $(*)$ 이 성립한다. \\\\ $\\boxed{(\\text{가})}$ 에 알맞은 수를 $p$, $\\boxed{(\\text{나})}$ 에 알맞은 식을 $f(k)$ 라 할 때, $p+f(4)$ 의 값은?",
+        "choices": [
+          "$30$",
+          "$31$",
+          "$33$",
+          "$32$",
+          "$34$"
+        ],
+        "answer": 4,
+        "solution": "(i)에서 (좌변)$=1\\cdot 2=2$ 이므로 $p=2$ 이다. (ii)에서 더해지는 항은 $\\displaystyle\\sum_{l=1}^{k+1}-\\sum_{l=1}^{k}=(k+1)(k+2)$ 이므로 $f(k)=(k+1)(k+2)$ 이다. 따라서 $f(4)=5\\cdot 6=30$ 이고 $p+f(4)=2+30=32$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "수학적 귀납법으로 $\\displaystyle\\sum_{k=1}^{n}k(k+1)=\\dfrac{n(n+1)(n+2)}{3}$ 을 증명하는 과정의 빈칸 $(\\text{가})$, $(\\text{나})$ 를 채우고 $p+f(4)$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$(\\text{가})$ 는 $n=1$ 일 때 좌변의 값이고, $(\\text{나})$ 는 $n=k$ 에서 $n=k+1$ 로 갈 때 새로 더해지는 항이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$n=1$ 좌변은 $1\\cdot 2$ 이고, 더해지는 항은 $\\displaystyle\\sum_{l=1}^{k+1}l(l+1)-\\sum_{l=1}^{k}l(l+1)=(k+1)(k+2)$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$p=1\\cdot 2=2$, $f(k)=(k+1)(k+2)$ 이므로 $f(4)=5\\cdot 6=30$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+f(4)=2+30=32$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 15,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$, $\\{b_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{9} a_k=27$, $\\displaystyle\\sum_{k=1}^{9} b_k=15$ 일 때, $\\displaystyle\\sum_{k=1}^{9}(5a_k-2b_k+3)$ 의 값을 구하시오.",
+        "answer": "132",
+        "solution": "$\\displaystyle\\sum_{k=1}^{9}(5a_k-2b_k+3)=5\\sum a_k-2\\sum b_k+3\\cdot 9=5\\cdot 27-2\\cdot 15+27=132$ 이다."
+      },
+      {
+        "num": 16,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "모든 항이 양수인 등비수열 $\\{a_n\\}$ 의 첫째항부터 제$3$항까지의 합이 $28$, 첫째항부터 제$4$항까지의 합이 $60$ 일 때, 이 수열의 공비를 구하시오.",
+        "answer": "2",
+        "solution": "제$4$항은 $a_4=S_4-S_3=60-28=32$ 이다. 한편 $S_3=28$ 이고 등비수열이므로 $a_4=a_1 r^{3}$ 이다. 첫째항을 $a_1$, 공비를 $r$ 이라 하면 $a_1\\dfrac{r^{3}-1}{r-1}=28$, $a_1 r^{3}=32$ 을 연립하여 풀면 $a_1=4$, $r=2$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등비수열의 첫 $3$항·첫 $4$항의 합이 주어졌을 때 공비를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$S_3=28$, $S_4=60$ 이고 모든 항이 양수이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "제$4$항 $a_4=S_4-S_3$ 이고, 등비수열에서 $a_4=a_1 r^{3}$, $S_3=a_1\\dfrac{r^{3}-1}{r-1}$ 임을 이용한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$a_4=60-28=32$ 이다. $a_1\\dfrac{r^{3}-1}{r-1}=28$, $a_1 r^{3}=32$ 을 연립하면 $a_1=4$, $r=2$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "공비는 $r=2$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 17,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "$k$ 에 대한 이차방정식 $x^{2}-2kx+5k=0$ 의 두 근을 $\\alpha_k$, $\\beta_k$ 라 할 때, $\\displaystyle\\sum_{k=1}^{6}(\\alpha_k^{2}+\\beta_k^{2})$ 의 값을 구하시오.",
+        "answer": "154",
+        "solution": "근과 계수의 관계에서 $\\alpha_k+\\beta_k=2k$, $\\alpha_k\\beta_k=5k$ 이므로 $\\alpha_k^{2}+\\beta_k^{2}=(2k)^{2}-2\\cdot 5k=4k^{2}-10k$ 이다. 따라서 $\\displaystyle\\sum_{k=1}^{6}(4k^{2}-10k)=4\\cdot\\dfrac{6\\cdot 7\\cdot 13}{6}-10\\cdot\\dfrac{6\\cdot 7}{2}=154$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "이차방정식의 두 근으로 이루어진 수열의 제곱합 시그마를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$x^{2}-2kx+5k=0$ 의 두 근이 $\\alpha_k$, $\\beta_k$ 이므로 근과 계수의 관계를 적용한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\alpha_k+\\beta_k=2k$, $\\alpha_k\\beta_k=5k$ 이고 $\\alpha_k^{2}+\\beta_k^{2}=(\\alpha_k+\\beta_k)^{2}-2\\alpha_k\\beta_k$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\alpha_k^{2}+\\beta_k^{2}=4k^{2}-10k$ 이므로 $\\displaystyle\\sum_{k=1}^{6}(4k^{2}-10k)=4\\cdot\\dfrac{6\\cdot 7\\cdot 13}{6}-10\\cdot\\dfrac{6\\cdot 7}{2}=154$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\displaystyle\\sum_{k=1}^{6}(\\alpha_k^{2}+\\beta_k^{2})=154$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 18,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=7$, $\\overline{AC}=8$, $A=120^{\\circ}$ 일 때, $\\overline{BC}^{2}$ 의 값을 구하시오.",
+        "answer": "169",
+        "solution": "코사인법칙에 의하여 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A=7^{2}+8^{2}-2\\cdot 7\\cdot 8\\cdot(-0.5)=169$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "두 변과 끼인각이 주어진 삼각형에서 나머지 한 변의 제곱 $\\overline{BC}^{2}$ 을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=7$, $\\overline{AC}=8$, $A=120^{\\circ}$ 이고 $\\cos 120^{\\circ}=-0.5$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "코사인법칙 $\\overline{BC}^{2}=\\overline{AB}^{2}+\\overline{AC}^{2}-2\\cdot\\overline{AB}\\cdot\\overline{AC}\\cos A$ 를 사용한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{BC}^{2}=7^{2}+8^{2}-2\\cdot 7\\cdot 8\\cdot(-0.5)=49+64--56=169$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\overline{BC}^{2}=169$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 19,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=8$, $\\overline{AC}=6$ 이다. 변 $AC$ 위의 점 $D$ 에 대하여 $\\angle ABD=\\angle ACB$ 일 때, 선분 $AD$ 의 길이는 $\\dfrac{q}{p}$ 이다. $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+        "answer": "35",
+        "solution": "두 삼각형 $ABD$ 와 $ACB$ 는 $\\angle A$ 가 공통이고 $\\angle ABD=\\angle ACB$ 이므로 닮음이다. 따라서 $\\overline{AB}:\\overline{AC}=\\overline{AD}:\\overline{AB}$ 에서 $\\overline{AD}=\\dfrac{\\overline{AB}^{2}}{\\overline{AC}}=\\dfrac{64}{6}=\\dfrac{32}{3}$ 이다. 따라서 $p=3$, $q=32$ 이고 $p+q=35$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "각의 조건이 주어진 두 삼각형의 닮음을 이용해 선분 $AD$ 의 길이를 구하고 $p+q$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=8$, $\\overline{AC}=6$ 이고, $D$ 는 변 $AC$ 위의 점으로 $\\angle ABD=\\angle ACB$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "삼각형 $ABD$ 와 $ACB$ 는 $\\angle A$ 가 공통이고 한 각이 같으므로 닮음이다. 대응변의 비 $\\overline{AB}:\\overline{AC}=\\overline{AD}:\\overline{AB}$ 가 성립한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{AD}=\\dfrac{\\overline{AB}^{2}}{\\overline{AC}}=\\dfrac{64}{6}=\\dfrac{32}{3}$ 이므로 $p=3$, $q=32$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=3+32=35$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$ 이 모든 자연수 $n$ 에 대하여 $\\displaystyle\\sum_{k=1}^{n}\\dfrac{1}{(4k-3)a_k}=2n^{2}+3n+5$ 를 만족시킬 때, $\\displaystyle\\sum_{k=1}^{9} a_k=\\dfrac{q}{p}$ 이다. $p+q$ 의 값을 구하시오. (단, $p$, $q$ 는 서로소인 자연수)",
+        "answer": "423",
+        "solution": "$T_n=2n^{2}+3n+5$ 라 하면 $n\\ge 2$ 에서 $\\dfrac{1}{(4n-3)a_n}=T_n-T_{n-1}=2(2n-1)+3=4n+1$ 이므로 $a_n=\\dfrac{1}{(4n-3)(4n+1)}=\\dfrac{1}{4}\\left(\\dfrac{1}{4n-3}-\\dfrac{1}{4n+1}\\right)$ 이다. 또 $n=1$ 일 때 $\\dfrac{1}{1\\cdot a_1}=T_1=10$ 이므로 $a_1=\\dfrac{1}{10}$ 이다. 따라서 $\\displaystyle\\sum_{k=1}^{9} a_k=\\dfrac{1}{10}+\\dfrac{1}{4}\\left(\\dfrac{1}{5}-\\dfrac{1}{37}\\right)=\\dfrac{53}{370}$ 이므로 $p=370$, $q=53$ 이고 $p+q=423$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "부분합 꼴 조건으로 정의된 점화식에서 일반항 $a_n$ 을 구하고 $\\displaystyle\\sum_{k=1}^{9} a_k$ 의 값으로부터 $p+q$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$T_n=\\displaystyle\\sum_{k=1}^{n}\\dfrac{1}{(4k-3)a_k}=2n^{2}+3n+5$ 이므로 $n\\ge 2$ 에서 $\\dfrac{1}{(4n-3)a_n}=T_n-T_{n-1}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$T_n-T_{n-1}=2(2n-1)+3=4n+1$ 이므로 $a_n=\\dfrac{1}{(4n-3)(4n+1)}$ 이고 부분분수 분해로 망원급수가 된다. $n=1$ 은 따로 처리한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$a_n=\\dfrac{1}{4}\\left(\\dfrac{1}{4n-3}-\\dfrac{1}{4n+1}\\right)$ $(n\\ge 2)$, $a_1=\\dfrac{1}{10}$ 이다. $\\displaystyle\\sum_{k=1}^{9} a_k=\\dfrac{1}{10}+\\dfrac{1}{4}\\left(\\dfrac{1}{5}-\\dfrac{1}{37}\\right)=\\dfrac{53}{370}$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p=370$, $q=53$ 이므로 $p+q=423$ 이다."
+          }
+        ]
+      }
+    ]
+  ]
+}

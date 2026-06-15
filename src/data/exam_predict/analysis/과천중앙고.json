@@ -1,0 +1,29 @@
+{
+  "school": "과천중앙고",
+  "region": "경기 과천시",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "total_problems": 20,
+  "analyzed_by": "claude-direct",
+  "unit_share": [
+    {"unit": "행렬", "count": 4, "percent": 20},
+    {"unit": "경우의수", "count": 3, "percent": 15},
+    {"unit": "연립방정식", "count": 2, "percent": 10},
+    {"unit": "이차부등식", "count": 2, "percent": 10},
+    {"unit": "연립부등식", "count": 2, "percent": 10},
+    {"unit": "절댓값부등식", "count": 2, "percent": 10},
+    {"unit": "고차방정식", "count": 2, "percent": 10},
+    {"unit": "순열", "count": 1, "percent": 5},
+    {"unit": "조합", "count": 1, "percent": 5},
+    {"unit": "이차방정식", "count": 1, "percent": 5}
+  ],
+  "top_units": ["행렬", "경우의수", "절댓값부등식"],
+  "objective_ratio": 80,
+  "subjective_ratio": 20,
+  "advanced_ratio": 60,
+  "difficulty_stars": 4,
+  "discrimination_stars": 4,
+  "summary": "2025 과천중앙고 1학기 기말은 행렬 비중이 가장 높다(성분 일반항, 곱셈 성질의 참·거짓, 근과 행렬 결합, 케일리-해밀턴형 역행렬). 부등식 영역(이차·연립·절댓값)이 두텁고, 특히 절댓값부등식은 이중 절댓값과 정수해 개수로 미정계수를 결정하는 변별 킬러로 출제된다. 고차방정식은 중근·인수정리·실근 조건(극값 부호), 경우의수는 같은 문자 배열·도형 색칠(사이클 채색)·조 배정 서술형으로 사고 깊이를 요구한다. 단순 계산형은 순열·조합과 기초 이차부등식 정도이며, 전체적으로 다개념 결합·조건 해석·경우 나누기가 필요한 심화 문항이 60%로 변별력이 높다. 서술형 4문항(20%)은 도형 색칠, 행렬 역행렬, 절댓값 정수해, 조 배정으로 과정 서술 비중이 크다. 체감 난이도 별 4, 변별력 별 4."
+}

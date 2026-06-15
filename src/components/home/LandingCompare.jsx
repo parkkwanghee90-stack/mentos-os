@@ -41,6 +41,9 @@ export default function LandingCompare() {
 
           <div className="hv-compare-col">
             <span className="hv-compare-label hv-compare-label--new">매쓰멘토스는 다릅니다</span>
+            <p style={{ margin: "6px 0 14px", fontSize: 14, fontWeight: 800, color: "#7c3aed", display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(124,58,237,0.08)", border: "1px solid rgba(124,58,237,0.2)", borderRadius: 999, padding: "6px 14px", alignSelf: "flex-start" }}>
+              🎓 25년차 1타강사의 수학적 사고 논리
+            </p>
             <div className="hv-compare-cards hv-compare-cards--new">
               {NEW.map(({ icon: Icon, t, d }) => (
                 <article key={t} className="hv-ccard hv-ccard--new">

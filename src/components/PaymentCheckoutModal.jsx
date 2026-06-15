@@ -18,7 +18,7 @@ const PLAN_LABELS = {
 
 // plan: early | regular | m6 | y1 | lifetime | naesin_event | naesin_regular
 // preset: 내신 등 다른 상품용 표시 오버라이드 { badge, title, subtitle, originalText, discountText, priceText, noteText }
-export default function PaymentCheckoutModal({ onClose, plan = 'regular', preset = null }) {
+export default function PaymentCheckoutModal({ onClose, plan = 'regular', preset = null, meta = null }) {
   const { user } = useAuth();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -47,7 +47,7 @@ export default function PaymentCheckoutModal({ onClose, plan = 'regular', preset
       const res = await fetch(CREATE_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userId: user.id, phone: cleanPhone, orderId, plan }),
+        body: JSON.stringify({ userId: user.id, phone: cleanPhone, orderId, plan, ...(meta || {}) }),
       });
       const data = await res.json();
       if (!res.ok || !data.payurl) throw new Error(data.error || '결제 요청에 실패했습니다.');

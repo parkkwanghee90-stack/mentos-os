@@ -1,0 +1,28 @@
+{
+  "school": "구암고",
+  "region": "부산",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "total_problems": 20,
+  "analyzed_by": "claude-direct-v3",
+  "unit_share": [
+    {"unit": "행렬", "count": 5, "percent": 25},
+    {"unit": "경우의수", "count": 4, "percent": 20},
+    {"unit": "고차방정식", "count": 3, "percent": 15},
+    {"unit": "연립방정식", "count": 2, "percent": 10},
+    {"unit": "연립부등식", "count": 2, "percent": 10},
+    {"unit": "이차부등식", "count": 1, "percent": 5},
+    {"unit": "조합", "count": 1, "percent": 5},
+    {"unit": "순열", "count": 1, "percent": 5},
+    {"unit": "절댓값부등식", "count": 1, "percent": 5}
+  ],
+  "top_units": ["행렬", "경우의수", "고차방정식"],
+  "objective_ratio": 100,
+  "subjective_ratio": 0,
+  "advanced_ratio": 70,
+  "difficulty_stars": 5,
+  "discrimination_stars": 5,
+  "summary": "부산 구암고 2025 1학기 기말은 24문항 전부 객관식(보기 5개, 100점)으로, 행렬과 경우의수가 양대 축을 이룬다. 행렬은 성분 계산·실수배부터 (A+B)^2=A^2+2AB+B^2 성립조건(AB=BA), A^2=kA+lE 관계식, AB꼴 행렬의 거듭제곱 성분합, 산책 코스 그래프를 행렬로 해석하는 실생활 융합까지 폭넓게 출제됐다. 경우의수는 순서쌍 개수, 약수 중 배수 세기, 세 학생 경로, 좌석 배치 조건, 신발 짝 고르기 등 조건 분기형이 다수다. 변별 킬러로 허근(켤레쌍)·복소수 ω 활용 고차방정식, 사차방정식 중근 조건, 연립부등식의 정수해 개수 조건, 대칭식 연립방정식이 배치돼 사고 깊이가 매우 높다. 예상문제는 이 비중(행렬 5·경우의수 4·고차방정식 3·연립방정식 2·연립부등식 2·이차/조합/순열/절댓값부등식 각 1)과 전 문항 객관식 구성을 그대로 반영하고, 심화 비중 70%로 원본 변별력 수준 이상을 유지했다. 난이도 별 5, 변별도 별 5."
+}

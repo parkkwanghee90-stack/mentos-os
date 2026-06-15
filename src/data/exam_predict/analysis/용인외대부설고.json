@@ -1,0 +1,29 @@
+{
+  "school": "용인외대부설고",
+  "region": "경기 용인시",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "total_problems": 20,
+  "analyzed_by": "claude-direct",
+  "unit_share": [
+    { "unit": "이차방정식", "count": 5, "percent": 21 },
+    { "unit": "행렬", "count": 3, "percent": 13 },
+    { "unit": "이차함수", "count": 3, "percent": 13 },
+    { "unit": "고차방정식", "count": 3, "percent": 13 },
+    { "unit": "경우의수", "count": 3, "percent": 13 },
+    { "unit": "조합", "count": 2, "percent": 8 },
+    { "unit": "여러가지방정식", "count": 2, "percent": 8 },
+    { "unit": "순열", "count": 1, "percent": 4 },
+    { "unit": "연립방정식", "count": 1, "percent": 4 },
+    { "unit": "이차부등식", "count": 1, "percent": 4 }
+  ],
+  "top_units": ["이차방정식", "행렬", "고차방정식", "이차함수", "경우의수"],
+  "objective_ratio": 75,
+  "subjective_ratio": 25,
+  "advanced_ratio": 70,
+  "difficulty_stars": 5,
+  "discrimination_stars": 5,
+  "summary": "2025 용인외대부고 1학기 기말은 총 24문항(객관식 18·서술형 6, 서술형 비율 25%)으로 구성된 외고형 고난도 시험이다. 방정식 계열(이차·고차·여러가지) 비중이 매우 높아 복소수 근의 켤레성, 1의 세제곱근 ω 성질, 삼차방정식 근과 계수 관계, 함수 합성을 통한 고차방정식 등 융합형이 다수 출제되었다. 행렬은 곱셈·거듭제곱·케일리-해밀턴형(A^2-A-2E=O) 식과 미정행렬 결정까지 다루며, 이차함수는 이동구간 최대·최소(g(t)) 서술형으로 변별력을 높였다. 경우의수는 약수의 배수 개수, 영역 색칠, 조합 항등식 등 단순 공식 적용을 넘어선 추론형이 주를 이룬다. 전반적으로 계산량과 사고 단계가 길어 난이도·변별도 모두 최상급(별 5)으로 평가된다."
+}

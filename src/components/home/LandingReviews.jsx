@@ -54,8 +54,10 @@ export default function LandingReviews() {
   return (
     <section id="reviews" className="hv-section hv-dark hv-reviews">
       <div className="hv-wrap hv-reviews-grid">
-        <h2 className="hv-h2 hv-reviews-title">학생과 학부모들의<br />실제 후기</h2>
-        <button type="button" className="hv-btn hv-btn-primary hv-review-write-btn" onClick={goWrite}>✍️ 리뷰 작성하기</button>
+        <div className="hv-reviews-side">
+          <h2 className="hv-h2 hv-reviews-title">학생과 학부모들의<br />실제 후기</h2>
+          <button type="button" className="hv-btn hv-btn-primary hv-review-write-btn" onClick={goWrite}>✍️ 리뷰 작성하기</button>
+        </div>
         <div className="hv-reviews-list">
           {all.map((r, i) => (
             <article key={i} className="hv-review">

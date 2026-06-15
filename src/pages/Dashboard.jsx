@@ -743,6 +743,7 @@ export default function Dashboard() {
             { name: '미적분', desc: '미적분 (심화)', icon: '🔥', color: '#ef4444' },
             { name: '확률과통계', desc: '확률과 통계', icon: '🎲', color: '#f59e0b' },
             { name: '모의고사', desc: '멘토스 실전 모의고사', icon: '📝', color: '#10b981' },
+            { name: '우리학교 기말 예상문제', desc: '🎯 전국 고1 기말 · 학교별 AI 예상문제', icon: '🎯', color: '#ec4899', route: '/class/exam-predict' },
           ].map(course => (
             <button
               key={course.name}

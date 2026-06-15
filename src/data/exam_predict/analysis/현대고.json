@@ -1,0 +1,27 @@
+{
+  "school": "현대고",
+  "region": "서울 강남구",
+  "year": 2025,
+  "grade": "고1",
+  "term": "1학기 기말",
+  "subject": "공통수학1",
+  "total_problems": 20,
+  "analyzed_by": "claude-direct",
+  "unit_share": [
+    { "unit": "복소수", "count": 5, "percent": 25 },
+    { "unit": "행렬", "count": 5, "percent": 25 },
+    { "unit": "이차함수", "count": 4, "percent": 20 },
+    { "unit": "고차방정식", "count": 2, "percent": 10 },
+    { "unit": "이차방정식", "count": 1, "percent": 5 },
+    { "unit": "이차부등식", "count": 1, "percent": 5 },
+    { "unit": "연립부등식", "count": 1, "percent": 5 },
+    { "unit": "연립방정식", "count": 1, "percent": 5 }
+  ],
+  "top_units": ["복소수", "행렬", "이차함수"],
+  "objective_ratio": 80,
+  "subjective_ratio": 20,
+  "advanced_ratio": 65,
+  "difficulty_stars": 5,
+  "discrimination_stars": 5,
+  "summary": "현대고 2025학년도 1학기 기말 공통수학1은 복소수·행렬·이차함수를 3대 축으로 하고 고차방정식·연립방정식·각종 부등식을 폭넓게 배치한 고난도 시험이다. 원본 기출 18문항(객관식 14·서술형 4)을 판독한 결과: 복소수(음수 제곱근의 성질, 켤레허근, z+z̄=0 같은 조건식)와 행렬(상등, 거듭제곱, xA+yB=C 표현, AB-3BA=E 같은 비가환 항등식)에서 변별력이 집중되며, 이차함수는 직선과의 교점·문자 구간에서의 최대·최소가 반복 출제된다. 서술형은 행렬 거듭제곱(A^n), 문자가 포함된 구간 최솟값(3case 분류), 삼차방정식 실근, 복소수 조건 등 단계적 사고를 요구한다. 예상문제 20문항은 이 비중(복소수 25%·행렬 25%·이차함수 20%)과 객관식 80%·서술형 20% 비율, 심화 65%의 난이도 분포를 그대로 반영해 창작하였으며 기출과 수치·설정이 겹치지 않도록 모든 문항을 새로 설계하고 직접 검산하였다."
+}

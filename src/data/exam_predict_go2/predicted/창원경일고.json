@@ -1,0 +1,2136 @@
+{
+  "school": "창원경일고",
+  "region": "경남 창원",
+  "year": 2025,
+  "grade": "고2",
+  "term": "1학기 기말",
+  "subject": "수학1",
+  "generated_by": "claude-direct-go2",
+  "generated_at": "2026-06-14",
+  "source_note": "원본 출제경향 기반 오리지널",
+  "count": 20,
+  "blueprint": {
+    "difficulty_stars": 4,
+    "subjective_ratio": 5,
+    "allocation": [
+      {
+        "unit": "삼각함수",
+        "n": 4
+      },
+      {
+        "unit": "삼각함수의 활용",
+        "n": 3
+      },
+      {
+        "unit": "등차수열과 등비수열",
+        "n": 3
+      },
+      {
+        "unit": "여러 가지 수열",
+        "n": 5
+      },
+      {
+        "unit": "수학적 귀납법",
+        "n": 2
+      },
+      {
+        "unit": "지수와 로그",
+        "n": 3
+      }
+    ]
+  },
+  "problems": [
+    {
+      "num": 1,
+      "unit": "삼각함수",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "$\\sin^2\\dfrac{7\\pi}{6}+\\cos\\dfrac{4\\pi}{3}$ 의 값은?",
+      "choices": [
+        "$-\\dfrac{1}{4}$",
+        "$-\\dfrac{1}{2}$",
+        "$-\\dfrac{3}{4}$",
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{1}{2}$"
+      ],
+      "answer": 1,
+      "solution": "$\\sin\\dfrac{7\\pi}{6}=-\\dfrac12$ 이므로 $\\sin^2\\dfrac{7\\pi}{6}=\\dfrac14$, $\\cos\\dfrac{4\\pi}{3}=-\\dfrac12$. 따라서 합은 $-\\dfrac14$."
+    },
+    {
+      "num": 2,
+      "unit": "여러 가지 수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "$\\displaystyle\\sum_{k=1}^{10}(2k-1)+\\sum_{k=1}^{10}3$ 의 값은?",
+      "choices": [
+        "$120$",
+        "$130$",
+        "$140$",
+        "$150$",
+        "$160$"
+      ],
+      "answer": 2,
+      "solution": "$\\sum_{k=1}^{10}(2k-1)=10^2=100$, $\\sum_{k=1}^{10}3=30$. 따라서 $130$."
+    },
+    {
+      "num": 3,
+      "unit": "삼각함수",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "$\\sin\\dfrac{\\pi}{3}\\cos\\dfrac{\\pi}{6}+\\tan\\dfrac{\\pi}{4}$ 의 값은?",
+      "choices": [
+        "$\\dfrac{5}{4}$",
+        "$\\dfrac{3}{2}$",
+        "$\\dfrac{7}{4}$",
+        "$2$",
+        "$\\dfrac{9}{4}$"
+      ],
+      "answer": 3,
+      "solution": "$\\dfrac{\\sqrt3}{2}\\cdot\\dfrac{\\sqrt3}{2}+1=\\dfrac34+1=\\dfrac74$."
+    },
+    {
+      "num": 4,
+      "unit": "삼각함수",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "$0<x<2\\pi$ 에서 방정식 $\\tan x=\\sqrt3$ 의 모든 해의 합은?",
+      "choices": [
+        "$\\dfrac{2\\pi}{3}$",
+        "$\\dfrac{4\\pi}{3}$",
+        "$\\dfrac{11\\pi}{6}$",
+        "$\\dfrac{5\\pi}{3}$",
+        "$2\\pi$"
+      ],
+      "answer": 4,
+      "solution": "해는 $x=\\dfrac{\\pi}{3},\\ \\dfrac{4\\pi}{3}$. 합은 $\\dfrac{5\\pi}{3}$."
+    },
+    {
+      "num": 5,
+      "unit": "삼각함수",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "함수 $y=a\\sin bx+c$ (단, $a>0,\\ b>0$) 의 최댓값이 $3$, 최솟값이 $-1$ 이고 주기가 $\\pi$ 일 때, $a+b+c$ 의 값은?",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$"
+      ],
+      "answer": 5,
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "최댓값·최솟값·주기 정보로부터 $a,\\ b,\\ c$ 를 모두 구해 $a+b+c$ 를 계산하는 것이 목표이다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "최댓값 $a+c=3$, 최솟값 $-a+c=-1$, 주기 $\\dfrac{2\\pi}{b}=\\pi$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$y=a\\sin bx+c$ 의 최댓값은 $a+c$, 최솟값은 $-a+c$, 주기는 $\\dfrac{2\\pi}{b}$ 이다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "두 식을 더하면 $2c=2$ 에서 $c=1$, 빼면 $2a=4$ 에서 $a=2$. 또 $\\dfrac{2\\pi}{b}=\\pi$ 에서 $b=2$. 따라서 $a+b+c=2+2+1=5$."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$a+b+c=5$ 이므로 보기 ⑤이다."
+        }
+      ]
+    },
+    {
+      "num": 6,
+      "unit": "지수와 로그",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "$100$ 이하의 자연수 $n$ 에 대하여 $2^n-1$ 이 $7$ 의 배수가 되는 $n$ 의 개수는?",
+      "choices": [
+        "$33$",
+        "$28$",
+        "$42$",
+        "$48$",
+        "$50$"
+      ],
+      "answer": 1,
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "$2^n-1$ 을 $7$ 로 나눈 나머지가 $0$ 이 되는 $n$ 의 규칙을 찾아 $100$ 이하의 개수를 세는 것이 목표이다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$2^n$ 을 $7$ 로 나눈 나머지를 $n=1,2,3,\\dots$ 순으로 조사하면 된다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "거듭제곱을 어떤 수로 나눈 나머지는 일정한 주기로 반복된다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$2^1,2^2,2^3$ 을 $7$ 로 나눈 나머지는 차례로 $2,4,1$ 이고 이후 같은 주기가 반복된다. 나머지가 $1$ 인 경우는 $n=3,6,9,\\dots$ 즉 $3$ 의 배수일 때이다. $100$ 이하의 $3$ 의 배수는 $33$ 개이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$33$ 개이므로 보기 ①이다."
+        }
+      ]
+    },
+    {
+      "num": 7,
+      "unit": "삼각함수의 활용",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "삼각형 $ABC$ 에서 $\\overline{AB}:\\overline{AC}=2:3$, $\\angle A=\\dfrac{\\pi}{3}$ 이고 넓이가 $6\\sqrt3$ 일 때, 변 $\\overline{BC}$ 의 길이는?",
+      "choices": [
+        "$2\\sqrt5$",
+        "$2\\sqrt7$",
+        "$2\\sqrt6$",
+        "$2\\sqrt{10}$",
+        "$6$"
+      ],
+      "answer": 2,
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "넓이 조건으로 두 변의 길이를 정한 뒤 코사인법칙으로 $\\overline{BC}$ 를 구하는 것이 목표이다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$\\overline{AB}=2t,\\ \\overline{AC}=3t$ 로 놓으면 넓이는 $\\dfrac12(2t)(3t)\\sin\\dfrac{\\pi}{3}=6\\sqrt3$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "삼각형 넓이 $S=\\dfrac12 bc\\sin A$, 코사인법칙 $a^2=b^2+c^2-2bc\\cos A$ 를 쓴다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\dfrac12(2t)(3t)\\cdot\\dfrac{\\sqrt3}{2}=\\dfrac{3\\sqrt3}{2}t^2=6\\sqrt3$ 에서 $t^2=4$, $t=2$. 따라서 $\\overline{AB}=4,\\ \\overline{AC}=6$. $\\overline{BC}^2=4^2+6^2-2\\cdot4\\cdot6\\cdot\\cos\\dfrac{\\pi}{3}=16+36-24=28$ 이므로 $\\overline{BC}=2\\sqrt7$."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$\\overline{BC}=2\\sqrt7$ 이므로 보기 ②이다."
+        }
+      ]
+    },
+    {
+      "num": 8,
+      "unit": "삼각함수의 활용",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "반지름의 길이가 $6$ 이고 중심각의 크기가 $\\dfrac{\\pi}{3}$ 인 부채꼴의 둘레의 길이는?",
+      "choices": [
+        "$12+\\pi$",
+        "$6+2\\pi$",
+        "$12+2\\pi$",
+        "$12+6\\pi$",
+        "$6+6\\pi$"
+      ],
+      "answer": 3,
+      "solution": "호의 길이 $l=r\\theta=6\\cdot\\dfrac{\\pi}{3}=2\\pi$. 둘레 $=2r+l=12+2\\pi$."
+    },
+    {
+      "num": 9,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "$\\displaystyle\\sum_{k=1}^{10}k(k+1)$ 의 값은?",
+      "choices": [
+        "$385$",
+        "$420$",
+        "$495$",
+        "$440$",
+        "$550$"
+      ],
+      "answer": 4,
+      "solution": "$\\sum_{k=1}^{10}k(k+1)=\\dfrac{10\\cdot11\\cdot12}{3}=440$."
+    },
+    {
+      "num": 10,
+      "unit": "수학적 귀납법",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "수열 $\\{a_n\\}$ 이 $a_1=3$, $a_{n+1}=2a_n+1$ 을 만족시킬 때, $a_5$ 의 값은?",
+      "choices": [
+        "$31$",
+        "$47$",
+        "$95$",
+        "$127$",
+        "$63$"
+      ],
+      "answer": 5,
+      "solution": "$a_1=3,\\ a_2=7,\\ a_3=15,\\ a_4=31,\\ a_5=63$. (일반항 $a_n=2^{\\,n+1}-1$)"
+    },
+    {
+      "num": 11,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "수열 $\\{a_n\\}$ 이 $a_1=2$, $a_{n+1}=a_n+2n$ 을 만족시킬 때, $a_{10}$ 의 값은?",
+      "choices": [
+        "$92$",
+        "$82$",
+        "$72$",
+        "$102$",
+        "$112$"
+      ],
+      "answer": 1,
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "계차가 주어진 점화식에서 일반항을 구해 $a_{10}$ 을 계산하는 것이 목표이다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$a_{n+1}-a_n=2n$ 이고 $a_1=2$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "계차수열이 $b_n=a_{n+1}-a_n$ 일 때 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}b_k\\ (n\\ge2)$."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$a_{10}=a_1+\\displaystyle\\sum_{k=1}^{9}2k=2+2\\cdot\\dfrac{9\\cdot10}{2}=2+90=92$."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$a_{10}=92$ 이므로 보기 ①이다."
+        }
+      ]
+    },
+    {
+      "num": 12,
+      "unit": "삼각함수",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "함수 $f(x)=2\\sin x+k$ 의 최댓값이 $5$ 일 때, 이 함수의 최솟값은?",
+      "choices": [
+        "$0$",
+        "$1$",
+        "$-1$",
+        "$2$",
+        "$3$"
+      ],
+      "answer": 2,
+      "solution": "$\\sin x$ 의 최댓값이 $1$ 이므로 최댓값은 $2+k=5$, 즉 $k=3$. 최솟값은 $-2+k=1$."
+    },
+    {
+      "num": 13,
+      "unit": "지수와 로그",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "$x>1$ 일 때, $\\log_2(x-1)+\\log_2(x+1)=3$ 을 만족시키는 $x$ 의 값은?",
+      "choices": [
+        "$2$",
+        "$\\sqrt7$",
+        "$2\\sqrt2$",
+        "$3$",
+        "$\\sqrt{10}$"
+      ],
+      "answer": 4,
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "로그의 합을 정리해 방정식을 풀고 진수 조건을 만족하는 $x$ 를 구하는 것이 목표이다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "진수 조건 $x-1>0,\\ x+1>0$ 에서 $x>1$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$\\log_a M+\\log_a N=\\log_a(MN)$, $\\log_a X=c \\iff X=a^c$."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\log_2\\{(x-1)(x+1)\\}=3$ 에서 $(x-1)(x+1)=2^3=8$. 즉 $x^2-1=8$, $x^2=9$, $x=\\pm3$. 진수 조건에 의해 $x=3$."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$x=3$ 이므로 보기 ④이다."
+        }
+      ]
+    },
+    {
+      "num": 14,
+      "unit": "등차수열과 등비수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "등차수열 $\\{a_n\\}$ 에서 $a_3=7$, $a_7=19$ 일 때, 첫째항부터 제$10$항까지의 합 $S_{10}$ 의 값은?",
+      "choices": [
+        "$125$",
+        "$135$",
+        "$145$",
+        "$155$",
+        "$165$"
+      ],
+      "answer": 3,
+      "solution": "공차 $d=\\dfrac{19-7}{4}=3$, 첫째항 $a_1=7-2\\cdot3=1$. $S_{10}=\\dfrac{10}{2}(2\\cdot1+9\\cdot3)=5\\cdot29=145$."
+    },
+    {
+      "num": 15,
+      "unit": "등차수열과 등비수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "등비수열 $\\{a_n\\}$ 에서 $a_2=6$, $a_5=48$ 일 때, 첫째항부터 제$6$항까지의 합은?",
+      "choices": [
+        "$129$",
+        "$159$",
+        "$219$",
+        "$249$",
+        "$189$"
+      ],
+      "answer": 5,
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "두 항의 값으로 공비와 첫째항을 구한 뒤 등비수열의 합을 계산하는 것이 목표이다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$a_2=a_1 r=6$, $a_5=a_1 r^4=48$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "등비수열의 합 $S_n=\\dfrac{a_1(r^n-1)}{r-1}\\ (r\\ne1)$."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\dfrac{a_5}{a_2}=r^3=\\dfrac{48}{6}=8$ 에서 $r=2$. $a_1=\\dfrac{6}{2}=3$. $S_6=\\dfrac{3(2^6-1)}{2-1}=3\\cdot63=189$."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$S_6=189$ 이므로 보기 ⑤이다."
+        }
+      ]
+    },
+    {
+      "num": 16,
+      "unit": "여러 가지 수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "수열 $\\{a_n\\}$ 이 $a_1=1$, $a_{n+1}-a_n=2n+1$ 을 만족시킬 때, $a_8$ 의 값은?",
+      "choices": [
+        "$64$",
+        "$49$",
+        "$36$",
+        "$81$",
+        "$100$"
+      ],
+      "answer": 1,
+      "solution": "$a_n=a_1+\\sum_{k=1}^{n-1}(2k+1)=1+(n-1)(n+1)+(n-1)\\cdots$ 정리하면 $a_n=n^2$. $a_8=64$."
+    },
+    {
+      "num": 17,
+      "unit": "수학적 귀납법",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "$\\displaystyle\\sum_{k=1}^{9}\\dfrac{1}{k(k+1)}$ 의 값은?",
+      "choices": [
+        "$\\dfrac{7}{10}$",
+        "$\\dfrac{9}{10}$",
+        "$\\dfrac{4}{5}$",
+        "$\\dfrac{9}{11}$",
+        "$1$"
+      ],
+      "answer": 2,
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "부분분수로 분해하여 망원급수로 합을 구하는 것이 목표이다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$\\dfrac{1}{k(k+1)}$ 꼴의 합을 $k=1$ 부터 $9$ 까지 구한다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 로 분해하면 중간 항이 소거된다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\displaystyle\\sum_{k=1}^{9}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{10}=\\dfrac{9}{10}$."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$\\dfrac{9}{10}$ 이므로 보기 ②이다."
+        }
+      ]
+    },
+    {
+      "num": 18,
+      "unit": "지수와 로그",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "$3^x=5$, $3^y=15$ 일 때, $3^{2x-y}$ 의 값은?",
+      "choices": [
+        "$\\dfrac{3}{5}$",
+        "$1$",
+        "$\\dfrac{25}{9}$",
+        "$\\dfrac{5}{3}$",
+        "$\\dfrac{25}{3}$"
+      ],
+      "answer": 4,
+      "solution": "$3^{2x-y}=\\dfrac{(3^x)^2}{3^y}=\\dfrac{25}{15}=\\dfrac{5}{3}$."
+    },
+    {
+      "num": 19,
+      "unit": "삼각함수의 활용",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=3$, $\\overline{AC}=5$, $\\angle A=\\dfrac{2\\pi}{3}$ 일 때, 변 $\\overline{BC}$ 의 길이는?",
+      "choices": [
+        "$5$",
+        "$6$",
+        "$7$",
+        "$2\\sqrt{13}$",
+        "$8$"
+      ],
+      "answer": 3,
+      "solution": "$\\overline{BC}^2=3^2+5^2-2\\cdot3\\cdot5\\cos\\dfrac{2\\pi}{3}=9+25-30\\cdot(-\\dfrac12)=34+15=49$. $\\overline{BC}=7$."
+    },
+    {
+      "num": 20,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "$\\displaystyle\\sum_{k=1}^{5}(2k-1)^2$ 의 값을 구하는 과정을 서술하시오.",
+      "answer": "165",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "홀수의 제곱의 합을 시그마의 기본 성질로 전개해 계산하는 것이 목표이다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$(2k-1)^2=4k^2-4k+1$ 로 전개해 $k=1$ 부터 $5$ 까지 더한다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$\\displaystyle\\sum_{k=1}^{n}k^2=\\dfrac{n(n+1)(2n+1)}{6}$, $\\displaystyle\\sum_{k=1}^{n}k=\\dfrac{n(n+1)}{2}$ 를 이용한다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\displaystyle\\sum_{k=1}^{5}(4k^2-4k+1)=4\\cdot\\dfrac{5\\cdot6\\cdot11}{6}-4\\cdot\\dfrac{5\\cdot6}{2}+5=4\\cdot55-60+5=220-60+5=165$."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "구하는 값은 $165$ 이다."
+        }
+      ]
+    }
+  ],
+  "rounds": [
+    [
+      {
+        "num": 1,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\sin^2\\dfrac{7\\pi}{6}+\\cos\\dfrac{4\\pi}{3}$ 의 값은?",
+        "choices": [
+          "$-\\dfrac{1}{4}$",
+          "$-\\dfrac{1}{2}$",
+          "$-\\dfrac{3}{4}$",
+          "$\\dfrac{1}{4}$",
+          "$\\dfrac{1}{2}$"
+        ],
+        "answer": 1,
+        "solution": "$\\sin\\dfrac{7\\pi}{6}=-\\dfrac12$ 이므로 $\\sin^2\\dfrac{7\\pi}{6}=\\dfrac14$, $\\cos\\dfrac{4\\pi}{3}=-\\dfrac12$. 따라서 합은 $-\\dfrac14$."
+      },
+      {
+        "num": 2,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{10}(2k-1)+\\sum_{k=1}^{10}3$ 의 값은?",
+        "choices": [
+          "$120$",
+          "$130$",
+          "$140$",
+          "$150$",
+          "$160$"
+        ],
+        "answer": 2,
+        "solution": "$\\sum_{k=1}^{10}(2k-1)=10^2=100$, $\\sum_{k=1}^{10}3=30$. 따라서 $130$."
+      },
+      {
+        "num": 3,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\sin\\dfrac{\\pi}{3}\\cos\\dfrac{\\pi}{6}+\\tan\\dfrac{\\pi}{4}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{5}{4}$",
+          "$\\dfrac{3}{2}$",
+          "$\\dfrac{7}{4}$",
+          "$2$",
+          "$\\dfrac{9}{4}$"
+        ],
+        "answer": 3,
+        "solution": "$\\dfrac{\\sqrt3}{2}\\cdot\\dfrac{\\sqrt3}{2}+1=\\dfrac34+1=\\dfrac74$."
+      },
+      {
+        "num": 4,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$0<x<2\\pi$ 에서 방정식 $\\tan x=\\sqrt3$ 의 모든 해의 합은?",
+        "choices": [
+          "$\\dfrac{2\\pi}{3}$",
+          "$\\dfrac{4\\pi}{3}$",
+          "$\\dfrac{11\\pi}{6}$",
+          "$\\dfrac{5\\pi}{3}$",
+          "$2\\pi$"
+        ],
+        "answer": 4,
+        "solution": "해는 $x=\\dfrac{\\pi}{3},\\ \\dfrac{4\\pi}{3}$. 합은 $\\dfrac{5\\pi}{3}$."
+      },
+      {
+        "num": 5,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "함수 $y=a\\sin bx+c$ (단, $a>0,\\ b>0$) 의 최댓값이 $3$, 최솟값이 $-1$ 이고 주기가 $\\pi$ 일 때, $a+b+c$ 의 값은?",
+        "choices": [
+          "$1$",
+          "$2$",
+          "$3$",
+          "$4$",
+          "$5$"
+        ],
+        "answer": 5,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "최댓값·최솟값·주기 정보로부터 $a,\\ b,\\ c$ 를 모두 구해 $a+b+c$ 를 계산하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "최댓값 $a+c=3$, 최솟값 $-a+c=-1$, 주기 $\\dfrac{2\\pi}{b}=\\pi$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$y=a\\sin bx+c$ 의 최댓값은 $a+c$, 최솟값은 $-a+c$, 주기는 $\\dfrac{2\\pi}{b}$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "두 식을 더하면 $2c=2$ 에서 $c=1$, 빼면 $2a=4$ 에서 $a=2$. 또 $\\dfrac{2\\pi}{b}=\\pi$ 에서 $b=2$. 따라서 $a+b+c=2+2+1=5$."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a+b+c=5$ 이므로 보기 ⑤이다."
+          }
+        ]
+      },
+      {
+        "num": 6,
+        "unit": "지수와 로그",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$100$ 이하의 자연수 $n$ 에 대하여 $2^n-1$ 이 $7$ 의 배수가 되는 $n$ 의 개수는?",
+        "choices": [
+          "$33$",
+          "$28$",
+          "$42$",
+          "$48$",
+          "$50$"
+        ],
+        "answer": 1,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "$2^n-1$ 을 $7$ 로 나눈 나머지가 $0$ 이 되는 $n$ 의 규칙을 찾아 $100$ 이하의 개수를 세는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$2^n$ 을 $7$ 로 나눈 나머지를 $n=1,2,3,\\dots$ 순으로 조사하면 된다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "거듭제곱을 어떤 수로 나눈 나머지는 일정한 주기로 반복된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$2^1,2^2,2^3$ 을 $7$ 로 나눈 나머지는 차례로 $2,4,1$ 이고 이후 같은 주기가 반복된다. 나머지가 $1$ 인 경우는 $n=3,6,9,\\dots$ 즉 $3$ 의 배수일 때이다. $100$ 이하의 $3$ 의 배수는 $33$ 개이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$33$ 개이므로 보기 ①이다."
+          }
+        ]
+      },
+      {
+        "num": 7,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}:\\overline{AC}=2:3$, $\\angle A=\\dfrac{\\pi}{3}$ 이고 넓이가 $6\\sqrt3$ 일 때, 변 $\\overline{BC}$ 의 길이는?",
+        "choices": [
+          "$2\\sqrt5$",
+          "$2\\sqrt7$",
+          "$2\\sqrt6$",
+          "$2\\sqrt{10}$",
+          "$6$"
+        ],
+        "answer": 2,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "넓이 조건으로 두 변의 길이를 정한 뒤 코사인법칙으로 $\\overline{BC}$ 를 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=2t,\\ \\overline{AC}=3t$ 로 놓으면 넓이는 $\\dfrac12(2t)(3t)\\sin\\dfrac{\\pi}{3}=6\\sqrt3$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "삼각형 넓이 $S=\\dfrac12 bc\\sin A$, 코사인법칙 $a^2=b^2+c^2-2bc\\cos A$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\dfrac12(2t)(3t)\\cdot\\dfrac{\\sqrt3}{2}=\\dfrac{3\\sqrt3}{2}t^2=6\\sqrt3$ 에서 $t^2=4$, $t=2$. 따라서 $\\overline{AB}=4,\\ \\overline{AC}=6$. $\\overline{BC}^2=4^2+6^2-2\\cdot4\\cdot6\\cdot\\cos\\dfrac{\\pi}{3}=16+36-24=28$ 이므로 $\\overline{BC}=2\\sqrt7$."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\overline{BC}=2\\sqrt7$ 이므로 보기 ②이다."
+          }
+        ]
+      },
+      {
+        "num": 8,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "반지름의 길이가 $6$ 이고 중심각의 크기가 $\\dfrac{\\pi}{3}$ 인 부채꼴의 둘레의 길이는?",
+        "choices": [
+          "$12+\\pi$",
+          "$6+2\\pi$",
+          "$12+2\\pi$",
+          "$12+6\\pi$",
+          "$6+6\\pi$"
+        ],
+        "answer": 3,
+        "solution": "호의 길이 $l=r\\theta=6\\cdot\\dfrac{\\pi}{3}=2\\pi$. 둘레 $=2r+l=12+2\\pi$."
+      },
+      {
+        "num": 9,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{10}k(k+1)$ 의 값은?",
+        "choices": [
+          "$385$",
+          "$420$",
+          "$495$",
+          "$440$",
+          "$550$"
+        ],
+        "answer": 4,
+        "solution": "$\\sum_{k=1}^{10}k(k+1)=\\dfrac{10\\cdot11\\cdot12}{3}=440$."
+      },
+      {
+        "num": 10,
+        "unit": "수학적 귀납법",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=3$, $a_{n+1}=2a_n+1$ 을 만족시킬 때, $a_5$ 의 값은?",
+        "choices": [
+          "$31$",
+          "$47$",
+          "$95$",
+          "$127$",
+          "$63$"
+        ],
+        "answer": 5,
+        "solution": "$a_1=3,\\ a_2=7,\\ a_3=15,\\ a_4=31,\\ a_5=63$. (일반항 $a_n=2^{\\,n+1}-1$)"
+      },
+      {
+        "num": 11,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=2$, $a_{n+1}=a_n+2n$ 을 만족시킬 때, $a_{10}$ 의 값은?",
+        "choices": [
+          "$92$",
+          "$82$",
+          "$72$",
+          "$102$",
+          "$112$"
+        ],
+        "answer": 1,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "계차가 주어진 점화식에서 일반항을 구해 $a_{10}$ 을 계산하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_{n+1}-a_n=2n$ 이고 $a_1=2$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "계차수열이 $b_n=a_{n+1}-a_n$ 일 때 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}b_k\\ (n\\ge2)$."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$a_{10}=a_1+\\displaystyle\\sum_{k=1}^{9}2k=2+2\\cdot\\dfrac{9\\cdot10}{2}=2+90=92$."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a_{10}=92$ 이므로 보기 ①이다."
+          }
+        ]
+      },
+      {
+        "num": 12,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "함수 $f(x)=2\\sin x+k$ 의 최댓값이 $5$ 일 때, 이 함수의 최솟값은?",
+        "choices": [
+          "$0$",
+          "$1$",
+          "$-1$",
+          "$2$",
+          "$3$"
+        ],
+        "answer": 2,
+        "solution": "$\\sin x$ 의 최댓값이 $1$ 이므로 최댓값은 $2+k=5$, 즉 $k=3$. 최솟값은 $-2+k=1$."
+      },
+      {
+        "num": 13,
+        "unit": "지수와 로그",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$x>1$ 일 때, $\\log_2(x-1)+\\log_2(x+1)=3$ 을 만족시키는 $x$ 의 값은?",
+        "choices": [
+          "$2$",
+          "$\\sqrt7$",
+          "$2\\sqrt2$",
+          "$3$",
+          "$\\sqrt{10}$"
+        ],
+        "answer": 4,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "로그의 합을 정리해 방정식을 풀고 진수 조건을 만족하는 $x$ 를 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "진수 조건 $x-1>0,\\ x+1>0$ 에서 $x>1$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\log_a M+\\log_a N=\\log_a(MN)$, $\\log_a X=c \\iff X=a^c$."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\log_2\\{(x-1)(x+1)\\}=3$ 에서 $(x-1)(x+1)=2^3=8$. 즉 $x^2-1=8$, $x^2=9$, $x=\\pm3$. 진수 조건에 의해 $x=3$."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$x=3$ 이므로 보기 ④이다."
+          }
+        ]
+      },
+      {
+        "num": 14,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "등차수열 $\\{a_n\\}$ 에서 $a_3=7$, $a_7=19$ 일 때, 첫째항부터 제$10$항까지의 합 $S_{10}$ 의 값은?",
+        "choices": [
+          "$125$",
+          "$135$",
+          "$145$",
+          "$155$",
+          "$165$"
+        ],
+        "answer": 3,
+        "solution": "공차 $d=\\dfrac{19-7}{4}=3$, 첫째항 $a_1=7-2\\cdot3=1$. $S_{10}=\\dfrac{10}{2}(2\\cdot1+9\\cdot3)=5\\cdot29=145$."
+      },
+      {
+        "num": 15,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "등비수열 $\\{a_n\\}$ 에서 $a_2=6$, $a_5=48$ 일 때, 첫째항부터 제$6$항까지의 합은?",
+        "choices": [
+          "$129$",
+          "$159$",
+          "$219$",
+          "$249$",
+          "$189$"
+        ],
+        "answer": 5,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "두 항의 값으로 공비와 첫째항을 구한 뒤 등비수열의 합을 계산하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_2=a_1 r=6$, $a_5=a_1 r^4=48$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "등비수열의 합 $S_n=\\dfrac{a_1(r^n-1)}{r-1}\\ (r\\ne1)$."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\dfrac{a_5}{a_2}=r^3=\\dfrac{48}{6}=8$ 에서 $r=2$. $a_1=\\dfrac{6}{2}=3$. $S_6=\\dfrac{3(2^6-1)}{2-1}=3\\cdot63=189$."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$S_6=189$ 이므로 보기 ⑤이다."
+          }
+        ]
+      },
+      {
+        "num": 16,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=1$, $a_{n+1}-a_n=2n+1$ 을 만족시킬 때, $a_8$ 의 값은?",
+        "choices": [
+          "$64$",
+          "$49$",
+          "$36$",
+          "$81$",
+          "$100$"
+        ],
+        "answer": 1,
+        "solution": "$a_n=a_1+\\sum_{k=1}^{n-1}(2k+1)=1+(n-1)(n+1)+(n-1)\\cdots$ 정리하면 $a_n=n^2$. $a_8=64$."
+      },
+      {
+        "num": 17,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{9}\\dfrac{1}{k(k+1)}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{7}{10}$",
+          "$\\dfrac{9}{10}$",
+          "$\\dfrac{4}{5}$",
+          "$\\dfrac{9}{11}$",
+          "$1$"
+        ],
+        "answer": 2,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "부분분수로 분해하여 망원급수로 합을 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\dfrac{1}{k(k+1)}$ 꼴의 합을 $k=1$ 부터 $9$ 까지 구한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 로 분해하면 중간 항이 소거된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{9}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{10}=\\dfrac{9}{10}$."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\dfrac{9}{10}$ 이므로 보기 ②이다."
+          }
+        ]
+      },
+      {
+        "num": 18,
+        "unit": "지수와 로그",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$3^x=5$, $3^y=15$ 일 때, $3^{2x-y}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{3}{5}$",
+          "$1$",
+          "$\\dfrac{25}{9}$",
+          "$\\dfrac{5}{3}$",
+          "$\\dfrac{25}{3}$"
+        ],
+        "answer": 4,
+        "solution": "$3^{2x-y}=\\dfrac{(3^x)^2}{3^y}=\\dfrac{25}{15}=\\dfrac{5}{3}$."
+      },
+      {
+        "num": 19,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=3$, $\\overline{AC}=5$, $\\angle A=\\dfrac{2\\pi}{3}$ 일 때, 변 $\\overline{BC}$ 의 길이는?",
+        "choices": [
+          "$5$",
+          "$6$",
+          "$7$",
+          "$2\\sqrt{13}$",
+          "$8$"
+        ],
+        "answer": 3,
+        "solution": "$\\overline{BC}^2=3^2+5^2-2\\cdot3\\cdot5\\cos\\dfrac{2\\pi}{3}=9+25-30\\cdot(-\\dfrac12)=34+15=49$. $\\overline{BC}=7$."
+      },
+      {
+        "num": 20,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "$\\displaystyle\\sum_{k=1}^{5}(2k-1)^2$ 의 값을 구하는 과정을 서술하시오.",
+        "answer": "165",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "홀수의 제곱의 합을 시그마의 기본 성질로 전개해 계산하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$(2k-1)^2=4k^2-4k+1$ 로 전개해 $k=1$ 부터 $5$ 까지 더한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\displaystyle\\sum_{k=1}^{n}k^2=\\dfrac{n(n+1)(2n+1)}{6}$, $\\displaystyle\\sum_{k=1}^{n}k=\\dfrac{n(n+1)}{2}$ 를 이용한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{5}(4k^2-4k+1)=4\\cdot\\dfrac{5\\cdot6\\cdot11}{6}-4\\cdot\\dfrac{5\\cdot6}{2}+5=4\\cdot55-60+5=220-60+5=165$."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "구하는 값은 $165$ 이다."
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "num": 1,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\sin^2\\dfrac{11\\pi}{6}+\\cos\\dfrac{2\\pi}{3}$ 의 값은?",
+        "choices": [
+          "$-\\dfrac{1}{4}$",
+          "$-\\dfrac{1}{2}$",
+          "$-\\dfrac{3}{4}$",
+          "$\\dfrac{1}{4}$",
+          "$\\dfrac{1}{2}$"
+        ],
+        "answer": 1,
+        "solution": "$\\sin\\dfrac{11\\pi}{6}=-\\dfrac12$ 이므로 $\\sin^2\\dfrac{11\\pi}{6}=\\dfrac14$, $\\cos\\dfrac{2\\pi}{3}=-\\dfrac12$. 따라서 합은 $-\\dfrac14$."
+      },
+      {
+        "num": 2,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{12}(2k-1)+\\sum_{k=1}^{12}5$ 의 값은?",
+        "choices": [
+          "$184$",
+          "$194$",
+          "$204$",
+          "$214$",
+          "$224$"
+        ],
+        "answer": 3,
+        "solution": "$\\sum_{k=1}^{12}(2k-1)=12^2=144$, $\\sum_{k=1}^{12}5=60$. 따라서 $204$."
+      },
+      {
+        "num": 3,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\sin\\dfrac{\\pi}{6}\\cos\\dfrac{\\pi}{3}+\\tan\\dfrac{\\pi}{4}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{5}{4}$",
+          "$\\dfrac{3}{2}$",
+          "$\\dfrac{7}{4}$",
+          "$2$",
+          "$\\dfrac{9}{4}$"
+        ],
+        "answer": 1,
+        "solution": "$\\dfrac12\\cdot\\dfrac12+1=\\dfrac14+1=\\dfrac54$."
+      },
+      {
+        "num": 4,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$0<x<2\\pi$ 에서 방정식 $\\tan x=-\\sqrt3$ 의 모든 해의 합은?",
+        "choices": [
+          "$\\dfrac{2\\pi}{3}$",
+          "$\\dfrac{5\\pi}{3}$",
+          "$\\dfrac{7\\pi}{3}$",
+          "$2\\pi$",
+          "$\\dfrac{8\\pi}{3}$"
+        ],
+        "answer": 3,
+        "solution": "해는 $x=\\dfrac{2\\pi}{3},\\ \\dfrac{5\\pi}{3}$. 합은 $\\dfrac{7\\pi}{3}$."
+      },
+      {
+        "num": 5,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "함수 $y=a\\sin bx+c$ (단, $a>0,\\ b>0$) 의 최댓값이 $5$, 최솟값이 $1$ 이고 주기가 $\\dfrac{2\\pi}{3}$ 일 때, $a+b+c$ 의 값은?",
+        "choices": [
+          "$5$",
+          "$6$",
+          "$7$",
+          "$8$",
+          "$9$"
+        ],
+        "answer": 4,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "최댓값·최솟값·주기 정보로부터 $a,\\ b,\\ c$ 를 모두 구해 $a+b+c$ 를 계산하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "최댓값 $a+c=5$, 최솟값 $-a+c=1$, 주기 $\\dfrac{2\\pi}{b}=\\dfrac{2\\pi}{3}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$y=a\\sin bx+c$ 의 최댓값은 $a+c$, 최솟값은 $-a+c$, 주기는 $\\dfrac{2\\pi}{b}$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "두 식을 더하면 $2c=6$ 에서 $c=3$, 빼면 $2a=4$ 에서 $a=2$. 또 $\\dfrac{2\\pi}{b}=\\dfrac{2\\pi}{3}$ 에서 $b=3$. 따라서 $a+b+c=2+3+3=8$."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a+b+c=8$ 이므로 보기 ④이다."
+          }
+        ]
+      },
+      {
+        "num": 6,
+        "unit": "지수와 로그",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$120$ 이하의 자연수 $n$ 에 대하여 $2^n-1$ 이 $7$ 의 배수가 되는 $n$ 의 개수는?",
+        "choices": [
+          "$30$",
+          "$36$",
+          "$40$",
+          "$45$",
+          "$48$"
+        ],
+        "answer": 3,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "$2^n-1$ 을 $7$ 로 나눈 나머지가 $0$ 이 되는 $n$ 의 규칙을 찾아 $120$ 이하의 개수를 세는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$2^n$ 을 $7$ 로 나눈 나머지를 $n=1,2,3,\\dots$ 순으로 조사하면 된다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "거듭제곱을 어떤 수로 나눈 나머지는 일정한 주기로 반복된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$2^1,2^2,2^3$ 을 $7$ 로 나눈 나머지는 차례로 $2,4,1$ 이고 이후 같은 주기가 반복된다. 나머지가 $1$ 인 경우는 $n=3,6,9,\\dots$ 즉 $3$ 의 배수일 때이다. $120$ 이하의 $3$ 의 배수는 $40$ 개이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$40$ 개이므로 보기 ③이다."
+          }
+        ]
+      },
+      {
+        "num": 7,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}:\\overline{AC}=3:4$, $\\angle A=\\dfrac{\\pi}{3}$ 이고 넓이가 $12\\sqrt3$ 일 때, 변 $\\overline{BC}$ 의 길이는?",
+        "choices": [
+          "$2\\sqrt{11}$",
+          "$2\\sqrt{13}$",
+          "$2\\sqrt{15}$",
+          "$4\\sqrt3$",
+          "$2\\sqrt{17}$"
+        ],
+        "answer": 2,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "넓이 조건으로 두 변의 길이를 정한 뒤 코사인법칙으로 $\\overline{BC}$ 를 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=3t,\\ \\overline{AC}=4t$ 로 놓으면 넓이는 $\\dfrac12(3t)(4t)\\sin\\dfrac{\\pi}{3}=12\\sqrt3$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "삼각형 넓이 $S=\\dfrac12 bc\\sin A$, 코사인법칙 $a^2=b^2+c^2-2bc\\cos A$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\dfrac12(3t)(4t)\\cdot\\dfrac{\\sqrt3}{2}=3\\sqrt3\\,t^2=12\\sqrt3$ 에서 $t^2=4$, $t=2$. 따라서 $\\overline{AB}=6,\\ \\overline{AC}=8$. $\\overline{BC}^2=6^2+8^2-2\\cdot6\\cdot8\\cdot\\cos\\dfrac{\\pi}{3}=36+64-48=52$ 이므로 $\\overline{BC}=2\\sqrt{13}$."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\overline{BC}=2\\sqrt{13}$ 이므로 보기 ②이다."
+          }
+        ]
+      },
+      {
+        "num": 8,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "반지름의 길이가 $4$ 이고 중심각의 크기가 $\\dfrac{\\pi}{2}$ 인 부채꼴의 둘레의 길이는?",
+        "choices": [
+          "$8+\\pi$",
+          "$8+2\\pi$",
+          "$4+2\\pi$",
+          "$8+4\\pi$",
+          "$4+4\\pi$"
+        ],
+        "answer": 2,
+        "solution": "호의 길이 $l=r\\theta=4\\cdot\\dfrac{\\pi}{2}=2\\pi$. 둘레 $=2r+l=8+2\\pi$."
+      },
+      {
+        "num": 9,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{8}k(k+1)$ 의 값은?",
+        "choices": [
+          "$204$",
+          "$240$",
+          "$285$",
+          "$330$",
+          "$372$"
+        ],
+        "answer": 2,
+        "solution": "$\\sum_{k=1}^{8}k(k+1)=\\dfrac{8\\cdot9\\cdot10}{3}=240$."
+      },
+      {
+        "num": 10,
+        "unit": "수학적 귀납법",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=2$, $a_{n+1}=2a_n+1$ 을 만족시킬 때, $a_5$ 의 값은?",
+        "choices": [
+          "$23$",
+          "$47$",
+          "$95$",
+          "$31$",
+          "$63$"
+        ],
+        "answer": 2,
+        "solution": "$a_1=2,\\ a_2=5,\\ a_3=11,\\ a_4=23,\\ a_5=47$. (일반항 $a_n=3\\cdot2^{\\,n-1}-1$)"
+      },
+      {
+        "num": 11,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=3$, $a_{n+1}=a_n+2n$ 을 만족시킬 때, $a_{10}$ 의 값은?",
+        "choices": [
+          "$83$",
+          "$93$",
+          "$103$",
+          "$73$",
+          "$113$"
+        ],
+        "answer": 2,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "계차가 주어진 점화식에서 일반항을 구해 $a_{10}$ 을 계산하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_{n+1}-a_n=2n$ 이고 $a_1=3$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "계차수열이 $b_n=a_{n+1}-a_n$ 일 때 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}b_k\\ (n\\ge2)$."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$a_{10}=a_1+\\displaystyle\\sum_{k=1}^{9}2k=3+2\\cdot\\dfrac{9\\cdot10}{2}=3+90=93$."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a_{10}=93$ 이므로 보기 ②이다."
+          }
+        ]
+      },
+      {
+        "num": 12,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "함수 $f(x)=3\\sin x+k$ 의 최댓값이 $7$ 일 때, 이 함수의 최솟값은?",
+        "choices": [
+          "$0$",
+          "$1$",
+          "$-1$",
+          "$2$",
+          "$3$"
+        ],
+        "answer": 2,
+        "solution": "$\\sin x$ 의 최댓값이 $1$ 이므로 최댓값은 $3+k=7$, 즉 $k=4$. 최솟값은 $-3+k=1$."
+      },
+      {
+        "num": 13,
+        "unit": "지수와 로그",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$x>1$ 일 때, $\\log_3(x-1)+\\log_3(x+1)=1$ 을 만족시키는 $x$ 의 값은?",
+        "choices": [
+          "$2$",
+          "$\\sqrt5$",
+          "$2\\sqrt2$",
+          "$3$",
+          "$\\sqrt{10}$"
+        ],
+        "answer": 1,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "로그의 합을 정리해 방정식을 풀고 진수 조건을 만족하는 $x$ 를 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "진수 조건 $x-1>0,\\ x+1>0$ 에서 $x>1$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\log_a M+\\log_a N=\\log_a(MN)$, $\\log_a X=c \\iff X=a^c$."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\log_3\\{(x-1)(x+1)\\}=1$ 에서 $(x-1)(x+1)=3^1=3$. 즉 $x^2-1=3$, $x^2=4$, $x=\\pm2$. 진수 조건에 의해 $x=2$."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$x=2$ 이므로 보기 ①이다."
+          }
+        ]
+      },
+      {
+        "num": 14,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "등차수열 $\\{a_n\\}$ 에서 $a_3=8$, $a_7=20$ 일 때, 첫째항부터 제$10$항까지의 합 $S_{10}$ 의 값은?",
+        "choices": [
+          "$135$",
+          "$145$",
+          "$155$",
+          "$165$",
+          "$175$"
+        ],
+        "answer": 3,
+        "solution": "공차 $d=\\dfrac{20-8}{4}=3$, 첫째항 $a_1=8-2\\cdot3=2$. $S_{10}=\\dfrac{10}{2}(2\\cdot2+9\\cdot3)=5\\cdot31=155$."
+      },
+      {
+        "num": 15,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "등비수열 $\\{a_n\\}$ 에서 $a_2=4$, $a_5=32$ 일 때, 첫째항부터 제$6$항까지의 합은?",
+        "choices": [
+          "$96$",
+          "$108$",
+          "$120$",
+          "$126$",
+          "$132$"
+        ],
+        "answer": 4,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "두 항의 값으로 공비와 첫째항을 구한 뒤 등비수열의 합을 계산하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_2=a_1 r=4$, $a_5=a_1 r^4=32$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "등비수열의 합 $S_n=\\dfrac{a_1(r^n-1)}{r-1}\\ (r\\ne1)$."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\dfrac{a_5}{a_2}=r^3=\\dfrac{32}{4}=8$ 에서 $r=2$. $a_1=\\dfrac{4}{2}=2$. $S_6=\\dfrac{2(2^6-1)}{2-1}=2\\cdot63=126$."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$S_6=126$ 이므로 보기 ④이다."
+          }
+        ]
+      },
+      {
+        "num": 16,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=2$, $a_{n+1}-a_n=2n+1$ 을 만족시킬 때, $a_7$ 의 값은?",
+        "choices": [
+          "$50$",
+          "$49$",
+          "$37$",
+          "$48$",
+          "$51$"
+        ],
+        "answer": 1,
+        "solution": "$a_n=a_1+\\sum_{k=1}^{n-1}(2k+1)=2+(n^2-1)=n^2+1$. $a_7=49+1=50$."
+      },
+      {
+        "num": 17,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{7}\\dfrac{1}{k(k+1)}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{5}{8}$",
+          "$\\dfrac{7}{8}$",
+          "$\\dfrac{3}{4}$",
+          "$\\dfrac{7}{9}$",
+          "$1$"
+        ],
+        "answer": 2,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "부분분수로 분해하여 망원급수로 합을 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\dfrac{1}{k(k+1)}$ 꼴의 합을 $k=1$ 부터 $7$ 까지 구한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 로 분해하면 중간 항이 소거된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{7}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{8}=\\dfrac{7}{8}$."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\dfrac{7}{8}$ 이므로 보기 ②이다."
+          }
+        ]
+      },
+      {
+        "num": 18,
+        "unit": "지수와 로그",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$3^x=4$, $3^y=8$ 일 때, $3^{2x-y}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{1}{2}$",
+          "$1$",
+          "$\\dfrac{16}{9}$",
+          "$2$",
+          "$\\dfrac{16}{3}$"
+        ],
+        "answer": 4,
+        "solution": "$3^{2x-y}=\\dfrac{(3^x)^2}{3^y}=\\dfrac{16}{8}=2$."
+      },
+      {
+        "num": 19,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=7$, $\\overline{AC}=8$, $\\angle A=\\dfrac{2\\pi}{3}$ 일 때, 변 $\\overline{BC}$ 의 길이는?",
+        "choices": [
+          "$11$",
+          "$12$",
+          "$13$",
+          "$2\\sqrt{37}$",
+          "$14$"
+        ],
+        "answer": 3,
+        "solution": "$\\overline{BC}^2=7^2+8^2-2\\cdot7\\cdot8\\cos\\dfrac{2\\pi}{3}=49+64-112\\cdot(-\\dfrac12)=113+56=169$. $\\overline{BC}=13$."
+      },
+      {
+        "num": 20,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "$\\displaystyle\\sum_{k=1}^{6}(2k-1)^2$ 의 값을 구하는 과정을 서술하시오.",
+        "answer": "286",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "홀수의 제곱의 합을 시그마의 기본 성질로 전개해 계산하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$(2k-1)^2=4k^2-4k+1$ 로 전개해 $k=1$ 부터 $6$ 까지 더한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\displaystyle\\sum_{k=1}^{n}k^2=\\dfrac{n(n+1)(2n+1)}{6}$, $\\displaystyle\\sum_{k=1}^{n}k=\\dfrac{n(n+1)}{2}$ 를 이용한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{6}(4k^2-4k+1)=4\\cdot\\dfrac{6\\cdot7\\cdot13}{6}-4\\cdot\\dfrac{6\\cdot7}{2}+6=4\\cdot91-84+6=364-84+6=286$."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "구하는 값은 $286$ 이다."
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "num": 1,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\sin^2\\dfrac{5\\pi}{6}+\\cos\\dfrac{5\\pi}{3}$ 의 값은?",
+        "choices": [
+          "$-\\dfrac{1}{4}$",
+          "$\\dfrac{1}{4}$",
+          "$\\dfrac{1}{2}$",
+          "$\\dfrac{3}{4}$",
+          "$1$"
+        ],
+        "answer": 4,
+        "solution": "$\\sin\\dfrac{5\\pi}{6}=\\dfrac12$ 이므로 $\\sin^2\\dfrac{5\\pi}{6}=\\dfrac14$, $\\cos\\dfrac{5\\pi}{3}=\\dfrac12$. 따라서 합은 $\\dfrac34$."
+      },
+      {
+        "num": 2,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{8}(2k-1)+\\sum_{k=1}^{8}4$ 의 값은?",
+        "choices": [
+          "$76$",
+          "$86$",
+          "$96$",
+          "$106$",
+          "$116$"
+        ],
+        "answer": 3,
+        "solution": "$\\sum_{k=1}^{8}(2k-1)=8^2=64$, $\\sum_{k=1}^{8}4=32$. 따라서 $96$."
+      },
+      {
+        "num": 3,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\sin\\dfrac{\\pi}{4}\\cos\\dfrac{\\pi}{4}+\\tan\\dfrac{\\pi}{4}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{5}{4}$",
+          "$\\dfrac{3}{2}$",
+          "$\\dfrac{7}{4}$",
+          "$2$",
+          "$\\dfrac{9}{4}$"
+        ],
+        "answer": 2,
+        "solution": "$\\dfrac{\\sqrt2}{2}\\cdot\\dfrac{\\sqrt2}{2}+1=\\dfrac12+1=\\dfrac32$."
+      },
+      {
+        "num": 4,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$0<x<2\\pi$ 에서 방정식 $\\tan x=\\dfrac{1}{\\sqrt3}$ 의 모든 해의 합은?",
+        "choices": [
+          "$\\dfrac{2\\pi}{3}$",
+          "$\\dfrac{4\\pi}{3}$",
+          "$\\dfrac{7\\pi}{6}$",
+          "$\\dfrac{5\\pi}{3}$",
+          "$2\\pi$"
+        ],
+        "answer": 2,
+        "solution": "해는 $x=\\dfrac{\\pi}{6},\\ \\dfrac{7\\pi}{6}$. 합은 $\\dfrac{8\\pi}{6}=\\dfrac{4\\pi}{3}$."
+      },
+      {
+        "num": 5,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "함수 $y=a\\sin bx+c$ (단, $a>0,\\ b>0$) 의 최댓값이 $4$, 최솟값이 $-2$ 이고 주기가 $\\dfrac{\\pi}{2}$ 일 때, $a+b+c$ 의 값은?",
+        "choices": [
+          "$6$",
+          "$7$",
+          "$8$",
+          "$9$",
+          "$10$"
+        ],
+        "answer": 3,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "최댓값·최솟값·주기 정보로부터 $a,\\ b,\\ c$ 를 모두 구해 $a+b+c$ 를 계산하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "최댓값 $a+c=4$, 최솟값 $-a+c=-2$, 주기 $\\dfrac{2\\pi}{b}=\\dfrac{\\pi}{2}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$y=a\\sin bx+c$ 의 최댓값은 $a+c$, 최솟값은 $-a+c$, 주기는 $\\dfrac{2\\pi}{b}$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "두 식을 더하면 $2c=2$ 에서 $c=1$, 빼면 $2a=6$ 에서 $a=3$. 또 $\\dfrac{2\\pi}{b}=\\dfrac{\\pi}{2}$ 에서 $b=4$. 따라서 $a+b+c=3+4+1=8$."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a+b+c=8$ 이므로 보기 ③이다."
+          }
+        ]
+      },
+      {
+        "num": 6,
+        "unit": "지수와 로그",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$90$ 이하의 자연수 $n$ 에 대하여 $2^n-1$ 이 $7$ 의 배수가 되는 $n$ 의 개수는?",
+        "choices": [
+          "$30$",
+          "$28$",
+          "$36$",
+          "$42$",
+          "$45$"
+        ],
+        "answer": 1,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "$2^n-1$ 을 $7$ 로 나눈 나머지가 $0$ 이 되는 $n$ 의 규칙을 찾아 $90$ 이하의 개수를 세는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$2^n$ 을 $7$ 로 나눈 나머지를 $n=1,2,3,\\dots$ 순으로 조사하면 된다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "거듭제곱을 어떤 수로 나눈 나머지는 일정한 주기로 반복된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$2^1,2^2,2^3$ 을 $7$ 로 나눈 나머지는 차례로 $2,4,1$ 이고 이후 같은 주기가 반복된다. 나머지가 $1$ 인 경우는 $n=3,6,9,\\dots$ 즉 $3$ 의 배수일 때이다. $90$ 이하의 $3$ 의 배수는 $30$ 개이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$30$ 개이므로 보기 ①이다."
+          }
+        ]
+      },
+      {
+        "num": 7,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}:\\overline{AC}=1:2$, $\\angle A=\\dfrac{\\pi}{3}$ 이고 넓이가 $2\\sqrt3$ 일 때, 변 $\\overline{BC}$ 의 길이는?",
+        "choices": [
+          "$\\sqrt3$",
+          "$2\\sqrt3$",
+          "$2\\sqrt2$",
+          "$\\sqrt7$",
+          "$2\\sqrt5$"
+        ],
+        "answer": 2,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "넓이 조건으로 두 변의 길이를 정한 뒤 코사인법칙으로 $\\overline{BC}$ 를 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{AB}=t,\\ \\overline{AC}=2t$ 로 놓으면 넓이는 $\\dfrac12(t)(2t)\\sin\\dfrac{\\pi}{3}=2\\sqrt3$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "삼각형 넓이 $S=\\dfrac12 bc\\sin A$, 코사인법칙 $a^2=b^2+c^2-2bc\\cos A$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\dfrac12(t)(2t)\\cdot\\dfrac{\\sqrt3}{2}=\\dfrac{\\sqrt3}{2}t^2=2\\sqrt3$ 에서 $t^2=4$, $t=2$. 따라서 $\\overline{AB}=2,\\ \\overline{AC}=4$. $\\overline{BC}^2=2^2+4^2-2\\cdot2\\cdot4\\cdot\\cos\\dfrac{\\pi}{3}=4+16-8=12$ 이므로 $\\overline{BC}=2\\sqrt3$."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\overline{BC}=2\\sqrt3$ 이므로 보기 ②이다."
+          }
+        ]
+      },
+      {
+        "num": 8,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "반지름의 길이가 $9$ 이고 중심각의 크기가 $\\dfrac{\\pi}{3}$ 인 부채꼴의 둘레의 길이는?",
+        "choices": [
+          "$18+\\pi$",
+          "$9+3\\pi$",
+          "$18+2\\pi$",
+          "$18+3\\pi$",
+          "$9+9\\pi$"
+        ],
+        "answer": 4,
+        "solution": "호의 길이 $l=r\\theta=9\\cdot\\dfrac{\\pi}{3}=3\\pi$. 둘레 $=2r+l=18+3\\pi$."
+      },
+      {
+        "num": 9,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{12}k(k+1)$ 의 값은?",
+        "choices": [
+          "$650$",
+          "$728$",
+          "$680$",
+          "$770$",
+          "$816$"
+        ],
+        "answer": 2,
+        "solution": "$\\sum_{k=1}^{12}k(k+1)=\\dfrac{12\\cdot13\\cdot14}{3}=728$."
+      },
+      {
+        "num": 10,
+        "unit": "수학적 귀납법",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=1$, $a_{n+1}=2a_n+1$ 을 만족시킬 때, $a_5$ 의 값은?",
+        "choices": [
+          "$15$",
+          "$47$",
+          "$95$",
+          "$127$",
+          "$31$"
+        ],
+        "answer": 5,
+        "solution": "$a_1=1,\\ a_2=3,\\ a_3=7,\\ a_4=15,\\ a_5=31$. (일반항 $a_n=2^{\\,n}-1$)"
+      },
+      {
+        "num": 11,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=1$, $a_{n+1}=a_n+2n$ 을 만족시킬 때, $a_{12}$ 의 값은?",
+        "choices": [
+          "$123$",
+          "$133$",
+          "$143$",
+          "$113$",
+          "$153$"
+        ],
+        "answer": 2,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "계차가 주어진 점화식에서 일반항을 구해 $a_{12}$ 를 계산하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_{n+1}-a_n=2n$ 이고 $a_1=1$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "계차수열이 $b_n=a_{n+1}-a_n$ 일 때 $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}b_k\\ (n\\ge2)$."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$a_{12}=a_1+\\displaystyle\\sum_{k=1}^{11}2k=1+2\\cdot\\dfrac{11\\cdot12}{2}=1+132=133$."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a_{12}=133$ 이므로 보기 ②이다."
+          }
+        ]
+      },
+      {
+        "num": 12,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "함수 $f(x)=4\\sin x+k$ 의 최댓값이 $6$ 일 때, 이 함수의 최솟값은?",
+        "choices": [
+          "$0$",
+          "$-1$",
+          "$-2$",
+          "$2$",
+          "$-3$"
+        ],
+        "answer": 3,
+        "solution": "$\\sin x$ 의 최댓값이 $1$ 이므로 최댓값은 $4+k=6$, 즉 $k=2$. 최솟값은 $-4+k=-2$."
+      },
+      {
+        "num": 13,
+        "unit": "지수와 로그",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$x>1$ 일 때, $\\log_3(x-1)+\\log_3(x+1)=2$ 를 만족시키는 $x$ 의 값은?",
+        "choices": [
+          "$2$",
+          "$\\sqrt7$",
+          "$2\\sqrt2$",
+          "$3$",
+          "$\\sqrt{10}$"
+        ],
+        "answer": 5,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "로그의 합을 정리해 방정식을 풀고 진수 조건을 만족하는 $x$ 를 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "진수 조건 $x-1>0,\\ x+1>0$ 에서 $x>1$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\log_a M+\\log_a N=\\log_a(MN)$, $\\log_a X=c \\iff X=a^c$."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\log_3\\{(x-1)(x+1)\\}=2$ 에서 $(x-1)(x+1)=3^2=9$. 즉 $x^2-1=9$, $x^2=10$, $x=\\pm\\sqrt{10}$. 진수 조건에 의해 $x=\\sqrt{10}$."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$x=\\sqrt{10}$ 이므로 보기 ⑤이다."
+          }
+        ]
+      },
+      {
+        "num": 14,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "등차수열 $\\{a_n\\}$ 에서 $a_3=5$, $a_7=17$ 일 때, 첫째항부터 제$10$항까지의 합 $S_{10}$ 의 값은?",
+        "choices": [
+          "$105$",
+          "$115$",
+          "$125$",
+          "$135$",
+          "$145$"
+        ],
+        "answer": 3,
+        "solution": "공차 $d=\\dfrac{17-5}{4}=3$, 첫째항 $a_1=5-2\\cdot3=-1$. $S_{10}=\\dfrac{10}{2}(2\\cdot(-1)+9\\cdot3)=5\\cdot25=125$."
+      },
+      {
+        "num": 15,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "등비수열 $\\{a_n\\}$ 에서 $a_2=6$, $a_5=162$ 일 때, 첫째항부터 제$6$항까지의 합은?",
+        "choices": [
+          "$628$",
+          "$668$",
+          "$728$",
+          "$748$",
+          "$788$"
+        ],
+        "answer": 3,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "두 항의 값으로 공비와 첫째항을 구한 뒤 등비수열의 합을 계산하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_2=a_1 r=6$, $a_5=a_1 r^4=162$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "등비수열의 합 $S_n=\\dfrac{a_1(r^n-1)}{r-1}\\ (r\\ne1)$."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\dfrac{a_5}{a_2}=r^3=\\dfrac{162}{6}=27$ 에서 $r=3$. $a_1=\\dfrac{6}{3}=2$. $S_6=\\dfrac{2(3^6-1)}{3-1}=\\dfrac{2\\cdot728}{2}=728$."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$S_6=728$ 이므로 보기 ③이다."
+          }
+        ]
+      },
+      {
+        "num": 16,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=1$, $a_{n+1}-a_n=2n+1$ 을 만족시킬 때, $a_9$ 의 값은?",
+        "choices": [
+          "$81$",
+          "$64$",
+          "$100$",
+          "$49$",
+          "$121$"
+        ],
+        "answer": 1,
+        "solution": "$a_n=a_1+\\sum_{k=1}^{n-1}(2k+1)=1+(n^2-1)=n^2$. $a_9=81$."
+      },
+      {
+        "num": 17,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{11}\\dfrac{1}{k(k+1)}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{9}{11}$",
+          "$\\dfrac{10}{11}$",
+          "$\\dfrac{11}{12}$",
+          "$\\dfrac{5}{6}$",
+          "$1$"
+        ],
+        "answer": 3,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "부분분수로 분해하여 망원급수로 합을 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\dfrac{1}{k(k+1)}$ 꼴의 합을 $k=1$ 부터 $11$ 까지 구한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{1}{k(k+1)}=\\dfrac{1}{k}-\\dfrac{1}{k+1}$ 로 분해하면 중간 항이 소거된다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{11}\\left(\\dfrac{1}{k}-\\dfrac{1}{k+1}\\right)=1-\\dfrac{1}{12}=\\dfrac{11}{12}$."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\dfrac{11}{12}$ 이므로 보기 ③이다."
+          }
+        ]
+      },
+      {
+        "num": 18,
+        "unit": "지수와 로그",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$2^x=3$, $2^y=12$ 일 때, $2^{2x-y}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{1}{2}$",
+          "$\\dfrac{3}{4}$",
+          "$1$",
+          "$\\dfrac{4}{3}$",
+          "$\\dfrac{9}{4}$"
+        ],
+        "answer": 2,
+        "solution": "$2^{2x-y}=\\dfrac{(2^x)^2}{2^y}=\\dfrac{9}{12}=\\dfrac{3}{4}$."
+      },
+      {
+        "num": 19,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=5$, $\\overline{AC}=8$, $\\angle A=\\dfrac{\\pi}{3}$ 일 때, 변 $\\overline{BC}$ 의 길이는?",
+        "choices": [
+          "$5$",
+          "$6$",
+          "$7$",
+          "$2\\sqrt{13}$",
+          "$8$"
+        ],
+        "answer": 3,
+        "solution": "$\\overline{BC}^2=5^2+8^2-2\\cdot5\\cdot8\\cos\\dfrac{\\pi}{3}=25+64-80\\cdot\\dfrac12=89-40=49$. $\\overline{BC}=7$."
+      },
+      {
+        "num": 20,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "$\\displaystyle\\sum_{k=1}^{4}(2k-1)^2$ 의 값을 구하는 과정을 서술하시오.",
+        "answer": "84",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "홀수의 제곱의 합을 시그마의 기본 성질로 전개해 계산하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$(2k-1)^2=4k^2-4k+1$ 로 전개해 $k=1$ 부터 $4$ 까지 더한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\displaystyle\\sum_{k=1}^{n}k^2=\\dfrac{n(n+1)(2n+1)}{6}$, $\\displaystyle\\sum_{k=1}^{n}k=\\dfrac{n(n+1)}{2}$ 를 이용한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{4}(4k^2-4k+1)=4\\cdot\\dfrac{4\\cdot5\\cdot9}{6}-4\\cdot\\dfrac{4\\cdot5}{2}+4=4\\cdot30-40+4=120-40+4=84$."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "구하는 값은 $84$ 이다."
+          }
+        ]
+      }
+    ]
+  ]
+}

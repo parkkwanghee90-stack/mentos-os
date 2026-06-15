@@ -1,0 +1,1952 @@
+{
+  "school": "창원경일여고",
+  "region": "경상남도 창원시",
+  "year": 2025,
+  "grade": "고2",
+  "term": "1학기 기말",
+  "subject": "수학1",
+  "generated_by": "claude-direct-go2",
+  "generated_at": "2026-06-14",
+  "source_note": "원본 출제경향 기반 오리지널",
+  "count": 20,
+  "blueprint": {
+    "difficulty_stars": 4,
+    "subjective_ratio": 20,
+    "allocation": [
+      {
+        "unit": "삼각함수",
+        "n": 5
+      },
+      {
+        "unit": "등차수열과 등비수열",
+        "n": 4
+      },
+      {
+        "unit": "여러 가지 수열",
+        "n": 4
+      },
+      {
+        "unit": "삼각함수의 활용",
+        "n": 2
+      },
+      {
+        "unit": "수학적 귀납법",
+        "n": 2
+      },
+      {
+        "unit": "지수와 로그",
+        "n": 2
+      },
+      {
+        "unit": "지수함수와 로그함수",
+        "n": 1
+      }
+    ]
+  },
+  "problems": [
+    {
+      "num": 1,
+      "unit": "삼각함수",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "$\\sin\\left(-\\dfrac{\\pi}{4}\\right)$ 의 값은?",
+      "choices": [
+        "$\\dfrac{1}{2}$",
+        "$-\\dfrac{1}{2}$",
+        "$-\\dfrac{\\sqrt{2}}{2}$",
+        "$\\dfrac{\\sqrt{2}}{2}$",
+        "$\\dfrac{\\sqrt{3}}{2}$"
+      ],
+      "answer": 3,
+      "solution": "$\\sin\\left(-\\dfrac{\\pi}{4}\\right)=-\\sin\\dfrac{\\pi}{4}=-\\dfrac{\\sqrt{2}}{2}$ 이다."
+    },
+    {
+      "num": 2,
+      "unit": "등차수열과 등비수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "등차수열 $-7,\\ -3,\\ \\square,\\ 5,\\ 9,\\ \\cdots$ 에서 $\\square$ 에 알맞은 수는?",
+      "choices": [
+        "$1$",
+        "$0$",
+        "$2$",
+        "$-1$",
+        "$3$"
+      ],
+      "answer": 1,
+      "solution": "공차 $d=-3-(-7)=4$ 이므로 $\\square=-3+4=1$ 이다."
+    },
+    {
+      "num": 3,
+      "unit": "등차수열과 등비수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "등비수열 $\\{a_n\\}$ 에서 $a_2=4,\\ a_5=32$ 일 때, 공비는?",
+      "choices": [
+        "$\\dfrac{1}{2}$",
+        "$\\sqrt{2}$",
+        "$3$",
+        "$4$",
+        "$2$"
+      ],
+      "answer": 5,
+      "solution": "$\\dfrac{a_5}{a_2}=r^{3}=\\dfrac{32}{4}=8$ 이므로 $r=2$ 이다."
+    },
+    {
+      "num": 4,
+      "unit": "여러 가지 수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "$\\displaystyle\\sum_{k=1}^{20}a_k=12,\\ \\sum_{k=1}^{20}b_k=8$ 일 때, $\\displaystyle\\sum_{k=1}^{20}\\left(3a_k-2b_k+2\\right)$ 의 값은?",
+      "choices": [
+        "$52$",
+        "$60$",
+        "$56$",
+        "$48$",
+        "$64$"
+      ],
+      "answer": 2,
+      "solution": "$3\\cdot12-2\\cdot8+2\\cdot20=36-16+40=60$ 이다."
+    },
+    {
+      "num": 5,
+      "unit": "여러 가지 수열",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "$\\dfrac{1}{1\\cdot 3}+\\dfrac{1}{3\\cdot 5}+\\dfrac{1}{5\\cdot 7}+\\cdots+\\dfrac{1}{99\\cdot 101}$ 의 값은?",
+      "choices": [
+        "$\\dfrac{49}{101}$",
+        "$\\dfrac{50}{99}$",
+        "$\\dfrac{49}{99}$",
+        "$\\dfrac{50}{101}$",
+        "$\\dfrac{51}{101}$"
+      ],
+      "answer": 4,
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "부분분수로 분해해 망원합(telescoping)으로 정리하는 것이 목표이다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "일반항은 $\\dfrac{1}{(2k-1)(2k+1)}$ ($k=1,2,\\cdots,50$) 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$\\dfrac{1}{(2k-1)(2k+1)}=\\dfrac{1}{2}\\left(\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}\\right)$ 로 분해한다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\displaystyle\\sum_{k=1}^{50}\\dfrac{1}{2}\\left(\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}\\right)=\\dfrac{1}{2}\\left(1-\\dfrac{1}{101}\\right)=\\dfrac{1}{2}\\cdot\\dfrac{100}{101}$"
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "값은 $\\dfrac{50}{101}$ 이므로 보기 ④이다."
+        }
+      ]
+    },
+    {
+      "num": 6,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "수열 $\\{a_n\\}$ 의 일반항이 $a_n=2n-1$ 일 때, $\\displaystyle\\sum_{k=1}^{40}\\dfrac{1}{\\sqrt{a_k}+\\sqrt{a_{k+1}}}$ 의 값은?",
+      "choices": [
+        "$4$",
+        "$\\dfrac{9}{2}$",
+        "$5$",
+        "$\\dfrac{7}{2}$",
+        "$3$"
+      ],
+      "answer": 1,
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "분모를 유리화해 망원합으로 정리하는 것이 목표이다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$a_k=2k-1,\\ a_{k+1}=2k+1$ 이고 $a_{k+1}-a_k=2$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$\\dfrac{1}{\\sqrt{a_k}+\\sqrt{a_{k+1}}}=\\dfrac{\\sqrt{a_{k+1}}-\\sqrt{a_k}}{a_{k+1}-a_k}=\\dfrac{\\sqrt{2k+1}-\\sqrt{2k-1}}{2}$"
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\displaystyle\\sum_{k=1}^{40}\\dfrac{\\sqrt{2k+1}-\\sqrt{2k-1}}{2}=\\dfrac{\\sqrt{81}-\\sqrt{1}}{2}=\\dfrac{9-1}{2}$"
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "값은 $4$ 이므로 보기 ①이다."
+        }
+      ]
+    },
+    {
+      "num": 7,
+      "unit": "등차수열과 등비수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "공비가 양수인 등비수열 $\\{a_n\\}$ 에서 $a_1=2,\\ a_4=16$ 이다. 첫째항부터 제 $5$ 항까지의 곱 $P_5$ 의 값은?",
+      "choices": [
+        "$2^{12}$",
+        "$2^{13}$",
+        "$2^{14}$",
+        "$2^{16}$",
+        "$2^{15}$"
+      ],
+      "answer": 5,
+      "solution": "$r^{3}=\\dfrac{a_4}{a_1}=8$ 이므로 $r=2,\\ a_n=2^{n}$ 이다. $P_5=2^{1+2+3+4+5}=2^{15}$ 이다."
+    },
+    {
+      "num": 8,
+      "unit": "삼각함수",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "$0\\le x<2\\pi$ 에서 방정식 $2\\sin^2 x-\\sin x-1=0$ 의 서로 다른 실근의 개수는?",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$"
+      ],
+      "answer": 3,
+      "solution": "$t=\\sin x$ 로 놓으면 $(2t+1)(t-1)=0$ 이므로 $\\sin x=1$ 또는 $\\sin x=-\\dfrac{1}{2}$ 이다. $\\sin x=1$ 에서 $x=\\dfrac{\\pi}{2}$, $\\sin x=-\\dfrac{1}{2}$ 에서 $x=\\dfrac{7\\pi}{6},\\ \\dfrac{11\\pi}{6}$ 이므로 서로 다른 실근은 $3$ 개이다."
+    },
+    {
+      "num": 9,
+      "unit": "삼각함수",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "함수 $y=a\\cos bx$ ($a>0,\\ b>0$)의 최댓값이 $3$이고 주기가 $\\pi$ 일 때, $a+b$ 의 값은?",
+      "choices": [
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$",
+        "$8$"
+      ],
+      "answer": 2,
+      "solution": "최댓값 $a=3$, 주기 $\\dfrac{2\\pi}{b}=\\pi$ 에서 $b=2$ 이므로 $a+b=5$ 이다."
+    },
+    {
+      "num": 10,
+      "unit": "삼각함수",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "$0\\le\\theta<2\\pi$ 에서 이차방정식 $x^{2}+(2\\cos\\theta+1)x+1=0$ 이 서로 다른 두 음의 실근을 가질 때, $\\theta$ 값의 범위의 길이는?",
+      "choices": [
+        "$\\dfrac{\\pi}{3}$",
+        "$\\dfrac{\\pi}{2}$",
+        "$\\pi$",
+        "$\\dfrac{2\\pi}{3}$",
+        "$\\dfrac{5\\pi}{6}$"
+      ],
+      "answer": 4,
+      "solution": "두 근의 곱 $1>0$, 두 근의 합 $-(2\\cos\\theta+1)<0$, 판별식 $(2\\cos\\theta+1)^2-4>0$ 을 모두 만족해야 하므로 $2\\cos\\theta+1>2$, 즉 $\\cos\\theta>\\dfrac{1}{2}$ 이다. $0\\le\\theta<\\dfrac{\\pi}{3}$ 또는 $\\dfrac{5\\pi}{3}<\\theta<2\\pi$ 이므로 길이의 합은 $\\dfrac{2\\pi}{3}$ 이다."
+    },
+    {
+      "num": 11,
+      "unit": "삼각함수의 활용",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "삼각형 $\\mathrm{ABC}$ 에서 $\\overline{\\mathrm{AC}}=8,\\ \\overline{\\mathrm{BC}}=5,\\ \\angle\\mathrm{C}=60^{\\circ}$ 일 때, $\\overline{\\mathrm{AB}}$ 의 길이는?",
+      "choices": [
+        "$7$",
+        "$\\sqrt{59}$",
+        "$8$",
+        "$\\sqrt{69}$",
+        "$9$"
+      ],
+      "answer": 1,
+      "solution": "코사인법칙에 의해 $\\overline{\\mathrm{AB}}^{2}=8^{2}+5^{2}-2\\cdot8\\cdot5\\cos60^{\\circ}=89-40=49$ 이므로 $\\overline{\\mathrm{AB}}=7$ 이다."
+    },
+    {
+      "num": 12,
+      "unit": "삼각함수",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "$0\\le x<2\\pi$ 에서 방정식 $\\cos 2x=\\sin x$ 의 모든 실근의 합은?",
+      "choices": [
+        "$\\dfrac{3\\pi}{2}$",
+        "$2\\pi$",
+        "$\\dfrac{11\\pi}{6}$",
+        "$3\\pi$",
+        "$\\dfrac{5\\pi}{2}$"
+      ],
+      "answer": 5,
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "배각공식으로 $\\sin x$ 에 대한 식으로 바꿔 모든 근의 합을 구하는 것이 목표이다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$\\cos 2x=1-2\\sin^2 x$ 이고 $0\\le x<2\\pi$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$1-2\\sin^2 x=\\sin x \\Rightarrow 2\\sin^2 x+\\sin x-1=0 \\Rightarrow (2\\sin x-1)(\\sin x+1)=0$"
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\sin x=\\dfrac{1}{2} \\Rightarrow x=\\dfrac{\\pi}{6},\\ \\dfrac{5\\pi}{6}$, $\\sin x=-1 \\Rightarrow x=\\dfrac{3\\pi}{2}$ 이고, 합은 $\\dfrac{\\pi}{6}+\\dfrac{5\\pi}{6}+\\dfrac{3\\pi}{2}=\\dfrac{5\\pi}{2}$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "모든 실근의 합은 $\\dfrac{5\\pi}{2}$ 이므로 보기 ⑤이다."
+        }
+      ]
+    },
+    {
+      "num": 13,
+      "unit": "수학적 귀납법",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "수열 $\\{a_n\\}$ 이 $a_1=2,\\ a_{n+1}=a_n+2n$ ($n\\ge 1$)을 만족할 때, $a_{10}$ 의 값은?",
+      "choices": [
+        "$82$",
+        "$88$",
+        "$92$",
+        "$96$",
+        "$100$"
+      ],
+      "answer": 3,
+      "solution": "$a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}2k=2+n(n-1)=n^2-n+2$ 이므로 $a_{10}=100-10+2=92$ 이다."
+    },
+    {
+      "num": 14,
+      "unit": "지수와 로그",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "$\\log_{2}24-\\log_{2}3$ 의 값은?",
+      "choices": [
+        "$2$",
+        "$3$",
+        "$4$",
+        "$\\log_2 21$",
+        "$8$"
+      ],
+      "answer": 2,
+      "solution": "$\\log_{2}24-\\log_{2}3=\\log_{2}\\dfrac{24}{3}=\\log_{2}8=3$ 이다."
+    },
+    {
+      "num": 15,
+      "unit": "지수와 로그",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "$3^{x}=2$ 일 때, $9^{x}+3^{-x}$ 의 값은?",
+      "choices": [
+        "$\\dfrac{7}{2}$",
+        "$4$",
+        "$\\dfrac{17}{4}$",
+        "$\\dfrac{9}{2}$",
+        "$5$"
+      ],
+      "answer": 4,
+      "solution": "$9^{x}=(3^{x})^{2}=4,\\ 3^{-x}=\\dfrac{1}{3^{x}}=\\dfrac{1}{2}$ 이므로 $9^{x}+3^{-x}=4+\\dfrac{1}{2}=\\dfrac{9}{2}$ 이다."
+    },
+    {
+      "num": 16,
+      "unit": "지수함수와 로그함수",
+      "level": "기본",
+      "type": "객관식",
+      "latex": "함수 $f(x)=2^{x-1}+3$ 에 대하여 $f(1)$ 의 값은?",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$\\dfrac{7}{2}$",
+        "$4$"
+      ],
+      "answer": 5,
+      "solution": "$f(1)=2^{0}+3=1+3=4$ 이다."
+    },
+    {
+      "num": 17,
+      "unit": "삼각함수의 활용",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "삼각형 $\\mathrm{ABC}$ 에서 $\\overline{\\mathrm{AB}}=8,\\ \\overline{\\mathrm{AC}}=6,\\ \\angle\\mathrm{A}=60^{\\circ}$ 이다. 변 $\\overline{\\mathrm{BC}}$ 의 길이와 삼각형 $\\mathrm{ABC}$ 의 넓이를 풀이과정과 함께 구하시오.",
+      "answer": "BC=2√13, 넓이=12√3",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "코사인법칙으로 $\\overline{\\mathrm{BC}}$ 를, 넓이 공식으로 삼각형의 넓이를 구하는 것이 목표이다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$\\overline{\\mathrm{AB}}=c=8,\\ \\overline{\\mathrm{AC}}=b=6,\\ \\angle\\mathrm{A}=60^{\\circ}$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "코사인법칙 $a^{2}=b^{2}+c^{2}-2bc\\cos A$, 넓이 $S=\\dfrac{1}{2}bc\\sin A$ 를 쓴다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\overline{\\mathrm{BC}}^{2}=6^{2}+8^{2}-2\\cdot6\\cdot8\\cos60^{\\circ}=100-48=52$ 이므로 $\\overline{\\mathrm{BC}}=2\\sqrt{13}$, $S=\\dfrac{1}{2}\\cdot6\\cdot8\\cdot\\dfrac{\\sqrt{3}}{2}=12\\sqrt{3}$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$\\overline{\\mathrm{BC}}=2\\sqrt{13}$, 넓이는 $12\\sqrt{3}$ 이다."
+        }
+      ]
+    },
+    {
+      "num": 18,
+      "unit": "등차수열과 등비수열",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "등차수열 $\\{a_n\\}$ 의 첫째항이 $3$, 공차가 $2$ 일 때, $\\displaystyle\\sum_{k=1}^{20}a_k$ 의 값을 풀이과정과 함께 구하시오.",
+      "answer": "440",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "등차수열의 일반항과 합 공식을 이용해 합을 구하는 것이 목표이다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$a_1=3,\\ d=2$ 이므로 $a_n=3+(n-1)\\cdot2=2n+1$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "등차수열의 합 $S_n=\\dfrac{n\\{2a_1+(n-1)d\\}}{2}$ 를 쓴다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$\\displaystyle\\sum_{k=1}^{20}a_k=\\dfrac{20\\{2\\cdot3+19\\cdot2\\}}{2}=10\\cdot(6+38)=10\\cdot44=440$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "구하는 값은 $440$ 이다."
+        }
+      ]
+    },
+    {
+      "num": 19,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "$\\displaystyle\\sum_{k=1}^{10}(2k-1)^{2}$ 의 값을 풀이과정과 함께 구하시오.",
+      "answer": "1330",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "전개한 뒤 시그마 공식을 적용해 값을 구하는 것이 목표이다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$(2k-1)^{2}=4k^{2}-4k+1$ 로 전개한다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "$\\displaystyle\\sum_{k=1}^{n}k^{2}=\\dfrac{n(n+1)(2n+1)}{6},\\ \\sum_{k=1}^{n}k=\\dfrac{n(n+1)}{2}$ 를 쓴다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$4\\displaystyle\\sum_{k=1}^{10}k^{2}-4\\sum_{k=1}^{10}k+\\sum_{k=1}^{10}1=4\\cdot385-4\\cdot55+10=1540-220+10=1330$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "구하는 값은 $1330$ 이다."
+        }
+      ]
+    },
+    {
+      "num": 20,
+      "unit": "수학적 귀납법",
+      "level": "심화",
+      "type": "서술형",
+      "latex": "수열 $\\{a_n\\}$ 이 $a_1=1,\\ a_{n+1}=2a_n+1$ ($n\\ge 1$)을 만족한다. 일반항 $a_n$ 을 구하고 $a_6$ 의 값을 풀이과정과 함께 구하시오.",
+      "answer": "a_n=2^n-1, a_6=63",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "점화식을 등비수열 꼴로 변형해 일반항과 $a_6$ 을 구하는 것이 목표이다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$a_{n+1}=2a_n+1$ 의 양변에 $1$ 을 더하면 $a_{n+1}+1=2(a_n+1)$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "수열 $\\{a_n+1\\}$ 은 첫째항 $a_1+1=2$, 공비 $2$ 인 등비수열이다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "$a_n+1=2\\cdot2^{n-1}=2^{n}$ 이므로 $a_n=2^{n}-1$ 이고 $a_6=2^{6}-1=63$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$a_n=2^{n}-1$ 이고 $a_6=63$ 이다."
+        }
+      ]
+    }
+  ],
+  "rounds": [
+    [
+      {
+        "num": 1,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\sin\\left(-\\dfrac{\\pi}{4}\\right)$ 의 값은?",
+        "choices": [
+          "$\\dfrac{1}{2}$",
+          "$-\\dfrac{1}{2}$",
+          "$-\\dfrac{\\sqrt{2}}{2}$",
+          "$\\dfrac{\\sqrt{2}}{2}$",
+          "$\\dfrac{\\sqrt{3}}{2}$"
+        ],
+        "answer": 3,
+        "solution": "$\\sin\\left(-\\dfrac{\\pi}{4}\\right)=-\\sin\\dfrac{\\pi}{4}=-\\dfrac{\\sqrt{2}}{2}$ 이다."
+      },
+      {
+        "num": 2,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "등차수열 $-7,\\ -3,\\ \\square,\\ 5,\\ 9,\\ \\cdots$ 에서 $\\square$ 에 알맞은 수는?",
+        "choices": [
+          "$1$",
+          "$0$",
+          "$2$",
+          "$-1$",
+          "$3$"
+        ],
+        "answer": 1,
+        "solution": "공차 $d=-3-(-7)=4$ 이므로 $\\square=-3+4=1$ 이다."
+      },
+      {
+        "num": 3,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "등비수열 $\\{a_n\\}$ 에서 $a_2=4,\\ a_5=32$ 일 때, 공비는?",
+        "choices": [
+          "$\\dfrac{1}{2}$",
+          "$\\sqrt{2}$",
+          "$3$",
+          "$4$",
+          "$2$"
+        ],
+        "answer": 5,
+        "solution": "$\\dfrac{a_5}{a_2}=r^{3}=\\dfrac{32}{4}=8$ 이므로 $r=2$ 이다."
+      },
+      {
+        "num": 4,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{20}a_k=12,\\ \\sum_{k=1}^{20}b_k=8$ 일 때, $\\displaystyle\\sum_{k=1}^{20}\\left(3a_k-2b_k+2\\right)$ 의 값은?",
+        "choices": [
+          "$52$",
+          "$60$",
+          "$56$",
+          "$48$",
+          "$64$"
+        ],
+        "answer": 2,
+        "solution": "$3\\cdot12-2\\cdot8+2\\cdot20=36-16+40=60$ 이다."
+      },
+      {
+        "num": 5,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\dfrac{1}{1\\cdot 3}+\\dfrac{1}{3\\cdot 5}+\\dfrac{1}{5\\cdot 7}+\\cdots+\\dfrac{1}{99\\cdot 101}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{49}{101}$",
+          "$\\dfrac{50}{99}$",
+          "$\\dfrac{49}{99}$",
+          "$\\dfrac{50}{101}$",
+          "$\\dfrac{51}{101}$"
+        ],
+        "answer": 4,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "부분분수로 분해해 망원합(telescoping)으로 정리하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "일반항은 $\\dfrac{1}{(2k-1)(2k+1)}$ ($k=1,2,\\cdots,50$) 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{1}{(2k-1)(2k+1)}=\\dfrac{1}{2}\\left(\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}\\right)$ 로 분해한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{50}\\dfrac{1}{2}\\left(\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}\\right)=\\dfrac{1}{2}\\left(1-\\dfrac{1}{101}\\right)=\\dfrac{1}{2}\\cdot\\dfrac{100}{101}$"
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "값은 $\\dfrac{50}{101}$ 이므로 보기 ④이다."
+          }
+        ]
+      },
+      {
+        "num": 6,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 의 일반항이 $a_n=2n-1$ 일 때, $\\displaystyle\\sum_{k=1}^{40}\\dfrac{1}{\\sqrt{a_k}+\\sqrt{a_{k+1}}}$ 의 값은?",
+        "choices": [
+          "$4$",
+          "$\\dfrac{9}{2}$",
+          "$5$",
+          "$\\dfrac{7}{2}$",
+          "$3$"
+        ],
+        "answer": 1,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "분모를 유리화해 망원합으로 정리하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_k=2k-1,\\ a_{k+1}=2k+1$ 이고 $a_{k+1}-a_k=2$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{1}{\\sqrt{a_k}+\\sqrt{a_{k+1}}}=\\dfrac{\\sqrt{a_{k+1}}-\\sqrt{a_k}}{a_{k+1}-a_k}=\\dfrac{\\sqrt{2k+1}-\\sqrt{2k-1}}{2}$"
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{40}\\dfrac{\\sqrt{2k+1}-\\sqrt{2k-1}}{2}=\\dfrac{\\sqrt{81}-\\sqrt{1}}{2}=\\dfrac{9-1}{2}$"
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "값은 $4$ 이므로 보기 ①이다."
+          }
+        ]
+      },
+      {
+        "num": 7,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "공비가 양수인 등비수열 $\\{a_n\\}$ 에서 $a_1=2,\\ a_4=16$ 이다. 첫째항부터 제 $5$ 항까지의 곱 $P_5$ 의 값은?",
+        "choices": [
+          "$2^{12}$",
+          "$2^{13}$",
+          "$2^{14}$",
+          "$2^{16}$",
+          "$2^{15}$"
+        ],
+        "answer": 5,
+        "solution": "$r^{3}=\\dfrac{a_4}{a_1}=8$ 이므로 $r=2,\\ a_n=2^{n}$ 이다. $P_5=2^{1+2+3+4+5}=2^{15}$ 이다."
+      },
+      {
+        "num": 8,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$0\\le x<2\\pi$ 에서 방정식 $2\\sin^2 x-\\sin x-1=0$ 의 서로 다른 실근의 개수는?",
+        "choices": [
+          "$1$",
+          "$2$",
+          "$3$",
+          "$4$",
+          "$5$"
+        ],
+        "answer": 3,
+        "solution": "$t=\\sin x$ 로 놓으면 $(2t+1)(t-1)=0$ 이므로 $\\sin x=1$ 또는 $\\sin x=-\\dfrac{1}{2}$ 이다. $\\sin x=1$ 에서 $x=\\dfrac{\\pi}{2}$, $\\sin x=-\\dfrac{1}{2}$ 에서 $x=\\dfrac{7\\pi}{6},\\ \\dfrac{11\\pi}{6}$ 이므로 서로 다른 실근은 $3$ 개이다."
+      },
+      {
+        "num": 9,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "함수 $y=a\\cos bx$ ($a>0,\\ b>0$)의 최댓값이 $3$이고 주기가 $\\pi$ 일 때, $a+b$ 의 값은?",
+        "choices": [
+          "$4$",
+          "$5$",
+          "$6$",
+          "$7$",
+          "$8$"
+        ],
+        "answer": 2,
+        "solution": "최댓값 $a=3$, 주기 $\\dfrac{2\\pi}{b}=\\pi$ 에서 $b=2$ 이므로 $a+b=5$ 이다."
+      },
+      {
+        "num": 10,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$0\\le\\theta<2\\pi$ 에서 이차방정식 $x^{2}+(2\\cos\\theta+1)x+1=0$ 이 서로 다른 두 음의 실근을 가질 때, $\\theta$ 값의 범위의 길이는?",
+        "choices": [
+          "$\\dfrac{\\pi}{3}$",
+          "$\\dfrac{\\pi}{2}$",
+          "$\\pi$",
+          "$\\dfrac{2\\pi}{3}$",
+          "$\\dfrac{5\\pi}{6}$"
+        ],
+        "answer": 4,
+        "solution": "두 근의 곱 $1>0$, 두 근의 합 $-(2\\cos\\theta+1)<0$, 판별식 $(2\\cos\\theta+1)^2-4>0$ 을 모두 만족해야 하므로 $2\\cos\\theta+1>2$, 즉 $\\cos\\theta>\\dfrac{1}{2}$ 이다. $0\\le\\theta<\\dfrac{\\pi}{3}$ 또는 $\\dfrac{5\\pi}{3}<\\theta<2\\pi$ 이므로 길이의 합은 $\\dfrac{2\\pi}{3}$ 이다."
+      },
+      {
+        "num": 11,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $\\mathrm{ABC}$ 에서 $\\overline{\\mathrm{AC}}=8,\\ \\overline{\\mathrm{BC}}=5,\\ \\angle\\mathrm{C}=60^{\\circ}$ 일 때, $\\overline{\\mathrm{AB}}$ 의 길이는?",
+        "choices": [
+          "$7$",
+          "$\\sqrt{59}$",
+          "$8$",
+          "$\\sqrt{69}$",
+          "$9$"
+        ],
+        "answer": 1,
+        "solution": "코사인법칙에 의해 $\\overline{\\mathrm{AB}}^{2}=8^{2}+5^{2}-2\\cdot8\\cdot5\\cos60^{\\circ}=89-40=49$ 이므로 $\\overline{\\mathrm{AB}}=7$ 이다."
+      },
+      {
+        "num": 12,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$0\\le x<2\\pi$ 에서 방정식 $\\cos 2x=\\sin x$ 의 모든 실근의 합은?",
+        "choices": [
+          "$\\dfrac{3\\pi}{2}$",
+          "$2\\pi$",
+          "$\\dfrac{11\\pi}{6}$",
+          "$3\\pi$",
+          "$\\dfrac{5\\pi}{2}$"
+        ],
+        "answer": 5,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "배각공식으로 $\\sin x$ 에 대한 식으로 바꿔 모든 근의 합을 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\cos 2x=1-2\\sin^2 x$ 이고 $0\\le x<2\\pi$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$1-2\\sin^2 x=\\sin x \\Rightarrow 2\\sin^2 x+\\sin x-1=0 \\Rightarrow (2\\sin x-1)(\\sin x+1)=0$"
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\sin x=\\dfrac{1}{2} \\Rightarrow x=\\dfrac{\\pi}{6},\\ \\dfrac{5\\pi}{6}$, $\\sin x=-1 \\Rightarrow x=\\dfrac{3\\pi}{2}$ 이고, 합은 $\\dfrac{\\pi}{6}+\\dfrac{5\\pi}{6}+\\dfrac{3\\pi}{2}=\\dfrac{5\\pi}{2}$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "모든 실근의 합은 $\\dfrac{5\\pi}{2}$ 이므로 보기 ⑤이다."
+          }
+        ]
+      },
+      {
+        "num": 13,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=2,\\ a_{n+1}=a_n+2n$ ($n\\ge 1$)을 만족할 때, $a_{10}$ 의 값은?",
+        "choices": [
+          "$82$",
+          "$88$",
+          "$92$",
+          "$96$",
+          "$100$"
+        ],
+        "answer": 3,
+        "solution": "$a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}2k=2+n(n-1)=n^2-n+2$ 이므로 $a_{10}=100-10+2=92$ 이다."
+      },
+      {
+        "num": 14,
+        "unit": "지수와 로그",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\log_{2}24-\\log_{2}3$ 의 값은?",
+        "choices": [
+          "$2$",
+          "$3$",
+          "$4$",
+          "$\\log_2 21$",
+          "$8$"
+        ],
+        "answer": 2,
+        "solution": "$\\log_{2}24-\\log_{2}3=\\log_{2}\\dfrac{24}{3}=\\log_{2}8=3$ 이다."
+      },
+      {
+        "num": 15,
+        "unit": "지수와 로그",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$3^{x}=2$ 일 때, $9^{x}+3^{-x}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{7}{2}$",
+          "$4$",
+          "$\\dfrac{17}{4}$",
+          "$\\dfrac{9}{2}$",
+          "$5$"
+        ],
+        "answer": 4,
+        "solution": "$9^{x}=(3^{x})^{2}=4,\\ 3^{-x}=\\dfrac{1}{3^{x}}=\\dfrac{1}{2}$ 이므로 $9^{x}+3^{-x}=4+\\dfrac{1}{2}=\\dfrac{9}{2}$ 이다."
+      },
+      {
+        "num": 16,
+        "unit": "지수함수와 로그함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "함수 $f(x)=2^{x-1}+3$ 에 대하여 $f(1)$ 의 값은?",
+        "choices": [
+          "$1$",
+          "$2$",
+          "$3$",
+          "$\\dfrac{7}{2}$",
+          "$4$"
+        ],
+        "answer": 5,
+        "solution": "$f(1)=2^{0}+3=1+3=4$ 이다."
+      },
+      {
+        "num": 17,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "삼각형 $\\mathrm{ABC}$ 에서 $\\overline{\\mathrm{AB}}=8,\\ \\overline{\\mathrm{AC}}=6,\\ \\angle\\mathrm{A}=60^{\\circ}$ 이다. 변 $\\overline{\\mathrm{BC}}$ 의 길이와 삼각형 $\\mathrm{ABC}$ 의 넓이를 풀이과정과 함께 구하시오.",
+        "answer": "BC=2√13, 넓이=12√3",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "코사인법칙으로 $\\overline{\\mathrm{BC}}$ 를, 넓이 공식으로 삼각형의 넓이를 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{\\mathrm{AB}}=c=8,\\ \\overline{\\mathrm{AC}}=b=6,\\ \\angle\\mathrm{A}=60^{\\circ}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "코사인법칙 $a^{2}=b^{2}+c^{2}-2bc\\cos A$, 넓이 $S=\\dfrac{1}{2}bc\\sin A$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{\\mathrm{BC}}^{2}=6^{2}+8^{2}-2\\cdot6\\cdot8\\cos60^{\\circ}=100-48=52$ 이므로 $\\overline{\\mathrm{BC}}=2\\sqrt{13}$, $S=\\dfrac{1}{2}\\cdot6\\cdot8\\cdot\\dfrac{\\sqrt{3}}{2}=12\\sqrt{3}$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\overline{\\mathrm{BC}}=2\\sqrt{13}$, 넓이는 $12\\sqrt{3}$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 18,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "등차수열 $\\{a_n\\}$ 의 첫째항이 $3$, 공차가 $2$ 일 때, $\\displaystyle\\sum_{k=1}^{20}a_k$ 의 값을 풀이과정과 함께 구하시오.",
+        "answer": "440",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열의 일반항과 합 공식을 이용해 합을 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_1=3,\\ d=2$ 이므로 $a_n=3+(n-1)\\cdot2=2n+1$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "등차수열의 합 $S_n=\\dfrac{n\\{2a_1+(n-1)d\\}}{2}$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{20}a_k=\\dfrac{20\\{2\\cdot3+19\\cdot2\\}}{2}=10\\cdot(6+38)=10\\cdot44=440$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "구하는 값은 $440$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 19,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "$\\displaystyle\\sum_{k=1}^{10}(2k-1)^{2}$ 의 값을 풀이과정과 함께 구하시오.",
+        "answer": "1330",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "전개한 뒤 시그마 공식을 적용해 값을 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$(2k-1)^{2}=4k^{2}-4k+1$ 로 전개한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\displaystyle\\sum_{k=1}^{n}k^{2}=\\dfrac{n(n+1)(2n+1)}{6},\\ \\sum_{k=1}^{n}k=\\dfrac{n(n+1)}{2}$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$4\\displaystyle\\sum_{k=1}^{10}k^{2}-4\\sum_{k=1}^{10}k+\\sum_{k=1}^{10}1=4\\cdot385-4\\cdot55+10=1540-220+10=1330$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "구하는 값은 $1330$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=1,\\ a_{n+1}=2a_n+1$ ($n\\ge 1$)을 만족한다. 일반항 $a_n$ 을 구하고 $a_6$ 의 값을 풀이과정과 함께 구하시오.",
+        "answer": "a_n=2^n-1, a_6=63",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "점화식을 등비수열 꼴로 변형해 일반항과 $a_6$ 을 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_{n+1}=2a_n+1$ 의 양변에 $1$ 을 더하면 $a_{n+1}+1=2(a_n+1)$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "수열 $\\{a_n+1\\}$ 은 첫째항 $a_1+1=2$, 공비 $2$ 인 등비수열이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$a_n+1=2\\cdot2^{n-1}=2^{n}$ 이므로 $a_n=2^{n}-1$ 이고 $a_6=2^{6}-1=63$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a_n=2^{n}-1$ 이고 $a_6=63$ 이다."
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "num": 1,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\sin\\left(-\\dfrac{\\pi}{3}\\right)$ 의 값은?",
+        "choices": [
+          "$\\dfrac{1}{2}$",
+          "$-\\dfrac{1}{2}$",
+          "$\\dfrac{\\sqrt{3}}{2}$",
+          "$-\\dfrac{\\sqrt{2}}{2}$",
+          "$-\\dfrac{\\sqrt{3}}{2}$"
+        ],
+        "answer": 5,
+        "solution": "$\\sin\\left(-\\dfrac{\\pi}{3}\\right)=-\\sin\\dfrac{\\pi}{3}=-\\dfrac{\\sqrt{3}}{2}$ 이다."
+      },
+      {
+        "num": 2,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "등차수열 $-9,\\ -4,\\ \\square,\\ 6,\\ 11,\\ \\cdots$ 에서 $\\square$ 에 알맞은 수는?",
+        "choices": [
+          "$1$",
+          "$0$",
+          "$2$",
+          "$-1$",
+          "$3$"
+        ],
+        "answer": 1,
+        "solution": "공차 $d=-4-(-9)=5$ 이므로 $\\square=-4+5=1$ 이다."
+      },
+      {
+        "num": 3,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "등비수열 $\\{a_n\\}$ 에서 $a_2=2,\\ a_5=54$ 일 때, 공비는?",
+        "choices": [
+          "$3$",
+          "$\\sqrt{3}$",
+          "$\\dfrac{1}{3}$",
+          "$4$",
+          "$2$"
+        ],
+        "answer": 1,
+        "solution": "$\\dfrac{a_5}{a_2}=r^{3}=\\dfrac{54}{2}=27$ 이므로 $r=3$ 이다."
+      },
+      {
+        "num": 4,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{15}a_k=10,\\ \\sum_{k=1}^{15}b_k=6$ 일 때, $\\displaystyle\\sum_{k=1}^{15}\\left(4a_k-3b_k+1\\right)$ 의 값은?",
+        "choices": [
+          "$52$",
+          "$30$",
+          "$45$",
+          "$37$",
+          "$40$"
+        ],
+        "answer": 4,
+        "solution": "$4\\cdot10-3\\cdot6+1\\cdot15=40-18+15=37$ 이다."
+      },
+      {
+        "num": 5,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\dfrac{1}{1\\cdot 4}+\\dfrac{1}{4\\cdot 7}+\\dfrac{1}{7\\cdot 10}+\\cdots+\\dfrac{1}{100\\cdot 103}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{33}{103}$",
+          "$\\dfrac{34}{101}$",
+          "$\\dfrac{33}{101}$",
+          "$\\dfrac{35}{103}$",
+          "$\\dfrac{34}{103}$"
+        ],
+        "answer": 5,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "부분분수로 분해해 망원합(telescoping)으로 정리하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "일반항은 $\\dfrac{1}{(3k-2)(3k+1)}$ ($k=1,2,\\cdots,34$) 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{1}{(3k-2)(3k+1)}=\\dfrac{1}{3}\\left(\\dfrac{1}{3k-2}-\\dfrac{1}{3k+1}\\right)$ 로 분해한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{34}\\dfrac{1}{3}\\left(\\dfrac{1}{3k-2}-\\dfrac{1}{3k+1}\\right)=\\dfrac{1}{3}\\left(1-\\dfrac{1}{103}\\right)=\\dfrac{1}{3}\\cdot\\dfrac{102}{103}$"
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "값은 $\\dfrac{34}{103}$ 이므로 보기 ⑤이다."
+          }
+        ]
+      },
+      {
+        "num": 6,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 의 일반항이 $a_n=2n-1$ 일 때, $\\displaystyle\\sum_{k=1}^{60}\\dfrac{1}{\\sqrt{a_k}+\\sqrt{a_{k+1}}}$ 의 값은?",
+        "choices": [
+          "$4$",
+          "$\\dfrac{9}{2}$",
+          "$5$",
+          "$\\dfrac{11}{2}$",
+          "$6$"
+        ],
+        "answer": 3,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "분모를 유리화해 망원합으로 정리하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_k=2k-1,\\ a_{k+1}=2k+1$ 이고 $a_{k+1}-a_k=2$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{1}{\\sqrt{a_k}+\\sqrt{a_{k+1}}}=\\dfrac{\\sqrt{a_{k+1}}-\\sqrt{a_k}}{a_{k+1}-a_k}=\\dfrac{\\sqrt{2k+1}-\\sqrt{2k-1}}{2}$"
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{60}\\dfrac{\\sqrt{2k+1}-\\sqrt{2k-1}}{2}=\\dfrac{\\sqrt{121}-\\sqrt{1}}{2}=\\dfrac{11-1}{2}$"
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "값은 $5$ 이므로 보기 ③이다."
+          }
+        ]
+      },
+      {
+        "num": 7,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "공비가 양수인 등비수열 $\\{a_n\\}$ 에서 $a_1=3,\\ a_4=81$ 이다. 첫째항부터 제 $5$ 항까지의 곱 $P_5$ 의 값은?",
+        "choices": [
+          "$3^{12}$",
+          "$3^{13}$",
+          "$3^{15}$",
+          "$3^{16}$",
+          "$3^{14}$"
+        ],
+        "answer": 3,
+        "solution": "$r^{3}=\\dfrac{a_4}{a_1}=27$ 이므로 $r=3,\\ a_n=3^{n}$ 이다. $P_5=3^{1+2+3+4+5}=3^{15}$ 이다."
+      },
+      {
+        "num": 8,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$0\\le x<2\\pi$ 에서 방정식 $2\\cos^2 x-\\cos x-1=0$ 의 서로 다른 실근의 개수는?",
+        "choices": [
+          "$1$",
+          "$2$",
+          "$3$",
+          "$4$",
+          "$5$"
+        ],
+        "answer": 3,
+        "solution": "$t=\\cos x$ 로 놓으면 $(2t+1)(t-1)=0$ 이므로 $\\cos x=1$ 또는 $\\cos x=-\\dfrac{1}{2}$ 이다. $\\cos x=1$ 에서 $x=0$, $\\cos x=-\\dfrac{1}{2}$ 에서 $x=\\dfrac{2\\pi}{3},\\ \\dfrac{4\\pi}{3}$ 이므로 서로 다른 실근은 $3$ 개이다."
+      },
+      {
+        "num": 9,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "함수 $y=a\\cos bx$ ($a>0,\\ b>0$)의 최댓값이 $4$이고 주기가 $\\dfrac{2\\pi}{3}$ 일 때, $a+b$ 의 값은?",
+        "choices": [
+          "$4$",
+          "$5$",
+          "$6$",
+          "$7$",
+          "$8$"
+        ],
+        "answer": 4,
+        "solution": "최댓값 $a=4$, 주기 $\\dfrac{2\\pi}{b}=\\dfrac{2\\pi}{3}$ 에서 $b=3$ 이므로 $a+b=7$ 이다."
+      },
+      {
+        "num": 10,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$0\\le\\theta<2\\pi$ 에서 이차방정식 $x^{2}-(2\\cos\\theta+1)x+1=0$ 이 서로 다른 두 양의 실근을 가질 때, $\\theta$ 값의 범위의 길이는?",
+        "choices": [
+          "$\\dfrac{\\pi}{3}$",
+          "$\\dfrac{\\pi}{2}$",
+          "$\\pi$",
+          "$\\dfrac{2\\pi}{3}$",
+          "$\\dfrac{5\\pi}{6}$"
+        ],
+        "answer": 4,
+        "solution": "두 근의 곱 $1>0$, 두 근의 합 $2\\cos\\theta+1>0$, 판별식 $(2\\cos\\theta+1)^2-4>0$ 을 모두 만족해야 하므로 $2\\cos\\theta+1>2$, 즉 $\\cos\\theta>\\dfrac{1}{2}$ 이다. $0\\le\\theta<\\dfrac{\\pi}{3}$ 또는 $\\dfrac{5\\pi}{3}<\\theta<2\\pi$ 이므로 길이의 합은 $\\dfrac{2\\pi}{3}$ 이다."
+      },
+      {
+        "num": 11,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $\\mathrm{ABC}$ 에서 $\\overline{\\mathrm{AC}}=3,\\ \\overline{\\mathrm{BC}}=5,\\ \\angle\\mathrm{C}=60^{\\circ}$ 일 때, $\\overline{\\mathrm{AB}}$ 의 길이는?",
+        "choices": [
+          "$\\sqrt{17}$",
+          "$\\sqrt{21}$",
+          "$\\sqrt{23}$",
+          "$5$",
+          "$\\sqrt{19}$"
+        ],
+        "answer": 5,
+        "solution": "코사인법칙에 의해 $\\overline{\\mathrm{AB}}^{2}=3^{2}+5^{2}-2\\cdot3\\cdot5\\cos60^{\\circ}=34-15=19$ 이므로 $\\overline{\\mathrm{AB}}=\\sqrt{19}$ 이다."
+      },
+      {
+        "num": 12,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$0\\le x<2\\pi$ 에서 방정식 $\\cos 2x=\\cos x$ 의 모든 실근의 합은?",
+        "choices": [
+          "$\\dfrac{3\\pi}{2}$",
+          "$2\\pi$",
+          "$\\dfrac{11\\pi}{6}$",
+          "$3\\pi$",
+          "$\\dfrac{5\\pi}{2}$"
+        ],
+        "answer": 2,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "배각공식으로 $\\cos x$ 에 대한 식으로 바꿔 모든 근의 합을 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\cos 2x=2\\cos^2 x-1$ 이고 $0\\le x<2\\pi$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$2\\cos^2 x-1=\\cos x \\Rightarrow 2\\cos^2 x-\\cos x-1=0 \\Rightarrow (2\\cos x+1)(\\cos x-1)=0$"
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\cos x=-\\dfrac{1}{2} \\Rightarrow x=\\dfrac{2\\pi}{3},\\ \\dfrac{4\\pi}{3}$, $\\cos x=1 \\Rightarrow x=0$ 이고, 합은 $\\dfrac{2\\pi}{3}+\\dfrac{4\\pi}{3}+0=2\\pi$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "모든 실근의 합은 $2\\pi$ 이므로 보기 ②이다."
+          }
+        ]
+      },
+      {
+        "num": 13,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=3,\\ a_{n+1}=a_n+2n$ ($n\\ge 1$)을 만족할 때, $a_{10}$ 의 값은?",
+        "choices": [
+          "$83$",
+          "$89$",
+          "$93$",
+          "$97$",
+          "$101$"
+        ],
+        "answer": 3,
+        "solution": "$a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}2k=3+n(n-1)=n^2-n+3$ 이므로 $a_{10}=100-10+3=93$ 이다."
+      },
+      {
+        "num": 14,
+        "unit": "지수와 로그",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\log_{3}54-\\log_{3}2$ 의 값은?",
+        "choices": [
+          "$2$",
+          "$3$",
+          "$4$",
+          "$\\log_3 52$",
+          "$8$"
+        ],
+        "answer": 2,
+        "solution": "$\\log_{3}54-\\log_{3}2=\\log_{3}\\dfrac{54}{2}=\\log_{3}27=3$ 이다."
+      },
+      {
+        "num": 15,
+        "unit": "지수와 로그",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$2^{x}=3$ 일 때, $4^{x}+2^{-x}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{7}{2}$",
+          "$\\dfrac{25}{3}$",
+          "$\\dfrac{17}{4}$",
+          "$\\dfrac{28}{3}$",
+          "$5$"
+        ],
+        "answer": 4,
+        "solution": "$4^{x}=(2^{x})^{2}=9,\\ 2^{-x}=\\dfrac{1}{2^{x}}=\\dfrac{1}{3}$ 이므로 $4^{x}+2^{-x}=9+\\dfrac{1}{3}=\\dfrac{28}{3}$ 이다."
+      },
+      {
+        "num": 16,
+        "unit": "지수함수와 로그함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "함수 $f(x)=3^{x-2}+2$ 에 대하여 $f(2)$ 의 값은?",
+        "choices": [
+          "$1$",
+          "$2$",
+          "$3$",
+          "$\\dfrac{7}{2}$",
+          "$4$"
+        ],
+        "answer": 3,
+        "solution": "$f(2)=3^{0}+2=1+2=3$ 이다."
+      },
+      {
+        "num": 17,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "삼각형 $\\mathrm{ABC}$ 에서 $\\overline{\\mathrm{AB}}=10,\\ \\overline{\\mathrm{AC}}=6,\\ \\angle\\mathrm{A}=60^{\\circ}$ 이다. 변 $\\overline{\\mathrm{BC}}$ 의 길이와 삼각형 $\\mathrm{ABC}$ 의 넓이를 풀이과정과 함께 구하시오.",
+        "answer": "BC=2√19, 넓이=15√3",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "코사인법칙으로 $\\overline{\\mathrm{BC}}$ 를, 넓이 공식으로 삼각형의 넓이를 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{\\mathrm{AB}}=c=10,\\ \\overline{\\mathrm{AC}}=b=6,\\ \\angle\\mathrm{A}=60^{\\circ}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "코사인법칙 $a^{2}=b^{2}+c^{2}-2bc\\cos A$, 넓이 $S=\\dfrac{1}{2}bc\\sin A$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{\\mathrm{BC}}^{2}=6^{2}+10^{2}-2\\cdot6\\cdot10\\cos60^{\\circ}=136-60=76$ 이므로 $\\overline{\\mathrm{BC}}=2\\sqrt{19}$, $S=\\dfrac{1}{2}\\cdot6\\cdot10\\cdot\\dfrac{\\sqrt{3}}{2}=15\\sqrt{3}$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\overline{\\mathrm{BC}}=2\\sqrt{19}$, 넓이는 $15\\sqrt{3}$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 18,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "등차수열 $\\{a_n\\}$ 의 첫째항이 $5$, 공차가 $3$ 일 때, $\\displaystyle\\sum_{k=1}^{20}a_k$ 의 값을 풀이과정과 함께 구하시오.",
+        "answer": "670",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열의 일반항과 합 공식을 이용해 합을 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_1=5,\\ d=3$ 이므로 $a_n=5+(n-1)\\cdot3=3n+2$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "등차수열의 합 $S_n=\\dfrac{n\\{2a_1+(n-1)d\\}}{2}$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{20}a_k=\\dfrac{20\\{2\\cdot5+19\\cdot3\\}}{2}=10\\cdot(10+57)=10\\cdot67=670$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "구하는 값은 $670$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 19,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "$\\displaystyle\\sum_{k=1}^{10}(2k)^{2}$ 의 값을 풀이과정과 함께 구하시오.",
+        "answer": "1540",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "전개한 뒤 시그마 공식을 적용해 값을 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$(2k)^{2}=4k^{2}$ 로 정리한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\displaystyle\\sum_{k=1}^{n}k^{2}=\\dfrac{n(n+1)(2n+1)}{6}$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$4\\displaystyle\\sum_{k=1}^{10}k^{2}=4\\cdot385=1540$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "구하는 값은 $1540$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=2,\\ a_{n+1}=2a_n+2$ ($n\\ge 1$)을 만족한다. 일반항 $a_n$ 을 구하고 $a_6$ 의 값을 풀이과정과 함께 구하시오.",
+        "answer": "a_n=2^{n+1}-2, a_6=126",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "점화식을 등비수열 꼴로 변형해 일반항과 $a_6$ 을 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_{n+1}=2a_n+2$ 의 양변에 $2$ 를 더하면 $a_{n+1}+2=2(a_n+2)$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "수열 $\\{a_n+2\\}$ 는 첫째항 $a_1+2=4$, 공비 $2$ 인 등비수열이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$a_n+2=4\\cdot2^{n-1}=2^{n+1}$ 이므로 $a_n=2^{n+1}-2$ 이고 $a_6=2^{7}-2=126$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a_n=2^{n+1}-2$ 이고 $a_6=126$ 이다."
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "num": 1,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\sin\\left(-\\dfrac{\\pi}{6}\\right)$ 의 값은?",
+        "choices": [
+          "$-\\dfrac{1}{2}$",
+          "$\\dfrac{1}{2}$",
+          "$-\\dfrac{\\sqrt{2}}{2}$",
+          "$\\dfrac{\\sqrt{2}}{2}$",
+          "$-\\dfrac{\\sqrt{3}}{2}$"
+        ],
+        "answer": 1,
+        "solution": "$\\sin\\left(-\\dfrac{\\pi}{6}\\right)=-\\sin\\dfrac{\\pi}{6}=-\\dfrac{1}{2}$ 이다."
+      },
+      {
+        "num": 2,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "등차수열 $-10,\\ -6,\\ \\square,\\ 2,\\ 6,\\ \\cdots$ 에서 $\\square$ 에 알맞은 수는?",
+        "choices": [
+          "$0$",
+          "$1$",
+          "$-2$",
+          "$-1$",
+          "$-3$"
+        ],
+        "answer": 3,
+        "solution": "공차 $d=-6-(-10)=4$ 이므로 $\\square=-6+4=-2$ 이다."
+      },
+      {
+        "num": 3,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "등비수열 $\\{a_n\\}$ 에서 $a_2=3,\\ a_5=24$ 일 때, 공비는?",
+        "choices": [
+          "$\\dfrac{1}{2}$",
+          "$2$",
+          "$3$",
+          "$4$",
+          "$\\sqrt{2}$"
+        ],
+        "answer": 2,
+        "solution": "$\\dfrac{a_5}{a_2}=r^{3}=\\dfrac{24}{3}=8$ 이므로 $r=2$ 이다."
+      },
+      {
+        "num": 4,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\displaystyle\\sum_{k=1}^{25}a_k=9,\\ \\sum_{k=1}^{25}b_k=5$ 일 때, $\\displaystyle\\sum_{k=1}^{25}\\left(2a_k-3b_k+4\\right)$ 의 값은?",
+        "choices": [
+          "$103$",
+          "$60$",
+          "$95$",
+          "$88$",
+          "$110$"
+        ],
+        "answer": 1,
+        "solution": "$2\\cdot9-3\\cdot5+4\\cdot25=18-15+100=103$ 이다."
+      },
+      {
+        "num": 5,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\dfrac{1}{2\\cdot 4}+\\dfrac{1}{4\\cdot 6}+\\dfrac{1}{6\\cdot 8}+\\cdots+\\dfrac{1}{98\\cdot 100}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{49}{200}$",
+          "$\\dfrac{49}{100}$",
+          "$\\dfrac{48}{200}$",
+          "$\\dfrac{1}{4}$",
+          "$\\dfrac{50}{200}$"
+        ],
+        "answer": 1,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "부분분수로 분해해 망원합(telescoping)으로 정리하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "일반항은 $\\dfrac{1}{2k(2k+2)}$ ($k=1,2,\\cdots,49$) 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{1}{2k(2k+2)}=\\dfrac{1}{2}\\left(\\dfrac{1}{2k}-\\dfrac{1}{2k+2}\\right)$ 로 분해한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{49}\\dfrac{1}{2}\\left(\\dfrac{1}{2k}-\\dfrac{1}{2k+2}\\right)=\\dfrac{1}{2}\\left(\\dfrac{1}{2}-\\dfrac{1}{100}\\right)=\\dfrac{1}{2}\\cdot\\dfrac{49}{100}$"
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "값은 $\\dfrac{49}{200}$ 이므로 보기 ①이다."
+          }
+        ]
+      },
+      {
+        "num": 6,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 의 일반항이 $a_n=3n-2$ 일 때, $\\displaystyle\\sum_{k=1}^{16}\\dfrac{1}{\\sqrt{a_k}+\\sqrt{a_{k+1}}}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{3}{2}$",
+          "$\\dfrac{5}{3}$",
+          "$\\dfrac{7}{3}$",
+          "$2$",
+          "$\\dfrac{8}{3}$"
+        ],
+        "answer": 4,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "분모를 유리화해 망원합으로 정리하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_k=3k-2,\\ a_{k+1}=3k+1$ 이고 $a_{k+1}-a_k=3$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\dfrac{1}{\\sqrt{a_k}+\\sqrt{a_{k+1}}}=\\dfrac{\\sqrt{a_{k+1}}-\\sqrt{a_k}}{a_{k+1}-a_k}=\\dfrac{\\sqrt{3k+1}-\\sqrt{3k-2}}{3}$"
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{16}\\dfrac{\\sqrt{3k+1}-\\sqrt{3k-2}}{3}=\\dfrac{\\sqrt{49}-\\sqrt{1}}{3}=\\dfrac{7-1}{3}$"
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "값은 $2$ 이므로 보기 ④이다."
+          }
+        ]
+      },
+      {
+        "num": 7,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "공비가 양수인 등비수열 $\\{a_n\\}$ 에서 $a_1=2,\\ a_3=8$ 이다. 첫째항부터 제 $4$ 항까지의 곱 $P_4$ 의 값은?",
+        "choices": [
+          "$2^{8}$",
+          "$2^{9}$",
+          "$2^{11}$",
+          "$2^{12}$",
+          "$2^{10}$"
+        ],
+        "answer": 5,
+        "solution": "$r^{2}=\\dfrac{a_3}{a_1}=4$ 이므로 $r=2,\\ a_n=2^{n}$ 이다. $P_4=2^{1+2+3+4}=2^{10}$ 이다."
+      },
+      {
+        "num": 8,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$0\\le x<2\\pi$ 에서 방정식 $2\\sin^2 x+\\sin x-1=0$ 의 서로 다른 실근의 개수는?",
+        "choices": [
+          "$1$",
+          "$2$",
+          "$3$",
+          "$4$",
+          "$5$"
+        ],
+        "answer": 3,
+        "solution": "$t=\\sin x$ 로 놓으면 $(2t-1)(t+1)=0$ 이므로 $\\sin x=\\dfrac{1}{2}$ 또는 $\\sin x=-1$ 이다. $\\sin x=\\dfrac{1}{2}$ 에서 $x=\\dfrac{\\pi}{6},\\ \\dfrac{5\\pi}{6}$, $\\sin x=-1$ 에서 $x=\\dfrac{3\\pi}{2}$ 이므로 서로 다른 실근은 $3$ 개이다."
+      },
+      {
+        "num": 9,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "함수 $y=a\\cos bx$ ($a>0,\\ b>0$)의 최댓값이 $2$이고 주기가 $2\\pi$ 일 때, $a+b$ 의 값은?",
+        "choices": [
+          "$2$",
+          "$3$",
+          "$4$",
+          "$5$",
+          "$6$"
+        ],
+        "answer": 2,
+        "solution": "최댓값 $a=2$, 주기 $\\dfrac{2\\pi}{b}=2\\pi$ 에서 $b=1$ 이므로 $a+b=3$ 이다."
+      },
+      {
+        "num": 10,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$0\\le\\theta<2\\pi$ 에서 이차방정식 $x^{2}+(2\\sin\\theta+1)x+1=0$ 이 서로 다른 두 음의 실근을 가질 때, $\\theta$ 값의 범위의 길이는?",
+        "choices": [
+          "$\\dfrac{\\pi}{3}$",
+          "$\\dfrac{\\pi}{2}$",
+          "$\\pi$",
+          "$\\dfrac{2\\pi}{3}$",
+          "$\\dfrac{5\\pi}{6}$"
+        ],
+        "answer": 4,
+        "solution": "두 근의 곱 $1>0$, 두 근의 합 $-(2\\sin\\theta+1)<0$, 판별식 $(2\\sin\\theta+1)^2-4>0$ 을 모두 만족해야 하므로 $2\\sin\\theta+1>2$, 즉 $\\sin\\theta>\\dfrac{1}{2}$ 이다. $\\dfrac{\\pi}{6}<\\theta<\\dfrac{5\\pi}{6}$ 이므로 범위의 길이는 $\\dfrac{2\\pi}{3}$ 이다."
+      },
+      {
+        "num": 11,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "삼각형 $\\mathrm{ABC}$ 에서 $\\overline{\\mathrm{AC}}=7,\\ \\overline{\\mathrm{BC}}=8,\\ \\angle\\mathrm{C}=120^{\\circ}$ 일 때, $\\overline{\\mathrm{AB}}$ 의 길이는?",
+        "choices": [
+          "$11$",
+          "$12$",
+          "$13$",
+          "$\\sqrt{170}$",
+          "$14$"
+        ],
+        "answer": 3,
+        "solution": "코사인법칙에 의해 $\\overline{\\mathrm{AB}}^{2}=7^{2}+8^{2}-2\\cdot7\\cdot8\\cos120^{\\circ}=113+56=169$ 이므로 $\\overline{\\mathrm{AB}}=13$ 이다."
+      },
+      {
+        "num": 12,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$0\\le x<2\\pi$ 에서 방정식 $\\cos 2x=-\\sin x$ 의 모든 실근의 합은?",
+        "choices": [
+          "$\\dfrac{3\\pi}{2}$",
+          "$2\\pi$",
+          "$\\dfrac{11\\pi}{6}$",
+          "$3\\pi$",
+          "$\\dfrac{7\\pi}{2}$"
+        ],
+        "answer": 5,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "배각공식으로 $\\sin x$ 에 대한 식으로 바꿔 모든 근의 합을 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\cos 2x=1-2\\sin^2 x$ 이고 $0\\le x<2\\pi$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$1-2\\sin^2 x=-\\sin x \\Rightarrow 2\\sin^2 x-\\sin x-1=0 \\Rightarrow (2\\sin x+1)(\\sin x-1)=0$"
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\sin x=-\\dfrac{1}{2} \\Rightarrow x=\\dfrac{7\\pi}{6},\\ \\dfrac{11\\pi}{6}$, $\\sin x=1 \\Rightarrow x=\\dfrac{\\pi}{2}$ 이고, 합은 $\\dfrac{7\\pi}{6}+\\dfrac{11\\pi}{6}+\\dfrac{\\pi}{2}=\\dfrac{7\\pi}{2}$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "모든 실근의 합은 $\\dfrac{7\\pi}{2}$ 이므로 보기 ⑤이다."
+          }
+        ]
+      },
+      {
+        "num": 13,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=1,\\ a_{n+1}=a_n+(2n+1)$ ($n\\ge 1$)을 만족할 때, $a_{10}$ 의 값은?",
+        "choices": [
+          "$82$",
+          "$90$",
+          "$100$",
+          "$110$",
+          "$121$"
+        ],
+        "answer": 3,
+        "solution": "$a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}(2k+1)=1+(n-1)(n+1)=n^2$ 이므로 $a_{10}=100$ 이다."
+      },
+      {
+        "num": 14,
+        "unit": "지수와 로그",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\log_{2}48-\\log_{2}3$ 의 값은?",
+        "choices": [
+          "$2$",
+          "$3$",
+          "$4$",
+          "$\\log_2 45$",
+          "$8$"
+        ],
+        "answer": 3,
+        "solution": "$\\log_{2}48-\\log_{2}3=\\log_{2}\\dfrac{48}{3}=\\log_{2}16=4$ 이다."
+      },
+      {
+        "num": 15,
+        "unit": "지수와 로그",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$2^{x}=5$ 일 때, $4^{x}+2^{-x}$ 의 값은?",
+        "choices": [
+          "$\\dfrac{7}{2}$",
+          "$\\dfrac{124}{5}$",
+          "$\\dfrac{17}{4}$",
+          "$\\dfrac{126}{5}$",
+          "$25$"
+        ],
+        "answer": 4,
+        "solution": "$4^{x}=(2^{x})^{2}=25,\\ 2^{-x}=\\dfrac{1}{2^{x}}=\\dfrac{1}{5}$ 이므로 $4^{x}+2^{-x}=25+\\dfrac{1}{5}=\\dfrac{126}{5}$ 이다."
+      },
+      {
+        "num": 16,
+        "unit": "지수함수와 로그함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "함수 $f(x)=3^{x-1}+4$ 에 대하여 $f(1)$ 의 값은?",
+        "choices": [
+          "$1$",
+          "$2$",
+          "$3$",
+          "$\\dfrac{9}{2}$",
+          "$5$"
+        ],
+        "answer": 5,
+        "solution": "$f(1)=3^{0}+4=1+4=5$ 이다."
+      },
+      {
+        "num": 17,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "삼각형 $\\mathrm{ABC}$ 에서 $\\overline{\\mathrm{AB}}=8,\\ \\overline{\\mathrm{AC}}=5,\\ \\angle\\mathrm{A}=120^{\\circ}$ 이다. 변 $\\overline{\\mathrm{BC}}$ 의 길이와 삼각형 $\\mathrm{ABC}$ 의 넓이를 풀이과정과 함께 구하시오.",
+        "answer": "BC=√129, 넓이=10√3",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "코사인법칙으로 $\\overline{\\mathrm{BC}}$ 를, 넓이 공식으로 삼각형의 넓이를 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\overline{\\mathrm{AB}}=c=8,\\ \\overline{\\mathrm{AC}}=b=5,\\ \\angle\\mathrm{A}=120^{\\circ}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "코사인법칙 $a^{2}=b^{2}+c^{2}-2bc\\cos A$, 넓이 $S=\\dfrac{1}{2}bc\\sin A$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\overline{\\mathrm{BC}}^{2}=5^{2}+8^{2}-2\\cdot5\\cdot8\\cos120^{\\circ}=89+40=129$ 이므로 $\\overline{\\mathrm{BC}}=\\sqrt{129}$, $S=\\dfrac{1}{2}\\cdot5\\cdot8\\cdot\\dfrac{\\sqrt{3}}{2}=10\\sqrt{3}$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$\\overline{\\mathrm{BC}}=\\sqrt{129}$, 넓이는 $10\\sqrt{3}$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 18,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "등차수열 $\\{a_n\\}$ 의 첫째항이 $2$, 공차가 $4$ 일 때, $\\displaystyle\\sum_{k=1}^{15}a_k$ 의 값을 풀이과정과 함께 구하시오.",
+        "answer": "450",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등차수열의 일반항과 합 공식을 이용해 합을 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_1=2,\\ d=4$ 이므로 $a_n=2+(n-1)\\cdot4=4n-2$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "등차수열의 합 $S_n=\\dfrac{n\\{2a_1+(n-1)d\\}}{2}$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\displaystyle\\sum_{k=1}^{15}a_k=\\dfrac{15\\{2\\cdot2+14\\cdot4\\}}{2}=\\dfrac{15\\cdot60}{2}=15\\cdot30=450$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "구하는 값은 $450$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 19,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "$\\displaystyle\\sum_{k=1}^{8}(2k-1)^{2}$ 의 값을 풀이과정과 함께 구하시오.",
+        "answer": "680",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "전개한 뒤 시그마 공식을 적용해 값을 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$(2k-1)^{2}=4k^{2}-4k+1$ 로 전개한다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\displaystyle\\sum_{k=1}^{n}k^{2}=\\dfrac{n(n+1)(2n+1)}{6},\\ \\sum_{k=1}^{n}k=\\dfrac{n(n+1)}{2}$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$4\\displaystyle\\sum_{k=1}^{8}k^{2}-4\\sum_{k=1}^{8}k+\\sum_{k=1}^{8}1=4\\cdot204-4\\cdot36+8=816-144+8=680$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "구하는 값은 $680$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "수열 $\\{a_n\\}$ 이 $a_1=1,\\ a_{n+1}=3a_n+2$ ($n\\ge 1$)을 만족한다. 일반항 $a_n$ 을 구하고 $a_5$ 의 값을 풀이과정과 함께 구하시오.",
+        "answer": "a_n=2·3^{n-1}-1, a_5=161",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "점화식을 등비수열 꼴로 변형해 일반항과 $a_5$ 를 구하는 것이 목표이다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_{n+1}=3a_n+2$ 의 양변에 $1$ 을 더하면 $a_{n+1}+1=3(a_n+1)$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "수열 $\\{a_n+1\\}$ 은 첫째항 $a_1+1=2$, 공비 $3$ 인 등비수열이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$a_n+1=2\\cdot3^{n-1}$ 이므로 $a_n=2\\cdot3^{n-1}-1$ 이고 $a_5=2\\cdot81-1=161$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$a_n=2\\cdot3^{n-1}-1$ 이고 $a_5=161$ 이다."
+          }
+        ]
+      }
+    ]
+  ]
+}

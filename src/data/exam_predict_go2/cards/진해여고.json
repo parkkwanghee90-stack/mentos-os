@@ -1,0 +1,2005 @@
+{
+  "schema": "go2-v1",
+  "school": "진해여고",
+  "region": "경상남도 창원시",
+  "year": 2025,
+  "grade": "고2",
+  "term": "1학기 기말",
+  "subject": "수학1",
+  "analysis": {
+    "school": "진해여고",
+    "region": "경상남도 창원시",
+    "year": 2025,
+    "grade": "고2",
+    "term": "1학기 기말",
+    "subject": "수학1",
+    "total_problems": 20,
+    "analyzed_by": "claude-direct-go2",
+    "unit_share": [
+      {
+        "unit": "지수와 로그",
+        "count": 3,
+        "percent": 15
+      },
+      {
+        "unit": "지수함수와 로그함수",
+        "count": 1,
+        "percent": 5
+      },
+      {
+        "unit": "삼각함수",
+        "count": 3,
+        "percent": 15
+      },
+      {
+        "unit": "삼각함수의 활용",
+        "count": 5,
+        "percent": 25
+      },
+      {
+        "unit": "등차수열과 등비수열",
+        "count": 4,
+        "percent": 20
+      },
+      {
+        "unit": "여러 가지 수열",
+        "count": 3,
+        "percent": 15
+      },
+      {
+        "unit": "수학적 귀납법",
+        "count": 1,
+        "percent": 5
+      }
+    ],
+    "top_units": [
+      "삼각함수의 활용",
+      "여러 가지 수열",
+      "등차수열과 등비수열"
+    ],
+    "objective_ratio": 85,
+    "subjective_ratio": 15,
+    "advanced_ratio": 50,
+    "difficulty_stars": 4,
+    "discrimination_stars": 4,
+    "summary": "진해여고 2025학년도 1학기 2차고사(수학1)는 삼각함수와 삼각함수의 활용(사인·코사인법칙, 삼각형 넓이) 비중이 가장 크고, 등차·등비수열과 시그마 등 여러 가지 수열이 그 뒤를 잇는다. 객관식이 다수이며 서술형으로 삼각형 모양 판별과 수열·귀납법 증명을 출제해 변별력을 확보한다. 삼각함수 그래프(y=a sin bx+c) 해석, 사인법칙을 이용한 외접원 반지름, 코사인법칙 변 길이 계산 등 표준 유형을 심화 수준으로 다룬다. 전반적으로 계산 정확성과 개념 종합력을 함께 요구하는 중상 난이도 시험이다."
+  },
+  "predicted": {
+    "count": 20,
+    "problems": [
+      {
+        "num": 1,
+        "unit": "지수와 로그",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\log_2 24-\\log_2 3$ 의 값은?",
+        "choices": [
+          "$3$",
+          "$1$",
+          "$2$",
+          "$4$",
+          "$5$"
+        ],
+        "answer": 1,
+        "solution": "$\\log_2 24-\\log_2 3=\\log_2\\frac{24}{3}=\\log_2 8=3$"
+      },
+      {
+        "num": 2,
+        "unit": "지수와 로그",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$2^{\\log_2 5}+3^{\\log_3 4}$ 의 값은?",
+        "choices": [
+          "$7$",
+          "$8$",
+          "$9$",
+          "$10$",
+          "$11$"
+        ],
+        "answer": 3,
+        "solution": "$a^{\\log_a x}=x$ 이므로 $2^{\\log_2 5}+3^{\\log_3 4}=5+4=9$"
+      },
+      {
+        "num": 3,
+        "unit": "지수함수와 로그함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$a>0$ 이고 $a^{\\frac{3}{2}}=27$ 일 때, $a$ 의 값은?",
+        "choices": [
+          "$3$",
+          "$6$",
+          "$12$",
+          "$27$",
+          "$9$"
+        ],
+        "answer": 5,
+        "solution": "$a=27^{\\frac{2}{3}}=(3^3)^{\\frac{2}{3}}=3^2=9$"
+      },
+      {
+        "num": 4,
+        "unit": "지수와 로그",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\log 2=a$, $\\log 3=b$ 일 때, $\\log 12$ 를 $a$, $b$ 로 나타내면?",
+        "choices": [
+          "$a+2b$",
+          "$2a+b$",
+          "$a+b$",
+          "$2a+2b$",
+          "$a+3b$"
+        ],
+        "answer": 2,
+        "solution": "$\\log 12=\\log(2^2\\cdot 3)=2\\log 2+\\log 3=2a+b$"
+      },
+      {
+        "num": 5,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\frac{\\pi}{2}<\\theta<\\pi$ 이고 $\\sin\\theta=\\frac{3}{5}$ 일 때, $\\sin\\theta-\\cos\\theta$ 의 값은?",
+        "choices": [
+          "$\\frac{1}{5}$",
+          "$\\frac{3}{5}$",
+          "$1$",
+          "$\\frac{7}{5}$",
+          "$\\frac{9}{5}$"
+        ],
+        "answer": 4,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "제2사분면 각 $\\theta$ 에 대해 $\\sin\\theta-\\cos\\theta$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\frac{\\pi}{2}<\\theta<\\pi$ 이므로 $\\sin\\theta>0$, $\\cos\\theta<0$ 이고 $\\sin\\theta=\\frac{3}{5}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\sin^2\\theta+\\cos^2\\theta=1$ 을 이용하여 $\\cos\\theta$ 를 구한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\cos^2\\theta=1-\\frac{9}{25}=\\frac{16}{25}$ 이고 제2사분면이므로 $\\cos\\theta=-\\frac{4}{5}$. 따라서 $\\sin\\theta-\\cos\\theta=\\frac{3}{5}-(-\\frac{4}{5})=\\frac{7}{5}$"
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "답은 $\\frac{7}{5}$ 로 보기 ④이다."
+          }
+        ]
+      },
+      {
+        "num": 6,
+        "unit": "삼각함수",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\tan\\frac{11}{4}\\pi$ 의 값은?",
+        "choices": [
+          "$-1$",
+          "$-\\sqrt{3}$",
+          "$0$",
+          "$1$",
+          "$\\sqrt{3}$"
+        ],
+        "answer": 1,
+        "solution": "$\\tan\\frac{11}{4}\\pi=\\tan(2\\pi+\\frac{3}{4}\\pi)=\\tan\\frac{3}{4}\\pi=-1$"
+      },
+      {
+        "num": 7,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\triangle ABC$ 에서 $A=120^\\circ$, $a=8$ 일 때, 외접원의 반지름 $R$ 의 값은?",
+        "choices": [
+          "$\\frac{4\\sqrt{3}}{3}$",
+          "$\\frac{8\\sqrt{3}}{3}$",
+          "$4\\sqrt{3}$",
+          "$\\frac{16\\sqrt{3}}{3}$",
+          "$8\\sqrt{3}$"
+        ],
+        "answer": 2,
+        "solution": "사인법칙 $\\frac{a}{\\sin A}=2R$ 에서 $2R=\\frac{8}{\\sin 120^\\circ}=\\frac{8}{\\frac{\\sqrt{3}}{2}}=\\frac{16}{\\sqrt{3}}$ 이므로 $R=\\frac{8\\sqrt{3}}{3}$"
+      },
+      {
+        "num": 8,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\triangle ABC$ 에서 $a=7$, $b=5$, $C=60^\\circ$ 일 때, 변 $c$ 의 길이는?",
+        "choices": [
+          "$\\sqrt{19}$",
+          "$2\\sqrt{10}$",
+          "$\\sqrt{41}$",
+          "$\\sqrt{39}$",
+          "$3\\sqrt{5}$"
+        ],
+        "answer": 4,
+        "solution": "코사인법칙에서 $c^2=49+25-2\\cdot 7\\cdot 5\\cos 60^\\circ=74-35=39$ 이므로 $c=\\sqrt{39}$"
+      },
+      {
+        "num": 9,
+        "unit": "삼각함수의 활용",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\triangle ABC$ 에서 $a=6$, $b=8$, $C=30^\\circ$ 일 때, 넓이는?",
+        "choices": [
+          "$6$",
+          "$12$",
+          "$18$",
+          "$24$",
+          "$48$"
+        ],
+        "answer": 2,
+        "solution": "$S=\\frac{1}{2}ab\\sin C=\\frac{1}{2}\\cdot 6\\cdot 8\\cdot\\sin 30^\\circ=24\\cdot\\frac{1}{2}=12$"
+      },
+      {
+        "num": 10,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\triangle ABC$ 에서 $A=60^\\circ$, $b=8$, $c=5$ 일 때, 삼각형의 넓이는?",
+        "choices": [
+          "$5\\sqrt{3}$",
+          "$8\\sqrt{3}$",
+          "$10\\sqrt{3}$",
+          "$12\\sqrt{3}$",
+          "$20\\sqrt{3}$"
+        ],
+        "answer": 3,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "두 변과 끼인각이 주어진 삼각형의 넓이를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "끼인각 $A=60^\\circ$, 두 변 $b=8$, $c=5$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "넓이 공식 $S=\\frac{1}{2}bc\\sin A$ 를 사용한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$S=\\frac{1}{2}\\cdot 8\\cdot 5\\cdot\\sin 60^\\circ=20\\cdot\\frac{\\sqrt{3}}{2}=10\\sqrt{3}$"
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "답은 $10\\sqrt{3}$ 으로 보기 ③이다."
+          }
+        ]
+      },
+      {
+        "num": 11,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "등차수열 $\\{a_n\\}$ 에서 $a_3=10$, $a_7=22$ 일 때, $a_{10}$ 의 값은?",
+        "choices": [
+          "$28$",
+          "$29$",
+          "$30$",
+          "$31$",
+          "$32$"
+        ],
+        "answer": 4,
+        "solution": "$a_7-a_3=4d=12$ 이므로 $d=3$, $a_1=a_3-2d=4$. 따라서 $a_{10}=4+9\\cdot 3=31$"
+      },
+      {
+        "num": 12,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "등비수열 $\\{a_n\\}$ 에서 $a_2=6$, $a_5=48$ 일 때, $a_6$ 의 값은?",
+        "choices": [
+          "$48$",
+          "$64$",
+          "$72$",
+          "$128$",
+          "$96$"
+        ],
+        "answer": 5,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등비수열의 두 항으로 공비를 구해 $a_6$ 을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$a_2=6$, $a_5=48$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "등비수열은 $a_n=a_1 r^{n-1}$ 이고 $\\frac{a_5}{a_2}=r^3$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$r^3=\\frac{48}{6}=8$ 이므로 $r=2$, $a_1=\\frac{a_2}{r}=3$. 따라서 $a_6=3\\cdot 2^5=96$"
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "답은 $96$ 으로 보기 ④이다."
+          }
+        ]
+      },
+      {
+        "num": 13,
+        "unit": "등차수열과 등비수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "첫째항이 $3$, 공차가 $4$ 인 등차수열의 첫째항부터 제 $10$ 항까지의 합은?",
+        "choices": [
+          "$210$",
+          "$180$",
+          "$190$",
+          "$200$",
+          "$220$"
+        ],
+        "answer": 1,
+        "solution": "$S_{10}=\\frac{10}{2}(2\\cdot 3+9\\cdot 4)=5(6+36)=210$"
+      },
+      {
+        "num": 14,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\sum_{k=1}^{20} k$ 의 값은?",
+        "choices": [
+          "$190$",
+          "$200$",
+          "$210$",
+          "$220$",
+          "$230$"
+        ],
+        "answer": 3,
+        "solution": "$\\sum_{k=1}^{20} k=\\frac{20\\cdot 21}{2}=210$"
+      },
+      {
+        "num": 15,
+        "unit": "여러 가지 수열",
+        "level": "기본",
+        "type": "객관식",
+        "latex": "$\\sum_{k=1}^{10} k^2$ 의 값은?",
+        "choices": [
+          "$285$",
+          "$330$",
+          "$440$",
+          "$506$",
+          "$385$"
+        ],
+        "answer": 5,
+        "solution": "$\\sum_{k=1}^{10} k^2=\\frac{10\\cdot 11\\cdot 21}{6}=385$"
+      },
+      {
+        "num": 16,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "$\\sum_{k=1}^{15}(2k-1)$ 의 값은?",
+        "choices": [
+          "$196$",
+          "$210$",
+          "$225$",
+          "$240$",
+          "$256$"
+        ],
+        "answer": 3,
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "홀수의 합 $\\sum_{k=1}^{15}(2k-1)$ 을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "합의 항이 $2k-1$ 인 일반항이고 $k$ 는 $1$ 부터 $15$ 까지이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "시그마의 성질 $\\sum(2k-1)=2\\sum k-\\sum 1$ 을 이용한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$\\sum_{k=1}^{15}(2k-1)=2\\cdot\\frac{15\\cdot 16}{2}-15=240-15=225$"
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "답은 $225$ 로 보기 ③이다."
+          }
+        ]
+      },
+      {
+        "num": 17,
+        "unit": "등차수열과 등비수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "첫째항이 $2$, 공비가 $3$ 인 등비수열의 첫째항부터 제 $5$ 항까지의 합은?",
+        "choices": [
+          "$121$",
+          "$242$",
+          "$243$",
+          "$364$",
+          "$486$"
+        ],
+        "answer": 2,
+        "solution": "$S_5=\\frac{2(3^5-1)}{3-1}=\\frac{2\\cdot 242}{2}=242$"
+      },
+      {
+        "num": 18,
+        "unit": "삼각함수",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "$0\\le x<2\\pi$ 에서 방정식 $2\\sin^2 x-3\\sin x+1=0$ 을 만족시키는 모든 $x$ 의 값의 합을 구하시오.",
+        "answer": "3π/2",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "삼각방정식의 모든 해의 합을 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "정의역은 $0\\le x<2\\pi$ 이고 식은 $2\\sin^2 x-3\\sin x+1=0$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$\\sin x=t$ 로 치환하여 이차방정식으로 인수분해한다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$(2\\sin x-1)(\\sin x-1)=0$ 에서 $\\sin x=\\frac{1}{2}$ 또는 $\\sin x=1$. 해는 $x=\\frac{\\pi}{6},\\ \\frac{5\\pi}{6},\\ \\frac{\\pi}{2}$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "합은 $\\frac{\\pi}{6}+\\frac{5\\pi}{6}+\\frac{\\pi}{2}=\\frac{3\\pi}{2}$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 19,
+        "unit": "삼각함수의 활용",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "$\\triangle ABC$ 에서 $2\\sin B\\cos C=\\sin A$ 가 성립할 때, 이 삼각형은 어떤 삼각형인지 설명하시오.",
+        "answer": "b=c인 이등변삼각형",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "주어진 삼각함수 관계식으로 삼각형의 모양을 판별한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$2\\sin B\\cos C=\\sin A$ 이고 $A=\\pi-(B+C)$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "사인법칙 $\\sin A=\\frac{a}{2R}$ 와 코사인법칙 $\\cos C=\\frac{a^2+b^2-c^2}{2ab}$ 를 변에 대한 식으로 바꾼다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$2\\cdot\\frac{b}{2R}\\cdot\\frac{a^2+b^2-c^2}{2ab}=\\frac{a}{2R}$ 을 정리하면 $\\frac{a^2+b^2-c^2}{a}=a$, 즉 $b^2=c^2$ 이므로 $b=c$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "따라서 $b=c$ 인 이등변삼각형이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "수학적 귀납법",
+        "level": "심화",
+        "type": "서술형",
+        "latex": "모든 자연수 $n$ 에 대하여 $\\sum_{k=1}^{n}\\frac{1}{k(k+1)}=\\frac{n}{n+1}$ 임을 수학적 귀납법으로 증명하시오.",
+        "answer": "n/(n+1)",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "등식 $\\sum_{k=1}^{n}\\frac{1}{k(k+1)}=\\frac{n}{n+1}$ 을 귀납법으로 증명한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "모든 자연수 $n$ 에 대해 성립함을 보인다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "$n=1$ 성립 확인 후, $n=m$ 가정으로 $n=m+1$ 을 보인다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "$n=1$ 일 때 좌변 $\\frac{1}{2}$, 우변 $\\frac{1}{2}$ 로 성립.  $n=m$ 성립을 가정하면 $\\sum_{k=1}^{m+1}\\frac{1}{k(k+1)}=\\frac{m}{m+1}+\\frac{1}{(m+1)(m+2)}=\\frac{m(m+2)+1}{(m+1)(m+2)}=\\frac{(m+1)^2}{(m+1)(m+2)}=\\frac{m+1}{m+2}$"
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "따라서 모든 자연수 $n$ 에 대해 $\\sum_{k=1}^{n}\\frac{1}{k(k+1)}=\\frac{n}{n+1}$ 이 성립한다."
+          }
+        ]
+      }
+    ],
+    "rounds": [
+      [
+        {
+          "num": 1,
+          "unit": "지수와 로그",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\log_2 24-\\log_2 3$ 의 값은?",
+          "choices": [
+            "$3$",
+            "$1$",
+            "$2$",
+            "$4$",
+            "$5$"
+          ],
+          "answer": 1,
+          "solution": "$\\log_2 24-\\log_2 3=\\log_2\\frac{24}{3}=\\log_2 8=3$"
+        },
+        {
+          "num": 2,
+          "unit": "지수와 로그",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$2^{\\log_2 5}+3^{\\log_3 4}$ 의 값은?",
+          "choices": [
+            "$7$",
+            "$8$",
+            "$9$",
+            "$10$",
+            "$11$"
+          ],
+          "answer": 3,
+          "solution": "$a^{\\log_a x}=x$ 이므로 $2^{\\log_2 5}+3^{\\log_3 4}=5+4=9$"
+        },
+        {
+          "num": 3,
+          "unit": "지수함수와 로그함수",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$a>0$ 이고 $a^{\\frac{3}{2}}=27$ 일 때, $a$ 의 값은?",
+          "choices": [
+            "$3$",
+            "$6$",
+            "$12$",
+            "$27$",
+            "$9$"
+          ],
+          "answer": 5,
+          "solution": "$a=27^{\\frac{2}{3}}=(3^3)^{\\frac{2}{3}}=3^2=9$"
+        },
+        {
+          "num": 4,
+          "unit": "지수와 로그",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\log 2=a$, $\\log 3=b$ 일 때, $\\log 12$ 를 $a$, $b$ 로 나타내면?",
+          "choices": [
+            "$a+2b$",
+            "$2a+b$",
+            "$a+b$",
+            "$2a+2b$",
+            "$a+3b$"
+          ],
+          "answer": 2,
+          "solution": "$\\log 12=\\log(2^2\\cdot 3)=2\\log 2+\\log 3=2a+b$"
+        },
+        {
+          "num": 5,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\frac{\\pi}{2}<\\theta<\\pi$ 이고 $\\sin\\theta=\\frac{3}{5}$ 일 때, $\\sin\\theta-\\cos\\theta$ 의 값은?",
+          "choices": [
+            "$\\frac{1}{5}$",
+            "$\\frac{3}{5}$",
+            "$1$",
+            "$\\frac{7}{5}$",
+            "$\\frac{9}{5}$"
+          ],
+          "answer": 4,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "제2사분면 각 $\\theta$ 에 대해 $\\sin\\theta-\\cos\\theta$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$\\frac{\\pi}{2}<\\theta<\\pi$ 이므로 $\\sin\\theta>0$, $\\cos\\theta<0$ 이고 $\\sin\\theta=\\frac{3}{5}$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$\\sin^2\\theta+\\cos^2\\theta=1$ 을 이용하여 $\\cos\\theta$ 를 구한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\cos^2\\theta=1-\\frac{9}{25}=\\frac{16}{25}$ 이고 제2사분면이므로 $\\cos\\theta=-\\frac{4}{5}$. 따라서 $\\sin\\theta-\\cos\\theta=\\frac{3}{5}-(-\\frac{4}{5})=\\frac{7}{5}$"
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "답은 $\\frac{7}{5}$ 로 보기 ④이다."
+            }
+          ]
+        },
+        {
+          "num": 6,
+          "unit": "삼각함수",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\tan\\frac{11}{4}\\pi$ 의 값은?",
+          "choices": [
+            "$-1$",
+            "$-\\sqrt{3}$",
+            "$0$",
+            "$1$",
+            "$\\sqrt{3}$"
+          ],
+          "answer": 1,
+          "solution": "$\\tan\\frac{11}{4}\\pi=\\tan(2\\pi+\\frac{3}{4}\\pi)=\\tan\\frac{3}{4}\\pi=-1$"
+        },
+        {
+          "num": 7,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\triangle ABC$ 에서 $A=120^\\circ$, $a=8$ 일 때, 외접원의 반지름 $R$ 의 값은?",
+          "choices": [
+            "$\\frac{4\\sqrt{3}}{3}$",
+            "$\\frac{8\\sqrt{3}}{3}$",
+            "$4\\sqrt{3}$",
+            "$\\frac{16\\sqrt{3}}{3}$",
+            "$8\\sqrt{3}$"
+          ],
+          "answer": 2,
+          "solution": "사인법칙 $\\frac{a}{\\sin A}=2R$ 에서 $2R=\\frac{8}{\\sin 120^\\circ}=\\frac{8}{\\frac{\\sqrt{3}}{2}}=\\frac{16}{\\sqrt{3}}$ 이므로 $R=\\frac{8\\sqrt{3}}{3}$"
+        },
+        {
+          "num": 8,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\triangle ABC$ 에서 $a=7$, $b=5$, $C=60^\\circ$ 일 때, 변 $c$ 의 길이는?",
+          "choices": [
+            "$\\sqrt{19}$",
+            "$2\\sqrt{10}$",
+            "$\\sqrt{41}$",
+            "$\\sqrt{39}$",
+            "$3\\sqrt{5}$"
+          ],
+          "answer": 4,
+          "solution": "코사인법칙에서 $c^2=49+25-2\\cdot 7\\cdot 5\\cos 60^\\circ=74-35=39$ 이므로 $c=\\sqrt{39}$"
+        },
+        {
+          "num": 9,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\triangle ABC$ 에서 $a=6$, $b=8$, $C=30^\\circ$ 일 때, 넓이는?",
+          "choices": [
+            "$6$",
+            "$12$",
+            "$18$",
+            "$24$",
+            "$48$"
+          ],
+          "answer": 2,
+          "solution": "$S=\\frac{1}{2}ab\\sin C=\\frac{1}{2}\\cdot 6\\cdot 8\\cdot\\sin 30^\\circ=24\\cdot\\frac{1}{2}=12$"
+        },
+        {
+          "num": 10,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\triangle ABC$ 에서 $A=60^\\circ$, $b=8$, $c=5$ 일 때, 삼각형의 넓이는?",
+          "choices": [
+            "$5\\sqrt{3}$",
+            "$8\\sqrt{3}$",
+            "$10\\sqrt{3}$",
+            "$12\\sqrt{3}$",
+            "$20\\sqrt{3}$"
+          ],
+          "answer": 3,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "두 변과 끼인각이 주어진 삼각형의 넓이를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "끼인각 $A=60^\\circ$, 두 변 $b=8$, $c=5$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "넓이 공식 $S=\\frac{1}{2}bc\\sin A$ 를 사용한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$S=\\frac{1}{2}\\cdot 8\\cdot 5\\cdot\\sin 60^\\circ=20\\cdot\\frac{\\sqrt{3}}{2}=10\\sqrt{3}$"
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "답은 $10\\sqrt{3}$ 으로 보기 ③이다."
+            }
+          ]
+        },
+        {
+          "num": 11,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "등차수열 $\\{a_n\\}$ 에서 $a_3=10$, $a_7=22$ 일 때, $a_{10}$ 의 값은?",
+          "choices": [
+            "$28$",
+            "$29$",
+            "$30$",
+            "$31$",
+            "$32$"
+          ],
+          "answer": 4,
+          "solution": "$a_7-a_3=4d=12$ 이므로 $d=3$, $a_1=a_3-2d=4$. 따라서 $a_{10}=4+9\\cdot 3=31$"
+        },
+        {
+          "num": 12,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "등비수열 $\\{a_n\\}$ 에서 $a_2=6$, $a_5=48$ 일 때, $a_6$ 의 값은?",
+          "choices": [
+            "$48$",
+            "$64$",
+            "$72$",
+            "$128$",
+            "$96$"
+          ],
+          "answer": 5,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "등비수열의 두 항으로 공비를 구해 $a_6$ 을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a_2=6$, $a_5=48$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "등비수열은 $a_n=a_1 r^{n-1}$ 이고 $\\frac{a_5}{a_2}=r^3$ 이다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$r^3=\\frac{48}{6}=8$ 이므로 $r=2$, $a_1=\\frac{a_2}{r}=3$. 따라서 $a_6=3\\cdot 2^5=96$"
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "답은 $96$ 으로 보기 ④이다."
+            }
+          ]
+        },
+        {
+          "num": 13,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "첫째항이 $3$, 공차가 $4$ 인 등차수열의 첫째항부터 제 $10$ 항까지의 합은?",
+          "choices": [
+            "$210$",
+            "$180$",
+            "$190$",
+            "$200$",
+            "$220$"
+          ],
+          "answer": 1,
+          "solution": "$S_{10}=\\frac{10}{2}(2\\cdot 3+9\\cdot 4)=5(6+36)=210$"
+        },
+        {
+          "num": 14,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\sum_{k=1}^{20} k$ 의 값은?",
+          "choices": [
+            "$190$",
+            "$200$",
+            "$210$",
+            "$220$",
+            "$230$"
+          ],
+          "answer": 3,
+          "solution": "$\\sum_{k=1}^{20} k=\\frac{20\\cdot 21}{2}=210$"
+        },
+        {
+          "num": 15,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\sum_{k=1}^{10} k^2$ 의 값은?",
+          "choices": [
+            "$285$",
+            "$330$",
+            "$440$",
+            "$506$",
+            "$385$"
+          ],
+          "answer": 5,
+          "solution": "$\\sum_{k=1}^{10} k^2=\\frac{10\\cdot 11\\cdot 21}{6}=385$"
+        },
+        {
+          "num": 16,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\sum_{k=1}^{15}(2k-1)$ 의 값은?",
+          "choices": [
+            "$196$",
+            "$210$",
+            "$225$",
+            "$240$",
+            "$256$"
+          ],
+          "answer": 3,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "홀수의 합 $\\sum_{k=1}^{15}(2k-1)$ 을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "합의 항이 $2k-1$ 인 일반항이고 $k$ 는 $1$ 부터 $15$ 까지이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "시그마의 성질 $\\sum(2k-1)=2\\sum k-\\sum 1$ 을 이용한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\sum_{k=1}^{15}(2k-1)=2\\cdot\\frac{15\\cdot 16}{2}-15=240-15=225$"
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "답은 $225$ 로 보기 ③이다."
+            }
+          ]
+        },
+        {
+          "num": 17,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "첫째항이 $2$, 공비가 $3$ 인 등비수열의 첫째항부터 제 $5$ 항까지의 합은?",
+          "choices": [
+            "$121$",
+            "$242$",
+            "$243$",
+            "$364$",
+            "$486$"
+          ],
+          "answer": 2,
+          "solution": "$S_5=\\frac{2(3^5-1)}{3-1}=\\frac{2\\cdot 242}{2}=242$"
+        },
+        {
+          "num": 18,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "$0\\le x<2\\pi$ 에서 방정식 $2\\sin^2 x-3\\sin x+1=0$ 을 만족시키는 모든 $x$ 의 값의 합을 구하시오.",
+          "answer": "3π/2",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "삼각방정식의 모든 해의 합을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "정의역은 $0\\le x<2\\pi$ 이고 식은 $2\\sin^2 x-3\\sin x+1=0$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$\\sin x=t$ 로 치환하여 이차방정식으로 인수분해한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$(2\\sin x-1)(\\sin x-1)=0$ 에서 $\\sin x=\\frac{1}{2}$ 또는 $\\sin x=1$. 해는 $x=\\frac{\\pi}{6},\\ \\frac{5\\pi}{6},\\ \\frac{\\pi}{2}$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "합은 $\\frac{\\pi}{6}+\\frac{5\\pi}{6}+\\frac{\\pi}{2}=\\frac{3\\pi}{2}$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 19,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "$\\triangle ABC$ 에서 $2\\sin B\\cos C=\\sin A$ 가 성립할 때, 이 삼각형은 어떤 삼각형인지 설명하시오.",
+          "answer": "b=c인 이등변삼각형",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "주어진 삼각함수 관계식으로 삼각형의 모양을 판별한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$2\\sin B\\cos C=\\sin A$ 이고 $A=\\pi-(B+C)$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "사인법칙 $\\sin A=\\frac{a}{2R}$ 와 코사인법칙 $\\cos C=\\frac{a^2+b^2-c^2}{2ab}$ 를 변에 대한 식으로 바꾼다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$2\\cdot\\frac{b}{2R}\\cdot\\frac{a^2+b^2-c^2}{2ab}=\\frac{a}{2R}$ 을 정리하면 $\\frac{a^2+b^2-c^2}{a}=a$, 즉 $b^2=c^2$ 이므로 $b=c$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "따라서 $b=c$ 인 이등변삼각형이다."
+            }
+          ]
+        },
+        {
+          "num": 20,
+          "unit": "수학적 귀납법",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "모든 자연수 $n$ 에 대하여 $\\sum_{k=1}^{n}\\frac{1}{k(k+1)}=\\frac{n}{n+1}$ 임을 수학적 귀납법으로 증명하시오.",
+          "answer": "n/(n+1)",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "등식 $\\sum_{k=1}^{n}\\frac{1}{k(k+1)}=\\frac{n}{n+1}$ 을 귀납법으로 증명한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "모든 자연수 $n$ 에 대해 성립함을 보인다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$n=1$ 성립 확인 후, $n=m$ 가정으로 $n=m+1$ 을 보인다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$n=1$ 일 때 좌변 $\\frac{1}{2}$, 우변 $\\frac{1}{2}$ 로 성립.  $n=m$ 성립을 가정하면 $\\sum_{k=1}^{m+1}\\frac{1}{k(k+1)}=\\frac{m}{m+1}+\\frac{1}{(m+1)(m+2)}=\\frac{m(m+2)+1}{(m+1)(m+2)}=\\frac{(m+1)^2}{(m+1)(m+2)}=\\frac{m+1}{m+2}$"
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "따라서 모든 자연수 $n$ 에 대해 $\\sum_{k=1}^{n}\\frac{1}{k(k+1)}=\\frac{n}{n+1}$ 이 성립한다."
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "num": 1,
+          "unit": "지수와 로그",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\log_2 48-\\log_2 3$ 의 값은?",
+          "solution": "$\\log_2 48-\\log_2 3=\\log_2\\frac{48}{3}=\\log_2 16=4$",
+          "choices": [
+            "$2$",
+            "$4$",
+            "$3$",
+            "$5$",
+            "$1$"
+          ],
+          "answer": 2
+        },
+        {
+          "num": 2,
+          "unit": "지수와 로그",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$2^{\\log_2 7}+3^{\\log_3 6}$ 의 값은?",
+          "solution": "$a^{\\log_a x}=x$ 이므로 $2^{\\log_2 7}+3^{\\log_3 6}=7+6=13$",
+          "choices": [
+            "$12$",
+            "$13$",
+            "$11$",
+            "$14$",
+            "$15$"
+          ],
+          "answer": 2
+        },
+        {
+          "num": 3,
+          "unit": "지수함수와 로그함수",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$a>0$ 이고 $a^{\\frac{3}{2}}=64$ 일 때, $a$ 의 값은?",
+          "solution": "$a=64^{\\frac{2}{3}}=(4^3)^{\\frac{2}{3}}=4^2=16$",
+          "choices": [
+            "$16$",
+            "$8$",
+            "$4$",
+            "$32$",
+            "$64$"
+          ],
+          "answer": 1
+        },
+        {
+          "num": 4,
+          "unit": "지수와 로그",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\log 2=a$, $\\log 3=b$ 일 때, $\\log 18$ 을 $a$, $b$ 로 나타내면?",
+          "choices": [
+            "$2a+b$",
+            "$a+b$",
+            "$2a+2b$",
+            "$3a+b$",
+            "$a+2b$"
+          ],
+          "answer": 5,
+          "solution": "$\\log 18=\\log(2\\cdot 3^2)=\\log 2+2\\log 3=a+2b$"
+        },
+        {
+          "num": 5,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\frac{\\pi}{2}<\\theta<\\pi$ 이고 $\\sin\\theta=\\frac{5}{13}$ 일 때, $\\sin\\theta-\\cos\\theta$ 의 값은?",
+          "choices": [
+            "$\\frac{5}{13}$",
+            "$\\frac{17}{13}$",
+            "$\\frac{12}{13}$",
+            "$1$",
+            "$\\frac{19}{13}$"
+          ],
+          "answer": 2,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "제2사분면 각 $\\theta$ 에 대해 $\\sin\\theta-\\cos\\theta$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$\\frac{\\pi}{2}<\\theta<\\pi$ 이므로 $\\sin\\theta>0$, $\\cos\\theta<0$ 이고 $\\sin\\theta=\\frac{5}{13}$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$\\sin^2\\theta+\\cos^2\\theta=1$ 을 이용하여 $\\cos\\theta$ 를 구한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\cos^2\\theta=1-\\frac{25}{169}=\\frac{144}{169}$ 이고 제2사분면이므로 $\\cos\\theta=-\\frac{12}{13}$. 따라서 $\\sin\\theta-\\cos\\theta=\\frac{5}{13}-(-\\frac{12}{13})=\\frac{17}{13}$"
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "답은 $\\frac{17}{13}$ 로 보기 ②이다."
+            }
+          ]
+        },
+        {
+          "num": 6,
+          "unit": "삼각함수",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\tan\\frac{13}{4}\\pi$ 의 값은?",
+          "choices": [
+            "$-1$",
+            "$-\\sqrt{3}$",
+            "$0$",
+            "$1$",
+            "$\\sqrt{3}$"
+          ],
+          "answer": 4,
+          "solution": "$\\tan\\frac{13}{4}\\pi=\\tan(2\\pi+\\frac{5}{4}\\pi)=\\tan\\frac{5}{4}\\pi=\\tan\\frac{\\pi}{4}=1$"
+        },
+        {
+          "num": 7,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\triangle ABC$ 에서 $A=120^\\circ$, $a=12$ 일 때, 외접원의 반지름 $R$ 의 값은?",
+          "choices": [
+            "$$\\frac{4\\sqrt{3}}{3}$$",
+            "$$4\\sqrt{3}$$",
+            "$$\\frac{8\\sqrt{3}}{3}$$",
+            "$$\\frac{16\\sqrt{3}}{3}$$",
+            "$$8\\sqrt{3}$$"
+          ],
+          "answer": 2,
+          "solution": "사인법칙 $\\frac{a}{\\sin A}=2R$ 에서 $2R=\\frac{12}{\\sin 120^\\circ}=\\frac{12}{\\frac{\\sqrt{3}}{2}}=\\frac{24}{\\sqrt{3}}=8\\sqrt{3}$ 이므로 $R=4\\sqrt{3}$"
+        },
+        {
+          "num": 8,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\triangle ABC$ 에서 $a=8$, $b=5$, $C=60^\\circ$ 일 때, 변 $c$ 의 길이는?",
+          "choices": [
+            "$$7$$",
+            "$$\\sqrt{47}$$",
+            "$$\\sqrt{39}$$",
+            "$$\\sqrt{41}$$",
+            "$$2\\sqrt{13}$$"
+          ],
+          "answer": 1,
+          "solution": "코사인법칙에서 $c^2=64+25-2\\cdot 8\\cdot 5\\cos 60^\\circ=89-40=49$ 이므로 $c=7$"
+        },
+        {
+          "num": 9,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\triangle ABC$ 에서 $a=8$, $b=10$, $C=30^\\circ$ 일 때, 넓이는?",
+          "solution": "$S=\\frac{1}{2}ab\\sin C=\\frac{1}{2}\\cdot 8\\cdot 10\\cdot\\sin 30^\\circ=40\\cdot\\frac{1}{2}=20$",
+          "choices": [
+            "$10$",
+            "$15$",
+            "$25$",
+            "$40$",
+            "$20$"
+          ],
+          "answer": 5
+        },
+        {
+          "num": 10,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\triangle ABC$ 에서 $A=60^\\circ$, $b=8$, $c=6$ 일 때, 삼각형의 넓이는?",
+          "choices": [
+            "$6\\sqrt{3}$",
+            "$8\\sqrt{3}$",
+            "$10\\sqrt{3}$",
+            "$12\\sqrt{3}$",
+            "$16\\sqrt{3}$"
+          ],
+          "answer": 4,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "두 변과 끼인각이 주어진 삼각형의 넓이를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "끼인각 $A=60^\\circ$, 두 변 $b=8$, $c=6$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "넓이 공식 $S=\\frac{1}{2}bc\\sin A$ 를 사용한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$S=\\frac{1}{2}\\cdot 8\\cdot 6\\cdot\\sin 60^\\circ=24\\cdot\\frac{\\sqrt{3}}{2}=12\\sqrt{3}$"
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "답은 $12\\sqrt{3}$ 로 보기 ④이다."
+            }
+          ]
+        },
+        {
+          "num": 11,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "등차수열 $\\{a_n\\}$ 에서 $a_3=13$, $a_7=29$ 일 때, $a_10$ 의 값은?",
+          "solution": "$a_7-a_3=4d=16$ 이므로 $d=4$, $a_1=a_3-2d=5$. 따라서 $a_10=5+9\\cdot 4=41$",
+          "choices": [
+            "$41$",
+            "$38$",
+            "$40$",
+            "$42$",
+            "$44$"
+          ],
+          "answer": 1
+        },
+        {
+          "num": 12,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "등비수열 $\\{a_n\\}$ 에서 $a_2=6$, $a_5=162$ 일 때, $a_6$ 의 값은?",
+          "choices": [
+            "$486$",
+            "$162$",
+            "$243$",
+            "$729$",
+            "$324$"
+          ],
+          "answer": 1,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "등비수열의 두 항으로 공비를 구해 $a_6$ 을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a_2=6$, $a_5=162$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "등비수열은 $a_n=a_1 r^{n-1}$ 이고 $\\frac{a_5}{a_2}=r^3$ 이다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$r^3=\\frac{162}{6}=27$ 이므로 $r=3$, $a_1=\\frac{a_2}{r}=2$. 따라서 $a_6=2\\cdot 3^5=486$"
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "답은 $486$ 로 보기 ①이다."
+            }
+          ]
+        },
+        {
+          "num": 13,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "첫째항이 $5$, 공차가 $3$ 인 등차수열의 첫째항부터 제 $10$ 항까지의 합은?",
+          "solution": "$S_{10}=\\frac{10}{2}(2\\cdot 5+9\\cdot 3)=5(10+27)=185$",
+          "choices": [
+            "$185$",
+            "$195$",
+            "$205$",
+            "$215$",
+            "$225$"
+          ],
+          "answer": 1
+        },
+        {
+          "num": 14,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\sum_{k=1}^{25} k$ 의 값은?",
+          "solution": "$\\sum_{k=1}^{25} k=\\frac{25\\cdot 26}{2}=325$",
+          "choices": [
+            "$300$",
+            "$315$",
+            "$350$",
+            "$325$",
+            "$375$"
+          ],
+          "answer": 4
+        },
+        {
+          "num": 15,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\sum_{k=1}^{12} k^2$ 의 값은?",
+          "solution": "$\\sum_{k=1}^{12} k^2=\\frac{12\\cdot 13\\cdot 25}{6}=650$",
+          "choices": [
+            "$506$",
+            "$650$",
+            "$600$",
+            "$725$",
+            "$800$"
+          ],
+          "answer": 2
+        },
+        {
+          "num": 16,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\sum_{k=1}^{18}(2k-1)$ 의 값은?",
+          "choices": [
+            "$289$",
+            "$306$",
+            "$324$",
+            "$342$",
+            "$360$"
+          ],
+          "answer": 3,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "홀수의 합 $\\sum_{k=1}^{18}(2k-1)$ 을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "합의 항이 $2k-1$ 인 일반항이고 $k$ 는 $1$ 부터 $18$ 까지이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "시그마의 성질 $\\sum(2k-1)=2\\sum k-\\sum 1$ 을 이용한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\sum_{k=1}^{18}(2k-1)=2\\cdot\\frac{18\\cdot 19}{2}-18=342-18=324$"
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "답은 $324$ 로 보기 ③이다."
+            }
+          ]
+        },
+        {
+          "num": 17,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "첫째항이 $3$, 공비가 $2$ 인 등비수열의 첫째항부터 제 $6$ 항까지의 합은?",
+          "solution": "$S_6=\\frac{3(2^6-1)}{2-1}=\\frac{3\\cdot 63}{1}=189$",
+          "choices": [
+            "$93$",
+            "$126$",
+            "$255$",
+            "$381$",
+            "$189$"
+          ],
+          "answer": 5
+        },
+        {
+          "num": 18,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "$0\\le x<2\\pi$ 에서 방정식 $2\\cos^2 x-3\\cos x+1=0$ 을 만족시키는 모든 $x$ 의 값의 합을 구하시오.",
+          "answer": "2π",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "삼각방정식의 모든 해의 합을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "정의역은 $0\\le x<2\\pi$ 이고 식은 $2\\cos^2 x-3\\cos x+1=0$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$\\cos x=t$ 로 치환하여 이차방정식으로 인수분해한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$(2\\cos x-1)(\\cos x-1)=0$ 에서 $\\cos x=\\frac{1}{2}$ 또는 $\\cos x=1$. 해는 $x=\\frac{\\pi}{3},\\ \\frac{5\\pi}{3},\\ 0$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "합은 $0+\\frac{\\pi}{3}+\\frac{5\\pi}{3}=2\\pi$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 19,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "$\\triangle ABC$ 에서 $2\\sin A\\cos B=\\sin C$ 가 성립할 때, 이 삼각형은 어떤 삼각형인지 설명하시오.",
+          "answer": "a=b인 이등변삼각형",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "주어진 삼각함수 관계식으로 삼각형의 모양을 판별한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$2\\sin A\\cos B=\\sin C$ 이고 $C=\\pi-(A+B)$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "사인법칙 $\\sin C=\\frac{c}{2R}$ 와 코사인법칙 $\\cos B=\\frac{c^2+a^2-b^2}{2ca}$ 를 변에 대한 식으로 바꾼다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$2\\cdot\\frac{a}{2R}\\cdot\\frac{c^2+a^2-b^2}{2ca}=\\frac{c}{2R}$ 을 정리하면 $\\frac{c^2+a^2-b^2}{c}=c$, 즉 $a^2=b^2$ 이므로 $a=b$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "따라서 $a=b$ 인 이등변삼각형이다."
+            }
+          ]
+        },
+        {
+          "num": 20,
+          "unit": "수학적 귀납법",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "모든 자연수 $n$ 에 대하여 $\\sum_{k=1}^{n}k(k+1)=\\frac{n(n+1)(n+2)}{3}$ 임을 수학적 귀납법으로 증명하시오.",
+          "answer": "n(n+1)(n+2)/3",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "등식 $\\sum_{k=1}^{n}k(k+1)=\\frac{n(n+1)(n+2)}{3}$ 을 귀납법으로 증명한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "모든 자연수 $n$ 에 대해 성립함을 보인다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$n=1$ 성립 확인 후, $n=m$ 가정으로 $n=m+1$ 을 보인다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$n=1$ 일 때 좌변 $2$, 우변 $\\frac{1\\cdot 2\\cdot 3}{3}=2$ 로 성립.  $n=m$ 성립을 가정하면 $\\sum_{k=1}^{m+1}k(k+1)=\\frac{m(m+1)(m+2)}{3}+(m+1)(m+2)=\\frac{(m+1)(m+2)(m+3)}{3}$"
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "따라서 모든 자연수 $n$ 에 대해 $\\sum_{k=1}^{n}k(k+1)=\\frac{n(n+1)(n+2)}{3}$ 이 성립한다."
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "num": 1,
+          "unit": "지수와 로그",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\log_2 96-\\log_2 3$ 의 값은?",
+          "solution": "$\\log_2 96-\\log_2 3=\\log_2\\frac{96}{3}=\\log_2 32=5$",
+          "choices": [
+            "$1$",
+            "$3$",
+            "$2$",
+            "$4$",
+            "$5$"
+          ],
+          "answer": 5
+        },
+        {
+          "num": 2,
+          "unit": "지수와 로그",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$2^{\\log_2 8}+3^{\\log_3 9}$ 의 값은?",
+          "solution": "$a^{\\log_a x}=x$ 이므로 $2^{\\log_2 8}+3^{\\log_3 9}=8+9=17$",
+          "choices": [
+            "$17$",
+            "$16$",
+            "$15$",
+            "$18$",
+            "$19$"
+          ],
+          "answer": 1
+        },
+        {
+          "num": 3,
+          "unit": "지수함수와 로그함수",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$a>0$ 이고 $a^{\\frac{3}{2}}=125$ 일 때, $a$ 의 값은?",
+          "solution": "$a=125^{\\frac{2}{3}}=(5^3)^{\\frac{2}{3}}=5^2=25$",
+          "choices": [
+            "$5$",
+            "$10$",
+            "$15$",
+            "$25$",
+            "$125$"
+          ],
+          "answer": 4
+        },
+        {
+          "num": 4,
+          "unit": "지수와 로그",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\log 2=a$, $\\log 3=b$ 일 때, $\\log 24$ 를 $a$, $b$ 로 나타내면?",
+          "choices": [
+            "$a+3b$",
+            "$2a+b$",
+            "$a+2b$",
+            "$3a+b$",
+            "$2a+2b$"
+          ],
+          "answer": 4,
+          "solution": "$\\log 24=\\log(2^3\\cdot 3)=3\\log 2+\\log 3=3a+b$"
+        },
+        {
+          "num": 5,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\frac{\\pi}{2}<\\theta<\\pi$ 이고 $\\sin\\theta=\\frac{8}{17}$ 일 때, $\\sin\\theta-\\cos\\theta$ 의 값은?",
+          "choices": [
+            "$\\frac{8}{17}$",
+            "$\\frac{15}{17}$",
+            "$\\frac{23}{17}$",
+            "$1$",
+            "$\\frac{25}{17}$"
+          ],
+          "answer": 3,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "제2사분면 각 $\\theta$ 에 대해 $\\sin\\theta-\\cos\\theta$ 를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$\\frac{\\pi}{2}<\\theta<\\pi$ 이므로 $\\sin\\theta>0$, $\\cos\\theta<0$ 이고 $\\sin\\theta=\\frac{8}{17}$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$\\sin^2\\theta+\\cos^2\\theta=1$ 을 이용하여 $\\cos\\theta$ 를 구한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\cos^2\\theta=1-\\frac{64}{289}=\\frac{225}{289}$ 이고 제2사분면이므로 $\\cos\\theta=-\\frac{15}{17}$. 따라서 $\\sin\\theta-\\cos\\theta=\\frac{8}{17}-(-\\frac{15}{17})=\\frac{23}{17}$"
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "답은 $\\frac{23}{17}$ 로 보기 ③이다."
+            }
+          ]
+        },
+        {
+          "num": 6,
+          "unit": "삼각함수",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\tan\\frac{7}{3}\\pi$ 의 값은?",
+          "choices": [
+            "$-1$",
+            "$-\\sqrt{3}$",
+            "$0$",
+            "$1$",
+            "$\\sqrt{3}$"
+          ],
+          "answer": 5,
+          "solution": "$\\tan\\frac{7}{3}\\pi=\\tan(2\\pi+\\frac{\\pi}{3})=\\tan\\frac{\\pi}{3}=\\sqrt{3}$"
+        },
+        {
+          "num": 7,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\triangle ABC$ 에서 $A=120^\\circ$, $a=6$ 일 때, 외접원의 반지름 $R$ 의 값은?",
+          "choices": [
+            "$$\\sqrt{3}$$",
+            "$$2\\sqrt{3}$$",
+            "$$\\frac{8\\sqrt{3}}{3}$$",
+            "$$4\\sqrt{3}$$",
+            "$$\\frac{16\\sqrt{3}}{3}$$"
+          ],
+          "answer": 2,
+          "solution": "사인법칙 $\\frac{a}{\\sin A}=2R$ 에서 $2R=\\frac{6}{\\sin 120^\\circ}=\\frac{6}{\\frac{\\sqrt{3}}{2}}=\\frac{12}{\\sqrt{3}}=4\\sqrt{3}$ 이므로 $R=2\\sqrt{3}$"
+        },
+        {
+          "num": 8,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\triangle ABC$ 에서 $a=5$, $b=3$, $C=60^\\circ$ 일 때, 변 $c$ 의 길이는?",
+          "choices": [
+            "$$\\sqrt{19}$$",
+            "$$\\sqrt{21}$$",
+            "$$2\\sqrt{7}$$",
+            "$$\\sqrt{31}$$",
+            "$$5$$"
+          ],
+          "answer": 1,
+          "solution": "코사인법칙에서 $c^2=25+9-2\\cdot 5\\cdot 3\\cos 60^\\circ=34-15=19$ 이므로 $c=\\sqrt{19}$"
+        },
+        {
+          "num": 9,
+          "unit": "삼각함수의 활용",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\triangle ABC$ 에서 $a=10$, $b=6$, $C=30^\\circ$ 일 때, 넓이는?",
+          "solution": "$S=\\frac{1}{2}ab\\sin C=\\frac{1}{2}\\cdot 10\\cdot 6\\cdot\\sin 30^\\circ=30\\cdot\\frac{1}{2}=15$",
+          "choices": [
+            "$12$",
+            "$15$",
+            "$18$",
+            "$24$",
+            "$30$"
+          ],
+          "answer": 2
+        },
+        {
+          "num": 10,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\triangle ABC$ 에서 $A=60^\\circ$, $b=10$, $c=4$ 일 때, 삼각형의 넓이는?",
+          "choices": [
+            "$10\\sqrt{3}$",
+            "$8\\sqrt{3}$",
+            "$5\\sqrt{3}$",
+            "$15\\sqrt{3}$",
+            "$20\\sqrt{3}$"
+          ],
+          "answer": 1,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "두 변과 끼인각이 주어진 삼각형의 넓이를 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "끼인각 $A=60^\\circ$, 두 변 $b=10$, $c=4$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "넓이 공식 $S=\\frac{1}{2}bc\\sin A$ 를 사용한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$S=\\frac{1}{2}\\cdot 10\\cdot 4\\cdot\\sin 60^\\circ=20\\cdot\\frac{\\sqrt{3}}{2}=10\\sqrt{3}$"
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "답은 $10\\sqrt{3}$ 로 보기 ①이다."
+            }
+          ]
+        },
+        {
+          "num": 11,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "등차수열 $\\{a_n\\}$ 에서 $a_3=17$, $a_7=37$ 일 때, $a_10$ 의 값은?",
+          "solution": "$a_7-a_3=4d=20$ 이므로 $d=5$, $a_1=a_3-2d=7$. 따라서 $a_10=7+9\\cdot 5=52$",
+          "choices": [
+            "$52$",
+            "$55$",
+            "$57$",
+            "$60$",
+            "$62$"
+          ],
+          "answer": 1
+        },
+        {
+          "num": 12,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "등비수열 $\\{a_n\\}$ 에서 $a_2=2$, $a_5=16$ 일 때, $a_6$ 의 값은?",
+          "choices": [
+            "$16$",
+            "$32$",
+            "$48$",
+            "$64$",
+            "$128$"
+          ],
+          "answer": 2,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "등비수열의 두 항으로 공비를 구해 $a_6$ 을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$a_2=2$, $a_5=16$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "등비수열은 $a_n=a_1 r^{n-1}$ 이고 $\\frac{a_5}{a_2}=r^3$ 이다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$r^3=\\frac{16}{2}=8$ 이므로 $r=2$, $a_1=\\frac{a_2}{r}=1$. 따라서 $a_6=1\\cdot 2^5=32$"
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "답은 $32$ 로 보기 ②이다."
+            }
+          ]
+        },
+        {
+          "num": 13,
+          "unit": "등차수열과 등비수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "첫째항이 $4$, 공차가 $5$ 인 등차수열의 첫째항부터 제 $10$ 항까지의 합은?",
+          "solution": "$S_{10}=\\frac{10}{2}(2\\cdot 4+9\\cdot 5)=5(8+45)=265$",
+          "choices": [
+            "$265$",
+            "$270$",
+            "$275$",
+            "$280$",
+            "$285$"
+          ],
+          "answer": 1
+        },
+        {
+          "num": 14,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\sum_{k=1}^{30} k$ 의 값은?",
+          "solution": "$\\sum_{k=1}^{30} k=\\frac{30\\cdot 31}{2}=465$",
+          "choices": [
+            "$465$",
+            "$450$",
+            "$435$",
+            "$480$",
+            "$496$"
+          ],
+          "answer": 1
+        },
+        {
+          "num": 15,
+          "unit": "여러 가지 수열",
+          "level": "기본",
+          "type": "객관식",
+          "latex": "$\\sum_{k=1}^{15} k^2$ 의 값은?",
+          "solution": "$\\sum_{k=1}^{15} k^2=\\frac{15\\cdot 16\\cdot 31}{6}=1240$",
+          "choices": [
+            "$1085$",
+            "$1180$",
+            "$1300$",
+            "$1360$",
+            "$1240$"
+          ],
+          "answer": 5
+        },
+        {
+          "num": 16,
+          "unit": "여러 가지 수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "$\\sum_{k=1}^{20}(2k-1)$ 의 값은?",
+          "choices": [
+            "$361$",
+            "$380$",
+            "$400$",
+            "$420$",
+            "$441$"
+          ],
+          "answer": 3,
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "홀수의 합 $\\sum_{k=1}^{20}(2k-1)$ 을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "합의 항이 $2k-1$ 인 일반항이고 $k$ 는 $1$ 부터 $20$ 까지이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "시그마의 성질 $\\sum(2k-1)=2\\sum k-\\sum 1$ 을 이용한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$\\sum_{k=1}^{20}(2k-1)=2\\cdot\\frac{20\\cdot 21}{2}-20=420-20=400$"
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "답은 $400$ 로 보기 ③이다."
+            }
+          ]
+        },
+        {
+          "num": 17,
+          "unit": "등차수열과 등비수열",
+          "level": "심화",
+          "type": "객관식",
+          "latex": "첫째항이 $2$, 공비가 $4$ 인 등비수열의 첫째항부터 제 $4$ 항까지의 합은?",
+          "solution": "$S_4=\\frac{2(4^4-1)}{4-1}=\\frac{2\\cdot 255}{3}=170$",
+          "choices": [
+            "$120$",
+            "$170$",
+            "$150$",
+            "$210$",
+            "$256$"
+          ],
+          "answer": 2
+        },
+        {
+          "num": 18,
+          "unit": "삼각함수",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "$0\\le x<2\\pi$ 에서 방정식 $2\\sin^2 x+\\sin x-1=0$ 을 만족시키는 모든 $x$ 의 값의 합을 구하시오.",
+          "answer": "5π/2",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "삼각방정식의 모든 해의 합을 구한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "정의역은 $0\\le x<2\\pi$ 이고 식은 $2\\sin^2 x+\\sin x-1=0$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$\\sin x=t$ 로 치환하여 이차방정식으로 인수분해한다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$(2\\sin x-1)(\\sin x+1)=0$ 에서 $\\sin x=\\frac{1}{2}$ 또는 $\\sin x=-1$. 해는 $x=\\frac{\\pi}{6},\\ \\frac{5\\pi}{6},\\ \\frac{3\\pi}{2}$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "합은 $\\frac{\\pi}{6}+\\frac{5\\pi}{6}+\\frac{3\\pi}{2}=\\frac{5\\pi}{2}$ 이다."
+            }
+          ]
+        },
+        {
+          "num": 19,
+          "unit": "삼각함수의 활용",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "$\\triangle ABC$ 에서 $2\\sin B\\cos A=\\sin C$ 가 성립할 때, 이 삼각형은 어떤 삼각형인지 설명하시오.",
+          "answer": "a=b인 이등변삼각형",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "주어진 삼각함수 관계식으로 삼각형의 모양을 판별한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "$2\\sin B\\cos A=\\sin C$ 이고 $C=\\pi-(A+B)$ 이다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "사인법칙 $\\sin C=\\frac{c}{2R}$ 와 코사인법칙 $\\cos A=\\frac{b^2+c^2-a^2}{2bc}$ 를 변에 대한 식으로 바꾼다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$2\\cdot\\frac{b}{2R}\\cdot\\frac{b^2+c^2-a^2}{2bc}=\\frac{c}{2R}$ 을 정리하면 $\\frac{b^2+c^2-a^2}{c}=c$, 즉 $b^2=a^2$ 이므로 $a=b$ 이다."
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "따라서 $a=b$ 인 이등변삼각형이다."
+            }
+          ]
+        },
+        {
+          "num": 20,
+          "unit": "수학적 귀납법",
+          "level": "심화",
+          "type": "서술형",
+          "latex": "모든 자연수 $n$ 에 대하여 $\\sum_{k=1}^{n}(2k-1)=n^2$ 임을 수학적 귀납법으로 증명하시오.",
+          "answer": "n^2",
+          "avs": [
+            {
+              "phase": "P",
+              "title": "목표 확인",
+              "content": "등식 $\\sum_{k=1}^{n}(2k-1)=n^2$ 을 귀납법으로 증명한다."
+            },
+            {
+              "phase": "C",
+              "title": "조건 정리",
+              "content": "모든 자연수 $n$ 에 대해 성립함을 보인다."
+            },
+            {
+              "phase": "B",
+              "title": "핵심 개념",
+              "content": "$n=1$ 성립 확인 후, $n=m$ 가정으로 $n=m+1$ 을 보인다."
+            },
+            {
+              "phase": "S",
+              "title": "풀이",
+              "content": "$n=1$ 일 때 좌변 $1$, 우변 $1^2=1$ 로 성립.  $n=m$ 성립을 가정하면 $\\sum_{k=1}^{m+1}(2k-1)=m^2+(2(m+1)-1)=m^2+2m+1=(m+1)^2$"
+            },
+            {
+              "phase": "A",
+              "title": "정답",
+              "content": "따라서 모든 자연수 $n$ 에 대해 $\\sum_{k=1}^{n}(2k-1)=n^2$ 이 성립한다."
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  "built_at": "2026-06-14"
+}
