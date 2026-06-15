@@ -100,7 +100,7 @@ const transcribeChunks = async (chunks, mimeType) => {
     : 'webm';
 
   const formData = new FormData();
-  formData.append('file', audioBlob, 'recording.${ext}`);
+  formData.append('file', audioBlob, `recording.${ext}`);
   formData.append('model', 'whisper-1');
   formData.append('language', 'ko'); // 한국어 우선 (정확도 향상)
   formData.append('response_format', 'json');
