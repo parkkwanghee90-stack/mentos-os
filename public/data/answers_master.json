@@ -16574,5 +16574,215 @@
     "problem": 32,
     "answer": "6",
     "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 34,
+    "answer": "\\frac{64\\sqrt{2}}{9}",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 35,
+    "answer": "64",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 37,
+    "answer": "\\frac{54}{25}",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 38,
+    "answer": "6",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 39,
+    "answer": "98",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 40,
+    "answer": "\\frac{20}{3}",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 41,
+    "answer": "11",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 43,
+    "answer": "\\frac{3+\\sqrt{3}}{2}",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 44,
+    "answer": "\\frac{5\\sqrt{2}}{2}",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 45,
+    "answer": "\\frac{6\\sqrt{13}}{13}",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 46,
+    "answer": "20",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 47,
+    "answer": "20\\sqrt{10}",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 48,
+    "answer": "\\frac{4\\sqrt{10}}{5}",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 50,
+    "answer": "\\frac{5\\sqrt{3}}{7}",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 52,
+    "answer": "84",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 53,
+    "answer": "10",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 54,
+    "answer": "27",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 55,
+    "answer": "\\frac{8}{3}",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 56,
+    "answer": "7",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 57,
+    "answer": "ㄱ, ㄴ",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 58,
+    "answer": "15",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 59,
+    "answer": "21",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 60,
+    "answer": "\\frac{6-\\sqrt{6}}{5}",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 61,
+    "answer": "\\frac{125}{2}\\pi",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 62,
+    "answer": "15",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 63,
+    "answer": "6\\pi+9\\sqrt{3}",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 64,
+    "answer": "\\frac{32\\sqrt{3}}{3}",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 65,
+    "answer": "150",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 67,
+    "answer": "4\\sqrt{2}",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 68,
+    "answer": "\\frac{8}{5}\\pi",
+    "type": "subjective"
   }
 ]
