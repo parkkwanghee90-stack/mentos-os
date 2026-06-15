@@ -3,10 +3,10 @@
   "scope": "four-subjects (excludes u<digit>_*)",
   "counts": {
     "bucketTotal": 2496,
-    "confirmed": 986,
-    "suspectAll": 1510,
+    "confirmed": 989,
+    "suspectAll": 1507,
     "suspectOutOfScope": 198,
-    "suspectInScope": 1312
+    "suspectInScope": 1309
   },
   "suspect": [
     {
@@ -1198,21 +1198,6 @@
       "key": "deriv_app_s4/020.mp3",
       "ttsDir": "deriv_app_s4",
       "pid": "020"
-    },
-    {
-      "key": "exp_s3/001.mp3",
-      "ttsDir": "exp_s3",
-      "pid": "001"
-    },
-    {
-      "key": "exp_s3/002.mp3",
-      "ttsDir": "exp_s3",
-      "pid": "002"
-    },
-    {
-      "key": "exp_s3/003.mp3",
-      "ttsDir": "exp_s3",
-      "pid": "003"
     },
     {
       "key": "exp_s3/004.mp3",
