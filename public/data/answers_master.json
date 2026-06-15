@@ -16466,6 +16466,13 @@
   {
     "unit": "삼각함수활용4단계",
     "stage": 4,
+    "problem": 10,
+    "answer": "ㄱ, ㄴ, ㄷ",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
     "problem": 11,
     "answer": "\\frac{4\\sqrt{6}}{3}",
     "type": "objective"
@@ -16543,6 +16550,13 @@
   {
     "unit": "삼각함수활용4단계",
     "stage": 4,
+    "problem": 22,
+    "answer": "ㄴ, ㄷ",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
     "problem": 23,
     "answer": "2\\sqrt{3}",
     "type": "objective"
@@ -16552,6 +16566,13 @@
     "stage": 4,
     "problem": 24,
     "answer": "20",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 25,
+    "answer": "50",
     "type": "subjective"
   },
   {
@@ -16585,6 +16606,13 @@
   {
     "unit": "삼각함수활용4단계",
     "stage": 4,
+    "problem": 30,
+    "answer": "36+30\\sqrt{3}",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
     "problem": 31,
     "answer": "2\\sqrt{2}",
     "type": "objective"
@@ -16594,6 +16622,13 @@
     "stage": 4,
     "problem": 32,
     "answer": "6",
+    "type": "objective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 33,
+    "answer": "21",
     "type": "objective"
   },
   {
@@ -16609,6 +16644,13 @@
     "problem": 35,
     "answer": "64",
     "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 36,
+    "answer": "4\\sqrt{3}",
+    "type": "objective"
   },
   {
     "unit": "삼각함수활용4단계",
@@ -16643,6 +16685,13 @@
     "stage": 4,
     "problem": 41,
     "answer": "11",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 42,
+    "answer": "22",
     "type": "subjective"
   },
   {
@@ -16686,6 +16735,13 @@
     "problem": 48,
     "answer": "\\frac{4\\sqrt{10}}{5}",
     "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 49,
+    "answer": "\\frac{45}{2}",
+    "type": "objective"
   },
   {
     "unit": "삼각함수활용4단계",
@@ -16797,6 +16853,13 @@
     "stage": 4,
     "problem": 65,
     "answer": "150",
+    "type": "subjective"
+  },
+  {
+    "unit": "삼각함수활용4단계",
+    "stage": 4,
+    "problem": 66,
+    "answer": "63",
     "type": "subjective"
   },
   {
