@@ -18,7 +18,10 @@ Audio is produced by **three diverging paths**:
 |---|---|---|---|
 | Canonical generators | `generate_gemini_math_sang_tts.cjs`, `generate_su1_tts.cjs`, `generate_gemini_math_su1_tts.cjs` | **3.1 + Aoede** | correct |
 | Legacy generators | `generate_gemini_gocha_tts.cjs`, `bulk_generate_tts.cjs` | **2.5 + Aoede** (different timbre despite same voice name) | off-voice |
+| OpenAI TTS generator | `generate_tts.cjs` | **OpenAI `tts-1-hd` + nova** (entirely different voice) | off-voice |
 | Live runtime | `src/services/ttsService.js` (`speakText`) | **2.5 + Aoede** → OpenAI `tts-1` nova → browser voice | off-voice |
+
+> **Discovered during implementation (2026-06-15):** `scripts/generate_tts.cjs` is a legacy OpenAI TTS generator (`tts-1-hd`/`nova`). Decision: **deprecate it** (guard exits immediately; history preserved) — clips it produced carry no manifest entry, so the Phase 2 audit auto-classifies them as suspect and Phase 3 regenerates them at 3.1+Aoede. The ~45 `api.openai.com/chat/completions` scripts are **GPT text-authoring tools (hint/LaTeX generation), unrelated to voice → out of scope** for this effort.
 
 `src/services/ttsService.js` is imported by 5 components: `WhiteFocusMode`, `hints/GeometryHintPlayer`, `pages/NaesinCourse`, `pages/MentosMockExam`, `pages/LocalInspector`.
 
@@ -115,6 +118,7 @@ Phase 1 + 2 land first as a single PR (no quota). Phase 3 runs over multiple day
 
 - The 42 `public/audio/suneung_tts/` 모의고사 clips (미적분/확통 — not the 4 core subjects). May be revisited separately.
 - Generating 수학 하 / 수2 AVS content (pipeline-readiness only).
+- The ~45 `api.openai.com/chat/completions` GPT text-authoring scripts (hint/LaTeX generation) — unrelated to TTS voice; left untouched.
 - `git filter-repo` history secret scrub (tracked separately in the bugfix roadmap).
 
 ## 11. Open items to confirm during planning

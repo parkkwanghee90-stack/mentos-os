@@ -33,6 +33,7 @@
 - `scripts/generate_gemini_math_su1_tts.cjs` — 모델/보이스 SSOT 참조로 교체(동작 불변).
 - `scripts/generate_gemini_gocha_tts.cjs` — 인라인 `gemini-2.5-flash-preview-tts` → SSOT 3.1로 교체. 상단에 deprecation 주석.
 - `scripts/bulk_generate_tts.cjs` — 인라인 `gemini-2.5-flash-preview-tts` → SSOT 3.1로 교체. 상단에 deprecation 주석.
+- `scripts/generate_tts.cjs` — **(구현 중 발견)** OpenAI TTS(`tts-1-hd`/`nova`) 레거시 생성기. deprecation 가드(실행 즉시 `process.exit`)로 비활성화. 기존 OpenAI 클립은 Phase 2 감사에서 suspect로 잡혀 Phase 3에서 3.1 재생성. (커밋 `549948a`)
 - `src/services/ttsService.js` — 런타임 Gemini 호출 2.5→3.1+Aoede(SSOT), OpenAI `tts-1` 블록 제거, `_browserFallback` 제거, 실패/할당량 시 `onError`만 호출(무음).
 - `src/services/ttsService.test.js` — 신규(같은 폴더): 3.1 호출·OpenAI 미호출·실패 시 무음+onError 검증.
 - `src/components/hints/GeometryHintPlayer.jsx` — `onError`에서 "음성 일시 사용 불가" 공지 상태 set.
