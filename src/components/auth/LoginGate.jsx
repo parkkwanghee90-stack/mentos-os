@@ -2,31 +2,28 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { LogIn, User, ShieldAlert, X } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
+import { resolveGateAccess } from '@/lib/auth/resolveGateAccess';
 
 /**
- * LoginGate: 로그인 필수 기능을 감싸는 게이트웨이 컴포넌트
+ * LoginGate: 로그인/권한 필수 기능을 감싸는 게이트웨이 컴포넌트
  * - 비로그인 상태에서도 특정 기능(체험 수업 등)은 허용
  * - 기록 저장, 대시보드 등 개인화 기능 진입 시 로그인 유도
+ * - 인가 판정은 서버에서 파생된 user(역할)만으로 한다. localStorage 우회는 신뢰하지 않는다.
  */
 export default function LoginGate({ children, required = false, requiredRole = null, fallback = null }) {
   const { user: authUser, loading: authLoading } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
 
-  // 🔑 슈퍼패스: localStorage에 mentos_super_pass가 있으면 가짜 유저로 모든 게이트 통과
-  const isSuperPass = localStorage.getItem('mentos_super_pass') === 'true';
-
-  const user = isSuperPass ? {
-    id: 'super_admin_pass',
-    name: '통합관리자',
-    email: 'super@mentos.ai',
-    role: 'admin'
-  } : authUser ? {
+  // 서버에서 파생된 사용자만 신뢰(클라이언트 localStorage 플래그 신뢰 제거).
+  const user = authUser ? {
     id: authUser.id,
     name: authUser.user_metadata?.name || authUser.email?.split('@')[0],
     email: authUser.email,
     role: authUser.user_metadata?.role || 'student'
   } : null;
+
+  const access = resolveGateAccess({ user, required, requiredRole, authLoading });
 
   const [showModal, setShowModal] = useState(false);
 
@@ -38,7 +35,7 @@ export default function LoginGate({ children, required = false, requiredRole = n
   };
 
   // 로그인이 필요한 기능인데 로그인이 안 된 경우
-  if (required && !user && !authLoading) {
+  if (access === 'login') {
     return (
       <div style={{ padding: '3rem 2rem', textAlign: 'center', background: '#0f172a', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.08)', color: 'white', maxWidth: '500px', margin: '2rem auto', boxShadow: '0 20px 40px -15px rgba(0,0,0,0.7)' }}>
         <div style={{ width: '64px', height: '64px', background: 'rgba(245, 158, 11, 0.1)', border: '1px solid rgba(245, 158, 11, 0.2)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem' }}>
@@ -58,15 +55,8 @@ export default function LoginGate({ children, required = false, requiredRole = n
     );
   }
 
-  // 마스터 관리자 인증 우회 체크
-  const isMasterAdmin = localStorage.getItem('mentos_admin_verified') === 'true';
-
-  if (requiredRole === 'admin' && isMasterAdmin) {
-    return <>{children}</>;
-  }
-
-  // 관리자 권한 체크
-  if (requiredRole === 'admin' && user && user.role !== 'admin') {
+  // 권한 부족 (서버 역할 기준; admin은 슈퍼유저)
+  if (access === 'forbidden') {
     return (
       <div style={{ padding: '3rem 2rem', textAlign: 'center', background: '#0f172a', borderRadius: '24px', border: '1px solid rgba(239,68,68,0.2)', color: 'white', maxWidth: '500px', margin: '2rem auto', boxShadow: '0 20px 40px -15px rgba(0,0,0,0.7)' }}>
         <div style={{ width: '64px', height: '64px', background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.2)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem' }}>
@@ -86,7 +76,7 @@ export default function LoginGate({ children, required = false, requiredRole = n
     );
   }
 
-  if (authLoading) {
+  if (access === 'loading') {
     return (
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '300px', color: '#94a3b8', background: '#09090b', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.05)', margin: '2rem' }}>
         <div style={{ width: '40px', height: '40px', border: '3px solid rgba(59,130,246,0.2)', borderTopColor: '#3b82f6', borderRadius: '50%', animation: 'spin 1s linear infinite', marginBottom: '1rem' }} />

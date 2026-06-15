@@ -10,10 +10,9 @@ export default function AdminDashboard() {
   const navigate = useNavigate();
   const { signOut } = useAuth();
 
-  // 관리자 마스터 인증 상태
-  const [isAdminVerified, setIsAdminVerified] = useState(
-    localStorage.getItem('mentos_admin_verified') === 'true'
-  );
+  // 인가는 라우트의 LoginGate(서버 역할 user_metadata.role==='admin')가 담당한다.
+  // 내부 localStorage 게이트는 신뢰하지 않는다(아래 인증코드 프롬프트는 미사용 — Phase 2 정리 대상).
+  const [isAdminVerified, setIsAdminVerified] = useState(true);
   const [adminCodeInput, setAdminCodeInput] = useState('');
   const [authError, setAuthError] = useState('');
 
