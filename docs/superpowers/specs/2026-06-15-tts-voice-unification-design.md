@@ -26,14 +26,16 @@ Audio is produced by **three diverging paths**:
 
 1. **Both layers in scope:** fix the code/pipeline **and** regenerate off-voice clips already shipped.
 2. **수학 하 / 수2:** pipeline-readiness only — they have no TTS audio yet. Ensure the unified generators will produce 3.1+Aoede when their content is authored later. **Do not** generate 하/수2 content now.
-3. **Runtime path:** switch the live Gemini call from 2.5 → 3.1+Aoede; **keep** the OpenAI→browser fallbacks as last resort (only reached when 3.1 quota is exhausted or the key is missing).
+3. **Runtime path:** switch the live Gemini call from 2.5 → 3.1+Aoede, **3.1 only**. **No ChatGPT/OpenAI API anywhere**, and no browser-voice fallback either — on failure or quota exhaustion the live path plays nothing and surfaces a small `음성 일시 사용 불가` notice. The user never hears an off-voice.
 4. **Regen strategy:** targeted — audit provenance first, regenerate only clips not provably 3.1.
+5. **Quota exhaustion (batch):** when the 3.1 daily quota is exhausted, the runner **waits** for the next available window (09:00 KST reset) and resumes. It never substitutes another model or provider.
 
 ## 4. Key technical constraints (load-bearing)
 
 - **2.5 vs 3.1 is NOT acoustically detectable.** The existing classifier `scripts/lib/tts_engine_classifier.cjs` separates only **gemini vs openai** (via the libmp3lame `Xing`/`Info` VBR header). Both Gemini models get the same ffmpeg re-encode, so both look identical. **Therefore provenance of 2.5-vs-3.1 comes only from the manifest** (`scripts/tts_manifest.json`, per-clip `{engine, model, voice}`) plus known-bad filename patterns (`hint_gocha_*`).
 - **Regeneration is idempotent toward Gemini.** Re-rendering an already-3.1 clip with 3.1 reproduces the same voice — no data/voice harm, only quota cost. So over-including a few already-3.1 clips in the suspect set is safe.
-- **Quota bottleneck:** `gemini-3.1-flash-tts-preview` ≈ **100 clips/day/project**, reset 09:00 KST, independent of billing. Regen is multi-day if the suspect set is large.
+- **Quota bottleneck:** `gemini-3.1-flash-tts-preview` ≈ **100 clips/day/project**, reset 09:00 KST, independent of billing. Regen is multi-day if the suspect set is large. On exhaustion the batch runner **waits for the next window and resumes** — it never falls back to another model or provider.
+- **No OpenAI/ChatGPT anywhere.** The OpenAI `tts-1` path is removed from both batch and runtime. The only voice is 3.1+Aoede; the only acceptable degradation is silence + a notice.
 - **Narration source:** generators build narration from the AVS hint JSONs at Supabase `mentos-assets/math_hints/{safePath}/NNN.json` (local cache in `scripts/.su1_hint_cache`). Regen reuses this, so **content stays identical — only the voice changes** — provided the source JSON is unchanged since the original render.
 
 ## 5. Architecture (Approach A: single SSOT + targeted idempotent regen)
@@ -50,7 +52,7 @@ Audio is produced by **three diverging paths**:
 ### Edited files
 - `generate_gemini_gocha_tts.cjs`, `bulk_generate_tts.cjs` — import the SSOT (model 2.5 → 3.1); mark deprecated in favor of the canonical generators.
 - `generate_gemini_math_sang_tts.cjs`, `generate_su1_tts.cjs`, `generate_gemini_math_su1_tts.cjs` — import the SSOT (no behavior change; remove duplicated local constants).
-- `src/services/ttsService.js` — Gemini call 2.5 → 3.1 + Aoede via `src/config/ttsVoice.js`; fallbacks unchanged.
+- `src/services/ttsService.js` — Gemini call 2.5 → 3.1 + Aoede via `src/config/ttsVoice.js`; **remove the OpenAI `tts-1` fallback and the browser-speechSynthesis fallback** from `speakText`. On failure/quota the call rejects via `onError`, and the 5 calling components show a small `음성 일시 사용 불가` notice.
 
 ### Immutability / style
 All new code follows the repo + global rules: no mutation, small focused files (<400 lines), secrets only from `.env` (`SUPABASE_SERVICE_ROLE_KEY`, Gemini keys — never hardcoded), comprehensive error handling, no `console.log` left as control flow.
@@ -91,10 +93,11 @@ Phase 1 + 2 land first as a single PR (no quota). Phase 3 runs over multiple day
 
 ## 8. Error handling
 
-- Missing env keys → fail-fast with a clear message (no silent OpenAI fallback in batch generation).
+- Missing Gemini key → fail-fast with a clear message. No provider substitution, ever.
+- **Runtime `speakText` failure or quota** → reject via `onError`; caller shows the `음성 일시 사용 불가` notice. No OpenAI, no browser voice.
 - Supabase upload failure → retry (existing 3-attempt backoff), then record in worklist as `failed[]` for the next run.
 - `orphanSource` clips (no hint JSON) → never regenerated blindly; listed for manual review.
-- Quota 429 → stop cleanly, persist progress, exit 0 so the resumable runner can continue next day.
+- **Batch quota 429** → stop cleanly, persist progress, exit 0; resume at the next 3.1 window (09:00 KST). Never substitute model/provider.
 
 ## 9. Testing
 
@@ -105,7 +108,8 @@ Phase 1 + 2 land first as a single PR (no quota). Phase 3 runs over multiple day
 - **Verification (evidence-based, fresh run):**
   - `node scripts/audit_tts_voice.cjs` BEFORE → N suspects; AFTER Phase 3 → **0 suspects**.
   - Grep guard: no remaining `gemini-2.5-flash-preview-tts` reference in `scripts/` generators or `src/services/ttsService.js`.
-  - Manual: a regenerated `hint_gocha_*` clip plays in the app and matches the canonical voice.
+  - Grep guard: no `openai`, `api.openai.com`, or `tts-1` reference remains in `src/services/ttsService.js` or the batch generators.
+  - Manual: a regenerated `hint_gocha_*` clip plays in the app and matches the canonical voice; with the Gemini key unset, `speakText` shows the notice and produces no audio.
 
 ## 10. Out of scope
 
