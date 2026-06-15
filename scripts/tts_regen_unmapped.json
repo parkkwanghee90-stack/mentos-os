@@ -1,0 +1,1721 @@
+{
+  "note": "ttsDir이 기존 생성기 STAGES에 없음 — 후속 hintDir 매핑 필요",
+  "count": 343,
+  "items": [
+    {
+      "key": "def_integ_app_s2/001.mp3",
+      "ttsDir": "def_integ_app_s2",
+      "pid": "001"
+    },
+    {
+      "key": "def_integ_app_s2/002.mp3",
+      "ttsDir": "def_integ_app_s2",
+      "pid": "002"
+    },
+    {
+      "key": "def_integ_app_s2/003.mp3",
+      "ttsDir": "def_integ_app_s2",
+      "pid": "003"
+    },
+    {
+      "key": "def_integ_app_s2/004.mp3",
+      "ttsDir": "def_integ_app_s2",
+      "pid": "004"
+    },
+    {
+      "key": "def_integ_app_s2/005.mp3",
+      "ttsDir": "def_integ_app_s2",
+      "pid": "005"
+    },
+    {
+      "key": "def_integ_app_s2/006.mp3",
+      "ttsDir": "def_integ_app_s2",
+      "pid": "006"
+    },
+    {
+      "key": "def_integ_app_s2/007.mp3",
+      "ttsDir": "def_integ_app_s2",
+      "pid": "007"
+    },
+    {
+      "key": "def_integ_app_s2/008.mp3",
+      "ttsDir": "def_integ_app_s2",
+      "pid": "008"
+    },
+    {
+      "key": "def_integ_app_s2/009.mp3",
+      "ttsDir": "def_integ_app_s2",
+      "pid": "009"
+    },
+    {
+      "key": "def_integ_app_s2/010.mp3",
+      "ttsDir": "def_integ_app_s2",
+      "pid": "010"
+    },
+    {
+      "key": "def_integ_app_s2/011.mp3",
+      "ttsDir": "def_integ_app_s2",
+      "pid": "011"
+    },
+    {
+      "key": "def_integ_app_s2/012.mp3",
+      "ttsDir": "def_integ_app_s2",
+      "pid": "012"
+    },
+    {
+      "key": "def_integ_app_s2/013.mp3",
+      "ttsDir": "def_integ_app_s2",
+      "pid": "013"
+    },
+    {
+      "key": "def_integ_app_s2/014.mp3",
+      "ttsDir": "def_integ_app_s2",
+      "pid": "014"
+    },
+    {
+      "key": "def_integ_app_s2/015.mp3",
+      "ttsDir": "def_integ_app_s2",
+      "pid": "015"
+    },
+    {
+      "key": "def_integ_app_s2/016.mp3",
+      "ttsDir": "def_integ_app_s2",
+      "pid": "016"
+    },
+    {
+      "key": "def_integ_app_s2/017.mp3",
+      "ttsDir": "def_integ_app_s2",
+      "pid": "017"
+    },
+    {
+      "key": "def_integ_app_s2/018.mp3",
+      "ttsDir": "def_integ_app_s2",
+      "pid": "018"
+    },
+    {
+      "key": "def_integ_app_s2/019.mp3",
+      "ttsDir": "def_integ_app_s2",
+      "pid": "019"
+    },
+    {
+      "key": "def_integ_app_s2/020.mp3",
+      "ttsDir": "def_integ_app_s2",
+      "pid": "020"
+    },
+    {
+      "key": "def_integ_app_s3/001.mp3",
+      "ttsDir": "def_integ_app_s3",
+      "pid": "001"
+    },
+    {
+      "key": "def_integ_app_s3/002.mp3",
+      "ttsDir": "def_integ_app_s3",
+      "pid": "002"
+    },
+    {
+      "key": "def_integ_app_s3/003.mp3",
+      "ttsDir": "def_integ_app_s3",
+      "pid": "003"
+    },
+    {
+      "key": "def_integ_app_s3/004.mp3",
+      "ttsDir": "def_integ_app_s3",
+      "pid": "004"
+    },
+    {
+      "key": "def_integ_app_s3/005.mp3",
+      "ttsDir": "def_integ_app_s3",
+      "pid": "005"
+    },
+    {
+      "key": "def_integ_app_s3/006.mp3",
+      "ttsDir": "def_integ_app_s3",
+      "pid": "006"
+    },
+    {
+      "key": "def_integ_app_s3/007.mp3",
+      "ttsDir": "def_integ_app_s3",
+      "pid": "007"
+    },
+    {
+      "key": "def_integ_app_s3/008.mp3",
+      "ttsDir": "def_integ_app_s3",
+      "pid": "008"
+    },
+    {
+      "key": "def_integ_app_s3/009.mp3",
+      "ttsDir": "def_integ_app_s3",
+      "pid": "009"
+    },
+    {
+      "key": "def_integ_app_s3/010.mp3",
+      "ttsDir": "def_integ_app_s3",
+      "pid": "010"
+    },
+    {
+      "key": "def_integ_app_s3/011.mp3",
+      "ttsDir": "def_integ_app_s3",
+      "pid": "011"
+    },
+    {
+      "key": "def_integ_app_s3/012.mp3",
+      "ttsDir": "def_integ_app_s3",
+      "pid": "012"
+    },
+    {
+      "key": "def_integ_app_s3/013.mp3",
+      "ttsDir": "def_integ_app_s3",
+      "pid": "013"
+    },
+    {
+      "key": "def_integ_app_s3/014.mp3",
+      "ttsDir": "def_integ_app_s3",
+      "pid": "014"
+    },
+    {
+      "key": "def_integ_app_s3/015.mp3",
+      "ttsDir": "def_integ_app_s3",
+      "pid": "015"
+    },
+    {
+      "key": "def_integ_s2/001.mp3",
+      "ttsDir": "def_integ_s2",
+      "pid": "001"
+    },
+    {
+      "key": "def_integ_s2/002.mp3",
+      "ttsDir": "def_integ_s2",
+      "pid": "002"
+    },
+    {
+      "key": "def_integ_s2/003.mp3",
+      "ttsDir": "def_integ_s2",
+      "pid": "003"
+    },
+    {
+      "key": "def_integ_s2/004.mp3",
+      "ttsDir": "def_integ_s2",
+      "pid": "004"
+    },
+    {
+      "key": "def_integ_s2/005.mp3",
+      "ttsDir": "def_integ_s2",
+      "pid": "005"
+    },
+    {
+      "key": "def_integ_s2/006.mp3",
+      "ttsDir": "def_integ_s2",
+      "pid": "006"
+    },
+    {
+      "key": "def_integ_s2/007.mp3",
+      "ttsDir": "def_integ_s2",
+      "pid": "007"
+    },
+    {
+      "key": "def_integ_s2/008.mp3",
+      "ttsDir": "def_integ_s2",
+      "pid": "008"
+    },
+    {
+      "key": "def_integ_s2/009.mp3",
+      "ttsDir": "def_integ_s2",
+      "pid": "009"
+    },
+    {
+      "key": "def_integ_s2/010.mp3",
+      "ttsDir": "def_integ_s2",
+      "pid": "010"
+    },
+    {
+      "key": "def_integ_s2/011.mp3",
+      "ttsDir": "def_integ_s2",
+      "pid": "011"
+    },
+    {
+      "key": "def_integ_s2/012.mp3",
+      "ttsDir": "def_integ_s2",
+      "pid": "012"
+    },
+    {
+      "key": "def_integ_s2/013.mp3",
+      "ttsDir": "def_integ_s2",
+      "pid": "013"
+    },
+    {
+      "key": "def_integ_s2/014.mp3",
+      "ttsDir": "def_integ_s2",
+      "pid": "014"
+    },
+    {
+      "key": "def_integ_s2/015.mp3",
+      "ttsDir": "def_integ_s2",
+      "pid": "015"
+    },
+    {
+      "key": "def_integ_s2/016.mp3",
+      "ttsDir": "def_integ_s2",
+      "pid": "016"
+    },
+    {
+      "key": "def_integ_s2/017.mp3",
+      "ttsDir": "def_integ_s2",
+      "pid": "017"
+    },
+    {
+      "key": "def_integ_s2/018.mp3",
+      "ttsDir": "def_integ_s2",
+      "pid": "018"
+    },
+    {
+      "key": "def_integ_s2/019.mp3",
+      "ttsDir": "def_integ_s2",
+      "pid": "019"
+    },
+    {
+      "key": "def_integ_s2/020.mp3",
+      "ttsDir": "def_integ_s2",
+      "pid": "020"
+    },
+    {
+      "key": "deriv_app2_s2/001.mp3",
+      "ttsDir": "deriv_app2_s2",
+      "pid": "001"
+    },
+    {
+      "key": "deriv_app2_s2/002.mp3",
+      "ttsDir": "deriv_app2_s2",
+      "pid": "002"
+    },
+    {
+      "key": "deriv_app2_s2/003.mp3",
+      "ttsDir": "deriv_app2_s2",
+      "pid": "003"
+    },
+    {
+      "key": "deriv_app2_s2/004.mp3",
+      "ttsDir": "deriv_app2_s2",
+      "pid": "004"
+    },
+    {
+      "key": "deriv_app2_s2/005.mp3",
+      "ttsDir": "deriv_app2_s2",
+      "pid": "005"
+    },
+    {
+      "key": "deriv_app2_s2/006.mp3",
+      "ttsDir": "deriv_app2_s2",
+      "pid": "006"
+    },
+    {
+      "key": "deriv_app2_s2/007.mp3",
+      "ttsDir": "deriv_app2_s2",
+      "pid": "007"
+    },
+    {
+      "key": "deriv_app2_s2/008.mp3",
+      "ttsDir": "deriv_app2_s2",
+      "pid": "008"
+    },
+    {
+      "key": "deriv_app2_s2/009.mp3",
+      "ttsDir": "deriv_app2_s2",
+      "pid": "009"
+    },
+    {
+      "key": "deriv_app2_s2/010.mp3",
+      "ttsDir": "deriv_app2_s2",
+      "pid": "010"
+    },
+    {
+      "key": "deriv_app2_s2/012.mp3",
+      "ttsDir": "deriv_app2_s2",
+      "pid": "012"
+    },
+    {
+      "key": "deriv_app2_s2/013.mp3",
+      "ttsDir": "deriv_app2_s2",
+      "pid": "013"
+    },
+    {
+      "key": "deriv_app2_s2/016.mp3",
+      "ttsDir": "deriv_app2_s2",
+      "pid": "016"
+    },
+    {
+      "key": "deriv_app2_s2/020.mp3",
+      "ttsDir": "deriv_app2_s2",
+      "pid": "020"
+    },
+    {
+      "key": "deriv_app_1s2/001.mp3",
+      "ttsDir": "deriv_app_1s2",
+      "pid": "001"
+    },
+    {
+      "key": "deriv_app_1s2/002.mp3",
+      "ttsDir": "deriv_app_1s2",
+      "pid": "002"
+    },
+    {
+      "key": "deriv_app_1s2/003.mp3",
+      "ttsDir": "deriv_app_1s2",
+      "pid": "003"
+    },
+    {
+      "key": "deriv_app_1s2/004.mp3",
+      "ttsDir": "deriv_app_1s2",
+      "pid": "004"
+    },
+    {
+      "key": "deriv_app_1s2/005.mp3",
+      "ttsDir": "deriv_app_1s2",
+      "pid": "005"
+    },
+    {
+      "key": "deriv_app_1s2/006.mp3",
+      "ttsDir": "deriv_app_1s2",
+      "pid": "006"
+    },
+    {
+      "key": "deriv_app_1s2/007.mp3",
+      "ttsDir": "deriv_app_1s2",
+      "pid": "007"
+    },
+    {
+      "key": "deriv_app_1s2/008.mp3",
+      "ttsDir": "deriv_app_1s2",
+      "pid": "008"
+    },
+    {
+      "key": "deriv_app_1s2/009.mp3",
+      "ttsDir": "deriv_app_1s2",
+      "pid": "009"
+    },
+    {
+      "key": "deriv_app_1s2/010.mp3",
+      "ttsDir": "deriv_app_1s2",
+      "pid": "010"
+    },
+    {
+      "key": "deriv_app_1s2/011.mp3",
+      "ttsDir": "deriv_app_1s2",
+      "pid": "011"
+    },
+    {
+      "key": "deriv_app_1s2/012.mp3",
+      "ttsDir": "deriv_app_1s2",
+      "pid": "012"
+    },
+    {
+      "key": "deriv_app_1s2/013.mp3",
+      "ttsDir": "deriv_app_1s2",
+      "pid": "013"
+    },
+    {
+      "key": "deriv_app_1s2/014.mp3",
+      "ttsDir": "deriv_app_1s2",
+      "pid": "014"
+    },
+    {
+      "key": "deriv_app_1s2/015.mp3",
+      "ttsDir": "deriv_app_1s2",
+      "pid": "015"
+    },
+    {
+      "key": "deriv_app_1s2/016.mp3",
+      "ttsDir": "deriv_app_1s2",
+      "pid": "016"
+    },
+    {
+      "key": "deriv_app_1s2/017.mp3",
+      "ttsDir": "deriv_app_1s2",
+      "pid": "017"
+    },
+    {
+      "key": "deriv_app_1s2/018.mp3",
+      "ttsDir": "deriv_app_1s2",
+      "pid": "018"
+    },
+    {
+      "key": "deriv_app_1s2/019.mp3",
+      "ttsDir": "deriv_app_1s2",
+      "pid": "019"
+    },
+    {
+      "key": "deriv_app_1s2/020.mp3",
+      "ttsDir": "deriv_app_1s2",
+      "pid": "020"
+    },
+    {
+      "key": "deriv_app_s4/001.mp3",
+      "ttsDir": "deriv_app_s4",
+      "pid": "001"
+    },
+    {
+      "key": "deriv_app_s4/002.mp3",
+      "ttsDir": "deriv_app_s4",
+      "pid": "002"
+    },
+    {
+      "key": "deriv_app_s4/003.mp3",
+      "ttsDir": "deriv_app_s4",
+      "pid": "003"
+    },
+    {
+      "key": "deriv_app_s4/004.mp3",
+      "ttsDir": "deriv_app_s4",
+      "pid": "004"
+    },
+    {
+      "key": "deriv_app_s4/005.mp3",
+      "ttsDir": "deriv_app_s4",
+      "pid": "005"
+    },
+    {
+      "key": "deriv_app_s4/006.mp3",
+      "ttsDir": "deriv_app_s4",
+      "pid": "006"
+    },
+    {
+      "key": "deriv_app_s4/007.mp3",
+      "ttsDir": "deriv_app_s4",
+      "pid": "007"
+    },
+    {
+      "key": "deriv_app_s4/008.mp3",
+      "ttsDir": "deriv_app_s4",
+      "pid": "008"
+    },
+    {
+      "key": "deriv_app_s4/009.mp3",
+      "ttsDir": "deriv_app_s4",
+      "pid": "009"
+    },
+    {
+      "key": "deriv_app_s4/010.mp3",
+      "ttsDir": "deriv_app_s4",
+      "pid": "010"
+    },
+    {
+      "key": "deriv_app_s4/011.mp3",
+      "ttsDir": "deriv_app_s4",
+      "pid": "011"
+    },
+    {
+      "key": "deriv_app_s4/012.mp3",
+      "ttsDir": "deriv_app_s4",
+      "pid": "012"
+    },
+    {
+      "key": "deriv_app_s4/013.mp3",
+      "ttsDir": "deriv_app_s4",
+      "pid": "013"
+    },
+    {
+      "key": "deriv_app_s4/014.mp3",
+      "ttsDir": "deriv_app_s4",
+      "pid": "014"
+    },
+    {
+      "key": "deriv_app_s4/015.mp3",
+      "ttsDir": "deriv_app_s4",
+      "pid": "015"
+    },
+    {
+      "key": "deriv_app_s4/016.mp3",
+      "ttsDir": "deriv_app_s4",
+      "pid": "016"
+    },
+    {
+      "key": "deriv_app_s4/017.mp3",
+      "ttsDir": "deriv_app_s4",
+      "pid": "017"
+    },
+    {
+      "key": "deriv_app_s4/018.mp3",
+      "ttsDir": "deriv_app_s4",
+      "pid": "018"
+    },
+    {
+      "key": "deriv_app_s4/019.mp3",
+      "ttsDir": "deriv_app_s4",
+      "pid": "019"
+    },
+    {
+      "key": "deriv_app_s4/020.mp3",
+      "ttsDir": "deriv_app_s4",
+      "pid": "020"
+    },
+    {
+      "key": "func_limit_s3/001.mp3",
+      "ttsDir": "func_limit_s3",
+      "pid": "001"
+    },
+    {
+      "key": "func_limit_s3/002.mp3",
+      "ttsDir": "func_limit_s3",
+      "pid": "002"
+    },
+    {
+      "key": "func_limit_s3/003.mp3",
+      "ttsDir": "func_limit_s3",
+      "pid": "003"
+    },
+    {
+      "key": "func_limit_s3/004.mp3",
+      "ttsDir": "func_limit_s3",
+      "pid": "004"
+    },
+    {
+      "key": "func_limit_s3/005.mp3",
+      "ttsDir": "func_limit_s3",
+      "pid": "005"
+    },
+    {
+      "key": "func_limit_s3/006.mp3",
+      "ttsDir": "func_limit_s3",
+      "pid": "006"
+    },
+    {
+      "key": "func_limit_s3/007.mp3",
+      "ttsDir": "func_limit_s3",
+      "pid": "007"
+    },
+    {
+      "key": "func_limit_s3/008.mp3",
+      "ttsDir": "func_limit_s3",
+      "pid": "008"
+    },
+    {
+      "key": "func_limit_s3/010.mp3",
+      "ttsDir": "func_limit_s3",
+      "pid": "010"
+    },
+    {
+      "key": "func_limit_s3/011.mp3",
+      "ttsDir": "func_limit_s3",
+      "pid": "011"
+    },
+    {
+      "key": "func_limit_s3/012.mp3",
+      "ttsDir": "func_limit_s3",
+      "pid": "012"
+    },
+    {
+      "key": "func_limit_s3/013.mp3",
+      "ttsDir": "func_limit_s3",
+      "pid": "013"
+    },
+    {
+      "key": "func_limit_s3/014.mp3",
+      "ttsDir": "func_limit_s3",
+      "pid": "014"
+    },
+    {
+      "key": "func_limit_s3/015.mp3",
+      "ttsDir": "func_limit_s3",
+      "pid": "015"
+    },
+    {
+      "key": "func_limit_s3/016.mp3",
+      "ttsDir": "func_limit_s3",
+      "pid": "016"
+    },
+    {
+      "key": "func_limit_s3/017.mp3",
+      "ttsDir": "func_limit_s3",
+      "pid": "017"
+    },
+    {
+      "key": "func_limit_s3/018.mp3",
+      "ttsDir": "func_limit_s3",
+      "pid": "018"
+    },
+    {
+      "key": "func_limit_s3/019.mp3",
+      "ttsDir": "func_limit_s3",
+      "pid": "019"
+    },
+    {
+      "key": "func_limit_s3/020.mp3",
+      "ttsDir": "func_limit_s3",
+      "pid": "020"
+    },
+    {
+      "key": "func_limit_s4/001.mp3",
+      "ttsDir": "func_limit_s4",
+      "pid": "001"
+    },
+    {
+      "key": "func_limit_s4/002.mp3",
+      "ttsDir": "func_limit_s4",
+      "pid": "002"
+    },
+    {
+      "key": "func_limit_s4/003.mp3",
+      "ttsDir": "func_limit_s4",
+      "pid": "003"
+    },
+    {
+      "key": "func_limit_s4/004.mp3",
+      "ttsDir": "func_limit_s4",
+      "pid": "004"
+    },
+    {
+      "key": "func_limit_s4/005.mp3",
+      "ttsDir": "func_limit_s4",
+      "pid": "005"
+    },
+    {
+      "key": "func_limit_s4/006.mp3",
+      "ttsDir": "func_limit_s4",
+      "pid": "006"
+    },
+    {
+      "key": "func_limit_s4/007.mp3",
+      "ttsDir": "func_limit_s4",
+      "pid": "007"
+    },
+    {
+      "key": "func_limit_s4/008.mp3",
+      "ttsDir": "func_limit_s4",
+      "pid": "008"
+    },
+    {
+      "key": "func_limit_s4/009.mp3",
+      "ttsDir": "func_limit_s4",
+      "pid": "009"
+    },
+    {
+      "key": "func_limit_s4/010.mp3",
+      "ttsDir": "func_limit_s4",
+      "pid": "010"
+    },
+    {
+      "key": "func_limit_s4/011.mp3",
+      "ttsDir": "func_limit_s4",
+      "pid": "011"
+    },
+    {
+      "key": "func_limit_s4/012.mp3",
+      "ttsDir": "func_limit_s4",
+      "pid": "012"
+    },
+    {
+      "key": "func_limit_s4/013.mp3",
+      "ttsDir": "func_limit_s4",
+      "pid": "013"
+    },
+    {
+      "key": "func_limit_s4/014.mp3",
+      "ttsDir": "func_limit_s4",
+      "pid": "014"
+    },
+    {
+      "key": "func_limit_s4/015.mp3",
+      "ttsDir": "func_limit_s4",
+      "pid": "015"
+    },
+    {
+      "key": "func_limit_s4/016.mp3",
+      "ttsDir": "func_limit_s4",
+      "pid": "016"
+    },
+    {
+      "key": "func_limit_s4/017.mp3",
+      "ttsDir": "func_limit_s4",
+      "pid": "017"
+    },
+    {
+      "key": "func_limit_s4/018.mp3",
+      "ttsDir": "func_limit_s4",
+      "pid": "018"
+    },
+    {
+      "key": "func_limit_s4/019.mp3",
+      "ttsDir": "func_limit_s4",
+      "pid": "019"
+    },
+    {
+      "key": "func_limit_s4/020.mp3",
+      "ttsDir": "func_limit_s4",
+      "pid": "020"
+    },
+    {
+      "key": "higher_order_eq_step2/001.mp3",
+      "ttsDir": "higher_order_eq_step2",
+      "pid": "001"
+    },
+    {
+      "key": "higher_order_eq_step2/002.mp3",
+      "ttsDir": "higher_order_eq_step2",
+      "pid": "002"
+    },
+    {
+      "key": "higher_order_eq_step2/003.mp3",
+      "ttsDir": "higher_order_eq_step2",
+      "pid": "003"
+    },
+    {
+      "key": "higher_order_eq_step2/004.mp3",
+      "ttsDir": "higher_order_eq_step2",
+      "pid": "004"
+    },
+    {
+      "key": "higher_order_eq_step2/005.mp3",
+      "ttsDir": "higher_order_eq_step2",
+      "pid": "005"
+    },
+    {
+      "key": "higher_order_eq_step2/006.mp3",
+      "ttsDir": "higher_order_eq_step2",
+      "pid": "006"
+    },
+    {
+      "key": "higher_order_eq_step2/007.mp3",
+      "ttsDir": "higher_order_eq_step2",
+      "pid": "007"
+    },
+    {
+      "key": "higher_order_eq_step2/008.mp3",
+      "ttsDir": "higher_order_eq_step2",
+      "pid": "008"
+    },
+    {
+      "key": "higher_order_eq_step2/009.mp3",
+      "ttsDir": "higher_order_eq_step2",
+      "pid": "009"
+    },
+    {
+      "key": "higher_order_eq_step2/010.mp3",
+      "ttsDir": "higher_order_eq_step2",
+      "pid": "010"
+    },
+    {
+      "key": "higher_order_eq_step2/011.mp3",
+      "ttsDir": "higher_order_eq_step2",
+      "pid": "011"
+    },
+    {
+      "key": "higher_order_eq_step2/012.mp3",
+      "ttsDir": "higher_order_eq_step2",
+      "pid": "012"
+    },
+    {
+      "key": "higher_order_eq_step2/013.mp3",
+      "ttsDir": "higher_order_eq_step2",
+      "pid": "013"
+    },
+    {
+      "key": "higher_order_eq_step2/014.mp3",
+      "ttsDir": "higher_order_eq_step2",
+      "pid": "014"
+    },
+    {
+      "key": "higher_order_eq_step2/015.mp3",
+      "ttsDir": "higher_order_eq_step2",
+      "pid": "015"
+    },
+    {
+      "key": "higher_order_eq_step2/016.mp3",
+      "ttsDir": "higher_order_eq_step2",
+      "pid": "016"
+    },
+    {
+      "key": "higher_order_eq_step2/017.mp3",
+      "ttsDir": "higher_order_eq_step2",
+      "pid": "017"
+    },
+    {
+      "key": "higher_order_eq_step2/018.mp3",
+      "ttsDir": "higher_order_eq_step2",
+      "pid": "018"
+    },
+    {
+      "key": "higher_order_eq_step2/019.mp3",
+      "ttsDir": "higher_order_eq_step2",
+      "pid": "019"
+    },
+    {
+      "key": "higher_order_eq_step2/020.mp3",
+      "ttsDir": "higher_order_eq_step2",
+      "pid": "020"
+    },
+    {
+      "key": "induction_s2/001.mp3",
+      "ttsDir": "induction_s2",
+      "pid": "001"
+    },
+    {
+      "key": "induction_s2/002.mp3",
+      "ttsDir": "induction_s2",
+      "pid": "002"
+    },
+    {
+      "key": "induction_s2/003.mp3",
+      "ttsDir": "induction_s2",
+      "pid": "003"
+    },
+    {
+      "key": "induction_s2/004.mp3",
+      "ttsDir": "induction_s2",
+      "pid": "004"
+    },
+    {
+      "key": "induction_s2/005.mp3",
+      "ttsDir": "induction_s2",
+      "pid": "005"
+    },
+    {
+      "key": "induction_s2/006.mp3",
+      "ttsDir": "induction_s2",
+      "pid": "006"
+    },
+    {
+      "key": "induction_s2/007.mp3",
+      "ttsDir": "induction_s2",
+      "pid": "007"
+    },
+    {
+      "key": "induction_s2/008.mp3",
+      "ttsDir": "induction_s2",
+      "pid": "008"
+    },
+    {
+      "key": "induction_s2/009.mp3",
+      "ttsDir": "induction_s2",
+      "pid": "009"
+    },
+    {
+      "key": "induction_s2/010.mp3",
+      "ttsDir": "induction_s2",
+      "pid": "010"
+    },
+    {
+      "key": "induction_s2/011.mp3",
+      "ttsDir": "induction_s2",
+      "pid": "011"
+    },
+    {
+      "key": "induction_s2/012.mp3",
+      "ttsDir": "induction_s2",
+      "pid": "012"
+    },
+    {
+      "key": "induction_s2/013.mp3",
+      "ttsDir": "induction_s2",
+      "pid": "013"
+    },
+    {
+      "key": "induction_s2/014.mp3",
+      "ttsDir": "induction_s2",
+      "pid": "014"
+    },
+    {
+      "key": "induction_s2/015.mp3",
+      "ttsDir": "induction_s2",
+      "pid": "015"
+    },
+    {
+      "key": "induction_s2/016.mp3",
+      "ttsDir": "induction_s2",
+      "pid": "016"
+    },
+    {
+      "key": "induction_s2/017.mp3",
+      "ttsDir": "induction_s2",
+      "pid": "017"
+    },
+    {
+      "key": "induction_s2/018.mp3",
+      "ttsDir": "induction_s2",
+      "pid": "018"
+    },
+    {
+      "key": "induction_s2/019.mp3",
+      "ttsDir": "induction_s2",
+      "pid": "019"
+    },
+    {
+      "key": "induction_s2/020.mp3",
+      "ttsDir": "induction_s2",
+      "pid": "020"
+    },
+    {
+      "key": "integ_s2/001.mp3",
+      "ttsDir": "integ_s2",
+      "pid": "001"
+    },
+    {
+      "key": "integ_s2/002.mp3",
+      "ttsDir": "integ_s2",
+      "pid": "002"
+    },
+    {
+      "key": "integ_s2/003.mp3",
+      "ttsDir": "integ_s2",
+      "pid": "003"
+    },
+    {
+      "key": "integ_s2/004.mp3",
+      "ttsDir": "integ_s2",
+      "pid": "004"
+    },
+    {
+      "key": "integ_s2/005.mp3",
+      "ttsDir": "integ_s2",
+      "pid": "005"
+    },
+    {
+      "key": "integ_s2/006.mp3",
+      "ttsDir": "integ_s2",
+      "pid": "006"
+    },
+    {
+      "key": "integ_s2/007.mp3",
+      "ttsDir": "integ_s2",
+      "pid": "007"
+    },
+    {
+      "key": "integ_s2/008.mp3",
+      "ttsDir": "integ_s2",
+      "pid": "008"
+    },
+    {
+      "key": "integ_s2/009.mp3",
+      "ttsDir": "integ_s2",
+      "pid": "009"
+    },
+    {
+      "key": "integ_s2/010.mp3",
+      "ttsDir": "integ_s2",
+      "pid": "010"
+    },
+    {
+      "key": "integ_s2/011.mp3",
+      "ttsDir": "integ_s2",
+      "pid": "011"
+    },
+    {
+      "key": "integ_s2/012.mp3",
+      "ttsDir": "integ_s2",
+      "pid": "012"
+    },
+    {
+      "key": "integ_s2/013.mp3",
+      "ttsDir": "integ_s2",
+      "pid": "013"
+    },
+    {
+      "key": "integ_s2/014.mp3",
+      "ttsDir": "integ_s2",
+      "pid": "014"
+    },
+    {
+      "key": "integ_s2/015.mp3",
+      "ttsDir": "integ_s2",
+      "pid": "015"
+    },
+    {
+      "key": "integ_s2/016.mp3",
+      "ttsDir": "integ_s2",
+      "pid": "016"
+    },
+    {
+      "key": "integ_s2/017.mp3",
+      "ttsDir": "integ_s2",
+      "pid": "017"
+    },
+    {
+      "key": "integ_s2/018.mp3",
+      "ttsDir": "integ_s2",
+      "pid": "018"
+    },
+    {
+      "key": "integ_s2/019.mp3",
+      "ttsDir": "integ_s2",
+      "pid": "019"
+    },
+    {
+      "key": "integ_s2/020.mp3",
+      "ttsDir": "integ_s2",
+      "pid": "020"
+    },
+    {
+      "key": "integ_s3/001.mp3",
+      "ttsDir": "integ_s3",
+      "pid": "001"
+    },
+    {
+      "key": "integ_s3/002.mp3",
+      "ttsDir": "integ_s3",
+      "pid": "002"
+    },
+    {
+      "key": "integ_s3/003.mp3",
+      "ttsDir": "integ_s3",
+      "pid": "003"
+    },
+    {
+      "key": "integ_s3/004.mp3",
+      "ttsDir": "integ_s3",
+      "pid": "004"
+    },
+    {
+      "key": "integ_s3/005.mp3",
+      "ttsDir": "integ_s3",
+      "pid": "005"
+    },
+    {
+      "key": "integ_s3/006.mp3",
+      "ttsDir": "integ_s3",
+      "pid": "006"
+    },
+    {
+      "key": "integ_s3/007.mp3",
+      "ttsDir": "integ_s3",
+      "pid": "007"
+    },
+    {
+      "key": "integ_s3/008.mp3",
+      "ttsDir": "integ_s3",
+      "pid": "008"
+    },
+    {
+      "key": "integ_s3/009.mp3",
+      "ttsDir": "integ_s3",
+      "pid": "009"
+    },
+    {
+      "key": "integ_s3/010.mp3",
+      "ttsDir": "integ_s3",
+      "pid": "010"
+    },
+    {
+      "key": "integ_s3/011.mp3",
+      "ttsDir": "integ_s3",
+      "pid": "011"
+    },
+    {
+      "key": "integ_s3/012.mp3",
+      "ttsDir": "integ_s3",
+      "pid": "012"
+    },
+    {
+      "key": "integ_s3/013.mp3",
+      "ttsDir": "integ_s3",
+      "pid": "013"
+    },
+    {
+      "key": "integ_s3/014.mp3",
+      "ttsDir": "integ_s3",
+      "pid": "014"
+    },
+    {
+      "key": "integ_s3/015.mp3",
+      "ttsDir": "integ_s3",
+      "pid": "015"
+    },
+    {
+      "key": "integ_s3/016.mp3",
+      "ttsDir": "integ_s3",
+      "pid": "016"
+    },
+    {
+      "key": "integ_s3/017.mp3",
+      "ttsDir": "integ_s3",
+      "pid": "017"
+    },
+    {
+      "key": "integ_s3/018.mp3",
+      "ttsDir": "integ_s3",
+      "pid": "018"
+    },
+    {
+      "key": "integ_s3/019.mp3",
+      "ttsDir": "integ_s3",
+      "pid": "019"
+    },
+    {
+      "key": "integ_s3/020.mp3",
+      "ttsDir": "integ_s3",
+      "pid": "020"
+    },
+    {
+      "key": "integ_s4/001.mp3",
+      "ttsDir": "integ_s4",
+      "pid": "001"
+    },
+    {
+      "key": "integ_s4/002.mp3",
+      "ttsDir": "integ_s4",
+      "pid": "002"
+    },
+    {
+      "key": "integ_s4/003.mp3",
+      "ttsDir": "integ_s4",
+      "pid": "003"
+    },
+    {
+      "key": "integ_s4/004.mp3",
+      "ttsDir": "integ_s4",
+      "pid": "004"
+    },
+    {
+      "key": "integ_s4/005.mp3",
+      "ttsDir": "integ_s4",
+      "pid": "005"
+    },
+    {
+      "key": "integ_s4/006.mp3",
+      "ttsDir": "integ_s4",
+      "pid": "006"
+    },
+    {
+      "key": "integ_s4/007.mp3",
+      "ttsDir": "integ_s4",
+      "pid": "007"
+    },
+    {
+      "key": "integ_s4/008.mp3",
+      "ttsDir": "integ_s4",
+      "pid": "008"
+    },
+    {
+      "key": "integ_s4/009.mp3",
+      "ttsDir": "integ_s4",
+      "pid": "009"
+    },
+    {
+      "key": "integ_s4/010.mp3",
+      "ttsDir": "integ_s4",
+      "pid": "010"
+    },
+    {
+      "key": "integ_s4/011.mp3",
+      "ttsDir": "integ_s4",
+      "pid": "011"
+    },
+    {
+      "key": "integ_s4/012.mp3",
+      "ttsDir": "integ_s4",
+      "pid": "012"
+    },
+    {
+      "key": "integ_s4/013.mp3",
+      "ttsDir": "integ_s4",
+      "pid": "013"
+    },
+    {
+      "key": "integ_s4/014.mp3",
+      "ttsDir": "integ_s4",
+      "pid": "014"
+    },
+    {
+      "key": "integ_s4/015.mp3",
+      "ttsDir": "integ_s4",
+      "pid": "015"
+    },
+    {
+      "key": "limit_s2/001.mp3",
+      "ttsDir": "limit_s2",
+      "pid": "001"
+    },
+    {
+      "key": "limit_s2/002.mp3",
+      "ttsDir": "limit_s2",
+      "pid": "002"
+    },
+    {
+      "key": "limit_s2/003.mp3",
+      "ttsDir": "limit_s2",
+      "pid": "003"
+    },
+    {
+      "key": "limit_s2/004.mp3",
+      "ttsDir": "limit_s2",
+      "pid": "004"
+    },
+    {
+      "key": "limit_s2/005.mp3",
+      "ttsDir": "limit_s2",
+      "pid": "005"
+    },
+    {
+      "key": "limit_s2/006.mp3",
+      "ttsDir": "limit_s2",
+      "pid": "006"
+    },
+    {
+      "key": "limit_s2/007.mp3",
+      "ttsDir": "limit_s2",
+      "pid": "007"
+    },
+    {
+      "key": "limit_s2/008.mp3",
+      "ttsDir": "limit_s2",
+      "pid": "008"
+    },
+    {
+      "key": "limit_s2/009.mp3",
+      "ttsDir": "limit_s2",
+      "pid": "009"
+    },
+    {
+      "key": "limit_s2/010.mp3",
+      "ttsDir": "limit_s2",
+      "pid": "010"
+    },
+    {
+      "key": "limit_s2/011.mp3",
+      "ttsDir": "limit_s2",
+      "pid": "011"
+    },
+    {
+      "key": "limit_s2/012.mp3",
+      "ttsDir": "limit_s2",
+      "pid": "012"
+    },
+    {
+      "key": "limit_s2/013.mp3",
+      "ttsDir": "limit_s2",
+      "pid": "013"
+    },
+    {
+      "key": "limit_s2/014.mp3",
+      "ttsDir": "limit_s2",
+      "pid": "014"
+    },
+    {
+      "key": "limit_s2/015.mp3",
+      "ttsDir": "limit_s2",
+      "pid": "015"
+    },
+    {
+      "key": "limit_s2/016.mp3",
+      "ttsDir": "limit_s2",
+      "pid": "016"
+    },
+    {
+      "key": "limit_s2/017.mp3",
+      "ttsDir": "limit_s2",
+      "pid": "017"
+    },
+    {
+      "key": "limit_s2/018.mp3",
+      "ttsDir": "limit_s2",
+      "pid": "018"
+    },
+    {
+      "key": "limit_s2/019.mp3",
+      "ttsDir": "limit_s2",
+      "pid": "019"
+    },
+    {
+      "key": "limit_s2/020.mp3",
+      "ttsDir": "limit_s2",
+      "pid": "020"
+    },
+    {
+      "key": "seq_sum_s2/001.mp3",
+      "ttsDir": "seq_sum_s2",
+      "pid": "001"
+    },
+    {
+      "key": "seq_sum_s2/002.mp3",
+      "ttsDir": "seq_sum_s2",
+      "pid": "002"
+    },
+    {
+      "key": "seq_sum_s2/003.mp3",
+      "ttsDir": "seq_sum_s2",
+      "pid": "003"
+    },
+    {
+      "key": "seq_sum_s2/004.mp3",
+      "ttsDir": "seq_sum_s2",
+      "pid": "004"
+    },
+    {
+      "key": "seq_sum_s2/005.mp3",
+      "ttsDir": "seq_sum_s2",
+      "pid": "005"
+    },
+    {
+      "key": "seq_sum_s2/006.mp3",
+      "ttsDir": "seq_sum_s2",
+      "pid": "006"
+    },
+    {
+      "key": "seq_sum_s2/007.mp3",
+      "ttsDir": "seq_sum_s2",
+      "pid": "007"
+    },
+    {
+      "key": "seq_sum_s2/008.mp3",
+      "ttsDir": "seq_sum_s2",
+      "pid": "008"
+    },
+    {
+      "key": "seq_sum_s2/009.mp3",
+      "ttsDir": "seq_sum_s2",
+      "pid": "009"
+    },
+    {
+      "key": "seq_sum_s2/010.mp3",
+      "ttsDir": "seq_sum_s2",
+      "pid": "010"
+    },
+    {
+      "key": "seq_sum_s2/011.mp3",
+      "ttsDir": "seq_sum_s2",
+      "pid": "011"
+    },
+    {
+      "key": "seq_sum_s2/012.mp3",
+      "ttsDir": "seq_sum_s2",
+      "pid": "012"
+    },
+    {
+      "key": "seq_sum_s2/013.mp3",
+      "ttsDir": "seq_sum_s2",
+      "pid": "013"
+    },
+    {
+      "key": "seq_sum_s2/014.mp3",
+      "ttsDir": "seq_sum_s2",
+      "pid": "014"
+    },
+    {
+      "key": "seq_sum_s2/015.mp3",
+      "ttsDir": "seq_sum_s2",
+      "pid": "015"
+    },
+    {
+      "key": "seq_sum_s2/016.mp3",
+      "ttsDir": "seq_sum_s2",
+      "pid": "016"
+    },
+    {
+      "key": "seq_sum_s2/017.mp3",
+      "ttsDir": "seq_sum_s2",
+      "pid": "017"
+    },
+    {
+      "key": "seq_sum_s2/018.mp3",
+      "ttsDir": "seq_sum_s2",
+      "pid": "018"
+    },
+    {
+      "key": "seq_sum_s2/019.mp3",
+      "ttsDir": "seq_sum_s2",
+      "pid": "019"
+    },
+    {
+      "key": "seq_sum_s2/020.mp3",
+      "ttsDir": "seq_sum_s2",
+      "pid": "020"
+    },
+    {
+      "key": "seq_sum_s3/001.mp3",
+      "ttsDir": "seq_sum_s3",
+      "pid": "001"
+    },
+    {
+      "key": "seq_sum_s3/002.mp3",
+      "ttsDir": "seq_sum_s3",
+      "pid": "002"
+    },
+    {
+      "key": "seq_sum_s3/003.mp3",
+      "ttsDir": "seq_sum_s3",
+      "pid": "003"
+    },
+    {
+      "key": "seq_sum_s3/004.mp3",
+      "ttsDir": "seq_sum_s3",
+      "pid": "004"
+    },
+    {
+      "key": "seq_sum_s3/005.mp3",
+      "ttsDir": "seq_sum_s3",
+      "pid": "005"
+    },
+    {
+      "key": "seq_sum_s3/006.mp3",
+      "ttsDir": "seq_sum_s3",
+      "pid": "006"
+    },
+    {
+      "key": "seq_sum_s3/007.mp3",
+      "ttsDir": "seq_sum_s3",
+      "pid": "007"
+    },
+    {
+      "key": "seq_sum_s3/008.mp3",
+      "ttsDir": "seq_sum_s3",
+      "pid": "008"
+    },
+    {
+      "key": "seq_sum_s3/009.mp3",
+      "ttsDir": "seq_sum_s3",
+      "pid": "009"
+    },
+    {
+      "key": "seq_sum_s3/010.mp3",
+      "ttsDir": "seq_sum_s3",
+      "pid": "010"
+    },
+    {
+      "key": "seq_sum_s3/011.mp3",
+      "ttsDir": "seq_sum_s3",
+      "pid": "011"
+    },
+    {
+      "key": "seq_sum_s3/012.mp3",
+      "ttsDir": "seq_sum_s3",
+      "pid": "012"
+    },
+    {
+      "key": "seq_sum_s3/013.mp3",
+      "ttsDir": "seq_sum_s3",
+      "pid": "013"
+    },
+    {
+      "key": "seq_sum_s3/014.mp3",
+      "ttsDir": "seq_sum_s3",
+      "pid": "014"
+    },
+    {
+      "key": "seq_sum_s3/015.mp3",
+      "ttsDir": "seq_sum_s3",
+      "pid": "015"
+    },
+    {
+      "key": "seq_sum_s3/016.mp3",
+      "ttsDir": "seq_sum_s3",
+      "pid": "016"
+    },
+    {
+      "key": "seq_sum_s3/017.mp3",
+      "ttsDir": "seq_sum_s3",
+      "pid": "017"
+    },
+    {
+      "key": "seq_sum_s3/018.mp3",
+      "ttsDir": "seq_sum_s3",
+      "pid": "018"
+    },
+    {
+      "key": "seq_sum_s3/019.mp3",
+      "ttsDir": "seq_sum_s3",
+      "pid": "019"
+    },
+    {
+      "key": "seq_sum_s3/020.mp3",
+      "ttsDir": "seq_sum_s3",
+      "pid": "020"
+    },
+    {
+      "key": "trig_graph_s4/001.mp3",
+      "ttsDir": "trig_graph_s4",
+      "pid": "001"
+    },
+    {
+      "key": "trig_graph_s4/002.mp3",
+      "ttsDir": "trig_graph_s4",
+      "pid": "002"
+    },
+    {
+      "key": "trig_graph_s4/003.mp3",
+      "ttsDir": "trig_graph_s4",
+      "pid": "003"
+    },
+    {
+      "key": "trig_graph_s4/004.mp3",
+      "ttsDir": "trig_graph_s4",
+      "pid": "004"
+    },
+    {
+      "key": "trig_graph_s4/005.mp3",
+      "ttsDir": "trig_graph_s4",
+      "pid": "005"
+    },
+    {
+      "key": "trig_graph_s4/006.mp3",
+      "ttsDir": "trig_graph_s4",
+      "pid": "006"
+    },
+    {
+      "key": "trig_graph_s4/007.mp3",
+      "ttsDir": "trig_graph_s4",
+      "pid": "007"
+    },
+    {
+      "key": "trig_graph_s4/008.mp3",
+      "ttsDir": "trig_graph_s4",
+      "pid": "008"
+    },
+    {
+      "key": "trig_graph_s4/009.mp3",
+      "ttsDir": "trig_graph_s4",
+      "pid": "009"
+    },
+    {
+      "key": "trig_graph_s4/010.mp3",
+      "ttsDir": "trig_graph_s4",
+      "pid": "010"
+    },
+    {
+      "key": "trig_graph_s4/011.mp3",
+      "ttsDir": "trig_graph_s4",
+      "pid": "011"
+    },
+    {
+      "key": "trig_graph_s4/012.mp3",
+      "ttsDir": "trig_graph_s4",
+      "pid": "012"
+    },
+    {
+      "key": "trig_graph_s4/013.mp3",
+      "ttsDir": "trig_graph_s4",
+      "pid": "013"
+    },
+    {
+      "key": "trig_graph_s4/014.mp3",
+      "ttsDir": "trig_graph_s4",
+      "pid": "014"
+    },
+    {
+      "key": "trig_graph_s4/015.mp3",
+      "ttsDir": "trig_graph_s4",
+      "pid": "015"
+    },
+    {
+      "key": "trig_graph_s4/016.mp3",
+      "ttsDir": "trig_graph_s4",
+      "pid": "016"
+    },
+    {
+      "key": "trig_graph_s4/017.mp3",
+      "ttsDir": "trig_graph_s4",
+      "pid": "017"
+    },
+    {
+      "key": "trig_graph_s4/018.mp3",
+      "ttsDir": "trig_graph_s4",
+      "pid": "018"
+    },
+    {
+      "key": "trig_graph_s4/019.mp3",
+      "ttsDir": "trig_graph_s4",
+      "pid": "019"
+    },
+    {
+      "key": "trig_graph_s4/020.mp3",
+      "ttsDir": "trig_graph_s4",
+      "pid": "020"
+    },
+    {
+      "key": "trig_util_s4/001.mp3",
+      "ttsDir": "trig_util_s4",
+      "pid": "001"
+    },
+    {
+      "key": "trig_util_s4/002.mp3",
+      "ttsDir": "trig_util_s4",
+      "pid": "002"
+    },
+    {
+      "key": "trig_util_s4/003.mp3",
+      "ttsDir": "trig_util_s4",
+      "pid": "003"
+    },
+    {
+      "key": "trig_util_s4/004.mp3",
+      "ttsDir": "trig_util_s4",
+      "pid": "004"
+    },
+    {
+      "key": "trig_util_s4/005.mp3",
+      "ttsDir": "trig_util_s4",
+      "pid": "005"
+    },
+    {
+      "key": "trig_util_s4/006.mp3",
+      "ttsDir": "trig_util_s4",
+      "pid": "006"
+    },
+    {
+      "key": "trig_util_s4/007.mp3",
+      "ttsDir": "trig_util_s4",
+      "pid": "007"
+    },
+    {
+      "key": "trig_util_s4/008.mp3",
+      "ttsDir": "trig_util_s4",
+      "pid": "008"
+    },
+    {
+      "key": "trig_util_s4/009.mp3",
+      "ttsDir": "trig_util_s4",
+      "pid": "009"
+    },
+    {
+      "key": "trig_util_s4/010.mp3",
+      "ttsDir": "trig_util_s4",
+      "pid": "010"
+    },
+    {
+      "key": "trig_util_s4/011.mp3",
+      "ttsDir": "trig_util_s4",
+      "pid": "011"
+    },
+    {
+      "key": "trig_util_s4/012.mp3",
+      "ttsDir": "trig_util_s4",
+      "pid": "012"
+    },
+    {
+      "key": "trig_util_s4/013.mp3",
+      "ttsDir": "trig_util_s4",
+      "pid": "013"
+    },
+    {
+      "key": "trig_util_s4/014.mp3",
+      "ttsDir": "trig_util_s4",
+      "pid": "014"
+    },
+    {
+      "key": "trig_util_s4/015.mp3",
+      "ttsDir": "trig_util_s4",
+      "pid": "015"
+    },
+    {
+      "key": "trig_util_s4/016.mp3",
+      "ttsDir": "trig_util_s4",
+      "pid": "016"
+    },
+    {
+      "key": "trig_util_s4/017.mp3",
+      "ttsDir": "trig_util_s4",
+      "pid": "017"
+    },
+    {
+      "key": "trig_util_s4/018.mp3",
+      "ttsDir": "trig_util_s4",
+      "pid": "018"
+    },
+    {
+      "key": "trig_util_s4/019.mp3",
+      "ttsDir": "trig_util_s4",
+      "pid": "019"
+    },
+    {
+      "key": "trig_util_s4/020.mp3",
+      "ttsDir": "trig_util_s4",
+      "pid": "020"
+    }
+  ]
+}
