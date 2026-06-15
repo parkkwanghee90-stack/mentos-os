@@ -1,3 +1,5 @@
+require('dotenv').config();
+if (!process.env.SUPABASE_SERVICE_ROLE_KEY) throw new Error('SUPABASE_SERVICE_ROLE_KEY 미설정 — .env에 service_role 키를 설정하세요(코드 하드코딩 금지).');
 /**
  * 한글 경로 힌트 파일 → Supabase Storage 업로드
  * Supabase Storage는 한글 key에 URL encoding이 필요
@@ -6,7 +8,7 @@ const fs = require('fs');
 const path = require('path');
 
 const SUPABASE_URL = 'https://trvqgqvwhqvlgqzlsxbu.supabase.co';
-const SERVICE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRydnFncXZ3aHF2bGdxemxzeGJ1Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3ODY1NzA1MywiZXhwIjoyMDk0MjMzMDUzfQ.a76V1LYSItB48fXQN2in-rXfy8oD4o7KJteAMCyX9so';
+const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const BUCKET = 'mentos-assets';
 
 async function uploadFile(localAbsPath, remotePath) {

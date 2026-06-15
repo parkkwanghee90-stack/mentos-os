@@ -1,3 +1,5 @@
+require('dotenv').config();
+if (!process.env.SUPABASE_SERVICE_ROLE_KEY) throw new Error('SUPABASE_SERVICE_ROLE_KEY 미설정 — .env에 service_role 키를 설정하세요(코드 하드코딩 금지).');
 const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
@@ -5,7 +7,7 @@ require('dotenv').config();
 const { getSafePath } = require('../src/config/pathMapping.js');
 
 const SUPABASE_URL = process.env.VITE_SUPABASE_URL || 'https://trvqgqvwhqvlgqzlsxbu.supabase.co';
-const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRydnFncXZ3aHF2bGdxemxzeGJ1Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3ODY1NzA1MywiZXhwIjoyMDk0MjMzMDUzfQ.a76V1LYSItB48fXQN2in-rXfy8oD4o7KJteAMCyX9so';
+const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const BUCKET = 'mentos-assets';
 
 const TARGET_UNITS = ['원의방정식2단계', '원의방정식3단계', '원의방정식4단계'];

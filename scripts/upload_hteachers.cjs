@@ -1,3 +1,5 @@
+require('dotenv').config();
+if (!process.env.SUPABASE_SERVICE_ROLE_KEY) throw new Error('SUPABASE_SERVICE_ROLE_KEY 미설정 — .env에 service_role 키를 설정하세요(코드 하드코딩 금지).');
 /**
  * Upload hteachers/ webp files to Supabase mentos-assets bucket.
  * Only uploads .webp files (not .png) to keep bucket lean.
@@ -8,7 +10,7 @@ const https = require('https');
 
 const SUPABASE_URL = 'https://trvqgqvwhqvlgqzlsxbu.supabase.co';
 const BUCKET = 'mentos-assets';
-const SERVICE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRydnFncXZ3aHF2bGdxemxzeGJ1Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3ODY1NzA1MywiZXhwIjoyMDk0MjMzMDUzfQ.a76V1LYSItB48fXQN2in-rXfy8oD4o7KJteAMCyX9so';
+const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const BASE_DIR = path.resolve(__dirname, '..', 'assets_backup', 'hteachers');
 
 function uploadFile(localPath, remotePath) {
