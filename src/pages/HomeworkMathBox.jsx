@@ -15,6 +15,7 @@ import { computeSolvedCounts } from '@/services/progressCounts';
 import { queueParentPush } from '@/services/pushService';
 import { mirrorProgress, mirrorWrongAnswer } from '@/services/syncService';
 import avsAnswersData from '@/data/avs_answers.json';
+import { normalizeAnswer, gradeAnswer } from '@/lib/grading/normalizeAnswer';
 
 export default function HomeworkMathBox() {
   const navigate = useNavigate();
@@ -208,22 +209,7 @@ export default function HomeworkMathBox() {
     );
   }
 
-  // ── 정답 정규화 ──
-  const normalizeAnswer = (str) => {
-    if (!str) return '';
-    let clean = String(str).replace(/\s+/g, '').trim();
-    clean = clean.replace(/^[a-zA-Z]+[:=]/, '');
-    if (!isNaN(clean) && clean.includes('.')) {
-      const num = parseFloat(clean);
-      if (Number.isInteger(num)) clean = String(num);
-    }
-    if (clean.startsWith('+') && !isNaN(clean.substring(1))) {
-      clean = clean.substring(1);
-    }
-    const mapCircle = { '①': '1', '②': '2', '③': '3', '④': '4', '⑤': '5' };
-    if (mapCircle[clean]) clean = mapCircle[clean];
-    return clean;
-  };
+  // 정답 정규화·비교는 @/lib/grading/normalizeAnswer 모듈로 일원화
 
   // ── AVS 보기 (정답 입력 전이면 오답 처리) ──
   const handleShowAVS = () => {
@@ -261,18 +247,16 @@ export default function HomeworkMathBox() {
       return;
     }
 
-    const normUser = normalizeAnswer(userAnswer);
     const correctAnswer = answers[pid] || '';
-    const normCorrect = normalizeAnswer(correctAnswer);
 
     // 방어: 정답 데이터가 없는 문항은 오답 처리하지 않고 채점 보류(안전망)
-    if (!normCorrect) {
+    if (!normalizeAnswer(correctAnswer)) {
       setToast('ℹ️ 이 문항은 정답 데이터 준비 중이라 채점을 보류합니다');
       return;
     }
 
-    // 정확 일치 비교 (includes 버그 수정)
-    const isCorrect = normUser.length > 0 && normUser === normCorrect;
+    // LaTeX/ㄱㄴㄷ/또는 정규화 비교 (모듈 일원화)
+    const isCorrect = gradeAnswer(userAnswer, correctAnswer);
 
     const newStatus = {
       ...solvedStatus,
