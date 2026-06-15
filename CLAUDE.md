@@ -33,5 +33,6 @@
 - 원격: `parkkwanghee90-stack/mentos-os`.
 
 ## 주의 / 보안
-- ⚠️ `scripts/upload_*.cjs`·`check_supa.js`에 service_role 키 하드코딩 — **로테이션 필요**.
-- 신규 스크립트는 키를 `.env`(`SUPABASE_SERVICE_ROLE_KEY` 등)에서만 로드.
+- ✅ `scripts/upload_*.cjs`·`check_supa.js`의 service_role 키 하드코딩 제거 완료 → `process.env.SUPABASE_SERVICE_ROLE_KEY`(`.env`)에서만 로드(미설정 시 fail-fast).
+- ⚠️ **단 옛 키는 여전히 git 이력에 남아 있음**: ① Supabase 대시보드에서 service_role 키 **재발급 필수**(GMAIL_SMTP·SUPABASE_ACCESS_TOKEN·Gemini 키도) ② 재발급 후 `git filter-repo`로 이력 스크럽(강제푸시·협업자 조율 필요).
+- 신규 스크립트는 키를 `.env`(`SUPABASE_SERVICE_ROLE_KEY` 등)에서만 로드(하드코딩 금지).
