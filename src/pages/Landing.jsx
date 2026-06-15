@@ -2,6 +2,7 @@
 import "@/styles/home.css";
 import LandingNav from "@/components/home/LandingNav";
 import LandingHero from "@/components/home/LandingHero";
+import LandingJourney from "@/components/home/LandingJourney";
 import LandingCompare from "@/components/home/LandingCompare";
 import LandingShowcase from "@/components/home/LandingShowcase";
 import LandingTutorAlert from "@/components/home/LandingTutorAlert";
@@ -15,6 +16,7 @@ export default function Landing() {
       <LandingNav />
       <main>
         <LandingHero />
+        <LandingJourney />
         <LandingCompare />
         <LandingShowcase />
         <LandingTutorAlert />
