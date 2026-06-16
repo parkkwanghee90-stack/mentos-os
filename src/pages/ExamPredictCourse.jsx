@@ -253,8 +253,28 @@ export default function ExamPredictCourse() {
     const inGo1 = (BUNDLE.schools || []).some(x => x.slug === decoded);
     const g = inGo2 ? 'go2' : inGo1 ? 'go1' : (GRADE_META[params.grade] ? params.grade : 'go1');
     const s = (GRADE_META[g].bundle.schools || []).find(x => x.slug === decoded);
-    if (s) { setGrade(g); setSelected(s); }
+    if (s) {
+      setGrade(g); setSelected(s);
+      // 추천 링크(?ref=)로 들어왔으면 추천인·대상학교 저장 → 가입 후 보상 RPC 호출.
+      try {
+        const ref = new URLSearchParams(window.location.search).get('ref');
+        if (ref) { localStorage.setItem('mentos_exam_ref', ref); localStorage.setItem('mentos_exam_ref_school', s.slug); }
+      } catch { /* 스토리지 차단 */ }
+    }
   }, [params.grade, params.slug]);
+
+  // 추천 보상: 추천 링크로 가입/로그인한 신규 유저면 추천인에게 해당 학교 2·3회차 해금.
+  //   백엔드(grant_exam_referral RPC + exam_referral 테이블 + school_pass)가 배포돼야 실제 보상.
+  //   미배포 시 RPC 에러는 조용히 무시하고 ref 를 남겨 다음 기회에 재시도.
+  useEffect(() => {
+    if (!user?.id) return;
+    let ref, school;
+    try { ref = localStorage.getItem('mentos_exam_ref'); school = localStorage.getItem('mentos_exam_ref_school'); } catch { return; }
+    if (!ref || ref === user.id) return;
+    supabase.rpc('grant_exam_referral', { p_referrer: ref, p_school: school || null })
+      .then(({ error }) => { if (!error) { try { localStorage.removeItem('mentos_exam_ref'); localStorage.removeItem('mentos_exam_ref_school'); } catch { /* */ } } })
+      .catch(() => { /* 백엔드 미배포 — 다음 기회에 재시도 */ });
+  }, [user?.id]);
 
   // SEO: 학교 상세 진입 시 문서 head 동적 갱신, 목록 복귀/언마운트 시 기본값 복원.
   useEffect(() => {
@@ -361,7 +381,7 @@ export default function ExamPredictCourse() {
         {!hasAccess && !master && (
           isStudent(user) ? (
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(16,185,129,0.12)', border: '1px solid rgba(16,185,129,0.35)', borderRadius: 12, padding: '10px 14px', marginBottom: 14, fontSize: 13.5, color: '#a7f3d0' }}>
-              <Gift size={16} color="#10b981" /> <span><b style={{ color: '#fff' }}>1회차 20문항 무료</b> 체험 중! 2·3회차(숫자 변형 복습분)는 잠금이에요.</span>
+              <Gift size={16} color="#10b981" /> <span><b style={{ color: '#fff' }}>1회차 20문항 무료</b> 체험 중! <button onClick={() => shareSchool(selected)} style={{ background: 'none', border: 'none', color: '#fbbf24', fontWeight: 800, cursor: 'pointer', padding: 0, textDecoration: 'underline' }}>친구에게 공유</button>하면 2·3회차도 무료로 열려요 🎁</span>
             </div>
           ) : (
             <div onClick={() => navigate('/login')} style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(59,130,246,0.12)', border: '1px solid rgba(59,130,246,0.4)', borderRadius: 12, padding: '10px 14px', marginBottom: 14, fontSize: 13.5, color: '#bfdbfe', cursor: 'pointer' }}>
