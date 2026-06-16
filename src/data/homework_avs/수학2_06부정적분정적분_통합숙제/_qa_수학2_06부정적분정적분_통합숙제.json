@@ -1,0 +1,518 @@
+[
+  {
+    "pid": "001",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "002",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "003",
+    "status": "rewrite",
+    "severity": "MEDIUM",
+    "issues": [
+      "객관식 문제(보기 ①~⑤)인데 A 필드가 보기번호가 아닌 맨값 -2를 박스로 표기함($\\boxed{-2}$). 채점키/finalAnswer는 보기 ①에 해당하는 \"1\"이므로, A의 표기(-2)와 저장답(1)이 표면상 불일치해 보임 → 답 포맷 오류(맨값↔보기번호).",
+      "S의 마지막 결론도 값 -2에서 멈추고 이 값이 보기 ①번임을 명시하지 않음. 객관식이므로 보기번호 ①번으로 마무리해야 함.",
+      "수학적 풀이 자체는 전부 정확($f(x)=x^4-4x^2+1$, 합=-2)하며 해설 이미지(003a)와 완전 일치. 정답값(보기 ①, 키 \"1\")은 올바름 → 정답 오류 아님."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "004",
+    "status": "rewrite",
+    "severity": "MEDIUM",
+    "issues": [
+      "객관식 문제인데 C(조건)에 보기 ① 2  ② 5  ③ 8  ④ 11  ⑤ 14가 전사되지 않음.",
+      "A(정답표기)가 객관식 보기번호(②번)를 표기하지 않고 값 5만 $\\boxed{5}$로 표기함. 채점키/finalAnswer는 보기번호 '2'(=②번)인데 A는 값을 boxed 처리하여 표기 형식 불일치. 정답값(②번=5)은 올바름.",
+      "S와 풀이는 수학적으로 모두 정확하며 f(3)=5에 올바르게 도달함."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "005",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "006",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "007",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "008",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "009",
+    "status": "rewrite",
+    "severity": "MEDIUM",
+    "issues": [
+      "이 문제는 객관식(보기 ①~⑤)인데 C에 객관식 보기가 전사되어 있지 않다. 보기 ① 1/4, ② 1/2, ③ 3/4, ④ 1, ⑤ 5/4를 명시해야 한다.",
+      "A 필드가 객관식 보기번호(②번)가 아니라 맨 값 $\\frac{1}{2}$만 박스로 표기하고 있다. finalAnswer는 보기번호 '2'인데 A 표기가 값과 혼동되어 포맷 불일치가 있다. 정답값(1/2)과 보기번호(②)를 모두 명확히 해야 한다.",
+      "정답값 자체(1/2=②)와 채점키('2')는 일치하므로 정답 오류는 아니다. S의 계산도 수학적으로 옳다."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "010",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "011",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "012",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "013",
+    "status": "rewrite",
+    "severity": "MEDIUM",
+    "issues": [
+      "이 문항은 객관식(① 5, ② 16/3, ③ 17/3, ④ 6, ⑤ 19/3)인데 P('최댓값을 구한다')와 C에 객관식 보기가 전사되어 있지 않다. 채점키/finalAnswer='2'(=②번)와 일치시키려면 객관식임을 명시하고 보기를 전사해야 한다.",
+      "A 필드가 보기번호(②번) 대신 박스값 16/3만 표기하여, 채점키 '2'(보기번호)와 표기 형식이 어긋난다(맨숫자↔보기번호 포맷 불일치). 값 16/3=②번은 수학적으로 정확하므로 정답 자체는 옳다.",
+      "독립 풀이 결과 g(a)=-a³/3+4a, g'(a)=-(a+2)(a-2), a=2에서 최대 g(2)=16/3 으로 S의 계산은 전부 정확하며 ②번에 해당한다. 정답값(②=16/3)은 바뀌지 않는다."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "014",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "015",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "016",
+    "status": "rewrite",
+    "severity": "MEDIUM",
+    "issues": [
+      "A(정답표기)가 객관식 보기번호(②번) 대신 원시값 28을 박스 처리함. finalAnswer/correctAnswer는 '2'(보기번호)인데 A는 값 28을 표기하여 포맷 불일치(맨숫자↔보기번호). 채점키=2, 독립답=②(28), 저장답=2로 의미상 모두 일치하므로 정답 자체는 정확함. 수학적 풀이(p=20, f(x)=x³-9x²+24x, 적분=28)는 전부 옳음. A를 보기번호 표기로 교정함."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "017",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "018",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "019",
+    "status": "rewrite",
+    "severity": "MEDIUM",
+    "issues": [
+      "객관식 문제인데 A(정답 표기)가 보기 번호 대신 값 $\\boxed{7}$만 표기하여 채점키 포맷(보기 번호 '5'=⑤)과 표기 컨벤션이 어긋남. 값 7은 보기 ⑤이므로 A를 '⑤번'으로 명시해야 채점키 '5'와 일관됨.",
+      "C에 객관식 보기(① 3 ② 4 ③ 5 ④ 6 ⑤ 7)가 전사되어 있지 않아 문제 복원이 불완전함.",
+      "수학적 풀이(S)와 정답 값 7 자체는 모두 정확함."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "020",
+    "status": "rewrite",
+    "severity": "MEDIUM",
+    "issues": [
+      "이 문제는 객관식(① 4, ② 9/2, ③ 5, ④ 11/2, ⑤ 6)이며 정답값 f(2)=11/2은 보기 ④에 해당한다. 저장된 finalAnswer/correctAnswer='4'와 채점키='4'는 보기번호 ④를 의미하므로 채점상 일치하나, A 필드가 '정답은 11/2'라고만 적고 보기번호 ④번을 명시하지 않아 객관식 답 표기로서 불완전하다(MEDIUM).",
+      "C에 객관식 보기(①~⑤)가 전사되지 않아 문제 복원이 불완전하다. 풀이 S의 수학 전개와 계산(f'(x)=3x, f(x)=3/2 x^2 -1/2, f(2)=11/2)은 모두 옳다."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "021",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "022",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "023",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "025",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "026",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "027",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "028",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "029",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "030",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "031",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "032",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "033",
+    "status": "rewrite",
+    "severity": "MEDIUM",
+    "issues": [
+      "객관식 문제(보기 ①~⑤)인데 A 필드가 보기 번호 대신 값 $\\boxed{\\frac{4}{3}}$만 표기한다. 채점키/finalAnswer는 보기 번호 '1'(=①, 값 4/3)로 올바르나, A의 정답 표기 포맷이 보기 번호와 불일치한다(맨값 표기). 보기 ①번임을 명시하도록 교정 필요.",
+      "P/C가 객관식 보기(① 4/3 ② 3/2 ③ 5/3 ④ 11/6 ⑤ 2)를 전사하지 않아 객관식 문제임이 드러나지 않는다.",
+      "수학적 풀이(a=3, 적분=4/3) 및 부호 상쇄 논리는 모두 정확함을 독립 계산으로 확인(int_0^1=-4/3, int_3^4=+4/3 상쇄, int_1^3=4/3)."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "034",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "035",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "036",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "037",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "038",
+    "status": "rewrite",
+    "severity": "MEDIUM",
+    "issues": [
+      "이 문제는 객관식(① 13 ~ ⑤ 21)인데 A 정답 표기가 보기번호가 아니라 값 '21'로만 되어 있다. 채점키와 finalAnswer/correctAnswer는 '5'(⑤번)로 일관되며 수학적으로도 정답은 ⑤ 21로 옳다. 정답값 자체는 정확하나 A를 보기번호(⑤번) 표기로 맞추는 포맷 교정이 필요하다(MEDIUM).",
+      "풀이 S의 수식 전개(우함수 성질, f(x)+f(-x)=3x^2-2, 두 적분 동일성, [x^3-2x]_{-3}^{3}=42, 1/2·42=21)는 모두 수학적으로 정확하며 정답 21에 올바르게 도달한다.",
+      "전사(P+C)는 함수·조건·수치를 정확히 복원하나 원본 C에 객관식 보기(① 13 ② 15 ③ 17 ④ 19 ⑤ 21)가 누락되어 있어 보강함."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "039",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "040",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "041",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "042",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "043",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "044",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "045",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "046",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "047",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "048",
+    "status": "rewrite",
+    "severity": "MEDIUM",
+    "issues": [
+      "객관식 문제(보기 ①18 ②20 ③22 ④24 ⑤26)인데 A 필드가 보기번호가 아닌 값 26으로 표기됨. 채점 SSOT 및 finalAnswer/correctAnswer는 보기번호 '5'를 사용하므로 A 표기를 ⑤번으로 정렬하는 것이 일관됨(값↔보기번호 포맷 불일치, MEDIUM).",
+      "정답값 자체는 정확함: 독립풀이 26 = ⑤번 = 저장답 '5' = 채점키 '5' 로 의미상 모두 일치. 풀이 S의 모든 전개(a=-6, 인수분해 3(x+2)(x-1), 부호변화 판정, g(-2)=26)는 수학적으로 옳고 정답에 실제 도달함."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "049",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "050",
+    "status": "rewrite",
+    "severity": "MEDIUM",
+    "issues": [
+      "이 문제는 객관식(5지선다)인데 A 필드가 보기번호(⑤번)가 아니라 값 -4만 박스 처리하고 있다. 채점키와 finalAnswer/correctAnswer는 보기번호 '5'이므로, 화면 표기와 채점값의 포맷이 어긋난다(값 -4 ↔ 보기번호 5). 수학적으로는 모두 일치(⑤=-4)하나 객관식 답 포맷을 보기번호로 통일해야 한다.",
+      "독립 풀이 결과 g(0)=-4 (⑤번)으로 채점키 '5', finalAnswer '5'와 의미상 일치하며 정답 오류는 없음.",
+      "C 필드 보기 전사가 누락되어 있다(객관식 5개 보기 미기재). C에 보기 ①~⑤를 명시 전사하는 것이 바람직하다."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "051",
+    "status": "rewrite",
+    "severity": "MEDIUM",
+    "issues": [
+      "ㄷ의 풀이가 논리적으로 불완전하다. JSON의 S는 '$S_1=S_2$이면 $g(x)$가 모든 구간에서 위쪽 넓이가 아래쪽 넓이 이상이 되어 항상 0 이상이다'라고만 서술하는데, 이는 $x<0$ 또는 $x>\\beta$에서 $g(x)\\ge0$임을 실제로 증명하지 못하는 논리 비약이다.",
+      "$f(\\beta)=g(\\beta)=0$ 조건은 두 근을 $\\gamma=\\beta/2,\\ \\beta$로 강제한다($g(\\beta)=\\tfrac{a\\beta^3(2\\gamma-\\beta)}{12}=0\\Rightarrow\\gamma=\\beta/2$). 이때 $g(x)=\\tfrac{a}{4}x^2(x-\\beta)^2\\ge0$로 완전제곱 형태가 되어 모든 실수에서 성립함이 깔끔히 증명되는데, JSON은 이 핵심 계산($\\gamma=\\beta/2$, $g(x)$의 완전제곱 형태)을 누락했다.",
+      "정답값(5)과 ㄱ·ㄴ 풀이는 정확하며 채점키와도 일치한다. 결함은 ㄷ 단계의 논리 불완전성에 국한된다(MEDIUM)."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "052",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "053",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "054",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "055",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "056",
+    "status": "rewrite",
+    "severity": "MEDIUM",
+    "issues": [
+      "객관식 문제인데 A필드의 최종정답 표기가 보기번호(③)가 아닌 원시값 26으로 되어 있어 채점키(finalAnswer=correctAnswer=3=보기③)와 표기 형식이 불일치한다. 값(26)과 보기번호(③)는 의미상 동일하므로 정답 자체는 옳다. A를 보기번호 ③ 표기로 교정한다.",
+      "독립 풀이로 f(x)=2x^2+6x+6, f(2)=26=③번 확인. S 전개와 계수비교(a=2,b=6,c=6)는 모두 수학적으로 정확하다."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "057",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "058",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "059",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "060",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "061",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "062",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "063",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "064",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "065",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "066",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "067",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "068",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  }
+]
