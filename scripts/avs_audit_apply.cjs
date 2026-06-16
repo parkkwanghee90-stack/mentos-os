@@ -58,6 +58,7 @@ for (const r of results) {
     pid,
     status: r.status,
     severity: r.severity,
+    shiftSuspected: r.shiftSuspected || false,
     issues: r.issues || [],
     answerChanged: r.answerChanged || null,
   })
