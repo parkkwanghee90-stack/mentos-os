@@ -3,10 +3,10 @@
   "scope": "four-subjects (excludes u<digit>_*)",
   "counts": {
     "bucketTotal": 2496,
-    "confirmed": 1193,
-    "suspectAll": 1303,
+    "confirmed": 1199,
+    "suspectAll": 1297,
     "suspectOutOfScope": 198,
-    "suspectInScope": 1105
+    "suspectInScope": 1099
   },
   "suspect": [
     {
@@ -208,21 +208,6 @@
       "key": "cases_s3/020.mp3",
       "ttsDir": "cases_s3",
       "pid": "020"
-    },
-    {
-      "key": "circle_s2/001.mp3",
-      "ttsDir": "circle_s2",
-      "pid": "001"
-    },
-    {
-      "key": "circle_s2/002.mp3",
-      "ttsDir": "circle_s2",
-      "pid": "002"
-    },
-    {
-      "key": "circle_s2/003.mp3",
-      "ttsDir": "circle_s2",
-      "pid": "003"
     },
     {
       "key": "circle_s2/004.mp3",
@@ -4970,11 +4955,6 @@
       "pid": "020"
     },
     {
-      "key": "seq_sum_s4/008.mp3",
-      "ttsDir": "seq_sum_s4",
-      "pid": "008"
-    },
-    {
       "key": "shape_move_s2/001.mp3",
       "ttsDir": "shape_move_s2",
       "pid": "001"
@@ -4988,16 +4968,6 @@
       "key": "shape_move_s2/007.mp3",
       "ttsDir": "shape_move_s2",
       "pid": "007"
-    },
-    {
-      "key": "trig_graph_s2/012.mp3",
-      "ttsDir": "trig_graph_s2",
-      "pid": "012"
-    },
-    {
-      "key": "trig_graph_s2/013.mp3",
-      "ttsDir": "trig_graph_s2",
-      "pid": "013"
     },
     {
       "key": "trig_graph_s2/014.mp3",
