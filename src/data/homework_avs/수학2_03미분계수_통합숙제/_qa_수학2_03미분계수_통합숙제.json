@@ -1,39 +1,251 @@
 [
   {
+    "pid": "001",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "002",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "003",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "004",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "005",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "006",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "007",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "008",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "009",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "010",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "011",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "012",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "013",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "014",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "015",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "017",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
     "pid": "018",
-    "issues": [
-      "k=2/3에서 f는 x=0에서 불연속(좌극한 2 ≠ f(0)=-2)이므로 좌미분계수는 존재하지 않음 — \"좌미분계수와 우미분계수가 모두 2\" 류의 미분가능 단언 절대 금지. 2인 것은 f'(x)의 좌/우극한일 뿐",
-      "t₀와 t₁ 혼동 금지: k=2/3에서 t₀=2, t₁=-2 (\"모두 2\"는 거짓 — t=-2일 때 x≥0 부분의 접선이 y=2x-2)",
-      "경우 2의 완전제곱 항등식을 날조하지 말 것 — 올바른 식은 t₁ = -2 - (k-2/3)²/k² (이로부터 k≠2/3이면 t₁<-2). 검산: k=1 → t₁=-19/9",
-      "구간별 h(t) 표 의무: 각 경우의 불연속점들(경우1·2: t₀, 2, -2 / t₁ 포함)에 대해 구간별 교점 수를 표로 전개 — 단언 금지. 최종 k=2/3, 150k=100"
-    ]
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "019",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "020",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
   },
   {
     "pid": "021",
-    "issues": [
-      "ㄴ: a=1, a=0, a=-1 표본 대입 논증 금지 — 해설의 삼분 논증(a≥1 / -1<a<1 / a≤-1, 그림1~3)을 케이스별로 전개해 최댓값 1 ⇒ a=-1을 도출할 것",
-      "끝점 극한을 '최댓값'으로 지칭하는 허위 금지 (예: a=1일 때 실제 최댓값은 t≥2에서 0, a=0일 때 t=2에서 1/2)",
-      "ㄷ: a=0·a>0 케이스를 무근거 단언으로 배제하지 말 것 — 해설 그림4·5의 논증으로 각각 배제",
-      "ㄷ: k 분기 누락 금지 — '모두 1≤x<2 / 모두 x≥2' 배제 후 1≤k<2 분기(f값 0,1,1)도 명시적으로 다룰 것",
-      "\"y=f(x)와 y=-3/2는 만나지 않습니다\" 자기모순 문장 금지 — 해설: 최솟값 -25/16이 -3/2보다 작으므로 서로 다른 두 점에서 만난다",
-      "B의 공선 조건 순환 서술 정리: 세 점 공선 ⇔ 두 기울기 동일"
-    ]
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
   },
   {
     "pid": "022",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "023",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "024",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "025",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "026",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "027",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "028",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "029",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "030",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "031",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "032",
+    "status": "rewrite",
+    "severity": "MEDIUM",
     "issues": [
-      "a=0 도출은 해설의 압착 논증만 허용: 조건 ①에서 b+4≥a²/3≥0 (b≥-4) ⇒ (x²-2)² ≥ 2ax+b+4 ≥ 2ax (모든 실수 x), x=√2와 x=-√2 대입 ⇒ ±2√2a≤0 ⇒ a=0",
-      "거짓 가교 명제 금지: \"2√2a+b+4≤0과 -2√2a+b+4≤0이 동시에 성립하려면 a=0이어야\"(반례 a=1,b=-100), \"a=0일 때만 b+4≤0\" 모두 거짓",
-      "풀이 도중 경로 포기 메타발언 금지(\"~를 이용하기 어렵게 만듭니다. 대신\") — 처음부터 압착 경로로 일관 전개",
-      "점별 부등식→전역 최솟값 비교 치환 금지(상수 우변과의 비교만 허용), b=-4 이후 단계와 최종답 296 유지"
-    ]
+      "ㄷ 풀이의 연속 후보 열거 오류: JSON은 $g(0)=0$을 만족하는 정수가 $k=-4,-2,-1,1$ 네 개뿐이라고 했으나, 실제로는 $g(0)=|f(-k)|=0$이 되는 정수는 $k=-4,-3,-2,-1,1$ 의 다섯 개이다($f(-k)=0 \\Leftrightarrow -k\\in\\{-1\\}\\cup[1,3]\\cup\\{4\\}$, 여기에 $-k=3$, 즉 $k=-3$도 포함됨). JSON은 $k=-3$을 누락했다.",
+      "$k=-3$ 케이스 미검토: $k=-3$이면 $g(x)=|f(x+3)|$가 $x=0$에서 불연속이다($x\\to0-$에서 $x+3<3$이라 $g=0$, $x\\to0+$에서 $x+3>3$이라 $g=|1-x|\\to1$, $g(0)=0$). 따라서 $f\\cdot g$의 좌측 곱극한 $=1\\cdot0=0$, 우측 곱극한 $=(-1)\\cdot1=-1$로 곱 자체가 $x=0$에서 불연속 → 미분불가능. 이 케이스가 올바르게 배제되지만 JSON은 이를 다루지 않고 처음부터 후보에서 빠뜨려 논리가 불완전하다.",
+      "최종 정답은 ㄱ,ㄷ(④)으로 독립답=저장답=채점키(모두 4)와 일치하므로 정답 자체는 옳다. 결함은 ㄷ 단계의 후보 집합 산정 및 $k=-3$ 미분가능성 검토 누락에 한정된다."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "033",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
   },
   {
     "pid": "034",
-    "issues": [
-      "경우 (ii) k=5에서 x<0 구간 g(x)=(3/2)|2x+4|의 첨점 x=-2 미분가능성 검사를 누락하지 말 것 — 해설은 h(3)=h(0)=h(-2)=0을 명시적 필요조건으로 사용. x=0, x=3만 조사하고 끝내면 (가) 검증 미완성",
-      "케이스 (iii) k∉{1,5} 배제 논증은 유지(h=x²(x-a), h'(3)=15→a=2, h(3)=9≠0 모순)",
-      "계획문 선참조 금지 — 서술과 수식 교차 배치. 최종 h(5)=70, 합 64"
-    ]
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "035",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "036",
+    "status": "pass",
+    "severity": "none",
+    "issues": [],
+    "answerChanged": null
   }
 ]
