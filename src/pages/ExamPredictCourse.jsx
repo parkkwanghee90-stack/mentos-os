@@ -87,6 +87,22 @@ const C = {
   text: '#e5e7eb', sub: '#94a3b8', accent: '#3b82f6', gold: '#fbbf24',
 };
 
+// 예상문제 단톡방(카카오 오픈채팅) — 학생 모집·무료 배포 안내 채널
+const KAKAO_OPENCHAT = 'https://open.kakao.com/o/gPzODQzi';
+// 카톡 오픈채팅 입장 버튼(노란 카카오 브랜드). full=true면 가로 꽉 채움.
+function KakaoJoin({ full = false, label = '예상문제 단톡방 입장 (무료 배포·질문)' }) {
+  return (
+    <a href={KAKAO_OPENCHAT} target="_blank" rel="noopener noreferrer"
+      style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+        width: full ? '100%' : 'auto', boxSizing: 'border-box',
+        background: '#FEE500', color: '#3C1E1E', fontWeight: 800, fontSize: 14.5,
+        borderRadius: 14, padding: '13px 18px', textDecoration: 'none', cursor: 'pointer',
+        boxShadow: '0 2px 10px rgba(254,229,0,0.25)' }}>
+      <span style={{ fontSize: 17 }}>💬</span> {label}
+    </a>
+  );
+}
+
 function UnitBars({ unitShare }) {
   const top = (unitShare || []).slice(0, 5);
   const palette = ['#3b82f6', '#8b5cf6', '#ec4899', '#f59e0b', '#10b981'];
@@ -355,6 +371,12 @@ export default function ExamPredictCourse() {
           <p style={{ color: C.sub, fontSize: 14, lineHeight: 1.6, marginTop: 16, marginBottom: 0 }}>{selected.analysis.summary}</p>
         </div>
 
+        {/* 단톡방 입장 CTA */}
+        <div style={{ marginBottom: 20 }}>
+          <KakaoJoin full label={`${selected.school} 예상문제 단톡방 입장 💬`} />
+          <div style={{ color: C.sub, fontSize: 12, textAlign: 'center', marginTop: 7 }}>시험 2주 전 예상문제 무료 배포 · 질문 받아요</div>
+        </div>
+
         {/* 예상문제 헤더 + 회차 탭 */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
           <Sparkles size={18} color={C.accent} />
@@ -428,6 +450,11 @@ export default function ExamPredictCourse() {
           ? <b style={{ color: '#10b981' }}>학생은 1회차 무료!</b>
           : <b style={{ color: C.gold }}>로그인하면 1회차 무료!</b>} 내 학교를 검색하세요.
       </p>
+
+      {/* 예상문제 단톡방 입장 */}
+      <div style={{ marginBottom: 16 }}>
+        <KakaoJoin full label="우리 학교 예상문제 단톡방 입장하기" />
+      </div>
 
       {/* 고1 / 고2 토글 */}
       <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
