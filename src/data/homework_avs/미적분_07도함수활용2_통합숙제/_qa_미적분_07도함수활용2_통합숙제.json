@@ -1,0 +1,328 @@
+[
+  {
+    "pid": "001",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "002",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "003",
+    "status": "rewrite",
+    "severity": "MEDIUM",
+    "shiftSuspected": false,
+    "issues": [
+      "P/C/B/S are generic placeholder text that does not describe the actual problem in 003.webp (max real k for 2x-1>=k e^{x^2}, fill (가)(나), compute g(2)*p). Solution body is a non-answer placeholder ('read the image'). Rewrote with full derivation. Answer option 3 unchanged."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "004",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "005",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "006",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "007",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "008",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "009",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "010",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "011",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "012",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "013",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "014",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "015",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "016",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "017",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "018",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [
+      "count=4 matches choice ③; finalAnswer stores choice number 3, A boxes value 4 — both consistent"
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "019",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "020",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "021",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "022",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [
+      "S field is a generic image-pointer stub (no full worked solution); answer verified correct independently (g(-6)*g(2)=129)"
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "023",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "024",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [
+      "value sqrt3/2 matches choice ④; finalAnswer stores choice number 4, A boxes value — consistent"
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "025",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [
+      "value 7+3/(2ln2) matches choice ④; finalAnswer stores choice number 4, A boxes value — consistent"
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "026",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "027",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "028",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "029",
+    "status": "rewrite",
+    "severity": "HIGH",
+    "shiftSuspected": false,
+    "issues": [
+      "S의 ㄴ/ㄷ 판정이 모두 뒤바뀜: f가 실수 전체에서 미분가능 + 우함수이므로 f'(0)=0이 강제되고 f(0)=0이므로 lim_{x->0} g(x)=lim sin f(x)/x = f'(0)=0 → ㄴ은 참인데 S는 거짓으로 판정함.",
+      "ㄷ: g(α)=sin(π/2)/α=1/α는 x>0에서 g의 최댓값이 아니라 일반적으로 그보다 작으므로, 수평선 y=1/α는 x>0에서 g와 두 번(상승·하강) 만나고 대칭으로 음수쪽도 두 번 → 서로 다른 실근 4개. ㄷ('2개')은 거짓인데 S는 참으로 판정함. (수치검증: π(1-e^{-x²}), 2arctan(x²), π·tanh(x²) 등 모든 미분가능 f에서 근 4개 일관 확인)",
+      "S 본문 결론과 A의 boxed가 'ㄱ, ㄷ'인데, 이는 객관식 보기(① ㄱ / ② ㄷ / ③ ㄱ,ㄴ / ④ ㄴ,ㄷ / ⑤ ㄱ,ㄴ,ㄷ)에 존재하지도 않는 조합임. 올바른 보기는 ③ ㄱ,ㄴ. 저장된 수치값 '3'은 올바른 보기번호와 일치하므로 정답값 변경은 불필요(answerChanged=null)."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "030",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "031",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "032",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "033",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "034",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "035",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "036",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "037",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "038",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "039",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  }
+]
