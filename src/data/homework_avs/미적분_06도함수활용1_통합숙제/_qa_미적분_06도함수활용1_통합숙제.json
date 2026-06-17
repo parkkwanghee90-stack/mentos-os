@@ -1,0 +1,648 @@
+[
+  {
+    "pid": "001",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "002",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "003",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "004",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "005",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "006",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "007",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "008",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "009",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "010",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "011",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "012",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "013",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "014",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "015",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "016",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "017",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "018",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "019",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "020",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "021",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "022",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "023",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "024",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "025",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "026",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "027",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "028",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "029",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "030",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "031",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": true,
+    "issues": [
+      "031.webp 이미지가 JSON 031(√3·lnx 정삼각형 문제)이 아니라 030번 문제의 해설 텍스트(ㄱ,ㄴ 판정)를 보여줌 → 이미지로 직접 풀 수 없음. JSON 자체 수학은 자기완결적이고 정답 32가 채점키와 일치하므로 재작성하지 않음."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "032",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "033",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "034",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "035",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "036",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "037",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "038",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "039",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "040",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "041",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "042",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "043",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "044",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "045",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "046",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "047",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "048",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "049",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "050",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "051",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "052",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "053",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "054",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "055",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "056",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "057",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "058",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "059",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "060",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "061",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "062",
+    "status": "rewrite",
+    "severity": "HIGH",
+    "shiftSuspected": false,
+    "issues": [
+      "S에 잘못된 계산 경로가 그대로 남아 있음: (8/27+6k)^(-1/3)=1/2로 잘못 두어 8/27+6k=8, 162k=208, k=104/81을 도출한 뒤 '조건을 다시 점검'하며 3/4로 정정. 올바른 값은 처음부터 3/4이며 8/27+6k=64/27 → k=28/81. 최종답 109는 정답."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "063",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "064",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "065",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "066",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "067",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "068",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "069",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "070",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "071",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "072",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "073",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "074",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "075",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "076",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "077",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [
+      "객관식: 정답은 보기 ⑤. finalAnswer='5'(보기번호)와 A의 boxed 값 (-1+√3)/2 모두 정상 일치"
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "078",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "079",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "080",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  }
+]
