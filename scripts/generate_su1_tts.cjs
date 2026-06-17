@@ -25,11 +25,19 @@ const { execSync } = require('child_process');
 
 dotenv.config();
 
-const GEMINI_API_KEYS = [
-  process.env.VITE_GEMINI_API_KEY,
-  process.env.VITE_GEMINI_API_KEY_2,
-  process.env.VITE_GEMINI_API_KEY_3,
-].filter(Boolean);
+// 동적 키 풀: VITE_GEMINI_API_KEY + VITE_GEMINI_API_KEY_2,_3,...,_N(연속 번호)을 모두 수집.
+// 서로 다른 GCP 프로젝트의 키를 추가할수록 일일 할당량(프로젝트당 100/day)이 합산된다.
+function collectGeminiKeys() {
+  const keys = [];
+  if (process.env.VITE_GEMINI_API_KEY) keys.push(process.env.VITE_GEMINI_API_KEY);
+  for (let i = 2; ; i++) {
+    const v = process.env[`VITE_GEMINI_API_KEY_${i}`];
+    if (!v) break;
+    keys.push(v);
+  }
+  return keys;
+}
+const GEMINI_API_KEYS = collectGeminiKeys();
 
 let currentKeyIndex = 0;
 function getCurrentKey() { return GEMINI_API_KEYS[currentKeyIndex]; }
