@@ -578,3 +578,11 @@
 .home-v4 .hv-footer-links a { color: var(--on-dark); font-size: 13px; text-decoration: none; }
 .home-v4 .hv-footer-links a:hover { color: #fff; }
 .home-v4 .hv-footer-copy { margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--surface-line); color: var(--on-dark-soft); font-size: 12px; }
+
+/* === 리뷰 섹션 정렬·가독성 개선 (칸 폭/높이 정렬 + 긴 후기 줄 클램프) === */
+.home-v4 .hv-reviews-grid { grid-template-columns: 1fr !important; align-items: start; gap: 18px; }
+.home-v4 .hv-reviews-title { text-align: center; }
+.home-v4 .hv-review-write-btn { justify-self: center; margin: 4px 0 20px; }
+.home-v4 .hv-reviews-list { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)) !important; align-items: start; gap: 16px; }
+.home-v4 .hv-review { display: flex; flex-direction: column; }
+.home-v4 .hv-review-q { display: -webkit-box; -webkit-line-clamp: 7; -webkit-box-orient: vertical; overflow: hidden; }
