@@ -1,11 +1,11 @@
-// membership: 가입 순번 기반 멤버십 상태 조회 + 선착순 100명 1개월 무료 부여(서버 권위).
+// membership: 가입 순번 기반 멤버십 상태 조회 + 선착순 100명 10일 무료 부여(서버 권위).
 //   action='status'     → { ordinal, tier, price, premium, premium_until } (체험종료 분기/가격표시용)
-//   action='claim_free' → ordinal≤100 검증 후 premium_until=+30d 부여 (클라이언트 셀프부여 취약점 우회)
+//   action='claim_free' → ordinal≤100 검증 후 premium_until=+10d 부여 (클라이언트 셀프부여 취약점 우회)
 // 가격/무료 판정은 절대 클라이언트를 신뢰하지 않고 auth.users 순번(service_role)으로만 결정한다.
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 import { membershipInfo } from '../_shared/tiers.ts';
 
-const FREE_GRANT_DAYS = 30;
+const FREE_GRANT_DAYS = 10;
 
 const CORS: Record<string, string> = {
   'Access-Control-Allow-Origin': '*',

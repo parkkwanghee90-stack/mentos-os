@@ -42,11 +42,11 @@ export default function FreeTrialBanner({ gradeFlow }) {
       setLoggedInUser(JSON.parse(savedUser));
     }
 
-    // 3. Initialize or load the trial timer (20 minutes = 1200 seconds)
+    // 3. Initialize or load the trial timer (1 hour = 3600 seconds)
     let initialSecs = localStorage.getItem('mentos_trial_seconds_left');
     if (initialSecs === null) {
-      localStorage.setItem('mentos_trial_seconds_left', '1200');
-      initialSecs = '1200';
+      localStorage.setItem('mentos_trial_seconds_left', '3600');
+      initialSecs = '3600';
     }
     
     let currentSecs = parseInt(initialSecs, 10);
@@ -179,7 +179,7 @@ export default function FreeTrialBanner({ gradeFlow }) {
           </div>
 
           <h2 style={{ fontSize: '1.6rem', fontWeight: '900', color: 'white', marginBottom: '0.6rem', letterSpacing: '-0.5px' }}>
-            20분 무료 체험이 종료되었습니다
+            1시간 무료 체험이 종료되었습니다
           </h2>
           
           <p style={{ color: '#94a3b8', fontSize: '0.92rem', lineHeight: '1.6', marginBottom: '2rem' }}>
@@ -216,7 +216,7 @@ export default function FreeTrialBanner({ gradeFlow }) {
                 <>
                   <div style={{ background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.25)', padding: '1rem 1.2rem', borderRadius: '14px', textAlign: 'center' }}>
                     <div style={{ fontSize: '0.8rem', color: '#34d399', fontWeight: 'bold', marginBottom: '4px' }}>🎉 선착순 100명 한정 이벤트</div>
-                    <div style={{ fontSize: '1.2rem', fontWeight: '900', color: '#6ee7b7' }}>1개월 무료 이용</div>
+                    <div style={{ fontSize: '1.2rem', fontWeight: '900', color: '#6ee7b7' }}>10일 무료 이용</div>
                     <div style={{ fontSize: '0.72rem', color: '#94a3b8', marginTop: '4px' }}>{membership.ordinal}번째 가입 고객 · 결제 없이 바로 시작</div>
                   </div>
                   <button onClick={handleClaimFree} disabled={claiming} style={{
@@ -225,7 +225,7 @@ export default function FreeTrialBanner({ gradeFlow }) {
                     color: 'white', fontSize: '1.1rem', fontWeight: 'bold', cursor: claiming ? 'not-allowed' : 'pointer',
                     display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', marginTop: '1rem'
                   }}>
-                    <Gift size={18} /> {claiming ? '처리 중...' : '1개월 무료로 시작하기'}
+                    <Gift size={18} /> {claiming ? '처리 중...' : '10일 무료로 시작하기'}
                   </button>
                 </>
               ) : (

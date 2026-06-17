@@ -17,7 +17,7 @@ export async function getMembershipStatus() {
 }
 
 /**
- * 선착순 100명 1개월 무료 혜택을 청구한다(서버가 순번 검증 후 부여).
+ * 선착순 100명 10일 무료 혜택을 청구한다(서버가 순번 검증 후 부여).
  * 대상이 아니면 서버가 403으로 거부한다.
  * 반환: { ordinal, tier, granted?, alreadyPremium?, premium_until }
  */
@@ -34,6 +34,6 @@ export async function claimFreeMembership() {
 
 /** tier → 한국어 가격 표기(원). free=무료. */
 export function priceLabel(tier, price) {
-  if (tier === 'free') return '1개월 무료';
+  if (tier === 'free') return '10일 무료';
   return `월 ${Number(price).toLocaleString()}원`;
 }
