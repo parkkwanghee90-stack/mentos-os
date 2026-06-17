@@ -1,0 +1,10 @@
+const fs=require('fs'),path=require('path');
+const ROOT=path.join(__dirname,'..','..');
+const done=new Set(JSON.parse(fs.readFileSync(path.join(__dirname,'difficulty_progress.json'),'utf8')).done.filter(d=>d.grade==='go1').map(d=>d.slug));
+const b=JSON.parse(fs.readFileSync(path.join(ROOT,'src/data/exam_predict/exam_predict_bundle.json'),'utf8')).schools;
+const PRI=['강남','서초','송파','분당','성남','수지'];
+const score=s=>{const r=s.region||'';const i=PRI.findIndex(k=>r.includes(k));return i<0?99:i;};
+const undone=b.filter(s=>!done.has(s.slug)).map(s=>({slug:s.slug,region:s.region||'',sc:score(s)})).sort((a,b)=>a.sc-b.sc||a.slug.localeCompare(b.slug,'ko'));
+console.log('남은 go1:',undone.length);
+const n=parseInt(process.argv[2]||'5',10);
+undone.slice(0,n).forEach((s,i)=>console.log(`${i+1}. ${s.slug} [${s.region}] raw_png=${fs.existsSync(path.join(ROOT,'src/data/exam_predict/raw_png',s.slug))?'O':'X'}`));

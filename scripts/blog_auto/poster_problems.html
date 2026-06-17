@@ -1,0 +1,73 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Apple SD Gothic Neo','Malgun Gothic','Nanum Gothic',sans-serif;}
+  body{background:#e9eef5;}
+  .poster{width:880px;background:#eef2f8;padding:0 0 18px;}
+  .hero{background:linear-gradient(135deg,#6d28d9,#2563eb);color:#fff;padding:24px 30px 20px;}
+  .hero .series{font-size:13px;opacity:.85;}
+  .hero h1{font-size:38px;font-weight:900;line-height:1.12;margin-top:4px;}
+  .hero h1 .em{color:#fde047;}
+  .hero .sub{font-size:15px;font-weight:600;opacity:.92;margin-top:8px;}
+  .hero .tag{margin-top:10px;display:inline-block;background:rgba(255,255,255,.16);padding:5px 13px;border-radius:8px;font-size:13.5px;font-weight:700;}
+  .list{padding:16px 18px 0;display:flex;flex-direction:column;gap:12px;}
+  .prob{background:#fff;border-radius:14px;padding:15px 18px;box-shadow:0 1px 4px rgba(0,0,0,.06);}
+  .ph{display:flex;align-items:center;gap:9px;margin-bottom:8px;}
+  .pn{background:#2563eb;color:#fff;width:26px;height:26px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex:none;}
+  .pu{font-size:12px;color:#475569;background:#eef2f8;padding:2px 9px;border-radius:999px;}
+  .plv{font-size:12px;font-weight:700;}
+  .plv.기본{color:#0891b2;} .plv.심화{color:#dc2626;}
+  .ptype{font-size:12px;color:#94a3b8;margin-left:auto;}
+  .pbody{font-size:15px;color:#0f172a;line-height:1.65;}
+  .choices{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:9px;}
+  .choices span{font-size:14px;color:#334155;}
+  .foot{display:grid;grid-template-columns:1.5fr 1fr;gap:14px;padding:14px 18px 0;}
+  .ans{background:#0f172a;border-radius:14px;padding:18px 20px;color:#fff;display:flex;flex-direction:column;justify-content:center;}
+  .ans h3{font-size:18px;font-weight:800;}
+  .ans p{font-size:13.5px;opacity:.85;margin-top:6px;line-height:1.5;}
+  .ans .badge{margin-top:10px;display:inline-block;background:#fbbf24;color:#1e293b;font-size:13px;font-weight:800;padding:6px 12px;border-radius:8px;width:max-content;}
+  .cta{background:linear-gradient(135deg,#2563eb,#7c3aed);border-radius:14px;padding:14px;color:#fff;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .cta .brand{font-size:19px;font-weight:900;}
+  .cta .qr{background:#fff;padding:6px;border-radius:8px;margin:7px 0;}
+  .cta .qr img{display:block;width:92px;height:92px;}
+  .cta .go{font-size:12.5px;font-weight:700;background:#fbbf24;color:#1e293b;padding:5px 11px;border-radius:8px;}
+</style></head>
+<body><div class="poster" id="poster">
+  <div class="hero">
+    <div class="series" id="series"></div>
+    <h1 id="title"></h1>
+    <div class="sub">실제 기출 분석 기반 · 가장 유사한 유형으로 준비하자!</div>
+    <div class="tag">📌 정답 · 풀이 · AVS 해설은 QR로 무료 체험</div>
+  </div>
+  <div class="list" id="list"></div>
+  <div class="foot">
+    <div class="ans"><h3>정답과 풀이가 궁금하다면?</h3>
+      <p>5문항의 정답·단계별 풀이(AVS 사고과정)와 학교별 예상문제 1회차 20문항을 <b>무료</b>로 풀어볼 수 있어요.</p>
+      <span class="badge" id="ans_school"></span>
+    </div>
+    <div class="cta"><div class="brand">MathMentos</div>
+      <div style="font-size:11px;opacity:.9;margin-top:2px">AI 기반 수학 학습</div>
+      <div class="qr"><img id="qr" alt="QR"></div>
+      <div class="go">지금 무료 체험 →</div>
+      <div style="font-size:10px;opacity:.85;margin-top:4px">mathmentos.com</div>
+    </div>
+  </div>
+</div>
+<script>
+const D = window.POSTER_DATA;
+if (!D) { document.title='NODATA'; throw new Error('no data'); }
+const CIRC=['①','②','③','④','⑤'];
+series.textContent = `${D.school} 기말 예상문제`;
+title.innerHTML = `2026 ${D.school} ${D.grade} 수학<br><span class="em">예상문제 5선</span>`;
+ans_school.textContent = `${D.school} 예상문제 무료체험 →`;
+qr.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(D.qr)}`;
+list.innerHTML = D.probs.map((p,i)=>`
+  <div class="prob">
+    <div class="ph"><span class="pn">${i+1}</span><span class="pu">${p.u}</span><span class="plv ${p.lv}">${p.lv}</span><span class="ptype">${p.type||''}</span></div>
+    <div class="pbody">${p.latex}</div>
+    ${Array.isArray(p.choices)&&p.choices.length?`<div class="choices">${p.choices.map((c,j)=>`<span>${CIRC[j]} ${c}</span>`).join('')}</div>`:''}
+  </div>`).join('');
+window.addEventListener('load',()=>{ renderMathInElement(document.body,{delimiters:[{left:'$',right:'$',display:false}],throwOnError:false}); document.title='READY'; });
+</script></body></html>

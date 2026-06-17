@@ -1,0 +1,13 @@
+{
+  "note": "난이도 상향(원본 킬러급) 완료 학교. 고1부터 쭉 진행. 재개 시 이 목록 제외하고 다음 5개.",
+  "done": [
+    {"grade":"go1","slug":"가락고"},{"grade":"go1","slug":"개포고"},{"grade":"go1","slug":"단국대학교사범대학부속고"},
+    {"grade":"go1","slug":"동북고"},{"grade":"go1","slug":"보성고"},{"grade":"go1","slug":"보인고"},
+    {"grade":"go2","slug":"휘문고"},{"grade":"go2","slug":"진주고"},{"grade":"go2","slug":"운중고"},
+    {"grade":"go2","slug":"낙동고"},{"grade":"go2","slug":"가림고"},{"grade":"go2","slug":"경기고"},
+    {"grade":"go2","slug":"경기여고"},{"grade":"go2","slug":"경문고"},{"grade":"go2","slug":"구암고"},
+    {"grade":"go2","slug":"금곡고"},{"grade":"go2","slug":"낙생고"},{"grade":"go2","slug":"늘푸른고"},
+    {"grade":"go2","slug":"다정고"}
+  ],
+  "failed": [{"grade":"go2","slug":"김해외고","reason":"weekly limit"}]
+}

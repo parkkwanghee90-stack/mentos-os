@@ -1,0 +1,112 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; font-family:'Apple SD Gothic Neo','Malgun Gothic','Nanum Gothic',sans-serif; }
+  body { background:#e9eef5; }
+  .poster { width:880px; background:#eef2f8; padding:0 0 22px; }
+  .hero { background:linear-gradient(135deg,#1e3a8a,#2563eb); color:#fff; padding:26px 30px 22px; position:relative; }
+  .hero .series { font-size:13px; opacity:.85; letter-spacing:.5px; }
+  .hero h1 { font-size:40px; font-weight:900; line-height:1.12; margin-top:6px; }
+  .hero h1 .sub { font-size:21px; font-weight:700; opacity:.92; }
+  .hero .tag { margin-top:12px; display:inline-block; background:rgba(255,255,255,.16); padding:6px 14px; border-radius:8px; font-size:15px; font-weight:700; }
+  .summary { position:absolute; top:24px; right:30px; width:250px; background:#0f2a66; border-radius:12px; padding:14px 16px; }
+  .summary h3 { font-size:13px; color:#bfdbfe; margin-bottom:8px; }
+  .summary .row { display:flex; justify-content:space-between; align-items:center; font-size:14px; margin:5px 0; }
+  .summary .stars { color:#fbbf24; letter-spacing:1px; font-size:15px; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; padding:16px 18px 0; }
+  .card { background:#fff; border-radius:14px; padding:16px 18px; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+  .card.full { grid-column:1 / -1; }
+  .ctitle { display:flex; align-items:center; gap:8px; font-size:17px; font-weight:800; color:#1e3a8a; margin-bottom:12px; }
+  .cnum { background:#2563eb; color:#fff; width:24px; height:24px; border-radius:7px; display:inline-flex; align-items:center; justify-content:center; font-size:14px; }
+  .pie-wrap { display:flex; align-items:center; gap:16px; }
+  .pie { width:150px; height:150px; border-radius:50%; flex:none; }
+  .legend { font-size:13px; flex:1; }
+  .legend .li { display:flex; align-items:center; gap:7px; margin:4px 0; }
+  .dot { width:11px; height:11px; border-radius:3px; flex:none; }
+  .legend .pc { margin-left:auto; font-weight:700; color:#334155; }
+  .top5 .it { display:flex; align-items:flex-start; gap:10px; margin:9px 0; }
+  .top5 .rk { background:#ef4444; color:#fff; width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; flex:none; }
+  .top5 .tx { font-size:13.5px; color:#334155; line-height:1.4; }
+  .top5 .tx b { color:#0f172a; }
+  .presc .pr { display:flex; gap:10px; align-items:center; margin:8px 0; }
+  .presc .band { font-size:12px; font-weight:800; color:#fff; border-radius:6px; padding:3px 8px; flex:none; width:64px; text-align:center; }
+  .presc .pd { font-size:13px; color:#334155; }
+  .probs { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .prob { background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:11px 13px; }
+  .prob .ph { font-size:11px; color:#64748b; margin-bottom:5px; }
+  .prob .pb { font-size:13.5px; color:#0f172a; line-height:1.5; }
+  .foot { display:grid; grid-template-columns:1.4fr 1fr; gap:14px; padding:14px 18px 0; }
+  .why { background:#fff; border-radius:14px; padding:16px 18px; }
+  .why h3 { font-size:16px; font-weight:800; color:#1e3a8a; }
+  .why .pcbsa { display:flex; gap:6px; margin-top:10px; }
+  .why .st { flex:1; background:#eff6ff; border-radius:8px; padding:8px 4px; text-align:center; font-size:11px; color:#1e3a8a; font-weight:700; }
+  .cta { background:linear-gradient(135deg,#2563eb,#7c3aed); border-radius:14px; padding:16px; color:#fff; text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+  .cta .brand { font-size:20px; font-weight:900; }
+  .cta .qr { background:#fff; padding:6px; border-radius:8px; margin:8px 0; }
+  .cta .qr img { display:block; width:96px; height:96px; }
+  .cta .go { font-size:13px; font-weight:700; background:#fbbf24; color:#1e293b; padding:6px 12px; border-radius:8px; }
+</style></head>
+<body><div class="poster" id="poster">
+  <div class="hero">
+    <div class="series" id="series"></div>
+    <h1 id="title"></h1>
+    <div class="tag" id="tag"></div>
+    <div class="summary">
+      <h3>한눈에 보는 시험 총평</h3>
+      <div class="row"><span>난이도</span><span class="stars" id="d_stars"></span></div>
+      <div class="row"><span>변별력</span><span class="stars" id="v_stars"></span></div>
+      <div class="row" style="margin-top:8px;border-top:1px solid #1e40af;padding-top:8px"><span>객관식</span><span id="obj"></span></div>
+      <div class="row"><span>서술형</span><span id="subj"></span></div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="card"><div class="ctitle"><span class="cnum">1</span>단원별 출제 비중</div>
+      <div class="pie-wrap"><div class="pie" id="pie"></div><div class="legend" id="legend"></div></div></div>
+    <div class="card top5"><div class="ctitle"><span class="cnum">2</span>가장 많이 틀린 유형 TOP 5</div><div id="top5"></div></div>
+    <div class="card presc"><div class="ctitle"><span class="cnum">3</span>점수대별 맞춤 처방</div><div id="presc"></div></div>
+    <div class="card"><div class="ctitle"><span class="cnum">4</span>출제 영역 핵심</div>
+      <div id="summary_txt" style="font-size:13px;color:#475569;line-height:1.6"></div></div>
+    <div class="card full"><div class="ctitle"><span class="cnum">5</span>대표 문항 맛보기 <span style="font-size:12px;font-weight:600;color:#94a3b8">· 정답·풀이는 QR로 무료 체험</span></div>
+      <div class="probs" id="probs"></div></div>
+  </div>
+  <div class="foot">
+    <div class="why"><h3>왜 우리 아이는 같은 문제를 계속 틀릴까?</h3>
+      <div style="font-size:13px;color:#475569;margin-top:6px">문제를 더 푸는 것보다, <b>틀린 이유를 아는 것</b>이 성적을 바꿉니다. AI+AVS 사고과정 분석으로 공부의 흐름을 잡습니다.</div>
+      <div class="pcbsa"><div class="st">P 목표</div><div class="st">C 조건</div><div class="st">B 개념</div><div class="st">S 풀이</div><div class="st">A 정답</div></div>
+    </div>
+    <div class="cta"><div class="brand">MathMentos</div>
+      <div style="font-size:11px;opacity:.9;margin-top:2px">AI 기반 수학 학습</div>
+      <div class="qr"><img id="qr" alt="QR"></div>
+      <div class="go">지금 무료 체험 →</div>
+      <div style="font-size:10px;opacity:.85;margin-top:5px">mathmentos.com</div>
+    </div>
+  </div>
+</div>
+<script>
+// ===== 학교 데이터: 렌더러가 window.POSTER_DATA 로 주입 =====
+const DATA = window.POSTER_DATA;
+if (!DATA) { document.title = 'NODATA'; throw new Error('POSTER_DATA 없음'); }
+const stars = n => '★★★★★'.slice(0,n)+'☆☆☆☆☆'.slice(0,5-n);
+const PAL=['#3b82f6','#8b5cf6','#ec4899','#f59e0b','#10b981','#06b6d4','#94a3b8'];
+const D=DATA;
+series.textContent = `${D.school} 내신 분석 시리즈`;
+title.innerHTML = `2025 ${D.school} ${D.grade}<br><span class="sub">1학기 기말고사 수학 분석</span>`;
+tag.textContent = D.tag;
+d_stars.textContent=stars(D.d_stars); v_stars.textContent=stars(D.v_stars);
+obj.textContent=D.obj; subj.textContent=D.subj;
+summary_txt.textContent=D.summary;
+qr.src=`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(D.qr)}`;
+// pie
+let acc=0; const segs=D.unit_share.map((u,i)=>{const a=acc, b=acc+u.percent*3.6; acc=b; return `${PAL[i%PAL.length]} ${a}deg ${b}deg`;});
+pie.style.background=`conic-gradient(${segs.join(',')})`;
+legend.innerHTML=D.unit_share.map((u,i)=>`<div class="li"><span class="dot" style="background:${PAL[i%PAL.length]}"></span>${u.unit}<span class="pc">${u.percent}%</span></div>`).join('');
+// top5
+document.getElementById('top5').innerHTML=D.top5.map((t,i)=>`<div class="it"><span class="rk">${i+1}</span><span class="tx"><b>${t[0]}</b><br>${t[1]}</span></div>`).join('');
+// presc
+document.getElementById('presc').innerHTML=D.presc.map(p=>`<div class="pr"><span class="band" style="background:${p[1]}">${p[0]}</span><span class="pd">${p[2]}</span></div>`).join('');
+// probs
+document.getElementById('probs').innerHTML=D.probs.map(p=>`<div class="prob"><div class="ph">${p.n}. ${p.u} · ${p.lv}</div><div class="pb">${p.latex}</div></div>`).join('');
+window.addEventListener('load',()=>{ renderMathInElement(document.body,{delimiters:[{left:'$',right:'$',display:false}],throwOnError:false}); document.title='READY'; });
+</script></body></html>

@@ -1,0 +1,18 @@
+{
+  "note": "네이버 블로그 mthmentoslab RSS(2026-06-16) 기준 이미 게시된 학교. 선택기가 (grade,slug) 일치분을 제외한다. 게시된 12교는 전부 고1(공통수학1) 분석 — go2(수1)는 다른 시험이라 신규.",
+  "posted": [
+    {"grade":"go1","slug":"낙동고","src":"naver"},
+    {"grade":"go1","slug":"화명고","src":"naver"},
+    {"grade":"go1","slug":"금명여고","src":"naver"},
+    {"grade":"go1","slug":"금곡고","src":"naver"},
+    {"grade":"go1","slug":"현대고","src":"naver"},
+    {"grade":"go1","slug":"풍산고","src":"naver"},
+    {"grade":"go1","slug":"잠신고","src":"naver"},
+    {"grade":"go1","slug":"중동고","src":"naver"},
+    {"grade":"go1","slug":"불곡고","src":"naver"},
+    {"grade":"go1","slug":"돌마고","src":"naver"},
+    {"grade":"go1","slug":"풍덕고","src":"naver"},
+    {"grade":"go1","slug":"영덕여고","src":"naver"}
+  ],
+  "generated": []
+}
