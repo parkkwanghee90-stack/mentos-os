@@ -127,3 +127,7 @@ public/math_pngs/**
 public/math_indexed/**
 public/math_pcbs_cache/**
 public/premium_lectures/**
+
+# --- 대문 학교 기출분석 포스터는 webp 차단 예외(배포 허용) ---
+!public/school_exam/
+!public/school_exam/*.webp
