@@ -8,8 +8,8 @@ const PLANS = [
   {
     name: "오픈 이벤트",
     event: true, // 무료 가입 → /login
-    priceLabel: "1개월 무료",
-    sub: "선착순 100명 한정 · 첫 달 0원",
+    priceLabel: "10일 무료",
+    sub: "선착순 100명 한정 · 10일간 0원",
     badge: "🎉 선착순 100명",
     features: PREMIUM_FEATURES(),
     cta: "지금 무료로 시작",
@@ -74,7 +74,7 @@ export default function LandingPricing() {
           <p className="hv-sub">사고력 AVS로 직접 가르치는 AI 1:1 과외.<br />학원 월 20~40만 · 과외 회당 5~10만 → 매쓰멘토스 <b>월 89,000원</b>.</p>
           <button type="button" onClick={() => navigate("/grade-select")} className="hv-btn hv-btn-primary hv-btn-lg">지금 무료로 시작하기 <ArrowRight size={18} /></button>
           <p className="hv-guarantee"><ShieldCheck size={16} /> 1개월 안에 성적 변화 없으면 <b>100% 환불 보장</b></p>
-          <p className="hv-pricing-note">· 선착순 100명 첫 1개월 무료 → 1,000명 얼리버드 월 49,000원 → 이후 정가 월 89,000원</p>
+          <p className="hv-pricing-note">· 선착순 100명 첫 10일 무료 → 1,000명 얼리버드 월 49,000원 → 이후 정가 월 89,000원</p>
         </div>
 
         <div className="hv-plans">
