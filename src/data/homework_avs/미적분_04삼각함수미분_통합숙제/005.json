@@ -2,9 +2,9 @@
   "title": "[통합숙제] 미적분 - 삼각함수의 미분 5번 명품 해설",
   "type": "calculus",
   "P": "$\\dfrac{\\pi}{2}<\\theta<\\pi$ 이고 $\\cos\\theta=-\\dfrac{3}{5}$ 일 때, $\\csc(\\pi+\\theta)$ 의 값을 구한다.",
-  "C": "각 $\\theta$ 의 범위는 $\\dfrac{\\pi}{2}<\\theta<\\pi$ (제2사분면) 이고, $\\cos\\theta=-\\dfrac{3}{5}$ 이다.",
+  "C": "각 $\\theta$ 의 범위는 $\\dfrac{\\pi}{2}<\\theta<\\pi$ (제2사분면) 이고, $\\cos\\theta=-\\dfrac{3}{5}$ 이다. 보기: ① $-\\dfrac{5}{2}$, ② $-\\dfrac{5}{3}$, ③ $-\\dfrac{5}{4}$, ④ $\\dfrac{5}{4}$, ⑤ $\\dfrac{5}{3}$.",
   "B": "코시컨트는 사인의 역수, 즉 $\\csc x=\\dfrac{1}{\\sin x}$ 이다. 각에 $\\pi$ 를 더하면 사인은 부호만 바뀌어 $\\sin(\\pi+\\theta)=-\\sin\\theta$ 가 된다. 한편 제2사분면에서는 $\\sin\\theta>0$ 이며, $\\sin^2\\theta+\\cos^2\\theta=1$ 로 $\\sin\\theta$ 를 정한다.",
-  "S": "구하려는 식을 사인으로 바꾸기 위해 코시컨트의 정의를 적용한다. $$\\csc(\\pi+\\theta)=\\frac{1}{\\sin(\\pi+\\theta)}$$\n분모의 각을 정리하기 위해 사인의 주기 성질 $\\sin(\\pi+\\theta)=-\\sin\\theta$ 를 대입한다. $$\\csc(\\pi+\\theta)=\\frac{1}{-\\sin\\theta}=-\\frac{1}{\\sin\\theta}$$\n이제 필요한 것은 $\\sin\\theta$ 의 값이므로, 피타고라스 항등식으로 $\\sin^2\\theta$ 를 구한다. $$\\sin^2\\theta=1-\\cos^2\\theta=1-\\left(-\\frac{3}{5}\\right)^2=1-\\frac{9}{25}=\\frac{16}{25}$$\n부호를 결정하기 위해 각의 범위를 본다. $\\dfrac{\\pi}{2}<\\theta<\\pi$ 인 제2사분면에서는 사인이 양수이므로 양의 제곱근을 택한다. $$\\sin\\theta=\\frac{4}{5}$$\n구한 $\\sin\\theta$ 를 두 번째 단계의 식에 대입하여 결론을 얻는다. $$\\csc(\\pi+\\theta)=-\\frac{1}{\\sin\\theta}=-\\frac{1}{\\tfrac{4}{5}}=-\\frac{5}{4}$$",
+  "S": "구하려는 식을 사인으로 바꾸기 위해 코시컨트의 정의를 적용한다. $$\\csc(\\pi+\\theta)=\\frac{1}{\\sin(\\pi+\\theta)}$$\n분모의 각을 정리하기 위해 사인의 성질 $\\sin(\\pi+\\theta)=-\\sin\\theta$ 를 대입한다. $$\\csc(\\pi+\\theta)=\\frac{1}{-\\sin\\theta}=-\\frac{1}{\\sin\\theta}$$\n이제 필요한 것은 $\\sin\\theta$ 의 값이므로, 피타고라스 항등식으로 $\\sin^2\\theta$ 를 구한다. $$\\sin^2\\theta=1-\\cos^2\\theta=1-\\left(-\\frac{3}{5}\\right)^2=1-\\frac{9}{25}=\\frac{16}{25}$$\n부호를 결정하기 위해 각의 범위를 본다. $\\dfrac{\\pi}{2}<\\theta<\\pi$ 인 제2사분면에서는 사인이 양수이므로 양의 제곱근을 택한다. $$\\sin\\theta=\\frac{4}{5}$$\n구한 $\\sin\\theta$ 를 대입하여 결론을 얻는다. $$\\csc(\\pi+\\theta)=-\\frac{1}{\\sin\\theta}=-\\frac{1}{\\tfrac{4}{5}}=-\\frac{5}{4}$$",
   "S_objects": [
     {
       "type": "image",
@@ -12,8 +12,8 @@
     }
   ],
   "A": "따라서 최종 정답은 $$\\mathbf{\\boxed{-\\dfrac{5}{4}}}$$ 입니다.",
-  "finalAnswer": "5/4",
-  "correctAnswer": "5/4",
+  "finalAnswer": "-5/4",
+  "correctAnswer": "-5/4",
   "pcbsa_completed": true,
   "vision_generated": true,
   "vision_model": "manual-claude-fable-5"

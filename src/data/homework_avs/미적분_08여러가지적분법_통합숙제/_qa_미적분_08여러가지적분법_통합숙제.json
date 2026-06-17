@@ -1,0 +1,152 @@
+[
+  {
+    "pid": "001",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "002",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "003",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "004",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "005",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "006",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "007",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "008",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "009",
+    "status": "pass",
+    "severity": null,
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "010",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": true,
+    "issues": [
+      "010.webp는 010.json(P: f'=3√x.., f(-5))의 문제가 아니라 다른 문제({xf(x)}'=xcosx, f(π)=-1/π)의 해설 이미지로 보임(시프트). JSON 본문은 자체 정합(f(-5)=23, stored=23, key=23 일치). 재작성 안 함."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "011",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [
+      "정답값 e+2 = 보기⑤. stored/key '5'는 보기번호로 일치. A박스 e+2(값), finalAnswer 5(번호) 정합."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "012",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "013",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "014",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "015",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "016",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "017",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [
+      "S 산문에 'ㄷを 판정' 일본어 글자 を 혼입(='ㄷ을'). KaTeX 아닌 한글 산문 오타로 렌더링·정답에 영향 없음. 결함 기준 미달, 재작성 안 함."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "018",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  }
+]

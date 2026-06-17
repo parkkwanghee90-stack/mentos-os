@@ -1,0 +1,1095 @@
+[
+  {
+    "pid": "001",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "002",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "003",
+    "status": "rewrite",
+    "severity": "MEDIUM",
+    "shiftSuspected": false,
+    "issues": [
+      "S 필드의 첫 문장 '$3^n \\times 5^{n+1}$'에서 백슬래시가 단일(\\t = 탭 문자)로 들어가 있어 KaTeX에서 \\times가 깨진다(탭+imes로 렌더링). 정답·풀이 논리·결과는 모두 정확하며, 이 부분만 \\\\times 로 이스케이프 교정 필요.",
+      "정답 판정: 구한 값 1/2 = 보기 ①. 저장값 finalAnswer/correctAnswer/채점키 모두 '1'(보기번호 ①)과 일치 → 정상, 정답 변경 없음."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "004",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "005",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "006",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "007",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "008",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "009",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "010",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "011",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "012",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "013",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "014",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "015",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "016",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "017",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "018",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "019",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "020",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "021",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "022",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "023",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "024",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "025",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "026",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "027",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "028",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "029",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "030",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "031",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "032",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "033",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "034",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "035",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "036",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "037",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "038",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "039",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "040",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "041",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "042",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "043",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "044",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "045",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "046",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": true,
+    "issues": [
+      "046.webp 이미지가 JSON의 P/C 문제와 완전히 다름(개별 불일치). 이미지는 삼각형·부채꼴 자기닮음 넓이 무한급수 문제로 $a^2+b^2=5$를 묻는 해설 크롭이며, JSON은 '$(-3)^{n-1}$의 $n$제곱근 실근 개수 $a_n$의 급수 $\\sum_{n=3}^{\\infty}a_n/2^n$' 문제(답 1/6)이다. 규약에 따라 shiftSuspected=true, status=pass로 두고 재작성하지 않음.",
+      "JSON 내부 정합성은 정상: $n$ 홀수→피근수 양수의 홀수제곱근 실근 1개($a_n=1$), $n$ 짝수→음수의 짝수제곱근 실근 0개($a_n=0$), 합 $=\\frac{1/8}{1-1/4}=\\frac{1}{6}$. 저장값(1/6)·채점키(1/6) 모두 일치."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "047",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "048",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "049",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "050",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "051",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "052",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "053",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "054",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "055",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "056",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "057",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "058",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "059",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "060",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "061",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "062",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "063",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "064",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "065",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "066",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "067",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "068",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "069",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "070",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "071",
+    "status": "rewrite",
+    "severity": "HIGH",
+    "shiftSuspected": false,
+    "issues": [
+      "S(풀이)의 핵심 기하 논리가 거짓이다. '삼각형 O1D1B1은 ∠D1B1O1=60°이고 O1D1=O1B1인 이등변삼각형이므로 정삼각형이고, 이때 ∠D1O1B1=60°'라고 서술했으나 실제로는 ∠D1B1O1=30°(변 B1A1과 이등분선 B1A2 사이 각의 절반), O1B1=O1D1=1, B1D1=√3로 꼭지각 ∠D1O1B1=120°인 이등변삼각형이다. 정삼각형이 아니며 각도 60°는 모두 틀렸다(실제 30°/120°). 몬테카를로로 검증 시 한쪽 산모양 넓이=0.9566=√3/4+π/6로 JSON 수치와는 일치하므로, 삼각형 넓이를 '1/2×√3×1/2=√3/4'로 쓴 부분은 옳지만 그 직전의 '정삼각형/60°' 논거는 자기모순적·수학적으로 거짓이다.",
+      "부채꼴 ∠D1O1A2=60°는 옳다(검증값 60°). 닮음비 1:3, 공비 r=1/9, S1=√3/2+π/3, 최종 (9√3+6π)/16 모두 수치상 정확하며 보기 ①과 일치(정답 정상).",
+      "S_objects.src가 072a.webp로 되어 있어 pid 071 해설인데 +1 시프트된 파일명을 참조한다(해설 크롭 파일명 의심). 본 검수 대상은 아니나 기록."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "072",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "073",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "074",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "075",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "076",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "077",
+    "status": "rewrite",
+    "severity": "MEDIUM",
+    "shiftSuspected": false,
+    "issues": [
+      "S(풀이)에 사실과 어긋나는 문장이 있다: '반원은 윗변 D₁C₁을 지름으로 하므로 중심 (1,2), 반지름 1이다.' 문제의 반원 지름은 G₁F₁(중점들의 연결선, y=1)이며 중심은 (1,1)이다. 따라서 중심을 (1,2)로 서술한 부분은 문제 조건과 모순된다(개념 오서술).",
+      "다만 이 오서술은 이후 계산에 사용되지 않았다. a₁은 '정사각형 − 반원 − 직각이등변삼각형 G₁E₁F₁'로 올바르게 계산되어 a₁=(6-π)/2가 맞고, 닮음비 3/5·넓이비 9/25·최종합 25(6-π)/32도 모두 옳다.",
+      "정답 판정: 정답 값은 25(6-π)/32(보기 ②). 저장값 finalAnswer/correctAnswer=2, 채점키=2 는 보기번호 ②와 일치하므로 정답 정상(answerConsistent=true). 정답 변경 없음."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "078",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "079",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "080",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "081",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "082",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "083",
+    "status": "rewrite",
+    "severity": "MEDIUM",
+    "shiftSuspected": false,
+    "issues": [
+      "S의 닮음비 도출 단계가 부실하다. '$2\\sqrt6:3$ 이등변삼각형 관계', '$\\overline{A_1C_1}=4\\sqrt6$ 대각선' 등 핵심 닮음비 11:8과 무관한 내용을 끌어들인 뒤 닮음비를 사실상 '정리되어 11:8이 된다'고 단정한다(핵심 단계의 논리 비약). 실제 좌표계산으로는 둘째 사다리꼴이 $E_1F_1,F_1G_1$ 위에서 비율 $s=6/11$로 결정되어 윗변=8s=48/11, 닮음비 k=8/11, 넓이공비 r=64/121이 깔끔히 나온다.",
+      "최종 정답 242/19·√2(보기⑤=\"5\")와 a1=6√2, r=64/121 핵심값은 모두 수학적으로 정확하며 저장값(finalAnswer/correctAnswer/채점키=\"5\")과 일치한다. 정답 자체는 정상이므로 변경하지 않는다."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "084",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "085",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "086",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "087",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "088",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "089",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "090",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "091",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "092",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "093",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "094",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "095",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "096",
+    "status": "rewrite",
+    "severity": "HIGH",
+    "shiftSuspected": false,
+    "issues": [
+      "S(풀이)의 각도 설정이 수학적으로 틀렸다. 마름모 ADEF에서 ∠DAF=60°이면 대각(對角) ∠DEF도 60°인데, JSON은 ∠DEF=120°, ∠OEP=60°로 잘못 적었다. 실제로는 ∠DEF=60°, 대각선 OE가 이를 이등분하여 ∠OEP=30°이다(좌표 검증 완료).",
+      "S에 거짓 계산 연쇄가 2곳 있다. (1) OP=OE·sin60°=2√3·(√3/2)=√3 로 적었으나 2√3·(√3/2)=3 이므로 등식이 거짓이다(올바른 식은 OP=OE·sin30°=2√3·½=√3). (2) PE=OE·cos60°=2√3·½=√3·√3=3 로 적었으나 2√3·½=√3 이고 뒤에 억지로 '=√3·√3=3'을 끼워 넣어 값을 맞췄다(올바른 식은 PE=OE·cos30°=2√3·(√3/2)=3).",
+      "최종 수치 OP=√3, PE=3, S₁=3√3, 공비 1/2, 합 6√3 은 모두 정답과 일치한다. 즉 결과값은 맞으나 유도 과정의 각도·삼각비가 틀려 학생이 따라가면 모순에 빠진다.",
+      "정답 저장은 정상: 정답은 보기 ① 6√3 이고 저장값 '1'은 보기번호와 일치(answerConsistent=true). 정답 변경 없음."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "097",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "098",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "099",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": true,
+    "issues": [
+      "099.webp 이미지는 JSON의 P/C가 말하는 문제(텔레스코핑 급수 $a_m=\\sum \\frac{m+1}{n(n+m+1)}$, $p+q$ 구하기)와 전혀 다른 도형 등비급수 문제(정사각형 EGHI, $\\sum S_n = \\frac{16}{3}(\\sqrt3-1)$)다. 이미지-pid 시프트로 판단되어 재작성하지 않고 pass 처리한다.",
+      "JSON 내부 수학은 자체적으로 정합: $a_1=\\frac32$, $a_{10}=\\frac{1}{11}$, 합 $\\frac{35}{22}$, $p+q=57$로 올바름. 저장값(57)·채점키(57)가 JSON 풀이의 정답값과 일치한다.",
+      "참고: 이미지 실제 문제의 정답값은 $\\frac{16}{3}(\\sqrt3-1)$로 57과 무관하나, 시프트 의심 상황이므로 정답 변경하지 않음."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "100",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "101",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "102",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "103",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "104",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "105",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "106",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "107",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "108",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "109",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "110",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "111",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "112",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "113",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "114",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "115",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "116",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "117",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "118",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "119",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "120",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "121",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "122",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "123",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "124",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "125",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "126",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "127",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "128",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "129",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "130",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "131",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  },
+  {
+    "pid": "132",
+    "status": "rewrite",
+    "severity": "MEDIUM",
+    "shiftSuspected": false,
+    "issues": [
+      "S의 공비 산출 단계가 자기모순적이고 혼란스러움: '같은 모양이 두 개씩 생기므로 r=2·(1/2)²=1/2가 아니라 한 변에 하나씩 ... 넓이비 1/4'라는 문장은 두 개/한 개를 동시에 주장하고 명확한 근거 없이 결론만 바꿈. 최종 r=1/4와 정답은 옳으나 논리 서술이 부실(MEDIUM).",
+      "정답 자체는 정상: 독립풀이 = 선분/원 기하 계산 결과 S_1=16√3/3−2π, 공비 1/4, 합 = 64√3/9 − 8π/3 = 보기 ③. finalAnswer/correctAnswer='3'(보기번호)와 일치하므로 변경 불필요."
+    ],
+    "answerChanged": null
+  },
+  {
+    "pid": "133",
+    "status": "pass",
+    "severity": "none",
+    "shiftSuspected": false,
+    "issues": [],
+    "answerChanged": null
+  }
+]
