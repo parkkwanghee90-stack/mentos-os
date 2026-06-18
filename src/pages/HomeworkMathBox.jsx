@@ -365,13 +365,21 @@ export default function HomeworkMathBox() {
     }
 
     const elapsed = Math.round((Date.now() - startTime) / 60000);
-    alert(
+    const summaryText =
       `🎉 숙제 완료!\n\n` +
       `📐 ${hwUnit.title}\n` +
       `📊 정답률: ${Math.round((correctCount / totalProblems) * 100)}% (${correctCount}/${totalProblems})\n` +
       `❌ 오답: ${wrongCount}문제\n` +
-      `⏱️ 소요시간: ${elapsed}분`
-    );
+      `⏱️ 소요시간: ${elapsed}분`;
+    // ③ 즉각 보강 루프: 틀린 직후 바로 복습 권유 (틀린 직후 복습이 가장 효과 큼)
+    if (!isWrongReview && wrongCount > 0) {
+      if (window.confirm(`${summaryText}\n\n방금 틀린 ${wrongCount}문제를 지금 바로 복습할까요?\n(틀린 직후 복습이 가장 효과 좋아요 👍)`)) {
+        navigate(`/homework/math/${WRONG_REVIEW_ID}`);
+        return;
+      }
+    } else {
+      alert(summaryText);
+    }
     navigate('/homework');
   };
 
