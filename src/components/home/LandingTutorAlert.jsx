@@ -85,40 +85,18 @@ export default function LandingTutorAlert() {
 
   return (
     <section id="report" className="hv-section hv-light-2 hv-tutor2">
-      <div className="hv-wrap hv-tutor2-grid">
-        {/* 좌: 카피 + 기능 */}
-        <div className="hv-tutor2-copy">
-          <h2 className="hv-h2">AI 튜터가 24시간 함께합니다</h2>
-          <p className="hv-sub">
-            실시간 카톡 상담부터 숙제 부여, 수업 후 학부모 리포트까지<br />
-            — 진짜 선생님처럼 챙겨드립니다.
-          </p>
-          <ul className="hv-tutor2-feats">
-            {FEATURES.map(({ icon: Icon, t, d }) => (
-              <li key={t}>
-                <span className="hv-tutor2-ic"><Icon size={20} /></span>
-                <div><b>{t}</b><span>{d}</span></div>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* 우: 카톡 폰 목업(애니메이션) */}
-        <div className="hv-tutor2-phonewrap">
-          <div className="kt-phone">
-            <div className="kt-head">
-              <span className="kt-back">‹</span>
-              <span className="kt-title">매쓰멘토스 AI 튜터</span>
-              <span className="kt-menu">☰</span>
-            </div>
-            <div className="kt-feed" ref={feedRef}>
-              {visible.map((item, i) => (
-                <div className="kt-in" key={`${n}-${i}`}><Bubble item={item} /></div>
-              ))}
-            </div>
-          </div>
-          <span className="kt-live"><i /> 실시간</span>
-        </div>
+      {/* 6컷 만화: 숙제 완료 → 엄마 카톡 알림 → 취약분석 → 맞춤 보강 → 복습 (탭하면 크게) */}
+      <div className="hv-wrap" style={{ textAlign: 'center' }}>
+        <a href="/school_exam/weakness_comic.jpg" target="_blank" rel="noreferrer"
+          style={{ display: 'inline-block', maxWidth: 920, width: '100%' }}>
+          <img
+            src="/school_exam/weakness_comic.jpg"
+            alt="매쓰멘토스 취약분석: 숙제 완료 → 엄마 카톡 알림 → 오늘의 취약분석 → 맞춤 보강 문제 자동 준비 → 복습으로 실력 향상"
+            loading="lazy"
+            style={{ width: '100%', height: 'auto', borderRadius: 16, boxShadow: '0 24px 60px -24px rgba(0,0,0,.4)', cursor: 'zoom-in', display: 'block' }}
+          />
+        </a>
+        <div style={{ marginTop: 8, fontSize: 12, color: '#94a3b8' }}>📱 탭하면 크게 볼 수 있어요</div>
       </div>
 
       <style>{TUTOR2_CSS}</style>
