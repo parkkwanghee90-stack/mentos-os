@@ -8,10 +8,81 @@ import { resolveAnswer } from '@/services/answerResolver';
 import { queueParentPush } from '@/services/pushService';
 import { getActiveWrongAnswers } from '@/services/wrongAnswerStore';
 
+// ── 클라우드(SSOT) 캐시: 로그인 학생 wrong_answers + homework_progress ──
+let _cloudCache = null;
+/** Dashboard가 fetchCloudDashboard() 결과를 주입 → 다른 호출부도 cross-device 분석 */
+export function setCloudWeaknessData(cloud) { _cloudCache = cloud || null; }
+
+// 오답률 → 처방 태그 + 학부모용 쉬운 설명(쉬운 말)
+function diagnoseTag(errorRate) {
+  if (errorRate >= 60) return { tag: '개념 결손 및 응용 한계', plain: '기초 개념이 아직 안 잡혀서, 문제를 어디서부터 풀어야 할지 막막해하는 단계예요.' };
+  if (errorRate >= 40) return { tag: '수식 전개 및 조건 해석 오류', plain: '개념은 아는데, 문제의 조건을 식으로 옮기는 과정에서 자주 틀려요.' };
+  if (errorRate >= 20) return { tag: '단순 마킹 및 계산 착오', plain: '거의 이해했는데 계산 실수로 점수를 놓쳐요. 비슷한 문제 반복이면 충분해요.' };
+  return { tag: '연산 실수', plain: '잘하는 편이에요. 가끔 나오는 실수만 잡으면 완벽해요.' };
+}
+
+// 학부모에게 한 문단으로 쉽게 풀어주는 요약
+export function parentSummaryOf(top3, studentName = '학생') {
+  if (!top3 || !top3.length) return `${studentName}은(는) 최근 틀린 문제가 거의 없어요. 지금 흐름을 잘 유지하면 좋아요. 👍`;
+  const t = top3[0];
+  const others = top3.slice(1).map(w => `「${w.unit}」`).join(', ');
+  return `${studentName}이(가) 지금 가장 어려워하는 건 「${t.unit}」이에요. ${t.tagPlain} `
+    + (others ? `그다음으로 ${others}도 더 봐주면 좋아요. ` : '')
+    + `이번 주는 「${t.unit}」 보강에 집중하면 가장 효과가 커요.`;
+}
+
+// 단원 통계 → 취약 리스트 + TOP3 + 학부모 요약 (공용 빌더)
+function buildWeaknessResult(unitStats, studentName = '학생') {
+  const weaknessList = Object.entries(unitStats).map(([unit, stat]) => {
+    const total = stat.totalQuestions;
+    const wrong = stat.wrongCount;
+    const errorRate = total > 0 ? Math.round((wrong / total) * 100) : 0;
+    const d = diagnoseTag(errorRate);
+    return {
+      unit, total, wrong, errorRate,
+      wrongIndices: (stat.wrongIndices || []).sort((a, b) => a - b),
+      tag: d.tag,
+      tagPlain: d.plain,                                  // 학부모용 쉬운 설명
+      parentMsg: `「${unit}」 단원은 ${d.plain}`,
+    };
+  }).filter(item => item.wrong > 0);
+  const top3 = [...weaknessList].sort((a, b) => b.wrong - a.wrong || b.errorRate - a.errorRate).slice(0, 3);
+  return { allWeakness: weaknessList, top3, parentSummary: parentSummaryOf(top3, studentName) };
+}
+
+// 클라우드(Supabase) SSOT 경로 — 로그인 학생 cross-device
+function analyzeFromCloud(cloud, studentName = '학생') {
+  const unitStats = {};
+  const U = (u) => (unitStats[u] || (unitStats[u] = { totalQuestions: 0, correctCount: 0, wrongCount: 0, wrongIndices: [] }));
+  // 1) homework_progress → 단원별 총 시도(분모) + 정답
+  for (const p of (cloud.homeworkProgress || [])) {
+    const hw = HOMEWORK_UNITS.find(h => h.id === p.homework_id);
+    const unit = hw ? (hw.relatedUnit || hw.title) : (p.homework_id || '공통수학');
+    const s = U(unit); s.totalQuestions++; if (p.is_correct) s.correctCount++;
+  }
+  // 2) wrong_answers(미해결) → 오답(숙제·교실 전 플로우). unit:problem 중복 제거.
+  const seen = new Set();
+  for (const e of (cloud.wrongAnswers || [])) {
+    if (e.resolved) continue;
+    const unit = e.unit_folder || '공통수학';
+    const num = parseInt(e.problem_num, 10) || 0;
+    const k = `${unit}:${e.problem_id || num}`;
+    if (seen.has(k)) continue; seen.add(k);
+    const s = U(unit); s.wrongCount++; if (num) s.wrongIndices.push(num);
+    if (s.totalQuestions < s.wrongCount) s.totalQuestions = s.wrongCount;   // 분모 보정
+  }
+  return buildWeaknessResult(unitStats, studentName);
+}
+
 /**
  * 1. 최근 학습 오답 데이터 취합 및 단원별 취약성 분석
+ *    cloudData(=fetchCloudDashboard 결과)가 있으면 클라우드 SSOT, 없으면 localStorage 폴백.
  */
-export function analyzeMathWeakness() {
+export function analyzeMathWeakness(cloudData = null, studentName = '학생') {
+  const cloud = cloudData || _cloudCache;
+  if (cloud && ((cloud.homeworkProgress && cloud.homeworkProgress.length) || (cloud.wrongAnswers && cloud.wrongAnswers.length))) {
+    return analyzeFromCloud(cloud, studentName);
+  }
   const lessonHistory = JSON.parse(localStorage.getItem('mentos_lesson_results') || '[]');
   const unitStats = {};
   const countedKeys = new Set(); // 소스 B에서 센 (hwId:num) — 입력 C 중복 방지
@@ -77,37 +148,8 @@ export function analyzeMathWeakness() {
     console.warn('[analyzeMathWeakness] 오답스토어 집계 실패:', err.message);
   }
 
-  // D. 취약성 데이터 정렬 및 유형화
-  const weaknessList = Object.entries(unitStats).map(([unit, stat]) => {
-    const total = stat.totalQuestions;
-    const wrong = stat.wrongCount;
-    const errorRate = total > 0 ? Math.round((wrong / total) * 100) : 0;
-    
-    // 구체적 오답 분석 처방
-    let tag = "연산 실수";
-    if (errorRate >= 60) tag = "개념 결손 및 응용 한계";
-    else if (errorRate >= 40) tag = "수식 전개 및 조건 해석 오류";
-    else if (errorRate >= 20) tag = "단순 마킹 및 계산 착오";
-
-    return {
-      unit,
-      total,
-      wrong,
-      errorRate,
-      wrongIndices: stat.wrongIndices.sort((a,b) => a-b),
-      tag
-    };
-  }).filter(item => item.wrong > 0);
-
-  // 취약 단원 TOP 3 (오답률 및 오답 수 기준 정렬)
-  const topWeakUnits = [...weaknessList]
-    .sort((a, b) => b.wrong - a.wrong || b.errorRate - a.errorRate)
-    .slice(0, 3);
-
-  return {
-    allWeakness: weaknessList,
-    top3: topWeakUnits
-  };
+  // D. 취약성 데이터 정렬·유형화 + 학부모 요약 (공용 빌더)
+  return buildWeaknessResult(unitStats, studentName);
 }
 
 /**

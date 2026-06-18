@@ -48,3 +48,27 @@ describe('analyzeMathWeakness 입력 C (오답스토어)', () => {
     expect(w.total).toBeGreaterThanOrEqual(w.wrong);
   });
 });
+
+describe('analyzeMathWeakness 클라우드 SSOT + 학부모 쉬운설명', () => {
+  it('cloud wrong_answers/homework_progress로 취약단원 + 학부모요약을 만든다', () => {
+    const cloud = {
+      homeworkProgress: [
+        { homework_id: 'X', problem_id: '001', is_correct: true },
+        { homework_id: 'X', problem_id: '002', is_correct: true },
+      ],
+      wrongAnswers: [
+        { unit_folder: '행렬', problem_num: '5', problem_id: '005', resolved: false },
+        { unit_folder: '행렬', problem_num: '6', problem_id: '006', resolved: false },
+        { unit_folder: '확률', problem_num: '3', problem_id: '003', resolved: true },
+      ],
+    };
+    const { allWeakness, top3, parentSummary } = analyzeMathWeakness(cloud);
+    const m = allWeakness.find(w => w.unit === '행렬');
+    expect(m.wrong).toBe(2);
+    expect(m.errorRate).toBe(100);
+    expect(allWeakness.find(w => w.unit === '확률')).toBeFalsy(); // resolved 제외
+    expect(top3[0].unit).toBe('행렬');
+    expect(top3[0].tagPlain).toBeTruthy();        // 학부모용 쉬운 설명
+    expect(parentSummary).toContain('행렬');       // 학부모 한 문단 요약
+  });
+});

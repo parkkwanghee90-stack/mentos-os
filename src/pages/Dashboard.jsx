@@ -11,7 +11,7 @@ import { updateSession, loadSession, SESSION_STATUS, formatTime, getDaysUntilTes
 import { HIGH_TEACHER_PROFILES } from '@/data/hTeacherProfiles';
 import { processHomeworkSubmission } from '@/engine/homeworkEngine';
 import { progressToNextUnit, initTrial, TEACHER_ASSIGNMENT } from '@/engine/gradeFlowSSOT';
-import { analyzeMathWeakness, generateFortnightlyTestProblems, gradeFortnightlyTest, sendFortnightlyParentPush } from '@/engine/math/mathWeaknessReporter';
+import { analyzeMathWeakness, setCloudWeaknessData, generateFortnightlyTestProblems, gradeFortnightlyTest, sendFortnightlyParentPush } from '@/engine/math/mathWeaknessReporter';
 import { generateMonthlyTestProblems, gradeMonthlyTest, sendMonthlyParentPush, recordMonthlyTestWrongs } from '@/engine/math/monthlyTest';
 import { getCompletions } from '@/services/homeworkCompletion';
 import { fetchCloudDashboard, buildWeeklySeries } from '@/services/dashboardData';
@@ -263,7 +263,7 @@ export default function Dashboard() {
 
   // ── [Real Data Integration: Supabase 우선, localStorage 폴백] ──
   const [cloud, setCloud] = React.useState(null); // {homeworkProgress, wrongAnswers, studyLogs} | null
-  React.useEffect(() => { fetchCloudDashboard().then(setCloud); }, []);
+  React.useEffect(() => { fetchCloudDashboard().then(c => { setCloud(c); setCloudWeaknessData(c); }); }, []);
 
   const wrongReviewCount = React.useMemo(
     () => cloud
@@ -429,7 +429,7 @@ export default function Dashboard() {
     }).filter(hw => hw.isComplete);
   }, [studentLevel]);
 
-  const mathWeakness = React.useMemo(() => analyzeMathWeakness(), [lessonHistory, completedHomeworkList]);
+  const mathWeakness = React.useMemo(() => analyzeMathWeakness(cloud), [cloud, lessonHistory, completedHomeworkList]);
   const topWeakUnits = mathWeakness.top3.length > 0 
     ? mathWeakness.top3.map(w => `${w.unit} (${w.tag})`)
     : ["이차함수와 이차방정식 (개념 결손)", "다항식의 연산 (연산 실수)", "항등식과 나머지정리 (응용 부족)"];
@@ -796,8 +796,8 @@ export default function Dashboard() {
           ))}
         </div>
         <div className="ai-comment">
-          <strong>AI 분석: </strong>
-          함수 단원 이해도가 빠르게 상승 중입니다. 복이차방정식 심화 보강을 추천합니다.
+          <strong>쉽게 풀어보면: </strong>
+          {mathWeakness.parentSummary}
         </div>
       </div>
 
