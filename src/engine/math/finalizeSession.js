@@ -1,6 +1,7 @@
 import { aggregateMathLessonResult, saveMathLessonResult } from './lessonResultAggregator.js';
 import { generateMathHomework } from './homeworkGenerator.js';
 import { queueParentPush } from '@/services/pushService.js';
+import { analyzeMathWeakness } from './mathWeaknessReporter.js';
 
 export function finalizeMathSession(session, solvedProblems = []) {
   console.log("=== [Finalize Math Lesson Session] Initialized ===");
@@ -37,7 +38,12 @@ AI가 취약점을 분석하여 맞춤형 복습 과제를 발송했습니다. �
 
   let studentName = '멘토스 학생';
   try { studentName = JSON.parse(localStorage.getItem('mentos_mock_user') || '{}')?.name || studentName; } catch { /* noop */ }
-  queueParentPush(pushMsg, {
+
+  // 취약분석 쉬운설명을 문자 본문에 덧붙임(학부모가 한눈에)
+  let weaknessLine = '';
+  try { weaknessLine = analyzeMathWeakness(null, studentName).parentSummary || ''; } catch { /* noop */ }
+  const pushMsgWithWeakness = weaknessLine ? `${pushMsg}\n\n💡 취약분석: ${weaknessLine}` : pushMsg;
+  queueParentPush(pushMsgWithWeakness, {
     templateKey: 'lessonEnd', // 수업종료리포트
     variables: {
       '#{학생명}': studentName,

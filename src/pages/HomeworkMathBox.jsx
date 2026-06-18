@@ -13,6 +13,7 @@ import { resolveAnswer } from '@/services/answerResolver';
 import { recordCompletion, buildSummaryMessage } from '@/services/homeworkCompletion';
 import { computeSolvedCounts } from '@/services/progressCounts';
 import { queueParentPush } from '@/services/pushService';
+import { analyzeMathWeakness } from '@/engine/math/mathWeaknessReporter';
 import { mirrorProgress, mirrorWrongAnswer } from '@/services/syncService';
 import avsAnswersData from '@/data/avs_answers.json';
 import { normalizeAnswer, gradeAnswer } from '@/lib/grading/normalizeAnswer';
@@ -335,14 +336,29 @@ export default function HomeworkMathBox() {
       const { shouldPush } = recordCompletion(completionKey, summary);
       if (shouldPush) {
         const studentName = JSON.parse(localStorage.getItem('mentos_mock_user') || '{}')?.name || '멘토스 학생';
-        queueParentPush(buildSummaryMessage(studentName, summary), {
+        // 취약분석 → 학부모용 쉬운설명 (카톡 #{wrongnote} 슬롯 + 문자 본문)
+        const SHORT_TAG = {
+          '개념 결손 및 응용 한계': '기초개념 보강이 필요해요',
+          '수식 전개 및 조건 해석 오류': '조건 해석 연습이 필요해요',
+          '단순 마킹 및 계산 착오': '계산 실수만 잡으면 돼요',
+          '연산 실수': '실수만 줄이면 완벽해요',
+        };
+        let wk = { top3: [], parentSummary: '' };
+        try { wk = analyzeMathWeakness(null, studentName); } catch { /* noop */ }
+        const top = wk.top3 && wk.top3[0];
+        const wrongnote = top
+          ? `「${top.unit}」 ${SHORT_TAG[top.tag] || '보강이 필요해요'} (오답 ${summary.wrong}개)`
+          : `오답 ${summary.wrong}개`;
+        const body = buildSummaryMessage(studentName, summary)
+          + (wk.parentSummary ? `\n\n💡 취약분석: ${wk.parentSummary}` : '');
+        queueParentPush(body, {
           templateKey: 'homework', // 숙제결과리포트
           variables: {
             '#{name}': studentName,
             '#{hwname}': summary.title || '수학 숙제',
             '#{submit}': `${summary.correct}/${summary.total}문제 제출`,
             '#{rate}': `${summary.accuracy}%`,
-            '#{wrongnote}': `오답 ${summary.wrong}개`,
+            '#{wrongnote}': wrongnote,
           },
         });
       }
