@@ -49,12 +49,13 @@ const FEATURES = [
   { icon: Bot, label: "24시간 AI 튜터" },
 ];
 
+// 정직하게 — 과장 수치 대신 검증 가능한 사실만
 const STATS = [
-  { v: "10,000+", l: "누적 학생 수" },
-  { v: "95%", l: "학부모 만족도" },
-  { v: "3.2등급", l: "평균 성적 향상" },
+  { v: "25년", l: "분당 수학 직강 노하우" },
+  { v: "200+", l: "학교별 기출 분석" },
   { v: "10일", l: "무료 체험 제공" },
   { v: "24시간", l: "AI 튜터 상시 대기" },
+  { v: "1:1", l: "AI 맞춤 취약분석" },
 ];
 
 const BG_EQ = [
@@ -135,6 +136,9 @@ export default function LandingHero() {
           <div className="hv-hero-actions">
             <Link to="/grade-select" className="hv-btn hv-btn-primary hv-btn-lg">무료 체험 시작 <ArrowRight size={18} /></Link>
           </div>
+          <p style={{ margin: "10px 0 0", fontSize: 13.5, color: "#a5b4fc", fontWeight: 700 }}>
+            🎁 누구나 1시간 무료 체험 · 선착순 100명은 10일 무료
+          </p>
           <RotatingTagline />
         </div>
 
@@ -144,15 +148,7 @@ export default function LandingHero() {
       </div>
 
       <div className="hv-wrap">
-        <ul className="hv-feature-row">
-          {FEATURES.map(({ icon: Icon, label }) => (
-            <li key={label} className="hv-feature">
-              <span className="hv-feature-ic"><Icon size={22} /></span>
-              <span className="hv-feature-label">{label}</span>
-            </li>
-          ))}
-        </ul>
-
+        {/* (기능 칩 행 제거 — 비교·튜터 섹션과 중복) */}
         <ul className="hv-stat-row">
           {STATS.map((s) => (
             <li key={s.l} className="hv-stat">
