@@ -5,8 +5,11 @@
 ## 0) 직전 한도 여부
 - 직전 턴이 한도(deferred 다수)로 끝났고 리셋 전이면: 작업 생략, ScheduleWakeup(1200~3600s) 후 종료.
 
+## 0.5) 검수 대기분 우선 처리
+- 트래커에 `pending_verify`(직전 턴 생성됐으나 한도로 검수 못 한 학교)가 있으면, **재생성 없이 검수(3단계)부터** 수행해 done 처리하고 `pending_verify`를 비운다.
+
 ## 1) 다음 배치 선택
-- `node scripts/blog_auto/next_pick.cjs 5` 실행.
+- `node scripts/blog_auto/next_pick.cjs 5` 실행. (트래커 `done`만 제외하므로, 검수 통과 전까진 재선택될 수 있음 → 반드시 0.5단계로 중복 생성 방지)
 - 출력이 `QUEUE_EMPTY` 면: 최종 배포(4단계) 후 ScheduleWakeup 생략(루프 종료).
 - `raw_png=X` 인 학교는 즉시 `needs_source`로 트래커 기록(6단계 헬퍼)하고 배치에서 빼고 다음 후보로 채운다.
 
