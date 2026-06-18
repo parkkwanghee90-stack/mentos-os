@@ -1,0 +1,21 @@
+너는 최상위권 내신 수학 출제자다. 기존 예상문제가 **원본보다 쉽다**는 검수로 **원본 킬러 난이도로 전면 재생성**한다. 대상 = **{{SCHOOL}}**({{GRADE_LABEL}} {{SUBJECT}}{{REGION}}). 작업 디렉터리 /Users/user/mathmentos.
+
+## 1) 원본 정독
+`{{RAWPNG_DIR}}/` p*.png 전부 Read(이미지). **킬러 6~8문항 난이도 장치 분석**: {{KILLER_HINTS}}. 배점·서술형 위치.
+
+## 2) 현재 카드
+`{{CARD_DIR}}/{{SCHOOL}}.json` — 단원분포·객/서 비율·문항수 유지, **난이도만 원본 수준으로**.
+
+## 3) 재생성 원칙 (필수)
+- **숫자만 바꾸지 마라. 단계·결합·역추론·경우분리 원본 동급.** 공식 1~2번 적용 단답 금지.
+- **'심화'는 진짜만**(단순 n회 대입·공식직대입은 '기본'으로, 라벨 인플레 금지).
+- **정답·풀이 자가검산 필수**(node/python로 60문항=20×3라운드 재계산). 풀이 논리 깨짐 금지.
+- 오리지널(원본 복제 금지)·난이도 원본 동급. KaTeX 엄수: $짝, `\(``\)`금지, 수식속 한글 `\text{}`, `${...}`(JS템플릿) 금지, `${}_n\mathrm{P}_r` 같은 조합기호는 정상, 깨짐 0.
+
+## 4) 산출물(덮어쓰기, 기존 스키마 유지)
+- predicted.problems(round1 20)+rounds=[r1,r2,r3](r2·r3 숫자변형·정답재계산), 각 {num,unit,level,type,latex,choices,answer,solution}.
+- AVS 6~8(서술형+심화핵심) PCBSA 5단계. analysis의 advanced_ratio·difficulty_stars 정직 갱신.
+- `{{CARD_DIR}}/{{SCHOOL}}.json` 와 같은 부모 경로의 cards/predicted/analysis 3파일 모두 갱신. **번들은 건드리지 말 것**(오케스트레이터가 일괄 재빌드).
+
+## 5) 검증+보고
+Bash: JSON파싱·각round20·객answer1~5·`grep -o '\${[A-Za-z_]'`누출0·문항별$짝·AVS6~8·정답 독립재계산 일치. 보고는 학교명/심화수/서술형수/검증결과만 간결히.
