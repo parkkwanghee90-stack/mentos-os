@@ -5,7 +5,10 @@ import { ArrowLeft, ChevronRight } from 'lucide-react';
 
 // 빌드된 시험만 id 부여(=바로 풀이/채점). id 없으면 '준비중'.
 const REGISTRY = {
-  고1: { external: false, years: { '2025': [{ m: '10월', id: 'hg1-2025-10' }, { m: '9월', id: 'hg1-2025-09' }, { m: '6월', id: 'hg1-2025-06' }, { m: '3월', id: 'hg1-2025-03' }] } },
+  고1: { external: false, years: {
+    '2025': [{ m: '10월', id: 'hg1-2025-10' }, { m: '9월', id: 'hg1-2025-09' }, { m: '6월', id: 'hg1-2025-06' }, { m: '3월', id: 'hg1-2025-03' }],
+    '2024': [{ m: '10월', id: 'hg1-2024-10' }, { m: '9월', id: 'hg1-2024-09' }, { m: '6월', id: 'hg1-2024-06' }, { m: '3월', id: 'hg1-2024-03' }],
+  } },
   고2: { external: false, years: {} },
   고3: { external: true }, // 기존 고3 모의고사 플로우(수능·6·9·3월)
 };

@@ -6,8 +6,15 @@ import { HG1_2025_10 } from '@/data/mockExams/HG1_2025_10';
 import { HG1_2025_09 } from '@/data/mockExams/HG1_2025_09';
 import { HG1_2025_06 } from '@/data/mockExams/HG1_2025_06';
 import { HG1_2025_03 } from '@/data/mockExams/HG1_2025_03';
+import { HG1_2024_10 } from '@/data/mockExams/HG1_2024_10';
+import { HG1_2024_09 } from '@/data/mockExams/HG1_2024_09';
+import { HG1_2024_06 } from '@/data/mockExams/HG1_2024_06';
+import { HG1_2024_03 } from '@/data/mockExams/HG1_2024_03';
 
-const EXAMS = { 'hg1-2025-10': HG1_2025_10, 'hg1-2025-09': HG1_2025_09, 'hg1-2025-06': HG1_2025_06, 'hg1-2025-03': HG1_2025_03 };
+const EXAMS = {
+  'hg1-2025-10': HG1_2025_10, 'hg1-2025-09': HG1_2025_09, 'hg1-2025-06': HG1_2025_06, 'hg1-2025-03': HG1_2025_03,
+  'hg1-2024-10': HG1_2024_10, 'hg1-2024-09': HG1_2024_09, 'hg1-2024-06': HG1_2024_06, 'hg1-2024-03': HG1_2024_03,
+};
 const CIRC = ['①', '②', '③', '④', '⑤'];
 const C = { bg: '#0b1020', card: 'rgba(255,255,255,0.04)', line: '1px solid rgba(255,255,255,0.08)', text: '#e5e7eb', sub: '#94a3b8', accent: '#3b82f6', good: '#34d399', bad: '#f87171', gold: '#fbbf24' };
 
