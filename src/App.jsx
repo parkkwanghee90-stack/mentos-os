@@ -23,6 +23,7 @@ const ParentDashboard = lazy(() => import("@/pages/ParentDashboard"));
 const LoginGate = lazy(() => import("@/components/auth/LoginGate"));
 const MentosMockExam = lazy(() => import("@/pages/MentosMockExam"));
 const MockExamOMR = lazy(() => import("@/pages/MockExamOMR"));
+const MockExamHub = lazy(() => import("@/pages/MockExamHub"));
 const NaesinCourse = lazy(() => import("@/pages/NaesinCourse"));
 const LessonTest = lazy(() => import("@/pages/LessonTest"));
 const Login = lazy(() => import("@/pages/Login"));
@@ -179,6 +180,7 @@ function AppContent() {
             <Route path="/test" element={<LessonTest />} />
             <Route path="/class/mock-exam" element={<MentosMockExam />} />
             <Route path="/class/mock/:examId" element={<MockExamOMR />} />
+            <Route path="/class/mock-hub" element={<MockExamHub />} />
             <Route path="/class/naesin" element={<NaesinCourse />} />
             
             <Route path="/login" element={<Login />} />

@@ -749,7 +749,7 @@ export default function Dashboard() {
                 if (course.route) {
                   navigate(course.route);
                 } else if (course.name === '모의고사') {
-                  navigate('/grade-select', { state: { subjectOverride: '모의고사' } });
+                  navigate('/class/mock-hub');
                 } else {
                   navigate('/grade-select', { state: { subjectOverride: course.name } });
                 }
