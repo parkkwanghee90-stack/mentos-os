@@ -96,5 +96,8 @@
       "slug": "김해외고",
       "reason": "weekly limit"
     }
-  ]
+  ],
+  "deferred": [],
+  "needs_review": [],
+  "needs_source": []
 }
