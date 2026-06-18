@@ -72,3 +72,26 @@ describe('analyzeMathWeakness 클라우드 SSOT + 학부모 쉬운설명', () =>
     expect(parentSummary).toContain('행렬');       // 학부모 한 문단 요약
   });
 });
+
+describe('analyzeMathWeakness — AVS 답지 의존 다신호', () => {
+  it('AVS 시청(답지 의존)을 취약점수·학부모설명에 반영한다', () => {
+    const cloud = {
+      homeworkProgress: [
+        { homework_id: 'M', problem_id: '001', is_correct: false, avs_viewed: true },
+        { homework_id: 'M', problem_id: '002', is_correct: false, avs_viewed: true },
+        { homework_id: 'M', problem_id: '003', is_correct: true, avs_viewed: true },
+        { homework_id: 'M', problem_id: '004', is_correct: true, avs_viewed: false },
+      ],
+      wrongAnswers: [
+        { unit_folder: 'M', problem_num: '1', problem_id: '001', resolved: false },
+        { unit_folder: 'M', problem_num: '2', problem_id: '002', resolved: false },
+      ],
+    };
+    const { allWeakness } = analyzeMathWeakness(cloud);
+    const m = allWeakness.find(w => w.unit === 'M');
+    expect(m.avsViewed).toBe(3);
+    expect(m.avsDependent).toBe(true);
+    expect(m.tagPlain).toContain('AVS');         // 학부모용 AVS 코멘트 포함
+    expect(m.score).toBeGreaterThan(m.errorRate); // 다신호 가산
+  });
+});

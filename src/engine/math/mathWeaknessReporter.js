@@ -31,34 +31,42 @@ export function parentSummaryOf(top3, studentName = '학생') {
     + `이번 주는 「${t.unit}」 보강에 집중하면 가장 효과가 커요.`;
 }
 
-// 단원 통계 → 취약 리스트 + TOP3 + 학부모 요약 (공용 빌더)
+const AVS_NOTE = '스스로 풀기 전에 풀이(AVS)부터 보는 습관이 있어요. 먼저 5분이라도 직접 고민해보는 연습이 필요해요.';
+// 단원 통계 → 취약 리스트 + TOP3 + 학부모 요약 (공용 빌더, AVS 의존 다신호 반영)
 function buildWeaknessResult(unitStats, studentName = '학생') {
   const weaknessList = Object.entries(unitStats).map(([unit, stat]) => {
     const total = stat.totalQuestions;
     const wrong = stat.wrongCount;
     const errorRate = total > 0 ? Math.round((wrong / total) * 100) : 0;
+    const avsViewed = stat.avsViewed || 0;                                  // 답지(AVS) 시청 횟수
+    const avsRate = total > 0 ? Math.round((avsViewed / total) * 100) : 0;
+    const avsDependent = avsRate >= 50 && avsViewed >= 2;                   // 절반 이상 답지부터 봄 → 의존
+    // 다신호 가중 점수: 오답률(기본) + AVS 의존도 가산 → 단순 오답수보다 정확한 약점 우선순위
+    const score = errorRate + Math.min(40, Math.round((avsViewed / Math.max(1, total)) * 40));
     const d = diagnoseTag(errorRate);
+    const plain = avsDependent ? `${d.plain} 또한 ${AVS_NOTE}` : d.plain;
     return {
-      unit, total, wrong, errorRate,
+      unit, total, wrong, errorRate, avsViewed, avsRate, avsDependent, score,
       wrongIndices: (stat.wrongIndices || []).sort((a, b) => a - b),
       tag: d.tag,
-      tagPlain: d.plain,                                  // 학부모용 쉬운 설명
-      parentMsg: `「${unit}」 단원은 ${d.plain}`,
+      tagPlain: plain,                                   // 학부모용 쉬운 설명(+AVS 의존 코멘트)
+      parentMsg: `「${unit}」 단원은 ${plain}`,
     };
   }).filter(item => item.wrong > 0);
-  const top3 = [...weaknessList].sort((a, b) => b.wrong - a.wrong || b.errorRate - a.errorRate).slice(0, 3);
+  const top3 = [...weaknessList].sort((a, b) => b.score - a.score || b.wrong - a.wrong).slice(0, 3);
   return { allWeakness: weaknessList, top3, parentSummary: parentSummaryOf(top3, studentName) };
 }
 
 // 클라우드(Supabase) SSOT 경로 — 로그인 학생 cross-device
 function analyzeFromCloud(cloud, studentName = '학생') {
   const unitStats = {};
-  const U = (u) => (unitStats[u] || (unitStats[u] = { totalQuestions: 0, correctCount: 0, wrongCount: 0, wrongIndices: [] }));
-  // 1) homework_progress → 단원별 총 시도(분모) + 정답
+  const U = (u) => (unitStats[u] || (unitStats[u] = { totalQuestions: 0, correctCount: 0, wrongCount: 0, wrongIndices: [], avsViewed: 0 }));
+  // 1) homework_progress → 단원별 총 시도(분모) + 정답 + AVS 시청(답지 의존 신호)
   for (const p of (cloud.homeworkProgress || [])) {
     const hw = HOMEWORK_UNITS.find(h => h.id === p.homework_id);
     const unit = hw ? (hw.relatedUnit || hw.title) : (p.homework_id || '공통수학');
     const s = U(unit); s.totalQuestions++; if (p.is_correct) s.correctCount++;
+    if (p.avs_viewed) s.avsViewed++;
   }
   // 2) wrong_answers(미해결) → 오답(숙제·교실 전 플로우). unit:problem 중복 제거.
   const seen = new Set();
@@ -125,6 +133,7 @@ export function analyzeMathWeakness(cloudData = null, studentName = '학생') {
         unitStats[unit].wrongIndices.push(parseInt(pid, 10));
         countedKeys.add(`${hw.id}:${parseInt(pid, 10)}`);
       }
+      if (data.avsViewed) unitStats[unit].avsViewed = (unitStats[unit].avsViewed || 0) + 1; // 답지 의존 신호
     });
     unitStats[unit].wrongIndices = [...new Set(unitStats[unit].wrongIndices)];
   });
