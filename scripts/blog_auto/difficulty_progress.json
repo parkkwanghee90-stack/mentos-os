@@ -97,7 +97,32 @@
       "reason": "weekly limit"
     }
   ],
-  "deferred": [],
+  "deferred": [
+    {
+      "grade": "go1",
+      "slug": "낙생고",
+      "reason": "session limit 8pm"
+    },
+    {
+      "grade": "go1",
+      "slug": "대성고",
+      "reason": "session limit 8pm"
+    }
+  ],
   "needs_review": [],
-  "needs_source": []
+  "needs_source": [],
+  "pending_verify": [
+    {
+      "grade": "go1",
+      "slug": "이산고"
+    },
+    {
+      "grade": "go1",
+      "slug": "창원대산고"
+    },
+    {
+      "grade": "go1",
+      "slug": "창원신월고"
+    }
+  ]
 }
