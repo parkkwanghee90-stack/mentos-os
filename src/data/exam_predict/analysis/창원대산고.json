@@ -4,7 +4,7 @@
   "grade": "고1",
   "term": "1학기 기말",
   "subject": "공통수학1",
-  "total_problems": 19,
+  "total_problems": 20,
   "unit_share": [
     {
       "unit": "행렬",
@@ -59,11 +59,11 @@
     "연립방정식",
     "연립부등식"
   ],
-  "objective_ratio": 53,
-  "subjective_ratio": 47,
-  "advanced_ratio": 74,
+  "objective_ratio": 50,
+  "subjective_ratio": 50,
+  "advanced_ratio": 70,
   "difficulty_stars": 5,
   "discrimination_stars": 5,
-  "summary": "창원대산고 기말은 행렬·순열 비중이 높고 서술형 47%·심화 74% 로 변별력이 큰 시험.",
-  "analyzed_at": "2026-06-11T18:45:35.915Z"
+  "summary": "창원대산고 기말은 행렬·순열 비중이 높고 서술형 50%·심화 70%로 변별력이 매우 큰 시험. 행렬 거듭제곱·성분식·정수 케이스, 이웃제한+양끝조건 배열, 미정계수 다중케이스 부등식, 상반방정식·ω 활용 등 원본 킬러 난이도로 재구성.",
+  "analyzed_at": "2026-06-18T11:01:54.000Z"
 }

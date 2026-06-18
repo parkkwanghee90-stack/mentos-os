@@ -59,11 +59,11 @@
     "절댓값부등식",
     "연립부등식"
   ],
-  "objective_ratio": 67,
-  "subjective_ratio": 33,
-  "advanced_ratio": 44,
-  "difficulty_stars": 4,
+  "objective_ratio": 65,
+  "subjective_ratio": 35,
+  "advanced_ratio": 65,
+  "difficulty_stars": 5,
   "discrimination_stars": 5,
-  "summary": "창원신월고 기말은 고차방정식·순열 비중이 높고 서술형 33%·심화 44% 로 변별력이 큰 시험.",
-  "analyzed_at": "2026-06-11T18:45:35.916Z"
+  "summary": "창원신월고 기말은 연립이차·1의세제곱근·순열조합 결합·판별식 역추론 등 킬러 6~8문항으로 변별력이 극대화된 최상위권 시험.",
+  "analyzed_at": "2026-06-18T06:44:08.484541Z"
 }
