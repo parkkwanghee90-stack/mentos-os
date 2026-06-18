@@ -3,10 +3,10 @@
   "scope": "four-subjects (excludes u<digit>_*)",
   "counts": {
     "bucketTotal": 2496,
-    "confirmed": 1203,
-    "suspectAll": 1293,
+    "confirmed": 1283,
+    "suspectAll": 1213,
     "suspectOutOfScope": 198,
-    "suspectInScope": 1095
+    "suspectInScope": 1015
   },
   "suspect": [
     {
@@ -208,26 +208,6 @@
       "key": "cases_s3/020.mp3",
       "ttsDir": "cases_s3",
       "pid": "020"
-    },
-    {
-      "key": "circle_s2/004.mp3",
-      "ttsDir": "circle_s2",
-      "pid": "004"
-    },
-    {
-      "key": "circle_s2/005.mp3",
-      "ttsDir": "circle_s2",
-      "pid": "005"
-    },
-    {
-      "key": "circle_s2/006.mp3",
-      "ttsDir": "circle_s2",
-      "pid": "006"
-    },
-    {
-      "key": "circle_s2/007.mp3",
-      "ttsDir": "circle_s2",
-      "pid": "007"
     },
     {
       "key": "circle_s2/008.mp3",
@@ -493,51 +473,6 @@
       "key": "complex_s3/010.mp3",
       "ttsDir": "complex_s3",
       "pid": "010"
-    },
-    {
-      "key": "complex_s3/011.mp3",
-      "ttsDir": "complex_s3",
-      "pid": "011"
-    },
-    {
-      "key": "complex_s3/012.mp3",
-      "ttsDir": "complex_s3",
-      "pid": "012"
-    },
-    {
-      "key": "complex_s3/013.mp3",
-      "ttsDir": "complex_s3",
-      "pid": "013"
-    },
-    {
-      "key": "complex_s3/014.mp3",
-      "ttsDir": "complex_s3",
-      "pid": "014"
-    },
-    {
-      "key": "complex_s3/016.mp3",
-      "ttsDir": "complex_s3",
-      "pid": "016"
-    },
-    {
-      "key": "complex_s3/017.mp3",
-      "ttsDir": "complex_s3",
-      "pid": "017"
-    },
-    {
-      "key": "complex_s3/018.mp3",
-      "ttsDir": "complex_s3",
-      "pid": "018"
-    },
-    {
-      "key": "complex_s3/019.mp3",
-      "ttsDir": "complex_s3",
-      "pid": "019"
-    },
-    {
-      "key": "complex_s3/020.mp3",
-      "ttsDir": "complex_s3",
-      "pid": "020"
     },
     {
       "key": "complex_s4/001.mp3",
@@ -3350,31 +3285,6 @@
       "pid": "020"
     },
     {
-      "key": "point_s2/001.mp3",
-      "ttsDir": "point_s2",
-      "pid": "001"
-    },
-    {
-      "key": "point_s2/002.mp3",
-      "ttsDir": "point_s2",
-      "pid": "002"
-    },
-    {
-      "key": "point_s2/003.mp3",
-      "ttsDir": "point_s2",
-      "pid": "003"
-    },
-    {
-      "key": "point_s2/004.mp3",
-      "ttsDir": "point_s2",
-      "pid": "004"
-    },
-    {
-      "key": "point_s2/005.mp3",
-      "ttsDir": "point_s2",
-      "pid": "005"
-    },
-    {
       "key": "point_s2/006.mp3",
       "ttsDir": "point_s2",
       "pid": "006"
@@ -4975,116 +4885,6 @@
       "pid": "018"
     },
     {
-      "key": "trig_graph_s2/019.mp3",
-      "ttsDir": "trig_graph_s2",
-      "pid": "019"
-    },
-    {
-      "key": "trig_graph_s2/020.mp3",
-      "ttsDir": "trig_graph_s2",
-      "pid": "020"
-    },
-    {
-      "key": "trig_graph_s3/001.mp3",
-      "ttsDir": "trig_graph_s3",
-      "pid": "001"
-    },
-    {
-      "key": "trig_graph_s3/002.mp3",
-      "ttsDir": "trig_graph_s3",
-      "pid": "002"
-    },
-    {
-      "key": "trig_graph_s3/003.mp3",
-      "ttsDir": "trig_graph_s3",
-      "pid": "003"
-    },
-    {
-      "key": "trig_graph_s3/004.mp3",
-      "ttsDir": "trig_graph_s3",
-      "pid": "004"
-    },
-    {
-      "key": "trig_graph_s3/005.mp3",
-      "ttsDir": "trig_graph_s3",
-      "pid": "005"
-    },
-    {
-      "key": "trig_graph_s3/006.mp3",
-      "ttsDir": "trig_graph_s3",
-      "pid": "006"
-    },
-    {
-      "key": "trig_graph_s3/007.mp3",
-      "ttsDir": "trig_graph_s3",
-      "pid": "007"
-    },
-    {
-      "key": "trig_graph_s3/008.mp3",
-      "ttsDir": "trig_graph_s3",
-      "pid": "008"
-    },
-    {
-      "key": "trig_graph_s3/009.mp3",
-      "ttsDir": "trig_graph_s3",
-      "pid": "009"
-    },
-    {
-      "key": "trig_graph_s3/010.mp3",
-      "ttsDir": "trig_graph_s3",
-      "pid": "010"
-    },
-    {
-      "key": "trig_graph_s3/011.mp3",
-      "ttsDir": "trig_graph_s3",
-      "pid": "011"
-    },
-    {
-      "key": "trig_graph_s3/012.mp3",
-      "ttsDir": "trig_graph_s3",
-      "pid": "012"
-    },
-    {
-      "key": "trig_graph_s3/013.mp3",
-      "ttsDir": "trig_graph_s3",
-      "pid": "013"
-    },
-    {
-      "key": "trig_graph_s3/014.mp3",
-      "ttsDir": "trig_graph_s3",
-      "pid": "014"
-    },
-    {
-      "key": "trig_graph_s3/015.mp3",
-      "ttsDir": "trig_graph_s3",
-      "pid": "015"
-    },
-    {
-      "key": "trig_graph_s3/016.mp3",
-      "ttsDir": "trig_graph_s3",
-      "pid": "016"
-    },
-    {
-      "key": "trig_graph_s3/017.mp3",
-      "ttsDir": "trig_graph_s3",
-      "pid": "017"
-    },
-    {
-      "key": "trig_graph_s3/018.mp3",
-      "ttsDir": "trig_graph_s3",
-      "pid": "018"
-    },
-    {
-      "key": "trig_graph_s3/019.mp3",
-      "ttsDir": "trig_graph_s3",
-      "pid": "019"
-    },
-    {
-      "key": "trig_graph_s3/020.mp3",
-      "ttsDir": "trig_graph_s3",
-      "pid": "020"
-    },
-    {
       "key": "trig_graph_s4/001.mp3",
       "ttsDir": "trig_graph_s4",
       "pid": "001"
@@ -5182,206 +4982,6 @@
     {
       "key": "trig_graph_s4/020.mp3",
       "ttsDir": "trig_graph_s4",
-      "pid": "020"
-    },
-    {
-      "key": "trig_util_s2/001.mp3",
-      "ttsDir": "trig_util_s2",
-      "pid": "001"
-    },
-    {
-      "key": "trig_util_s2/002.mp3",
-      "ttsDir": "trig_util_s2",
-      "pid": "002"
-    },
-    {
-      "key": "trig_util_s2/003.mp3",
-      "ttsDir": "trig_util_s2",
-      "pid": "003"
-    },
-    {
-      "key": "trig_util_s2/004.mp3",
-      "ttsDir": "trig_util_s2",
-      "pid": "004"
-    },
-    {
-      "key": "trig_util_s2/005.mp3",
-      "ttsDir": "trig_util_s2",
-      "pid": "005"
-    },
-    {
-      "key": "trig_util_s2/006.mp3",
-      "ttsDir": "trig_util_s2",
-      "pid": "006"
-    },
-    {
-      "key": "trig_util_s2/007.mp3",
-      "ttsDir": "trig_util_s2",
-      "pid": "007"
-    },
-    {
-      "key": "trig_util_s2/008.mp3",
-      "ttsDir": "trig_util_s2",
-      "pid": "008"
-    },
-    {
-      "key": "trig_util_s2/009.mp3",
-      "ttsDir": "trig_util_s2",
-      "pid": "009"
-    },
-    {
-      "key": "trig_util_s2/010.mp3",
-      "ttsDir": "trig_util_s2",
-      "pid": "010"
-    },
-    {
-      "key": "trig_util_s2/011.mp3",
-      "ttsDir": "trig_util_s2",
-      "pid": "011"
-    },
-    {
-      "key": "trig_util_s2/012.mp3",
-      "ttsDir": "trig_util_s2",
-      "pid": "012"
-    },
-    {
-      "key": "trig_util_s2/013.mp3",
-      "ttsDir": "trig_util_s2",
-      "pid": "013"
-    },
-    {
-      "key": "trig_util_s2/014.mp3",
-      "ttsDir": "trig_util_s2",
-      "pid": "014"
-    },
-    {
-      "key": "trig_util_s2/015.mp3",
-      "ttsDir": "trig_util_s2",
-      "pid": "015"
-    },
-    {
-      "key": "trig_util_s2/016.mp3",
-      "ttsDir": "trig_util_s2",
-      "pid": "016"
-    },
-    {
-      "key": "trig_util_s2/017.mp3",
-      "ttsDir": "trig_util_s2",
-      "pid": "017"
-    },
-    {
-      "key": "trig_util_s2/018.mp3",
-      "ttsDir": "trig_util_s2",
-      "pid": "018"
-    },
-    {
-      "key": "trig_util_s2/019.mp3",
-      "ttsDir": "trig_util_s2",
-      "pid": "019"
-    },
-    {
-      "key": "trig_util_s2/020.mp3",
-      "ttsDir": "trig_util_s2",
-      "pid": "020"
-    },
-    {
-      "key": "trig_util_s3/001.mp3",
-      "ttsDir": "trig_util_s3",
-      "pid": "001"
-    },
-    {
-      "key": "trig_util_s3/002.mp3",
-      "ttsDir": "trig_util_s3",
-      "pid": "002"
-    },
-    {
-      "key": "trig_util_s3/003.mp3",
-      "ttsDir": "trig_util_s3",
-      "pid": "003"
-    },
-    {
-      "key": "trig_util_s3/004.mp3",
-      "ttsDir": "trig_util_s3",
-      "pid": "004"
-    },
-    {
-      "key": "trig_util_s3/005.mp3",
-      "ttsDir": "trig_util_s3",
-      "pid": "005"
-    },
-    {
-      "key": "trig_util_s3/006.mp3",
-      "ttsDir": "trig_util_s3",
-      "pid": "006"
-    },
-    {
-      "key": "trig_util_s3/007.mp3",
-      "ttsDir": "trig_util_s3",
-      "pid": "007"
-    },
-    {
-      "key": "trig_util_s3/008.mp3",
-      "ttsDir": "trig_util_s3",
-      "pid": "008"
-    },
-    {
-      "key": "trig_util_s3/009.mp3",
-      "ttsDir": "trig_util_s3",
-      "pid": "009"
-    },
-    {
-      "key": "trig_util_s3/010.mp3",
-      "ttsDir": "trig_util_s3",
-      "pid": "010"
-    },
-    {
-      "key": "trig_util_s3/011.mp3",
-      "ttsDir": "trig_util_s3",
-      "pid": "011"
-    },
-    {
-      "key": "trig_util_s3/012.mp3",
-      "ttsDir": "trig_util_s3",
-      "pid": "012"
-    },
-    {
-      "key": "trig_util_s3/013.mp3",
-      "ttsDir": "trig_util_s3",
-      "pid": "013"
-    },
-    {
-      "key": "trig_util_s3/014.mp3",
-      "ttsDir": "trig_util_s3",
-      "pid": "014"
-    },
-    {
-      "key": "trig_util_s3/015.mp3",
-      "ttsDir": "trig_util_s3",
-      "pid": "015"
-    },
-    {
-      "key": "trig_util_s3/016.mp3",
-      "ttsDir": "trig_util_s3",
-      "pid": "016"
-    },
-    {
-      "key": "trig_util_s3/017.mp3",
-      "ttsDir": "trig_util_s3",
-      "pid": "017"
-    },
-    {
-      "key": "trig_util_s3/018.mp3",
-      "ttsDir": "trig_util_s3",
-      "pid": "018"
-    },
-    {
-      "key": "trig_util_s3/019.mp3",
-      "ttsDir": "trig_util_s3",
-      "pid": "019"
-    },
-    {
-      "key": "trig_util_s3/020.mp3",
-      "ttsDir": "trig_util_s3",
       "pid": "020"
     },
     {
