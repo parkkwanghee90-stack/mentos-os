@@ -3,10 +3,10 @@
   "scope": "four-subjects (excludes u<digit>_*)",
   "counts": {
     "bucketTotal": 2496,
-    "confirmed": 1285,
-    "suspectAll": 1211,
+    "confirmed": 1334,
+    "suspectAll": 1162,
     "suspectOutOfScope": 198,
-    "suspectInScope": 1013
+    "suspectInScope": 964
   },
   "suspect": [
     {
@@ -210,11 +210,6 @@
       "pid": "020"
     },
     {
-      "key": "circle_s2/010.mp3",
-      "ttsDir": "circle_s2",
-      "pid": "010"
-    },
-    {
       "key": "circle_s3/001.mp3",
       "ttsDir": "circle_s3",
       "pid": "001"
@@ -413,56 +408,6 @@
       "key": "complex_s2/020.mp3",
       "ttsDir": "complex_s2",
       "pid": "020"
-    },
-    {
-      "key": "complex_s3/001.mp3",
-      "ttsDir": "complex_s3",
-      "pid": "001"
-    },
-    {
-      "key": "complex_s3/002.mp3",
-      "ttsDir": "complex_s3",
-      "pid": "002"
-    },
-    {
-      "key": "complex_s3/003.mp3",
-      "ttsDir": "complex_s3",
-      "pid": "003"
-    },
-    {
-      "key": "complex_s3/004.mp3",
-      "ttsDir": "complex_s3",
-      "pid": "004"
-    },
-    {
-      "key": "complex_s3/005.mp3",
-      "ttsDir": "complex_s3",
-      "pid": "005"
-    },
-    {
-      "key": "complex_s3/006.mp3",
-      "ttsDir": "complex_s3",
-      "pid": "006"
-    },
-    {
-      "key": "complex_s3/007.mp3",
-      "ttsDir": "complex_s3",
-      "pid": "007"
-    },
-    {
-      "key": "complex_s3/008.mp3",
-      "ttsDir": "complex_s3",
-      "pid": "008"
-    },
-    {
-      "key": "complex_s3/009.mp3",
-      "ttsDir": "complex_s3",
-      "pid": "009"
-    },
-    {
-      "key": "complex_s3/010.mp3",
-      "ttsDir": "complex_s3",
-      "pid": "010"
     },
     {
       "key": "complex_s4/001.mp3",
@@ -3275,76 +3220,6 @@
       "pid": "020"
     },
     {
-      "key": "point_s2/006.mp3",
-      "ttsDir": "point_s2",
-      "pid": "006"
-    },
-    {
-      "key": "point_s2/007.mp3",
-      "ttsDir": "point_s2",
-      "pid": "007"
-    },
-    {
-      "key": "point_s2/008.mp3",
-      "ttsDir": "point_s2",
-      "pid": "008"
-    },
-    {
-      "key": "point_s2/009.mp3",
-      "ttsDir": "point_s2",
-      "pid": "009"
-    },
-    {
-      "key": "point_s2/010.mp3",
-      "ttsDir": "point_s2",
-      "pid": "010"
-    },
-    {
-      "key": "point_s2/011.mp3",
-      "ttsDir": "point_s2",
-      "pid": "011"
-    },
-    {
-      "key": "point_s2/012.mp3",
-      "ttsDir": "point_s2",
-      "pid": "012"
-    },
-    {
-      "key": "point_s2/014.mp3",
-      "ttsDir": "point_s2",
-      "pid": "014"
-    },
-    {
-      "key": "point_s2/015.mp3",
-      "ttsDir": "point_s2",
-      "pid": "015"
-    },
-    {
-      "key": "point_s2/016.mp3",
-      "ttsDir": "point_s2",
-      "pid": "016"
-    },
-    {
-      "key": "point_s2/017.mp3",
-      "ttsDir": "point_s2",
-      "pid": "017"
-    },
-    {
-      "key": "point_s2/018.mp3",
-      "ttsDir": "point_s2",
-      "pid": "018"
-    },
-    {
-      "key": "point_s2/019.mp3",
-      "ttsDir": "point_s2",
-      "pid": "019"
-    },
-    {
-      "key": "point_s2/020.mp3",
-      "ttsDir": "point_s2",
-      "pid": "020"
-    },
-    {
       "key": "point_s3/001.mp3",
       "ttsDir": "point_s3",
       "pid": "001"
@@ -4045,21 +3920,6 @@
       "pid": "020"
     },
     {
-      "key": "quad_eq_s4/001.mp3",
-      "ttsDir": "quad_eq_s4",
-      "pid": "001"
-    },
-    {
-      "key": "quad_eq_s4/002.mp3",
-      "ttsDir": "quad_eq_s4",
-      "pid": "002"
-    },
-    {
-      "key": "quad_eq_s4/003.mp3",
-      "ttsDir": "quad_eq_s4",
-      "pid": "003"
-    },
-    {
       "key": "quad_func_s2/001.mp3",
       "ttsDir": "quad_func_s2",
       "pid": "001"
@@ -4160,81 +4020,6 @@
       "pid": "020"
     },
     {
-      "key": "quad_func_s3/001.mp3",
-      "ttsDir": "quad_func_s3",
-      "pid": "001"
-    },
-    {
-      "key": "quad_func_s3/002.mp3",
-      "ttsDir": "quad_func_s3",
-      "pid": "002"
-    },
-    {
-      "key": "quad_func_s3/003.mp3",
-      "ttsDir": "quad_func_s3",
-      "pid": "003"
-    },
-    {
-      "key": "quad_func_s3/004.mp3",
-      "ttsDir": "quad_func_s3",
-      "pid": "004"
-    },
-    {
-      "key": "quad_func_s3/005.mp3",
-      "ttsDir": "quad_func_s3",
-      "pid": "005"
-    },
-    {
-      "key": "quad_func_s3/006.mp3",
-      "ttsDir": "quad_func_s3",
-      "pid": "006"
-    },
-    {
-      "key": "quad_func_s3/007.mp3",
-      "ttsDir": "quad_func_s3",
-      "pid": "007"
-    },
-    {
-      "key": "quad_func_s3/008.mp3",
-      "ttsDir": "quad_func_s3",
-      "pid": "008"
-    },
-    {
-      "key": "quad_func_s3/009.mp3",
-      "ttsDir": "quad_func_s3",
-      "pid": "009"
-    },
-    {
-      "key": "quad_func_s3/010.mp3",
-      "ttsDir": "quad_func_s3",
-      "pid": "010"
-    },
-    {
-      "key": "quad_func_s3/011.mp3",
-      "ttsDir": "quad_func_s3",
-      "pid": "011"
-    },
-    {
-      "key": "quad_func_s3/012.mp3",
-      "ttsDir": "quad_func_s3",
-      "pid": "012"
-    },
-    {
-      "key": "quad_func_s3/013.mp3",
-      "ttsDir": "quad_func_s3",
-      "pid": "013"
-    },
-    {
-      "key": "quad_func_s3/014.mp3",
-      "ttsDir": "quad_func_s3",
-      "pid": "014"
-    },
-    {
-      "key": "quad_func_s3/015.mp3",
-      "ttsDir": "quad_func_s3",
-      "pid": "015"
-    },
-    {
       "key": "quad_ineq_s2/001.mp3",
       "ttsDir": "quad_ineq_s2",
       "pid": "001"
@@ -4333,21 +4118,6 @@
       "key": "quad_ineq_s2/020.mp3",
       "ttsDir": "quad_ineq_s2",
       "pid": "020"
-    },
-    {
-      "key": "quad_ineq_s3/001.mp3",
-      "ttsDir": "quad_ineq_s3",
-      "pid": "001"
-    },
-    {
-      "key": "quad_ineq_s3/002.mp3",
-      "ttsDir": "quad_ineq_s3",
-      "pid": "002"
-    },
-    {
-      "key": "quad_ineq_s3/003.mp3",
-      "ttsDir": "quad_ineq_s3",
-      "pid": "003"
     },
     {
       "key": "remain_s2/001.mp3",
@@ -4853,21 +4623,6 @@
       "key": "seq_sum_s3/020.mp3",
       "ttsDir": "seq_sum_s3",
       "pid": "020"
-    },
-    {
-      "key": "shape_move_s2/001.mp3",
-      "ttsDir": "shape_move_s2",
-      "pid": "001"
-    },
-    {
-      "key": "shape_move_s2/002.mp3",
-      "ttsDir": "shape_move_s2",
-      "pid": "002"
-    },
-    {
-      "key": "shape_move_s2/007.mp3",
-      "ttsDir": "shape_move_s2",
-      "pid": "007"
     },
     {
       "key": "trig_graph_s2/018.mp3",
