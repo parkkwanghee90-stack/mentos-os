@@ -20,8 +20,15 @@ process.chdir(ROOT);
 const SU1 = 'scripts/generate_su1_tts.cjs';
 const SANG = 'scripts/generate_gemini_math_sang_tts.cjs';
 
+// launchd PATH에는 node/ffmpeg가 없다(ENOENT/command not found). 생성기가 ffmpeg를 찾도록
+// 자식 프로세스 환경의 PATH에 일반 설치 경로를 보강한다.
+const CHILD_ENV = {
+  ...process.env,
+  PATH: ['/usr/local/bin', '/opt/homebrew/bin', '/usr/bin', '/bin', process.env.PATH || ''].filter(Boolean).join(':'),
+};
+
 function listStages(gen) {
-  const out = cp.execFileSync(process.execPath,[gen, '--list-stages'], { encoding: 'utf8' });
+  const out = cp.execFileSync(process.execPath,[gen, '--list-stages'], { encoding: 'utf8', env: CHILD_ENV });
   const line = out.split('\n').find(l => l.startsWith('STAGES_JSON '));
   return new Set(JSON.parse(line.slice('STAGES_JSON '.length)));
 }
@@ -30,7 +37,7 @@ function run(gen, keys) {
   if (!keys.length) { console.log(`[cron] ${gen}: 대상 0 — 건너뜀`); return; }
   console.log(`[cron] ${gen}: ${keys.length}개 재생성 시작`);
   try {
-    cp.execFileSync(process.execPath,[gen, '--regen-keys', keys.join(',')], { stdio: 'inherit' });
+    cp.execFileSync(process.execPath,[gen, '--regen-keys', keys.join(',')], { stdio: 'inherit', env: CHILD_ENV });
   } catch (e) {
     console.log(`[cron] ${gen} 종료(할당량 소진 또는 오류): ${e.message}`);
   }
@@ -60,7 +67,7 @@ function run(gen, keys) {
   run(SANG, sangKeys);
 
   // worklist 갱신(이번에 생성된 클립을 confirmed로 반영)
-  try { cp.execFileSync(process.execPath,['scripts/audit_tts_voice.cjs'], { stdio: 'inherit' }); }
+  try { cp.execFileSync(process.execPath,['scripts/audit_tts_voice.cjs'], { stdio: 'inherit', env: CHILD_ENV }); }
   catch (e) { console.log(`[cron] audit 갱신 실패: ${e.message}`); }
 
   console.log('[cron] 완료');
