@@ -734,7 +734,8 @@ export default function Dashboard() {
         </div>
         <div className="course-grid">
           {[
-            { name: '기말 내신 완벽대비', desc: '🎉 오픈이벤트 · 기본필수+심화', icon: '🏆', color: '#10b981', route: '/class/naesin' },
+            { name: '고1 기말 내신 완벽대비', desc: '🎉 오픈이벤트 · 기본필수+심화', icon: '🏆', color: '#10b981', route: '/class/naesin' },
+            { name: '고2 수1 기말 완벽대비', desc: '🎉 삼각함수·수열·귀납법 · 필수+심화', icon: '🏆', color: '#f59e0b', route: '/class/go2' },
             { name: '수학(상)', desc: '고1 수학(상/하)', icon: '📐', color: '#3b82f6' },
             { name: '수학1', desc: '수학1 (대수)', icon: '📊', color: '#8b5cf6' },
             { name: '수학2', desc: '미적분 기초', icon: '📈', color: '#06b6d4' },
