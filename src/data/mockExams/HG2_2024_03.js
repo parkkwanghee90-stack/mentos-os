@@ -27,11 +27,11 @@ export const HG2_2024_03 = {
   { num: 21, obj: true, answer: 4, type: '원과 직선의 위치 관계를 이용하여 조 건을 만족시키는 선분의 길이를 추론한다' },
   { num: 22, obj: false, answer: 20, type: '집합의 연산을 이용하여 원소의 합을 계산한다' },
   { num: 23, obj: false, answer: 30, type: '선분의 외분을 이용하여 점의 좌표를 계산한다' },
-  { num: 24, obj: false, answer: 189, type: '이차함수의 그래프와 직선의 위치 관계 를 이해하여 미지수의 최솟값을 구한다' },
+  { num: 24, obj: false, answer: 6, type: '이차함수의 그래프와 직선의 위치 관계 를 이해하여 미지수의 최솟값을 구한다' },
   { num: 25, obj: false, answer: 24, type: '도형의 평행이동을 이해하여 직선의  절편을 구한다' },
   { num: 26, obj: false, answer: 12, type: '명제의 참, 거짓을 이용하여 미지수의 값을 추론한다' },
   { num: 27, obj: false, answer: 510, type: '조합을 이용하여 조건을 만족시키는 함 수의 개수를 구하는 문제를 해결한다' },
-  { num: 28, obj: false, answer: 28, type: '주어진 조건을 만족시키는 집합을 추론 한다' },
+  { num: 28, obj: false, answer: 189, type: '주어진 조건을 만족시키는 집합을 추론 한다' },
   { num: 29, obj: false, answer: 5, type: '다항식의 나눗셈과 항등식을 이용하여 미지수의 값을 구하는 문제를 해결한다' },
   { num: 30, obj: false, answer: 36, type: '무리함수의 그래프를 이용하여 함숫값 을 구하는 문제를 해결한다' }
   ],

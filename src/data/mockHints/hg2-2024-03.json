@@ -1,0 +1,185 @@
+{
+  "14": {
+    "problem_id": "14",
+    "title": "2024학년도 3월 고2 학평 14번",
+    "difficulty": "준킬러",
+    "weakness_unit": "무리함수의 그래프와 도형의 넓이",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "function_plot", "expr": "sqrt(x)" },
+        { "type": "function_plot", "expr": "3*sqrt(x)" },
+        { "type": "point", "coordinates": [9, 0], "label": "A" },
+        { "type": "point", "coordinates": [9, 3], "label": "B" },
+        { "type": "point", "coordinates": [9, 9], "label": "C" },
+        { "type": "point", "coordinates": [0, 0], "label": "O" },
+        { "type": "segment", "from": [0, 0], "to": [9, 3] },
+        { "type": "segment", "from": [0, 0], "to": [9, 9] },
+        { "type": "segment", "from": [9, 0], "to": [9, 9] }
+      ]
+    },
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "점 $\\mathrm{A}(k,0)$ 을 지나고 $y$축에 평행한 직선(즉 직선 $x=k$)이 두 곡선 $y=\\sqrt{x}$, $y=\\sqrt{kx}$ 와 만나는 점을 각각 $\\mathrm{B}$, $\\mathrm{C}$ 라 합니다. 삼각형 $\\mathrm{OBC}$ 의 넓이가 삼각형 $\\mathrm{OAB}$ 의 넓이의 $2$배일 때 $k$ 를 구하고, 그 값으로 삼각형 $\\mathrm{OBC}$ 의 넓이를 구해야 합니다. (단, $k>1$, $\\mathrm{O}$ 는 원점)" },
+      { "phase": "C", "title": "핵심 단서", "content": "직선 $x=k$ 위의 세 점 $\\mathrm{A}$, $\\mathrm{B}$, $\\mathrm{C}$ 의 $y$좌표를 각각 구하면 두 삼각형은 모두 밑변이 같은 세로선 위에 놓이므로, 넓이는 그 위의 선분 길이로 비교할 수 있습니다." },
+      { "phase": "B", "title": "배경 지식", "content": "곡선 $y=\\sqrt{x}$ 위의 점은 $(k,\\sqrt{k})$, 곡선 $y=\\sqrt{kx}$ 위의 점은 $(k,\\sqrt{k\\cdot k})=(k,k)$ 입니다. 한 직선 $x=k$ 위의 선분을 밑변으로 보면 원점 $\\mathrm{O}$ 에서 그 직선까지의 거리 $k$ 가 공통의 높이가 됩니다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "직선 $x=k$ 와 두 곡선의 교점을 구하면\n$$\\mathrm{B}=(k,\\sqrt{k}),\\qquad \\mathrm{C}=(k,\\sqrt{k\\cdot k})=(k,k)$$\n이고 $\\mathrm{A}=(k,0)$ 입니다.\n\n세 점 $\\mathrm{A}$, $\\mathrm{B}$, $\\mathrm{C}$ 는 모두 직선 $x=k$ 위에 있고, 원점 $\\mathrm{O}$ 에서 이 직선까지의 거리는 $k$ 입니다. 따라서\n$$\\triangle\\mathrm{OAB}=\\frac{1}{2}\\times\\overline{\\mathrm{AB}}\\times k=\\frac{1}{2}\\times\\sqrt{k}\\times k=\\frac{1}{2}k\\sqrt{k}$$\n$$\\triangle\\mathrm{OBC}=\\frac{1}{2}\\times\\overline{\\mathrm{BC}}\\times k=\\frac{1}{2}\\times(k-\\sqrt{k})\\times k$$\n\n조건에서 $\\triangle\\mathrm{OBC}=2\\,\\triangle\\mathrm{OAB}$ 이므로\n$$\\frac{1}{2}k(k-\\sqrt{k})=2\\times\\frac{1}{2}k\\sqrt{k}$$\n양변을 $\\dfrac{1}{2}k\\;(k>0)$ 로 나누면\n$$k-\\sqrt{k}=2\\sqrt{k}\\ \\Longrightarrow\\ k=3\\sqrt{k}$$\n$\\sqrt{k}>0$ 으로 나누면\n$$\\sqrt{k}=3\\ \\Longrightarrow\\ k=9$$\n($k>1$ 을 만족합니다.)\n\n따라서 $\\mathrm{B}=(9,3)$, $\\mathrm{C}=(9,9)$ 이고\n$$\\triangle\\mathrm{OBC}=\\frac{1}{2}\\times\\overline{\\mathrm{BC}}\\times k=\\frac{1}{2}\\times(9-3)\\times 9=\\frac{1}{2}\\times 6\\times 9=27$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **27** 입니다." }
+    ],
+    "final_answer": "27"
+  },
+  "15": {
+    "problem_id": "15",
+    "title": "2024학년도 3월 고2 학평 15번",
+    "difficulty": "준킬러",
+    "weakness_unit": "복소수가 서로 같을 조건",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "조건 (가) $\\overline{z}=-z$ 와 (나) $z^2+(k^2-3k-4)z+(k^2+2k-8)=0$ 을 동시에 만족시키는 복소수 $z$ 가 존재하도록 하는 모든 실수 $k$ 의 곱을 구하는 문제입니다." },
+      { "phase": "C", "title": "핵심 단서", "content": "$\\overline{z}=-z$ 는 $z$ 가 순허수이거나 $0$ 임을 뜻합니다. $z=bi$ ($b$ 는 실수)로 놓고 (나)에 대입한 뒤, 실수부와 허수부가 각각 $0$ 이 되도록 하여 $b$ 가 존재할 조건을 찾습니다." },
+      { "phase": "B", "title": "배경 지식", "content": "복소수 $z=a+bi$ 에 대하여 $\\overline{z}=a-bi$ 이므로 $\\overline{z}=-z \\iff a-bi=-a-bi \\iff a=0$, 즉 $z=bi$ (순허수 또는 $0$). 또 $z=bi$ 이면 $z^2=-b^2$ 입니다. 복소수가 $0$ 이 되려면 실수부와 허수부가 모두 $0$ 이어야 합니다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "(가)에서 $z=bi$ ($b$ 는 실수)로 놓을 수 있습니다. 이때 $z^2=(bi)^2=-b^2$ 이므로 (나)에 대입하면\n$$-b^2+(k^2-3k-4)\\,bi+(k^2+2k-8)=0$$\n실수부와 허수부로 나누면\n$$\\text{실수부:}\\quad -b^2+(k^2+2k-8)=0$$\n$$\\text{허수부:}\\quad (k^2-3k-4)\\,b=0$$\n\n[ⅰ] $b\\neq 0$ (순허수 $z$) 인 경우\n허수부 조건에서 $k^2-3k-4=0$ 이어야 하므로\n$$(k-4)(k+1)=0\\ \\Longrightarrow\\ k=4\\ \\text{또는}\\ k=-1$$\n또한 실수부에서 $b^2=k^2+2k-8>0$ 이어야 $b\\neq 0$ 인 실수 $b$ 가 존재합니다.\n$\\cdot\\ k=4:\\ k^2+2k-8=16+8-8=16>0$ → 존재함 ($z=\\pm 4i$).\n$\\cdot\\ k=-1:\\ k^2+2k-8=1-2-8=-9<0$ → $b^2<0$ 이므로 존재하지 않음.\n따라서 이 경우 $k=4$.\n\n[ⅱ] $b=0$ (즉 $z=0$) 인 경우\n$z=0$ 도 $\\overline{z}=-z$ 를 만족합니다. (나)에 $z=0$ 을 대입하면\n$$k^2+2k-8=0\\ \\Longrightarrow\\ (k+4)(k-2)=0\\ \\Longrightarrow\\ k=-4\\ \\text{또는}\\ k=2$$\n\n[ⅰ], [ⅱ]에서 조건을 만족시키는 복소수 $z$ 가 존재하는 모든 실수 $k$ 는\n$$k=4,\\ k=-4,\\ k=2$$\n따라서 모든 실수 $k$ 의 값의 곱은\n$$4\\times(-4)\\times 2=-32$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **-32** 입니다." }
+    ],
+    "final_answer": "-32"
+  },
+  "18": {
+    "problem_id": "18",
+    "title": "2024학년도 3월 고2 학평 18번",
+    "difficulty": "준킬러",
+    "weakness_unit": "조건을 만족시키는 순열의 수",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "둥근 의자 $3$개와 사각 의자 $3$개가 (둥근, 사각, 둥근, 사각, 둥근, 사각) 순서로 교대로 일렬로 놓여 있습니다. 자리를 왼쪽부터 $1,2,3,4,5,6$ 번이라 하면 $1,3,5$ 번이 둥근 의자, $2,4,6$ 번이 사각 의자입니다. $1$학년 $2$명, $2$학년 $2$명, $3$학년 $2$명이 (가) $2$학년은 사각 의자에만 앉고, (나) 같은 학년끼리 이웃하지 않도록 모두 앉는 경우의 수를 구합니다." },
+      { "phase": "C", "title": "핵심 단서", "content": "$2$학년 두 명은 사각 의자 $\\{2,4,6\\}$ 중 두 자리에 앉습니다. 이 세 자리는 서로 이웃하지 않으므로 $2$학년끼리는 자동으로 떨어집니다. 어느 사각 의자가 비는지(즉 $1\\cdot 3$학년이 차지하는지)에 따라 경우를 나누어, 남는 네 자리에 $1$학년 $2$명, $3$학년 $2$명을 같은 학년끼리 이웃하지 않게 배열합니다." },
+      { "phase": "B", "title": "배경 지식", "content": "일렬 배열에서 이웃하는 자리쌍은 $(1,2),(2,3),(3,4),(4,5),(5,6)$ 입니다. $2$학년 두 명을 사각 의자 두 곳에 배열하는 방법은 $2!=2$ 가지입니다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$2$학년이 앉는 사각 의자 두 곳을 정하면 남는 사각 의자 한 곳은 $1\\cdot 3$학년이 차지합니다. 비는 사각 의자가 $2,4,6$ 번 중 어디인지로 경우를 나눕니다. 각 경우 $2$학년 배열은 $2!=2$ 가지이고, 나머지 네 자리에 $1$학년 $\\mathrm{A_1,A_2}$, $3$학년 $\\mathrm{C_1,C_2}$ 를 같은 학년끼리 이웃하지 않게 배열합니다.\n\n[경우 1] $6$번이 $1\\cdot 3$학년 ($2$학년은 $2,4$번)\n$1\\cdot 3$학년이 앉는 자리: $\\{1,3,5,6\\}$. 이 중 이웃하는 쌍은 $(5,6)$ 뿐입니다.\n네 명을 배열하는 전체 $4!=24$ 가지 중, 자리 $5,6$ 에 같은 학년이 오는 경우(나쁜 경우)는\n$$2(\\text{어느 학년})\\times 2!(\\text{그 학년 두 명 배열})\\times 2!(\\text{나머지 두 명})=8$$\n따라서 좋은 배열은 $24-8=16$ 가지. $2$학년 배열 $2$를 곱하면 $16\\times 2=32$ 가지.\n\n[경우 2] $2$번이 $1\\cdot 3$학년 ($2$학년은 $4,6$번)\n$1\\cdot 3$학년이 앉는 자리: $\\{1,2,3,5\\}$. 이웃 쌍은 $(1,2),(2,3)$ 이고 $5$번은 고립. 가운데 $2$번이 양옆 $1,3$ 번과 이웃하므로, $2$번에 앉는 학생과 $1,3$ 번에 앉는 학생의 학년이 모두 달라야 합니다.\n$2$번에 앉을 학생을 정하면(예: $\\mathrm{A}$ 계열, $2$가지) $1,3$ 번에는 같은 학년이 올 수 없으므로 두 자리 모두 $\\mathrm{C}$ 학년이어야 하고 ($2!$ 배열), $5$번에 남은 한 명이 옵니다. $2$번이 $\\mathrm{A}$ 일 때 $2\\times 2=4$, $\\mathrm{C}$ 일 때도 $4$ 가지이므로 좋은 배열은 $8$ 가지. $2$학년 배열 $2$를 곱하면 $8\\times 2=16$ 가지.\n\n[경우 3] $4$번이 $1\\cdot 3$학년 ($2$학년은 $2,6$번)\n$1\\cdot 3$학년이 앉는 자리: $\\{1,3,4,5\\}$. 이웃 쌍은 $(3,4),(4,5)$ 이고 $1$번은 고립. 경우 2와 같은 구조(가운데 $4$번)이므로 좋은 배열은 $8$ 가지, $2$학년 배열을 곱하면 $16$ 가지.\n\n모든 경우의 수를 더하면\n$$32+16+16=64$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **64** 입니다." }
+    ],
+    "final_answer": "64"
+  },
+  "19": {
+    "problem_id": "19",
+    "title": "2024학년도 3월 고2 학평 19번",
+    "difficulty": "준킬러",
+    "weakness_unit": "원의 방정식과 접선",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "point", "coordinates": [0, 6], "label": "A" },
+        { "type": "point", "coordinates": [9, 0], "label": "B" },
+        { "type": "point", "coordinates": [6, 2], "label": "P" },
+        { "type": "segment", "from": [0, 6], "to": [9, 0] },
+        { "type": "circle", "center": [3.78, -1.33], "radius": 4.01 }
+      ]
+    },
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "두 점 $\\mathrm{A}(0,6)$, $\\mathrm{B}(9,0)$ 에 대하여 선분 $\\mathrm{AB}$ 를 $2:1$ 로 내분하는 점을 $\\mathrm{P}$ 라 합니다. 원 $x^2+y^2-2ax-2by=0$ 과 직선 $\\mathrm{AB}$ 가 점 $\\mathrm{P}$ 에서만 만날 때(즉 점 $\\mathrm{P}$ 에서 접할 때) $a+b$ 의 값을 구합니다." },
+      { "phase": "C", "title": "핵심 단서", "content": "원 $x^2+y^2-2ax-2by=0$ 은 중심이 $(a,b)$ 이고 원점 $\\mathrm{O}(0,0)$ 을 지납니다(상수항 $0$). 직선 $\\mathrm{AB}$ 와 점 $\\mathrm{P}$ 에서만 만나므로 ① 점 $\\mathrm{P}$ 가 원 위에 있고, ② 중심 $(a,b)$ 와 $\\mathrm{P}$ 를 잇는 반지름이 직선 $\\mathrm{AB}$ 와 수직입니다." },
+      { "phase": "B", "title": "배경 지식", "content": "내분점 공식: $\\mathrm{AB}$ 를 $m:n$ 으로 내분하는 점은 $\\left(\\dfrac{nx_1+mx_2}{m+n},\\dfrac{ny_1+my_2}{m+n}\\right)$. 원 $x^2+y^2-2ax-2by=0$ 의 중심은 $(a,b)$, 반지름은 $\\sqrt{a^2+b^2}$ (원점을 지남). 접선은 접점에서 반지름과 수직입니다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "먼저 내분점 $\\mathrm{P}$ 를 구합니다. $\\mathrm{A}(0,6)$, $\\mathrm{B}(9,0)$ 을 $2:1$ 로 내분하면\n$$\\mathrm{P}=\\left(\\frac{1\\cdot 0+2\\cdot 9}{2+1},\\ \\frac{1\\cdot 6+2\\cdot 0}{2+1}\\right)=\\left(\\frac{18}{3},\\frac{6}{3}\\right)=(6,2)$$\n\n원의 중심을 $\\mathrm{C}=(a,b)$ 라 하면 원은 원점을 지나므로\n$$\\text{(반지름)}^2=\\overline{\\mathrm{CO}}^2=a^2+b^2$$\n\n조건 ① 점 $\\mathrm{P}(6,2)$ 가 원 위에 있으므로 $\\overline{\\mathrm{CP}}^2=\\overline{\\mathrm{CO}}^2$:\n$$(6-a)^2+(2-b)^2=a^2+b^2$$\n$$36-12a+a^2+4-4b+b^2=a^2+b^2$$\n$$40-12a-4b=0\\ \\Longrightarrow\\ 3a+b=10 \\quad\\cdots(\\ast)$$\n\n조건 ② 직선 $\\mathrm{AB}$ 의 기울기는 $\\dfrac{0-6}{9-0}=-\\dfrac{2}{3}$ 이고, 반지름 $\\mathrm{CP}$ 가 이에 수직이므로 $\\mathrm{CP}$ 의 기울기는 $\\dfrac{3}{2}$:\n$$\\frac{2-b}{6-a}=\\frac{3}{2}\\ \\Longrightarrow\\ 2(2-b)=3(6-a)$$\n$$4-2b=18-3a\\ \\Longrightarrow\\ 3a-2b=14 \\quad\\cdots(\\ast\\ast)$$\n\n$(\\ast)$ 에서 $b=10-3a$ 를 $(\\ast\\ast)$ 에 대입하면\n$$3a-2(10-3a)=14\\ \\Longrightarrow\\ 3a-20+6a=14\\ \\Longrightarrow\\ 9a=34\\ \\Longrightarrow\\ a=\\frac{34}{9}$$\n$$b=10-3\\times\\frac{34}{9}=10-\\frac{102}{9}=\\frac{90-102}{9}=-\\frac{12}{9}=-\\frac{4}{3}$$\n\n따라서\n$$a+b=\\frac{34}{9}-\\frac{4}{3}=\\frac{34}{9}-\\frac{12}{9}=\\frac{22}{9}$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **$\\dfrac{22}{9}$** 입니다." }
+    ],
+    "final_answer": "22/9"
+  },
+  "20": {
+    "problem_id": "20",
+    "title": "2024학년도 3월 고2 학평 20번",
+    "difficulty": "킬러",
+    "weakness_unit": "합성함수와 함수의 추론",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "집합 $X=\\{1,2,3,4\\}$ 에 대하여 함수 $f:X\\to X$ 가 (가) 모든 $x\\in X$ 에 대하여 $x+f(f(x))\\le 5$, (나) $f$ 의 치역이 $\\{1,2,4\\}$ 를 만족합니다. 보기 ㄱ, ㄴ, ㄷ 의 참거짓을 판별합니다." },
+      { "phase": "C", "title": "핵심 단서", "content": "조건 (나)에서 치역이 $\\{1,2,4\\}$ 이므로 $f$ 의 모든 함숫값은 $1,2,4$ 중 하나이고($3$ 은 함숫값이 될 수 없음), $1,2,4$ 가 모두 나타납니다. 따라서 $f$ 는 정의역 $4$개를 치역 $3$개로 보내는 전사함수입니다. 조건 (가)를 각 $x$ 마다 적용하면 $f(f(x))\\le 5-x$ 입니다." },
+      { "phase": "B", "title": "배경 지식", "content": "함수 $f:X\\to X$ 의 역함수가 존재하려면 $f$ 가 일대일대응이어야 합니다. 치역이 $\\{1,2,4\\}$ 이면 함숫값은 항상 $1,2,4$ 중 하나이므로, $x+f(f(x))\\le 5$ 에서 $f(f(x))$ 도 $\\{1,2,4\\}$ 의 원소입니다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "조건 (가) $f(f(x))\\le 5-x$ 를 각 $x$ 에 적용합니다($f(f(x))\\in\\{1,2,4\\}$ 임에 유의).\n$$x=1:\\ f(f(1))\\le 4\\quad(\\text{항상 성립})$$\n$$x=2:\\ f(f(2))\\le 3\\ \\Rightarrow\\ f(f(2))\\in\\{1,2\\}$$\n$$x=3:\\ f(f(3))\\le 2\\ \\Rightarrow\\ f(f(3))\\in\\{1,2\\}$$\n$$x=4:\\ f(f(4))\\le 1\\ \\Rightarrow\\ f(f(4))=1$$\n\n[보기 ㄱ] $f(f(4))=1$ 은 위 $x=4$ 에서 바로 성립하므로 **참**.\n\n조건을 만족시키는 $f$ 를 모두 찾습니다. 모든 함숫값은 $1,2,4$ 중 하나이고 전사이므로, $f(1),f(2),f(3),f(4)\\in\\{1,2,4\\}$ 이며 $1,2,4$ 가 모두 나타납니다.\n\n$f(f(4))=1$ 에서 $f(4)=4$ 이면 $f(f(4))=f(4)=4\\neq 1$ 이므로 $f(4)\\in\\{1,2\\}$.\n\n[경우 ⓐ] $f(4)=1$ → $f(f(4))=f(1)=1$ 이어야 함. 그러면 $f(1)=f(4)=1$ 이고, 치역에 $2,4$ 가 나오려면 $\\{f(2),f(3)\\}=\\{2,4\\}$.\n$\\cdot\\ f(2)=2,\\ f(3)=4:\\ f(f(2))=f(2)=2\\in\\{1,2\\}$ ✓, $f(f(3))=f(4)=1\\in\\{1,2\\}$ ✓ → $f=(1,2,4,1)$ 성립.\n$\\cdot\\ f(2)=4,\\ f(3)=2:\\ f(f(3))=f(2)=4\\notin\\{1,2\\}$ ✗ → 불가.\n\n[경우 ⓑ] $f(4)=2$ → $f(f(4))=f(2)=1$ 이어야 함. 그러면 $f(2)=1$, $f(4)=2$. 치역에 $4$ 가 필요하고, $x=2$ 조건 $f(f(2))=f(1)\\in\\{1,2\\}$ 에서 $f(1)\\in\\{1,2\\}$. 따라서 $4$ 는 $f(3)$ 에서만 나올 수 있어 $f(3)=4$ ($f(f(3))=f(4)=2\\in\\{1,2\\}$ ✓).\n$\\cdot\\ f(1)=1:\\ f=(1,1,4,2)$ 성립.\n$\\cdot\\ f(1)=2:\\ f=(2,1,4,2)$ → $f(f(2))=f(1)=2$ ✓ 성립.\n\n따라서 조건을 만족시키는 함수는\n$$f=(1,2,4,1),\\quad (1,1,4,2),\\quad (2,1,4,2)$$\n의 $3$개입니다.\n\n[보기 ㄴ] 세 함수 모두 $f(3)=4$ 이므로 $f(3)=4$ 는 **참**.\n[보기 ㄷ] 가능한 $f$ 의 개수는 $3$ 이므로 \"$4$\" 라는 주장은 **거짓**.\n\n옳은 것은 ㄱ, ㄴ 이므로 답은 ② 입니다." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **②** 입니다." }
+    ],
+    "final_answer": "②"
+  },
+  "21": {
+    "problem_id": "21",
+    "title": "2024학년도 3월 고2 학평 21번",
+    "difficulty": "킬러",
+    "weakness_unit": "원과 직선의 위치 관계 · 접선",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "point", "coordinates": [0, 0], "label": "O" },
+        { "type": "point", "coordinates": [4, 8], "label": "P" },
+        { "type": "point", "coordinates": [8, 4], "label": "Q" },
+        { "type": "point", "coordinates": [6.667, 6.667], "label": "A" },
+        { "type": "point", "coordinates": [5, 10], "label": "B" },
+        { "type": "point", "coordinates": [12, 0], "label": "R" },
+        { "type": "segment", "from": [0, 0], "to": [5, 10] },
+        { "type": "segment", "from": [0, 0], "to": [12, 0] },
+        { "type": "segment", "from": [4, 8], "to": [12, 0] },
+        { "type": "segment", "from": [6.667, 6.667], "to": [8, 4] },
+        { "type": "circle", "center": [6.667, 6.667], "radius": 2.981 }
+      ]
+    },
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "두 직선 $l_1:y=mx\\,(m>1)$, $l_2:y=\\dfrac{1}{m}x$ 에 동시에 접하는 원의 중심을 $\\mathrm{A}$(제1사분면)라 합니다. $l_1$ 과의 접점을 $\\mathrm{P}$, $l_2$ 와의 접점을 $\\mathrm{Q}$, 직선 $\\mathrm{PQ}$ 와 $x$축의 교점을 $\\mathrm{R}$ 라 할 때 (가) $\\overline{\\mathrm{PQ}}=\\overline{\\mathrm{QR}}$, (나) $\\triangle\\mathrm{OPQ}=24$ 입니다. 직선 $l_1$ 과 직선 $\\mathrm{AQ}$ 의 교점을 $\\mathrm{B}$ 라 할 때 $\\overline{\\mathrm{BQ}}$ 를 구합니다." },
+      { "phase": "C", "title": "핵심 단서", "content": "두 직선의 기울기 $m$ 과 $\\dfrac{1}{m}$ 은 직선 $y=x$ 에 대하여 대칭입니다. 따라서 두 직선과 원의 구성 전체가 $y=x$ 에 대칭이고, 접점 $\\mathrm{P}$, $\\mathrm{Q}$ 는 서로 $y=x$ 에 대한 대칭점입니다. 이를 이용하면 $\\mathrm{P}=(p,mp)$, $\\mathrm{Q}=(mp,p)$ 로 둘 수 있습니다." },
+      { "phase": "B", "title": "배경 지식", "content": "직선 $y=x$ 에 대한 점 $(s,t)$ 의 대칭점은 $(t,s)$ 입니다. 원의 중심 $\\mathrm{A}$ 는 두 직선이 이루는 각의 이등분선, 즉 제1사분면에서 $y=x$ 위에 있습니다. 접점에서는 반지름과 접선이 수직입니다. 좌표로 나타낸 삼각형 넓이는 $\\dfrac{1}{2}\\,|x_\\mathrm{P}\\,y_\\mathrm{Q}-x_\\mathrm{Q}\\,y_\\mathrm{P}|$ 로 계산합니다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$l_1$ 과 $l_2$ 는 $y=x$ 에 대칭이므로 접점 $\\mathrm{P}=(p,\\,mp)$ 라 하면 $\\mathrm{Q}=(mp,\\,p)$ ($y=x$ 대칭점)입니다. ($m>1$ 이므로 $mp>p$.)\n\n직선 $\\mathrm{PQ}$ 는 $\\mathrm{P}(p,mp)$, $\\mathrm{Q}(mp,p)$ 를 지나며 기울기가 $-1$ 입니다:\n$$x+y=p+mp$$\n$x$축($y=0$)과의 교점은 $\\mathrm{R}=(p+mp,\\,0)$.\n\n두 선분의 길이를 구하면\n$$\\overline{\\mathrm{PQ}}=\\sqrt{(mp-p)^2+(p-mp)^2}=\\sqrt{2}\\,(mp-p)$$\n$$\\overline{\\mathrm{QR}}=\\sqrt{(p+mp-mp)^2+(0-p)^2}=\\sqrt{p^2+p^2}=\\sqrt{2}\\,p$$\n\n조건 (가) $\\overline{\\mathrm{PQ}}=\\overline{\\mathrm{QR}}$ 에서\n$$\\sqrt{2}\\,(mp-p)=\\sqrt{2}\\,p\\ \\Longrightarrow\\ mp-p=p\\ \\Longrightarrow\\ m=2$$\n\n$m=2$ 일 때 $\\mathrm{P}=(p,2p)$, $\\mathrm{Q}=(2p,p)$. 조건 (나) $\\triangle\\mathrm{OPQ}=24$:\n$$\\triangle\\mathrm{OPQ}=\\frac{1}{2}\\,|x_\\mathrm{P}\\,y_\\mathrm{Q}-x_\\mathrm{Q}\\,y_\\mathrm{P}|=\\frac{1}{2}\\,|p\\cdot p-2p\\cdot 2p|=\\frac{1}{2}\\,|p^2-4p^2|=\\frac{3}{2}p^2$$\n$$\\frac{3}{2}p^2=24\\ \\Longrightarrow\\ p^2=16\\ \\Longrightarrow\\ p=4\\,(p>0)$$\n따라서 $\\mathrm{P}=(4,8)$, $\\mathrm{Q}=(8,4)$.\n\n중심 $\\mathrm{A}$ 는 $y=x$ 위에 있으므로 $\\mathrm{A}=(a,a)$. 반지름 $\\mathrm{AQ}$ 는 $l_2:y=\\dfrac{1}{2}x$ 와 수직(기울기 $-2$)이고 $\\mathrm{Q}(8,4)$ 를 지나므로\n$$\\text{직선 }\\mathrm{AQ}:\\ y-4=-2(x-8)\\ \\Longrightarrow\\ y=-2x+20$$\n$y=x$ 와 연립: $x=-2x+20\\Rightarrow 3x=20\\Rightarrow x=\\dfrac{20}{3}$ 이므로 $\\mathrm{A}=\\left(\\dfrac{20}{3},\\dfrac{20}{3}\\right)$.\n\n$\\mathrm{B}$ 는 직선 $l_1:y=2x$ 와 직선 $\\mathrm{AQ}:y=-2x+20$ 의 교점:\n$$2x=-2x+20\\ \\Longrightarrow\\ 4x=20\\ \\Longrightarrow\\ x=5,\\ y=10$$\n따라서 $\\mathrm{B}=(5,10)$.\n\n구하는 선분의 길이는\n$$\\overline{\\mathrm{BQ}}=\\sqrt{(8-5)^2+(4-10)^2}=\\sqrt{9+36}=\\sqrt{45}=3\\sqrt{5}$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **$3\\sqrt{5}$** 입니다." }
+    ],
+    "final_answer": "3√5"
+  },
+  "27": {
+    "problem_id": "27",
+    "title": "2024학년도 3월 고2 학평 27번",
+    "difficulty": "킬러",
+    "weakness_unit": "조건을 만족시키는 함수의 개수 (조합)",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "집합 $X=\\{1,2,3,4,5,6\\}$ 에 대하여 (가) $1\\le x_1<x_2\\le 4$ 이면 $f(x_1)>f(x_2)$, (나) $f$ 의 역함수가 존재하지 않는다(즉 $f$ 가 일대일대응이 아니다)를 만족시키는 함수 $f:X\\to X$ 의 개수를 구합니다." },
+      { "phase": "C", "title": "핵심 단서", "content": "조건 (가)는 $f(1)>f(2)>f(3)>f(4)$, 즉 $f$ 가 $\\{1,2,3,4\\}$ 에서 강하게 감소함을 뜻하므로 $f(1),f(2),f(3),f(4)$ 는 서로 다른 네 값입니다. $f(5),f(6)$ 은 자유입니다. (나)는 $f$ 가 일대일대응이 아닌 경우만 세라는 뜻이므로, (가)를 만족하는 전체에서 일대일대응(역함수 존재)인 것을 빼면 됩니다." },
+      { "phase": "B", "title": "배경 지식", "content": "$f(1)>f(2)>f(3)>f(4)$ 가 되도록 네 값을 정하는 것은 $\\{1,\\dots,6\\}$ 에서 서로 다른 네 수를 고르면 그 크기 순서가 자동으로 정해지므로 $\\binom{6}{4}$ 가지입니다. $f:X\\to X$ 의 역함수 존재 $\\iff$ 일대일대응 $\\iff$ 여섯 함숫값이 모두 서로 다름." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "조건 (가)를 만족시키는 함수의 전체 개수를 먼저 구합니다.\n$f(1)>f(2)>f(3)>f(4)$ 가 되도록 네 함숫값을 정하는 방법은 $\\{1,2,3,4,5,6\\}$ 에서 서로 다른 $4$개를 택하여 큰 순서대로 $f(1),f(2),f(3),f(4)$ 에 대응시키면 되므로\n$$\\binom{6}{4}=15\\ \\text{가지}$$\n$f(5)$, $f(6)$ 은 각각 $X$ 의 임의의 원소이므로 $6\\times 6=36$ 가지.\n따라서 (가)를 만족시키는 함수는\n$$15\\times 36=540\\ \\text{개}$$\n\n이 중에서 일대일대응(역함수가 존재하는 것)을 셉니다. $f(1),f(2),f(3),f(4)$ 는 이미 서로 다르므로, 일대일대응이려면 $f(5),f(6)$ 이 서로 다르고 또 앞의 네 값과도 모두 달라야 합니다. 즉 여섯 값이 $\\{1,2,3,4,5,6\\}$ 의 한 배열이 되어야 합니다.\n네 값을 고르는 방법 $\\binom{6}{4}=15$ 가지마다, 남은 두 값을 $f(5),f(6)$ 에 배열하는 방법이 $2!=2$ 가지이므로\n$$15\\times 2=30\\ \\text{개}$$\n\n따라서 (가)를 만족시키면서 역함수가 존재하지 않는 함수의 개수는\n$$540-30=510$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **510** 입니다." }
+    ],
+    "final_answer": "510"
+  },
+  "28": {
+    "problem_id": "28",
+    "title": "2024학년도 3월 고2 학평 28번",
+    "difficulty": "킬러",
+    "weakness_unit": "집합의 연산과 원소의 개수 추론",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "$1$보다 큰 자연수 $k$ 에 대하여 전체집합 $U=\\{x\\mid x \\text{는 } k \\text{ 이하의 자연수}\\}$ 의 두 부분집합 $A=\\{x\\mid x \\text{는 } k \\text{ 이하의 짝수}\\}$, $B=\\{x\\mid x \\text{는 } k \\text{의 약수}\\}$ 가 $n(A)\\times n((A\\cup B)^C)=15$ 를 만족시킵니다. 집합 $(A\\cup B)^C$ 의 모든 원소의 곱을 구합니다." },
+      { "phase": "C", "title": "핵심 단서", "content": "$n(A)=\\left\\lfloor\\dfrac{k}{2}\\right\\rfloor$ ($k$ 이하의 짝수 개수)입니다. $(A\\cup B)^C$ 는 $U$ 에서 $A\\cup B$ 를 뺀 것으로, $A\\cup B$ 에 들어가지 않는 수, 즉 \"짝수도 아니고 $k$ 의 약수도 아닌 수\"의 집합입니다. $15=n(A)\\times n((A\\cup B)^C)$ 의 약수쌍 $(15,1),(5,3),(3,5),(1,15)$ 을 따져 가능한 $k$ 를 찾습니다." },
+      { "phase": "B", "title": "배경 지식", "content": "$n(A\\cup B)=n(A)+n(B)-n(A\\cap B)$. $(A\\cup B)^C$ 의 원소는 모두 홀수입니다(짝수는 $A$ 에 속하므로). $15=1\\times 15=3\\times 5=5\\times 3=15\\times 1$ 로 인수분해됩니다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$n(A)=\\left\\lfloor\\dfrac{k}{2}\\right\\rfloor$ 이고 $n((A\\cup B)^C)=k-n(A\\cup B)$ 입니다. $15$ 의 약수쌍으로 경우를 나누어 가능한 $k$ 를 찾습니다.\n\n$\\cdot\\ n(A)=5$ 이려면 $k=10$ 또는 $k=11$.\n$\\cdot\\ n(A)=3$ 이려면 $k=6$ 또는 $k=7$, 이때 $(A\\cup B)^C$ 의 원소 개수가 $5$ 가 되어야 하는데 그렇게 큰 여집합이 나오지 않습니다.\n\n$k=10$ 인 경우를 확인합니다.\n$$U=\\{1,2,3,4,5,6,7,8,9,10\\}$$\n$$A=\\{2,4,6,8,10\\}\\quad(n(A)=5)$$\n$$B=\\{1,2,5,10\\}\\quad(10\\text{의 약수})$$\n$$A\\cup B=\\{1,2,4,5,6,8,10\\}$$\n$$(A\\cup B)^C=U-(A\\cup B)=\\{3,7,9\\}\\quad(n=3)$$\n이때\n$$n(A)\\times n((A\\cup B)^C)=5\\times 3=15 \\quad(\\text{조건 성립})$$\n\n$k=11$ 인 경우 $A=\\{2,4,6,8,10\\}$, $B=\\{1,11\\}$, $A\\cup B=\\{1,2,4,6,8,10,11\\}$, $(A\\cup B)^C=\\{3,5,7,9\\}$ 이므로 $5\\times 4=20\\neq 15$ 로 성립하지 않습니다. 다른 경우도 $15$ 가 되지 않으므로 $k=10$ 만 조건을 만족시킵니다.\n\n따라서 $(A\\cup B)^C=\\{3,7,9\\}$ 의 모든 원소의 곱은\n$$3\\times 7\\times 9=189$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **189** 입니다." }
+    ],
+    "final_answer": "189"
+  },
+  "29": {
+    "problem_id": "29",
+    "title": "2024학년도 3월 고2 학평 29번",
+    "difficulty": "킬러",
+    "weakness_unit": "다항식의 나눗셈과 항등식 (인수분해)",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "최고차항의 계수가 $1$ 이고 계수와 상수항이 모두 실수인 다항식 $f(x)=x^4+(a+2)x^3+bx^2+ax+6$ 과 두 다항식 $g(x)$, $h(x)$ 가 (가) $f(x)=0$ 은 실근을 갖지 않는다, (나) $f(x)$ 는 $g(x)$, $h(x)$ 를 인수로 갖고 $h(x)$ 를 $g(x)$ 로 나눈 나머지는 $-4x-1$ 이다 를 만족시킵니다. $a^2+b^2$ 을 구합니다." },
+      { "phase": "C", "title": "핵심 단서", "content": "$f$ 는 실계수 사차식이며 실근이 없으므로, 실근 없는 두 이차식의 곱 $f(x)=g(x)h(x)$ 로 인수분해됩니다. $g$, $h$ 를 최고차항 계수가 $1$ 인 이차식으로 놓으면 $h(x)$ 를 $g(x)$ 로 나눈 몫은 $1$ 이고 나머지는 $h(x)-g(x)$ 이므로, 이것이 $-4x-1$ 과 같다는 조건을 씁니다." },
+      { "phase": "B", "title": "배경 지식", "content": "실계수 다항식에서 허근은 켤레쌍으로 나타나므로, 실근이 없는 사차식은 실근 없는 두 이차식의 곱입니다. 이차식 $g(x)=x^2+px+q$ 가 실근을 갖지 않을 조건은 판별식 $p^2-4q<0$ 입니다. 계수비교법(항등식)으로 $a,b$ 를 결정합니다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$f(x)$ 를 최고차항 계수가 $1$ 인 두 이차식의 곱으로 놓습니다.\n$$g(x)=x^2+px+q,\\qquad h(x)=x^2+rx+s$$\n$h(x)$ 를 $g(x)$ 로 나누면 몫은 $1$, 나머지는\n$$h(x)-g(x)=(r-p)x+(s-q)$$\n조건 (나)에서 이 나머지가 $-4x-1$ 이므로\n$$r-p=-4,\\qquad s-q=-1\\quad\\Rightarrow\\quad r=p-4,\\ s=q-1$$\n\n$f(x)=g(x)h(x)$ 를 전개하여 계수를 비교합니다.\n$$f(x)=(x^2+px+q)(x^2+rx+s)$$\n$$=x^4+(p+r)x^3+(q+s+pr)x^2+(ps+qr)x+qs$$\n주어진 $f(x)=x^4+(a+2)x^3+bx^2+ax+6$ 과 비교하면\n$$p+r=a+2,\\quad q+s+pr=b,\\quad ps+qr=a,\\quad qs=6$$\n\n상수항: $qs=q(q-1)=6\\ \\Rightarrow\\ q^2-q-6=0\\ \\Rightarrow\\ (q-3)(q+2)=0$ 이므로 $q=3$ 또는 $q=-2$.\n\n[경우 1] $q=3,\\ s=2$.\n$x^3$ 계수: $p+r=2p-4=a+2\\ \\Rightarrow\\ a=2p-6$.\n$x$ 계수: $ps+qr=2p+3(p-4)=5p-12=a$. 두 식에서 $5p-12=2p-6\\Rightarrow 3p=6\\Rightarrow p=2$. 따라서 $a=2\\cdot2-6=-2$, $r=p-4=-2$.\n$g(x)=x^2+2x+3$ (판별식 $4-12<0$, 실근 없음), $h(x)=x^2-2x+2$ (판별식 $4-8<0$, 실근 없음) → 조건 (가) 만족.\n$b=q+s+pr=3+2+(2)(-2)=5-4=1$.\n\n[경우 2] $q=-2,\\ s=-3$.\n$x$ 계수: $ps+qr=-3p-2(p-4)=-5p+8=a$, $x^3$ 계수에서 $a=2p-6$. $-5p+8=2p-6\\Rightarrow 7p=14\\Rightarrow p=2$, $a=-2$. 이때 $g(x)=x^2+2x-2$ 는 판별식 $4+8>0$ 으로 실근을 가지므로 조건 (가)에 위배 → 기각.\n\n따라서 $a=-2$, $b=1$ 이고\n$$a^2+b^2=(-2)^2+1^2=4+1=5$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **5** 입니다." }
+    ],
+    "final_answer": "5"
+  },
+  "30": {
+    "problem_id": "30",
+    "title": "2024학년도 3월 고2 학평 30번",
+    "difficulty": "킬러",
+    "weakness_unit": "무리함수의 그래프와 함숫값 추론",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "두 상수 $a,b$ 에 대하여 $f(x)=\\sqrt{-x+a}-b$ 이고, $g(x)=\\begin{cases}|f(x)|+b & (x\\le a)\\\\ -f(-x+2a)+|b| & (x>a)\\end{cases}$ 입니다. 두 실수 $\\alpha,\\beta\\,(\\alpha<\\beta)$ 가 (가) $y=g(x)$ 와 $y=t$ 의 교점 개수 $h(t)$ 에 대해 $h(\\alpha)\\times h(\\beta)=4$, (나) 방정식 $\\{g(x)-\\alpha\\}\\{g(x)-\\beta\\}=0$ 의 실근 중 최솟값 $-30$, 최댓값 $15$ 를 만족시킬 때 $\\{g(150)\\}^2$ 을 구합니다." },
+      { "phase": "C", "title": "핵심 단서", "content": "$f(x)=\\sqrt{a-x}-b$ 는 $x\\le a$ 에서 정의되고 $x=a$ 에서 최솟값 $-b$, $x\\to-\\infty$ 에서 $+\\infty$ 입니다. $b>0$ 으로 두고 $g$ 의 그래프를 그리면, $x=a-b^2$ 에서 극솟값 $b$, $x=a$ 에서 극댓값 $2b$ 를 갖고 $x>a$ 에서는 $2b$ 에서 감소하는 형태입니다. 이 그래프로 $h(t)$ 를 구하고 $\\alpha,\\beta$ 를 결정합니다." },
+      { "phase": "B", "title": "배경 지식", "content": "$x\\le a$ 에서 $u=\\sqrt{a-x}\\ (\\ge 0)$ 로 치환하면 $f=u-b$, $g=|u-b|+b$. $x>a$ 에서 $-x+2a<a$ 이므로 $f(-x+2a)=\\sqrt{x-a}-b$ 로 정의됩니다. 가로선 $y=t$ 와의 교점 개수 $h(t)$ 는 그래프의 극값 $b,\\ 2b$ 를 경계로 변합니다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$b>0$ 이라 가정합니다($|b|=b$).\n\n[$x\\le a$ 구간] $u=\\sqrt{a-x}\\ge0$ 로 두면 $f=u-b$, \n$$g=|u-b|+b=\\begin{cases}u & (u\\ge b)\\\\ 2b-u & (0\\le u<b)\\end{cases}$$\n$x=a$ 일 때 $u=0$ 이므로 $g=2b$. $x$ 가 감소하면 $u$ 가 커지며, $u=b$ (즉 $x=a-b^2$)에서 $g$ 는 최솟값 $b$, 이후 $u>b$ 에서 $g=u$ 로 증가하여 $+\\infty$. 즉 $x=a-b^2$ 에서 극솟값 $b$, $x=a$ 에서 값 $2b$.\n\n[$x>a$ 구간] $f(-x+2a)=\\sqrt{x-a}-b$ 이므로\n$$g(x)=-(\\sqrt{x-a}-b)+b=2b-\\sqrt{x-a}$$\n$x=a^{+}$ 에서 $2b$, $x$ 가 커지면 감소하여 $-\\infty$. ($x=a$ 에서 좌우 값이 모두 $2b$ 로 연속.)\n\n따라서 $g$ 의 그래프는: $x:-\\infty\\to a-b^2$ 에서 $+\\infty\\to b$ 로 감소, $a-b^2\\to a$ 에서 $b\\to 2b$ 로 증가, $a\\to+\\infty$ 에서 $2b\\to-\\infty$ 로 감소. 극솟값 $b$, 극댓값 $2b$.\n\n가로선 $y=t$ 와의 교점 개수 $h(t)$ 는\n$$h(t)=\\begin{cases}1 & (t<b)\\\\ 2 & (t=b)\\\\ 3 & (b<t<2b)\\\\ 2 & (t=2b)\\\\ 1 & (t>2b)\\end{cases}$$\n\n조건 (가) $h(\\alpha)\\times h(\\beta)=4$ ($\\alpha<\\beta$). $h$ 의 값은 $1,2,3$ 뿐이고 곱이 $4$ 가 되려면 $2\\times2$ 뿐이므로 $h(\\alpha)=h(\\beta)=2$, 즉\n$$\\alpha=b,\\qquad \\beta=2b$$\n\n조건 (나) $\\{g(x)-\\alpha\\}\\{g(x)-\\beta\\}=0$ 은 $g(x)=b$ 또는 $g(x)=2b$ 입니다. 각 해를 구하면\n$\\cdot\\ g(x)=b$: 극솟점 $x=a-b^2$, 그리고 $x>a$ 에서 $2b-\\sqrt{x-a}=b\\Rightarrow x=a+b^2$.\n$\\cdot\\ g(x)=2b$: $x\\le a$ 에서 $u=2b\\Rightarrow x=a-4b^2$, 그리고 $x=a$(극댓점).\n따라서 실근은 $x=a-4b^2,\\ a-b^2,\\ a,\\ a+b^2$ 입니다.\n\n최솟값 $a-4b^2=-30$, 최댓값 $a+b^2=15$. 두 식을 빼면\n$$(a+b^2)-(a-4b^2)=5b^2=15-(-30)=45\\ \\Longrightarrow\\ b^2=9\\ \\Longrightarrow\\ b=3$$\n$$a=15-b^2=15-9=6$$\n($a-4b^2=6-36=-30$ 으로 확인됩니다.)\n\n마지막으로 $x=150>a=6$ 이므로 $x>a$ 구간의 식을 씁니다.\n$$g(150)=2b-\\sqrt{150-a}=2\\cdot3-\\sqrt{150-6}=6-\\sqrt{144}=6-12=-6$$\n따라서\n$$\\{g(150)\\}^2=(-6)^2=36$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **36** 입니다." }
+    ],
+    "final_answer": "36"
+  }
+}

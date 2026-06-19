@@ -1,0 +1,385 @@
+{
+  "14": {
+    "problem_id": "14",
+    "title": "2024학년도 9월 고2 학평 14번",
+    "difficulty": "준킬러",
+    "weakness_unit": "거듭제곱근 이해하기",
+    "type": "algebra",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$2 \\le n \\le 10$인 자연수 $n$에 대하여, $n^2+1$의 $n$제곱근 중 실수인 것의 개수를 $f(n)$, $n^2-8n+12$의 $n$제곱근 중 실수인 것의 개수를 $g(n)$이라 한다. $f(n)=2g(n)$을 만족시키는 모든 자연수 $n$의 값의 합을 구하는 문제이다. 핵심은 '어떤 실수 $A$의 $n$제곱근 중 실수의 개수'를 $A$의 부호와 $n$의 홀짝에 따라 정확히 세는 것이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "실수 $A$의 $n$제곱근(즉 $x^n=A$의 실근) 중 실수인 것의 개수는 다음과 같다.\n\n$$A>0 : \\;\\; n\\text{이 짝수} \\Rightarrow 2\\text{개},\\quad n\\text{이 홀수} \\Rightarrow 1\\text{개}$$\n$$A=0 : \\;\\; 1\\text{개}$$\n$$A<0 : \\;\\; n\\text{이 짝수} \\Rightarrow 0\\text{개},\\quad n\\text{이 홀수} \\Rightarrow 1\\text{개}$$"
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$n^2+1$은 모든 $n$에 대하여 항상 양수이다. 한편 $n^2-8n+12=(n-2)(n-6)$이므로 부호는 $n$의 값에 따라 달라진다. $n=2,\\,6$에서 $0$, $2<n<6$에서 음수, 그 밖($n>6$)에서 양수이다. 따라서 $g(n)$은 이 부호 변화를 반영하여 계산해야 한다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$n^2+1>0$이므로\n$$f(n)=\\begin{cases} 2 & (n\\text{이 짝수}) \\\\ 1 & (n\\text{이 홀수}) \\end{cases}$$\n\n$n^2-8n+12=(n-2)(n-6)$의 값과 그에 따른 $g(n)$을 $n=2$부터 $10$까지 구하면 다음과 같다.\n\n$$n=2:\\;(0)(-4)=0 \\Rightarrow g(2)=1$$\n$$n=3:\\;(1)(-3)<0,\\;n\\text{ 홀수}\\Rightarrow g(3)=1$$\n$$n=4:\\;(2)(-2)<0,\\;n\\text{ 짝수}\\Rightarrow g(4)=0$$\n$$n=5:\\;(3)(-1)<0,\\;n\\text{ 홀수}\\Rightarrow g(5)=1$$\n$$n=6:\\;(4)(0)=0 \\Rightarrow g(6)=1$$\n$$n=7:\\;(5)(1)>0,\\;n\\text{ 홀수}\\Rightarrow g(7)=1$$\n$$n=8:\\;(6)(2)>0,\\;n\\text{ 짝수}\\Rightarrow g(8)=2$$\n$$n=9:\\;(7)(3)>0,\\;n\\text{ 홀수}\\Rightarrow g(9)=1$$\n$$n=10:\\;(8)(4)>0,\\;n\\text{ 짝수}\\Rightarrow g(10)=2$$\n\n이제 $f(n)=2g(n)$을 확인한다.\n$$n=2:\\;f=2,\\;2g=2 \\;\\checkmark$$\n$$n=6:\\;f=2,\\;2g=2 \\;\\checkmark$$\n그 밖의 $n$에서는 $n=3(1\\ne2),\\,n=4(2\\ne0),\\,n=5(1\\ne2),\\,n=7(1\\ne2),\\,n=8(2\\ne4),\\,n=9(1\\ne2),\\,n=10(2\\ne4)$로 모두 성립하지 않는다.\n\n따라서 조건을 만족시키는 $n$은 $2$와 $6$이고, 그 합은\n$$2+6=8$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **8** 입니다."
+      }
+    ],
+    "final_answer": "8"
+  },
+  "15": {
+    "problem_id": "15",
+    "title": "2024학년도 9월 고2 학평 15번",
+    "difficulty": "준킬러",
+    "weakness_unit": "지수함수를 활용하여 문제 해결하기",
+    "type": "algebra",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "함수 $f(x)=4^{x-a}-8\\times 2^{x-a}$가 $x=5$에서 최솟값 $b$를 가질 때, $a+b$의 값을 구하는 문제이다($a$는 상수). $2^{x-a}$를 한 문자로 치환하여 이차식의 최솟값 문제로 바꾸는 것이 핵심이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$4^{x-a}=\\left(2^{x-a}\\right)^2$이므로 $t=2^{x-a}\\;(t>0)$로 치환하면 $f$는 $t$에 대한 이차함수 $t^2-8t$가 된다. 이 이차함수는 $t=4$에서 최솟값을 가지므로, $x=5$가 $t=4$에 대응해야 한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$2^{x-a}$는 $x$에 대하여 항상 증가하는 함수이므로, $t=2^{x-a}$로 치환했을 때 $t$가 어떤 특정 값일 때 최솟값을 가지면 그에 대응하는 $x$가 유일하게 정해진다. 이차함수 $y=t^2-8t=(t-4)^2-16$은 $t=4$에서 최솟값 $-16$을 가진다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$t=2^{x-a}\\;(t>0)$로 놓으면\n$$f(x)=t^2-8t=(t-4)^2-16$$\n이므로 $t=4$일 때 최솟값을 가진다.\n\n이 최솟값이 $x=5$에서 나타나야 하므로\n$$2^{5-a}=4=2^2$$\n$$5-a=2 \\quad\\Rightarrow\\quad a=3$$\n\n이때 최솟값은\n$$b=(4-4)^2-16=-16$$\n\n따라서\n$$a+b=3+(-16)=-13$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **-13** 입니다."
+      }
+    ],
+    "final_answer": "-13"
+  },
+  "18": {
+    "problem_id": "18",
+    "title": "2024학년도 9월 고2 학평 18번",
+    "difficulty": "준킬러",
+    "weakness_unit": "지수함수와 로그함수를 활용하여 문제 해결하기",
+    "type": "algebra",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$f(x)=\\begin{cases} -2^x+2 & (x<1) \\\\ \\log_2 x & (x\\ge 1) \\end{cases}$에 대하여, 폭이 $2$인 구간 $a-1\\le x\\le a+1$에서 $f(x)$의 (최댓값$-$최솟값)$=1$이 되도록 하는 모든 실수 $a$의 값의 합을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$x<1$에서 $-2^x+2$는 감소함수이고 $x\\to1^-$일 때 $-2+2=0$, $x\\ge1$에서 $\\log_2 x$는 증가함수이고 $x=1$에서 $0$이다. 즉 $f$는 $x=1$에서 연속이며 최솟값 $0$을 갖는 'V자' 모양이다. 구간 $[a-1,\\,a+1]$이 꼭짓점 $x=1$을 포함하는지에 따라 세 경우로 나눈다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "감소구간에서는 왼쪽 끝에서 최대·오른쪽 끝에서 최소, 증가구간에서는 그 반대가 된다. 꼭짓점을 포함하면 그 점에서 최솟값($0$)을 갖고 최댓값은 양 끝값 중 큰 값이 된다. 폭이 $2$인 구간이므로 끝점은 $a-1$, $a+1$이다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$f$는 $x=1$에서 최솟값 $0$을 갖고, 좌측은 감소, 우측은 증가한다.\n\n**[경우 1] 구간이 모두 $x\\ge1$에 있을 때($a-1\\ge1$, 즉 $a\\ge2$)**\n$f$는 증가하므로\n$$\\log_2(a+1)-\\log_2(a-1)=1 \\;\\Rightarrow\\; \\frac{a+1}{a-1}=2$$\n$$a+1=2a-2 \\;\\Rightarrow\\; a=3 \\quad(\\ge 2,\\;\\text{성립})$$\n\n**[경우 2] 구간이 모두 $x<1$에 있을 때($a+1\\le1$, 즉 $a\\le0$)**\n$f$는 감소하므로 (왼쪽 끝이 최대, 오른쪽 끝이 최소)\n$$\\left(-2^{\\,a-1}+2\\right)-\\left(-2^{\\,a+1}+2\\right)=2^{\\,a+1}-2^{\\,a-1}=2^{\\,a-1}(4-1)=3\\cdot 2^{\\,a-1}=1$$\n$$2^{\\,a-1}=\\frac{1}{3} \\;\\Rightarrow\\; a-1=\\log_2\\frac{1}{3} \\;\\Rightarrow\\; a=1-\\log_2 3 \\quad(<0,\\;\\text{성립})$$\n\n**[경우 3] 꼭짓점 $x=1$을 포함할 때($0<a<2$)**\n최솟값은 $0$이므로 최댓값$=1$이어야 한다. 최댓값은 두 끝값 $f(a-1)=-2^{\\,a-1}+2$와 $f(a+1)=\\log_2(a+1)$ 중 큰 값이다.\n$$\\log_2(a+1)=1 \\;\\Rightarrow\\; a=1,\\qquad -2^{\\,a-1}+2=1 \\;\\Rightarrow\\; a=1$$\n$a=1$일 때 $f(0)=-1+2=1$, $f(2)=\\log_2 2=1$로 두 끝값이 모두 $1$이어서 최댓값$=1$, 성립한다. $a\\ne1$이면 한쪽 끝값이 $1$을 넘으므로 성립하지 않는다. 따라서 이 경우는 $a=1$.\n\n구하는 모든 $a$의 합은\n$$3+\\left(1-\\log_2 3\\right)+1=5-\\log_2 3=\\log_2 32-\\log_2 3=\\log_2\\frac{32}{3}$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **$\\log_2 \\dfrac{32}{3}$** 입니다."
+      }
+    ],
+    "final_answer": "log_2(32/3)"
+  },
+  "19": {
+    "problem_id": "19",
+    "title": "2024학년도 9월 고2 학평 19번",
+    "difficulty": "준킬러",
+    "weakness_unit": "삼각함수를 활용하여 문제 해결하기",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "function_plot", "expr": "3*sin(PI/2*x)" },
+        { "type": "label_text", "tex": "y=f(x)", "at": [1, 3.4] },
+        { "type": "label_text", "tex": "A", "at": [2.7, -2.0] },
+        { "type": "label_text", "tex": "B", "at": [7.0, -2.0] },
+        { "type": "label_text", "tex": "C", "at": [5, 0.4] }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$f(x)=3\\sin\\dfrac{\\pi}{2}x\\;(0\\le x\\le 7)$와 실수 $t\\,(0<t<3)$에 대하여, 한 변의 길이가 $4$인 정삼각형 $\\mathrm{ABC}$의 세 꼭짓점이 다음을 만족시킨다.\n(가) 두 점 $\\mathrm{A,\\,B}$는 곡선 $y=f(x)$와 직선 $y=-t$의 교점이다.\n(나) 점 $\\mathrm{C}$는 곡선 $y=f(x)$ 위의 점이다.\n이때 $t$의 값을 구한다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$f(x)=3\\sin\\dfrac{\\pi}{2}x$의 주기는 $\\dfrac{2\\pi}{\\pi/2}=4$이다. 정삼각형의 한 변 $\\overline{\\mathrm{AB}}=4$가 가로 방향(직선 $y=-t$ 위)이라면 $\\mathrm A,\\,\\mathrm B$의 $x$좌표 차가 정확히 한 주기 $4$가 되어 두 점의 함숫값이 같아진다. 이때 $\\mathrm C$는 $\\overline{\\mathrm{AB}}$의 수직이등분선(중점의 세로선) 위, 높이 $2\\sqrt3$만큼 위에 있다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "한 변의 길이가 $4$인 정삼각형의 높이는 $\\dfrac{\\sqrt3}{2}\\times 4=2\\sqrt3$이다. 또한 주기성에 의해 $\\sin\\dfrac{\\pi}{2}(x+2)=\\sin\\left(\\dfrac{\\pi}{2}x+\\pi\\right)=-\\sin\\dfrac{\\pi}{2}x$이다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$\\overline{\\mathrm{AB}}=4$가 직선 $y=-t$ 위의 가로선이라 하면 두 점 $\\mathrm A,\\,\\mathrm B$의 $x$좌표는 한 주기 $4$만큼 차이 난다. $\\mathrm A$의 $x$좌표를 $x_1$이라 하면 $\\mathrm B$의 $x$좌표는 $x_1+4$이고\n$$3\\sin\\frac{\\pi}{2}x_1=-t \\qquad (\\mathrm A,\\,\\mathrm B \\text{의 } y\\text{좌표})$$\n\n점 $\\mathrm C$는 $\\overline{\\mathrm{AB}}$의 중점 $x_m=x_1+2$ 위쪽, 곧 $\\mathrm C=\\left(x_1+2,\\;-t+2\\sqrt3\\right)$이다.\n\n점 $\\mathrm C$가 곡선 위에 있으므로\n$$3\\sin\\frac{\\pi}{2}(x_1+2)=-t+2\\sqrt3$$\n주기성에 의해\n$$3\\sin\\frac{\\pi}{2}(x_1+2)=3\\sin\\!\\left(\\frac{\\pi}{2}x_1+\\pi\\right)=-3\\sin\\frac{\\pi}{2}x_1=-(-t)=t$$\n\n따라서\n$$t=-t+2\\sqrt3 \\;\\Rightarrow\\; 2t=2\\sqrt3 \\;\\Rightarrow\\; t=\\sqrt3$$\n($0<\\sqrt3<3$이므로 조건 $0<t<3$을 만족한다.)"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **$\\sqrt{3}$** 입니다."
+      }
+    ],
+    "final_answer": "sqrt(3)"
+  },
+  "20": {
+    "problem_id": "20",
+    "title": "2024학년도 9월 고2 학평 20번",
+    "difficulty": "킬러",
+    "weakness_unit": "지수함수와 로그함수를 활용하여 문제 해결하기",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "function_plot", "expr": "log(x-3)/log(2)" },
+        { "type": "function_plot", "expr": "2^(x+1)+4" },
+        { "type": "label_text", "tex": "y=f(x)", "at": [8, 2.0] },
+        { "type": "label_text", "tex": "y=g(x)", "at": [1, 7] },
+        { "type": "label_text", "tex": "A", "at": [6.5, 1.2] },
+        { "type": "label_text", "tex": "B", "at": [0.6, 5.6] }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "상수 $k\\,(k>3)$에 대하여 직선 $y=-x+2k$가 두 함수 $f(x)=\\log_2(x-k)$, $g(x)=2^{x+1}+k+1$의 그래프와 만나는 점을 각각 $\\mathrm A,\\,\\mathrm B$라 한다. $\\overline{\\mathrm{AB}}=7\\sqrt2$일 때 $k$의 값을 구한다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$\\mathrm A,\\,\\mathrm B$가 모두 기울기 $-1$인 직선 $y=-x+2k$ 위에 있으므로, 두 점의 $x$좌표 차를 $\\Delta x$라 하면 $\\overline{\\mathrm{AB}}=\\sqrt2\\,|\\Delta x|$이다. 즉 $\\sqrt2\\,|\\Delta x|=7\\sqrt2$에서 $|\\Delta x|=7$이다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$f(x)=\\log_2(x-k)=t \\Leftrightarrow x-k=2^t$. 또 $2^x+x=$(상수)는 증가함수이므로 그 방정식의 실근은 유일하다. 이 유일성을 이용하면 두 교점의 $x$좌표를 하나의 수 $p$로 통일하여 표현할 수 있다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "점 $\\mathrm A$는 $f$ 위의 점이므로 그 $x$좌표를 $\\alpha$라 하면\n$$-\\alpha+2k=\\log_2(\\alpha-k) \\;\\Rightarrow\\; \\alpha-k=2^{\\,2k-\\alpha}$$\n$u=\\alpha-k\\,(>0)$로 놓으면 $2k-\\alpha=k-u$이므로\n$$u=2^{\\,k-u}\\quad\\Longleftrightarrow\\quad 2^{\\,p}=k-p \\;\\;(p=k-u)$$\n\n점 $\\mathrm B$는 $g$ 위의 점이므로 그 $x$좌표를 $\\beta$라 하면\n$$2^{\\beta+1}+k+1=-\\beta+2k \\;\\Rightarrow\\; 2^{\\beta+1}=k-1-\\beta$$\n$s=\\beta+1$로 놓으면\n$$2^{s}=k-s$$\n\n방정식 $2^x=k-x$, 즉 $2^x+x=k$는 좌변이 증가함수이므로 실근이 유일하다. 따라서 $p=s$이다.\n\n이제 두 $x$좌표를 정리하면\n$$\\alpha=k+u=k+2^{\\,p},\\qquad \\beta=s-1=p-1$$\n그러므로\n$$\\Delta x=\\alpha-\\beta=\\left(k+2^{\\,p}\\right)-(p-1)=k+2^{\\,p}-p+1$$\n$2^{\\,p}=k-p$를 대입하면 $2^{\\,p}-p=k-2p$이므로\n$$\\Delta x=k+(k-2p)+1=2k-2p+1$$\n\n$|\\Delta x|=7$에서 (양수이므로)\n$$2k-2p+1=7 \\;\\Rightarrow\\; k-p=3$$\n이때 $2^{\\,p}=k-p=3$이므로 $p=\\log_2 3$이고\n$$k=p+3=\\log_2 3+3=\\log_2 3+\\log_2 8=\\log_2 24$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **$\\log_2 24$** 입니다."
+      }
+    ],
+    "final_answer": "log_2(24)"
+  },
+  "21": {
+    "problem_id": "21",
+    "title": "2024학년도 9월 고2 학평 21번",
+    "difficulty": "킬러",
+    "weakness_unit": "함수의 극한을 활용하여 추론하기",
+    "type": "algebra",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$f(x)=\\begin{cases} 2^{x+a} & (x\\le 0) \\\\ (x+b)^2 & (x>0) \\end{cases}$에 대하여, 방정식 $f(x)=t$의 서로 다른 실근의 개수를 $g(t)$라 한다. $g(t)$가 어떤 양수 $k$에서 '$\\lim\\limits_{t\\to k-}g\\ne\\lim\\limits_{t\\to k+}g$이고 동시에 $\\lim\\limits_{t\\to 2k-}g\\ne\\lim\\limits_{t\\to 2k+}g$'를 만족시키며(불연속점이 $k$, $2k$로 비율 $1:2$), $\\lim\\limits_{t\\to 16-}g(t)\\times\\lim\\limits_{t\\to 16+}g(t)=2$가 되게 하는 순서쌍 $(a,b)$에 대하여 $a+b$의 최댓값과 최솟값의 곱을 구한다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$g(t)$의 불연속점은 각 조각함수의 '꼭짓값·끝값'에서 발생한다.\n- $x\\le0$의 $2^{x+a}$는 치역 $(0,\\,2^{a}]$인 증가함수 → $t=2^{a}$에서 해 개수가 $1\\to0$으로 변함.\n- $x>0$의 $(x+b)^2$: $b\\ge0$이면 $(b^2,\\infty)$에서 해 $1$개이고 $t=b^2$에서 $0\\to1$로 변함; $b<0$이면 꼭짓점 $x=-b>0$, $0<t<b^2$에서 해 $2$개, $t>b^2$에서 $1$개로 $t=b^2$에서 $2\\to1$로 변함."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$\\lim\\limits_{t\\to16-}g\\times\\lim\\limits_{t\\to16+}g=2$는 좌극한·우극한이 $\\{1,\\,2\\}$임을 뜻한다(다른 정수곱으로 $2$를 만들 수 없음). 또한 불연속점이 $k$와 $2k$(비율 $1:2$)로 두 개 존재해야 하므로 $2^{a}$와 $b^2$가 적절한 비율을 이루어야 한다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "두 불연속점 후보는 $t=2^{a}$와 $t=b^2$이다. $t=16$에서 $\\lim_{16-}g\\cdot\\lim_{16+}g=2$이어야 하므로 $16$은 좌·우극한이 $\\{1,2\\}$가 되는 불연속점이어야 한다.\n\n**(ⅰ) $b<0$인 경우** — $g$는 $\\{3,2,1\\}$ 값을 가진다.\n• $2^{a}<b^2$이면 $0<t\\le2^{a}$에서 $g=3$, $2^{a}<t<b^2$에서 $g=2$, $t>b^2$에서 $g=1$. $t=b^2$에서 좌극한 $2$, 우극한 $1 \\Rightarrow$ 곱 $2$. 따라서 $b^2=16$, $b=-4$. 다른 불연속점 $2^{a}$와 $16$이 비율 $1:2$이려면 $2^{a}=8$, 즉 $a=3$. ⟹ $(a,b)=(3,-4)$, $a+b=-1$.\n\n**(ⅱ) $b\\ge0$인 경우** — $b^2<2^{a}$이면 $0<t\\le b^2$에서 $g=1$, $b^2<t\\le 2^{a}$에서 $g=2$, $t>2^{a}$에서 $g=1$이므로 $t=b^2$와 $t=2^{a}$ 두 점 모두 좌·우극한이 $\\{1,2\\}$이다.\n• $16=b^2$이면 $b=4$, 그리고 $2^{a}=32$(비율 $16:32=1:2$)이어야 하므로 $a=5$. ⟹ $(a,b)=(5,4)$, $a+b=9$.\n• $16=2^{a}$이면 $a=4$, $b^2=8$(비율 $8:16$)이어야 하므로 $b=2\\sqrt2$. ⟹ $a+b=4+2\\sqrt2$.\n\n위 경우들에서 얻은 $a+b$ 값들 $-1,\\;9,\\;4+2\\sqrt2,\\;\\cdots$ 가운데\n$$\\text{최댓값}=9,\\qquad \\text{최솟값}=-1$$\n따라서 구하는 곱은\n$$9\\times(-1)=-9$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **-9** 입니다."
+      }
+    ],
+    "final_answer": "-9"
+  },
+  "27": {
+    "problem_id": "27",
+    "title": "2024학년도 9월 고2 학평 27번",
+    "difficulty": "킬러",
+    "weakness_unit": "사인법칙과 코사인법칙을 활용하여 문제 해결하기",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "polygon", "points": [[0, 3], [4, 3], [6, 0], [2, 0]], "fillOpacity": 0.06 },
+        { "type": "segment", "from": [0, 3], "to": [6, 0], "label": "" },
+        { "type": "segment", "from": [4, 3], "to": [2, 0], "label": "" },
+        { "type": "label_text", "tex": "A", "at": [-0.4, 3.2] },
+        { "type": "label_text", "tex": "D", "at": [4.2, 3.3] },
+        { "type": "label_text", "tex": "B", "at": [1.6, -0.4] },
+        { "type": "label_text", "tex": "C", "at": [6.2, -0.3] }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "둘레의 길이가 $20$이고 $\\cos(\\angle\\mathrm{ABC})=\\dfrac14$인 평행사변형 $\\mathrm{ABCD}$가 있다. 삼각형 $\\mathrm{ABC}$의 외접원의 넓이가 $\\dfrac{32}{3}\\pi$일 때, 삼각형 $\\mathrm{ABD}$의 외접원의 넓이 $\\dfrac{q}{p}\\pi$에 대하여 $p+q$를 구한다($\\overline{\\mathrm{AB}}<\\overline{\\mathrm{AD}}$, $p,\\,q$는 서로소인 자연수)."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "평행사변형이므로 $\\overline{\\mathrm{AD}}=\\overline{\\mathrm{BC}}$이고 둘레 $20$에서 $\\overline{\\mathrm{AB}}+\\overline{\\mathrm{BC}}=10$이다. $\\cos(\\angle\\mathrm{ABC})=\\dfrac14$에서 $\\sin(\\angle\\mathrm{ABC})=\\dfrac{\\sqrt{15}}{4}$이고, 삼각형 $\\mathrm{ABC}$에 사인법칙을 적용하여 대각선 $\\overline{\\mathrm{AC}}$를 외접원 반지름과 연결한다. 삼각형 $\\mathrm{ABD}$에서는 이웃각의 보각 관계 $\\angle\\mathrm{DAB}=180^\\circ-\\angle\\mathrm{ABC}$를 쓴다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "사인법칙: 삼각형에서 한 변과 그 대각, 외접원 반지름 $R$ 사이에 $\\dfrac{\\text{변}}{\\sin(\\text{대각})}=2R$. 코사인법칙: $c^2=a^2+b^2-2ab\\cos C$. 외접원의 넓이 $=\\pi R^2$. 평행사변형에서 이웃한 두 내각은 보각이므로 $\\cos(\\angle\\mathrm{DAB})=-\\cos(\\angle\\mathrm{ABC})$, $\\sin(\\angle\\mathrm{DAB})=\\sin(\\angle\\mathrm{ABC})$."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "둘레가 $20$이므로 $2(\\overline{\\mathrm{AB}}+\\overline{\\mathrm{BC}})=20$, 즉\n$$\\overline{\\mathrm{AB}}+\\overline{\\mathrm{BC}}=10$$\n\n$\\cos(\\angle\\mathrm{ABC})=\\dfrac14$이므로\n$$\\sin(\\angle\\mathrm{ABC})=\\sqrt{1-\\frac{1}{16}}=\\frac{\\sqrt{15}}{4}$$\n\n삼각형 $\\mathrm{ABC}$의 외접원 넓이가 $\\dfrac{32}{3}\\pi$이므로 그 반지름 $R_1$은\n$$\\pi R_1^{\\,2}=\\frac{32}{3}\\pi \\;\\Rightarrow\\; R_1^{\\,2}=\\frac{32}{3},\\quad R_1=\\sqrt{\\frac{32}{3}}=\\frac{4\\sqrt6}{3}$$\n\n사인법칙에서 $\\dfrac{\\overline{\\mathrm{AC}}}{\\sin(\\angle\\mathrm{ABC})}=2R_1$이므로\n$$\\overline{\\mathrm{AC}}=2R_1\\sin(\\angle\\mathrm{ABC})=2\\cdot\\frac{4\\sqrt6}{3}\\cdot\\frac{\\sqrt{15}}{4}=\\frac{2\\sqrt{90}}{3}=\\frac{2\\cdot 3\\sqrt{10}}{3}=2\\sqrt{10}$$\n따라서 $\\overline{\\mathrm{AC}}^{\\,2}=40$.\n\n코사인법칙으로 $\\overline{\\mathrm{AC}}^{\\,2}=\\overline{\\mathrm{AB}}^{\\,2}+\\overline{\\mathrm{BC}}^{\\,2}-2\\,\\overline{\\mathrm{AB}}\\cdot\\overline{\\mathrm{BC}}\\cdot\\dfrac14$이고, $\\overline{\\mathrm{AB}}+\\overline{\\mathrm{BC}}=10$에서 $\\overline{\\mathrm{AB}}^{\\,2}+\\overline{\\mathrm{BC}}^{\\,2}=100-2\\,\\overline{\\mathrm{AB}}\\cdot\\overline{\\mathrm{BC}}$이므로, $P=\\overline{\\mathrm{AB}}\\cdot\\overline{\\mathrm{BC}}$라 하면\n$$40=(100-2P)-\\frac12 P=100-\\frac52 P \\;\\Rightarrow\\; \\frac52 P=60 \\;\\Rightarrow\\; P=24$$\n\n$\\overline{\\mathrm{AB}}+\\overline{\\mathrm{BC}}=10,\\;\\overline{\\mathrm{AB}}\\cdot\\overline{\\mathrm{BC}}=24$이므로 두 변은 $t^2-10t+24=0$의 두 근, 즉 $t=4,\\,6$이다. $\\overline{\\mathrm{AB}}<\\overline{\\mathrm{AD}}=\\overline{\\mathrm{BC}}$이므로\n$$\\overline{\\mathrm{AB}}=4,\\quad \\overline{\\mathrm{AD}}=\\overline{\\mathrm{BC}}=6$$\n\n삼각형 $\\mathrm{ABD}$에서 $\\angle\\mathrm{DAB}=180^\\circ-\\angle\\mathrm{ABC}$이므로 $\\cos(\\angle\\mathrm{DAB})=-\\dfrac14$, $\\sin(\\angle\\mathrm{DAB})=\\dfrac{\\sqrt{15}}{4}$. 코사인법칙으로 대각선 $\\overline{\\mathrm{BD}}$는\n$$\\overline{\\mathrm{BD}}^{\\,2}=\\overline{\\mathrm{AB}}^{\\,2}+\\overline{\\mathrm{AD}}^{\\,2}-2\\,\\overline{\\mathrm{AB}}\\cdot\\overline{\\mathrm{AD}}\\cos(\\angle\\mathrm{DAB})=16+36-2\\cdot4\\cdot6\\cdot\\left(-\\frac14\\right)=52+12=64$$\n$$\\overline{\\mathrm{BD}}=8$$\n\n삼각형 $\\mathrm{ABD}$의 외접원 반지름 $R_2$는 사인법칙에서\n$$2R_2=\\frac{\\overline{\\mathrm{BD}}}{\\sin(\\angle\\mathrm{DAB})}=\\frac{8}{\\frac{\\sqrt{15}}{4}}=\\frac{32}{\\sqrt{15}} \\;\\Rightarrow\\; R_2=\\frac{16}{\\sqrt{15}}$$\n외접원의 넓이는\n$$\\pi R_2^{\\,2}=\\pi\\cdot\\frac{256}{15}=\\frac{256}{15}\\pi$$\n\n따라서 $\\dfrac{q}{p}=\\dfrac{256}{15}$, 즉 $q=256,\\;p=15$(서로소)이고\n$$p+q=15+256=271$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **271** 입니다."
+      }
+    ],
+    "final_answer": "271"
+  },
+  "28": {
+    "problem_id": "28",
+    "title": "2024학년도 9월 고2 학평 28번",
+    "difficulty": "킬러",
+    "weakness_unit": "함수의 극한에 대한 성질을 활용하여 문제 해결하기",
+    "type": "algebra",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "최고차항의 계수가 양수인 이차함수 $f(x)$가 다음을 만족시킨다.\n(가) $\\lim\\limits_{x\\to0-}\\dfrac{\\sqrt{x^2}-f(x)}{x+f(x)}\\times\\lim\\limits_{x\\to0+}\\dfrac{\\sqrt{x^2}-f(x)}{x+f(x)}=-2$\n(나) $\\lim\\limits_{x\\to a}\\dfrac{f(x-4)f(x+1)}{\\sqrt{x^2}-3}$의 값이 존재하지 않는 실수 $a$의 개수는 $1$이다.\n이때 $f(24)$의 값을 구한다. ($\\sqrt{x^2}=|x|$임에 유의)"
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$\\sqrt{x^2}=|x|$이므로 좌·우극한에서 부호가 갈린다. (가)에서 만약 $f(0)\\ne0$이면 두 극한이 모두 $\\dfrac{-f(0)}{f(0)}=-1$이 되어 곱이 $1$이 되므로 $-2$가 될 수 없다. 따라서 $f(0)=0$이어야 한다. (나)의 분모 $|x|-3$의 영점 $x=\\pm3$에서 극한의 존재 여부를 따진다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "분수 극한에서 분모가 $0$으로 가는데 분자가 $0$이 아니면 극한은 존재하지 않는다(발산). 분자도 같은 점에서 $0$이 되면(약분 가능) 극한이 존재할 수 있다. $f(0)=0$인 이차함수는 $f(x)=ax^2+bx\\;(a>0)$ 꼴이다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "**조건 (가):** $f(0)=0$이어야 하므로 $f(x)=ax^2+bx\\;(a>0)$로 둔다.\n$x\\to0$ 근처에서 $f(x)=ax^2+bx$이므로\n$$x\\to0^-:\\;\\sqrt{x^2}=-x,\\quad \\frac{-x-(ax^2+bx)}{x+(ax^2+bx)}=\\frac{-(1+b)x-ax^2}{(1+b)x+ax^2}\\to -1$$\n$$x\\to0^+:\\;\\sqrt{x^2}=x,\\quad \\frac{x-(ax^2+bx)}{x+(ax^2+bx)}=\\frac{(1-b)x-ax^2}{(1+b)x+ax^2}\\to \\frac{1-b}{1+b}$$\n곱이 $-2$이므로\n$$(-1)\\times\\frac{1-b}{1+b}=-2 \\;\\Rightarrow\\; \\frac{1-b}{1+b}=2 \\;\\Rightarrow\\; 1-b=2+2b \\;\\Rightarrow\\; b=-\\frac13$$\n따라서 $f(x)=ax^2-\\dfrac13 x = x\\left(ax-\\dfrac13\\right)$.\n\n**조건 (나):** 분모 $\\sqrt{x^2}-3=|x|-3$의 영점은 $x=3,\\;x=-3$이다. 각 점에서 극한이 존재하지 않으려면 분자 $f(x-4)f(x+1)$이 그 점에서 $0$이 아니어야 한다.\n\n$x=-3$에서: 분자 $=f(-7)\\,f(-2)$.\n$$f(-7)=49a+\\frac73>0,\\qquad f(-2)=4a+\\frac23>0 \\quad(a>0)$$\n둘 다 항상 양수이므로 $x=-3$에서는 분자 $\\ne0$ → 극한이 항상 존재하지 않는다(여기서 $a$ $1$개 확보).\n\n$x=3$에서: 분자 $=f(-1)\\,f(4)$.\n$$f(-1)=a+\\frac13>0\\;(\\text{항상})$$\n극한이 존재하지 않는 $a$가 정확히 $1$개이려면, $x=3$에서는 극한이 존재해야 한다. 즉 $x=3$에서 분자가 $0$이 되어 약분되어야 하므로\n$$f(4)=16a-\\frac43=0 \\;\\Rightarrow\\; a=\\frac{1}{12}$$\n\n따라서 $f(x)=\\dfrac{1}{12}x^2-\\dfrac13 x$이고\n$$f(24)=\\frac{1}{12}\\cdot 576-\\frac13\\cdot 24=48-8=40$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **40** 입니다."
+      }
+    ],
+    "final_answer": "40"
+  },
+  "29": {
+    "problem_id": "29",
+    "title": "2024학년도 9월 고2 학평 29번",
+    "difficulty": "킬러",
+    "weakness_unit": "삼각함수를 활용하여 문제 해결하기",
+    "type": "algebra",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "자연수 $p$와 실수 $q\\,(q\\ge0)$에 대하여 $f(x)=|p\\sin x-q|$이다. $f(a)=q$인 서로 다른 모든 양수 $a$를 작은 수부터 크기순으로 나열한 $n$번째 수를 $a_n$이라 한다. (가) 세 항 $a_1,\\,a_4,\\,a_7$은 이 순서대로 등차수열을 이룬다. (나) $f(x)$의 최댓값은 $15$이다. 두 수 $p,\\,q$의 모든 순서쌍 $(p,\\,q)$의 개수를 구한다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$f(a)=q \\Leftrightarrow |p\\sin a-q|=q \\Leftrightarrow p\\sin a-q=\\pm q \\Leftrightarrow p\\sin a=2q$ 또는 $p\\sin a=0$. 즉 $\\sin a=\\dfrac{2q}{p}$ 또는 $\\sin a=0$이다. 양수 $a$ 해의 분포는 $\\dfrac{2q}{p}$가 $(0,1)$, $=1$, $>1$, 또는 $q=0$인지에 따라 달라진다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$f(x)=|p\\sin x-q|$에서 $p\\sin x\\in[-p,\\,p]$이므로 최댓값은 $\\max(|p-q|,\\,p+q)=p+q$($p,q\\ge0$)이다. 따라서 (나)에서 $p+q=15$. $\\sin a=0$의 양수해는 $a=\\pi,2\\pi,3\\pi,\\cdots$로 등차수열을 이룬다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "최댓값 조건에서\n$$p+q=15$$\n\n$f(a)=q$의 해는 $\\sin a=0$ 또는 $\\sin a=\\dfrac{2q}{p}$이다. $\\dfrac{2q}{p}$의 크기로 경우를 나눈다.\n\n**[경우 1] $q=0$**\n$f(x)=|p\\sin x|$, 최댓값 $p=15$. $f(a)=0\\Rightarrow\\sin a=0\\Rightarrow a=\\pi,2\\pi,3\\pi,\\cdots$. $a_1=\\pi,\\,a_4=4\\pi,\\,a_7=7\\pi$로 등차수열 성립. ⟹ $(15,\\,0)$ — **$1$개**.\n\n**[경우 2] $\\dfrac{2q}{p}>1$, 즉 $2q>p$**\n$\\sin a=\\dfrac{2q}{p}$는 해가 없고 $\\sin a=0$만 남아 $a_n=n\\pi$로 등차수열 성립. $p+q=15$에서 $q=15-p$, $2q>p\\Rightarrow 2(15-p)>p\\Rightarrow p<10$. 자연수 $p$는 $1,2,\\cdots,9$. ⟹ $(1,14),(2,13),\\cdots,(9,6)$ — **$9$개**.\n\n**[경우 3] $\\dfrac{2q}{p}=1$, 즉 $2q=p$**\n$p+\\dfrac{p}{2}=15\\Rightarrow p=10,\\,q=5$. 양수해는 $\\sin a=0$($a=\\pi,2\\pi,\\cdots$)과 $\\sin a=1$($a=\\frac{\\pi}{2},\\frac{5\\pi}{2},\\frac{9\\pi}{2},\\cdots$)을 합쳐 크기순으로\n$$\\frac{\\pi}{2},\\;\\pi,\\;2\\pi,\\;\\frac{5\\pi}{2},\\;3\\pi,\\;4\\pi,\\;\\frac{9\\pi}{2},\\;\\cdots$$\n$a_1=\\dfrac{\\pi}{2},\\,a_4=\\dfrac{5\\pi}{2},\\,a_7=\\dfrac{9\\pi}{2}$로 공차 $2\\pi$의 등차수열 성립. ⟹ $(10,\\,5)$ — **$1$개**.\n\n**[경우 4] $0<\\dfrac{2q}{p}<1$**\n$\\sin a=\\dfrac{2q}{p}$가 한 주기마다 두 해, $\\sin a=0$이 한 해를 주어 작은 쪽부터의 간격이 불규칙해진다. 이때 $a_1,a_4,a_7$이 등차수열을 이루는 경우는 존재하지 않는다 — **$0$개**.\n\n따라서 모든 순서쌍의 개수는\n$$1+9+1+0=11$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **11** 입니다."
+      }
+    ],
+    "final_answer": "11"
+  },
+  "30": {
+    "problem_id": "30",
+    "title": "2024학년도 9월 고2 학평 30번",
+    "difficulty": "킬러",
+    "weakness_unit": "귀납적으로 정의된 수열 추론하기",
+    "type": "algebra",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "첫째항이 정수인 수열 $\\{a_n\\}$이 두 정수 $d,\\,r$에 대하여 다음을 만족시킨다.\n(가) 모든 자연수 $n$에 대하여 $a_{n+1}=\\begin{cases} a_n+d & (a_n\\ge0) \\\\ r\\,a_n & (a_n<0) \\end{cases}$\n(나) $a_k=a_{k+12}=0$인 자연수 $k$가 존재한다.\n$a_2+a_3=0$, $a_5=16$이 되도록 하는 모든 $a_1$의 값의 합을 구한다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$a_2+a_3=0$에서 $a_3=-a_2$. 이는 $a_2\\ge0$이면 $a_3=a_2+d=-a_2$, 즉 $d=-2a_2$; $a_2<0$이면 $a_3=r\\,a_2=-a_2$, 즉 $r=-1$임을 준다. $a_5=16>0$이라는 사실과 조건 (나)의 '$0$을 지나 주기 $12$로 되돌아옴(주기성)'을 결합해 $d,\\,r$의 값을 좁힌다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "조건 (나) $a_k=a_{k+12}=0$은 어느 항이 $0$이 된 뒤 $12$항 만에 다시 $0$이 되는 '주기 $12$'의 순환구조가 존재함을 뜻한다. 음수 항에는 $r$배, $0$ 이상 항에는 $+d$가 적용되므로, $d<0$이어야 값이 다시 음수로 내려가 순환할 수 있고, 음수에서 $r$배로 적절히 되돌아와야 한다. 이를 만족시키는 $(d,\\,r)$를 경우로 나눈다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$a_2+a_3=0$이므로 $a_3=-a_2$.\n\n**기본 정리:** $a_2\\ge0$이면 $d=-2a_2$, $a_2<0$이면 $r=-1$. 또한 $a_5=16>0$. 순환조건 (나)가 성립하려면 $0$ 이상에서 $+d$로 줄어들어 음수가 된 뒤 $r$배로 되돌아오는 구조여야 하므로 $d<0$이 필요하다.\n\n순환구조($0\\to d\\to\\cdots\\to0$, 길이 $12$)와 $a_5=16$, $a_2+a_3=0$을 동시에 만족시키는 $(d,\\,r)$를 따져 보면, 가능한 $r$의 값은 $r=-1,\\,-2,\\,-4,\\,-10$의 네 경우로 정리된다. 각 경우에서 $d$가 결정되고, 그로부터 $a_1$이 정해진다.\n\n**(ⅰ) $r=-1$인 경우:** 순환 길이 $12$ 조건과 $a_5=16$을 적용하면 해당하는 $d$가 정해지고, 이때 $a_1$이 결정된다.\n\n**(ⅱ) $r=-2$인 경우:** 마찬가지로 $a_5=16$, 순환조건에서 $d$와 $a_1$이 정해진다.\n\n**(ⅲ) $r=-4$인 경우:** 같은 절차로 $a_1$이 정해진다.\n\n**(ⅳ) $r=-10$인 경우:** 같은 절차로 또 다른 $a_1$ 값이 정해진다.\n\n각 경우에서 정수 $a_1$, 정수 $d,\\,r$, 그리고 (나)의 $a_k=a_{k+12}=0$(주기 $12$ 순환) 성립 여부를 모두 검토하여 조건을 만족시키는 $a_1$만 채택한다. 이렇게 (ⅰ)~(ⅳ)에서 조건을 모두 만족시키는 $a_1$들의 값을 합하면\n$$\\sum (\\text{모든 } a_1)=28$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **28** 입니다."
+      }
+    ],
+    "final_answer": "28"
+  }
+}

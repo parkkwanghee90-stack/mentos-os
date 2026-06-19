@@ -1,0 +1,366 @@
+{
+  "14": {
+    "problem_id": "14",
+    "title": "2025학년도 9월 고2 학평 14번",
+    "difficulty": "준킬러",
+    "weakness_unit": "거듭제곱근을 활용하여 문제 해결하기",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$2$ 이상의 자연수 $n$에 대하여 $n^2-12n+27$의 $n$제곱근 중 **음의 실수**인 것의 개수를 $f(n)$이라 할 때, $\\sum_{n=2}^{20} f(n)$의 값을 구하는 문제입니다. 핵심은 $n^2-12n+27$의 부호와 $n$의 홀짝에 따라 음의 실수인 $n$제곱근의 개수가 어떻게 달라지는지를 정확히 따지는 것입니다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "먼저 인수분해하면 $$n^2-12n+27=(n-3)(n-9)$$ 입니다. 이 값을 $v$라 하면 $v$의 부호는 다음과 같습니다.\n\n- $v>0$ : $n\\le 2$ 또는 $n\\ge 10$ (단 $n\\ge 2$이므로 $n=2$ 또는 $n\\ge 10$)\n- $v<0$ : $3<n<9$, 즉 $n=4,5,6,7,8$\n- $v=0$ : $n=3,\\ n=9$"
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "실수 $v$의 $n$제곱근 중 **실수**인 것은 다음과 같습니다.\n\n- $n$이 짝수, $v>0$ : 실수인 $n$제곱근은 $\\pm\\sqrt[n]{v}$로 2개이고, 그중 **음수는 1개**\n- $n$이 짝수, $v<0$ : 실수인 $n$제곱근은 없음 (음수 0개)\n- $n$이 홀수, $v>0$ : 실수인 $n$제곱근은 양수 1개뿐 (음수 0개)\n- $n$이 홀수, $v<0$ : 실수인 $n$제곱근은 음수 1개\n- $v=0$ : $n$제곱근은 $0$뿐 → 음수 0개\n\n따라서 $f(n)=1$이 되는 경우는 ‘$n$ 짝수이고 $v>0$’ 또는 ‘$n$ 홀수이고 $v<0$’인 경우뿐입니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$n=2$부터 $n=20$까지 $v=(n-3)(n-9)$의 부호와 $n$의 홀짝을 따져 $f(n)$을 구합니다.\n\n$$f(2):\\ v=7>0,\\ n\\text{ 짝수} \\Rightarrow f=1$$\n$$f(3):\\ v=0 \\Rightarrow f=0$$\n$$f(4):\\ v=-5<0,\\ n\\text{ 짝수} \\Rightarrow f=0$$\n$$f(5):\\ v=-8<0,\\ n\\text{ 홀수} \\Rightarrow f=1$$\n$$f(6):\\ v=-9<0,\\ n\\text{ 짝수} \\Rightarrow f=0$$\n$$f(7):\\ v=-8<0,\\ n\\text{ 홀수} \\Rightarrow f=1$$\n$$f(8):\\ v=-5<0,\\ n\\text{ 짝수} \\Rightarrow f=0$$\n$$f(9):\\ v=0 \\Rightarrow f=0$$\n\n$n\\ge 10$이면 $v=(n-3)(n-9)>0$이므로 $n$이 짝수일 때만 $f(n)=1$입니다.\n\n$$f(10)=1,\\ f(11)=0,\\ f(12)=1,\\ f(13)=0,\\ f(14)=1,$$\n$$f(15)=0,\\ f(16)=1,\\ f(17)=0,\\ f(18)=1,\\ f(19)=0,\\ f(20)=1$$\n\n$f(n)=1$인 $n$을 모으면 $$n=2,\\ 5,\\ 7,\\ 10,\\ 12,\\ 14,\\ 16,\\ 18,\\ 20$$ 으로 모두 $9$개입니다.\n\n$$\\therefore \\sum_{n=2}^{20} f(n)=9$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **9** 입니다."
+      }
+    ],
+    "final_answer": "9"
+  },
+  "15": {
+    "problem_id": "15",
+    "title": "2025학년도 9월 고2 학평 15번",
+    "difficulty": "준킬러",
+    "weakness_unit": "여러 가지 수열의 합 이해하기",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "자연수 $n$에 대하여 $f(x)=x^2-nx-2n^2$이고, 곡선 $y=f(x)$와 직선 $y=x+n$이 만나는 두 점을 $\\mathrm{A}_n,\\ \\mathrm{B}_n$이라 합니다. 삼각형 $\\mathrm{A}_n\\mathrm{O}\\mathrm{B}_n$의 넓이를 $S_n$이라 할 때 $\\sum_{k=1}^{4} S_k$를 구하는 문제입니다. ($\\mathrm{O}$는 원점)"
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "두 교점 $\\mathrm{A}_n,\\ \\mathrm{B}_n$은 모두 직선 $y=x+n$ 위에 있으므로, 삼각형의 밑변을 선분 $\\mathrm{A}_n\\mathrm{B}_n$, 높이를 원점에서 직선 $y=x+n$까지의 거리로 잡으면 깔끔합니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "직선 $y=x+n$, 즉 $x-y+n=0$ 위의 두 점 $(\\alpha,\\alpha+n),\\ (\\beta,\\beta+n)$ 사이의 거리는 기울기가 $1$이므로 $$|\\mathrm{A}_n\\mathrm{B}_n|=\\sqrt{2}\\,|\\alpha-\\beta|$$ 이고, 원점과 직선 $x-y+n=0$ 사이의 거리는 $$d=\\frac{|0-0+n|}{\\sqrt{1^2+(-1)^2}}=\\frac{n}{\\sqrt{2}}$$ 입니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "교점의 $x$좌표는 방정식 $$x^2-nx-2n^2=x+n$$ $$x^2-(n+1)x-(2n^2+n)=0$$ 의 두 근 $\\alpha,\\ \\beta$입니다. 근과 계수의 관계에서\n$$\\alpha+\\beta=n+1,\\qquad \\alpha\\beta=-(2n^2+n)=-n(2n+1)$$\n\n두 근의 차의 제곱은\n$$(\\alpha-\\beta)^2=(\\alpha+\\beta)^2-4\\alpha\\beta=(n+1)^2+4n(2n+1)$$\n$$=n^2+2n+1+8n^2+4n=9n^2+6n+1=(3n+1)^2$$\n따라서 $|\\alpha-\\beta|=3n+1$ 이므로 밑변의 길이는\n$$|\\mathrm{A}_n\\mathrm{B}_n|=\\sqrt{2}\\,(3n+1)$$\n\n삼각형 $\\mathrm{A}_n\\mathrm{O}\\mathrm{B}_n$의 넓이는\n$$S_n=\\frac{1}{2}\\times |\\mathrm{A}_n\\mathrm{B}_n|\\times d=\\frac{1}{2}\\times \\sqrt{2}\\,(3n+1)\\times \\frac{n}{\\sqrt{2}}=\\frac{n(3n+1)}{2}=\\frac{3n^2+n}{2}$$\n\n이제 $n=1,2,3,4$를 대입합니다.\n$$S_1=\\frac{3+1}{2}=2,\\quad S_2=\\frac{12+2}{2}=7,$$\n$$S_3=\\frac{27+3}{2}=15,\\quad S_4=\\frac{48+4}{2}=26$$\n\n$$\\therefore \\sum_{k=1}^{4} S_k=2+7+15+26=50$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **50** 입니다."
+      }
+    ],
+    "final_answer": "50"
+  },
+  "18": {
+    "problem_id": "18",
+    "title": "2025학년도 9월 고2 학평 18번",
+    "difficulty": "준킬러",
+    "weakness_unit": "삼각함수를 활용하여 문제 해결하기",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "두 양수 $a,\\ b$에 대하여 $$f(x)=a\\cos\\left(bx-\\frac{\\pi}{4}\\right)$$ 가 $0\\le x\\le \\pi$에서 최댓값 $4$, 최솟값 $-2\\sqrt{2}$를 가질 때 $a+b$의 값을 구하는 문제입니다. 정의역이 한정되어 있으므로 코사인의 전체 범위($-1\\sim 1$)가 다 실현되지 않을 수 있다는 점이 핵심입니다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$\\theta=bx-\\dfrac{\\pi}{4}$로 치환하면, $x$가 $0$에서 $\\pi$까지 변할 때 $\\theta$는 $$\\theta=-\\frac{\\pi}{4}\\ \\ \\longrightarrow\\ \\ \\theta=b\\pi-\\frac{\\pi}{4}$$ 까지 변합니다. 이 구간에서 $\\cos\\theta$의 최댓값과 최솟값을 따져야 합니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$f=a\\cos\\theta$ ($a>0$)에서 최댓값이 $4$이고 $\\cos\\theta$의 최댓값은 $1$ 이하이므로, 최댓값 $4$가 나오려면 구간 안에서 $\\cos\\theta=1$, 즉 $\\theta=0$이 포함되어야 하고 그때 $a=4$입니다. 또 최솟값 $-2\\sqrt{2}$는 $a\\cos\\theta$의 최소이므로 $$\\cos\\theta_{\\min}=\\frac{-2\\sqrt{2}}{4}=-\\frac{\\sqrt{2}}{2}$$ 가 되어야 합니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "구간 $\\theta\\in\\left[-\\dfrac{\\pi}{4},\\ b\\pi-\\dfrac{\\pi}{4}\\right]$ 에서 생각합니다.\n\n**1) 최댓값 조건.** 최댓값 $4=a\\cdot(\\cos\\theta)_{\\max}$ 이고 $(\\cos\\theta)_{\\max}\\le 1$ 이므로, $4$가 최댓값이 되려면 $\\cos\\theta=1$ (즉 $\\theta=0$)이 구간에 포함되어야 합니다. 시작점이 $-\\dfrac{\\pi}{4}<0$이므로 $b\\pi-\\dfrac{\\pi}{4}\\ge 0$이면 $\\theta=0$이 포함되고, 이때\n$$a\\cdot 1=4 \\ \\Rightarrow\\ a=4$$\n\n**2) 최솟값 조건.** $a=4$이므로 $$(\\cos\\theta)_{\\min}=\\frac{-2\\sqrt{2}}{4}=-\\frac{\\sqrt{2}}{2}$$ 이어야 합니다. $\\cos\\theta=-\\dfrac{\\sqrt{2}}{2}$ 는 $\\theta=\\dfrac{3\\pi}{4}$ 에서 처음 나타납니다. 구간의 최솟값이 정확히 $-\\dfrac{\\sqrt{2}}{2}$가 되려면, $\\cos\\theta$가 $\\theta=\\dfrac{3\\pi}{4}$ 까지는 도달하되 $\\theta=\\pi$(여기서 $\\cos\\theta=-1$)에는 도달하지 않아야 합니다. 즉 구간의 오른쪽 끝이\n$$b\\pi-\\frac{\\pi}{4}=\\frac{3\\pi}{4}\\ \\Rightarrow\\ b\\pi=\\pi\\ \\Rightarrow\\ b=1$$\n\n**3) 검산.** $a=4,\\ b=1$이면 $\\theta\\in\\left[-\\dfrac{\\pi}{4},\\ \\dfrac{3\\pi}{4}\\right]$. 이 구간에서 $\\cos\\theta$의 최댓값은 $\\theta=0$에서 $1$, 최솟값은 $\\theta=\\dfrac{3\\pi}{4}$에서 $-\\dfrac{\\sqrt{2}}{2}$. 따라서 $f$의 최댓값 $4\\cdot 1=4$, 최솟값 $4\\cdot\\left(-\\dfrac{\\sqrt{2}}{2}\\right)=-2\\sqrt{2}$로 조건을 모두 만족합니다.\n\n$$\\therefore a+b=4+1=5$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **5** 입니다."
+      }
+    ],
+    "final_answer": "5"
+  },
+  "19": {
+    "problem_id": "19",
+    "title": "2025학년도 9월 고2 학평 19번",
+    "difficulty": "킬러",
+    "weakness_unit": "지수함수와 로그함수를 활용하여 문제 해결하기",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "두 양수 $a,\\ b$에 대하여 점 $\\mathrm{A}(a,\\ 3^a+b)$, $\\mathrm{B}(a+3,\\ 3^{a+3}+b)$가 있습니다. 직선 $y=x$ 위의 점 $\\mathrm{P}$에 대하여 $\\overline{\\mathrm{AP}}+\\overline{\\mathrm{BP}}$의 최솟값이 $55$입니다. 또 곡선 $y=\\log_3(x-a-b)$ 위의 점 $\\mathrm{C}$의 $y$좌표가 $a+3$이고 $\\overline{\\mathrm{AC}}=a+55$일 때 $a+b$를 구합니다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$\\overline{\\mathrm{AP}}+\\overline{\\mathrm{BP}}$의 최솟값은 한 점을 직선 $y=x$에 대하여 대칭이동시켜 구합니다. $\\mathrm{A}$를 직선 $y=x$에 대칭이동한 점을 $\\mathrm{A}'(3^a+b,\\ a)$라 하면 $$\\overline{\\mathrm{AP}}+\\overline{\\mathrm{BP}}\\ \\ge\\ \\overline{\\mathrm{A}'\\mathrm{B}}$$ 이고 최솟값은 $\\overline{\\mathrm{A}'\\mathrm{B}}=55$ 입니다. 한편 점 $\\mathrm{C}$는 $y$좌표가 $a+3$이므로 $a+3=\\log_3(x_{\\mathrm C}-a-b)$에서 $x_{\\mathrm C}=3^{a+3}+a+b$, 즉 $\\mathrm{C}(3^{a+3}+a+b,\\ a+3)$ 입니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "거리 제곱을 정리합니다. $\\mathrm{A}'(3^a+b,\\ a)$, $\\mathrm{B}(a+3,\\ 3^{a+3}+b)$ 이므로\n$$\\overline{\\mathrm{A}'\\mathrm{B}}^2=\\big(a+3-3^a-b\\big)^2+\\big(3^{a+3}+b-a\\big)^2$$\n$\\mathrm{A}(a,\\ 3^a+b)$, $\\mathrm{C}(3^{a+3}+a+b,\\ a+3)$ 이므로\n$$\\overline{\\mathrm{AC}}^2=\\big(3^{a+3}+b\\big)^2+\\big(a+3-3^a-b\\big)^2$$\n두 식의 첫 항만 다르고 둘째 항 $\\big(a+3-3^a-b\\big)^2$은 공통입니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "**1) 두 거리 제곱의 차.** $\\overline{\\mathrm{AC}}^2-\\overline{\\mathrm{A}'\\mathrm{B}}^2$를 계산하면 공통항이 소거되어\n$$\\overline{\\mathrm{AC}}^2-\\overline{\\mathrm{A}'\\mathrm{B}}^2=\\big(3^{a+3}+b\\big)^2-\\big(3^{a+3}+b-a\\big)^2$$\n$A=3^{a+3}+b$로 두면 $A^2-(A-a)^2=a(2A-a)$ 이므로\n$$\\overline{\\mathrm{AC}}^2-\\overline{\\mathrm{A}'\\mathrm{B}}^2=a\\big(2(3^{a+3}+b)-a\\big)$$\n\n**2) 값 대입.** $\\overline{\\mathrm{AC}}=a+55,\\ \\overline{\\mathrm{A}'\\mathrm{B}}=55$ 이므로\n$$\\overline{\\mathrm{AC}}^2-\\overline{\\mathrm{A}'\\mathrm{B}}^2=(a+55)^2-55^2=a^2+110a=a(a+110)$$\n두 결과를 같다고 놓으면 ($a>0$이므로 $a$로 나누어)\n$$a+110=2(3^{a+3}+b)-a\\ \\Rightarrow\\ 2a+110=2(3^{a+3}+b)$$\n$$\\Rightarrow\\ 3^{a+3}+b=a+55\\quad\\cdots(\\ast)$$\n즉 점 $\\mathrm{B}$의 $y$좌표가 $a+55$입니다.\n\n**3) 최솟값 조건 적용.** $(\\ast)$를 $\\overline{\\mathrm{A}'\\mathrm{B}}^2=55^2$에 대입하면\n$$\\overline{\\mathrm{A}'\\mathrm{B}}^2=\\big(a+3-3^a-b\\big)^2+\\big((a+55)-a\\big)^2=\\big(a+3-3^a-b\\big)^2+55^2=55^2$$\n따라서\n$$\\big(a+3-3^a-b\\big)^2=0\\ \\Rightarrow\\ 3^a+b=a+3\\quad\\cdots(\\ast\\ast)$$\n즉 점 $\\mathrm{A}$의 $y$좌표가 $a+3$입니다.\n\n**4) 연립.** $(\\ast)$와 $(\\ast\\ast)$를 정리하면\n$$3^a+b=a+3,\\qquad 27\\cdot 3^a+b=a+55$$\n두 식을 빼면\n$$26\\cdot 3^a=52\\ \\Rightarrow\\ 3^a=2\\ \\Rightarrow\\ a=\\log_3 2$$\n$(\\ast\\ast)$에서\n$$b=a+3-3^a=\\log_3 2+3-2=\\log_3 2+1$$\n\n**5) 결론.**\n$$a+b=\\log_3 2+(\\log_3 2+1)=2\\log_3 2+1=\\log_3 4+\\log_3 3=\\log_3 12$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **$\\log_3 12$** 입니다."
+      }
+    ],
+    "final_answer": "log_3 12"
+  },
+  "20": {
+    "problem_id": "20",
+    "title": "2025학년도 9월 고2 학평 20번",
+    "difficulty": "킬러",
+    "weakness_unit": "귀납적으로 정의된 수열 추론하기",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "모든 항이 자연수인 수열 $\\{a_n\\}$이 $$a_{n+1}=\\begin{cases}\\dfrac{a_n+3}{2} & (a_n\\text{이 홀수})\\\\[2mm]\\dfrac{3}{2}a_n & (a_n\\text{이 짝수})\\end{cases}$$ 를 만족하고, (나) 모든 자연수 $n$에 대하여 $a_n\\le a_3$ 입니다. $a_4+a_5\\le 24$가 되도록 하는 모든 $a_1$의 값의 합을 구하는 문제입니다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "조건 (나)는 $a_3$이 수열 전체의 **최댓값**이라는 뜻입니다. 짝수 항 $a_n$은 $a_{n+1}=\\dfrac32 a_n>a_n$으로 항상 커지므로, $a_3$ 이후 값이 $a_3$을 넘지 않으려면 $a_3$은 **홀수**여야 합니다. 또한 $a_1\\le a_3,\\ a_2\\le a_3$도 만족해야 합니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "변환 $T(x)$를 ‘$x$가 홀수면 $\\dfrac{x+3}{2}$, 짝수면 $\\dfrac32 x$’로 두면, 홀수 $x>3$은 $\\dfrac{x+3}{2}<x$로 작아지고, $x=3$은 $3\\to 3$으로 고정점, $x=1\\to 2\\to 3$으로 이동합니다. 짝수는 항상 커지므로, 최댓값이 $a_3$에서 잡히려면 $a_3$이 홀수이고 $a_1,a_2$가 모두 $a_3$ 이하여야 합니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$a_1$을 작은 자연수부터 직접 대입하여 수열을 추적하고, ‘모든 $n$에서 $a_n\\le a_3$’와 ‘$a_4+a_5\\le 24$’를 동시에 확인합니다.\n\n$$a_1=1:\\ 1\\to 2\\to 3\\to 3\\to 3,\\ \\ a_3=3,\\ \\max=3=a_3\\ (\\checkmark),\\ a_4+a_5=6\\le 24\\ (\\checkmark)$$\n$$a_1=2:\\ 2\\to 3\\to 3\\to 3\\to 3,\\ \\ a_3=3\\ (\\checkmark),\\ a_4+a_5=6\\ (\\checkmark)$$\n$$a_1=3:\\ 3\\to 3\\to 3\\to 3\\to 3,\\ \\ a_3=3\\ (\\checkmark),\\ a_4+a_5=6\\ (\\checkmark)$$\n$$a_1=4:\\ 4\\to 6\\to 9\\to 6\\to 9,\\ \\ a_3=9,\\ \\max=9=a_3\\ (\\checkmark),\\ a_4+a_5=6+9=15\\ (\\checkmark)$$\n$$a_1=9:\\ 9\\to 6\\to 9\\to 6\\to 9,\\ \\ a_3=9,\\ \\max=9=a_3\\ (\\checkmark),\\ a_4+a_5=6+9=15\\ (\\checkmark)$$\n$$a_1=12:\\ 12\\to 18\\to 27\\to 15\\to 9,\\ \\ a_3=27,\\ \\max=27=a_3\\ (\\checkmark),\\ a_4+a_5=15+9=24\\le 24\\ (\\checkmark)$$\n\n그 밖의 $a_1$은 조건을 위배합니다. 예를 들어\n$$a_1=5:\\ 5\\to 4\\to 6\\to 9,\\ a_3=6\\ \\text{인데}\\ a_4=9>a_3\\ (\\times)$$\n$$a_1=6:\\ 6\\to 9\\to 6,\\ a_3=6\\ \\text{인데}\\ a_2=9>a_3\\ (\\times)$$\n$$a_1=8:\\ 8\\to 12\\to 18\\to 27,\\ a_3=18\\ \\text{인데}\\ a_4=27>a_3\\ (\\times)$$\n$$a_1=20:\\ 20\\to 30\\to 45\\to 24\\to 18,\\ a_3=45\\ \\text{는 최댓값}(\\checkmark)\\ \\text{이나}\\ a_4+a_5=24+18=42>24\\ (\\times)$$\n\n조건을 모두 만족하는 $a_1$은 $$a_1=1,\\ 2,\\ 3,\\ 4,\\ 9,\\ 12$$ 입니다. 따라서 합은\n$$1+2+3+4+9+12=31$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **31** 입니다."
+      }
+    ],
+    "final_answer": "31"
+  },
+  "21": {
+    "problem_id": "21",
+    "title": "2025학년도 9월 고2 학평 21번",
+    "difficulty": "킬러",
+    "weakness_unit": "사인법칙과 코사인법칙을 활용하여 문제 해결하기",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "circle", "center": [0, 0], "radius": 6.11},
+        {"type": "point", "coordinates": [0, 6.11], "label": "A"},
+        {"type": "point", "coordinates": [-6.05, 0.87], "label": "B"},
+        {"type": "point", "coordinates": [5.29, -3.06], "label": "C"},
+        {"type": "point", "coordinates": [6.05, 0.87], "label": "D"},
+        {"type": "polygon", "points": [[0, 6.11], [-6.05, 0.87], [5.29, -3.06], [6.05, 0.87]], "fillOpacity": 0.06},
+        {"type": "segment", "from": [0, 6.11], "to": [5.29, -3.06], "label": "AC"},
+        {"type": "circle", "center": [4.0, -0.82], "radius": 1.69},
+        {"type": "label_text", "tex": "C_1", "at": [-3.5, -4.8]},
+        {"type": "label_text", "tex": "C_2", "at": [2.6, -1.0]}
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "반지름의 길이가 $\\dfrac{\\sqrt{21}}{3}$인 원 $C_1$에 내접하는 사각형 $\\mathrm{ABCD}$가 있고 $\\overline{\\mathrm{AB}}=2,\\ \\overline{\\mathrm{AC}}=\\sqrt{7}$ 입니다. 선분 $\\mathrm{AC}$가 삼각형 $\\mathrm{BCD}$에 내접하는 원 $C_2$의 넓이를 이등분할 때, 원 $C_2$의 반지름의 길이를 구합니다. (단, $\\overline{\\mathrm{BC}}>\\overline{\\mathrm{CD}}$)"
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "직선이 원의 넓이를 이등분하려면 그 직선이 원의 **중심을 지나야** 합니다. 따라서 선분 $\\mathrm{AC}$(직선 $\\mathrm{CA}$)는 삼각형 $\\mathrm{BCD}$의 내접원 $C_2$의 중심, 즉 **내심을 지납니다**. 내심은 각의 이등분선 위에 있으므로 $\\mathrm{CA}$는 $\\angle\\mathrm{BCD}$의 이등분선입니다. 그러면 원주각 $\\angle\\mathrm{BCA}=\\angle\\mathrm{DCA}$ 이고, 같은 크기의 원주각이 잡는 호가 같으므로 $\\overline{\\mathrm{AB}}=\\overline{\\mathrm{AD}}$ 입니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "삼각형 $\\mathrm{ABC}$의 외접원이 $C_1$이므로 사인법칙에서 $$\\frac{\\overline{\\mathrm{AC}}}{\\sin(\\angle\\mathrm{ABC})}=2R=\\frac{2\\sqrt{21}}{3}$$ 입니다. 또 내접사각형에서 마주 보는 각의 합은 $\\pi$이고, 삼각형의 넓이 $=\\dfrac12\\,bc\\sin A$, 내접원 반지름 $r=\\dfrac{(\\text{넓이})}{s}$ ($s$는 둘레의 반)임을 이용합니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "**1) $\\angle\\mathrm{ABC}$ 구하기.** 사인법칙에서\n$$\\sin(\\angle\\mathrm{ABC})=\\frac{\\overline{\\mathrm{AC}}}{2R}=\\frac{\\sqrt{7}}{\\dfrac{2\\sqrt{21}}{3}}=\\frac{3\\sqrt{7}}{2\\sqrt{21}}=\\frac{3}{2\\sqrt{3}}=\\frac{\\sqrt{3}}{2}$$\n따라서 $\\angle\\mathrm{ABC}=60^\\circ$ 또는 $120^\\circ$ 입니다.\n\n**2) $\\overline{\\mathrm{AB}}=\\overline{\\mathrm{AD}}=2$.** 핵심 단서에서 $\\mathrm{CA}$가 $\\angle\\mathrm{BCD}$의 이등분선이므로 $\\overline{\\mathrm{AD}}=\\overline{\\mathrm{AB}}=2$.\n\n**3) $\\overline{\\mathrm{BC}},\\ \\overline{\\mathrm{CD}}$ 결정.** 내접사각형이므로 $\\angle\\mathrm{ADC}=180^\\circ-\\angle\\mathrm{ABC}$. 삼각형 $\\mathrm{ABC}$에서 코사인법칙 $$\\overline{\\mathrm{AC}}^2=\\overline{\\mathrm{AB}}^2+\\overline{\\mathrm{BC}}^2-2\\,\\overline{\\mathrm{AB}}\\cdot\\overline{\\mathrm{BC}}\\cos(\\angle\\mathrm{ABC})$$ 을, 삼각형 $\\mathrm{ACD}$에서도 마찬가지로 적용합니다.\n\n$\\angle\\mathrm{ABC}=60^\\circ$인 경우: $7=4+\\overline{\\mathrm{BC}}^2-2\\overline{\\mathrm{BC}}$ → $\\overline{\\mathrm{BC}}^2-2\\overline{\\mathrm{BC}}-3=0$ → $\\overline{\\mathrm{BC}}=3$. 또 $\\angle\\mathrm{ADC}=120^\\circ$에서 $7=4+\\overline{\\mathrm{CD}}^2+2\\overline{\\mathrm{CD}}$ → $\\overline{\\mathrm{CD}}=1$. 이때 $\\overline{\\mathrm{BC}}>\\overline{\\mathrm{CD}}\\ (\\checkmark)$.\n\n$\\angle\\mathrm{ABC}=120^\\circ$인 경우는 $\\overline{\\mathrm{BC}}=1,\\ \\overline{\\mathrm{CD}}=3$이 되어 $\\overline{\\mathrm{BC}}>\\overline{\\mathrm{CD}}$를 위배하므로 제외합니다.\n\n따라서 $\\overline{\\mathrm{BC}}=3,\\ \\overline{\\mathrm{CD}}=1$.\n\n**4) $\\angle\\mathrm{BCD}$와 $\\overline{\\mathrm{BD}}$.** 삼각형 $\\mathrm{ABC}$에서 코사인법칙으로\n$$\\cos(\\angle\\mathrm{ACB})=\\frac{\\overline{\\mathrm{AC}}^2+\\overline{\\mathrm{BC}}^2-\\overline{\\mathrm{AB}}^2}{2\\,\\overline{\\mathrm{AC}}\\cdot\\overline{\\mathrm{BC}}}=\\frac{7+9-4}{2\\cdot\\sqrt{7}\\cdot 3}=\\frac{12}{6\\sqrt{7}}=\\frac{2}{\\sqrt{7}}$$\n$\\angle\\mathrm{BCD}=2\\,\\angle\\mathrm{ACB}$ 이므로\n$$\\cos(\\angle\\mathrm{BCD})=2\\cos^2(\\angle\\mathrm{ACB})-1=2\\cdot\\frac{4}{7}-1=\\frac{1}{7}$$\n삼각형 $\\mathrm{BCD}$에서 코사인법칙으로\n$$\\overline{\\mathrm{BD}}^2=\\overline{\\mathrm{BC}}^2+\\overline{\\mathrm{CD}}^2-2\\,\\overline{\\mathrm{BC}}\\cdot\\overline{\\mathrm{CD}}\\cos(\\angle\\mathrm{BCD})=9+1-2\\cdot3\\cdot1\\cdot\\frac{1}{7}=\\frac{64}{7}$$\n$$\\therefore \\overline{\\mathrm{BD}}=\\frac{8}{\\sqrt{7}}$$\n\n**5) 내접원 반지름.** $\\sin(\\angle\\mathrm{BCD})=\\sqrt{1-\\dfrac{1}{49}}=\\dfrac{4\\sqrt{3}}{7}$ 이므로 삼각형 $\\mathrm{BCD}$의 넓이는\n$$T=\\frac{1}{2}\\,\\overline{\\mathrm{BC}}\\cdot\\overline{\\mathrm{CD}}\\sin(\\angle\\mathrm{BCD})=\\frac{1}{2}\\cdot 3\\cdot 1\\cdot\\frac{4\\sqrt{3}}{7}=\\frac{6\\sqrt{3}}{7}$$\n둘레의 반은\n$$s=\\frac{\\overline{\\mathrm{BC}}+\\overline{\\mathrm{CD}}+\\overline{\\mathrm{BD}}}{2}=\\frac{3+1+\\dfrac{8}{\\sqrt{7}}}{2}=2+\\frac{4}{\\sqrt{7}}=\\frac{2\\sqrt{7}+4}{\\sqrt{7}}$$\n따라서\n$$r_2=\\frac{T}{s}=\\frac{\\dfrac{6\\sqrt{3}}{7}}{\\dfrac{2\\sqrt{7}+4}{\\sqrt{7}}}=\\frac{6\\sqrt{3}}{7}\\cdot\\frac{\\sqrt{7}}{2\\sqrt{7}+4}=\\frac{6\\sqrt{21}}{7\\cdot 2(\\sqrt{7}+2)}=\\frac{3\\sqrt{21}}{7(\\sqrt{7}+2)}$$\n분모를 유리화하면 (분자·분모에 $\\sqrt{7}-2$ 곱)\n$$r_2=\\frac{3\\sqrt{21}\\,(\\sqrt{7}-2)}{7(7-4)}=\\frac{3(\\sqrt{147}-2\\sqrt{21})}{21}=\\frac{3(7\\sqrt{3}-2\\sqrt{21})}{21}=\\frac{21\\sqrt{3}-6\\sqrt{21}}{21}$$\n$$\\therefore r_2=\\sqrt{3}-\\frac{2}{7}\\sqrt{21}$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **$\\sqrt{3}-\\dfrac{2}{7}\\sqrt{21}$** 입니다."
+      }
+    ],
+    "final_answer": "sqrt(3) - (2/7)sqrt(21)"
+  },
+  "27": {
+    "problem_id": "27",
+    "title": "2025학년도 9월 고2 학평 27번",
+    "difficulty": "준킬러",
+    "weakness_unit": "삼각함수를 활용하여 문제 해결하기",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "function_plot", "expr": "3*sin(PI/4*x)+1"},
+        {"type": "label_text", "tex": "y=f(x)", "at": [2, 4.6]}
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "두 자연수 $a,\\ b$에 대하여 $0\\le x\\le 8$에서 정의된 함수 $$f(x)=a\\sin\\frac{\\pi}{4}x+b$$ 가 있습니다. 집합 $\\{x\\,|\\,f(x)=n,\\ n\\text{은 자연수}\\}$의 모든 원소의 합이 $22$일 때 $a^2+b^2$의 값을 구합니다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$\\sin\\dfrac{\\pi}{4}x$는 주기가 $8$이고, $[0,8]$에서 $x=2$에서 최대($1$), $x=6$에서 최소($-1$)인 모양입니다. 수평선 $y=n$과의 교점의 $x$좌표 합은 대칭성으로 정해집니다.\n\n- 자연수 $n$이 $b<n<b+a$ : 교점 두 개가 $x=2$에 대칭 → 합 $4$\n- $n=b$ : $x=0,4,8$ → 합 $12$\n- $n=b+a$ (최댓값) : $x=2$ → 합 $2$\n- $b-a<n<b$ : 교점 두 개가 $x=6$에 대칭 → 합 $12$\n- $n=b-a$ (최솟값) : $x=6$ → 합 $6$"
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "집합의 원소는 ‘$f(x)=n$을 만족하는 $x$’이며, $n$은 함숫값 범위 $[b-a,\\ b+a]$ 안의 자연수를 모두 훑습니다. 각 $n$마다 위의 합을 더해 총합이 $22$가 되도록 $a,b$를 정합니다. 자연수 조건 $n\\ge 1$ 때문에 $b-a\\le 0$이면 아래쪽 교점이 일부 사라집니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "**1) 총합 식 세우기.** $b-a\\le 0$인 경우(아래쪽으로는 자연수 $n$이 $1$부터 시작)를 생각합니다. 범위 안의 자연수 $n$은 $1,2,\\dots,b+a$ 입니다. 각 기여를 모으면\n\n- $n=b$ : $12$\n- $n=b+a$ : $2$\n- $b<n<b+a$ 인 $n$ : 개수 $(a-1)$, 각 $4$ → $4(a-1)$\n- $1\\le n<b$ 인 $n$ : 개수 $(b-1)$, 각 $12$ → $12(b-1)$\n\n총합은\n$$2+4(a-1)+12+12(b-1)=4a+12b-2$$\n\n**2) 방정식 풀이.** 총합 $=22$ 이므로\n$$4a+12b-2=22\\ \\Rightarrow\\ 4a+12b=24\\ \\Rightarrow\\ a+3b=6$$\n자연수 해는 $b=1,\\ a=3$ 뿐입니다. ($b=2$이면 $a=0$으로 자연수 아님.) 이때 $b-a=1-3=-2\\le 0$ 이므로 가정과도 일치합니다.\n\n**3) 검산.** $a=3,\\ b=1$이면 $f$의 치역은 $[-2,4]$, 범위 안 자연수는 $1,2,3,4$.\n$$n=1(=b):\\ x=0,4,8\\ \\to\\ \\text{합 }12$$\n$$n=4(=b+a):\\ x=2\\ \\to\\ \\text{합 }2$$\n$$n=2,3\\ (b<n<b+a):\\ \\text{각 합 }4\\ \\to\\ 4+4=8$$\n총합 $=12+2+8=22\\ (\\checkmark)$.\n\n**4) 결론.**\n$$a^2+b^2=3^2+1^2=10$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **10** 입니다."
+      }
+    ],
+    "final_answer": "10"
+  },
+  "28": {
+    "problem_id": "28",
+    "title": "2025학년도 9월 고2 학평 28번",
+    "difficulty": "킬러",
+    "weakness_unit": "등비수열을 활용하여 문제 해결하기",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "모든 항이 자연수인 수열 $\\{a_n\\}$에 대하여 $$b_n=a_{3n-2}+a_{3n-1}+a_{3n}$$ 이라 합니다. 조건 (가) 모든 자연수 $n$에 대하여 $a_{3n-2}+a_{3n}=2a_{3n-1}$, (나) $\\{b_n\\}$은 공비가 $3$인 등비수열입니다. $\\sum_{k=1}^{14}a_k=500$일 때 $a_{13}$의 값을 구합니다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "조건 (가)에서 세 항 $a_{3n-2},\\ a_{3n-1},\\ a_{3n}$은 가운데 항이 $a_{3n-1}$인 등차 관계이므로 $$b_n=a_{3n-2}+a_{3n-1}+a_{3n}=3a_{3n-1}$$ 입니다. 따라서 $b_n$이 공비 $3$의 등비수열이면 $a_{3n-1}$도 공비 $3$의 등비수열입니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$a_{3n-1}=a_2\\cdot 3^{\\,n-1}$ 이므로 $$a_2,\\ a_5,\\ a_8,\\ a_{11},\\ a_{14}=a_2,\\ 3a_2,\\ 9a_2,\\ 27a_2,\\ 81a_2$$ 이고, $b_n=3a_{3n-1}=a_2\\cdot 3^{\\,n}$ 입니다. 또 등차 관계에서 $a_{3n-2}+a_{3n}=2a_{3n-1}$ 이 성립합니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "**1) 앞 12항의 합.** $a_1\\sim a_{12}$는 $b_1,b_2,b_3,b_4$로 묶이므로\n$$\\sum_{k=1}^{12}a_k=b_1+b_2+b_3+b_4=a_2(3+9+27+81)=120\\,a_2$$\n\n**2) 13, 14항 처리.** $a_{13},a_{14},a_{15}$는 다섯 번째 묶음($n=5$)으로, $a_{14}=a_2\\cdot 3^4=81a_2$ 이고 등차 관계에서\n$$a_{13}+a_{15}=2a_{14}=162\\,a_2$$\n\n**3) 전체 합 식.**\n$$\\sum_{k=1}^{14}a_k=\\sum_{k=1}^{12}a_k+a_{13}+a_{14}=120a_2+a_{13}+81a_2=201a_2+a_{13}=500$$\n따라서\n$$a_{13}=500-201a_2$$\n\n**4) 자연수 조건으로 $a_2$ 결정.** $a_{13}\\ge 1$ 이려면 $201a_2<500$ 이므로 $a_2\\le 2$.\n\n- $a_2=1$ : $a_{13}=299$, $a_{14}=81$, $a_{13}+a_{15}=162$ 에서 $a_{15}=162-299<0$ → 자연수 아님 ($\\times$)\n- $a_2=2$ : $a_{13}=500-402=98$, $a_{14}=162$, $a_{13}+a_{15}=324$ 에서 $a_{15}=226>0$ → 자연수 ($\\checkmark$)\n\n따라서 $a_2=2$, $a_{13}=98$ 입니다.\n\n$$\\therefore a_{13}=98$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **98** 입니다."
+      }
+    ],
+    "final_answer": "98"
+  },
+  "29": {
+    "problem_id": "29",
+    "title": "2025학년도 9월 고2 학평 29번",
+    "difficulty": "킬러",
+    "weakness_unit": "삼각함수를 활용하여 추론하기",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "두 함수 $$f(x)=\\frac{3}{a}\\,|x-3|-b,\\qquad g(x)=\\sin\\frac{\\pi}{b}x+3$$ 에 대하여 조건 (가) $y=f(g(x))$의 그래프는 직선 $x=3$에 대하여 대칭, (나) $0\\le x\\le 6$에서 $y=g(f(x))$의 그래프가 직선 $y=3$과 만나는 점의 개수는 $3$ 입니다. 이를 만족하는 두 자연수 $a,b$의 순서쌍 $(a,b)$에 대하여 $2a+b$의 최댓값 $M$, 최솟값 $m$을 구하고 $M\\times m$을 구합니다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$g(x)-3=\\sin\\dfrac{\\pi}{b}x$ 이므로 $$f(g(x))=\\frac{3}{a}\\big|g(x)-3\\big|-b=\\frac{3}{a}\\left|\\sin\\frac{\\pi}{b}x\\right|-b$$ 입니다. 즉 $f(g(x))$는 $\\left|\\sin\\dfrac{\\pi}{b}x\\right|$ 꼴이며, 이 함수의 대칭축은 $x=\\dfrac{b}{2}k$ ($k$는 정수)에 있습니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$g(f(x))=3$ 은 $\\sin\\dfrac{\\pi}{b}f(x)=0$, 즉 $f(x)$가 $b$의 배수일 때 성립합니다. $f(x)=\\dfrac{3}{a}|x-3|-b$ 는 꼭짓점 $(3,-b)$인 V자 모양으로, $[0,6]$에서 최솟값 $-b$ (꼭짓점), 최댓값 $\\dfrac{9}{a}-b$ ($x=0,6$)를 가집니다. 수평값 $v=bk$에 대해 $v=-b$이면 교점 $1$개, $-b<v\\le \\dfrac{9}{a}-b$이면 교점 $2$개입니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "**1) 조건 (가).** $\\left|\\sin\\dfrac{\\pi}{b}x\\right|$의 대칭축은 $x=\\dfrac{b}{2}k$. $x=3$이 대칭축이 되려면 $$3=\\frac{b}{2}k\\ \\Rightarrow\\ b=\\frac{6}{k}\\quad(k\\text{는 자연수})$$ 이므로 $b\\in\\{1,2,3,6\\}$.\n\n**2) 조건 (나).** $g(f(x))=3 \\Leftrightarrow f(x)=bk$ ($k$ 정수). 교점 개수를 세면, 꼭짓점값 $f=-b$ ($k=-1$)는 항상 $1$개($x=3$)를 줍니다. $k\\ge 0$인 $bk$가 $\\left(-b,\\ \\dfrac{9}{a}-b\\right]$ 안에 있으면 각각 $2$개를 줍니다. 따라서 총 교점 수\n$$1+2N=3\\ \\Rightarrow\\ N=1$$\n즉 $k\\ge 0$ 중 $bk\\le \\dfrac{9}{a}-b$ 인 것이 정확히 하나(=$k=0$)여야 합니다.\n\n- $k=0$ ($v=0$) 포함: $0\\le \\dfrac{9}{a}-b\\ \\Rightarrow\\ \\dfrac{9}{a}\\ge b$\n- $k=1$ ($v=b$) 제외: $b>\\dfrac{9}{a}-b\\ \\Rightarrow\\ \\dfrac{9}{a}<2b$\n\n정리하면 $$b\\le \\frac{9}{a}<2b\\quad\\Longleftrightarrow\\quad \\frac{9}{2b}<a\\le \\frac{9}{b}$$\n\n**3) 순서쌍 열거.** $b\\in\\{1,2,3,6\\}$에 대해 자연수 $a$를 찾습니다.\n$$b=1:\\ \\tfrac{9}{2}<a\\le 9\\ \\Rightarrow\\ a=5,6,7,8,9$$\n$$b=2:\\ \\tfrac{9}{4}<a\\le \\tfrac{9}{2}\\ \\Rightarrow\\ a=3,4$$\n$$b=3:\\ \\tfrac{3}{2}<a\\le 3\\ \\Rightarrow\\ a=2,3$$\n$$b=6:\\ \\tfrac{3}{4}<a\\le \\tfrac{3}{2}\\ \\Rightarrow\\ a=1$$\n\n**4) $2a+b$ 계산.**\n$$b=1:\\ 11,13,15,17,19$$\n$$b=2:\\ 8,10$$\n$$b=3:\\ 7,9$$\n$$b=6:\\ 8$$\n최댓값 $M=19\\ (a=9,b=1)$, 최솟값 $m=7\\ (a=2,b=3)$.\n\n$$\\therefore M\\times m=19\\times 7=133$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **133** 입니다."
+      }
+    ],
+    "final_answer": "133"
+  },
+  "30": {
+    "problem_id": "30",
+    "title": "2025학년도 9월 고2 학평 30번",
+    "difficulty": "킬러",
+    "weakness_unit": "함수의 극한을 활용하여 추론하기",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "최고차항의 계수가 양수인 이차함수 $f(x)$와 $g(x)=\\dfrac{1}{3}x+a$에 대하여 $$h(x)=\\begin{cases} g(x)+f(x) & (f(x)\\ge g(x))\\\\ g(x)-f(x) & (f(x)<g(x))\\end{cases}$$ 가 (가) $\\displaystyle\\lim_{x\\to\\alpha-}h(x)\\ne \\lim_{x\\to\\alpha+}h(x)$ 인 실수 $\\alpha$는 $2$뿐이고, (나) 모든 실수 $k$에 대하여 $\\displaystyle\\lim_{x\\to k}|h(x)-1|$이 존재하도록 합니다. $h(0)=\\dfrac{7}{3}$일 때 $h(5)$를 구합니다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$d(x)=f(x)-g(x)$로 두면 $d$는 최고차항 양수인 이차함수입니다. $h$는 $d\\ge 0$이면 $g+f$, $d<0$이면 $g-f$입니다. $d(x)=0$이면서 부호가 바뀌는(서로 다른 근) 점에서 좌우극한이 $g+f$와 $g-f$로 갈리며, 그 점에서 $f=g$이므로 두 극한은 $2f$와 $0$입니다. 따라서 **불연속이 생기지 않으려면 그 근에서 $f=g=0$** 이어야 합니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$d(x)$가 서로 다른 두 근 $r_1,r_2$를 가지면 두 근에서 모두 불연속이 생길 수 있습니다. (가)에서 불연속이 $x=2$ 한 곳뿐이려면, 한 근에서는 점프가 사라지고($f=g=0$) 다른 근 $x=2$에서만 점프가 남아야 합니다. (나)에서 $\\lim|h-1|$이 존재하려면 $x=2$에서의 두 한쪽극한 $L_1,L_2$가 $|L_1-1|=|L_2-1|$을 만족해야 합니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "**1) $x=2$에서의 극한.** $x=2$는 $d$의 근이므로 $f(2)=g(2)$. 좌우극한은 $g(2)+f(2)=2f(2)$ 와 $g(2)-f(2)=0$ 입니다.\n\n**2) 조건 (나) 적용.** $\\lim_{x\\to2}|h(x)-1|$이 존재하려면\n$$|2f(2)-1|=|0-1|=1\\ \\Rightarrow\\ 2f(2)-1=\\pm1\\ \\Rightarrow\\ f(2)=1\\ \\text{또는}\\ f(2)=0$$\n불연속이려면 $f(2)\\ne 0$ 이므로 $f(2)=1$. 그러면 $g(2)=f(2)=1$:\n$$\\frac{1}{3}\\cdot 2+a=1\\ \\Rightarrow\\ a=\\frac{1}{3}$$\n\n**3) 다른 근 결정.** 점프가 사라지는 근 $r$에서는 $f(r)=g(r)=0$ 이어야 합니다. $g(r)=\\dfrac{1}{3}r+\\dfrac{1}{3}=0\\Rightarrow r=-1$. 따라서 $d(x)=f(x)-g(x)$의 두 근은 $x=2,\\ x=-1$ 이고, 최고차항 계수를 $p\\ (>0)$라 하면\n$$d(x)=p(x+1)(x-2)$$\n즉 $f(x)=g(x)+p(x+1)(x-2)=\\dfrac{1}{3}x+\\dfrac{1}{3}+p(x+1)(x-2)$.\n\n**4) $h(0)$으로 $p$ 결정.** $x=0$에서 $d(0)=p(1)(-2)=-2p<0$ 이므로 $f(0)<g(0)$, $h(0)=g(0)-f(0)=-d(0)=2p$. 따라서\n$$2p=\\frac{7}{3}\\ \\Rightarrow\\ p=\\frac{7}{6}$$\n\n**5) $h(5)$ 계산.** $d(5)=p(6)(3)=18p=18\\cdot\\dfrac{7}{6}=21>0$ 이므로 $f(5)\\ge g(5)$, $h(5)=g(5)+f(5)$. \n$$g(5)=\\frac{1}{3}\\cdot5+\\frac{1}{3}=2,\\qquad f(5)=g(5)+d(5)=2+21=23$$\n$$\\therefore h(5)=g(5)+f(5)=2+23=25$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **25** 입니다."
+      }
+    ],
+    "final_answer": "25"
+  }
+}

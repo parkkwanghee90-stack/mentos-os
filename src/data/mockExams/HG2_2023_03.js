@@ -26,11 +26,11 @@ export const HG2_2023_03 = {
   { num: 20, obj: true, answer: 3, type: '무리함수의 그래프를 이용하여 함숫값 을 구하는 문제를 해결한다' },
   { num: 21, obj: true, answer: 2, type: '삼각형의 무게중심의 성질을 이용하여 삼각형과 관련된 명제의 참, 거짓을 추론한다' },
   { num: 22, obj: false, answer: 35, type: '집합의 연산을 이용하여 원소의 곱을 계산한다' },
-  { num: 23, obj: false, answer: 23, type: '합성함수와 역함수의 값을 계산한다' },
+  { num: 23, obj: false, answer: 5, type: '합성함수와 역함수의 값을 계산한다' },
   { num: 24, obj: false, answer: 22, type: '나머지정리를 이해하여 식의 값을 구한 9 다. 다항식 를 으로 나눈 몫이 , 나머지 가 이므로  나머지정리에 의하여 를 로 나눈 나머지는 ×' },
   { num: 25, obj: false, answer: 3, type: '무리함수의 그래프를 이해하여 미지수 의 값을 구한다' },
   { num: 26, obj: false, answer: 9, type: '직선의 평행 조건을 이용하여 점의 좌 표를 구하는 문제를 해결한다' },
-  { num: 27, obj: false, answer: 22, type: '조합을 이용하여 조건을 만족시키는 경 우의 수를 구하는 문제를 해결한다' },
+  { num: 27, obj: false, answer: 16, type: '조합을 이용하여 조건을 만족시키는 경 우의 수를 구하는 문제를 해결한다' },
   { num: 28, obj: false, answer: 12, type: '이차방정식과 이차함수의 관계를 이용 하여 미지수의 개수를 구하는 문제를 해결한다' },
   { num: 29, obj: false, answer: 15, type: '도형의 평행이동과 대칭이동을 이용하 여 미지수의 값을 구하는 문제를 해결한다' },
   { num: 30, obj: false, answer: 250, type: '이차함수와 유리함수의 그래프를 추론 하여 미지수의 값을 구한다' }

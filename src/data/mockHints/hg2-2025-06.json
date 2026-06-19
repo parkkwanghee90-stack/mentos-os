@@ -1,0 +1,231 @@
+{
+  "14": {
+    "problem_id": "14",
+    "title": "2025학년도 6월 고2 학평 14번",
+    "difficulty": "준킬러",
+    "weakness_unit": "지수·로그 - 곡선 위의 점의 좌표와 선분의 길이",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "function_plot", "expr": "2^x"},
+        {"type": "point", "coordinates": [0.29, 1.225], "label": "A"},
+        {"type": "point", "coordinates": [1.46, 2.756], "label": "B"},
+        {"type": "point", "coordinates": [0.876, 1.99], "label": "M"},
+        {"type": "point", "coordinates": [0.876, 1.837], "label": "N"},
+        {"type": "segment", "from": [0.29, 1.225], "to": [1.46, 2.756]},
+        {"type": "segment", "from": [0.876, 1.99], "to": [0.876, 1.837]},
+        {"type": "label_text", "tex": "y=2^x", "at": [1.7, 3.0]}
+      ]
+    },
+    "steps": [
+      {"phase": "P", "title": "문제 분석", "content": "곡선 $y=2^{x}$ 위의 두 점 $\\text{A}$, $\\text{B}$에 대하여 선분 $\\text{AB}$의 중점을 $\\text{M}$, 점 $\\text{M}$을 지나고 $x$축에 수직인 직선이 곡선 $y=2^{x}$과 만나는 점을 $\\text{N}$이라 한다. 두 점 $\\text{A}$, $\\text{B}$의 $x$좌표가 각각 $\\dfrac{1}{2}\\log_2\\dfrac{3}{2}$, $\\dfrac{5}{2}\\log_2\\dfrac{3}{2}$일 때 선분 $\\text{MN}$의 길이를 구하는 문제이다."},
+      {"phase": "C", "title": "핵심 단서", "content": "$\\text{M}$과 $\\text{N}$은 $x$좌표가 같으므로 $\\overline{\\text{MN}}$은 두 점의 $y$좌표의 차이이다.\n\n$\\bullet$ $\\text{M}$의 $y$좌표는 $\\text{A}$, $\\text{B}$의 $y$좌표의 평균(중점이므로),\n$\\bullet$ $\\text{N}$의 $y$좌표는 곡선 위의 점이므로 $x=(\\text{M의 }x\\text{좌표})$를 $y=2^{x}$에 대입한 값이다.\n\n핵심 계산 도구는 $2^{k\\log_2 a}=a^{k}$ 이다."},
+      {"phase": "B", "title": "배경 지식", "content": "$\\bullet$ 로그의 정의에 의한 변형: $a^{\\log_a b}=b$, 그리고 $2^{k\\log_2 a}=2^{\\log_2 a^{k}}=a^{k}$.\n\n$\\bullet$ $\\sqrt{\\dfrac{3}{2}}=\\dfrac{\\sqrt{6}}{2}$ (분모를 유리화).\n\n$\\bullet$ 두 점 $\\text{A}(x_1,y_1)$, $\\text{B}(x_2,y_2)$의 중점 $\\text{M}$의 좌표는 $\\left(\\dfrac{x_1+x_2}{2},\\ \\dfrac{y_1+y_2}{2}\\right)$이다."},
+      {"phase": "SOLVE", "title": "단계별 풀이", "content": "$\\textbf{1단계. 두 점 A, B의 }y\\textbf{좌표}$\n두 점 $\\text{A}$, $\\text{B}$가 곡선 $y=2^{x}$ 위에 있으므로\n$$(\\text{A의 }y\\text{좌표})=2^{\\frac{1}{2}\\log_2\\frac{3}{2}}=2^{\\log_2\\sqrt{\\frac{3}{2}}}=\\sqrt{\\frac{3}{2}}=\\frac{\\sqrt{6}}{2}$$\n$$(\\text{B의 }y\\text{좌표})=2^{\\frac{5}{2}\\log_2\\frac{3}{2}}=2^{\\log_2\\left(\\frac{3}{2}\\right)^{\\frac{5}{2}}}=\\left(\\frac{3}{2}\\right)^{\\frac{5}{2}}=\\frac{9}{4}\\sqrt{\\frac{3}{2}}=\\frac{9}{8}\\sqrt{6}$$\n\n$\\textbf{2단계. 중점 M의 좌표}$\n선분 $\\text{AB}$의 중점이 $\\text{M}$이므로 $\\text{M}$의 $y$좌표는\n$$\\frac{\\dfrac{\\sqrt{6}}{2}+\\dfrac{9}{8}\\sqrt{6}}{2}=\\frac{\\dfrac{4}{8}\\sqrt{6}+\\dfrac{9}{8}\\sqrt{6}}{2}=\\frac{\\dfrac{13}{8}\\sqrt{6}}{2}=\\frac{13}{16}\\sqrt{6}$$\n또한 $\\text{M}$의 $x$좌표는\n$$\\frac{\\dfrac{1}{2}\\log_2\\dfrac{3}{2}+\\dfrac{5}{2}\\log_2\\dfrac{3}{2}}{2}=\\frac{3\\log_2\\dfrac{3}{2}}{2}=\\frac{3}{2}\\log_2\\frac{3}{2}$$\n\n$\\textbf{3단계. 점 N의 }y\\textbf{좌표}$\n두 점 $\\text{M}$, $\\text{N}$의 $x$좌표가 서로 같으므로 점 $\\text{N}$의 $y$좌표는\n$$2^{\\frac{3}{2}\\log_2\\frac{3}{2}}=2^{\\log_2\\left(\\frac{3}{2}\\right)^{\\frac{3}{2}}}=\\left(\\frac{3}{2}\\right)^{\\frac{3}{2}}=\\frac{3}{2}\\sqrt{\\frac{3}{2}}=\\frac{3}{4}\\sqrt{6}$$\n\n$\\textbf{4단계. 선분 MN의 길이}$\n$\\text{M}$, $\\text{N}$의 $x$좌표가 같으므로 $\\overline{\\text{MN}}$은 $y$좌표의 차이이다.\n$$\\overline{\\text{MN}}=\\frac{13}{16}\\sqrt{6}-\\frac{3}{4}\\sqrt{6}=\\frac{13}{16}\\sqrt{6}-\\frac{12}{16}\\sqrt{6}=\\frac{\\sqrt{6}}{16}$$"},
+      {"phase": "A", "title": "최종 정답", "content": "정답은 **$\\dfrac{\\sqrt{6}}{16}$** (③) 입니다."}
+    ],
+    "final_answer": "\\dfrac{\\sqrt{6}}{16}"
+  },
+  "15": {
+    "problem_id": "15",
+    "title": "2025학년도 6월 고2 학평 15번",
+    "difficulty": "준킬러",
+    "weakness_unit": "로그 - 밑·진수 조건과 정수의 개수",
+    "steps": [
+      {"phase": "P", "title": "문제 분석", "content": "$\\log_{|x+1|}\\{(n-x)(n+1+x)\\}$ 가 정의되도록 하는 정수 $x$의 개수가 $25$일 때, 자연수 $n$의 값을 구하는 문제이다."},
+      {"phase": "C", "title": "핵심 단서", "content": "로그 $\\log_{(\\text{밑})}(\\text{진수})$가 정의되려면 다음을 모두 만족해야 한다.\n$$(\\text{밑})>0,\\quad (\\text{밑})\\ne 1,\\quad (\\text{진수})>0$$\n즉 $|x+1|>0$, $|x+1|\\ne 1$, $(n-x)(n+1+x)>0$ 세 조건을 각각 정수 $x$ 범위로 바꾼 뒤, 진수 조건의 구간에서 밑 조건으로 제외되는 정수를 빼야 한다."},
+      {"phase": "B", "title": "배경 지식", "content": "$\\bullet$ $|x+1|>0\\Leftrightarrow x\\ne -1$.\n\n$\\bullet$ $|x+1|\\ne 1\\Leftrightarrow x+1\\ne \\pm 1\\Leftrightarrow x\\ne 0,\\ x\\ne -2$.\n\n$\\bullet$ 이차부등식 $(n-x)(n+1+x)>0$의 두 경계는 $x=n$, $x=-(n+1)$이고, 두 근 사이에서 부등식이 성립한다.\n\n$\\bullet$ 정수 $a<b$에 대하여 열린구간 $(a,b)$ 안의 정수의 개수는 $b-a-1$개이다."},
+      {"phase": "SOLVE", "title": "단계별 풀이", "content": "$\\textbf{1단계. 세 조건 정리}$\n로그가 정의되려면\n$$|x+1|>0,\\quad |x+1|\\ne 1,\\quad (n-x)(n+1+x)>0$$\n이어야 한다.\n$\\bullet$ $|x+1|>0$에서 $x\\ne -1$.\n$\\bullet$ $|x+1|\\ne 1$에서 $x\\ne 0$ 이고 $x\\ne -2$.\n$\\bullet$ $(n-x)(n+1+x)>0$에서 두 근이 $x=n$, $x=-(n+1)$이므로\n$$-(n+1)<x<n,\\quad\\text{즉}\\quad -n-1<x<n$$\n\n$\\textbf{2단계. 진수 조건 구간의 정수 개수}$\n$n\\ge 2$일 때, 제외해야 하는 세 정수 $x=-2,\\,-1,\\,0$은 모두 구간 $(-n-1,\\ n)$ 안에 들어온다.\n구간 $(-n-1,\\ n)$ 안의 정수의 개수는\n$$n-(-n-1)-1=2n$$\n여기서 밑 조건으로 제외되는 정수 $x=-2,\\,-1,\\,0$의 $3$개를 빼면, 정의되도록 하는 정수 $x$의 개수는\n$$2n-3$$\n\n$\\textbf{3단계. 방정식 풀이}$\n정수 $x$의 개수가 $25$이므로\n$$2n-3=25$$\n$$2n=28$$\n$$\\therefore\\ n=14$$\n($n=14\\ge 2$이므로 $2$단계의 가정과 모순이 없다.)"},
+      {"phase": "A", "title": "최종 정답", "content": "정답은 **$14$** (②) 입니다."}
+    ],
+    "final_answer": "14"
+  },
+  "18": {
+    "problem_id": "18",
+    "title": "2025학년도 6월 고2 학평 18번",
+    "difficulty": "준킬러",
+    "weakness_unit": "지수함수·로그함수 - 역함수 대칭과 도형의 넓이",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "function_plot", "expr": "2^(2*x)"},
+        {"type": "point", "coordinates": [0, 0], "label": "O"},
+        {"type": "point", "coordinates": [1, 4], "label": "A"},
+        {"type": "point", "coordinates": [4.5, 0.5], "label": "B"},
+        {"type": "point", "coordinates": [2.5, 0], "label": "C"},
+        {"type": "point", "coordinates": [0.5, 2], "label": "D"},
+        {"type": "point", "coordinates": [5, 0], "label": "E"},
+        {"type": "polygon", "points": [[1, 4], [4.5, 0.5], [2.5, 0], [0.5, 2]], "fillOpacity": 0.08},
+        {"type": "segment", "from": [0.5, 2], "to": [5, 0]},
+        {"type": "segment", "from": [0, 0], "to": [1, 4]},
+        {"type": "label_text", "tex": "y=a^{ax}", "at": [1.5, 4.3]}
+      ]
+    },
+    "steps": [
+      {"phase": "P", "title": "문제 분석", "content": "상수 $a\\,(a>1)$에 대하여 두 곡선 $y=a^{ax}$, $y=\\dfrac{1}{a}\\log_a\\left(x-\\dfrac{1}{a}\\right)-\\dfrac{1}{a}$ 가 있다. 곡선 $y=a^{ax}$ 위의 점 중 $x$좌표가 $\\dfrac{1}{a}$보다 큰 점 $\\text{A}$에서 기울기 $-1$인 직선이 두 번째 곡선과 만나는 점을 $\\text{B}$, 두 번째 곡선이 $x$축과 만나는 점을 $\\text{C}$, 점 $\\text{C}$에서 기울기 $-1$인 직선이 $y=a^{ax}$과 만나는 점을 $\\text{D}$라 한다. 점 $\\text{A}$와 점 $\\text{D}$의 $x$좌표의 차가 $\\dfrac{1}{a}$이고 직선 $\\text{AD}$가 원점을 지날 때, 사각형 $\\text{ABCD}$의 넓이를 구하는 문제이다."},
+      {"phase": "C", "title": "핵심 단서", "content": "함수 $g(x)=\\dfrac{1}{a}\\log_a\\left(x-\\dfrac{1}{a}\\right)-\\dfrac{1}{a}$ 의 그래프는 $y=a^{ax}$의 역함수의 그래프를 $x$축 방향으로 $\\dfrac{1}{a}$, $y$축 방향으로 $-\\dfrac{1}{a}$ 만큼 평행이동한 것이다. 이를 이용해 $\\text{A}$, $\\text{B}$, $\\text{C}$, $\\text{D}$의 좌표를 $a$로 나타낸 뒤, 직선 $\\text{AD}$가 원점을 지난다는 조건에서 $a$를 결정한다."},
+      {"phase": "B", "title": "배경 지식", "content": "$\\bullet$ $y=a^{ax}$와 그 역함수의 그래프는 직선 $y=x$에 대하여 대칭이다.\n\n$\\bullet$ 곡선을 $x$축 방향으로 $p$, $y$축 방향으로 $q$만큼 평행이동하면 $y-q=(\\text{원식의 }x\\text{에 }x-p\\text{ 대입})$.\n\n$\\bullet$ 기울기 $-1$인 직선들로 둘러싸인 사각형의 넓이는, 큰 직각삼각형의 넓이에서 모서리의 작은 삼각형들의 넓이를 빼서 구한다."},
+      {"phase": "SOLVE", "title": "단계별 풀이", "content": "$\\textbf{1단계. 점 C, D의 좌표}$\n$g(x)=\\dfrac{1}{a}\\log_a\\left(x-\\dfrac{1}{a}\\right)-\\dfrac{1}{a}$ 의 그래프는 $y=a^{ax}$의 역함수의 그래프를 $x$축 방향으로 $\\dfrac{1}{a}$, $y$축 방향으로 $-\\dfrac{1}{a}$만큼 평행이동한 것이다.\n점 $\\text{C}$는 두 번째 곡선이 $x$축과 만나는 점이므로\n$$\\text{C}\\left(a+\\frac{1}{a},\\ 0\\right)$$\n이고, 점 $\\text{D}$의 좌표는\n$$\\text{D}\\left(\\frac{1}{a},\\ a\\right)$$\n이다.\n\n$\\textbf{2단계. 점 A의 좌표}$\n점 $\\text{A}$의 $x$좌표와 점 $\\text{D}$의 $x$좌표의 차가 $\\dfrac{1}{a}$이므로 점 $\\text{A}$의 $x$좌표는 $\\dfrac{1}{a}+\\dfrac{1}{a}=\\dfrac{2}{a}$이고, $\\text{A}$는 $y=a^{ax}$ 위의 점이므로\n$$\\text{A}\\left(\\frac{2}{a},\\ a^{a\\cdot\\frac{2}{a}}\\right)=\\text{A}\\left(\\frac{2}{a},\\ a^{2}\\right)$$\n\n$\\textbf{3단계. 직선 AD가 원점을 지나는 조건으로 }a\\textbf{ 결정}$\n두 점 $\\text{A}\\left(\\dfrac{2}{a},a^{2}\\right)$, $\\text{D}\\left(\\dfrac{1}{a},a\\right)$를 지나는 직선의 기울기는\n$$\\frac{a^{2}-a}{\\dfrac{2}{a}-\\dfrac{1}{a}}=\\frac{a^{2}-a}{\\dfrac{1}{a}}=a(a^{2}-a)=a^{3}-a^{2}$$\n이므로 직선 $\\text{AD}$의 방정식은\n$$y=(a^{3}-a^{2})\\left(x-\\frac{2}{a}\\right)+a^{2}$$\n이 직선이 원점 $(0,0)$을 지나므로\n$$0=(a^{3}-a^{2})\\left(-\\frac{2}{a}\\right)+a^{2}$$\n$$0=-2(a^{2}-a)+a^{2}=-2a^{2}+2a+a^{2}=-a^{2}+2a$$\n$$a^{2}-2a=0\\ \\Rightarrow\\ a(a-2)=0$$\n$a>1$이므로 $a=2$이다.\n\n$\\textbf{4단계. 네 점의 좌표}$\n$a=2$이므로\n$$\\text{A}(1,\\,4),\\quad \\text{C}\\left(\\frac{5}{2},\\,0\\right),\\quad \\text{D}\\left(\\frac{1}{2},\\,2\\right)$$\n점 $\\text{B}$는 점 $\\text{A}(1,4)$를 지나고 기울기가 $-1$인 직선 $y=-(x-1)+4=-x+5$ 위에 있고 두 번째 곡선 위의 점이므로\n$$\\text{B}\\left(\\frac{9}{2},\\,\\frac{1}{2}\\right)$$\n직선 $\\text{AD}$($y=4x$)와 $x$축의 교점은 원점 $\\text{O}(0,0)$, 직선 $\\text{AB}$($y=-x+5$)와 $x$축의 교점은 $\\text{E}(5,0)$이다.\n\n$\\textbf{5단계. 넓이 계산}$\n사각형 $\\text{ABCD}$의 넓이는 큰 삼각형 $\\text{AOE}$에서 두 모서리 삼각형 $\\text{DOC}$, $\\text{BCE}$를 뺀 값이다.\n$$\\triangle\\text{AOE}=\\frac{1}{2}\\times\\overline{\\text{OE}}\\times(\\text{A의 }y\\text{좌표})=\\frac{1}{2}\\times 5\\times 4=10$$\n$$\\triangle\\text{DOC}=\\frac{1}{2}\\times\\overline{\\text{OC}}\\times(\\text{D의 }y\\text{좌표})=\\frac{1}{2}\\times\\frac{5}{2}\\times 2=\\frac{5}{2}$$\n$$\\triangle\\text{BCE}=\\frac{1}{2}\\times\\overline{\\text{CE}}\\times(\\text{B의 }y\\text{좌표})=\\frac{1}{2}\\times\\frac{5}{2}\\times\\frac{1}{2}=\\frac{5}{8}$$\n따라서\n$$(\\text{사각형 ABCD의 넓이})=10-\\frac{5}{2}-\\frac{5}{8}=\\frac{80}{8}-\\frac{20}{8}-\\frac{5}{8}=\\frac{55}{8}$$"},
+      {"phase": "A", "title": "최종 정답", "content": "정답은 **$\\dfrac{55}{8}$** (⑤) 입니다."}
+    ],
+    "final_answer": "\\dfrac{55}{8}"
+  },
+  "19": {
+    "problem_id": "19",
+    "title": "2025학년도 6월 고2 학평 19번",
+    "difficulty": "킬러",
+    "weakness_unit": "삼각함수의 그래프 - 절댓값 그래프와 실근의 개수, 순서쌍",
+    "steps": [
+      {"phase": "P", "title": "문제 분석", "content": "$7$ 이하의 두 자연수 $m$, $n$에 대하여 함수 $f(x)=|2^{m}\\cos x-2^{n}|$ 이 있다. $0\\le x\\le 2\\pi$에서 방정식 $\\{f(x)\\}^{2}-(2^{5}+2^{4})f(x)+2^{9}=0$ 의 서로 다른 실근의 개수가 $6$이 되도록 하는 $m$, $n$의 모든 순서쌍 $(m,n)$의 개수를 구하는 문제이다."},
+      {"phase": "C", "title": "핵심 단서", "content": "방정식을 $f(x)$에 대한 이차방정식으로 보고 인수분해하면 $f(x)$의 값이 두 개로 정해진다. 그러면 실근의 개수는 곡선 $y=f(x)$와 두 수평선 $y=2^{5}$, $y=2^{4}$의 교점의 개수의 합이다. $f(x)=|2^{m}\\cos x-2^{n}|$의 그래프 모양은 $m$과 $n$의 대소($m<n$, $m=n$, $m>n$)에 따라 달라진다."},
+      {"phase": "B", "title": "배경 지식", "content": "$\\bullet$ 이차방정식 인수분해: $t^{2}-(2^{5}+2^{4})t+2^{9}=(t-2^{5})(t-2^{4})$ (곱 $2^{5}\\cdot 2^{4}=2^{9}$, 합 $2^{5}+2^{4}$).\n\n$\\bullet$ $\\cos x$는 $0\\le x\\le 2\\pi$에서 $1\\to -1\\to 1$로 변하므로 $2^{m}\\cos x-2^{n}$은 $(2^{m}-2^{n})$에서 $(-2^{m}-2^{n})$을 거쳐 다시 $(2^{m}-2^{n})$로 변한다.\n\n$\\bullet$ $m>n$이면 $2^{m}-2^{n}>0$이고, $f(x)=|2^{m}\\cos x-2^{n}|$의 그래프는 양 끝에서 $2^{m}-2^{n}$, 중앙에서 최댓값 $2^{m}+2^{n}$, 그 사이 두 곳에서 $0$이 되는 가운데 봉우리가 솟은 모양이 된다."},
+      {"phase": "SOLVE", "title": "단계별 풀이", "content": "$\\textbf{1단계. 방정식 정리}$\n$$\\{f(x)\\}^{2}-(2^{5}+2^{4})f(x)+2^{9}=\\{f(x)-2^{5}\\}\\{f(x)-2^{4}\\}=0$$\n이므로 $f(x)=2^{5}=32$ 또는 $f(x)=2^{4}=16$.\n따라서 서로 다른 실근의 개수는 $0\\le x\\le 2\\pi$에서 곡선 $y=f(x)$와 두 직선 $y=2^{5}$, $y=2^{4}$가 만나는 점의 개수의 합이다.\n\n$\\textbf{2단계. 그래프 모양 분류}$\n$\\;$(i) $m<n$일 때, $f(x)$의 그래프는 양 끝에서 $2^{n}-2^{m}$, 중앙에서 $2^{m}+2^{n}$이 되는 모양으로, 두 수평선과의 교점이 최대 $4$개이므로 합이 $6$이 될 수 없다.\n$\\;$(ii) $m=n$일 때도 마찬가지로 교점이 최대 $4$개이므로 $6$이 될 수 없다.\n$\\;$(iii) $m>n$일 때, $f(x)=|2^{m}\\cos x-2^{n}|$의 그래프는 양 끝에서 $2^{m}-2^{n}$, 두 곳에서 $0$, 중앙에서 최댓값 $2^{m}+2^{n}$이 되는 모양이다. 이때 두 수평선과의 교점의 합이 $6$이 될 수 있다.\n\n$\\textbf{3단계. 실근의 개수가 6이 되는 조건 }(m>n)$\n그래프 분석에 의해 실근의 합이 $6$이 되려면\n$$16\\le 2^{m}-2^{n}<32,\\qquad 2^{m}+2^{n}>32$$\n이어야 한다. 즉 $2^{n}+16\\le 2^{m}<2^{n}+32$ 이고 $2^{m}>32-2^{n}$ 이다.\n\n$\\textbf{4단계. }n\\textbf{에 따른 자연수 }m\\textbf{ 찾기}$\n$\\;$① $n=1$이면 $30<2^{m}<34$이므로 $m=5$.\n$\\;$② $n=2$이면 $28<2^{m}<36$이므로 $m=5$.\n$\\;$③ $n=3$이면 $24<2^{m}<40$이므로 $m=5$.\n$\\;$④ $n=4$이면 $32\\le 2^{m}<48$이므로 $m=5$.\n$\\;$⑤ $n=5$이면 $48\\le 2^{m}<64$이므로 부등식을 만족시키는 자연수 $m$은 존재하지 않는다.\n$\\;$⑥ $n=6$이면 $80\\le 2^{m}<96$이므로 부등식을 만족시키는 자연수 $m$은 존재하지 않는다.\n($n=7$도 마찬가지로 존재하지 않는다.)\n\n따라서 조건을 만족시키는 순서쌍 $(m,n)$은\n$$(5,1),\\ (5,2),\\ (5,3),\\ (5,4)$$\n로 그 개수는 $4$이다."},
+      {"phase": "A", "title": "최종 정답", "content": "정답은 **$4$** (②) 입니다."}
+    ],
+    "final_answer": "4"
+  },
+  "20": {
+    "problem_id": "20",
+    "title": "2025학년도 6월 고2 학평 20번",
+    "difficulty": "킬러",
+    "weakness_unit": "지수함수·이차함수 - 절댓값 그래프와 실근의 개수, 최솟값",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "function_plot", "expr": "abs(2^(-x+3)-2)"},
+        {"type": "function_plot", "expr": "-x^2+5*x-4"},
+        {"type": "label_text", "tex": "y=|2^{-x+3}-2|", "at": [4.6, 2.4]},
+        {"type": "label_text", "tex": "y=-x^2+tx-4", "at": [1.0, 3.4]}
+      ]
+    },
+    "steps": [
+      {"phase": "P", "title": "문제 분석", "content": "$t>4$인 실수 $t$에 대하여 방정식 $|2^{-x+3}-2|=-x^{2}+tx-4$ 의 서로 다른 두 실근을 $\\alpha$, $\\beta\\,(\\alpha<\\beta)$라 하자. 함수\n$$f(x)=\\begin{cases}|2^{-x+3}-2| & (x<\\alpha\\ \\text{또는}\\ x>\\beta)\\\\[2pt] -x^{2}+tx-4 & (\\alpha\\le x\\le\\beta)\\end{cases}$$\n에 대하여 방정식 $f(x)=f\\left(\\dfrac{t}{2}\\right)$의 서로 다른 실근의 개수가 $2$가 되도록 하는 $t$의 최솟값을 구하는 문제이다."},
+      {"phase": "C", "title": "핵심 단서", "content": "$f(x)$는 두 실근 $\\alpha$, $\\beta$를 경계로 바깥쪽은 지수절댓값 곡선, 안쪽은 위로 볼록한 포물선으로 이어 붙인 함수이다. 포물선 $-x^{2}+tx-4$의 꼭짓점이 $x=\\dfrac{t}{2}$이므로 $f\\left(\\dfrac{t}{2}\\right)$는 봉우리의 높이이다. 수평선 $y=f\\left(\\dfrac{t}{2}\\right)$이 곡선 $y=f(x)$와 정확히 두 점에서 만나도록 하는 조건을 찾으면 된다."},
+      {"phase": "B", "title": "배경 지식", "content": "$\\bullet$ 위로 볼록한 포물선 $-x^{2}+tx-4=-\\left(x-\\dfrac{t}{2}\\right)^{2}+\\dfrac{t^{2}}{4}-4$의 꼭짓점은 $\\left(\\dfrac{t}{2},\\ \\dfrac{t^{2}}{4}-4\\right)$.\n\n$\\bullet$ $y=|2^{-x+3}-2|$는 $x\\to\\infty$일 때 $2^{-x+3}\\to 0$이므로 $y\\to 2$로 다가가며, 오른쪽 가지는 $y=2$ 아래에서 점점 평평해진다.\n\n$\\bullet$ 수평선과 곡선의 교점 개수는 봉우리 높이가 $2$를 기준으로 달라진다."},
+      {"phase": "SOLVE", "title": "단계별 풀이", "content": "$\\textbf{1단계. 봉우리의 높이 }f\\left(\\frac{t}{2}\\right)$\n포물선 부분의 꼭짓점에서\n$$f\\left(\\frac{t}{2}\\right)=-\\left(\\frac{t}{2}\\right)^{2}+t\\cdot\\frac{t}{2}-4=\\frac{t^{2}}{4}-4$$\n$t>4$이므로\n$$f\\left(\\frac{t}{2}\\right)=\\frac{t^{2}}{4}-4>0$$\n\n$\\textbf{2단계. 교점(실근) 개수 }g(t)\\textbf{ 분석}$\n$x$에 대한 방정식 $f(x)=f\\left(\\dfrac{t}{2}\\right)$의 서로 다른 실근의 개수를 $g(t)$라 하자. 곡선 $y=f(x)$와 수평선 $y=f\\left(\\dfrac{t}{2}\\right)$의 교점을 살펴보면\n$$0<f\\left(\\frac{t}{2}\\right)<2\\ \\text{일 때},\\quad g(t)=3$$\n$$f\\left(\\frac{t}{2}\\right)\\ge 2\\ \\text{일 때},\\quad g(t)=2$$\n\n$\\textbf{3단계. }g(t)=2\\textbf{가 되는 조건}$\n$g(t)=2$이려면\n$$f\\left(\\frac{t}{2}\\right)=\\frac{t^{2}}{4}-4\\ge 2$$\n$$\\frac{t^{2}}{4}\\ge 6\\ \\Rightarrow\\ t^{2}\\ge 24\\ \\Rightarrow\\ t\\ge 2\\sqrt{6}\\quad(t>0)$$\n$2\\sqrt{6}=\\sqrt{24}\\approx 4.9>4$이므로 $t>4$ 조건과도 모순이 없다.\n따라서 $g(t)=2$인 $t$의 최솟값은\n$$t=2\\sqrt{6}$$"},
+      {"phase": "A", "title": "최종 정답", "content": "정답은 **$2\\sqrt{6}$** (①) 입니다."}
+    ],
+    "final_answer": "2\\sqrt{6}"
+  },
+  "21": {
+    "problem_id": "21",
+    "title": "2025학년도 6월 고2 학평 21번",
+    "difficulty": "킬러",
+    "weakness_unit": "사인법칙·코사인법칙 - 반원과 평행선을 이용한 선분의 길이",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "point", "coordinates": [0, 0], "label": "A"},
+        {"type": "point", "coordinates": [6, 0], "label": "B"},
+        {"type": "point", "coordinates": [0.667, 1.886], "label": "C"},
+        {"type": "point", "coordinates": [4, 0], "label": "D"},
+        {"type": "point", "coordinates": [2.06, 2.81], "label": "E"},
+        {"type": "segment", "from": [0, 0], "to": [6, 0]},
+        {"type": "segment", "from": [0, 0], "to": [0.667, 1.886]},
+        {"type": "segment", "from": [0.667, 1.886], "to": [4, 0]},
+        {"type": "segment", "from": [0.667, 1.886], "to": [6, 0]},
+        {"type": "segment", "from": [6, 0], "to": [2.06, 2.81]},
+        {"type": "segment", "from": [0.667, 1.886], "to": [2.06, 2.81]},
+        {"type": "label_text", "tex": "6", "at": [3, -0.4]}
+      ]
+    },
+    "steps": [
+      {"phase": "P", "title": "문제 분석", "content": "길이가 $6$인 선분 $\\text{AB}$를 지름으로 하는 반원이 있다. 호 $\\text{AB}$ 위에 점 $\\text{C}$를 $\\cos(\\angle\\text{CAB})=\\dfrac{1}{3}$이 되도록 잡고, 선분 $\\text{AB}$ 위에 점 $\\text{D}$를 $\\overline{\\text{AC}}=\\overline{\\text{DB}}$가 되도록 잡는다. 점 $\\text{B}$를 지나고 선분 $\\text{CD}$와 평행한 직선이 호 $\\text{AB}$와 만나는 점 중 $\\text{B}$가 아닌 점을 $\\text{E}$라 할 때, 선분 $\\text{CE}$의 길이를 구하는 문제이다."},
+      {"phase": "C", "title": "핵심 단서", "content": "$\\bullet$ $\\overline{\\text{AB}}$가 지름이므로 반원에 내접하는 $\\angle\\text{ACB}=90^\\circ$이다. 이로부터 $\\overline{\\text{AC}}$를 구한다.\n\n$\\bullet$ 삼각형 $\\text{ADC}$에서 코사인법칙으로 $\\overline{\\text{CD}}$를 구한다.\n\n$\\bullet$ $\\text{BE}\\parallel\\text{CD}$(엇각·동위각)와 삼각형 $\\text{DBC}$의 사인법칙으로 $\\sin\\beta$를 구한 뒤, 지름이 $6$인 원에 대한 사인법칙으로 $\\overline{\\text{CE}}=6\\sin\\beta$를 구한다."},
+      {"phase": "B", "title": "배경 지식", "content": "$\\bullet$ 반원(지름에 대한 원주각)에 대한 원주각은 $90^\\circ$.\n\n$\\bullet$ 코사인법칙: $a^{2}=b^{2}+c^{2}-2bc\\cos A$.\n\n$\\bullet$ 사인법칙: 외접원의 반지름이 $R$일 때 $\\dfrac{a}{\\sin A}=2R$. 지름이 $6$이면 $2R=6$.\n\n$\\bullet$ $\\sin(90^\\circ-\\alpha)=\\cos\\alpha$, 평행선의 엇각은 서로 같다."},
+      {"phase": "SOLVE", "title": "단계별 풀이", "content": "$\\textbf{1단계. }\\overline{\\text{AC}},\\ \\overline{\\text{AD}}\\textbf{ 구하기}$\n$\\overline{\\text{AC}}=\\overline{\\text{DB}}=x$, $\\angle\\text{CAB}=\\alpha$라 하자. $\\overline{\\text{AB}}$가 지름이므로 삼각형 $\\text{ABC}$에서 $\\angle\\text{ACB}=90^\\circ$이고\n$$\\cos\\alpha=\\frac{1}{3}=\\frac{\\overline{\\text{AC}}}{\\overline{\\text{AB}}}=\\frac{x}{6}\\ \\Rightarrow\\ x=2$$\n그러므로 $\\overline{\\text{AC}}=\\overline{\\text{DB}}=2$이고 $\\overline{\\text{AD}}=\\overline{\\text{AB}}-\\overline{\\text{DB}}=6-2=4$.\n\n$\\textbf{2단계. 삼각형 ADC에서 }\\overline{\\text{CD}}$\n코사인법칙에 의하여\n$$\\overline{\\text{CD}}^{2}=\\overline{\\text{AC}}^{2}+\\overline{\\text{AD}}^{2}-2\\cdot\\overline{\\text{AC}}\\cdot\\overline{\\text{AD}}\\cos\\alpha=2^{2}+4^{2}-2\\times 2\\times 4\\times\\frac{1}{3}=20-\\frac{16}{3}=\\frac{44}{3}$$\n$$\\overline{\\text{CD}}=\\sqrt{\\frac{44}{3}}=\\frac{2\\sqrt{33}}{3}$$\n\n$\\textbf{3단계. 삼각형 DBC의 사인법칙으로 }\\sin\\beta$\n$\\angle\\text{CBE}=\\beta$라 하면 선분 $\\text{BE}$와 선분 $\\text{CD}$가 평행하므로 엇각에 의해 $\\angle\\text{DCB}=\\angle\\text{CBE}=\\beta$이고, $\\angle\\text{DBC}=\\angle\\text{ABC}=90^\\circ-\\alpha$이다. 삼각형 $\\text{DBC}$에서 사인법칙에 의하여\n$$\\frac{\\overline{\\text{DB}}}{\\sin(\\angle\\text{DCB})}=\\frac{\\overline{\\text{CD}}}{\\sin(\\angle\\text{DBC})}$$\n$$\\frac{2}{\\sin\\beta}=\\frac{\\dfrac{2\\sqrt{33}}{3}}{\\sin(90^\\circ-\\alpha)}$$\n$\\sin(90^\\circ-\\alpha)=\\cos\\alpha=\\dfrac{1}{3}$이므로\n$$\\sin\\beta=\\frac{2\\times\\dfrac{1}{3}}{\\dfrac{2\\sqrt{33}}{3}}=\\frac{\\dfrac{2}{3}}{\\dfrac{2\\sqrt{33}}{3}}=\\frac{2}{2\\sqrt{33}}=\\frac{1}{\\sqrt{33}}=\\frac{\\sqrt{33}}{33}$$\n\n$\\textbf{4단계. 삼각형 CBE의 사인법칙으로 }\\overline{\\text{CE}}$\n삼각형 $\\text{CBE}$의 외접원(주어진 반원과 같은 원)의 지름이 $6$이므로 사인법칙에 의하여\n$$\\frac{\\overline{\\text{CE}}}{\\sin(\\angle\\text{CBE})}=6$$\n$$\\overline{\\text{CE}}=6\\sin\\beta=6\\times\\frac{\\sqrt{33}}{33}=\\frac{6\\sqrt{33}}{33}=\\frac{2}{11}\\sqrt{33}$$"},
+      {"phase": "A", "title": "최종 정답", "content": "정답은 **$\\dfrac{2}{11}\\sqrt{33}$** (⑤) 입니다."}
+    ],
+    "final_answer": "\\dfrac{2}{11}\\sqrt{33}"
+  },
+  "27": {
+    "problem_id": "27",
+    "title": "2025학년도 6월 고2 학평 27번",
+    "difficulty": "준킬러",
+    "weakness_unit": "거듭제곱근 - 제곱근·네제곱근 조건과 자연수의 합",
+    "steps": [
+      {"phase": "P", "title": "문제 분석", "content": "다음 두 조건을 만족시키는 두 자연수 $m$, $n$에 대하여 모든 $m$의 값의 합을 구하는 문제이다.\n(가) $m$의 양의 제곱근은 $n$의 양의 네제곱근의 $2$배이다.\n(나) $\\dfrac{3m}{n}$ 은 자연수이다."},
+      {"phase": "C", "title": "핵심 단서", "content": "(가)를 식으로 옮기면 $m^{\\frac{1}{2}}=2\\cdot n^{\\frac{1}{4}}$, 즉 $m=4\\sqrt{n}$이다. 이것을 (나)의 $\\dfrac{3m}{n}$에 대입하면 $\\dfrac{12}{\\sqrt{n}}$ 꼴이 되어, $\\sqrt{n}$이 $12$의 약수라는 정수론적 조건으로 바뀐다."},
+      {"phase": "B", "title": "배경 지식", "content": "$\\bullet$ 양의 제곱근은 $m^{\\frac{1}{2}}=\\sqrt{m}$, 양의 네제곱근은 $n^{\\frac{1}{4}}=\\sqrt[4]{n}$.\n\n$\\bullet$ $\\dfrac{\\sqrt{n}}{n}=\\dfrac{1}{\\sqrt{n}}$ (단, $n>0$).\n\n$\\bullet$ $m=4\\sqrt{n}$이 자연수이려면 $\\sqrt{n}$이 유리수, 즉 $n$이 완전제곱수이어야 한다. $12$의 양의 약수: $1,2,3,4,6,12$."},
+      {"phase": "SOLVE", "title": "단계별 풀이", "content": "$\\textbf{1단계. 조건 (가) 식으로 옮기기}$\n$$m^{\\frac{1}{2}}=2\\times n^{\\frac{1}{4}}$$\n양변을 정리하면\n$$m=\\left(2\\cdot n^{\\frac{1}{4}}\\right)^{2}=4\\cdot n^{\\frac{1}{2}}=4\\sqrt{n}\\quad\\cdots\\ \\text{㉠}$$\n\n$\\textbf{2단계. 조건 (나)에 대입}$\n㉠에 의하여\n$$\\frac{3m}{n}=\\frac{3\\cdot 4\\sqrt{n}}{n}=\\frac{12\\sqrt{n}}{n}=\\frac{12}{\\sqrt{n}}\\quad\\cdots\\ \\text{㉡}$$\n\n$\\textbf{3단계. }\\sqrt{n}\\textbf{이 12의 약수}$\n조건 (나)에서 $\\dfrac{3m}{n}$이 자연수이므로 ㉡에 의하여 $\\sqrt{n}$은 $12$의 (양의) 약수이다. 따라서\n$$\\sqrt{n}=1,\\ 2,\\ 3,\\ 4,\\ 6,\\ 12$$\n이고, 이때\n$$n=1,\\ 4,\\ 9,\\ 16,\\ 36,\\ 144$$\n㉠에서 $m=4\\sqrt{n}$이므로\n$$m=4,\\ 8,\\ 12,\\ 16,\\ 24,\\ 48$$\n\n$\\textbf{4단계. 모든 }m\\textbf{의 합}$\n$$4+8+12+16+24+48=112$$"},
+      {"phase": "A", "title": "최종 정답", "content": "정답은 **$112$** 입니다."}
+    ],
+    "final_answer": "112"
+  },
+  "28": {
+    "problem_id": "28",
+    "title": "2025학년도 6월 고2 학평 28번",
+    "difficulty": "킬러",
+    "weakness_unit": "지수함수의 그래프 - 두 곡선·직선의 위치 관계와 자연수 추론",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "function_plot", "expr": "(1/2)^(x-5)"},
+        {"type": "function_plot", "expr": "(1/2)^(x-3)-2"},
+        {"type": "label_text", "tex": "y=\\left(\\frac{1}{2}\\right)^{x-k-2}", "at": [2.0, 5.2]},
+        {"type": "label_text", "tex": "y=\\left(\\frac{1}{2}\\right)^{x-k}-2", "at": [5.0, 0.4]},
+        {"type": "label_text", "tex": "y=k", "at": [6.2, 3.0]}
+      ]
+    },
+    "steps": [
+      {"phase": "P", "title": "문제 분석", "content": "자연수 $k$에 대하여 두 곡선 $y=\\left(\\dfrac{1}{2}\\right)^{x-k-2}$, $y=\\left(\\dfrac{1}{2}\\right)^{x-k}-2$ 와 직선 $y=k$가 있다. 자연수 $n$에 대하여 직선 $x=n$이 두 곡선과 만나는 점을 각각 $\\text{A}$, $\\text{B}$라 할 때, 선분 $\\text{AB}$가 직선 $y=k$와 만나도록 하는 $n$의 최댓값과 최솟값의 합을 $f(k)$라 하자. $f(k)=15$를 만족시키는 $k$의 값을 구하는 문제이다."},
+      {"phase": "C", "title": "핵심 단서", "content": "두 곡선 모두 감소함수이므로 같은 $x=n$에서 위쪽 점 $\\text{A}$, 아래쪽 점 $\\text{B}$가 정해진다. 선분 $\\text{AB}$가 직선 $y=k$와 만나려면 $\\text{B}$의 $y$좌표 $\\le k\\le \\text{A}$의 $y$좌표 이어야 한다. 이를 정리하면 $n$에 대한 두 부등식이 나오고, 그 사이 자연수 $n$의 범위에서 최댓값·최솟값을 더한 것이 $f(k)$이다."},
+      {"phase": "B", "title": "배경 지식", "content": "$\\bullet$ $\\left(\\dfrac{1}{2}\\right)^{x-k-2}=2^{-(x-k-2)}=2^{k+2-x}$, $\\left(\\dfrac{1}{2}\\right)^{x-k}-2=2^{k-x}-2$.\n\n$\\bullet$ $2^{a}\\le b\\Leftrightarrow a\\le\\log_2 b$ ($b>0$).\n\n$\\bullet$ 선분 $\\text{AB}$는 수직선분이고 $\\text{A}$가 위, $\\text{B}$가 아래이므로 $y=k$와 만날 조건은 두 끝 $y$좌표 사이에 $k$가 있는 것이다."},
+      {"phase": "SOLVE", "title": "단계별 풀이", "content": "$\\textbf{1단계. 두 점 A, B의 }y\\textbf{좌표}$\n직선 $x=n$이 곡선과 만나므로\n$$(\\text{A의 }y\\text{좌표})=\\left(\\frac{1}{2}\\right)^{n-k-2}=2^{k+2-n}$$\n$$(\\text{B의 }y\\text{좌표})=\\left(\\frac{1}{2}\\right)^{n-k}-2=2^{k-n}-2$$\n\n$\\textbf{2단계. 선분 AB가 }y=k\\textbf{와 만날 조건}$\n선분 $\\text{AB}$가 직선 $y=k$와 만나려면\n$$2^{k-n}-2\\le k\\le 2^{k+2-n}$$\n$\\bullet$ $k\\le 2^{k+2-n}$에서 $\\log_2 k\\le k+2-n$, 즉 $n\\le k+2-\\log_2 k$.\n$\\bullet$ $2^{k-n}-2\\le k$에서 $2^{k-n}\\le k+2$, 즉 $k-n\\le\\log_2(k+2)$, 즉 $n\\ge k-\\log_2(k+2)$.\n따라서\n$$k-\\log_2(k+2)\\le n\\le k+2-\\log_2 k$$\n$f(k)$는 이 범위의 자연수 $n$의 최댓값과 최솟값의 합이다.\n\n$\\textbf{3단계. }k\\textbf{에 따른 }f(k)\\textbf{ 계산}$\n$\\;$(i) $k=1$이면 $1\\le n\\le 3$이므로 $f(1)=1+3=4$.\n$\\;$(ii) $k=2$이면 $1\\le n\\le 3$이므로 $f(2)=1+3=4$.\n$\\;$(iii) $k=3$이면 $1\\le n\\le 4$이므로 $f(3)=1+4=5$.\n$\\;$(iv) $k=4$이면 $1\\le n\\le 4$이므로 $f(4)=1+4=5$.\n$\\;$(v) $k=5$이면 $2\\le n\\le 4$이므로 $f(5)=2+4=6$.\n$\\;$(vi) $6\\le k\\le 8$이면 $k-3\\le n\\le(k+2)-3$이므로\n$$f(k)=(k-3)+(k-1)=2k-4$$\n$2k-4=15$를 만족시키는 자연수 $k$는 존재하지 않는다.\n$\\;$(vii) $9\\le k\\le 13$이면 $k-3\\le n\\le(k+2)-4$이므로\n$$f(k)=(k-3)+(k-2)=2k-5$$\n$2k-5=15$에서 $k=10$.\n\n따라서 $f(k)=15$를 만족시키는 자연수 $k$의 값은 $10$이다."},
+      {"phase": "A", "title": "최종 정답", "content": "정답은 **$10$** 입니다."}
+    ],
+    "final_answer": "10"
+  },
+  "29": {
+    "problem_id": "29",
+    "title": "2025학년도 6월 고2 학평 29번",
+    "difficulty": "킬러",
+    "weakness_unit": "코사인법칙 - 외접원과 수선의 발을 이용한 선분의 길이",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "circle", "center": [3, 0.378], "radius": 3.024},
+        {"type": "point", "coordinates": [2.25, 3.307], "label": "A"},
+        {"type": "point", "coordinates": [0, 0], "label": "B"},
+        {"type": "point", "coordinates": [6, 0], "label": "C"},
+        {"type": "point", "coordinates": [2, 0], "label": "D"},
+        {"type": "point", "coordinates": [1.82, -2.406], "label": "E"},
+        {"type": "point", "coordinates": [3.0, -1.73], "label": "F"},
+        {"type": "segment", "from": [2.25, 3.307], "to": [0, 0]},
+        {"type": "segment", "from": [2.25, 3.307], "to": [6, 0]},
+        {"type": "segment", "from": [0, 0], "to": [6, 0]},
+        {"type": "segment", "from": [2.25, 3.307], "to": [1.82, -2.406]},
+        {"type": "segment", "from": [6, 0], "to": [1.82, -2.406]},
+        {"type": "segment", "from": [2, 0], "to": [3.0, -1.73]}
+      ]
+    },
+    "steps": [
+      {"phase": "P", "title": "문제 분석", "content": "$\\overline{\\text{AB}}=4$, $\\overline{\\text{AC}}=5$, $\\cos(\\angle\\text{BAC})=\\dfrac{1}{8}$인 삼각형 $\\text{ABC}$가 있다. 선분 $\\text{BC}$를 $1:2$로 내분하는 점을 $\\text{D}$, 직선 $\\text{AD}$가 삼각형 $\\text{ABC}$의 외접원과 만나는 점 중 $\\text{A}$가 아닌 점을 $\\text{E}$라 하자. 점 $\\text{D}$에서 선분 $\\text{CE}$에 내린 수선의 발을 $\\text{F}$라 할 때, 선분 $\\text{FC}$의 길이가 $\\dfrac{q}{p}\\sqrt{11}$이다. 서로소인 두 자연수 $p$, $q$에 대하여 $p+q$의 값을 구하는 문제이다."},
+      {"phase": "C", "title": "핵심 단서", "content": "$\\bullet$ 코사인법칙으로 $\\overline{\\text{BC}}$를 구하고, $1:2$ 내분으로 $\\overline{\\text{BD}}$, $\\overline{\\text{DC}}$를 정한다.\n\n$\\bullet$ 삼각형 $\\text{ABD}$에서 코사인법칙으로 $\\overline{\\text{AD}}$와 $\\cos(\\angle\\text{BAD})$를 구한다.\n\n$\\bullet$ 호 $\\text{BE}$에 대한 원주각이 서로 같으므로 $\\angle\\text{BAD}=\\angle\\text{BCF}$이고, 직각삼각형에서 $\\overline{\\text{FC}}=\\overline{\\text{DC}}\\cos(\\angle\\text{BCF})$로 구한다."},
+      {"phase": "B", "title": "배경 지식", "content": "$\\bullet$ 코사인법칙: $a^{2}=b^{2}+c^{2}-2bc\\cos A$, $\\cos A=\\dfrac{b^{2}+c^{2}-a^{2}}{2bc}$.\n\n$\\bullet$ 같은 호에 대한 원주각의 크기는 서로 같다.\n\n$\\bullet$ 직각삼각형에서 빗변에 대한 인접변의 비는 코사인이다: $\\overline{\\text{FC}}=\\overline{\\text{DC}}\\cos(\\angle\\text{DCF})$."},
+      {"phase": "SOLVE", "title": "단계별 풀이", "content": "$\\textbf{1단계. }\\overline{\\text{BC}},\\ \\overline{\\text{BD}},\\ \\overline{\\text{DC}}$\n삼각형 $\\text{ABC}$에서 코사인법칙에 의하여\n$$\\overline{\\text{BC}}^{2}=4^{2}+5^{2}-2\\times 4\\times 5\\times\\frac{1}{8}=16+25-5=36\\ \\Rightarrow\\ \\overline{\\text{BC}}=6$$\n점 $\\text{D}$가 선분 $\\text{BC}$를 $1:2$로 내분하는 점이므로\n$$\\overline{\\text{BD}}=2,\\qquad \\overline{\\text{DC}}=4$$\n\n$\\textbf{2단계. }\\cos\\theta\\ (\\theta=\\angle\\text{ABC})$\n삼각형 $\\text{ABC}$에서\n$$\\cos\\theta=\\frac{\\overline{\\text{AB}}^{2}+\\overline{\\text{BC}}^{2}-\\overline{\\text{AC}}^{2}}{2\\cdot\\overline{\\text{AB}}\\cdot\\overline{\\text{BC}}}=\\frac{16+36-25}{2\\times 4\\times 6}=\\frac{27}{48}=\\frac{9}{16}$$\n\n$\\textbf{3단계. 삼각형 ABD에서 }\\overline{\\text{AD}}$\n코사인법칙에 의하여\n$$\\overline{\\text{AD}}^{2}=\\overline{\\text{AB}}^{2}+\\overline{\\text{BD}}^{2}-2\\cdot\\overline{\\text{AB}}\\cdot\\overline{\\text{BD}}\\cos\\theta=16+4-2\\times 4\\times 2\\times\\frac{9}{16}=20-9=11$$\n$$\\overline{\\text{AD}}=\\sqrt{11}$$\n\n$\\textbf{4단계. }\\cos(\\angle\\text{BAD})$\n삼각형 $\\text{ABD}$에서 코사인법칙에 의하여\n$$\\cos(\\angle\\text{BAD})=\\frac{\\overline{\\text{AB}}^{2}+\\overline{\\text{AD}}^{2}-\\overline{\\text{BD}}^{2}}{2\\cdot\\overline{\\text{AB}}\\cdot\\overline{\\text{AD}}}=\\frac{16+11-4}{2\\times 4\\times\\sqrt{11}}=\\frac{23}{8\\sqrt{11}}$$\n\n$\\textbf{5단계. }\\overline{\\text{FC}}\\textbf{ 구하기}$\n호 $\\text{BE}$에 대한 원주각의 크기는 서로 같으므로 $\\angle\\text{BAD}=\\angle\\text{BCE}=\\angle\\text{BCF}$이다. 점 $\\text{F}$는 $\\text{D}$에서 선분 $\\text{CE}$에 내린 수선의 발이므로 직각삼각형 $\\text{DFC}$에서\n$$\\overline{\\text{FC}}=\\overline{\\text{DC}}\\cos(\\angle\\text{BCF})=\\overline{\\text{DC}}\\cos(\\angle\\text{BAD})=4\\times\\frac{23}{8\\sqrt{11}}=\\frac{23}{2\\sqrt{11}}=\\frac{23\\sqrt{11}}{22}=\\frac{23}{22}\\sqrt{11}$$\n\n$\\textbf{6단계. }p+q$\n$\\overline{\\text{FC}}=\\dfrac{q}{p}\\sqrt{11}=\\dfrac{23}{22}\\sqrt{11}$이므로 $p=22$, $q=23$ (서로소)이고\n$$p+q=22+23=45$$"},
+      {"phase": "A", "title": "최종 정답", "content": "정답은 **$45$** 입니다."}
+    ],
+    "final_answer": "45"
+  },
+  "30": {
+    "problem_id": "30",
+    "title": "2025학년도 6월 고2 학평 30번",
+    "difficulty": "킬러",
+    "weakness_unit": "로그함수가 포함된 부등식 - 밑의 범위에 따른 정수의 합",
+    "steps": [
+      {"phase": "P", "title": "문제 분석", "content": "함수 $f(x)=-x^{2}+2x-1$에 대하여 다음 두 조건을 만족시키는 $0$이 아닌 모든 정수 $k$의 값의 합을 구하는 문제이다.\n(가) $\\log_{2^{k}}\\{f(2)+|k|\\}\\le\\log_{2^{k}}8$\n(나) 부등식 $\\log_{2^{k}}\\{f(x)+|k|(x-1)\\}\\le\\log_{2^{k}}4x$ 를 만족시키는 자연수 $x$의 개수는 $6$이다."},
+      {"phase": "C", "title": "핵심 단서", "content": "$f(x)=-x^{2}+2x-1=-(x-1)^{2}$이고 $f(2)=-1$이다. 로그의 밑이 $2^{k}$이므로 $k>0$이면 밑$>1$(증가), $k<0$이면 $0<$밑$<1$(감소)이어서 부등식의 방향이 달라진다. 진수 조건과 밑의 대소를 정확히 나누어 자연수 $x$의 개수가 $6$이 되는 정수 $k$를 양·음으로 나누어 찾는다."},
+      {"phase": "B", "title": "배경 지식", "content": "$\\bullet$ $\\log_a$의 진수는 양수, 밑은 $a>0,\\ a\\ne 1$.\n\n$\\bullet$ 밑 $a>1$이면 $\\log_a X\\le\\log_a Y\\Leftrightarrow X\\le Y$, 밑 $0<a<1$이면 부등호가 뒤집혀 $X\\ge Y$.\n\n$\\bullet$ $f(x)+|k|(x-1)=-(x-1)^{2}+|k|(x-1)=(x-1)\\{|k|-(x-1)\\}$.\n\n$\\bullet$ 판별식 $D=b^{2}-4ac$로 이차부등식의 해를 분류한다."},
+      {"phase": "SOLVE", "title": "단계별 풀이", "content": "$\\textbf{0단계. 기본 정리}$\n$f(x)=-(x-1)^{2}$, $f(2)=-1$. 조건 (가)는 $\\log_{2^{k}}(|k|-1)\\le\\log_{2^{k}}8$이다. 진수 조건 $|k|-1>0$, 밑 조건 $2^{k}\\ne 1$(즉 $k\\ne 0$)에서\n$$|k|>1\\ \\Rightarrow\\ k>1\\ \\text{또는}\\ k<-1$$\n\n$\\textbf{(i) }k\\ge 1\\textbf{ (밑 }2^{k}>1\\textbf{, 증가)}$\n조건 (가): 밑$>1$이므로 $|k|-1\\le 8$, 즉 $k-1\\le 8$에서 $1<k\\le 9$.\n조건 (나): 진수 조건 $f(x)+|k|(x-1)=(x-1)(k-x+1)>0$에서 $1<x<1+k$, 그리고 $4x>0$.\n부등식은 밑$>1$이므로\n$$-x^{2}+2x-1+k(x-1)\\le 4x\\ \\Rightarrow\\ x^{2}+(2-k)x+1+k\\ge 0\\quad\\cdots\\ \\text{㉠}$$\n㉠의 판별식 $D=(2-k)^{2}-4(1+k)=k^{2}-8k=k(k-8)$.\n$\\;$① $1<k\\le 8$이면 $D\\le 0$이므로 ㉠은 모든 실수 $x$에서 성립하고, $x$의 범위는 진수 조건 $1<x<1+k$와 같다. 이 안의 자연수가 $\\{2,3,4,5,6,7\\}$로 $6$개이려면 $k=7$ (범위 $1<x<8$).\n$\\;$② $k=9$이면 $D>0$이고 ㉠은 $x^{2}-7x+10\\ge 0$, 즉 $(x-2)(x-5)\\ge 0$에서 $x\\le 2$ 또는 $x\\ge 5$. 진수 조건 $1<x<10$과 합치면 $1<x\\le 2$ 또는 $5\\le x<10$이 되어 만족시키는 자연수 $x$는 $2,\\ 5,\\ 6,\\ 7,\\ 8,\\ 9$로 $6$개이다. 따라서 $k=9$도 조건을 만족시킨다.\n그러므로 (i)에서 $k=7,\\ 9$.\n\n$\\textbf{(ii) }k\\le -1\\textbf{ (밑 }0<2^{k}<1\\textbf{, 감소)}$\n조건 (가): 밑$<1$이므로 부등호가 뒤집혀 $|k|-1\\ge 8$, 즉 $-k-1\\ge 8$에서 $k\\le -9$.\n조건 (나): 진수 조건 $(x-1)(k-x+1)>0$, $k<0$이므로 두 근 $x=1$, $x=1-k$에서 $1<x<1-k$이다. 부등식은 밑$<1$이므로 방향이 뒤집혀\n$$f(x)+|k|(x-1)\\ge 4x\\ \\Rightarrow\\ (x+1)^{2}\\le -k(x-1)\\quad\\cdots\\ \\text{㉡}$$\n방정식 $(x+1)^{2}=-k(x-1)$의 판별식을 $D$라 하면 $D=k(k+8)$이고 $k\\le -9$이므로 $D>0$이다. 따라서 $y=(x+1)^{2}$의 그래프와 $y=-k(x-1)$의 그래프는 서로 다른 두 점에서 만난다.\n$1<x<1-k$에서 ㉡ $(x+1)^{2}\\le -k(x-1)$을 만족시키는 자연수 $x$의 개수가 $6$이려면, $k\\le -9$에서 만족시키는 자연수가 $x=2,\\ 3,\\ 4,\\ 5,\\ 6,\\ 7$이어야 한다. 즉 $x=7$은 성립하고 $x=8$은 성립하지 않아야 하므로\n$$(7+1)^{2}\\le -k(7-1)\\quad\\text{이고}\\quad (8+1)^{2}>-k(8-1)$$\n$$64\\le -6k\\ \\Rightarrow\\ k\\le -\\frac{32}{3},\\qquad 81>-7k\\ \\Rightarrow\\ k>-\\frac{81}{7}$$\n그러므로 $-\\dfrac{81}{7}<k\\le-\\dfrac{32}{3}$이고, 이를 만족시키는 정수 $k=-11$이다.\n\n$\\textbf{결론}$\n(i), (ii)에 의하여 조건을 만족시키는 서로 다른 모든 정수 $k$의 값의 합은\n$$-11+7+9=5$$"},
+      {"phase": "A", "title": "최종 정답", "content": "정답은 **$5$** 입니다."}
+    ],
+    "final_answer": "5"
+  }
+}

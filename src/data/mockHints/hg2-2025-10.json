@@ -1,0 +1,364 @@
+{
+  "14": {
+    "problem_id": "14",
+    "title": "2025학년도 10월 고2 학평 14번",
+    "difficulty": "준킬러",
+    "weakness_unit": "수열의 합과 일반항 사이의 관계",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "수열 $\\{a_n\\}$의 첫째항부터 제$n$항까지의 합 $S_n$이 $S_n=\\dfrac{1}{n}$으로 주어져 있습니다. 이때 $a_1+\\displaystyle\\sum_{k=2}^{7}\\dfrac{1}{(k-1)\\times a_k}$의 값을 구하는 문제입니다. 핵심은 부분합 $S_n$으로부터 일반항 $a_n$을 복원하는 것입니다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$S_n$이 주어졌으므로 $a_n=S_n-S_{n-1}\\,(n\\ge 2)$, $a_1=S_1$ 관계를 이용해 일반항을 구합니다. 그러면 $\\dfrac{1}{(k-1)a_k}$이 깔끔하게 정리되어 단순한 자연수의 합으로 바뀝니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "수열의 합과 일반항의 관계는\n$$a_1=S_1,\\qquad a_n=S_n-S_{n-1}\\quad(n\\ge 2)$$\n입니다. $n=1$일 때는 따로 $a_1=S_1$로 구해야 함에 주의합니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "먼저 $a_1=S_1=\\dfrac{1}{1}=1$ 입니다.\n\n$n\\ge 2$일 때\n$$a_n=S_n-S_{n-1}=\\frac{1}{n}-\\frac{1}{n-1}=\\frac{(n-1)-n}{n(n-1)}=-\\frac{1}{n(n-1)}.$$\n\n따라서 $k\\ge 2$일 때 $a_k=-\\dfrac{1}{k(k-1)}$ 이므로\n$$\\frac{1}{(k-1)\\times a_k}=\\frac{1}{(k-1)\\cdot\\left(-\\dfrac{1}{k(k-1)}\\right)}=\\frac{k(k-1)}{-(k-1)}=-k.$$\n\n그러므로\n$$\\sum_{k=2}^{7}\\frac{1}{(k-1)\\times a_k}=\\sum_{k=2}^{7}(-k)=-(2+3+4+5+6+7)=-27.$$\n\n최종적으로\n$$a_1+\\sum_{k=2}^{7}\\frac{1}{(k-1)\\times a_k}=1+(-27)=-26.$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **-26** 입니다."
+      }
+    ],
+    "final_answer": "-26"
+  },
+  "15": {
+    "problem_id": "15",
+    "title": "2025학년도 10월 고2 학평 15번",
+    "difficulty": "준킬러",
+    "weakness_unit": "거듭제곱근의 정의",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$2$ 이상의 자연수 $n$에 대하여, $n-12$의 실수인 $n$제곱근의 개수를 $f(n)$이라 합니다. $f(n)+f(2n)=1$을 만족시키는 모든 $n$의 값의 합을 구하는 문제입니다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "실수인 $n$제곱근의 개수는 밑(여기서는 $n-12$)의 부호와 $n$의 홀짝에 따라 결정됩니다. $2n$은 항상 짝수임에 주목하면 $f(2n)$의 값이 크게 제한됩니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "실수 $A$의 실수인 $n$제곱근의 개수는 다음과 같습니다.\n$$\\begin{cases}A>0:\\ n\\text{이 짝수}\\to 2\\text{개},\\ n\\text{이 홀수}\\to 1\\text{개}\\\\ A=0:\\ 1\\text{개 }(0\\text{뿐})\\\\ A<0:\\ n\\text{이 짝수}\\to 0\\text{개},\\ n\\text{이 홀수}\\to 1\\text{개}\\end{cases}$$"
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$f(2n)$을 먼저 분석합니다. $2n$은 짝수이므로 밑 $2n-12$의 부호로 결정됩니다.\n$$2n-12>0\\,(n>6)\\Rightarrow f(2n)=2,\\quad 2n-12=0\\,(n=6)\\Rightarrow f(2n)=1,\\quad 2n-12<0\\,(n<6)\\Rightarrow f(2n)=0.$$\n\n각 경우에서 $f(n)+f(2n)=1$을 살펴봅니다.\n\n$$\\textbf{(i)}\\ 2\\le n\\le 5\\ (n<6):\\ f(2n)=0\\Rightarrow f(n)=1.$$\n이때 밑 $n-12<0$이므로 $n$이 홀수일 때만 $f(n)=1$. 따라서 $n=3,\\ 5$.\n\n$$\\textbf{(ii)}\\ n=6:\\ f(2n)=f(12)=1\\Rightarrow f(6)=0.$$\n밑 $6-12=-6<0$, $n=6$은 짝수이므로 $f(6)=0$. 조건 성립. 따라서 $n=6$.\n\n$$\\textbf{(iii)}\\ 7\\le n\\le 11\\ (6<n<12):\\ 2n-12>0\\Rightarrow f(2n)=2\\Rightarrow f(n)=-1.$$\n불가능하므로 해 없음.\n\n$$\\textbf{(iv)}\\ n=12:\\ f(12)=1\\,(\\text{밑}=0),\\ f(24)=2\\Rightarrow \\text{합}=3\\neq1.$$\n해 없음.\n\n$$\\textbf{(v)}\\ n>12:\\ n-12>0,\\ 2n-12>0\\Rightarrow f(2n)=2\\Rightarrow f(n)=-1.$$\n불가능하므로 해 없음.\n\n따라서 조건을 만족시키는 $n$은 $3,\\ 5,\\ 6$이고, 그 합은\n$$3+5+6=14.$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **14** 입니다."
+      }
+    ],
+    "final_answer": "14"
+  },
+  "18": {
+    "problem_id": "18",
+    "title": "2025학년도 10월 고2 학평 18번",
+    "difficulty": "킬러",
+    "weakness_unit": "삼각함수의 그래프 활용",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "함수 $f(x)=\\sin(x+a)$가 다음 조건을 만족시키도록 하는, $3\\pi$보다 작은 모든 양수 $a$의 값의 합을 구합니다.\n조건: 닫힌구간 $[0,\\pi]$에서 $f(x)$의 최댓값과 최솟값을 각각 $M,\\ m$이라 할 때 $2|M|=|m|$이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$x\\in[0,\\pi]$이면 $x+a$는 길이가 정확히 $\\pi$인 구간 $[a,\\,a+\\pi]$를 움직입니다. 길이 $\\pi$인 구간에는 사인함수의 극대점($\\frac{\\pi}{2}+2k\\pi$)과 극소점($\\frac{3\\pi}{2}+2k\\pi$) 중 많아야 하나만 내부에 들어갑니다. $2|M|=|m|$이려면 최솟값 쪽이 더 커야 하므로 구간 내부에 극소점이 들어가 $m=-1$이 되는 경우를 따져야 합니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$\\sin\\theta$는 $\\theta=\\frac{\\pi}{2}+2k\\pi$에서 극대값 $1$, $\\theta=\\frac{3\\pi}{2}+2k\\pi$에서 극소값 $-1$을 가집니다. 길이 $\\pi$인 구간의 양 끝값은 $\\sin a$와 $\\sin(a+\\pi)=-\\sin a$로 서로 부호가 반대이고 크기가 같습니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$\\theta=x+a$로 두면 $\\theta\\in[a,\\,a+\\pi]$ (길이 $\\pi$)입니다.\n\n극대점이 내부에 있으면 $M=1$ 이므로 $2|M|=2$, 그러나 $|m|\\le 1$ 이라 $2|M|=|m|$은 불가능합니다.\n\n따라서 극소점이 내부에 있어 $m=-1,\\ |m|=1$ 인 경우를 봅니다. 이때 극대점은 내부에 없으므로 최댓값은 끝값에서 나오고\n$$M=\\max\\{\\sin a,\\ \\sin(a+\\pi)\\}=\\max\\{\\sin a,\\ -\\sin a\\}=|\\sin a|.$$\n조건 $2|M|=|m|$에서\n$$2|\\sin a|=1\\ \\Rightarrow\\ |\\sin a|=\\frac{1}{2}.$$\n\n그러므로 두 조건\n$$(1)\\ |\\sin a|=\\frac{1}{2},\\qquad (2)\\ \\text{구간 }(a,\\,a+\\pi)\\text{ 내부에 극소점 }\\Big(\\tfrac{3\\pi}{2}+2k\\pi\\Big)\\text{이 존재}$$\n를 동시에 만족하는 $a$를 $0<a<3\\pi$에서 찾습니다.\n\n$0<a<3\\pi$에서 $|\\sin a|=\\dfrac{1}{2}$인 $a$는\n$$a=\\frac{\\pi}{6},\\ \\frac{5\\pi}{6},\\ \\frac{7\\pi}{6},\\ \\frac{11\\pi}{6},\\ \\frac{13\\pi}{6},\\ \\frac{17\\pi}{6}.$$\n\n각 $a$에 대해 구간 $(a,\\,a+\\pi)$ 안에 극소점 $\\dfrac{3\\pi}{2}=\\dfrac{9\\pi}{6}$ 또는 $\\dfrac{7\\pi}{2}=\\dfrac{21\\pi}{6}$이 들어오는지 확인합니다.\n$$a=\\tfrac{\\pi}{6}:\\ \\Big(\\tfrac{\\pi}{6},\\tfrac{7\\pi}{6}\\Big)\\ \\text{에 극소점 없음}\\ (\\times)$$\n$$a=\\tfrac{5\\pi}{6}:\\ \\Big(\\tfrac{5\\pi}{6},\\tfrac{11\\pi}{6}\\Big)\\ni\\tfrac{9\\pi}{6}\\ (\\bigcirc)$$\n$$a=\\tfrac{7\\pi}{6}:\\ \\Big(\\tfrac{7\\pi}{6},\\tfrac{13\\pi}{6}\\Big)\\ni\\tfrac{9\\pi}{6}\\ (\\bigcirc)$$\n$$a=\\tfrac{11\\pi}{6}:\\ \\Big(\\tfrac{11\\pi}{6},\\tfrac{17\\pi}{6}\\Big)\\ \\text{에 극소점 없음}\\ (\\times)$$\n$$a=\\tfrac{13\\pi}{6}:\\ \\Big(\\tfrac{13\\pi}{6},\\tfrac{19\\pi}{6}\\Big)\\ \\text{에 극소점 없음}\\ (\\times)$$\n$$a=\\tfrac{17\\pi}{6}:\\ \\Big(\\tfrac{17\\pi}{6},\\tfrac{23\\pi}{6}\\Big)\\ni\\tfrac{21\\pi}{6}\\ (\\bigcirc)$$\n\n따라서 조건을 만족하는 $a$는 $\\dfrac{5\\pi}{6},\\ \\dfrac{7\\pi}{6},\\ \\dfrac{17\\pi}{6}$이고, 그 합은\n$$\\frac{5\\pi}{6}+\\frac{7\\pi}{6}+\\frac{17\\pi}{6}=\\frac{29\\pi}{6}.$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **$\\dfrac{29}{6}\\pi$** 입니다."
+      }
+    ],
+    "final_answer": "29π/6"
+  },
+  "19": {
+    "problem_id": "19",
+    "title": "2025학년도 10월 고2 학평 19번",
+    "difficulty": "킬러",
+    "weakness_unit": "지수함수의 그래프 활용",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "function_plot", "expr": "2^x" },
+        { "type": "function_plot", "expr": "2^(x-1)+1" },
+        { "type": "function_plot", "expr": "x+1.65" },
+        { "type": "label_text", "tex": "y=2^x", "at": [1.6, 1.1] },
+        { "type": "label_text", "tex": "y=2^{x-1}+1", "at": [2.3, 3.6] },
+        { "type": "label_text", "tex": "l", "at": [2.9, 4.5] }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "기울기가 $1$인 직선 $l$이 곡선 $y=2^x$와 서로 다른 두 점 $\\mathrm{A,B}$에서, 곡선 $y=2^{x-1}+1$과 서로 다른 두 점 $\\mathrm{C,D}$에서 만납니다. 점 $\\mathrm{B}$가 선분 $\\mathrm{AD}$를 $3:1$로 내분할 때 점 $\\mathrm{B}$의 $x$좌표를 구합니다. (단, $\\mathrm{B}$의 $x$좌표 $>$ $\\mathrm{A}$의 $x$좌표, $\\mathrm{D}$의 $x$좌표 $>$ $\\mathrm{C}$의 $x$좌표.)"
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "곡선 $y=2^{x-1}+1$은 곡선 $y=2^x$를 $x$축 방향으로 $1$, $y$축 방향으로 $1$만큼 평행이동한 것입니다. 그런데 평행이동 벡터 $(1,1)$은 기울기 $1$인 직선 $l$의 방향과 같으므로, 이 평행이동은 직선 $l$ 위의 점을 같은 직선 $l$ 위의 점으로 옮깁니다. 따라서 $\\mathrm{C=A}+(1,1)$, $\\mathrm{D=B}+(1,1)$ 입니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "직선 위의 점들에 대한 내분점의 $x$좌표는 일반 내분점 공식과 같이 다룹니다. 또한 곡선 위 두 점을 잇는 현의 기울기가 $1$이면 두 점의 $x$좌표 $p,q$에 대해 $\\dfrac{2^q-2^p}{q-p}=1$ 입니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "점 $\\mathrm{A,B}$의 $x$좌표를 각각 $p,\\ q\\,(p<q)$라 하면 평행이동에 의해\n$$\\mathrm{C}=\\mathrm{A}+(1,1),\\qquad \\mathrm{D}=\\mathrm{B}+(1,1)$$\n이므로 점 $\\mathrm{D}$의 $x$좌표는 $q+1$ 입니다.\n\n점 $\\mathrm{B}$가 선분 $\\mathrm{AD}$를 $3:1$로 내분하므로 ($\\overline{\\mathrm{AB}}:\\overline{\\mathrm{BD}}=3:1$) $x$좌표에 대하여\n$$q=\\frac{1\\cdot p+3\\cdot(q+1)}{3+1}=\\frac{p+3q+3}{4}.$$\n양변에 $4$를 곱하면\n$$4q=p+3q+3\\ \\Rightarrow\\ q=p+3.$$\n\n한편 두 점 $\\mathrm{A,B}$는 모두 곡선 $y=2^x$ 위에 있고 직선 $l$의 기울기가 $1$이므로\n$$\\frac{2^q-2^p}{q-p}=1\\ \\Rightarrow\\ 2^q-2^p=q-p=3.$$\n$q=p+3$을 대입하면\n$$2^{p+3}-2^p=3\\ \\Rightarrow\\ 2^p(2^3-1)=3\\ \\Rightarrow\\ 2^p\\cdot 7=3\\ \\Rightarrow\\ 2^p=\\frac{3}{7}.$$\n\n따라서 점 $\\mathrm{B}$의 $x$좌표는\n$$2^q=2^{p+3}=8\\cdot 2^p=8\\cdot\\frac{3}{7}=\\frac{24}{7}\\ \\Rightarrow\\ q=\\log_2\\frac{24}{7}.$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **$\\log_2\\dfrac{24}{7}$** 입니다."
+      }
+    ],
+    "final_answer": "log₂(24/7)"
+  },
+  "20": {
+    "problem_id": "20",
+    "title": "2025학년도 10월 고2 학평 20번",
+    "difficulty": "킬러",
+    "weakness_unit": "등비수열의 추론",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "등비수열 $\\{a_n\\}$이 다음 두 조건을 만족시킬 때 $a_{10}$의 값을 구합니다.\n(가) $2$ 이상의 모든 자연수 $n$에 대하여 $a_n>a_1$, $a_n=(a_4+a_5-1)\\times a_{n-1}$ 이다.\n(나) $\\displaystyle\\sum_{n=1}^{3}a_n=\\dfrac{6}{a_1-a_2}$ 이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$a_n=(a_4+a_5-1)\\,a_{n-1}$은 공비가 $r=a_4+a_5-1$임을 뜻합니다. 첫째항 $a_1=a$, 공비 $r$로 두고 이 식을 정리하면 $a_4=ar^3=1$이라는 강력한 관계가 나옵니다. (나)와 함께 풀면 $r^3$에 대한 이차방정식을 얻고, 조건 $a_n>a_1$로 해를 가립니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "등비수열은 $a_n=ar^{n-1}$, $\\displaystyle\\sum_{n=1}^{3}a_n=a(1+r+r^2)$, $a_1-a_2=a(1-r)$ 입니다. 또한 $1-r^3=(1-r)(1+r+r^2)$ 입니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "첫째항 $a$, 공비 $r$이라 하면 공비가 $r=a_4+a_5-1$ 이므로\n$$r=ar^3+ar^4-1=ar^3(1+r)-1\\ \\Rightarrow\\ r+1=ar^3(1+r).$$\n$1+r\\neq 0$일 때 양변을 $(1+r)$로 나누면\n$$1=ar^3\\ \\Rightarrow\\ a_4=ar^3=1.$$\n\n조건 (나)를 정리합니다.\n$$a(1+r+r^2)=\\frac{6}{a(1-r)}\\ \\Rightarrow\\ a^2(1+r+r^2)(1-r)=6\\ \\Rightarrow\\ a^2(1-r^3)=6.$$\n$ar^3=1$에서 $a=\\dfrac{1}{r^3}$이므로 $u=r^3$으로 두면\n$$\\left(\\frac{1}{u}\\right)^2(1-u)=6\\ \\Rightarrow\\ \\frac{1-u}{u^2}=6\\ \\Rightarrow\\ 6u^2+u-1=0.$$\n$$u=\\frac{-1\\pm\\sqrt{1+24}}{12}=\\frac{-1\\pm5}{12}\\ \\Rightarrow\\ u=\\frac{1}{3}\\ \\text{또는}\\ u=-\\frac{1}{2}.$$\n\n조건 $a_n>a_1$ (모든 $n\\ge2$)을 확인합니다.\n$$\\textbf{(i)}\\ u=r^3=\\frac{1}{3}:\\ a=\\frac{1}{u}=3>0,\\ 0<r<1\\Rightarrow a_2=ar<a_1.\\ \\text{조건 위배 (기각)}.$$\n$$\\textbf{(ii)}\\ u=r^3=-\\frac{1}{2}:\\ a=\\frac{1}{u}=-2,\\ r=-\\left(\\frac{1}{2}\\right)^{1/3}<0.$$\n이 경우 $a_n=-2\\,r^{n-1}$에서 $n$이 짝수면 $a_n>0>a_1=-2$, $n$이 홀수면 $a_n$이 $-2$보다 큼이 확인되어 모든 $n\\ge2$에서 $a_n>a_1$을 만족합니다. (채택)\n\n따라서 $r^3=-\\dfrac{1}{2}$, $a=-2$ 이고\n$$a_{10}=a\\,r^{9}=a\\,(r^3)^3=(-2)\\left(-\\frac{1}{2}\\right)^3=(-2)\\left(-\\frac{1}{8}\\right)=\\frac{1}{4}.$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **$\\dfrac{1}{4}$** 입니다."
+      }
+    ],
+    "final_answer": "1/4"
+  },
+  "21": {
+    "problem_id": "21",
+    "title": "2025학년도 10월 고2 학평 21번",
+    "difficulty": "킬러",
+    "weakness_unit": "지수함수의 그래프 추론",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "함수 $f(x)=\\begin{cases}-2^{x+3}+a & (x<0)\\\\ 2^{-x+6}+a-12 & (x\\ge0)\\end{cases}$ 에 대하여, '$x$에 대한 방정식 $f(x)\\times f(x-k)=0$의 서로 다른 실근의 개수가 $3$이 되도록 하는 $4$ 이하의 양수 $k$가 존재한다'는 조건을 만족시키는 모든 정수 $a$의 값의 합을 구합니다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$f(x)f(x-k)=0$의 실근 집합은 $\\{f(x)=0\\text{의 근}\\}\\cup\\{f(x)=0\\text{의 근}+k\\}$입니다. $f(x)=0$의 근의 집합을 $R$이라 하면 서로 다른 실근의 개수는 $|R\\cup(R+k)|$. 이것이 $3$이 되려면 $|R|=2$이고, 적당한 $k\\,(0<k\\le4)$가 두 근의 차이와 같아 정확히 한 점이 겹쳐야 합니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$f(x-k)=0\\Leftrightarrow x-k\\in R\\Leftrightarrow x\\in R+k$. 따라서 전체 실근은 $R\\cup(R+k)$이고, $|R\\cup(R+k)|=2|R|-(\\text{겹치는 개수})$. $|R|=2$일 때 정확히 한 쌍이 겹치면 $4-1=3$이 됩니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "먼저 $f(x)=0$의 근을 구합니다.\n\n$x<0$ 영역: $-2^{x+3}+a=0\\Rightarrow 2^{x+3}=a\\Rightarrow x=\\log_2 a-3$. 이 근이 $x<0$이려면 $\\log_2 a<3$, 즉 $0<a<8$.\n\n$x\\ge0$ 영역: $2^{-x+6}+a-12=0\\Rightarrow 2^{-x+6}=12-a\\Rightarrow x=6-\\log_2(12-a)$. 이 근이 존재하려면 $12-a>0$, 즉 $a<12$.\n\n따라서 $0<a<8$일 때 근이 $2$개이고\n$$r_1=\\log_2 a-3\\ (<0),\\qquad r_2=6-\\log_2(12-a)\\ (\\ge0).$$\n$|R|=2$가 되는 경우는 $0<a<8$ 이며, 정수로는 $a=1,2,\\dots,7$ 입니다.\n\n서로 다른 실근이 정확히 $3$개가 되려면 $k=r_2-r_1$ (양수)이고 $0<k\\le4$여야 합니다. ($r_2\\ge0>r_1$ 이므로 $r_2-r_1>0$이고, $k=r_2-r_1$이면 $r_1+k=r_2$로 정확히 한 점만 겹칩니다.)\n$$r_2-r_1=\\big(6-\\log_2(12-a)\\big)-\\big(\\log_2 a-3\\big)=9-\\log_2\\big(a(12-a)\\big).$$\n$0<k\\le4$ 조건에서\n$$9-\\log_2\\big(a(12-a)\\big)\\le4\\ \\Rightarrow\\ \\log_2\\big(a(12-a)\\big)\\ge5\\ \\Rightarrow\\ a(12-a)\\ge32.$$\n\n정수 $a\\in\\{1,\\dots,7\\}$에 대해 $a(12-a)$를 계산하면\n$$a=1:11,\\ a=2:20,\\ a=3:27,\\ a=4:32,\\ a=5:35,\\ a=6:36,\\ a=7:35.$$\n$a(12-a)\\ge32$인 것은 $a=4,5,6,7$ 입니다. (이때 $k=r_2-r_1\\in(0,4]$로 존재.)\n\n따라서 조건을 만족하는 모든 정수 $a$의 합은\n$$4+5+6+7=22.$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **22** 입니다."
+      }
+    ],
+    "final_answer": "22"
+  },
+  "27": {
+    "problem_id": "27",
+    "title": "2025학년도 10월 고2 학평 27번",
+    "difficulty": "준킬러",
+    "weakness_unit": "사인법칙과 코사인법칙 활용",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$\\overline{\\mathrm{AB}}=6$인 삼각형 $\\mathrm{ABC}$에서 $2\\sin A=\\sin B$, $\\cos C=\\dfrac{4}{5}$ 일 때 삼각형 $\\mathrm{ABC}$의 넓이를 구합니다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$\\overline{\\mathrm{AB}}$는 각 $C$의 대변이므로 $c=6$. 사인법칙으로 $2\\sin A=\\sin B$를 변의 관계 $2a=b$로 바꾸고, $\\cos C=\\dfrac{4}{5}$에서 $\\sin C=\\dfrac{3}{5}$. 코사인법칙으로 $a$를 구한 뒤 넓이공식 $\\dfrac{1}{2}ab\\sin C$를 씁니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "사인법칙 $\\dfrac{a}{\\sin A}=\\dfrac{b}{\\sin B}=\\dfrac{c}{\\sin C}$, 코사인법칙 $c^2=a^2+b^2-2ab\\cos C$, 삼각형 넓이 $S=\\dfrac{1}{2}ab\\sin C$, $\\sin^2 C+\\cos^2 C=1$."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$\\overline{\\mathrm{BC}}=a,\\ \\overline{\\mathrm{CA}}=b,\\ \\overline{\\mathrm{AB}}=c=6$ 으로 둡니다.\n\n사인법칙에 의해 $2\\sin A=\\sin B \\Rightarrow 2a=b$.\n\n$\\cos C=\\dfrac{4}{5}$, $0<C<\\pi$이므로 $\\sin C=\\sqrt{1-\\left(\\dfrac{4}{5}\\right)^2}=\\dfrac{3}{5}$.\n\n코사인법칙에서\n$$c^2=a^2+b^2-2ab\\cos C.$$\n$b=2a,\\ c=6,\\ \\cos C=\\dfrac{4}{5}$을 대입하면\n$$36=a^2+(2a)^2-2\\cdot a\\cdot 2a\\cdot\\frac{4}{5}=a^2+4a^2-\\frac{16}{5}a^2=\\frac{25-16}{5}a^2=\\frac{9}{5}a^2.$$\n따라서\n$$a^2=36\\cdot\\frac{5}{9}=20.$$\n그러면 $a=2\\sqrt5,\\ b=2a=4\\sqrt5$ 입니다.\n\n삼각형의 넓이는\n$$S=\\frac{1}{2}ab\\sin C=\\frac{1}{2}\\cdot 2\\sqrt5\\cdot 4\\sqrt5\\cdot\\frac{3}{5}=\\frac{1}{2}\\cdot(8\\cdot5)\\cdot\\frac{3}{5}=\\frac{1}{2}\\cdot40\\cdot\\frac{3}{5}=\\frac{1}{2}\\cdot24=12.$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **12** 입니다."
+      }
+    ],
+    "final_answer": "12"
+  },
+  "28": {
+    "problem_id": "28",
+    "title": "2025학년도 10월 고2 학평 28번",
+    "difficulty": "킬러",
+    "weakness_unit": "함수의 연속 추론",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "닫힌구간 $[0,2]$에서 정의된 함수 $f(x)$가 다음 조건을 만족시킬 때 $\\dfrac{f(0)}{f(2)}$의 값을 구합니다.\n(가) $f(x)$는 $x=1$에서만 불연속이고 $\\displaystyle\\lim_{x\\to1}f(x)=3f(2)$ 이다.\n(나) $0\\le x\\le2$인 모든 실수 $x$에 대하여 $f(x)\\neq2$ 이고 $f(0)+f(2)=4$ 이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$f$가 $[0,1)$과 $(1,2]$에서 연속이고 그 위에서 값 $2$를 한 번도 취하지 않으므로, 사잇값 정리에 의해 각 구간에서 함숫값은 $2$를 넘나들 수 없습니다. 따라서 $f(0),\\ \\displaystyle\\lim_{x\\to1}f(x)=L,\\ f(2)$는 모두 $2$를 기준으로 같은 쪽에 놓입니다. $f(0)+f(2)=4$와 결합하면 $L=2$로 결정됩니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "연속함수가 어떤 구간에서 특정 값 $2$를 취하지 않으면 그 구간에서 함숫값은 모두 $2$보다 크거나 모두 작습니다(사잇값 정리). 극한값 $L$은 그 닫힌 쪽 경계($\\ge2$ 또는 $\\le2$)에 위치합니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$L=\\displaystyle\\lim_{x\\to1}f(x)=3f(2)$ 으로 둡니다.\n\n$f$는 $[0,1)$에서 연속이며 값 $2$를 취하지 않으므로 $f(0)$과 $L$은 $2$를 기준으로 같은 쪽에 있습니다.\n$f$는 $(1,2]$에서 연속이며 값 $2$를 취하지 않으므로 $f(2)$와 $L$도 같은 쪽에 있습니다.\n따라서 $f(0),\\ f(2)$는 같은 쪽입니다.\n\n$$\\textbf{(i)}\\ f(0)>2,\\ f(2)>2:\\ f(0)+f(2)>4.\\ \\text{모순}.$$\n$$\\textbf{(ii)}\\ f(0)<2,\\ f(2)<2:\\ f(0)+f(2)<4.\\ \\text{모순}.$$\n\n순수한 경우가 모두 모순이므로 경계값을 정밀하게 봅니다. $f(2)<2$이면 $(1,2]$ 쪽에서 $L\\le2$, 동시에 $f(0)=4-f(2)>2$이면 $[0,1)$ 쪽에서 $L\\ge2$. 두 부등식 $L\\le2,\\ L\\ge2$에서\n$$L=2.$$\n($f$ 자체는 $2$를 취하지 않지만 극한값이 $2$인 것은 가능합니다.)\n\n$L=3f(2)=2$ 이므로\n$$f(2)=\\frac{2}{3}.$$\n그러면 $f(0)=4-f(2)=4-\\dfrac{2}{3}=\\dfrac{10}{3}$.\n\n($f(2)=\\dfrac{2}{3}<2$, $f(0)=\\dfrac{10}{3}>2$로 위의 가정과 일치하고 모두 $2$가 아니므로 조건을 만족합니다.)\n\n따라서\n$$\\frac{f(0)}{f(2)}=\\frac{\\,10/3\\,}{\\,2/3\\,}=\\frac{10}{2}=5.$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **5** 입니다."
+      }
+    ],
+    "final_answer": "5"
+  },
+  "29": {
+    "problem_id": "29",
+    "title": "2025학년도 10월 고2 학평 29번",
+    "difficulty": "킬러",
+    "weakness_unit": "수열의 귀납적 정의",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "다음 조건을 만족시키는 수열 $\\{a_n\\}$에 대하여 $12(a_{14}+a_{15})$의 값을 구합니다.\n(가) 모든 자연수 $n$에 대하여 $a_{n+1}=\\begin{cases}\\dfrac{1}{a_n}-1 & (a_n>0)\\\\ -a_n & (a_n\\le0)\\end{cases}$ 이다.\n(나) $a_1>6$ 이고 $a_1+a_5+a_9+a_{13}=13$ 이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$a_1>6$에서 출발해 네 단계를 진행하면 $a_5=a_1-2$가 됨을 직접 계산으로 확인할 수 있습니다. 이 '$4$항마다 $2$씩 감소' 패턴이 (나)의 합으로 $a_1$을 결정하고, $a_{13}$이 $1$보다 작아지면서 패턴이 깨지는 지점을 따로 계산합니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "귀납적으로 정의된 수열은 항을 차례로 대입하여 규칙을 찾습니다. $a_n>1$일 때 위 점화식을 네 번 적용하면 $a_{n+4}=a_n-2$가 성립함을 이용합니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$a_1>6\\,(>1)$에서 네 단계를 계산합니다.\n$$a_2=\\frac{1}{a_1}-1\\quad(a_1>1\\Rightarrow a_2<0).$$\n$$a_3=-a_2=1-\\frac{1}{a_1}\\quad(>0).$$\n$$a_4=\\frac{1}{a_3}-1=\\frac{1}{\\,1-\\frac{1}{a_1}\\,}-1=\\frac{a_1}{a_1-1}-1=\\frac{1}{a_1-1}\\quad(>0).$$\n$$a_5=\\frac{1}{a_4}-1=(a_1-1)-1=a_1-2.$$\n즉 $a_n>1$이면 $a_{n+4}=a_n-2$ 입니다.\n\n$a_1>6$이므로 $a_5=a_1-2>4>1$, $a_9=a_5-2=a_1-4>1$, $a_{13}=a_9-2=a_1-6$ 이 차례로 성립합니다. 따라서\n$$a_1+a_5+a_9+a_{13}=a_1+(a_1-2)+(a_1-4)+(a_1-6)=4a_1-12=13.$$\n$$\\Rightarrow\\ 4a_1=25\\ \\Rightarrow\\ a_1=\\frac{25}{4}.$$\n($a_1=6.25>6$ 으로 조건과 일치.)\n\n이제 $a_{13}=a_1-6=\\dfrac{25}{4}-6=\\dfrac{1}{4}$ 입니다. $a_{13}=\\dfrac{1}{4}\\in(0,1)$ 이므로 $4$단계 패턴은 여기서 깨집니다.\n\n$$a_{14}=\\frac{1}{a_{13}}-1=\\frac{1}{1/4}-1=4-1=3.$$\n$$a_{15}=\\frac{1}{a_{14}}-1=\\frac{1}{3}-1=-\\frac{2}{3}.$$\n\n따라서\n$$12(a_{14}+a_{15})=12\\left(3-\\frac{2}{3}\\right)=12\\cdot\\frac{7}{3}=28.$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **28** 입니다."
+      }
+    ],
+    "final_answer": "28"
+  },
+  "30": {
+    "problem_id": "30",
+    "title": "2025학년도 10월 고2 학평 30번",
+    "difficulty": "킬러",
+    "weakness_unit": "함수의 연속 추론(평균변화율)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "function_plot", "expr": "(x+4)*(x+9)" },
+        { "type": "function_plot", "expr": "-x^2+6*x+36" },
+        { "type": "point", "coordinates": [-4, 41], "label": "(-4, 41)" },
+        { "type": "label_text", "tex": "y=f(x)", "at": [4.5, 42] }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "세 양수 $a,b,c$에 대하여 $f(x)=\\begin{cases}(x+4)(x+a) & (x<-4,\\ -4<x<0)\\\\ b & (x=-4)\\\\ -x^2+6x+c & (x\\ge0)\\end{cases}$ 입니다. 상수 $k\\,(k>4)$와 실수 $t$에 대하여, $x$가 $t$에서 $t+k$까지 변할 때 $f(x)$의 평균변화율을 $g(t)$, $f(t)\\times g(t)$를 $h(t)$라 합니다. (가) $h(t)$가 실수 전체에서 연속, (나) $f(k)=b$ 일 때 $f(c-a-b)$를 구합니다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$f$는 $x=-4$ (값 $b$ vs 극한 $0$)와 $x=0$ (좌극한 $4a$ vs 값 $c$)에서 불연속일 수 있습니다. $h(t)=f(t)\\cdot\\dfrac{f(t+k)-f(t)}{k}$가 모든 곳에서 연속이려면 $f(t)$가 끊기는 점($t=-4,\\,0$)과 $f(t+k)$가 끊기는 점($t=-4-k,\\,-k$)에서 모두 좌우극한이 일치해야 합니다. 각 조건을 세우면 $a,c,k$의 관계가 나오고, (나) $f(k)=b$가 마지막 방정식이 됩니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "평균변화율 $g(t)=\\dfrac{f(t+k)-f(t)}{k}$. 곱 $h(t)=f(t)g(t)$의 연속성은 불연속 후보점에서 (좌극한)=(우극한)=(함숫값)을 따져 판별합니다. $\\displaystyle\\lim_{x\\to-4}(x+4)(x+a)=0$, $\\displaystyle\\lim_{x\\to0^-}f(x)=4a$, $f(0)=c$ 입니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$h(t)=f(t)\\cdot\\dfrac{f(t+k)-f(t)}{k}$ 의 연속을 불연속 후보점마다 따집니다. ($k>4$ 이므로 $t+k$가 관련 구간을 옮겨감에 유의.)\n\n① $t=-4$ (여기서 $f(t)$가 끊김, $t+k=k-4>0$이라 $f(t+k)$는 연속):\n$$\\lim_{t\\to-4}h(t)=0\\cdot\\frac{f(k-4)-0}{k}=0,\\qquad h(-4)=b\\cdot\\frac{f(k-4)-b}{k}.$$\n연속이려면 $b\\big(f(k-4)-b\\big)=0$, $b>0$ 이므로\n$$f(k-4)=b.\\qquad\\cdots(1)$$\n\n② $t=-4-k$ (여기서 $t+k=-4$라 $f(t+k)$가 끊김, $t<-4$라 $f(t)$는 연속):\n$$\\lim h(t)=f(-4-k)\\cdot\\frac{0-f(-4-k)}{k},\\qquad h(-4-k)=f(-4-k)\\cdot\\frac{b-f(-4-k)}{k}.$$\n두 값이 같으려면 $f(-4-k)\\cdot(-b)=0$, $b>0$ 이므로 $f(-4-k)=0$.\n$-4-k<-4$ 이므로 $f(-4-k)=(-k)(a-4-k)=0\\Rightarrow a=k+4.\\qquad\\cdots(2)$\n\n③ $t=-k$ (여기서 $t+k=0$라 $f(t+k)$가 끊길 수 있음, $t<-4$라 $f(t)$ 연속):\n좌·우극한과 함숫값이 같으려면 $f(-k)\\,(4a-c)=0$. (2)에서 $f(-k)=(4-k)(a-k)=(4-k)\\cdot4\\neq0$ 이므로\n$$c=4a.\\qquad\\cdots(3)$$\n($c=4a$이면 $x=0$에서 $f$가 연속이 되어 $t=0$에서의 $h$ 연속도 자동 성립.)\n\n④ 조건 (나) $f(k)=b$: $k>4$ 이므로 $f(k)=-k^2+6k+c=b.\\qquad\\cdots(4)$\n\n이제 $(1)$과 $(4)$를 결합합니다. $(1)$: $f(k-4)=-(k-4)^2+6(k-4)+c=b$.\n$(1)=(4)$ 에서\n$$-(k-4)^2+6(k-4)=-k^2+6k.$$\n$$-(k^2-8k+16)+6k-24=-k^2+6k\\ \\Rightarrow\\ -k^2+14k-40=-k^2+6k.$$\n$$\\Rightarrow\\ 8k=40\\ \\Rightarrow\\ k=5\\ (>4,\\ \\text{적합}).$$\n\n따라서\n$$a=k+4=9,\\qquad c=4a=36,\\qquad b=-k^2+6k+c=-25+30+36=41.$$\n\n구하는 값은 $c-a-b=36-9-41=-14$ 이고, $-14<-4$ 이므로\n$$f(-14)=(-14+4)(-14+9)=(-10)(-5)=50.$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **50** 입니다."
+      }
+    ],
+    "final_answer": "50"
+  }
+}

@@ -1,0 +1,385 @@
+{
+  "14": {
+    "problem_id": "14",
+    "title": "2023학년도 9월 고2 학평 14번",
+    "difficulty": "준킬러",
+    "weakness_unit": "거듭제곱근",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$4 \\le n \\le 12$ 인 자연수 $n$ 에 대하여 $A=n^2-15n+50$ 의 $n$ 제곱근 중 실수인 것의 개수를 $f(n)$ 이라 한다. $f(n)=f(n+1)$ 을 만족시키는 모든 $n$ 의 값의 합을 구하는 문제이다. 핵심은 $A$ 의 부호와 $n$ 의 홀짝에 따라 실수인 거듭제곱근의 개수가 달라진다는 점이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "이차식을 인수분해하면 $$n^2-15n+50=(n-5)(n-10)$$ 이므로 $A$ 의 부호는 $n=5$, $n=10$ 을 경계로 바뀐다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "실수 $A$ 의 $n$ 제곱근 중 실수인 것의 개수는 다음과 같다.\n$$A>0 \\;\\Rightarrow\\; n\\text{ 이 짝수면 } 2\\text{개},\\; n\\text{ 이 홀수면 } 1\\text{개}$$\n$$A<0 \\;\\Rightarrow\\; n\\text{ 이 짝수면 } 0\\text{개},\\; n\\text{ 이 홀수면 } 1\\text{개}$$\n$$A=0 \\;\\Rightarrow\\; 0\\text{ 의 } n\\text{ 제곱근은 } 0\\text{ 뿐이므로 } 1\\text{개}$$"
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$n=4$ 부터 $n=12$ 까지 $A=(n-5)(n-10)$ 의 부호와 $n$ 의 홀짝을 따져 $f(n)$ 을 구한다.\n$$f(4):A=6>0,\\ 4\\text{짝}\\Rightarrow 2$$\n$$f(5):A=0\\Rightarrow 1$$\n$$f(6):A=-4<0,\\ 6\\text{짝}\\Rightarrow 0$$\n$$f(7):A=-6<0,\\ 7\\text{홀}\\Rightarrow 1$$\n$$f(8):A=-6<0,\\ 8\\text{짝}\\Rightarrow 0$$\n$$f(9):A=-4<0,\\ 9\\text{홀}\\Rightarrow 1$$\n$$f(10):A=0\\Rightarrow 1$$\n$$f(11):A=6>0,\\ 11\\text{홀}\\Rightarrow 1$$\n$$f(12):A=14>0,\\ 12\\text{짝}\\Rightarrow 2$$\n이제 연속한 두 값이 같은 경우 $f(n)=f(n+1)$ 을 찾는다.\n$$f(9)=f(10)=1 \\;\\Rightarrow\\; n=9$$\n$$f(10)=f(11)=1 \\;\\Rightarrow\\; n=10$$\n나머지는 모두 값이 다르다. 따라서 조건을 만족하는 $n$ 은 $9,\\ 10$ 이고 그 합은\n$$9+10=19$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **③ 19** 입니다."
+      }
+    ],
+    "final_answer": "③ 19"
+  },
+  "15": {
+    "problem_id": "15",
+    "title": "2023학년도 9월 고2 학평 15번",
+    "difficulty": "준킬러",
+    "weakness_unit": "수열의 합·유리화",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "circle", "center": [0, 0], "radius": 3 },
+        { "type": "function_plot", "expr": "sqrt(3)*x" },
+        { "type": "point", "coordinates": [1.5, 2.598], "label": "P" },
+        { "type": "label_text", "tex": "y=\\sqrt{3}\\,x", "at": [2.4, 4] },
+        { "type": "label_text", "tex": "x^2+y^2=n", "at": [3.4, 1.4] }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "원 $x^2+y^2=n$ 과 직선 $y=\\sqrt{3}\\,x$ 가 제1사분면에서 만나는 점의 $x$ 좌표를 $x_n$ 이라 할 때 $$\\sum_{k=1}^{80}\\dfrac{1}{x_k+x_{k+1}}$$ 의 값을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "교점의 $x$ 좌표 $x_n$ 을 $n$ 으로 직접 구한 뒤, 분모를 유리화하면 망원급수(소거되는 합) 꼴이 된다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "분모 유리화 공식 $$\\dfrac{1}{\\sqrt{k}+\\sqrt{k+1}}=\\sqrt{k+1}-\\sqrt{k}$$ 를 이용하면 합이 양 끝항만 남는다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "직선 $y=\\sqrt{3}\\,x$ 를 원의 방정식에 대입하면\n$$x^2+(\\sqrt{3}\\,x)^2=n \\;\\Rightarrow\\; x^2+3x^2=4x^2=n$$\n제1사분면에서 $x>0$ 이므로\n$$x_n=\\dfrac{\\sqrt{n}}{2}$$\n따라서\n$$\\dfrac{1}{x_k+x_{k+1}}=\\dfrac{1}{\\dfrac{\\sqrt{k}}{2}+\\dfrac{\\sqrt{k+1}}{2}}=\\dfrac{2}{\\sqrt{k}+\\sqrt{k+1}}=2\\left(\\sqrt{k+1}-\\sqrt{k}\\right)$$\n이므로\n$$\\sum_{k=1}^{80}\\dfrac{1}{x_k+x_{k+1}}=2\\sum_{k=1}^{80}\\left(\\sqrt{k+1}-\\sqrt{k}\\right)=2\\left(\\sqrt{81}-\\sqrt{1}\\right)=2(9-1)=16$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **⑤ 16** 입니다."
+      }
+    ],
+    "final_answer": "⑤ 16"
+  },
+  "18": {
+    "problem_id": "18",
+    "title": "2023학년도 9월 고2 학평 18번",
+    "difficulty": "준킬러",
+    "weakness_unit": "로그함수의 그래프",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "function_plot", "expr": "log(x)/log(2)" },
+        { "type": "function_plot", "expr": "log(x-3)/log(2)+2" },
+        { "type": "point", "coordinates": [4, 2], "label": "(4,2)" },
+        { "type": "point", "coordinates": [1, 0], "label": "A" },
+        { "type": "point", "coordinates": [3.25, 0], "label": "B" },
+        { "type": "point", "coordinates": [8, 3], "label": "C" },
+        { "type": "point", "coordinates": [5, 3], "label": "D" },
+        { "type": "label_text", "tex": "y=3", "at": [8.6, 3.4] },
+        { "type": "label_text", "tex": "y=\\log_2 x", "at": [9, 2.2] }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "두 곡선 $y=\\log_2 x$ 와 $y=\\log_2(x-p)+q$ 가 점 $(4,2)$ 에서 만난다. 두 곡선이 $x$ 축과 만나는 점을 각각 $\\mathrm{A,\\,B}$, 직선 $y=3$ 과 만나는 점을 각각 $\\mathrm{C,\\,D}$ 라 할 때 $\\overline{\\mathrm{CD}}-\\overline{\\mathrm{BA}}=\\dfrac{3}{4}$ 를 이용하여 $p+q$ 를 구한다. (단, $0<p<4$, $q>0$)"
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "네 점 $\\mathrm{A,B,C,D}$ 의 $x$ 좌표를 $p,q$ 로 나타내고, 두 곡선이 점 $(4,2)$ 를 지난다는 조건으로 $p$ 를 $q$ 로 표현하면 식이 하나의 미지수로 정리된다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$y=\\log_2 x$ 는 $x=1$ 에서 $y=0$, $x=8$ 에서 $y=3$. 평행이동한 곡선 $y=\\log_2(x-p)+q$ 에서 $y=k$ 일 때 $x-p=2^{\\,k-q}$, 즉 $x=p+2^{\\,k-q}$ 이다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "점 $(4,2)$ 를 지나므로 $$\\log_2(4-p)+q=2 \\;\\Rightarrow\\; 4-p=2^{\\,2-q}\\;\\Rightarrow\\; p=4-4\\cdot 2^{-q}$$\n각 점의 $x$ 좌표를 구한다.\n$$\\mathrm{A}:\\ x=1,\\qquad \\mathrm{B}:\\ x=p+2^{-q}$$\n$$\\mathrm{C}:\\ x=8,\\qquad \\mathrm{D}:\\ x=p+2^{\\,3-q}$$\n그림에서 $\\mathrm{D}$ 는 $\\mathrm{C}$ 의 왼쪽, $\\mathrm{B}$ 는 $\\mathrm{A}$ 의 오른쪽이므로\n$$\\overline{\\mathrm{CD}}=8-\\left(p+2^{\\,3-q}\\right),\\qquad \\overline{\\mathrm{BA}}=\\left(p+2^{-q}\\right)-1$$\n$$\\overline{\\mathrm{CD}}-\\overline{\\mathrm{BA}}=9-2p-2^{\\,3-q}-2^{-q}=9-2p-9\\cdot 2^{-q}$$\n여기서 $t=2^{-q}$ 라 하면 $p=4-4t$ 이므로\n$$9-2(4-4t)-9t=1-t=\\dfrac{3}{4}$$\n$$t=\\dfrac{1}{4} \\;\\Rightarrow\\; 2^{-q}=\\dfrac{1}{4} \\;\\Rightarrow\\; q=2$$\n$$p=4-4\\cdot\\dfrac{1}{4}=3$$\n따라서\n$$p+q=3+2=5$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **④ 5** 입니다."
+      }
+    ],
+    "final_answer": "④ 5"
+  },
+  "19": {
+    "problem_id": "19",
+    "title": "2023학년도 9월 고2 학평 19번",
+    "difficulty": "준킬러",
+    "weakness_unit": "등비수열의 활용",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "수열 $\\{a_n\\}$ 에 대하여 (가) $a_1,a_3,a_5,a_7$ 이 이 순서대로 공비가 양수인 등비수열, (나) $8$ 이하의 모든 자연수 $n$ 에 대하여 $a_n\\times a_{9-n}=75$ 이다. $a_1+a_2=\\dfrac{10}{3}$, $\\sum_{k=1}^{8}a_k=\\dfrac{400}{3}$ 일 때 $a_3+a_8$ 을 구한다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "조건 (나)를 이용해 짝수 항 $a_2,a_4,a_6,a_8$ 을 모두 홀수 항(등비수열)과 공비 $r$ 로 표현하면, 전체 합이 $(1+r+r^2+r^3)$ 로 묶여 $r$ 이 결정된다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$a_1=A$, 공비 $r>0$ 이라 하면 홀수 항은 $a_1=A,\\ a_3=Ar,\\ a_5=Ar^2,\\ a_7=Ar^3$. 조건 (나) $a_n a_{9-n}=75$ 에서 $a_8=\\dfrac{75}{a_1}$, $a_6=\\dfrac{75}{a_3}$, $a_7=\\dfrac{75}{a_2}$, $a_5=\\dfrac{75}{a_4}$ 로 짝수 항을 표현한다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "조건 (나)로부터 짝수 항을 정리하면\n$$a_2=\\dfrac{75}{a_1 r^3},\\quad a_4=\\dfrac{75}{a_1 r^2},\\quad a_6=\\dfrac{75}{a_1 r},\\quad a_8=\\dfrac{75}{a_1}$$\n홀수 항의 합과 짝수 항의 합을 각각 묶으면\n$$a_1+a_3+a_5+a_7=a_1\\left(1+r+r^2+r^3\\right)$$\n$$a_2+a_4+a_6+a_8=\\dfrac{75}{a_1}\\left(\\dfrac{1}{r^3}+\\dfrac{1}{r^2}+\\dfrac{1}{r}+1\\right)=\\dfrac{75}{a_1 r^3}\\left(1+r+r^2+r^3\\right)$$\n따라서\n$$\\sum_{k=1}^{8}a_k=\\left(1+r+r^2+r^3\\right)\\left(a_1+\\dfrac{75}{a_1 r^3}\\right)$$\n그런데 $a_1+a_2=a_1+\\dfrac{75}{a_1 r^3}=\\dfrac{10}{3}$ 이므로\n$$\\sum_{k=1}^{8}a_k=\\left(1+r+r^2+r^3\\right)\\cdot\\dfrac{10}{3}=\\dfrac{400}{3}$$\n$$1+r+r^2+r^3=40 \\;\\Rightarrow\\; r=3 \\quad (1+3+9+27=40)$$\n이제 $a_1+\\dfrac{75}{27\\,a_1}=\\dfrac{10}{3}$ 에서\n$$a_1+\\dfrac{25}{9\\,a_1}=\\dfrac{10}{3} \\;\\Rightarrow\\; 9a_1^2-30a_1+25=0 \\;\\Rightarrow\\; (3a_1-5)^2=0 \\;\\Rightarrow\\; a_1=\\dfrac{5}{3}$$\n따라서\n$$a_3=a_1 r=\\dfrac{5}{3}\\times 3=5,\\qquad a_8=\\dfrac{75}{a_1}=\\dfrac{75}{\\frac{5}{3}}=45$$\n$$a_3+a_8=5+45=50$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **⑤ 50** 입니다."
+      }
+    ],
+    "final_answer": "⑤ 50"
+  },
+  "20": {
+    "problem_id": "20",
+    "title": "2023학년도 9월 고2 학평 20번",
+    "difficulty": "킬러",
+    "weakness_unit": "함수의 극한·이차함수",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "이차함수 $f(x)=(x-k)^2$ $(k>0)$ 에 대하여 양수 $a$ 로 $$g(x)=\\begin{cases} f(x) & (x\\le 3) \\\\ kf(x-a) & (x>3)\\end{cases}$$ 가 (가) $\\lim_{x\\to 3}g(x)$ 가 존재, (나) $y=g(x)$ 의 그래프가 $x$ 축과 오직 한 점에서 만난다는 조건을 만족할 때 보기 ㄱ, ㄴ, ㄷ 의 참거짓을 판별한다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "(가)는 좌극한 $f(3)$ 과 우극한 $kf(3-a)$ 가 같음을, (나)는 $g(x)\\ge 0$ 인 두 조각이 $x$ 축에 닿는 점이 오직 하나임을 뜻한다. $f(x)=(x-k)^2\\ge 0$, $kf(x-a)\\ge 0$ 이므로 두 조각은 모두 $x$ 축 위쪽이며 닿는 점은 $x=k$ (왼쪽), $x=a+k$ (오른쪽)뿐이다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "조건 (가): $$(3-k)^2=k(3-a-k)^2$$ 조건 (나): 두 조각이 모두 $\\ge 0$ 이므로 $x$ 축과의 접점은 (i) 왼쪽 조각 $x=k\\ (k\\le 3)$, (ii) 오른쪽 조각 $x=a+k\\ (a+k>3)$ 중에서 오직 하나만 존재해야 한다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$\\textbf{ㄱ.}$ $f(1)=1$ 이면 $(1-k)^2=1$, 즉 $1-k=\\pm 1$ 에서 $k=2$ $(k>0)$. 이때 $2\\le 3$ 이므로 $g(2)=f(2)=(2-2)^2=0$. 따라서 ㄱ 은 참이다.\n\n$\\textbf{ㄴ.}$ $g(k+a)$ 와 $g(3)$ 을 비교한다. $g(3)=f(3)=(3-k)^2$.\n경우 1) $k>3$: 왼쪽 조각은 $x\\le 3$ 에서 $x$ 축에 닿지 않으므로 오른쪽 접점 $x=a+k>3$ 이 유일한 접점이다. 이때 $k+a>3$ 이므로 $g(k+a)=kf(k)=k(k-k)^2=0$. $(3-k)^2>0$ 이므로 $$g(k+a)=0<(3-k)^2=g(3)$$\n경우 2) $k\\le 3$: 왼쪽 접점 $x=k$ 가 존재하므로 유일성을 위해 오른쪽 조각은 닿지 않아야 하고, (가)에서 $a+k=3$ 이면 $k=3,a=0$ 으로 모순이므로 $a+k<3$. 그러면 $g(k+a)=f(k+a)=(k+a-k)^2=a^2$ 이고 $a<3-k$, 양변이 양수이므로 $$a^2<(3-k)^2=g(3)$$\n두 경우 모두 $g(k+a)<g(3)$ 이므로 ㄴ 은 참이다.\n\n$\\textbf{ㄷ.}$ $(k-1)(k-2)\\ge 0$, 즉 $k\\le 1$ 또는 $k\\ge 2$ 라는 주장이다. 경우 2)에서 (가) $(3-k)^2=k(3-a-k)^2$ 를 $a$ 에 대해 풀면 $a=(3-k)\\left(1-\\dfrac{1}{\\sqrt{k}}\\right)$ 이고, 이는 $1<k<3$ 일 때 $a>0$ 이면서 $a+k<3$ 을 만족한다. 예를 들어 $k=\\dfrac{3}{2}$ 일 때 적당한 양수 $a$ 가 존재하여 모든 조건을 만족하지만 $(k-1)(k-2)=\\dfrac{1}{2}\\cdot\\left(-\\dfrac{1}{2}\\right)<0$ 이다. 따라서 ㄷ 은 거짓이다.\n\n옳은 것은 ㄱ, ㄴ 이다."
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **② ㄱ, ㄴ** 입니다."
+      }
+    ],
+    "final_answer": "② ㄱ, ㄴ"
+  },
+  "21": {
+    "problem_id": "21",
+    "title": "2023학년도 9월 고2 학평 21번",
+    "difficulty": "킬러",
+    "weakness_unit": "귀납적으로 정의된 수열",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "수열 $\\{a_n\\}$ 이 (가) $n$ 이 $3$ 의 배수가 아니면 $a_{n+1}=(-1)^n\\times a_n$, (나) $n$ 이 $3$ 의 배수이면 $a_{n+3}=-a_n-n$ 을 만족한다. $a_{20}+a_{21}=0$ 일 때 $\\sum_{k=1}^{18}a_k$ 를 구한다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$a_1=p$ 로 놓고 항을 차례로 계산하면 모든 항이 $p$ 와 정수의 일차식으로 표현된다. 마지막에 $a_{20}+a_{21}=0$ 을 써서 $p$ 를 결정한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "조건 (가)에서 $n$ 이 홀수면 $a_{n+1}=-a_n$, $n$ 이 짝수면 $a_{n+1}=a_n$. 조건 (나)는 $3$ 의 배수 $n$ 에서 세 칸 뛴 항을 연결한다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$a_1=p$ 라 하면 (가),(나)로부터 차례로\n$$a_2=-p,\\quad a_3=-p$$\n$$a_6=-a_3-3=p-3,\\quad a_5=-a_6=3-p,\\quad a_4=a_5=3-p$$\n$$a_9=-a_6-6=-p-3,\\quad a_8=a_9=-p-3,\\quad a_7=-a_8=p+3$$\n$$a_{12}=-a_9-9=p-6,\\quad a_{11}=-a_{12}=6-p,\\quad a_{10}=a_{11}=6-p$$\n$$a_{15}=-a_{12}-12=-p-6,\\quad a_{14}=a_{15}=-p-6,\\quad a_{13}=-a_{14}=p+6$$\n$$a_{18}=-a_{15}-15=p-9,\\quad a_{17}=-a_{18}=9-p,\\quad a_{16}=a_{17}=9-p$$\n$$a_{21}=-a_{18}-18=-p-9,\\quad a_{20}=a_{21}=-p-9$$\n조건 $a_{20}+a_{21}=0$ 에서\n$$(-p-9)+(-p-9)=-2p-18=0 \\;\\Rightarrow\\; p=-9$$\n$p=-9$ 를 대입하면\n$$a_1{=}{-}9,\\ a_2{=}9,\\ a_3{=}9,\\ a_4{=}12,\\ a_5{=}12,\\ a_6{=}{-}12,$$\n$$a_7{=}{-}6,\\ a_8{=}6,\\ a_9{=}6,\\ a_{10}{=}15,\\ a_{11}{=}15,\\ a_{12}{=}{-}15,$$\n$$a_{13}{=}{-}3,\\ a_{14}{=}3,\\ a_{15}{=}3,\\ a_{16}{=}18,\\ a_{17}{=}18,\\ a_{18}{=}{-}18$$\n세 항씩 묶어 더하면\n$$(-9+9+9)+(12+12-12)+(-6+6+6)+(15+15-15)+(-3+3+3)+(18+18-18)$$\n$$=9+12+6+15+3+18=63$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **③ 63** 입니다."
+      }
+    ],
+    "final_answer": "③ 63"
+  },
+  "27": {
+    "problem_id": "27",
+    "title": "2023학년도 9월 고2 학평 27번",
+    "difficulty": "킬러",
+    "weakness_unit": "삼각함수의 그래프 활용",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$n\\ge 4$ 인 자연수 $n$ 에 대하여 집합 $\\{x\\,|\\,0\\le x\\le 4\\}$ 에서 정의된 $f(x)=\\dfrac{n}{2}\\cos\\pi x+1$ 이 있다. 방정식 $|f(x)|=3$ 의 서로 다른 모든 실근의 합을 $g(n)$ 이라 할 때 $\\sum_{n=4}^{10}g(n)$ 을 구한다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$|f(x)|=3$ 은 $f(x)=3$ 또는 $f(x)=-3$, 즉 $\\cos\\pi x=\\dfrac{4}{n}$ 또는 $\\cos\\pi x=-\\dfrac{8}{n}$ 으로 나뉜다. 구간 $[0,4]$ 에서 $\\cos\\pi x=c$ $(-1<c<1)$ 의 네 근은 항상 합이 $8$ 이라는 대칭성을 활용한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$\\cos\\pi x$ 의 주기는 $2$ 이므로 $[0,4]$ 는 두 주기이다. $-1<c<1$ 이면 $\\cos\\pi x=c$ 의 근은 $x=\\alpha,\\ 2-\\alpha,\\ 2+\\alpha,\\ 4-\\alpha$ 로 네 개이고 그 합은 $$\\alpha+(2-\\alpha)+(2+\\alpha)+(4-\\alpha)=8$$ 경계값에서는 $c=1\\Rightarrow x=0,2,4$ (합 $6$), $c=-1\\Rightarrow x=1,3$ (합 $4$)."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$f(x)=3$ 은 $\\dfrac{n}{2}\\cos\\pi x=2$, 즉 $\\cos\\pi x=\\dfrac{4}{n}$. $n\\ge 4$ 에서 $0<\\dfrac{4}{n}\\le 1$ 이므로 항상 근이 존재한다.\n$f(x)=-3$ 은 $\\dfrac{n}{2}\\cos\\pi x=-4$, 즉 $\\cos\\pi x=-\\dfrac{8}{n}$. $-\\dfrac{8}{n}\\ge -1$, 즉 $n\\ge 8$ 일 때만 근이 존재한다.\n각 $n$ 에서 $g(n)$ 은 두 방정식의 근의 합이다.\n$$g(4):\\ \\cos\\pi x=1\\Rightarrow x=0,2,4,\\ \\text{합}=6;\\quad -\\tfrac{8}{4}=-2\\ \\text{근없음}\\;\\Rightarrow\\; g(4)=6$$\n$$g(5):\\ \\cos\\pi x=\\tfrac{4}{5}\\Rightarrow \\text{합}=8;\\ \\text{근없음}\\;\\Rightarrow\\; g(5)=8$$\n$$g(6):\\ \\cos\\pi x=\\tfrac{2}{3}\\Rightarrow 8;\\ \\text{근없음}\\;\\Rightarrow\\; g(6)=8$$\n$$g(7):\\ \\cos\\pi x=\\tfrac{4}{7}\\Rightarrow 8;\\ \\text{근없음}\\;\\Rightarrow\\; g(7)=8$$\n$$g(8):\\ \\cos\\pi x=\\tfrac{1}{2}\\Rightarrow 8;\\ \\cos\\pi x=-1\\Rightarrow x=1,3\\ \\text{합}=4\\;\\Rightarrow\\; g(8)=12$$\n$$g(9):\\ \\cos\\pi x=\\tfrac{4}{9}\\Rightarrow 8;\\ \\cos\\pi x=-\\tfrac{8}{9}\\Rightarrow 8\\;\\Rightarrow\\; g(9)=16$$\n$$g(10):\\ \\cos\\pi x=\\tfrac{2}{5}\\Rightarrow 8;\\ \\cos\\pi x=-\\tfrac{4}{5}\\Rightarrow 8\\;\\Rightarrow\\; g(10)=16$$\n따라서\n$$\\sum_{n=4}^{10}g(n)=6+8+8+8+12+16+16=74$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **74** 입니다."
+      }
+    ],
+    "final_answer": "74"
+  },
+  "28": {
+    "problem_id": "28",
+    "title": "2023학년도 9월 고2 학평 28번",
+    "difficulty": "킬러",
+    "weakness_unit": "사인법칙과 코사인법칙 활용",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "circle", "center": [0, 0], "radius": 4 },
+        { "type": "point", "coordinates": [-3.6, 1.7], "label": "A" },
+        { "type": "point", "coordinates": [-3.0, -2.6], "label": "B" },
+        { "type": "point", "coordinates": [3.9, -0.9], "label": "C" },
+        { "type": "point", "coordinates": [2.7, 2.9], "label": "E" },
+        { "type": "point", "coordinates": [0.2, 0.1], "label": "D" },
+        { "type": "segment", "from": [-3.6, 1.7], "to": [-3.0, -2.6], "label": "2" },
+        { "type": "segment", "from": [-3.6, 1.7], "to": [3.9, -0.9], "label": "" },
+        { "type": "segment", "from": [-3.0, -2.6], "to": [2.7, 2.9], "label": "" },
+        { "type": "segment", "from": [-3.0, -2.6], "to": [3.9, -0.9], "label": "" },
+        { "type": "segment", "from": [2.7, 2.9], "to": [3.9, -0.9], "label": "" }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$\\overline{\\mathrm{AB}}=2$, $\\cos(\\angle\\mathrm{BAC})=\\dfrac{\\sqrt{3}}{6}$ 인 삼각형 $\\mathrm{ABC}$ 에서, 선분 $\\mathrm{AC}$ 위의 점 $\\mathrm{D}$ 에 대해 직선 $\\mathrm{BD}$ 가 외접원과 만나는 점 중 $\\mathrm{B}$ 가 아닌 점을 $\\mathrm{E}$ 라 한다. $\\overline{\\mathrm{DE}}=5$, $\\overline{\\mathrm{CD}}+\\overline{\\mathrm{CE}}=5\\sqrt{3}$ 일 때 외접원의 넓이 $\\dfrac{q}{p}\\pi$ 에서 $p+q$ 를 구한다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "원주각 $\\angle\\mathrm{CEB}=\\angle\\mathrm{CAB}$ (호 $\\mathrm{BC}$ 에 대한 원주각)이므로 삼각형 $\\mathrm{CDE}$ 의 $\\angle\\mathrm{DEC}=\\angle\\mathrm{BAC}$ 이다. 또한 맞꼭지각 $\\angle\\mathrm{ADB}=\\angle\\mathrm{CDE}$, 방멱(원의 두 현) $\\overline{\\mathrm{DA}}\\cdot\\overline{\\mathrm{DC}}=\\overline{\\mathrm{DB}}\\cdot\\overline{\\mathrm{DE}}$ 를 이용한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$\\cos A=\\dfrac{\\sqrt{3}}{6}$ 이면 $\\sin A=\\sqrt{1-\\dfrac{3}{36}}=\\dfrac{\\sqrt{33}}{6}$. 코사인법칙, 사인법칙 $\\dfrac{\\overline{\\mathrm{BC}}}{\\sin A}=2R$, 그리고 한 점에 대한 방멱 정리를 사용한다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "삼각형 $\\mathrm{CDE}$ 에서 $\\angle\\mathrm{DEC}=\\angle\\mathrm{BAC}=A$ 이고 $\\overline{\\mathrm{DE}}=5$. $\\overline{\\mathrm{CE}}=y$, $\\overline{\\mathrm{CD}}=x$ 라 하면 $x+y=5\\sqrt{3}$ 이고 코사인법칙으로\n$$x^2=y^2+25-2\\cdot y\\cdot 5\\cdot\\dfrac{\\sqrt{3}}{6}=y^2+25-\\dfrac{5\\sqrt{3}}{3}y$$\n$x^2-y^2=25-\\dfrac{5\\sqrt{3}}{3}y$, 즉 $(x-y)(x+y)=25-\\dfrac{5\\sqrt{3}}{3}y$. $x-y=5\\sqrt{3}-2y$ 이므로\n$$(5\\sqrt{3}-2y)\\cdot 5\\sqrt{3}=25-\\dfrac{5\\sqrt{3}}{3}y \\;\\Rightarrow\\; 75-10\\sqrt{3}\\,y=25-\\dfrac{5\\sqrt{3}}{3}y$$\n$$50=\\dfrac{25\\sqrt{3}}{3}y \\;\\Rightarrow\\; y=2\\sqrt{3}=\\overline{\\mathrm{CE}},\\qquad x=\\overline{\\mathrm{CD}}=3\\sqrt{3}$$\n다음으로 삼각형 $\\mathrm{CDE}$ 의 $\\angle\\mathrm{CDE}$ 를 코사인법칙으로 구한다.\n$$\\cos(\\angle\\mathrm{CDE})=\\dfrac{\\overline{\\mathrm{CD}}^2+\\overline{\\mathrm{DE}}^2-\\overline{\\mathrm{CE}}^2}{2\\,\\overline{\\mathrm{CD}}\\cdot\\overline{\\mathrm{DE}}}=\\dfrac{27+25-12}{2\\cdot 3\\sqrt{3}\\cdot 5}=\\dfrac{40}{30\\sqrt{3}}=\\dfrac{4\\sqrt{3}}{9}$$\n$\\angle\\mathrm{ADB}=\\angle\\mathrm{CDE}$ (맞꼭지각)이고 $\\sin(\\angle\\mathrm{ADB})=\\sqrt{1-\\dfrac{48}{81}}=\\dfrac{\\sqrt{33}}{9}$. 삼각형 $\\mathrm{ABD}$ 에서 사인법칙으로\n$$\\dfrac{\\overline{\\mathrm{AB}}}{\\sin(\\angle\\mathrm{ADB})}=\\dfrac{\\overline{\\mathrm{BD}}}{\\sin(\\angle\\mathrm{BAD})} \\;\\Rightarrow\\; \\overline{\\mathrm{BD}}=\\overline{\\mathrm{AB}}\\cdot\\dfrac{\\sin A}{\\sin(\\angle\\mathrm{ADB})}=2\\cdot\\dfrac{\\frac{\\sqrt{33}}{6}}{\\frac{\\sqrt{33}}{9}}=3$$\n방멱 정리 $\\overline{\\mathrm{DA}}\\cdot\\overline{\\mathrm{DC}}=\\overline{\\mathrm{DB}}\\cdot\\overline{\\mathrm{DE}}$ 에서\n$$\\overline{\\mathrm{DA}}\\cdot 3\\sqrt{3}=3\\cdot 5=15 \\;\\Rightarrow\\; \\overline{\\mathrm{DA}}=\\dfrac{5}{\\sqrt{3}}=\\dfrac{5\\sqrt{3}}{3}$$\n$$\\overline{\\mathrm{AC}}=\\overline{\\mathrm{AD}}+\\overline{\\mathrm{DC}}=\\dfrac{5\\sqrt{3}}{3}+3\\sqrt{3}=\\dfrac{14\\sqrt{3}}{3}$$\n삼각형 $\\mathrm{ABC}$ 에서 코사인법칙으로 $\\overline{\\mathrm{BC}}$ 를 구한다.\n$$\\overline{\\mathrm{BC}}^2=\\overline{\\mathrm{AB}}^2+\\overline{\\mathrm{AC}}^2-2\\,\\overline{\\mathrm{AB}}\\cdot\\overline{\\mathrm{AC}}\\cos A=4+\\dfrac{196}{3}-2\\cdot 2\\cdot\\dfrac{14\\sqrt{3}}{3}\\cdot\\dfrac{\\sqrt{3}}{6}$$\n$$=4+\\dfrac{196}{3}-\\dfrac{28}{3}=4+56=60 \\;\\Rightarrow\\; \\overline{\\mathrm{BC}}=2\\sqrt{15}$$\n사인법칙으로 외접원의 반지름 $R$ 은\n$$2R=\\dfrac{\\overline{\\mathrm{BC}}}{\\sin A}=\\dfrac{2\\sqrt{15}}{\\frac{\\sqrt{33}}{6}}=\\dfrac{12\\sqrt{15}}{\\sqrt{33}} \\;\\Rightarrow\\; R^2=\\dfrac{36\\cdot 15}{33}=\\dfrac{180}{11}$$\n외접원의 넓이는\n$$\\pi R^2=\\dfrac{180}{11}\\pi$$\n따라서 $\\dfrac{q}{p}=\\dfrac{180}{11}$, $p=11$, $q=180$ 이고\n$$p+q=11+180=191$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **191** 입니다."
+      }
+    ],
+    "final_answer": "191"
+  },
+  "29": {
+    "problem_id": "29",
+    "title": "2023학년도 9월 고2 학평 29번",
+    "difficulty": "킬러",
+    "weakness_unit": "여러 가지 수열의 합 활용",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "(가) 모든 자연수 $k$ 에 대하여 $a_k$ 는 방정식 $x^2+3x+(8-k)(k-5)=0$ 의 근, (나) $a_n\\times a_{n+1}\\le 0$ 을 만족시키는 $10$ 이하의 자연수 $n$ 의 개수가 $2$ 인 모든 수열 $\\{a_n\\}$ 에 대하여 $\\sum_{n=1}^{10}a_n$ 의 최댓값을 구한다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "이차방정식을 인수분해하면 두 근이 $k-8$ 과 $5-k$ 임을 알 수 있다. 각 $a_k$ 는 둘 중 하나를 택할 수 있으며, $a_6,a_7$ 은 두 근이 모두 음수라 반드시 음수가 된다. 부호변화(곱 $\\le 0$)가 정확히 $2$ 번이 되도록 하면서 합을 최대로 만든다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$x^2+3x+(8-k)(k-5)=0$ 의 두 근의 합은 $-3$, 곱은 $(8-k)(k-5)$. $(k-8)+(5-k)=-3$, $(k-8)(5-k)=(8-k)(k-5)$ 이므로 두 근은 $$x=k-8 \\quad \\text{또는} \\quad x=5-k$$ 이다. $a_n a_{n+1}\\le 0$ 은 부호가 바뀌거나 한쪽이 $0$ 인 경우이다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "각 $k$ 에서 택할 수 있는 두 근을 정리한다($k=1,\\dots,11$).\n$$k{=}1{:}\\ {-}7\\ /\\ 4,\\quad k{=}2{:}\\ {-}6\\ /\\ 3,\\quad k{=}3{:}\\ {-}5\\ /\\ 2,\\quad k{=}4{:}\\ {-}4\\ /\\ 1$$\n$$k{=}5{:}\\ {-}3\\ /\\ 0,\\quad k{=}6{:}\\ {-}2\\ /\\ {-}1,\\quad k{=}7{:}\\ {-}1\\ /\\ {-}2,\\quad k{=}8{:}\\ 0\\ /\\ {-}3$$\n$$k{=}9{:}\\ 1\\ /\\ {-}4,\\quad k{=}10{:}\\ 2\\ /\\ {-}5,\\quad k{=}11{:}\\ 3\\ /\\ {-}6$$\n$k=6,7$ 은 두 근이 모두 음수이므로 $a_6,a_7$ 은 항상 음수이다. 합을 최대화하려면 가능한 한 큰 근을 택해야 하나, 부호변화(곱 $\\le 0$)가 정확히 $2$ 번이어야 한다. $0$ 을 택하면 인접한 곱이 $0$ 이 되어 추가 카운트가 생기므로 양수 블록과 음수 블록의 경계는 모두 $0$ 이 아닌 값으로 두어야 한다.\n왼쪽 양수 블록은 $a_5$ 의 양의 선택지가 $0$ 뿐이므로 $a_1,\\dots,a_4$ 까지만 양수로 둘 수 있고, 오른쪽 양수 블록은 $a_8$ 의 양의 선택지가 $0$ 뿐이므로 $a_9$ 부터 가능하다. 따라서 음수 블록은 반드시 $\\{a_5,a_6,a_7,a_8\\}$ 이며 양 끝이 $0$ 이 아닌 음수여야 한다.\n최댓값을 위해 각 항을 다음과 같이 택한다.\n$$a_1{=}4,\\ a_2{=}3,\\ a_3{=}2,\\ a_4{=}1$$\n$$a_5{=}{-}3,\\ a_6{=}{-}1,\\ a_7{=}{-}1,\\ a_8{=}{-}3$$\n$$a_9{=}1,\\ a_{10}{=}2$$\n이때 부호는 $+,+,+,+,-,-,-,-,+,+$ 이고 곱 $\\le 0$ 인 곳은 $(a_4,a_5)$ 와 $(a_8,a_9)$ 의 정확히 $2$ 번이다(나 만족). 그 합은\n$$\\sum_{n=1}^{10}a_n=(4+3+2+1)+(-3-1-1-3)+(1+2)=10-8+3=5$$\n음수 블록 $\\{a_5,a_6,a_7,a_8\\}$ 은 강제이며 각 항을 가능한 큰 값($a_5{=}{-}3,\\ a_6{=}{-}1,\\ a_7{=}{-}1,\\ a_8{=}{-}3$)으로, 양수 항은 최댓값으로 택한 위 구성이 최대이다. 따라서 최댓값은 $5$ 이다."
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **5** 입니다."
+      }
+    ],
+    "final_answer": "5"
+  },
+  "30": {
+    "problem_id": "30",
+    "title": "2023학년도 9월 고2 학평 30번",
+    "difficulty": "킬러",
+    "weakness_unit": "함수의 극한 추론",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "두 양수 $a,b\\ (a<b)$ 에 대하여 $$f(x)=\\begin{cases} \\left|-ax^2+b\\right| & (x\\le 0) \\\\ x^2-2ax+b^2 & (x>0)\\end{cases}$$ 가 있다. 직선 $y=t\\ (t>0)$ 가 $y=f(x)$ 와 만나는 서로 다른 점의 개수를 $g(t)$ 라 한다. $g(t)$ 의 최솟값이 $2$ 이고 조건 (가),(나),(다)를 만족할 때, $f\\!\\left(\\dfrac{1}{2}\\right)=\\alpha$, $\\alpha+24\\beta=30$ 으로부터 $f(-2)+f(1)=\\dfrac{q}{p}$ 의 $p+q$ 를 구한다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "왼쪽 조각 $\\left|-ax^2+b\\right|$ 와 오른쪽 조각 $(x-a)^2+(b^2-a^2)$ 의 그래프를 그려 $y=t$ 와의 교점 개수 $g(t)$ 가 변하는 경계값을 찾는다. 그 경계는 $t=b^2-a^2$, $t=b$, $t=b^2$ 이며, $g$ 의 점프 크기가 $2$ 인 곳이 $\\alpha$, 조건 (나)를 만족하는 곳이 $\\beta$ 이다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "왼쪽($x\\le 0$): $-ax^2+b$ 는 $x=-\\sqrt{b/a}$ 에서 $0$, $x=0$ 에서 $b$. 절댓값을 취하면 $x\\to-\\infty$ 에서 $+\\infty$, $x=-\\sqrt{b/a}$ 에서 $0$, $x=0$ 에서 $b$. 따라서 $y=t$ 와의 교점은 $0<t<b$ 에서 $2$개, $t=b$ 에서 $2$개, $t>b$ 에서 $1$개.\n오른쪽($x>0$): $(x-a)^2+(b^2-a^2)$ 는 꼭짓점 $(a,\\,b^2-a^2)$, $x\\to 0^+$ 에서 $b^2$. 교점은 $0<t<b^2-a^2$ 에서 $0$개, $t=b^2-a^2$ 에서 $1$개, $b^2-a^2<t<b^2$ 에서 $2$개, $t=b^2$ 에서 $1$개, $t>b^2$ 에서 $1$개."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$m=b^2-a^2$ 라 하자. 왼쪽·오른쪽 교점 수를 더하면 $g(t)$ 의 점프는 $t=m$ 에서 $+2$, $t=b$ 에서 $-1$, $t=b^2$ 에서 $-1$ 이다.\n조건 (가) $\\left|\\lim_{t\\to\\alpha-}g(t)-\\lim_{t\\to\\alpha+}g(t)\\right|=2$ 를 만족하는 점프 크기 $2$ 의 지점은 $t=m$ 뿐이므로 $$\\alpha=m=b^2-a^2$$\n한편 $f\\!\\left(\\dfrac{1}{2}\\right)=\\left(\\dfrac{1}{2}\\right)^2-2a\\cdot\\dfrac{1}{2}+b^2=b^2-a+\\dfrac{1}{4}=\\alpha$ 이므로\n$$b^2-a^2=b^2-a+\\dfrac{1}{4} \\;\\Rightarrow\\; a^2-a+\\dfrac{1}{4}=0 \\;\\Rightarrow\\; \\left(a-\\dfrac{1}{2}\\right)^2=0 \\;\\Rightarrow\\; a=\\dfrac{1}{2}$$\n$m=b^2-\\dfrac{1}{4}<b$ (즉 $1<b<\\dfrac{1+\\sqrt2}{2}$)이면 경계 순서는 $m<b<b^2$ 이고, 이때 $g(t)$ 는\n$$0<t<m:2,\\quad t=m:3,\\quad m<t<b:4,\\quad t=b:4,$$\n$$b<t<b^2:3,\\quad t=b^2:2,\\quad t>b^2:2$$\n로 최솟값 $2$ (가 만족), $\\alpha=m$ 에서 $2\\to4$ 의 점프 크기 $2$ (가 만족).\n조건 (나) $\\lim_{t\\to\\beta-}g(t)-\\lim_{t\\to\\beta+}g(t)+1=g(\\beta)$ 를 점검하면, $t=b^2$ 에서 $\\lim_{t\\to\\beta-}g=3$, $\\lim_{t\\to\\beta+}g=2$, $g(b^2)=2$ 이므로 $3-2+1=2=g(b^2)$ 로 성립한다. 따라서 $$\\beta=b^2$$\n조건 (다) $g(\\alpha)\\ne g(\\beta)$ 는 $g(m)=3\\ne g(b^2)=2$ 로 성립한다.\n이제 $\\alpha+24\\beta=30$ 에 $\\alpha=b^2-\\dfrac{1}{4}$, $\\beta=b^2$ 를 대입하면\n$$\\left(b^2-\\dfrac{1}{4}\\right)+24b^2=25b^2-\\dfrac{1}{4}=30 \\;\\Rightarrow\\; 25b^2=\\dfrac{121}{4} \\;\\Rightarrow\\; b^2=\\dfrac{121}{100},\\ b=\\dfrac{11}{10}$$\n($1<b=1.1<\\dfrac{1+\\sqrt2}{2}$, $a=\\dfrac{1}{2}<b$ 로 모든 조건과 정합).\n마지막으로 $f(-2)$ 와 $f(1)$ 을 구한다.\n$$f(-2)=\\left|-a(-2)^2+b\\right|=\\left|-4\\cdot\\dfrac{1}{2}+\\dfrac{11}{10}\\right|=\\left|-2+\\dfrac{11}{10}\\right|=\\dfrac{9}{10}$$\n$$f(1)=1-2a+b^2=1-2\\cdot\\dfrac{1}{2}+\\dfrac{121}{100}=\\dfrac{121}{100}$$\n$$f(-2)+f(1)=\\dfrac{9}{10}+\\dfrac{121}{100}=\\dfrac{90}{100}+\\dfrac{121}{100}=\\dfrac{211}{100}$$\n따라서 $\\dfrac{q}{p}=\\dfrac{211}{100}$, $p=100$, $q=211$ 이고\n$$p+q=100+211=311$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **311** 입니다."
+      }
+    ],
+    "final_answer": "311"
+  }
+}

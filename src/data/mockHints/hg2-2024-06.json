@@ -1,0 +1,435 @@
+{
+  "14": {
+    "problem_id": "14",
+    "title": "2024학년도 6월 고2 학평 14번",
+    "difficulty": "준킬러",
+    "weakness_unit": "로그의 정의",
+    "type": "geometry",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "모든 실수 $x$에 대하여 $\\log_a(x^2+ax+a+8)$이 정의되도록 하는 모든 정수 $a$의 값의 합을 구하는 문제입니다. 로그가 \"모든 실수 $x$\"에 대해 정의되려면 ① 밑 $a$가 로그의 밑 조건을 만족하고, ② 진수 $x^2+ax+a+8$이 모든 실수 $x$에서 항상 양수여야 합니다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "두 조건을 동시에 만족시키는 정수 $a$를 모두 찾아 합해야 합니다. 밑 조건: $a>0,\\ a\\neq 1$. 진수 조건: 이차식 $x^2+ax+a+8>0$이 모든 실수에서 성립 $\\Rightarrow$ (판별식)$<0$."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "로그 $\\log_a N$이 정의되기 위한 조건은 (밑) $a>0,\\ a\\neq 1$ 이고 (진수) $N>0$ 입니다. 또한 이차함수 $y=x^2+bx+c$ (최고차항 계수가 양수)가 모든 실수 $x$에서 $y>0$일 조건은 판별식 $D=b^2-4c<0$ 입니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "[1단계] 밑 조건\n$$a>0,\\quad a\\neq 1$$\n\n[2단계] 진수 조건 — 모든 실수 $x$에서 $x^2+ax+a+8>0$\n이차항의 계수가 $1>0$이므로 판별식이 음수이면 됩니다.\n$$D=a^2-4(a+8)<0$$\n$$a^2-4a-32<0$$\n$$(a-8)(a+4)<0$$\n$$-4<a<8$$\n\n[3단계] 두 조건의 공통 범위\n$$0<a<8,\\quad a\\neq 1$$\n\n[4단계] 조건을 만족하는 정수 $a$\n$$a=2,\\ 3,\\ 4,\\ 5,\\ 6,\\ 7$$\n\n[5단계] 모든 정수 $a$의 값의 합\n$$2+3+4+5+6+7=27$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **27** 입니다."
+      }
+    ],
+    "final_answer": "27"
+  },
+  "15": {
+    "problem_id": "15",
+    "title": "2024학년도 6월 고2 학평 15번",
+    "difficulty": "준킬러",
+    "weakness_unit": "삼각함수의 정의",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "circle", "center": [0, 0], "radius": 2.404 },
+        { "type": "segment", "from": [-2, -2.2], "to": [-2, 2.2], "label": "x=-2" },
+        { "type": "point", "coordinates": [0, 0], "label": "O" },
+        { "type": "point", "coordinates": [-2, 1.333], "label": "A" },
+        { "type": "point", "coordinates": [-2, -1.333], "label": "B" },
+        { "type": "segment", "from": [0, 0], "to": [-2, 1.333], "label": "" },
+        { "type": "segment", "from": [0, 0], "to": [-2, -1.333], "label": "" },
+        { "type": "label_text", "tex": "A", "at": [-2.35, 1.45] },
+        { "type": "label_text", "tex": "B", "at": [-2.35, -1.45] }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "원 $x^2+y^2=r^2\\,(r>2)$와 직선 $x=-2$가 만나는 두 점 중 $y$좌표가 양수인 점이 A, 음수인 점이 B입니다. 동경 OA, OB가 나타내는 각을 각각 $\\alpha,\\ \\beta$라 할 때 $2\\cos\\alpha=3\\sin\\beta$ 라는 조건으로 $r$을 구하고 $r(\\sin\\alpha+\\cos\\beta)$의 값을 구하는 문제입니다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "A, B는 모두 $x=-2$ 위의 점이므로 $\\cos\\alpha=\\cos\\beta=\\dfrac{-2}{r}$ 로 같습니다. A의 $y$좌표는 $+\\sqrt{r^2-4}$, B의 $y$좌표는 $-\\sqrt{r^2-4}$ 이므로 $\\sin\\alpha=\\dfrac{\\sqrt{r^2-4}}{r}$, $\\sin\\beta=\\dfrac{-\\sqrt{r^2-4}}{r}$ 입니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "원점 O를 중심으로 반지름 $r$인 원 위의 점 $\\mathrm P(x,y)$에 대하여 동경 OP가 나타내는 각 $\\theta$의 삼각함수는 $\\cos\\theta=\\dfrac{x}{r},\\ \\sin\\theta=\\dfrac{y}{r}$ 입니다. 직선 $x=-2$와 원의 교점은 $x=-2,\\ y=\\pm\\sqrt{r^2-4}$ 입니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "[1단계] 교점의 좌표\n$$\\mathrm A=(-2,\\ \\sqrt{r^2-4}),\\qquad \\mathrm B=(-2,\\ -\\sqrt{r^2-4})$$\n\n[2단계] 삼각함수값\n$$\\cos\\alpha=\\frac{-2}{r},\\quad \\sin\\alpha=\\frac{\\sqrt{r^2-4}}{r}$$\n$$\\cos\\beta=\\frac{-2}{r},\\quad \\sin\\beta=\\frac{-\\sqrt{r^2-4}}{r}$$\n\n[3단계] 조건 $2\\cos\\alpha=3\\sin\\beta$ 적용\n$$2\\cdot\\frac{-2}{r}=3\\cdot\\frac{-\\sqrt{r^2-4}}{r}$$\n$$-4=-3\\sqrt{r^2-4}$$\n$$\\sqrt{r^2-4}=\\frac{4}{3}$$\n\n[4단계] $r$ 구하기\n$$r^2-4=\\frac{16}{9}\\ \\Rightarrow\\ r^2=\\frac{52}{9}$$\n\n[5단계] 구하는 값 계산\n$$r(\\sin\\alpha+\\cos\\beta)=r\\cdot\\frac{\\sqrt{r^2-4}}{r}+r\\cdot\\frac{-2}{r}=\\sqrt{r^2-4}-2$$\n$$=\\frac{4}{3}-2=-\\frac{2}{3}$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **$-\\dfrac{2}{3}$** 입니다."
+      }
+    ],
+    "final_answer": "③ -2/3"
+  },
+  "18": {
+    "problem_id": "18",
+    "title": "2024학년도 6월 고2 학평 18번",
+    "difficulty": "준킬러",
+    "weakness_unit": "삼각함수의 그래프를 이용한 부등식의 해",
+    "type": "geometry",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$0\\le k\\le 2\\pi$ 인 실수 $k$에 대하여 $-\\pi\\le x\\le k$ 에서 부등식 $\\sin x+\\cos\\dfrac{\\pi}{8}<0$ 을 만족시키는 모든 $x$의 범위가 $-\\pi-\\alpha<x<\\alpha$ 가 되도록 하는 $k$의 최댓값을 구하는 문제입니다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$\\cos\\dfrac{\\pi}{8}=\\sin\\dfrac{3\\pi}{8}$ 이므로 부등식은 $\\sin x<-\\sin\\dfrac{3\\pi}{8}=\\sin\\left(-\\dfrac{3\\pi}{8}\\right)$ 가 됩니다. $\\sin$ 그래프에서 이 값보다 작아지는 구간 하나가 해의 구간이며, $k$가 다음 해의 구간으로 넘어가기 직전까지가 최댓값입니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$\\cos\\theta=\\sin\\left(\\dfrac{\\pi}{2}-\\theta\\right)$ 이므로 $\\cos\\dfrac{\\pi}{8}=\\sin\\dfrac{3\\pi}{8}$. 또 $-\\sin\\theta=\\sin(-\\theta)$ 입니다. $\\sin x=c$ 의 해는 그래프에서 직선 $y=c$ 와의 교점으로 찾고, 부등식 $\\sin x<c$ 의 해는 그래프가 직선 아래에 있는 구간입니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "[1단계] 부등식 변형\n$$\\sin x+\\cos\\frac{\\pi}{8}<0\\ \\Rightarrow\\ \\sin x<-\\cos\\frac{\\pi}{8}=-\\sin\\frac{3\\pi}{8}=\\sin\\left(-\\frac{3\\pi}{8}\\right)$$\n\n[2단계] 경계값(등식이 되는 $x$) 찾기\n$\\sin x=\\sin\\left(-\\dfrac{3\\pi}{8}\\right)$ 의 해는\n$$x=-\\frac{3\\pi}{8}+2n\\pi\\quad\\text{또는}\\quad x=\\pi+\\frac{3\\pi}{8}+2n\\pi=\\frac{11\\pi}{8}+2n\\pi$$\n\n[3단계] 해의 구간 파악\n$\\sin x$ 가 $\\sin\\left(-\\dfrac{3\\pi}{8}\\right)$ 보다 작아지는 구간은 $\\sin$ 의 골짜기(최소) 부근입니다. $-\\pi\\le x$ 부근에서 그 구간은\n$$-\\frac{5\\pi}{8}<x<-\\frac{3\\pi}{8}$$\n이고, 다음 구간은\n$$\\frac{11\\pi}{8}<x<\\frac{13\\pi}{8}$$\n입니다.\n\n[4단계] 주어진 해 $-\\pi-\\alpha<x<\\alpha$ 와 비교\n첫 구간이 $-\\pi-\\alpha<x<\\alpha$ 이려면\n$$\\alpha=-\\frac{3\\pi}{8},\\qquad -\\pi-\\alpha=-\\pi+\\frac{3\\pi}{8}=-\\frac{5\\pi}{8}$$\n로 정확히 일치합니다. 즉 해는 $\\left(-\\dfrac{5\\pi}{8},\\ -\\dfrac{3\\pi}{8}\\right)$ 하나뿐이어야 합니다.\n\n[5단계] $k$의 최댓값\n해가 이 한 구간으로 유지되려면 $k$가 다음 해의 구간이 시작되는 $\\dfrac{11\\pi}{8}$ 을 넘지 않아야 합니다. $x=\\dfrac{11\\pi}{8}$ 에서는 등호라 부등식의 해가 아니므로 포함해도 해의 범위가 바뀌지 않습니다.\n$$\\therefore\\ k_{\\max}=\\frac{11\\pi}{8}$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **$\\dfrac{11}{8}\\pi$** 입니다."
+      }
+    ],
+    "final_answer": "④ 11π/8"
+  },
+  "19": {
+    "problem_id": "19",
+    "title": "2024학년도 6월 고2 학평 19번",
+    "difficulty": "킬러",
+    "weakness_unit": "지수함수의 그래프를 이용한 식의 값",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "function_plot", "expr": "Math.pow(Math.pow(2,2/3),1-x)" },
+        { "type": "function_plot", "expr": "Math.pow(4,1-x)" },
+        { "type": "segment", "from": [-3, 4], "to": [5, 4], "label": "y=4" },
+        { "type": "segment", "from": [-3, 0.25], "to": [5, 0.25], "label": "y=k" },
+        { "type": "point", "coordinates": [-2, 4], "label": "A" },
+        { "type": "point", "coordinates": [0, 4], "label": "B" },
+        { "type": "point", "coordinates": [4, 0.25], "label": "C" },
+        { "type": "point", "coordinates": [2, 0.25], "label": "D" },
+        { "type": "polygon", "points": [[-2, 4], [2, 0.25], [4, 0.25], [0, 4]], "fillOpacity": 0.08 },
+        { "type": "label_text", "tex": "A", "at": [-2.2, 4.35] },
+        { "type": "label_text", "tex": "B", "at": [0.2, 4.35] },
+        { "type": "label_text", "tex": "C", "at": [4.2, -0.2] },
+        { "type": "label_text", "tex": "D", "at": [1.9, -0.2] }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "두 상수 $a,\\ k\\,(1<a<4,\\ 0<k<1)$ 에 대해 직선 $y=4$ 가 두 곡선 $y=a^{1-x},\\ y=4^{1-x}$ 와 만나는 점이 A, B, 직선 $y=k$ 가 두 곡선과 만나는 점이 C, D 입니다. 사각형 ADCB가 넓이 $\\dfrac{15}{2}$ 인 평행사변형일 때 $4ak$ 의 값을 구합니다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "그림에서 큰 $x$에서 $4^{1-x}<a^{1-x}$ 이므로 아래 직선 $y=k$ 와의 교점 중 오른쪽(C)이 $y=a^{1-x}$, 왼쪽(D)이 $y=4^{1-x}$ 위의 점입니다. 평행사변형은 두 평행한 가로변 $\\overline{AB},\\ \\overline{DC}$ 의 $x$방향 변위가 같아야 합니다($\\overrightarrow{AB}=\\overrightarrow{DC}$)."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$a^{1-x}=t$ 의 해는 $1-x=\\log_a t$, 즉 $x=1-\\log_a t$. 평행사변형의 넓이는 (밑변)$\\times$(높이)이며, 가로변이 평행할 때 높이는 두 가로선 $y=4,\\ y=k$ 사이의 수직거리 $4-k$ 입니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "[1단계] 네 점의 $x$좌표\n$$\\mathrm A:\\ a^{1-x}=4\\Rightarrow x_A=1-\\log_a 4,\\qquad \\mathrm B:\\ 4^{1-x}=4\\Rightarrow x_B=0$$\n$$\\mathrm C:\\ a^{1-x}=k\\Rightarrow x_C=1-\\log_a k,\\qquad \\mathrm D:\\ 4^{1-x}=k\\Rightarrow x_D=1-\\log_4 k$$\n\n[2단계] 평행사변형 조건 $\\overrightarrow{AB}=\\overrightarrow{DC}$ (가로 변위 일치)\n$$x_B-x_A=x_C-x_D$$\n$$0-(1-\\log_a 4)=(1-\\log_a k)-(1-\\log_4 k)$$\n$$\\log_a 4-1=\\log_4 k-\\log_a k$$\n밑 $2$로 통일하여 $p=\\log_2 a,\\ q=\\log_2 k$ 라 하면\n$$\\frac{2}{p}-1=\\frac{q}{2}-\\frac{q}{p}$$\n양변에 $2p$를 곱하면\n$$4-2p=pq-2q\\ \\Rightarrow\\ (p-2)(q+2)=0$$\n$1<a<4$ 에서 $0<p<2$ 이므로 $p\\neq2$. 따라서\n$$q+2=0\\ \\Rightarrow\\ q=-2\\ \\Rightarrow\\ \\log_2 k=-2\\ \\Rightarrow\\ k=\\frac{1}{4}$$\n\n[3단계] 넓이 조건으로 $a$ 구하기\n밑변 $\\overline{AB}=|x_A-x_B|=\\log_a 4-1=\\dfrac{2}{p}-1$, 높이 $=4-k=4-\\dfrac14=\\dfrac{15}{4}$.\n$$\\left(\\frac{2}{p}-1\\right)\\cdot\\frac{15}{4}=\\frac{15}{2}$$\n$$\\frac{2}{p}-1=2\\ \\Rightarrow\\ \\frac{2}{p}=3\\ \\Rightarrow\\ p=\\frac{2}{3}$$\n$$\\log_2 a=\\frac{2}{3}\\ \\Rightarrow\\ a=2^{\\frac{2}{3}}$$\n\n[4단계] $4ak$ 계산\n$$4ak=4\\cdot 2^{\\frac{2}{3}}\\cdot\\frac{1}{4}=2^{\\frac{2}{3}}$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **$2^{\\frac{2}{3}}$** 입니다."
+      }
+    ],
+    "final_answer": "⑤ 2^(2/3)"
+  },
+  "20": {
+    "problem_id": "20",
+    "title": "2024학년도 6월 고2 학평 20번",
+    "difficulty": "킬러",
+    "weakness_unit": "코사인법칙을 활용한 삼각함수의 값",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "circle", "center": [0, 0], "radius": 1 },
+        { "type": "segment", "from": [-1, 0], "to": [1, 0], "label": "" },
+        { "type": "point", "coordinates": [0, 0], "label": "O" },
+        { "type": "point", "coordinates": [-1, 0], "label": "A" },
+        { "type": "point", "coordinates": [1, 0], "label": "B" },
+        { "type": "point", "coordinates": [0.6, 0.8], "label": "E" },
+        { "type": "point", "coordinates": [-0.28, 0.96], "label": "D" },
+        { "type": "point", "coordinates": [-0.8, 0.6], "label": "C" },
+        { "type": "segment", "from": [0, 0], "to": [-0.8, 0.6], "label": "" },
+        { "type": "segment", "from": [0, 0], "to": [0.6, 0.8], "label": "" },
+        { "type": "segment", "from": [-0.8, 0.6], "to": [-0.28, 0.96], "label": "" },
+        { "type": "segment", "from": [-0.28, 0.96], "to": [0.6, 0.8], "label": "" },
+        { "type": "segment", "from": [0.6, 0.8], "to": [1, 0], "label": "" },
+        { "type": "label_text", "tex": "A", "at": [-1.12, -0.12] },
+        { "type": "label_text", "tex": "B", "at": [1.08, -0.12] },
+        { "type": "label_text", "tex": "O", "at": [0, -0.15] },
+        { "type": "label_text", "tex": "C", "at": [-0.95, 0.68] },
+        { "type": "label_text", "tex": "D", "at": [-0.3, 1.08] },
+        { "type": "label_text", "tex": "E", "at": [0.72, 0.88] }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "중심이 O이고 지름 $\\overline{AB}=2$(반지름 $1$)인 반원의 호 위에 세 점 C, D, E가 있습니다. $\\overline{DE}=\\overline{EB},\\ \\overline{CD}:\\overline{DE}=1:\\sqrt{2},\\ \\angle COE=\\dfrac{\\pi}{2}$ 일 때 $\\cos(\\angle OBE)$ 의 값을 구합니다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "반지름이 $1$인 원에서 중심각 $\\varphi$ 에 대한 현의 길이는 $2\\sin\\dfrac{\\varphi}{2}$ 입니다. 점 B에서부터의 중심각을 $\\angle BOE=e$ 라 두면, 조건들이 모두 $e$ 에 대한 식이 되어 $\\tan\\dfrac{e}{2}$ 가 정해집니다. 삼각형 OBE는 $\\overline{OB}=\\overline{OE}=1$ 인 이등변삼각형입니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "반지름 $R$인 원에서 중심각 $\\varphi$ 의 현 길이 $=2R\\sin\\dfrac{\\varphi}{2}$. 사인의 차 공식 $\\sin\\left(\\dfrac{\\pi}{4}-\\theta\\right)=\\dfrac{1}{\\sqrt2}(\\cos\\theta-\\sin\\theta)$. 이등변삼각형 OBE에서 밑각 $\\angle OBE=\\dfrac{\\pi-e}{2}$ 이므로 $\\cos(\\angle OBE)=\\sin\\dfrac{e}{2}$."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "[1단계] 중심각 설정\n점 B에서 시작하여 호를 따라 E, D, C 순으로 놓이며, 각 점의 위치각(양의 $x$축 기준)을 $\\angle BOE=e,\\ \\angle BOD=d,\\ \\angle BOC=c$ 라 합니다.\n\n[2단계] $\\overline{DE}=\\overline{EB}$\n현 $\\mathrm{EB}$ 의 중심각은 $e$, 현 $\\mathrm{DE}$ 의 중심각은 $d-e$ 이므로\n$$2\\sin\\frac{e}{2}=2\\sin\\frac{d-e}{2}\\ \\Rightarrow\\ d=2e$$\n\n[3단계] $\\angle COE=\\dfrac{\\pi}{2}$\n$$c-e=\\frac{\\pi}{2}\\ \\Rightarrow\\ c=e+\\frac{\\pi}{2},\\qquad c-d=\\frac{\\pi}{2}-e$$\n\n[4단계] $\\overline{CD}:\\overline{DE}=1:\\sqrt2$\n$$\\frac{\\overline{CD}}{\\overline{DE}}=\\frac{2\\sin\\frac{c-d}{2}}{2\\sin\\frac{d-e}{2}}=\\frac{\\sin\\left(\\frac{\\pi}{4}-\\frac{e}{2}\\right)}{\\sin\\frac{e}{2}}=\\frac{1}{\\sqrt2}$$\n$$\\sin\\left(\\frac{\\pi}{4}-\\frac{e}{2}\\right)=\\frac{1}{\\sqrt2}\\sin\\frac{e}{2}$$\n좌변을 전개하면\n$$\\frac{1}{\\sqrt2}\\left(\\cos\\frac{e}{2}-\\sin\\frac{e}{2}\\right)=\\frac{1}{\\sqrt2}\\sin\\frac{e}{2}$$\n$$\\cos\\frac{e}{2}-\\sin\\frac{e}{2}=\\sin\\frac{e}{2}\\ \\Rightarrow\\ \\cos\\frac{e}{2}=2\\sin\\frac{e}{2}\\ \\Rightarrow\\ \\tan\\frac{e}{2}=\\frac{1}{2}$$\n\n[5단계] $\\cos(\\angle OBE)$ 계산\n삼각형 OBE는 $\\overline{OB}=\\overline{OE}=1$ 인 이등변삼각형이고 꼭지각 $\\angle BOE=e$ 이므로\n$$\\angle OBE=\\frac{\\pi-e}{2}\\ \\Rightarrow\\ \\cos(\\angle OBE)=\\cos\\left(\\frac{\\pi}{2}-\\frac{e}{2}\\right)=\\sin\\frac{e}{2}$$\n$\\tan\\dfrac{e}{2}=\\dfrac12$ 이므로 직각삼각형(밑변 $2$, 높이 $1$, 빗변 $\\sqrt5$)에서\n$$\\sin\\frac{e}{2}=\\frac{1}{\\sqrt5}=\\frac{\\sqrt5}{5}$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **$\\dfrac{\\sqrt5}{5}$** 입니다."
+      }
+    ],
+    "final_answer": "④ √5/5"
+  },
+  "21": {
+    "problem_id": "21",
+    "title": "2024학년도 6월 고2 학평 21번",
+    "difficulty": "킬러",
+    "weakness_unit": "지수함수와 역함수 관계를 이용한 자연수 추론",
+    "type": "geometry",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$2$ 이상의 자연수 $n$에 대해 $f(x)=3^x-n$ 의 그래프가 $y=f^{-1}(x)$ 의 그래프와 만나는 두 점의 $x$좌표 중 큰 값을 $g(n)$ 이라 합니다. $k\\le g(n)<k+1$ 을 만족시키는 자연수 $k$를 $h(n)$ 이라 할 때, $h(n)<h(n+1)$ 을 만족시키는 $100$ 이하의 모든 $n$의 값의 합을 구합니다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$f$ 가 증가함수이므로 $f$ 와 $f^{-1}$ 의 교점은 모두 직선 $y=x$ 위에 있습니다. 즉 $g(n)$ 은 $3^x-n=x$ 의 큰 해입니다. $h(n)=\\lfloor g(n)\\rfloor$ 이고, $g(n)$ 이 정수 $m$ 을 넘는 순간(=$\\lfloor g\\rfloor$ 가 커지는 순간)을 찾는 것이 핵심입니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "증가함수 $f$ 에 대해 $f(x)=f^{-1}(x)$ 의 해는 $f(x)=x$ 의 해와 같습니다. $g(n)=m$ 일 조건은 $3^m-m=n$. $g(n)$ 은 $n$에 대해 증가하므로 $g(n)\\ge m\\iff n\\ge 3^m-m$. 따라서 $\\lfloor g(n)\\rfloor$ 가 $m$ 으로 처음 올라가는 자연수는 $n=3^m-m$ 입니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "[1단계] 교점은 $y=x$ 위\n$f(x)=3^x-n$ 이 증가함수이므로 교점에서 $f(x)=x$, 즉\n$$3^x-n=x\\ \\Rightarrow\\ n=3^x-x$$\n$\\varphi(x)=3^x-x$ 는 아래로 볼록하며 한 점에서 최소이고, 큰 해(증가구간의 해)가 $g(n)$ 입니다.\n\n[2단계] $\\lfloor g(n)\\rfloor$ 가 바뀌는 지점\n$g(n)$ 은 증가하고 $g(n)=m\\iff n=3^m-m$ 이므로\n$$\\lfloor g(n)\\rfloor\\ge m\\iff g(n)\\ge m\\iff n\\ge 3^m-m$$\n즉 $h(n)=\\lfloor g(n)\\rfloor$ 의 값이 $m$ 으로 처음 올라가는 $n$ 은 $n=3^m-m$ 입니다.\n\n[3단계] $h(n)<h(n+1)$ 의 의미\n$n+1$ 이 위의 \"올라가는 지점\"일 때, 즉\n$$n+1=3^m-m\\ \\Rightarrow\\ n=3^m-m-1$$\n인 $n$ 에서 $h(n)<h(n+1)$ 이 성립합니다.\n\n[4단계] $100$ 이하의 $n$ 나열 ($n\\ge2$)\n$$m=2:\\ n=3^2-2-1=6$$\n$$m=3:\\ n=3^3-3-1=23$$\n$$m=4:\\ n=3^4-4-1=76$$\n$$m=5:\\ n=3^5-5-1=237\\ (>100,\\ \\text{제외})$$\n($m=1$ 은 $n=1$ 로 $2$ 이상 조건에 어긋나 제외)\n\n[5단계] 합\n$$6+23+76=105$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **105** 입니다."
+      }
+    ],
+    "final_answer": "② 105"
+  },
+  "27": {
+    "problem_id": "27",
+    "title": "2024학년도 6월 고2 학평 27번",
+    "difficulty": "준킬러",
+    "weakness_unit": "로그의 성질을 이용한 식의 값",
+    "type": "geometry",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$1$보다 큰 세 실수 $a,\\ b,\\ c$ 가 $\\log_a b=81$, $\\log_c\\sqrt a=\\log_{\\sqrt b}c$ 를 만족시킬 때 $\\log_c b$ 의 값을 구하는 문제입니다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "두 식을 모두 자연로그(또는 같은 밑의 로그)로 바꾸어 $\\ln a,\\ \\ln b,\\ \\ln c$ 사이의 관계식을 만듭니다. $\\log_a b=81$ 에서 $\\ln b=81\\ln a$, 두 번째 식에서 $(\\ln c)^2=\\dfrac{\\ln a\\,\\ln b}{4}$ 를 얻어 $\\ln c$ 를 $\\ln a$ 로 표현합니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "밑변환공식 $\\log_a b=\\dfrac{\\ln b}{\\ln a}$, 로그의 성질 $\\log_c\\sqrt a=\\dfrac12\\log_c a$, $\\log_{\\sqrt b}c=\\dfrac{\\ln c}{\\frac12\\ln b}=\\dfrac{2\\ln c}{\\ln b}$. $a,b,c>1$ 이므로 모든 로그값은 양수입니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "[1단계] 첫 번째 조건\n$$\\log_a b=\\frac{\\ln b}{\\ln a}=81\\ \\Rightarrow\\ \\ln b=81\\ln a$$\n\n[2단계] 두 번째 조건을 자연로그로\n$$\\log_c\\sqrt a=\\frac{\\ln\\sqrt a}{\\ln c}=\\frac{\\ln a}{2\\ln c},\\qquad \\log_{\\sqrt b}c=\\frac{\\ln c}{\\ln\\sqrt b}=\\frac{2\\ln c}{\\ln b}$$\n두 식이 같으므로\n$$\\frac{\\ln a}{2\\ln c}=\\frac{2\\ln c}{\\ln b}\\ \\Rightarrow\\ \\ln a\\cdot\\ln b=4(\\ln c)^2$$\n\n[3단계] $\\ln b=81\\ln a$ 대입\n$$(\\ln c)^2=\\frac{\\ln a\\cdot 81\\ln a}{4}=\\frac{81(\\ln a)^2}{4}$$\n$\\ln c>0,\\ \\ln a>0$ 이므로\n$$\\ln c=\\frac{9}{2}\\ln a$$\n\n[4단계] $\\log_c b$ 계산\n$$\\log_c b=\\frac{\\ln b}{\\ln c}=\\frac{81\\ln a}{\\frac{9}{2}\\ln a}=81\\cdot\\frac{2}{9}=18$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **18** 입니다."
+      }
+    ],
+    "final_answer": "18"
+  },
+  "28": {
+    "problem_id": "28",
+    "title": "2024학년도 6월 고2 학평 28번",
+    "difficulty": "킬러",
+    "weakness_unit": "이차함수와 로그함수의 그래프를 이용한 식의 값",
+    "type": "geometry",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "두 양수 $a,\\ b$ 에 대해 $x\\ge0$ 에서 정의된 함수 $f(x)=\\begin{cases}a(4-x^2)&(0\\le x<3)\\\\ b\\log_2\\frac{x}{3}-5a&(x\\ge3)\\end{cases}$ 의 그래프가 $x$축과 만나는 두 점을 A, B라 합니다. $\\overline{AB}=10$ 이고 $f(b)=2b$ 일 때 $5a+b$ 의 값을 구합니다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "첫 구간의 근은 $a(4-x^2)=0\\Rightarrow x=2$ (점 A). 두 번째 구간의 근에서 $\\overline{AB}=10$ 을 이용해 그 $x$좌표를 $12$ 로 확정하면 $\\dfrac{5a}{b}=2$, 즉 $5a=2b$ 를 얻습니다. 이어 $f(b)=2b$ 를 $x\\ge3$ 구간에서 풀면 $b$ 가 정해집니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$x$축과 만나는 점은 $f(x)=0$ 인 점입니다. 로그방정식 $b\\log_2\\dfrac{x}{3}-5a=0\\Rightarrow \\log_2\\dfrac{x}{3}=\\dfrac{5a}{b}\\Rightarrow x=3\\cdot 2^{5a/b}$. 두 근이 모두 $x$축 위에 있으므로 두 점 사이 거리는 $x$좌표의 차입니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "[1단계] 첫 구간 ($0\\le x<3$)의 근\n$$a(4-x^2)=0\\ \\Rightarrow\\ x=2\\quad(\\because a>0)$$\n$$\\therefore\\ \\mathrm A=(2,\\ 0)$$\n\n[2단계] 두 번째 구간 ($x\\ge3$)의 근\n$$b\\log_2\\frac{x}{3}-5a=0\\ \\Rightarrow\\ \\log_2\\frac{x}{3}=\\frac{5a}{b}\\ \\Rightarrow\\ x=3\\cdot 2^{\\frac{5a}{b}}$$\n$$\\therefore\\ \\mathrm B=\\left(3\\cdot 2^{\\frac{5a}{b}},\\ 0\\right)$$\n\n[3단계] $\\overline{AB}=10$ 적용\n$$3\\cdot 2^{\\frac{5a}{b}}-2=10\\ \\Rightarrow\\ 3\\cdot 2^{\\frac{5a}{b}}=12\\ \\Rightarrow\\ 2^{\\frac{5a}{b}}=4$$\n$$\\frac{5a}{b}=2\\ \\Rightarrow\\ 5a=2b$$\n\n[4단계] $f(b)=2b$ 적용 ($b\\ge3$ 구간 사용)\n$$f(b)=b\\log_2\\frac{b}{3}-5a=2b$$\n$5a=2b$ 를 대입하면\n$$b\\log_2\\frac{b}{3}-2b=2b\\ \\Rightarrow\\ b\\log_2\\frac{b}{3}=4b\\ \\Rightarrow\\ \\log_2\\frac{b}{3}=4$$\n$$\\frac{b}{3}=16\\ \\Rightarrow\\ b=48\\quad(b\\ge3\\ \\text{만족})$$\n\n[5단계] $5a+b$ 계산\n$$5a=2b=96,\\qquad 5a+b=96+48=144$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **144** 입니다."
+      }
+    ],
+    "final_answer": "144"
+  },
+  "29": {
+    "problem_id": "29",
+    "title": "2024학년도 6월 고2 학평 29번",
+    "difficulty": "킬러",
+    "weakness_unit": "사인법칙과 코사인법칙을 활용한 선분 길이의 합",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "circle", "center": [-1.855, 3.72], "radius": 8.05 },
+        { "type": "circle", "center": [-4.5, 4.03], "radius": 6.05 },
+        { "type": "point", "coordinates": [-9, 0], "label": "A" },
+        { "type": "point", "coordinates": [-7.94, 9], "label": "B" },
+        { "type": "point", "coordinates": [5.29, 0], "label": "C" },
+        { "type": "point", "coordinates": [0, 0], "label": "D" },
+        { "type": "segment", "from": [-9, 0], "to": [5.29, 0], "label": "" },
+        { "type": "segment", "from": [-9, 0], "to": [-7.94, 9], "label": "" },
+        { "type": "segment", "from": [-7.94, 9], "to": [5.29, 0], "label": "" },
+        { "type": "segment", "from": [-7.94, 9], "to": [0, 0], "label": "" },
+        { "type": "label_text", "tex": "A", "at": [-9.6, -0.6] },
+        { "type": "label_text", "tex": "B", "at": [-8.0, 9.6] },
+        { "type": "label_text", "tex": "C", "at": [5.7, 0.4] },
+        { "type": "label_text", "tex": "D", "at": [-0.2, 0.7] }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$\\overline{AC}>2\\sqrt7$ 인 삼각형 ABC에서 선분 AC 위의 점 D가 $\\overline{CD}=2\\sqrt7$, $\\cos(\\angle BDA)=\\dfrac{\\sqrt7}{4}$ 를 만족시킵니다. 삼각형 ABC와 ABD의 외접원의 반지름을 각각 $R_1,\\ R_2$ 라 하고 $R_1:R_2=4:3$ 일 때 $\\overline{BC}+\\overline{BD}$ 의 값을 구합니다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$\\angle BDA$ 와 $\\angle BDC$ 는 보각이므로 $\\sin\\angle BDC=\\sin\\angle BDA=\\dfrac34$, $\\cos\\angle BDC=-\\dfrac{\\sqrt7}{4}$. 두 외접원은 공통현 AB를 가지므로 사인법칙에서 $\\dfrac{R_1}{R_2}=\\dfrac{\\sin\\angle ADB}{\\sin\\angle ACB}$ 를 이용해 $\\sin\\angle ACB$ 를 구합니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "사인법칙 $\\dfrac{a}{\\sin A}=2R$. 공통변 AB에 대해 $2R_2=\\dfrac{\\overline{AB}}{\\sin\\angle ADB}$, $2R_1=\\dfrac{\\overline{AB}}{\\sin\\angle ACB}$. 보각관계 $\\sin(\\pi-\\theta)=\\sin\\theta,\\ \\cos(\\pi-\\theta)=-\\cos\\theta$. 삼각형 BDC에서 사인법칙으로 변 BC, BD를 구합니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "[1단계] $\\angle BDA$, $\\angle BDC$ 의 삼각비\n$$\\cos\\angle BDA=\\frac{\\sqrt7}{4}\\ \\Rightarrow\\ \\sin\\angle BDA=\\sqrt{1-\\frac{7}{16}}=\\frac{3}{4}$$\n$\\angle BDC=\\pi-\\angle BDA$ 이므로\n$$\\sin\\angle BDC=\\frac{3}{4},\\qquad \\cos\\angle BDC=-\\frac{\\sqrt7}{4}$$\n\n[2단계] 외접원 반지름 비로 $\\sin\\angle ACB$ 구하기\n공통변 AB에 대해\n$$\\frac{R_1}{R_2}=\\frac{\\sin\\angle ADB}{\\sin\\angle ACB}=\\frac{4}{3}$$\n$\\sin\\angle ADB=\\dfrac34$ 이므로\n$$\\sin\\angle ACB=\\frac{3}{4}\\cdot\\frac{3}{4}=\\frac{9}{16}$$\n$\\angle ACB=\\angle BCD$ 는 예각이므로 $\\cos\\angle BCD=\\sqrt{1-\\frac{81}{256}}=\\frac{5\\sqrt7}{16}$\n\n[3단계] 삼각형 BDC에서 $\\angle DBC$ 의 사인\n$$\\sin\\angle DBC=\\sin(\\angle BDC+\\angle BCD)=\\sin\\angle BDC\\cos\\angle BCD+\\cos\\angle BDC\\sin\\angle BCD$$\n$$=\\frac{3}{4}\\cdot\\frac{5\\sqrt7}{16}+\\left(-\\frac{\\sqrt7}{4}\\right)\\cdot\\frac{9}{16}=\\frac{15\\sqrt7}{64}-\\frac{9\\sqrt7}{64}=\\frac{6\\sqrt7}{64}=\\frac{3\\sqrt7}{32}$$\n\n[4단계] 삼각형 BDC에 사인법칙 적용\n$$\\frac{\\overline{CD}}{\\sin\\angle DBC}=\\frac{2\\sqrt7}{\\frac{3\\sqrt7}{32}}=\\frac{2\\sqrt7\\cdot 32}{3\\sqrt7}=\\frac{64}{3}$$\n$$\\overline{BC}=\\frac{64}{3}\\sin\\angle BDC=\\frac{64}{3}\\cdot\\frac{3}{4}=16$$\n$$\\overline{BD}=\\frac{64}{3}\\sin\\angle BCD=\\frac{64}{3}\\cdot\\frac{9}{16}=12$$\n\n[5단계] 합\n$$\\overline{BC}+\\overline{BD}=16+12=28$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **28** 입니다."
+      }
+    ],
+    "final_answer": "28"
+  },
+  "30": {
+    "problem_id": "30",
+    "title": "2024학년도 6월 고2 학평 30번",
+    "difficulty": "킬러",
+    "weakness_unit": "삼각함수의 그래프를 이용한 조건에 맞는 함수 추론",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "function_plot", "expr": "Math.abs(2*Math.sin(Math.PI/6*x)+0.5)" },
+        { "type": "segment", "from": [0, 0.5], "to": [12, 0.5], "label": "y=1/2" },
+        { "type": "label_text", "tex": "y=\\tfrac12", "at": [12.6, 0.5] }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$1$보다 큰 실수 $k$에 대해 $f(x)=\\left|\\,2\\sin\\dfrac{\\pi}{k}x+\\dfrac12\\,\\right|$ 가 다음을 만족합니다: $0\\le t\\le 2k$ 인 실수 $t$에 대하여 $t\\le x\\le t+1$ 에서 $f(x)$ 의 최댓값이 $\\dfrac12$ 이 되도록 하는 $t$의 값이 $\\alpha,\\ \\beta$ 뿐. 이때 $k\\alpha+\\beta$ 를 구합니다. ($\\alpha<\\beta$)"
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "길이 $1$인 구간에서 $f=\\left|2\\sin\\frac{\\pi}{k}x+\\frac12\\right|$ 의 최댓값이 $\\frac12$ 이려면 그 구간 전체에서 $-\\frac12\\le 2\\sin\\frac{\\pi}{k}x+\\frac12\\le\\frac12$, 즉 $-\\frac12\\le\\sin\\frac{\\pi}{k}x\\le0$ 이어야 하고, 그 값이 끝값($0$ 또는 $-\\frac12$)에 닿아야 합니다. 이런 $t$가 정확히 $2$개가 되도록 하는 $k$가 결정됩니다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$f(x)$ 의 주기는 $\\dfrac{2\\pi}{\\pi/k}=2k$. $\\theta=\\dfrac{\\pi}{k}x$ 라 하면 $\\sin\\theta\\in[-\\frac12,0]$ 인 구간은 한 주기에서 $\\theta\\in[\\pi,\\frac{7\\pi}{6}]$ 와 $[\\frac{11\\pi}{6},2\\pi]$ (각각 길이 $\\frac{\\pi}{6}$)뿐입니다. 이 끝값에서 $\\left|2\\sin\\theta+\\frac12\\right|=\\frac12$ 입니다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "[1단계] 최댓값이 $\\dfrac12$ 일 조건\n$f(x)=\\left|2\\sin\\frac{\\pi}{k}x+\\frac12\\right|$ 의 최댓값이 $\\dfrac12$ 이려면 구간에서\n$$-\\frac12\\le 2\\sin\\frac{\\pi}{k}x+\\frac12\\le\\frac12\\ \\Rightarrow\\ -\\frac12\\le\\sin\\frac{\\pi}{k}x\\le0$$\n이고, 끝값 $\\sin=0$ 또는 $\\sin=-\\frac12$ 에 닿아야 합니다.\n\n[2단계] $\\theta=\\dfrac{\\pi}{k}x$ 에서 허용 구간\n$0\\le x\\le 2k$ 일 때 $\\theta$ 는 $0$ 에서 $2\\pi$ 까지 변합니다. $\\sin\\theta\\in[-\\frac12,0]$ 인 구간은\n$$\\theta\\in\\left[\\pi,\\ \\frac{7\\pi}{6}\\right]\\quad\\text{및}\\quad \\theta\\in\\left[\\frac{11\\pi}{6},\\ 2\\pi\\right]$$\n$x$로 환산하면 ($x=\\frac{k}{\\pi}\\theta$)\n$$\\left[k,\\ \\frac{7k}{6}\\right]\\quad\\text{및}\\quad \\left[\\frac{11k}{6},\\ 2k\\right]\\quad(\\text{각 길이 }\\tfrac{k}{6})$$\n\n[3단계] 길이 $1$인 창이 들어갈 조건\n창 $[t,t+1]$(길이 $1$)이 허용 구간(길이 $\\frac{k}{6}$) 안에 완전히 들어가야 하므로\n$$1\\le\\frac{k}{6}\\ \\Rightarrow\\ k\\ge 6$$\n\n[4단계] $t$가 정확히 $2$개일 조건\n최댓값이 정확히 $\\dfrac12$ 이려면 창이 허용 구간의 경계점($f=\\frac12$ 인 점)을 포함해야 합니다. $k>6$ 이면 각 허용 구간마다 왼쪽 경계를 포함하는 $t$와 오른쪽 경계를 포함하는 $t$가 서로 다른 값이 되어 $t$가 $4$개가 됩니다. $t$가 정확히 $2$개가 되려면 허용 구간의 길이가 창의 길이와 같아야 하므로\n$$\\frac{k}{6}=1\\ \\Rightarrow\\ k=6$$\n이때 각 허용 구간은 창과 정확히 일치하여 두 $t$값이 하나로 합쳐집니다.\n$$\\left[k,\\frac{7k}{6}\\right]=[6,7]\\ \\Rightarrow\\ t=6,\\qquad \\left[\\frac{11k}{6},2k\\right]=[11,12]\\ \\Rightarrow\\ t=11$$\n\n[5단계] $k\\alpha+\\beta$ 계산\n$\\alpha<\\beta$ 이므로 $\\alpha=6,\\ \\beta=11$, $k=6$.\n$$k\\alpha+\\beta=6\\cdot 6+11=36+11=47$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **47** 입니다."
+      }
+    ],
+    "final_answer": "47"
+  }
+}
