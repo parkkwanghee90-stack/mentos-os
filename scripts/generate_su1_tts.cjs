@@ -91,6 +91,23 @@ const STAGES = {
   ind4:     { ko: '수학적귀납법4단계',      hintDir: 'induction_step4',    ttsDir: 'induction_s4' },
 };
 
+// 음색 통일용 추가 매핑 주입: scripts/tts_hintdir_map.json(ttsDir→Supabase hintDir, 내용+pid 검증완료)을
+// STAGES에 병합한다. 기존 ttsDir과 겹치지 않는 항목만 추가(수학 상/하/수2 단원).
+(function injectHintDirMap() {
+  const mapPath = path.join('scripts', 'tts_hintdir_map.json');
+  if (!fs.existsSync(mapPath)) return;
+  let map;
+  try { map = JSON.parse(fs.readFileSync(mapPath, 'utf8')).map || {}; } catch { return; }
+  const existing = new Set(Object.values(STAGES).map(s => s.ttsDir));
+  let n = 0;
+  for (const [ttsDir, hintDir] of Object.entries(map)) {
+    if (existing.has(ttsDir)) continue;
+    STAGES[`map_${ttsDir}`] = { ko: ttsDir, hintDir, ttsDir };
+    n++;
+  }
+  if (n && !process.argv.includes('--list-stages')) console.log(`[map] tts_hintdir_map.json에서 ${n}개 단원 STAGES 주입`);
+})();
+
 if (!process.argv.includes('--list-stages')) {
   if (GEMINI_API_KEYS.length === 0) {
     console.error('❌ Error: No Gemini API keys are defined');
