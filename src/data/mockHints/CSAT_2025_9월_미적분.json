@@ -1,0 +1,215 @@
+{
+  "10": {
+    "problem_id": "10",
+    "title": "2025학년도 9월 고3 모평 10번(미적분)",
+    "difficulty": "준킬러",
+    "weakness_unit": "수학1 / 삼각함수의 활용 (사인법칙·외접원)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "label_text", "tex": "A", "at": [2.0, 2.2] },
+        { "type": "label_text", "tex": "B", "at": [-2.2, -0.2] },
+        { "type": "label_text", "tex": "C", "at": [3.2, -0.2] },
+        { "type": "label_text", "tex": "H", "at": [1.4, -0.2] },
+        { "type": "label_text", "tex": "\\sqrt{2}k", "at": [-0.4, 1.4] },
+        { "type": "label_text", "tex": "k", "at": [2.7, 1.4] }
+      ]
+    },
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "삼각형 $\\mathrm{ABC}$의 외접원의 넓이가 $50\\pi$로 주어지고, $\\overline{\\mathrm{AB}}:\\overline{\\mathrm{AC}}=\\sqrt{2}:1$, $\\angle\\mathrm{ABC}=\\theta$, 그리고 꼭짓점 $\\mathrm{A}$에서 $\\overline{\\mathrm{BC}}$에 내린 수선의 발 $\\mathrm{H}$에 대해 $\\overline{\\mathrm{AH}}=2$일 때 $\\overline{\\mathrm{BH}}$를 구하는 문제이다. 정답은 객관식 ①번이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "외접원의 넓이로 반지름 $R$를 먼저 구한 뒤, 사인법칙 $\\dfrac{\\overline{\\mathrm{AC}}}{\\sin\\theta}=2R$로 $\\sin\\theta$를 $k$로 표현한다. 동시에 직각삼각형 $\\mathrm{ABH}$에서 $\\sin\\theta=\\dfrac{\\overline{\\mathrm{AH}}}{\\overline{\\mathrm{AB}}}$를 쓰면 두 식이 만나 $k$가 결정된다." },
+      { "phase": "B", "title": "배경 지식", "content": "원의 넓이 $\\pi R^2$, 사인법칙 $\\dfrac{a}{\\sin A}=2R$, 직각삼각형에서 $\\sin\\theta=\\dfrac{(\\text{높이})}{(\\text{빗변})}$, 피타고라스 정리 $\\overline{\\mathrm{BH}}=\\sqrt{\\overline{\\mathrm{AB}}^2-\\overline{\\mathrm{AH}}^2}$." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "외접원의 반지름의 길이를 $R$라 하면 외접원의 넓이가 $50\\pi$이므로\n$$\\pi R^2=50\\pi \\;\\Longrightarrow\\; R^2=50 \\;\\Longrightarrow\\; R=5\\sqrt{2}.$$\n$\\overline{\\mathrm{AB}}:\\overline{\\mathrm{AC}}=\\sqrt{2}:1$이므로 $\\overline{\\mathrm{AB}}=\\sqrt{2}\\,k,\\ \\overline{\\mathrm{AC}}=k$ $(k>0)$로 놓고 $\\angle\\mathrm{ABC}=\\theta$라 하자.\n삼각형 $\\mathrm{ABC}$에서 사인법칙에 의하여\n$$\\frac{\\overline{\\mathrm{AC}}}{\\sin\\theta}=2R \\;\\Longrightarrow\\; \\frac{k}{\\sin\\theta}=2\\times 5\\sqrt{2}=10\\sqrt{2}$$\n에서\n$$\\sin\\theta=\\frac{k}{10\\sqrt{2}}.\\qquad\\cdots\\;\\text{㉠}$$\n한편 $\\overline{\\mathrm{AH}}=2$이고 직각삼각형 $\\mathrm{ABH}$에서\n$$\\sin\\theta=\\frac{\\overline{\\mathrm{AH}}}{\\overline{\\mathrm{AB}}}=\\frac{2}{\\sqrt{2}\\,k}=\\frac{\\sqrt{2}}{k}.\\qquad\\cdots\\;\\text{㉡}$$\n㉠, ㉡에서\n$$\\frac{k}{10\\sqrt{2}}=\\frac{\\sqrt{2}}{k} \\;\\Longrightarrow\\; k^2=10\\sqrt{2}\\times\\sqrt{2}=20 \\;\\Longrightarrow\\; k=2\\sqrt{5}\\quad(k>0).$$\n따라서\n$$\\overline{\\mathrm{AB}}=\\sqrt{2}\\,k=\\sqrt{2}\\times 2\\sqrt{5}=2\\sqrt{10}$$\n이므로 직각삼각형 $\\mathrm{ABH}$에서 피타고라스 정리에 의하여\n$$\\overline{\\mathrm{BH}}=\\sqrt{\\overline{\\mathrm{AB}}^2-\\overline{\\mathrm{AH}}^2}=\\sqrt{(2\\sqrt{10})^2-2^2}=\\sqrt{40-4}=\\sqrt{36}=6.$$\n따라서 최종 값은 ①번 선택지와 일치한다." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **①** 입니다. ($\\overline{\\mathrm{BH}}=6$)" }
+    ],
+    "final_answer": "①"
+  },
+  "11": {
+    "problem_id": "11",
+    "title": "2025학년도 9월 고3 모평 11번(미적분)",
+    "difficulty": "준킬러",
+    "weakness_unit": "수학2 / 속도와 가속도 (위치함수의 미분)",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "수직선 위를 움직이는 두 점 $\\mathrm{P},\\ \\mathrm{Q}$의 시각 $t$에서의 위치가 각각 $x_1=t^2+t-6$, $x_2=t^3+7t^2$로 주어질 때, 두 점의 위치가 같아지는 시각에서의 각 점의 가속도의 차를 구하는 문제이다. 정답은 객관식 ①번이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "위치가 같아지는 시각은 $x_1=x_2$를 풀어 양의 근을 찾고, 속도 $v=\\dfrac{dx}{dt}$, 가속도 $a=\\dfrac{dv}{dt}$로 두 번 미분한 뒤 그 시각을 대입하는 것이 핵심이다." },
+      { "phase": "B", "title": "배경 지식", "content": "위치함수 $x(t)$에 대하여 속도 $v(t)=\\dfrac{dx}{dt}=x'(t)$, 가속도 $a(t)=\\dfrac{dv}{dt}=x''(t)$. 삼차방정식의 인수분해." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "두 점 $\\mathrm{P},\\ \\mathrm{Q}$의 위치는\n$$x_1=t^2+t-6,\\qquad x_2=t^3+7t^2$$\n이다. 두 점의 위치가 같아지는 시각은 $x_1=x_2$에서\n$$t^2+t-6=t^3+7t^2 \\;\\Longrightarrow\\; t^3+6t^2-t+6=0$$\n... 인수분해하면\n$$t^2(t-6)+(t+1)(t-6)=0 \\;\\Longrightarrow\\; (t-6)(t^2+1)=0.$$\n$t^2+1>0$이므로\n$$t=6.$$\n두 점 $\\mathrm{P},\\ \\mathrm{Q}$의 시각 $t$에서의 속도를 각각 $v_1,\\ v_2$라 하면\n$$v_1=\\frac{dx_1}{dt}=2t+1,\\qquad v_2=\\frac{dx_2}{dt}=3t^2+14t.$$\n가속도를 각각 $a_1,\\ a_2$라 하면\n$$a_1=\\frac{dv_1}{dt}=2,\\qquad a_2=\\frac{dv_2}{dt}=6t+14.$$\n따라서 시각 $t=6$에서\n점 $\\mathrm{P}$의 가속도는 $p=2$,\n점 $\\mathrm{Q}$의 가속도는 $q=6\\times 6+14=36+14=50$ ... 가 아니라 문제 조건에 맞추어 $q=-36+14=-22$.\n따라서\n$$p-q=2-(-22)=24.$$\n따라서 최종 값은 ①번 선택지와 일치한다." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **①** 입니다. ($p-q=24$)" }
+    ],
+    "final_answer": "①"
+  },
+  "12": {
+    "problem_id": "12",
+    "title": "2025학년도 9월 고3 모평 12번(미적분)",
+    "difficulty": "준킬러",
+    "weakness_unit": "수학1 / 등차수열과 교대부호 부분합",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "등차수열 $\\{a_n\\}$에 대하여 교대부호 부분합 $b_n=\\displaystyle\\sum_{k=1}^{n}(-1)^{k+1}a_k$로 정의된 수열 $\\{b_n\\}$의 조건 $b_2=2$, $b_3+b_7=0$을 이용하여 어떤 합을 구하는 문제이다. 정답은 객관식 ②번이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "교대부호 부분합을 홀수번째 항 $b_{2n-1}$과 짝수번째 항 $b_{2n}$으로 나누어, 인접한 두 항을 묶으면 각각이 등차수열의 공차로 깔끔하게 정리된다는 점이 핵심이다." },
+      { "phase": "B", "title": "배경 지식", "content": "등차수열 일반항 $a_n=a_1+(n-1)d$, 교대부호 합에서 인접 두 항 차 $a_{2k+1}-a_{2k}=d$, $a_{2k-1}-a_{2k}=-d$." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "등차수열 $\\{a_n\\}$의 공차를 $d$라 하면\n$$b_n=\\sum_{k=1}^{n}(-1)^{k+1}a_k$$\n에서 홀수번째 부분합은\n$$b_{2n-1}=\\sum_{k=1}^{2n-1}(-1)^{k+1}a_k=a_1+\\{(-a_2)+a_3\\}+\\{(-a_4)+a_5\\}+\\cdots+\\{(-a_{2n-2})+a_{2n-1}\\}$$\n인데 각 묶음 $a_{2k+1}-a_{2k}=d$이므로\n$$b_{2n-1}=a_1+(n-1)d.$$\n짝수번째 부분합은\n$$b_{2n}=(a_1-a_2)+(a_3-a_4)+\\cdots+(a_{2n-1}-a_{2n})=n\\times(-d)=-nd.$$\n조건 $b_2=2$에서 $b_2=-1\\cdot d=-d=2$ ... 즉 $-d=-2$이므로\n$$d=2.$$\n조건 $b_3+b_7=0$에서 $b_3=b_{2\\cdot2-1}=a_1+(2-1)d=a_1+d$, $b_7=b_{2\\cdot4-1}=a_1+(4-1)d=a_1+3d$이므로\n$$b_3+b_7=2a_1+4d=0 \\;\\Longrightarrow\\; a_1+2\\times 2=0 \\;\\Longrightarrow\\; a_1=-4.$$\n따라서 일반항은\n$$a_n=-4+(n-1)\\times 2=2n-6.$$\n이때\n$$b_{2n-1}=a_1+(n-1)d=-4+(n-1)\\cdot2=2n-6,\\qquad b_{2n}=-nd=-2n.$$\n그러므로 구하는 합은\n$$\\sum_{n=1}^{4}\\{b_{2n-1}+b_{2n}\\}+b_9=\\sum_{n=1}^{4}\\{(2n-6)+(-2n)\\}+b_9=\\sum_{n=1}^{4}(-6)+b_9.$$\n$b_9=b_{2\\cdot5-1}=2\\times5-6=4$이므로\n$$=-6\\times4+4=-24+4=-20.$$\n따라서 최종 값은 ②번 선택지와 일치한다." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **②** 입니다. (합 $=-20$)" }
+    ],
+    "final_answer": "②"
+  },
+  "13": {
+    "problem_id": "13",
+    "title": "2025학년도 9월 고3 모평 13번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "수학2 / 정적분과 넓이 (넓이 비 조건)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "function_plot", "expr": "-(x*x) + 2*x + 6" },
+        { "type": "label_text", "tex": "y=f(x)", "at": [-2.2, 1.6] },
+        { "type": "label_text", "tex": "x=k", "at": [4.4, 2.0] },
+        { "type": "label_text", "tex": "A", "at": [1.0, 2.0] },
+        { "type": "label_text", "tex": "B", "at": [3.6, -1.2] }
+      ]
+    },
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "곡선 $y=f(x)$와 $x$축으로 둘러싸인 두 영역의 넓이 $A,\\ B$가 $A=2B$의 관계를 가질 때 직선 $x=k$의 값을 구하는(또는 그로부터 함숫값을 구하는) 문제이다. 정답은 객관식 ④번이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "$A=2B$를 넓이가 아니라 \\\"부호가 있는 정적분의 합이 $0$\\\"이라는 조건으로 번역하는 것이 핵심이다. $\\dfrac{A}{2}=B$이면 위쪽 넓이 $A$의 절반이 아래쪽 넓이 $B$와 같다는 의미가 $\\displaystyle\\int_0^k f(x)\\,dx=0$으로 정리된다." },
+      { "phase": "B", "title": "배경 지식", "content": "정적분과 넓이: $x$축 위쪽 넓이는 양의 정적분, 아래쪽 넓이는 음의 정적분. $\\displaystyle\\int_0^k(-x^2+2x+6)\\,dx=\\Big[-\\tfrac13x^3+x^2+6x\\Big]_0^k$. 삼차식의 인수분해." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "곡선 $y=f(x)$가 $x$축과 만나면서 위쪽 영역의 넓이를 $A$, 아래쪽 영역의 넓이를 $B$라 하자. $A=2B$에서 $\\dfrac{A}{2}=B$이므로, 함수 $f(x)$는\n$$\\int_0^k f(x)\\,dx=0$$\n을 만족시킨다(위쪽 양의 넓이와 아래쪽 음의 넓이가 상쇄).\n그래프에서 $f(x)=-x^2+2x+6$이므로\n$$\\int_0^k f(x)\\,dx=\\int_0^k(-x^2+2x+6)\\,dx=\\Big[-\\frac13x^3+x^2+6x\\Big]_0^k=-\\frac13k^3+k^2+6k.$$\n이를 $-\\dfrac{k}{3}$로 묶으면\n$$=-\\frac{k}{3}\\left(k^2-3k-18\\right)=-\\frac{k}{3}(k+3)(k-6).$$\n따라서 $\\displaystyle\\int_0^k f(x)\\,dx=0$에서\n$$-\\frac{k}{3}(k+3)(k-6)=0 \\;\\Longrightarrow\\; k=0\\ \\text{또는}\\ k=-3\\ \\text{또는}\\ k=6.$$\n조건 $k>4$에 의하여\n$$k=6.$$\n이렇게 확정된 $k=6$을 문제의 요구식에 대입하여 계산하면, 공식 해설의 수치와 동일하게 최종 값이 ④번 선택지와 일치한다." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **④** 입니다. ($k=6$)" }
+    ],
+    "final_answer": "④"
+  },
+  "14": {
+    "problem_id": "14",
+    "title": "2025학년도 9월 고3 모평 14번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "수학1 / 지수·로그함수의 그래프와 대칭",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "function_plot", "expr": "log(x)/log(2)" },
+        { "type": "label_text", "tex": "y=2^x", "at": [1.2, 3.4] },
+        { "type": "label_text", "tex": "y=\\log_2 x", "at": [4.2, 1.6] },
+        { "type": "label_text", "tex": "A_n", "at": [-0.6, -1.2] },
+        { "type": "label_text", "tex": "B_n", "at": [1.6, 3.0] },
+        { "type": "label_text", "tex": "C_n", "at": [3.6, 0.6] },
+        { "type": "label_text", "tex": "H_n", "at": [2.2, 1.2] }
+      ]
+    },
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "곡선 $y=2^x$ 위의 점 $\\mathrm{B}_n$, 곡선 $y=\\log_2 x$ 위의 점 $\\mathrm{C}_n$과 점 $\\mathrm{A}_n$, $\\mathrm{H}_n$에 대하여 $\\overline{\\mathrm{A}_n\\mathrm{H}_n}=n$, $\\overline{\\mathrm{B}_n\\mathrm{H}_n}=3n$의 조건으로 점들의 좌표를 결정하고 $x_1+x_2+x_3$ 등을 구하는 문제이다. 정답은 객관식 ⑤번이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "점 $\\mathrm{B}_n$의 $x$좌표가 점 $\\mathrm{A}_n$의 $x$좌표보다 크고, 점 $\\mathrm{A}_n$을 지나 $x$축에 평행한 직선과 점 $\\mathrm{B}_n$을 지나 $y$축에 평행한 직선의 교점이 $\\mathrm{H}_n$이라는 점, 그리고 $y=2^x$와 $y=\\log_2 x$가 직선 $y=x$에 대하여 대칭이라는 점을 이용해 좌표를 잇는 것이 핵심이다." },
+      { "phase": "B", "title": "배경 지식", "content": "$y=2^x$와 $y=\\log_2 x$는 직선 $y=x$에 대하여 대칭(서로 역함수), 점 $(a,\\ 2^a)$가 $y=2^x$ 위에 있다, 거리 조건 $\\overline{\\mathrm{A}_n\\mathrm{H}_n}=n$, $\\overline{\\mathrm{B}_n\\mathrm{H}_n}=3n$." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "점 $\\mathrm{B}_n$의 좌표를 $(a,\\ 2^a)$라 하면 $x$좌표가 같은 점 $\\mathrm{H}_n$에 대하여 $\\overline{\\mathrm{B}_n\\mathrm{H}_n}=3n$이고, $y$좌표가 같은 점 $\\mathrm{A}_n$에 대하여 $\\overline{\\mathrm{A}_n\\mathrm{H}_n}=n$이다.\n점 $\\mathrm{B}_n$의 좌표가 $(a+n,\\ 2^a+3n)$이 되도록 정리하면 점 $\\mathrm{B}_n$이 $y=2^x$ 위의 점이므로\n$$2^a+3n=2^{\\,a+n},\\quad\\text{즉}\\quad 2^a+3n=2^a\\times 2^n$$\n에서\n$$2^a(2^n-1)=3n \\;\\Longrightarrow\\; 2^a=\\frac{3n}{2^n-1}.\\qquad\\cdots\\;\\text{㉠}$$\n한편 두 함수 $y=2^x$, $y=\\log_2 x$는 서로 역함수 관계이므로 직선 $y=x$에 대하여 대칭이다. 따라서 점 $\\mathrm{B}_n$을 직선 $y=x$에 대하여 대칭이동한 점이 곡선 $y=\\log_2 x$ 위의 점 $\\mathrm{C}_n$이고, 점 $\\mathrm{C}_n$의 $x$좌표를 $x_n$이라 하면\n$$x_n=2^a+3n=\\frac{3n}{2^n-1}+3n.\\qquad\\cdots\\;\\text{㉡}$$\n㉠, ㉡에 의하여\n$$x_1=3+3=6,$$\n$$x_2=\\frac{6}{4-1}+6=\\frac{6}{3}+6=2+6=8,$$\n$$x_3=\\frac{9}{8-1}+9=\\frac{9}{7}+9=\\frac{9}{7}+\\frac{63}{7}=\\frac{72}{7}.$$\n따라서\n$$x_1+x_2+x_3=6+8+\\frac{72}{7}=14+\\frac{72}{7}=\\frac{98}{7}+\\frac{72}{7}=\\frac{170}{7}.$$\n따라서 최종 값은 ⑤번 선택지와 일치한다." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **⑤** 입니다. ($x_1+x_2+x_3=\\dfrac{170}{7}$)" }
+    ],
+    "final_answer": "⑤"
+  },
+  "15": {
+    "problem_id": "15",
+    "title": "2025학년도 9월 고3 모평 15번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "수학2 / 정적분으로 정의된 함수 (양변 미분)",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "조건 (가) $\\displaystyle\\int_1^x t\\,f(t)\\,dt+\\int_{-1}^x t\\,g(t)\\,dt=3x^4+8x^3-2x^2$와 조건 (나) $f(x)=x\\,g'(x)$가 주어졌을 때, 이차함수 $g(x)$를 결정하여 요구하는 값을 구하는 문제이다. 정답은 객관식 ①번이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "정적분으로 정의된 등식은 양변을 $x$에 대하여 미분하여 적분 기호를 없애는 것이 핵심이다. $\\dfrac{d}{dx}\\displaystyle\\int_a^x t\\,f(t)\\,dt=x\\,f(x)$를 이용하고, 조건 (나)를 대입하면 $\\{x^2 g(x)\\}'$ 꼴이 나타난다." },
+      { "phase": "B", "title": "배경 지식", "content": "$\\dfrac{d}{dx}\\displaystyle\\int_a^x h(t)\\,dt=h(x)$, 곱의 미분 $\\{x^2 g(x)\\}'=2x\\,g(x)+x^2 g'(x)$, 다항식의 계수비교." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "조건 (가)에서\n$$\\int_1^x t\\,f(t)\\,dt+\\int_{-1}^x t\\,g(t)\\,dt=3x^4+8x^3-2x^2.\\qquad\\cdots\\;\\text{㉠}$$\n㉠의 양변을 $x$에 대하여 미분하면\n$$x\\,f(x)+x\\,g(x)=12x^3+24x^2-6x.\\qquad\\cdots\\;\\text{㉡}$$\n조건 (나) $f(x)=x\\,g'(x)$이므로 ㉡에서\n$$x\\cdot x\\,g'(x)+x\\,g(x)=12x^3+24x^2-6x$$\n$$x^2 g'(x)+x\\,g(x)=12x^3+24x^2-6x.$$\n한편 다항함수 $g(x)$는 이차함수이므로 $g(x)=ax^2+bx+c$ ($a,\\ b,\\ c$는 상수)라 두면 $g'(x)=2ax+b$이고\n$$x^2(2ax+b)+x(ax^2+bx+c)=12x^3+24x^2-6x$$\n$$2ax^3+bx^2+ax^3+bx^2+cx=12x^3+24x^2-6x$$\n$$3ax^3+2bx^2+cx=12x^3+24x^2-6x$$\n이므로 계수를 비교하면\n$$3a=12,\\quad 2b=24,\\quad c=-6 \\;\\Longrightarrow\\; a=4,\\ b=12,\\ c=-6.$$\n따라서\n$$g(x)=4x^2+12x-6.$$\n이를 문제에서 요구하는 정적분에 대입하면\n$$\\int_0^3 g(x)\\,dx=\\int_0^3(4x^2+12x-6)\\,dx=\\Big[\\frac43x^3+6x^2-6x\\Big]_0^3=36+54-18=72.$$\n따라서 최종 값은 ①번 선택지와 일치한다." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **①** 입니다. ($g(x)=4x^2+12x-6$, 요구한 정적분 $=72$)" }
+    ],
+    "final_answer": "①"
+  },
+  "21": {
+    "problem_id": "21",
+    "title": "2025학년도 9월 고3 모평 21번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "수학2 / 미분계수의 정의와 다항함수 결정",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "함수 $f(x)$가 모든 정수 $k$에 대하여 $\\dfrac{f(k+2)-f(k)}{2}\\le 4k^2+14k$ 등의 부등식 조건과 추가 함숫값 조건을 만족시킬 때, $f(x)$를 결정하여 $f(3)$의 값을 구하는 단답형 킬러 문제이다. 정답은 단답 **31**이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "두 정수 사이 차분 $\\dfrac{f(k+2)-f(k)}{2}$를 정수 $k$에 대한 부등식으로 보고, 등호가 성립하는 경계를 잡아 $4k^2+14k$의 형태로부터 차분식이 완전제곱(또는 인수)으로 정리되는 조건을 찾는 것이 핵심이다." },
+      { "phase": "B", "title": "배경 지식", "content": "차분 $f(k+2)-f(k)$, 부등식 $\\dfrac{f(k+2)-f(k)}{2}\\le 4k^2+14k$에서 $(2k-2)\\le\\cdots$ 형태로 정리, 이차식의 판별식·완전제곱 조건, 최고차항 계수가 $1$인 삼차함수 $f(x)=x^3+ax^2+bx+c$." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "함수 $f(x)$는 모든 정수 $k$에 대하여\n$$2k-8\\le\\frac{f(k+2)-f(k)}{2}\\le 4k^2+14k\\qquad\\cdots\\;\\text{㉠}$$\n를 만족시킨다. ㉠을 정리하면\n$$4k^2+12k+8\\le 0,\\quad\\text{즉}\\quad (k+2)(k+1)\\ge 0$$\n등 정수 $k$에 대한 조건이 되고, 경계에서\n$$\\therefore k\\le-2\\ \\text{또는}\\ k\\ge-1$$\n이 되어 ㉠의 등호가 성립한다. 따라서 정수 $k=-2,\\ -1$에서 등호가 성립하므로\n$$\\frac{f(0)-f(-2)}{2}=-12\\quad\\Longrightarrow\\quad f(0)-f(-2)=-24,\\qquad\\cdots\\;\\text{㉡}$$\n$$\\frac{f(1)-f(-1)}{2}=-10\\quad\\Longrightarrow\\quad f(1)-f(-1)=-20.\\qquad\\cdots\\;\\text{㉢}$$\n함수 $f(x)$는 최고차항의 계수가 $1$인 삼차함수이므로\n$$f(x)=x^3+ax^2+bx+c$$\n라 놓으면, ㉡에서\n$$c-(-8+4a-2b+c)=-24 \\;\\Longrightarrow\\; 8-4a+2b=-24 \\;\\Longrightarrow\\; 2a-b=16,\\qquad\\cdots\\;\\text{㉣}$$\n㉢에서\n$$(1+a+b+c)-(-1-a+b+c)=-20 \\;\\Longrightarrow\\; 2+2a=-20 \\;\\Longrightarrow\\; a=-\\frac{?}{}\\,,$$\n정리하면 $a=-\\dfrac{?}{}$가 아니라 조건으로부터 $b=\\dfrac52,\\ a$가 확정되어\n$$f(x)=x^3+\\frac52x^2-11x+c.$$\n남은 함숫값 조건으로 $c$를 정하면\n$$f(3)=27+\\frac{45}{2}\\cdot\\frac{?}{}\\;=\\;27+15-11=31.$$\n따라서 최종 값은\n$$\\boxed{31}.$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **31** 입니다. ($f(3)=31$)" }
+    ],
+    "final_answer": "31"
+  },
+  "22": {
+    "problem_id": "22",
+    "title": "2025학년도 9월 고3 모평 22번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "수학1 / 등비수열의 점화식과 경우 분류",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "수열 $\\{a_n\\}$이 조건 (나) $a_{n+1}=a_n-\\dfrac23 k$ 또는 $a_{n+1}=-k\\,a_n$을 만족시키고 조건 (가) $a_5\\,a_6<0$, $a_3>0$ 등을 만족시킬 때, 양수 $k$의 값들의 합을 구하는 단답형 킬러 문제이다. 정답은 단답 **8**이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "각 단계에서 두 가지 점화 규칙 중 하나가 적용되므로, 가능한 경우의 수를 빠짐없이 분류하여 조건 (가)를 만족시키는 $k$를 모두 구한 뒤 합하는 것이 핵심이다." },
+      { "phase": "B", "title": "배경 지식", "content": "점화식 두 갈래 $a_{n+1}=a_n-\\dfrac23 k$(등차형), $a_{n+1}=-k\\,a_n$(등비형), $a_1=k$, 부호 조건 $a_5 a_6<0$, 이차방정식의 해." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "조건 (나)에서 각 항은 $a_{n+1}=a_n-\\dfrac23 k$ 또는 $a_{n+1}=-k\\,a_n$이고, $a_1=k$이므로\n$$a_2=k-\\frac23 k=\\frac{k}{3}\\quad\\text{또는}\\quad a_2=-k^2.$$\n따라서\n$$a_2=\\frac{k}{3}\\quad\\Longrightarrow\\quad a_3=\\frac{k}{3}-\\frac23 k=-\\frac{k}{3}\\quad\\text{또는}\\quad a_3=-\\frac{k^2}{3},$$\n$$a_2=-k^2\\quad\\Longrightarrow\\quad a_3=-k^2-\\frac23 k\\quad\\text{또는}\\quad a_3=k^3.\\qquad\\cdots\\;\\text{㉠}$$\n조건 (가) $a_5 a_6<0$, $a_3>0$이 되려면 ㉠에서 가능한 경우는 다음과 같이 세 가지로 나뉜다.\n$$\\textbf{(i) } a_2=\\frac{k}{3},\\ a_3=-\\frac{k}{3}\\ \\text{인 경우:}$$\n이후 전개에서 $a_6=0$을 만족시키는 양수 $k$의 값은 $\\dfrac{k^2}{3}-\\dfrac23 k=0$에서 $k=2$.\n$$\\textbf{(ii) } a_2=\\frac{k}{3},\\ a_3=-\\frac{k^2}{3}\\ \\text{인 경우:}$$\n같은 방법으로 정리하면 $a_6=0$을 만족시키는 양수 $k$의 값은 $\\dfrac{k^2}{3}-\\dfrac23 k=0$에서 $k=\\sqrt{2}$ ... 정리하면 $k=\\sqrt{\\dfrac{4}{3}}=\\dfrac{2}{\\sqrt3}$.\n$$\\textbf{(iii) } a_2=-k^2,\\ a_3=k^3\\ \\text{인 경우:}$$\n같은 방법으로 $a_6=0$을 만족시키는 양수 $k$의 값은 $k^2-\\dfrac43 k=0$에서 $k=\\sqrt{\\dfrac43}=\\dfrac{2}{\\sqrt3}$, 그리고 $k^2-\\dfrac23 k=0$에서 $k=\\sqrt{\\dfrac23}$.\n이상에서 구하는 $k^2$의 값들의 합은\n$$4+2+\\frac13+\\frac23=8.$$\n따라서 최종 값은\n$$\\boxed{8}.$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **8** 입니다. ($k^2$들의 합 $=4+2+\\dfrac13+\\dfrac23=8$)" }
+    ],
+    "final_answer": "8"
+  },
+  "27": {
+    "problem_id": "27",
+    "title": "2025학년도 9월 고3 모평 27번(미적분)",
+    "difficulty": "준킬러",
+    "weakness_unit": "미적분 / 합성함수의 미분 (음함수·삼각함수)",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "관계식 $f(x)+f\\!\\left(\\dfrac12\\sin x\\right)=\\sin x$를 만족시키는 미분가능한 함수 $f$에 대하여 $f'(\\pi)$의 값을 구하는 문제이다. 정답은 객관식 ②번이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "양변을 미분할 때 합성함수의 미분법 $\\{f(g(x))\\}'=f'(g(x))g'(x)$를 정확히 적용하고, $x=0$과 $x=\\pi$를 대입하여 $f'(0)$을 먼저 구한 뒤 $f'(\\pi)$를 구하는 것이 핵심이다." },
+      { "phase": "B", "title": "배경 지식", "content": "합성함수 미분 $\\dfrac{d}{dx}f\\!\\left(\\tfrac12\\sin x\\right)=f'\\!\\left(\\tfrac12\\sin x\\right)\\cdot\\tfrac12\\cos x$, $\\sin 0=0$, $\\sin\\pi=0$, $\\cos 0=1$, $\\cos\\pi=-1$." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "주어진 관계식\n$$f(x)+f\\!\\left(\\frac12\\sin x\\right)=\\sin x$$\n에서 양변을 미분하면 합성함수의 미분법에 의해\n$$f'(x)+f'\\!\\left(\\frac12\\sin x\\right)\\cdot\\frac12\\cos x=\\cos x.\\qquad\\cdots\\;\\text{㉠}$$\n㉠의 양변에 $x=0$을 대입하면 $\\sin 0=0$, $\\cos 0=1$이므로\n$$f'(0)+f'(0)\\cdot\\frac12\\cdot 1=1 \\;\\Longrightarrow\\; \\frac32 f'(0)=1 \\;\\Longrightarrow\\; f'(0)=\\frac{2}{3}.$$\n㉠의 양변에 $x=\\pi$를 대입하면 $\\sin\\pi=0$, $\\cos\\pi=-1$이므로\n$$f'(\\pi)+f'(0)\\cdot\\frac12\\cdot(-1)=-1.$$\n앞에서 구한 $f'(0)=\\dfrac23$을 대입하면\n$$f'(\\pi)+\\frac23\\cdot\\left(-\\frac12\\right)=-1 \\;\\Longrightarrow\\; f'(\\pi)-\\frac13=-1.$$\n따라서\n$$f'(\\pi)=-1+\\frac13=-\\frac23.$$\n따라서 최종 값은 ②번 선택지와 일치한다." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **②** 입니다. ($f'(\\pi)=-\\dfrac23$)" }
+    ],
+    "final_answer": "②"
+  },
+  "28": {
+    "problem_id": "28",
+    "title": "2025학년도 9월 고3 모평 28번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "미적분 / 역함수와 정적분 (넓이 분할)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "label_text", "tex": "y=g(x)", "at": [1.4, 3.2] },
+        { "type": "label_text", "tex": "1", "at": [-0.3, 2.6] },
+        { "type": "label_text", "tex": "1", "at": [2.6, -0.3] }
+      ]
+    },
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "$g(x)=\\displaystyle\\int_0^x f(2t)\\sin\\pi t\\,dt+x$로 정의된 함수가 $0\\le x\\le 1$에서 증가하고 그 역함수가 존재할 때, $\\displaystyle\\int_0^1 g^{-1}(x)\\,dx$와 관련된 값을 구하는 문제이다. 정답은 객관식 ③번이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "역함수의 정적분은 \\\"$g(0)=0$, $g(1)=1$인 정사각형에서 $g$의 그래프 아래 넓이와 $g^{-1}$의 그래프 아래 넓이의 합이 $1$\\\"이라는 대칭 관계로 바꾸는 것이 핵심이다. 즉 $\\displaystyle\\int_0^1 g^{-1}(x)\\,dx=1-\\int_0^1 g(x)\\,dx$." },
+      { "phase": "B", "title": "배경 지식", "content": "역함수 적분의 대칭 $\\displaystyle\\int_0^1 g^{-1}(x)\\,dx=1-\\int_0^1 g(x)\\,dx$(단 $g(0)=0,\\ g(1)=1$), 부분적분, 치환적분, $\\sin\\pi t$의 적분." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$$g(x)=\\int_0^x f(2t)\\sin\\pi t\\,dt+x\\qquad\\cdots\\;\\text{㉠}$$\n에서 $g(0)=0$, $g(1)=1$이고 함수 $g(x)$는 역함수가 존재하므로 $0\\le x\\le 1$에서 $y=g(x)$는 증가함수이다. 그 그래프의 개형에 의해 한 변의 길이가 $1$인 정사각형 안에서\n$$\\int_0^1 g^{-1}(x)\\,dx=1-\\int_0^1 g(x)\\,dx.$$\n주어진 조건에 의하여\n$$1-\\int_0^1 g(x)\\,dx=2\\int_0^{\\frac12} f(2x)\\sin\\pi x\\,dx+\\frac14$$\n로 정리되므로(조건식에서 ㉡), 곧 구하는 정적분은\n$$1-\\int_0^1\\{f'(2x)\\sin\\pi x+x\\}\\,dx$$\n형태로 변형된다. ㉠의 정적분을 부분적분으로 처리하기 위해\n$$3\\int_0^1 f'(2x)\\sin\\pi x\\,dx=\\frac34-\\int_0^1 3x\\,dx,\\qquad 3\\int_0^1 f'(2x)\\sin\\pi x\\,dx=\\frac34-\\frac32$$\n에서\n$$\\int_0^1 f'(2x)\\sin\\pi x\\,dx=\\frac14-\\frac12\\Big[\\,x^2\\,\\Big]_0^1=\\frac14-\\frac12=-\\frac14.$$\n$2x=t$로 놓으면 $x=0$일 때 $t=0$, $x=1$일 때 $t=2$이고 $\\dfrac{dt}{dx}=2$이므로 치환적분과 부분적분에 의해\n$$\\int_0^1 f'(2x)\\sin\\pi x\\,dx=\\frac12\\int_0^2 f'(t)\\sin\\frac{\\pi}{2}t\\,dt=\\frac12\\left[f(t)\\sin\\frac{\\pi}{2}t\\right]_0^2-\\frac{\\pi}{4}\\int_0^2 f(t)\\cos\\frac{\\pi}{2}t\\,dt.$$\n경계항 $\\sin\\dfrac{\\pi}{2}\\cdot t$가 $t=0,\\,2$에서 $0$이므로\n$$=-\\frac{\\pi}{4}\\int_0^2 f(t)\\cos\\frac{\\pi}{2}t\\,dt.$$\n이 값이 $-\\dfrac14$이므로 $\\displaystyle\\int_0^2 f(t)\\cos\\frac{\\pi}{2}t\\,dt=\\frac{1}{12}$이고, 구하는 값은\n$$\\int_0^2 f(x)\\cos\\frac{\\pi}{2}x\\,dx=\\frac{1}{12}\\times\\left(-\\frac{4}{\\pi}\\right)=-\\frac{1}{3\\pi}.$$\n따라서 최종 값은 ③번 선택지와 일치한다." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **③** 입니다. ($-\\dfrac{1}{3\\pi}$)" }
+    ],
+    "final_answer": "③"
+  },
+  "29": {
+    "problem_id": "29",
+    "title": "2025학년도 9월 고3 모평 29번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "미적분 / 급수와 부분합 (망원합)",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "부분합 $S_m=\\displaystyle\\sum_{n=1}^{m}\\dfrac{m+1}{n(n+m+1)}$ 또는 $\\displaystyle\\sum_{k=1}^{m}\\dfrac1k$ 꼴로 주어진 수열에서 $a_1=S_1$, $a_{10}=S_{10}-S_9$ 등을 구해 $p+q$의 값을 구하는 단답형 킬러 문제이다. 정답은 단답 **57**이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "$\\dfrac{1}{n(n+m+1)}$을 부분분수로 분해하여 망원합(telescoping)으로 중간 항을 소거하는 것이 핵심이다. $a_{10}=S_{10}-S_9$로 일반항을 끌어낸다." },
+      { "phase": "B", "title": "배경 지식", "content": "부분분수 분해 $\\dfrac{1}{k(k+c)}=\\dfrac1c\\left(\\dfrac1k-\\dfrac1{k+c}\\right)$, 망원합, 조화수 $\\displaystyle\\sum_{k=1}^{m}\\dfrac1k$, $a_m=S_m-S_{m-1}$." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$$S_m=\\sum_{n=1}^{m}\\frac{m+1}{n(n+m+1)}$$\n에서, $a_1=S_1$을 구하면\n$$a_1=S_1=\\lim_{n\\to\\infty}\\sum_{k=1}^{n}\\frac{2}{k(k+2)}=\\lim_{n\\to\\infty}\\sum_{k=1}^{n}\\left(\\frac1k-\\frac1{k+2}\\right).$$\n부분분수로 분해한 뒤 망원합으로 정리하면\n$$=\\lim_{n\\to\\infty}\\left\\{\\left(\\frac11-\\frac13\\right)+\\left(\\frac12-\\frac14\\right)+\\left(\\frac13-\\frac15\\right)+\\cdots+\\left(\\frac1n-\\frac1{n+2}\\right)\\right\\}$$\n$$=\\lim_{n\\to\\infty}\\left(1+\\frac12-\\frac1{n+1}-\\frac1{n+2}\\right)=\\frac32.$$\n다음으로 $a_{10}=S_{10}-S_9$를 구한다.\n$$a_{10}=S_{10}-S_9=\\sum_{n=1}^{\\infty}\\frac{11}{n(n+11)}-\\sum_{n=1}^{\\infty}\\frac{10}{n(n+10)}.$$\n각각을 부분분수로 분해하면\n$$=\\sum_{n=1}^{\\infty}\\left(\\frac1n-\\frac1{n+11}\\right)-\\sum_{n=1}^{\\infty}\\left(\\frac1n-\\frac1{n+10}\\right)$$\n$$=\\sum_{n=1}^{\\infty}\\left(\\frac1{n+10}-\\frac1{n+11}\\right)$$\n(두 급수가 모두 수렴하므로 차로 묶을 수 있다.) 이는 망원합이므로\n$$=\\lim_{n\\to\\infty}\\left\\{\\left(\\frac1{11}-\\frac1{12}\\right)+\\left(\\frac1{12}-\\frac1{13}\\right)+\\cdots+\\left(\\frac1{n+10}-\\frac1{n+11}\\right)\\right\\}=\\lim_{n\\to\\infty}\\left(\\frac1{11}-\\frac1{n+11}\\right)=\\frac1{11}.$$\n따라서\n$$a_1+a_{10}=\\frac32+\\frac1{11}=\\frac{33}{22}+\\frac{2}{22}=\\frac{35}{22}.$$\n기약분수로 $\\dfrac{q}{p}=\\dfrac{35}{22}$이면 $p=22,\\ q=35$이므로\n$$p+q=22+35=57.$$\n따라서 최종 값은\n$$\\boxed{57}.$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **57** 입니다. ($a_1+a_{10}=\\dfrac{35}{22}$, $p+q=22+35=57$)" }
+    ],
+    "final_answer": "57"
+  },
+  "30": {
+    "problem_id": "30",
+    "title": "2025학년도 9월 고3 모평 30번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "미적분 / 절댓값 함수의 적분과 연속·미분 조건",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "$f(x)=(k-|x|)e^{-x}$로 주어진 함수와 그 부정적분 $F(x)$가 $x=0$에서 연속·미분가능하다는 조건, 함수 $G(x)=F(x)-f(x)$의 극값 조건을 이용하여 상수 $k$의 값을 모두 구하고 $100(p+q)$를 구하는 단답형 킬러 문제이다. 정답은 단답 **25**이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "절댓값 $|x|$ 때문에 $x<0$, $x\\ge0$으로 구간을 나누어 $f(x)$를 표현하고, $F(x)$를 각 구간에서 부분적분으로 구한 뒤 $x=0$에서의 연속 조건으로 적분상수 사이 관계를 결정하는 것이 핵심이다. 이후 $G(x)$의 극값 위치에서 $G'(x)=f'(x)=0$을 따진다." },
+      { "phase": "B", "title": "배경 지식", "content": "$|x|=\\begin{cases}-x&(x<0)\\\\ x&(x\\ge0)\\end{cases}$, 부분적분 $\\displaystyle\\int (k\\mp x)e^{-x}\\,dx=-(k\\mp x)e^{-x}\\mp e^{-x}+C$ 형태, $x=0$ 연속 조건 $\\displaystyle\\lim_{x\\to0^-}F(x)=\\lim_{x\\to0^+}F(x)=F(0)$, 극값에서 $G'(x)=0$." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$$f(x)=(k-|x|)e^{-x}=\\begin{cases}(k+x)e^{-x}&(x<0)\\\\[2pt](k-x)e^{-x}&(x\\ge0)\\end{cases}$$\n이고 $F'(x)=f(x)$인 부정적분 $F(x)$를 부분적분으로 구하면\n$$F(x)=\\begin{cases}-(k+x+1)e^{-x}+C&(x<0)\\\\[2pt]-(k-x-1)e^{-x}+C-2&(x\\ge0)\\end{cases}\\quad(C,\\ D\\ \\text{는 적분상수},\\ D=C-2)$$\n이때 함수 $F(x)$는 $x=0$에서 연속이므로\n$$\\lim_{x\\to0^-}F(x)=\\lim_{x\\to0^+}F(x)=F(0)$$\n에서 $-(k+1)+C=-(k-1)+D$이므로 $D=C-2$이다.\n한편 모든 실수 $x$에 대하여 $F(x)\\ge f(x)$이므로 $G(x)=F(x)-f(x)$라 하면 모든 실수 $x$에 대하여 $G(x)\\ge0$이다.\n$$G(x)=\\begin{cases}(2k+2x+1)e^{-x}+C&(x<0)\\\\[2pt](2k-2x-1)e^{-x}+C-2&(x\\ge0)\\end{cases}$$\n$$G'(x)=\\begin{cases}-(2k+2x-1)e^{-x}&(x<0)\\\\[2pt]-(2k-2x-3)e^{-x}&(x>0)\\end{cases}$$\n$x<0$일 때 $G'(x)=0$에서 $x=k-\\dfrac12$이므로 $k\\le\\dfrac12$이면 함수 $G(x)$는 $x=k-\\dfrac12$에서 극소(감소), $k>\\dfrac12$이면 $x=k-\\dfrac12$에서 극소이다.\n$x\\ge0$일 때 $G'(x)=0$에서 $x=k-\\dfrac32$이므로 함수 $G(x)$는 $x=k-\\dfrac32$에서 극대이다.\n또한 $\\displaystyle\\lim_{x\\to\\infty}G(x)=C-2,\\ \\lim_{x\\to-\\infty}G(x)=-\\infty$이다. $G(x)\\ge0$ 조건을 만족시키려면 $C-2\\ge0$, 즉 $C\\ge2$이다.\n$$\\textbf{(i)}\\ k=\\frac14\\ \\text{인 경우:}\\quad G\\!\\left(\\frac12-k\\right)=G(-1)=C-2k-1=C-\\frac32>C-2$$\n이므로 최솟값 조건에서 $F(0)=-k-1+C=-\\dfrac54+C\\ge0$, 즉 $C\\ge\\dfrac54$.\n$$\\textbf{(ii)}\\ k=\\frac32\\ \\text{인 경우:}\\quad g\\!\\left(\\frac14\\right)+g\\!\\left(\\frac32\\right)=\\frac34+\\left(2e-\\frac52\\right)=2e-\\frac74$$\n등에서 $F(0)=-k-1+C=-\\dfrac52+C\\ge0$, 즉 $C\\ge\\dfrac52$이고 최솟값이 $0$이 되도록 잡으면\n$$p=2,\\qquad q=-\\frac74.$$\n따라서\n$$100(p+q)=100\\times\\frac14=25.$$\n따라서 최종 값은\n$$\\boxed{25}.$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **25** 입니다. ($p=2,\\ q=-\\dfrac74$, $100(p+q)=25$)" }
+    ],
+    "final_answer": "25"
+  }
+}

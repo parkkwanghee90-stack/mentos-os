@@ -30,8 +30,10 @@ import { HG2_2024_03 } from '@/data/mockExams/HG2_2024_03';
 import { HG2_2023_09 } from '@/data/mockExams/HG2_2023_09';
 import { HG2_2023_06 } from '@/data/mockExams/HG2_2023_06';
 import { HG2_2023_03 } from '@/data/mockExams/HG2_2023_03';
+import { CSAT_2025_09 } from '@/data/mockExams/CSAT_2025_09';
 
 const EXAMS = {
+  'csat-2025-09': CSAT_2025_09,
   'hg1-2025-10': HG1_2025_10, 'hg1-2025-09': HG1_2025_09, 'hg1-2025-06': HG1_2025_06, 'hg1-2025-03': HG1_2025_03,
   'hg1-2024-10': HG1_2024_10, 'hg1-2024-09': HG1_2024_09, 'hg1-2024-06': HG1_2024_06, 'hg1-2024-03': HG1_2024_03,
   'hg1-2023-12': HG1_2023_12, 'hg1-2023-09': HG1_2023_09, 'hg1-2023-06': HG1_2023_06, 'hg1-2023-03': HG1_2023_03,
@@ -53,7 +55,8 @@ export default function MockExamOMR() {
   const [showSheet, setShowSheet] = useState(false);
 
   const pages = useMemo(() => Array.from({ length: exam.pageCount }, (_, i) => `${exam.pageBase}p${i + 1}.jpg`), [exam]);
-  const hintNums = useMemo(() => exam.questions.filter(q => getMockHint(examId, q.num)).map(q => q.num), [exam, examId]);
+  const hintKey = exam.hintKey || examId;
+  const hintNums = useMemo(() => exam.questions.filter(q => getMockHint(hintKey, q.num)).map(q => q.num), [exam, hintKey]);
 
   const setAns = (num, val) => { if (!result) setAnswers(a => ({ ...a, [num]: val })); };
   const answered = exam.questions.filter(q => answers[q.num] !== '' && answers[q.num] != null).length;
@@ -202,7 +205,7 @@ export default function MockExamOMR() {
       {review && (() => {
         const num = review.list[review.idx];
         const q = exam.questions.find(x => x.num === num);
-        const hint = getMockHint(examId, num);
+        const hint = getMockHint(hintKey, num);
         return (
           <div style={{ position: 'fixed', inset: 0, background: C.bg, zIndex: 1000, display: 'flex', flexDirection: 'column' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 16px', borderBottom: C.line }}>
