@@ -1,7 +1,9 @@
 // 고1·고2 모의고사 OMR 채점 화면 — 문제지 페이지 이미지 + 30답 입력 → 정답키 채점 + 취약유형 분석.
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, CheckCircle, XCircle, AlertTriangle } from 'lucide-react';
+import { ArrowLeft, CheckCircle, XCircle, AlertTriangle, Sparkles, X } from 'lucide-react';
+import HintPlayerRouter from '@/components/hints/HintPlayerRouter';
+import { getMockHint } from '@/data/mockHints';
 import { HG1_2025_10 } from '@/data/mockExams/HG1_2025_10';
 import { HG1_2025_09 } from '@/data/mockExams/HG1_2025_09';
 import { HG1_2025_06 } from '@/data/mockExams/HG1_2025_06';
@@ -31,6 +33,8 @@ export default function MockExamOMR() {
   const exam = EXAMS[examId] || HG1_2025_10;
   const [answers, setAnswers] = useState({});
   const [result, setResult] = useState(null);
+  const [hint, setHint] = useState(null); // { num, data }
+  const openHint = (num) => { const d = getMockHint(examId, num); if (d) setHint({ num, data: d }); };
 
   const setAns = (num, val) => setAnswers(a => ({ ...a, [num]: val }));
 
@@ -72,7 +76,7 @@ export default function MockExamOMR() {
                   <b style={{ color: C.bad }}>{nums.join(', ')}번</b> · {type} <span style={{ color: C.sub }}>({nums.length}문제)</span>
                 </div>
               ))}
-              <p style={{ color: C.sub, fontSize: 12.5, marginTop: 8 }}>위 유형을 집중 보강하면 가장 효과가 큽니다. (AVS 해설 연결 예정)</p>
+              <p style={{ color: C.sub, fontSize: 12.5, marginTop: 8 }}>위 유형을 집중 보강하면 가장 효과가 큽니다. 아래 답안의 <b style={{ color: C.gold }}>✨AVS 해설</b> 버튼으로 킬러문항 단계별 풀이를 확인하세요.</p>
             </div>
           ) : <div style={{ marginTop: 10, color: C.good, fontWeight: 700 }}>🎉 전부 정답! 완벽합니다.</div>}
           <button onClick={() => { setResult(null); setAnswers({}); window.scrollTo({ top: 0 }); }} style={{ marginTop: 14, background: C.accent, color: '#fff', border: 'none', borderRadius: 10, padding: '9px 18px', fontWeight: 700, cursor: 'pointer' }}>다시 풀기</button>
@@ -112,10 +116,32 @@ export default function MockExamOMR() {
                 <input value={answers[q.num] ?? ''} onChange={e => setAns(q.num, e.target.value)} disabled={showMark} inputMode="numeric" placeholder="정답 입력"
                   style={{ width: '100%', boxSizing: 'border-box', padding: '6px 8px', borderRadius: 7, border: '1px solid rgba(255,255,255,0.15)', background: 'rgba(0,0,0,0.25)', color: '#fff', fontSize: 14 }} />
               )}
+              {showMark && getMockHint(examId, q.num) && (
+                <button onClick={() => openHint(q.num)}
+                  style={{ marginTop: 7, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 5, padding: '6px 0', borderRadius: 7, cursor: 'pointer',
+                    border: '1px solid rgba(251,191,36,0.45)', background: wrong ? 'rgba(251,191,36,0.16)' : 'rgba(255,255,255,0.05)', color: C.gold, fontWeight: 700, fontSize: 12 }}>
+                  <Sparkles size={13} /> AVS 해설
+                </button>
+              )}
             </div>
           );
         })}
       </div>
+
+      {/* AVS 해설 모달 (고3 모의고사와 동일한 HintPlayerRouter) */}
+      {hint && (
+        <div onClick={() => setHint(null)} style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.78)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 12 }}>
+          <div onClick={e => e.stopPropagation()} style={{ width: '100%', maxWidth: 880, maxHeight: '92vh', overflow: 'auto', background: C.bg, border: '1px solid rgba(255,255,255,0.12)', borderRadius: 16, position: 'relative' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 16px', borderBottom: C.line, position: 'sticky', top: 0, background: C.bg, zIndex: 2 }}>
+              <div style={{ fontWeight: 800, color: C.gold, display: 'flex', alignItems: 'center', gap: 6 }}><Sparkles size={16} /> {hint.num}번 AVS 해설</div>
+              <button onClick={() => setHint(null)} style={{ background: 'none', border: 'none', color: C.sub, cursor: 'pointer' }}><X size={22} /></button>
+            </div>
+            <div style={{ padding: 12 }}>
+              <HintPlayerRouter data={hint.data} showQA={false} geminiTts={false} />
+            </div>
+          </div>
+        </div>
+      )}
 
       {!result && (
         <button onClick={grade} style={{ marginTop: 22, width: '100%', maxWidth: 820, background: 'linear-gradient(135deg,#3b82f6,#8b5cf6)', color: '#fff', border: 'none', borderRadius: 12, padding: '14px', fontWeight: 800, fontSize: 16, cursor: 'pointer' }}>

@@ -22,7 +22,7 @@ export const HG1_2023_09 = {
   { num: 16, obj: true, answer: 3, type: '대칭이동을 활용하여 문제해결하기' },
   { num: 17, obj: true, answer: 1, type: '직선의 방정식을 활용하여 문제해결하기' },
   { num: 18, obj: true, answer: 1, type: '삼차방정식을 활용하여 문제해결하기' },
-  { num: 19, obj: true, answer: 5, type: '원과 직선의 위치 관계를 활용하여 문제해결하기' },
+  { num: 19, obj: true, answer: 3, type: '원과 직선의 위치 관계를 활용하여 문제해결하기' },
   { num: 20, obj: true, answer: 5, type: '원의 방정식을 활용하여 추론하기' },
   { num: 21, obj: true, answer: 4, type: '이차방정식과 이차함수의 관계를 활용하여 추론하기' },
   { num: 22, obj: false, answer: 3, type: '나머지정리 이해하기' },

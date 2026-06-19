@@ -1,0 +1,410 @@
+{
+  "14": {
+    "problem_id": "14",
+    "title": "2023학년도 6월 고1 학평 14번",
+    "difficulty": "준킬러",
+    "weakness_unit": "다항식의 연산 - 분수식·비례관계 실생활 활용",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "이상 기체에 대하여 부피 $V$, 몰수 $n$, 절대 온도 $T$, 압력 $P$ 사이에 $$V=R\\left(\\dfrac{nT}{P}\\right)\\ (R\\text{는 기체 상수})$$ 가 성립한다. 강철 용기 $A$, $B$에 담긴 이상 기체의 부피를 각각 $V_A$, $V_B$라 하자. 주어진 조건은 다음과 같다.\\n\\n· 용기 $A$의 몰수는 용기 $B$ 몰수의 $\\dfrac{1}{4}$ 배: $n_A=\\dfrac{1}{4}n_B$\\n· 용기 $A$의 압력은 용기 $B$ 압력의 $\\dfrac{3}{2}$ 배: $P_A=\\dfrac{3}{2}P_B$\\n· 두 기체의 절대 온도는 같다: $T_A=T_B$\\n\\n이때 $\\dfrac{V_A}{V_B}$의 값을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "관계식 $V=R\\dfrac{nT}{P}$ 를 두 용기 $A$, $B$에 각각 적용한 뒤, 주어진 비례 관계 $n_A=\\dfrac{1}{4}n_B$, $P_A=\\dfrac{3}{2}P_B$ 를 그대로 대입하면 된다. 온도가 같으므로 $T$는 약분되어 사라진다. 결국 $\\dfrac{V_A}{V_B}$는 몰수의 비와 압력의 비만으로 결정된다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "분수식의 계산: 분모에 분수가 들어 있는 번분수 $$\\dfrac{\\frac{1}{4}nT}{\\frac{3}{2}P}=\\dfrac{1}{4}\\div\\dfrac{3}{2}\\times\\dfrac{nT}{P}=\\dfrac{1}{4}\\times\\dfrac{2}{3}\\times\\dfrac{nT}{P}=\\dfrac{1}{6}\\cdot\\dfrac{nT}{P}$$ 와 같이 정리한다. 즉 분모·분자의 상수 인자를 따로 묶어 계산하는 것이 핵심이다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "주어진 조건 $n_A=\\dfrac{1}{4}n_B$, $P_A=\\dfrac{3}{2}P_B$ 이므로 용기 $A$의 부피는 $$V_A=R\\left(\\dfrac{n_A T}{P_A}\\right)=R\\left(\\dfrac{\\dfrac{1}{4}n_B T}{\\dfrac{3}{2}P_B}\\right)$$ 이다. 분수 부분의 상수를 정리하면 $$\\dfrac{\\dfrac{1}{4}n_B T}{\\dfrac{3}{2}P_B}=\\dfrac{1}{4}\\times\\dfrac{2}{3}\\times\\dfrac{n_B T}{P_B}=\\dfrac{1}{6}\\cdot\\dfrac{n_B T}{P_B}$$ 이므로 $$V_A=\\dfrac{1}{6}\\,R\\left(\\dfrac{n_B T}{P_B}\\right)=\\dfrac{1}{6}V_B$$ 가 된다. 여기서 $V_B=R\\left(\\dfrac{n_B T}{P_B}\\right)$ 임을 이용하였다.\\n\\n따라서 $$\\dfrac{V_A}{V_B}=\\dfrac{1}{6}$$ 이다."
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **①** 입니다. $\\left(\\dfrac{V_A}{V_B}=\\dfrac{1}{6}\\right)$"
+      }
+    ],
+    "final_answer": "①"
+  },
+  "15": {
+    "problem_id": "15",
+    "title": "2023학년도 6월 고1 학평 15번",
+    "difficulty": "준킬러",
+    "weakness_unit": "이차함수의 최대·최소 (넓이의 최솟값)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "function_plot", "expr": "2*x^2+1" },
+        { "type": "function_plot", "expr": "-(x-3)^2+1" },
+        { "type": "point", "coordinates": [1, 3], "label": "P" },
+        { "type": "point", "coordinates": [1, -3], "label": "Q" },
+        { "type": "point", "coordinates": [0, 1], "label": "A" },
+        { "type": "point", "coordinates": [3, 1], "label": "B" },
+        { "type": "polygon", "points": [[1, 3], [0, 1], [1, -3], [3, 1]], "fillOpacity": 0.08 },
+        { "type": "segment", "from": [1, 3], "to": [1, -3], "label": "PQ" },
+        { "type": "segment", "from": [0, 1], "to": [3, 1], "label": "AB=3" },
+        { "type": "label_text", "tex": "x=t", "at": [1, -3.8] }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "직선 $x=t\\ (0<t<3)$ 가 두 이차함수 $y=2x^2+1$, $y=-(x-3)^2+1$ 의 그래프와 만나는 점을 각각 $\\mathrm{P}$, $\\mathrm{Q}$ 라 한다. 두 점 $\\mathrm{A}(0,\\,1)$, $\\mathrm{B}(3,\\,1)$ 에 대하여 사각형 $\\mathrm{PAQB}$의 넓이의 최솟값을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$\\mathrm{P}$, $\\mathrm{Q}$ 는 직선 $x=t$ 위의 점이므로 같은 $x$좌표 $t$ 를 가진다. 따라서 선분 $\\mathrm{PQ}$ 는 세로(연직) 선분이고, $\\mathrm{A}(0,1)$, $\\mathrm{B}(3,1)$ 은 $y=1$ 위의 점이므로 선분 $\\mathrm{AB}$ 는 가로(수평) 선분이다. 즉 $\\overline{\\mathrm{AB}}\\perp\\overline{\\mathrm{PQ}}$ 이고, 사각형 $\\mathrm{PAQB}$ 는 두 대각선이 $\\mathrm{AB}$, $\\mathrm{PQ}$ 인 사각형이므로 넓이는 $\\dfrac{1}{2}\\times\\overline{\\mathrm{AB}}\\times\\overline{\\mathrm{PQ}}$ 이다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "두 대각선이 서로 수직인 사각형의 넓이는 $\\dfrac{1}{2}\\times(\\text{대각선}_1)\\times(\\text{대각선}_2)$ 이다. 또한 이차식 $S(t)=a(t-p)^2+q\\ (a>0)$ 의 최솟값은 꼭짓점 $t=p$ 에서 $q$ 이다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "두 점 $\\mathrm{P}$, $\\mathrm{Q}$ 는 각각 $$\\mathrm{P}(t,\\,2t^2+1),\\qquad \\mathrm{Q}(t,\\,-(t-3)^2+1)$$ 이므로 선분 $\\mathrm{PQ}$의 길이는 $$\\overline{\\mathrm{PQ}}=(2t^2+1)-\\{-(t-3)^2+1\\}=2t^2+(t-3)^2=3t^2-6t+9$$ 이다. 또 $\\mathrm{A}(0,1)$, $\\mathrm{B}(3,1)$ 이므로 $$\\overline{\\mathrm{AB}}=3$$ 이고, $\\overline{\\mathrm{AB}}\\perp\\overline{\\mathrm{PQ}}$ 이므로 사각형 $\\mathrm{PAQB}$의 넓이는 $$\\dfrac{1}{2}\\times\\overline{\\mathrm{AB}}\\times\\overline{\\mathrm{PQ}}=\\dfrac{1}{2}\\times 3\\times(3t^2-6t+9)=\\dfrac{3}{2}(3t^2-6t+9)$$ 이다.\\n\\n사각형 $\\mathrm{PAQB}$의 넓이를 $S(t)$ 라 하면 $0<t<3$ 에서 $$S(t)=\\dfrac{3}{2}(3t^2-6t+9)=\\dfrac{9}{2}(t-1)^2+9$$ 이다. 따라서 $S(t)$ 는 $t=1$ 일 때 최솟값 $9$ 를 갖는다.\\n\\n그러므로 사각형 $\\mathrm{PAQB}$의 넓이의 최솟값은 $9$ 이다."
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **②** 입니다. (넓이의 최솟값 $9$)"
+      }
+    ],
+    "final_answer": "②"
+  },
+  "18": {
+    "problem_id": "18",
+    "title": "2023학년도 6월 고1 학평 18번",
+    "difficulty": "킬러",
+    "weakness_unit": "사차방정식 - 치환과 정수해 조건",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "자연수 $n$ 에 대하여 $x$ 에 대한 사차방정식 $$4x^4-4(n+2)x^2+(n-2)^2=0$$ 이 서로 다른 네 개의 정수해를 갖도록 하는 $20$ 이하의 모든 $n$ 의 값을 구하는 과정에서, 빈칸 (가), (나), (다) 를 채운다. $\\text{(가)}$ 에 알맞은 식을 $f(n)$, $\\text{(나)}$, $\\text{(다)}$ 에 알맞은 수를 각각 $a$, $b\\ (a<b)$ 라 할 때 $f(b-a)$ 의 값을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$x^2=X$ 로 치환하면 $X$ 에 대한 이차방정식이 된다. 근의 공식으로 $X$ 를 구한 뒤 다시 $x^2=X$ 를 풀어 $x$ 의 값을 얻는다. 정수해가 되려면 근호 안 $\\dfrac{n}{2}$ 가 완전제곱(즉 $\\sqrt{\\dfrac{n}{2}}$ 가 자연수)이어야 한다. 또 \\\"서로 다른 네 개\\\"라는 조건 때문에 해가 중복되는 경우를 제외해야 한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "근의 공식 $aX^2+bX+c=0\\Rightarrow X=\\dfrac{-b\\pm\\sqrt{b^2-4ac}}{2a}$. 그리고 $x^2=k^2\\ (k>0)$ 이면 $x=k$ 또는 $x=-k$ 의 두 해를 갖지만, $x^2=0$ 이면 $x=0$ 의 한 해만을 갖는다(중근). 이 차이가 정수해 개수를 판정하는 데 결정적이다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$x^2=X$ 라 하면 주어진 방정식은 $$4X^2-4(n+2)X+(n-2)^2=0$$ 이고, 근의 공식에 의해 $$X=\\dfrac{4(n+2)\\pm\\sqrt{16(n+2)^2-16(n-2)^2}}{8}=\\dfrac{n+2\\pm\\sqrt{8n}}{2}$$ 이다. 즉 $\\text{(가)}=f(n)=8n$ 이다.\\n\\n여기서 $\\sqrt{8n}=2\\sqrt{2n}$ 인데 $\\dfrac{n+2\\pm\\sqrt{8n}}{2}$ 를 완전제곱 꼴로 정리하면 $$X=\\left(\\sqrt{\\tfrac{n}{2}}+1\\right)^2 \\ \\text{ 또는 }\\ X=\\left(\\sqrt{\\tfrac{n}{2}}-1\\right)^2$$ 이다. 즉 $$x^2=\\left(\\sqrt{\\tfrac{n}{2}}+1\\right)^2\\ \\text{ 또는 }\\ x^2=\\left(\\sqrt{\\tfrac{n}{2}}-1\\right)^2$$ 에서 $$x=\\sqrt{\\tfrac{n}{2}}+1\\ \\text{ 또는 }\\ x=-\\sqrt{\\tfrac{n}{2}}-1\\ \\text{ 또는 }\\ x=\\sqrt{\\tfrac{n}{2}}-1\\ \\text{ 또는 }\\ x=-\\sqrt{\\tfrac{n}{2}}+1$$ 이다.\\n\\n방정식이 정수해를 갖기 위해서는 $\\sqrt{\\dfrac{n}{2}}$ 가 자연수가 되어야 한다. 즉 자연수 $l$ 에 대하여 $n=2l^2$ 이어야 하므로 $20$ 이하의 자연수 $n$ 의 값은 $2,\\ 8,\\ 18$ 이다.\\n\\n$\\text{(i) }n=2$ 인 경우: $\\sqrt{\\tfrac{n}{2}}=1$ 이므로 $x=-2$ 또는 $x=0$ 또는 $x=2$ 이다. 즉 서로 다른 정수해를 $3$ 개 가진다(해가 $4$ 개가 아님).\\n$\\text{(ii) }n=8$ 인 경우: $\\sqrt{\\tfrac{n}{2}}=2$ 이므로 $x=-3$ 또는 $x=-1$ 또는 $x=1$ 또는 $x=3$ 이다. 서로 다른 네 개의 정수해를 가진다.\\n$\\text{(iii) }n=18$ 인 경우: $\\sqrt{\\tfrac{n}{2}}=3$ 이므로 $x=-4$ 또는 $x=-2$ 또는 $x=2$ 또는 $x=4$ 이다. 서로 다른 네 개의 정수해를 가진다.\\n\\n$\\text{(i)}$, $\\text{(ii)}$, $\\text{(iii)}$ 에 의해 서로 다른 네 개의 정수해를 갖도록 하는 모든 $n$ 의 값은 $8$, $18$ 이다. 따라서 $a=8$, $b=18$ 이므로 $$f(b-a)=f(18-8)=f(10)=8\\times 10=80$$ 이다."
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **⑤** 입니다. $(f(b-a)=80)$"
+      }
+    ],
+    "final_answer": "⑤"
+  },
+  "19": {
+    "problem_id": "19",
+    "title": "2023학년도 6월 고1 학평 19번",
+    "difficulty": "킬러",
+    "weakness_unit": "다항식의 연산 (도형 + 무리수 대입·나눗셈)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "point", "coordinates": [0, 0], "label": "A" },
+        { "type": "point", "coordinates": [2.667, 0], "label": "B" },
+        { "type": "point", "coordinates": [2.216, 0], "label": "H" },
+        { "type": "point", "coordinates": [2.216, 1], "label": "C" },
+        { "type": "polygon", "points": [[0, 0], [2.667, 0], [2.216, 1]], "fillOpacity": 0.06 },
+        { "type": "segment", "from": [2.216, 1], "to": [2.216, 0], "label": "CH=1" },
+        { "type": "segment", "from": [0, 0], "to": [2.667, 0], "label": "AB" }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "선분 $\\mathrm{AB}$ 를 빗변으로 하는 직각삼각형 $\\mathrm{ABC}$(직각은 $\\angle\\mathrm{C}$)가 있다. 점 $\\mathrm{C}$ 에서 선분 $\\mathrm{AB}$ 에 내린 수선의 발을 $\\mathrm{H}$ 라 할 때 $\\overline{\\mathrm{CH}}=1$ 이고 삼각형 $\\mathrm{ABC}$ 의 넓이는 $\\dfrac{4}{3}$ 이다. $\\overline{\\mathrm{BH}}=x$ 라 할 때 ($x<1$), $3x^3-5x^2+4x+7$ 의 값을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "넓이로부터 $\\overline{\\mathrm{AB}}$ 의 길이를 구하고, 직각삼각형에서 빗변에 내린 수선의 성질(닮음)을 이용해 $\\overline{\\mathrm{CH}}^2=\\overline{\\mathrm{AH}}\\times\\overline{\\mathrm{BH}}$ 로 $x$ 의 이차방정식을 세운다. $x$ 의 값이 무리수이므로 그 값을 바로 세제곱식에 대입하지 말고, $3x^3-5x^2+4x+7$ 을 $x$ 가 만족하는 이차식 $3x^2-8x+3$ 으로 나누어 나머지로 정리하면 계산이 간단해진다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "직각삼각형 $\\mathrm{ABC}$($\\angle\\mathrm{C}=90^\\circ$)에서 빗변 $\\mathrm{AB}$ 위로 내린 수선의 발 $\\mathrm{H}$ 에 대하여 두 직각삼각형 $\\mathrm{AHC}$ 와 $\\mathrm{CHB}$ 는 닮음이다. 따라서 $\\overline{\\mathrm{AH}}:\\overline{\\mathrm{CH}}=\\overline{\\mathrm{CH}}:\\overline{\\mathrm{BH}}$, 즉 $\\overline{\\mathrm{CH}}^2=\\overline{\\mathrm{AH}}\\cdot\\overline{\\mathrm{BH}}$ 이다. 또 다항식 $A$ 를 $B$ 로 나눈 몫이 $Q$, 나머지가 $R$ 이면 $A=BQ+R$ 이다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$\\overline{\\mathrm{CH}}=1$, $\\overline{\\mathrm{BH}}=x$ 이고 삼각형 $\\mathrm{ABC}$ 의 넓이가 $\\dfrac{4}{3}$ 이므로 $$\\dfrac{1}{2}\\times\\overline{\\mathrm{AB}}\\times\\overline{\\mathrm{CH}}=\\dfrac{4}{3}\\ \\Rightarrow\\ \\overline{\\mathrm{AB}}=\\dfrac{8}{3}$$ 이다. 직각삼각형 $\\mathrm{AHC}$ 와 직각삼각형 $\\mathrm{CHB}$ 는 닮음이므로 $$\\overline{\\mathrm{AH}}:\\overline{\\mathrm{CH}}=\\overline{\\mathrm{CH}}:\\overline{\\mathrm{BH}}$$ 이다. 여기서 $\\overline{\\mathrm{AH}}=\\overline{\\mathrm{AB}}-\\overline{\\mathrm{BH}}=\\dfrac{8}{3}-x$ 이므로 $$\\left(\\dfrac{8}{3}-x\\right):1=1:x$$ 에서 $$x\\left(\\dfrac{8}{3}-x\\right)=1\\ \\Rightarrow\\ 3x^2-8x+3=0$$ 이다. $0<x<1$ 이므로 $$x=\\dfrac{4-\\sqrt{7}}{3}$$ 이다.\\n\\n한편 다항식 $3x^3-5x^2+4x+7$ 을 $3x^2-8x+3$ 으로 나누면 몫은 $x+1$, 나머지는 $9x+4$ 이므로 $$3x^3-5x^2+4x+7=(3x^2-8x+3)(x+1)+9x+4$$ 이다. 그런데 $x$ 는 $3x^2-8x+3=0$ 을 만족하므로 $$3x^3-5x^2+4x+7=0\\cdot(x+1)+9x+4=9x+4$$ 이다. 따라서 $$9x+4=9\\times\\dfrac{4-\\sqrt{7}}{3}+4=3(4-\\sqrt{7})+4=16-3\\sqrt{7}$$ 이다."
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **④** 입니다. $(3x^3-5x^2+4x+7=16-3\\sqrt{7})$"
+      }
+    ],
+    "final_answer": "④"
+  },
+  "20": {
+    "problem_id": "20",
+    "title": "2023학년도 6월 고1 학평 20번",
+    "difficulty": "킬러",
+    "weakness_unit": "이차함수의 최대·최소 추론 (구간 나누기)",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "실수 $a$ 에 대하여 이차함수 $f(x)=(x-a)^2$ 이 다음 조건을 만족시킨다.\\n· $\\text{(가)}$ $2\\le x\\le 10$ 에서 $f(x)$ 의 최솟값은 $0$ 이다.\\n· $\\text{(나)}$ $2\\le x\\le 6$ 에서 $f(x)$ 의 최댓값과 $6\\le x\\le 10$ 에서 $f(x)$ 의 최솟값은 같다.\\n$f(-1)$ 의 최댓값을 $M$, 최솟값을 $m$ 이라 할 때 $M+m$ 의 값을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$f(x)=(x-a)^2$ 의 그래프는 꼭짓점이 $(a,\\,0)$ 인 아래로 볼록한 포물선이다. 조건 $\\text{(가)}$ 에서 구간 $[2,10]$ 에서 최솟값이 $0$ 이려면 꼭짓점 $x=a$ 가 이 구간 안에 있어야 하므로 $2\\le a\\le 10$ 이다. 이제 $a$ 의 위치에 따라 $[2,6]$ 의 최댓값과 $[6,10]$ 의 최솟값을 경우로 나누어 조건 $\\text{(나)}$ 를 따진다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "아래로 볼록한 이차함수의 폐구간에서의 최댓값은 꼭짓점에서 더 멀리 떨어진 끝점에서, 최솟값은 꼭짓점(구간 안일 때) 또는 꼭짓점에 더 가까운 끝점(구간 밖일 때)에서 나타난다. $(2-a)^2-(6-a)^2=(2-a+6-a)(2-a-6+a)=(8-2a)(-4)$ 와 같이 인수분해로 부호를 비교할 수 있다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$f(x)=(x-a)^2$ 의 꼭짓점은 $(a,\\,0)$ 이고, 조건 $\\text{(가)}$ 에 의해 $2\\le a\\le 10$ 이다.\\n\\n$\\textbf{(i) }a=2$ 인 경우: $2\\le x\\le 6$ 에서 최댓값과 $6\\le x\\le 10$ 에서 최솟값은 모두 $f(6)$ 으로 같으므로 조건 $\\text{(나)}$ 를 만족시킨다. 이때 $$f(-1)=(-1-2)^2=9$$ 이다.\\n\\n$\\textbf{(ii) }2<a\\le 6$ 인 경우: $2\\le x\\le 6$ 에서 최댓값은 $f(2)$ 또는 $f(6)$ 이고, $6\\le x\\le 10$ 에서 최솟값은 $f(6)$ 이다. 조건 $\\text{(나)}$ 가 성립하려면 $[2,6]$ 의 최댓값이 $f(6)$ 이어야 하므로 $f(2)\\le f(6)$ 이어야 한다. $$ (2-a)^2-(6-a)^2\\le 0 \\ \\Rightarrow\\ (8-2a)(-4)\\le 0\\ \\Rightarrow\\ a\\le 4$$ 이므로 $2<a\\le 4$ 이다. 이때 $$f(-1)=(-1-a)^2$$ 인데 $2<a\\le 4$ 이므로 $3<a+1\\le 5$, 따라서 $9<f(-1)\\le 25$ 이다.\\n\\n$\\textbf{(iii) }6<a\\le 10$ 인 경우: $2\\le x\\le 6$ 에서 최댓값은 $f(2)$ 이고, $6\\le x\\le 10$ 에서 최솟값은 꼭짓점이 구간 안에 있으므로 $0$ 이다. $f(2)>0$ 이므로 조건 $\\text{(나)}$ 를 만족시키지 않는다.\\n\\n$\\text{(i)}$, $\\text{(ii)}$, $\\text{(iii)}$ 에 의해 $f(-1)$ 의 값의 범위는 $$9\\le f(-1)\\le 25$$ 이다. 따라서 $M=25$, $m=9$ 이므로 $$M+m=25+9=34$$ 이다."
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **①** 입니다. $(M+m=34)$"
+      }
+    ],
+    "final_answer": "①"
+  },
+  "21": {
+    "problem_id": "21",
+    "title": "2023학년도 6월 고1 학평 21번",
+    "difficulty": "킬러",
+    "weakness_unit": "이차함수의 그래프와 직선의 위치 관계 추론 (보기 ㄱㄴㄷ)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "function_plot", "expr": "x^2" },
+        { "type": "function_plot", "expr": "x^2-6*x+6" },
+        { "type": "label_text", "tex": "y=x^2", "at": [-1.6, 4] },
+        { "type": "label_text", "tex": "y=x^2-6x+6", "at": [4.2, 4] }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$1$ 이 아닌 양수 $k$ 에 대하여 직선 $y=k$ 와 이차함수 $y=x^2$ 의 그래프가 만나는 두 점을 각각 $\\mathrm{A}$, $\\mathrm{B}$, 직선 $y=k$ 와 이차함수 $y=x^2-6x+6$ 의 그래프가 만나는 두 점을 각각 $\\mathrm{C}$, $\\mathrm{D}$ 라 한다($\\mathrm{A}$의 $x$좌표는 $\\mathrm{B}$의 $x$좌표보다, $\\mathrm{C}$의 $x$좌표는 $\\mathrm{D}$의 $x$좌표보다 작다). 보기 $\\text{ㄱ}$, $\\text{ㄴ}$, $\\text{ㄷ}$ 중 옳은 것을 모두 고르는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "두 교점의 $x$좌표가 곧 $y=k$ 를 대입해 얻은 이차방정식의 두 근이다. 두 근의 차의 제곱은 $(\\beta-\\alpha)^2=(\\alpha+\\beta)^2-4\\alpha\\beta$ 로 근과 계수의 관계로 구할 수 있다. $y=x^2$ 은 좌우대칭이므로 $\\overline{\\mathrm{AB}}^2=4k$ 처럼 깔끔하게 나오고, $y=x^2-6x+6$ 에서 $\\overline{\\mathrm{CD}}^2$ 를 구해 두 값을 비교한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "이차방정식 $x^2+px+q=0$ 의 두 근 $\\alpha$, $\\beta$ 에 대하여 $\\alpha+\\beta=-p$, $\\alpha\\beta=q$ 이고 $(\\beta-\\alpha)^2=(\\alpha+\\beta)^2-4\\alpha\\beta$ 이다. 또 $\\overline{\\mathrm{CD}}^2-\\overline{\\mathrm{AB}}^2=(\\overline{\\mathrm{CD}}+\\overline{\\mathrm{AB}})(\\overline{\\mathrm{CD}}-\\overline{\\mathrm{AB}})$ 의 인수분해를 활용한다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$\\textbf{[ㄱ] }k=6$ 인 경우: 방정식 $x^2-6x+6=6$ 의 해는 $x^2-6x=0$, 즉 $x=0$ 또는 $x=6$ 이므로 점 $\\mathrm{C}(0,\\,6)$, 점 $\\mathrm{D}(6,\\,6)$ 에서 $\\overline{\\mathrm{CD}}=6$ 이다. $\\text{ㄱ}$ 은 **참**.\\n\\n$\\textbf{[ㄴ] }$ 방정식 $x^2=k$ 의 해는 $x=\\pm\\sqrt{k}$ 이므로 점 $\\mathrm{A}(-\\sqrt{k},\\,k)$, 점 $\\mathrm{B}(\\sqrt{k},\\,k)$ 에서 $$\\overline{\\mathrm{AB}}^2=(2\\sqrt{k})^2=4k$$ 이다. 두 점 $\\mathrm{C}$, $\\mathrm{D}$ 의 $x$좌표를 각각 $\\alpha$, $\\beta$ 라 하면 방정식 $x^2-6x+6=k$, 즉 $x^2-6x+6-k=0$ 에서 $\\alpha+\\beta=6$, $\\alpha\\beta=6-k$ 이므로 $$\\overline{\\mathrm{CD}}^2=(\\beta-\\alpha)^2=(\\alpha+\\beta)^2-4\\alpha\\beta=36-4(6-k)=12+4k$$ 이다. 따라서 $$\\overline{\\mathrm{CD}}^2-\\overline{\\mathrm{AB}}^2=(12+4k)-4k=12$$ 로 일정하다. $\\text{ㄴ}$ 은 **참**.\\n\\n$\\textbf{[ㄷ] }\\overline{\\mathrm{CD}}+\\overline{\\mathrm{AB}}=4$ 인 경우: $\\overline{\\mathrm{CD}}^2-\\overline{\\mathrm{AB}}^2=(\\overline{\\mathrm{CD}}+\\overline{\\mathrm{AB}})(\\overline{\\mathrm{CD}}-\\overline{\\mathrm{AB}})=12$ 에서 $\\overline{\\mathrm{CD}}+\\overline{\\mathrm{AB}}=4$ 이므로 $\\overline{\\mathrm{CD}}-\\overline{\\mathrm{AB}}=3$ 이다. 두 식을 연립하면 $$\\overline{\\mathrm{AB}}=\\dfrac{1}{2},\\qquad \\overline{\\mathrm{CD}}=\\dfrac{7}{2}$$ 이다. $\\overline{\\mathrm{AB}}=2\\sqrt{k}=\\dfrac{1}{2}$ 에서 $k=\\dfrac{1}{16}$ 이고, 점 $\\mathrm{B}$ 의 $x$좌표는 $\\sqrt{k}=\\dfrac{1}{4}$ 이다. 방정식 $x^2-6x+6=\\dfrac{1}{16}$, 즉 $16x^2-96x+95=0$ 에서 $x=\\dfrac{5}{4}$ 또는 $x=\\dfrac{19}{4}$ 이다. 점 $\\mathrm{C}$ 의 $x$좌표는 점 $\\mathrm{D}$ 의 $x$좌표보다 작으므로 점 $\\mathrm{C}$ 의 $x$좌표는 $\\dfrac{5}{4}$ 이고, $$\\overline{\\mathrm{BC}}=\\dfrac{5}{4}-\\dfrac{1}{4}=1$$ 이다. 따라서 $$k+\\overline{\\mathrm{BC}}=\\dfrac{1}{16}+1=\\dfrac{17}{16}$$ 이다. $\\text{ㄷ}$ 은 **참**.\\n\\n그러므로 옳은 것은 $\\text{ㄱ}$, $\\text{ㄴ}$, $\\text{ㄷ}$ 모두이다."
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **⑤** 입니다. (ㄱ, ㄴ, ㄷ)"
+      }
+    ],
+    "final_answer": "⑤"
+  },
+  "27": {
+    "problem_id": "27",
+    "title": "2023학년도 6월 고1 학평 27번",
+    "difficulty": "킬러",
+    "weakness_unit": "절댓값 일차부등식·이차부등식 연립 (해의 개수 조건)",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "자연수 $n$ 에 대하여 $x$ 에 대한 연립부등식 $$\\begin{cases}|x-n|>2 & \\cdots\\ \\unicode{x3279}\\\\ x^2-14x+40\\le 0 & \\cdots\\ \\unicode{x327A}\\end{cases}$$ 을 만족시키는 자연수 $x$ 의 개수가 $2$ 가 되도록 하는 모든 $n$ 의 값의 합을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "이차부등식 $\\unicode{x327A}$ 의 해는 $4\\le x\\le 10$ 으로 고정되어 있고, 이 안의 자연수는 $4,5,6,7,8,9,10$ 의 $7$ 개이다. 절댓값 부등식 $\\unicode{x3279}$ 는 $n$ 을 중심으로 폭 $2$ 인 구간 $[n-2,\\,n+2]$ 를 \\\"제외\\\"하는 부등식이다. 따라서 $7$ 개의 자연수 중 $\\unicode{x3279}$ 도 만족하는 것이 정확히 $2$ 개가 되도록 $n$ 을 정하면 된다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$|x-n|>2 \\Leftrightarrow x<n-2$ 또는 $x>n+2$. 그리고 $x^2-14x+40=(x-4)(x-10)\\le 0 \\Leftrightarrow 4\\le x\\le 10$. 정해진 후보 자연수 $4\\sim 10$ 을 두고 $n$ 의 위치에 따라 몇 개가 살아남는지 세어 보면 된다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "부등식 $\\unicode{x3279}$ 의 해는 $x<n-2$ 또는 $x>n+2$ 이다. 부등식 $\\unicode{x327A}$ 는 $$x^2-14x+40=(x-4)(x-10)\\le 0\\ \\Rightarrow\\ 4\\le x\\le 10$$ 이고, 이 구간의 자연수는 $4,5,6,7,8,9,10$ 의 $7$ 개이다.\\n\\n$\\textbf{(i) }n\\le 5$ 또는 $n\\ge 9$ 인 경우: 제외 구간 $[n-2,\\,n+2]$ 가 $[4,10]$ 의 한쪽 끝에 치우쳐, 두 부등식 $\\unicode{x3279}$, $\\unicode{x327A}$ 를 동시에 만족시키는 자연수 $x$ 의 개수는 $3$ 이상이다. 조건에 맞지 않는다.\\n\\n$\\textbf{(ii) }n=6$ 인 경우: 부등식 $\\unicode{x3279}$ 는 $|x-6|>2$ 이므로 해는 $x<4$ 또는 $x>8$ 이다. 두 부등식 $\\unicode{x3279}$, $\\unicode{x327A}$ 를 동시에 만족시키는 자연수는 $9,\\ 10$ 이다(개수 $2$).\\n\\n$\\textbf{(iii) }n=7$ 인 경우: 부등식 $\\unicode{x3279}$ 는 $|x-7|>2$ 이므로 해는 $x<5$ 또는 $x>9$ 이다. 두 부등식을 동시에 만족시키는 자연수는 $4,\\ 10$ 이다(개수 $2$).\\n\\n$\\textbf{(iv) }n=8$ 인 경우: 부등식 $\\unicode{x3279}$ 는 $|x-8|>2$ 이므로 해는 $x<6$ 또는 $x>10$ 이다. 두 부등식을 동시에 만족시키는 자연수는 $4,\\ 5$ 이다(개수 $2$).\\n\\n$\\text{(i)}$, $\\text{(ii)}$, $\\text{(iii)}$, $\\text{(iv)}$ 에 의해 자연수 $x$ 의 개수가 $2$ 가 되도록 하는 자연수 $n$ 의 값은 $6,\\ 7,\\ 8$ 이므로 모든 자연수 $n$ 의 값의 합은 $$6+7+8=21$$ 이다."
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **21** 입니다."
+      }
+    ],
+    "final_answer": "21"
+  },
+  "28": {
+    "problem_id": "28",
+    "title": "2023학년도 6월 고1 학평 28번",
+    "difficulty": "킬러",
+    "weakness_unit": "이차함수의 그래프와 직선의 위치 관계 (접선·넓이)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "function_plot", "expr": "x^2-4*x+25/4" },
+        { "type": "function_plot", "expr": "x" },
+        { "type": "point", "coordinates": [0, 0], "label": "O" },
+        { "type": "point", "coordinates": [0, 6.25], "label": "B" },
+        { "type": "point", "coordinates": [2.5, 2.5], "label": "A" },
+        { "type": "point", "coordinates": [2.5, 0], "label": "H" },
+        { "type": "point", "coordinates": [1.7857, 1.7857], "label": "C" },
+        { "type": "segment", "from": [0, 6.25], "to": [2.5, 0], "label": "BH" },
+        { "type": "segment", "from": [0, 0], "to": [2.5, 2.5], "label": "OA" },
+        { "type": "polygon", "points": [[0, 0], [0, 6.25], [1.7857, 1.7857]], "fillOpacity": 0.08 },
+        { "type": "polygon", "points": [[1.7857, 1.7857], [2.5, 2.5], [2.5, 0]], "fillOpacity": 0.12 }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "이차함수 $y=x^2-4x+\\dfrac{25}{4}$ 의 그래프가 직선 $y=ax\\ (a>0)$ 와 한 점 $\\mathrm{A}$ 에서만 만난다(접한다). 이 이차함수의 그래프가 $y$축과 만나는 점을 $\\mathrm{B}$, 점 $\\mathrm{A}$ 에서 $x$축에 내린 수선의 발을 $\\mathrm{H}$ 라 하고, 선분 $\\mathrm{OA}$ 와 선분 $\\mathrm{BH}$ 가 만나는 점을 $\\mathrm{C}$ 라 하자. 삼각형 $\\mathrm{BOC}$ 의 넓이를 $S_1$, 삼각형 $\\mathrm{ACH}$ 의 넓이를 $S_2$ 라 할 때 $S_1-S_2=\\dfrac{q}{p}$ 이다. ($\\mathrm{O}$ 는 원점, $p$, $q$ 는 서로소인 자연수) $p+q$ 의 값을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "\\\"한 점에서만 만난다\\\"는 접한다는 뜻이므로 판별식 $D=0$ 으로 $a$ 를 구한다. $S_1-S_2$ 를 직접 구하기는 번거로우므로, 두 삼각형 $\\mathrm{BOH}$, $\\mathrm{AOH}$ 의 넓이 차를 이용한다. 두 삼각형 $\\mathrm{BOC}$ 와 $\\mathrm{ACH}$ 에 공통 부분인 삼각형 $\\mathrm{COH}$ 를 각각 더하고 빼면 $S_1-S_2=\\triangle\\mathrm{BOH}-\\triangle\\mathrm{AOH}$ 가 성립한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "이차함수와 직선이 접할 조건은 (이차함수)$=$(직선) 으로 만든 이차방정식의 판별식 $D=0$ 이다. 그리고 $\\triangle\\mathrm{BOC}=S_1$, $\\triangle\\mathrm{ACH}=S_2$ 일 때 매개가 되는 삼각형 $\\triangle\\mathrm{COH}$ 에 대하여 $$S_1-S_2=(\\triangle\\mathrm{BOH}-\\triangle\\mathrm{COH})-(\\triangle\\mathrm{AOH}-\\triangle\\mathrm{COH})=\\triangle\\mathrm{BOH}-\\triangle\\mathrm{AOH}$$ 가 성립한다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "이차함수 $y=x^2-4x+\\dfrac{25}{4}$ 의 그래프가 직선 $y=ax$ 와 한 점에서만 만나므로 $$x^2-4x+\\dfrac{25}{4}=ax\\ \\Rightarrow\\ x^2-(a+4)x+\\dfrac{25}{4}=0$$ 의 판별식이 $$D=(a+4)^2-4\\times 1\\times\\dfrac{25}{4}=0$$ 이어야 한다. $(a+4)^2=25$ 에서 $a>0$ 이므로 $a=1$ 이다.\\n\\n이차함수의 그래프가 직선 $y=x$ 와 만나는 점의 $x$좌표는 $$x^2-4x+\\dfrac{25}{4}=x\\ \\Rightarrow\\ x^2-5x+\\dfrac{25}{4}=0\\ \\Rightarrow\\ \\left(x-\\dfrac{5}{2}\\right)^2=0$$ 에서 $x=\\dfrac{5}{2}$ 이고, 세 점 $\\mathrm{A}$, $\\mathrm{B}$, $\\mathrm{H}$ 는 각각 $$\\mathrm{A}\\left(\\dfrac{5}{2},\\,\\dfrac{5}{2}\\right),\\quad \\mathrm{B}\\left(0,\\,\\dfrac{25}{4}\\right),\\quad \\mathrm{H}\\left(\\dfrac{5}{2},\\,0\\right)$$ 이다. (점 $\\mathrm{B}$ 는 $y$절편이므로 $x=0$ 대입 $y=\\dfrac{25}{4}$)\\n\\n한편 삼각형 $\\mathrm{BOH}$ 의 넓이를 $T_1$, 삼각형 $\\mathrm{AOH}$ 의 넓이를 $T_2$ 라 할 때 $T_1-T_2=S_1-S_2$ 가 성립한다. 따라서 $$S_1-S_2=T_1-T_2=\\dfrac{1}{2}\\times\\dfrac{5}{2}\\times\\dfrac{25}{4}-\\dfrac{1}{2}\\times\\dfrac{5}{2}\\times\\dfrac{5}{2}=\\dfrac{125}{16}-\\dfrac{25}{8}=\\dfrac{125}{16}-\\dfrac{50}{16}=\\dfrac{75}{16}$$ 이다.\\n\\n따라서 $p=16$, $q=75$ 이므로 $$p+q=16+75=91$$ 이다."
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **91** 입니다."
+      }
+    ],
+    "final_answer": "91"
+  },
+  "29": {
+    "problem_id": "29",
+    "title": "2023학년도 6월 고1 학평 29번",
+    "difficulty": "킬러",
+    "weakness_unit": "복소수의 성질 (거듭제곱의 주기성 추론)",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$49$ 이하의 두 자연수 $m$, $n$ 이 $$\\left\\{\\left(\\dfrac{1+i}{\\sqrt{2}}\\right)^{m}-i^{n}\\right\\}^{2}=4$$ 를 만족시킬 때, $m+n$ 의 최댓값을 구하는 문제이다. (단, $i=\\sqrt{-1}$)"
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$\\dfrac{1+i}{\\sqrt{2}}$ 의 거듭제곱은 주기 $8$ 로, $i$ 의 거듭제곱은 주기 $4$ 로 순환한다. 좌변 전체가 $\\left(\\cdots\\right)^2=4$ 이므로 $\\left(\\dfrac{1+i}{\\sqrt{2}}\\right)^{m}-i^{n}=2$ 또는 $-2$ 인데, $2$ 와 $-2$ 는 모두 실수이므로 두 항 $\\left(\\dfrac{1+i}{\\sqrt{2}}\\right)^{m}$ 과 $i^{n}$ 이 각각 실수 $(\\pm1)$ 이 되는 경우만 가능하다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$\\dfrac{1+i}{\\sqrt{2}}$ 의 거듭제곱(주기 $8$): $m\\equiv1$ 이면 $\\dfrac{1+i}{\\sqrt{2}}$, $m\\equiv2$ 이면 $i$, $m\\equiv3$ 이면 $\\dfrac{-1+i}{\\sqrt{2}}$, $m\\equiv4$ 이면 $-1$, $m\\equiv5$ 이면 $\\dfrac{-1-i}{\\sqrt{2}}$, $m\\equiv6$ 이면 $-i$, $m\\equiv7$ 이면 $\\dfrac{1-i}{\\sqrt{2}}$, $m\\equiv0\\,(\\text{mod }8)$ 이면 $1$ 이다. $i$ 의 거듭제곱(주기 $4$): $i,\\,-1,\\,-i,\\,1$ 이 반복된다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$49$ 이하의 자연수 $m$ 에 대하여 $\\left(\\dfrac{1+i}{\\sqrt{2}}\\right)^{m}$ 의 값은 주기 $8$ 로 다음과 같다.\\n· $m=1,9,\\cdots,49$ : $\\dfrac{1+i}{\\sqrt{2}}$\\n· $m=2,10,\\cdots,42$ : $i$\\n· $m=3,11,\\cdots,43$ : $\\dfrac{-1+i}{\\sqrt{2}}$\\n· $m=4,12,\\cdots,44$ : $-1$\\n· $m=5,13,\\cdots,45$ : $\\dfrac{-1-i}{\\sqrt{2}}$\\n· $m=6,14,\\cdots,46$ : $-i$\\n· $m=7,15,\\cdots,47$ : $\\dfrac{1-i}{\\sqrt{2}}$\\n· $m=8,16,\\cdots,48$ : $1$\\n\\n또 $49$ 이하의 자연수 $n$ 에 대하여 $i^{n}$ 은 $n\\equiv1$ 이면 $i$, $n\\equiv2$ 이면 $-1$, $n\\equiv3$ 이면 $-i$, $n\\equiv0\\,(\\text{mod }4)$ 이면 $1$ 이다.\\n\\n$\\left\\{\\left(\\dfrac{1+i}{\\sqrt{2}}\\right)^{m}-i^{n}\\right\\}^{2}=4$ 이므로 $$\\left(\\dfrac{1+i}{\\sqrt{2}}\\right)^{m}-i^{n}=2\\quad\\text{또는}\\quad \\left(\\dfrac{1+i}{\\sqrt{2}}\\right)^{m}-i^{n}=-2$$ 이다.\\n\\n$\\textbf{(i) }$ 값이 $2$ 인 경우: $\\left(\\dfrac{1+i}{\\sqrt{2}}\\right)^{m}=1$, $i^{n}=-1$ 이어야 한다. $\\left(\\dfrac{1+i}{\\sqrt{2}}\\right)^{m}=1$ 은 $m$ 이 $8$ 의 배수일 때이므로 $49$ 이하에서 최댓값 $m=48$, $i^{n}=-1$ 은 $n\\equiv2\\,(\\text{mod }4)$ 일 때이므로 최댓값 $n=46$ 이다. 이때 $m+n=48+46=94$ 로 최댓값을 갖는다.\\n\\n$\\textbf{(ii) }$ 값이 $-2$ 인 경우: $\\left(\\dfrac{1+i}{\\sqrt{2}}\\right)^{m}=-1$, $i^{n}=1$ 이어야 한다. $\\left(\\dfrac{1+i}{\\sqrt{2}}\\right)^{m}=-1$ 은 $m\\equiv4\\,(\\text{mod }8)$ 일 때이므로 최댓값 $m=44$, $i^{n}=1$ 은 $n$ 이 $4$ 의 배수일 때이므로 최댓값 $n=48$ 이다. 이때 $m+n=44+48=92$ 로 최댓값을 갖는다.\\n\\n$\\text{(i)}$, $\\text{(ii)}$ 에 의해 $m+n$ 의 최댓값은 $94$ 이다."
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **94** 입니다."
+      }
+    ],
+    "final_answer": "94"
+  },
+  "30": {
+    "problem_id": "30",
+    "title": "2023학년도 6월 고1 학평 30번",
+    "difficulty": "킬러",
+    "weakness_unit": "부등식과 이차함수의 그래프 추론 (조건 종합)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "function_plot", "expr": "x^2" },
+        { "type": "function_plot", "expr": "-(x-2)^2-4" },
+        { "type": "label_text", "tex": "y=f(x)", "at": [1.7, 4] },
+        { "type": "label_text", "tex": "y=g(x)", "at": [2, -8.5] },
+        { "type": "point", "coordinates": [0, 0], "label": "O" },
+        { "type": "point", "coordinates": [2, -4], "label": "" }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "두 이차함수 $f(x)$, $g(x)$ 가 다음 조건을 만족시킨다.\\n· $\\text{(가)}$ $y=f(x)$ 의 그래프는 $x$축과 한 점 $(0,\\,0)$ 에서만 만난다.\\n· $\\text{(나)}$ 부등식 $f(x)+g(x)\\ge 0$ 의 해는 $x\\ge 2$ 이다.\\n· $\\text{(다)}$ 모든 실수 $x$ 에 대하여 $f(x)-g(x)\\ge f(1)-g(1)$ 이다.\\n$x$ 에 대한 방정식 $\\{f(x)-k\\}\\times\\{g(x)-k\\}=0$ 이 실근을 갖지 않도록 하는 정수 $k$ 의 개수가 $5$ 일 때, $f(22)+g(22)$ 의 최댓값을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$\\text{(가)}$ 에서 $f$ 의 그래프가 $x$축과 $(0,0)$ 에서만 만나므로 $f(x)=ax^2$ 꼴이다. $\\text{(나)}$ 에서 $f+g$ 의 해가 $x\\ge2$ 이려면 $f+g$ 가 일차식이어야 하므로 $g(x)$ 의 이차항은 $f$ 의 이차항과 상쇄되어야 한다. $\\text{(다)}$ 는 $f-g$ 가 $x=1$ 에서 최솟값을 가짐을 뜻하므로 꼭짓점이 $x=1$ 이다. 이 세 조건으로 $a$ 만 남기고 $f$, $g$ 를 결정한 뒤, 정수 $k$ 의 개수 조건으로 $a$ 의 범위를 정한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$x$축과 한 점에서만 만나는(중근) 이차함수는 $f(x)=a(x-p)^2$ 꼴이다. 이차함수 $ax^2+bx+c$ 의 꼭짓점은 $x=-\\dfrac{b}{2a}$ 이다. 방정식 $\\{f(x)-k\\}\\{g(x)-k\\}=0$ 이 실근을 갖지 않으려면 $f(x)=k$, $g(x)=k$ 가 모두 실근을 갖지 않아야 하며, 이는 직선 $y=k$ 가 두 그래프 어느 것과도 만나지 않음을 뜻한다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "조건 $\\text{(가)}$ 에서 $f(x)=ax^2\\ (a\\ne 0)$ 이다. 조건 $\\text{(나)}$ 를 만족시키려면 $f(x)+g(x)$ 는 일차식이어야 하므로 $g(x)=-ax^2+bx+c\\ (b\\ne 0)$ 로 나타낼 수 있다. 이때 $$f(x)+g(x)=bx+c$$ 이고, 부등식 $bx+c\\ge 0$ 의 해가 $x\\ge 2$ 이므로 $b>0$ 이고 $-\\dfrac{c}{b}=2$, 즉 $c=-2b$ 이다.\\n\\n조건 $\\text{(다)}$ 를 만족시키려면 함수 $$f(x)-g(x)=2ax^2-bx-c=2ax^2-bx+2b$$ 가 $x=1$ 에서 최솟값을 가져야 한다. 따라서 $a>0$ 이고, 꼭짓점 $\\dfrac{b}{4a}=1$ 에서 $b=4a$ 이다. 조건 $\\text{(나)}$ 에서 $c=-2b$ 이므로 $c=-8a$ 이다.\\n\\n즉 $$g(x)=-ax^2+4ax-8a=-a(x^2-4x+8)=-a(x-2)^2-4a$$ 이고, $f(x)+g(x)=bx+c=4ax-8a=4a(x-2)$ 이다.\\n\\n방정식 $\\{f(x)-k\\}\\times\\{g(x)-k\\}=0$ 이 실근을 갖지 않으려면 $f(x)-k=0$ 과 $g(x)-k=0$ 이 모두 실근을 갖지 않아야 한다. 즉 직선 $y=k$ 가 함수 $y=f(x)$ 의 그래프(최솟값 $0$, 아래로 볼록)와도, 함수 $y=g(x)$ 의 그래프(최댓값 $-4a$, 위로 볼록)와도 만나지 않아야 한다. 그러므로 정수 $k$ 는 함수 $g(x)$ 의 최댓값인 $-4a$ 보다 크고, 함수 $f(x)$ 의 최솟값인 $0$ 보다 작아야 한다. 즉 $$-4a<k<0$$ 이다.\\n\\n$-4a<k<0$ 을 만족시키는 정수 $k$ 의 개수가 $5$ 이므로(즉 $k=-1,-2,-3,-4,-5$), $$-6\\le -4a<-5\\ \\Rightarrow\\ \\dfrac{5}{4}<a\\le\\dfrac{3}{2}$$ 이다.\\n\\n따라서 $$f(22)+g(22)=4a(22-2)=80a$$ 이므로 $a=\\dfrac{3}{2}$ 일 때 $f(22)+g(22)$ 의 최댓값은 $80\\times\\dfrac{3}{2}=120$ 이다."
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **120** 입니다."
+      }
+    ],
+    "final_answer": "120"
+  }
+}

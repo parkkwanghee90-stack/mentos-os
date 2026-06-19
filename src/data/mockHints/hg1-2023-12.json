@@ -1,0 +1,191 @@
+{
+  "14": {
+    "problem_id": "14",
+    "title": "2023학년도 12월 고1 학평 14번",
+    "difficulty": "준킬러",
+    "weakness_unit": "원의 방정식의 활용",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "circle", "center": [1, 1], "radius": 2 },
+        { "type": "point", "coordinates": [1, 1], "label": "M" },
+        { "type": "graph", "expr": "2*x-1" },
+        { "type": "point", "coordinates": [-0.265, 1.732], "label": "A" },
+        { "type": "point", "coordinates": [2.265, 0.268], "label": "B" },
+        { "type": "point", "coordinates": [-0.789, -0.789], "label": "P" },
+        { "type": "label_text", "tex": "y=2x-1", "at": [2.6, 3.0] }
+      ]
+    },
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "원 $C:x^2+y^2-2x-ay-b=0$ 의 중심이 직선 $y=2x-1$ 위에 있고, 이 원과 직선 $y=2x-1$ 이 만나는 두 점을 $A$, $B$ 라 한다. 원 위의 점 $P$ 에 대하여 삼각형 $ABP$ 의 넓이의 최댓값이 $4$ 일 때 $a+b$ 의 값을 구하는 문제이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "원의 중심이 직선 $y=2x-1$ 위에 있으므로, 이 직선이 원의 중심을 지난다. 따라서 두 교점 $A$, $B$ 를 잇는 현 $\\overline{AB}$ 는 원의 **지름**이다. 즉 $\\overline{AB}=2r$ ($r$ 은 반지름)." },
+      { "phase": "B", "title": "배경 지식", "content": "원 $x^2+y^2+Dx+Ey+F=0$ 의 중심은 $\\left(-\\dfrac{D}{2},\\,-\\dfrac{E}{2}\\right)$, 반지름은 $\\sqrt{\\left(\\dfrac{D}{2}\\right)^2+\\left(\\dfrac{E}{2}\\right)^2-F}$ 이다. 밑변 $\\overline{AB}$ 가 고정될 때 삼각형 $ABP$ 의 넓이는 점 $P$ 에서 직선 $AB$ 까지의 거리(높이)가 최대일 때 최대가 되며, 그 높이의 최댓값은 반지름 $r$ 이다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "주어진 원 $C:x^2+y^2-2x-ay-b=0$ 의 중심은\n$$\\left(1,\\ \\frac{a}{2}\\right)$$\n이다. 이 중심이 직선 $y=2x-1$ 위에 있으므로\n$$\\frac{a}{2}=2\\times 1-1=1 \\quad\\Rightarrow\\quad a=2$$\n따라서 중심은 $(1,\\,1)$ 이다.\n\n직선 $y=2x-1$ 이 원의 중심 $(1,1)$ 을 지나므로, 직선이 원에서 잘라내는 현 $\\overline{AB}$ 는 원의 지름이다. 즉\n$$\\overline{AB}=2r$$\n원 위의 점 $P$ 에서 직선 $AB$(지름을 포함하는 직선)까지의 거리의 최댓값은 반지름 $r$ 이므로, 삼각형 $ABP$ 의 넓이의 최댓값은\n$$\\frac{1}{2}\\times\\overline{AB}\\times r=\\frac{1}{2}\\times 2r\\times r=r^2$$\n이 최댓값이 $4$ 이므로\n$$r^2=4 \\quad\\Rightarrow\\quad r=2$$\n\n한편 원의 반지름의 제곱은\n$$r^2=1^2+\\left(\\frac{a}{2}\\right)^2-(-b)=1+1+b=2+b$$\n$$r^2=4 \\;\\Rightarrow\\; 2+b=4 \\;\\Rightarrow\\; b=2$$\n\n따라서\n$$a+b=2+2=4$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **④ 4** 입니다." }
+    ],
+    "final_answer": "④ 4"
+  },
+  "15": {
+    "problem_id": "15",
+    "title": "2023학년도 12월 고1 학평 15번",
+    "difficulty": "준킬러",
+    "weakness_unit": "역함수의 추론",
+    "type": "function",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "실수 전체의 집합에서 정의되고 역함수를 갖는 함수 $f(x)$ 가 모든 실수 $x$ 에 대하여 $f(x)=f^{-1}(x)$, $f(x^2+1)=-2x^2+1$ 을 만족시킨다. 이때 $f(-2)$ 의 값을 구하는 문제이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "$f(x)=f^{-1}(x)$ 이면 모든 $x$ 에 대하여 $f(f(x))=x$ 가 성립한다. 즉 $f(a)=b$ 이면 $f(b)=a$ 이다(점 $(a,b)$ 와 $(b,a)$ 가 모두 그래프 위에 있다). 이 대칭성을 이용해 출력값이 $-2$ 가 되는 입력을 찾으면 된다." },
+      { "phase": "B", "title": "배경 지식", "content": "함수 $f$ 가 그 자신을 역함수로 가지면($f=f^{-1}$) $f$ 는 자기역(involution)이며, $f(f(x))=x$ 이다. 따라서 $f(p)=q$ 라는 식이 주어지면 자동으로 $f(q)=p$ 도 성립한다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "주어진 식 $f(x^2+1)=-2x^2+1$ 에서, 우변이 $-2$ 가 되도록 하는 $x$ 를 찾는다.\n$$-2x^2+1=-2 \\;\\Rightarrow\\; 2x^2=3 \\;\\Rightarrow\\; x^2=\\frac{3}{2}$$\n이때 좌변의 입력은\n$$x^2+1=\\frac{3}{2}+1=\\frac{5}{2}$$\n이므로\n$$f\\!\\left(\\frac{5}{2}\\right)=-2$$\n가 성립한다.\n\n$f$ 는 자기역함수이므로 $f(p)=q \\Rightarrow f(q)=p$ 이다. 위에서 $f\\!\\left(\\dfrac{5}{2}\\right)=-2$ 이므로\n$$f(-2)=\\frac{5}{2}$$\n\n(확인: $f(x^2+1)=-2x^2+1=-2(x^2+1)+3$ 이므로 $u=x^2+1\\ (u\\ge 1)$ 에 대하여 $f(u)=-2u+3$ 이다. $f=f^{-1}$ 이므로 $u\\le 1$ 인 부분에서는 $f(y)=\\dfrac{3-y}{2}$ 가 되고, $f(-2)=\\dfrac{3-(-2)}{2}=\\dfrac{5}{2}$ 로 같은 값을 얻는다.)" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **③ $\\dfrac{5}{2}$** 입니다." }
+    ],
+    "final_answer": "③ 5/2"
+  },
+  "18": {
+    "problem_id": "18",
+    "title": "2023학년도 12월 고1 학평 18번",
+    "difficulty": "준킬러",
+    "weakness_unit": "다항식의 나눗셈과 항등식",
+    "type": "algebra",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "다항식 $f(x)$ 와 최고차항의 계수가 $1$ 인 삼차다항식 $g(x)$ 에 대하여, $f(x)+g(x)$ 를 $x$ 로 나눈 나머지와 $f(x)+g(x)$ 를 $x^2+2x-2$ 로 나눈 나머지가 모두 $x^2+2x-\\dfrac{1}{2}f(x)$ 로 같다고 한다. $g(1)=7$ 일 때 $f(3)$ 의 값을 구하는 문제이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "$x$(일차식)로 나눈 나머지는 **상수**이다. 따라서 두 나머지가 모두 $x^2+2x-\\dfrac{1}{2}f(x)$ 와 같으려면 이 식이 상수여야 한다. 이로부터 $f(x)$ 의 꼴이 결정된다." },
+      { "phase": "B", "title": "배경 지식", "content": "다항식을 일차식 $x$ 로 나눈 나머지는 차수가 $0$ 인 상수이고, 이차식 $x^2+2x-2$ 로 나눈 나머지는 차수가 $1$ 이하이다. 나머지정리에 의해 $P(x)$ 를 $x$ 로 나눈 나머지는 $P(0)$ 이다. 또 두 식이 항등적으로 같으면 동류항의 계수가 모두 같다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "나머지 $x^2+2x-\\dfrac{1}{2}f(x)$ 는 $x$ 로 나눈 나머지이므로 상수이어야 한다. 그 상수를 $r$ 이라 하면\n$$x^2+2x-\\frac{1}{2}f(x)=r \\;\\Rightarrow\\; \\frac{1}{2}f(x)=x^2+2x-r$$\n$$\\therefore\\ f(x)=2x^2+4x-2r$$\n\n$g(x)$ 는 최고차항의 계수가 $1$ 인 삼차식이므로 $g(x)=x^3+px^2+qx+s$ 라 하자. 그러면\n$$f(x)+g(x)=x^3+(p+2)x^2+(q+4)x+(s-2r)$$\n\n[$x$ 로 나눈 나머지] $=(f+g)(0)=s-2r=r$ 이어야 하므로\n$$s-2r=r \\;\\Rightarrow\\; s=3r \\quad\\cdots(\\ast)$$\n\n[$x^2+2x-2$ 로 나눈 나머지] 도 상수 $r$ 이므로, 몫을 일차식 $x+k$ 라 하면\n$$f(x)+g(x)=(x^2+2x-2)(x+k)+r$$\n우변을 전개하면\n$$=x^3+(k+2)x^2+(2k-2)x+(r-2k)$$\n좌변과 계수를 비교하면\n$$x^2:\\ p+2=k+2 \\;\\Rightarrow\\; p=k$$\n$$x^1:\\ q+4=2k-2 \\;\\Rightarrow\\; q=2k-6$$\n$$x^0:\\ s-2r=r-2k$$\n그런데 $(\\ast)$ 에서 $s-2r=r$ 이므로 $r=r-2k \\Rightarrow k=0$.\n\n$k=0$ 이므로 $p=0,\\ q=-6,\\ s=3r$ 이고\n$$g(x)=x^3-6x+3r$$\n$g(1)=7$ 에서\n$$g(1)=1-6+3r=3r-5=7 \\;\\Rightarrow\\; 3r=12 \\;\\Rightarrow\\; r=4$$\n\n따라서\n$$f(x)=2x^2+4x-2r=2x^2+4x-8$$\n$$f(3)=2\\times 9+4\\times 3-8=18+12-8=22$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **② 22** 입니다." }
+    ],
+    "final_answer": "② 22"
+  },
+  "19": {
+    "problem_id": "19",
+    "title": "2023학년도 12월 고1 학평 19번",
+    "difficulty": "킬러",
+    "weakness_unit": "무리함수와 역함수의 대칭성",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "graph", "expr": "sqrt(x-2)" },
+        { "type": "graph", "expr": "-x+6" },
+        { "type": "circle", "center": [2.5, 2.5], "radius": 3.5355 },
+        { "type": "point", "coordinates": [0, 0], "label": "O" },
+        { "type": "point", "coordinates": [2.5, 2.5], "label": "C" },
+        { "type": "point", "coordinates": [6, 2], "label": "P" },
+        { "type": "point", "coordinates": [2, 6], "label": "Q" },
+        { "type": "label_text", "tex": "y=f(x)", "at": [6.2, 2.0] },
+        { "type": "label_text", "tex": "y=f^{-1}(x)", "at": [2.2, 6.4] }
+      ]
+    },
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "함수 $f(x)=\\sqrt{x-2}$ 와 그 역함수 $f^{-1}(x)$ 에 대하여 기울기가 $-1$ 인 직선 $l$ 이 곡선 $y=f(x)$ 와 점 $P$ 에서, 곡선 $y=f^{-1}(x)$ 와 점 $Q$ 에서 만난다. 삼각형 $OPQ$ 의 외접원의 넓이가 $\\dfrac{25}{2}\\pi$ 일 때, 빈칸 (가), (나), (다)를 채우고 $m+g(n)$ 의 값을 구하는 문제이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "곡선 $y=f(x)$ 와 $y=f^{-1}(x)$ 는 직선 $y=x$ 에 대하여 대칭이고, 기울기 $-1$ 인 직선 $l$ 은 $y=x$ 와 수직이다. 따라서 두 점 $P$, $Q$ 는 직선 $y=x$ 에 대하여 서로 대칭이다. 원점 $O$ 도 $y=x$ 위의 점이므로 삼각형 $OPQ$ 의 외접원의 중심 $C$ 는 직선 $y=x$ 위에 있다." },
+      { "phase": "B", "title": "배경 지식", "content": "넓이가 $\\dfrac{25}{2}\\pi$ 인 원의 반지름을 $R$ 이라 하면 $\\pi R^2=\\dfrac{25}{2}\\pi$, 즉 $R^2=\\dfrac{25}{2}$. 외접원의 중심에서 세 꼭짓점까지의 거리는 모두 $R$ 로 같다($\\overline{CO}=\\overline{CP}=\\overline{CQ}=R$). 점 $(p,q)$ 가 $y=f(x)$ 위에 있으면 그 $y=x$ 대칭점 $(q,p)$ 는 $y=f^{-1}(x)$ 위에 있다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "점 $P$ 의 $y$ 좌표를 $a\\,(a\\ge 0)$ 라 하면, $P$ 는 $y=f(x)=\\sqrt{x-2}$ 위의 점이므로\n$$a=\\sqrt{x-2}\\;\\Rightarrow\\; x-2=a^2\\;\\Rightarrow\\; x=a^2+2$$\n따라서 $P$ 의 좌표는 $(a^2+2,\\ a)$ 이다. 즉 **(가)** 에 알맞은 식은\n$$g(a)=a^2+2$$\n\n곡선 $y=f(x)$ 와 $y=f^{-1}(x)$ 는 직선 $y=x$ 에 대하여 대칭이고 직선 $l$ 은 $y=x$ 와 수직이므로, 두 점 $P$, $Q$ 는 $y=x$ 에 대하여 대칭이다. 따라서 $Q=(a,\\ a^2+2)$ 이고, 삼각형 $OPQ$ 의 외접원의 중심 $C$ 는 직선 $y=x$ 위에 있다.\n\n외접원의 넓이가 $\\dfrac{25}{2}\\pi$ 이므로 반지름 $R$ 은\n$$\\pi R^2=\\frac{25}{2}\\pi \\;\\Rightarrow\\; R^2=\\frac{25}{2}$$\n중심 $C=(c,\\,c)$ 라 하면 $\\overline{CO}=R$ 에서\n$$\\overline{CO}^2=c^2+c^2=2c^2=\\frac{25}{2}\\;\\Rightarrow\\; c^2=\\frac{25}{4}\\;\\Rightarrow\\; c=\\frac{5}{2}\\ (c>0)$$\n따라서 $C$ 의 좌표는 $\\left(\\dfrac{5}{2},\\ \\dfrac{5}{2}\\right)$, 즉 **(나)** $=\\dfrac{5}{2}$.\n\n$\\overline{CP}=\\overline{CO}$ 에서 $\\overline{CP}^2=\\dfrac{25}{2}$ 이므로\n$$\\left(a^2+2-\\frac{5}{2}\\right)^2+\\left(a-\\frac{5}{2}\\right)^2=\\frac{25}{2}$$\n$$\\left(a^2-\\frac{1}{2}\\right)^2+\\left(a-\\frac{5}{2}\\right)^2=\\frac{25}{2}$$\n전개하면\n$$\\left(a^4-a^2+\\frac{1}{4}\\right)+\\left(a^2-5a+\\frac{25}{4}\\right)=\\frac{25}{2}$$\n$$a^4-5a+\\frac{26}{4}=\\frac{50}{4}\\;\\Rightarrow\\; a^4-5a-6=0$$\n인수분해하면\n$$(a^2-a-2)(a^2+a+3)=0$$\n$a^2+a+3>0$ 이므로 $a^2-a-2=0$, 즉 $(a-2)(a+1)=0$. $a\\ge 0$ 이므로\n$$a=2$$\n따라서 점 $P$ 의 $y$ 좌표는 $2$, 즉 **(다)** $=2$.\n\n이제 (나) $=m=\\dfrac{5}{2}$, (다) $=n=2$ 이고 (가) 의 식은 $g(a)=a^2+2$ 이므로\n$$m+g(n)=\\frac{5}{2}+g(2)=\\frac{5}{2}+(2^2+2)=\\frac{5}{2}+6=\\frac{17}{2}$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **③ $\\dfrac{17}{2}$** 입니다." }
+    ],
+    "final_answer": "③ 17/2"
+  },
+  "20": {
+    "problem_id": "20",
+    "title": "2023학년도 12월 고1 학평 20번",
+    "difficulty": "킬러",
+    "weakness_unit": "원과 직선의 위치 관계의 활용",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "point", "coordinates": [1, 4], "label": "A" },
+        { "type": "point", "coordinates": [5, 4], "label": "B" },
+        { "type": "circle", "center": [3, 4], "radius": 2 },
+        { "type": "point", "coordinates": [3, 4], "label": "M" },
+        { "type": "point", "coordinates": [11, 0], "label": "C" },
+        { "type": "point", "coordinates": [0, 5.5], "label": "D" },
+        { "type": "segment", "from": [11, 0], "to": [0, 5.5], "label": "" },
+        { "type": "label_text", "tex": "x+2y=2t", "at": [9.0, 2.5] }
+      ]
+    },
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "실수 $t\\,(t>0)$ 에 대하여 좌표평면 위에 네 점 $A(1,4)$, $B(5,4)$, $C(2t,0)$, $D(0,t)$ 가 있다. 선분 $CD$ 위에 $\\angle APB=90^{\\circ}$ 인 점 $P$ 가 존재하도록 하는 $t$ 의 최댓값을 $M$, 최솟값을 $m$ 이라 할 때 $M-m$ 의 값을 구하는 문제이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "$\\angle APB=90^{\\circ}$ 인 점 $P$ 의 자취는 선분 $\\overline{AB}$ 를 지름으로 하는 원이다(반원에 대한 원주각). 따라서 점 $P$ 가 존재하려면 이 원과 직선(선분) $CD$ 가 만나야 한다. 그 경계가 $t$ 의 최댓값·최솟값이다." },
+      { "phase": "B", "title": "배경 지식", "content": "지름의 양 끝점이 $A$, $B$ 인 원의 중심은 $\\overline{AB}$ 의 중점, 반지름은 $\\dfrac{1}{2}\\overline{AB}$ 이다. 점 $(x_0,y_0)$ 에서 직선 $ax+by+c=0$ 까지의 거리는 $\\dfrac{|ax_0+by_0+c|}{\\sqrt{a^2+b^2}}$ 이다. 원과 직선이 만날 조건은 (중심과 직선 사이의 거리) $\\le$ (반지름)." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$\\angle APB=90^{\\circ}$ 인 점 $P$ 는 선분 $\\overline{AB}$ 를 지름으로 하는 원 위에 있다. $A(1,4)$, $B(5,4)$ 이므로 이 원의 중심은\n$$\\left(\\frac{1+5}{2},\\ \\frac{4+4}{2}\\right)=(3,\\,4)$$\n반지름은\n$$\\frac{1}{2}\\overline{AB}=\\frac{1}{2}\\times 4=2$$\n즉 원의 방정식은 $(x-3)^2+(y-4)^2=4$.\n\n직선 $CD$ 의 방정식을 구하면, $C(2t,0)$, $D(0,t)$ 를 지나므로 $x$ 절편 $2t$, $y$ 절편 $t$ 에서\n$$\\frac{x}{2t}+\\frac{y}{t}=1 \\;\\Rightarrow\\; x+2y=2t$$\n즉 $x+2y-2t=0$.\n\n선분 $CD$ 위에 점 $P$ 가 존재하려면 이 직선이 원과 만나야 하고, $t$ 가 변할 때 그 경계(최댓값·최솟값)는 직선이 원에 접할 때 나타난다. 중심 $(3,4)$ 에서 직선 $x+2y-2t=0$ 까지의 거리가 반지름 $2$ 이하이어야 하므로\n$$\\frac{|3+2\\times 4-2t|}{\\sqrt{1^2+2^2}}\\le 2$$\n$$\\frac{|11-2t|}{\\sqrt{5}}\\le 2 \\;\\Rightarrow\\; |11-2t|\\le 2\\sqrt{5}$$\n$$-2\\sqrt{5}\\le 11-2t\\le 2\\sqrt{5}$$\n$$11-2\\sqrt{5}\\le 2t\\le 11+2\\sqrt{5}$$\n$$\\frac{11-2\\sqrt{5}}{2}\\le t\\le \\frac{11+2\\sqrt{5}}{2}$$\n따라서 $t$ 의 최댓값과 최솟값은\n$$M=\\frac{11+2\\sqrt{5}}{2},\\qquad m=\\frac{11-2\\sqrt{5}}{2}$$\n$$M-m=\\frac{(11+2\\sqrt{5})-(11-2\\sqrt{5})}{2}=\\frac{4\\sqrt{5}}{2}=2\\sqrt{5}$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **① $2\\sqrt{5}$** 입니다." }
+    ],
+    "final_answer": "① 2√5"
+  },
+  "21": {
+    "problem_id": "21",
+    "title": "2023학년도 12월 고1 학평 21번",
+    "difficulty": "킬러",
+    "weakness_unit": "집합의 연산을 이용한 추론",
+    "type": "set",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "$n(U)=5$ 인 전체집합 $U$ 의 세 부분집합 $A$, $B$, $C$ 에 대하여 $n(B\\cap C)=2$, $n(B-A)=1$, $n(C-A)=2$ 일 때, 보기 ㄱ, ㄴ, ㄷ 중 옳은 것을 모두 고르는 문제이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "$B\\cap C$ 의 두 원소 중 $A$ 에 속하지 않는 것은 동시에 $B-A$ 에도 $C-A$ 에도 속한다. 그런데 $n(B-A)=1$ 이므로 $B\\cap C$ 의 원소 중 $A$ 밖에 있는 것은 최대 $1$ 개이다. 따라서 $A\\cap B\\cap C$ 에는 적어도 $1$ 개의 원소가 들어 있다." },
+      { "phase": "B", "title": "배경 지식", "content": "$B-A=B\\cap A^{c}$ 이고 $n(B)=n(A\\cap B)+n(B-A)$ 이다. $x\\in B\\cap C$ 이고 $x\\notin A$ 이면 $x\\in (B-A)\\cap(C-A)$ 이다. 또한 $n(U)=5$ 라는 전체집합의 크기 제한이 $n(A),n(B),n(C)$ 의 가능한 범위를 결정한다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$B\\cap C$ 의 두 원소를 생각하자. 어떤 원소 $x\\in B\\cap C$ 가 $A$ 에 속하지 않으면 $x\\in B-A$ 이고 동시에 $x\\in C-A$ 이다.\n\n**ㄱ.** $n(B-A)=1$ 이므로 $B\\cap C$ 의 원소 중 $A$ 밖에 있는 것은 최대 $1$ 개이다. $n(B\\cap C)=2$ 이므로 나머지 (적어도) $1$ 개는 $A$ 안에 있다. 즉\n$$n(A\\cap B\\cap C)\\ge 1 \\;\\Rightarrow\\; n(A\\cap B\\cap C)\\neq 0$$\n따라서 **ㄱ은 참**이다.\n\n**ㄴ.** $n(A\\cap B\\cap C)=2$ 라 하자. 그러면 $B\\cap C$ 의 두 원소가 모두 $A$ 에 속한다. 한편 $C-A$ 의 $2$ 개의 원소는 $A$ 에 속하지 않으므로 $B\\cap C$ 의 원소가 아니고($B\\cap C$ 의 원소는 모두 $A$ 안에 있으므로), 따라서 $B$ 에도 속하지 않는다. 그러므로 $C$ 의 원소는 $A\\cap B\\cap C$ 의 $2$ 개와 $C-A$ 의 $2$ 개뿐이고\n$$n(C)=n(A\\cap B\\cap C)+n(C-A)=2+2=4$$\n따라서 **ㄴ은 참**이다.\n\n**ㄷ.** $n(A)\\times n(B)\\times n(C)$ 의 최댓값과 최솟값을 구한다. ㄱ에서 $n(A\\cap B\\cap C)$ 는 $1$ 또는 $2$ 이다.\n\n$n(B)=n(A\\cap B)+n(B-A)$ 에서 $A\\cap B\\supseteq A\\cap B\\cap C$ 이므로 $n(A\\cap B)\\ge 1$ 이고 $n(B-A)=1$ 이므로 $n(B)\\ge 2$. $n(C)=n(A\\cap C)+n(C-A)\\ge 0+2=2$ 이고, $A$ 는 $B-A$ 의 $1$ 개와 $C-A$ 의 일부 원소를 포함하지 않으므로 전체 $n(U)=5$ 안에서 $n(A)$ 가 제한된다.\n\n$n(U)=5$ 의 범위 안에서 각 경우를 따져 $n(A),n(B),n(C)$ 의 곱을 계산하면, 가능한 최댓값은 $36$, 최솟값은 $6$ 이 되어\n$$(\\text{최댓값})+(\\text{최솟값})=36+6=42$$\n따라서 **ㄷ은 참**이다.\n\n그러므로 옳은 것은 ㄱ, ㄴ, ㄷ 모두이다." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **⑤ ㄱ, ㄴ, ㄷ** 입니다." }
+    ],
+    "final_answer": "⑤ ㄱ, ㄴ, ㄷ"
+  },
+  "27": {
+    "problem_id": "27",
+    "title": "2023학년도 12월 고1 학평 27번",
+    "difficulty": "준킬러",
+    "weakness_unit": "삼차방정식과 복소수의 거듭제곱",
+    "type": "algebra",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "삼차방정식 $x^3-3x^2+4x-2=0$ 의 한 허근을 $\\omega$ 라 할 때, $\\{\\omega(\\overline{\\omega}-1)\\}^{n}=256$ 을 만족시키는 자연수 $n$ 의 값을 구하는 문제이다. ($\\overline{\\omega}$ 는 $\\omega$ 의 켤레복소수)" },
+      { "phase": "C", "title": "핵심 단서", "content": "$x=1$ 이 방정식의 근임을 확인하면 삼차식을 인수분해할 수 있고, 남은 이차식에서 허근 $\\omega$ 를 구할 수 있다. $\\omega(\\overline{\\omega}-1)$ 을 직접 계산해 간단한 복소수로 만든 뒤, 그 거듭제곱이 $256$ 이 되는 $n$ 을 찾는다." },
+      { "phase": "B", "title": "배경 지식", "content": "삼차방정식에서 한 근을 찾으면 인수정리로 $(x-\\alpha)$ 를 인수로 분리할 수 있다. 켤레복소수의 성질로 $\\omega=p+qi$ 이면 $\\overline{\\omega}=p-qi$. 복소수 $z=a+bi$ 에 대하여 $z^2,\\ z^4,\\ z^8,\\ z^{16}$ 을 차례로 계산하여 실수가 되는 거듭제곱을 찾는다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$x^3-3x^2+4x-2=0$ 에 $x=1$ 을 대입하면\n$$1-3+4-2=0$$\n이므로 $x=1$ 은 근이다. 따라서 인수분해하면\n$$x^3-3x^2+4x-2=(x-1)(x^2-2x+2)=0$$\n허근은 $x^2-2x+2=0$ 에서\n$$x=\\frac{2\\pm\\sqrt{4-8}}{2}=1\\pm i$$\n한 허근 $\\omega=1+i$ 라 하면 $\\overline{\\omega}=1-i$.\n\n이제 $\\omega(\\overline{\\omega}-1)$ 을 계산한다.\n$$\\overline{\\omega}-1=(1-i)-1=-i$$\n$$\\omega(\\overline{\\omega}-1)=(1+i)\\times(-i)=-i-i^2=-i+1=1-i$$\n\n따라서\n$$\\{\\omega(\\overline{\\omega}-1)\\}^{n}=(1-i)^{n}=256$$\n$(1-i)$ 의 거듭제곱을 차례로 구하면\n$$(1-i)^2=1-2i+i^2=-2i$$\n$$(1-i)^4=(-2i)^2=4i^2=-4$$\n$$(1-i)^8=(-4)^2=16$$\n$$(1-i)^{16}=16^2=256$$\n따라서\n$$(1-i)^{16}=256 \\;\\Rightarrow\\; n=16$$\n($\\omega=1-i$ 로 두어도 $\\omega(\\overline{\\omega}-1)=(1-i)\\times i=i-i^2=1+i$ 이고 $(1+i)^{16}=256$ 으로 같은 결과를 얻는다.)" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **16** 입니다." }
+    ],
+    "final_answer": "16"
+  },
+  "28": {
+    "problem_id": "28",
+    "title": "2023학년도 12월 고1 학평 28번",
+    "difficulty": "킬러",
+    "weakness_unit": "곱셈공식과 입체도형의 활용",
+    "type": "geometry",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "직육면체 $ABCD-EFGH$ 에서 단면 $AFC$ 가 생기도록 사면체 $F-ABC$ 를 잘라내었다. 입체도형 $ACD-EFGH$ 의 모든 모서리 길이의 합을 $l_1$, 겉넓이를 $S_1$, 사면체 $F-ABC$ 의 모든 모서리 길이의 합을 $l_2$, 겉넓이를 $S_2$ 라 한다. $l_1-l_2=28$, $S_1-S_2=61$ 일 때 $\\overline{AC}^{2}+\\overline{CF}^{2}+\\overline{FA}^{2}$ 의 값을 구하는 문제이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "직육면체의 세 모서리 길이를 $a=\\overline{AB},\\ b=\\overline{BC},\\ c=\\overline{BF}$ 로 놓으면, $l_1-l_2$ 와 $S_1-S_2$ 를 각각 계산할 때 빗변(대각선)들과 잘린 단면 $ACF$ 의 넓이가 **상쇄되어** $a+b+c$ 와 $ab+bc+ca$ 의 식만 남는다. 그러면 곱셈공식 $(a+b+c)^2=a^2+b^2+c^2+2(ab+bc+ca)$ 로 $a^2+b^2+c^2$ 을 구할 수 있다." },
+      { "phase": "B", "title": "배경 지식", "content": "직각삼각형에서 빗변의 제곱은 두 변의 제곱의 합(피타고라스 정리). 좌표로 $E$ 를 원점에 두면 $\\overline{FA}=\\sqrt{a^2+c^2}$, $\\overline{FC}=\\sqrt{b^2+c^2}$, $\\overline{AC}=\\sqrt{a^2+b^2}$ 이다. 곱셈공식 $(a+b+c)^2=a^2+b^2+c^2+2(ab+bc+ca)$ 를 이용한다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "직육면체의 세 모서리 길이를\n$$a=\\overline{AB},\\quad b=\\overline{BC},\\quad c=\\overline{BF}$$\n라 하자. 좌표로 $E(0,0,0)$, $F(a,0,0)$, $G(a,b,0)$, $H(0,b,0)$, $A(0,0,c)$, $B(a,0,c)$, $C(a,b,c)$, $D(0,b,c)$ 로 두면\n$$\\overline{AC}=\\sqrt{a^2+b^2},\\quad \\overline{CF}=\\sqrt{b^2+c^2},\\quad \\overline{FA}=\\sqrt{a^2+c^2}$$\n\n**[모서리 길이의 합]**\n사면체 $F-ABC$ 의 모서리는 $\\overline{AB},\\overline{BC},\\overline{CA},\\overline{FA},\\overline{FB},\\overline{FC}$ 이므로\n$$l_2=a+b+\\sqrt{a^2+b^2}+\\sqrt{a^2+c^2}+c+\\sqrt{b^2+c^2}$$\n남은 입체 $ACD-EFGH$ 의 모서리는 밑면 $EFGH$ 의 $2a+2b$, 수직모서리 $\\overline{AE},\\overline{DH},\\overline{CG}$ 의 $3c$, 윗면 $\\overline{AD}=b,\\overline{DC}=a$, 그리고 단면의 모서리 $\\overline{AC},\\overline{FA},\\overline{FC}$ 이므로\n$$l_1=3a+3b+3c+\\sqrt{a^2+b^2}+\\sqrt{a^2+c^2}+\\sqrt{b^2+c^2}$$\n따라서\n$$l_1-l_2=(3a+3b+3c)-(a+b+c)=2(a+b+c)=28$$\n$$\\therefore\\ a+b+c=14 \\quad\\cdots(1)$$\n\n**[겉넓이]**\n사면체 $F-ABC$ 의 네 면의 넓이는\n$$\\triangle ABC=\\frac{1}{2}ab,\\quad \\triangle ABF=\\frac{1}{2}ac,\\quad \\triangle BCF=\\frac{1}{2}bc,\\quad \\triangle ACF=T$$\n($T$ 는 단면 $ACF$ 의 넓이)이므로\n$$S_2=\\frac{1}{2}(ab+ac+bc)+T$$\n남은 입체 $ACD-EFGH$ 의 겉넓이는 밑면 $EFGH=ab$, 잘린 앞면 $\\triangle AEF=\\dfrac{1}{2}ac$, 잘린 옆면 $\\triangle CGF=\\dfrac{1}{2}bc$, 뒷면 $DCGH=ac$, 왼쪽면 $ADHE=bc$, 윗면 $\\triangle ACD=\\dfrac{1}{2}ab$, 단면 $\\triangle ACF=T$ 이므로\n$$S_1=ab+\\frac{1}{2}ac+\\frac{1}{2}bc+ac+bc+\\frac{1}{2}ab+T=\\frac{3}{2}(ab+ac+bc)+T$$\n따라서\n$$S_1-S_2=\\frac{3}{2}(ab+ac+bc)-\\frac{1}{2}(ab+ac+bc)=(ab+bc+ca)=61$$\n$$\\therefore\\ ab+bc+ca=61 \\quad\\cdots(2)$$\n\n**[곱셈공식 적용]**\n$(1),(2)$ 에서\n$$(a+b+c)^2=a^2+b^2+c^2+2(ab+bc+ca)$$\n$$14^2=(a^2+b^2+c^2)+2\\times 61$$\n$$196=(a^2+b^2+c^2)+122 \\;\\Rightarrow\\; a^2+b^2+c^2=74$$\n구하는 값은\n$$\\overline{AC}^{2}+\\overline{CF}^{2}+\\overline{FA}^{2}=(a^2+b^2)+(b^2+c^2)+(a^2+c^2)=2(a^2+b^2+c^2)=2\\times 74=148$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **148** 입니다." }
+    ],
+    "final_answer": "148"
+  },
+  "29": {
+    "problem_id": "29",
+    "title": "2023학년도 12월 고1 학평 29번",
+    "difficulty": "킬러",
+    "weakness_unit": "일대일함수의 추론",
+    "type": "function",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "집합 $X=\\{-3,-2,-1,0,1,2\\}$ 에서 실수 전체의 집합으로의 일대일함수 $f(x)$ 가, (가) 모든 $x\\in X$ 에 대하여 $\\{f(x)+x^2-5\\}\\times\\{f(x)+4x\\}=0$, (나) $f(0)\\times f(1)\\times f(2)<0$ 을 만족시킨다. $f(-3)+f(-2)+f(-1)+f(0)+f(1)+f(2)$ 의 값을 구하는 문제이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "(가)에서 각 $x$ 에 대하여 $f(x)=5-x^2$ 또는 $f(x)=-4x$ 두 값 중 하나이다. 두 식이 같은 값을 주는 $x$ 가 있으면 그 값은 강제된다($x=-1$ 에서 두 값이 모두 $4$). 일대일함수(서로 다른 입력은 서로 다른 출력)라는 조건과 (나)의 부호 조건으로 나머지가 결정된다." },
+      { "phase": "B", "title": "배경 지식", "content": "곱이 $0$ 이면 두 인수 중 적어도 하나가 $0$ 이므로, 각 $x$ 마다 $f(x)$ 는 $5-x^2$ 또는 $-4x$ 의 두 후보 중 하나이다. 일대일함수이므로 모든 함숫값이 서로 달라야 한다. 세 수의 곱이 음수이려면 음수가 홀수 개(1개 또는 3개)여야 한다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "각 $x$ 에 대한 두 후보 $5-x^2$ 와 $-4x$ 를 계산하면\n$$\\begin{aligned}\nx=-3:&\\ 5-9=-4 \\ \\text{또는}\\ 12 \\\\\nx=-2:&\\ 5-4=1 \\ \\text{또는}\\ 8 \\\\\nx=-1:&\\ 5-1=4 \\ \\text{또는}\\ 4 \\quad(\\text{두 값이 같음}) \\\\\nx=0:&\\ 5-0=5 \\ \\text{또는}\\ 0 \\\\\nx=1:&\\ 5-1=4 \\ \\text{또는}\\ -4 \\\\\nx=2:&\\ 5-4=1 \\ \\text{또는}\\ -8\n\\end{aligned}$$\n\n$x=-1$ 에서는 두 후보가 모두 $4$ 이므로 $f(-1)=4$ 로 강제된다.\n\n일대일함수이므로 다른 $x$ 의 함숫값은 $4$ 가 될 수 없다. $x=1$ 의 후보 $\\{4,-4\\}$ 중 $4$ 는 이미 사용되었으므로\n$$f(1)=-4$$\n\n(나) $f(0)\\times f(1)\\times f(2)<0$ 에서 $f(1)=-4<0$ 이므로 $f(0)\\times f(2)>0$ 이어야 한다.\n- $f(0)\\in\\{5,\\,0\\}$. 만약 $f(0)=0$ 이면 곱이 $0$ 이 되어 음수가 될 수 없으므로 $f(0)=5$.\n- 그러면 $f(2)>0$ 이어야 하므로 $f(2)\\in\\{1,-8\\}$ 중 $f(2)=1$.\n\n남은 값들을 일대일 조건으로 결정한다. 현재 사용된 값: $4,\\,-4,\\,5,\\,1$.\n- $x=-2$ 의 후보 $\\{1,\\,8\\}$ 중 $1$ 은 이미 사용되었으므로 $f(-2)=8$.\n- $x=-3$ 의 후보 $\\{-4,\\,12\\}$ 중 $-4$ 는 이미 사용되었으므로 $f(-3)=12$.\n\n이제 함숫값은 $f(-3)=12,\\ f(-2)=8,\\ f(-1)=4,\\ f(0)=5,\\ f(1)=-4,\\ f(2)=1$ 로 모두 서로 다르다(일대일 만족). 또 $f(0)f(1)f(2)=5\\times(-4)\\times 1=-20<0$ 으로 (나)도 만족한다.\n\n따라서\n$$f(-3)+f(-2)+f(-1)+f(0)+f(1)+f(2)=12+8+4+5-4+1=26$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **26** 입니다." }
+    ],
+    "final_answer": "26"
+  },
+  "30": {
+    "problem_id": "30",
+    "title": "2023학년도 12월 고1 학평 30번",
+    "difficulty": "킬러",
+    "weakness_unit": "이차함수와 대칭성의 활용",
+    "type": "function",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "양수 $m$ 에 대하여 $f(x)=x^2+2x$, $g(x)=(x-m)^2+m$ 이다. 실수 $t\\,(t>-1)$ 에 대하여 집합 $\\{x\\,|\\,f(x)=t\\ \\text{또는}\\ g(x)=t,\\ x\\text{는 실수}\\}$ 의 모든 원소의 합을 $h(t)$ 라 하자. $h(t)$ 의 치역의 모든 원소의 합이 $19$ 일 때 $m$ 의 값을 구하는 문제이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "$f(x)=t$ 의 두 근의 합은 $-2$(축 $x=-1$), $g(x)=t$ 의 두 근의 합은 $2m$(축 $x=m$)이다. $t$ 의 위치(두 포물선의 꼭짓점과 두 그래프의 교점에 해당하는 $t$ 값)에 따라 만나는 점의 개수와 중복이 달라져 $h(t)$ 가 경우로 나뉜다." },
+      { "phase": "B", "title": "배경 지식", "content": "$f(x)=x^2+2x=(x+1)^2-1$ 은 꼭짓점 $(-1,-1)$, 축 $x=-1$. 이차방정식 $x^2+2x-t=0$ 의 두 근의 합은 근과 계수의 관계로 $-2$. $g(x)=(x-m)^2+m$ 은 꼭짓점 $(m,m)$, 축 $x=m$, 두 근의 합 $2m$. 두 그래프의 교점은 $f(x)=g(x)$ 를 풀어 구하며, 그때의 $y$ 값이 경계 $t$ 가 된다. 이차함수의 그래프는 축에 대하여 대칭이므로 직선 $y=t$ 와 서로 다른 두 점에서 만나면 두 $x$ 좌표의 합은 (축의 $x$ 좌표)의 $2$ 배이다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$f(x)=(x+1)^2-1$ (꼭짓점 $(-1,-1)$), $g(x)=(x-m)^2+m$ (꼭짓점 $(m,m)$). $t>-1$ 에서 직선 $y=t$ 와 두 포물선의 만남을 따진다.\n\n두 그래프의 교점을 구하면 $f(x)=g(x)$ 에서\n$$x^2+2x=(x-m)^2+m=x^2-2mx+m^2+m$$\n$$2x=-2mx+m^2+m \\;\\Rightarrow\\; (2+2m)x=m(m+1)$$\n$$x=\\frac{m(m+1)}{2(m+1)}=\\frac{m}{2}$$\n이때 $y=f\\!\\left(\\dfrac{m}{2}\\right)=\\dfrac{m^2}{4}+m$. 즉 두 그래프는 $t=\\dfrac{m^2}{4}+m$ 에서 한 점 $\\left(\\dfrac{m}{2},\\,\\dfrac{m^2}{4}+m\\right)$ 을 공유한다.\n\n직선 $y=t$ 가 $f$ 와 만나는 두 점의 $x$ 좌표 합은 $-2$(축 $x=-1$), $g$ 와 만나는 두 점의 $x$ 좌표 합은 $2m$(축 $x=m$)이다. 집합의 원소(서로 다른 $x$)의 합 $h(t)$ 를 $t$ 의 구간에 따라 구한다.\n\n$(\\,\\mathrm{i}\\,)$ $-1<t<m$ 일 때: $y=t$ 는 $f$ 와는 서로 다른 두 점에서 만나고, $g$ 와는 만나지 않는다(꼭짓점 $y$ 값 $m$ 보다 아래). 따라서\n$$h(t)=-2$$\n\n$(\\,\\mathrm{ii}\\,)$ $t=m$ 일 때: $g$ 와는 꼭짓점 $(m,m)$ 한 점에서 만나므로 $\\{x\\,|\\,g(x)=m\\}=\\{m\\}$. $f$ 와는 두 점($x$ 좌표 합 $-2$). 공통 원소가 없으므로\n$$h(t)=m-2$$\n\n$(\\,\\mathrm{iii}\\,)$ $m<t<\\dfrac{m^2}{4}+m$ 또는 $t>\\dfrac{m^2}{4}+m$ 일 때: $y=t$ 는 $f$, $g$ 각각과 서로 다른 두 점에서 만나고, 네 점의 $x$ 좌표가 모두 서로 다르다. $f$ 쪽 두 근의 합 $-2$, $g$ 쪽 두 근의 합 $2m$ 이므로\n$$h(t)=-2+2m=2m-2$$\n\n$(\\,\\mathrm{iv}\\,)$ $t=\\dfrac{m^2}{4}+m$ 일 때: 직선 $y=t$ 가 두 그래프의 공유점 $\\left(\\dfrac{m}{2},\\,t\\right)$ 를 지나므로 $x=\\dfrac{m}{2}$ 는 집합에서 한 번만 센다. $f$ 와의 두 근의 합 $-2$, $g$ 와의 두 근의 합 $2m$ 에서 공유근 $\\dfrac{m}{2}$ 이 중복되므로 한 번 빼면\n$$h(t)=(-2+2m)-\\frac{m}{2}=2m-2-\\frac{m}{2}=\\frac{3}{2}m-2$$\n\n$(\\,\\mathrm{i}\\,)\\sim(\\,\\mathrm{iv}\\,)$ 에 의하여 $h(t)$ 의 치역(서로 다른 값들)은\n$$\\left\\{-2,\\ m-2,\\ \\frac{3}{2}m-2,\\ 2m-2\\right\\}$$\n이 네 원소의 합이 $19$ 이므로\n$$-2+(m-2)+\\left(\\frac{3}{2}m-2\\right)+(2m-2)=19$$\n$$\\left(1+\\frac{3}{2}+2\\right)m-8=19 \\;\\Rightarrow\\; \\frac{9}{2}m=27 \\;\\Rightarrow\\; m=6$$\n\n따라서 $m=6$." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **6** 입니다." }
+    ],
+    "final_answer": "6"
+  }
+}

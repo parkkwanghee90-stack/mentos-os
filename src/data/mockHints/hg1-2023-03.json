@@ -1,0 +1,473 @@
+{
+  "14": {
+    "problem_id": "14",
+    "title": "2023학년도 3월 고1 학평 14번",
+    "difficulty": "준킬러",
+    "weakness_unit": "일차방정식의 활용",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "수직선 위 원점에서 출발한 두 점 $P$, $Q$가 동전을 한 번 던질 때마다 규칙에 따라 움직인다.\n\n- (가) 앞면이 나오면 점 $P$가 양의 방향으로 $2$만큼 이동\n- (나) 뒷면이 나오면 점 $Q$가 음의 방향으로 $1$만큼 이동\n\n동전을 $30$번 던진 후 두 점 $P$, $Q$ 사이의 거리가 $46$일 때, 앞면이 나온 횟수를 구하는 문제이다. 앞면이 나온 횟수를 미지수로 놓고 일차방정식을 세운다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "동전을 $30$번 던졌으므로 (앞면 횟수)$+$(뒷면 횟수)$=30$이다. 앞면은 오직 $P$만, 뒷면은 오직 $Q$만 움직이게 하므로 각 점의 최종 위치는 앞면·뒷면 횟수만으로 결정된다. $P$는 양의 방향, $Q$는 음의 방향으로만 이동하므로 두 점은 원점을 기준으로 서로 반대편에 놓이고, 사이의 거리는 두 이동량의 합이 된다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "수직선 위 두 점의 좌표가 각각 $x_P$, $x_Q$일 때 두 점 사이의 거리는 $|x_P-x_Q|$이다. 한쪽은 양수, 다른 쪽은 음수(또는 $0$)이면 거리는 두 절댓값의 합과 같다. 미지수 하나로 식을 세워 푸는 일차방정식의 활용 문제이다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "앞면이 나온 횟수를 $a$라 하면, 뒷면이 나온 횟수는 $30-a$이다.\n\n$$\\text{앞면 } a\\text{회} \\;\\Rightarrow\\; \\text{점 } P \\text{의 좌표} = 2a$$\n\n$$\\text{뒷면 } (30-a)\\text{회} \\;\\Rightarrow\\; \\text{점 } Q \\text{의 좌표} = -(30-a)$$\n\n두 점 사이의 거리는\n\n$$\\overline{PQ}=\\left|\\,2a-\\big(-(30-a)\\big)\\,\\right|=\\left|\\,2a+30-a\\,\\right|=\\left|\\,a+30\\,\\right|=a+30$$\n\n($a\\ge 0$이므로 절댓값을 벗을 수 있다.)\n\n이 거리가 $46$이므로\n\n$$a+30=46$$\n\n$$a=16$$\n\n앞면이 나온 횟수는 $16$이고, $0\\le 16\\le 30$이므로 조건에 맞는다."
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **16** 입니다."
+      }
+    ],
+    "final_answer": "16"
+  },
+  "15": {
+    "problem_id": "15",
+    "title": "2023학년도 3월 고1 학평 15번",
+    "difficulty": "준킬러",
+    "weakness_unit": "이차방정식의 활용",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "polygon", "points": [[0,4.5],[0,0],[8,0],[8,4.5]], "fillOpacity": 0.0 },
+        { "type": "circle", "center": [0,0], "radius": 4.5 },
+        { "type": "circle", "center": [8,0], "radius": 3.5 },
+        { "type": "polygon", "points": [[0,4.5],[4.5,0],[8,1],[8,4.5]], "fillOpacity": 0.1 },
+        { "type": "point", "coordinates": [0,4.5], "label": "A" },
+        { "type": "point", "coordinates": [0,0], "label": "B" },
+        { "type": "point", "coordinates": [8,0], "label": "C" },
+        { "type": "point", "coordinates": [8,4.5], "label": "D" },
+        { "type": "point", "coordinates": [4.5,0], "label": "P" },
+        { "type": "point", "coordinates": [8,1], "label": "Q" },
+        { "type": "label_text", "tex": "a", "at": [-0.5,2.2] }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$\\overline{AB}=a\\,(4<a<8)$, $\\overline{BC}=8$인 직사각형 $ABCD$가 있다. 점 $B$를 중심으로 하고 점 $A$를 지나는 원이 선분 $BC$와 만나는 점을 $P$, 점 $C$를 중심으로 하고 점 $P$를 지나는 원이 선분 $CD$와 만나는 점을 $Q$라 한다. 사각형 $APQD$의 넓이가 $\\dfrac{79}{4}$일 때 $a$의 값을 구한다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "두 원의 반지름을 변의 길이로 옮기는 것이 핵심이다.\n\n- 점 $B$ 중심, 점 $A$를 지나는 원의 반지름 $=\\overline{BA}=a$이므로 $\\overline{BP}=a$, 따라서 $\\overline{PC}=8-a$.\n- 점 $C$ 중심, 점 $P$를 지나는 원의 반지름 $=\\overline{CP}=8-a$이므로 $\\overline{CQ}=8-a$, 따라서 $\\overline{DQ}=\\overline{CD}-\\overline{CQ}=a-(8-a)=2a-8$.\n\n구하는 사각형 $APQD$의 넓이는 직사각형 전체에서 두 직각삼각형 $\\triangle ABP$, $\\triangle PCQ$를 빼서 구한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "원의 반지름은 중심에서 원 위의 어떤 점까지의 거리이므로 모두 같다. 직각삼각형의 넓이는 $\\dfrac12\\times(\\text{밑변})\\times(\\text{높이})$이다. 직사각형의 넓이는 (가로)$\\times$(세로)이며, 부분 넓이를 빼서 구하는 도형의 넓이를 식으로 만들면 $a$에 대한 이차방정식이 된다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "직사각형 $ABCD$의 넓이는\n\n$$\\overline{AB}\\times\\overline{BC}=a\\times 8=8a$$\n\n직각삼각형 $\\triangle ABP$는 $\\overline{AB}=a$, $\\overline{BP}=a$인 직각삼각형이므로\n\n$$\\triangle ABP=\\frac12\\times a\\times a=\\frac{a^2}{2}$$\n\n직각삼각형 $\\triangle PCQ$는 $\\overline{PC}=8-a$, $\\overline{CQ}=8-a$인 직각삼각형이므로\n\n$$\\triangle PCQ=\\frac12\\times(8-a)\\times(8-a)=\\frac{(8-a)^2}{2}$$\n\n사각형 $APQD$의 넓이는 직사각형에서 두 삼각형을 뺀 것이므로\n\n$$\\square APQD=8a-\\frac{a^2}{2}-\\frac{(8-a)^2}{2}$$\n\n$$=8a-\\frac{a^2}{2}-\\frac{64-16a+a^2}{2}$$\n\n$$=8a-\\frac{a^2+64-16a+a^2}{2}=8a-\\frac{2a^2-16a+64}{2}$$\n\n$$=8a-(a^2-8a+32)=-a^2+16a-32$$\n\n이 넓이가 $\\dfrac{79}{4}$이므로\n\n$$-a^2+16a-32=\\frac{79}{4}$$\n\n양변에 $4$를 곱하면\n\n$$-4a^2+64a-128=79$$\n\n$$4a^2-64a+207=0$$\n\n근의 공식을 적용하면\n\n$$a=\\frac{64\\pm\\sqrt{64^2-4\\cdot 4\\cdot 207}}{2\\cdot 4}=\\frac{64\\pm\\sqrt{4096-3312}}{8}=\\frac{64\\pm\\sqrt{784}}{8}=\\frac{64\\pm 28}{8}$$\n\n$$a=\\frac{92}{8}=\\frac{23}{2}\\quad\\text{또는}\\quad a=\\frac{36}{8}=\\frac{9}{2}$$\n\n조건 $4<a<8$을 만족하는 값은\n\n$$a=\\frac{9}{2}$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **③ $\\dfrac{9}{2}$** 입니다."
+      }
+    ],
+    "final_answer": "③ 9/2"
+  },
+  "18": {
+    "problem_id": "18",
+    "title": "2023학년도 3월 고1 학평 18번",
+    "difficulty": "준킬러",
+    "weakness_unit": "삼각형의 무게중심과 닮음",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "polygon", "points": [[-2,-2],[2,-2],[0.333,-0.333],[1,-0.333],[0,0.667],[-1,-0.333],[-0.333,-0.333]], "fillOpacity": 0.08 },
+        { "type": "point", "coordinates": [0,0.667], "label": "A" },
+        { "type": "point", "coordinates": [-1,-0.333], "label": "B" },
+        { "type": "point", "coordinates": [1,-0.333], "label": "C" },
+        { "type": "point", "coordinates": [-2,-2], "label": "E" },
+        { "type": "point", "coordinates": [2,-2], "label": "F" },
+        { "type": "point", "coordinates": [0,0], "label": "D" }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "[그림1]에서 $\\overline{AB}=\\overline{AC}=\\sqrt{2}$, $\\angle CAB=90^\\circ$인 삼각형 $ABC$의 무게중심 $D$에 대하여, $\\overline{DE}=\\overline{DF}=2\\sqrt{2}$, $\\angle FDE=90^\\circ$이고 $\\overline{BC}\\parallel\\overline{EF}$인 삼각형 $DEF$가 있다. [그림2]처럼 두 삼각형으로 만들어지는 나무 모양 도형의 둘레의 길이를 구한다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "도형의 둘레는 바깥 경계를 이루는 선분만 더해야 한다. 두 직각이등변삼각형의 빗변($\\overline{BC}$, $\\overline{EF}$)을 먼저 구하고, $\\overline{BC}\\parallel\\overline{EF}$를 이용해 좌표로 정확히 배치한 뒤 두 삼각형의 변이 만나는 교점을 찾는다. 둘레는 $\\overline{EF}$, 무게중심 쪽 빗변 위에 남는 두 조각, 가지 밑면 두 조각($\\overline{BC}$의 일부), 그리고 $\\overline{AB}$, $\\overline{AC}$로 이루어진다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "직각이등변삼각형에서 두 변의 길이가 $\\ell$이면 빗변은 $\\ell\\sqrt{2}$이다. 삼각형의 무게중심은 세 중선을 $2:1$로 내분하며, 세 꼭짓점의 좌표평균과 같다. 즉 무게중심 $G=\\left(\\dfrac{x_A+x_B+x_C}{3},\\dfrac{y_A+y_B+y_C}{3}\\right)$이다. 평행한 두 빗변을 가로로 놓고 좌표로 분석하면 교점을 정확히 구할 수 있다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "먼저 각 빗변의 길이를 구한다. $\\triangle ABC$는 $\\overline{AB}=\\overline{AC}=\\sqrt{2}$, $\\angle A=90^\\circ$인 직각이등변삼각형이므로\n\n$$\\overline{BC}=\\sqrt{2}\\times\\sqrt{2}=2$$\n\n$\\triangle DEF$는 $\\overline{DE}=\\overline{DF}=2\\sqrt{2}$, $\\angle FDE=90^\\circ$인 직각이등변삼각형이므로\n\n$$\\overline{EF}=2\\sqrt{2}\\times\\sqrt{2}=4$$\n\n$\\overline{BC}\\parallel\\overline{EF}$가 되도록 좌표를 잡는다. $\\overline{EF}$를 가로로 두고, 직각꼭짓점 $D$에서 빗변 $\\overline{EF}$까지의 높이는 $\\dfrac{2\\sqrt2\\cdot 2\\sqrt2}{4}=2$이므로\n\n$$D=(0,\\,0),\\quad E=(-2,\\,-2),\\quad F=(2,\\,-2)$$\n\n다음으로 $\\triangle ABC$를 배치한다. $D$가 $\\triangle ABC$의 무게중심이고 $\\overline{BC}\\parallel\\overline{EF}$(가로)이므로, $\\overline{BC}$를 가로선분으로 두면 $B=(-1,t)$, $C=(1,t)$, 꼭짓점 $A=(0,\\,t+1)$이다($\\overline{BC}=2$, $A$에서 $\\overline{BC}$까지 높이 $\\dfrac{\\sqrt2\\cdot\\sqrt2}{2}=1$). 무게중심의 $y$좌표가 $0$이어야 하므로\n\n$$\\frac{t+t+(t+1)}{3}=0\\;\\Rightarrow\\; t=-\\frac13$$\n\n$$A=\\left(0,\\tfrac23\\right),\\quad B=\\left(-1,-\\tfrac13\\right),\\quad C=\\left(1,-\\tfrac13\\right)$$\n\n이제 두 삼각형 변의 교점을 찾는다. $\\overline{BC}$($y=-\\tfrac13$)는 $\\overline{DE}$($y=x$)와 점 $P_1=\\left(-\\tfrac13,-\\tfrac13\\right)$에서, $\\overline{DF}$($y=-x$)와 점 $P_2=\\left(\\tfrac13,-\\tfrac13\\right)$에서 만난다. 따라서 도형의 바깥 둘레는\n\n$$E\\to F\\to P_2\\to C\\to A\\to B\\to P_1\\to E$$\n\n순서의 다각형이다. 각 변의 길이를 구하면\n\n$$\\overline{EF}=4$$\n\n$$\\overline{FP_2}=\\sqrt{\\left(2-\\tfrac13\\right)^2+\\left(-2+\\tfrac13\\right)^2}=\\sqrt{2\\left(\\tfrac53\\right)^2}=\\frac{5}{3}\\sqrt2$$\n\n$$\\overline{P_2 C}=1-\\frac13=\\frac23,\\qquad \\overline{CA}=\\sqrt2,\\qquad \\overline{AB}=\\sqrt2$$\n\n$$\\overline{BP_1}=-\\frac13-(-1)=\\frac23,\\qquad \\overline{P_1 E}=\\sqrt{2\\left(\\tfrac53\\right)^2}=\\frac{5}{3}\\sqrt2$$\n\n따라서 둘레의 길이는\n\n$$4+\\frac{5}{3}\\sqrt2+\\frac23+\\sqrt2+\\sqrt2+\\frac23+\\frac{5}{3}\\sqrt2$$\n\n$$=\\left(4+\\frac43\\right)+\\left(\\frac{10}{3}+2\\right)\\sqrt2=\\frac{16}{3}+\\frac{16}{3}\\sqrt2=\\frac{16+16\\sqrt2}{3}$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **① $\\dfrac{16+16\\sqrt{2}}{3}$** 입니다."
+      }
+    ],
+    "final_answer": "① (16+16√2)/3"
+  },
+  "19": {
+    "problem_id": "19",
+    "title": "2023학년도 3월 고1 학평 19번",
+    "difficulty": "준킬러",
+    "weakness_unit": "정비례·반비례 관계",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "function_plot", "expr": "1/x" },
+        { "type": "function_plot", "expr": "2*x" },
+        { "type": "function_plot", "expr": "0.5*x" },
+        { "type": "point", "coordinates": [0.707,1.414], "label": "P" },
+        { "type": "point", "coordinates": [1.414,0.707], "label": "Q" },
+        { "type": "point", "coordinates": [0.707,0.354], "label": "R" },
+        { "type": "label_text", "tex": "y=mx", "at": [1.1,2.4] },
+        { "type": "label_text", "tex": "y=nx", "at": [2.2,1.0] },
+        { "type": "label_text", "tex": "y=\\frac{a}{x}", "at": [0.35,2.4] }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "반비례 관계 $y=\\dfrac{a}{x}\\,(a>0)$의 그래프가 정비례 관계 $y=mx$, $y=nx$의 그래프와 제1사분면에서 만나는 점을 각각 $P$, $Q$라 한다. 점 $P$를 지나고 $y$축과 평행한 직선이 $y=nx$와 만나는 점을 $R$라 할 때, $\\triangle PRQ$의 넓이가 $\\dfrac32$이고 점 $Q$의 $x$좌표가 점 $P$의 $x$좌표의 $2$배이다. $m>n>0$일 때 $a$의 값을 구한다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$P$, $Q$가 모두 $y=\\dfrac{a}{x}$ 위의 점이라는 사실이 핵심이다. 점 $P$의 $x$좌표를 $p$라 하면 $Q$의 $x$좌표는 $2p$이고, 두 점 모두 반비례 그래프 위에 있다. 점 $R$는 $P$와 같은 $x$좌표($x=p$)를 가지면서 $y=nx$ 위에 있으므로 $\\overline{PR}$는 $x=p$에서의 두 직선의 세로 간격이다. 이를 밑변으로, $Q$의 $x$좌표와 $p$의 차를 높이로 삼각형 넓이를 계산한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "반비례 관계 $y=\\dfrac{a}{x}$ 위의 점 $(x,y)$는 $xy=a$를 만족한다. 정비례 관계 $y=mx$ 위의 점은 $y/x=m$이다. 세로변(연직선분)을 밑변으로 하는 삼각형의 넓이는 $\\dfrac12\\times(\\text{밑변 길이})\\times(\\text{밑변에서 꼭짓점까지의 수평거리})$로 구할 수 있다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "점 $P$의 $x$좌표를 $p$라 하자. $P$는 $y=mx$ 위의 점이므로\n\n$$P=(p,\\,mp)$$\n\n점 $Q$의 $x$좌표는 $2p$이고 $Q$는 $y=nx$ 위의 점이므로\n\n$$Q=(2p,\\,2np)$$\n\n두 점 $P$, $Q$는 모두 $y=\\dfrac{a}{x}$ 위에 있으므로 $xy=a$가 성립한다.\n\n$$P:\\; p\\cdot mp=mp^2=a$$\n\n$$Q:\\; 2p\\cdot 2np=4np^2=a$$\n\n두 식이 같으므로\n\n$$mp^2=4np^2\\;\\Rightarrow\\; m=4n$$\n\n점 $R$는 $x=p$이고 $y=nx$ 위의 점이므로\n\n$$R=(p,\\,np)$$\n\n선분 $\\overline{PR}$는 $x=p$에서의 연직선분이고 그 길이는\n\n$$\\overline{PR}=mp-np=4np-np=3np$$\n\n$\\triangle PRQ$는 밑변 $\\overline{PR}$가 직선 $x=p$ 위에 있고, 꼭짓점 $Q$의 $x$좌표가 $2p$이므로 밑변에서 $Q$까지의 수평거리는 $2p-p=p$이다. 따라서\n\n$$\\triangle PRQ=\\frac12\\times\\overline{PR}\\times p=\\frac12\\times 3np\\times p=\\frac{3}{2}np^2$$\n\n이 넓이가 $\\dfrac32$이므로\n\n$$\\frac32 np^2=\\frac32\\;\\Rightarrow\\; np^2=1$$\n\n따라서\n\n$$a=4np^2=4\\times 1=4$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **④ $4$** 입니다."
+      }
+    ],
+    "final_answer": "④ 4"
+  },
+  "20": {
+    "problem_id": "20",
+    "title": "2023학년도 3월 고1 학평 20번",
+    "difficulty": "킬러",
+    "weakness_unit": "삼각비를 이용한 도형의 넓이",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "point", "coordinates": [0,0], "label": "O" },
+        { "type": "point", "coordinates": [-1.366,2.366], "label": "A" },
+        { "type": "point", "coordinates": [0,2.732], "label": "C" },
+        { "type": "point", "coordinates": [2.366,1.366], "label": "D" },
+        { "type": "point", "coordinates": [2.732,0], "label": "B" },
+        { "type": "point", "coordinates": [0,2], "label": "E" },
+        { "type": "point", "coordinates": [1.577,0], "label": "F" },
+        { "type": "segment", "from": [0,0], "to": [-1.366,2.366] },
+        { "type": "segment", "from": [0,0], "to": [2.732,0] },
+        { "type": "segment", "from": [0,0], "to": [0,2.732] },
+        { "type": "segment", "from": [0,0], "to": [2.366,1.366] },
+        { "type": "segment", "from": [-1.366,2.366], "to": [2.366,1.366] },
+        { "type": "segment", "from": [1.577,0], "to": [2.366,1.366] }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "중심이 $O$이고 중심각의 크기가 $120^\\circ$인 부채꼴 $OAB$가 있다. $\\angle AOC=\\angle DOB=30^\\circ$인 호 $AB$ 위의 두 점 $C$, $D$에 대하여 선분 $OC$와 선분 $AD$가 만나는 점을 $E$라 한다. 선분 $OD$의 수직이등분선과 선분 $OB$가 만나는 점을 $F$라 할 때 $\\overline{BF}=\\dfrac{2\\sqrt3}{3}$이다. 이때 삼각형 $ODE$의 넓이를 구한다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "반지름 $r=\\overline{OA}=\\overline{OB}=\\overline{OC}=\\overline{OD}$가 모두 같다는 점, 그리고 $\\angle AOC=30^\\circ$, $\\angle COD=120^\\circ-30^\\circ-30^\\circ=60^\\circ$, $\\angle DOB=30^\\circ$로 각이 결정된다는 점이 핵심이다. 먼저 $\\overline{OD}$의 수직이등분선 위의 점 $F$가 $\\overline{FO}=\\overline{FD}$를 만족함을 이용해 반지름 $r$를 구한다. 그 다음 $O$를 원점으로 좌표를 잡아 직선 $OC$와 직선 $AD$의 교점 $E$를 구하고 $\\triangle ODE$의 넓이를 계산한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "수직이등분선 위의 점은 양 끝점에서 같은 거리에 있다. 한 원(부채꼴)의 반지름은 모두 같다. 좌표평면에서 점 $(x_1,y_1),(x_2,y_2),(x_3,y_3)$을 꼭짓점으로 하는 삼각형의 넓이는 $\\dfrac12\\left|x_1(y_2-y_3)+x_2(y_3-y_1)+x_3(y_1-y_2)\\right|$이다. 한 꼭짓점이 원점이면 식이 크게 간단해진다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "반지름을 $r=\\overline{OA}=\\overline{OB}=\\overline{OC}=\\overline{OD}$라 하자.\n\n점 $F$는 선분 $\\overline{OD}$의 수직이등분선 위에 있으므로 $\\overline{FO}=\\overline{FD}$이다. 삼각형 $OFD$는 $\\overline{FO}=\\overline{FD}$인 이등변삼각형이고, $F$는 $\\overline{OB}$ 위에 있으므로 $\\angle FOD=\\angle DOB=30^\\circ$이다. 따라서 $\\angle FDO=30^\\circ$, $\\angle OFD=120^\\circ$이다. 밑변 $\\overline{OD}=r$에 대해 이등변삼각형의 한 변 $\\overline{OF}$는\n\n$$\\overline{OF}=\\frac{\\overline{OD}/2}{\\cos 30^\\circ}=\\frac{r/2}{\\dfrac{\\sqrt3}{2}}=\\frac{r}{\\sqrt3}$$\n\n그러면\n\n$$\\overline{BF}=\\overline{OB}-\\overline{OF}=r-\\frac{r}{\\sqrt3}=\\frac{r(\\sqrt3-1)}{\\sqrt3}$$\n\n$\\overline{BF}=\\dfrac{2\\sqrt3}{3}=\\dfrac{2}{\\sqrt3}$이므로\n\n$$\\frac{r(\\sqrt3-1)}{\\sqrt3}=\\frac{2}{\\sqrt3}\\;\\Rightarrow\\; r(\\sqrt3-1)=2\\;\\Rightarrow\\; r=\\frac{2}{\\sqrt3-1}=\\sqrt3+1$$\n\n이제 $O$를 원점으로 두고 $\\overline{OB}$를 시초선($0^\\circ$)으로 하여 반시계방향으로 각을 잰다. 그러면\n\n$$B:0^\\circ,\\quad D:30^\\circ,\\quad C:90^\\circ,\\quad A:120^\\circ$$\n\n이고 각 점의 좌표는 ($r=\\sqrt3+1$)\n\n$$A=r\\left(-\\tfrac12,\\tfrac{\\sqrt3}{2}\\right),\\quad C=r(0,1),\\quad D=r\\left(\\tfrac{\\sqrt3}{2},\\tfrac12\\right),\\quad O=(0,0)$$\n\n직선 $OC$는 $C=(0,r)$를 지나는 $y$축, 즉 $x=0$이다. 직선 $AD$ 위의 점을 $A+t(D-A)$로 두고 $x=0$이 되는 $t$를 구하면\n\n$$r\\left(-\\tfrac12\\right)+t\\cdot r\\left(\\tfrac{\\sqrt3}{2}+\\tfrac12\\right)=0\\;\\Rightarrow\\; t=\\frac{1}{\\sqrt3+1}=\\frac{\\sqrt3-1}{2}$$\n\n교점 $E$의 $y$좌표는\n\n$$y_E=r\\left[\\frac{\\sqrt3}{2}+t\\cdot\\frac{1-\\sqrt3}{2}\\right]=r\\left[\\frac{\\sqrt3}{2}-\\frac{(\\sqrt3-1)^2}{4}\\right]=r\\left[\\frac{\\sqrt3}{2}-\\frac{2-\\sqrt3}{2}\\right]=r(\\sqrt3-1)$$\n\n$r=\\sqrt3+1$이므로\n\n$$y_E=(\\sqrt3+1)(\\sqrt3-1)=3-1=2,\\qquad E=(0,\\,2)$$\n\n삼각형 $ODE$의 넓이를 구한다. $O=(0,0)$, $E=(0,2)$는 모두 $y$축 위에 있으므로 밑변 $\\overline{OE}=2$로 보고, 높이는 $D$의 $x$좌표이다.\n\n$$x_D=r\\cdot\\frac{\\sqrt3}{2}=(\\sqrt3+1)\\cdot\\frac{\\sqrt3}{2}=\\frac{3+\\sqrt3}{2}$$\n\n$$\\triangle ODE=\\frac12\\times\\overline{OE}\\times x_D=\\frac12\\times 2\\times\\frac{3+\\sqrt3}{2}=\\frac{3+\\sqrt3}{2}$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **① $\\dfrac{3+\\sqrt3}{2}$** 입니다."
+      }
+    ],
+    "final_answer": "① (3+√3)/2"
+  },
+  "21": {
+    "problem_id": "21",
+    "title": "2023학년도 3월 고1 학평 21번",
+    "difficulty": "킬러",
+    "weakness_unit": "삼각형의 내심과 피타고라스 정리",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "polygon", "points": [[5.5,4],[0,0],[4.5,0]], "fillOpacity": 0.05 },
+        { "type": "circle", "center": [2.7,1], "radius": 1 },
+        { "type": "point", "coordinates": [5.5,4], "label": "A" },
+        { "type": "point", "coordinates": [0,0], "label": "B" },
+        { "type": "point", "coordinates": [4.5,0], "label": "C" },
+        { "type": "point", "coordinates": [2.7,1], "label": "I" },
+        { "type": "point", "coordinates": [1.5,1], "label": "D" },
+        { "type": "point", "coordinates": [3.9,1], "label": "E" },
+        { "type": "segment", "from": [1.5,1], "to": [3.9,1] }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "삼각형 $ABC$의 내심 $I$를 지나고 선분 $BC$에 평행한 직선이 두 선분 $AB$, $AC$와 만나는 점을 각각 $D$, $E$라 한다. $\\overline{AI}=3$이고 내접원의 반지름이 $1$, $\\triangle ABC$의 넓이가 $5\\sqrt2$일 때, <보기> ㄱ, ㄴ, ㄷ의 참·거짓을 판단한다.\n\n- ㄱ. $\\angle BID=\\angle IBD$\n- ㄴ. $\\triangle ADE$의 둘레의 길이는 $7\\sqrt2$이다.\n- ㄷ. $\\overline{DE}=2\\sqrt2$"
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$\\overline{DE}\\parallel\\overline{BC}$이고 $I$가 내심이라는 두 조건이 결합한다. 평행선의 엇각과 내심의 각의 이등분 성질로 $\\triangle DBI$가 이등변삼각형($\\overline{DB}=\\overline{DI}$)임이 나오고, 마찬가지로 $\\overline{EC}=\\overline{EI}$이다. 이로부터 $\\triangle ADE$의 둘레$=\\overline{AB}+\\overline{AC}$임을 얻는다. 넓이$=$(반지름)$\\times$(둘레의 절반)과 $\\overline{AI}=\\dfrac{r}{\\sin(A/2)}$를 이용해 길이들을 구한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "내심은 세 내각의 이등분선의 교점이다. 평행선에서 엇각은 같다. 내접원 반지름 $r$, 둘레의 절반 $s$일 때 삼각형 넓이 $S=rs$이다. 또한 꼭짓점 $A$에서 내심까지의 거리는 $\\overline{AI}=\\dfrac{r}{\\sin(A/2)}$, 꼭짓점에서의 접선의 길이 $s-a$에 대해 $r=(s-a)\\tan(A/2)$가 성립한다. 평행선으로 잘린 두 삼각형은 닮음이다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "[ㄱ] $\\overline{DE}\\parallel\\overline{BC}$이므로 엇각에 의해 $\\angle DIB=\\angle IBC$이다. 한편 $I$는 내심이므로 $\\overline{BI}$는 $\\angle B$의 이등분선이어서 $\\angle IBC=\\angle IBD$이다. 따라서\n\n$$\\angle BID(=\\angle DIB)=\\angle IBC=\\angle IBD$$\n\n즉 $\\angle BID=\\angle IBD$이다. **(ㄱ 참)** 덤으로 $\\triangle DBI$는 이등변삼각형이므로 $\\overline{DB}=\\overline{DI}$, 같은 방법으로 $\\overline{EC}=\\overline{EI}$이다.\n\n[ㄴ] 위 결과로부터\n\n$$\\triangle ADE\\text{의 둘레}=\\overline{AD}+\\overline{DE}+\\overline{EA}=\\overline{AD}+(\\overline{DI}+\\overline{IE})+\\overline{EA}$$\n\n$$=\\overline{AD}+\\overline{DB}+\\overline{EC}+\\overline{EA}=\\overline{AB}+\\overline{AC}$$\n\n이제 $\\overline{AB}+\\overline{AC}$를 구한다. 넓이 $S=rs$에서 $r=1$이므로\n\n$$5\\sqrt2=1\\cdot s\\;\\Rightarrow\\; s=5\\sqrt2\\quad(\\text{둘레}=2s=10\\sqrt2)$$\n\n$\\overline{AI}=\\dfrac{r}{\\sin(A/2)}$에서\n\n$$\\sin\\frac{A}{2}=\\frac{r}{\\overline{AI}}=\\frac13,\\qquad \\cos\\frac{A}{2}=\\sqrt{1-\\frac19}=\\frac{2\\sqrt2}{3},\\qquad \\tan\\frac{A}{2}=\\frac{1}{2\\sqrt2}=\\frac{\\sqrt2}{4}$$\n\n$r=(s-a)\\tan\\dfrac{A}{2}$이므로 ($a=\\overline{BC}$)\n\n$$1=(s-a)\\cdot\\frac{\\sqrt2}{4}\\;\\Rightarrow\\; s-a=\\frac{4}{\\sqrt2}=2\\sqrt2\\;\\Rightarrow\\; a=5\\sqrt2-2\\sqrt2=3\\sqrt2$$\n\n따라서\n\n$$\\overline{AB}+\\overline{AC}=2s-a=10\\sqrt2-3\\sqrt2=7\\sqrt2$$\n\n즉 $\\triangle ADE$의 둘레$=7\\sqrt2$이다. **(ㄴ 참)**\n\n[ㄷ] $\\overline{DE}\\parallel\\overline{BC}$이므로 $\\triangle ADE\\sim\\triangle ABC$이고 닮음비는 $A$에서 두 평행선까지의 거리비이다. $A$에서 $\\overline{BC}$까지의 높이는\n\n$$h=\\frac{2S}{\\overline{BC}}=\\frac{2\\cdot 5\\sqrt2}{3\\sqrt2}=\\frac{10}{3}$$\n\n직선 $\\overline{DE}$는 내심 $I$를 지나고 $I$에서 $\\overline{BC}$까지 거리는 $r=1$이므로, $A$에서 $\\overline{DE}$까지의 거리는 $h-r=\\dfrac{10}{3}-1=\\dfrac73$이다. 닮음비는\n\n$$\\frac{\\overline{DE}}{\\overline{BC}}=\\frac{h-r}{h}=\\frac{7/3}{10/3}=\\frac{7}{10}$$\n\n$$\\overline{DE}=\\frac{7}{10}\\cdot 3\\sqrt2=\\frac{21\\sqrt2}{10}\\neq 2\\sqrt2$$\n\n따라서 ㄷ은 거짓이다. **(ㄷ 거짓)**\n\n옳은 것은 ㄱ, ㄴ이다."
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **② ㄱ, ㄴ** 입니다."
+      }
+    ],
+    "final_answer": "② ㄱ, ㄴ"
+  },
+  "27": {
+    "problem_id": "27",
+    "title": "2023학년도 3월 고1 학평 27번",
+    "difficulty": "준킬러",
+    "weakness_unit": "소인수분해(최대공약수)의 활용",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "polygon", "points": [[0,12],[0,0],[9,0],[9,4.8],[15,4.8],[15,12]], "fillOpacity": 0.06 },
+        { "type": "point", "coordinates": [0,12], "label": "A" },
+        { "type": "point", "coordinates": [15,12], "label": "D" },
+        { "type": "point", "coordinates": [0,0], "label": "B" },
+        { "type": "point", "coordinates": [9,0], "label": "E" },
+        { "type": "point", "coordinates": [15,0], "label": "C" },
+        { "type": "point", "coordinates": [15,4.8], "label": "F" },
+        { "type": "label_text", "tex": "150", "at": [7.5,12.6] },
+        { "type": "label_text", "tex": "120", "at": [-1.2,6] },
+        { "type": "label_text", "tex": "60", "at": [12,-0.7] },
+        { "type": "label_text", "tex": "48", "at": [15.9,2.4] }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "가로 $150\\,\\text{cm}$, 세로 $120\\,\\text{cm}$인 직사각형 $ABCD$ 종이에서, $\\overline{CE}=60\\,\\text{cm}$($\\overline{BC}$ 위의 점 $E$), $\\overline{CF}=48\\,\\text{cm}$($\\overline{CD}$ 위의 점 $F$)를 두 변으로 하는 직사각형을 잘라내어 ㄴ자(凸 모양) 종이를 만든다. 이 종이 내부를 한 변의 길이가 자연수이고 모두 합동인 정사각형으로 겹치지 않고 빈틈없이 채울 때, 붙일 수 있는 종이 개수의 최솟값을 구한다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "개수를 최소로 하려면 정사각형 한 변의 길이를 최대로 해야 한다. 빈틈없이 합동인 정사각형으로 채우려면 정사각형의 한 변 $s$가 ㄴ자 도형의 모든 변의 길이($150,\\,120,\\,60,\\,48$ 및 이들의 차)를 나누어야 한다. 즉 $s$는 $150,120,60,48$의 공약수여야 하고, 최댓값은 최대공약수이다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "직사각형(과 그 결합으로 만든 직각다각형)을 합동인 정사각형으로 빈틈없이 덮으려면 정사각형 한 변의 길이가 모든 가로·세로 분할 길이의 공약수여야 한다. 가장 큰 정사각형은 그 길이들의 최대공약수(GCD)일 때 얻어지고, 이때 정사각형 개수가 최소가 된다. (넓이)$\\div$(정사각형 한 개의 넓이)로 개수를 구한다. 최대공약수는 소인수분해로 구한다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "ㄴ자 도형의 넓이는 전체 직사각형에서 잘라낸 직사각형을 뺀 값이다.\n\n$$\\text{넓이}=150\\times 120-60\\times 48=18000-2880=15120\\,(\\text{cm}^2)$$\n\n도형을 이루는 변의 길이는 가로 방향으로 $150$과 $150-60=90$, 세로 방향으로 $120$과 $120-48=72$이다. 합동인 정사각형으로 빈틈없이 채우려면 정사각형 한 변 $s$가 $150,\\,120,\\,60,\\,48$을 모두 나누어야 한다. 각각을 소인수분해하면\n\n$$150=2\\times 3\\times 5^2,\\quad 120=2^3\\times 3\\times 5,\\quad 60=2^2\\times 3\\times 5,\\quad 48=2^4\\times 3$$\n\n공통인 소인수는 $2^1$과 $3^1$뿐이므로 최대공약수는\n\n$$\\gcd(150,120,60,48)=2\\times 3=6$$\n\n개수를 최소로 하려면 정사각형 한 변을 가장 크게 $s=6$으로 잡는다. 정사각형 한 개의 넓이는 $6\\times 6=36$이므로 필요한 정사각형의 개수는\n\n$$\\frac{15120}{36}=420$$\n\n따라서 붙일 수 있는 종이 개수의 최솟값은 $420$이다."
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **420** 입니다."
+      }
+    ],
+    "final_answer": "420"
+  },
+  "28": {
+    "problem_id": "28",
+    "title": "2023학년도 3월 고1 학평 28번",
+    "difficulty": "킬러",
+    "weakness_unit": "소수와 부등식을 만족하는 자연수의 개수",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$p<q$인 두 소수 $p$, $q$에 대하여 $p^2q<n\\le pq^2$을 만족시키는 자연수 $n$의 개수가 $308$일 때, $p+q$의 값을 구한다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$p^2q<n\\le pq^2$ 꼴의 부등식을 만족하는 자연수 $n$의 개수는 (오른쪽 끝값)$-$(왼쪽 끝값)$=pq^2-p^2q$이다. 양 끝이 모두 정수이고 왼쪽은 포함하지 않고($<$) 오른쪽은 포함하므로($\\le$) 개수는 정확히 $pq^2-p^2q=pq(q-p)$이다. 이것이 $308$이 되도록 소수 $p<q$를 찾는다. $308$을 소인수분해해 가능한 경우를 따진다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "정수 $A<B$에 대하여 $A<n\\le B$를 만족하는 자연수(정수) $n$의 개수는 $B-A$이다. 소수는 $1$과 자기 자신만을 약수로 갖는 $2$ 이상의 자연수이다. 곱이 주어진 값이 되도록 인수를 배분할 때는 소인수분해를 활용한다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$p^2q$와 $pq^2$은 모두 자연수이고 $p^2q<pq^2$이므로, $p^2q<n\\le pq^2$을 만족하는 자연수 $n$의 개수는\n\n$$pq^2-p^2q=pq(q-p)$$\n\n이 값이 $308$이므로\n\n$$pq(q-p)=308$$\n\n$308$을 소인수분해하면\n\n$$308=2^2\\times 7\\times 11$$\n\n$p<q$인 소수 $p$, $q$를 찾는다. 작은 소수부터 $p$를 대입한다.\n\n(i) $p=2$일 때: $2q(q-2)=308\\Rightarrow q(q-2)=154\\Rightarrow q^2-2q-154=0$. 판별식 $=4+616=620$은 완전제곱수가 아니므로 정수해(소수해)가 없다.\n\n(ii) $p=3$일 때: $3q(q-3)=308$인데 $308$은 $3$의 배수가 아니므로 불가능하다.\n\n(iii) $p=7$일 때: $7q(q-7)=308\\Rightarrow q(q-7)=44\\Rightarrow q^2-7q-44=0$. 판별식 $=49+176=225=15^2$이므로\n\n$$q=\\frac{7+15}{2}=11$$\n\n$q=11$은 소수이고 $p=7<q=11$을 만족한다. 검산하면\n\n$$pq(q-p)=7\\times 11\\times(11-7)=7\\times 11\\times 4=308\\;(\\checkmark)$$\n\n따라서\n\n$$p+q=7+11=18$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **18** 입니다."
+      }
+    ],
+    "final_answer": "18"
+  },
+  "29": {
+    "problem_id": "29",
+    "title": "2023학년도 3월 고1 학평 29번",
+    "difficulty": "킬러",
+    "weakness_unit": "삼각형의 닮음과 넓이비",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "point", "coordinates": [2.5,5], "label": "A" },
+        { "type": "point", "coordinates": [0,0], "label": "B" },
+        { "type": "point", "coordinates": [5,0], "label": "C" },
+        { "type": "point", "coordinates": [3.5,3], "label": "D" },
+        { "type": "point", "coordinates": [1.5,3], "label": "F" },
+        { "type": "point", "coordinates": [4.2,3.5], "label": "E" },
+        { "type": "point", "coordinates": [4.5,3], "label": "G" },
+        { "type": "segment", "from": [2.5,5], "to": [0,0] },
+        { "type": "segment", "from": [2.5,5], "to": [5,0] },
+        { "type": "segment", "from": [0,0], "to": [5,0] },
+        { "type": "segment", "from": [1.5,3], "to": [4.5,3] },
+        { "type": "segment", "from": [0,0], "to": [4.2,3.5] },
+        { "type": "segment", "from": [4.2,3.5], "to": [5,0] }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "삼각형 $ABC$의 선분 $AC$ 위의 점 $D$와 직선 $BD$ 위의 점 $E$에 대하여 $\\overline{DE}:\\overline{DA}:\\overline{DB}=1:2:4$이다. 점 $D$를 지나고 직선 $BC$와 평행한 직선이 두 선분 $AB$, $EC$와 만나는 점을 각각 $F$, $G$라 한다. $\\overline{FD}=2$, $\\overline{DG}=1$이고 $\\triangle AFD$의 넓이가 $3$일 때, $\\triangle EDG$의 넓이가 $\\dfrac{q}{p}$이면 $p+q$의 값을 구한다. (단, $E$는 $\\triangle ABC$의 외부에 있고 $p,q$는 서로소인 자연수)"
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$\\overline{FG}\\parallel\\overline{BC}$이므로 두 가지 닮음을 동시에 쓴다. ① $\\triangle ABC$에서 $\\overline{FD}$가 $\\overline{BC}$와 평행 → $\\triangle AFD\\sim\\triangle ABC$로 $\\overline{BC}$를 구한다. ② $\\triangle EBC$에서 점 $D$가 $\\overline{BE}$ 위, $\\overline{DG}\\parallel\\overline{BC}$ → $\\dfrac{\\overline{DG}}{\\overline{BC}}=\\dfrac{\\overline{ED}}{\\overline{EB}}$로 $\\overline{BC}$와 닮음비를 연결한다. 길이비 $\\overline{DE}:\\overline{DA}:\\overline{DB}=1:2:4$로 좌표를 잡으면 $\\triangle EDG$의 넓이를 정확히 계산할 수 있다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "한 변에 평행한 직선이 삼각형을 자르면 닮은 삼각형이 생기고, 대응변의 길이비가 닮음비이며 넓이비는 닮음비의 제곱이다. 삼각형의 넓이는 $\\dfrac12\\times(\\text{밑변})\\times(\\text{높이})$이다. 점들의 길이비가 주어졌으므로 좌표평면에 옮겨 넓이를 계산하면 정확하다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$\\overline{DE}=k$, $\\overline{DA}=2k$, $\\overline{DB}=4k$라 하자. $E$가 삼각형 외부에 있으므로 점 $B$, $D$, $E$는 이 순서로 한 직선 위에 있고\n\n$$\\overline{EB}=\\overline{ED}+\\overline{DB}=k+4k=5k$$\n\n[1단계: $\\overline{BC}$ 구하기] $\\triangle EBC$에서 $D$는 $\\overline{EB}$ 위의 점이고 $\\overline{DG}\\parallel\\overline{BC}$($G$는 $\\overline{EC}$ 위)이므로 $\\triangle EDG\\sim\\triangle EBC$이고\n\n$$\\frac{\\overline{DG}}{\\overline{BC}}=\\frac{\\overline{ED}}{\\overline{EB}}=\\frac{k}{5k}=\\frac15$$\n\n$\\overline{DG}=1$이므로\n\n$$\\overline{BC}=5\\overline{DG}=5$$\n\n[2단계: $\\triangle ABC$의 넓이] $\\overline{FD}\\parallel\\overline{BC}$이므로 $\\triangle AFD\\sim\\triangle ABC$이고 닮음비는\n\n$$\\frac{\\overline{FD}}{\\overline{BC}}=\\frac{2}{5}$$\n\n넓이비는 닮음비의 제곱이므로\n\n$$\\frac{\\triangle AFD}{\\triangle ABC}=\\left(\\frac25\\right)^2=\\frac{4}{25}\\;\\Rightarrow\\;\\triangle ABC=3\\times\\frac{25}{4}=\\frac{75}{4}$$\n\n[3단계: 좌표 설정] $B=(0,0)$, $C=(5,0)$로 놓고 $A=(a_x,a_y)$라 하자. $\\triangle ABC$의 넓이가 $\\dfrac{75}{4}$이므로\n\n$$\\frac12\\times 5\\times a_y=\\frac{75}{4}\\;\\Rightarrow\\; a_y=\\frac{15}{2}$$\n\n$D$는 $\\overline{AC}$ 위의 점이고 $\\overline{AD}:\\overline{DC}=2k:?$. $\\overline{FD}\\parallel\\overline{BC}$, $\\dfrac{\\overline{AD}}{\\overline{AC}}=\\dfrac{\\overline{FD}}{\\overline{BC}}=\\dfrac25$이므로 $D$는 $\\overline{AC}$를 $2:3$으로 내분한다.\n\n$$D=A+\\frac25(C-A)=\\left(\\tfrac35 a_x+2,\\ \\tfrac35 a_y\\right)$$\n\n또 $D$는 $\\overline{BE}$ 위에서 $\\overline{BD}:\\overline{DE}=4:1$, 즉 $\\dfrac{\\overline{BD}}{\\overline{BE}}=\\dfrac45$이므로 $D=\\dfrac45 E$, 따라서\n\n$$E=\\frac54 D=\\left(\\tfrac34 a_x+\\tfrac52,\\ \\tfrac34 a_y\\right)$$\n\n[4단계: $\\triangle EDG$의 넓이] $E$의 $y$좌표(밑변 $\\overline{BC}$에 대한 높이)는 $y_E=\\dfrac34 a_y$이므로 $\\triangle EBC$의 넓이는\n\n$$\\triangle EBC=\\frac12\\times 5\\times \\frac34 a_y=\\frac{15}{8}a_y=\\frac{15}{8}\\times\\frac{15}{2}=\\frac{225}{16}$$\n\n$\\triangle EDG\\sim\\triangle EBC$이고 닮음비 $\\dfrac15$이므로 넓이비는 $\\dfrac{1}{25}$이다.\n\n$$\\triangle EDG=\\frac{1}{25}\\times\\frac{225}{16}=\\frac{9}{16}$$\n\n따라서 $\\dfrac{q}{p}=\\dfrac{9}{16}$이고 $q=9$, $p=16$(서로소)이므로\n\n$$p+q=16+9=25$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **25** 입니다."
+      }
+    ],
+    "final_answer": "25"
+  },
+  "30": {
+    "problem_id": "30",
+    "title": "2023학년도 3월 고1 학평 30번",
+    "difficulty": "킬러",
+    "weakness_unit": "원과 접선·피타고라스 정리",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "circle", "center": [0,0.135], "radius": 1.348 },
+        { "type": "point", "coordinates": [-1.281,0], "label": "A" },
+        { "type": "point", "coordinates": [1.281,0], "label": "C" },
+        { "type": "point", "coordinates": [0,1.482], "label": "B" },
+        { "type": "point", "coordinates": [0,-1.213], "label": "D" },
+        { "type": "point", "coordinates": [0,0], "label": "E" },
+        { "type": "segment", "from": [-1.281,0], "to": [1.281,0] },
+        { "type": "segment", "from": [-1.281,0], "to": [0,1.482] },
+        { "type": "segment", "from": [1.281,0], "to": [0,1.482] },
+        { "type": "segment", "from": [0,1.482], "to": [0,-1.213] }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$\\overline{AB}=\\overline{BC}=2$인 삼각형 $ABC$에 외접하는 원 $O$가 있다. 점 $B$를 지나고 직선 $AC$에 수직인 직선이 원 $O$와 만나는 점 중 $B$가 아닌 점을 $D$, 선분 $AC$와 선분 $BD$가 만나는 점을 $E$라 한다. 원 $O$ 위의 점 $C$에서의 접선과 점 $D$에서의 접선이 만나는 점을 $F$라 할 때 $\\overline{FD}=2$이다. $\\overline{AE}=\\dfrac{a+b\\sqrt{17}}{2}$일 때 $a^2+b^2$의 값을 구한다. (단, $a,b$는 정수)"
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$\\overline{AB}=\\overline{BC}$인 이등변삼각형이므로, $B$에서 밑변 $AC$에 내린 수선은 $AC$의 수직이등분선이자 삼각형의 대칭축이다. 이 대칭축은 외접원의 중심 $O$를 지나므로 $\\overline{BD}$는 원의 지름이고 $E$는 $\\overline{AC}$의 중점이다($\\overline{AE}=\\tfrac12\\overline{AC}$). 또 $F$는 두 접선의 교점이므로 $\\overline{FC}=\\overline{FD}=2$이다. 좌표를 잡아 접선 조건과 $\\overline{FD}=2$, $\\overline{AB}=2$로 식을 세운다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "이등변삼각형의 꼭지각에서 밑변에 내린 수선은 밑변을 수직이등분하고 외심을 지난다(따라서 그 현은 지름). 원 밖의 한 점에서 그은 두 접선의 길이는 같다. 접선은 접점에서 반지름과 수직이다. 좌표평면에서 원 $O$, 접선의 식을 세우고 거리·길이 조건을 연립하면 미지의 길이를 구할 수 있다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$\\overline{AB}=\\overline{BC}=2$이므로 $\\triangle ABC$는 이등변삼각형이고, $B$에서 $\\overline{AC}$에 내린 수선(직선 $BD$)은 $\\overline{AC}$의 수직이등분선이며 외심 $O$를 지난다. 따라서 $\\overline{BD}$는 외접원의 지름이고 $E$는 $\\overline{AC}$의 중점이다.\n\n좌표를 잡는다. $E$를 원점, $\\overline{AC}$를 $x$축, 대칭축 $\\overline{BD}$를 $y$축으로 두고\n\n$$A=(-m,0),\\quad C=(m,0)\\;(\\overline{AE}=m),\\quad B=(0,h)$$\n\n로 놓으면 $\\overline{AB}=2$에서\n\n$$m^2+h^2=4\\quad\\cdots(1)$$\n\n외심 $O$는 $y$축 위 $(0,k)$이고 반지름 $R=|h-k|$이다. $A$도 원 위에 있으므로\n\n$$m^2+k^2=(h-k)^2=h^2-2hk+k^2\\;\\Rightarrow\\; m^2=h^2-2hk\\;\\Rightarrow\\; k=\\frac{h^2-m^2}{2h}$$\n\n지름의 반대 끝점 $D$는 $D=(0,\\,2k-h)$이고\n\n$$2k-h=\\frac{h^2-m^2}{h}-h=-\\frac{m^2}{h}\\;\\Rightarrow\\; D=\\left(0,\\,-\\frac{m^2}{h}\\right)$$\n\n이제 접선을 다룬다. 점 $D$에서의 접선은 반지름 $\\overline{OD}$(연직선)에 수직이므로 수평선 $y=-\\dfrac{m^2}{h}$이다. 점 $C=(m,0)$에서의 접선은 반지름 $\\overline{OC}$($O=(0,k)$, 방향 $(m,-k)$)에 수직이므로\n\n$$m(x-m)-k(y-0)=0\\;\\Rightarrow\\; mx-ky=m^2$$\n\n두 접선의 교점 $F$는 $y=-\\dfrac{m^2}{h}$를 대입하여\n\n$$mx=m^2+ky=m^2+k\\left(-\\frac{m^2}{h}\\right)=m^2\\cdot\\frac{h-k}{h}\\;\\Rightarrow\\; x=\\frac{m(h-k)}{h}$$\n\n$D$와 $F$는 $y$좌표가 같으므로\n\n$$\\overline{FD}=|x_F-x_D|=\\frac{m(h-k)}{h}$$\n\n여기서 $h-k=h-\\dfrac{h^2-m^2}{2h}=\\dfrac{2h^2-h^2+m^2}{2h}=\\dfrac{h^2+m^2}{2h}$이고, $(1)$에서 $h^2+m^2=4$이므로\n\n$$h-k=\\frac{4}{2h}=\\frac{2}{h}$$\n\n$$\\overline{FD}=\\frac{m}{h}\\cdot\\frac{2}{h}=\\frac{2m}{h^2}=2\\;\\Rightarrow\\; m=h^2$$\n\n이를 $(1)$에 대입하면\n\n$$h^4+h^2=4\\;\\Rightarrow\\; (h^2)^2+h^2-4=0$$\n\n$h^2=u$로 두면 $u^2+u-4=0$이므로\n\n$$u=\\frac{-1+\\sqrt{1+16}}{2}=\\frac{-1+\\sqrt{17}}{2}\\quad(u>0)$$\n\n따라서\n\n$$\\overline{AE}=m=h^2=u=\\frac{-1+\\sqrt{17}}{2}=\\frac{-1+1\\cdot\\sqrt{17}}{2}$$\n\n주어진 꼴 $\\overline{AE}=\\dfrac{a+b\\sqrt{17}}{2}$와 비교하면 $a=-1$, $b=1$이므로\n\n$$a^2+b^2=(-1)^2+1^2=2$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **2** 입니다."
+      }
+    ],
+    "final_answer": "2"
+  }
+}

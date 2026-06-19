@@ -1,0 +1,215 @@
+{
+  "14": {
+    "problem_id": "14",
+    "title": "2023학년도 9월 고1 학평 14번",
+    "difficulty": "준킬러",
+    "weakness_unit": "점과 직선 사이의 거리 활용",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "segment", "from": [6, 0], "to": [0, 3], "label": "l" },
+        { "type": "segment", "from": [0, 3], "to": [-2, 4] },
+        { "type": "label_text", "tex": "l", "at": [-2.6, 4.4] },
+        { "type": "point", "coordinates": [3, 6], "label": "A" },
+        { "type": "polygon", "points": [[3, 6], [-0.6, 4.2], [1.2, 0.6], [4.8, 2.4]], "fillOpacity": 0.08 },
+        { "type": "point", "coordinates": [-0.6, 4.2], "label": "B" },
+        { "type": "point", "coordinates": [1.2, 0.6], "label": "C" },
+        { "type": "point", "coordinates": [4.8, 2.4], "label": "D" },
+        { "type": "label_text", "tex": "A(a,\\,6)", "at": [3.4, 6.5] }
+      ]
+    },
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "점 $\\mathrm{A}(a,\\,6)$ ($a>0$)과 두 점 $(6,\\,0)$, $(0,\\,3)$을 지나는 직선 $l$이 주어져 있다. 직선 $l$ 위의 두 점 $\\mathrm{B}$, $\\mathrm{C}$와 제1사분면 위의 점 $\\mathrm{D}$로 사각형 $\\mathrm{ABCD}$가 정사각형이 되도록 한다. 정사각형의 넓이가 $\\dfrac{81}{5}$일 때 $a$의 값을 구하는 문제이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "정사각형 $\\mathrm{ABCD}$에서 두 꼭짓점 $\\mathrm{B}$, $\\mathrm{C}$가 직선 $l$ 위에 있으므로 변 $\\overline{\\mathrm{BC}}$는 직선 $l$ 위에 놓인다. 따라서 변 $\\overline{\\mathrm{AB}}$는 직선 $l$과 **수직**이고, 점 $\\mathrm{A}$에서 직선 $l$까지의 거리가 곧 정사각형의 한 변의 길이 $\\overline{\\mathrm{AB}}$와 같다." },
+      { "phase": "B", "title": "배경 지식", "content": "두 점 $(x_1,\\,0)$, $(0,\\,y_1)$을 지나는 직선의 방정식은 $\\dfrac{x}{x_1}+\\dfrac{y}{y_1}=1$ 이다. 또한 점 $(x_0,\\,y_0)$과 직선 $px+qy+r=0$ 사이의 거리는 $$d=\\frac{|px_0+qy_0+r|}{\\sqrt{p^2+q^2}}$$ 이다. 정사각형의 넓이는 (한 변)$^2$ 이다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "두 점 $(6,\\,0)$, $(0,\\,3)$을 지나는 직선 $l$의 방정식은 $$\\frac{x}{6}+\\frac{y}{3}=1$$ 양변에 $6$을 곱하면 $$x+2y=6 \\quad\\Rightarrow\\quad x+2y-6=0$$ 정사각형의 넓이가 $\\dfrac{81}{5}$이므로 한 변의 길이는 $$\\overline{\\mathrm{AB}}=\\sqrt{\\frac{81}{5}}=\\frac{9}{\\sqrt{5}}$$ 이때 $\\overline{\\mathrm{AB}}$는 점 $\\mathrm{A}(a,\\,6)$과 직선 $l:\\,x+2y-6=0$ 사이의 거리와 같으므로 $$\\frac{|a+2\\times 6-6|}{\\sqrt{1^2+2^2}}=\\frac{|a+6|}{\\sqrt{5}}=\\frac{9}{\\sqrt{5}}$$ 따라서 $$|a+6|=9$$ $a>0$이므로 $a+6>0$, 즉 $$a+6=9 \\quad\\Rightarrow\\quad a=3$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **3** 입니다." }
+    ],
+    "final_answer": "3"
+  },
+  "15": {
+    "problem_id": "15",
+    "title": "2023학년도 9월 고1 학평 15번",
+    "difficulty": "준킬러",
+    "weakness_unit": "이차함수의 그래프와 직선의 위치 관계",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "이차함수 $y=-x^2$의 그래프를 $x$축에 대하여 대칭이동한 후, $x$축의 방향으로 $4$만큼, $y$축의 방향으로 $m$만큼 평행이동한 그래프가 직선 $y=2x+3$에 접할 때, 상수 $m$의 값을 구하는 문제이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "이동한 포물선과 직선이 **접한다**는 것은 두 식을 연립하여 얻는 이차방정식이 **중근**을 가진다는 뜻이다. 즉 판별식 $D=0$ 이다." },
+      { "phase": "B", "title": "배경 지식", "content": "$x$축에 대한 대칭이동은 $y$ 대신 $-y$를 대입하므로 $y=-x^2 \\to -y=-x^2$, 즉 $y=x^2$ 이 된다. $x$축으로 $p$, $y$축으로 $q$만큼 평행이동하면 $x\\to x-p$, $y\\to y-q$ 로 바꾼다. 이차방정식 $ax^2+bx+c=0$의 판별식은 $D=b^2-4ac$ 이며 $D=0$이면 중근(접함)이다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "이차함수 $y=-x^2$을 $x$축에 대하여 대칭이동하면 $$-y=-x^2 \\quad\\Rightarrow\\quad y=x^2$$ 이를 $x$축의 방향으로 $4$만큼, $y$축의 방향으로 $m$만큼 평행이동하면 $$y=(x-4)^2+m$$ 이 그래프가 직선 $y=2x+3$에 접하므로 두 식을 연립하면 $$(x-4)^2+m=2x+3$$ 좌변을 전개하여 정리하면 $$x^2-8x+16+m=2x+3$$ $$x^2-10x+13+m=0$$ 접하려면 이 이차방정식의 판별식이 $0$이어야 하므로 $$\\frac{D}{4}=(-5)^2-(13+m)=0$$ $$25-13-m=0$$ $$12-m=0 \\quad\\Rightarrow\\quad m=12$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **12** 입니다." }
+    ],
+    "final_answer": "12"
+  },
+  "18": {
+    "problem_id": "18",
+    "title": "2023학년도 9월 고1 학평 18번",
+    "difficulty": "준킬러",
+    "weakness_unit": "삼차방정식의 근과 켤레허근",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "삼차다항식 $P(x)=x^3+ax^2+bx+c$ 가 두 조건을 만족시킨다. (가) $P(x)=0$은 한 실근과 서로 다른 두 허근을 갖고, 두 허근의 곱은 $5$이다. (나) $P(3x-1)=0$은 한 근 $0$과 서로 다른 두 허근을 갖고, 두 허근의 합은 $2$이다. 이때 $a+b+c$의 값을 구한다." },
+      { "phase": "C", "title": "핵심 단서", "content": "실수 계수 다항식에서 허근은 항상 **켤레쌍**으로 나타난다. 두 허근을 $\\alpha$, $\\beta$, 실근을 $p$라 하자. $P(3x-1)=0$의 근은 '$3x-1$이 $P$의 근이 되는 $x$'이므로 $P$의 근 $r$에 대해 $x=\\dfrac{r+1}{3}$ 꼴이다. '한 근 $0$'은 실근에서 나오므로 $\\dfrac{p+1}{3}=0$ 임을 이용한다." },
+      { "phase": "B", "title": "배경 지식", "content": "다항식 $P(x)=x^3+ax^2+bx+c$의 세 근이 $p,\\,\\alpha,\\,\\beta$이면 인수분해 $P(x)=(x-p)(x-\\alpha)(x-\\beta)$ 가 성립한다. $P(3x-1)=0 \\Leftrightarrow 3x-1=(P\\text{의 근}) \\Leftrightarrow x=\\dfrac{(\\text{근})+1}{3}$. 따라서 $P(3x-1)=0$의 근은 $P(x)=0$의 각 근을 $\\dfrac{r+1}{3}$로 옮긴 것이다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$P(x)=0$의 실근을 $p$, 서로 다른 두 허근을 $\\alpha$, $\\beta$라 하자.\n\n조건 (가)에서 두 허근의 곱이 $5$이므로 $$\\alpha\\beta=5 \\qquad \\cdots\\ ①$$\n$P(3x-1)=0$의 근은 $3x-1$이 $P(x)=0$의 근과 같아지는 $x$값이므로 $$x=\\frac{p+1}{3},\\quad x=\\frac{\\alpha+1}{3},\\quad x=\\frac{\\beta+1}{3}$$ 이다. 여기서 $\\dfrac{\\alpha+1}{3}$, $\\dfrac{\\beta+1}{3}$ 는 허수이고, 실근에서 나오는 것은 $\\dfrac{p+1}{3}$ 뿐이다.\n\n조건 (나)에서 한 근이 $0$이므로 이 실근이 $0$이어야 한다. $$\\frac{p+1}{3}=0 \\quad\\Rightarrow\\quad p=-1$$\n또 두 허근의 합이 $2$이므로 $$\\frac{\\alpha+1}{3}+\\frac{\\beta+1}{3}=\\frac{\\alpha+\\beta+2}{3}=2$$ $$\\alpha+\\beta+2=6 \\quad\\Rightarrow\\quad \\alpha+\\beta=4 \\qquad \\cdots\\ ②$$\n①, ②에서 두 허근 $\\alpha$, $\\beta$는 합이 $4$, 곱이 $5$이므로 이차식 $$x^2-4x+5$$ 의 두 근이다. (판별식 $16-20=-4<0$ 이므로 실제로 허근.)\n\n따라서 $$P(x)=(x-p)(x^2-4x+5)=(x+1)(x^2-4x+5)$$ 전개하면 $$P(x)=x^3-4x^2+5x+x^2-4x+5=x^3-3x^2+x+5$$ 그러므로 $$a=-3,\\quad b=1,\\quad c=5$$ $$a+b+c=-3+1+5=3$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **3** 입니다." }
+    ],
+    "final_answer": "3"
+  },
+  "19": {
+    "problem_id": "19",
+    "title": "2023학년도 9월 고1 학평 19번",
+    "difficulty": "준킬러",
+    "weakness_unit": "원과 직선의 위치 관계",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "circle", "center": [0, 0], "radius": 3.162 },
+        { "type": "segment", "from": [-4.5, -4], "to": [1.5, 8] },
+        { "type": "label_text", "tex": "l", "at": [1.7, 8.2] },
+        { "type": "segment", "from": [-1, 3], "to": [1, -3] },
+        { "type": "segment", "from": [1, -3], "to": [-4, -3] },
+        { "type": "point", "coordinates": [-1, 3], "label": "A" },
+        { "type": "point", "coordinates": [-3, -1], "label": "B" },
+        { "type": "point", "coordinates": [1, -3], "label": "C" },
+        { "type": "point", "coordinates": [-4, -3], "label": "D" },
+        { "type": "label_text", "tex": "O", "at": [0.3, 0.4] }
+      ]
+    },
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "기울기가 $2$인 직선 $l$이 원 $x^2+y^2=10$과 제2사분면의 점 $\\mathrm{A}$, 제3사분면의 점 $\\mathrm{B}$에서 만나고 $\\overline{\\mathrm{AB}}=2\\sqrt{5}$이다. 직선 $\\mathrm{OA}$와 원이 만나는 점 중 $\\mathrm{A}$가 아닌 점을 $\\mathrm{C}$라 하고, 점 $\\mathrm{C}$를 지나고 $x$축과 평행한 직선이 $l$과 만나는 점을 $\\mathrm{D}(a,\\,b)$라 할 때 $a+b$의 값을 구한다." },
+      { "phase": "C", "title": "핵심 단서", "content": "원의 중심 $\\mathrm{O}$에서 현 $\\overline{\\mathrm{AB}}$에 내린 수선의 발은 현의 중점이고, (반지름)$^2$ = (중심에서 현까지 거리)$^2$ + (현 길이의 절반)$^2$ 이 성립한다. 이를 이용해 직선 $l$의 $y$절편을 정한다. 또 원의 중심을 지나는 직선이 원과 만나는 두 점은 **원점에 대하여 대칭**이므로 $\\mathrm{C}=-\\mathrm{A}$ 이다." },
+      { "phase": "B", "title": "배경 지식", "content": "중심이 원점이고 반지름이 $r$인 원에서 길이 $\\ell$인 현까지 중심으로부터의 거리 $d$는 $$d=\\sqrt{r^2-\\left(\\frac{\\ell}{2}\\right)^2}$$ 이다. 점 $(x_0,\\,y_0)$과 직선 $px+qy+r=0$ 사이의 거리는 $\\dfrac{|px_0+qy_0+r|}{\\sqrt{p^2+q^2}}$ 이다. 중심을 지나는 현(지름) 위의 두 교점은 중심에 대하여 서로 대칭이다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "원 $x^2+y^2=10$의 반지름은 $\\sqrt{10}$, 즉 $r^2=10$ 이다. 현 $\\overline{\\mathrm{AB}}=2\\sqrt{5}$ 이므로 중심 $\\mathrm{O}$에서 직선 $l$까지의 거리 $d$는 $$d=\\sqrt{r^2-\\left(\\frac{\\overline{\\mathrm{AB}}}{2}\\right)^2}=\\sqrt{10-(\\sqrt{5})^2}=\\sqrt{10-5}=\\sqrt{5}$$ 기울기가 $2$인 직선 $l$을 $y=2x+k$, 즉 $2x-y+k=0$ 이라 하면 원점과의 거리가 $\\sqrt{5}$이므로 $$\\frac{|k|}{\\sqrt{2^2+(-1)^2}}=\\frac{|k|}{\\sqrt{5}}=\\sqrt{5} \\quad\\Rightarrow\\quad |k|=5$$ 직선 $l$과 원의 교점을 구하기 위해 $y=2x+k$를 대입하면 $$x^2+(2x+k)^2=10 \\;\\Rightarrow\\; 5x^2+4kx+k^2-10=0$$ 두 교점이 모두 $x<0$ (제2·제3사분면)에 있으려면 두 근의 합 $-\\dfrac{4k}{5}<0$, 즉 $k>0$ 이어야 하므로 $$k=5$$ 따라서 $$5x^2+20x+15=0 \\;\\Rightarrow\\; x^2+4x+3=0 \\;\\Rightarrow\\; (x+1)(x+3)=0$$ $x=-1$ 또는 $x=-3$ 이다.\n\n제2사분면의 점은 $x=-1$ 일 때 $y=2(-1)+5=3$ 이므로 $$\\mathrm{A}(-1,\\,3)$$ (제3사분면의 점은 $\\mathrm{B}(-3,\\,-1)$.)\n\n직선 $\\mathrm{OA}$는 원점과 $\\mathrm{A}(-1,\\,3)$을 지나므로 $$y=-3x$$ 이고, 점 $\\mathrm{C}$는 이 직선과 원의 교점 중 $\\mathrm{A}$가 아닌 점, 즉 $\\mathrm{A}$와 원점에 대하여 대칭인 점이므로 $$\\mathrm{C}(1,\\,-3)$$ ($1^2+(-3)^2=10$ 으로 원 위의 점임을 확인.)\n\n점 $\\mathrm{C}(1,\\,-3)$을 지나고 $x$축과 평행한 직선은 $y=-3$ 이다. 이 직선이 $l:\\,y=2x+5$ 과 만나는 점 $\\mathrm{D}$는 $$-3=2x+5 \\;\\Rightarrow\\; 2x=-8 \\;\\Rightarrow\\; x=-4$$ 따라서 $$\\mathrm{D}(-4,\\,-3)=(a,\\,b)$$ $$a+b=-4+(-3)=-7$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **$-7$** 입니다." }
+    ],
+    "final_answer": "-7"
+  },
+  "20": {
+    "problem_id": "20",
+    "title": "2023학년도 9월 고1 학평 20번",
+    "difficulty": "킬러",
+    "weakness_unit": "원의 방정식과 내분점 추론",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "point", "coordinates": [0, 4], "label": "A" },
+        { "type": "point", "coordinates": [4, 4], "label": "B" },
+        { "type": "point", "coordinates": [4, 0], "label": "C" },
+        { "type": "polygon", "points": [[0, 0], [0, 4], [4, 4], [4, 0]], "fillOpacity": 0.05 },
+        { "type": "label_text", "tex": "O", "at": [-0.35, -0.35] },
+        { "type": "point", "coordinates": [0, 2.33], "label": "P" },
+        { "type": "point", "coordinates": [2.33, 4], "label": "Q" },
+        { "type": "point", "coordinates": [4, 1.67], "label": "R" }
+      ]
+    },
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "세 점 $\\mathrm{A}(0,\\,4)$, $\\mathrm{B}(4,\\,4)$, $\\mathrm{C}(4,\\,0)$에 대하여 세 선분 $\\overline{\\mathrm{OA}}$, $\\overline{\\mathrm{AB}}$, $\\overline{\\mathrm{BC}}$를 $m:n$ ($m>0,\\,n>0$)으로 내분하는 점을 각각 $\\mathrm{P}$, $\\mathrm{Q}$, $\\mathrm{R}$라 하고, 이 세 점을 지나는 원을 $C$라 한다. 보기 ㄱ, ㄴ, ㄷ의 참·거짓을 판정한다." },
+      { "phase": "C", "title": "핵심 단서", "content": "$t=\\dfrac{4m}{m+n}$ 로 두면 $0<t<4$ 이고 $\\mathrm{P}(0,\\,t)$, $\\mathrm{Q}(t,\\,4)$, $\\mathrm{R}(4,\\,4-t)$ 로 깔끔하게 표현된다. 세 점을 원의 일반형 $x^2+y^2+Dx+Ey+F=0$ 에 대입하면 $t$값에 관계없이 $D=E=-4$, $F=-t^2+4t$ 임을 알 수 있어 보기를 일괄 검증할 수 있다." },
+      { "phase": "B", "title": "배경 지식", "content": "두 점 $(x_1,\\,y_1)$, $(x_2,\\,y_2)$를 $m:n$으로 내분하는 점은 $\\left(\\dfrac{m x_2+n x_1}{m+n},\\ \\dfrac{m y_2+n y_1}{m+n}\\right)$ 이다. 원의 방정식 일반형은 $x^2+y^2+Dx+Ey+F=0$ 이고, 세 점을 대입해 $D,\\,E,\\,F$를 정한다. 원이 $x$축과 만나는 점은 $y=0$ 을 대입한 이차방정식의 두 근이다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$t=\\dfrac{4m}{m+n}$ 라 하면 $\\dfrac{m}{m+n}=\\dfrac{t}{4}$, $\\dfrac{n}{m+n}=1-\\dfrac{t}{4}$ 이고 $0<t<4$ 이다.\n\n$\\bullet$ $\\mathrm{P}$ : $\\overline{\\mathrm{OA}}$를 $m:n$ 내분 $\\Rightarrow \\mathrm{P}\\!\\left(0,\\ \\dfrac{4m}{m+n}\\right)=\\mathrm{P}(0,\\,t)$\n$\\bullet$ $\\mathrm{Q}$ : $\\overline{\\mathrm{AB}}$를 $m:n$ 내분 $\\Rightarrow \\mathrm{Q}\\!\\left(\\dfrac{4m}{m+n},\\ 4\\right)=\\mathrm{Q}(t,\\,4)$\n$\\bullet$ $\\mathrm{R}$ : $\\overline{\\mathrm{BC}}$를 $m:n$ 내분 $\\Rightarrow \\mathrm{R}\\!\\left(4,\\ 4-\\dfrac{4m}{m+n}\\right)=\\mathrm{R}(4,\\,4-t)$\n\n$$\\textbf{[ㄱ]}\\quad m=n \\Rightarrow t=\\frac{4m}{m+m}=2 \\Rightarrow \\mathrm{P}(0,\\,2)$$ 따라서 ㄱ은 **참**.\n\n$$\\textbf{[원 } C \\textbf{ 구하기]}$$ 원 $x^2+y^2+Dx+Ey+F=0$ 에 세 점을 대입하면\n$\\mathrm{P}(0,\\,t):\\ t^2+Et+F=0 \\;\\Rightarrow\\; F=-t^2-Et$\n$\\mathrm{Q}(t,\\,4):\\ t^2+16+Dt+4E+F=0$\n$\\mathrm{R}(4,\\,4-t):\\ 16+(4-t)^2+4D+E(4-t)+F=0$\n$\\mathrm{Q}$ 식에서 $\\mathrm{P}$ 식을 빼면 $16+Dt+(4-t)E=0$, 즉 $Dt+(4-t)E=-16$. 여기서 $D=E$ 로 가정하면 $D(t+4-t)=4D=-16$, 즉 $$D=E=-4$$ 이고 이를 $\\mathrm{R}$ 식에 대입하면 모순 없이 성립한다. 또 $$F=-t^2-Et=-t^2+4t$$ 따라서 원 $C$ : $$x^2+y^2-4x-4y-t^2+4t=0$$\n\n$$\\textbf{[ㄴ]}\\quad \\left(\\frac{4m}{m+n},\\,0\\right)=(t,\\,0)\\ \\text{을 대입}$$ $$t^2+0-4t-0-t^2+4t=0 \\;\\Rightarrow\\; 0=0$$ 항상 성립하므로 점 $(t,\\,0)$은 원 $C$ 위의 점이다. ㄴ은 **참**.\n\n$$\\textbf{[ㄷ]}\\quad y=0 \\text{ 대입하여 } x\\text{축 교점 구하기}$$ $$x^2-4x-t^2+4t=0$$ 두 근의 차(= 두 교점 사이의 거리)는 $$\\sqrt{(\\text{두 근의 합})^2-4(\\text{두 근의 곱})}=\\sqrt{4^2-4(-t^2+4t)}$$ $$=\\sqrt{16+4t^2-16t}=\\sqrt{4(t-2)^2}=2|t-2|$$ 이 거리가 $3$이면 $$2|t-2|=3 \\;\\Rightarrow\\; |t-2|=\\frac{3}{2} \\;\\Rightarrow\\; t=\\frac{7}{2}\\ \\text{또는}\\ t=\\frac{1}{2}$$ 한편 $$\\overline{\\mathrm{PQ}}=\\sqrt{(t-0)^2+(4-t)^2}=\\sqrt{t^2+(4-t)^2}$$ $t=\\dfrac{7}{2}$ 이면 $t^2+(4-t)^2=\\dfrac{49}{4}+\\dfrac{1}{4}=\\dfrac{50}{4}=\\dfrac{25}{2}$, $t=\\dfrac{1}{2}$ 이면 $\\dfrac{1}{4}+\\dfrac{49}{4}=\\dfrac{50}{4}=\\dfrac{25}{2}$ 로 같다. 따라서 $$\\overline{\\mathrm{PQ}}=\\sqrt{\\frac{25}{2}}=\\frac{5}{\\sqrt{2}}=\\frac{5\\sqrt{2}}{2}$$ ㄷ은 **참**.\n\n그러므로 ㄱ, ㄴ, ㄷ 모두 옳다." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **⑤ (ㄱ, ㄴ, ㄷ)** 입니다." }
+    ],
+    "final_answer": "5"
+  },
+  "21": {
+    "problem_id": "21",
+    "title": "2023학년도 9월 고1 학평 21번",
+    "difficulty": "킬러",
+    "weakness_unit": "이차방정식·이차함수의 관계 추론",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "이차함수 $f(x)$와 이차항의 계수가 $1$인 이차함수 $g(x)$에 대하여 $x$에 관한 이차방정식 $\\{x-f(k)\\}\\{x-g(k)\\}=0$ 이 서로 다른 두 실근 $0$, $4$를 갖도록 하는 모든 실수 $k$의 개수가 $3$이다. $f(2)=4$일 때 $g(8)-f(8)$의 값을 구한다." },
+      { "phase": "C", "title": "핵심 단서", "content": "방정식 $\\{x-f(k)\\}\\{x-g(k)\\}=0$의 두 근은 $x=f(k)$, $x=g(k)$ 이다. 이 두 근이 $\\{0,\\,4\\}$ 가 되려면 $\\{f(k),\\,g(k)\\}=\\{0,\\,4\\}$, 즉 **합이 $4$**, **곱이 $0$** 이어야 한다. $k$가 $3$개 존재하려면 합 조건이 항등식이 되어야 하므로 $f(x)+g(x)$ 가 상수 $4$ 여야 한다." },
+      { "phase": "B", "title": "배경 지식", "content": "$\\{f(k),\\,g(k)\\}=\\{0,\\,4\\} \\Leftrightarrow f(k)+g(k)=4$ 이고 $f(k)\\,g(k)=0$. 이차함수끼리 더해 상수가 되려면 이차항·일차항 계수가 모두 상쇄되어야 한다. 이차방정식 $h(x)=0$이 중근을 가질 조건은 판별식 $D=0$ 이다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "두 실근이 $0$, $4$ 이려면 $\\{f(k),\\,g(k)\\}=\\{0,\\,4\\}$, 즉 $$f(k)+g(k)=4,\\qquad f(k)\\,g(k)=0$$ 이어야 한다.\n\n만약 $f(x)+g(x)$ 가 이차식이면 $f(k)+g(k)=4$ 를 만족하는 $k$는 많아야 $2$개뿐이라 $k$가 $3$개가 될 수 없다. 따라서 모든 $k$에 대해 $$f(x)+g(x)=4 \\quad(\\text{항등식})$$ 이어야 한다. $g(x)$의 이차항 계수가 $1$이므로 $f(x)$의 이차항 계수는 $-1$ 이고 $$f(x)=4-g(x)$$\n\n이때 조건은 $f(k)\\,g(k)=0$, 즉 $$g(k)=0 \\quad\\text{또는}\\quad f(k)=0\\ (\\Leftrightarrow g(k)=4)$$ 로 환원된다. 즉 $k$는 방정식 $g(k)=0$ 의 근 또는 $g(k)=4$ 의 근이다. $g(k)=0$ 과 $g(k)=4$ 는 동시에 성립할 수 없으므로 공통근은 없다.\n\n각 이차방정식은 많아야 두 근을 가지므로 서로 다른 $k$의 총 개수가 $3$이 되려면 한쪽은 **중근(1개)**, 다른 쪽은 **서로 다른 두 근(2개)** 이어야 한다.\n\n$g(x)=x^2+bx+c$ 라 하면\n$g(k)=0$ 의 판별식 $=b^2-4c$,\n$g(k)=4$ 즉 $x^2+bx+c-4=0$ 의 판별식 $=b^2-4(c-4)=b^2-4c+16$.\n뒤쪽 판별식이 항상 $16$ 만큼 더 크므로, 중근(판별식 $0$)이 되는 쪽은 $g(k)=0$ 이어야 한다. 즉 $$b^2-4c=0$$ 이고 이때 $g(k)=4$ 는 판별식 $16>0$ 으로 서로 다른 두 근을 갖는다. (총 $1+2=3$ 개.)\n\n한편 $f(2)=4$ 에서 $f(2)=4-g(2)=4$ 이므로 $$g(2)=0$$ 즉 $2$는 $g(k)=0$ 의 (중)근이다. 중근이 $2$이므로 꼭짓점의 $x$좌표가 $2$, $$-\\frac{b}{2}=2 \\Rightarrow b=-4,\\qquad b^2-4c=0 \\Rightarrow 16=4c \\Rightarrow c=4$$ 따라서 $$g(x)=x^2-4x+4=(x-2)^2$$ 검산: $g(k)=0 \\Rightarrow k=2$ (중근, 1개), $g(k)=4 \\Rightarrow (x-2)^2=4 \\Rightarrow x=0,\\,4$ (2개). 서로 다른 $k$는 $0,\\,2,\\,4$ 로 $3$개. ✓\n\n또 $$f(x)=4-g(x)=4-(x-2)^2=-x^2+4x$$\n\n따라서 $$g(8)=(8-2)^2=36,\\qquad f(8)=-8^2+4\\times 8=-64+32=-32$$ $$g(8)-f(8)=36-(-32)=68$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **68** 입니다." }
+    ],
+    "final_answer": "68"
+  },
+  "27": {
+    "problem_id": "27",
+    "title": "2023학년도 9월 고1 학평 27번",
+    "difficulty": "킬러",
+    "weakness_unit": "나머지정리·다항식의 나눗셈",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "다항식 $P(x)$에 대하여 $(x-2)P(x)-x^2$ 을 $P(x)-x$ 로 나누었을 때의 몫은 $Q(x)$, 나머지는 $P(x)-3x$ 이다. 또 $P(x)$를 $Q(x)$로 나눈 나머지가 $10$일 때 $P(30)$의 값을 구한다. (단, $P(x)-x$ 는 $0$이 아니다.)" },
+      { "phase": "C", "title": "핵심 단서", "content": "나눗셈 등식 $(x-2)P(x)-x^2=Q(x)\\{P(x)-x\\}+\\{P(x)-3x\\}$ 의 양변을 정리하면 좌변이 $(x-3)\\{P(x)-x\\}$ 로 인수분해되어 $Q(x)=x-3$ 임을 알 수 있다. 나머지의 차수가 나누는 식의 차수보다 작아야 한다는 조건이 $P(x)$의 형태를 결정한다." },
+      { "phase": "B", "title": "배경 지식", "content": "다항식 나눗셈 $A=Q\\cdot B+R$ 에서 나머지 $R$의 차수는 나누는 식 $B$의 차수보다 **작아야** 한다. 일차식 $x-3$ 으로 나눈 나머지는 나머지정리에 의해 $P(3)$ 과 같다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "나눗셈 등식을 세우면 $$(x-2)P(x)-x^2=Q(x)\\{P(x)-x\\}+\\{P(x)-3x\\}$$ 우변의 나머지를 좌변으로 옮겨 정리하면 $$(x-2)P(x)-x^2-\\{P(x)-3x\\}=Q(x)\\{P(x)-x\\}$$ 좌변을 계산하면 $$(x-2)P(x)-P(x)-x^2+3x=(x-3)P(x)-(x^2-3x)$$ $$=(x-3)P(x)-x(x-3)=(x-3)\\{P(x)-x\\}$$ 따라서 $$(x-3)\\{P(x)-x\\}=Q(x)\\{P(x)-x\\}$$ $P(x)-x\\neq 0$ 이므로 양변을 $P(x)-x$ 로 나누면 $$Q(x)=x-3$$\n\n이제 나머지 조건을 본다. 나누는 식 $P(x)-x$ 에 대해 나머지 $P(x)-3x$ 의 차수가 더 작아야 한다. $P(x)$의 차수를 $n$이라 하면 $n\\ge 2$ 일 때 $P(x)-x$, $P(x)-3x$ 의 차수가 모두 $n$이 되어 나머지가 더 작다는 조건을 어긴다. 또 $P(x)=ax+b$ ($n=1$)로 두어도 $P(x)-3x=(a-3)x+b$ 가 일반적으로 일차식이 되어 일차식 $P(x)-x$ 로 나눈 나머지로 부적합하다. 나머지의 차수가 진짜로 작아지려면 $$a-3=0,\\quad\\text{즉}\\quad a=3$$ 이어야 하고, 이때 $P(x)-3x=b$ (상수)로 차수 $0<1$ 이 되어 적합하다. 즉 $$P(x)=3x+b$$ ($P(x)-x=2x+b\\neq 0$.)\n\n$P(x)$를 $Q(x)=x-3$ 으로 나눈 나머지가 $10$이므로 나머지정리에 의해 $$P(3)=10$$ $$3\\times 3+b=10 \\;\\Rightarrow\\; 9+b=10 \\;\\Rightarrow\\; b=1$$ 따라서 $$P(x)=3x+1$$ 그러므로 $$P(30)=3\\times 30+1=91$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **91** 입니다." }
+    ],
+    "final_answer": "91"
+  },
+  "28": {
+    "problem_id": "28",
+    "title": "2023학년도 9월 고1 학평 28번",
+    "difficulty": "킬러",
+    "weakness_unit": "이차함수의 최대·최소 활용",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "function_plot", "expr": "0.6875*x^2" },
+        { "type": "function_plot", "expr": "-0.6875*(x-2.75)^2+7.5625" },
+        { "type": "segment", "from": [-2, 11], "to": [2, 11], "label": "y=4a" },
+        { "type": "point", "coordinates": [-2, 11], "label": "A" },
+        { "type": "point", "coordinates": [2, 11], "label": "B" },
+        { "type": "point", "coordinates": [1.75, 4.81], "label": "C" },
+        { "type": "point", "coordinates": [2.75, 7.56], "label": "D" },
+        { "type": "polygon", "points": [[-2, 11], [1.75, 4.81], [2.75, 7.56], [2, 11]], "fillOpacity": 0.08 },
+        { "type": "label_text", "tex": "O", "at": [0.3, -0.6] }
+      ]
+    },
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "$2<a<4$ 인 실수 $a$에 대하여 $f(x)=ax^2$, $g(x)=-a(x-a)^2+a^2$ 이다. 직선 $y=4a$와 $y=f(x)$의 교점을 $\\mathrm{A}$, $\\mathrm{B}$ (단 $\\mathrm{A}$의 $x$좌표 $<$ $\\mathrm{B}$의 $x$좌표), 직선 $y=ax$와 $y=g(x)$의 교점을 $\\mathrm{C}$, $\\mathrm{D}$ (단 $\\mathrm{C}$의 $x$좌표 $<$ $\\mathrm{D}$의 $x$좌표)라 한다. 사각형 $\\mathrm{ACDB}$의 넓이의 최댓값 $M$에 대하여 $8\\times M$ 을 구한다." },
+      { "phase": "C", "title": "핵심 단서", "content": "교점을 $a$로 표현하면 $\\mathrm{A}(-2,\\,4a)$, $\\mathrm{B}(2,\\,4a)$, $\\mathrm{C}(a-1,\\,a^2-a)$, $\\mathrm{D}(a,\\,a^2)$ 가 된다. 네 점이 모두 $a$로 정리되므로 사각형 $\\mathrm{ACDB}$의 넓이를 **신발끈 공식**으로 $a$에 관한 이차식으로 나타낸 뒤 $2<a<4$ 에서 최댓값을 구한다." },
+      { "phase": "B", "title": "배경 지식", "content": "네 점 $(x_1,y_1),\\dots,(x_4,y_4)$를 순서대로 이은 사각형의 넓이는 신발끈 공식 $\\dfrac{1}{2}\\left|\\displaystyle\\sum (x_i y_{i+1}-x_{i+1}y_i)\\right|$ 로 구한다. 이차식 $-2a^2+11a$ 의 최댓값은 꼭짓점 $a=\\dfrac{11}{4}$ 에서 얻는다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$\\textbf{[교점 A, B]}$ $y=4a$ 와 $y=ax^2$: $$ax^2=4a \\Rightarrow x^2=4 \\Rightarrow x=\\pm 2$$ $$\\mathrm{A}(-2,\\,4a),\\qquad \\mathrm{B}(2,\\,4a)$$\n\n$\\textbf{[교점 C, D]}$ $y=ax$ 와 $y=g(x)=-a(x-a)^2+a^2$: $$ax=-a(x-a)^2+a^2$$ 양변을 $a$로 나누면 $$x=-(x-a)^2+a \\Rightarrow (x-a)^2=a-x=-(x-a)$$ $t=x-a$ 로 놓으면 $t^2=-t \\Rightarrow t(t+1)=0 \\Rightarrow t=0\\ \\text{또는}\\ t=-1$ 즉 $$x=a \\quad\\text{또는}\\quad x=a-1$$ $x$좌표가 작은 쪽이 $\\mathrm{C}$이므로 $$\\mathrm{C}(a-1,\\,a(a-1))=(a-1,\\,a^2-a),\\qquad \\mathrm{D}(a,\\,a^2)$$\n\n$\\textbf{[사각형 ACDB의 넓이]}$ 꼭짓점을 순서 $\\mathrm{A}\\to\\mathrm{C}\\to\\mathrm{D}\\to\\mathrm{B}$ 로 신발끈 공식 적용:\n$$\\mathrm{A}(-2,\\,4a),\\ \\mathrm{C}(a-1,\\,a^2-a),\\ \\mathrm{D}(a,\\,a^2),\\ \\mathrm{B}(2,\\,4a)$$\n각 항 $x_i y_{i+1}-x_{i+1}y_i$:\n$$\\mathrm{AC}:\\ (-2)(a^2-a)-(a-1)(4a)=-2a^2+2a-4a^2+4a=-6a^2+6a$$\n$$\\mathrm{CD}:\\ (a-1)a^2-a(a^2-a)=a^3-a^2-a^3+a^2=0$$\n$$\\mathrm{DB}:\\ a\\cdot 4a-2\\cdot a^2=4a^2-2a^2=2a^2$$\n$$\\mathrm{BA}:\\ 2\\cdot 4a-(-2)\\cdot 4a=8a+8a=16a$$\n합 $=(-6a^2+6a)+0+2a^2+16a=-4a^2+22a$. 따라서 넓이는 $$S(a)=\\frac{1}{2}\\left|-4a^2+22a\\right|=\\frac{1}{2}(-4a^2+22a)=-2a^2+11a$$ ($2<a<4$ 에서 양수.)\n\n$\\textbf{[최댓값]}$ $S(a)=-2a^2+11a$ 는 위로 볼록, 꼭짓점 $$a=\\frac{11}{4}\\in(2,\\,4)$$ 에서 최대. $$M=S\\!\\left(\\frac{11}{4}\\right)=-2\\left(\\frac{11}{4}\\right)^2+11\\cdot\\frac{11}{4}=-2\\cdot\\frac{121}{16}+\\frac{121}{4}=-\\frac{121}{8}+\\frac{242}{8}=\\frac{121}{8}$$ 따라서 $$8\\times M=8\\times\\frac{121}{8}=121$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **121** 입니다." }
+    ],
+    "final_answer": "121"
+  },
+  "29": {
+    "problem_id": "29",
+    "title": "2023학년도 9월 고1 학평 29번",
+    "difficulty": "킬러",
+    "weakness_unit": "점과 직선 사이의 거리·무게중심",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "circle", "center": [0, 0], "radius": 5.099 },
+        { "type": "point", "coordinates": [-5, -1], "label": "A" },
+        { "type": "point", "coordinates": [4.58, -2.24], "label": "B" },
+        { "type": "point", "coordinates": [-2.58, 6.24], "label": "C" },
+        { "type": "polygon", "points": [[-5, -1], [4.58, -2.24], [-2.58, 6.24]], "fillOpacity": 0.08 },
+        { "type": "label_text", "tex": "O", "at": [0.3, 0.4] },
+        { "type": "label_text", "tex": "G(-1,1)", "at": [-1, 1] }
+      ]
+    },
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "좌표평면 위의 세 점 $\\mathrm{A}(-5,\\,-1)$, $\\mathrm{B}$, $\\mathrm{C}$ 가 (가) 삼각형 $\\mathrm{ABC}$의 무게중심이 $(-1,\\,1)$, (나) 세 점 $\\mathrm{A},\\mathrm{B},\\mathrm{C}$를 지나는 원(외접원)의 중심이 원점, 을 만족시킨다. 삼각형 $\\mathrm{ABC}$의 넓이가 $\\dfrac{q}{p}\\sqrt{105}$ 일 때 서로소인 자연수 $p,\\,q$에 대해 $p+q$를 구한다." },
+      { "phase": "C", "title": "핵심 단서", "content": "(나)에서 외접원의 중심이 원점이므로 $\\overline{\\mathrm{OA}}=\\overline{\\mathrm{OB}}=\\overline{\\mathrm{OC}}=$ 반지름이고, $\\overline{\\mathrm{OA}}=\\sqrt{26}$ 이다. (가)의 무게중심 조건으로 $\\mathrm{B}+\\mathrm{C}$ 의 좌표 합을 알 수 있고, 좌표를 벡터로 보아 크기·합을 이용해 $\\overline{\\mathrm{BC}}$ 와 $\\mathrm{A}$에서 직선 $\\mathrm{BC}$까지의 거리를 구한다. 직선 $\\mathrm{BC}$는 $\\overline{\\mathrm{OM}}$ ($\\mathrm{M}$은 $\\overline{\\mathrm{BC}}$ 중점)에 수직이다." },
+      { "phase": "B", "title": "배경 지식", "content": "무게중심 $\\mathrm{G}=\\dfrac{\\mathrm{A}+\\mathrm{B}+\\mathrm{C}}{3}$. 외접원의 중심에서 현 $\\overline{\\mathrm{BC}}$에 내린 수선은 그 중점을 지나며 현에 수직이다. 좌표를 위치벡터로 보면 $|\\mathrm{B}+\\mathrm{C}|^2=|\\mathrm{B}|^2+|\\mathrm{C}|^2+2(\\mathrm{B}\\cdot\\mathrm{C})$, $|\\mathrm{B}-\\mathrm{C}|^2=|\\mathrm{B}|^2+|\\mathrm{C}|^2-2(\\mathrm{B}\\cdot\\mathrm{C})$. 삼각형 넓이 $=\\dfrac{1}{2}\\times(\\text{밑변})\\times(\\text{높이})$." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$\\textbf{[외접원 반지름]}$ 중심이 원점이므로 $$r^2=\\overline{\\mathrm{OA}}^2=(-5)^2+(-1)^2=26$$ 따라서 $\\mathrm{B}$, $\\mathrm{C}$도 $|\\mathrm{B}|^2=|\\mathrm{C}|^2=26$.\n\n$\\textbf{[무게중심 조건]}$ $$\\frac{\\mathrm{A}+\\mathrm{B}+\\mathrm{C}}{3}=(-1,\\,1) \\Rightarrow \\mathrm{A}+\\mathrm{B}+\\mathrm{C}=(-3,\\,3)$$ $\\mathrm{A}=(-5,\\,-1)$ 이므로 $$\\mathrm{B}+\\mathrm{C}=(-3,\\,3)-(-5,\\,-1)=(2,\\,4)$$\n\n$\\textbf{[BC의 길이]}$ $|\\mathrm{B}+\\mathrm{C}|^2=2^2+4^2=20$ 이고 $$|\\mathrm{B}+\\mathrm{C}|^2=|\\mathrm{B}|^2+|\\mathrm{C}|^2+2(\\mathrm{B}\\cdot\\mathrm{C}) \\Rightarrow 20=26+26+2(\\mathrm{B}\\cdot\\mathrm{C})$$ $$\\mathrm{B}\\cdot\\mathrm{C}=-16$$ 따라서 $$|\\mathrm{B}-\\mathrm{C}|^2=|\\mathrm{B}|^2+|\\mathrm{C}|^2-2(\\mathrm{B}\\cdot\\mathrm{C})=52-2(-16)=84$$ $$\\overline{\\mathrm{BC}}=\\sqrt{84}=2\\sqrt{21}$$\n\n$\\textbf{[A에서 직선 BC까지의 거리]}$ $\\overline{\\mathrm{BC}}$의 중점은 $$\\mathrm{M}=\\frac{\\mathrm{B}+\\mathrm{C}}{2}=(1,\\,2)$$ 외접원의 중심 $\\mathrm{O}$에서 $\\overline{\\mathrm{BC}}$에 내린 수선은 $\\mathrm{M}$을 지나므로 직선 $\\mathrm{BC}$는 $\\overline{\\mathrm{OM}}$ (방향 $(1,\\,2)$)에 수직이다. 즉 직선 $\\mathrm{BC}$의 법선벡터가 $(1,\\,2)$ 이고 $\\mathrm{M}(1,\\,2)$ 를 지나므로 $$1\\cdot(x-1)+2\\cdot(y-2)=0 \\Rightarrow x+2y-5=0$$ 점 $\\mathrm{A}(-5,\\,-1)$ 에서 이 직선까지의 거리는 $$d=\\frac{|(-5)+2(-1)-5|}{\\sqrt{1^2+2^2}}=\\frac{|-12|}{\\sqrt{5}}=\\frac{12}{\\sqrt{5}}$$\n\n$\\textbf{[넓이]}$ $$\\triangle \\mathrm{ABC}=\\frac{1}{2}\\times\\overline{\\mathrm{BC}}\\times d=\\frac{1}{2}\\times 2\\sqrt{21}\\times\\frac{12}{\\sqrt{5}}=\\frac{12\\sqrt{21}}{\\sqrt{5}}=12\\sqrt{\\frac{21}{5}}=\\frac{12\\sqrt{105}}{5}$$ 즉 $$\\triangle\\mathrm{ABC}=\\frac{12}{5}\\sqrt{105}$$ 따라서 $\\dfrac{q}{p}=\\dfrac{12}{5}$ 에서 $p=5$, $q=12$ (서로소). $$p+q=5+12=17$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **17** 입니다." }
+    ],
+    "final_answer": "17"
+  },
+  "30": {
+    "problem_id": "30",
+    "title": "2023학년도 9월 고1 학평 30번",
+    "difficulty": "킬러",
+    "weakness_unit": "평행이동 추론·이차함수",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "이차함수 $y=f(x)$ 가 있다. 중심이 $y=f(x)$의 그래프 위에 있고 반지름이 $1$인 원 중에서, '원을 $x$축으로 $m$, $y$축으로 $m$만큼 평행이동한 원이 $x$축과 $y$축에 동시에 접하도록 하는 실수 $m$이 $1$개 이상 존재한다'는 조건을 만족시키는 중심이 $5$개이다. 이 중심들의 $x$좌표를 작은 수부터 $x_1,\\dots,x_5$ 라 하면 $x_1=0$, $x_2+x_3+x_4+x_5=20$ 이고, $x_1\\le x\\le x_5$ 에서 $f(x)$의 최솟값이 $0$보다 클 때 $f(20)$을 구한다." },
+      { "phase": "C", "title": "핵심 단서", "content": "중심 $(s,\\,f(s))$ 인 원을 $(m,\\,m)$ 만큼 옮긴 중심은 $(s+m,\\,f(s)+m)$. 두 축에 동시에 접하려면 $|s+m|=1$ 이고 $|f(s)+m|=1$. 두 식이 동시에 성립하는 $m$이 존재할 조건은 $f(s)=s$ 또는 $|f(s)-s|=2$. 즉 $h(s)=f(s)-s$ 로 두면 $h(s)\\in\\{-2,\\,0,\\,2\\}$ 인 $s$가 정확히 $5$개여야 한다." },
+      { "phase": "B", "title": "배경 지식", "content": "원이 $x$축에 접하려면 (중심의 $y$좌표의 절댓값)$=$반지름, $y$축에 접하려면 (중심의 $x$좌표의 절댓값)$=$반지름. 이차함수(포물선) $h$ 에 대해 수평선 $h=c$ 와의 교점 수는 $c$가 꼭짓값보다 크면 $2$, 같으면 $1$(접함), 작으면 $0$ 이다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "원의 중심을 $(s,\\,f(s))$ 라 하자. 평행이동한 원의 중심은 $(s+m,\\,f(s)+m)$, 반지름은 그대로 $1$. 두 축에 동시에 접하려면 $$|s+m|=1,\\qquad |f(s)+m|=1$$ 두 절댓값이 같으므로 $s+m=\\pm\\{f(s)+m\\}$.\n\n$\\bullet$ $s+m=f(s)+m \\Rightarrow s=f(s)$. 이때 $m=-s\\pm 1$ 로 $m$이 항상 존재.\n$\\bullet$ $s+m=-\\{f(s)+m\\} \\Rightarrow 2m=-s-f(s) \\Rightarrow m=-\\dfrac{s+f(s)}{2}$. 이때 $|s+m|=\\left|\\dfrac{s-f(s)}{2}\\right|=1 \\Rightarrow |s-f(s)|=2$.\n\n따라서 조건을 만족하는 $s$는 $$f(s)=s,\\quad f(s)=s+2,\\quad f(s)=s-2$$ 의 해이다. $h(s)=f(s)-s$ 로 놓으면 $$h(s)=0,\\quad h(s)=2,\\quad h(s)=-2$$ 의 해의 총 개수가 $5$ 여야 한다.\n\n$h(s)$ 는 이차함수($f$와 같은 이차항 계수 $A$)이므로 세 수평선과의 교점 합이 $5$가 되려면 한 수평선은 **접하고**(1개), 나머지 둘은 각각 **두 점**(2개+2개)에서 만나야 한다. 세 값 $-2,\\,0,\\,2$ 중 접하는 값은 포물선의 **꼭짓값**이다. $x_1\\le x\\le x_5$ 에서 $f(x)$의 최솟값이 $0$보다 크다는 조건과 부합하려면 $h$ 는 아래로 볼록($A>0$)이고 꼭짓값이 가장 작은 $-2$ 여야 한다. 즉 $$h(s)=A(s-\\alpha)^2-2$$\n\n$\\bullet$ $h=-2$ (접함): $s=\\alpha$ (1개)\n$\\bullet$ $h=0$: $A(s-\\alpha)^2=2 \\Rightarrow s=\\alpha\\pm\\sqrt{\\dfrac{2}{A}}$ (2개)\n$\\bullet$ $h=2$: $A(s-\\alpha)^2=4 \\Rightarrow s=\\alpha\\pm\\dfrac{2}{\\sqrt{A}}$ (2개)\n\n$\\sqrt{\\dfrac{4}{A}}>\\sqrt{\\dfrac{2}{A}}$ 이므로 $x$좌표를 작은 순서로 쓰면 $$x_1=\\alpha-\\frac{2}{\\sqrt{A}},\\quad x_2=\\alpha-\\sqrt{\\frac{2}{A}},\\quad x_3=\\alpha,\\quad x_4=\\alpha+\\sqrt{\\frac{2}{A}},\\quad x_5=\\alpha+\\frac{2}{\\sqrt{A}}$$\n\n$x_1=0$ 에서 $$\\alpha=\\frac{2}{\\sqrt{A}}$$ $x_2+x_3+x_4+x_5=20$ 에서 (대칭인 $x_2,x_4$의 합은 $2\\alpha$) $$\\left(\\alpha-\\sqrt{\\tfrac{2}{A}}\\right)+\\alpha+\\left(\\alpha+\\sqrt{\\tfrac{2}{A}}\\right)+\\left(\\alpha+\\frac{2}{\\sqrt{A}}\\right)=4\\alpha+\\frac{2}{\\sqrt{A}}=20$$ $\\alpha=\\dfrac{2}{\\sqrt{A}}$ 대입하면 $$4\\cdot\\frac{2}{\\sqrt{A}}+\\frac{2}{\\sqrt{A}}=\\frac{10}{\\sqrt{A}}=20 \\Rightarrow \\sqrt{A}=\\frac{1}{2} \\Rightarrow A=\\frac{1}{4}$$ 따라서 $$\\frac{2}{\\sqrt{A}}=\\frac{2}{1/2}=4 \\Rightarrow \\alpha=4,\\qquad \\sqrt{\\frac{2}{A}}=\\sqrt{8}=2\\sqrt{2}$$ 다섯 중심의 $x$좌표는 $$x_1=0,\\ x_2=4-2\\sqrt{2},\\ x_3=4,\\ x_4=4+2\\sqrt{2},\\ x_5=8$$ (검산: $x_2+x_3+x_4+x_5=(4-2\\sqrt2)+4+(4+2\\sqrt2)+8=20$.)\n\n$h(s)=\\dfrac{1}{4}(s-4)^2-2$ 이므로 $$f(s)=h(s)+s=\\frac{1}{4}(s-4)^2-2+s=\\frac{1}{4}s^2-2s+4-2+s=\\frac{1}{4}s^2-s+2$$ $\\textbf{[최솟값 확인]}$ $f$의 꼭짓점은 $s=2$, $f(2)=\\dfrac{1}{4}\\cdot 4-2+2=1>0$ 이고 구간 $[x_1,\\,x_5]=[0,\\,8]$ 에 포함되므로 이 구간 최솟값이 $1>0$. 조건을 만족한다.\n\n따라서 $$f(20)=\\frac{1}{4}\\times 20^2-20+2=\\frac{400}{4}-20+2=100-20+2=82$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **82** 입니다." }
+    ],
+    "final_answer": "82"
+  }
+}

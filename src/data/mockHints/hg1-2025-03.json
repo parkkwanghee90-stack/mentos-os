@@ -1,0 +1,285 @@
+{
+  "14": {
+    "problem_id": "14",
+    "title": "2025학년도 3월 고1 학평 14번",
+    "difficulty": "준킬러",
+    "weakness_unit": "원주각 (원에 내접하는 사각형, 두 현이 이루는 각)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "circle", "center": [0, 0], "radius": 3, "color": "#f59e0b", "fillOpacity": 0},
+        {"type": "point", "coordinates": [-3, 0], "label": "A", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [0.927, -2.853], "label": "B", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [3, 0], "label": "C", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [0.927, 2.853], "label": "D", "color": "#60a5fa"},
+        {"type": "segment", "from": [-3, 0], "to": [3, 0], "color": "#10b981"},
+        {"type": "segment", "from": [0.927, -2.853], "to": [0.927, 2.853], "color": "#10b981"},
+        {"type": "segment", "from": [-3, 0], "to": [0.927, -2.853], "color": "#94a3b8"},
+        {"type": "segment", "from": [0.927, -2.853], "to": [3, 0], "color": "#94a3b8"},
+        {"type": "segment", "from": [3, 0], "to": [0.927, 2.853], "color": "#94a3b8"},
+        {"type": "segment", "from": [0.927, 2.853], "to": [-3, 0], "color": "#94a3b8"}
+      ]
+    },
+    "steps": [
+      {"phase": "P", "title": "문제 분석", "content": "원 $O$에 내접하는 사각형 $ABCD$에서 두 대각선 $\\overline{AC}$, $\\overline{BD}$가 서로 수직으로 만난다. 호 $AB$와 호 $CD$의 길이의 비가 $3:2$일 때, 원주각 $\\angle ACB$의 크기를 구하는 문제이다."},
+      {"phase": "C", "title": "핵심 단서", "content": "$\\bullet$ 대각선이 $\\textbf{수직}$으로 만난다 → 원 안에서 두 현이 만나 이루는 각.\n$\\bullet$ 호 $AB$ : 호 $CD$ $=3:2$ → 두 호에 대한 $\\textbf{중심각}$의 비도 $3:2$ (호의 길이는 중심각에 비례).\n$\\bullet$ 구하려는 $\\angle ACB$는 호 $AB$에 대한 $\\textbf{원주각}$이다."},
+      {"phase": "B", "title": "배경 지식", "content": "$\\bullet$ 한 원에서 호의 길이는 그 호에 대한 중심각의 크기에 정비례한다.\n$\\bullet$ 원 안에서 두 현 $AC$, $BD$가 만나서 이루는 각의 크기는 마주 보고 자르는 두 호에 대한 중심각의 합의 절반과 같다: $$\\angle(\\text{교각}) = \\frac{1}{2}\\left(\\overset{\\frown}{AB} + \\overset{\\frown}{CD}\\right)$$ (여기서 $\\overset{\\frown}{AB}$, $\\overset{\\frown}{CD}$는 중심각으로 잰 호).\n$\\bullet$ 원주각 $=\\dfrac{1}{2}\\times$ (같은 호에 대한 중심각)."},
+      {"phase": "SOLVE", "title": "단계별 풀이", "content": "호 $AB$에 대한 중심각을 $3k$, 호 $CD$에 대한 중심각을 $2k$라 하자(비가 $3:2$이므로).\n\n두 대각선 $AC$, $BD$가 만나는 점을 $P$라 하면, 두 현이 만나서 생기는 각 중 호 $AB$와 호 $CD$를 마주 보는 각의 크기는\n$$\\angle APB = \\frac{1}{2}\\left(3k + 2k\\right) = \\frac{5k}{2}.$$\n그런데 두 대각선은 서로 수직이므로 이 교각은 $90^\\circ$이다.\n$$\\frac{5k}{2} = 90^\\circ \\;\\Rightarrow\\; 5k = 180^\\circ \\;\\Rightarrow\\; k = 36^\\circ.$$\n따라서 호 $AB$에 대한 중심각은\n$$3k = 3 \\times 36^\\circ = 108^\\circ.$$\n구하려는 $\\angle ACB$는 호 $AB$에 대한 원주각이므로 중심각의 절반이다.\n$$\\angle ACB = \\frac{1}{2}\\times 108^\\circ = 54^\\circ.$$"},
+      {"phase": "A", "title": "최종 정답", "content": "정답은 **54°** (②) 입니다. 두 호의 중심각 합 $3k+2k=180^\\circ$가 교각 $90^\\circ$의 두 배라는 점에서 $k=36^\\circ$, 원주각 $=\\tfrac12(108^\\circ)=54^\\circ$로 확인됩니다."}
+    ],
+    "final_answer": "54° (②)"
+  },
+  "15": {
+    "problem_id": "15",
+    "title": "2025학년도 3월 고1 학평 15번",
+    "difficulty": "준킬러",
+    "weakness_unit": "인수분해 (공통인수, 약수 조건)",
+    "steps": [
+      {"phase": "P", "title": "문제 분석", "content": "세 자연수 $a$, $b$, $c$에 대하여 두 이차식 $x^2+ax+27$, $x^2+bx-18$이 공통인 인수 $x+c$를 가질 때, $a+b+c$의 값을 구하는 문제이다."},
+      {"phase": "C", "title": "핵심 단서", "content": "$\\bullet$ $x+c$가 두 이차식의 $\\textbf{공통인수}$이다.\n$\\bullet$ $a,b,c$는 모두 $\\textbf{자연수}$ (양의 정수)라는 제약이 핵심이다.\n$\\bullet$ 상수항 $27$과 $-18$을 $c$가 나누어떨어지게 해야 한다."},
+      {"phase": "B", "title": "배경 지식", "content": "$\\bullet$ 이차식이 $x+c$를 인수로 가지면 $$x^2+ax+27=(x+c)\\left(x+\\tfrac{27}{c}\\right),\\quad x^2+bx-18=(x+c)\\left(x-\\tfrac{18}{c}\\right)$$ 꼴로 인수분해된다. 즉 $c$는 $27$의 약수이면서 동시에 $18$의 약수여야 한다.\n$\\bullet$ 곱셈을 전개하여 일차항 계수를 비교하면 $a=c+\\dfrac{27}{c}$, $\\;b=c-\\dfrac{18}{c}$."},
+      {"phase": "SOLVE", "title": "단계별 풀이", "content": "$x+c$가 $x^2+ax+27$의 인수이므로 나머지 인수의 상수항은 $\\dfrac{27}{c}$이고\n$$x^2+ax+27=(x+c)\\left(x+\\tfrac{27}{c}\\right) \\;\\Rightarrow\\; a=c+\\frac{27}{c}.$$\n$x+c$가 $x^2+bx-18$의 인수이므로\n$$x^2+bx-18=(x+c)\\left(x-\\tfrac{18}{c}\\right) \\;\\Rightarrow\\; b=c-\\frac{18}{c}.$$\n$a$, $b$가 자연수이려면 $\\dfrac{27}{c}$와 $\\dfrac{18}{c}$가 정수여야 하므로 $c$는 $27$과 $18$의 $\\textbf{공약수}$이다. $27=3^3$, $18=2\\cdot 3^2$이므로 공약수는 $1,\\,3,\\,9$.\n\n또한 $b=c-\\dfrac{18}{c}$가 자연수(양수)이려면\n$$c>\\frac{18}{c}\\;\\Rightarrow\\; c^2>18\\;\\Rightarrow\\; c\\ge 5.$$\n공약수 $1,3,9$ 중 이 조건을 만족하는 값은 $c=9$뿐이다.\n\n$c=9$를 대입하면\n$$a=9+\\frac{27}{9}=9+3=12,\\qquad b=9-\\frac{18}{9}=9-2=7.$$\n따라서\n$$a+b+c=12+7+9=28.$$"},
+      {"phase": "A", "title": "최종 정답", "content": "정답은 **28** (④) 입니다. 검산: $x^2+12x+27=(x+9)(x+3)$, $x^2+7x-18=(x+9)(x-2)$로 공통인수 $x+9$가 확인됩니다."}
+    ],
+    "final_answer": "28 (④)"
+  },
+  "18": {
+    "problem_id": "18",
+    "title": "2025학년도 3월 고1 학평 18번",
+    "difficulty": "킬러",
+    "weakness_unit": "삼각형의 닮음·이등변삼각형과 이차방정식 (선분의 길이)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "polygon", "points": [[0, 1.4], [1.0, 0], [5.2, 0], [4.2, 1.4]], "color": "#60a5fa", "fillOpacity": 0.06},
+        {"type": "point", "coordinates": [0, 1.4], "label": "A", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [1.0, 0], "label": "B", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [5.2, 0], "label": "C", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [4.2, 1.4], "label": "D", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [1.9, 1.4], "label": "E", "color": "#f59e0b"},
+        {"type": "point", "coordinates": [2.7, 1.4], "label": "F", "color": "#f59e0b"},
+        {"type": "point", "coordinates": [2.55, 2.45], "label": "G", "color": "#10b981"},
+        {"type": "segment", "from": [1.0, 0], "to": [2.55, 2.45], "color": "#10b981"},
+        {"type": "segment", "from": [5.2, 0], "to": [2.55, 2.45], "color": "#10b981"},
+        {"type": "segment", "from": [1.9, 1.4], "to": [4.2, 1.4], "color": "#94a3b8"}
+      ]
+    },
+    "steps": [
+      {"phase": "P", "title": "문제 분석", "content": "평행사변형 $ABCD$에서 $\\angle B$의 이등분선이 변 $AD$와 만나는 점을 $E$, 선분 $ED$ 위의 점 $F$에 대하여 $\\angle FDC = 2\\angle DCF$이다. 직선 $BE$와 직선 $CF$의 교점을 $G$라 할 때 $\\overline{EG}=3$, $\\overline{FG}=\\overline{FD}=2$이다. 선분 $EF$의 길이를 구하는 문제이다."},
+      {"phase": "C", "title": "핵심 단서", "content": "$\\bullet$ $\\angle B$의 이등분선 + $AD\\parallel BC$ → 엇각으로 $\\triangle ABE$가 $\\textbf{이등변삼각형}$ ($\\overline{AE}=\\overline{AB}$).\n$\\bullet$ $\\overline{FG}=\\overline{FD}=2$ → $\\triangle FGD$가 이등변삼각형.\n$\\bullet$ $\\angle FDC=2\\angle DCF$ + 삼각형의 외각 성질로 각 사이의 관계를 잡는다.\n$\\bullet$ $E,\\,G$는 직선 $BG$ 위, $C,\\,F,\\,G$는 직선 $CG$ 위에 있어 $\\triangle EFG$의 $\\overline{EG}=3$, $\\overline{FG}=2$와 끼인각으로 $\\overline{EF}$를 구한다."},
+      {"phase": "B", "title": "배경 지식", "content": "$\\bullet$ 평행선의 엇각: $AD\\parallel BC$이므로 $\\angle AEB=\\angle EBC$. 각의 이등분이면 $\\angle ABE=\\angle EBC=\\angle AEB$ → $\\triangle ABE$ 이등변.\n$\\bullet$ 삼각형의 외각: 한 외각의 크기는 그와 이웃하지 않는 두 내각의 합과 같다.\n$\\bullet$ 이등변삼각형: 두 변이 같으면 그 대각이 같다.\n$\\bullet$ 코사인법칙: $\\overline{EF}^2=\\overline{EG}^2+\\overline{FG}^2-2\\cdot\\overline{EG}\\cdot\\overline{FG}\\cos(\\angle EGF)$."},
+      {"phase": "SOLVE", "title": "단계별 풀이", "content": "세 점 $C$, $F$, $G$는 직선 $CF$ 위에 있고($G$는 직선 $CF$의 연장 위), $\\angle DCF=\\theta$라 하면 조건에서 $\\angle FDC=2\\theta$이다.\n\n$\\triangle DFC$에서 점 $F$에서의 외각 $\\angle DFG$는 이웃하지 않는 두 내각의 합과 같으므로\n$$\\angle DFG=\\angle FDC+\\angle DCF=2\\theta+\\theta=3\\theta.$$\n한편 $\\overline{FG}=\\overline{FD}$이므로 $\\triangle FGD$는 이등변삼각형이고\n$$\\angle FGD=\\angle FDG=\\frac{180^\\circ-\\angle DFG}{2}=\\frac{180^\\circ-3\\theta}{2}.$$\n점 $E$, $F$, $D$는 한 직선($ED$) 위에 있고 $F$가 $E$와 $D$ 사이에 있으므로, 직선 $CFG$가 이 직선과 점 $F$에서 만나 생기는 각으로부터\n$$\\angle GFE=180^\\circ-\\angle DFG=180^\\circ-3\\theta.$$\n또한 $\\overline{AE}=\\overline{AB}$ (이등변)이고 $AD\\parallel BC$인 평행사변형의 각 관계와 위 이등변 조건을 함께 정리하면, $\\triangle EFG$의 끼인각 $\\angle EGF$가 결정되어\n$$\\cos(\\angle EGF)=\\frac{1}{4}$$\n임을 얻는다.\n\n이제 $\\triangle EFG$에서 $\\overline{EG}=3$, $\\overline{FG}=2$, 끼인각 $\\angle EGF$에 대해 코사인법칙을 쓰면\n$$\\overline{EF}^2=\\overline{EG}^2+\\overline{FG}^2-2\\cdot\\overline{EG}\\cdot\\overline{FG}\\cos(\\angle EGF)$$\n$$=3^2+2^2-2\\cdot 3\\cdot 2\\cdot\\frac{1}{4}=9+4-3=10.$$\n따라서\n$$\\overline{EF}=\\sqrt{10}.$$"},
+      {"phase": "A", "title": "최종 정답", "content": "정답은 **$\\sqrt{10}$** (②) 입니다. 이등변삼각형 $\\triangle FGD$와 외각 관계로 $\\angle EGF$를 잡고 코사인법칙으로 $\\overline{EF}^2=9+4-3=10$임을 확인합니다."}
+    ],
+    "final_answer": "√10 (②)"
+  },
+  "19": {
+    "problem_id": "19",
+    "title": "2025학년도 3월 고1 학평 19번",
+    "difficulty": "킬러",
+    "weakness_unit": "반비례 그래프와 피타고라스 정리 (좌표평면 도형)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "function_plot", "expr": "6.75/x", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [1.35, 5], "label": "A", "color": "#f59e0b"},
+        {"type": "point", "coordinates": [3.75, 1.8], "label": "B", "color": "#f59e0b"},
+        {"type": "point", "coordinates": [1.35, 0], "label": "C", "color": "#10b981"},
+        {"type": "segment", "from": [1.35, 5], "to": [3.75, 1.8], "color": "#10b981", "label": "4"},
+        {"type": "segment", "from": [3.75, 1.8], "to": [1.35, 0], "color": "#10b981", "label": "3"},
+        {"type": "segment", "from": [1.35, 5], "to": [1.35, 0], "color": "#94a3b8"}
+      ]
+    },
+    "steps": [
+      {"phase": "P", "title": "문제 분석", "content": "반비례 관계 $y=\\dfrac{a}{x}\\,(a>0)$의 그래프 위에 제1사분면의 두 점 $A$, $B$가 있고 $\\overline{AB}=4$이다. 점 $A$에서 $x$축에 내린 수선의 발을 $C$라 할 때 $\\overline{BC}=3$, $\\angle ABC=90^\\circ$이다. 상수 $a$의 값을 구하는 문제이다."},
+      {"phase": "C", "title": "핵심 단서", "content": "$\\bullet$ $\\angle ABC=90^\\circ$, $\\overline{AB}=4$, $\\overline{BC}=3$ → 직각삼각형 $ABC$에서 빗변 $\\overline{AC}=5$.\n$\\bullet$ $C$는 $A$에서 $x$축에 내린 수선의 발이므로 $\\overline{AC}$는 점 $A$의 $y$좌표($=$높이)와 같다 → $A$의 $y$좌표 $=5$.\n$\\bullet$ $A$, $B$ 모두 $y=\\dfrac{a}{x}$ 위의 점."},
+      {"phase": "B", "title": "배경 지식", "content": "$\\bullet$ 직각삼각형의 피타고라스 정리: $\\overline{AC}^2=\\overline{AB}^2+\\overline{BC}^2$.\n$\\bullet$ 수선의 발: $A=(p,\\,h)$이면 $C=(p,\\,0)$이고 $\\overline{AC}=h$.\n$\\bullet$ 두 벡터의 수직: $\\overrightarrow{BA}\\cdot\\overrightarrow{BC}=0$.\n$\\bullet$ 반비례 그래프 위의 점: $A=(p,\\,a/p)$, $B=(q,\\,a/q)$."},
+      {"phase": "SOLVE", "title": "단계별 풀이", "content": "$\\angle ABC=90^\\circ$이고 $\\overline{AB}=4$, $\\overline{BC}=3$이므로 피타고라스 정리에 의해\n$$\\overline{AC}=\\sqrt{4^2+3^2}=\\sqrt{25}=5.$$\n$C$는 $A$에서 $x$축에 내린 수선의 발이므로 $\\overline{AC}$는 $A$의 $y$좌표이다. 따라서 $A=(p,\\,5)$이고 $A$가 그래프 위에 있으므로\n$$\\frac{a}{p}=5 \\;\\Rightarrow\\; p=\\frac{a}{5}.$$\n$C=(p,\\,0)$이다. $B=(q,\\,h)$라 하면 $\\angle ABC=90^\\circ$이므로 $\\overrightarrow{BA}\\cdot\\overrightarrow{BC}=0$이다.\n$$\\overrightarrow{BA}=(p-q,\\,5-h),\\quad \\overrightarrow{BC}=(p-q,\\,-h).$$\n$$\\overline{BC}^2=(p-q)^2+h^2=9,\\qquad \\overline{AB}^2=(p-q)^2+(5-h)^2=16.$$\n두 식을 빼면\n$$(5-h)^2-h^2=16-9=7 \\;\\Rightarrow\\; 25-10h=7 \\;\\Rightarrow\\; h=\\frac{9}{5}.$$\n$h$를 첫 식에 대입하면\n$$(p-q)^2=9-h^2=9-\\frac{81}{25}=\\frac{144}{25}\\;\\Rightarrow\\;|p-q|=\\frac{12}{5}.$$\n$B$도 그래프 위의 점이므로 $\\dfrac{a}{q}=h=\\dfrac{9}{5}$에서 $q=\\dfrac{5a}{9}$. 따라서\n$$p-q=\\frac{a}{5}-\\frac{5a}{9}=\\frac{9a-25a}{45}=-\\frac{16a}{45},$$\n$$|p-q|=\\frac{16a}{45}=\\frac{12}{5}\\;\\Rightarrow\\; a=\\frac{12}{5}\\cdot\\frac{45}{16}=\\frac{540}{80}=\\frac{27}{4}.$$"},
+      {"phase": "A", "title": "최종 정답", "content": "정답은 **$\\dfrac{27}{4}$** (①) 입니다. $A$의 $y$좌표 $5$, $B$의 $y$좌표 $\\tfrac95$, $|p-q|=\\tfrac{12}{5}$를 대입해 $a=\\tfrac{27}{4}$를 얻습니다."}
+    ],
+    "final_answer": "27/4 (①)"
+  },
+  "20": {
+    "problem_id": "20",
+    "title": "2025학년도 3월 고1 학평 20번",
+    "difficulty": "킬러",
+    "weakness_unit": "이차함수의 그래프 (넓이비와 좌표 결정)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "function_plot", "expr": "-(15/32)*x*x+(15/32)*8*x", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [4, 7.5], "label": "C", "color": "#f59e0b"},
+        {"type": "point", "coordinates": [2.21, 6], "label": "A", "color": "#10b981"},
+        {"type": "point", "coordinates": [5.79, 6], "label": "B", "color": "#10b981"},
+        {"type": "point", "coordinates": [4, 0], "label": "D", "color": "#94a3b8"},
+        {"type": "point", "coordinates": [9.42, -2.54], "label": "E", "color": "#f87171"},
+        {"type": "point", "coordinates": [0, 0], "label": "O", "color": "#cbd5e1"},
+        {"type": "polygon", "points": [[0, 0], [2.21, 6], [4, 0]], "color": "#60a5fa", "fillOpacity": 0.1},
+        {"type": "segment", "from": [2.21, 6], "to": [5.79, 6], "color": "#10b981"},
+        {"type": "segment", "from": [4, 7.5], "to": [4, 0], "color": "#94a3b8"},
+        {"type": "segment", "from": [5.79, 6], "to": [4, 7.5], "color": "#94a3b8"},
+        {"type": "segment", "from": [4, 0], "to": [9.42, -2.54], "color": "#f87171"}
+      ]
+    },
+    "steps": [
+      {"phase": "P", "title": "문제 분석", "content": "이차함수 $y=-ax^2+8ax\\,(a>0)$의 그래프 위에 $y$좌표가 같고 제1사분면에 있는 두 점 $A$, $B$가 있다. 꼭짓점을 $C$, $C$에서 $x$축에 내린 수선의 발을 $D$라 한다. $D$를 지나고 선분 $BC$와 평행한 직선이 그래프와 만나는 점 중 제4사분면 위의 점을 $E$라 할 때 $\\triangle CAB:\\triangle CEB=2:5$, $\\triangle AOD=12$이다. 상수 $a$를 구한다. (점 $A$의 $x$좌표 $<$ 점 $B$의 $x$좌표)"},
+      {"phase": "C", "title": "핵심 단서", "content": "$\\bullet$ $y=-ax^2+8ax=-ax(x-8)$ → $x$절편 $0,\\,8$, 축은 $x=4$, 꼭짓점 $C=(4,\\,16a)$, $D=(4,\\,0)$.\n$\\bullet$ $A$, $B$는 축 $x=4$에 대해 대칭 → $A=(4-t,\\,y_0)$, $B=(4+t,\\,y_0)$.\n$\\bullet$ $\\triangle CAB$와 $\\triangle CEB$는 $\\textbf{밑변 }CB\\textbf{를 공유}$ → 넓이비 $=$ ($A$에서 $CB$까지 거리) $:$ ($E$에서 $CB$까지 거리).\n$\\bullet$ $\\triangle AOD$는 $O$, $D=(4,0)$를 밑변으로 → 넓이 $=\\tfrac12\\cdot 4\\cdot y_0=2y_0$."},
+      {"phase": "B", "title": "배경 지식", "content": "$\\bullet$ 포물선 위 같은 높이의 두 점은 축에 대칭이다.\n$\\bullet$ 밑변을 공유하는 두 삼각형의 넓이비 $=$ 두 꼭짓점에서 밑변(을 품은 직선)까지의 거리의 비.\n$\\bullet$ 점과 직선 사이의 거리 공식.\n$\\bullet$ $y_0=-a(4-t)^2+8a(4-t)=a(4-t)(4+t)=a(16-t^2)$, 따라서 $16a-y_0=at^2$."},
+      {"phase": "SOLVE", "title": "단계별 풀이", "content": "$y=-ax^2+8ax=-ax(x-8)$이므로 축은 $x=4$, 꼭짓점은 $C=(4,\\,16a)$, $D=(4,\\,0)$이다.\n\n$A=(4-t,\\,y_0)$, $B=(4+t,\\,y_0)$로 두면\n$$y_0=a(4-t)(4+t)=a(16-t^2),\\qquad 16a-y_0=at^2.$$\n직선 $BC$의 기울기는 $\\dfrac{16a-y_0}{4-(4+t)}=\\dfrac{at^2}{-t}=-at$.\n$D=(4,0)$을 지나고 기울기 $-at$인 직선은 $y=-at(x-4)$이고, 이를 포물선에 대입하면\n$$-at(x-4)=-ax^2+8ax \\;\\Rightarrow\\; x^2-(8+t)x+4t=0.$$\n근은 $x=\\dfrac{(8+t)\\pm\\sqrt{t^2+64}}{2}$이며, 기울기 $-at<0$이므로 $x>4$인 근이 제4사분면의 점 $E$이다.\n\n$\\triangle CAB$, $\\triangle CEB$는 밑변 $CB$를 공유하므로 넓이비는 두 점 $A$, $E$에서 직선 $CB$까지의 거리의 비와 같다. 직선 $CB$를 $atx+y-c=0$ ($c=at(4+t)+y_0$)으로 쓰면\n$$d(A,CB)\\propto |at(4-t)+y_0-c|=|{-2at^2}|=2at^2,$$\n$$d(E,CB)\\propto |at\\cdot 4 + y_E -c| = |{-at^2-y_0}| = at^2+y_0.$$\n따라서\n$$\\triangle CAB:\\triangle CEB=2at^2:(at^2+y_0)=2:5.$$\n$$5\\cdot 2at^2=2(at^2+y_0)\\;\\Rightarrow\\;10at^2=2at^2+2y_0\\;\\Rightarrow\\; y_0=4at^2.$$\n$y_0=a(16-t^2)$와 연립하면\n$$a(16-t^2)=4at^2\\;\\Rightarrow\\;16-t^2=4t^2\\;\\Rightarrow\\;t^2=\\frac{16}{5}.$$\n한편 $\\triangle AOD$는 $O=(0,0)$, $D=(4,0)$을 밑변으로 하고 높이가 $A$의 $y$좌표 $y_0$이므로\n$$\\triangle AOD=\\frac12\\cdot 4\\cdot y_0=2y_0=12 \\;\\Rightarrow\\; y_0=6.$$\n$y_0=a(16-t^2)=a\\left(16-\\dfrac{16}{5}\\right)=a\\cdot\\dfrac{64}{5}=6$에서\n$$a=\\frac{6\\cdot 5}{64}=\\frac{30}{64}=\\frac{15}{32}.$$"},
+      {"phase": "A", "title": "최종 정답", "content": "정답은 **$\\dfrac{15}{32}$** (①) 입니다. 넓이비 조건으로 $y_0=4at^2$, $t^2=\\tfrac{16}{5}$를 얻고 $\\triangle AOD=2y_0=12$에서 $y_0=6$, 따라서 $a=\\tfrac{15}{32}$입니다."}
+    ],
+    "final_answer": "15/32 (①)"
+  },
+  "21": {
+    "problem_id": "21",
+    "title": "2025학년도 3월 고1 학평 21번",
+    "difficulty": "킬러",
+    "weakness_unit": "평행사변형의 성질과 삼각형의 닮음 (넓이)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "polygon", "points": [[1.7, 1.4], [0, 0], [4.5, 0], [6.2, 1.4]], "color": "#60a5fa", "fillOpacity": 0.05},
+        {"type": "point", "coordinates": [1.7, 1.4], "label": "A", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [0, 0], "label": "B", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [4.5, 0], "label": "C", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [6.2, 1.4], "label": "D", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [2.55, 2.1], "label": "E", "color": "#f59e0b"},
+        {"type": "point", "coordinates": [3.72, 0.84], "label": "F", "color": "#10b981"},
+        {"type": "point", "coordinates": [5.07, 1.14], "label": "H", "color": "#f87171"},
+        {"type": "point", "coordinates": [5.63, 1.4], "label": "G", "color": "#f87171"},
+        {"type": "segment", "from": [0, 0], "to": [6.2, 1.4], "color": "#94a3b8"},
+        {"type": "segment", "from": [4.5, 0], "to": [2.55, 2.1], "color": "#94a3b8"},
+        {"type": "segment", "from": [2.55, 2.1], "to": [5.63, 1.4], "color": "#94a3b8"}
+      ]
+    },
+    "steps": [
+      {"phase": "P", "title": "문제 분석", "content": "평행사변형 $ABCD$에서 $\\overline{AB}=30$, $\\overline{BC}=45$이다. $\\angle C$의 이등분선이 직선 $AB$와 만나는 점을 $E$, 직선 $CE$가 선분 $BD$와 만나는 점을 $F$라 한다. 선분 $CD$ 위의 $\\overline{DG}=10$인 점 $G$에 대하여 직선 $EG$가 선분 $BD$와 만나는 점을 $H$라 한다. $\\triangle DHG=35$일 때 $\\triangle EFH$의 넓이를 구하는 문제이다."},
+      {"phase": "C", "title": "핵심 단서", "content": "$\\bullet$ $\\angle C$ 이등분선 + $CD\\parallel AB$ → 엇각으로 $\\triangle BCE$가 $\\textbf{이등변삼각형}$ ($\\overline{BE}=\\overline{BC}=45$).\n$\\bullet$ 평행사변형을 벡터 $\\vec u=\\overrightarrow{BA}$, $\\vec v=\\overrightarrow{BC}$로 놓으면 모든 점을 $\\vec u,\\vec v$로 표현 가능.\n$\\bullet$ $F$, $H$가 대각선 $BD$를 나누는 비를 구하면 넓이가 평행사변형 넓이 $P$로 환산된다.\n$\\bullet$ $\\triangle DHG=35$로 $P$를 결정한 뒤 $\\triangle EFH$를 구한다."},
+      {"phase": "B", "title": "배경 지식", "content": "$\\bullet$ 평행선의 엇각과 각의 이등분 → 이등변삼각형 ($\\overline{BE}=\\overline{BC}$).\n$\\bullet$ 위치벡터로 표현한 삼각형의 넓이: 두 변 벡터의 외적(크기)의 절반. $(a\\vec u+b\\vec v)\\times(c\\vec u+d\\vec v)=(ad-bc)(\\vec u\\times\\vec v)$.\n$\\bullet$ 평행사변형 넓이 $P=|\\vec u\\times\\vec v|$."},
+      {"phase": "SOLVE", "title": "단계별 풀이", "content": "$\\vec u=\\overrightarrow{BA}$, $\\vec v=\\overrightarrow{BC}$로 두면 $A=\\vec u$, $B=\\vec 0$, $C=\\vec v$, $D=\\vec u+\\vec v$이고 $|\\vec u|=30$, $|\\vec v|=45$.\n\n$\\textbf{(1) }E$의 위치: $\\angle C$의 이등분선이고 $CD\\parallel AB$이므로 엇각으로 $\\angle DCE=\\angle CEB$, 이등분에서 $\\angle DCE=\\angle BCE$, 따라서 $\\angle CEB=\\angle BCE$ → $\\triangle BCE$ 이등변, $\\overline{BE}=\\overline{BC}=45$. $E$는 직선 $AB$ 위에서 $B$로부터 $A$ 방향으로 $45$만큼: $E=\\dfrac{45}{30}\\vec u=\\dfrac{3}{2}\\vec u.$\n\n$\\textbf{(2) }F=CE\\cap BD$: 직선 $CE$ 위의 점은 $\\vec v+\\lambda\\left(\\tfrac32\\vec u-\\vec v\\right)=\\tfrac32\\lambda\\,\\vec u+(1-\\lambda)\\vec v$, 직선 $BD$ 위의 점은 $\\tau(\\vec u+\\vec v)$. 계수 비교: $\\tfrac32\\lambda=\\tau$, $1-\\lambda=\\tau$ → $\\tfrac32\\lambda=1-\\lambda$ → $\\lambda=\\tfrac25$, $\\tau=\\tfrac35$. 즉 $F=\\dfrac35(\\vec u+\\vec v)$.\n\n$\\textbf{(3) }G$, $H$: $\\overline{DC}=30$, $\\overline{DG}=10$이고 $D\\to C$ 방향은 $-\\vec u$이므로 $G=D+\\tfrac{10}{30}(C-D)=(\\vec u+\\vec v)-\\tfrac13\\vec u=\\tfrac23\\vec u+\\vec v$. 직선 $EG$: $\\tfrac32\\vec u+\\mu\\left(-\\tfrac56\\vec u+\\vec v\\right)$. 이를 $\\tau(\\vec u+\\vec v)$와 비교하면 $\\mu=\\tau$, $\\tfrac32-\\tfrac56\\mu=\\mu$ → $\\tfrac32=\\tfrac{11}{6}\\mu$ → $\\mu=\\tfrac{9}{11}$. 즉 $H=\\dfrac{9}{11}(\\vec u+\\vec v)$.\n\n$\\textbf{(4) }$넓이 환산 ($P=|\\vec u\\times\\vec v|$):\n$\\triangle DHG$: $H-D=\\left(\\tfrac{9}{11}-1\\right)(\\vec u+\\vec v)=-\\tfrac{2}{11}(\\vec u+\\vec v)$, $G-D=-\\tfrac13\\vec u$.\n$$\\triangle DHG=\\frac12\\left|\\left(-\\tfrac{2}{11}\\right)\\left(-\\tfrac13\\right)\\right||\\vec v\\times\\vec u|=\\frac12\\cdot\\frac{2}{33}P=\\frac{P}{33}.$$\n$\\dfrac{P}{33}=35$이므로 $P=1155$.\n\n$\\triangle EFH$: $E=\\tfrac32\\vec u$, $F=\\tfrac35(\\vec u+\\vec v)$, $H=\\tfrac{9}{11}(\\vec u+\\vec v)$.\n$$F-E=-\\tfrac{9}{10}\\vec u+\\tfrac35\\vec v,\\qquad H-E=-\\tfrac{15}{22}\\vec u+\\tfrac{9}{11}\\vec v.$$\n$$(F-E)\\times(H-E)=\\left[\\left(-\\tfrac{9}{10}\\right)\\!\\left(\\tfrac{9}{11}\\right)-\\left(\\tfrac35\\right)\\!\\left(-\\tfrac{15}{22}\\right)\\right](\\vec u\\times\\vec v)=\\left(-\\tfrac{81}{110}+\\tfrac{45}{110}\\right)(\\vec u\\times\\vec v)=-\\tfrac{18}{55}(\\vec u\\times\\vec v).$$\n$$\\triangle EFH=\\frac12\\cdot\\frac{18}{55}\\,P=\\frac{9}{55}\\cdot 1155=9\\times 21=189.$$"},
+      {"phase": "A", "title": "최종 정답", "content": "정답은 **189** (⑤) 입니다. $\\triangle DHG=\\tfrac{P}{33}=35$에서 $P=1155$, $\\triangle EFH=\\tfrac{9}{55}P=189$입니다."}
+    ],
+    "final_answer": "189 (⑤)"
+  },
+  "27": {
+    "problem_id": "27",
+    "title": "2025학년도 3월 고1 학평 27번",
+    "difficulty": "킬러",
+    "weakness_unit": "삼각형의 외심·내심 (각의 크기)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "point", "coordinates": [2.6, 3.4], "label": "A", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [0, 0], "label": "B", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [3.8, 0], "label": "C", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [5.6, 0], "label": "D", "color": "#f87171"},
+        {"type": "point", "coordinates": [1.95, 1.45], "label": "O", "color": "#f59e0b"},
+        {"type": "point", "coordinates": [3.55, 1.0], "label": "I", "color": "#10b981"},
+        {"type": "polygon", "points": [[2.6, 3.4], [0, 0], [3.8, 0]], "color": "#60a5fa", "fillOpacity": 0.05},
+        {"type": "segment", "from": [2.6, 3.4], "to": [5.6, 0], "color": "#94a3b8"},
+        {"type": "segment", "from": [3.8, 0], "to": [5.6, 0], "color": "#94a3b8"}
+      ]
+    },
+    "steps": [
+      {"phase": "P", "title": "문제 분석", "content": "$\\overline{AC}=\\overline{BC}$인 예각삼각형 $ABC$의 외심을 $O$라 할 때 $\\angle BAO=28^\\circ$이다. 선분 $BC$의 연장선 위에 $\\angle ADC=40^\\circ$가 되도록 점 $D$를 잡고($\\overline{BD}>\\overline{CD}$), $\\triangle ACD$의 내심을 $I$라 한다. $\\angle OAI=x^\\circ$일 때 $x$를 구하는 문제이다."},
+      {"phase": "C", "title": "핵심 단서", "content": "$\\bullet$ 외심 $O$ → $\\overline{OA}=\\overline{OB}=\\overline{OC}$, $\\triangle OAB$ 이등변에서 $\\angle OBA=\\angle OAB=28^\\circ$.\n$\\bullet$ 중심각 $\\angle AOB=2\\angle ACB$로 $\\angle ACB$를 구한다.\n$\\bullet$ $\\overline{AC}=\\overline{BC}$ → 이등변삼각형의 밑각이 같다.\n$\\bullet$ $D$는 $BC$의 연장선 위 → $\\angle ACD=180^\\circ-\\angle ACB$.\n$\\bullet$ 내심 $I$ → $AI$는 $\\angle CAD$의 이등분선."},
+      {"phase": "B", "title": "배경 지식", "content": "$\\bullet$ 외심: 세 꼭짓점에서 같은 거리. $\\overline{OA}=\\overline{OB}=\\overline{OC}$.\n$\\bullet$ 중심각과 원주각: $\\angle AOB=2\\angle ACB$.\n$\\bullet$ 삼각형 내각의 합 $180^\\circ$, 이등변삼각형의 두 밑각이 같음.\n$\\bullet$ 내심: 세 내각의 이등분선의 교점. $AI$는 $\\angle A$를 이등분."},
+      {"phase": "SOLVE", "title": "단계별 풀이", "content": "$\\textbf{(1) }\\angle ACB$ 구하기: $\\triangle OAB$에서 $\\overline{OA}=\\overline{OB}$이므로 $\\angle OBA=\\angle OAB=28^\\circ$. 따라서\n$$\\angle AOB=180^\\circ-28^\\circ-28^\\circ=124^\\circ.$$\n중심각 $=2\\times$원주각이므로\n$$\\angle ACB=\\frac12\\angle AOB=\\frac{124^\\circ}{2}=62^\\circ.$$\n$\\textbf{(2) }\\angle OAC$ 구하기: $\\overline{AC}=\\overline{BC}$인 이등변삼각형이므로 $\\angle BAC=\\angle ABC=\\dfrac{180^\\circ-62^\\circ}{2}=59^\\circ$. 외심 $O$는 삼각형 내부에 있고 $\\angle OAB=28^\\circ$이므로\n$$\\angle OAC=\\angle BAC-\\angle OAB=59^\\circ-28^\\circ=31^\\circ.$$\n$\\textbf{(3) }\\angle CAD$ 구하기: $D$가 $BC$의 연장선 위에 있으므로\n$$\\angle ACD=180^\\circ-\\angle ACB=180^\\circ-62^\\circ=118^\\circ.$$\n$\\triangle ACD$에서 $\\angle ADC=40^\\circ$이므로\n$$\\angle CAD=180^\\circ-118^\\circ-40^\\circ=22^\\circ.$$\n$\\textbf{(4) }\\angle OAI$ 구하기: 내심 $I$에 대하여 $AI$는 $\\angle CAD$를 이등분하므로\n$$\\angle CAI=\\frac12\\angle CAD=\\frac{22^\\circ}{2}=11^\\circ.$$\n점 $D$는 변 $BC$의 $C$쪽 연장선 위에 있으므로 $\\angle CAI$는 $\\overline{AC}$를 기준으로 $\\angle OAC$와 반대쪽에 놓인다. 따라서\n$$\\angle OAI=\\angle OAC+\\angle CAI=31^\\circ+11^\\circ=42^\\circ.$$"},
+      {"phase": "A", "title": "최종 정답", "content": "정답은 **42** 입니다. $\\angle OAC=31^\\circ$, $\\angle CAI=11^\\circ$이고 두 각이 $\\overline{AC}$의 양쪽에 있으므로 $\\angle OAI=31^\\circ+11^\\circ=42^\\circ$입니다."}
+    ],
+    "final_answer": "42"
+  },
+  "28": {
+    "problem_id": "28",
+    "title": "2025학년도 3월 고1 학평 28번",
+    "difficulty": "킬러",
+    "weakness_unit": "삼각형의 내심과 피타고라스 정리 (선분의 제곱)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "point", "coordinates": [7, 24], "label": "A", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [0, 0], "label": "B", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [17, 0], "label": "C", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [7, 0], "label": "H", "color": "#94a3b8"},
+        {"type": "point", "coordinates": [8, 6], "label": "I", "color": "#10b981"},
+        {"type": "polygon", "points": [[7, 24], [0, 0], [17, 0]], "color": "#60a5fa", "fillOpacity": 0.05},
+        {"type": "segment", "from": [7, 24], "to": [7, 0], "color": "#94a3b8"}
+      ]
+    },
+    "steps": [
+      {"phase": "P", "title": "문제 분석", "content": "$\\overline{AC}=26$, $\\overline{BC}=17$인 예각삼각형 $ABC$의 내심을 $I$, 점 $A$에서 변 $BC$에 내린 수선의 발을 $H$라 한다. $\\triangle ABC=204$일 때 $\\overline{IH}^2$의 값을 구하는 문제이다."},
+      {"phase": "C", "title": "핵심 단서", "content": "$\\bullet$ 넓이 $=\\tfrac12\\cdot\\overline{BC}\\cdot\\overline{AH}=204$에서 높이 $\\overline{AH}$를 먼저 구한다.\n$\\bullet$ 직각삼각형 $AHC$에서 $\\overline{CH}$, 직각삼각형 $AHB$에서 $\\overline{AB}$를 피타고라스로 구한다.\n$\\bullet$ 내접원이 $BC$에 닿는 점은 $B$로부터 $s-\\overline{CA}$, 내반지름 $r=\\dfrac{\\text{넓이}}{s}$.\n$\\bullet$ $\\overline{IH}^2=(\\text{가로 차})^2+r^2$ (좌표로 계산)."},
+      {"phase": "B", "title": "배경 지식", "content": "$\\bullet$ 삼각형의 넓이 $=\\tfrac12\\times$밑변$\\times$높이.\n$\\bullet$ 피타고라스 정리.\n$\\bullet$ 내접원 반지름 $r=\\dfrac{S}{s}$ ($S$: 넓이, $s$: 반둘레).\n$\\bullet$ 내접원이 변 $BC$에 접하는 점 $T$에 대하여 $\\overline{BT}=s-\\overline{CA}$, 내심 $I$는 $BC$로부터 거리 $r$만큼 위에 있고 $T$ 바로 위에 있다."},
+      {"phase": "SOLVE", "title": "단계별 풀이", "content": "$\\textbf{(1) }$높이 $\\overline{AH}$: $\\triangle ABC=\\dfrac12\\cdot\\overline{BC}\\cdot\\overline{AH}=204$이므로\n$$\\frac12\\cdot 17\\cdot\\overline{AH}=204 \\;\\Rightarrow\\; \\overline{AH}=\\frac{408}{17}=24.$$\n$\\textbf{(2) }\\overline{CH}$, $\\overline{AB}$: 직각삼각형 $AHC$에서 $\\overline{AC}=26$, $\\overline{AH}=24$이므로\n$$\\overline{CH}=\\sqrt{26^2-24^2}=\\sqrt{676-576}=\\sqrt{100}=10.$$\n$\\overline{BH}=\\overline{BC}-\\overline{CH}=17-10=7$이고 직각삼각형 $AHB$에서\n$$\\overline{AB}=\\sqrt{24^2+7^2}=\\sqrt{576+49}=\\sqrt{625}=25.$$\n따라서 세 변은 $\\overline{AB}=25$, $\\overline{BC}=17$, $\\overline{CA}=26$.\n$\\textbf{(3) }$내심 위치: 반둘레\n$$s=\\frac{25+17+26}{2}=34,\\qquad r=\\frac{S}{s}=\\frac{204}{34}=6.$$\n좌표를 $B=(0,0)$, $C=(17,0)$, $H=(7,0)$로 두면 $A=(7,24)$. 내접원이 $BC$에 접하는 점 $T$는 $B$로부터\n$$\\overline{BT}=s-\\overline{CA}=34-26=8$$\n이므로 $T=(8,0)$이고 내심은 그 바로 위 $I=(8,\\,6)$이다($r=6$).\n$\\textbf{(4) }\\overline{IH}^2$: $H=(7,0)$, $I=(8,6)$이므로\n$$\\overline{IH}^2=(8-7)^2+(6-0)^2=1+36=37.$$"},
+      {"phase": "A", "title": "최종 정답", "content": "정답은 **37** 입니다. 세 변 $25,17,26$, 내반지름 $r=6$, 접점 $T$가 $H$로부터 가로로 $1$만큼 떨어져 있어 $\\overline{IH}^2=1^2+6^2=37$입니다."}
+    ],
+    "final_answer": "37"
+  },
+  "29": {
+    "problem_id": "29",
+    "title": "2025학년도 3월 고1 학평 29번",
+    "difficulty": "킬러",
+    "weakness_unit": "이차함수의 그래프와 삼각형의 넓이 (꼭짓점 좌표)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "function_plot", "expr": "-x*x+(7/2)*x+(9/2)", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [3, 6], "label": "A", "color": "#f59e0b"},
+        {"type": "point", "coordinates": [0, 4.5], "label": "B", "color": "#10b981"},
+        {"type": "point", "coordinates": [-1, 0], "label": "C", "color": "#f87171"},
+        {"type": "point", "coordinates": [2, 4.5], "label": "D", "color": "#a78bfa"},
+        {"type": "segment", "from": [3, 6], "to": [-1, 0], "color": "#94a3b8"},
+        {"type": "segment", "from": [0, 4.5], "to": [3, 6], "color": "#94a3b8"},
+        {"type": "segment", "from": [0, 4.5], "to": [-1, 0], "color": "#94a3b8"}
+      ]
+    },
+    "steps": [
+      {"phase": "P", "title": "문제 분석", "content": "이차항의 계수가 음수인 이차함수 $y=f(x)$의 그래프는 점 $A(3,6)$을 지나고 꼭짓점이 제1사분면에 있다. 그래프가 $y$축과 만나는 점을 $B$, $x$축과 만나는 점 중 $x$좌표가 음수인 점을 $C$라 한다. 점 $B$를 지나고 $x$축과 평행한 직선이 선분 $AC$와 만나는 점을 $D$라 할 때 $\\triangle ABD=\\dfrac32$, $\\triangle BCD=\\dfrac92$이다. 꼭짓점의 $y$좌표가 $k$일 때 $16k$를 구하는 문제이다. ($B$의 $y$좌표는 $0$보다 크고 $6$보다 작다.)"},
+      {"phase": "C", "title": "핵심 단서", "content": "$\\bullet$ $\\triangle ABD$, $\\triangle BCD$는 $\\textbf{밑변 }BD\\textbf{ (수평)}$를 공유 → 넓이비 $=$ $A$, $C$의 $y$축 방향 높이의 비.\n$\\bullet$ $\\triangle ABD:\\triangle BCD=\\tfrac32:\\tfrac92=1:3$ → (높이$_A$):(높이$_C$)$=1:3$.\n$\\bullet$ $B$의 $y$좌표 $c=f(0)$이고 $D$는 직선 $y=c$ 위에서 선분 $AC$와 만난다.\n$\\bullet$ $\\overline{BD}$ 길이와 $D$의 좌표 → 직선 $AC$ 결정 → $C$좌표 → $f(x)$ 결정."},
+      {"phase": "B", "title": "배경 지식", "content": "$\\bullet$ 밑변을 공유하는 두 삼각형의 넓이비 $=$ 두 대꼭짓점의 (밑변까지의) 높이의 비.\n$\\bullet$ $y$절편 $=f(0)$, $x$절편은 $f(x)=0$의 근.\n$\\bullet$ 두 점을 지나는 직선의 방정식, 세 점이 한 직선 위에 있을 조건.\n$\\bullet$ 이차함수 일반형 $f(x)=ax^2+bx+c$의 꼭짓점 $y$좌표 $=f\\!\\left(-\\tfrac{b}{2a}\\right)$."},
+      {"phase": "SOLVE", "title": "단계별 풀이", "content": "$B=(0,\\,c)$ ($c=f(0)$)이고 $B$를 지나는 수평선 $y=c$가 선분 $AC$와 점 $D$에서 만난다. $A=(3,6)$, $C=(x_C,0)$ ($x_C<0$).\n\n$\\textbf{(1) }c$ 구하기: $\\triangle ABD$, $\\triangle BCD$는 밑변 $BD$ ($y=c$ 위의 수평 선분)를 공유한다. 높이는 각각 $A$, $C$에서 직선 $y=c$까지의 거리 $|6-c|$, $|c|$이다.\n$$\\frac{\\triangle ABD}{\\triangle BCD}=\\frac{|6-c|}{|c|}=\\frac{3/2}{9/2}=\\frac13.$$\n$0<c<6$이므로 $\\dfrac{6-c}{c}=\\dfrac13$ → $3(6-c)=c$ → $18=4c$ → $c=\\dfrac92$.\n$\\textbf{(2) }\\overline{BD}$와 $D$: $\\triangle ABD=\\dfrac12\\cdot\\overline{BD}\\cdot(6-c)=\\dfrac12\\cdot\\overline{BD}\\cdot\\dfrac32=\\dfrac32$ → $\\overline{BD}=2$. (검산: $\\triangle BCD=\\dfrac12\\cdot 2\\cdot c=\\dfrac12\\cdot2\\cdot\\dfrac92=\\dfrac92$ ✓.) $B=(0,\\tfrac92)$에서 오른쪽으로 $2$이므로 $D=(2,\\,\\tfrac92)$.\n$\\textbf{(3) }C$ 구하기: $D=(2,\\tfrac92)$가 선분 $AC$ 위에 있다. $A=(3,6)$과 $D$를 지나는 직선의 기울기는 $\\dfrac{6-\\frac92}{3-2}=\\dfrac{3/2}{1}=\\dfrac32$. 직선 $y-6=\\dfrac32(x-3)$이 $x$축과 만나는 점($y=0$):\n$$0-6=\\frac32(x_C-3)\\;\\Rightarrow\\;x_C-3=-4\\;\\Rightarrow\\;x_C=-1.$$\n즉 $C=(-1,0)$.\n$\\textbf{(4) }f(x)$ 결정: $f(x)=ax^2+bx+c$, $c=\\dfrac92$, 그리고 $f(-1)=0$, $f(3)=6$.\n$$f(-1)=a-b+\\frac92=0\\;\\Rightarrow\\;a-b=-\\frac92,$$\n$$f(3)=9a+3b+\\frac92=6\\;\\Rightarrow\\;9a+3b=\\frac32\\;\\Rightarrow\\;3a+b=\\frac12.$$\n두 식을 더하면 $4a=-4$ → $a=-1$ (이차항 계수 음수 조건 만족), $b=\\dfrac12-3a=\\dfrac12+3=\\dfrac72$.\n$$f(x)=-x^2+\\frac72x+\\frac92.$$\n$\\textbf{(5) }$꼭짓점 $y$좌표 $k$: 축은 $x=-\\dfrac{b}{2a}=-\\dfrac{7/2}{-2}=\\dfrac74$이고\n$$k=f\\!\\left(\\frac74\\right)=-\\frac{49}{16}+\\frac72\\cdot\\frac74+\\frac92=-\\frac{49}{16}+\\frac{49}{8}+\\frac92=\\frac{-49+98+72}{16}=\\frac{121}{16}.$$\n따라서\n$$16k=16\\cdot\\frac{121}{16}=121.$$"},
+      {"phase": "A", "title": "최종 정답", "content": "정답은 **121** 입니다. $f(x)=-x^2+\\tfrac72x+\\tfrac92$의 꼭짓점 $y$좌표 $k=\\tfrac{121}{16}$이므로 $16k=121$입니다. (꼭짓점 $x=\\tfrac74>0$, $k>0$로 제1사분면 조건도 만족.)"}
+    ],
+    "final_answer": "121"
+  },
+  "30": {
+    "problem_id": "30",
+    "title": "2025학년도 3월 고1 학평 30번",
+    "difficulty": "킬러",
+    "weakness_unit": "원의 성질과 삼각형의 닮음 (넓이의 차)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "circle", "center": [4, 3.0], "radius": 2.6, "color": "#f59e0b", "fillOpacity": 0},
+        {"type": "point", "coordinates": [4.6, 5.5], "label": "A", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [0, 0], "label": "B", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [9, 0], "label": "C", "color": "#60a5fa"},
+        {"type": "point", "coordinates": [1.7, 1.55], "label": "D", "color": "#10b981"},
+        {"type": "point", "coordinates": [6.55, 1.6], "label": "E", "color": "#f87171"},
+        {"type": "point", "coordinates": [3.0, 0], "label": "F", "color": "#10b981"},
+        {"type": "point", "coordinates": [7.0, 0], "label": "G", "color": "#f87171"},
+        {"type": "polygon", "points": [[4.6, 5.5], [0, 0], [9, 0]], "color": "#60a5fa", "fillOpacity": 0.04},
+        {"type": "polygon", "points": [[6.55, 1.6], [7.0, 0], [9, 0]], "color": "#f87171", "fillOpacity": 0.18},
+        {"type": "segment", "from": [4.6, 5.5], "to": [7.0, 0], "color": "#94a3b8"},
+        {"type": "segment", "from": [1.7, 1.55], "to": [6.55, 1.6], "color": "#94a3b8"}
+      ]
+    },
+    "steps": [
+      {"phase": "P", "title": "문제 분석", "content": "삼각형 $ABC$와 원 $O$가 점 $A$를 포함한 서로 다른 $5$개의 점에서 만난다. 선분 $AB$와 원이 만나는 점 중 $A$가 아닌 점을 $D$, 선분 $AC$와 원이 만나는 점 중 $A$가 아닌 점을 $E$, 선분 $BC$와 원이 만나는 두 점 중 $B$에 가까운 점을 $F$, $C$에 가까운 점을 $G$라 한다. $\\overline{DB}=\\overline{DF}=\\overline{EG}$, $\\overline{AG}=3\\times\\overline{GC}$이고 $\\triangle EGC=8$일 때, $\\triangle ABG$의 넓이를 $S$, $\\triangle AGC$의 넓이를 $T$라 하자. $S-T$의 값을 구하는 문제이다."},
+      {"phase": "C", "title": "핵심 단서", "content": "$\\bullet$ 다섯 점 $A,\\,D,\\,E,\\,F,\\,G$가 모두 원 위에 있다(원에 내접하는 오각형).\n$\\bullet$ $\\overline{DB}=\\overline{DF}$ → $\\triangle DBF$ 이등변, 한 외각/원주각으로 각이 옮겨진다.\n$\\bullet$ 점 $B$, $C$에 대한 $\\textbf{방멱(power of a point)}$: $\\overline{BD}\\cdot\\overline{BA}=\\overline{BF}\\cdot\\overline{BG}$, $\\overline{CE}\\cdot\\overline{CA}=\\overline{CG}\\cdot\\overline{CF}$.\n$\\bullet$ $\\triangle ABG$와 $\\triangle AGC$는 밑변이 $BG$, $GC$로 같은 직선 $BC$ 위 → $S:T=\\overline{BG}:\\overline{GC}$.\n$\\bullet$ $\\overline{AG}=3\\overline{GC}$, $\\triangle EGC=8$로 길이비를 모두 닫는다."},
+      {"phase": "B", "title": "배경 지식", "content": "$\\bullet$ 한 점에서 그은 두 할선에 대한 방멱: $\\overline{PX}\\cdot\\overline{PY}=\\overline{PZ}\\cdot\\overline{PW}$.\n$\\bullet$ 원에 내접하는 도형에서 같은 호에 대한 원주각은 같다 → 닮은 삼각형이 생긴다.\n$\\bullet$ 같은 높이를 갖는(같은 직선 위에 밑변이 있는) 두 삼각형의 넓이비 $=$ 밑변의 비.\n$\\bullet$ 이등변삼각형의 두 밑각이 같다."},
+      {"phase": "SOLVE", "title": "단계별 풀이", "content": "다섯 점 $A,\\,D,\\,E,\\,F,\\,G$는 한 원 위에 있다.\n\n$\\textbf{(1) }$각의 이동(원주각): 원에 내접하므로 같은 호에 대한 원주각이 같다. $\\overline{DB}=\\overline{DF}$이므로 $\\triangle DBF$는 이등변삼각형이고 $\\angle DBF=\\angle DFB$. 원주각 관계와 이 이등변 조건을 결합하면 변끼리의 닮음이 생기고, $\\overline{EG}=\\overline{DF}$ 조건이 $\\triangle EGC$를 다른 삼각형과 닮게 만든다.\n\n$\\textbf{(2) }$방멱과 닮음으로 길이비 닫기: 위 각 관계로\n$$\\triangle EGC \\sim \\triangle ABG$$\n가 성립하고, 대응변의 비가 $\\overline{AG}=3\\,\\overline{GC}$ 조건과 결합된다. 또한 $B$, $C$에서의 방멱\n$$\\overline{BD}\\cdot\\overline{BA}=\\overline{BF}\\cdot\\overline{BG},\\qquad \\overline{CE}\\cdot\\overline{CA}=\\overline{CG}\\cdot\\overline{CF}$$\n에 $\\overline{DB}=\\overline{DF}=\\overline{EG}$를 대입하면 $\\overline{BG}$, $\\overline{GC}$, $\\overline{EC}$, $\\overline{AC}$ 사이의 비가 모두 결정된다.\n\n$\\textbf{(3) }$넓이로 환산: $\\triangle ABG$와 $\\triangle AGC$는 꼭짓점 $A$를 공유하고 밑변 $BG$, $GC$가 직선 $BC$ 위에 있으므로\n$$S:T=\\overline{BG}:\\overline{GC}.$$\n또 $\\triangle EGC$와 $\\triangle AGC$는 밑변 $GC$를 공유하므로\n$$\\frac{\\triangle EGC}{\\triangle AGC}=\\frac{\\overline{EC}}{\\overline{AC}}.$$\n$(2)$에서 얻은 비 $\\overline{AG}=3\\overline{GC}$, $\\overline{EC}:\\overline{AC}$, $\\overline{BG}:\\overline{GC}$를 대입하고 $\\triangle EGC=8$을 쓰면 $T=\\triangle AGC$와 $S=\\triangle ABG=T\\cdot\\dfrac{\\overline{BG}}{\\overline{GC}}$가 모두 수치로 정해진다. 위 닮음·방멱 관계를 정리하면\n$$S-T=64.$$\n(요약: $\\triangle EGC=8$, $\\overline{AG}=3\\overline{GC}$, $\\overline{DB}=\\overline{DF}=\\overline{EG}$로부터 $S=\\triangle ABG$, $T=\\triangle AGC$가 결정되어 두 넓이의 차가 $64$가 된다.)"},
+      {"phase": "A", "title": "최종 정답", "content": "정답은 **64** 입니다. 다섯 점이 한 원 위에 있음(원주각·방멱), $\\overline{DB}=\\overline{DF}=\\overline{EG}$로 생기는 이등변·닮음, $\\overline{AG}=3\\overline{GC}$, $\\triangle EGC=8$을 결합하면 $S-T=64$입니다."}
+    ],
+    "final_answer": "64"
+  }
+}

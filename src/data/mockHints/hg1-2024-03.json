@@ -1,0 +1,468 @@
+{
+  "14": {
+    "problem_id": "14",
+    "title": "2024학년도 3월 고1 학평 14번",
+    "difficulty": "준킬러",
+    "weakness_unit": "대푯값과 산포도(평균·분산)",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "과수원 A의 사과 6개의 당도는 평균이 $11$, 분산이 $\\dfrac{5}{3}$ 이다. 과수원 B의 사과 6개의 당도는 차례로 $11,\\ 9,\\ 12,\\ 9,\\ a,\\ a+1$ 이다.\n\n학생들의 대화에 따르면 두 조건이 성립한다.\n\n(1) B의 평균은 A의 평균과 **같다** ($=11$).\n(2) B의 분산은 $b$ 이고, A가 B보다 더 고르다(즉 A의 분산 $<$ B의 분산). 분산을 직접 계산하면 된다.\n\n두 상수 $a,\\ b$ 에 대하여 $a+b$ 의 값을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "핵심 단서는 두 가지이다.\n\n첫째, **B의 평균 $=11$** 이라는 조건으로 미지수 $a$ 를 결정한다.\n\n둘째, $a$ 를 구한 뒤 B의 6개 자료로 **분산 $b$ 를 직접 계산**한다.\n\n$$(\\text{분산})=\\frac{(\\text{편차})^2 \\text{의 총합}}{(\\text{변량})\\text{의 개수}}$$\n\nA의 분산 $\\dfrac{5}{3}$ 은 (B가 A보다 덜 고르다는) 정황을 확인하는 데만 쓰이고, 답 계산에는 평균 조건과 B의 분산만 필요하다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$n$ 개의 변량 $x_1,\\ x_2,\\ \\cdots,\\ x_n$ 에 대하여\n\n$$(\\text{평균}\\ m)=\\frac{x_1+x_2+\\cdots+x_n}{n}$$\n$$(\\text{편차})=(\\text{변량})-(\\text{평균})$$\n$$(\\text{분산})=\\frac{(x_1-m)^2+(x_2-m)^2+\\cdots+(x_n-m)^2}{n}$$\n\n분산이 작을수록 자료가 평균 주위에 모여 있어 '더 고르다'고 말한다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "**1단계. 평균 조건으로 $a$ 구하기**\n\n과수원 B의 사과 6개의 당도의 평균이 과수원 A의 평균 $11$ 과 같으므로\n\n$$\\frac{11+9+12+9+a+(a+1)}{6}=\\frac{42+2a}{6}=11$$\n\n$$42+2a=66 \\quad\\Rightarrow\\quad 2a=24 \\quad\\Rightarrow\\quad a=12$$\n\n따라서 B의 자료는 $11,\\ 9,\\ 12,\\ 9,\\ 12,\\ 13$ 이다.\n\n**2단계. B의 분산 $b$ 구하기**\n\n평균이 $11$ 이므로 각 자료의 편차는 차례로\n\n$$0,\\ -2,\\ 1,\\ -2,\\ 1,\\ 2$$\n\n편차의 제곱의 합은\n\n$$0^2+(-2)^2+1^2+(-2)^2+1^2+2^2=0+4+1+4+1+4=14$$\n\n따라서 분산은\n\n$$b=\\frac{14}{6}=\\frac{7}{3}$$\n\n(참고: B의 분산 $\\dfrac{7}{3}>\\dfrac{5}{3}=$ A의 분산이므로 A가 더 고르다는 대화 내용과 일치한다.)\n\n**3단계. $a+b$ 계산**\n\n$$a+b=12+\\frac{7}{3}=\\frac{36}{3}+\\frac{7}{3}=\\frac{43}{3}$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **$\\dfrac{43}{3}$ (③)** 입니다."
+      }
+    ],
+    "final_answer": "43/3 (③)"
+  },
+  "15": {
+    "problem_id": "15",
+    "title": "2024학년도 3월 고1 학평 15번",
+    "difficulty": "준킬러",
+    "weakness_unit": "일차부등식의 활용(실생활)",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "정가 $12000$ 원인 도서를 온라인 서점 A, B에서 한 번에 $x$ 권 주문한다.\n\n- 서점 A: 할인율 $5\\%$, 배송비 $0$ 원\n- 서점 B: 할인율 $10\\%$, 배송비 $4000$ 원 (배송비는 한 번만)\n\n서점 A에서 지불하는 금액이 서점 B에서 지불하는 금액보다 **더 크게** 되도록 하는 $x$ 의 최솟값을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "할인율이 낮은 A는 권당 단가가 비싸지만 배송비가 없고, 할인율이 높은 B는 권당이 싸지만 배송비 $4000$ 원이 붙는다.\n\n따라서 주문 권수 $x$ 가 커질수록 A가 점점 불리해진다. **(A의 금액) $>$ (B의 금액)** 을 부등식으로 세워 $x$ 의 범위를 구한 뒤, 이를 만족하는 자연수 $x$ 의 최솟값을 찾으면 된다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "정가 $P$ 원인 상품을 $r\\%$ 할인하면 한 권의 가격은 $P\\left(1-\\dfrac{r}{100}\\right)$ 원이다.\n\n일차부등식 $ax>b$ ($a>0$) 의 해는 $x>\\dfrac{b}{a}$ 이며, 주문 권수는 자연수이므로 부등식의 해를 만족하는 가장 작은 자연수를 답으로 택한다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "**1단계. 두 서점의 지불 금액 식 세우기**\n\n온라인 서점 A에서 $x$ 권 주문할 때 지불하는 금액은\n\n$$12000\\times\\left(1-\\frac{5}{100}\\right)x$$\n\n온라인 서점 B에서 $x$ 권 주문할 때 지불하는 금액은\n\n$$12000\\times\\left(1-\\frac{10}{100}\\right)x+4000$$\n\n**2단계. 부등식 세우기**\n\nA의 금액이 B의 금액보다 더 커야 하므로\n\n$$12000\\times\\left(1-\\frac{5}{100}\\right)x>12000\\times\\left(1-\\frac{10}{100}\\right)x+4000$$\n\n**3단계. 부등식 풀기**\n\n$$12000\\times\\frac{95}{100}\\,x>12000\\times\\frac{90}{100}\\,x+4000$$\n\n$$11400x>10800x+4000$$\n\n$$600x>4000 \\quad\\Rightarrow\\quad x>\\frac{4000}{600}=\\frac{20}{3}$$\n\n**4단계. 최솟값 결정**\n\n$$\\frac{20}{3}=6.66\\cdots \\quad\\Rightarrow\\quad 6<\\frac{20}{3}<7$$\n\n$x$ 는 자연수이므로 $x>\\dfrac{20}{3}$ 을 만족시키는 $x$ 의 최솟값은 $7$ 이다."
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **$7$ (③)** 입니다."
+      }
+    ],
+    "final_answer": "7 (③)"
+  },
+  "18": {
+    "problem_id": "18",
+    "title": "2024학년도 3월 고1 학평 18번",
+    "difficulty": "킬러",
+    "weakness_unit": "원·부채꼴과 삼각비(접기 도형의 넓이)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "circle", "center": [0, 0], "radius": 4},
+        {"type": "point", "coordinates": [0, 0], "label": "E"},
+        {"type": "point", "coordinates": [0, 4], "label": "A"},
+        {"type": "point", "coordinates": [-2.828, 2.828], "label": "B"},
+        {"type": "point", "coordinates": [-4, 0], "label": "C"},
+        {"type": "point", "coordinates": [-2.828, -2.828], "label": "D"},
+        {"type": "point", "coordinates": [0, -4], "label": "F"},
+        {"type": "point", "coordinates": [2.828, -2.828], "label": "G"},
+        {"type": "point", "coordinates": [4, 0], "label": "H"},
+        {"type": "point", "coordinates": [2.828, 2.828], "label": "A2"},
+        {"type": "segment", "from": [-2.828, 2.828], "to": [-4, 0], "label": "BC"},
+        {"type": "segment", "from": [-2.828, -2.828], "to": [0, -4], "label": "DF"},
+        {"type": "segment", "from": [2.828, -2.828], "to": [4, 0], "label": "GH"},
+        {"type": "label_text", "tex": "45^\\circ", "at": [0.6, 0.6]}
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "반지름의 길이가 $4\\,\\text{cm}$ 인 원 모양 종이의 둘레를 $8$ 등분하는 점을 $A,\\ B,\\ C,\\ D,\\ E,\\ F,\\ G,\\ H$ 라 하고(중심 $E$, 실제 해설에서는 중심을 $O$ 로 둠), 선분 $BC$, 선분 $DF$, 선분 $GH$ 를 접는 선으로 하여 접는다. 이렇게 접은 종이 $2$ 개를 직선 $BC$ 를 대칭축으로 하는 선대칭도형이 되도록 겹치지 않게 빈틈없이 붙여 만든 $\\bigwedge$ 모양 도형의 넓이 $a\\,\\text{cm}^2$ 를 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "둘레를 $8$ 등분하므로 각 호에 대한 **중심각의 크기는 $45^\\circ$** 이다.\n\n핵심은 접은 한 장의 ($\\bigcap$ 모양) 종이의 넓이를 구하고, $\\bigwedge$ 모양은 그 **$2$ 배**라는 점이다. 접은 한 장의 넓이는 그대로 남는 두 개의 부채꼴(중심각 $45^\\circ$)과 두 개의 직각삼각형($\\triangle EBC$, $\\triangle EDM$)으로 분할하여 계산한다. 여기서 $M$ 은 선분 $DF$ 의 중점이며 $\\overline{EM}\\perp\\overline{DF}$ 이다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "반지름 $r$, 중심각 $\\theta^\\circ$ 인 부채꼴의 넓이는 $\\pi r^2\\times\\dfrac{\\theta}{360}$ 이다.\n\n중심각이 $45^\\circ$ 인 이등변삼각형(두 변이 반지름)의 넓이는 $\\dfrac{1}{2}\\,r\\cdot r\\cdot\\sin 45^\\circ$ 로 구한다. 이때 $\\sin 45^\\circ=\\dfrac{\\sqrt{2}}{2}$ 이다.\n\n현 $DF$ 의 중점을 $M$ 이라 하면 중심에서 현에 내린 수선은 현을 수직이등분하므로 $\\overline{EM}\\perp\\overline{DF}$ 이고, 직각삼각형 $EDM$ 에서 $\\angle DEM=45^\\circ$ 이다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "**1단계. 접은 한 장($\\bigcap$ 모양)의 넓이 구상**\n\n부채꼴 $AEB$ 의 넓이를 $S$ 라 하면, 접은 한 장의 넓이는 두 부채꼴과 두 직각삼각형으로 분할되어\n\n$$(\\bigcap\\ \\text{모양의 넓이})=2S+\\triangle EBC+\\triangle EDM$$\n\n**2단계. 부채꼴 $S$ 의 넓이**\n\n중심각이 $45^\\circ$ 이므로\n\n$$S=\\pi\\times 4^2\\times\\frac{45}{360}=2\\pi\\ (\\text{cm}^2)$$\n\n**3단계. $\\triangle EBC$ 의 넓이**\n\n$\\overline{EB}=\\overline{EC}=4$, $\\angle BEC=45^\\circ$ 이므로\n\n$$\\triangle EBC=\\frac{1}{2}\\times 4\\times 4\\times\\sin 45^\\circ=\\frac{1}{2}\\times 16\\times\\frac{\\sqrt{2}}{2}=4\\sqrt{2}\\ (\\text{cm}^2)$$\n\n**4단계. $\\triangle EDM$ 의 넓이**\n\n$M$ 은 $\\overline{DF}$ 의 중점, $\\overline{EM}\\perp\\overline{DF}$, $\\angle DEM=45^\\circ$ 이다. 직각삼각형 $EDM$ 에서\n\n$$\\frac{\\overline{DM}}{4}=\\sin 45^\\circ=\\frac{\\sqrt{2}}{2} \\quad\\Rightarrow\\quad \\overline{DM}=2\\sqrt{2}$$\n\n또 $\\angle EDM=45^\\circ$ 이므로 $\\overline{EM}=\\overline{DM}=2\\sqrt{2}$. 따라서\n\n$$\\triangle EDM=\\frac{1}{2}\\times 2\\sqrt{2}\\times 2\\sqrt{2}=4\\ (\\text{cm}^2)$$\n\n**5단계. 접은 한 장의 넓이**\n\n$$(\\bigcap\\ \\text{모양의 넓이})=2S+\\triangle EBC+\\triangle EDM=2\\times 2\\pi+4\\sqrt{2}+4=4\\pi+4\\sqrt{2}+4$$\n\n**6단계. $\\bigwedge$ 모양 도형의 넓이**\n\n$\\bigwedge$ 모양은 접은 종이 $2$ 장으로 만들어지므로\n\n$$a=(\\bigcap\\ \\text{모양의 넓이})\\times 2=(4+4\\pi+4\\sqrt{2})\\times 2=8+8\\pi+8\\sqrt{2}$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **$8+8\\pi+8\\sqrt{2}$ (④)** 입니다."
+      }
+    ],
+    "final_answer": "8+8π+8√2 (④)"
+  },
+  "19": {
+    "problem_id": "19",
+    "title": "2024학년도 3월 고1 학평 19번",
+    "difficulty": "킬러",
+    "weakness_unit": "삼각형의 합동과 이차방정식의 활용",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "polygon", "points": [[0, 8], [0, 0], [8, 0], [8, 8]], "fillOpacity": 0.06},
+        {"type": "point", "coordinates": [0, 8], "label": "A"},
+        {"type": "point", "coordinates": [0, 0], "label": "B"},
+        {"type": "point", "coordinates": [8, 0], "label": "C"},
+        {"type": "point", "coordinates": [8, 8], "label": "D"},
+        {"type": "point", "coordinates": [6, 8], "label": "F"},
+        {"type": "point", "coordinates": [8, 6], "label": "E"},
+        {"type": "point", "coordinates": [14, 0], "label": "G"},
+        {"type": "segment", "from": [6, 8], "to": [8, 6], "label": "FE"},
+        {"type": "segment", "from": [8, 6], "to": [14, 0], "label": "EG"},
+        {"type": "segment", "from": [6, 8], "to": [14, 0], "label": "FG"},
+        {"type": "label_text", "tex": "2", "at": [7, 8.4]},
+        {"type": "label_text", "tex": "2", "at": [8.5, 7]},
+        {"type": "label_text", "tex": "x-2", "at": [11, -0.6]},
+        {"type": "label_text", "tex": "x", "at": [-0.9, 4]}
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "한 변의 길이가 $x\\ (x>4)$ 인 정사각형 $ABCD$ 가 있다. 선분 $CD$ 위에 $\\overline{CE}=2$ 인 점 $E$, 선분 $AD$ 위에 $\\overline{FD}=2$ 인 점 $F$ 가 있다. 선분 $BC$ 의 연장선 위에 $\\overline{CG}=x-2$ 인 점 $G$ 를 잡을 때, 삼각형 $EGF$ 의 넓이가 $7$ 이다. $x$ 의 값을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "넓이가 복잡한 $\\triangle EGF$ 를 직접 구하는 대신, **사다리꼴(또는 사각형) $ABGF$ 의 넓이를 두 가지 방법으로 표현**하여 같다고 놓는 것이 핵심이다.\n\n방법 1: $ABGF$ 는 평행한 두 변 $\\overline{AF}$, $\\overline{BG}$ 와 높이 $\\overline{AB}=x$ 를 갖는 사다리꼴이다.\n\n방법 2: $ABGF$ 를 정사각형 $ABCD$ 와 바깥 삼각형들로 나누어 표현한다. 이때 $\\triangle FDE\\equiv\\triangle ECG$ (합동)임을 이용하면 깔끔하게 $x^2+7$ 로 정리된다.\n\n두 표현을 같다고 놓으면 $x$ 에 대한 이차방정식이 나온다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "윗변 $a$, 아랫변 $b$, 높이 $h$ 인 사다리꼴의 넓이는 $\\dfrac{1}{2}(a+b)h$ 이다.\n\n두 직각삼각형에서 끼인 변과 그 양 끝 직각이 각각 같으면 합동(SAS)이다.\n\n이차방정식 $ax^2+bx+c=0$ 의 근은 $x=\\dfrac{-b\\pm\\sqrt{b^2-4ac}}{2a}$ 이다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "**1단계. 길이 정리**\n\n$$\\overline{AF}=\\overline{AD}-\\overline{FD}=x-2$$\n$$\\overline{BG}=\\overline{BC}+\\overline{CG}=x+(x-2)=2x-2$$\n\n**2단계. 사다리꼴 $ABGF$ 의 넓이 (방법 1)**\n\n$\\overline{AF}\\parallel\\overline{BG}$ 이고 높이가 $\\overline{AB}=x$ 인 사다리꼴이므로\n\n$$\\square ABGF=\\frac{1}{2}\\times\\{(x-2)+(2x-2)\\}\\times x=\\frac{1}{2}\\times(3x-4)\\times x=\\frac{3}{2}x^2-2x \\quad\\cdots\\ \\textcircled{1}$$\n\n**3단계. 합동을 이용한 표현 (방법 2)**\n\n$\\overline{DE}=\\overline{CD}-\\overline{CE}=x-2=\\overline{CG}$, $\\overline{FD}=\\overline{EC}=2$ 이고 $\\angle FDE=\\angle ECG=90^\\circ$ 이므로\n\n$$\\triangle FDE\\equiv\\triangle ECG$$\n\n오각형 $ABCEF$ 의 넓이를 $S$ 라 하면\n\n$$\\square ABGF=S+\\triangle ECG+\\triangle EGF=\\square ABCD+\\triangle FDE+\\triangle EGF$$\n\n$\\square ABCD=x^2$, $\\triangle EGF=7$ 이므로\n\n$$\\square ABGF=x^2+7 \\quad\\cdots\\ \\textcircled{2}$$\n\n**4단계. 이차방정식 풀기**\n\n$\\textcircled{1}=\\textcircled{2}$ 에서\n\n$$\\frac{3}{2}x^2-2x=x^2+7$$\n$$\\frac{1}{2}x^2-2x-7=0$$\n$$x^2-4x-14=0$$\n\n근의 공식에 의하여\n\n$$x=\\frac{-(-4)\\pm\\sqrt{(-4)^2-4\\times 1\\times(-14)}}{2\\times 1}=\\frac{4\\pm\\sqrt{72}}{2}=2\\pm 3\\sqrt{2}$$\n\n$x>4$ 이므로 $x=2+3\\sqrt{2}$ 이다."
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **$2+3\\sqrt{2}$ (②)** 입니다."
+      }
+    ],
+    "final_answer": "2+3√2 (②)"
+  },
+  "20": {
+    "problem_id": "20",
+    "title": "2024학년도 3월 고1 학평 20번",
+    "difficulty": "킬러",
+    "weakness_unit": "삼각형의 합동·닮음(빈칸 추론)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "polygon", "points": [[0, 0], [12, 0], [6, 10.392]], "fillOpacity": 0.05},
+        {"type": "point", "coordinates": [0, 0], "label": "B"},
+        {"type": "point", "coordinates": [8, 0], "label": "D"},
+        {"type": "point", "coordinates": [12, 0], "label": "C"},
+        {"type": "point", "coordinates": [6, 10.392], "label": "A"},
+        {"type": "point", "coordinates": [14.928, 3.464], "label": "E"},
+        {"type": "point", "coordinates": [10.5, 4.041], "label": "F"},
+        {"type": "polygon", "points": [[8, 0], [6, 10.392], [14.928, 3.464]], "fillOpacity": 0.05},
+        {"type": "segment", "from": [6, 10.392], "to": [12, 0], "label": "AC"},
+        {"type": "segment", "from": [8, 0], "to": [14.928, 3.464], "label": "DE"}
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "한 변의 길이가 $12$ 인 정삼각형 $ABC$ 의 변 $BC$ 위에 $\\overline{DC}=4$ 인 점 $D$ 가 있다. 선분 $AD$ 를 한 변으로 하는 정삼각형 $ADE$ 에 대하여 선분 $AC$ 와 선분 $DE$ 가 만나는 점을 $F$ 라 하자.\n\n선분 $CF$ 의 길이를 구하는 과정의 빈칸 (가), (나), (다)에 알맞은 수를 각각 $p,\\ q,\\ r$ 라 할 때 $p+q+r$ 의 값을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "두 정삼각형 $ABC$, $ADE$ 에서 $\\overline{AB}=\\overline{AC}$, $\\overline{AD}=\\overline{AE}$ 이고 $\\angle BAD=60^\\circ-\\angle DAC=\\angle CAE$ 이므로 **$\\triangle ABD\\equiv\\triangle ACE$ (SAS 합동)**. 이로부터 (가) $\\overline{CE}=\\overline{BD}$ 를 얻는다.\n\n이어서 맞꼭지각과 등각을 이용해 **$\\triangle ACD\\sim\\triangle ECF$** 임을 보이고, (나) 닮음비로 (다) $\\overline{CF}$ 를 구한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "정삼각형의 세 변의 길이는 같고 한 각의 크기는 $60^\\circ$ 이다.\n\n두 삼각형에서 두 변의 길이가 각각 같고 끼인각이 같으면 합동(SAS)이다.\n\n두 삼각형에서 두 각이 각각 같으면 닮음(AA)이며, 대응변의 길이의 비(닮음비)가 일정하다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "**1단계. 두 삼각형의 합동 — (가) 구하기**\n\n두 정삼각형 $ABC$, $ADE$ 에서\n\n$$\\overline{AB}=\\overline{AC},\\qquad \\overline{AD}=\\overline{AE}$$\n\n이고\n\n$$\\angle BAD=60^\\circ-\\angle DAC=\\angle CAE$$\n\n이므로 삼각형 $ABD$ 와 삼각형 $ACE$ 는 서로 합동이다. 그러므로\n\n$$\\angle ECA=60^\\circ,\\qquad \\overline{CE}=\\overline{BD}=\\overline{BC}-\\overline{DC}=12-4=8$$\n\n따라서 **(가) $\\overline{CE}=8$**, 즉 $p=8$.\n\n**2단계. 두 삼각형의 닮음 — (나) 구하기**\n\n한편 $\\angle AFD$ 와 $\\angle CFE$ 는 서로 맞꼭지각이고 $\\angle FDA=\\angle FEC$ 이므로\n\n$$\\angle DAF=\\angle FEC$$\n\n또한 $\\angle ACD=\\angle ECF$ 이므로 삼각형 $ACD$ 와 삼각형 $ECF$ 는 서로 닮은 도형이고, 닮음비는\n\n$$\\overline{AC}:\\overline{EC}=12:8=3:2$$\n\n따라서 **(나) $=3$**, 즉 $q=3$.\n\n**3단계. $\\overline{CF}$ — (다) 구하기**\n\n닮음비가 $3:2$ 이므로\n\n$$\\overline{CD}:\\overline{CF}=3:2,\\qquad \\overline{CD}=4$$\n\n$$3\\times\\overline{CF}=4\\times 2 \\quad\\Rightarrow\\quad \\overline{CF}=\\frac{8}{3}$$\n\n따라서 **(다) $\\overline{CF}=\\dfrac{8}{3}$**, 즉 $r=\\dfrac{8}{3}$.\n\n**4단계. $p+q+r$ 계산**\n\n$$p+q+r=8+3+\\frac{8}{3}=11+\\frac{8}{3}=\\frac{33}{3}+\\frac{8}{3}=\\frac{41}{3}$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **$\\dfrac{41}{3}$ (①)** 입니다."
+      }
+    ],
+    "final_answer": "41/3 (①)"
+  },
+  "21": {
+    "problem_id": "21",
+    "title": "2024학년도 3월 고1 학평 21번",
+    "difficulty": "킬러",
+    "weakness_unit": "삼각형의 내심·닮음과 제곱근",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "polygon", "points": [[0, 0], [40, 0], [16.2, 11.85]], "fillOpacity": 0.05},
+        {"type": "point", "coordinates": [0, 0], "label": "B"},
+        {"type": "point", "coordinates": [40, 0], "label": "C"},
+        {"type": "point", "coordinates": [16.2, 11.85], "label": "A"},
+        {"type": "point", "coordinates": [20, 0], "label": "M"},
+        {"type": "point", "coordinates": [22.59, 16.52], "label": "D"},
+        {"type": "segment", "from": [40, 0], "to": [22.59, 16.52], "label": "CD"},
+        {"type": "point", "coordinates": [20, 6.667], "label": "I"},
+        {"type": "point", "coordinates": [24, 8], "label": "J"},
+        {"type": "label_text", "tex": "25", "at": [7, 7]},
+        {"type": "label_text", "tex": "40", "at": [20, -1.3]}
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$\\overline{AB}=\\overline{AC}=25$, $\\overline{BC}=40$ 인 이등변삼각형 $ABC$ 에 대하여 점 $C$ 에서 직선 $AB$ 에 내린 수선의 발을 $D$ 라 하자. 삼각형 $ABC$ 의 내심을 $I$, 삼각형 $DBC$ 의 내심을 $J$ 라 할 때, 선분 $IJ$ 의 길이를 구하는 문제이다.\n\n($\\angle A$ 가 둔각이므로 수선의 발 $D$ 는 변 $AB$ 의 연장선 위, 즉 $A$ 너머에 위치한다.)"
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "핵심은 다음 세 가지이다.\n\n1) 이등변삼각형이므로 $\\overline{BC}$ 의 중점 $M$ 에 대하여 $\\overline{AM}\\perp\\overline{BC}$, $\\overline{AM}=15$ ($15$–$20$–$25$ 직각삼각형).\n\n2) $\\triangle ABM\\sim\\triangle CBD$ 로 $\\overline{BD}=32$, $\\overline{CD}=24$ 를 얻어 $\\triangle DBC$ 가 $24$–$32$–$40$ 직각삼각형임을 안다.\n\n3) 두 내심 $I,\\ J$ 의 $\\overline{BC}$ 까지의 거리(내접원 반지름)를 넓이로 구하면 $r_I=\\dfrac{20}{3}$, $r_J=8$. 두 내심은 모두 **$\\angle B$ 의 이등분선** 위에 있으므로 $B,\\ I,\\ J$ 가 한 직선 위에 있고, $\\triangle IBM\\sim\\triangle JBN$ 의 닮음비로 $\\overline{IJ}$ 를 구한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "삼각형의 내심은 세 내각의 이등분선의 교점이며, 내접원의 반지름 $r$ 에 대하여 삼각형의 넓이는 $\\dfrac{1}{2}r(a+b+c)$ (둘레의 절반 $\\times r$)이다.\n\n내심에서 각 변까지의 거리는 모두 $r$ 로 같다. 따라서 내심에서 $\\overline{BC}$ 에 내린 수선의 길이가 $r$ 이다.\n\n이등변삼각형의 꼭지점에서 밑변에 내린 수선은 밑변을 이등분한다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "**1단계. $\\overline{AM}$ 구하기**\n\n$\\overline{BC}$ 의 중점을 $M$ 이라 하면 $\\overline{BM}=\\overline{CM}=20$, $\\angle AMB=90^\\circ$. 직각삼각형 $ABM$ 에서 피타고라스 정리에 의하여\n\n$$\\overline{AB}^2=\\overline{BM}^2+\\overline{AM}^2,\\quad 25^2=20^2+\\overline{AM}^2$$\n$$\\overline{AM}^2=625-400=225 \\quad\\Rightarrow\\quad \\overline{AM}=15$$\n\n**2단계. $\\overline{BD},\\ \\overline{CD}$ 구하기**\n\n두 삼각형 $ABM$, $CBD$ 에서 $\\angle MBA$ 공통이고 $\\angle AMB=\\angle CDB=90^\\circ$ 이므로 $\\triangle ABM\\sim\\triangle CBD$. 그러므로\n\n$$\\overline{AB}:\\overline{CB}=\\overline{BM}:\\overline{BD},\\quad 25:40=20:\\overline{BD} \\quad\\Rightarrow\\quad \\overline{BD}=\\frac{40\\times 20}{25}=32$$\n\n마찬가지로 $\\overline{AB}:\\overline{CB}=\\overline{AM}:\\overline{CD}$ 에서\n\n$$25:40=15:\\overline{CD} \\quad\\Rightarrow\\quad \\overline{CD}=\\frac{40\\times 15}{25}=24$$\n\n**3단계. 두 내접원의 반지름**\n\n삼각형 $ABC$ 의 내접원의 반지름을 $x$ 라 하면, 넓이를 두 가지로 표현하여\n\n$$\\triangle ABC=\\frac{1}{2}(\\overline{AB}+\\overline{BC}+\\overline{CA})\\,x=\\frac{1}{2}(25+40+25)x=45x$$\n$$\\triangle ABC=\\frac{1}{2}\\,\\overline{BC}\\times\\overline{AM}=\\frac{1}{2}\\times 40\\times 15=300$$\n$$45x=300 \\quad\\Rightarrow\\quad x=\\frac{20}{3}$$\n\n삼각형 $DBC$ 의 내접원의 반지름을 $y$ 라 하면 ($\\angle BDC=90^\\circ$)\n\n$$\\triangle DBC=\\frac{1}{2}(\\overline{DB}+\\overline{BC}+\\overline{CD})\\,y=\\frac{1}{2}(32+40+24)y=48y$$\n$$\\triangle DBC=\\frac{1}{2}\\,\\overline{DB}\\times\\overline{CD}=\\frac{1}{2}\\times 32\\times 24=384$$\n$$48y=384 \\quad\\Rightarrow\\quad y=8$$\n\n**4단계. $\\overline{IB}$ 구하기**\n\n내심 $I$ 에서 $\\overline{BC}$ 에 내린 수선의 발을 $M$(밑변 중점과 일치)이라 하면 $\\overline{IM}=x=\\dfrac{20}{3}$, $\\overline{BM}=20$. 직각삼각형 $IBM$ 에서\n\n$$\\overline{IB}^2=\\overline{BM}^2+\\overline{IM}^2=20^2+\\left(\\frac{20}{3}\\right)^2=400+\\frac{400}{9}=\\frac{4000}{9}$$\n$$\\overline{IB}=\\frac{20\\sqrt{10}}{3}$$\n\n**5단계. 닮음비로 $\\overline{IJ}$ 구하기**\n\n점 $J$ 에서 $\\overline{BC}$ 에 내린 수선의 발을 $N$ 이라 하자. $\\overline{BI}$, $\\overline{BJ}$ 는 모두 $\\angle B$ 의 이등분선이므로 세 점 $B,\\ I,\\ J$ 는 한 직선 위에 있고, $\\angle IBM=\\angle JBN$, $\\angle IMB=\\angle JNB=90^\\circ$ 이므로 $\\triangle IBM\\sim\\triangle JBN$ 이며 닮음비는\n\n$$x:y=\\frac{20}{3}:8=5:6$$\n\n따라서 $\\overline{JB}=\\dfrac{6}{5}\\,\\overline{IB}$ 이고, $B,\\ I,\\ J$ 가 한 직선 위에 있으므로\n\n$$\\overline{IJ}=\\overline{JB}-\\overline{IB}=\\frac{6}{5}\\,\\overline{IB}-\\overline{IB}=\\frac{1}{5}\\,\\overline{IB}=\\frac{1}{5}\\times\\frac{20\\sqrt{10}}{3}=\\frac{4\\sqrt{10}}{3}$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **$\\dfrac{4\\sqrt{10}}{3}$ (②)** 입니다."
+      }
+    ],
+    "final_answer": "4√10/3 (②)"
+  },
+  "27": {
+    "problem_id": "27",
+    "title": "2024학년도 3월 고1 학평 27번",
+    "difficulty": "준킬러",
+    "weakness_unit": "유리수의 곱셈(최대·최소 추론)",
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "네 수 $-\\dfrac{1}{2},\\ \\dfrac{6}{5},\\ -\\dfrac{3}{4},\\ \\dfrac{2}{9}$ 중 서로 다른 두 수를 곱하여 나올 수 있는 값으로 가장 큰 수를 $a$, 가장 작은 수를 $b$ 라 할 때, $120(a-b)$ 의 값을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "두 수의 곱의 부호와 크기를 따진다.\n\n- **가장 큰 곱(양수)** 은 같은 부호끼리 곱한 양수 중 가장 크다. 두 음수의 곱 또는 두 양수의 곱을 비교한다.\n- **가장 작은 곱(음수)** 은 서로 다른 부호를 곱한 음수 중 절댓값이 가장 큰 것이다. 즉 양수 중 절댓값이 큰 수와 음수 중 절댓값이 큰 수를 곱한다.\n\n절댓값 크기 순서를 먼저 파악하는 것이 핵심이다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "(양수)$\\times$(양수)$>0$, (음수)$\\times$(음수)$>0$, (양수)$\\times$(음수)$<0$ 이다.\n\n양수 곱이 가장 크려면 절댓값이 큰 두 양(같은 부호) 수를 곱하고, 음수 곱이 가장 작으려면(절댓값이 가장 크려면) 절댓값이 큰 양수와 절댓값이 큰 음수를 곱한다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "**1단계. 절댓값 크기 순으로 나열**\n\n네 수의 절댓값을 큰 것부터 나열하면\n\n$$\\frac{6}{5},\\ \\frac{3}{4},\\ \\frac{1}{2},\\ \\frac{2}{9}$$\n\n(부호 포함: $\\dfrac{6}{5}>0$, $-\\dfrac{3}{4}<0$, $-\\dfrac{1}{2}<0$, $\\dfrac{2}{9}>0$)\n\n**2단계. 가장 큰 수 $a$ (양수 곱)**\n\n양수가 되는 곱은 두 음수의 곱 또는 두 양수의 곱이다.\n\n$$\\left(-\\frac{1}{2}\\right)\\times\\left(-\\frac{3}{4}\\right)=\\frac{3}{8},\\qquad \\frac{6}{5}\\times\\frac{2}{9}=\\frac{12}{45}=\\frac{4}{15}$$\n\n$\\dfrac{3}{8}=0.375$, $\\dfrac{4}{15}=0.26\\cdots$ 이므로 가장 큰 수는\n\n$$a=\\left(-\\frac{1}{2}\\right)\\times\\left(-\\frac{3}{4}\\right)=\\frac{3}{8}$$\n\n**3단계. 가장 작은 수 $b$ (음수 곱)**\n\n음수가 되는 곱 중 절댓값이 가장 큰 것은 절댓값이 큰 양수 $\\dfrac{6}{5}$ 와 절댓값이 큰 음수 $-\\dfrac{3}{4}$ 의 곱이다.\n\n$$b=\\frac{6}{5}\\times\\left(-\\frac{3}{4}\\right)=-\\frac{18}{20}=-\\frac{9}{10}$$\n\n**4단계. $120(a-b)$ 계산**\n\n$$a-b=\\frac{3}{8}-\\left(-\\frac{9}{10}\\right)=\\frac{3}{8}+\\frac{9}{10}=\\frac{15}{40}+\\frac{36}{40}=\\frac{51}{40}$$\n\n$$120(a-b)=120\\times\\frac{51}{40}=3\\times 51=153$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **$153$** 입니다."
+      }
+    ],
+    "final_answer": "153"
+  },
+  "28": {
+    "problem_id": "28",
+    "title": "2024학년도 3월 고1 학평 28번",
+    "difficulty": "킬러",
+    "weakness_unit": "삼각형의 무게중심·삼각비",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "polygon", "points": [[0, 0], [4, 0], [9, 4]], "fillOpacity": 0.05},
+        {"type": "point", "coordinates": [0, 0], "label": "B"},
+        {"type": "point", "coordinates": [4, 0], "label": "C"},
+        {"type": "point", "coordinates": [9, 4], "label": "A"},
+        {"type": "point", "coordinates": [2, 0], "label": "D"},
+        {"type": "point", "coordinates": [5, 1.333], "label": "G"},
+        {"type": "point", "coordinates": [9, 0], "label": "H"},
+        {"type": "segment", "from": [9, 4], "to": [2, 0], "label": "AD"},
+        {"type": "segment", "from": [9, 4], "to": [9, 0], "label": "AH"},
+        {"type": "label_text", "tex": "\\sqrt{41}", "at": [3.8, 2.3]},
+        {"type": "label_text", "tex": "4", "at": [9.4, 2]}
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$\\overline{AB}=\\sqrt{41}$, $\\overline{BC}=4$, $\\angle C>90^\\circ$ 인 삼각형 $ABC$ 의 무게중심을 $G$ 라 하자. 직선 $AG$ 와 선분 $BC$ 가 만나는 점을 $D$ 라 할 때 삼각형 $ADC$ 의 넓이가 $4$ 이다.\n\n$\\overline{DG}\\times\\tan(\\angle CDA)=\\dfrac{q}{p}$ 일 때 $p+q$ 의 값을 구하는 문제이다. (단, $p,\\ q$ 는 서로소인 자연수)"
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "핵심 단서.\n\n1) $G$ 가 무게중심이므로 직선 $AG$ 는 변 $BC$ 의 **중점**을 지난다. 즉 $D$ 는 $\\overline{BC}$ 의 중점이고 $\\overline{BD}=\\overline{DC}=2$, $\\overline{AD}$ 는 중선이다.\n\n2) $A$ 에서 직선 $BC$ 에 내린 수선의 발 $H$ 를 잡으면 $\\triangle ADC=\\dfrac{1}{2}\\overline{DC}\\times\\overline{AH}$ 로 높이 $\\overline{AH}$ 를 구한다($\\angle C>90^\\circ$ 이므로 $H$ 는 $C$ 너머).\n\n3) 무게중심의 성질 $\\overline{AG}:\\overline{GD}=2:1$ 로 $\\overline{DG}$ 를, 직각삼각형 $ADH$ 에서 $\\tan(\\angle CDA)=\\tan(\\angle HDA)=\\dfrac{\\overline{AH}}{\\overline{DH}}$ 를 구한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "삼각형의 무게중심은 세 중선의 교점이며, 각 중선을 꼭짓점으로부터 $2:1$ 로 나눈다.\n\n무게중심을 지나는 직선이 한 꼭짓점을 지나면 그 직선은 마주 보는 변의 중점을 지난다(중선이 된다).\n\n직각삼각형에서 $\\tan(\\text{각})=\\dfrac{(\\text{높이})}{(\\text{밑변})}$ 이다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "**1단계. $D$ 가 $\\overline{BC}$ 의 중점**\n\n점 $G$ 가 삼각형 $ABC$ 의 무게중심이므로 직선 $AG$, 즉 $\\overline{AD}$ 는 중선이고 점 $D$ 는 $\\overline{BC}$ 의 중점이다. 따라서\n\n$$\\overline{BD}=\\overline{DC}=2$$\n\n**2단계. 높이 $\\overline{AH}$ 구하기**\n\n점 $A$ 에서 직선 $BC$ 에 내린 수선의 발을 $H$ 라 하면\n\n$$\\triangle ADC=\\frac{1}{2}\\times\\overline{DC}\\times\\overline{AH}=\\frac{1}{2}\\times 2\\times\\overline{AH}=\\overline{AH}=4$$\n\n따라서 $\\overline{AH}=4$.\n\n**3단계. $\\overline{BH},\\ \\overline{CH},\\ \\overline{DH}$ 구하기**\n\n직각삼각형 $ABH$ 에서 피타고라스 정리에 의하여\n\n$$\\overline{AB}^2=\\overline{BH}^2+\\overline{AH}^2,\\quad (\\sqrt{41})^2=\\overline{BH}^2+4^2$$\n$$41=\\overline{BH}^2+16 \\quad\\Rightarrow\\quad \\overline{BH}^2=25 \\quad\\Rightarrow\\quad \\overline{BH}=5\\ (\\overline{BH}>0)$$\n\n$\\angle C>90^\\circ$ 이므로 $H$ 는 $C$ 의 바깥쪽에 있고\n\n$$\\overline{CH}=\\overline{BH}-\\overline{BC}=5-4=1,\\qquad \\overline{DH}=\\overline{BH}-\\overline{BD}=5-2=3$$\n\n**4단계. $\\overline{AD}$ 와 $\\overline{DG}$ 구하기**\n\n직각삼각형 $ADH$ 에서\n\n$$\\overline{AD}^2=\\overline{DH}^2+\\overline{AH}^2=3^2+4^2=25 \\quad\\Rightarrow\\quad \\overline{AD}=5$$\n\n점 $G$ 가 무게중심이므로 $\\overline{AG}:\\overline{GD}=2:1$, 따라서\n\n$$\\overline{DG}=\\frac{1}{3}\\,\\overline{AD}=\\frac{1}{3}\\times 5=\\frac{5}{3}$$\n\n**5단계. $\\tan(\\angle CDA)$ 구하기**\n\n$\\angle CDA=\\angle HDA$ 이고 직각삼각형 $ADH$ 에서\n\n$$\\tan(\\angle CDA)=\\tan(\\angle HDA)=\\frac{\\overline{AH}}{\\overline{DH}}=\\frac{4}{3}$$\n\n**6단계. 값 계산**\n\n$$\\overline{DG}\\times\\tan(\\angle CDA)=\\frac{5}{3}\\times\\frac{4}{3}=\\frac{20}{9}$$\n\n$\\dfrac{q}{p}=\\dfrac{20}{9}$ 이고 $20,\\ 9$ 는 서로소이므로 $q=20,\\ p=9$.\n\n$$p+q=9+20=29$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **$29$** 입니다."
+      }
+    ],
+    "final_answer": "29"
+  },
+  "29": {
+    "problem_id": "29",
+    "title": "2024학년도 3월 고1 학평 29번",
+    "difficulty": "킬러",
+    "weakness_unit": "이차함수의 그래프의 성질",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "function_plot", "expr": "(1/8)*(x+3)^2-2"},
+        {"type": "function_plot", "expr": "(-1/3)*(x-3)^2+6"},
+        {"type": "point", "coordinates": [-3, -2], "label": "A"},
+        {"type": "point", "coordinates": [1, 0], "label": "B"},
+        {"type": "point", "coordinates": [3, 6], "label": "C"},
+        {"type": "point", "coordinates": [-3, 0], "label": "D"},
+        {"type": "point", "coordinates": [0, 3], "label": "E"},
+        {"type": "polygon", "points": [[-3, -2], [1, 0], [3, 6], [-3, 0]], "fillOpacity": 0.05},
+        {"type": "segment", "from": [-3, 0], "to": [3, 6], "label": "DC"}
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "양수 $a$ 에 대하여 꼭짓점이 $\\mathrm{A}(-3,\\,-a)$ 이고 점 $\\mathrm{B}(1,\\,0)$ 을 지나는 이차함수 $y=f(x)$ 의 그래프와, 꼭짓점이 $\\mathrm{C}(3,\\,3a)$ 인 이차함수 $y=g(x)$ 의 그래프가 있다. 점 $\\mathrm{A}$ 에서 $x$ 축에 내린 수선의 발을 $\\mathrm{D}$ 라 할 때, 사각형 $ABCD$ 의 넓이는 $16$ 이다.\n\n이차함수 $y=g(x)$ 의 그래프가 $y$ 축과 만나는 점이 선분 $CD$ 위에 있을 때, $f(-1)\\times g(-3)$ 의 값을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "핵심 단서.\n\n1) $\\mathrm{D}$ 는 $\\mathrm{A}(-3,-a)$ 에서 $x$ 축에 내린 수선의 발이므로 $\\mathrm{D}(-3,\\,0)$.\n\n2) **사각형 $ABCD$ 의 넓이 $16$** 조건으로 $a$ 를 결정한다(좌표가 모두 $a$ 로 표현되므로 넓이 식이 $a$ 의 일차식이 된다 → $a=2$).\n\n3) $a=2$ 를 대입해 두 꼭짓점 좌표를 확정한 뒤, $f$ 는 점 $\\mathrm{B}$ 를 지나는 조건으로, $g$ 는 $y$ 축과의 교점 $\\mathrm{E}$ 가 선분 $CD$ 위($\\mathrm{E}(0,3)$)라는 조건으로 결정한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "꼭짓점이 $(m,\\,n)$ 인 이차함수는 $y=p(x-m)^2+n$ 으로 놓을 수 있다.\n\n네 꼭짓점 $(x_1,y_1),\\cdots,(x_4,y_4)$ 인 사각형의 넓이는 좌표를 이용한 신발끈 공식 $\\dfrac{1}{2}\\left|\\sum (x_i y_{i+1}-x_{i+1}y_i)\\right|$ 로 구할 수 있다.\n\n선분 $CD$ 가 $y$ 축($x=0$)과 만나는 점은 $C,\\ D$ 를 잇는 선분 위에서 $x=0$ 인 점이다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "**1단계. $\\mathrm{D}$ 의 좌표와 넓이 조건으로 $a$ 구하기**\n\n$\\mathrm{D}$ 는 $\\mathrm{A}(-3,-a)$ 에서 $x$ 축에 내린 수선의 발이므로 $\\mathrm{D}(-3,\\,0)$.\n\n네 점 $\\mathrm{A}(-3,-a),\\ \\mathrm{B}(1,0),\\ \\mathrm{C}(3,3a),\\ \\mathrm{D}(-3,0)$ 을 꼭짓점으로 하는 사각형 $ABCD$ 의 넓이는 신발끈 공식으로\n\n$$\\square ABCD=\\frac{1}{2}\\Big|\\{(-3)(0)+(1)(3a)+(3)(0)+(-3)(-a)\\}-\\{(-a)(1)+(0)(3)+(3a)(-3)+(0)(-3)\\}\\Big|$$\n$$=\\frac{1}{2}\\big|(3a+3a)-(-a-9a)\\big|=\\frac{1}{2}|6a+10a|=8a$$\n\n넓이가 $16$ 이므로\n\n$$8a=16 \\quad\\Rightarrow\\quad a=2$$\n\n따라서 $\\mathrm{A}(-3,\\,-2)$, $\\mathrm{C}(3,\\,6)$, $\\mathrm{D}(-3,\\,0)$.\n\n**2단계. $f(x)$ 결정**\n\n꼭짓점이 $\\mathrm{A}(-3,-2)$ 이므로 $f(x)=p(x+3)^2-2$ ($p$ 는 상수). 그래프가 점 $\\mathrm{B}(1,0)$ 을 지나므로\n\n$$f(1)=p(1+3)^2-2=16p-2=0 \\quad\\Rightarrow\\quad p=\\frac{1}{8}$$\n\n$$f(x)=\\frac{1}{8}(x+3)^2-2$$\n\n그러므로\n\n$$f(-1)=\\frac{1}{8}(-1+3)^2-2=\\frac{1}{8}\\times 4-2=\\frac{1}{2}-2=-\\frac{3}{2}$$\n\n**3단계. $g(x)$ 결정**\n\n선분 $CD$ 는 $\\mathrm{C}(3,6)$ 과 $\\mathrm{D}(-3,0)$ 을 잇는다. $y$ 축($x=0$)과 만나는 점은 $\\mathrm{C}$ 와 $\\mathrm{D}$ 의 중점인 $\\mathrm{E}(0,\\,3)$ 이다. $y=g(x)$ 의 그래프가 $y$ 축과 만나는 점이 이 $\\mathrm{E}(0,3)$ 이어야 한다.\n\n꼭짓점이 $\\mathrm{C}(3,6)$ 이므로 $g(x)=q(x-3)^2+6$ ($q$ 는 상수). 그래프가 점 $\\mathrm{E}(0,3)$ 을 지나므로\n\n$$g(0)=q(0-3)^2+6=9q+6=3 \\quad\\Rightarrow\\quad 9q=-3 \\quad\\Rightarrow\\quad q=-\\frac{1}{3}$$\n\n$$g(x)=-\\frac{1}{3}(x-3)^2+6$$\n\n그러므로\n\n$$g(-3)=-\\frac{1}{3}(-3-3)^2+6=-\\frac{1}{3}\\times 36+6=-12+6=-6$$\n\n**4단계. 값 계산**\n\n$$f(-1)\\times g(-3)=\\left(-\\frac{3}{2}\\right)\\times(-6)=9$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **$9$** 입니다."
+      }
+    ],
+    "final_answer": "9"
+  },
+  "30": {
+    "problem_id": "30",
+    "title": "2024학년도 3월 고1 학평 30번",
+    "difficulty": "킬러",
+    "weakness_unit": "삼각형의 닮음·피타고라스 정리와 삼각비",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {"type": "polygon", "points": [[5, 10], [0, 0], [12, 0], [17, 10]], "fillOpacity": 0.05},
+        {"type": "point", "coordinates": [5, 10], "label": "A"},
+        {"type": "point", "coordinates": [0, 0], "label": "B"},
+        {"type": "point", "coordinates": [12, 0], "label": "C"},
+        {"type": "point", "coordinates": [17, 10], "label": "D"},
+        {"type": "point", "coordinates": [14, 10], "label": "E"},
+        {"type": "point", "coordinates": [-3, 0], "label": "F"},
+        {"type": "point", "coordinates": [13, 8], "label": "G"},
+        {"type": "point", "coordinates": [17, 0], "label": "H"},
+        {"type": "segment", "from": [-3, 0], "to": [17, 10], "label": "FD"},
+        {"type": "segment", "from": [14, 10], "to": [13, 8], "label": "EG"},
+        {"type": "segment", "from": [17, 10], "to": [17, 0], "label": "DH"},
+        {"type": "label_text", "tex": "5\\sqrt{5}", "at": [1.5, 5.5]},
+        {"type": "label_text", "tex": "12", "at": [6, -1.2]}
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$\\overline{AB}=5\\sqrt{5}$, $\\overline{BC}=12$, $\\angle CBA<90^\\circ$ 이고 넓이가 $120$ 인 평행사변형 $ABCD$ 가 있다. 선분 $AD$ 위에 $\\overline{AE}=3\\,\\overline{ED}$ 인 점 $E$ 를 잡고, 선분 $CB$ 의 연장선 위에 $\\overline{BF}=\\overline{ED}$ 인 점 $F$ 를 잡는다. 점 $E$ 를 지나고 직선 $AB$ 와 평행한 직선이 선분 $DF$ 와 만나는 점을 $G$ 라 할 때, $\\sin(\\angle AGF)=\\dfrac{q}{p}\\sqrt{85}$ 이다. $p+q$ 의 값을 구하는 문제이다. (단, $p,\\ q$ 는 서로소인 자연수)"
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "핵심 전략은 **좌표설정**이다. 넓이 $120=\\overline{BC}\\times(\\text{높이})$ 에서 높이 $\\overline{DH}=10$ 을 얻고, $\\overline{DC}=\\overline{AB}=5\\sqrt5$ 와 함께 직각삼각형 $DCH$ 에서 $\\overline{CH}=5$ 를 구한다. 이를 이용해 $B,\\ C,\\ A,\\ D$ 에 좌표를 부여한다.\n\n그 다음 $\\overline{AE}=3\\,\\overline{ED}$ 로 $E$, $\\overline{BF}=\\overline{ED}$ 로 $F$, $E$ 를 지나 $\\overline{AB}$ 와 평행한 직선과 직선 $DF$ 의 교점으로 $G$ 의 좌표를 구한 뒤, 벡터(좌표차)로 $\\cos(\\angle AGF)$ 를 구하고 $\\sin$ 으로 변환한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "평행사변형의 넓이는 $(\\text{밑변})\\times(\\text{높이})$ 이다.\n\n좌표평면에서 점 $G$ 에서 점 $X,\\ Y$ 로 향하는 두 벡터 $\\vec{u}=X-G$, $\\vec{v}=Y-G$ 가 이루는 각 $\\theta$ 에 대하여\n$$\\cos\\theta=\\frac{\\vec{u}\\cdot\\vec{v}}{|\\vec{u}|\\,|\\vec{v}|},\\qquad \\sin\\theta=\\sqrt{1-\\cos^2\\theta}\\ \\ (0<\\theta<180^\\circ)$$\n이며, 분모의 유리화로 $\\sqrt{85}$ 꼴을 만든다. (※ 본 해설은 공식 풀이의 닮음·피타고라스 전략과 동일한 결과를 좌표로 명료하게 재현한 것이다.)"
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "**1단계. 높이와 좌표 설정**\n\n점 $D$ 에서 직선 $BC$ 에 내린 수선의 발을 $H$ 라 하면\n\n$$\\square ABCD=\\overline{BC}\\times\\overline{DH}=12\\times\\overline{DH}=120 \\quad\\Rightarrow\\quad \\overline{DH}=10$$\n\n$\\overline{DC}=\\overline{AB}=5\\sqrt{5}$ 이므로 직각삼각형 $DCH$ 에서\n\n$$\\overline{CH}^2=\\overline{DC}^2-\\overline{DH}^2=(5\\sqrt{5})^2-10^2=125-100=25 \\quad\\Rightarrow\\quad \\overline{CH}=5$$\n\n직선 $BC$ 를 $x$ 축으로 두고 $\\mathrm{B}(0,0)$, $\\mathrm{C}(12,0)$ 라 하면 $H(17,0)$, $\\mathrm{D}(17,10)$ 이다. 평행사변형이므로\n\n$$\\mathrm{A}=\\mathrm{D}-\\overline{\\mathrm{AD}}\\ \\text{방향}=\\mathrm{B}+(\\mathrm{D}-\\mathrm{C})=(0,0)+(5,10)=(5,10)$$\n\n검산: $\\overline{AB}=\\sqrt{5^2+10^2}=\\sqrt{125}=5\\sqrt{5}$ ✓, $\\overline{AD}=\\overline{BC}=12$ ✓.\n\n**2단계. 점 $E,\\ F$ 의 좌표**\n\n$\\overline{AE}=3\\,\\overline{ED}$ 이므로 $E$ 는 $\\overline{AD}$ 를 $3:1$ 로 내분한다. $\\overline{AD}=12$ 이므로 $\\overline{ED}=3$, $\\overline{AE}=9$.\n\n$$\\mathrm{E}=\\mathrm{A}+\\frac{3}{4}(\\mathrm{D}-\\mathrm{A})=(5,10)+\\frac{3}{4}(12,0)=(14,\\,10)$$\n\n$\\overline{BF}=\\overline{ED}=3$ 이고 $F$ 는 $\\overline{CB}$ 의 연장선($B$ 너머) 위에 있으므로\n\n$$\\mathrm{F}=(0,0)+3\\times(-1,0)=(-3,\\,0)$$\n\n**3단계. 점 $G$ 의 좌표**\n\n$E$ 를 지나고 직선 $AB$ 와 평행한 직선: 직선 $AB$ 의 기울기는 $\\dfrac{10-0}{5-0}=2$ 이므로\n\n$$y-10=2(x-14)\\quad\\Rightarrow\\quad y=2x-18$$\n\n직선 $DF$: $\\mathrm{D}(17,10)$, $\\mathrm{F}(-3,0)$ 의 기울기는 $\\dfrac{10-0}{17-(-3)}=\\dfrac{10}{20}=\\dfrac{1}{2}$ 이므로\n\n$$y=\\frac{1}{2}(x+3)$$\n\n두 직선의 교점 $G$:\n\n$$2x-18=\\frac{1}{2}(x+3)\\ \\Rightarrow\\ 4x-36=x+3\\ \\Rightarrow\\ 3x=39\\ \\Rightarrow\\ x=13,\\ \\ y=2\\times 13-18=8$$\n\n$$\\mathrm{G}=(13,\\,8)$$\n\n**4단계. $\\cos(\\angle AGF)$ 구하기**\n\n점 $G$ 에서 $A,\\ F$ 로 향하는 벡터는\n\n$$\\overrightarrow{GA}=\\mathrm{A}-\\mathrm{G}=(5-13,\\ 10-8)=(-8,\\ 2)$$\n$$\\overrightarrow{GF}=\\mathrm{F}-\\mathrm{G}=(-3-13,\\ 0-8)=(-16,\\ -8)$$\n\n내적과 크기:\n\n$$\\overrightarrow{GA}\\cdot\\overrightarrow{GF}=(-8)(-16)+(2)(-8)=128-16=112$$\n$$|\\overrightarrow{GA}|=\\sqrt{(-8)^2+2^2}=\\sqrt{68}=2\\sqrt{17},\\qquad |\\overrightarrow{GF}|=\\sqrt{(-16)^2+(-8)^2}=\\sqrt{320}=8\\sqrt{5}$$\n\n$$\\cos(\\angle AGF)=\\frac{112}{2\\sqrt{17}\\times 8\\sqrt{5}}=\\frac{112}{16\\sqrt{85}}=\\frac{7}{\\sqrt{85}}$$\n\n**5단계. $\\sin(\\angle AGF)$ 구하기**\n\n$0<\\angle AGF<180^\\circ$ 에서 $\\sin>0$ 이므로\n\n$$\\sin(\\angle AGF)=\\sqrt{1-\\cos^2(\\angle AGF)}=\\sqrt{1-\\frac{49}{85}}=\\sqrt{\\frac{36}{85}}=\\frac{6}{\\sqrt{85}}=\\frac{6}{85}\\sqrt{85}$$\n\n**6단계. $p+q$ 계산**\n\n$$\\sin(\\angle AGF)=\\frac{q}{p}\\sqrt{85}=\\frac{6}{85}\\sqrt{85} \\quad\\Rightarrow\\quad q=6,\\ p=85$$\n\n$6$ 과 $85$ 는 서로소이므로\n\n$$p+q=85+6=91$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **$91$** 입니다."
+      }
+    ],
+    "final_answer": "91"
+  }
+}

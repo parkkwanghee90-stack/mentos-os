@@ -1,0 +1,191 @@
+{
+  "14": {
+    "problem_id": "14",
+    "title": "2024학년도 6월 고1 학평 14번",
+    "difficulty": "준킬러",
+    "weakness_unit": "이차함수의 그래프와 직선의 위치 관계",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "function_plot", "expr": "-x^2+4*x+5" },
+        { "type": "function_plot", "expr": "2*x+6" },
+        { "type": "point", "coordinates": [1, 8], "label": "A" },
+        { "type": "point", "coordinates": [-1, 0], "label": "B" },
+        { "type": "point", "coordinates": [5, 0], "label": "C" },
+        { "type": "polygon", "points": [[-1, 0], [5, 0], [1, 8]], "fillOpacity": 0.08 },
+        { "type": "label_text", "tex": "y=2x+a", "at": [2.2, 9] },
+        { "type": "label_text", "tex": "y=-x^2+4x+5", "at": [4.3, 4] }
+      ]
+    },
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "이차함수 $y=-x^2+4x+5$의 그래프와 직선 $y=2x+a$가 한 점 $\\text{A}$에서만 만난다(접한다)는 조건에서 상수 $a$와 접점 $\\text{A}$를 구한다. 또 포물선이 $x$축과 만나는 두 점 $\\text{B}$, $\\text{C}$를 구한 뒤, 삼각형 $\\text{ABC}$의 넓이를 계산한다." },
+      { "phase": "C", "title": "핵심 단서", "content": "‘한 점에서만 만난다’는 것은 두 식을 연립한 이차방정식이 **중근**을 가진다는 뜻이므로 **판별식 $D=0$** 으로 $a$를 결정한다. 삼각형 $\\text{ABC}$는 밑변 $\\overline{\\text{BC}}$가 $x$축 위에 있으므로, 넓이는 $\\dfrac{1}{2}\\times\\overline{\\text{BC}}\\times(\\text{A의 } y\\text{좌표})$ 로 간단히 구할 수 있다." },
+      { "phase": "B", "title": "배경 지식", "content": "이차방정식 $px^2+qx+r=0$의 판별식은 $D=q^2-4pr$이고, $D=0$이면 중근(접함), $D>0$이면 서로 다른 두 실근(두 점에서 만남), $D<0$이면 만나지 않는다. 또 밑변이 $x$축에 평행한 삼각형의 넓이는 $\\dfrac{1}{2}\\times(\\text{밑변 길이})\\times(\\text{높이})$ 로 구한다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "포물선과 직선의 교점은 두 식을 연립하여 구한다.\n$$-x^2+4x+5=2x+a$$\n$$x^2-2x+(a-5)=0$$\n한 점에서만 만나려면 이 이차방정식이 중근을 가져야 하므로 판별식이 $0$이다.\n$$\\frac{D}{4}=(-1)^2-1\\cdot(a-5)=0$$\n$$1-a+5=0 \\;\\Rightarrow\\; a=6$$\n이때 $x^2-2x+1=0$, 즉 $(x-1)^2=0$ 이므로 접점의 $x$좌표는 $x=1$이다.\n$$y=2\\cdot1+6=8 \\;\\Rightarrow\\; \\text{A}(1,\\,8)$$\n다음으로 포물선이 $x$축과 만나는 점을 구한다.\n$$-x^2+4x+5=0 \\;\\Rightarrow\\; x^2-4x-5=0$$\n$$(x-5)(x+1)=0 \\;\\Rightarrow\\; x=-1 \\text{ 또는 } x=5$$\n따라서 $\\text{B}(-1,\\,0)$, $\\text{C}(5,\\,0)$ 이고\n$$\\overline{\\text{BC}}=5-(-1)=6$$\n삼각형 $\\text{ABC}$는 밑변 $\\overline{\\text{BC}}=6$, 높이는 점 $\\text{A}$의 $y$좌표인 $8$이므로\n$$S=\\frac{1}{2}\\times\\overline{\\text{BC}}\\times(\\text{높이})=\\frac{1}{2}\\times6\\times8=24$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **24** 입니다." }
+    ],
+    "final_answer": "24"
+  },
+  "15": {
+    "problem_id": "15",
+    "title": "2024학년도 6월 고1 학평 15번",
+    "difficulty": "준킬러",
+    "weakness_unit": "치환을 이용한 인수분해",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "$(x+2)(x+3)(x+4)(x+5)+k$가 완전제곱식 $(x^2+ax+b)^2$의 꼴로 인수분해되도록 하는 세 실수 $a$, $b$, $k$를 구하고 $a+b+k$의 값을 계산한다." },
+      { "phase": "C", "title": "핵심 단서", "content": "네 일차식을 **상수항의 합이 같아지도록 두 개씩 짝지어** 전개하면 $x^2+7x$ 가 공통으로 나타난다. 이를 $t=x^2+7x$ 로 **치환**하면 식이 $t$에 대한 이차식이 되어 완전제곱 꼴 조건을 쉽게 다룰 수 있다." },
+      { "phase": "B", "title": "배경 지식", "content": "$(x+m)(x+n)=x^2+(m+n)x+mn$ 이다. $t$에 대한 이차식 $t^2+pt+(q+k)$ 가 완전제곱 $\\left(t+\\dfrac{p}{2}\\right)^2$ 이 되려면 상수항이 $\\left(\\dfrac{p}{2}\\right)^2$ 와 같아야 한다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "상수항의 합이 같도록 $(x+2)(x+5)$ 와 $(x+3)(x+4)$ 로 짝지어 전개한다.\n$$(x+2)(x+5)=x^2+7x+10$$\n$$(x+3)(x+4)=x^2+7x+12$$\n$t=x^2+7x$ 로 치환하면\n$$(t+10)(t+12)+k=t^2+22t+120+k$$\n이것이 완전제곱식이 되려면 $t$의 일차항 계수의 절반인 $11$을 이용한 $(t+11)^2=t^2+22t+121$ 과 같아야 한다.\n$$t^2+22t+120+k=t^2+22t+121$$\n$$120+k=121 \\;\\Rightarrow\\; k=1$$\n따라서\n$$(x+2)(x+3)(x+4)(x+5)+1=(t+11)^2=(x^2+7x+11)^2$$\n이므로 $a=7$, $b=11$, $k=1$ 이다.\n$$a+b+k=7+11+1=19$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **19** 입니다." }
+    ],
+    "final_answer": "19"
+  },
+  "18": {
+    "problem_id": "18",
+    "title": "2024학년도 6월 고1 학평 18번",
+    "difficulty": "준킬러",
+    "weakness_unit": "제한된 구간에서의 이차함수의 최대·최소",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "$-2\\le x\\le2$에서 정의된 이차함수 $f(x)=x^2-(2a-b)x+a^2-4b$ 에 대해, (가) $x=1$에서 최솟값을 가진다는 조건과 (나) 최댓값이 $0$이라는 조건을 이용하여 상수 $a$, $b$를 구하고 $a+b$를 계산한다." },
+      { "phase": "C", "title": "핵심 단서", "content": "$f(x)$는 아래로 볼록하므로 **꼭짓점의 $x$좌표(축)에서 최솟값**을 가진다. (가)에서 축이 $x=1$이다. 최댓값은 닫힌구간 $[-2,2]$에서 **축으로부터 더 먼 끝점**에서 나오는데, 축이 $x=1$이므로 더 먼 끝점은 $x=-2$ 이다." },
+      { "phase": "B", "title": "배경 지식", "content": "이차함수 $f(x)=x^2+px+q$ 의 축은 $x=-\\dfrac{p}{2}$ 이다. 아래로 볼록한 이차함수를 닫힌구간에서 볼 때, 최솟값은 축이 구간 안에 있으면 축에서, 최댓값은 두 끝점 중 축에서 더 멀리 떨어진 끝점에서 나타난다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$f(x)=x^2-(2a-b)x+a^2-4b$ 의 축은\n$$x=\\frac{2a-b}{2}$$\n(가) 최솟값을 $x=1$에서 가지므로 축이 $x=1$이다.\n$$\\frac{2a-b}{2}=1 \\;\\Rightarrow\\; 2a-b=2 \\;\\Rightarrow\\; b=2a-2 \\quad\\cdots(\\ast)$$\n축 $x=1$은 구간 $[-2,2]$의 중앙 $x=0$보다 오른쪽에 있으므로, 두 끝점 중 축에서 더 먼 $x=-2$에서 최댓값을 가진다.\n$$f(-2)=(-2)^2-(2a-b)(-2)+a^2-4b$$\n$2a-b=2$ 를 대입하면\n$$f(-2)=4+2(2a-b)+a^2-4b=4+2\\cdot2+a^2-4b=8+a^2-4b$$\n(나) 최댓값이 $0$이므로\n$$8+a^2-4b=0$$\n$(\\ast)$ 의 $b=2a-2$ 를 대입한다.\n$$8+a^2-4(2a-2)=0$$\n$$8+a^2-8a+8=0$$\n$$a^2-8a+16=0 \\;\\Rightarrow\\; (a-4)^2=0 \\;\\Rightarrow\\; a=4$$\n$$b=2\\cdot4-2=6$$\n따라서\n$$a+b=4+6=10$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **10** 입니다." }
+    ],
+    "final_answer": "10"
+  },
+  "19": {
+    "problem_id": "19",
+    "title": "2024학년도 6월 고1 학평 19번",
+    "difficulty": "킬러",
+    "weakness_unit": "반원(원주각)과 곱셈공식·치환의 활용",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "point", "coordinates": [0, 0], "label": "A" },
+        { "type": "point", "coordinates": [6, 0], "label": "B" },
+        { "type": "point", "coordinates": [1.05, 2.3], "label": "C" },
+        { "type": "point", "coordinates": [2.85, 2.85], "label": "D" },
+        { "type": "segment", "from": [0, 0], "to": [6, 0] },
+        { "type": "segment", "from": [0, 0], "to": [1.05, 2.3] },
+        { "type": "segment", "from": [1.05, 2.3], "to": [2.85, 2.85] },
+        { "type": "segment", "from": [2.85, 2.85], "to": [6, 0] },
+        { "type": "label_text", "tex": "a-1", "at": [0.2, 1.4] },
+        { "type": "label_text", "tex": "a-1", "at": [1.7, 3.1] },
+        { "type": "label_text", "tex": "8", "at": [4.7, 1.7] }
+      ]
+    },
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "지름 $\\overline{\\text{AB}}=2a$ 인 반원의 호 위에 두 점 $\\text{C}$, $\\text{D}$가 있고 $\\overline{\\text{AC}}=\\overline{\\text{CD}}=a-1$, $\\overline{\\text{BD}}=8$ 이다($a>4$). 이때 $a^3-\\dfrac{1}{a^3}$ 의 값을 구한다." },
+      { "phase": "C", "title": "핵심 단서", "content": "지름에 대한 **원주각은 $90^\\circ$** 이므로 $\\angle\\text{ACB}=\\angle\\text{ADB}=90^\\circ$ 이다. 네 점 $\\text{A}, \\text{C}, \\text{D}, \\text{B}$가 한 원 위에 있으므로 **톨레미(Ptolemy) 정리**(원에 내접하는 사각형에서 두 대각선의 곱은 마주 보는 두 변의 곱의 합과 같다)를 적용하면 $a$에 대한 방정식을 얻을 수 있다. $a$를 구한 뒤 $a-\\dfrac{1}{a}$ 를 거쳐 $a^3-\\dfrac{1}{a^3}$ 을 계산한다." },
+      { "phase": "B", "title": "배경 지식", "content": "반원의 지름에 대한 원주각은 $90^\\circ$ 이다. 직각삼각형에서 피타고라스 정리 $(\\text{빗변})^2=(\\text{밑변})^2+(\\text{높이})^2$ 가 성립한다. 원에 내접하는 사각형 $\\text{ACDB}$에서 톨레미 정리는 $\\overline{\\text{AD}}\\cdot\\overline{\\text{CB}}=\\overline{\\text{AC}}\\cdot\\overline{\\text{DB}}+\\overline{\\text{CD}}\\cdot\\overline{\\text{AB}}$ 이다. 또 곱셈공식 $a^3-\\dfrac{1}{a^3}=\\left(a-\\dfrac{1}{a}\\right)^3+3\\left(a-\\dfrac{1}{a}\\right)$ 를 이용한다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$\\overline{\\text{AB}}$ 가 지름이므로 $\\angle\\text{ADB}=90^\\circ$, $\\angle\\text{ACB}=90^\\circ$ 이다. 직각삼각형 $\\text{ABD}$, $\\text{ABC}$에서 피타고라스 정리를 쓰면\n$$\\overline{\\text{AD}}=\\sqrt{\\overline{\\text{AB}}^2-\\overline{\\text{BD}}^2}=\\sqrt{4a^2-64}=2\\sqrt{(a-4)(a+4)}$$\n$$\\overline{\\text{CB}}=\\sqrt{\\overline{\\text{AB}}^2-\\overline{\\text{AC}}^2}=\\sqrt{4a^2-(a-1)^2}=\\sqrt{(a+1)(3a-1)}$$\n네 점 $\\text{A}, \\text{C}, \\text{D}, \\text{B}$가 같은 원 위에 있으므로 사각형 $\\text{ACDB}$에 톨레미 정리를 적용한다.\n$$\\overline{\\text{AD}}\\cdot\\overline{\\text{CB}}=\\overline{\\text{AC}}\\cdot\\overline{\\text{DB}}+\\overline{\\text{CD}}\\cdot\\overline{\\text{AB}}$$\n$$\\overline{\\text{AD}}\\cdot\\overline{\\text{CB}}=(a-1)\\cdot8+(a-1)\\cdot2a=(a-1)(2a+8)$$\n양변을 제곱한다. 좌변은\n$$\\overline{\\text{AD}}^2\\cdot\\overline{\\text{CB}}^2=4(a-4)(a+4)\\cdot(a+1)(3a-1)$$\n우변은\n$$\\{(a-1)(2a+8)\\}^2=4(a-1)^2(a+4)^2$$\n두 식을 같게 두고 양변을 $4(a+4)$ 로 나누면\n$$(a-1)^2(a+4)=(a-4)(a+1)(3a-1)$$\n좌변과 우변을 각각 전개한다.\n$$\\text{좌변}=(a^2-2a+1)(a+4)=a^3+2a^2-7a+4$$\n$$\\text{우변}=(a^2-3a-4)(3a-1)=3a^3-10a^2-9a+4$$\n등식 $a^3+2a^2-7a+4=3a^3-10a^2-9a+4$ 를 정리하면\n$$2a^3-12a^2-2a=0 \\;\\Rightarrow\\; 2a(a^2-6a-1)=0$$\n$a>4$ 이므로 $a^2-6a-1=0$ 이다. 양변을 $a$로 나누면\n$$a-6-\\frac{1}{a}=0 \\;\\Rightarrow\\; a-\\frac{1}{a}=6$$\n곱셈공식을 이용하면\n$$a^3-\\frac{1}{a^3}=\\left(a-\\frac{1}{a}\\right)^3+3\\left(a-\\frac{1}{a}\\right)=6^3+3\\cdot6=216+18=234$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **234** 입니다." }
+    ],
+    "final_answer": "234"
+  },
+  "20": {
+    "problem_id": "20",
+    "title": "2024학년도 6월 고1 학평 20번",
+    "difficulty": "킬러",
+    "weakness_unit": "삼차방정식의 근과 계수의 관계·인수분해",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "삼차방정식 $x^3-(a^2+a-1)x^2-a(a-3)x+4a=0$ 이 서로 다른 세 실근 $\\alpha<\\beta<\\gamma$ 를 가지고 $\\alpha\\times\\gamma=-4$ 가 되도록 하는 모든 실수 $a$의 값의 합을 구한다." },
+      { "phase": "C", "title": "핵심 단서", "content": "삼차방정식의 **근과 계수의 관계**에서 세 근의 곱 $\\alpha\\beta\\gamma=-4a$ 이다. 조건 $\\alpha\\gamma=-4$ 를 대입하면 $\\beta\\cdot(-4)=-4a$, 즉 **$\\beta=a$** 가 되어 $x=a$가 이 방정식의 근임을 알 수 있다. 이를 대입해 $a$의 후보를 구한 뒤, 각 후보에 대해 인수분해하여 ‘서로 다른 세 실근’과 ‘$\\alpha\\gamma=-4$(즉 중간 근이 $a$)’ 를 모두 만족하는지 확인한다." },
+      { "phase": "B", "title": "배경 지식", "content": "삼차방정식 $x^3+px^2+qx+r=0$ 의 세 근 $\\alpha,\\beta,\\gamma$ 에 대해 근과 계수의 관계는 $\\alpha+\\beta+\\gamma=-p$, $\\alpha\\beta+\\beta\\gamma+\\gamma\\alpha=q$, $\\alpha\\beta\\gamma=-r$ 이다. 또 $x=a$가 근이면 $P(a)=0$ 이고, 인수정리로 $(x-a)$ 로 나누어떨어진다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "방정식 $P(x)=x^3-(a^2+a-1)x^2-a(a-3)x+4a=0$ 에서 근과 계수의 관계에 의해 세 근의 곱은 상수항의 부호를 바꾼 값이므로\n$$\\alpha\\beta\\gamma=-4a$$\n조건 $\\alpha\\gamma=-4$ 를 대입하면\n$$\\beta\\cdot(-4)=-4a \\;\\Rightarrow\\; \\beta=a$$\n즉 $x=a$ 가 방정식의 근이므로 $P(a)=0$ 이어야 한다.\n$$P(a)=a^3-(a^2+a-1)a^2-a(a-3)a+4a$$\n$$=a^3-a^4-a^3+a^2-a^3+3a^2+4a=-a^4-a^3+4a^2+4a$$\n$$=-a(a^3+a^2-4a-4)=-a(a+1)(a-2)(a+2)$$\n$P(a)=0$ 에서 $a=0,\\,-1,\\,2,\\,-2$ 가 후보이다. 각 경우를 직접 검토한다.\n\n$\\bullet\\;a=0$: 방정식은 $x^3+x^2=0$, 즉 $x^2(x+1)=0$ 으로 근이 $0,0,-1$. **서로 다른 세 실근이 아니므로 제외.**\n\n$\\bullet\\;a=2$: $x^3-5x^2+2x+8=0$. 인수분해하면\n$$(x-2)(x^2-3x-4)=(x-2)(x-4)(x+1)=0$$\n근은 $-1,2,4$ 로 서로 다르고, $\\alpha=-1,\\beta=2,\\gamma=4$. $\\alpha\\gamma=(-1)\\cdot4=-4$ **성립.**\n\n$\\bullet\\;a=-1$: $x^3+x^2-4x-4=0$. 인수분해하면\n$$(x+1)(x^2-4)=(x+1)(x-2)(x+2)=0$$\n근은 $-2,-1,2$ 로 서로 다르고, $\\alpha=-2,\\beta=-1,\\gamma=2$. $\\alpha\\gamma=(-2)\\cdot2=-4$ **성립.**\n\n$\\bullet\\;a=-2$: $x^3-x^2-10x-8=0$. 인수분해하면\n$$(x+2)(x^2-3x-4)=(x+2)(x-4)(x+1)=0$$\n근은 $-2,-1,4$. 이때 $\\alpha=-2,\\gamma=4$ 이므로 $\\alpha\\gamma=-8\\neq-4$ 이고 중간 근이 $-1$ 이어서 $\\beta=a=-2$ 도 아니다. **제외.**\n\n따라서 조건을 만족하는 $a$는 $2$ 와 $-1$ 이고, 그 합은\n$$2+(-1)=1$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **1** 입니다." }
+    ],
+    "final_answer": "1"
+  },
+  "21": {
+    "problem_id": "21",
+    "title": "2024학년도 6월 고1 학평 21번",
+    "difficulty": "킬러",
+    "weakness_unit": "이차함수의 그래프와 직선의 위치 관계 추론",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "최고차항의 계수가 $2$인 이차함수 $f(x)$와 최고차항의 계수가 $-1$인 이차함수 $g(x)$가 (가) $y=f(x)$가 직선 $y=x$와 원점이 아닌 서로 다른 두 점 $\\text{P}, \\text{Q}$에서 만남, (나) $y=g(x)$가 직선 $y=x$와 한 점 $\\text{P}$에서만 만남, (다) 점 $\\text{P}$의 $x$좌표가 점 $\\text{Q}$의 $x$좌표보다 작고 $\\overline{\\text{OP}}=\\overline{\\text{PQ}}$ 를 만족할 때, 부등식 $f(x)+g(x)\\ge0$ 의 해가 모든 실수가 되도록 하면서 점 $\\text{P}$의 $x$좌표가 최대가 되는 값을 구한다." },
+      { "phase": "C", "title": "핵심 단서", "content": "$\\text{P}, \\text{Q}$는 직선 $y=x$ 위의 점이므로 $\\text{P}(p,p)$, $\\text{Q}(q,q)$ 로 둘 수 있다. (가)에서 $f(x)-x=2(x-p)(x-q)$, (나)에서 $g(x)$ 는 $y=x$ 에 접하므로 $g(x)-x=-(x-p)^2$ 로 나타낼 수 있다. (다)의 $\\overline{\\text{OP}}=\\overline{\\text{PQ}}$ (세 점이 모두 $y=x$ 위) 로부터 $q=2p$ 를 얻는다. 마지막으로 $f(x)+g(x)\\ge0$ 이 모든 실수에서 성립하려면 **판별식 $\\le0$** 이어야 한다." },
+      { "phase": "B", "title": "배경 지식", "content": "최고차항의 계수가 $k$인 이차함수가 직선 $y=x$와 두 점 $x=p,q$ 에서 만나면 $f(x)-x=k(x-p)(x-q)$ 로 쓸 수 있고, 한 점 $x=p$ 에서만 만나면(접하면) $g(x)-x=k(x-p)^2$ 이다. 직선 $y=x$ 위의 두 점 사이 거리는 $x$좌표 차의 $\\sqrt2$ 배이다. 또 이차식 $\\ge0$ 이 항상 성립하려면 최고차항 계수$>0$ 이고 판별식 $D\\le0$ 이어야 한다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$\\text{P}(p,p)$, $\\text{Q}(q,q)$ ($p<q$) 로 둔다. (가), (나)에 의해\n$$f(x)-x=2(x-p)(x-q),\\qquad g(x)-x=-(x-p)^2$$\n(다)에서 $\\text{O}, \\text{P}, \\text{Q}$ 가 모두 직선 $y=x$ 위에 있으므로\n$$\\overline{\\text{OP}}=\\sqrt2\\,|p|,\\qquad \\overline{\\text{PQ}}=\\sqrt2\\,|q-p|$$\n$\\overline{\\text{OP}}=\\overline{\\text{PQ}}$ 에서 $|p|=|q-p|$. $\\text{P}, \\text{Q}$ 가 원점이 아니므로 $q\\neq0$ 이고, $p<q$ 를 고려하면\n$$p=q-p \\;\\Rightarrow\\; q=2p$$\n이제 $f(x)+g(x)$ 를 정리한다.\n$$f(x)+g(x)=\\{2(x-p)(x-q)+x\\}+\\{-(x-p)^2+x\\}$$\n$$=2(x-p)(x-q)-(x-p)^2+2x$$\n전개하면\n$$=2x^2-2(p+q)x+2pq-x^2+2px-p^2+2x$$\n$$=x^2+(2-2q)x+(2pq-p^2)$$\n최고차항 계수가 $1>0$ 이므로 $f(x)+g(x)\\ge0$ 이 모든 실수에서 성립하려면 판별식이 $0$ 이하여야 한다.\n$$D=(2-2q)^2-4(2pq-p^2)\\le0$$\n$$4(1-q)^2-4(2pq-p^2)\\le0 \\;\\Rightarrow\\; (1-q)^2-2pq+p^2\\le0$$\n$$1-2q+q^2-2pq+p^2\\le0 \\;\\Rightarrow\\; (p-q)^2-2q+1\\le0$$\n$q=2p$ 를 대입하면\n$$(p-2p)^2-2(2p)+1\\le0 \\;\\Rightarrow\\; p^2-4p+1\\le0$$\n이차부등식 $p^2-4p+1\\le0$ 의 해는\n$$2-\\sqrt3\\le p\\le2+\\sqrt3$$\n따라서 점 $\\text{P}$의 $x$좌표 $p$의 최댓값은\n$$p=2+\\sqrt3$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **$2+\\sqrt{3}$** 입니다." }
+    ],
+    "final_answer": "2+√3"
+  },
+  "27": {
+    "problem_id": "27",
+    "title": "2024학년도 6월 고1 학평 27번",
+    "difficulty": "준킬러",
+    "weakness_unit": "연립이차부등식의 해 조건",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "연립부등식 $\\begin{cases} x^2-11x+24<0 \\\\ x^2-2kx+k^2-9>0 \\end{cases}$ 의 해가 $\\alpha<x<\\beta$ 이고 $\\beta-\\alpha=2$ 를 만족시키는 모든 실수 $k$의 값의 합을 구한다." },
+      { "phase": "C", "title": "핵심 단서", "content": "첫 부등식의 해는 $3<x<8$ (길이 $5$의 구간)이다. 둘째 부등식은 $(x-k)^2>9$ 이므로 해가 $x<k-3$ 또는 $x>k+3$ 으로 **구간 $[k-3,\\,k+3]$(폭 $6$)을 제외**하는 형태이다. 두 해의 교집합이 길이 $2$인 **하나의 열린구간**이 되려면, 제외 구간 $[k-3,k+3]$ 이 $(3,8)$ 의 왼쪽 또는 오른쪽을 덮어 한쪽 조각만 남겨야 한다." },
+      { "phase": "B", "title": "배경 지식", "content": "$x^2+bx+c<0$ 은 두 근 사이, $>0$ 은 두 근 바깥이 해이다. $(x-k)^2>9 \\iff x-k>3$ 또는 $x-k<-3 \\iff x>k+3$ 또는 $x<k-3$. 연립부등식의 해는 두 해의 공통부분(교집합)이다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "첫째 부등식을 푼다.\n$$x^2-11x+24<0 \\;\\Rightarrow\\; (x-3)(x-8)<0 \\;\\Rightarrow\\; 3<x<8$$\n둘째 부등식을 푼다.\n$$x^2-2kx+k^2-9>0 \\;\\Rightarrow\\; (x-k)^2>9 \\;\\Rightarrow\\; x<k-3 \\text{ 또는 } x>k+3$$\n연립부등식의 해는 $3<x<8$ 에서 구간 $[k-3,\\,k+3]$ 을 제외한 부분이다. 이것이 길이 $2$인 하나의 구간 $\\alpha<x<\\beta$ 가 되려면 다음 두 경우뿐이다.\n\n$\\bullet$ (왼쪽이 잘려 오른쪽 조각만 남는 경우) 해가 $(k+3,\\,8)$ 이고\n$$8-(k+3)=2 \\;\\Rightarrow\\; k+3=6 \\;\\Rightarrow\\; k=3$$\n이때 $k-3=0\\le3$ 이므로 왼쪽 조각 $(3,\\,k-3)$ 은 비어 있어 해가 $(6,8)$ 하나뿐이다. $\\beta-\\alpha=8-6=2$ **성립.**\n\n$\\bullet$ (오른쪽이 잘려 왼쪽 조각만 남는 경우) 해가 $(3,\\,k-3)$ 이고\n$$(k-3)-3=2 \\;\\Rightarrow\\; k-3=5 \\;\\Rightarrow\\; k=8$$\n이때 $k+3=11\\ge8$ 이므로 오른쪽 조각은 비어 있어 해가 $(3,5)$ 하나뿐이다. $\\beta-\\alpha=5-3=2$ **성립.**\n\n따라서 조건을 만족하는 $k$는 $3$ 과 $8$ 이고, 그 합은\n$$3+8=11$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **11** 입니다." }
+    ],
+    "final_answer": "11"
+  },
+  "28": {
+    "problem_id": "28",
+    "title": "2024학년도 6월 고1 학평 28번",
+    "difficulty": "킬러",
+    "weakness_unit": "다항식의 나눗셈을 이용한 다항식 추론",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "이차다항식 $f(x)$와 일차다항식 $g(x)$에 대하여 $f(x)g(x)$ 를 $f(x)-2x^2$ 으로 나누었을 때의 몫이 $x^2-3x+3$ 이고 나머지가 $f(x)+xg(x)$ 이다. $f(-2)$ 의 값을 구한다." },
+      { "phase": "C", "title": "핵심 단서", "content": "나눗셈의 기본 관계 $(\\text{피제식})=(\\text{나누는 식})\\times(\\text{몫})+(\\text{나머지})$ 를 세운다. 핵심은 **차수 조건**이다. 좌변 $f(x)g(x)$ 가 삼차이려면 나누는 식 $f(x)-2x^2$ 이 일차여야 하므로 $f(x)$ 의 $x^2$ 계수는 $2$ 이다. 또 나머지 $f(x)+xg(x)$ 는 나누는 식(일차)보다 차수가 낮아야 하므로 **상수**가 되어야 한다. 이 두 차수 조건과 계수비교로 $f(x)$ 를 완전히 결정한다." },
+      { "phase": "B", "title": "배경 지식", "content": "다항식 $A$를 $B$로 나눈 몫 $Q$, 나머지 $R$ 에 대해 $A=BQ+R$ 이고 $(\\text{나머지의 차수})<(\\text{나누는 식의 차수})$ 이다. 양변의 동류항 계수를 비교하는 미정계수법으로 계수를 구한다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "나눗셈의 관계식을 세운다.\n$$f(x)g(x)=\\{f(x)-2x^2\\}(x^2-3x+3)+\\{f(x)+xg(x)\\}$$\n$f(x)$ 는 이차, $g(x)$ 는 일차이므로 좌변 $f(x)g(x)$ 는 삼차이다. 우변 첫 항이 삼차가 되려면 $\\{f(x)-2x^2\\}$ 의 차수가 $1$ 이어야 하므로 $f(x)$ 의 $x^2$ 의 계수는 $2$ 이다. 따라서\n$$f(x)=2x^2+bx+c,\\qquad g(x)=px+q\\ (p\\neq0)$$\n로 두면 나누는 식은 $f(x)-2x^2=bx+c$ (일차)이다.\n\n나머지 $f(x)+xg(x)$ 는 나누는 식(일차)보다 차수가 낮아야 하므로 **상수**여야 한다.\n$$f(x)+xg(x)=(2x^2+bx+c)+x(px+q)=(2+p)x^2+(b+q)x+c$$\n이것이 상수가 되려면\n$$2+p=0 \\;\\Rightarrow\\; p=-2,\\qquad b+q=0 \\;\\Rightarrow\\; q=-b$$\n이고, 이때 나머지는 상수 $c$ 이다.\n다음으로 관계식의 양변을 계수비교한다. 좌변은\n$$f(x)g(x)=(2x^2+bx+c)(-2x+q)$$\n우변은\n$$(bx+c)(x^2-3x+3)+c$$\n이다. 먼저 $x^3$ 의 계수를 비교하면 좌변은 $2\\cdot(-2)=-4$, 우변은 $b$ 이므로\n$$b=-4,\\qquad q=-b=4$$\n그러면 $f(x)=2x^2-4x+c$, $g(x)=-2x+4$ 이다. 이제 $x^2$ 의 계수를 비교한다.\n좌변 $(2x^2-4x+c)(-2x+4)$ 의 $x^2$ 계수: $2\\cdot4+(-4)\\cdot(-2)=8+8=16$.\n우변 $(-4x+c)(x^2-3x+3)+c$ 의 $x^2$ 계수: $(-4)\\cdot(-3)+c\\cdot1=12+c$.\n두 값을 같게 두면\n$$16=12+c \\;\\Rightarrow\\; c=4$$\n(검산: $x$ 계수 — 좌변 $(-4)\\cdot4+4\\cdot(-2)=-16-8=-24$, 우변 $(-4)\\cdot3+4\\cdot(-3)=-12-12=-24$ 로 일치. 상수항 — 좌변 $4\\cdot4=16$, 우변 $4\\cdot3+4=16$ 으로 일치.)\n따라서\n$$f(x)=2x^2-4x+4$$\n그러므로\n$$f(-2)=2\\cdot(-2)^2-4\\cdot(-2)+4=8+8+4=20$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **20** 입니다." }
+    ],
+    "final_answer": "20"
+  },
+  "29": {
+    "problem_id": "29",
+    "title": "2024학년도 6월 고1 학평 29번",
+    "difficulty": "킬러",
+    "weakness_unit": "도형에서 유도한 이차함수의 최대·최소",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "point", "coordinates": [0, 0], "label": "O" },
+        { "type": "point", "coordinates": [2, 0], "label": "A" },
+        { "type": "point", "coordinates": [0, 2], "label": "B" },
+        { "type": "point", "coordinates": [1.732, 1], "label": "C" },
+        { "type": "point", "coordinates": [0.866, 2.5], "label": "P" },
+        { "type": "circle", "center": [0.866, 1.5], "radius": 1 },
+        { "type": "segment", "from": [0, 2], "to": [1.732, 1] },
+        { "type": "segment", "from": [0, 0], "to": [2, 0] },
+        { "type": "segment", "from": [0, 0], "to": [0.866, 2.5] },
+        { "type": "segment", "from": [0.866, 2.5], "to": [2, 0] },
+        { "type": "polygon", "points": [[0, 0], [2, 0], [0.866, 2.5]], "fillOpacity": 0.08 },
+        { "type": "label_text", "tex": "1", "at": [-0.25, 1] }
+      ]
+    },
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "반지름 $1$, 중심각 $90^\\circ$ 인 부채꼴 $\\text{OAB}$ 가 있다. 호 $\\text{AB}$ 위의 점 $\\text{C}$ 에 대하여 선분 $\\text{BC}$ 를 지름으로 하는 원을 그린다. 선분 $\\text{BC}$ 의 중점을 지나고 직선 $\\text{OB}$ 에 평행한 직선이 이 원과 만나는 두 점 중 $\\text{B}$ 에 가까운 점을 $\\text{P}$ 라 하자. $\\overline{\\text{BC}}=x$ 일 때 삼각형 $\\text{OAP}$ 의 넓이 $S(x)$ 의 최댓값이 $\\dfrac{q}{p}$ 이면 $p+q$ 를 구한다. (단, $0<x<\\sqrt2$, $p,q$ 는 서로소인 자연수)" },
+      { "phase": "C", "title": "핵심 단서", "content": "$\\text{O}$ 를 원점, $\\text{OA}$ 를 $x$축, $\\text{OB}$ 를 $y$축으로 좌표를 잡으면 $\\text{A}(1,0)$, $\\text{B}(0,1)$ 이고 호 위의 점 $\\text{C}(\\cos\\theta,\\sin\\theta)$ 이다. 삼각형 $\\text{OAP}$ 는 밑변 $\\overline{\\text{OA}}=1$ 이 $x$축 위에 있으므로 **넓이는 점 $\\text{P}$의 $y$좌표로만 결정**된다. $\\text{P}$ 는 $\\text{BC}$ 의 중점에서 $\\text{OB}$(연직선)에 평행한 직선이 원과 만나는 점 중 $\\text{B}$ 에 가까운 점이므로, $\\text{P}$ 의 $y$좌표를 구하면 $S$ 를 $x$에 대한 이차식으로 나타낼 수 있다." },
+      { "phase": "B", "title": "배경 지식", "content": "밑변이 $x$축 위에 있는 삼각형의 넓이는 $\\dfrac{1}{2}\\times(\\text{밑변})\\times(\\text{높이})$ 이고 높이는 꼭짓점의 $y$좌표이다. 선분 $\\text{BC}$ 를 지름으로 하는 원의 중심은 $\\text{BC}$ 의 중점, 반지름은 $\\dfrac{\\overline{\\text{BC}}}{2}$ 이다. 원의 중심을 지나는 직선이 원과 만나는 두 점은 중심에서 반지름만큼 떨어져 있다. 이차함수의 최댓값은 꼭짓점에서 나온다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$\\text{O}(0,0)$, $\\text{A}(1,0)$, $\\text{B}(0,1)$ 로 좌표를 잡고 호 위의 점을 $\\text{C}(\\cos\\theta,\\sin\\theta)$ ($0<\\theta<90^\\circ$) 라 하자. 그러면\n$$x=\\overline{\\text{BC}}=\\sqrt{\\cos^2\\theta+(\\sin\\theta-1)^2}=\\sqrt{2-2\\sin\\theta}$$\n이므로\n$$\\sin\\theta=1-\\frac{x^2}{2}$$\n선분 $\\text{BC}$ 의 중점은\n$$\\text{M}=\\left(\\frac{\\cos\\theta}{2},\\ \\frac{1+\\sin\\theta}{2}\\right)$$\n이고, 원의 반지름은 $\\dfrac{x}{2}$ 이다. $\\text{M}$ 을 지나고 $\\text{OB}$(연직선)에 평행한 직선은 원의 중심 $\\text{M}$ 을 지나므로, 원과 만나는 두 점은 $\\text{M}$ 에서 위·아래로 각각 $\\dfrac{x}{2}$ 만큼 떨어진 점이다.\n$$\\left(\\frac{\\cos\\theta}{2},\\ \\frac{1+\\sin\\theta}{2}\\pm\\frac{x}{2}\\right)$$\n이 중 $\\text{B}(0,1)$ 에 가까운 점은 $y$좌표가 더 큰 위쪽 점이므로\n$$(\\text{P의 } y\\text{좌표})=\\frac{1+\\sin\\theta}{2}+\\frac{x}{2}=\\frac{1+\\sin\\theta+x}{2}$$\n삼각형 $\\text{OAP}$ 는 밑변 $\\overline{\\text{OA}}=1$, 높이는 점 $\\text{P}$ 의 $y$좌표이므로\n$$S(x)=\\frac{1}{2}\\times1\\times(\\text{P의 } y\\text{좌표})=\\frac{1+\\sin\\theta+x}{4}$$\n$\\sin\\theta=1-\\dfrac{x^2}{2}$ 를 대입하면\n$$S(x)=\\frac{1+\\left(1-\\frac{x^2}{2}\\right)+x}{4}=\\frac{2+x-\\frac{x^2}{2}}{4}=\\frac{4+2x-x^2}{8}$$\n$$=-\\frac{1}{8}x^2+\\frac{1}{4}x+\\frac{1}{2}$$\n$0<x<\\sqrt2$ 에서 이 이차함수의 꼭짓점의 $x$좌표는\n$$x=-\\frac{\\frac{1}{4}}{2\\cdot\\left(-\\frac{1}{8}\\right)}=1$$\n로 정의역 안에 있다. 따라서 최댓값은\n$$S(1)=\\frac{4+2-1}{8}=\\frac{5}{8}$$\n즉 $\\dfrac{q}{p}=\\dfrac{5}{8}$ 이고 $p=8$, $q=5$ 는 서로소이므로\n$$p+q=8+5=13$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **13** 입니다." }
+    ],
+    "final_answer": "13"
+  },
+  "30": {
+    "problem_id": "30",
+    "title": "2024학년도 6월 고1 학평 30번",
+    "difficulty": "킬러",
+    "weakness_unit": "이차함수의 추론(부등식·최대최소·대칭)",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "두 이차함수 $f(x)$, $g(x)$ 가 (가) 모든 실수 $x$에 대하여 $f(x)\\le0\\le g(x)$, (나) $k-2\\le x\\le k+2$ 에서 $f(x)$ 의 최댓값과 $g(x)$ 의 최솟값이 같게 되도록 하는 실수 $k$의 최솟값이 $0$, 최댓값이 $1$, (다) 방정식 $f(x)=f(0)$ 의 모든 실근의 합이 음수 를 만족시킨다. $f(1)=-2$, $g(1)=2$ 일 때 $f(3)+g(11)$ 의 값을 구한다." },
+      { "phase": "C", "title": "핵심 단서", "content": "(가)에서 $f(x)\\le0$ 이 항상 성립하므로 $f$는 **위로 볼록**하고 최댓값 $\\le0$, $g(x)\\ge0$ 이 항상 성립하므로 $g$는 **아래로 볼록**하고 최솟값 $\\ge0$. (나)에서 두 꼭짓점이 모두 구간 안에 있을 때 ‘최댓값=최솟값’ 이 성립하려면 두 값이 모두 $0$ 이어야 하므로 $f(x)=a(x-p)^2$($a<0$), $g(x)=b(x-q)^2$($b>0$) 꼴이다. $k$의 범위 $[0,1]$ 로부터 두 꼭짓점 $p,q$ 를 결정하고, (다)로 어느 것이 $p$인지 확정한다." },
+      { "phase": "B", "title": "배경 지식", "content": "이차함수가 모든 실수에서 $\\le0$ 이면 위로 볼록이고 꼭짓점에서 최댓값을, $\\ge0$ 이면 아래로 볼록이고 꼭짓점에서 최솟값을 가진다. $f(x)=a(x-p)^2$ 이면 $f(x)=f(0)$ 의 근은 $0$ 과 $2p$ 이고 그 합은 $2p$ 이다. 닫힌구간에서 위로 볼록한 함수의 최댓값은 꼭짓점이 구간에 있으면 꼭짓점에서 나온다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "(가) $f(x)\\le0$ 이 항상 성립하므로 $f$는 위로 볼록이고 최댓값 $\\le0$. $g(x)\\ge0$ 이 항상 성립하므로 $g$는 아래로 볼록이고 최솟값 $\\ge0$.\n(나)에서 구간 $[k-2,\\,k+2]$ 안에 $f$의 꼭짓점과 $g$의 꼭짓점이 모두 들어 있으면, 그 구간에서 $f$의 최댓값은 $f$의 전체 최댓값, $g$의 최솟값은 $g$의 전체 최솟값이 되어 $k$와 무관한 상수이다. 이 둘이 같으려면\n$$(f\\text{의 최댓값})=(g\\text{의 최솟값})$$\n인데, $(f\\text{의 최댓값})\\le0\\le(g\\text{의 최솟값})$ 이므로 두 값이 같으려면 모두 $0$ 이어야 한다. 따라서\n$$f(x)=a(x-p)^2\\ (a<0),\\qquad g(x)=b(x-q)^2\\ (b>0)$$\n이고, 두 꼭짓점이 모두 구간에 들어갈 때(즉 $p\\in[k-2,k+2]$ 이고 $q\\in[k-2,k+2]$) 최댓값과 최솟값이 $0$ 으로 같아진다. $p\\in[k-2,k+2] \\iff k\\in[p-2,p+2]$, $q\\in[k-2,k+2]\\iff k\\in[q-2,q+2]$ 이므로 조건을 만족하는 $k$의 집합은\n$$[\\,\\max(p,q)-2,\\ \\min(p,q)+2\\,]$$\n이고 이 집합의 최솟값이 $0$, 최댓값이 $1$ 이다.\n$$\\max(p,q)-2=0 \\;\\Rightarrow\\; \\max(p,q)=2$$\n$$\\min(p,q)+2=1 \\;\\Rightarrow\\; \\min(p,q)=-1$$\n따라서 $\\{p,\\,q\\}=\\{2,\\,-1\\}$ 이다.\n(다) 방정식 $f(x)=f(0)$ 은 $a(x-p)^2=a\\,p^2$, 즉 $(x-p)^2=p^2$ 이므로 근은 $x=0$ 과 $x=2p$ 이고 합은 $2p$ 이다. 이 합이 음수이므로 $p<0$ 이어야 한다. 따라서\n$$p=-1,\\qquad q=2$$\n이제 $f(1)=-2$, $g(1)=2$ 로 $a$, $b$ 를 구한다.\n$$f(x)=a(x+1)^2,\\quad f(1)=a\\cdot2^2=4a=-2 \\;\\Rightarrow\\; a=-\\frac{1}{2}$$\n$$g(x)=b(x-2)^2,\\quad g(1)=b\\cdot(-1)^2=b=2 \\;\\Rightarrow\\; b=2$$\n그러므로\n$$f(x)=-\\frac{1}{2}(x+1)^2,\\qquad g(x)=2(x-2)^2$$\n구하는 값은\n$$f(3)=-\\frac{1}{2}(3+1)^2=-\\frac{1}{2}\\cdot16=-8$$\n$$g(11)=2(11-2)^2=2\\cdot81=162$$\n$$f(3)+g(11)=-8+162=154$$" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **154** 입니다." }
+    ],
+    "final_answer": "154"
+  }
+}
