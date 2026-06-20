@@ -100,13 +100,18 @@
   "deferred": [
     {
       "grade": "go1",
-      "slug": "낙생고",
-      "reason": "session limit 8pm"
+      "slug": "이산고",
+      "reason": "verify=쉬움 재생성필요"
     },
     {
       "grade": "go1",
-      "slug": "대성고",
-      "reason": "session limit 8pm"
+      "slug": "창원대산고",
+      "reason": "verify=쉬움 재생성필요"
+    },
+    {
+      "grade": "go1",
+      "slug": "창원신월고",
+      "reason": "verify=쉬움 재생성필요"
     }
   ],
   "needs_review": [],
@@ -114,15 +119,43 @@
   "pending_verify": [
     {
       "grade": "go1",
-      "slug": "이산고"
+      "slug": "낙생고"
     },
     {
       "grade": "go1",
-      "slug": "창원대산고"
+      "slug": "대성고"
     },
     {
       "grade": "go1",
-      "slug": "창원신월고"
+      "slug": "오성고"
+    },
+    {
+      "grade": "go1",
+      "slug": "우성고"
+    },
+    {
+      "grade": "go1",
+      "slug": "국제고"
+    },
+    {
+      "grade": "go2",
+      "slug": "중산고"
+    },
+    {
+      "grade": "go2",
+      "slug": "보평고"
+    },
+    {
+      "grade": "go2",
+      "slug": "서현고"
+    },
+    {
+      "grade": "go2",
+      "slug": "판교고"
+    },
+    {
+      "grade": "go2",
+      "slug": "한빛고"
     }
   ]
 }
