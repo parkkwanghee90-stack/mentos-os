@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Check, ArrowRight, ShieldCheck } from "lucide-react";
 import PaymentCheckoutModal from "@/components/PaymentCheckoutModal";
+import { isPromoFree, promoDaysLeft } from "@/lib/promo";
 
 // 런칭 선착순 단계별 월 가격 — "AI 1:1 과외" 프리미엄 포지셔닝.
 const PLANS = [
@@ -61,6 +62,57 @@ export default function LandingPricing() {
     if (!plan) { navigate("/login"); return; } // 오픈이벤트(무료) → 가입
     setCheckoutPlan(plan);
   };
+
+  // 🎉 3개월 전면무료 프로모 기간: 유료 금액은 모두 숨기고 무료 안내만 노출.
+  //    종료일(promo.js)이 지나면 자동으로 아래 정규 가격표가 복구된다.
+  if (isPromoFree()) {
+    const daysLeft = promoDaysLeft();
+    return (
+      <section id="pricing" className="hv-section hv-dark hv-pricing">
+        <div className="hv-wrap hv-pricing-grid">
+          <div className="hv-pricing-intro" style={{ textAlign: "center", margin: "0 auto" }}>
+            <span className="hv-pricing-eyebrow">🎉 오픈 기념 전면 무료</span>
+            <h2 className="hv-h2">
+              지금은 <b>전 콘텐츠 3개월 무료</b><br />0원으로 다 써보세요
+            </h2>
+            <p className="hv-sub">
+              내신·모의고사·AI 1:1 과외·사고력 AVS 해설까지 <b>전부 무료 개방</b>.<br />
+              결제 없이 바로 시작하고, 성적 변화를 직접 확인하세요.
+            </p>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr",
+                gap: "0.55rem",
+                maxWidth: "440px",
+                margin: "1.4rem auto",
+                textAlign: "left",
+              }}
+            >
+              {PREMIUM_FEATURES().map((f) => (
+                <div key={f} style={{ display: "flex", alignItems: "center", gap: "0.5rem", color: "#cbd5e1", fontWeight: 600 }}>
+                  <Check size={16} style={{ color: "#10b981", flexShrink: 0 }} /> {f}
+                </div>
+              ))}
+            </div>
+            <button
+              type="button"
+              onClick={() => navigate("/grade-select")}
+              className="hv-btn hv-btn-primary hv-btn-lg"
+            >
+              지금 무료로 시작하기 <ArrowRight size={18} />
+            </button>
+            <p className="hv-guarantee">
+              <ShieldCheck size={16} /> 가입·결제 정보 없이 바로 이용 · 카드 등록 불필요
+            </p>
+            {daysLeft > 0 && (
+              <p className="hv-pricing-note">· 무료 개방 종료까지 D-{daysLeft} · 이후 정규 요금제로 전환됩니다</p>
+            )}
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="pricing" className="hv-section hv-dark hv-pricing">
