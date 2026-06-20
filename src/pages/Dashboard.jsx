@@ -18,6 +18,7 @@ import { fetchCloudDashboard, buildWeeklySeries } from '@/services/dashboardData
 import '@/pages/Dashboard.css';
 import PremiumLectureModal from '@/components/lectures/PremiumLectureModal';
 import StudyHabitWidget from '@/components/StudyHabitWidget';
+import WeeklyReportCard from '@/components/WeeklyReportCard';
 
 const parseSubject = (subj) => {
   const map = { 'physics': '물리', 'chemistry': '화학', 'biology': '생명과학', 'earth': '지구과학', 'math': '수학', 'english': '영어', 'eng': '영어' };
@@ -634,6 +635,9 @@ export default function Dashboard() {
 
       {/* 🔥 학습 습관 — 연속 스트릭 + 오늘의 학습시간 링 */}
       <StudyHabitWidget />
+
+      {/* 📩 주간 부모 리포트 — 자동 주1회 + 수동 발송 */}
+      <WeeklyReportCard />
 
       {/* ═══ 1. Hero — 오늘의 학습 ═══ */}
       <div className="hero-card animate-fade-in">
