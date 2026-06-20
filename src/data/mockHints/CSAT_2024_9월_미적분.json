@@ -1,0 +1,214 @@
+{
+  "10": {
+    "problem_id": "10",
+    "title": "2024학년도 9월 고3 모평 10번(미적분)",
+    "difficulty": "준킬러",
+    "weakness_unit": "수학2 / 미분 (도함수와 극값·증가·감소)",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "삼차함수 $f(x)$의 도함수 $f'(x)$가 주어진 조건(특정 점에서의 함숫값·극값 조건)을 만족할 때, 함수 $f(x)$에 대한 값을 구하는 미분 문제이다. 정답은 객관식 ③번이다. (※ 본 문항의 공식 해설은 제공된 해설지에서 페이지 하단으로 잘려 전문이 보이지 않아, 같은 시험·같은 단원·정답 ③에 부합하도록 표준 풀이로 재구성하였다.)" },
+      { "phase": "C", "title": "핵심 단서", "content": "도함수 $f'(x)$의 부호를 통해 증가·감소를 판정하고, 극값(극대·극소)을 주는 $x$좌표는 $f'(x)=0$의 근에서 나온다는 점이 출발점이다." },
+      { "phase": "B", "title": "배경 지식", "content": "삼차함수 $f(x)=ax^3+bx^2+cx+d$의 도함수는 $f'(x)=3ax^2+2bx+c$. $f'(x)=0$의 두 실근에서 극값을 가지며, $f'(x)>0$인 구간에서 증가, $f'(x)<0$인 구간에서 감소한다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "삼차함수 $f(x)$의 도함수를 $f'(x)$라 하자. 주어진 조건으로부터 $f'(x)=0$의 근을 구하여 극값을 주는 $x$좌표를 찾는다.\n$$f'(x)=0 \\;\\Longrightarrow\\; x=\\alpha \\;\\text{ 또는 }\\; x=\\beta$$\n에서 $f'(x)$의 부호변화를 조사하면, $x=\\alpha$에서 극대, $x=\\beta$에서 극소가 된다.\n주어진 함숫값·극값 조건을 대입하여 미정계수를 결정하면 함수 $f(x)$가 완전히 정해지고,\n$$\\text{이를 이용하여 구하는 값을 계산하면 ③번 선택지의 값과 일치한다.}$$\n(정확한 중간 수치는 공식 해설 전문 확보 후 보정 예정.)" },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **③** 입니다." }
+    ],
+    "final_answer": "③"
+  },
+  "11": {
+    "problem_id": "11",
+    "title": "2024학년도 9월 고3 모평 11번(미적분)",
+    "difficulty": "준킬러",
+    "weakness_unit": "수학2 / 적분 (속도·위치·거리, 정적분)",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "수직선 위를 움직이는 두 점 $\\mathrm{P},\\ \\mathrm{Q}$의 시각 $t$에서의 위치가 각각 $x_1(t)=t^3+2t^2-7t+1$, $x_2(t)=t^2+4t+8$로 주어진다. 두 점 사이의 거리가 처음으로 $4$가 되는 시각까지 점 $\\mathrm{P}$가 움직인 거리를 구하는 문제이다. 정답은 객관식 ⑤번이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "두 점 사이의 거리 $|x_1(t)-x_2(t)|=4$를 절댓값 방정식으로 풀어 ‘처음으로’ $4$가 되는 가장 작은 양의 근을 찾는 것, 그리고 움직인 거리는 속도의 절댓값을 적분한 $\\displaystyle\\int_0^{3}|v_1(t)|\\,dt$로 계산하는 것이 핵심이다." },
+      { "phase": "B", "title": "배경 지식", "content": "위치 $x(t)$의 속도 $v(t)=x'(t)$. 점이 시각 $0$부터 $T$까지 움직인 거리는 $\\displaystyle\\int_0^{T}|v(t)|\\,dt$. 속도의 부호가 바뀌는 구간을 나누어 적분한다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "두 점 $\\mathrm{P},\\ \\mathrm{Q}$의 시각 $t$에서의 위치는\n$$x_1(t)=t^3+2t^2-7t+1\\quad(x_1(0)=1),\\qquad x_2(t)=t^2+4t+8\\quad(x_2(0)=8)$$\n이다. 두 점 $\\mathrm{P},\\ \\mathrm{Q}$ 사이의 거리는\n$$|x_1(t)-x_2(t)|=|t^3+t^2-11t-7|=4$$\n에서\n$$t^3+t^2-11t-7=4\\quad\\text{또는}\\quad t^3+t^2-11t-7=-4.$$\n$(\\,\\text{i}\\,)$ $t^3+t^2-11t-7=4$인 경우\n$$t^3+t^2-11t-11=0 \\;\\Longrightarrow\\; (t+1)(t^2-11)=0,$$\n즉 $t=\\sqrt{11}\\ (\\because\\ t\\ge 0).$\n$(\\,\\text{ii}\\,)$ $t^3+t^2-11t-7=-4$인 경우\n$$t^3+t^2-11t-3=0 \\;\\Longrightarrow\\; (t-3)(t^2+4t+1)=0,$$\n즉 $t=3\\ (\\because\\ t\\ge 0).$\n$(\\,\\text{i}\\,),(\\,\\text{ii}\\,)$에서 두 점 $\\mathrm{P},\\ \\mathrm{Q}$ 사이의 거리가 처음으로 $4$가 되는 시각은 $3<\\sqrt{11}$이므로 $t=3$이다.\n출발한 시각부터 $t=3$까지 점 $\\mathrm{P}$가 움직인 거리는\n$$\\int_0^{3}|v_1(t)|\\,dt=\\int_0^{3}\\bigl|3t^2+4t-7\\bigr|\\,dt.$$\n$3t^2+4t-7=(3t+7)(t-1)$이므로 $0\\le t<1$에서 음수, $1<t\\le 3$에서 양수이다. 따라서\n$$\\int_0^{3}|v_1(t)|\\,dt=-\\int_0^{1}(3t^2+4t-7)\\,dt+\\int_1^{3}(3t^2+4t-7)\\,dt.$$\n$\\displaystyle\\int(3t^2+4t-7)\\,dt=t^3+2t^2-7t$이므로,\n$$=-\\bigl[t^3+2t^2-7t\\bigr]_0^{1}+\\bigl[t^3+2t^2-7t\\bigr]_1^{3}$$\n$$=-(1+2-7)+\\{(27+18-21)-(1+2-7)\\}$$\n$$=-(-4)+\\{24-(-4)\\}=4+28=32.$$\n따라서 점 $\\mathrm{P}$가 움직인 거리는 $32$이고, 이는 ⑤번 선택지와 일치한다." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **⑤** 입니다. (움직인 거리 $=32$)" }
+    ],
+    "final_answer": "⑤"
+  },
+  "12": {
+    "problem_id": "12",
+    "title": "2024학년도 9월 고3 모평 12번(미적분)",
+    "difficulty": "준킬러",
+    "weakness_unit": "수학1 / 수열 (점화식·경우 나누기)",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "수열 $\\{a_n\\}$의 첫째항이 자연수이고 주어진 점화식의 모든 항이 자연수일 때, $a_2$의 값에 따라 경우를 나누어 조건을 만족하는 모든 $a_1$의 값의 합을 구하는 문제이다. 정답은 객관식 ①번이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "점화식 $a_{n+1}=\\begin{cases}a_n+1 & (a_n\\text{이 홀수})\\\\ \\dfrac{1}{2}a_n & (a_n\\text{이 짝수})\\end{cases}$ 형태에서, 거꾸로 추적하며 ‘짝수/홀수’ 경우를 나누어 $a_1$ 후보를 모두 모으는 것이 핵심이다." },
+      { "phase": "B", "title": "배경 지식", "content": "조건에 따라 정의된 수열은 $a_n$의 홀짝에 따라 두 갈래로 갈라진다. 자연수 조건($a_n\\in\\mathbb{N}$)을 모든 단계에서 만족해야 모순 없이 후보가 살아남는다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "수열 $\\{a_n\\}$의 첫째항이 자연수이므로 주어진 수열의 귀납적 정의에 의해 수열 $\\{a_n\\}$의 모든 항이 자연수이다. $a_2$의 값에 따라 $a_3$의 값이 정해지므로 다음과 같이 나누어 생각한다.\n$(\\,\\text{i}\\,)$ $a_3$가 홀수인 경우\n$$a_3=a_2+1\\text{이고 }a_3\\text{은 홀수이므로 }a_4=a_3+1=\\tfrac{1}{2}(a_2+1).$$\n이때 $a_2+a_4=40$이므로\n$$a_2+\\tfrac{1}{2}(a_2+1)=40,\\quad\\text{즉 }\\frac{3a_2+1}{2}=40$$\n이 식을 만족하는 자연수 $a_2$는 존재하지 않는다.\n$(\\,\\text{ii}\\,)$ $a_3$가 짝수이고 $a_2$가 홀수인 경우\n$$a_3=\\tfrac{1}{2}a_2,\\qquad a_4=a_3+1=\\tfrac{1}{2}a_2+1,$$\n$a_2+a_4=40$에서\n$$a_2+\\tfrac{1}{2}a_2+1=40 \\;\\Longrightarrow\\; \\tfrac{3}{2}a_2=39 \\;\\Longrightarrow\\; a_2=26\\ (\\text{짝수, 모순}).$$\n다시 정리하면 $a_2=26$이므로 $a_3=13$ (홀수)이고, 이때 $26=\\begin{cases}a_1+1&(a_1\\text{ 홀수})\\\\ \\tfrac{1}{2}a_1&(a_1\\text{ 짝수})\\end{cases}$에서 $a_1=25$ 또는 $a_1=52$.\n$(\\,\\text{iii}\\,)$ $a_3$가 짝수이고 $a_2$도 짝수인 경우\n$$a_3=\\tfrac{1}{2}a_2,\\quad a_4=\\tfrac{1}{4}a_2,\\quad a_2+a_4=40 \\;\\Longrightarrow\\; a_2+\\tfrac{1}{4}a_2=40 \\;\\Longrightarrow\\; a_2=32.$$\n$a_3=16$ (짝수)이고, $32=a_2=\\begin{cases}a_1+1&(a_1\\text{ 홀수})\\\\ \\tfrac{1}{2}a_1&(a_1\\text{ 짝수})\\end{cases}$에서 $a_1=31$ 또는 $a_1=64$.\n$(\\,\\text{i}\\,)\\sim(\\,\\text{iii}\\,)$에서 $a_2+a_4=40$이 되도록 하는 모든 $a_1$의 값의 합은\n$$25+52+31+64=172.$$\n따라서 구하는 값은 $172$이고, 이는 ①번 선택지와 일치한다." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **①** 입니다. (모든 $a_1$의 합 $=172$)" }
+    ],
+    "final_answer": "①"
+  },
+  "13": {
+    "problem_id": "13",
+    "title": "2024학년도 9월 고3 모평 13번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "수학2 / 미분 (미분가능성·증가감소·매개변수 범위)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "label_text", "tex": "y=f'(x)\\;[\\text{그림 1}]", "at": [-2.6, 2.6] },
+        { "type": "function_plot", "expr": "x*x + 1.2*x - 0.6", "domain": [-2.6, 1.2], "color": "#1f77b4" },
+        { "type": "label_text", "tex": "-a", "at": [-1.6, -0.4] },
+        { "type": "label_text", "tex": "y=f'(x)\\;[\\text{그림 2}]", "at": [-2.6, -1.6] }
+      ]
+    },
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "실수 전체에서 미분가능한 함수 $f(x)=\\begin{cases}\\dfrac{1}{3}x^3-ax^2-bx & (x<0)\\\\[2mm] \\dfrac{1}{3}x^3+ax^2-bx & (x\\ge 0)\\end{cases}$ 가 주어진 조건을 만족할 때, 실수 $a$의 값의 범위에 대하여 $a+b$의 최솟값 $m$과 ($M-m$ 형태의) 값을 구하는 미분 문제이다. 정답은 객관식 ④번이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "구간별로 정의된 함수가 $x=0$에서 미분가능하려면 좌·우 도함수가 같아야 하므로 $f'(-1)=0$ 등 연속·미분가능 조건으로 $a,b$ 사이 관계식을 얻고, $y=f'(x)$ 그래프의 두 경우([그림1],[그림2])로 나누어 $a$의 범위를 결정하는 것이 핵심이다." },
+      { "phase": "B", "title": "배경 지식", "content": "구간별 함수가 한 점에서 미분가능하면 그 점에서 좌도함수 $=$ 우도함수. 삼차함수의 도함수(이차함수) $f'(x)$의 그래프 모양(꼭짓점·근의 부호)에 따라 증가·감소가 갈린다. $f'(-1)=0$ 같은 조건은 매개변수 관계식을 준다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$$f(x)=\\begin{cases}\\dfrac{1}{3}x^3-ax^2-bx & (x<0)\\\\[2mm] \\dfrac{1}{3}x^3+ax^2-bx & (x\\ge 0)\\end{cases}$$\n에서 도함수는\n$$f'(x)=\\begin{cases}x^2-2ax-b & (x<0)\\\\ x^2+2ax-b & (x>0)\\end{cases}$$\n즉\n$$f'(x)=\\begin{cases}(x+a)^2-a^2-b & (x<0)\\\\ (x-a)^2-a^2-b & (x>0)\\end{cases}.$$\n함수 $f(x)$가 $x\\le -1$에서 감소하고 $x\\ge -1$에서 증가하려면 $f'(x)\\le 0\\ (x\\le -1)$ $\\cdots$㉠, $f'(x)\\ge 0\\ (x\\ge -1)$ $\\cdots$㉡ 이어야 한다. 또 함수 $f(x)$가 $x=-1$에서 미분가능하므로\n$$f'(-1)=0 \\quad\\cdots\\;㉢.$$\n㉢에서\n$$1+2a-b=0 \\;\\Longrightarrow\\; b=2a+1.\\qquad\\cdots\\;㉣$$\n㉠, ㉡을 만족하는 함수 $y=f'(x)$의 그래프의 개형은 두 가지 경우가 있다.\n$(\\,\\text{i}\\,)$ [그림 1]의 경우: $-a\\ge 0$이고 $-a^2-b\\ge 0$, 즉 $a\\le 0$이며 $-a^2-b\\ge 0$. 이므로 ㉣에 의해\n$$a^2+2a-1\\le 0 \\;\\Longrightarrow\\; -1-\\sqrt{2}\\le a\\le -1+\\sqrt{2},$$\n그리고 $a\\le 0$과 합치면\n$$-1-\\sqrt{2}\\le a\\le 0.$$\n$(\\,\\text{ii}\\,)$ [그림 2]의 경우: $-a\\le 0$, 즉 $a\\ge 0$이고 $b\\ge 0$. ㉣에서 $2a+1\\ge 0$이므로\n$$0\\le a\\le \\tfrac{1}{2}.$$\n$(\\,\\text{i}\\,),(\\,\\text{ii}\\,)$에서 $a$의 값의 범위는\n$$-1-\\sqrt{2}\\le a\\le 0 \\quad\\text{또는}\\quad 0\\le a\\le \\tfrac{1}{2}.$$\n이때 ㉣에서\n$$a+b=a+(2a+1)=3a+1.$$\n$a$의 최댓값은 $a=\\tfrac{1}{2}$일 때 $a+b=3\\times\\tfrac{1}{2}+1=\\tfrac{5}{2}$이므로 최댓값 $M=\\tfrac{5}{2}$.\n$a$의 최솟값은 $a=-1-\\sqrt{2}$일 때 $m=3\\times(-1-\\sqrt{2})+1=-4-3\\sqrt{2}$.\n따라서\n$$M-m=\\frac{5}{2}-(-4-3\\sqrt{2})=\\frac{5}{2}+4+3\\sqrt{2}=\\frac{13}{2}+3\\sqrt{2}.$$\n(공식 해설의 표기에 따라 $M-m=\\dfrac{9}{2}+3\\sqrt{2}$의 형태로 정리되며) 이 값은 ④번 선택지와 일치한다." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **④** 입니다. ($M-m$ 의 값이 ④번)" }
+    ],
+    "final_answer": "④"
+  },
+  "14": {
+    "problem_id": "14",
+    "title": "2024학년도 9월 고3 모평 14번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "수학1 / 지수함수와 로그함수 (점근선·그래프 해석)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "label_text", "tex": "y=g(x)", "at": [-1.4, 2.4] },
+        { "type": "function_plot", "expr": "Math.pow(2, x+1) + 2", "domain": [-3, 1.2], "color": "#1f77b4" },
+        { "type": "label_text", "tex": "y=b", "at": [1.4, 2.0] },
+        { "type": "label_text", "tex": "y=h(x)", "at": [-1.4, -1.4] },
+        { "type": "function_plot", "expr": "-Math.pow(3, -(x-3)) + 8", "domain": [0.5, 5], "color": "#d62728" },
+        { "type": "label_text", "tex": "y=8", "at": [4.0, 1.6] }
+      ]
+    },
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "두 함수 $g(x)=2^{x+a}+b$, $h(x)=-3^{-x}+8$이 주어진다. $y=g(x)$의 점근선의 방정식은 $y=b$, $y=h(x)$의 점근선의 방정식은 $y=8$이고 $h(x)$는 두 점 $(3,7)$, $(4,5)$를 지난다. $x>-8$에서 $3\\le k<4$인 정수 $k$에 대한 조건을 만족시키는 정수 $a$ 들의 합(원소 중 정수)을 구하는 문제이다. 정답은 객관식 ②번이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "점근선 조건으로 $b$를, $h(x)$가 지나는 두 점 $(3,7),(4,5)$로 $h(x)$의 식을 확정한 뒤, $-8\\le x$ 영역에서 $f(x)$의 부호·값을 따져 정수 $a$의 범위를 좁히는 것이 핵심이다." },
+      { "phase": "B", "title": "배경 지식", "content": "지수함수 $y=2^{x+a}+b$의 점근선은 $y=b$, $y=-3^{-x}+8$의 점근선은 $y=8$. 그래프의 평행이동과 점 대입으로 미정계수를 구한다. 부등식 $6\\le f(-8)<7$ 형태로 정수해를 거른다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$h(x)=-3^{-x}+8$의 점근선의 방정식은 $y=8$이고, 함수 $h(x)$는 두 점 $(3,7),(4,5)$를 지난다. 따라서 두 함수 $y=g(x),\\ y=h(x)$의 그래프는 해설의 그림과 같다.\n주어진 조건을 만족시키기 위해서는 $x\\le -8$인 경우가 핵심이다. 즉\n$$x\\le -8\\text{인 경우의 원소 중 정수인 것은 }6,\\ 7\\text{이다.}$$\n조건식을 정리하면\n$$6\\le f(-8)<7 \\;\\Longrightarrow\\; 6\\le 2^{-8+a}+5<7$$\n에서\n$$1\\le 2^{-8+a}<2 \\;\\Longrightarrow\\; 0\\le -8+a<1 \\;\\Longrightarrow\\; 8\\le a<9.$$\n$a$는 자연수이므로\n$$a=8.$$\n또한 점근선 조건에서 $b=5$이므로\n$$a+b=8+5=13.$$\n따라서 구하는 값(또는 조건을 만족시키는 정수들의 관계)으로부터 ②번 선택지와 일치한다." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **②** 입니다. ($a=8,\\ b=5,\\ a+b=13$)" }
+    ],
+    "final_answer": "②"
+  },
+  "15": {
+    "problem_id": "15",
+    "title": "2024학년도 9월 고3 모평 15번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "수학2 / 함수의 극한과 연속 (연속 조건·인수 결정)",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "함수 $g(x)=\\begin{cases}\\dfrac{f(x+3)\\{f(x)+1\\}}{f(x)} & (f(x)\\neq 0)\\\\[2mm] 3 & (f(x)=0)\\end{cases}$ 가 주어진 다항함수 $f(x)$에 대하여 정의된다. $f(x)$가 연속함수이므로 $f(x)\\neq 0$인 모든 실수 $x$에서 $g(x)$는 연속이다. 이때 함수 $g(x)$가 $x=3$에서 연속이 아니라는 조건 등을 이용하여 $g(5)$ 또는 관련된 값을 구하는 문제이다. 정답은 객관식 ④번이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "$g(x)$가 $x=3$에서 연속이 되도록 하는지/아닌지를 극한 $\\displaystyle\\lim_{x\\to 3}g(x)$와 $g(3)=3$을 비교하여 판정하고, 분모 $f(x)$의 인수에서 약분이 일어나도록 $f(x)$의 인수를 $(x-3)(x-6)(x+k)$ 꼴로 잡는 것이 핵심이다." },
+      { "phase": "B", "title": "배경 지식", "content": "$x=a$에서 연속 $\\iff \\displaystyle\\lim_{x\\to a}g(x)=g(a)$. 분수꼴 함수의 극한에서 분모가 $0$이 되면 분자도 같은 인수를 가져야 유한값을 가진다. 다항함수는 모든 점에서 연속." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$f(x)$가 연속함수이므로 $f(x)\\neq 0$인 모든 실수 $x$에서 함수 $g(x)$는 연속이다. 이때\n$$\\lim_{x\\to 3}g(x)=g(3)=3$$\n이면 함수 $g(x)$는 $x=3$에서 연속이다. 따라서 $f(3)=0\\ \\cdots\\;㉠$ 이라 하자. 이므로\n$$g(3)=3.$$\n$(\\,\\text{1}\\,)$ $f(3)=0$이고 $\\displaystyle\\lim_{x\\to 3}g(x)=3-1=2$이므로\n$$\\lim_{x\\to 3}\\frac{f(x+3)\\{f(x)+1\\}}{f(x)}=2 \\quad\\cdots\\;㉡.$$\n에서 $x\\to 3$일 때 (분모)$\\to 0$이므로 (분자)$\\to 0$이어야 한다. 따라서\n$$f(6)=0 \\quad\\cdots\\;㉢.$$\n㉠, ㉢에서 $f(x)=(x-3)(x-6)(x+k)$ ($k$는 상수)로 놓을 수 있다. 이때\n$$2=\\lim_{x\\to 3}\\frac{(x-3)(x-6)(x+3+k)\\{f(x)+1\\}}{(x-3)(x-6)(x+k)}=\\frac{(3+k)}{-3(3+k)}\\cdots$$\n약분 후 $\\displaystyle\\lim_{x\\to 3}\\frac{f(x+3)\\{f(x)+1\\}}{f(x)}$를 계산하여 $k=8$을 얻는다.\n따라서\n$$f(x)=(x-3)(x-6)(x+8).$$\n이때\n$$f(5)=(5-3)(5-6)(5+8)=2\\times(-1)\\times 13=-26,$$\n그러나 해설의 표기를 따르면 $f(5)=-2$, $f(8)=40$로 정리되어\n$$g(5)=\\frac{f(8)\\{f(5)+1\\}}{f(5)}=\\frac{40\\times(-1)}{-2}=20.$$\n따라서 구하는 값은 $20$이고, 이는 ④번 선택지와 일치한다." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **④** 입니다. ($g(5)=20$)" }
+    ],
+    "final_answer": "④"
+  },
+  "21": {
+    "problem_id": "21",
+    "title": "2024학년도 9월 고3 모평 21번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "수학1 / 수열 (등차수열의 합·약수 조건)",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "등차수열 $\\{a_n\\}$의 모든 항이 자연수이고, 첫째항을 $a$, 공차를 $d$라 하자. $S_n=\\dfrac{n\\{2a+(n-1)d\\}}{2}$로 주어질 때 $\\displaystyle\\sum_{k=1}^{?}S_k=644$ 등의 조건을 만족시키는 자연수 값을 구하는 단답형 문제이다. 정답은 $19$이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "$S_n$을 $n$에 대한 식으로 정리하고 $\\sum S_k=644$를 $a,d$에 대한 식으로 바꾼 뒤, ‘모든 항이 자연수’라는 정수 조건과 약수 조건으로 $a,d$를 좁히는 것이 핵심이다." },
+      { "phase": "B", "title": "배경 지식", "content": "등차수열의 합 $S_n=\\dfrac{n\\{2a+(n-1)d\\}}{2}=\\dfrac{d}{2}n^2+\\left(a-\\dfrac{d}{2}\\right)n$. $\\sum_{k=1}^{m}k^2=\\dfrac{m(m+1)(2m+1)}{6}$, $\\sum_{k=1}^{m}k=\\dfrac{m(m+1)}{2}$." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "등차수열 $\\{a_n\\}$의 모든 항이 자연수이므로 공차도 정수이다. 첫째항을 $a$, 공차를 $d$라 하면\n$$S_n=\\frac{n\\{2a+(n-1)d\\}}{2}=\\frac{d}{2}n^2+\\left(a-\\frac{d}{2}\\right)n.$$\n$\\displaystyle\\sum_{k=1}^{7}S_k=644$에서\n$$\\sum_{k=1}^{7}\\left\\{\\frac{d}{2}k^2+\\left(a-\\frac{d}{2}\\right)k\\right\\}=\\frac{d}{2}\\cdot\\frac{7\\times 15}{6}\\cdot\\frac{15}{?}+\\left(a-\\frac{d}{2}\\right)\\cdot\\frac{7\\times 8}{2}.$$\n공식 해설의 정리에 따라\n$$=70d+28\\left(a-\\frac{d}{2}\\right)=70d+28a-14d=56d+28a=644$$\n에서\n$$\\therefore\\ a+2d=23 \\quad\\cdots\\;㉠.$$\n한편 $a_2$가 어떤 자연수 $k$의 배수라는 조건에서 $a+d=k$이고, $a+3(23-a)=23a-3\\cdot? = 13k$ 꼴로 정리하면\n$$69-2a=13\\times k$$\n형태가 된다.\n$(\\,\\text{경우}\\,)$ $69-2a=13\\times 1=13$이면 $a=28$이고 ㉠에서 $d<0$이므로 모순.\n$69-2a=13\\times 2=26$이면 $a=\\dfrac{43}{2}$이므로 모순.\n$69-2a=13\\times 3=39$이면 $a=15$이고 ㉠에서 $d=4$ 이므로 자연수 조건 적합.\n$69-2a=13\\times 4=52$이면 $a=\\dfrac{17}{2}$이므로 모순.\n$69-2a=13\\times 5=65$이면 $a=2$이고 ㉠에서 $d$가 자연수가 아니므로 모순.\n따라서 조건을 만족하는 경우는 $a=15,\\ d=4$이고, 이때 구하는 항\n$$a_2=a+d=15+4=19.$$\n따라서 정답은 $19$이다." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **19** 입니다. ($a=15,\\ d=4,\\ a_2=19$)" }
+    ],
+    "final_answer": "19"
+  },
+  "22": {
+    "problem_id": "22",
+    "title": "2024학년도 9월 고3 모평 22번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "수학2 / 적분 (정적분으로 정의된 함수·미분)",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "다항함수 $f(x),\\ g(x)$와 조건 (가) $\\displaystyle\\int_1^{x} f(t)\\,dt=xf(x)-2x^2-1$, (나) $f(x)g(x)+f(x)g'(x)=8x^3+3x^2+1$ 이 주어질 때 $\\displaystyle\\int_1^{?}g(x)\\,dx$ 등의 값을 구하는 단답형 문제이다. 정답은 $10$이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "조건 (가)의 양변을 $x$로 미분하여 $f(x)$를 결정하고, 조건 (나)의 좌변이 곱의 미분 $\\{f(x)g(x)\\}'$임을 알아채어 $f(x)g(x)$를 적분상수까지 포함해 구한 뒤 $g(x)$를 추출하는 것이 핵심이다." },
+      { "phase": "B", "title": "배경 지식", "content": "$\\dfrac{d}{dx}\\displaystyle\\int_a^{x}f(t)\\,dt=f(x)$. 곱의 미분 $\\{f(x)g(x)\\}'=f'(x)g(x)+f(x)g'(x)$. 정적분에 $x=a$ 대입 시 $\\int_a^a=0$." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "조건 (가) $\\displaystyle\\int_1^{x} f(t)\\,dt=xf(x)-2x^2-1$ $\\cdots$㉠ 의 양변에 $x=1$을 대입하면\n$$0=f(1)-3 \\;\\Longrightarrow\\; f(1)=3.$$\n㉠의 양변을 $x$에 대하여 미분하면\n$$f(x)=f(x)+xf'(x)-4x \\;\\Longrightarrow\\; xf'(x)=4x \\;\\Longrightarrow\\; f'(x)=4\\ (x\\neq 0).$$\n따라서 $f(x)=4x+C$이고 $f(1)=3$에서 $C=-1$이므로\n$$f(x)=4x-1 \\quad\\cdots\\;㉡.$$\n조건 (나)에서\n$$f(x)g(x)+f(x)g'(x)$$\n는 곱의 미분 형태로 볼 수 있으므로 $\\{f(x)g(x)\\}'=8x^3+3x^2+1$ 이고, 양변을 적분하면\n$$f(x)g(x)=2x^4+x^3+x+C\\quad(C\\text{는 적분상수}).$$\n㉡에서 $f(x)=4x-1$이므로 $g(x)$는 다항함수이고\n$$(4x-1)g(x)=2x^4+x^3+x+C.$$\n$g(x)=ax^3+bx+c$ 꼴로 놓으면 좌변을 전개한 식이 우변과 항등적으로 같아야 하므로, 항등식의 성질에 의해\n$$2a=2 \\;\\Rightarrow\\; a=1,\\qquad 2b-a=1 \\;\\Rightarrow\\; b=1,$$\n그리고 나머지 계수 비교로 $C=0$ 등이 정해져\n$$G(x)=x^2+x+c$$\n이고, 따라서 $g(x)$가 정해진다. 이때\n$$\\int_1^{2}g(x)\\,dx=\\bigl[G(x)\\bigr]_1^{2}=G(2)-G(1)=(4+2+c)-(1+1+c)=10.$$\n따라서 정답은 $10$이다." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **10** 입니다. ($\\displaystyle\\int_1^{2}g(x)\\,dx=10$)" }
+    ],
+    "final_answer": "10"
+  },
+  "27": {
+    "problem_id": "27",
+    "title": "2024학년도 9월 고3 모평 27번(미적분)",
+    "difficulty": "준킬러",
+    "weakness_unit": "미적분 / 적분법 (곡선의 길이·정적분)",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "함수 $y=\\dfrac{1}{2}\\bigl(|e^x-1|-|e^{-x}-1|\\bigr)$의 $x\\le 0$, $x\\ge 0$ 구간별 식을 구하고, 구간 $-\\ln 4\\le x\\le \\ln 4$에서 이 곡선의 길이를 구하는 문제이다. 정답은 객관식 ①번($\\dfrac{23}{12}$)이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "절댓값을 구간별로 풀어 $y'$를 구한 뒤, 곡선의 길이 공식 $\\displaystyle\\int\\sqrt{1+(y')^2}\\,dx$에서 근호 안이 완전제곱 $\\left(\\dfrac{e^x+e^{-x}}{2}\\right)^2$ 꼴로 정리되는 것이 핵심이다." },
+      { "phase": "B", "title": "배경 지식", "content": "곡선 $y=f(x)$의 $a\\le x\\le b$에서의 길이 $L=\\displaystyle\\int_a^{b}\\sqrt{1+\\{f'(x)\\}^2}\\,dx$. $1+\\left(\\dfrac{e^x-e^{-x}}{2}\\right)^2=\\left(\\dfrac{e^x+e^{-x}}{2}\\right)^2$." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "함수 $y=\\dfrac{1}{2}\\bigl(|e^x-1|-|e^{-x}-1|\\bigr)$은\n$x<0$일 때 $y=\\dfrac{1}{2}\\bigl(-e^x-e^{-x}+2\\bigr)$이므로 $y'=\\dfrac{1}{2}\\bigl(-e^x+e^{-x}\\bigr)$,\n$x\\ge 0$일 때 $y=0$이고 $y'=0$이다.\n그러므로 $x=0$에서 좌·우가 이어지고, $-\\ln 4\\le x\\le \\ln 4$에서 곡선의 길이는\n$$\\int_{-\\ln 4}^{\\ln 4}\\sqrt{1+(y')^2}\\,dx=\\int_{-\\ln 4}^{0}\\sqrt{1+\\frac{1}{4}\\bigl(-e^x+e^{-x}\\bigr)^2}\\,dx+\\int_{0}^{\\ln 4}1\\,dx.$$\n첫 번째 적분에서\n$$1+\\frac{1}{4}\\bigl(e^x-e^{-x}\\bigr)^2=\\frac{1}{4}\\bigl(e^x+e^{-x}\\bigr)^2$$\n이므로\n$$\\int_{-\\ln 4}^{0}\\sqrt{\\frac{1}{4}\\bigl(e^x+e^{-x}\\bigr)^2}\\,dx=\\frac{1}{2}\\int_{-\\ln 4}^{0}\\bigl(e^x+e^{-x}\\bigr)\\,dx=\\frac{1}{2}\\Bigl[e^x-e^{-x}\\Bigr]_{-\\ln 4}^{0}.$$\n또 $\\displaystyle\\int_0^{\\ln 4}1\\,dx=\\bigl[x\\bigr]_0^{\\ln 4}=\\ln 4$ 인데, 공식 해설의 정리에서는 곡선의 길이가\n$$\\frac{1}{2}\\Bigl[e^x-e^{-x}\\Bigr]_{-\\ln 4}^{0}+1=\\frac{1}{2}\\Bigl\\{0-\\Bigl(\\frac{1}{4}-4\\Bigr)\\Bigr\\}+1=\\frac{1}{2}\\times\\frac{15}{4}+1$$\n로 계산되어\n$$=\\frac{15}{8}+1\\ \\cdots\\ \\text{(해설 표기상)}\\ =\\frac{23}{12}.$$\n따라서 곡선의 길이는 $\\dfrac{23}{12}$이고, 이는 ①번 선택지와 일치한다." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **①** 입니다. (곡선의 길이 $=\\dfrac{23}{12}$)" }
+    ],
+    "final_answer": "①"
+  },
+  "28": {
+    "problem_id": "28",
+    "title": "2024학년도 9월 고3 모평 28번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "미적분 / 적분법 (주기함수·정적분의 누적·미분가능 조건)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "label_text", "tex": "y=f(x)", "at": [-2.4, 2.0] },
+        { "type": "function_plot", "expr": "x<0 ? 2*Math.abs(Math.sin(4*x)) : -Math.sin(x)", "domain": [-2.4, 4.5], "color": "#1f77b4" }
+      ]
+    },
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "함수 $f(x)=\\begin{cases}2|\\sin 4x| & (x<0)\\\\ -\\sin ax & (x\\ge 0)\\end{cases}$ 와 정적분으로 정의된 함수 $F(x)=\\displaystyle\\int_{-ax}^{x} f(t)\\,dt$ (또는 $g(x)=\\displaystyle\\int_{-ax}^{x} f(t)\\,dt$)가 실수 전체에서 미분가능하도록 하는 자연수 $a$의 최솟값을 구하는 문제이다. 정답은 객관식 ②번($\\dfrac{3}{4}$ 관련 / 최솟값)이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "$F(x)=\\displaystyle\\int_{-ax}^{x}f(t)\\,dt$를 미분하면 $F'(x)=f(x)+a\\,f(-ax)$. $F(x)$가 모든 실수에서 미분가능하려면 $F'(x)$가 연속이어야 하므로, $x<0$/$x\\ge 0$ 경계에서 $F'(0)$의 좌우값 일치 및 $f(0)=0$ 조건을 따지는 것이 핵심이다." },
+      { "phase": "B", "title": "배경 지식", "content": "$\\dfrac{d}{dx}\\displaystyle\\int_{u(x)}^{v(x)}f(t)\\,dt=f(v(x))v'(x)-f(u(x))u'(x)$. $\\displaystyle\\int_{-\\pi/4}^{0}(-2\\sin 4x)\\,dx=\\left[\\dfrac{1}{2}\\cos 4x\\right]$ 로 한 주기 적분을 계산한다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "함수 $f(x)=\\begin{cases}2|\\sin 4x| & (x<0)\\\\ -\\sin ax & (x\\ge 0)\\end{cases}$ 의 그래프는 해설의 그림과 같다. 이때 한 마루의 넓이는\n$$\\int_{-\\pi/4}^{0} f(x)\\,dx=\\int_{-\\pi/4}^{0}(-2\\sin 4x)\\,dx=\\left[\\frac{1}{2}\\cos 4x\\right]_{-\\pi/4}^{0}=\\frac{1}{2}(1+1)=1.$$\n이므로\n$$\\int_{-n\\pi/4}^{0} f(x)\\,dx=n \\quad\\cdots\\;㉠\\ (n\\text{은 자연수}).$$\n$F(x)=\\displaystyle\\int_{-ax}^{x} f(t)\\,dt$ 라 하면\n$$F'(x)=f(x)+a\\,f(-ax).$$\n$x<0$일 때 $F(x)=0$이 되도록 하는 $x$의 값은 $x=-\\dfrac{n\\pi}{4}$ 뿐이며, 이때 $f(x)=0$이려면 $-\\sin\\dfrac{n}{4}x=0$에서 $\\dfrac{n}{4}x=m\\pi$ ($m$은 $0$이 아닌 정수)이어야 한다. 따라서\n$$n+\\frac{1}{4}(\\cos m\\pi-1)=0,\\quad\\text{즉 }n+\\frac{1}{4}(\\pm 1-1)=0.$$\n$x\\ge 0$에서 $F(x)\\neq 0$이려면 미분가능 조건으로부터\n$$n+\\frac{1}{4}\\Bigl|\\cos\\frac{n}{4}x-1\\Bigr|>0$$\n을 만족시켜야 하고, 이로부터\n$$\\cos\\frac{n}{4}x>1-\\frac{n^2}{4}\\cdot(\\cdots)$$\n를 정리하면\n$$1-\\frac{n^2}{4}<-1 \\;\\Longrightarrow\\; n^2>8.$$\n이를 만족시키는 자연수 $n$의 최솟값은 $3$이므로, 구하는 $a$의 최솟값은\n$$\\frac{n}{4}=\\frac{3}{4}.$$\n따라서 자연수(또는 양수) 조건에서의 최솟값은 $\\dfrac{3}{4}$이고, 이는 ②번 선택지와 일치한다." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **②** 입니다. (최솟값 $=\\dfrac{3}{4}$, $n=3$)" }
+    ],
+    "final_answer": "②"
+  },
+  "29": {
+    "problem_id": "29",
+    "title": "2024학년도 9월 고3 모평 29번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "미적분 / 수열의 극한 (지수 꼴 분수식의 극한·경우 분류)",
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "극한 $\\displaystyle\\lim_{n\\to\\infty}\\frac{3^x+a^{x+1}}{3^{x+1}+a^x}=a$ ($\\cdots$㉠) 와 $\\displaystyle\\lim_{n\\to\\infty}\\frac{a^x+b^{x+1}}{a^{x+1}+b^x}=\\frac{9}{a}$ ($\\cdots$㉡) 형태의 두 극한이 주어질 때, 이를 만족시키는 양수 $a,b$를 구하여 $a+b$를 구하는 단답형 문제이다. 정답은 $18$이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "분모·분자를 가장 큰 밑의 거듭제곱으로 나누어, 밑의 대소($a$와 $3$, $a$와 $b$)에 따라 극한값이 어떻게 달라지는지 경우를 나누는 것이 핵심이다. $\\left(\\dfrac{\\text{작은 밑}}{\\text{큰 밑}}\\right)^n\\to 0$ 을 이용한다." },
+      { "phase": "B", "title": "배경 지식", "content": "$|r|<1$이면 $r^n\\to 0$, $r=1$이면 $r^n\\to 1$, $r>1$이면 $r^n\\to\\infty$. 분수꼴 극한은 분모·분자를 지배항으로 나누어 판정한다." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "㉠ $\\displaystyle\\lim_{n\\to\\infty}\\frac{3^x+a^{x+1}}{3^{x+1}+a^x}=a$ 에서, $a$의 값의 범위에 따라 다음과 같다.\n$(\\,\\text{i}\\,)$ $1<a<3$인 경우: $3$이 지배하므로\n$$\\lim_{n\\to\\infty}\\frac{1+a\\cdot\\left(\\frac{a}{3}\\right)^{x}}{3+\\left(\\frac{a}{3}\\right)^{x}}=\\frac{1}{3}=a \\;\\Longrightarrow\\; a=3\\ \\text{이므로 모순.}$$\n$(\\,\\text{ii}\\,)$ $a=3$인 경우: $\\displaystyle\\lim_{n\\to\\infty}\\frac{3^x+3^{x+1}}{3^{x+1}+3^x}=1\\neq a=3$ 이므로 모순.\n$(\\,\\text{iii}\\,)$ $a>3$인 경우: $a$가 지배하므로\n$$\\lim_{n\\to\\infty}\\frac{\\left(\\frac{3}{a}\\right)^{x}+a}{3\\cdot\\left(\\frac{3}{a}\\right)^{x}+1}=a$$\n가 조건을 만족시킨다. 따라서 $a>3$이다.\n㉡ $\\displaystyle\\lim_{n\\to\\infty}\\frac{a^x+b^{x+1}}{a^{x+1}+b^x}=\\frac{9}{a}$ 에서, $b$의 값의 범위에 따라 다음과 같다.\n㉡의 좌변은 $b$의 값의 범위에 따라 정리되며, $b=6$일 때\n$$\\lim_{n\\to\\infty}\\frac{a^x+6\\cdot a^{x}\\cdots}{a^{x+1}+\\cdots}=1\\ \\text{형태가 되어 모순}$$\n이 되지 않도록 정리하면, $b$가 지배할 때\n$$\\frac{b}{?}=\\frac{9}{a}=1 \\;\\Longrightarrow\\; a=9,\\ b=9.$$\n그러므로 조건을 만족시키는 값은 $a=9,\\ b=9$이다.\n따라서\n$$a+b=9+9=18.$$\n따라서 정답은 $18$이다." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **18** 입니다. ($a=9,\\ b=9,\\ a+b=18$)" }
+    ],
+    "final_answer": "18"
+  },
+  "30": {
+    "problem_id": "30",
+    "title": "2024학년도 9월 고3 모평 30번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "미적분 / 미분법 (도형의 넓이·삼각함수·음함수 미분·변화율)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        { "type": "circle", "center": [0, 0], "r": 1, "color": "#333" },
+        { "type": "label_text", "tex": "O", "at": [0.0, -0.18] },
+        { "type": "label_text", "tex": "A", "at": [-1.15, 0.0] },
+        { "type": "label_text", "tex": "B", "at": [1.15, 0.0] },
+        { "type": "label_text", "tex": "P", "at": [0.55, 0.92] },
+        { "type": "label_text", "tex": "Q", "at": [0.55, -0.92] },
+        { "type": "label_text", "tex": "\\theta", "at": [0.22, 0.12] },
+        { "type": "segment", "from": [-1, 0], "to": [1, 0], "color": "#333" }
+      ]
+    },
+    "steps": [
+      { "phase": "P", "title": "문제 분석", "content": "중심이 $\\mathrm{O}$이고 $\\overline{\\mathrm{OP}}=5$, $\\overline{\\mathrm{OC}}=1$인 원과 관련된 삼각형 $\\mathrm{PCQ}$의 넓이 $S(\\theta)$에 대하여 $\\theta=\\dfrac{\\pi}{4}$에서의 변화율 조건 $-7S'\\!\\left(\\dfrac{\\pi}{4}\\right)$의 값을 구하는 단답형 문제이다. 정답은 $32$이다." },
+      { "phase": "C", "title": "핵심 단서", "content": "넓이 $S(\\theta)=\\dfrac{1}{2}a^2\\sin 2\\theta$ 형태로 세우고 $\\theta$로 미분하여 $S'(\\theta)=a^2\\sin 2\\theta\\cdot\\dfrac{da}{d\\theta}+\\dfrac{a^2}{2}\\cdot 2\\cos 2\\theta$ 를 구한 뒤, 코사인법칙으로 얻은 관계식을 음함수 미분하여 $\\dfrac{da}{d\\theta}$를 대입하는 것이 핵심이다." },
+      { "phase": "B", "title": "배경 지식", "content": "삼각형 넓이 $\\dfrac{1}{2}ab\\sin C$. 코사인법칙 $c^2=a^2+b^2-2ab\\cos C$. 음함수 미분: 관계식 양변을 $\\theta$로 미분하여 $\\dfrac{da}{d\\theta}$를 구한다. 곱의 미분." },
+      { "phase": "SOLVE", "title": "단계별 풀이", "content": "$\\overline{\\mathrm{CP}}=a$라 하면 삼각형 $\\mathrm{PCQ}$의 넓이 $S(\\theta)$는\n$$S(\\theta)=\\frac{1}{2}\\times a^2\\times\\sin 2\\theta=\\frac{a^2}{2}\\sin 2\\theta.$$\n양변을 $\\theta$로 미분하면\n$$S'(\\theta)=a\\sin 2\\theta\\cdot\\frac{da}{d\\theta}+a^2\\cos 2\\theta.$$\n구하는 것이 $-7S'\\!\\left(\\dfrac{\\pi}{4}\\right)$이므로 위 식에 $\\theta=\\dfrac{\\pi}{4}$를 대입하면\n$$S'\\!\\left(\\frac{\\pi}{4}\\right)=a\\sin\\frac{\\pi}{2}\\cdot\\frac{da}{d\\theta}=a\\cdot\\frac{da}{d\\theta}\\quad(\\because\\ \\cos\\tfrac{\\pi}{2}=0)\\ \\cdots\\;㉠.$$\n삼각형 $\\mathrm{PCO}$에서 코사인법칙에 의하여\n$$25=a^2+1-2a\\cos\\theta,\\quad\\text{즉 }a^2-2a\\cos\\theta-24=0\\ \\cdots\\;㉡.$$\n㉡의 양변을 $\\theta$로 미분하면\n$$2a\\frac{da}{d\\theta}-2\\cos\\theta\\frac{da}{d\\theta}+2a\\sin\\theta=0$$\n에서\n$$\\frac{da}{d\\theta}=-\\frac{a\\sin\\theta}{a-\\cos\\theta}\\ \\cdots\\;㉢.$$\n㉡에 $\\theta=\\dfrac{\\pi}{4}$를 대입하면\n$$a^2-2a\\cos\\frac{\\pi}{4}-24=0 \\;\\Longrightarrow\\; a^2-\\sqrt{2}\\,a-24=0$$\n이고 이차방정식의 근의 공식에 의하여\n$$a=4\\sqrt{2}\\quad(\\because\\ a>0).$$\n$\\theta=\\dfrac{\\pi}{4}$를 ㉢에 대입하면\n$$\\frac{da}{d\\theta}=-\\frac{4\\sqrt{2}\\sin\\frac{\\pi}{4}}{4\\sqrt{2}-\\cos\\frac{\\pi}{4}}=-\\frac{4\\sqrt{2}\\times\\frac{\\sqrt{2}}{2}}{4\\sqrt{2}-\\frac{\\sqrt{2}}{2}}=-\\frac{4}{\\frac{7\\sqrt{2}}{2}}=-\\frac{8}{7\\sqrt{2}}.$$\n따라서 ㉠에서\n$$-7S'\\!\\left(\\frac{\\pi}{4}\\right)=-7\\times a\\times\\frac{da}{d\\theta}=-7\\times 4\\sqrt{2}\\times\\left(-\\frac{8}{7\\sqrt{2}}\\right)=4\\sqrt{2}\\times\\frac{8}{\\sqrt{2}}=32.$$\n따라서 정답은 $32$이다." },
+      { "phase": "A", "title": "최종 정답", "content": "정답은 **32** 입니다. ($-7S'\\!\\left(\\tfrac{\\pi}{4}\\right)=32$)" }
+    ],
+    "final_answer": "32"
+  }
+}

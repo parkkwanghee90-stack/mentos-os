@@ -1,1 +1,746 @@
-{}
+{
+ "10": {
+  "problem_id": "10",
+  "title": "2026학년도 3월 고3 학평 10번(미적분)",
+  "difficulty": "준킬러",
+  "weakness_unit": "수학1 / 로그함수의 그래프와 삼각형의 넓이",
+  "type": "geometry",
+  "base_figure": {
+   "type": "custom",
+   "objects": [
+    {
+     "type": "label_text",
+     "tex": "A(3,0)",
+     "at": [
+      3.0,
+      -0.4
+     ]
+    },
+    {
+     "type": "label_text",
+     "tex": "B(6,2)",
+     "at": [
+      6.0,
+      2.3
+     ]
+    },
+    {
+     "type": "label_text",
+     "tex": "C(0,2)",
+     "at": [
+      -0.2,
+      2.3
+     ]
+    },
+    {
+     "type": "label_text",
+     "tex": "y=\\log_2(x-2)",
+     "at": [
+      6.5,
+      0.8
+     ]
+    }
+   ]
+  },
+  "steps": [
+   {
+    "phase": "P",
+    "title": "문제 분석",
+    "content": "곡선 $y=\\log_2(x-k)$와 직선 $y=2$, 그리고 $y$축 등으로 정해지는 삼각형 $\\mathrm{ABC}$의 넓이를 구하는 문제이다. 정답은 객관식 **②번**이다."
+   },
+   {
+    "phase": "C",
+    "title": "핵심 단서",
+    "content": "먼저 곡선의 $x$절편 $\\mathrm{A}$, 그리고 $y=2$와의 교점 $\\mathrm{B}$, $y$축과 $y=2$의 교점 $\\mathrm{C}$의 좌표를 구한다. 삼각형 $\\mathrm{ABC}$가 $\\overline{\\mathrm{AB}}=\\overline{\\mathrm{AC}}$인 이등변삼각형임을 이용해 밑변 $\\overline{\\mathrm{BC}}$와 높이 $\\overline{\\mathrm{AM}}$를 잡는다."
+   },
+   {
+    "phase": "B",
+    "title": "배경 지식",
+    "content": "로그함수 $y=\\log_2(x-k)$의 $x$절편은 진수가 $1$이 되는 점, 즉 $x-k=1$일 때이다. 이등변삼각형에서 밑변의 중점을 $\\mathrm{M}$이라 하면 $\\overline{\\mathrm{AM}}\\perp\\overline{\\mathrm{BC}}$이고, 넓이는 $\\dfrac12\\times\\overline{\\mathrm{BC}}\\times\\overline{\\mathrm{AM}}$이다."
+   },
+   {
+    "phase": "SOLVE",
+    "title": "단계별 풀이",
+    "content": "$y=\\log_2(x-k)$에 $y=0$을 대입하면 $0=\\log_2(x-k)$\n$$2^0=1=x-k,\\;\\; x=k+1$$\n이므로 $\\mathrm{A}(k+1,\\,0)$\n점 $\\mathrm{B}$의 $x$좌표를 $t$라 하면 점 $\\mathrm{B}$의 $y$좌표는 $2$이므로\n$$\\log_2(t-k)=2,\\;\\; 2^2=t-k,\\;\\; t=k+4$$\n이므로 $\\mathrm{B}(k+4,\\,2)$\n점 $\\mathrm{C}$는 직선 $y=2$가 $y$축과 만나는 점이므로 $\\mathrm{C}(0,\\,2)$\n삼각형 $\\mathrm{ABC}$는 $\\overline{\\mathrm{AB}}=\\overline{\\mathrm{AC}}$인 이등변삼각형이므로 선분 $\\mathrm{BC}$의 중점을 $\\mathrm{M}$이라 할 때 $\\overline{\\mathrm{AM}}\\perp\\overline{\\mathrm{BC}}$이고 점 $\\mathrm{M}$의 $x$좌표는 점 $\\mathrm{A}$의 $x$좌표와 같다.\n$$\\mathrm{M}\\!\\left(\\frac{k+4}{2},\\,2\\right)$$\n이므로\n$$\\frac{k+4}{2}=k+1,\\;\\; k+4=2k+2,\\;\\; k=2$$\n그러므로 $\\mathrm{A}(3,0),\\;\\mathrm{B}(6,2),\\;\\mathrm{C}(0,2),\\;\\mathrm{M}(3,2)$\n따라서 삼각형 $\\mathrm{ABC}$의 넓이는\n$$\\frac12\\times\\overline{\\mathrm{BC}}\\times\\overline{\\mathrm{AM}}=\\frac12\\times 6\\times 2=6$$"
+   },
+   {
+    "phase": "A",
+    "title": "최종 정답",
+    "content": "정답은 **②** 입니다."
+   }
+  ],
+  "final_answer": "②"
+ },
+ "11": {
+  "problem_id": "11",
+  "title": "2026학년도 3월 고3 학평 11번(미적분)",
+  "difficulty": "준킬러",
+  "weakness_unit": "수학2 / 정적분과 점의 위치·움직인 거리 (참거짓)",
+  "type": "geometry",
+  "base_figure": {
+   "type": "custom",
+   "objects": [
+    {
+     "type": "label_text",
+     "tex": "v(t)=3t^2-24t+36",
+     "at": [
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  "steps": [
+   {
+    "phase": "P",
+    "title": "문제 분석",
+    "content": "원점을 출발하여 속도 $v(t)=3t^2-24t+36$으로 움직이는 점 $\\mathrm{P}$에 대하여 보기 ㄱ, ㄴ, ㄷ의 참거짓을 판별하는 문제이다. 정답은 객관식 **⑤번**이다."
+   },
+   {
+    "phase": "C",
+    "title": "핵심 단서",
+    "content": "ㄱ은 위치 $=$ 출발점 $+\\int_0^1 v(t)\\,dt$, ㄴ은 속도 $v(t)$의 부호 변화 횟수($=$운동 방향이 바뀌는 횟수), ㄷ은 움직인 거리 $=\\int |v(t)|\\,dt$로 절댓값 적분을 부호에 따라 나누어 계산한다."
+   },
+   {
+    "phase": "B",
+    "title": "배경 지식",
+    "content": "시각 $t$에서의 위치는 $x(t)=x(0)+\\int_0^t v(s)\\,ds$, 움직인 거리는 $\\int |v(t)|\\,dt$이다. $v(t)$의 부호가 바뀌는 시각에서 운동 방향이 바뀐다."
+   },
+   {
+    "phase": "SOLVE",
+    "title": "단계별 풀이",
+    "content": "ㄱ. 시각 $t=1$일 때 점 $\\mathrm{P}$의 위치는\n$$0+\\int_0^1 v(t)\\,dt=\\int_0^1(3t^2-24t+36)\\,dt$$\n$$=\\Big[\\,t^3-12t^2+36t\\,\\Big]_0^1=25\\;\\;(\\text{참})$$\nㄴ. $v(t)=3(t^2-8t+12)=3(t-2)(t-6)$\n시각 $t=2,\\;t=6$일 때 $v(t)$의 부호가 바뀌므로 출발한 후 점 $\\mathrm{P}$의 운동 방향은 두 번 바뀐다. (참)\nㄷ. 시각 $t=0$에서 $t=3$까지 점 $\\mathrm{P}$가 움직인 거리는\n$$\\int_0^3 |v(t)|\\,dt=\\int_0^3 |3t^2-24t+36|\\,dt$$\n$$=\\int_0^2(3t^2-24t+36)\\,dt+\\int_2^3\\{-(3t^2-24t+36)\\}\\,dt$$\n$$=\\Big[t^3-12t^2+36t\\Big]_0^2+\\Big[-t^3+12t^2-36t\\Big]_2^3$$\n$$=(32-0)+\\{-27-(-32)\\}=37\\;\\;(\\text{참})$$\n이상에서 옳은 것은 ㄱ, ㄴ, ㄷ이다."
+   },
+   {
+    "phase": "A",
+    "title": "최종 정답",
+    "content": "정답은 **⑤** 입니다."
+   }
+  ],
+  "final_answer": "⑤"
+ },
+ "12": {
+  "problem_id": "12",
+  "title": "2026학년도 3월 고3 학평 12번(미적분)",
+  "difficulty": "준킬러",
+  "weakness_unit": "수학1 / 등비수열의 합과 일반항 (수열의 합)",
+  "type": "geometry",
+  "base_figure": {
+   "type": "custom",
+   "objects": [
+    {
+     "type": "label_text",
+     "tex": "\\dfrac{a_n}{b_n+1}=\\sum a_k/(b_k+1)",
+     "at": [
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  "steps": [
+   {
+    "phase": "P",
+    "title": "문제 분석",
+    "content": "수열 $\\{a_n\\}$, $\\{b_n\\}$ 사이의 조건으로부터 $\\{b_n\\}$이 등비수열임을 밝히고 $\\displaystyle\\sum_{n=1}^{5}\\frac{a_n}{n}$의 값을 구해 $p+q+r$을 계산하는 문제이다. 정답은 객관식 **①번**이다."
+   },
+   {
+    "phase": "C",
+    "title": "핵심 단서",
+    "content": "부분합과 일반항 관계 $\\dfrac{a_n}{b_n+1}=S_n-S_{n-1}$을 이용해 $\\dfrac{a_n}{b_n+1}=2\\times n$ 꼴을 유도하고, 이를 변형해 $\\dfrac{a_n}{n}=2(b_n+1)$을 얻는다. $n=2$를 대입해 $b_2$를 구하면 공비를 알 수 있다."
+   },
+   {
+    "phase": "B",
+    "title": "배경 지식",
+    "content": "$n\\ge2$에서 $a_n=S_n-S_{n-1}$이다. 등비수열의 합 $\\displaystyle\\sum_{n=1}^{m}b_n=\\frac{b_1(r^m-1)}{r-1}$를 이용한다."
+   },
+   {
+    "phase": "SOLVE",
+    "title": "단계별 풀이",
+    "content": "$n=1$일 때, $\\dfrac{a_1}{b_1+1}=2$에서 $b_1=\\dfrac12$이다.\n$2$ 이상의 모든 자연수 $n$에 대하여\n$$\\frac{a_n}{b_n+1}=\\sum_{k=1}^{n}\\frac{a_k}{b_k+1}-\\sum_{k=1}^{n-1}\\frac{a_k}{b_k+1}$$\n$$=(n^2+n)-\\{(n-1)^2+(n-1)\\}$$\n이므로\n$$\\frac{a_n}{b_n+1}=2\\times n\\;\\;\\cdots\\cdots\\;\\bigcirc$$\n이다. $n=1$일 때도 $\\bigcirc$이 성립하므로 모든 자연수 $n$에 대하여\n$$\\frac{a_n}{n}=2\\times(b_n+1)\\;\\;\\cdots\\cdots\\;\\bigcirc\\!\\!\\bigcirc$$\n이다. $n=2$일 때, $\\dfrac{a_2}{2}=2\\times(b_2+1)$에서 $b_2=\\dfrac32$이다.\n그러므로 등비수열 $\\{b_n\\}$의 공비는 $3$이다.\n따라서 $\\bigcirc\\!\\!\\bigcirc$에 의하여\n$$\\sum_{n=1}^{5}\\frac{a_n}{n}=2\\times\\sum_{n=1}^{5}(b_n+1)=2\\times\\left(\\sum_{n=1}^{5}b_n+\\sum_{n=1}^{5}1\\right)$$\n$$=2\\times\\left\\{\\frac{\\frac12(3^5-1)}{3-1}+5\\right\\}=2\\times\\left(\\frac{121}{2}+5\\right)=131$$\n이다.\n$p=2,\\;q=3,\\;r=131$이므로 $p+q+r=136$"
+   },
+   {
+    "phase": "A",
+    "title": "최종 정답",
+    "content": "정답은 **①** 입니다."
+   }
+  ],
+  "final_answer": "①"
+ },
+ "13": {
+  "problem_id": "13",
+  "title": "2026학년도 3월 고3 학평 13번(미적분)",
+  "difficulty": "준킬러",
+  "weakness_unit": "수학2 / 접선의 방정식과 도형의 넓이",
+  "type": "geometry",
+  "base_figure": {
+   "type": "custom",
+   "objects": [
+    {
+     "type": "label_text",
+     "tex": "P(1,-5)",
+     "at": [
+      1,
+      -5
+     ]
+    },
+    {
+     "type": "label_text",
+     "tex": "Q(2,-4)",
+     "at": [
+      2,
+      -4
+     ]
+    },
+    {
+     "type": "label_text",
+     "tex": "y=2x-8",
+     "at": [
+      3.5,
+      -2
+     ]
+    }
+   ]
+  },
+  "steps": [
+   {
+    "phase": "P",
+    "title": "문제 분석",
+    "content": "삼차함수 $f(x)$의 그래프 위의 점 $\\mathrm{P}(1,-5)$에서의 접선이 곡선과 다시 만나는 점 $\\mathrm{Q}$에서의 접선을 구하고, 그 접선의 $x$절편·$y$절편으로 이루어지는 도형의 넓이를 구하는 문제이다. 정답은 객관식 **⑤번**이다."
+   },
+   {
+    "phase": "C",
+    "title": "핵심 단서",
+    "content": "$\\mathrm{P}$에서의 접선의 방정식 $y=f'(1)(x-1)+f(1)$을 세운 뒤, 접선과 곡선의 교점에서 $f(t)=$(접선의 $y$값) 방정식을 풀어 $\\mathrm{Q}$의 좌표 $t$를 구한다. $\\mathrm{Q}$에서 다시 접선을 그어 절편들을 구한다."
+   },
+   {
+    "phase": "B",
+    "title": "배경 지식",
+    "content": "곡선 $y=f(x)$ 위의 점 $(a,f(a))$에서의 접선은 $y=f'(a)(x-a)+f(a)$이다. 직선의 $x$절편·$y$절편과 직각삼각형의 넓이 $\\dfrac12\\times|x\\text{절편}|\\times|y\\text{절편}|$를 이용한다."
+   },
+   {
+    "phase": "SOLVE",
+    "title": "단계별 풀이",
+    "content": "$f'(x)=3x^2-8x+6$이므로 점 $\\mathrm{P}(1,-5)$에서의 접선의 방정식은\n$$y=f'(1)(x-1)+f(1)$$\n$$y=x-6$$\n점 $\\mathrm{Q}$의 좌표를 $(t,\\,f(t))$라 하면\n$$f(t)=t-6$$\n$$t^3-4t^2+5t-2=0,\\;\\;(t-1)^2(t-2)=0$$\n점 $\\mathrm{Q}$는 점 $\\mathrm{P}$가 아닌 점이므로 $t=2$이다.\n점 $\\mathrm{Q}(2,-4)$에서의 접선의 방정식은\n$$y=f'(2)(x-2)+f(2)$$\n$$y=2x-8$$\n이 직선의 $x$절편은 $4$, $y$절편은 $-8$이므로 구하는 도형의 넓이는\n$$\\frac12\\times 4\\times|-8|=16$$"
+   },
+   {
+    "phase": "A",
+    "title": "최종 정답",
+    "content": "정답은 **⑤** 입니다."
+   }
+  ],
+  "final_answer": "⑤"
+ },
+ "14": {
+  "problem_id": "14",
+  "title": "2026학년도 3월 고3 학평 14번(미적분)",
+  "difficulty": "킬러",
+  "weakness_unit": "수학1 / 삼각함수의 그래프를 이용한 함수 추론",
+  "type": "geometry",
+  "base_figure": {
+   "type": "custom",
+   "objects": [
+    {
+     "type": "label_text",
+     "tex": "3",
+     "at": [
+      -0.3,
+      3
+     ]
+    },
+    {
+     "type": "label_text",
+     "tex": "\\frac{\\pi}{2}",
+     "at": [
+      1.57,
+      -0.4
+     ]
+    },
+    {
+     "type": "label_text",
+     "tex": "\\pi",
+     "at": [
+      3.14,
+      -0.4
+     ]
+    },
+    {
+     "type": "label_text",
+     "tex": "2\\pi",
+     "at": [
+      6.28,
+      -0.4
+     ]
+    },
+    {
+     "type": "label_text",
+     "tex": "y=f(x)",
+     "at": [
+      5.0,
+      2.5
+     ]
+    }
+   ]
+  },
+  "steps": [
+   {
+    "phase": "P",
+    "title": "문제 분석",
+    "content": "구간에 따라 $0\\le x<\\pi$에서 $f(x)=3\\sin x$, $\\pi\\le x\\le 2\\pi$에서 $f(x)=a\\cos x+b$로 정의된 함수에 대해, 방정식 $f(x)=k$의 모든 실근의 합이 $\\dfrac74\\pi$가 되도록 하는 조건으로부터 $a$, $b$를 구하고 $a^2+b^2$을 구하는 문제이다. 정답은 객관식 **②번**이다."
+   },
+   {
+    "phase": "C",
+    "title": "핵심 단서",
+    "content": "$k$의 값에 따라 $0\\le x<\\pi$ 구간에서 $3\\sin x=k$의 해의 합과 $\\pi\\le x\\le 2\\pi$ 구간에서 $a\\cos x+b=k$의 해의 존재 여부를 경우 ( i )~( iv )로 나눈다. 실근의 합이 $\\dfrac74\\pi$가 되려면 $f\\!\\left(\\tfrac54\\pi\\right)=3$, $f\\!\\left(\\tfrac74\\pi\\right)=0$인 경우만 가능함을 찾는다."
+   },
+   {
+    "phase": "B",
+    "title": "배경 지식",
+    "content": "$\\sin x$, $\\cos x$ 그래프의 대칭성으로 일정 구간에서 해의 합이 결정된다. $\\cos\\dfrac54\\pi=\\cos\\dfrac74\\pi=-\\dfrac{\\sqrt2}{2},\\;\\dfrac{\\sqrt2}{2}$ 등 특수각의 삼각비를 이용한다."
+   },
+   {
+    "phase": "SOLVE",
+    "title": "단계별 풀이",
+    "content": "실수 $k$에 대하여\n( i ) $k=0$인 경우\n$0\\le x<\\pi$에서 방정식 $3\\sin x=k$의 해는 $x=0$이므로 $0\\le x\\le 2\\pi$에서 방정식 $f(x)=k$를 만족시키는 모든 $x$의 값의 합이 $\\dfrac74\\pi$가 되려면 $f\\!\\left(\\dfrac74\\pi\\right)=0$이어야 하고, 이때 $f(t)=k$를 만족시키는 실수 $t$의 값은 $0$ 또는 $\\dfrac74\\pi$로 $2$개다.\n( ii ) $0<k<3$인 경우\n$0\\le x<\\pi$에서 방정식 $3\\sin x=k$의 해의 합은 $\\pi$\n  ① $\\pi\\le x\\le 2\\pi$에서 방정식 $a\\cos x+b=k$의 해가 존재하면 $0\\le x\\le 2\\pi$에서 방정식 $f(x)=k$를 만족시키는 모든 $x$의 값의 합은 $2\\pi$ 이상이다.\n  ② $\\pi\\le x\\le 2\\pi$에서 방정식 $a\\cos x+b=k$의 해가 존재하지 않으면 $0\\le x\\le 2\\pi$에서 방정식 $f(x)=k$를 만족시키는 모든 $x$의 값의 합은 $\\pi$이다.\n그러므로 조건을 만족시키는 실수 $t$는 존재하지 않는다.\n( iii ) $k=3$인 경우\n$0\\le x<\\pi$에서 방정식 $3\\sin x=k$의 해는 $x=\\dfrac{\\pi}{2}$이므로 $0\\le x\\le 2\\pi$에서 방정식 $f(x)=k$를 만족시키는 모든 $x$의 값의 합이 $\\dfrac74\\pi$가 되려면 $f\\!\\left(\\dfrac54\\pi\\right)=3$이어야 하고, 이때 $f(t)=k$를 만족시키는 실수 $t$의 값은 $\\dfrac{\\pi}{2}$ 또는 $\\dfrac54\\pi$로 $2$개다.\n( iv ) $k<0$ 또는 $k>3$인 경우\n$0\\le x<\\pi$에서 방정식 $3\\sin x=k$의 해가 존재하지 않으므로 $0\\le x\\le 2\\pi$에서 방정식 $f(x)=k$를 만족시키는 모든 $x$의 값의 합이 $\\dfrac74\\pi$가 되려면 $f\\!\\left(\\dfrac74\\pi\\right)=k$이어야 하고, 이때 $f(t)=k$를 만족시키는 실수 $t$의 값은 $\\dfrac74\\pi$로 $1$개다.\n( i )~( iv )에서 $f\\!\\left(\\dfrac54\\pi\\right)=3$이고 $f\\!\\left(\\dfrac74\\pi\\right)=0$인 경우에만 조건을 만족시킨다.\n$$f\\!\\left(\\frac54\\pi\\right)=a\\cos\\frac54\\pi+b=-\\frac{\\sqrt2}{2}a+b=3\\;\\;\\cdots\\cdots\\;\\bigcirc$$\n$$f\\!\\left(\\frac74\\pi\\right)=a\\cos\\frac74\\pi+b=\\frac{\\sqrt2}{2}a+b=0\\;\\;\\cdots\\cdots\\;\\bigcirc\\!\\!\\bigcirc$$\n$\\bigcirc$, $\\bigcirc\\!\\!\\bigcirc$에서 $a=-\\dfrac{3\\sqrt2}{2},\\;b=\\dfrac32$\n따라서\n$$a^2+b^2=\\frac92+\\frac94=\\frac{27}{4}$$"
+   },
+   {
+    "phase": "A",
+    "title": "최종 정답",
+    "content": "정답은 **②** 입니다. ($a^2+b^2=\\dfrac{27}{4}$)"
+   }
+  ],
+  "final_answer": "②"
+ },
+ "15": {
+  "problem_id": "15",
+  "title": "2026학년도 3월 고3 학평 15번(미적분)",
+  "difficulty": "킬러",
+  "weakness_unit": "수학2 / 도함수를 이용한 함수 추론 (연속·미분가능)",
+  "type": "geometry",
+  "base_figure": {
+   "type": "custom",
+   "objects": [
+    {
+     "type": "label_text",
+     "tex": "-3",
+     "at": [
+      -3,
+      -0.4
+     ]
+    },
+    {
+     "type": "label_text",
+     "tex": "6",
+     "at": [
+      6,
+      -0.4
+     ]
+    },
+    {
+     "type": "label_text",
+     "tex": "-27",
+     "at": [
+      1.2,
+      -27
+     ]
+    },
+    {
+     "type": "label_text",
+     "tex": "y=g(x)",
+     "at": [
+      7.5,
+      5
+     ]
+    }
+   ]
+  },
+  "steps": [
+   {
+    "phase": "P",
+    "title": "문제 분석",
+    "content": "$x\\le0$에서 $g(x)=-xf(x)-ax^2$, $x>0$에서 $g(x)=\\dfrac14 f(x)-bx^2$로 정의된 함수 $g(x)$가 $x=0$에서 연속·미분가능하다는 조건과 추가 조건 (가), (나)로부터 $a+b$의 값을 구하는 문제이다. 정답은 객관식 **③번**이다."
+   },
+   {
+    "phase": "C",
+    "title": "핵심 단서",
+    "content": "$x=0$에서의 연속·미분가능 조건으로 $f(0)=0$, $f'(0)=0$을 얻어 $f(x)=x^3+px^2$ 꼴을 결정한다. 그 뒤 $g(\\alpha)=-27$, $g'(\\alpha)=0$인 점과 $g_2'(x)=0$의 근을 이용해 $a$, $b$, $p$를 차례로 구한다."
+   },
+   {
+    "phase": "B",
+    "title": "배경 지식",
+    "content": "함수가 한 점에서 미분가능하면 그 점에서 연속이고, 좌·우 미분계수가 같다. 삼차함수의 극값·근과 계수의 관계를 활용한다."
+   },
+   {
+    "phase": "SOLVE",
+    "title": "단계별 풀이",
+    "content": "함수 $g(x)$가 $x=0$에서 연속이므로\n$$\\lim_{x\\to0-}g(x)=\\lim_{x\\to0-}(-xf(x)-ax^2)=0$$\n$$\\lim_{x\\to0+}g(x)=\\lim_{x\\to0+}\\left(\\frac14 f(x)-bx^2\\right)=\\frac14 f(0)$$\n$\\displaystyle\\lim_{x\\to0-}g(x)=\\lim_{x\\to0+}g(x)$에서\n$$f(0)=0\\;\\;\\cdots\\cdots\\;\\bigcirc$$\n함수 $g(x)$가 $x=0$에서 미분가능하므로\n$$\\lim_{h\\to0-}\\frac{g(0+h)-g(0)}{h}=\\lim_{h\\to0-}\\frac{g(h)}{h}=\\lim_{h\\to0-}\\frac{-hf(h)-ah^2}{h}=\\lim_{h\\to0-}(-f(h)-ah)=-f(0)=0$$\n$$\\lim_{h\\to0+}\\frac{g(0+h)-g(0)}{h}=\\lim_{h\\to0+}\\frac{g(h)}{h}=\\lim_{h\\to0+}\\frac{\\frac14 f(h)-bh^2}{h}=\\frac14 f'(0)$$\n$\\displaystyle\\lim_{h\\to0-}\\frac{g(0+h)-g(0)}{h}=\\lim_{h\\to0+}\\frac{g(0+h)-g(0)}{h}$에서\n$$f'(0)=0\\;\\;\\cdots\\cdots\\;\\bigcirc\\!\\!\\bigcirc$$\n$\\bigcirc$, $\\bigcirc\\!\\!\\bigcirc$에 의해 $f(x)=x^3+px^2$을 만족시키는 실수 $p$가 존재한다.\n$$g_1(x)=-xf(x)-ax^2=-x^4-px^3-ax^2,$$\n$$g_2(x)=\\frac14 f(x)-bx^2=\\frac14 x^3+\\left(\\frac{p}{4}-b\\right)x^2$$\n이라 하자.\n$x\\le0$에서 $\\displaystyle\\lim_{x\\to-\\infty}g(x)=-\\infty$이고 $g(0)=0$이므로 $g(\\alpha)=-27$을 만족시키는 실수 $\\alpha$가 구간 $(-\\infty,0)$에 적어도 하나 존재한다.\n$g_1'(x)=-x(4x^2+3px+2a)$이고 조건 (나)에서 $g'(\\alpha)=0$이므로 실수 $\\beta$가 존재하여 $g(\\beta)=-27$, $g'(\\beta)=0$을 만족시킨다.\n$\\alpha$, $\\beta$는 이차방정식 $4x^2+3px+2a=0$의 근이다.\n( i ) $\\beta<\\alpha<0$인 경우 함수 $g(x)$는 구간 $(-\\infty,\\beta)$에서 증가하고 구간 $(\\beta,0)$에서 감소하므로 $g(\\beta)=-27$이지만 $g'(\\beta)=0$인 실수 $k$가 구간 $(-\\infty,\\beta)$에 존재하여 조건 (나)를 만족시키지 않는다.\n( ii ) $\\alpha<\\beta<0$인 경우 함수 $g(x)$는 구간 $(\\alpha,\\beta)$에서 감소하고 구간 $(\\beta,0)$에서 증가하며 $g(0)=0$이므로 $g(\\beta)=-27$이지만 $g'(\\beta)=0$인 실수 $k$가 구간 $(\\beta,0)$에 존재하여 조건 (나)를 만족시키지 않는다.\n( iii ) $\\beta=\\alpha<0$인 경우 함수 $g(x)$는 구간 $(\\alpha,0)$에서 감소하므로 $g(\\alpha)=-27$이고 $g(0)=0$인 것에 모순이다.\n( i )~( iii )에서 조건을 만족시키기 위해서는 $\\beta=\\alpha$이어야 한다.\n이차방정식 $4x^2+3px+2a=0$의 근과 계수의 관계에 의하여\n$$2\\alpha=-\\frac34 p,\\;\\;\\alpha^2=\\frac{a}{2}$$\n$$p=-\\frac83\\alpha,\\;\\; a=2\\alpha^2$$\n$$g(\\alpha)=-\\alpha^4+\\frac83\\alpha^4-2\\alpha^4=-\\frac13\\alpha^4=-27$$\n$$\\alpha^4=81,\\;\\;\\alpha=3\\;\\text{또는}\\;\\alpha=-3$$\n$x\\le0$에서 $g(x)=-27$을 만족시키는 $x$의 값은 $\\alpha$뿐이므로 조건 (가)에 의하여 $\\gamma>0$인 실수 $\\gamma$가 존재해야 하므로 $\\alpha=-3$, $p=8$, $a=18$\n$x\\le0$에서 $g(x)=-27$을 만족시키는 $x$의 값은 $\\alpha=-3$뿐이고, $x>0$에서 $g(\\gamma)=-27$, $g'(\\gamma)=0$을 만족시킨다.\n$$g_2'(x)=\\frac34 x^2+(4-2b)x=0\\;\\text{에서}$$\n$$\\gamma=\\frac83(b-2)$$\n$$g(\\gamma)=g\\!\\left(\\frac83(b-2)\\right)=-\\frac{64}{27}(b-2)^3=-27$$\n$$b-2=\\frac94,\\;\\; b=\\frac{17}{4}$$\n따라서 $a+b=18+\\dfrac{17}{4}=\\dfrac{89}{4}$"
+   },
+   {
+    "phase": "A",
+    "title": "최종 정답",
+    "content": "정답은 **③** 입니다. ($a+b=\\dfrac{89}{4}$)"
+   }
+  ],
+  "final_answer": "③"
+ },
+ "21": {
+  "problem_id": "21",
+  "title": "2026학년도 3월 고3 학평 21번(미적분)",
+  "difficulty": "킬러",
+  "weakness_unit": "수학2 / 정적분으로 정의된 함수의 추론",
+  "type": "geometry",
+  "base_figure": {
+   "type": "custom",
+   "objects": [
+    {
+     "type": "label_text",
+     "tex": "f(x)=x(x-2)(x+2)",
+     "at": [
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  "steps": [
+   {
+    "phase": "P",
+    "title": "문제 분석",
+    "content": "$g(x)=\\displaystyle\\int_0^x (f(t)-|f(t)|)\\,dt$로 정의된 함수에서, 최고차항의 계수가 $1$인 삼차함수 $f(x)$가 $f(0)=0$, $f(2)=0$이고 조건 (가), (나)를 만족시킬 때 $f(4)$의 값을 구하는 문제이다. 정답은 단답형 **48**이다."
+   },
+   {
+    "phase": "C",
+    "title": "핵심 단서",
+    "content": "$g'(x)=f(x)-|f(x)|$이므로 $f(x)\\ge0$이면 $g'(x)=0$, $f(x)<0$이면 $g'(x)=2f(x)$이다. 조건 (가)로 $f(2)=0$을 얻고 $f(x)=x(x-2)(x-a)$로 둔 뒤, 조건 (나) $g(2)=-8$을 만족하는 $a$를 경우로 나누어 구한다."
+   },
+   {
+    "phase": "B",
+    "title": "배경 지식",
+    "content": "$\\dfrac{d}{dx}\\displaystyle\\int_0^x h(t)\\,dt=h(x)$. 절댓값 적분은 $f$의 부호에 따라 구간을 나누어 계산한다."
+   },
+   {
+    "phase": "SOLVE",
+    "title": "단계별 풀이",
+    "content": "$g(x)=\\displaystyle\\int_0^x (f(t)-|f(t)|)\\,dt$의 양변을 $x$에 대하여 미분하면 $g'(x)=f(x)-|f(x)|$이므로\n$$g'(x)=\\begin{cases}2f(x)&(f(x)<0)\\\\[2pt]0&(f(x)\\ge0)\\end{cases}$$\n조건 (가)에서 $x\\ge2$인 모든 $x$에 대하여 $f(x)\\ge0$이고 충분히 작은 양수 $h$에 대하여 열린구간 $(2-h,2)$에서 $f(x)<0$이다.\n삼차함수 $f(x)$의 부호가 $x=2$의 좌우에서 음에서 양으로 바뀌어야 하므로 $f(2)=0$이다.\n$f(x)$는 최고차항이 $1$인 삼차함수이고 $f(0)=0$, $f(2)=0$이며 $x\\ge2$에서 $f(x)\\ge0$이므로 $f(x)=x(x-2)(x-a)$를 만족시키는 실수 $a\\,(a<2)$가 존재한다.\n( i ) $0<a<2$인 경우\n$0<x\\le a$인 모든 $x$에 대하여 $f(x)\\ge0$이고 $a<x<2$인 모든 $x$에 대하여 $f(x)<0$이므로\n$$g(2)=\\int_0^2(f(t)-|f(t)|)\\,dt=\\int_0^a 0\\,dt+\\int_a^2 2f(t)\\,dt$$\n$$=\\int_a^2 2t(t-2)(t-a)\\,dt=\\int_a^2\\{2t^3-(2a+4)t^2+4at\\}\\,dt$$\n$$=\\left[\\frac12 t^4-\\frac{2a+4}{3}t^3+2at^2\\right]_a^2=\\frac16 a^4-\\frac23 a^3+\\frac83 a-\\frac83$$\n$h(x)=\\dfrac16 x^4-\\dfrac23 x^3+\\dfrac83 x-\\dfrac83$이라 하면\n$$h'(x)=\\frac23 x^3-2x^2+\\frac83=\\frac23(x+1)(x-2)^2$$\n$0<x<2$에서 $h'(x)>0$이고 $h(0)=-\\dfrac83$이므로 $0<a<2$인 모든 $a$에 대하여 $h(a)>-\\dfrac83$이다.\n그러므로 조건 (나)를 만족시키지 않는다.\n( ii ) $a\\le0$인 경우\n$0<x<2$인 모든 $x$에 대하여 $f(x)<0$이고 조건 (나)에서 $g(2)=-8$이므로\n$$g(2)=\\int_0^2(f(t)-|f(t)|)\\,dt=\\int_0^2 2f(t)\\,dt=\\int_0^2 2t(t-2)(t-a)\\,dt$$\n$$=\\int_0^2\\{2t^3-(2a+4)t^2+4at\\}\\,dt=\\left[\\frac12 t^4-\\frac{2a+4}{3}t^3+2at^2\\right]_0^2=\\frac83 a-\\frac83=-8$$\n에서 $a=-2$\n( i ), ( ii )에 의하여 $f(x)=x(x-2)(x+2)$\n따라서 $f(4)=4\\times2\\times6=48$"
+   },
+   {
+    "phase": "A",
+    "title": "최종 정답",
+    "content": "정답은 **48** 입니다."
+   }
+  ],
+  "final_answer": "48"
+ },
+ "22": {
+  "problem_id": "22",
+  "title": "2026학년도 3월 고3 학평 22번(미적분)",
+  "difficulty": "킬러",
+  "weakness_unit": "수학1 / 지수함수의 그래프와 두 점 사이의 거리",
+  "type": "geometry",
+  "base_figure": {
+   "type": "custom",
+   "objects": [
+    {
+     "type": "label_text",
+     "tex": "h(x)=2\\cdot4^x-2^x+(1/2)^k",
+     "at": [
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  "steps": [
+   {
+    "phase": "P",
+    "title": "문제 분석",
+    "content": "직선 $y=t$가 두 곡선과 만나는 두 점의 $x$좌표를 $a$, $b\\,(a\\ne b)$라 할 때, 자연수 $k$와 관련 조건으로부터 $2^p=2^{a+b}$를 정하여 $k\\times\\left(\\tfrac12\\right)^p$의 값을 구하는 문제이다. 정답은 단답형 **80**이다."
+   },
+   {
+    "phase": "C",
+    "title": "핵심 단서",
+    "content": "$h(x)=g(x)-f(x)$로 놓으면 $a$, $b$는 방정식 $|h(x)|=\\dfrac15$의 근이다. $h(x)$를 완전제곱 꼴로 정리해 최솟값을 따지면 실제로 $h(x)=\\dfrac15$의 근임을 알 수 있고, $2^x=X$로 치환하여 이차방정식의 판별식과 근과 계수의 관계를 이용한다."
+   },
+   {
+    "phase": "B",
+    "title": "배경 지식",
+    "content": "$2^a\\cdot2^b=2^{a+b}$이고, 두 근의 곱은 근과 계수의 관계로 구한다. 이차방정식이 서로 다른 두 양의 실근을 가질 조건(판별식$>0$, 두 근의 합$>0$, 두 근의 곱$>0$)을 이용한다."
+   },
+   {
+    "phase": "SOLVE",
+    "title": "단계별 풀이",
+    "content": "$h(x)=g(x)-f(x)$라 하면 $a$, $b$는 방정식 $|h(x)|=\\dfrac15$의 근이다.\n$$h(x)=2\\times4^x-2^x+\\left(\\frac12\\right)^k$$\n$$=2\\times\\left(2^x-\\frac14\\right)^2+\\left(\\frac12\\right)^k-\\frac18>-\\frac15$$\n이므로 $a$, $b$는 방정식 $h(x)=\\dfrac15$의 근이다.\n$$2\\times4^x-2^x+\\frac{1}{2^k}-\\frac15=0\\;\\text{에서}\\;2^x=X\\,(X>0)\\text{이라 하면}$$\n$2^a$, $2^b$은 $X$에 대한 이차방정식\n$$2X^2-X+\\frac{1}{2^k}-\\frac15=0$$\n의 근이다.\n이차방정식 $2X^2-X+\\dfrac{1}{2^k}-\\dfrac15=0$의 판별식을 $D$라 하면\n$$D=1-4\\times2\\times\\left(\\frac{1}{2^k}-\\frac15\\right)=\\frac{13}{5}-\\frac{8}{2^k}>0$$\n$$\\frac{8}{2^k}<\\frac{13}{5}$$\n$$\\frac{40}{13}<2^k\\;\\;\\cdots\\cdots\\;\\bigcirc$$\n한편, $X>0$이므로 이차방정식의 근과 계수의 관계에 의하여 두 근의 곱은\n$$2^a\\times2^b=\\frac12\\left(\\frac{1}{2^k}-\\frac15\\right)>0,\\;\\;\\frac{1}{2^k}>\\frac15$$\n$$2^k<5\\;\\;\\cdots\\cdots\\;\\bigcirc\\!\\!\\bigcirc$$\n$\\bigcirc$, $\\bigcirc\\!\\!\\bigcirc$에서 구하는 자연수 $k$의 값은 $2$이다.\n$$2^p=2^{a+b}=2^a\\times2^b=\\frac12\\left(\\frac{1}{2^k}-\\frac15\\right)=\\frac12\\left(\\frac{1}{2^2}-\\frac15\\right)=\\frac{1}{40}$$\n$$\\left(\\frac12\\right)^p=\\frac{1}{2^p}=40$$\n따라서 $k\\times\\left(\\dfrac12\\right)^p=2\\times40=80$"
+   },
+   {
+    "phase": "A",
+    "title": "최종 정답",
+    "content": "정답은 **80** 입니다."
+   }
+  ],
+  "final_answer": "80"
+ },
+ "27": {
+  "problem_id": "27",
+  "title": "2026학년도 3월 고3 학평 27번(미적분)",
+  "difficulty": "킬러",
+  "weakness_unit": "미적분 / 수열의 극한의 대소 관계 (조임정리)",
+  "type": "geometry",
+  "base_figure": {
+   "type": "custom",
+   "objects": [
+    {
+     "type": "label_text",
+     "tex": "y=a_nx",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "type": "label_text",
+     "tex": "C_n:(x-(2n-1))^2+y^2=n^2",
+     "at": [
+      0,
+      -1
+     ]
+    }
+   ]
+  },
+  "steps": [
+   {
+    "phase": "P",
+    "title": "문제 분석",
+    "content": "원점을 지나고 기울기가 $a_n$인 직선이 원 $C_n$과는 서로 다른 두 점에서 만나고 원 $C_{n+1}$과는 만나지 않을 때, 수열의 극한 $\\displaystyle\\lim_{n\\to\\infty}n\\!\\left(3-\\dfrac{1}{a_n^2}\\right)$의 값을 구하는 문제이다. 정답은 객관식 **⑤번**이다."
+   },
+   {
+    "phase": "C",
+    "title": "핵심 단서",
+    "content": "직선이 원과 두 점에서 만나면 중심과 직선 사이 거리$<$반지름, 만나지 않으면 거리$>$반지름임을 이용해 $\\dfrac{1}{a_n^2}$의 범위를 부등식 두 개로 잡는다. 그 뒤 조임정리(샌드위치)로 극한을 구한다."
+   },
+   {
+    "phase": "B",
+    "title": "배경 지식",
+    "content": "점 $(x_0,0)$과 직선 $a_nx-y=0$ 사이의 거리는 $\\dfrac{|a_nx_0|}{\\sqrt{a_n^2+1}}$이다. 두 수열에 끼인 수열의 극한이 같으면 그 사이 수열의 극한도 같다."
+   },
+   {
+    "phase": "SOLVE",
+    "title": "단계별 풀이",
+    "content": "원점을 지나고 기울기가 $a_n$인 직선의 방정식은 $y=a_nx$\n모든 자연수 $n$에 대하여 점 $(2n-1,\\,0)$을 중심으로 하고 반지름의 길이가 $n$인 원을 $C_n$이라 하자.\n직선 $y=a_nx$가 원 $C_n$과 서로 다른 두 점에서 만나므로 점 $(2n-1,0)$과 직선 $y=a_nx$ 사이의 거리는 $n$보다 작다.\n$$\\frac{a_n(2n-1)}{\\sqrt{a_n^2+1}}<n,\\;\\;\\frac{1}{a_n^2}>\\frac{3n^2-4n+1}{n^2}\\;\\;\\cdots\\cdots\\;\\bigcirc$$\n직선 $y=a_nx$가 원 $C_{n+1}$과 만나지 않으므로 점 $(2n+1,0)$과 직선 $y=a_nx$ 사이의 거리는 $n+1$보다 크다.\n$$\\frac{a_n(2n+1)}{\\sqrt{a_n^2+1}}>n+1,\\;\\;\\frac{1}{a_n^2}<\\frac{3n^2+2n}{n^2+2n+1}\\;\\;\\cdots\\cdots\\;\\bigcirc\\!\\!\\bigcirc$$\n$\\bigcirc$, $\\bigcirc\\!\\!\\bigcirc$에서 모든 자연수 $n$에 대하여\n$$\\frac{3n^2-4n+1}{n^2}<\\frac{1}{a_n^2}<\\frac{3n^2+2n}{n^2+2n+1}$$\n$$\\frac{4n+3}{n^2+2n+1}<3-\\frac{1}{a_n^2}<\\frac{4n-1}{n^2}$$\n$$\\frac{4n^2+3n}{n^2+2n+1}<n\\!\\left(3-\\frac{1}{a_n^2}\\right)<\\frac{4n^2-n}{n^2}$$\n수열의 극한의 대소 관계에 의하여\n$$\\lim_{n\\to\\infty}n\\!\\left(3-\\frac{1}{a_n^2}\\right)=4$$"
+   },
+   {
+    "phase": "A",
+    "title": "최종 정답",
+    "content": "정답은 **⑤** 입니다. ($\\displaystyle\\lim_{n\\to\\infty}n\\!\\left(3-\\tfrac{1}{a_n^2}\\right)=4$)"
+   }
+  ],
+  "final_answer": "⑤"
+ },
+ "28": {
+  "problem_id": "28",
+  "title": "2026학년도 3월 고3 학평 28번(미적분)",
+  "difficulty": "킬러",
+  "weakness_unit": "미적분 / 수열의 극한으로 정의된 함수의 추론·함숫값",
+  "type": "geometry",
+  "base_figure": {
+   "type": "custom",
+   "objects": [
+    {
+     "type": "label_text",
+     "tex": "5",
+     "at": [
+      -0.3,
+      5
+     ]
+    },
+    {
+     "type": "label_text",
+     "tex": "3",
+     "at": [
+      -0.3,
+      3
+     ]
+    },
+    {
+     "type": "label_text",
+     "tex": "-2",
+     "at": [
+      -2,
+      -0.4
+     ]
+    },
+    {
+     "type": "label_text",
+     "tex": "2",
+     "at": [
+      2,
+      -0.4
+     ]
+    },
+    {
+     "type": "label_text",
+     "tex": "3",
+     "at": [
+      3,
+      -0.4
+     ]
+    },
+    {
+     "type": "label_text",
+     "tex": "y=h(x)",
+     "at": [
+      3.5,
+      4
+     ]
+    }
+   ]
+  },
+  "steps": [
+   {
+    "phase": "P",
+    "title": "문제 분석",
+    "content": "$h(x)=\\displaystyle\\lim_{n\\to\\infty}\\dfrac{f(x)+g(x)\\left(\\frac{5}{f(x)}\\right)^{2n}}{1+\\left(\\frac{5}{f(x)}\\right)^{2n}}$ 꼴로 정의된 함수가 실수 전체에서 연속이고, 직선 $y=\\left(k-\\dfrac{1}{2^n}\\right)x+5$ 관련 조건으로부터 $p$, $q$를 정하여 $p+q+h(4)$를 구하는 문제이다. 정답은 객관식 **③번**이다."
+   },
+   {
+    "phase": "C",
+    "title": "핵심 단서",
+    "content": "$|f(x)|>5$, $|f(x)|=5$, $|f(x)|<5$ 세 경우로 나누어 극한 $\\left(\\frac{5}{f(x)}\\right)^{2n}$의 값(각각 $0$, $1$, $\\infty$)을 따져 $h(x)$의 식을 구한다. 연속 조건과 $x=-2$에서의 좌·우 미분계수로 $q$를 결정하고, 자연수 조건으로 $p$, $q$를 확정한다."
+   },
+   {
+    "phase": "B",
+    "title": "배경 지식",
+    "content": "$|r|<1$이면 $\\displaystyle\\lim_{n\\to\\infty}r^n=0$, $|r|>1$이면 발산한다. 두 점을 지나는 직선의 기울기, 극한으로 정의된 함수의 연속을 이용한다."
+   },
+   {
+    "phase": "SOLVE",
+    "title": "단계별 풀이",
+    "content": "( i ) $|f(x)|>5$인 경우\n$$\\lim_{n\\to\\infty}\\left(\\frac{5}{f(x)}\\right)^{2n}=0$$\n이므로\n$$h(x)=\\lim_{n\\to\\infty}\\frac{f(x)+g(x)\\left(\\frac{5}{f(x)}\\right)^{2n}}{1+\\left(\\frac{5}{f(x)}\\right)^{2n}}=f(x)$$\n( ii ) $|f(x)|=5$인 경우\n$$\\lim_{n\\to\\infty}\\left(\\frac{5}{f(x)}\\right)^{2n}=1$$\n이므로\n$$h(x)=\\lim_{n\\to\\infty}\\frac{f(x)+g(x)\\left(\\frac{5}{f(x)}\\right)^{2n}}{1+\\left(\\frac{5}{f(x)}\\right)^{2n}}=\\frac{f(x)+g(x)}{2}$$\n( iii ) $|f(x)|<5$인 경우\n$$\\lim_{n\\to\\infty}\\left(\\frac{f(x)}{5}\\right)^{2n}=0$$\n이므로\n$$h(x)=\\lim_{n\\to\\infty}\\frac{f(x)\\left(\\frac{f(x)}{5}\\right)^{2n}+g(x)}{\\left(\\frac{f(x)}{5}\\right)^{2n}+1}=g(x)$$\n( i ), ( ii ), ( iii )에 의하여 함수 $h(x)$는\n$$h(x)=\\begin{cases}f(x)&(|f(x)|>5)\\\\[2pt]\\dfrac{f(x)+g(x)}{2}&(|f(x)|=5)\\\\[4pt]g(x)&(|f(x)|<5)\\end{cases}$$\n함수 $h(x)$가 실수 전체의 집합에서 연속이므로 $h(-2)=\\displaystyle\\lim_{x\\to-2}h(x)$이다. $|f(-2)|=5$이므로\n$$h(-2)=\\lim_{x\\to-2-}h(x)=\\lim_{x\\to-2-}f(x)=f(-2)$$\n$$h(-2)=\\lim_{x\\to-2+}h(x)=\\lim_{x\\to-2+}g(x)=g(-2)$$\n$$f(-2)=g(-2),\\;\\;-5=2p-q+5,\\;\\;q=2p+10$$\n직선 $y=\\left(k-\\dfrac{1}{2^n}\\right)x+5$에서 모든 자연수 $n$에 대하여\n$$k-1<k-\\frac{1}{2^n}<k$$\n이다. 두 점 $(-2,-5)$, $(0,5)$를 지나는 직선의 기울기가 $5$이고\n$$\\lim_{x\\to0-}\\frac{h(x)-h(0)}{x}=\\lim_{x\\to0-}\\left(\\frac{p}{2}x+\\frac{q}{2}\\right)=\\frac{q}{2}$$\n이다. $k\\le5$일 때,\n$$\\lim_{x\\to-2-}\\frac{h(x)-h(-2)}{x+2}=\\lim_{x\\to-2-}\\frac12(x^2-5x+10)=12$$\n이므로 모든 자연수 $n$에 대하여 $a_n=2$, $\\displaystyle\\lim_{n\\to\\infty}a_n=2$\n$5<k\\le\\dfrac{q}{2}$일 때, 모든 자연수 $n$에 대하여 $a_n=4$, $\\displaystyle\\lim_{n\\to\\infty}a_n=4$이다.\n$k>\\dfrac{q}{2}$일 때, 모든 자연수 $n$에 대하여 $a_n=3$, $\\displaystyle\\lim_{n\\to\\infty}a_n=3$이다.\n$\\displaystyle\\lim_{n\\to\\infty}a_n=4$가 되도록 하는 자연수 $k$의 개수가 $7$이므로 $5<k\\le\\dfrac{q}{2}$에서 $12\\le\\dfrac{q}{2}<13$, $24\\le q<26$이다.\n$q$가 자연수이므로 $q=24$ 또는 $q=25$이고, $p=\\dfrac{q-10}{2}$에서 $p$가 자연수이므로 $p=7$, $q=24$이다.\n$$h(4)=f(4)=32-24+5=13\\;\\text{이므로}\\;p+q+h(4)=44$$"
+   },
+   {
+    "phase": "A",
+    "title": "최종 정답",
+    "content": "정답은 **③** 입니다. ($p+q+h(4)=44$)"
+   }
+  ],
+  "final_answer": "③"
+ },
+ "29": {
+  "problem_id": "29",
+  "title": "2026학년도 3월 고3 학평 29번(미적분)",
+  "difficulty": "킬러",
+  "weakness_unit": "미적분 / 도형의 성질을 이용한 수열의 극한",
+  "type": "geometry",
+  "base_figure": {
+   "type": "custom",
+   "objects": [
+    {
+     "type": "label_text",
+     "tex": "A",
+     "at": [
+      -2.2,
+      0
+     ]
+    },
+    {
+     "type": "label_text",
+     "tex": "B",
+     "at": [
+      2.2,
+      0
+     ]
+    },
+    {
+     "type": "label_text",
+     "tex": "C",
+     "at": [
+      0,
+      2.4
+     ]
+    },
+    {
+     "type": "label_text",
+     "tex": "P",
+     "at": [
+      0,
+      -0.3
+     ]
+    }
+   ]
+  },
+  "steps": [
+   {
+    "phase": "P",
+    "title": "문제 분석",
+    "content": "$\\overline{\\mathrm{AC}}=\\overline{\\mathrm{BC}}$인 이등변삼각형 $\\mathrm{ABC}$와 점 $\\mathrm{P}$(선분 $\\mathrm{AB}$의 중점) 등으로 구성된 도형에서, $\\overline{\\mathrm{DR}}=x$를 $n$에 대한 식으로 구하고 $\\displaystyle\\lim_{n\\to\\infty}\\!\\left(\\overline{\\mathrm{DR}}-\\dfrac43 n\\right)=\\dfrac{q}{p}$ 꼴로 정리하여 $p+q$를 구하는 문제이다. 정답은 단답형 **11**이다."
+   },
+   {
+    "phase": "C",
+    "title": "핵심 단서",
+    "content": "이등변삼각형과 중점 성질로 닮음·평행 관계를 찾아 $\\overline{\\mathrm{RQ}}$, $\\overline{\\mathrm{CQ}}$를 $n$으로 표현한다. 직각삼각형에서 코사인을, 삼각형 $\\mathrm{CDQ}$에서 코사인법칙을 적용해 $x$에 대한 이차방정식을 세운 뒤 근의 공식으로 풀고 극한을 계산한다."
+   },
+   {
+    "phase": "B",
+    "title": "배경 지식",
+    "content": "중점연결정리(평행·길이 비), 닮음비, 코사인법칙 $c^2=a^2+b^2-2ab\\cos C$, 그리고 무리식 극한에서 분자의 유리화를 이용한다."
+   },
+   {
+    "phase": "SOLVE",
+    "title": "단계별 풀이",
+    "content": "삼각형 $\\mathrm{ABC}$가 $\\overline{\\mathrm{AC}}=\\overline{\\mathrm{BC}}$인 이등변삼각형이고 점 $\\mathrm{P}$가 선분 $\\mathrm{AB}$의 중점이므로 $\\angle\\mathrm{CPB}=\\dfrac{\\pi}{2}$\n직각삼각형 $\\mathrm{CPB}$에서 $\\overline{\\mathrm{BP}}^2=\\overline{\\mathrm{BC}}^2-\\overline{\\mathrm{CP}}^2=n^2$이므로 $\\overline{\\mathrm{AP}}=\\overline{\\mathrm{BP}}=n$\n두 점 $\\mathrm{P}$, $\\mathrm{Q}$가 각각 선분 $\\mathrm{AB}$, 선분 $\\mathrm{BC}$의 중점이므로 두 선분 $\\mathrm{PQ}$와 $\\mathrm{AC}$는 서로 평행하고 $\\angle\\mathrm{CAB}=\\angle\\mathrm{QPB}$\n$\\angle\\mathrm{CAB}=\\angle\\mathrm{PQR}$이므로 $\\angle\\mathrm{QPB}=\\angle\\mathrm{PQR}$\n엇각의 크기가 같으므로 두 선분 $\\mathrm{AB}$와 $\\mathrm{DQ}$는 서로 평행하고, $\\angle\\mathrm{ABC}=\\angle\\mathrm{RQC}$이다. 점 $\\mathrm{Q}$가 선분 $\\mathrm{BC}$의 중점이므로 점 $\\mathrm{R}$는 선분 $\\mathrm{AC}$의 중점이다.\n삼각형 $\\mathrm{CRQ}$와 삼각형 $\\mathrm{CAB}$는 서로 닮음인 삼각형이고 닮음비가 $1:2$이므로 $\\overline{\\mathrm{RQ}}=n$, $\\overline{\\mathrm{CQ}}=2n+1$\n$\\overline{\\mathrm{DR}}=x$, $\\overline{\\mathrm{DC}}=2x\\,(x>0)$이라 하자.\n직각삼각형 $\\mathrm{CPB}$에서 $\\cos(\\angle\\mathrm{PBC})=\\dfrac{\\overline{\\mathrm{BP}}}{\\overline{\\mathrm{BC}}}=\\dfrac{n}{4n+2}$\n$\\angle\\mathrm{PBC}=\\angle\\mathrm{DQC}$이므로 삼각형 $\\mathrm{CDQ}$에서 코사인법칙에 의해\n$$\\overline{\\mathrm{CD}}^2=\\overline{\\mathrm{DQ}}^2+\\overline{\\mathrm{CQ}}^2-2\\times\\overline{\\mathrm{DQ}}\\times\\overline{\\mathrm{CQ}}\\times\\cos(\\angle\\mathrm{DQC})$$\n$$(2x)^2=(x+n)^2+(2n+1)^2-2(x+n)(2n+1)\\cos(\\angle\\mathrm{PBC})$$\n$$3x^2-nx-4n^2-4n-1=0$$\n$x>0$이므로\n$$\\overline{\\mathrm{DR}}=x=\\frac{n+\\sqrt{49n^2+48n+12}}{6}$$\n$$\\lim_{n\\to\\infty}\\!\\left(\\overline{\\mathrm{DR}}-\\frac43 n\\right)=\\lim_{n\\to\\infty}\\frac16\\!\\left(\\sqrt{49n^2+48n+12}-7n\\right)$$\n$$=\\lim_{n\\to\\infty}\\frac16\\!\\left(\\frac{48n+12}{\\sqrt{49n^2+48n+12}+7n}\\right)=\\frac47$$\n따라서 $p=7$, $q=4$이므로 $p+q=11$"
+   },
+   {
+    "phase": "A",
+    "title": "최종 정답",
+    "content": "정답은 **11** 입니다."
+   }
+  ],
+  "final_answer": "11"
+ },
+ "30": {
+  "problem_id": "30",
+  "title": "2026학년도 3월 고3 학평 30번(미적분)",
+  "difficulty": "킬러",
+  "weakness_unit": "미적분 / 등비수열의 극한과 정수 순서쌍",
+  "type": "geometry",
+  "base_figure": {
+   "type": "custom",
+   "objects": [
+    {
+     "type": "label_text",
+     "tex": "\\lim_{n\\to\\infty}|a|(a+b)^n=\\lim_{n\\to\\infty}\\left|\\frac{2a+2b-20}{k}\\right|^n",
+     "at": [
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  "steps": [
+   {
+    "phase": "P",
+    "title": "문제 분석",
+    "content": "등비수열의 극한 $\\displaystyle\\lim_{n\\to\\infty}\\left|\\dfrac{2a+2b-20}{k}\\right|^n$의 값이 존재한다는 조건으로부터, 조건을 만족시키는 정수 순서쌍 $(a,b)$의 개수와 자연수 $k$의 값을 구하는 문제이다. 정답은 단답형 **57**이다."
+   },
+   {
+    "phase": "C",
+    "title": "핵심 단서",
+    "content": "등비수열의 극한이 존재하려면 공비의 절댓값이 $0$(극한 $0$) 또는 $1$(극한 $1$)이어야 한다. 두 경우 ( i ), ( ii )로 나누어 각 경우의 정수 순서쌍 개수를 세고, $\\displaystyle\\lim a_n=4$가 되도록 하는 자연수 $k$를 찾는다."
+   },
+   {
+    "phase": "B",
+    "title": "배경 지식",
+    "content": "$|r|<1$이면 $\\displaystyle\\lim_{n\\to\\infty}r^n=0$, $r=1$이면 극한 $1$, 그 외에는 발산(혹은 진동)한다. 부등식을 만족시키는 정수의 개수를 홀짝으로 나누어 센다."
+   },
+   {
+    "phase": "SOLVE",
+    "title": "단계별 풀이",
+    "content": "$\\displaystyle\\lim_{n\\to\\infty}\\left|\\frac{2a+2b-20}{k}\\right|^n$의 값이 존재하므로\n$$\\lim_{n\\to\\infty}\\left|\\frac{2a+2b-20}{k}\\right|^n=0\\;\\;\\text{또는}\\;\\;\\lim_{n\\to\\infty}\\left|\\frac{2a+2b-20}{k}\\right|^n=1$$\n( i ) $\\displaystyle\\lim_{n\\to\\infty}|a|(a+b)^n=\\lim_{n\\to\\infty}\\left|\\frac{2a+2b-20}{k}\\right|^n=1$인 경우\n$|a|=1$, $a+b=1\\,(a\\ne0)$이고 $\\left|\\dfrac{2a+2b-20}{k}\\right|=1$을 만족시켜야 한다. $a+b=1$에서 $\\dfrac{|2\\times1-20|}{|k|}=1$, 즉 $k=18$\n$k=18$일 때 $a+b=1$, $|a|=1$을 만족시키는 정수 $(a,b)$의 순서쌍은 $(-1,2)$와 $(1,0)$ 뿐이므로 정수 $(a,b)$의 모든 순서쌍의 개수는 $2$이다.\n( ii ) $\\displaystyle\\lim_{n\\to\\infty}|a|(a+b)^n=\\lim_{n\\to\\infty}\\left|\\frac{2a+2b-20}{k}\\right|^n=0$인 경우\n$\\displaystyle\\lim_{n\\to\\infty}|a|(a+b)^n=0$이므로 $a+b=0\\,(a\\ne0)$ 또는 $a=0$\n$$\\left|\\frac{2a+2b-20}{k}\\right|<1\\;\\text{에서}\\;|2a+2b-20|<k\\le20$$\n$a+b=0\\,(a\\ne0)$일 때, 부등식을 만족시키지 못한다.\n$a=0$일 때, $|2b-20|<k$ 즉 $10-\\dfrac{k}{2}<b<10+\\dfrac{k}{2}$\n$k$가 홀수인 경우, 부등식을 만족시키는 정수 $b$의 개수는 $k$이고 $k$가 짝수인 경우, 부등식을 만족시키는 정수 $b$의 개수는 $k-1$이다.\n$k=18$, $k=19$, $k=20$인 경우 조건을 만족시키는 정수 $(a,b)$의 모든 순서쌍의 개수는 각각 $17$, $19$, $19$이다.\n$k\\le17$인 경우 조건을 만족시키는 정수 $(a,b)$의 모든 순서쌍의 개수는 $17$ 이하이다.\n( i ), ( ii )에 의하여 조건을 만족시키는 자연수 $k$의 값은 $18$, $19$, $20$이므로 $18+19+20=57$"
+   },
+   {
+    "phase": "A",
+    "title": "최종 정답",
+    "content": "정답은 **57** 입니다."
+   }
+  ],
+  "final_answer": "57"
+ }
+}

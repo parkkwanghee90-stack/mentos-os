@@ -1,0 +1,634 @@
+{
+  "10": {
+    "problem_id": "10",
+    "title": "2024학년도 3월 고3 학평 10번(미적분)",
+    "difficulty": "준킬러",
+    "weakness_unit": "수학2 / 속도와 거리 (정적분)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": []
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "수직선 위를 움직이는 두 점 $\\mathrm{P},\\ \\mathrm{Q}$의 시각 $t\\,(t\\ge 0)$에서의 위치가 각각 $x_1(t)=t^3-3t^2-2t$, $x_2(t)=-t^2+6t$일 때, 두 점이 다시 만나는 시각까지 점 $\\mathrm{Q}$가 움직인 거리를 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "두 점이 다시 만나는 시각은 $x_1(t)=x_2(t)$를 풀어 양의 근을 찾고, 점 $\\mathrm{Q}$의 속도 $v_2(t)=x_2'(t)$의 부호가 바뀌므로 $\\int_0^4|v_2(t)|\\,dt$를 부호에 따라 구간을 나누어 적분한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "움직인 거리 $=\\displaystyle\\int|v(t)|\\,dt$, 속도 $v(t)=x'(t)$, 절댓값 적분은 부호가 바뀌는 점에서 구간을 나눈다."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "시각 $t\\,(t\\ge 0)$에서 두 점 $\\mathrm{P},\\ \\mathrm{Q}$의 위치를 각각 $x_1(t),\\ x_2(t)$라 하면\n$$x_1(t)=t^3-3t^2-2t,\\qquad x_2(t)=-t^2+6t$$\n$$x_1(t)-x_2(t)=t^3-3t^2-8t=t(t+2)(t-4)=0$$\n에서 두 점 $\\mathrm{P},\\ \\mathrm{Q}$가 다시 만날 때의 시각은 $t=4$이다.\n점 $\\mathrm{Q}$가 시각 $t=0$에서 $t=4$까지 움직인 거리는\n$$\\int_0^4|v_2(t)|\\,dt=\\int_0^4|-2t+6|\\,dt$$\n$$=\\int_0^3|-2t+6|\\,dt+\\int_3^4|-2t+6|\\,dt$$\n$$=\\int_0^3(-2t+6)\\,dt+\\int_3^4(2t-6)\\,dt$$\n$$=\\Big[-t^2+6t\\Big]_0^3+\\Big[t^2-6t\\Big]_3^4=9+1=10.$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **10** 입니다."
+      }
+    ],
+    "final_answer": "10"
+  },
+  "11": {
+    "problem_id": "11",
+    "title": "2024학년도 3월 고3 학평 11번(미적분)",
+    "difficulty": "준킬러",
+    "weakness_unit": "수학1 / 등차수열의 합",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": []
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "공차가 $d\\,(d<0)$인 등차수열 $\\{a_n\\}$에서 $a_6,\\ d$가 모두 정수이고, $\\sum_{k=1}^{8}a_k=-4$, $\\sum_{k=1}^{8}|a_k|=16$일 때 $\\sum_{k=1}^{8}a_k$의 값(즉 $\\sum a_k$가 되는 선택지 값)을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$d=a_6-a_5$ 관계와 $d<0$, 정수 조건으로 $a_5$의 후보를 좁힌 뒤, $a_5=-1$인 경우와 $a_5$가 음이 아닌 정수인 경우로 나누어 $\\sum|a_k|=\\sum a_k+42$ 조건이 성립하는 경우를 찾는다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "등차수열 $a_n=a_1+(n-1)d$, 합 공식 $\\sum_{k=1}^{n}a_k=\\dfrac{n\\{2a_1+(n-1)d\\}}{2}$, 음수 항의 절댓값 처리."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "등차수열 $\\{a_n\\}$의 공차를 $d\\,(d<0)$라 하자. $a_6,\\ d$가 모두 정수이므로 등차수열 $\\{a_n\\}$의 모든 항은 정수이다.\n$$d=a_6-a_5=-2-a_5\\ \\text{이고}\\ d<0\\ \\text{이므로}\\ a_5>-2$$\n즉, $a_5=-1$ 또는 $a_5$는 음이 아닌 정수이다.\n$(\\mathrm{i})$ $a_5=-1$일 때\n$$d=-2-a_5=-1\\ \\text{이므로}\\ a_n=-n+4$$\n$$\\sum_{k=1}^{8}a_k=-4,\\quad \\sum_{k=1}^{8}|a_k|=16\\ \\text{이므로}$$\n$$\\sum_{k=1}^{8}|a_k|=\\sum_{k=1}^{8}a_k+42\\quad\\cdots\\;\\text{㉠}$$\n이 성립하지 않는다.\n$(\\mathrm{ii})$ $a_5$는 음이 아닌 정수일 때\n$n\\le 5$일 때 $a_n\\ge 0$이고 $|a_n|=a_n$,\n$n\\ge 6$일 때 $a_n<0$이고 $|a_n|=-a_n$.\n㉠에서 $-a_6-a_7-a_8=a_6+a_7+a_8+42$\n$$a_6+a_7+a_8=-21$$\n$$a_6+(a_6+d)+(a_6+2d)=-21,\\quad a_6+d=-7$$\n$a_6=-2$이므로 $d=-5$.\n$(\\mathrm{i}),\\ (\\mathrm{ii})$에서 $d=-5$이고 $a_1=a_6-5d=-2+25=23$.\n따라서\n$$\\sum_{k=1}^{8}a_k=\\frac{8\\times\\{2\\times 23+7\\times(-5)\\}}{2}=44.$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **②** 입니다. ($\\sum_{k=1}^{8}a_k=44$)"
+      }
+    ],
+    "final_answer": "②"
+  },
+  "12": {
+    "problem_id": "12",
+    "title": "2024학년도 3월 고3 학평 12번(미적분)",
+    "difficulty": "준킬러",
+    "weakness_unit": "수학2 / 정적분으로 정의된 함수의 극댓값",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": []
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$g(x)=\\displaystyle\\int_{-4}^{x}f(t)\\,dt$로 정의된 함수 $g(x)$가 $x=2$에서 극솟값을 가질 때, 상수 $a$를 정하고 $g(x)$의 극댓값을 구하는 문제이다. ($f$는 $x<0$에서 $f(x)=3x^2+3x+a$, $x\\ge 0$에서 $f(x)=3x+a$인 함수)"
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$g'(x)=f(x)$임을 이용하여 $x=2$에서 극솟값 조건 $g'(2)=0$으로 $a$를 결정하고, $g'(x)$의 부호 변화로 증감표를 작성해 극댓값은 $x=-2$에서 가짐을 파악한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "미적분의 기본정리 $\\dfrac{d}{dx}\\int_{a}^{x}f(t)\\,dt=f(x)$, 극값의 판정(도함수의 부호 변화), 정적분 계산."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$g(x)=\\displaystyle\\int_{-4}^{x}f(t)\\,dt$의 양변을 $x$에 대하여 미분하면 $g'(x)=f(x)$이므로\n$$g'(x)=\\begin{cases}3x^2+3x+a & (x<0)\\\\[2pt] 3x+a & (x\\ge 0)\\end{cases}$$\n함수 $g(x)$는 $x=2$에서 극솟값을 가지므로 $g'(2)=6+a=0$에서 $a=-6$이다.\n$$g'(x)=\\begin{cases}3(x+2)(x-1) & (x<0)\\\\[2pt] 3(x-2) & (x\\ge 0)\\end{cases}$$\n$g(x)$의 증가와 감소를 표로 나타내면 $x=-2$에서 극대, $x=2$에서 극소이다.\n따라서 함수 $g(x)$의 극댓값은\n$$g(-2)=\\int_{-4}^{-2}(3t^2+3t-6)\\,dt=\\Big[t^3+\\tfrac{3}{2}t^2-6t\\Big]_{-4}^{-2}=26.$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **⑤** 입니다. ($g(-2)=26$)"
+      }
+    ],
+    "final_answer": "⑤"
+  },
+  "13": {
+    "problem_id": "13",
+    "title": "2024학년도 3월 고3 학평 13번(미적분)",
+    "difficulty": "준킬러",
+    "weakness_unit": "수학1 / 삼각함수의 활용 (사인법칙·코사인법칙·외접원)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {
+          "type": "label_text",
+          "tex": "A",
+          "at": [
+            0.0,
+            -2.0
+          ]
+        },
+        {
+          "type": "label_text",
+          "tex": "B",
+          "at": [
+            1.0,
+            -1.4
+          ]
+        },
+        {
+          "type": "label_text",
+          "tex": "C",
+          "at": [
+            1.4,
+            1.6
+          ]
+        },
+        {
+          "type": "label_text",
+          "tex": "Q",
+          "at": [
+            -1.8,
+            1.2
+          ]
+        },
+        {
+          "type": "label_text",
+          "tex": "D",
+          "at": [
+            0.7,
+            -0.4
+          ]
+        },
+        {
+          "type": "label_text",
+          "tex": "\\dfrac{2}{3}\\pi",
+          "at": [
+            1.4,
+            -0.4
+          ]
+        }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "한 원에 내접하는 점 $\\mathrm{A},\\mathrm{B},\\mathrm{C},\\mathrm{Q}$와 $\\angle\\mathrm{CDB}=\\dfrac{2}{3}\\pi$, $\\cos(\\angle\\mathrm{ABC})=-\\dfrac{5}{8}$ 등의 조건이 주어질 때, 삼각형 $\\mathrm{CDB}$의 외접원의 반지름의 길이 $R$를 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$\\cos(\\angle\\mathrm{CQA})=\\cos(\\pi-\\angle\\mathrm{ABC})=-\\cos(\\angle\\mathrm{ABC})=\\dfrac{5}{8}$를 이용하고, 삼각형 $\\mathrm{QAC}$와 삼각형 $\\mathrm{ABC}$에서 코사인법칙으로 $\\overline{\\mathrm{AC}}^2$를 두 가지로 구해 $a$를 결정한 뒤, 삼각형 $\\mathrm{CDB}$에서 사인법칙으로 $R$를 구한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "코사인법칙 $c^2=a^2+b^2-2ab\\cos C$, 사인법칙 $\\dfrac{a}{\\sin A}=2R$, 원에 내접하는 사각형의 대각의 합은 $\\pi$."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$\\cos(\\angle\\mathrm{ABC})=-\\dfrac{5}{8}$이므로\n$$\\cos(\\angle\\mathrm{CQA})=\\cos(\\pi-\\angle\\mathrm{ABC})=-\\cos(\\angle\\mathrm{ABC})=\\frac{5}{8}.$$\n$\\overline{\\mathrm{QA}}=\\overline{\\mathrm{QC}}=6\\sqrt{10}$이므로 삼각형 $\\mathrm{QAC}$에서 코사인법칙에 의하여\n$$\\overline{\\mathrm{AC}}^2=\\overline{\\mathrm{QA}}^2+\\overline{\\mathrm{QC}}^2-2\\times\\overline{\\mathrm{QA}}\\times\\overline{\\mathrm{QC}}\\times\\cos(\\angle\\mathrm{CQA})$$\n$$=(6\\sqrt{10})^2+(6\\sqrt{10})^2-2\\times 6\\sqrt{10}\\times 6\\sqrt{10}\\times\\frac{5}{8}=270.$$\n$\\overline{\\mathrm{AB}}=a\\,(a>0)$이라 하면 $2\\overline{\\mathrm{AB}}=\\overline{\\mathrm{BC}}$에서 $\\overline{\\mathrm{BC}}=2a$이다.\n삼각형 $\\mathrm{ABC}$에서 코사인법칙에 의하여\n$$\\overline{\\mathrm{AC}}^2=\\overline{\\mathrm{AB}}^2+\\overline{\\mathrm{BC}}^2-2\\times\\overline{\\mathrm{AB}}\\times\\overline{\\mathrm{BC}}\\times\\cos(\\angle\\mathrm{ABC})$$\n$$=a^2+(2a)^2-2\\times a\\times 2a\\times\\Big(-\\frac{5}{8}\\Big)=\\frac{15}{2}a^2.$$\n$\\dfrac{15}{2}a^2=270$에서 $a=6$.\n삼각형 $\\mathrm{CDB}$의 외접원의 반지름의 길이를 $R$라 하면 삼각형 $\\mathrm{CDB}$에서 사인법칙에 의하여\n$$2R=\\frac{\\overline{\\mathrm{BC}}}{\\sin(\\angle\\mathrm{CDB})}=\\frac{2a}{\\sin\\dfrac{2}{3}\\pi}=\\frac{12}{\\dfrac{\\sqrt{3}}{2}}=8\\sqrt{3}.$$\n따라서 $R=4\\sqrt{3}$."
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **②** 입니다. ($R=4\\sqrt{3}$)"
+      }
+    ],
+    "final_answer": "②"
+  },
+  "14": {
+    "problem_id": "14",
+    "title": "2024학년도 3월 고3 학평 14번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "수학2 / 다항함수의 그래프와 함수의 연속 (불연속점의 개수)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": []
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$x>0$에서 $f(x)=x^3-3x^2+5$, $x\\le 0$에서 $f(x)=x^2-2ax+\\dfrac{a^2}{4}+b^2$인 함수 $f$에 대하여, $g(t)$를 $y=f(x)$와 $y=t$의 교점의 개수로 정의할 때, $g(t)$가 $t=k$에서 불연속인 실수 $k$의 개수가 $3$이 되도록 하는 정수 $a,\\ b$의 모든 순서쌍 $(a,b)$의 개수를 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$x>0$ 부분의 삼차함수는 $x=2$에서 극솟값 $f(2)=1$, $\\lim_{x\\to 0+}f(x)=5$로 고정되고, $x\\le 0$ 부분의 이차함수의 꼭짓점·$f(0)=\\dfrac{a^2}{4}+b^2$의 위치에 따라 그래프의 형태가 달라진다. $a\\ge 0$, $a<0$로 경우를 나누고 $f(0)$와 $1,\\ 5$의 대소로 세분하여 불연속점이 정확히 $3$개인 경우를 찾는다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$g(t)$의 불연속점은 $y=f(x)$의 극값·끊긴 점(불연속점)에서의 가로선 교점 개수의 급변으로 발생한다. 이차·삼차함수의 그래프 개형과 극값 분석."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$x>0$에서 $f(x)=x^3-3x^2+5$이므로 $\\lim_{x\\to 0+}f(x)=5$이고 $f'(x)=3x^2-6x=3x(x-2)$이다.\n$f'(2)=0$이고 $x=2$의 좌우에서 $f'(x)$의 부호가 음에서 양으로 바뀌므로 $f(x)$의 극솟값은 $f(2)=1$이다.\n$x\\le 0$에서\n$$f(x)=x^2-2ax+\\frac{a^2}{4}+b^2=(x-a)^2-\\frac{3}{4}a^2+b^2$$\n이고 $f(0)=\\dfrac{a^2}{4}+b^2$이다.\n$(\\mathrm{i})$ $a\\ge 0$인 경우\n① $f(0)=5$인 경우: 함수 $g(t)$는 $t=1$에서만 불연속이므로 $g(t)$가 $t=k$에서 불연속인 실수 $k$의 개수는 $1$이다.\n② $f(0)\\ne 5$인 경우: 함수 $g(t)$는 $t=1,\\ t=5,\\ t=f(0)$에서 불연속이다. 함수 $g(t)$가 $t=k$에서 불연속인 실수 $k$의 개수는 $3$이다.\n$(\\mathrm{ii})$ $a<0$인 경우(꼭짓점이 $x=a<0$에 있음): $f(a)<1<5$이고 함수 $g(t)$는 $t=f(a),\\ t=1,\\ t=5$에서 불연속이므로 함수 $g(t)$가 $t=k$에서 불연속인 실수 $k$의 개수가 $3$이다.\n③ $f(0)\\ne 1$이고 $f(0)\\ne 5$인 경우: $g(t)$는 $t=1,\\ t=5,\\ t=f(0)$에서 불연속이므로 함수 $g(t)$가 $t=k$에서 불연속인 실수 $k$의 개수는 $3$ 이상이다.\n$(\\mathrm{i}),\\ (\\mathrm{ii})$에서 구하는 두 정수 $a,\\ b$의 모든 순서쌍 $(a,b)$의 개수는\n$$(0,1),\\ (0,-1),\\ (2,0),\\ (-2,2),\\ (-2,-2)$$\n로 $5$이다."
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **③** 입니다. (순서쌍 $(a,b)$의 개수는 $5$)"
+      }
+    ],
+    "final_answer": "③"
+  },
+  "15": {
+    "problem_id": "15",
+    "title": "2024학년도 3월 고3 학평 15번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "수학1 / 수열의 귀납적 정의",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": []
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "조건 $a_{n+1}=\\begin{cases}a_n+1 & (a_n\\le 1)\\\\[2pt] -a_n & (a_n>1)\\end{cases}$ 등으로 귀납적으로 정의된 수열 $\\{a_n\\}$에서 $a_5=10-a_4$ 등의 관계를 이용해 가능한 $a_1$을 모두 구하고, 그 모든 $a_1$의 값의 곱을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "뒤에서부터 거슬러 올라가며 $a_4,\\ a_3,\\ a_2,\\ a_1$의 가능한 값을 경우($a_n\\le 1$인지 $a_n>1$인지)에 따라 분기한다. 각 분기에서 정의에 모순이 없는지 점검하여 살아남는 $a_1$을 모은다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "귀납적으로 정의된 수열에서 역추적, 경우 분류와 모순 점검. 조건식의 정의역($a_n\\le 1$ / $a_n>1$) 일관성."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$a_4\\le 4$이면 $a_5=10-a_4\\ge 5$에서 $a_4=5$이므로 $a_4\\le 4$를 만족시키지 않는다. 그러므로 $a_4>4$이고 $a_4=a_5$에서 $a_4=5$이다.\n$a_3>3$일 때 $a_3=a_4$에서 $a_3=5$이고, $a_3\\le 3$일 때 $a_4=7-a_3=5$에서 $a_3=2$이다.\n$(\\mathrm{i})$ $a_3=5$인 경우\n① $a_2>2$이면 $a_2=a_3$에서 $a_2=5$이다. $a_1>1$일 때 $a_1=a_2$에서 $a_1=5$이고, $a_1\\le 1$일 때 $a_2=1-a_1=5$에서 $a_1=-4$이다.\n② $a_2\\le 2$이면 $a_3=4-a_2=5$에서 $a_2=-1$이다. $a_1>1$일 때 $a_1=a_2=-1$이므로 $a_1>1$을 만족시키지 않는다. $a_1\\le 1$일 때 $a_2=1-a_1=-1$에서 $a_1=2$이므로 $a_1\\le 1$을 만족시키지 않는다.\n$(\\mathrm{ii})$ $a_3=2$인 경우\n① $a_2>2$이면 $a_2=a_3$에서 $a_2=2$이므로 $a_2>2$를 만족시키지 않는다.\n② $a_2\\le 2$이면 $a_3=4-a_2=2$에서 $a_2=2$이다. $a_1>1$일 때 $a_1=a_2$에서 $a_1=2$이고, $a_1\\le 1$일 때 $a_2=1-a_1=2$에서 $a_1=-1$이다.\n$(\\mathrm{i}),\\ (\\mathrm{ii})$에서 $a_1=5$ 또는 $a_1=-4$ 또는 $a_1=2$ 또는 $a_1=-1$이다. 따라서 구하는 모든 $a_1$의 값의 곱은\n$$5\\times(-4)\\times 2\\times(-1)=40.$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **③** 입니다. (모든 $a_1$의 값의 곱은 $40$)"
+      }
+    ],
+    "final_answer": "③"
+  },
+  "21": {
+    "problem_id": "21",
+    "title": "2024학년도 3월 고3 학평 21번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "수학1 / 지수함수와 로그함수의 그래프",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {
+          "type": "label_text",
+          "tex": "A",
+          "at": [
+            -1.0,
+            -1.0
+          ]
+        },
+        {
+          "type": "label_text",
+          "tex": "B",
+          "at": [
+            2.0,
+            2.0
+          ]
+        },
+        {
+          "type": "label_text",
+          "tex": "C",
+          "at": [
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "type": "label_text",
+          "tex": "A'",
+          "at": [
+            2.0,
+            13.0
+          ]
+        },
+        {
+          "type": "label_text",
+          "tex": "B'",
+          "at": [
+            -1.0,
+            -1.0
+          ]
+        }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "선분 $\\mathrm{AB}$를 지름으로 하는 원의 중심이 점 $\\mathrm{C}\\Big(k,\\dfrac{19}{2}\\Big)$일 때, 두 곡선 $y=a^x+2$, $y=\\log_a x+2$와 관련된 조건으로부터 상수 $a$에 대해 $a^2$의 값을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "두 곡선 $y=a^x+2$, $y=\\log_a x+2$를 $y$축 방향으로 $-2$만큼 평행이동한 $y=a^x$, $y=\\log_a x$가 직선 $y=x$에 대하여 대칭임을 이용한다. 점들을 $-2$만큼 평행이동해 직선 $y=x$ 위의 점 조건으로 $k$를 정하고, 원의 반지름과 직선 $\\mathrm{A'B'}$의 기울기로 점 $\\mathrm{A'}$의 좌표를 구한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "$y=a^x$와 $y=\\log_a x$는 직선 $y=x$에 대하여 대칭, 평행이동과 대칭, 원의 넓이 $\\pi r^2$, 중점과 기울기."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "선분 $\\mathrm{AB}$를 지름으로 하는 원의 중심을 점 $\\mathrm{C}\\Big(k,\\dfrac{19}{2}\\Big)$라 할 때, 점 $\\mathrm{C}$는 선분 $\\mathrm{AB}$의 중점이다.\n두 곡선 $y=a^x+2$, $y=\\log_a x+2$를 $y$축의 방향으로 $-2$만큼 평행이동한 두 곡선 $y=a^x$, $y=\\log_a x$가 직선 $y=x$에 대하여 대칭이므로 두 점 $\\mathrm{A},\\ \\mathrm{B}$를 $y$축의 방향으로 각각 $-2$만큼 평행이동한 두 점 $\\mathrm{A'},\\ \\mathrm{B'}$도 직선 $y=x$에 대하여 대칭이다.\n점 $\\mathrm{C}$를 $y$축의 방향으로 $-2$만큼 평행이동한 점 $\\mathrm{C'}\\Big(k,\\dfrac{15}{2}\\Big)$가 선분 $\\mathrm{A'B'}$의 중점이므로 점 $\\mathrm{C'}$은 직선 $y=x$ 위에 있다. 그러므로 $k=\\dfrac{15}{2}$이다.\n넓이가 $\\dfrac{121}{2}\\pi$인 원의 반지름의 길이는 $\\overline{\\mathrm{A'C'}}=\\dfrac{11\\sqrt{2}}{2}$이고 직선 $\\mathrm{A'B'}$의 기울기가 $-1$이므로 점 $\\mathrm{A'}$의 좌표는\n$$\\Big(\\frac{15}{2}-\\frac{11}{2},\\ \\frac{15}{2}+\\frac{11}{2}\\Big)=(2,\\,13)$$\n이다. 점 $\\mathrm{A'}(2,13)$이 곡선 $y=a^x$ 위의 점이므로\n$$a^2=13.$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **13** 입니다."
+      }
+    ],
+    "final_answer": "13"
+  },
+  "22": {
+    "problem_id": "22",
+    "title": "2024학년도 3월 고3 학평 22번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "수학2 / 다항함수의 그래프와 방정식 (절댓값 함수)",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": []
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$h(x)=x^3-3x+8$에 대하여 $f(x)=|h(x)|$로 정의된 함수가 있고, 방정식 $f(t)=f(t+2)$의 해와 닫힌구간 $[t,\\,t+2]$에서의 $f(x)$의 최댓값으로 정의되는 함수 $g(t)$에 관한 추론을 통해 두 값 $\\alpha,\\ \\beta$를 정하고, 어떤 정수 $m,\\ n$에 대한 $m+n$의 값을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$h(x)$의 극값을 구해 $f(x)=|h(x)|$의 개형을 파악한다. 방정식 $f(t)=f(t+2)$를 구간별로 풀어 근을 얻고, $g(t)$가 $t$의 위치에 따라 $f(t)$인지 $f(t+2)$인지 구간을 나누어 분석한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "삼차함수의 극값과 그래프 개형, 절댓값 함수 $|h(x)|$의 그래프, 닫힌구간에서의 최댓값, 방정식의 실근 분석."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$h(x)=x^3-3x+8$이라 하면 $f(x)=|h(x)|$이다.\n$$h'(x)=3x^2-3=3(x+1)(x-1)$$\n$h'(x)=0$에서 $x=-1$ 또는 $x=1$.\n$h(x)$의 증가와 감소를 표로 나타내면 $x=-1$에서 극대, $x=1$에서 극소이다.\n극댓값은 $h(-1)=10$이고 극솟값은 $h(1)=6$이다.\n$y=h(x)$의 극솟값이 양수이므로 함수 $y=h(x)$의 그래프는 $x$축과 한 점에서 만난다.\n즉 방정식 $h(x)=0$은 한 개의 실근 $x=a$를 갖고,\n$$f(x)=\\begin{cases}-h(x) & (x<a)\\\\[2pt] h(x) & (x\\ge a)\\end{cases}$$\n이다. 방정식 $f(t)=f(t+2)$의 해를 구하자.\n$a-2<t<a$일 때, $-t^3+3t-8=(t+2)^3-3(t+2)+8$에서\n$$t^3+3t^2+9=(t+3)(t^2+3)=0\\ \\text{에서}\\ t=-3.$$\n$t\\le a-2$ 또는 $t\\ge a$일 때, $t^3-3t+8=(t+2)^3-3(t+2)+8$에서\n$$3t^2+6t+1=0\\ \\text{에서}\\ t=\\frac{-3\\pm\\sqrt{6}}{3}.$$\n$\\dfrac{-3+\\sqrt{6}}{3}=b$라 하면 $b>-1$.\n$t<-3$일 때, 닫힌구간 $[t,\\,t+2]$에서의 $f(x)$의 최댓값이 $f(t)$이므로 $g(t)=f(t)$이다.\n$-3\\le t\\le -1$일 때, 닫힌구간 $[t,\\,t+2]$에서의 $f(x)$의 최댓값이 $f(-1)=10$이므로 $g(t)=10$이다.\n$-1<t\\le b$일 때, 닫힌구간 $[t,\\,t+2]$에서의 $f(x)$의 최댓값이 $f(t)$이므로 $g(t)=f(t)$이다.\n$b<t$일 때, 닫힌구간 $[t,\\,t+2]$에서의 $f(x)$의 최댓값에 대한 분석에 따라 그러므로\n$$\\alpha=-3,\\qquad \\beta=\\frac{-3+\\sqrt{6}}{3}$$\n이고 $\\alpha\\beta=3-\\sqrt{6}$이다. 따라서 $m=3,\\ n=-1$이므로\n$$m+n=2.$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **2** 입니다."
+      }
+    ],
+    "final_answer": "2"
+  },
+  "27": {
+    "problem_id": "27",
+    "title": "2024학년도 3월 고3 학평 27번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "미적분 / 수열의 합과 일반항 사이의 관계, 수열의 극한",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": []
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "공차가 $3$인 등차수열 $\\{a_n\\}$과 $S_n=\\sum_{k=1}^{n}a_k(b_k)^2=n^3-n+3$으로 정의된 수열에서, 일반항 사이의 관계를 이용해 $(b_n)^2$를 구하고 $\\lim_{n\\to\\infty}\\dfrac{a_n}{b_n b_{2n}}$의 값을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$a_n b_k^2$의 부분합 $S_n$에서 $a_n(b_n)^2=S_n-S_{n-1}$로 일반항을 구한다($n\\ge 2$). $n=1$은 따로 확인하고, 모든 항이 양수임을 이용해 $b_n$을 구한 뒤 극한을 계산한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "수열의 합과 일반항의 관계 $a_n=S_n-S_{n-1}\\,(n\\ge 2)$, $S_1=a_1$, 등차수열 $a_n=a_1+(n-1)d$, 무한대 극한에서 최고차항 비교."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "등차수열 $\\{a_n\\}$의 공차는 $3$이므로\n$$a_n=3+(n-1)\\times 3=3n.$$\n$S_n=\\displaystyle\\sum_{k=1}^{n}a_k(b_k)^2=n^3-n+3$이라 하면 $n\\ge 2$일 때,\n$$a_n(b_n)^2=S_n-S_{n-1}=(n^3-n+3)-\\{(n-1)^3-(n-1)+3\\}$$\n$$=3n^2-3n=3n(n-1).$$\n$(b_n)^2=n-1$\n$n=1$일 때, $S_1=a_1(b_1)^2=3$에서 $(b_1)^2=1$.\n수열 $\\{b_n\\}$의 모든 항이 양수이므로 $b_n=\\sqrt{n-1}\\,(n\\ge 2),\\ b_1=1$이다.\n$$\\lim_{n\\to\\infty}\\frac{a_n}{b_n b_{2n}}=\\lim_{n\\to\\infty}\\frac{3n}{\\sqrt{n-1}\\,\\sqrt{2n-1}}=\\lim_{n\\to\\infty}\\frac{3}{\\sqrt{1-\\dfrac{1}{n}}\\,\\sqrt{2-\\dfrac{1}{n}}}=\\frac{3}{\\sqrt{2}}=\\frac{3\\sqrt{2}}{2}.$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **②** 입니다. ($\\lim_{n\\to\\infty}\\dfrac{a_n}{b_n b_{2n}}=\\dfrac{3\\sqrt{2}}{2}$)"
+      }
+    ],
+    "final_answer": "②"
+  },
+  "28": {
+    "problem_id": "28",
+    "title": "2024학년도 3월 고3 학평 28번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "미적분 / 도형의 성질을 이용한 수열의 극한",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {
+          "type": "label_text",
+          "tex": "A_n",
+          "at": [
+            -1.0,
+            0.5
+          ]
+        },
+        {
+          "type": "label_text",
+          "tex": "B_n",
+          "at": [
+            2.0,
+            4.0
+          ]
+        },
+        {
+          "type": "label_text",
+          "tex": "(2,0)",
+          "at": [
+            2.0,
+            -0.4
+          ]
+        }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "방정식 $x^2+n^2-1=2nx$를 이용해 정해지는 두 점 $\\mathrm{A}_n,\\ \\mathrm{B}_n$과 점 $\\mathrm{P}$, 직선 $2nx-y=0$ 사이의 거리를 이용하여 만들어지는 도형의 넓이 $S_n$에 대해 $\\lim_{n\\to\\infty}\\dfrac{S_n}{n}$의 값을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$x^2+n^2-1=2nx$를 인수분해해 교점의 $x$좌표 $x=n-1,\\ n+1$을 얻고, 두 점 $\\mathrm{A}_n,\\ \\mathrm{B}_n$의 좌표로 $\\overline{\\mathrm{A}_n\\mathrm{B}_n}$을 구한다. 원의 중심 $(2,0)$과 직선 $2nx-y=0$ 사이의 거리를 점 $\\mathrm{P}$와 직선 사이의 거리로 활용해 넓이 $S_n$을 구한 뒤 극한을 계산한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "이차방정식의 인수분해, 두 점 사이의 거리, 점 $(x_0,y_0)$과 직선 $ax+by+c=0$ 사이의 거리 $\\dfrac{|ax_0+by_0+c|}{\\sqrt{a^2+b^2}}$, 삼각형의 넓이, 무한대 극한."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$x^2+n^2-1=2nx$에서\n$$x^2-2nx+(n+1)(n-1)=0$$\n$$(x-n-1)(x-n+1)=0$$\n이므로 두 교점을 각각 $\\mathrm{A}_n(n-1,\\ 2n^2-2n)$, $\\mathrm{B}_n(n+1,\\ 2n^2+2n)$이라 하자.\n$$\\overline{\\mathrm{A}_n\\mathrm{B}_n}=\\sqrt{2^2+(4n)^2}=\\sqrt{16n^2+4}=2\\sqrt{4n^2+1}.$$\n원의 중심 $(2,0)$과 직선 $2nx-y=0$ 사이의 거리는 $\\dfrac{4n}{\\sqrt{4n^2+1}}$이므로 점 $\\mathrm{P}$와 직선 $2nx-y=0$ 사이의 거리를 $h$라 하면\n$$\\frac{4n}{\\sqrt{4n^2+1}}-1\\le h\\le \\frac{4n}{\\sqrt{4n^2+1}}+1.$$\n$$S_n=\\frac{1}{2}\\times\\overline{\\mathrm{A}_n\\mathrm{B}_n}\\times\\Big(\\frac{4n}{\\sqrt{4n^2+1}}+1\\Big)$$\n$$=\\frac{1}{2}\\times 2\\sqrt{4n^2+1}\\times\\Big(\\frac{4n}{\\sqrt{4n^2+1}}+1\\Big)=4n+\\sqrt{4n^2+1}$$\n이므로\n$$\\lim_{n\\to\\infty}\\frac{S_n}{n}=\\lim_{n\\to\\infty}\\frac{4n+\\sqrt{4n^2+1}}{n}=\\lim_{n\\to\\infty}\\frac{4+\\sqrt{4+\\dfrac{1}{n^2}}}{1}=4+\\sqrt{4}=6.$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **③** 입니다. ($\\lim_{n\\to\\infty}\\dfrac{S_n}{n}=6$)"
+      }
+    ],
+    "final_answer": "③"
+  },
+  "29": {
+    "problem_id": "29",
+    "title": "2024학년도 3월 고3 학평 29번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "미적분 / 도형의 성질을 활용한 수열의 극한",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": [
+        {
+          "type": "label_text",
+          "tex": "O",
+          "at": [
+            0.0,
+            -0.4
+          ]
+        },
+        {
+          "type": "label_text",
+          "tex": "P_n",
+          "at": [
+            -1.6,
+            1.0
+          ]
+        },
+        {
+          "type": "label_text",
+          "tex": "Q_n",
+          "at": [
+            1.5,
+            -0.4
+          ]
+        },
+        {
+          "type": "label_text",
+          "tex": "R_n",
+          "at": [
+            3.0,
+            -0.4
+          ]
+        },
+        {
+          "type": "label_text",
+          "tex": "C_n",
+          "at": [
+            2.6,
+            1.6
+          ]
+        },
+        {
+          "type": "label_text",
+          "tex": "H_n",
+          "at": [
+            1.5,
+            1.4
+          ]
+        }
+      ]
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "양의 실수 $t$에 대하여 점 $\\mathrm{P}_n(t,\\,f(t))$, 직선 $l_n$, 중심 $\\mathrm{C}_n$인 원과 그 접점·수선의 발 $\\mathrm{Q}_n,\\ \\mathrm{R}_n,\\ \\mathrm{H}_n$ 등으로 정의되는 도형에서 원의 반지름 $r_n$을 구하고, $\\lim_{n\\to\\infty}n^2(4r_n-3)$을 이용해 $40\\times\\lim_{n\\to\\infty}n^2(4r_n-3)$의 값을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$\\angle\\mathrm{P}_n\\mathrm{O}\\mathrm{Q}_n=\\theta$로 놓고 $\\cos\\theta=\\dfrac{\\overline{\\mathrm{OQ}_n}}{\\overline{\\mathrm{OP}_n}}$를 구한다. 접선과 수선의 발의 성질로 $\\overline{\\mathrm{P}_n\\mathrm{Q}_n}=r_n\\cos\\theta+r_n$ 관계를 세워 $r_n=\\dfrac{3}{2(1+\\cos\\theta)}$를 얻고, 유리화·최고차항 비교로 극한을 계산한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "직각삼각형에서 $\\cos\\theta=\\dfrac{(\\text{밑변})}{(\\text{빗변})}$, 접선·접점에서의 수직 관계, $\\sqrt{\\ }$ 차 꼴의 유리화, 무한대 극한에서 최고차항 분석."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "양의 실수 $t$에 대하여 점 $\\mathrm{P}_n(t,\\,f(t))$라 하면, 주어진 관계에서\n$$f(t)=\\frac{12t^3}{n^3}=\\frac{4t^3}{n^3}\\cdot 3+1,\\qquad t^3=\\frac{n^3}{8},\\qquad t=\\frac{n}{2}$$\n이므로 직선 $l_n$의 방정식은 $y=\\dfrac{3}{n}x$이다.\n원 $\\mathrm{C}_n$의 중심을 $\\mathrm{C}$라 하고, 두 점 $\\mathrm{P}_n,\\ \\mathrm{C}$에서 $x$축에 내린 수선의 발을 각각 $\\mathrm{Q}_n,\\ \\mathrm{R}_n$이라 하자. 점 $\\mathrm{C}$에서 $\\overline{\\mathrm{P}_n\\mathrm{Q}_n}$에 내린 수선의 발을 $\\mathrm{H}_n$이라 하자.\n$\\angle\\mathrm{P}_n\\mathrm{O}\\mathrm{Q}_n=\\theta$라 하면\n$$\\overline{\\mathrm{OP}_n}=\\sqrt{\\Big(\\frac{n}{2}\\Big)^2+\\Big(\\frac{3}{2}\\Big)^2}=\\frac{\\sqrt{n^2+9}}{2},\\qquad \\cos\\theta=\\frac{\\overline{\\mathrm{OQ}_n}}{\\overline{\\mathrm{OP}_n}}=\\frac{n}{\\sqrt{n^2+9}}.$$\n$\\overline{\\mathrm{H}_n\\mathrm{C}}=\\overline{\\mathrm{C}\\mathrm{R}_n}=\\overline{\\mathrm{H}_n\\mathrm{Q}_n}=r_n$, $\\overline{\\mathrm{P}_n\\mathrm{Q}_n}=\\dfrac{3}{2}$이므로\n$$\\overline{\\mathrm{P}_n\\mathrm{H}_n}+\\overline{\\mathrm{H}_n\\mathrm{Q}_n}=r_n\\times\\cos\\theta+r_n=\\frac{3}{2}$$\n$$r_n=\\frac{3}{2(1+\\cos\\theta)}=\\frac{3\\sqrt{n^2+9}}{2(\\sqrt{n^2+9}+n)}.$$\n$$\\lim_{n\\to\\infty}n^2(4r_n-3)=\\lim_{n\\to\\infty}n^2\\times\\Big(\\frac{6\\sqrt{n^2+9}}{\\sqrt{n^2+9}+n}-3\\Big)$$\n$$=\\lim_{n\\to\\infty}n^2\\Big(\\frac{3\\sqrt{n^2+9}-3n}{\\sqrt{n^2+9}+n}\\Big)=\\lim_{n\\to\\infty}3n^2\\Big\\{\\frac{9}{(\\sqrt{n^2+9}+n)^2}\\Big\\}$$\n$$=\\lim_{n\\to\\infty}\\frac{27}{\\Big(\\sqrt{1+\\dfrac{9}{n^2}}+1\\Big)^2}=\\frac{27}{4}.$$\n그러므로\n$$40\\times\\lim_{n\\to\\infty}n^2(4r_n-3)=40\\times\\frac{27}{4}=270.$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **270** 입니다."
+      }
+    ],
+    "final_answer": "270"
+  },
+  "30": {
+    "problem_id": "30",
+    "title": "2024학년도 3월 고3 학평 30번(미적분)",
+    "difficulty": "킬러",
+    "weakness_unit": "미적분 / 수열의 극한으로 정의된 함수의 추론, 미분가능성",
+    "type": "geometry",
+    "base_figure": {
+      "type": "custom",
+      "objects": []
+    },
+    "steps": [
+      {
+        "phase": "P",
+        "title": "문제 분석",
+        "content": "$x>0$에서 $g(x)=\\lim_{n\\to\\infty}\\dfrac{f(x)+x\\big(\\frac{m}{x}\\big)^n}{1+\\big(\\frac{m}{x}\\big)^n}$ 등으로 수열의 극한으로 정의된 함수 $g(x)$가 미분가능·연속이고, 어떤 조건을 만족시키는 삼차함수 $f(x)$를 추론하여 $g(12)$의 값을 구하는 문제이다."
+      },
+      {
+        "phase": "C",
+        "title": "핵심 단서",
+        "content": "$\\big(\\frac{x}{m}\\big)^n$ 또는 $\\big(\\frac{m}{x}\\big)^n$의 극한을 $0<x<m$, $x=m$, $x>m$으로 나누어 $g(x)$를 구간별로 결정한다. $g$가 $x=m$에서 미분가능·연속 조건으로 $f'(m)=1,\\ m=f(m)$을 얻고, 조건 (나)·(다)와 그래프 개형으로 근 $\\alpha,\\ \\alpha+1,\\ \\beta$를 분석한다."
+      },
+      {
+        "phase": "B",
+        "title": "배경 지식",
+        "content": "수열의 극한 $\\lim_{n\\to\\infty}r^n$의 값($|r|<1$, $r=1$, $r>1$), 극한으로 정의된 함수의 구간별 표현, 미분가능하면 연속, 삼차함수의 인수분해와 도함수."
+      },
+      {
+        "phase": "SOLVE",
+        "title": "단계별 풀이",
+        "content": "$x>0$일 때, 함수 $g(x)$를 구하면 다음과 같다.\n$(\\mathrm{i})$ $0<x<m$이면 $\\lim_{n\\to\\infty}\\Big(\\dfrac{x}{m}\\Big)^n=0$이므로 $g(x)=x$\n$(\\mathrm{ii})$ $x=m$이면 $\\lim_{n\\to\\infty}\\Big(\\dfrac{x}{m}\\Big)^n=1$이므로 $g(m)=\\dfrac{f(m)+m}{2}$\n$(\\mathrm{iii})$ $x>m$이면 $\\lim_{n\\to\\infty}\\Big(\\dfrac{m}{x}\\Big)^n=0$이므로\n$$g(x)=\\lim_{n\\to\\infty}\\frac{f(x)+x\\times\\Big(\\dfrac{m}{x}\\Big)^n}{1+\\Big(\\dfrac{m}{x}\\Big)^n}=f(x)$$\n$(\\mathrm{i}),(\\mathrm{ii}),(\\mathrm{iii})$에 의하여\n$$g(x)=\\begin{cases}x & (0<x<m)\\\\[2pt] \\dfrac{f(m)+m}{2} & (x=m)\\\\[2pt] f(x) & (x>m)\\end{cases}$$\n조건 (가)에서 함수 $g(x)$가 $x=m$에서 미분가능하고 연속이므로 $1=f'(m),\\ m=f(m)$.\n조건 (나)에서 $g(k)g(k+1)=0$을 만족시키는 자연수 $k$의 개수가 $3$이므로, $g(x)=0$을 만족시키는 자연수 $x$는 연속된 $2$개의 자연수이다. 이 두 자연수를 $\\alpha,\\ \\alpha+1$이라 하면 함수 $g(x)$의 그래프의 개형으로부터, 방정식 $f(x)=0$의 세 근을 $\\alpha,\\ \\alpha+1,\\ \\beta$라 하자.\n$(\\mathrm{i})$ $g(m)<g(m+1)$일 때, $g'(m+1)\\le 0$이므로 조건 (다)에서 $g(l)\\ge g(l+1)$을 만족시키는 세 자연수 $l$은 $m+1,\\ m+2,\\ m+3$이므로 $\\alpha=m+3$.\n$$f(x)=(x-\\alpha)(x-\\alpha-1)(x-\\beta)=(x-m-3)(x-m-4)(x-\\beta)$$\n$$=\\{x^2-(2m+7)x+m^2+7m+12\\}(x-\\beta)$$\n$$f'(x)=(2x-2m-7)(x-\\beta)+\\{x^2-(2m+7)x+m^2+7m+12\\}$$\n$$f'(m)=-7(m-\\beta)+12$$\n$f'(m)=1$이므로 $-7(m-\\beta)+12=1$, $m-\\beta=\\dfrac{11}{7}$.\n$m=f(m)=12(m-\\beta)=\\dfrac{132}{7}$이므로 모순이다.\n$(\\mathrm{ii})$ $g(m)\\ge g(m+1)$일 때, 조건 (다)에서 $g(l)\\ge g(l+1)$을 만족시키는 세 자연수 $l$은 $m,\\ m+1,\\ m+2$이므로 $\\alpha=m+2$.\n$$f(x)=(x-\\alpha)(x-\\alpha-1)(x-\\beta)=(x-m-2)(x-m-3)(x-\\beta)$$\n$$=\\{x^2-(2m+5)x+m^2+5m+6\\}(x-\\beta)$$\n$$f'(x)=(2x-2m-5)(x-\\beta)+\\{x^2-(2m+5)x+m^2+5m+6\\}$$\n$$f'(m)=-5(m-\\beta)+6$$\n$f'(m)=1$이므로 $-5(m-\\beta)+6=1$, $m-\\beta=1$.\n$m=f(m)=6(m-\\beta)=6$.\n$m=6$일 때, $f(x)=(x-5)(x-8)(x-9)$에서 $g'(m+1)=f'(m+1)=-4$이므로 조건 (가)를 만족시키고, $g(m)=f(m)\\ge f(m+1)=g(m+1)$이다.\n$(\\mathrm{i}),(\\mathrm{ii})$에 의하여 $f(x)=(x-5)(x-8)(x-9)$이므로\n$$g(12)=f(12)=7\\times 4\\times 3=84.$$"
+      },
+      {
+        "phase": "A",
+        "title": "최종 정답",
+        "content": "정답은 **84** 입니다."
+      }
+    ],
+    "final_answer": "84"
+  }
+}
