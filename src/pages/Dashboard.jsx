@@ -16,6 +16,7 @@ import { generateMonthlyTestProblems, gradeMonthlyTest, sendMonthlyParentPush, r
 import { getCompletions } from '@/services/homeworkCompletion';
 import { fetchCloudDashboard, buildWeeklySeries } from '@/services/dashboardData';
 import '@/pages/Dashboard.css';
+import PremiumLectureModal from '@/components/lectures/PremiumLectureModal';
 
 const parseSubject = (subj) => {
   const map = { 'physics': '물리', 'chemistry': '화학', 'biology': '생명과학', 'earth': '지구과학', 'math': '수학', 'english': '영어', 'eng': '영어' };
@@ -457,6 +458,7 @@ export default function Dashboard() {
 
   const [activeReportTab, setActiveReportTab] = React.useState('weekly');
   const [showFortTestModal, setShowFortTestModal] = React.useState(false);
+  const [showPremiumLecture, setShowPremiumLecture] = React.useState(false);
   const [fortAnswers, setFortAnswers] = React.useState({});
   const [fortGradingResult, setFortGradingResult] = React.useState(null);
 
@@ -742,6 +744,7 @@ export default function Dashboard() {
             { name: '미적분', desc: '미적분 (심화)', icon: '🔥', color: '#ef4444' },
             { name: '확률과통계', desc: '확률과 통계', icon: '🎲', color: '#f59e0b' },
             { name: '모의고사', desc: '멘토스 실전 모의고사', icon: '📝', color: '#10b981' },
+            { name: '프리미엄 AI 강의노트', desc: '⭐ AI 강의노트 · 무료 개방', icon: '📒', color: '#a855f7' },
           ].map(course => (
             <button
               key={course.name}
@@ -751,6 +754,8 @@ export default function Dashboard() {
                   navigate(course.route);
                 } else if (course.name === '모의고사') {
                   navigate('/class/mock-hub');
+                } else if (course.name === '프리미엄 AI 강의노트') {
+                  setShowPremiumLecture(true);
                 } else {
                   navigate('/grade-select', { state: { subjectOverride: course.name } });
                 }
@@ -1747,6 +1752,7 @@ export default function Dashboard() {
         </div>
       )}
     </div>
+      {showPremiumLecture && <PremiumLectureModal onClose={() => setShowPremiumLecture(false)} />}
     </div>
   );
 }

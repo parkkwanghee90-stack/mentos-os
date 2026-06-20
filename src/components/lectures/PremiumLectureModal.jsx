@@ -79,7 +79,7 @@ export default function PremiumLectureModal({ onClose, selectedUnit, selectedCou
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const loading = false;
 
-  const isPaid = localStorage.getItem('mentos_is_paid') === 'true' || localStorage.getItem('mentos_premium') === 'true';
+  const isPaid = true; // 49,000원 페이월 제거 — 프리미엄 AI 강의노트 무료 개방
   const [showCheckout, setShowCheckout] = useState(false);
 
   useEffect(() => {
