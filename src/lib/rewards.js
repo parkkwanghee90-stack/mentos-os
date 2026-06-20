@@ -4,6 +4,8 @@
 // 적립: 문제 정답·수업 완료·일일목표·스트릭 마일스톤
 // 교환: 코인 → 보너스 수강시간(분) (시간제 결제와 연결되는 실보상)
 
+import { celebrateLevelUp } from '@/lib/celebrate';
+
 const KEY = 'mentos_rewards';
 
 export const COINS_PER_BLOCK = 100; // 코인 100
@@ -52,6 +54,9 @@ export function award({ xp = 0, coins = 0 } = {}) {
   s.coins += Math.max(0, Math.round(coins));
   save(s);
   const after = levelFromXp(s.xp);
+  if (after > before) {
+    try { celebrateLevelUp(after); } catch { /* noop */ }
+  }
   return { ...getRewards(), leveledUp: after > before };
 }
 

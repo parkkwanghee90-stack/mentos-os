@@ -3,6 +3,26 @@
 import { useEffect, useState } from 'react';
 import { Trophy, Target } from 'lucide-react';
 import { getActiveWrongAnswers } from '@/services/wrongAnswerStore';
+import { celebrateConquest } from '@/lib/celebrate';
+
+const CELEBRATED_KEY = 'mentos_conquered_celebrated';
+function celebrateNewConquests(units) {
+  try {
+    const done = new Set(JSON.parse(localStorage.getItem(CELEBRATED_KEY) || '[]'));
+    let changed = false;
+    units.filter((u) => u.conquered).forEach((u) => {
+      if (!done.has(u.unit)) {
+        done.add(u.unit);
+        changed = true;
+        celebrateConquest(u.unit);
+      }
+    });
+    // 다시 오답이 생겨 정복이 풀리면 재축하 가능하도록 제거
+    const conqueredNow = new Set(units.filter((u) => u.conquered).map((u) => u.unit));
+    [...done].forEach((u) => { if (!conqueredNow.has(u)) { done.delete(u); changed = true; } });
+    if (changed) localStorage.setItem(CELEBRATED_KEY, JSON.stringify([...done]));
+  } catch { /* noop */ }
+}
 
 function buildUnits() {
   const wrongs = getActiveWrongAnswers();
@@ -27,13 +47,19 @@ export default function WeaknessConquestMap() {
   const [units, setUnits] = useState(buildUnits);
 
   useEffect(() => {
-    const refresh = () => setUnits(buildUnits());
+    celebrateNewConquests(units);
+    const refresh = () => {
+      const next = buildUnits();
+      setUnits(next);
+      celebrateNewConquests(next);
+    };
     window.addEventListener('focus', refresh);
     window.addEventListener('storage', refresh);
     return () => {
       window.removeEventListener('focus', refresh);
       window.removeEventListener('storage', refresh);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const conquered = units.filter((u) => u.conquered).length;

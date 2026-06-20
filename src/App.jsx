@@ -5,6 +5,7 @@ import { initStudentProfile } from '@/engine/studentProfileEngine';
 import { AuthProvider, useAuth } from '@/context/AuthContext';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import StudyTimeTracker from '@/components/StudyTimeTracker';
+import CelebrationHost from '@/components/CelebrationHost';
 
 const Landing = lazy(() => import("@/pages/Landing"));
 const Diagnosis = lazy(() => import("@/pages/Diagnosis"));
@@ -160,6 +161,7 @@ function AppContent() {
         </div>
       )}
 
+      <CelebrationHost />
       <BrowserRouter>
         <StudyTimeTracker />
         <ErrorBoundary>

@@ -21,6 +21,8 @@ import StudyHabitWidget from '@/components/StudyHabitWidget';
 import WeeklyReportCard from '@/components/WeeklyReportCard';
 import RewardsWidget from '@/components/RewardsWidget';
 import WeaknessConquestMap from '@/components/WeaknessConquestMap';
+import DailyQuestCard from '@/components/DailyQuestCard';
+import LeagueWidget from '@/components/LeagueWidget';
 
 const parseSubject = (subj) => {
   const map = { 'physics': '물리', 'chemistry': '화학', 'biology': '생명과학', 'earth': '지구과학', 'math': '수학', 'english': '영어', 'eng': '영어' };
@@ -640,6 +642,12 @@ export default function Dashboard() {
 
       {/* 🎮 보상 — 레벨·XP·코인 → 수강시간 교환 */}
       <RewardsWidget />
+
+      {/* 🎯 오늘의 퀘스트 */}
+      <DailyQuestCard />
+
+      {/* 🏅 성장 리그 */}
+      <LeagueWidget />
 
       {/* 🗺️ 약점 정복 맵 */}
       <WeaknessConquestMap />
