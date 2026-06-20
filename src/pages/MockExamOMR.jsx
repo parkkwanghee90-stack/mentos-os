@@ -35,10 +35,11 @@ import { CSAT_2024_09 } from '@/data/mockExams/CSAT_2024_09';
 import { CSAT_2023_09 } from '@/data/mockExams/CSAT_2023_09';
 import { CSAT_2026_03 } from '@/data/mockExams/CSAT_2026_03';
 import { CSAT_2024_03 } from '@/data/mockExams/CSAT_2024_03';
+import { CSAT_2025_03 } from '@/data/mockExams/CSAT_2025_03';
 
 const EXAMS = {
   'csat-2025-09': CSAT_2025_09, 'csat-2024-09': CSAT_2024_09, 'csat-2023-09': CSAT_2023_09,
-  'csat-2026-03': CSAT_2026_03, 'csat-2024-03': CSAT_2024_03,
+  'csat-2026-03': CSAT_2026_03, 'csat-2025-03': CSAT_2025_03, 'csat-2024-03': CSAT_2024_03,
   'hg1-2025-10': HG1_2025_10, 'hg1-2025-09': HG1_2025_09, 'hg1-2025-06': HG1_2025_06, 'hg1-2025-03': HG1_2025_03,
   'hg1-2024-10': HG1_2024_10, 'hg1-2024-09': HG1_2024_09, 'hg1-2024-06': HG1_2024_06, 'hg1-2024-03': HG1_2024_03,
   'hg1-2023-12': HG1_2023_12, 'hg1-2023-09': HG1_2023_09, 'hg1-2023-06': HG1_2023_06, 'hg1-2023-03': HG1_2023_03,
