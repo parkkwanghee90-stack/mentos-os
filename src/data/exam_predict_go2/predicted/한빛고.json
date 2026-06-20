@@ -6,8 +6,8 @@
   "term": "1학기 기말",
   "subject": "수학1",
   "generated_by": "claude-direct-go2",
-  "generated_at": "2026-06-15",
-  "source_note": "원본 출제경향 기반 오리지널",
+  "generated_at": "2026-06-20T23:28:03",
+  "source_note": "원본 킬러 난이도 기반 전면 재생성(단계·결합·역추론·경우분리 원본 동급)",
   "count": 20,
   "blueprint": {
     "difficulty_stars": 5,
@@ -57,9 +57,9 @@
       "choices": [
         "$165$",
         "$185$",
-        "$175$",
         "$195$",
-        "$205$"
+        "$215$",
+        "$225$"
       ],
       "answer": 2,
       "solution": "$\\displaystyle\\sum_{k=1}^{10}(3k+2)=3\\cdot\\dfrac{10\\cdot 11}{2}+2\\cdot 10=165+20=185$ 이다."
@@ -69,16 +69,16 @@
       "unit": "수학적 귀납법",
       "level": "심화",
       "type": "객관식",
-      "latex": "수열 $\\{a_n\\}$ 이 \\\\ $a_1=20,\\quad a_{n+1}=\\dfrac{1}{4}a_n+3\\ \\ (n=1,\\,2,\\,3,\\,\\cdots)$ \\\\ 으로 정의될 때, $a_2$ 의 값은?",
+      "latex": "수열 $\\{a_n\\}$ 이 \\\\ $a_1=3,\\quad a_{n+1}=2a_n+1\\ \\ (n=1,\\,2,\\,3,\\,\\cdots)$ \\\\ 으로 정의될 때, $a_3$ 의 값은?",
       "choices": [
-        "$6$",
-        "$7$",
-        "$9$",
-        "$8$",
-        "$10$"
+        "$13$",
+        "$15$",
+        "$16$",
+        "$18$",
+        "$14$"
       ],
-      "answer": 4,
-      "solution": "$a_2=\\dfrac{1}{4}a_1+3=\\dfrac{20}{4}+3=5+3=8$ 이다."
+      "answer": 2,
+      "solution": "$a_2=2\\cdot 3+1=7$ 이고 $a_3=2\\cdot 7+1=15$ 이다."
     },
     {
       "num": 4,
@@ -94,23 +94,23 @@
         "$605$"
       ],
       "answer": 1,
-      "solution": "$\\displaystyle\\sum_{k=1}^{10} k(k+2)=\\sum_{k=1}^{10} k^2+2\\sum_{k=1}^{10} k=\\dfrac{10\\cdot 11\\cdot 21}{6}+2\\cdot\\dfrac{10\\cdot 11}{2}=385+110=495$ 이다."
+      "solution": "$\\displaystyle\\sum_{k=1}^{10} k(k+2)=\\sum k^2+2\\sum k=\\dfrac{10\\cdot 11\\cdot 21}{6}+2\\cdot\\dfrac{10\\cdot 11}{2}=495$ 이다."
     },
     {
       "num": 5,
       "unit": "삼각함수의 활용",
       "level": "심화",
       "type": "객관식",
-      "latex": "평행사변형 $ABCD$ 에서 $\\overline{AB}=4$, $\\overline{BC}=6$, $\\angle B=120^{\\circ}$ 일 때, 대각선 $AC$ 의 길이는?",
+      "latex": "평행사변형 $ABCD$ 에서 $\\overline{AB}=5$, $\\overline{BC}=8$ 이고 $\\angle B=120^{\\circ}$ 이다. 두 대각선의 길이의 제곱의 합 $\\overline{AC}^{2}+\\overline{BD}^{2}$ 의 값은?",
       "choices": [
-        "$\\sqrt{19}$",
-        "$2\\sqrt{19}$",
-        "$\\sqrt{38}$",
-        "$3\\sqrt{19}$",
-        "$4\\sqrt{19}$"
+        "$166$",
+        "$178$",
+        "$190$",
+        "$202$",
+        "$154$"
       ],
       "answer": 2,
-      "solution": "삼각형 $ABC$ 에서 코사인법칙에 의해 $\\overline{AC}^{2}=4^{2}+6^{2}-2\\cdot 4\\cdot 6\\cos 120^{\\circ}=16+36+24=76$ 이므로 $\\overline{AC}=2\\sqrt{19}$ 이다."
+      "solution": "삼각형 $ABC$ 에서 $\\overline{AC}^{2}=5^2+8^2-2\\cdot 5\\cdot 8\\cos 120^{\\circ}$, 삼각형 $ABD$ 에서 $\\angle A=60^{\\circ}$ 이므로 $\\overline{BD}^{2}=5^2+8^2-2\\cdot 5\\cdot 8\\cos 60^{\\circ}$ 이다. 두 식을 더하면 $\\cos$ 항이 소거되어 $\\overline{AC}^{2}+\\overline{BD}^{2}=2(5^2+8^2)=178$ 이다."
     },
     {
       "num": 6,
@@ -126,7 +126,7 @@
         "$18$"
       ],
       "answer": 5,
-      "solution": "등차중항에서 $x=\\dfrac{4+16}{2}=10$ 이고, 등비중항에서 $y=\\sqrt{4\\cdot 16}=\\sqrt{64}=8$ 이다. 따라서 $x+y=10+8=18$ 이다."
+      "solution": "등차중항에서 $x=\\dfrac{4+16}{2}=10$, 등비중항에서 $y=\\sqrt{4\\cdot 16}=8$ 이므로 $x+y=18$ 이다."
     },
     {
       "num": 7,
@@ -142,7 +142,7 @@
         "$200$"
       ],
       "answer": 1,
-      "solution": "$a_3+a_5+a_7=3a_5=60$ 이므로 $a_5=20$ 이다. 등차수열의 합은 $\\displaystyle\\sum_{k=1}^{9} a_k=\\dfrac{9(a_1+a_9)}{2}=9a_5=9\\cdot 20=180$ 이다."
+      "solution": "$a_3+a_5+a_7=3a_5=60$ 이므로 $a_5=20$ 이다. $\\displaystyle\\sum_{k=1}^{9} a_k=\\dfrac{9(a_1+a_{9})}{2}=9a_5=180$ 이다."
     },
     {
       "num": 8,
@@ -153,27 +153,27 @@
       "choices": [
         "$\\dfrac{47}{49}$",
         "$\\dfrac{46}{49}$",
-        "$\\dfrac{24}{25}$",
         "$\\dfrac{48}{49}$",
-        "$\\dfrac{48}{50}$"
+        "$\\dfrac{24}{25}$",
+        "$\\dfrac{48}{47}$"
       ],
-      "answer": 4,
-      "solution": "$\\dfrac{2}{(2k-1)(2k+1)}=\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}$ 이므로 망원급수로 $\\displaystyle\\sum_{k=1}^{24}\\left(\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}\\right)=1-\\dfrac{1}{49}=\\dfrac{48}{49}$ 이다.",
+      "answer": 3,
+      "solution": "$\\dfrac{2}{(2k-1)(2k+1)}=\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}$ 이므로 망원급수로 $1-\\dfrac{1}{49}=\\dfrac{48}{49}$ 이다.",
       "avs": [
         {
           "phase": "P",
           "title": "목표 확인",
-          "content": "부분분수 분해를 이용하여 $\\displaystyle\\sum_{k=1}^{24}\\dfrac{2}{(2k-1)(2k+1)}$ 의 값을 구한다."
+          "content": "부분분수 분해로 $\\displaystyle\\sum_{k=1}^{24}\\dfrac{2}{(2k-1)(2k+1)}$ 를 구한다."
         },
         {
           "phase": "C",
           "title": "조건 정리",
-          "content": "분모가 연속한 두 홀수의 곱 $(2k-1)(2k+1)$ 꼴이므로 부분분수로 분해할 수 있다."
+          "content": "분모가 연속한 두 홀수의 곱 $(2k-1)(2k+1)$ 꼴이다."
         },
         {
           "phase": "B",
           "title": "핵심 개념",
-          "content": "$\\dfrac{2}{(2k-1)(2k+1)}=\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}$ 로 분해하면 인접한 항이 소거되는 망원급수가 된다."
+          "content": "$\\dfrac{2}{(2k-1)(2k+1)}=\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}$ 로 분해하면 인접 항이 소거되는 망원급수가 된다."
         },
         {
           "phase": "S",
@@ -192,16 +192,43 @@
       "unit": "삼각함수의 활용",
       "level": "심화",
       "type": "객관식",
-      "latex": "수평인 지면 위의 두 지점 $A$, $B$ 사이의 거리가 $8$ 이다. 지점 $A$ 에서 나무 꼭대기 $P$ 를 올려본 각의 크기가 $30^{\\circ}$, 지점 $B$ 에서 올려본 각의 크기가 $60^{\\circ}$ 이고 $A$, $B$, 나무의 밑면이 한 직선 위에 있다. $A$ 가 $B$ 보다 나무에서 멀 때, 선분 $BP$ 의 길이는?",
+      "latex": "$\\overline{AB}=1$, $\\overline{AC}=\\sqrt{3}$ 인 직각삼각형 $ABC$ ($\\angle A=90^{\\circ}$) 모양의 종이가 있고, 이 삼각형의 외접원은 빗변 $BC$ 를 지름으로 한다. 변 $BC$ 위의 점 $D$, 변 $AB$ 위의 점 $E$, 변 $AC$ 위의 점 $F$ 에 대하여 선분 $EF$ 를 접는 선으로 하여 점 $A$ 가 점 $D$ 에 겹쳐지도록 접었다. 삼각형 $BDE$ 와 삼각형 $DCF$ 의 외접원의 반지름의 길이의 비가 $1:2$ 일 때, 선분 $DF$ 의 길이는 $\\dfrac{q}{p}\\sqrt{3}$ 이다. $p+q$ 의 값은? (단, $p$ 와 $q$ 는 서로소인 자연수이다.)",
       "choices": [
-        "$4$",
-        "$6$",
-        "$8$",
-        "$10$",
-        "$12$"
+        "$25$",
+        "$26$",
+        "$27$",
+        "$28$",
+        "$29$"
       ],
-      "answer": 3,
-      "solution": "삼각형 $ABP$ 에서 $\\angle PAB=30^{\\circ}$ 이고 $\\angle PBA=180^{\\circ}-60^{\\circ}=120^{\\circ}$ 이므로 $\\angle APB=30^{\\circ}$ 이다. 사인법칙에서 $\\dfrac{\\overline{BP}}{\\sin 30^{\\circ}}=\\dfrac{\\overline{AB}}{\\sin 30^{\\circ}}$ 이므로 $\\overline{BP}=\\overline{AB}=8$ 이다."
+      "answer": 1,
+      "solution": "$\\angle A=90^{\\circ}$ 이므로 $\\angle B=60^{\\circ}$, $\\angle C=30^{\\circ}$ 이다. 접은 성질로 $\\overline{ED}=\\overline{AE}$, $\\overline{FD}=\\overline{AF}$ 이고 $\\angle EDF=\\angle A=90^{\\circ}$ 이다. 삼각형 $BDE$, $DCF$ 에 사인법칙을 적용하면 외접원 반지름비 조건에서 $\\overline{AF}$ 가 결정되고, $D$ 가 $BC$ 위에 있다는 조건 $\\angle BDE+\\angle FDC=90^{\\circ}$ 로 연립하면 $\\overline{DF}=\\dfrac{7}{18}\\sqrt{3}$ 이다. 따라서 $p+q=25$ 이다.",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "직각삼각형 종이를 접어 점 $A$ 가 $BC$ 위의 점 $D$ 에 겹쳐질 때, 두 삼각형의 외접원 반지름비 조건으로 $\\overline{DF}$ 를 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "$\\angle A=90^{\\circ}$ 에서 $\\angle B=60^{\\circ}$, $\\angle C=30^{\\circ}$ 이고, 접은 성질로 $\\overline{ED}=\\overline{AE}$, $\\overline{FD}=\\overline{AF}$, $\\angle EDF=90^{\\circ}$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "사인법칙으로 $2R_1=\\dfrac{\\overline{ED}}{\\sin B}$, $2R_2=\\dfrac{\\overline{FD}}{\\sin C}$ 이고, $D$ 가 $BC$ 위에 있으므로 $\\angle BDE+\\angle FDC=90^{\\circ}$ 이다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "반지름비와 각 조건을 연립하면 $\\overline{DF}=\\dfrac{7}{18}\\sqrt{3}$ 을 얻는다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$p+q=25$ 이다."
+        }
+      ]
     },
     {
       "num": 10,
@@ -210,34 +237,34 @@
       "type": "객관식",
       "latex": "첫째항이 $2$, 공차가 $3$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{15}\\dfrac{1}{a_k\\,a_{k+1}}$ 의 값은?",
       "choices": [
-        "$\\dfrac{7}{47}$",
+        "$\\dfrac{1}{94}$",
         "$\\dfrac{15}{94}$",
-        "$\\dfrac{15}{47}$",
+        "$\\dfrac{15}{109}$",
         "$\\dfrac{1}{6}$",
-        "$\\dfrac{8}{47}$"
+        "$\\dfrac{15}{47}$"
       ],
       "answer": 2,
-      "solution": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{3}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 이고 $a_1=2$, $a_{16}=47$ 이므로 $\\displaystyle\\sum_{k=1}^{15}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{3}\\left(\\dfrac{1}{2}-\\dfrac{1}{47}\\right)=\\dfrac{15}{94}$ 이다.",
+      "solution": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{3}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 이고 $a_1=2$, $a_{16}=47$ 이므로 합은 $\\dfrac{15}{94}$ 이다.",
       "avs": [
         {
           "phase": "P",
           "title": "목표 확인",
-          "content": "등차수열의 곱으로 이루어진 분수의 시그마 $\\displaystyle\\sum_{k=1}^{15}\\dfrac{1}{a_k a_{k+1}}$ 의 값을 구한다."
+          "content": "등차수열의 곱 분수의 시그마 $\\displaystyle\\sum_{k=1}^{15}\\dfrac{1}{a_k a_{k+1}}$ 를 구한다."
         },
         {
           "phase": "C",
           "title": "조건 정리",
-          "content": "$a_n=2+3(n-1)$ 이고 공차가 $3$ 이므로 $a_1=2$, $a_{16}=47$ 이다."
+          "content": "$a_n=2+3(n-1)$ 이므로 $a_1=2$, $a_{16}=47$ 이다."
         },
         {
           "phase": "B",
           "title": "핵심 개념",
-          "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{3}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 부분분수 분해하면 망원급수가 된다."
+          "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{3}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 분해하면 망원급수가 된다."
         },
         {
           "phase": "S",
           "title": "풀이",
-          "content": "$\\displaystyle\\sum_{k=1}^{15}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{3}\\left(\\dfrac{1}{2}-\\dfrac{1}{47}\\right)=\\dfrac{15}{94}$ 이다."
+          "content": "$\\dfrac{1}{3}\\left(\\dfrac{1}{2}-\\dfrac{1}{47}\\right)=\\dfrac{15}{94}$ 이다."
         },
         {
           "phase": "A",
@@ -254,13 +281,13 @@
       "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=2^{n}+5$ 일 때, $a_{6}$ 의 값은?",
       "choices": [
         "$16$",
-        "$36$",
         "$32$",
         "$64$",
-        "$28$"
+        "$33$",
+        "$31$"
       ],
-      "answer": 3,
-      "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=(2^{n}+5)-(2^{n-1}+5)=2^{n-1}$ 이다. 따라서 $a_{6}=2^{5}=32$ 이다."
+      "answer": 2,
+      "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=2^{n}-2^{n-1}=(2-1)2^{n-1}$ 이다. 따라서 $a_{6}=32$ 이다."
     },
     {
       "num": 12,
@@ -276,14 +303,14 @@
         "$15\\sqrt{2}$"
       ],
       "answer": 2,
-      "solution": "삼각형 $GAB$ 에서 $\\angle AGB=180^{\\circ}-45^{\\circ}-75^{\\circ}=60^{\\circ}$ 이므로 사인법칙에 의해 $\\dfrac{\\overline{GB}}{\\sin 45^{\\circ}}=\\dfrac{\\overline{AB}}{\\sin 60^{\\circ}}$, 즉 $\\overline{GB}=10\\cdot\\dfrac{\\sin 45^{\\circ}}{\\sin 60^{\\circ}}=\\dfrac{10\\sqrt{6}}{3}$ 이다. 직각삼각형 $PGB$ 에서 $\\overline{GP}=\\overline{GB}\\tan 60^{\\circ}=\\dfrac{10\\sqrt{6}}{3}\\cdot\\sqrt{3}=10\\sqrt{2}$ 이다."
+      "solution": "삼각형 $GAB$ 에서 $\\angle AGB=180^{\\circ}-45^{\\circ}-75^{\\circ}=60^{\\circ}$ 이므로 사인법칙에 의해 $\\overline{GB}=10\\cdot\\dfrac{\\sin 45^{\\circ}}{\\sin 60^{\\circ}}$ 이다. 직각삼각형 $PGB$ 에서 $\\overline{GP}=\\overline{GB}\\tan 60^{\\circ}=10\\sqrt{2}$ 이다."
     },
     {
       "num": 13,
       "unit": "수학적 귀납법",
       "level": "심화",
       "type": "객관식",
-      "latex": "다음은 모든 자연수 $n$ 에 대하여 \\\\ $\\displaystyle\\sum_{k=1}^{n} k(k+1)(k+2)=\\dfrac{n(n+1)(n+2)(n+3)}{4}\\quad\\cdots\\ (\\ast)$ \\\\ 이 성립함을 수학적 귀납법으로 증명한 것이다. \\\\ (i) $n=1$ 일 때, (좌변)$=1\\cdot 2\\cdot 3=6$, (우변)$=\\dfrac{1\\cdot 2\\cdot 3\\cdot 4}{4}=6$ 이므로 $(\\ast)$ 이 성립한다. \\\\ (ii) $n=k$ 일 때 $(\\ast)$ 이 성립한다고 가정하면 \\\\ $\\displaystyle\\sum_{i=1}^{k+1} i(i+1)(i+2)=\\dfrac{k(k+1)(k+2)(k+3)}{4}+\\boxed{(\\text{가})}=\\dfrac{(k+1)(k+2)(k+3)\\cdot\\boxed{(\\text{나})}}{4}$ \\\\ 이므로 $n=k+1$ 일 때도 $(\\ast)$ 이 성립한다. \\\\ 위의 $\\boxed{(\\text{가})}=f(k)$, $\\boxed{(\\text{나})}=g(k)$ 라 할 때, $\\dfrac{f(2)}{g(2)}$ 의 값은?",
+      "latex": "다음은 모든 자연수 $n$ 에 대하여 \\\\ $\\displaystyle\\sum_{k=1}^{n} k(k+1)(k+2)=\\dfrac{n(n+1)(n+2)(n+3)}{4}\\quad\\cdots\\ (\\ast)$ \\\\ 이 성립함을 수학적 귀납법으로 증명한 것이다. \\\\ (i) $n=1$ 일 때, (좌변)$=1\\cdot 2\\cdot 3=6$, (우변)$=\\dfrac{1\\cdot 2\\cdot 3\\cdot 4}{4}=6$ 이므로 $(\\ast)$ 이 성립한다. \\\\ (ii) $n=k$ 일 때 $(\\ast)$ 이 성립한다고 가정하면 \\\\ $\\displaystyle\\sum_{i=1}^{k+1} i(i+1)(i+2)=\\dfrac{k(k+1)(k+2)(k+3)}{4}+(\\text{가})=\\dfrac{(k+1)(k+2)(k+3)\\cdot(\\text{나})}{4}$ \\\\ 이므로 $n=k+1$ 일 때도 $(\\ast)$ 이 성립한다. \\\\ 위의 $(\\text{가})=f(k)$, $(\\text{나})=g(k)$ 라 할 때, $\\dfrac{f(2)}{g(2)}$ 의 값은?",
       "choices": [
         "$6$",
         "$10$",
@@ -292,27 +319,27 @@
         "$15$"
       ],
       "answer": 2,
-      "solution": "$\\boxed{(\\text{가})}=(k+1)(k+2)(k+3)$ 이므로 $f(k)=(k+1)(k+2)(k+3)$ 이고, 우변을 묶으면 $\\dfrac{(k+1)(k+2)(k+3)(k+4)}{4}$ 이므로 $\\boxed{(\\text{나})}=k+4$, 즉 $g(k)=k+4$ 이다. 따라서 $\\dfrac{f(2)}{g(2)}=\\dfrac{3\\cdot 4\\cdot 5}{6}=10$ 이다.",
+      "solution": "$(\\text{가})=(k+1)(k+2)(k+3)$ 이므로 $f(k)=(k+1)(k+2)(k+3)$ 이고, 우변을 묶으면 $\\dfrac{(k+1)(k+2)(k+3)(k+4)}{4}$ 이므로 $g(k)=k+4$ 이다. 따라서 $\\dfrac{f(2)}{g(2)}=\\dfrac{3\\cdot 4\\cdot 5}{6}=10$ 이다.",
       "avs": [
         {
           "phase": "P",
           "title": "목표 확인",
-          "content": "수학적 귀납법 증명의 빈칸 $f(k)$, $g(k)$ 를 찾아 $\\dfrac{f(2)}{g(2)}$ 를 구한다."
+          "content": "수학적 귀납법 등식 증명의 빈칸 $f(k)$, $g(k)$ 를 찾아 $\\dfrac{f(2)}{g(2)}$ 를 구한다."
         },
         {
           "phase": "C",
           "title": "조건 정리",
-          "content": "$n=k$ 가정식에 제$(k+1)$항 $(k+1)(k+2)(k+3)$ 을 더한 것이 $n=k+1$ 식이어야 한다."
+          "content": "$n=k$ 가정식에 제$(k+1)$항을 더한 것이 $n=k+1$ 식과 같아야 한다."
         },
         {
           "phase": "B",
           "title": "핵심 개념",
-          "content": "따라서 $\\boxed{(\\text{가})}=(k+1)(k+2)(k+3)$ 이고, 두 항을 $(k+1)(k+2)(k+3)$ 으로 묶으면 $\\boxed{(\\text{나})}$ 가 결정된다."
+          "content": "더한 항이 $(\\text{가})=f(k)$ 이고, 공통인수로 묶으면 $(\\text{나})=g(k)$ 가 결정된다."
         },
         {
           "phase": "S",
           "title": "풀이",
-          "content": "$\\dfrac{k(k+1)(k+2)(k+3)}{4}+(k+1)(k+2)(k+3)=\\dfrac{(k+1)(k+2)(k+3)(k+4)}{4}$ 이므로 $g(k)=k+4$ 이다. $\\dfrac{f(2)}{g(2)}=\\dfrac{3\\cdot 4\\cdot 5}{6}=10$."
+          "content": "$f(k)=(k+1)(k+2)(k+3)$, $g(k)=k+4$ 이므로 $\\dfrac{f(2)}{g(2)}=10$ 이다."
         },
         {
           "phase": "A",
@@ -335,7 +362,7 @@
         "$38$"
       ],
       "answer": 3,
-      "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=2n^2-2(n-1)^2=4n-2$ 이고, $b_n=T_n-T_{n-1}=2^{n+1}-2^{n}=2^{n}$ 이다. 따라서 $a_{4}=14$, $b_{4}=16$ 이므로 합은 $14+16=30$ 이다."
+      "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=2n^2-2(n-1)^2=2(2n-1)$ 이고 $b_n=T_n-T_{n-1}=2^{n+1}-2^{n}=2^{n}$ 이다. 따라서 $a_{4}=14$, $b_{4}=16$ 이므로 합은 $30$ 이다."
     },
     {
       "num": 15,
@@ -351,48 +378,48 @@
         "$68$"
       ],
       "answer": 4,
-      "solution": "제$6$항부터 제$9$항까지의 합은 (첫째항부터 제$9$항까지의 합)$-$(첫째항부터 제$5$항까지의 합)$=63-15=48$ 이다."
+      "solution": "제$6$항부터 제$9$항까지의 합 $=(63)-(15)=48$ 이다."
     },
     {
       "num": 16,
       "unit": "여러 가지 수열",
       "level": "심화",
       "type": "객관식",
-      "latex": "수열 $\\{a_n\\}$ 이 모든 자연수 $n$ 에 대하여 \\\\ (가) $a_{2n}=2n$ \\\\ (나) $\\displaystyle\\sum_{k=1}^{2n} a_k=n(2n+1)$ \\\\ 를 만족시킬 때, $a_3+a_5$ 의 값은?",
+      "latex": "수열 $\\{a_n\\}$ 이 모든 자연수 $n$ 에 대하여 \\\\ (가) $a_{2n}=\\dfrac{1}{1-2n}$ \\\\ (나) $\\displaystyle\\sum_{k=1}^{2n} a_k=\\dfrac{2n+2}{2n+1}$ \\\\ 를 만족시킬 때, $a_1-a_7$ 의 값은?",
       "choices": [
-        "$4$",
-        "$6$",
-        "$8$",
-        "$10$",
-        "$12$"
+        "$\\dfrac{14}{9}$",
+        "$\\dfrac{16}{9}$",
+        "$2$",
+        "$\\dfrac{20}{9}$",
+        "$\\dfrac{22}{9}$"
       ],
-      "answer": 3,
-      "solution": "$n=1$ 에서 $a_1+a_2=3$ 이고 $a_2=2$ 이므로 $a_1=1$ 이다. $n=2$ 에서 $\\sum_{k=1}^{4}a_k=10$ 이고 $a_4=4$ 이므로 $a_3=10-1-2-4=3$ 이다. $n=3$ 에서 $\\sum_{k=1}^{6}a_k=21$ 이고 $a_6=6$ 이므로 $a_5=21-10-6=5$ 이다. 따라서 $a_3+a_5=3+5=8$ 이다.",
+      "answer": 4,
+      "solution": "(나)에서 $S_{2n}=\\dfrac{2n+2}{2n+1}$ 이고 (가)에서 $a_{2n}=\\dfrac{1}{1-2n}$ 이다. $a_1=S_2-a_2=\\dfrac{7}{3}$, 홀수항은 $a_{2n-1}=S_{2n}-S_{2n-2}-a_{2n}$ 로 구하면 $a_3=\\dfrac{1}{5}$, $a_5=\\dfrac{1}{7}$, $a_7=\\dfrac{1}{9}$ 이다. 따라서 $a_1-a_7=\\dfrac{20}{9}$ 이다.",
       "avs": [
         {
           "phase": "P",
           "title": "목표 확인",
-          "content": "짝수항 조건과 누적합 조건으로부터 $a_3$, $a_5$ 를 구해 그 합을 구한다."
+          "content": "짝수항 (가)와 누적합 (나)로부터 홀수항을 역산하여 $a_1-a_7$ 을 구한다."
         },
         {
           "phase": "C",
           "title": "조건 정리",
-          "content": "(가)에서 $a_2=2$, $a_4=4$, $a_6=6$ 이고, (나)에서 누적합 $\\sum_{k=1}^{2n} a_k=n(2n+1)$ 이다."
+          "content": "(가)에서 $a_2=-1$, $a_4=-\\dfrac{1}{3}$ 등 짝수항을, (나)에서 누적합 $S_{2n}$ 을 안다."
         },
         {
           "phase": "B",
           "title": "핵심 개념",
-          "content": "홀수항은 (누적합의 차)$-$(짝수항) 으로 구한다. 즉 $a_{2n-1}=\\sum_{k=1}^{2n}a_k-\\sum_{k=1}^{2n-2}a_k-a_{2n}$ 이다."
+          "content": "$a_1=S_2-a_2$ 이고, 홀수항은 $a_{2n-1}=S_{2n}-S_{2n-2}-a_{2n}$ 로 구한다."
         },
         {
           "phase": "S",
           "title": "풀이",
-          "content": "$a_1=1$, $a_3=3$, $a_5=5$ 이므로 $a_3+a_5=8$ 이다."
+          "content": "$a_1=\\dfrac{7}{3}$, $a_3=\\dfrac{1}{5}$, $a_5=\\dfrac{1}{7}$, $a_7=\\dfrac{1}{9}$ 이므로 $a_1-a_7=\\dfrac{20}{9}$ 이다."
         },
         {
           "phase": "A",
           "title": "정답",
-          "content": "$a_3+a_5=8$ 이다."
+          "content": "$a_1-a_7=\\dfrac{20}{9}$ 이다."
         }
       ]
     },
@@ -401,41 +428,41 @@
       "unit": "삼각함수의 활용",
       "level": "심화",
       "type": "객관식",
-      "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=5$, $\\overline{AC}=4$ 이고 삼각형 $ABC$ 의 넓이가 $5\\sqrt{3}$ 이다. 변 $BC$ 를 한 변으로 하는 정사각형의 넓이는? (단, $\\angle A$ 는 예각)",
+      "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=5$, $\\overline{AC}=3$ 이다. 변 $BC$ 를 한 변으로 하고 삼각형과 겹치지 않도록 하는 정사각형 $BEDC$ 를 만들었을 때, 삼각형 $ABE$ 의 넓이가 $13$ 이다. 정사각형 $BEDC$ 의 넓이는?",
       "choices": [
         "$13$",
         "$17$",
-        "$21$",
         "$25$",
-        "$29$"
+        "$36$",
+        "$40$"
       ],
-      "answer": 3,
-      "solution": "넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A=\\dfrac{1}{2}\\cdot 5\\cdot 4\\sin A=5\\sqrt{3}$ 에서 $\\sin A=\\dfrac{\\sqrt{3}}{2}$ 이고 $A$ 가 예각이므로 $A=60^{\\circ}$, $\\cos A=\\dfrac{1}{2}$ 이다. 코사인법칙에서 $\\overline{BC}^{2}=5^{2}+4^{2}-2\\cdot 5\\cdot 4\\cdot\\dfrac{1}{2}=25+16-20=21$ 이므로 정사각형의 넓이는 $21$ 이다.",
+      "answer": 4,
+      "solution": "정사각형의 넓이는 $\\overline{BC}^{2}$ 이다. $\\angle ABE=\\angle ABC+90^{\\circ}$ 이므로 삼각형 $ABE$ 의 넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{BC}\\sin(\\angle ABC+90^{\\circ})=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{BC}\\cos(\\angle ABC)=13$ 이므로 $\\overline{BC}\\cos(\\angle ABC)=\\dfrac{2\\cdot 13}{5}$ 이다. 코사인법칙 $\\overline{AC}^{2}=\\overline{AB}^{2}+\\overline{BC}^{2}-2\\,\\overline{AB}\\cdot\\overline{BC}\\cos(\\angle ABC)$ 에 대입하면 $\\overline{BC}^{2}=\\overline{AC}^{2}-\\overline{AB}^{2}+4\\cdot 13=36$ 이다.",
       "avs": [
         {
           "phase": "P",
           "title": "목표 확인",
-          "content": "삼각형의 넓이로 $\\angle A$ 를 구한 뒤 코사인법칙으로 $\\overline{BC}^{2}$, 곧 정사각형의 넓이를 구한다."
+          "content": "변 $BC$ 밖에 세운 정사각형의 넓이 $\\overline{BC}^{2}$ 를, 삼각형 $ABE$ 의 넓이 조건으로 구한다."
         },
         {
           "phase": "C",
           "title": "조건 정리",
-          "content": "$\\overline{AB}=5$, $\\overline{AC}=4$, 넓이$=5\\sqrt{3}$ 이며 정사각형의 넓이는 $\\overline{BC}^{2}$ 이다."
+          "content": "$\\overline{AB}=5$, $\\overline{AC}=3$, 삼각형 $ABE$ 넓이 $=13$ 이며 $\\angle ABE=\\angle ABC+90^{\\circ}$ 이다."
         },
         {
           "phase": "B",
           "title": "핵심 개념",
-          "content": "넓이 공식 $\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A$ 로 $\\sin A$ 를, 코사인법칙으로 $\\overline{BC}^{2}$ 를 구한다."
+          "content": "넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{BC}\\cos(\\angle ABC)$ 로 $\\overline{BC}\\cos(\\angle ABC)$ 를 구한 뒤 코사인법칙에 넣는다."
         },
         {
           "phase": "S",
           "title": "풀이",
-          "content": "$\\sin A=\\dfrac{\\sqrt{3}}{2}$ 에서 $A=60^{\\circ}$ 이고 $\\overline{BC}^{2}=25+16-20=21$ 이다."
+          "content": "$\\overline{BC}\\cos(\\angle ABC)=\\dfrac{2\\cdot 13}{5}$, $\\overline{BC}^{2}=\\overline{AC}^{2}-\\overline{AB}^{2}+4\\cdot 13=36$ 이다."
         },
         {
           "phase": "A",
           "title": "정답",
-          "content": "정사각형의 넓이는 $21$ 이다."
+          "content": "정사각형의 넓이는 $36$ 이다."
         }
       ]
     },
@@ -444,41 +471,41 @@
       "unit": "수학적 귀납법",
       "level": "심화",
       "type": "객관식",
-      "latex": "수열 $\\{a_n\\}$ 이 모든 자연수 $n$ 에 대하여 다음 조건을 만족시킨다. \\\\ (가) $n$ 이 홀수이면 $a_{n+1}=a_n+2$ 이다. \\\\ (나) $n$ 이 짝수이면 $a_{n+1}=2a_n$ 이다. \\\\ $a_1=2$ 일 때, $a_5$ 의 값은?",
+      "latex": "수열 $\\{a_n\\}$ 이 모든 자연수 $n$ 에 대하여 다음 조건을 만족시킨다. \\\\ (가) $n$ 이 $3$ 의 배수가 아니면 $a_{n+1}=-a_n-n$ 이다. \\\\ (나) $n$ 이 $3$ 의 배수이면 $a_{n+3}=(-1)^{n}\\times a_n$ 이다. \\\\ $a_{20}=-30$ 일 때, $\\displaystyle\\sum_{k=1}^{21} a_k$ 의 값은?",
       "choices": [
-        "$12$",
-        "$16$",
-        "$24$",
-        "$28$",
-        "$20$"
+        "$-65$",
+        "$-60$",
+        "$-55$",
+        "$-50$",
+        "$-45$"
       ],
-      "answer": 5,
-      "solution": "$a_1=2$, $a_2=a_1+2=4$, $a_3=2a_2=8$, $a_4=a_3+2=10$, $a_5=2a_4=20$ 이다.",
+      "answer": 2,
+      "solution": "(나)에서 $3$ 의 배수 위치의 연결식으로 첫째항 $a_1$ 에 대한 관계가 정해지고, (가)로 각 묶음의 나머지 항을 표현한다. $3$ 의 배수가 아닌 $n$ 에서의 식과 (나)의 연결식을 연립하면 $a_1=-9$ 이 되어 모든 항이 결정된다. 이때 $a_{20}=-30$ 조건이 성립하고, $\\displaystyle\\sum_{k=1}^{21} a_k=-60$ 이다.",
       "avs": [
         {
           "phase": "P",
           "title": "목표 확인",
-          "content": "홀수·짝수 번호에 따라 규칙이 다른 점화식으로 $a_5$ 를 구한다."
+          "content": "$3$ 의 배수 여부로 규칙이 갈리는 점화식에서 주어진 항으로부터 거꾸로 추적하여 합을 구한다."
         },
         {
           "phase": "C",
           "title": "조건 정리",
-          "content": "$n$ 이 홀수이면 $+2$, 짝수이면 $\\times 2$ 이고 $a_1=2$ 이다."
+          "content": "(가)는 $3$ 의 배수가 아닌 $n$ 에서의 점화식, (나)는 $3$ 의 배수 $n$ 에서 $a_{n+3}=(-1)^{n}a_n$ 이며 $a_{20}=-30$ 이다."
         },
         {
           "phase": "B",
           "title": "핵심 개념",
-          "content": "항을 순서대로 계산하되 다음 항을 만드는 규칙이 현재 번호 $n$ 의 홀짝에 의해 결정됨에 주의한다."
+          "content": "$3k+1$ 번째 항을 미지수로 두고 (가)로 묶음 내부를 표현한 뒤, (나)의 연결식으로 미지수 사이의 관계를 연립한다."
         },
         {
           "phase": "S",
           "title": "풀이",
-          "content": "$a_2=4$, $a_3=8$, $a_4=10$, $a_5=20$ 이다."
+          "content": "연립하면 $a_1=-9$ 로 모든 항이 정해지고 $a_{20}=-30$ 가 확인된다. 모든 항을 더하면 합은 $-60$ 이다."
         },
         {
           "phase": "A",
           "title": "정답",
-          "content": "$a_5=20$ 이다."
+          "content": "$\\displaystyle\\sum_{k=1}^{21} a_k=-60$ 이다."
         }
       ]
     },
@@ -487,50 +514,7 @@
       "unit": "삼각함수의 활용",
       "level": "심화",
       "type": "객관식",
-      "latex": "원에 내접하는 사각형 $ABCD$ 에서 $\\overline{AB}=2$, $\\overline{BC}=3$, $\\overline{CD}=2$, $\\overline{DA}=3$ 일 때, 사각형 $ABCD$ 의 넓이는?",
-      "choices": [
-        "$6$",
-        "$0$",
-        "$3$",
-        "$9$",
-        "$12$"
-      ],
-      "answer": 1,
-      "solution": "원에 내접하는 사각형이므로 $\\angle B+\\angle D=180^{\\circ}$ 이다. 대각선 $AC$ 에 대하여 코사인법칙을 두 삼각형에 적용하면 $\\cos B=\\dfrac{2^2+3^2-\\overline{AC}^2}{2\\cdot 2\\cdot 3}$, $\\cos D=-\\cos B$ 이고 $\\overline{AC}^2$ 를 소거하면 $\\cos B=0$, 즉 $B=90^{\\circ}$ 이다. 따라서 넓이 $=2\\times\\dfrac{1}{2}\\cdot 2\\cdot 3=6$ 이다.",
-      "avs": [
-        {
-          "phase": "P",
-          "title": "목표 확인",
-          "content": "원에 내접하는 사각형의 마주보는 각의 성질을 이용하여 넓이를 구한다."
-        },
-        {
-          "phase": "C",
-          "title": "조건 정리",
-          "content": "네 변이 $2,3,2,3$ 이고 $\\angle B+\\angle D=180^{\\circ}$ 이다."
-        },
-        {
-          "phase": "B",
-          "title": "핵심 개념",
-          "content": "대각선 $AC$ 에 대해 두 삼각형에 코사인법칙을 적용하고 $\\cos D=-\\cos B$ 를 이용해 $\\overline{AC}^2$ 를 소거한다."
-        },
-        {
-          "phase": "S",
-          "title": "풀이",
-          "content": "소거 결과 $\\cos B=0$, 즉 $\\angle B=90^{\\circ}$ 이므로 넓이 $=\\dfrac{1}{2}\\cdot 2\\cdot 3\\times 2=6$ 이다."
-        },
-        {
-          "phase": "A",
-          "title": "정답",
-          "content": "사각형 $ABCD$ 의 넓이는 $6$ 이다."
-        }
-      ]
-    },
-    {
-      "num": 20,
-      "unit": "여러 가지 수열",
-      "level": "심화",
-      "type": "객관식",
-      "latex": "수열 $\\{a_n\\}$ 의 일반항이 $a_n=2n-13$ 이다. $\\displaystyle\\sum_{k=1}^{p} a_k=\\sum_{k=1}^{q} a_k$ 를 만족시키는 서로 다른 두 자연수 $p$, $q$ $(p<q)$ 의 순서쌍 $(p,\\ q)$ 의 개수는?",
+      "latex": "그림과 같이 사각형 $ABCD$ 가 한 원에 내접하고 다음 조건을 만족시킨다. \\\\ (가) $\\overline{AB}^{2}:\\overline{AD}^{2}:\\overline{BD}^{2}=4:9:7$ \\\\ (나) 삼각형 $BCD$ 의 넓이는 $\\sqrt{3}$ 이다. \\\\ (다) $\\sin(\\angle DBC)+\\sin(\\angle BDC)=1$ \\\\ 사각형 $ABCD$ 의 외접원의 넓이가 $\\dfrac{q}{p}\\pi$ 일 때, $p+q$ 의 값은? (단, $p$ 와 $q$ 는 서로소인 자연수이다.)",
       "choices": [
         "$3$",
         "$4$",
@@ -539,7 +523,50 @@
         "$7$"
       ],
       "answer": 3,
-      "solution": "$S_n=\\sum_{k=1}^{n}(2k-13)=n(n+1)-13n=n^2+-12n$ 이다. $S_p=S_q$ 이면 $p^2+-12p=q^2+-12q$, 즉 $(p-q)(p+q+-12)=0$ 이므로 $p+q=12$ 이다. $p<q$ 인 자연수 순서쌍은 5개이다."
+      "solution": "삼각형 $ABD$ 에서 코사인법칙으로 $\\cos(\\angle A)=\\dfrac{4+9-7}{2\\sqrt{4\\cdot 9}}=\\frac{1}{2}$ 이므로 $\\sin(\\angle A)$ 가 정해지고, $\\overline{BD}=2R\\sin(\\angle A)$ 이다. 내접사각형이므로 $\\angle BCD=180^{\\circ}-\\angle A$ 이고 $\\sin(\\angle BCD)=\\sin(\\angle A)$ 이다. 삼각형 $BCD$ 에서 $\\overline{BC}=2R\\sin(\\angle BDC)$, $\\overline{CD}=2R\\sin(\\angle DBC)$ 이므로 넓이 $=2R^{2}\\sin(\\angle DBC)\\sin(\\angle BDC)\\sin(\\angle A)$ 이다. (다)와 $\\angle DBC+\\angle BDC=\\angle A$ 로 $\\sin(\\angle DBC)\\sin(\\angle BDC)$ 를 구해 (나)에 대입하면 $R^{2}=4$, 즉 외접원의 넓이는 $\\dfrac{4}{1}\\pi$ 이다. 따라서 $p+q=5$ 이다.",
+      "avs": [
+        {
+          "phase": "P",
+          "title": "목표 확인",
+          "content": "내접사각형의 변비·넓이·사인 합 조건으로 외접원의 넓이를 구한다."
+        },
+        {
+          "phase": "C",
+          "title": "조건 정리",
+          "content": "(가)로 $\\angle A$ 를, (나)로 삼각형 $BCD$ 의 넓이를, (다)로 두 밑각의 사인 합을 안다. 내접사각형이므로 $\\angle BCD=180^{\\circ}-\\angle A$ 이다."
+        },
+        {
+          "phase": "B",
+          "title": "핵심 개념",
+          "content": "삼각형 $ABD$ 에서 코사인법칙으로 $\\angle A$, 사인법칙으로 $2R$ 을 잡고, 삼각형 $BCD$ 의 넓이 $=2R^{2}\\sin(\\angle DBC)\\sin(\\angle BDC)\\sin(\\angle A)$ 를 쓴다."
+        },
+        {
+          "phase": "S",
+          "title": "풀이",
+          "content": "(다)와 $\\angle DBC+\\angle BDC=\\angle A$ 로 곱 $\\sin(\\angle DBC)\\sin(\\angle BDC)$ 를 구해 넓이식에 넣으면 $R^{2}=4$ 이다. 외접원 넓이는 $\\dfrac{4}{1}\\pi$ 이다."
+        },
+        {
+          "phase": "A",
+          "title": "정답",
+          "content": "$p+q=5$ 이다."
+        }
+      ]
+    },
+    {
+      "num": 20,
+      "unit": "여러 가지 수열",
+      "level": "심화",
+      "type": "객관식",
+      "latex": "수열 $\\{a_n\\}$ 이 \\\\ $a_n=\\begin{cases}(n-4)(n-13) & (n\\le 8) \\\\ -(n-4)(n-13) & (n\\ge 9)\\end{cases}$ \\\\ 일 때, $\\displaystyle\\sum_{k=1}^{p} a_k=\\sum_{k=1}^{q} a_k$ 를 만족시키는 서로 다른 두 자연수 $p$, $q$ $(p<q)$ 의 순서쌍 $(p,\\ q)$ 의 개수는?",
+      "choices": [
+        "$7$",
+        "$8$",
+        "$9$",
+        "$10$",
+        "$11$"
+      ],
+      "answer": 5,
+      "solution": "$S_n=\\displaystyle\\sum_{k=1}^{n} a_k$ 라 하면 $S_p=S_q$ 는 $\\displaystyle\\sum_{k=p+1}^{q} a_k=0$ 을 뜻한다. $a_n$ 은 $n\\le 8$ 에서 위로 볼록한 포물선 값, $n\\ge 9$ 에서 부호가 뒤집힌 값으로, 부분합 $S_n$ 의 증감과 부호 변화를 추적하면 $S_n$ 값이 같아지는 구간을 경우로 나누어 셀 수 있다. $S_0,S_1,\\cdots$ 의 값을 비교하여 같은 값을 갖는 모든 쌍을 세면 그 개수는 $11$ 이다."
     }
   ],
   "rounds": [
@@ -569,9 +596,9 @@
         "choices": [
           "$165$",
           "$185$",
-          "$175$",
           "$195$",
-          "$205$"
+          "$215$",
+          "$225$"
         ],
         "answer": 2,
         "solution": "$\\displaystyle\\sum_{k=1}^{10}(3k+2)=3\\cdot\\dfrac{10\\cdot 11}{2}+2\\cdot 10=165+20=185$ 이다."
@@ -581,16 +608,16 @@
         "unit": "수학적 귀납법",
         "level": "심화",
         "type": "객관식",
-        "latex": "수열 $\\{a_n\\}$ 이 \\\\ $a_1=20,\\quad a_{n+1}=\\dfrac{1}{4}a_n+3\\ \\ (n=1,\\,2,\\,3,\\,\\cdots)$ \\\\ 으로 정의될 때, $a_2$ 의 값은?",
+        "latex": "수열 $\\{a_n\\}$ 이 \\\\ $a_1=3,\\quad a_{n+1}=2a_n+1\\ \\ (n=1,\\,2,\\,3,\\,\\cdots)$ \\\\ 으로 정의될 때, $a_3$ 의 값은?",
         "choices": [
-          "$6$",
-          "$7$",
-          "$9$",
-          "$8$",
-          "$10$"
+          "$13$",
+          "$15$",
+          "$16$",
+          "$18$",
+          "$14$"
         ],
-        "answer": 4,
-        "solution": "$a_2=\\dfrac{1}{4}a_1+3=\\dfrac{20}{4}+3=5+3=8$ 이다."
+        "answer": 2,
+        "solution": "$a_2=2\\cdot 3+1=7$ 이고 $a_3=2\\cdot 7+1=15$ 이다."
       },
       {
         "num": 4,
@@ -606,23 +633,23 @@
           "$605$"
         ],
         "answer": 1,
-        "solution": "$\\displaystyle\\sum_{k=1}^{10} k(k+2)=\\sum_{k=1}^{10} k^2+2\\sum_{k=1}^{10} k=\\dfrac{10\\cdot 11\\cdot 21}{6}+2\\cdot\\dfrac{10\\cdot 11}{2}=385+110=495$ 이다."
+        "solution": "$\\displaystyle\\sum_{k=1}^{10} k(k+2)=\\sum k^2+2\\sum k=\\dfrac{10\\cdot 11\\cdot 21}{6}+2\\cdot\\dfrac{10\\cdot 11}{2}=495$ 이다."
       },
       {
         "num": 5,
         "unit": "삼각함수의 활용",
         "level": "심화",
         "type": "객관식",
-        "latex": "평행사변형 $ABCD$ 에서 $\\overline{AB}=4$, $\\overline{BC}=6$, $\\angle B=120^{\\circ}$ 일 때, 대각선 $AC$ 의 길이는?",
+        "latex": "평행사변형 $ABCD$ 에서 $\\overline{AB}=5$, $\\overline{BC}=8$ 이고 $\\angle B=120^{\\circ}$ 이다. 두 대각선의 길이의 제곱의 합 $\\overline{AC}^{2}+\\overline{BD}^{2}$ 의 값은?",
         "choices": [
-          "$\\sqrt{19}$",
-          "$2\\sqrt{19}$",
-          "$\\sqrt{38}$",
-          "$3\\sqrt{19}$",
-          "$4\\sqrt{19}$"
+          "$166$",
+          "$178$",
+          "$190$",
+          "$202$",
+          "$154$"
         ],
         "answer": 2,
-        "solution": "삼각형 $ABC$ 에서 코사인법칙에 의해 $\\overline{AC}^{2}=4^{2}+6^{2}-2\\cdot 4\\cdot 6\\cos 120^{\\circ}=16+36+24=76$ 이므로 $\\overline{AC}=2\\sqrt{19}$ 이다."
+        "solution": "삼각형 $ABC$ 에서 $\\overline{AC}^{2}=5^2+8^2-2\\cdot 5\\cdot 8\\cos 120^{\\circ}$, 삼각형 $ABD$ 에서 $\\angle A=60^{\\circ}$ 이므로 $\\overline{BD}^{2}=5^2+8^2-2\\cdot 5\\cdot 8\\cos 60^{\\circ}$ 이다. 두 식을 더하면 $\\cos$ 항이 소거되어 $\\overline{AC}^{2}+\\overline{BD}^{2}=2(5^2+8^2)=178$ 이다."
       },
       {
         "num": 6,
@@ -638,7 +665,7 @@
           "$18$"
         ],
         "answer": 5,
-        "solution": "등차중항에서 $x=\\dfrac{4+16}{2}=10$ 이고, 등비중항에서 $y=\\sqrt{4\\cdot 16}=\\sqrt{64}=8$ 이다. 따라서 $x+y=10+8=18$ 이다."
+        "solution": "등차중항에서 $x=\\dfrac{4+16}{2}=10$, 등비중항에서 $y=\\sqrt{4\\cdot 16}=8$ 이므로 $x+y=18$ 이다."
       },
       {
         "num": 7,
@@ -654,7 +681,7 @@
           "$200$"
         ],
         "answer": 1,
-        "solution": "$a_3+a_5+a_7=3a_5=60$ 이므로 $a_5=20$ 이다. 등차수열의 합은 $\\displaystyle\\sum_{k=1}^{9} a_k=\\dfrac{9(a_1+a_9)}{2}=9a_5=9\\cdot 20=180$ 이다."
+        "solution": "$a_3+a_5+a_7=3a_5=60$ 이므로 $a_5=20$ 이다. $\\displaystyle\\sum_{k=1}^{9} a_k=\\dfrac{9(a_1+a_{9})}{2}=9a_5=180$ 이다."
       },
       {
         "num": 8,
@@ -665,27 +692,27 @@
         "choices": [
           "$\\dfrac{47}{49}$",
           "$\\dfrac{46}{49}$",
-          "$\\dfrac{24}{25}$",
           "$\\dfrac{48}{49}$",
-          "$\\dfrac{48}{50}$"
+          "$\\dfrac{24}{25}$",
+          "$\\dfrac{48}{47}$"
         ],
-        "answer": 4,
-        "solution": "$\\dfrac{2}{(2k-1)(2k+1)}=\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}$ 이므로 망원급수로 $\\displaystyle\\sum_{k=1}^{24}\\left(\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}\\right)=1-\\dfrac{1}{49}=\\dfrac{48}{49}$ 이다.",
+        "answer": 3,
+        "solution": "$\\dfrac{2}{(2k-1)(2k+1)}=\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}$ 이므로 망원급수로 $1-\\dfrac{1}{49}=\\dfrac{48}{49}$ 이다.",
         "avs": [
           {
             "phase": "P",
             "title": "목표 확인",
-            "content": "부분분수 분해를 이용하여 $\\displaystyle\\sum_{k=1}^{24}\\dfrac{2}{(2k-1)(2k+1)}$ 의 값을 구한다."
+            "content": "부분분수 분해로 $\\displaystyle\\sum_{k=1}^{24}\\dfrac{2}{(2k-1)(2k+1)}$ 를 구한다."
           },
           {
             "phase": "C",
             "title": "조건 정리",
-            "content": "분모가 연속한 두 홀수의 곱 $(2k-1)(2k+1)$ 꼴이므로 부분분수로 분해할 수 있다."
+            "content": "분모가 연속한 두 홀수의 곱 $(2k-1)(2k+1)$ 꼴이다."
           },
           {
             "phase": "B",
             "title": "핵심 개념",
-            "content": "$\\dfrac{2}{(2k-1)(2k+1)}=\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}$ 로 분해하면 인접한 항이 소거되는 망원급수가 된다."
+            "content": "$\\dfrac{2}{(2k-1)(2k+1)}=\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}$ 로 분해하면 인접 항이 소거되는 망원급수가 된다."
           },
           {
             "phase": "S",
@@ -704,16 +731,43 @@
         "unit": "삼각함수의 활용",
         "level": "심화",
         "type": "객관식",
-        "latex": "수평인 지면 위의 두 지점 $A$, $B$ 사이의 거리가 $8$ 이다. 지점 $A$ 에서 나무 꼭대기 $P$ 를 올려본 각의 크기가 $30^{\\circ}$, 지점 $B$ 에서 올려본 각의 크기가 $60^{\\circ}$ 이고 $A$, $B$, 나무의 밑면이 한 직선 위에 있다. $A$ 가 $B$ 보다 나무에서 멀 때, 선분 $BP$ 의 길이는?",
+        "latex": "$\\overline{AB}=1$, $\\overline{AC}=\\sqrt{3}$ 인 직각삼각형 $ABC$ ($\\angle A=90^{\\circ}$) 모양의 종이가 있고, 이 삼각형의 외접원은 빗변 $BC$ 를 지름으로 한다. 변 $BC$ 위의 점 $D$, 변 $AB$ 위의 점 $E$, 변 $AC$ 위의 점 $F$ 에 대하여 선분 $EF$ 를 접는 선으로 하여 점 $A$ 가 점 $D$ 에 겹쳐지도록 접었다. 삼각형 $BDE$ 와 삼각형 $DCF$ 의 외접원의 반지름의 길이의 비가 $1:2$ 일 때, 선분 $DF$ 의 길이는 $\\dfrac{q}{p}\\sqrt{3}$ 이다. $p+q$ 의 값은? (단, $p$ 와 $q$ 는 서로소인 자연수이다.)",
         "choices": [
-          "$4$",
-          "$6$",
-          "$8$",
-          "$10$",
-          "$12$"
+          "$25$",
+          "$26$",
+          "$27$",
+          "$28$",
+          "$29$"
         ],
-        "answer": 3,
-        "solution": "삼각형 $ABP$ 에서 $\\angle PAB=30^{\\circ}$ 이고 $\\angle PBA=180^{\\circ}-60^{\\circ}=120^{\\circ}$ 이므로 $\\angle APB=30^{\\circ}$ 이다. 사인법칙에서 $\\dfrac{\\overline{BP}}{\\sin 30^{\\circ}}=\\dfrac{\\overline{AB}}{\\sin 30^{\\circ}}$ 이므로 $\\overline{BP}=\\overline{AB}=8$ 이다."
+        "answer": 1,
+        "solution": "$\\angle A=90^{\\circ}$ 이므로 $\\angle B=60^{\\circ}$, $\\angle C=30^{\\circ}$ 이다. 접은 성질로 $\\overline{ED}=\\overline{AE}$, $\\overline{FD}=\\overline{AF}$ 이고 $\\angle EDF=\\angle A=90^{\\circ}$ 이다. 삼각형 $BDE$, $DCF$ 에 사인법칙을 적용하면 외접원 반지름비 조건에서 $\\overline{AF}$ 가 결정되고, $D$ 가 $BC$ 위에 있다는 조건 $\\angle BDE+\\angle FDC=90^{\\circ}$ 로 연립하면 $\\overline{DF}=\\dfrac{7}{18}\\sqrt{3}$ 이다. 따라서 $p+q=25$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "직각삼각형 종이를 접어 점 $A$ 가 $BC$ 위의 점 $D$ 에 겹쳐질 때, 두 삼각형의 외접원 반지름비 조건으로 $\\overline{DF}$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\angle A=90^{\\circ}$ 에서 $\\angle B=60^{\\circ}$, $\\angle C=30^{\\circ}$ 이고, 접은 성질로 $\\overline{ED}=\\overline{AE}$, $\\overline{FD}=\\overline{AF}$, $\\angle EDF=90^{\\circ}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "사인법칙으로 $2R_1=\\dfrac{\\overline{ED}}{\\sin B}$, $2R_2=\\dfrac{\\overline{FD}}{\\sin C}$ 이고, $D$ 가 $BC$ 위에 있으므로 $\\angle BDE+\\angle FDC=90^{\\circ}$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "반지름비와 각 조건을 연립하면 $\\overline{DF}=\\dfrac{7}{18}\\sqrt{3}$ 을 얻는다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=25$ 이다."
+          }
+        ]
       },
       {
         "num": 10,
@@ -722,34 +776,34 @@
         "type": "객관식",
         "latex": "첫째항이 $2$, 공차가 $3$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{15}\\dfrac{1}{a_k\\,a_{k+1}}$ 의 값은?",
         "choices": [
-          "$\\dfrac{7}{47}$",
+          "$\\dfrac{1}{94}$",
           "$\\dfrac{15}{94}$",
-          "$\\dfrac{15}{47}$",
+          "$\\dfrac{15}{109}$",
           "$\\dfrac{1}{6}$",
-          "$\\dfrac{8}{47}$"
+          "$\\dfrac{15}{47}$"
         ],
         "answer": 2,
-        "solution": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{3}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 이고 $a_1=2$, $a_{16}=47$ 이므로 $\\displaystyle\\sum_{k=1}^{15}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{3}\\left(\\dfrac{1}{2}-\\dfrac{1}{47}\\right)=\\dfrac{15}{94}$ 이다.",
+        "solution": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{3}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 이고 $a_1=2$, $a_{16}=47$ 이므로 합은 $\\dfrac{15}{94}$ 이다.",
         "avs": [
           {
             "phase": "P",
             "title": "목표 확인",
-            "content": "등차수열의 곱으로 이루어진 분수의 시그마 $\\displaystyle\\sum_{k=1}^{15}\\dfrac{1}{a_k a_{k+1}}$ 의 값을 구한다."
+            "content": "등차수열의 곱 분수의 시그마 $\\displaystyle\\sum_{k=1}^{15}\\dfrac{1}{a_k a_{k+1}}$ 를 구한다."
           },
           {
             "phase": "C",
             "title": "조건 정리",
-            "content": "$a_n=2+3(n-1)$ 이고 공차가 $3$ 이므로 $a_1=2$, $a_{16}=47$ 이다."
+            "content": "$a_n=2+3(n-1)$ 이므로 $a_1=2$, $a_{16}=47$ 이다."
           },
           {
             "phase": "B",
             "title": "핵심 개념",
-            "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{3}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 부분분수 분해하면 망원급수가 된다."
+            "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{3}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 분해하면 망원급수가 된다."
           },
           {
             "phase": "S",
             "title": "풀이",
-            "content": "$\\displaystyle\\sum_{k=1}^{15}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{3}\\left(\\dfrac{1}{2}-\\dfrac{1}{47}\\right)=\\dfrac{15}{94}$ 이다."
+            "content": "$\\dfrac{1}{3}\\left(\\dfrac{1}{2}-\\dfrac{1}{47}\\right)=\\dfrac{15}{94}$ 이다."
           },
           {
             "phase": "A",
@@ -766,13 +820,13 @@
         "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=2^{n}+5$ 일 때, $a_{6}$ 의 값은?",
         "choices": [
           "$16$",
-          "$36$",
           "$32$",
           "$64$",
-          "$28$"
+          "$33$",
+          "$31$"
         ],
-        "answer": 3,
-        "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=(2^{n}+5)-(2^{n-1}+5)=2^{n-1}$ 이다. 따라서 $a_{6}=2^{5}=32$ 이다."
+        "answer": 2,
+        "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=2^{n}-2^{n-1}=(2-1)2^{n-1}$ 이다. 따라서 $a_{6}=32$ 이다."
       },
       {
         "num": 12,
@@ -788,14 +842,14 @@
           "$15\\sqrt{2}$"
         ],
         "answer": 2,
-        "solution": "삼각형 $GAB$ 에서 $\\angle AGB=180^{\\circ}-45^{\\circ}-75^{\\circ}=60^{\\circ}$ 이므로 사인법칙에 의해 $\\dfrac{\\overline{GB}}{\\sin 45^{\\circ}}=\\dfrac{\\overline{AB}}{\\sin 60^{\\circ}}$, 즉 $\\overline{GB}=10\\cdot\\dfrac{\\sin 45^{\\circ}}{\\sin 60^{\\circ}}=\\dfrac{10\\sqrt{6}}{3}$ 이다. 직각삼각형 $PGB$ 에서 $\\overline{GP}=\\overline{GB}\\tan 60^{\\circ}=\\dfrac{10\\sqrt{6}}{3}\\cdot\\sqrt{3}=10\\sqrt{2}$ 이다."
+        "solution": "삼각형 $GAB$ 에서 $\\angle AGB=180^{\\circ}-45^{\\circ}-75^{\\circ}=60^{\\circ}$ 이므로 사인법칙에 의해 $\\overline{GB}=10\\cdot\\dfrac{\\sin 45^{\\circ}}{\\sin 60^{\\circ}}$ 이다. 직각삼각형 $PGB$ 에서 $\\overline{GP}=\\overline{GB}\\tan 60^{\\circ}=10\\sqrt{2}$ 이다."
       },
       {
         "num": 13,
         "unit": "수학적 귀납법",
         "level": "심화",
         "type": "객관식",
-        "latex": "다음은 모든 자연수 $n$ 에 대하여 \\\\ $\\displaystyle\\sum_{k=1}^{n} k(k+1)(k+2)=\\dfrac{n(n+1)(n+2)(n+3)}{4}\\quad\\cdots\\ (\\ast)$ \\\\ 이 성립함을 수학적 귀납법으로 증명한 것이다. \\\\ (i) $n=1$ 일 때, (좌변)$=1\\cdot 2\\cdot 3=6$, (우변)$=\\dfrac{1\\cdot 2\\cdot 3\\cdot 4}{4}=6$ 이므로 $(\\ast)$ 이 성립한다. \\\\ (ii) $n=k$ 일 때 $(\\ast)$ 이 성립한다고 가정하면 \\\\ $\\displaystyle\\sum_{i=1}^{k+1} i(i+1)(i+2)=\\dfrac{k(k+1)(k+2)(k+3)}{4}+\\boxed{(\\text{가})}=\\dfrac{(k+1)(k+2)(k+3)\\cdot\\boxed{(\\text{나})}}{4}$ \\\\ 이므로 $n=k+1$ 일 때도 $(\\ast)$ 이 성립한다. \\\\ 위의 $\\boxed{(\\text{가})}=f(k)$, $\\boxed{(\\text{나})}=g(k)$ 라 할 때, $\\dfrac{f(2)}{g(2)}$ 의 값은?",
+        "latex": "다음은 모든 자연수 $n$ 에 대하여 \\\\ $\\displaystyle\\sum_{k=1}^{n} k(k+1)(k+2)=\\dfrac{n(n+1)(n+2)(n+3)}{4}\\quad\\cdots\\ (\\ast)$ \\\\ 이 성립함을 수학적 귀납법으로 증명한 것이다. \\\\ (i) $n=1$ 일 때, (좌변)$=1\\cdot 2\\cdot 3=6$, (우변)$=\\dfrac{1\\cdot 2\\cdot 3\\cdot 4}{4}=6$ 이므로 $(\\ast)$ 이 성립한다. \\\\ (ii) $n=k$ 일 때 $(\\ast)$ 이 성립한다고 가정하면 \\\\ $\\displaystyle\\sum_{i=1}^{k+1} i(i+1)(i+2)=\\dfrac{k(k+1)(k+2)(k+3)}{4}+(\\text{가})=\\dfrac{(k+1)(k+2)(k+3)\\cdot(\\text{나})}{4}$ \\\\ 이므로 $n=k+1$ 일 때도 $(\\ast)$ 이 성립한다. \\\\ 위의 $(\\text{가})=f(k)$, $(\\text{나})=g(k)$ 라 할 때, $\\dfrac{f(2)}{g(2)}$ 의 값은?",
         "choices": [
           "$6$",
           "$10$",
@@ -804,27 +858,27 @@
           "$15$"
         ],
         "answer": 2,
-        "solution": "$\\boxed{(\\text{가})}=(k+1)(k+2)(k+3)$ 이므로 $f(k)=(k+1)(k+2)(k+3)$ 이고, 우변을 묶으면 $\\dfrac{(k+1)(k+2)(k+3)(k+4)}{4}$ 이므로 $\\boxed{(\\text{나})}=k+4$, 즉 $g(k)=k+4$ 이다. 따라서 $\\dfrac{f(2)}{g(2)}=\\dfrac{3\\cdot 4\\cdot 5}{6}=10$ 이다.",
+        "solution": "$(\\text{가})=(k+1)(k+2)(k+3)$ 이므로 $f(k)=(k+1)(k+2)(k+3)$ 이고, 우변을 묶으면 $\\dfrac{(k+1)(k+2)(k+3)(k+4)}{4}$ 이므로 $g(k)=k+4$ 이다. 따라서 $\\dfrac{f(2)}{g(2)}=\\dfrac{3\\cdot 4\\cdot 5}{6}=10$ 이다.",
         "avs": [
           {
             "phase": "P",
             "title": "목표 확인",
-            "content": "수학적 귀납법 증명의 빈칸 $f(k)$, $g(k)$ 를 찾아 $\\dfrac{f(2)}{g(2)}$ 를 구한다."
+            "content": "수학적 귀납법 등식 증명의 빈칸 $f(k)$, $g(k)$ 를 찾아 $\\dfrac{f(2)}{g(2)}$ 를 구한다."
           },
           {
             "phase": "C",
             "title": "조건 정리",
-            "content": "$n=k$ 가정식에 제$(k+1)$항 $(k+1)(k+2)(k+3)$ 을 더한 것이 $n=k+1$ 식이어야 한다."
+            "content": "$n=k$ 가정식에 제$(k+1)$항을 더한 것이 $n=k+1$ 식과 같아야 한다."
           },
           {
             "phase": "B",
             "title": "핵심 개념",
-            "content": "따라서 $\\boxed{(\\text{가})}=(k+1)(k+2)(k+3)$ 이고, 두 항을 $(k+1)(k+2)(k+3)$ 으로 묶으면 $\\boxed{(\\text{나})}$ 가 결정된다."
+            "content": "더한 항이 $(\\text{가})=f(k)$ 이고, 공통인수로 묶으면 $(\\text{나})=g(k)$ 가 결정된다."
           },
           {
             "phase": "S",
             "title": "풀이",
-            "content": "$\\dfrac{k(k+1)(k+2)(k+3)}{4}+(k+1)(k+2)(k+3)=\\dfrac{(k+1)(k+2)(k+3)(k+4)}{4}$ 이므로 $g(k)=k+4$ 이다. $\\dfrac{f(2)}{g(2)}=\\dfrac{3\\cdot 4\\cdot 5}{6}=10$."
+            "content": "$f(k)=(k+1)(k+2)(k+3)$, $g(k)=k+4$ 이므로 $\\dfrac{f(2)}{g(2)}=10$ 이다."
           },
           {
             "phase": "A",
@@ -847,7 +901,7 @@
           "$38$"
         ],
         "answer": 3,
-        "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=2n^2-2(n-1)^2=4n-2$ 이고, $b_n=T_n-T_{n-1}=2^{n+1}-2^{n}=2^{n}$ 이다. 따라서 $a_{4}=14$, $b_{4}=16$ 이므로 합은 $14+16=30$ 이다."
+        "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=2n^2-2(n-1)^2=2(2n-1)$ 이고 $b_n=T_n-T_{n-1}=2^{n+1}-2^{n}=2^{n}$ 이다. 따라서 $a_{4}=14$, $b_{4}=16$ 이므로 합은 $30$ 이다."
       },
       {
         "num": 15,
@@ -863,48 +917,48 @@
           "$68$"
         ],
         "answer": 4,
-        "solution": "제$6$항부터 제$9$항까지의 합은 (첫째항부터 제$9$항까지의 합)$-$(첫째항부터 제$5$항까지의 합)$=63-15=48$ 이다."
+        "solution": "제$6$항부터 제$9$항까지의 합 $=(63)-(15)=48$ 이다."
       },
       {
         "num": 16,
         "unit": "여러 가지 수열",
         "level": "심화",
         "type": "객관식",
-        "latex": "수열 $\\{a_n\\}$ 이 모든 자연수 $n$ 에 대하여 \\\\ (가) $a_{2n}=2n$ \\\\ (나) $\\displaystyle\\sum_{k=1}^{2n} a_k=n(2n+1)$ \\\\ 를 만족시킬 때, $a_3+a_5$ 의 값은?",
+        "latex": "수열 $\\{a_n\\}$ 이 모든 자연수 $n$ 에 대하여 \\\\ (가) $a_{2n}=\\dfrac{1}{1-2n}$ \\\\ (나) $\\displaystyle\\sum_{k=1}^{2n} a_k=\\dfrac{2n+2}{2n+1}$ \\\\ 를 만족시킬 때, $a_1-a_7$ 의 값은?",
         "choices": [
-          "$4$",
-          "$6$",
-          "$8$",
-          "$10$",
-          "$12$"
+          "$\\dfrac{14}{9}$",
+          "$\\dfrac{16}{9}$",
+          "$2$",
+          "$\\dfrac{20}{9}$",
+          "$\\dfrac{22}{9}$"
         ],
-        "answer": 3,
-        "solution": "$n=1$ 에서 $a_1+a_2=3$ 이고 $a_2=2$ 이므로 $a_1=1$ 이다. $n=2$ 에서 $\\sum_{k=1}^{4}a_k=10$ 이고 $a_4=4$ 이므로 $a_3=10-1-2-4=3$ 이다. $n=3$ 에서 $\\sum_{k=1}^{6}a_k=21$ 이고 $a_6=6$ 이므로 $a_5=21-10-6=5$ 이다. 따라서 $a_3+a_5=3+5=8$ 이다.",
+        "answer": 4,
+        "solution": "(나)에서 $S_{2n}=\\dfrac{2n+2}{2n+1}$ 이고 (가)에서 $a_{2n}=\\dfrac{1}{1-2n}$ 이다. $a_1=S_2-a_2=\\dfrac{7}{3}$, 홀수항은 $a_{2n-1}=S_{2n}-S_{2n-2}-a_{2n}$ 로 구하면 $a_3=\\dfrac{1}{5}$, $a_5=\\dfrac{1}{7}$, $a_7=\\dfrac{1}{9}$ 이다. 따라서 $a_1-a_7=\\dfrac{20}{9}$ 이다.",
         "avs": [
           {
             "phase": "P",
             "title": "목표 확인",
-            "content": "짝수항 조건과 누적합 조건으로부터 $a_3$, $a_5$ 를 구해 그 합을 구한다."
+            "content": "짝수항 (가)와 누적합 (나)로부터 홀수항을 역산하여 $a_1-a_7$ 을 구한다."
           },
           {
             "phase": "C",
             "title": "조건 정리",
-            "content": "(가)에서 $a_2=2$, $a_4=4$, $a_6=6$ 이고, (나)에서 누적합 $\\sum_{k=1}^{2n} a_k=n(2n+1)$ 이다."
+            "content": "(가)에서 $a_2=-1$, $a_4=-\\dfrac{1}{3}$ 등 짝수항을, (나)에서 누적합 $S_{2n}$ 을 안다."
           },
           {
             "phase": "B",
             "title": "핵심 개념",
-            "content": "홀수항은 (누적합의 차)$-$(짝수항) 으로 구한다. 즉 $a_{2n-1}=\\sum_{k=1}^{2n}a_k-\\sum_{k=1}^{2n-2}a_k-a_{2n}$ 이다."
+            "content": "$a_1=S_2-a_2$ 이고, 홀수항은 $a_{2n-1}=S_{2n}-S_{2n-2}-a_{2n}$ 로 구한다."
           },
           {
             "phase": "S",
             "title": "풀이",
-            "content": "$a_1=1$, $a_3=3$, $a_5=5$ 이므로 $a_3+a_5=8$ 이다."
+            "content": "$a_1=\\dfrac{7}{3}$, $a_3=\\dfrac{1}{5}$, $a_5=\\dfrac{1}{7}$, $a_7=\\dfrac{1}{9}$ 이므로 $a_1-a_7=\\dfrac{20}{9}$ 이다."
           },
           {
             "phase": "A",
             "title": "정답",
-            "content": "$a_3+a_5=8$ 이다."
+            "content": "$a_1-a_7=\\dfrac{20}{9}$ 이다."
           }
         ]
       },
@@ -913,41 +967,41 @@
         "unit": "삼각함수의 활용",
         "level": "심화",
         "type": "객관식",
-        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=5$, $\\overline{AC}=4$ 이고 삼각형 $ABC$ 의 넓이가 $5\\sqrt{3}$ 이다. 변 $BC$ 를 한 변으로 하는 정사각형의 넓이는? (단, $\\angle A$ 는 예각)",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=5$, $\\overline{AC}=3$ 이다. 변 $BC$ 를 한 변으로 하고 삼각형과 겹치지 않도록 하는 정사각형 $BEDC$ 를 만들었을 때, 삼각형 $ABE$ 의 넓이가 $13$ 이다. 정사각형 $BEDC$ 의 넓이는?",
         "choices": [
           "$13$",
           "$17$",
-          "$21$",
           "$25$",
-          "$29$"
+          "$36$",
+          "$40$"
         ],
-        "answer": 3,
-        "solution": "넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A=\\dfrac{1}{2}\\cdot 5\\cdot 4\\sin A=5\\sqrt{3}$ 에서 $\\sin A=\\dfrac{\\sqrt{3}}{2}$ 이고 $A$ 가 예각이므로 $A=60^{\\circ}$, $\\cos A=\\dfrac{1}{2}$ 이다. 코사인법칙에서 $\\overline{BC}^{2}=5^{2}+4^{2}-2\\cdot 5\\cdot 4\\cdot\\dfrac{1}{2}=25+16-20=21$ 이므로 정사각형의 넓이는 $21$ 이다.",
+        "answer": 4,
+        "solution": "정사각형의 넓이는 $\\overline{BC}^{2}$ 이다. $\\angle ABE=\\angle ABC+90^{\\circ}$ 이므로 삼각형 $ABE$ 의 넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{BC}\\sin(\\angle ABC+90^{\\circ})=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{BC}\\cos(\\angle ABC)=13$ 이므로 $\\overline{BC}\\cos(\\angle ABC)=\\dfrac{2\\cdot 13}{5}$ 이다. 코사인법칙 $\\overline{AC}^{2}=\\overline{AB}^{2}+\\overline{BC}^{2}-2\\,\\overline{AB}\\cdot\\overline{BC}\\cos(\\angle ABC)$ 에 대입하면 $\\overline{BC}^{2}=\\overline{AC}^{2}-\\overline{AB}^{2}+4\\cdot 13=36$ 이다.",
         "avs": [
           {
             "phase": "P",
             "title": "목표 확인",
-            "content": "삼각형의 넓이로 $\\angle A$ 를 구한 뒤 코사인법칙으로 $\\overline{BC}^{2}$, 곧 정사각형의 넓이를 구한다."
+            "content": "변 $BC$ 밖에 세운 정사각형의 넓이 $\\overline{BC}^{2}$ 를, 삼각형 $ABE$ 의 넓이 조건으로 구한다."
           },
           {
             "phase": "C",
             "title": "조건 정리",
-            "content": "$\\overline{AB}=5$, $\\overline{AC}=4$, 넓이$=5\\sqrt{3}$ 이며 정사각형의 넓이는 $\\overline{BC}^{2}$ 이다."
+            "content": "$\\overline{AB}=5$, $\\overline{AC}=3$, 삼각형 $ABE$ 넓이 $=13$ 이며 $\\angle ABE=\\angle ABC+90^{\\circ}$ 이다."
           },
           {
             "phase": "B",
             "title": "핵심 개념",
-            "content": "넓이 공식 $\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A$ 로 $\\sin A$ 를, 코사인법칙으로 $\\overline{BC}^{2}$ 를 구한다."
+            "content": "넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{BC}\\cos(\\angle ABC)$ 로 $\\overline{BC}\\cos(\\angle ABC)$ 를 구한 뒤 코사인법칙에 넣는다."
           },
           {
             "phase": "S",
             "title": "풀이",
-            "content": "$\\sin A=\\dfrac{\\sqrt{3}}{2}$ 에서 $A=60^{\\circ}$ 이고 $\\overline{BC}^{2}=25+16-20=21$ 이다."
+            "content": "$\\overline{BC}\\cos(\\angle ABC)=\\dfrac{2\\cdot 13}{5}$, $\\overline{BC}^{2}=\\overline{AC}^{2}-\\overline{AB}^{2}+4\\cdot 13=36$ 이다."
           },
           {
             "phase": "A",
             "title": "정답",
-            "content": "정사각형의 넓이는 $21$ 이다."
+            "content": "정사각형의 넓이는 $36$ 이다."
           }
         ]
       },
@@ -956,41 +1010,41 @@
         "unit": "수학적 귀납법",
         "level": "심화",
         "type": "객관식",
-        "latex": "수열 $\\{a_n\\}$ 이 모든 자연수 $n$ 에 대하여 다음 조건을 만족시킨다. \\\\ (가) $n$ 이 홀수이면 $a_{n+1}=a_n+2$ 이다. \\\\ (나) $n$ 이 짝수이면 $a_{n+1}=2a_n$ 이다. \\\\ $a_1=2$ 일 때, $a_5$ 의 값은?",
+        "latex": "수열 $\\{a_n\\}$ 이 모든 자연수 $n$ 에 대하여 다음 조건을 만족시킨다. \\\\ (가) $n$ 이 $3$ 의 배수가 아니면 $a_{n+1}=-a_n-n$ 이다. \\\\ (나) $n$ 이 $3$ 의 배수이면 $a_{n+3}=(-1)^{n}\\times a_n$ 이다. \\\\ $a_{20}=-30$ 일 때, $\\displaystyle\\sum_{k=1}^{21} a_k$ 의 값은?",
         "choices": [
-          "$12$",
-          "$16$",
-          "$24$",
-          "$28$",
-          "$20$"
+          "$-65$",
+          "$-60$",
+          "$-55$",
+          "$-50$",
+          "$-45$"
         ],
-        "answer": 5,
-        "solution": "$a_1=2$, $a_2=a_1+2=4$, $a_3=2a_2=8$, $a_4=a_3+2=10$, $a_5=2a_4=20$ 이다.",
+        "answer": 2,
+        "solution": "(나)에서 $3$ 의 배수 위치의 연결식으로 첫째항 $a_1$ 에 대한 관계가 정해지고, (가)로 각 묶음의 나머지 항을 표현한다. $3$ 의 배수가 아닌 $n$ 에서의 식과 (나)의 연결식을 연립하면 $a_1=-9$ 이 되어 모든 항이 결정된다. 이때 $a_{20}=-30$ 조건이 성립하고, $\\displaystyle\\sum_{k=1}^{21} a_k=-60$ 이다.",
         "avs": [
           {
             "phase": "P",
             "title": "목표 확인",
-            "content": "홀수·짝수 번호에 따라 규칙이 다른 점화식으로 $a_5$ 를 구한다."
+            "content": "$3$ 의 배수 여부로 규칙이 갈리는 점화식에서 주어진 항으로부터 거꾸로 추적하여 합을 구한다."
           },
           {
             "phase": "C",
             "title": "조건 정리",
-            "content": "$n$ 이 홀수이면 $+2$, 짝수이면 $\\times 2$ 이고 $a_1=2$ 이다."
+            "content": "(가)는 $3$ 의 배수가 아닌 $n$ 에서의 점화식, (나)는 $3$ 의 배수 $n$ 에서 $a_{n+3}=(-1)^{n}a_n$ 이며 $a_{20}=-30$ 이다."
           },
           {
             "phase": "B",
             "title": "핵심 개념",
-            "content": "항을 순서대로 계산하되 다음 항을 만드는 규칙이 현재 번호 $n$ 의 홀짝에 의해 결정됨에 주의한다."
+            "content": "$3k+1$ 번째 항을 미지수로 두고 (가)로 묶음 내부를 표현한 뒤, (나)의 연결식으로 미지수 사이의 관계를 연립한다."
           },
           {
             "phase": "S",
             "title": "풀이",
-            "content": "$a_2=4$, $a_3=8$, $a_4=10$, $a_5=20$ 이다."
+            "content": "연립하면 $a_1=-9$ 로 모든 항이 정해지고 $a_{20}=-30$ 가 확인된다. 모든 항을 더하면 합은 $-60$ 이다."
           },
           {
             "phase": "A",
             "title": "정답",
-            "content": "$a_5=20$ 이다."
+            "content": "$\\displaystyle\\sum_{k=1}^{21} a_k=-60$ 이다."
           }
         ]
       },
@@ -999,50 +1053,7 @@
         "unit": "삼각함수의 활용",
         "level": "심화",
         "type": "객관식",
-        "latex": "원에 내접하는 사각형 $ABCD$ 에서 $\\overline{AB}=2$, $\\overline{BC}=3$, $\\overline{CD}=2$, $\\overline{DA}=3$ 일 때, 사각형 $ABCD$ 의 넓이는?",
-        "choices": [
-          "$6$",
-          "$0$",
-          "$3$",
-          "$9$",
-          "$12$"
-        ],
-        "answer": 1,
-        "solution": "원에 내접하는 사각형이므로 $\\angle B+\\angle D=180^{\\circ}$ 이다. 대각선 $AC$ 에 대하여 코사인법칙을 두 삼각형에 적용하면 $\\cos B=\\dfrac{2^2+3^2-\\overline{AC}^2}{2\\cdot 2\\cdot 3}$, $\\cos D=-\\cos B$ 이고 $\\overline{AC}^2$ 를 소거하면 $\\cos B=0$, 즉 $B=90^{\\circ}$ 이다. 따라서 넓이 $=2\\times\\dfrac{1}{2}\\cdot 2\\cdot 3=6$ 이다.",
-        "avs": [
-          {
-            "phase": "P",
-            "title": "목표 확인",
-            "content": "원에 내접하는 사각형의 마주보는 각의 성질을 이용하여 넓이를 구한다."
-          },
-          {
-            "phase": "C",
-            "title": "조건 정리",
-            "content": "네 변이 $2,3,2,3$ 이고 $\\angle B+\\angle D=180^{\\circ}$ 이다."
-          },
-          {
-            "phase": "B",
-            "title": "핵심 개념",
-            "content": "대각선 $AC$ 에 대해 두 삼각형에 코사인법칙을 적용하고 $\\cos D=-\\cos B$ 를 이용해 $\\overline{AC}^2$ 를 소거한다."
-          },
-          {
-            "phase": "S",
-            "title": "풀이",
-            "content": "소거 결과 $\\cos B=0$, 즉 $\\angle B=90^{\\circ}$ 이므로 넓이 $=\\dfrac{1}{2}\\cdot 2\\cdot 3\\times 2=6$ 이다."
-          },
-          {
-            "phase": "A",
-            "title": "정답",
-            "content": "사각형 $ABCD$ 의 넓이는 $6$ 이다."
-          }
-        ]
-      },
-      {
-        "num": 20,
-        "unit": "여러 가지 수열",
-        "level": "심화",
-        "type": "객관식",
-        "latex": "수열 $\\{a_n\\}$ 의 일반항이 $a_n=2n-13$ 이다. $\\displaystyle\\sum_{k=1}^{p} a_k=\\sum_{k=1}^{q} a_k$ 를 만족시키는 서로 다른 두 자연수 $p$, $q$ $(p<q)$ 의 순서쌍 $(p,\\ q)$ 의 개수는?",
+        "latex": "그림과 같이 사각형 $ABCD$ 가 한 원에 내접하고 다음 조건을 만족시킨다. \\\\ (가) $\\overline{AB}^{2}:\\overline{AD}^{2}:\\overline{BD}^{2}=4:9:7$ \\\\ (나) 삼각형 $BCD$ 의 넓이는 $\\sqrt{3}$ 이다. \\\\ (다) $\\sin(\\angle DBC)+\\sin(\\angle BDC)=1$ \\\\ 사각형 $ABCD$ 의 외접원의 넓이가 $\\dfrac{q}{p}\\pi$ 일 때, $p+q$ 의 값은? (단, $p$ 와 $q$ 는 서로소인 자연수이다.)",
         "choices": [
           "$3$",
           "$4$",
@@ -1051,7 +1062,50 @@
           "$7$"
         ],
         "answer": 3,
-        "solution": "$S_n=\\sum_{k=1}^{n}(2k-13)=n(n+1)-13n=n^2+-12n$ 이다. $S_p=S_q$ 이면 $p^2+-12p=q^2+-12q$, 즉 $(p-q)(p+q+-12)=0$ 이므로 $p+q=12$ 이다. $p<q$ 인 자연수 순서쌍은 5개이다."
+        "solution": "삼각형 $ABD$ 에서 코사인법칙으로 $\\cos(\\angle A)=\\dfrac{4+9-7}{2\\sqrt{4\\cdot 9}}=\\frac{1}{2}$ 이므로 $\\sin(\\angle A)$ 가 정해지고, $\\overline{BD}=2R\\sin(\\angle A)$ 이다. 내접사각형이므로 $\\angle BCD=180^{\\circ}-\\angle A$ 이고 $\\sin(\\angle BCD)=\\sin(\\angle A)$ 이다. 삼각형 $BCD$ 에서 $\\overline{BC}=2R\\sin(\\angle BDC)$, $\\overline{CD}=2R\\sin(\\angle DBC)$ 이므로 넓이 $=2R^{2}\\sin(\\angle DBC)\\sin(\\angle BDC)\\sin(\\angle A)$ 이다. (다)와 $\\angle DBC+\\angle BDC=\\angle A$ 로 $\\sin(\\angle DBC)\\sin(\\angle BDC)$ 를 구해 (나)에 대입하면 $R^{2}=4$, 즉 외접원의 넓이는 $\\dfrac{4}{1}\\pi$ 이다. 따라서 $p+q=5$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "내접사각형의 변비·넓이·사인 합 조건으로 외접원의 넓이를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "(가)로 $\\angle A$ 를, (나)로 삼각형 $BCD$ 의 넓이를, (다)로 두 밑각의 사인 합을 안다. 내접사각형이므로 $\\angle BCD=180^{\\circ}-\\angle A$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "삼각형 $ABD$ 에서 코사인법칙으로 $\\angle A$, 사인법칙으로 $2R$ 을 잡고, 삼각형 $BCD$ 의 넓이 $=2R^{2}\\sin(\\angle DBC)\\sin(\\angle BDC)\\sin(\\angle A)$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "(다)와 $\\angle DBC+\\angle BDC=\\angle A$ 로 곱 $\\sin(\\angle DBC)\\sin(\\angle BDC)$ 를 구해 넓이식에 넣으면 $R^{2}=4$ 이다. 외접원 넓이는 $\\dfrac{4}{1}\\pi$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=5$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 \\\\ $a_n=\\begin{cases}(n-4)(n-13) & (n\\le 8) \\\\ -(n-4)(n-13) & (n\\ge 9)\\end{cases}$ \\\\ 일 때, $\\displaystyle\\sum_{k=1}^{p} a_k=\\sum_{k=1}^{q} a_k$ 를 만족시키는 서로 다른 두 자연수 $p$, $q$ $(p<q)$ 의 순서쌍 $(p,\\ q)$ 의 개수는?",
+        "choices": [
+          "$7$",
+          "$8$",
+          "$9$",
+          "$10$",
+          "$11$"
+        ],
+        "answer": 5,
+        "solution": "$S_n=\\displaystyle\\sum_{k=1}^{n} a_k$ 라 하면 $S_p=S_q$ 는 $\\displaystyle\\sum_{k=p+1}^{q} a_k=0$ 을 뜻한다. $a_n$ 은 $n\\le 8$ 에서 위로 볼록한 포물선 값, $n\\ge 9$ 에서 부호가 뒤집힌 값으로, 부분합 $S_n$ 의 증감과 부호 변화를 추적하면 $S_n$ 값이 같아지는 구간을 경우로 나누어 셀 수 있다. $S_0,S_1,\\cdots$ 의 값을 비교하여 같은 값을 갖는 모든 쌍을 세면 그 개수는 $11$ 이다."
       }
     ],
     [
@@ -1076,96 +1130,96 @@
         "unit": "여러 가지 수열",
         "level": "기본",
         "type": "객관식",
-        "latex": "$\\displaystyle\\sum_{k=1}^{12}\\left(4k+1\\right)$ 의 값은?",
+        "latex": "$\\displaystyle\\sum_{k=1}^{12}\\left(2k+3\\right)$ 의 값은?",
         "choices": [
-          "$304$",
-          "$324$",
-          "$314$",
-          "$334$",
-          "$344$"
+          "$172$",
+          "$192$",
+          "$202$",
+          "$222$",
+          "$232$"
         ],
         "answer": 2,
-        "solution": "$\\displaystyle\\sum_{k=1}^{12}(4k+1)=4\\cdot\\dfrac{12\\cdot 13}{2}+1\\cdot 12=312+12=324$ 이다."
+        "solution": "$\\displaystyle\\sum_{k=1}^{12}(2k+3)=2\\cdot\\dfrac{12\\cdot 13}{2}+3\\cdot 12=156+36=192$ 이다."
       },
       {
         "num": 3,
         "unit": "수학적 귀납법",
         "level": "심화",
         "type": "객관식",
-        "latex": "수열 $\\{a_n\\}$ 이 \\\\ $a_1=30,\\quad a_{n+1}=\\dfrac{1}{3}a_n+4\\ \\ (n=1,\\,2,\\,3,\\,\\cdots)$ \\\\ 으로 정의될 때, $a_2$ 의 값은?",
+        "latex": "수열 $\\{a_n\\}$ 이 \\\\ $a_1=2,\\quad a_{n+1}=3a_n+2\\ \\ (n=1,\\,2,\\,3,\\,\\cdots)$ \\\\ 으로 정의될 때, $a_3$ 의 값은?",
         "choices": [
-          "$12$",
-          "$13$",
-          "$15$",
-          "$14$",
-          "$16$"
+          "$24$",
+          "$26$",
+          "$27$",
+          "$29$",
+          "$25$"
         ],
-        "answer": 4,
-        "solution": "$a_2=\\dfrac{1}{3}a_1+4=\\dfrac{30}{3}+4=10+4=14$ 이다."
+        "answer": 2,
+        "solution": "$a_2=3\\cdot 2+2=8$ 이고 $a_3=3\\cdot 8+2=26$ 이다."
       },
       {
         "num": 4,
         "unit": "여러 가지 수열",
         "level": "기본",
         "type": "객관식",
-        "latex": "$\\displaystyle\\sum_{k=1}^{12} k(k+2)$ 의 값은?",
+        "latex": "$\\displaystyle\\sum_{k=1}^{10} k(k+3)$ 의 값은?",
         "choices": [
-          "$806$",
-          "$696$",
-          "$751$",
-          "$861$",
-          "$916$"
+          "$550$",
+          "$440$",
+          "$495$",
+          "$605$",
+          "$660$"
         ],
         "answer": 1,
-        "solution": "$\\displaystyle\\sum_{k=1}^{12} k(k+2)=\\sum_{k=1}^{12} k^2+2\\sum_{k=1}^{12} k=\\dfrac{12\\cdot 13\\cdot 25}{6}+2\\cdot\\dfrac{12\\cdot 13}{2}=650+156=806$ 이다."
+        "solution": "$\\displaystyle\\sum_{k=1}^{10} k(k+3)=\\sum k^2+3\\sum k=\\dfrac{10\\cdot 11\\cdot 21}{6}+3\\cdot\\dfrac{10\\cdot 11}{2}=550$ 이다."
       },
       {
         "num": 5,
         "unit": "삼각함수의 활용",
         "level": "심화",
         "type": "객관식",
-        "latex": "평행사변형 $ABCD$ 에서 $\\overline{AB}=6$, $\\overline{BC}=10$, $\\angle B=120^{\\circ}$ 일 때, 대각선 $AC$ 의 길이는?",
+        "latex": "평행사변형 $ABCD$ 에서 $\\overline{AB}=4$, $\\overline{BC}=7$ 이고 $\\angle B=120^{\\circ}$ 이다. 두 대각선의 길이의 제곱의 합 $\\overline{AC}^{2}+\\overline{BD}^{2}$ 의 값은?",
         "choices": [
-          "$12$",
-          "$13$",
-          "$14$",
-          "$15$",
-          "$16$"
+          "$118$",
+          "$130$",
+          "$142$",
+          "$154$",
+          "$106$"
         ],
-        "answer": 3,
-        "solution": "삼각형 $ABC$ 에서 코사인법칙에 의해 $\\overline{AC}^{2}=6^{2}+10^{2}-2\\cdot 6\\cdot 10\\cos 120^{\\circ}=36+100+60=196$ 이므로 $\\overline{AC}=14$ 이다."
+        "answer": 2,
+        "solution": "삼각형 $ABC$ 에서 $\\overline{AC}^{2}=4^2+7^2-2\\cdot 4\\cdot 7\\cos 120^{\\circ}$, 삼각형 $ABD$ 에서 $\\angle A=60^{\\circ}$ 이므로 $\\overline{BD}^{2}=4^2+7^2-2\\cdot 4\\cdot 7\\cos 60^{\\circ}$ 이다. 두 식을 더하면 $\\cos$ 항이 소거되어 $\\overline{AC}^{2}+\\overline{BD}^{2}=2(4^2+7^2)=130$ 이다."
       },
       {
         "num": 6,
         "unit": "등차수열과 등비수열",
         "level": "심화",
         "type": "객관식",
-        "latex": "세 양수 $2,\\ x,\\ 8$ 가 이 순서로 등차수열을 이루고, 세 양수 $2,\\ y,\\ 8$ 가 이 순서로 등비수열을 이룰 때, $x+y$ 의 값은?",
+        "latex": "세 양수 $9,\\ x,\\ 25$ 가 이 순서로 등차수열을 이루고, 세 양수 $9,\\ y,\\ 25$ 가 이 순서로 등비수열을 이룰 때, $x+y$ 의 값은?",
         "choices": [
-          "$6$",
-          "$7$",
-          "$11$",
-          "$12$",
-          "$9$"
+          "$29$",
+          "$30$",
+          "$34$",
+          "$35$",
+          "$32$"
         ],
         "answer": 5,
-        "solution": "등차중항에서 $x=\\dfrac{2+8}{2}=5$ 이고, 등비중항에서 $y=\\sqrt{2\\cdot 8}=\\sqrt{16}=4$ 이다. 따라서 $x+y=5+4=9$ 이다."
+        "solution": "등차중항에서 $x=\\dfrac{9+25}{2}=17$, 등비중항에서 $y=\\sqrt{9\\cdot 25}=15$ 이므로 $x+y=32$ 이다."
       },
       {
         "num": 7,
         "unit": "등차수열과 등비수열",
         "level": "심화",
         "type": "객관식",
-        "latex": "등차수열 $\\{a_n\\}$ 에 대하여 $a_3+a_5+a_7=72$ 일 때, 첫째항부터 제$9$항까지의 합 $\\displaystyle\\sum_{k=1}^{9} a_k$ 의 값은?",
+        "latex": "등차수열 $\\{a_n\\}$ 에 대하여 $a_3+a_5+a_7=90$ 일 때, 첫째항부터 제$9$항까지의 합 $\\displaystyle\\sum_{k=1}^{9} a_k$ 의 값은?",
         "choices": [
-          "$216$",
-          "$196$",
-          "$206$",
-          "$226$",
-          "$236$"
+          "$270$",
+          "$250$",
+          "$260$",
+          "$280$",
+          "$290$"
         ],
         "answer": 1,
-        "solution": "$a_3+a_5+a_7=3a_5=72$ 이므로 $a_5=24$ 이다. 등차수열의 합은 $\\displaystyle\\sum_{k=1}^{9} a_k=\\dfrac{9(a_1+a_9)}{2}=9a_5=9\\cdot 24=216$ 이다."
+        "solution": "$a_3+a_5+a_7=3a_5=90$ 이므로 $a_5=30$ 이다. $\\displaystyle\\sum_{k=1}^{9} a_k=\\dfrac{9(a_1+a_{9})}{2}=9a_5=270$ 이다."
       },
       {
         "num": 8,
@@ -1176,27 +1230,27 @@
         "choices": [
           "$\\dfrac{59}{61}$",
           "$\\dfrac{58}{61}$",
-          "$\\dfrac{30}{31}$",
           "$\\dfrac{60}{61}$",
-          "$\\dfrac{60}{62}$"
+          "$\\dfrac{30}{31}$",
+          "$\\dfrac{60}{59}$"
         ],
-        "answer": 4,
-        "solution": "$\\dfrac{2}{(2k-1)(2k+1)}=\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}$ 이므로 망원급수로 $\\displaystyle\\sum_{k=1}^{30}\\left(\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}\\right)=1-\\dfrac{1}{61}=\\dfrac{60}{61}$ 이다.",
+        "answer": 3,
+        "solution": "$\\dfrac{2}{(2k-1)(2k+1)}=\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}$ 이므로 망원급수로 $1-\\dfrac{1}{61}=\\dfrac{60}{61}$ 이다.",
         "avs": [
           {
             "phase": "P",
             "title": "목표 확인",
-            "content": "부분분수 분해를 이용하여 $\\displaystyle\\sum_{k=1}^{30}\\dfrac{2}{(2k-1)(2k+1)}$ 의 값을 구한다."
+            "content": "부분분수 분해로 $\\displaystyle\\sum_{k=1}^{30}\\dfrac{2}{(2k-1)(2k+1)}$ 를 구한다."
           },
           {
             "phase": "C",
             "title": "조건 정리",
-            "content": "분모가 연속한 두 홀수의 곱 $(2k-1)(2k+1)$ 꼴이므로 부분분수로 분해할 수 있다."
+            "content": "분모가 연속한 두 홀수의 곱 $(2k-1)(2k+1)$ 꼴이다."
           },
           {
             "phase": "B",
             "title": "핵심 개념",
-            "content": "$\\dfrac{2}{(2k-1)(2k+1)}=\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}$ 로 분해하면 인접한 항이 소거되는 망원급수가 된다."
+            "content": "$\\dfrac{2}{(2k-1)(2k+1)}=\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}$ 로 분해하면 인접 항이 소거되는 망원급수가 된다."
           },
           {
             "phase": "S",
@@ -1215,57 +1269,84 @@
         "unit": "삼각함수의 활용",
         "level": "심화",
         "type": "객관식",
-        "latex": "수평인 지면 위의 두 지점 $A$, $B$ 사이의 거리가 $12$ 이다. 지점 $A$ 에서 나무 꼭대기 $P$ 를 올려본 각의 크기가 $30^{\\circ}$, 지점 $B$ 에서 올려본 각의 크기가 $60^{\\circ}$ 이고 $A$, $B$, 나무의 밑면이 한 직선 위에 있다. $A$ 가 $B$ 보다 나무에서 멀 때, 선분 $BP$ 의 길이는?",
+        "latex": "$\\overline{AB}=1$, $\\overline{AC}=\\sqrt{3}$ 인 직각삼각형 $ABC$ ($\\angle A=90^{\\circ}$) 모양의 종이가 있고, 이 삼각형의 외접원은 빗변 $BC$ 를 지름으로 한다. 변 $BC$ 위의 점 $D$, 변 $AB$ 위의 점 $E$, 변 $AC$ 위의 점 $F$ 에 대하여 선분 $EF$ 를 접는 선으로 하여 점 $A$ 가 점 $D$ 에 겹쳐지도록 접었다. 삼각형 $BDE$ 와 삼각형 $DCF$ 의 외접원의 반지름의 길이의 비가 $2:3$ 일 때, 선분 $DF$ 의 길이는 $\\dfrac{q}{p}\\sqrt{3}$ 이다. $p+q$ 의 값은? (단, $p$ 와 $q$ 는 서로소인 자연수이다.)",
         "choices": [
-          "$8$",
-          "$10$",
-          "$12$",
-          "$14$",
-          "$16$"
+          "$25$",
+          "$26$",
+          "$27$",
+          "$28$",
+          "$29$"
         ],
         "answer": 3,
-        "solution": "삼각형 $ABP$ 에서 $\\angle PAB=30^{\\circ}$ 이고 $\\angle PBA=180^{\\circ}-60^{\\circ}=120^{\\circ}$ 이므로 $\\angle APB=30^{\\circ}$ 이다. 사인법칙에서 $\\dfrac{\\overline{BP}}{\\sin 30^{\\circ}}=\\dfrac{\\overline{AB}}{\\sin 30^{\\circ}}$ 이므로 $\\overline{BP}=\\overline{AB}=12$ 이다."
+        "solution": "$\\angle A=90^{\\circ}$ 이므로 $\\angle B=60^{\\circ}$, $\\angle C=30^{\\circ}$ 이다. 접은 성질로 $\\overline{ED}=\\overline{AE}$, $\\overline{FD}=\\overline{AF}$ 이고 $\\angle EDF=\\angle A=90^{\\circ}$ 이다. 삼각형 $BDE$, $DCF$ 에 사인법칙을 적용하면 외접원 반지름비 조건에서 $\\overline{AF}$ 가 결정되고, $D$ 가 $BC$ 위에 있다는 조건 $\\angle BDE+\\angle FDC=90^{\\circ}$ 로 연립하면 $\\overline{DF}=\\dfrac{7}{20}\\sqrt{3}$ 이다. 따라서 $p+q=27$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "직각삼각형 종이를 접어 점 $A$ 가 $BC$ 위의 점 $D$ 에 겹쳐질 때, 두 삼각형의 외접원 반지름비 조건으로 $\\overline{DF}$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\angle A=90^{\\circ}$ 에서 $\\angle B=60^{\\circ}$, $\\angle C=30^{\\circ}$ 이고, 접은 성질로 $\\overline{ED}=\\overline{AE}$, $\\overline{FD}=\\overline{AF}$, $\\angle EDF=90^{\\circ}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "사인법칙으로 $2R_1=\\dfrac{\\overline{ED}}{\\sin B}$, $2R_2=\\dfrac{\\overline{FD}}{\\sin C}$ 이고, $D$ 가 $BC$ 위에 있으므로 $\\angle BDE+\\angle FDC=90^{\\circ}$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "반지름비와 각 조건을 연립하면 $\\overline{DF}=\\dfrac{7}{20}\\sqrt{3}$ 을 얻는다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=27$ 이다."
+          }
+        ]
       },
       {
         "num": 10,
         "unit": "여러 가지 수열",
         "level": "심화",
         "type": "객관식",
-        "latex": "첫째항이 $1$, 공차가 $4$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k\\,a_{k+1}}$ 의 값은?",
+        "latex": "첫째항이 $3$, 공차가 $4$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{12}\\dfrac{1}{a_k\\,a_{k+1}}$ 의 값은?",
         "choices": [
-          "$\\dfrac{10}{81}$",
-          "$\\dfrac{20}{81}$",
-          "$\\dfrac{20}{82}$",
-          "$\\dfrac{1}{4}$",
-          "$\\dfrac{19}{81}$"
+          "$\\dfrac{1}{153}$",
+          "$\\dfrac{4}{51}$",
+          "$\\dfrac{4}{55}$",
+          "$\\dfrac{1}{12}$",
+          "$\\dfrac{8}{51}$"
         ],
         "answer": 2,
-        "solution": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{4}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 이고 $a_1=1$, $a_{21}=81$ 이므로 $\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{4}\\left(\\dfrac{1}{1}-\\dfrac{1}{81}\\right)=\\dfrac{20}{81}$ 이다.",
+        "solution": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{4}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 이고 $a_1=3$, $a_{13}=51$ 이므로 합은 $\\dfrac{4}{51}$ 이다.",
         "avs": [
           {
             "phase": "P",
             "title": "목표 확인",
-            "content": "등차수열의 곱으로 이루어진 분수의 시그마 $\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k a_{k+1}}$ 의 값을 구한다."
+            "content": "등차수열의 곱 분수의 시그마 $\\displaystyle\\sum_{k=1}^{12}\\dfrac{1}{a_k a_{k+1}}$ 를 구한다."
           },
           {
             "phase": "C",
             "title": "조건 정리",
-            "content": "$a_n=1+4(n-1)$ 이고 공차가 $4$ 이므로 $a_1=1$, $a_{21}=81$ 이다."
+            "content": "$a_n=3+4(n-1)$ 이므로 $a_1=3$, $a_{13}=51$ 이다."
           },
           {
             "phase": "B",
             "title": "핵심 개념",
-            "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{4}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 부분분수 분해하면 망원급수가 된다."
+            "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{4}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 분해하면 망원급수가 된다."
           },
           {
             "phase": "S",
             "title": "풀이",
-            "content": "$\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{4}\\left(\\dfrac{1}{1}-\\dfrac{1}{81}\\right)=\\dfrac{20}{81}$ 이다."
+            "content": "$\\dfrac{1}{4}\\left(\\dfrac{1}{3}-\\dfrac{1}{51}\\right)=\\dfrac{4}{51}$ 이다."
           },
           {
             "phase": "A",
             "title": "정답",
-            "content": "값은 $\\dfrac{20}{81}$ 이다."
+            "content": "값은 $\\dfrac{4}{51}$ 이다."
           }
         ]
       },
@@ -1274,39 +1355,39 @@
         "unit": "여러 가지 수열",
         "level": "심화",
         "type": "객관식",
-        "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=2^{n}+3$ 일 때, $a_{5}$ 의 값은?",
+        "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=3^{n}+2$ 일 때, $a_{5}$ 의 값은?",
         "choices": [
-          "$8$",
-          "$20$",
-          "$16$",
-          "$32$",
-          "$12$"
+          "$81$",
+          "$162$",
+          "$324$",
+          "$164$",
+          "$160$"
         ],
-        "answer": 3,
-        "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=(2^{n}+3)-(2^{n-1}+3)=2^{n-1}$ 이다. 따라서 $a_{5}=2^{4}=16$ 이다."
+        "answer": 2,
+        "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=3^{n}-3^{n-1}=(3-1)3^{n-1}$ 이다. 따라서 $a_{5}=162$ 이다."
       },
       {
         "num": 12,
         "unit": "삼각함수의 활용",
         "level": "심화",
         "type": "객관식",
-        "latex": "깃발의 높이를 구하기 위하여 깃발의 밑면 $G$ 로부터 떨어진 두 지점 $A$, $B$ 에서 측량하였더니 $\\angle GAB=45^{\\circ}$, $\\angle GBA=75^{\\circ}$, $\\overline{AB}=12$ 이었다. 깃발의 꼭대기를 $P$ 라 할 때 $\\angle PGB=90^{\\circ}$, $\\angle PBG=60^{\\circ}$ 이다. 깃발의 높이 $\\overline{GP}$ 의 값은?",
+        "latex": "깃발의 높이를 구하기 위하여 깃발의 밑면 $G$ 로부터 떨어진 두 지점 $A$, $B$ 에서 측량하였더니 $\\angle GAB=60^{\\circ}$, $\\angle GBA=75^{\\circ}$, $\\overline{AB}=8$ 이었다. 깃발의 꼭대기를 $P$ 라 할 때 $\\angle PGB=90^{\\circ}$, $\\angle PBG=60^{\\circ}$ 이다. 깃발의 높이 $\\overline{GP}$ 의 값은?",
         "choices": [
           "$6\\sqrt{2}$",
           "$12\\sqrt{2}$",
           "$12\\sqrt{3}$",
           "$24$",
-          "$18\\sqrt{2}$"
+          "$8\\sqrt{6}$"
         ],
         "answer": 2,
-        "solution": "삼각형 $GAB$ 에서 $\\angle AGB=180^{\\circ}-45^{\\circ}-75^{\\circ}=60^{\\circ}$ 이므로 사인법칙에 의해 $\\dfrac{\\overline{GB}}{\\sin 45^{\\circ}}=\\dfrac{\\overline{AB}}{\\sin 60^{\\circ}}$, 즉 $\\overline{GB}=12\\cdot\\dfrac{\\sin 45^{\\circ}}{\\sin 60^{\\circ}}=\\dfrac{12\\sqrt{6}}{3}$ 이다. 직각삼각형 $PGB$ 에서 $\\overline{GP}=\\overline{GB}\\tan 60^{\\circ}=\\dfrac{12\\sqrt{6}}{3}\\cdot\\sqrt{3}=12\\sqrt{2}$ 이다."
+        "solution": "삼각형 $GAB$ 에서 $\\angle AGB=180^{\\circ}-60^{\\circ}-75^{\\circ}=45^{\\circ}$ 이므로 사인법칙에 의해 $\\overline{GB}=8\\cdot\\dfrac{\\sin 60^{\\circ}}{\\sin 45^{\\circ}}$ 이다. 직각삼각형 $PGB$ 에서 $\\overline{GP}=\\overline{GB}\\tan 60^{\\circ}=12\\sqrt{2}$ 이다."
       },
       {
         "num": 13,
         "unit": "수학적 귀납법",
         "level": "심화",
         "type": "객관식",
-        "latex": "다음은 모든 자연수 $n$ 에 대하여 \\\\ $\\displaystyle\\sum_{k=1}^{n} k(k+1)(k+2)=\\dfrac{n(n+1)(n+2)(n+3)}{4}\\quad\\cdots\\ (\\ast)$ \\\\ 이 성립함을 수학적 귀납법으로 증명한 것이다. \\\\ (i) $n=1$ 일 때, (좌변)$=1\\cdot 2\\cdot 3=6$, (우변)$=\\dfrac{1\\cdot 2\\cdot 3\\cdot 4}{4}=6$ 이므로 $(\\ast)$ 이 성립한다. \\\\ (ii) $n=k$ 일 때 $(\\ast)$ 이 성립한다고 가정하면 \\\\ $\\displaystyle\\sum_{i=1}^{k+1} i(i+1)(i+2)=\\dfrac{k(k+1)(k+2)(k+3)}{4}+\\boxed{(\\text{가})}=\\dfrac{(k+1)(k+2)(k+3)\\cdot\\boxed{(\\text{나})}}{4}$ \\\\ 이므로 $n=k+1$ 일 때도 $(\\ast)$ 이 성립한다. \\\\ 위의 $\\boxed{(\\text{가})}=f(k)$, $\\boxed{(\\text{나})}=g(k)$ 라 할 때, $\\dfrac{f(2)}{g(2)}$ 의 값은?",
+        "latex": "다음은 모든 자연수 $n$ 에 대하여 \\\\ $\\displaystyle\\sum_{k=1}^{n} k(k+1)(k+2)=\\dfrac{n(n+1)(n+2)(n+3)}{4}\\quad\\cdots\\ (\\ast)$ \\\\ 이 성립함을 수학적 귀납법으로 증명한 것이다. \\\\ (i) $n=1$ 일 때, (좌변)$=1\\cdot 2\\cdot 3=6$, (우변)$=\\dfrac{1\\cdot 2\\cdot 3\\cdot 4}{4}=6$ 이므로 $(\\ast)$ 이 성립한다. \\\\ (ii) $n=k$ 일 때 $(\\ast)$ 이 성립한다고 가정하면 \\\\ $\\displaystyle\\sum_{i=1}^{k+1} i(i+1)(i+2)=\\dfrac{k(k+1)(k+2)(k+3)}{4}+(\\text{가})=\\dfrac{(k+1)(k+2)(k+3)\\cdot(\\text{나})}{4}$ \\\\ 이므로 $n=k+1$ 일 때도 $(\\ast)$ 이 성립한다. \\\\ 위의 $(\\text{가})=f(k)$, $(\\text{나})=g(k)$ 라 할 때, $\\dfrac{f(2)}{g(2)}$ 의 값은?",
         "choices": [
           "$6$",
           "$10$",
@@ -1315,27 +1396,27 @@
           "$15$"
         ],
         "answer": 2,
-        "solution": "$\\boxed{(\\text{가})}=(k+1)(k+2)(k+3)$ 이므로 $f(k)=(k+1)(k+2)(k+3)$ 이고, 우변을 묶으면 $\\dfrac{(k+1)(k+2)(k+3)(k+4)}{4}$ 이므로 $\\boxed{(\\text{나})}=k+4$, 즉 $g(k)=k+4$ 이다. 따라서 $\\dfrac{f(2)}{g(2)}=\\dfrac{3\\cdot 4\\cdot 5}{6}=10$ 이다.",
+        "solution": "$(\\text{가})=(k+1)(k+2)(k+3)$ 이므로 $f(k)=(k+1)(k+2)(k+3)$ 이고, 우변을 묶으면 $\\dfrac{(k+1)(k+2)(k+3)(k+4)}{4}$ 이므로 $g(k)=k+4$ 이다. 따라서 $\\dfrac{f(2)}{g(2)}=\\dfrac{3\\cdot 4\\cdot 5}{6}=10$ 이다.",
         "avs": [
           {
             "phase": "P",
             "title": "목표 확인",
-            "content": "수학적 귀납법 증명의 빈칸 $f(k)$, $g(k)$ 를 찾아 $\\dfrac{f(2)}{g(2)}$ 를 구한다."
+            "content": "수학적 귀납법 등식 증명의 빈칸 $f(k)$, $g(k)$ 를 찾아 $\\dfrac{f(2)}{g(2)}$ 를 구한다."
           },
           {
             "phase": "C",
             "title": "조건 정리",
-            "content": "$n=k$ 가정식에 제$(k+1)$항 $(k+1)(k+2)(k+3)$ 을 더한 것이 $n=k+1$ 식이어야 한다."
+            "content": "$n=k$ 가정식에 제$(k+1)$항을 더한 것이 $n=k+1$ 식과 같아야 한다."
           },
           {
             "phase": "B",
             "title": "핵심 개념",
-            "content": "따라서 $\\boxed{(\\text{가})}=(k+1)(k+2)(k+3)$ 이고, 두 항을 $(k+1)(k+2)(k+3)$ 으로 묶으면 $\\boxed{(\\text{나})}$ 가 결정된다."
+            "content": "더한 항이 $(\\text{가})=f(k)$ 이고, 공통인수로 묶으면 $(\\text{나})=g(k)$ 가 결정된다."
           },
           {
             "phase": "S",
             "title": "풀이",
-            "content": "$\\dfrac{k(k+1)(k+2)(k+3)}{4}+(k+1)(k+2)(k+3)=\\dfrac{(k+1)(k+2)(k+3)(k+4)}{4}$ 이므로 $g(k)=k+4$ 이다. $\\dfrac{f(2)}{g(2)}=\\dfrac{3\\cdot 4\\cdot 5}{6}=10$."
+            "content": "$f(k)=(k+1)(k+2)(k+3)$, $g(k)=k+4$ 이므로 $\\dfrac{f(2)}{g(2)}=10$ 이다."
           },
           {
             "phase": "A",
@@ -1349,73 +1430,73 @@
         "unit": "여러 가지 수열",
         "level": "심화",
         "type": "객관식",
-        "latex": "두 수열 $\\{a_n\\}$, $\\{b_n\\}$ 에 대하여 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합이 $S_n=2n^{2}$ 이고, $\\{b_n\\}$ 의 첫째항부터 제$n$항까지의 합이 $T_n=2^{n+1}-2$ 이다. $a_{5}+b_{5}$ 의 값은?",
+        "latex": "두 수열 $\\{a_n\\}$, $\\{b_n\\}$ 에 대하여 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합이 $S_n=3n^{2}$ 이고, $\\{b_n\\}$ 의 첫째항부터 제$n$항까지의 합이 $T_n=2^{n+1}-2$ 이다. $a_{4}+b_{4}$ 의 값은?",
         "choices": [
-          "$42$",
-          "$46$",
-          "$50$",
-          "$54$",
-          "$58$"
+          "$33$",
+          "$35$",
+          "$37$",
+          "$39$",
+          "$41$"
         ],
         "answer": 3,
-        "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=2n^2-2(n-1)^2=4n-2$ 이고, $b_n=T_n-T_{n-1}=2^{n+1}-2^{n}=2^{n}$ 이다. 따라서 $a_{5}=18$, $b_{5}=32$ 이므로 합은 $18+32=50$ 이다."
+        "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=3n^2-3(n-1)^2=3(2n-1)$ 이고 $b_n=T_n-T_{n-1}=2^{n+1}-2^{n}=2^{n}$ 이다. 따라서 $a_{4}=21$, $b_{4}=16$ 이므로 합은 $37$ 이다."
       },
       {
         "num": 15,
         "unit": "등차수열과 등비수열",
         "level": "심화",
         "type": "객관식",
-        "latex": "등차수열 $\\{a_n\\}$ 의 첫째항부터 제$6$항까지의 합이 $24$, 첫째항부터 제$12$항까지의 합이 $120$ 일 때, 제$7$항부터 제$12$항까지의 합은?",
+        "latex": "등차수열 $\\{a_n\\}$ 의 첫째항부터 제$5$항까지의 합이 $20$, 첫째항부터 제$9$항까지의 합이 $72$ 일 때, 제$6$항부터 제$9$항까지의 합은?",
         "choices": [
-          "$76$",
-          "$86$",
-          "$106$",
-          "$96$",
-          "$116$"
+          "$32$",
+          "$42$",
+          "$62$",
+          "$52$",
+          "$72$"
         ],
         "answer": 4,
-        "solution": "제$7$항부터 제$12$항까지의 합은 (첫째항부터 제$12$항까지의 합)$-$(첫째항부터 제$6$항까지의 합)$=120-24=96$ 이다."
+        "solution": "제$6$항부터 제$9$항까지의 합 $=(72)-(20)=52$ 이다."
       },
       {
         "num": 16,
         "unit": "여러 가지 수열",
         "level": "심화",
         "type": "객관식",
-        "latex": "수열 $\\{a_n\\}$ 이 모든 자연수 $n$ 에 대하여 \\\\ (가) $a_{2n}=2n$ \\\\ (나) $\\displaystyle\\sum_{k=1}^{2n} a_k=n(2n+3)$ \\\\ 를 만족시킬 때, $a_3+a_5$ 의 값은?",
+        "latex": "수열 $\\{a_n\\}$ 이 모든 자연수 $n$ 에 대하여 \\\\ (가) $a_{2n}=\\dfrac{2}{1-2n}$ \\\\ (나) $\\displaystyle\\sum_{k=1}^{2n} a_k=\\dfrac{2n+1}{2n+1}$ \\\\ 를 만족시킬 때, $a_1-a_7$ 의 값은?",
         "choices": [
-          "$8$",
-          "$10$",
-          "$12$",
-          "$14$",
-          "$16$"
+          "$\\dfrac{13}{7}$",
+          "$\\dfrac{19}{7}$",
+          "$3$",
+          "$\\dfrac{27}{7}$",
+          "$\\dfrac{31}{7}$"
         ],
-        "answer": 3,
-        "solution": "$n=1$ 에서 $a_1+a_2=5$ 이고 $a_2=2$ 이므로 $a_1=3$ 이다. $n=2$ 에서 $\\sum_{k=1}^{4}a_k=14$ 이고 $a_4=4$ 이므로 $a_3=14-3-2-4=5$ 이다. $n=3$ 에서 $\\sum_{k=1}^{6}a_k=27$ 이고 $a_6=6$ 이므로 $a_5=27-14-6=7$ 이다. 따라서 $a_3+a_5=5+7=12$ 이다.",
+        "answer": 2,
+        "solution": "(나)에서 $S_{2n}=\\dfrac{2n+1}{2n+1}$ 이고 (가)에서 $a_{2n}=\\dfrac{2}{1-2n}$ 이다. $a_1=S_2-a_2=3$, 홀수항은 $a_{2n-1}=S_{2n}-S_{2n-2}-a_{2n}$ 로 구하면 $a_3=\\dfrac{2}{3}$, $a_5=\\dfrac{2}{5}$, $a_7=\\dfrac{2}{7}$ 이다. 따라서 $a_1-a_7=\\dfrac{19}{7}$ 이다.",
         "avs": [
           {
             "phase": "P",
             "title": "목표 확인",
-            "content": "짝수항 조건과 누적합 조건으로부터 $a_3$, $a_5$ 를 구해 그 합을 구한다."
+            "content": "짝수항 (가)와 누적합 (나)로부터 홀수항을 역산하여 $a_1-a_7$ 을 구한다."
           },
           {
             "phase": "C",
             "title": "조건 정리",
-            "content": "(가)에서 $a_2=2$, $a_4=4$, $a_6=6$ 이고, (나)에서 누적합 $\\sum_{k=1}^{2n} a_k=n(2n+3)$ 이다."
+            "content": "(가)에서 $a_2=-2$, $a_4=-\\dfrac{2}{3}$ 등 짝수항을, (나)에서 누적합 $S_{2n}$ 을 안다."
           },
           {
             "phase": "B",
             "title": "핵심 개념",
-            "content": "홀수항은 (누적합의 차)$-$(짝수항) 으로 구한다. 즉 $a_{2n-1}=\\sum_{k=1}^{2n}a_k-\\sum_{k=1}^{2n-2}a_k-a_{2n}$ 이다."
+            "content": "$a_1=S_2-a_2$ 이고, 홀수항은 $a_{2n-1}=S_{2n}-S_{2n-2}-a_{2n}$ 로 구한다."
           },
           {
             "phase": "S",
             "title": "풀이",
-            "content": "$a_1=3$, $a_3=5$, $a_5=7$ 이므로 $a_3+a_5=12$ 이다."
+            "content": "$a_1=3$, $a_3=\\dfrac{2}{3}$, $a_5=\\dfrac{2}{5}$, $a_7=\\dfrac{2}{7}$ 이므로 $a_1-a_7=\\dfrac{19}{7}$ 이다."
           },
           {
             "phase": "A",
             "title": "정답",
-            "content": "$a_3+a_5=12$ 이다."
+            "content": "$a_1-a_7=\\dfrac{19}{7}$ 이다."
           }
         ]
       },
@@ -1424,41 +1505,41 @@
         "unit": "삼각함수의 활용",
         "level": "심화",
         "type": "객관식",
-        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=6$, $\\overline{AC}=8$ 이고 삼각형 $ABC$ 의 넓이가 $12\\sqrt{3}$ 이다. 변 $BC$ 를 한 변으로 하는 정사각형의 넓이는? (단, $\\angle A$ 는 예각)",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=6$, $\\overline{AC}=4$ 이다. 변 $BC$ 를 한 변으로 하고 삼각형과 겹치지 않도록 하는 정사각형 $BEDC$ 를 만들었을 때, 삼각형 $ABE$ 의 넓이가 $15$ 이다. 정사각형 $BEDC$ 의 넓이는?",
         "choices": [
-          "$44$",
-          "$48$",
-          "$52$",
-          "$56$",
-          "$60$"
+          "$36$",
+          "$38$",
+          "$40$",
+          "$42$",
+          "$44$"
         ],
         "answer": 3,
-        "solution": "넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A=\\dfrac{1}{2}\\cdot 6\\cdot 8\\sin A=12\\sqrt{3}$ 에서 $\\sin A=\\dfrac{\\sqrt{3}}{2}$ 이고 $A$ 가 예각이므로 $A=60^{\\circ}$, $\\cos A=\\dfrac{1}{2}$ 이다. 코사인법칙에서 $\\overline{BC}^{2}=6^{2}+8^{2}-2\\cdot 6\\cdot 8\\cdot\\dfrac{1}{2}=36+64-48=52$ 이므로 정사각형의 넓이는 $52$ 이다.",
+        "solution": "정사각형의 넓이는 $\\overline{BC}^{2}$ 이다. $\\angle ABE=\\angle ABC+90^{\\circ}$ 이므로 삼각형 $ABE$ 의 넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{BC}\\sin(\\angle ABC+90^{\\circ})=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{BC}\\cos(\\angle ABC)=15$ 이므로 $\\overline{BC}\\cos(\\angle ABC)=\\dfrac{2\\cdot 15}{6}$ 이다. 코사인법칙 $\\overline{AC}^{2}=\\overline{AB}^{2}+\\overline{BC}^{2}-2\\,\\overline{AB}\\cdot\\overline{BC}\\cos(\\angle ABC)$ 에 대입하면 $\\overline{BC}^{2}=\\overline{AC}^{2}-\\overline{AB}^{2}+4\\cdot 15=40$ 이다.",
         "avs": [
           {
             "phase": "P",
             "title": "목표 확인",
-            "content": "삼각형의 넓이로 $\\angle A$ 를 구한 뒤 코사인법칙으로 $\\overline{BC}^{2}$, 곧 정사각형의 넓이를 구한다."
+            "content": "변 $BC$ 밖에 세운 정사각형의 넓이 $\\overline{BC}^{2}$ 를, 삼각형 $ABE$ 의 넓이 조건으로 구한다."
           },
           {
             "phase": "C",
             "title": "조건 정리",
-            "content": "$\\overline{AB}=6$, $\\overline{AC}=8$, 넓이$=12\\sqrt{3}$ 이며 정사각형의 넓이는 $\\overline{BC}^{2}$ 이다."
+            "content": "$\\overline{AB}=6$, $\\overline{AC}=4$, 삼각형 $ABE$ 넓이 $=15$ 이며 $\\angle ABE=\\angle ABC+90^{\\circ}$ 이다."
           },
           {
             "phase": "B",
             "title": "핵심 개념",
-            "content": "넓이 공식 $\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A$ 로 $\\sin A$ 를, 코사인법칙으로 $\\overline{BC}^{2}$ 를 구한다."
+            "content": "넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{BC}\\cos(\\angle ABC)$ 로 $\\overline{BC}\\cos(\\angle ABC)$ 를 구한 뒤 코사인법칙에 넣는다."
           },
           {
             "phase": "S",
             "title": "풀이",
-            "content": "$\\sin A=\\dfrac{\\sqrt{3}}{2}$ 에서 $A=60^{\\circ}$ 이고 $\\overline{BC}^{2}=36+64-48=52$ 이다."
+            "content": "$\\overline{BC}\\cos(\\angle ABC)=\\dfrac{2\\cdot 15}{6}$, $\\overline{BC}^{2}=\\overline{AC}^{2}-\\overline{AB}^{2}+4\\cdot 15=40$ 이다."
           },
           {
             "phase": "A",
             "title": "정답",
-            "content": "정사각형의 넓이는 $52$ 이다."
+            "content": "정사각형의 넓이는 $40$ 이다."
           }
         ]
       },
@@ -1467,41 +1548,41 @@
         "unit": "수학적 귀납법",
         "level": "심화",
         "type": "객관식",
-        "latex": "수열 $\\{a_n\\}$ 이 모든 자연수 $n$ 에 대하여 다음 조건을 만족시킨다. \\\\ (가) $n$ 이 홀수이면 $a_{n+1}=a_n+2$ 이다. \\\\ (나) $n$ 이 짝수이면 $a_{n+1}=2a_n$ 이다. \\\\ $a_1=3$ 일 때, $a_5$ 의 값은?",
+        "latex": "수열 $\\{a_n\\}$ 이 모든 자연수 $n$ 에 대하여 다음 조건을 만족시킨다. \\\\ (가) $n$ 이 $3$ 의 배수가 아니면 $a_{n+1}=-a_n+n$ 이다. \\\\ (나) $n$ 이 $3$ 의 배수이면 $a_{n+3}=(-1)^{n}\\times a_n$ 이다. \\\\ $a_{20}=40$ 일 때, $\\displaystyle\\sum_{k=1}^{21} a_k$ 의 값은?",
         "choices": [
-          "$16$",
-          "$20$",
-          "$28$",
-          "$32$",
-          "$24$"
+          "$40$",
+          "$45$",
+          "$50$",
+          "$55$",
+          "$60$"
         ],
-        "answer": 5,
-        "solution": "$a_1=3$, $a_2=a_1+2=5$, $a_3=2a_2=10$, $a_4=a_3+2=12$, $a_5=2a_4=24$ 이다.",
+        "answer": 3,
+        "solution": "(나)에서 $3$ 의 배수 위치의 연결식으로 첫째항 $a_1$ 에 대한 관계가 정해지고, (가)로 각 묶음의 나머지 항을 표현한다. $3$ 의 배수가 아닌 $n$ 에서의 식과 (나)의 연결식을 연립하면 $a_1=19$ 이 되어 모든 항이 결정된다. 이때 $a_{20}=40$ 조건이 성립하고, $\\displaystyle\\sum_{k=1}^{21} a_k=50$ 이다.",
         "avs": [
           {
             "phase": "P",
             "title": "목표 확인",
-            "content": "홀수·짝수 번호에 따라 규칙이 다른 점화식으로 $a_5$ 를 구한다."
+            "content": "$3$ 의 배수 여부로 규칙이 갈리는 점화식에서 주어진 항으로부터 거꾸로 추적하여 합을 구한다."
           },
           {
             "phase": "C",
             "title": "조건 정리",
-            "content": "$n$ 이 홀수이면 $+2$, 짝수이면 $\\times 2$ 이고 $a_1=3$ 이다."
+            "content": "(가)는 $3$ 의 배수가 아닌 $n$ 에서의 점화식, (나)는 $3$ 의 배수 $n$ 에서 $a_{n+3}=(-1)^{n}a_n$ 이며 $a_{20}=40$ 이다."
           },
           {
             "phase": "B",
             "title": "핵심 개념",
-            "content": "항을 순서대로 계산하되 다음 항을 만드는 규칙이 현재 번호 $n$ 의 홀짝에 의해 결정됨에 주의한다."
+            "content": "$3k+1$ 번째 항을 미지수로 두고 (가)로 묶음 내부를 표현한 뒤, (나)의 연결식으로 미지수 사이의 관계를 연립한다."
           },
           {
             "phase": "S",
             "title": "풀이",
-            "content": "$a_2=5$, $a_3=10$, $a_4=12$, $a_5=24$ 이다."
+            "content": "연립하면 $a_1=19$ 로 모든 항이 정해지고 $a_{20}=40$ 가 확인된다. 모든 항을 더하면 합은 $50$ 이다."
           },
           {
             "phase": "A",
             "title": "정답",
-            "content": "$a_5=24$ 이다."
+            "content": "$\\displaystyle\\sum_{k=1}^{21} a_k=50$ 이다."
           }
         ]
       },
@@ -1510,50 +1591,7 @@
         "unit": "삼각함수의 활용",
         "level": "심화",
         "type": "객관식",
-        "latex": "원에 내접하는 사각형 $ABCD$ 에서 $\\overline{AB}=4$, $\\overline{BC}=6$, $\\overline{CD}=4$, $\\overline{DA}=6$ 일 때, 사각형 $ABCD$ 의 넓이는?",
-        "choices": [
-          "$24$",
-          "$18$",
-          "$21$",
-          "$27$",
-          "$30$"
-        ],
-        "answer": 1,
-        "solution": "원에 내접하는 사각형이므로 $\\angle B+\\angle D=180^{\\circ}$ 이다. 대각선 $AC$ 에 대하여 코사인법칙을 두 삼각형에 적용하면 $\\cos B=\\dfrac{4^2+6^2-\\overline{AC}^2}{2\\cdot 4\\cdot 6}$, $\\cos D=-\\cos B$ 이고 $\\overline{AC}^2$ 를 소거하면 $\\cos B=0$, 즉 $B=90^{\\circ}$ 이다. 따라서 넓이 $=2\\times\\dfrac{1}{2}\\cdot 4\\cdot 6=24$ 이다.",
-        "avs": [
-          {
-            "phase": "P",
-            "title": "목표 확인",
-            "content": "원에 내접하는 사각형의 마주보는 각의 성질을 이용하여 넓이를 구한다."
-          },
-          {
-            "phase": "C",
-            "title": "조건 정리",
-            "content": "네 변이 $4,6,4,6$ 이고 $\\angle B+\\angle D=180^{\\circ}$ 이다."
-          },
-          {
-            "phase": "B",
-            "title": "핵심 개념",
-            "content": "대각선 $AC$ 에 대해 두 삼각형에 코사인법칙을 적용하고 $\\cos D=-\\cos B$ 를 이용해 $\\overline{AC}^2$ 를 소거한다."
-          },
-          {
-            "phase": "S",
-            "title": "풀이",
-            "content": "소거 결과 $\\cos B=0$, 즉 $\\angle B=90^{\\circ}$ 이므로 넓이 $=\\dfrac{1}{2}\\cdot 4\\cdot 6\\times 2=24$ 이다."
-          },
-          {
-            "phase": "A",
-            "title": "정답",
-            "content": "사각형 $ABCD$ 의 넓이는 $24$ 이다."
-          }
-        ]
-      },
-      {
-        "num": 20,
-        "unit": "여러 가지 수열",
-        "level": "심화",
-        "type": "객관식",
-        "latex": "수열 $\\{a_n\\}$ 의 일반항이 $a_n=2n-15$ 이다. $\\displaystyle\\sum_{k=1}^{p} a_k=\\sum_{k=1}^{q} a_k$ 를 만족시키는 서로 다른 두 자연수 $p$, $q$ $(p<q)$ 의 순서쌍 $(p,\\ q)$ 의 개수는?",
+        "latex": "그림과 같이 사각형 $ABCD$ 가 한 원에 내접하고 다음 조건을 만족시킨다. \\\\ (가) $\\overline{AB}^{2}:\\overline{AD}^{2}:\\overline{BD}^{2}=4:9:13$ \\\\ (나) 삼각형 $BCD$ 의 넓이는 $5$ 이다. \\\\ (다) $\\sin(\\angle DBC)+\\sin(\\angle BDC)=\\sqrt{2}$ \\\\ 사각형 $ABCD$ 의 외접원의 넓이가 $\\dfrac{q}{p}\\pi$ 일 때, $p+q$ 의 값은? (단, $p$ 와 $q$ 는 서로소인 자연수이다.)",
         "choices": [
           "$4$",
           "$5$",
@@ -1562,7 +1600,50 @@
           "$8$"
         ],
         "answer": 3,
-        "solution": "$S_n=\\sum_{k=1}^{n}(2k-15)=n(n+1)-15n=n^2+-14n$ 이다. $S_p=S_q$ 이면 $p^2+-14p=q^2+-14q$, 즉 $(p-q)(p+q+-14)=0$ 이므로 $p+q=14$ 이다. $p<q$ 인 자연수 순서쌍은 6개이다."
+        "solution": "삼각형 $ABD$ 에서 코사인법칙으로 $\\cos(\\angle A)=\\dfrac{4+9-13}{2\\sqrt{4\\cdot 9}}=0$ 이므로 $\\sin(\\angle A)$ 가 정해지고, $\\overline{BD}=2R\\sin(\\angle A)$ 이다. 내접사각형이므로 $\\angle BCD=180^{\\circ}-\\angle A$ 이고 $\\sin(\\angle BCD)=\\sin(\\angle A)$ 이다. 삼각형 $BCD$ 에서 $\\overline{BC}=2R\\sin(\\angle BDC)$, $\\overline{CD}=2R\\sin(\\angle DBC)$ 이므로 넓이 $=2R^{2}\\sin(\\angle DBC)\\sin(\\angle BDC)\\sin(\\angle A)$ 이다. (다)와 $\\angle DBC+\\angle BDC=\\angle A$ 로 $\\sin(\\angle DBC)\\sin(\\angle BDC)$ 를 구해 (나)에 대입하면 $R^{2}=5$, 즉 외접원의 넓이는 $\\dfrac{5}{1}\\pi$ 이다. 따라서 $p+q=6$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "내접사각형의 변비·넓이·사인 합 조건으로 외접원의 넓이를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "(가)로 $\\angle A$ 를, (나)로 삼각형 $BCD$ 의 넓이를, (다)로 두 밑각의 사인 합을 안다. 내접사각형이므로 $\\angle BCD=180^{\\circ}-\\angle A$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "삼각형 $ABD$ 에서 코사인법칙으로 $\\angle A$, 사인법칙으로 $2R$ 을 잡고, 삼각형 $BCD$ 의 넓이 $=2R^{2}\\sin(\\angle DBC)\\sin(\\angle BDC)\\sin(\\angle A)$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "(다)와 $\\angle DBC+\\angle BDC=\\angle A$ 로 곱 $\\sin(\\angle DBC)\\sin(\\angle BDC)$ 를 구해 넓이식에 넣으면 $R^{2}=5$ 이다. 외접원 넓이는 $\\dfrac{5}{1}\\pi$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=6$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 \\\\ $a_n=\\begin{cases}(n-3)(n-14) & (n\\le 8) \\\\ -(n-3)(n-14) & (n\\ge 9)\\end{cases}$ \\\\ 일 때, $\\displaystyle\\sum_{k=1}^{p} a_k=\\sum_{k=1}^{q} a_k$ 를 만족시키는 서로 다른 두 자연수 $p$, $q$ $(p<q)$ 의 순서쌍 $(p,\\ q)$ 의 개수는?",
+        "choices": [
+          "$9$",
+          "$10$",
+          "$11$",
+          "$12$",
+          "$13$"
+        ],
+        "answer": 5,
+        "solution": "$S_n=\\displaystyle\\sum_{k=1}^{n} a_k$ 라 하면 $S_p=S_q$ 는 $\\displaystyle\\sum_{k=p+1}^{q} a_k=0$ 을 뜻한다. $a_n$ 은 $n\\le 8$ 에서 위로 볼록한 포물선 값, $n\\ge 9$ 에서 부호가 뒤집힌 값으로, 부분합 $S_n$ 의 증감과 부호 변화를 추적하면 $S_n$ 값이 같아지는 구간을 경우로 나누어 셀 수 있다. $S_0,S_1,\\cdots$ 의 값을 비교하여 같은 값을 갖는 모든 쌍을 세면 그 개수는 $13$ 이다."
       }
     ],
     [
@@ -1587,64 +1668,64 @@
         "unit": "여러 가지 수열",
         "level": "기본",
         "type": "객관식",
-        "latex": "$\\displaystyle\\sum_{k=1}^{15}\\left(2k+3\\right)$ 의 값은?",
+        "latex": "$\\displaystyle\\sum_{k=1}^{12}\\left(4k+1\\right)$ 의 값은?",
         "choices": [
-          "$265$",
-          "$285$",
-          "$275$",
-          "$295$",
-          "$305$"
+          "$304$",
+          "$324$",
+          "$334$",
+          "$354$",
+          "$364$"
         ],
         "answer": 2,
-        "solution": "$\\displaystyle\\sum_{k=1}^{15}(2k+3)=2\\cdot\\dfrac{15\\cdot 16}{2}+3\\cdot 15=240+45=285$ 이다."
+        "solution": "$\\displaystyle\\sum_{k=1}^{12}(4k+1)=4\\cdot\\dfrac{12\\cdot 13}{2}+1\\cdot 12=312+12=324$ 이다."
       },
       {
         "num": 3,
         "unit": "수학적 귀납법",
         "level": "심화",
         "type": "객관식",
-        "latex": "수열 $\\{a_n\\}$ 이 \\\\ $a_1=40,\\quad a_{n+1}=\\dfrac{1}{5}a_n+4\\ \\ (n=1,\\,2,\\,3,\\,\\cdots)$ \\\\ 으로 정의될 때, $a_2$ 의 값은?",
+        "latex": "수열 $\\{a_n\\}$ 이 \\\\ $a_1=2,\\quad a_{n+1}=2a_n+1\\ \\ (n=1,\\,2,\\,3,\\,\\cdots)$ \\\\ 으로 정의될 때, $a_3$ 의 값은?",
         "choices": [
-          "$10$",
+          "$9$",
           "$11$",
-          "$13$",
           "$12$",
-          "$14$"
+          "$14$",
+          "$10$"
         ],
-        "answer": 4,
-        "solution": "$a_2=\\dfrac{1}{5}a_1+4=\\dfrac{40}{5}+4=8+4=12$ 이다."
+        "answer": 2,
+        "solution": "$a_2=2\\cdot 2+1=5$ 이고 $a_3=2\\cdot 5+1=11$ 이다."
       },
       {
         "num": 4,
         "unit": "여러 가지 수열",
         "level": "기본",
         "type": "객관식",
-        "latex": "$\\displaystyle\\sum_{k=1}^{15} k(k+2)$ 의 값은?",
+        "latex": "$\\displaystyle\\sum_{k=1}^{10} k(k+4)$ 의 값은?",
         "choices": [
-          "$1480$",
-          "$1370$",
-          "$1425$",
-          "$1535$",
-          "$1590$"
+          "$605$",
+          "$495$",
+          "$550$",
+          "$660$",
+          "$715$"
         ],
         "answer": 1,
-        "solution": "$\\displaystyle\\sum_{k=1}^{15} k(k+2)=\\sum_{k=1}^{15} k^2+2\\sum_{k=1}^{15} k=\\dfrac{15\\cdot 16\\cdot 31}{6}+2\\cdot\\dfrac{15\\cdot 16}{2}=1240+240=1480$ 이다."
+        "solution": "$\\displaystyle\\sum_{k=1}^{10} k(k+4)=\\sum k^2+4\\sum k=\\dfrac{10\\cdot 11\\cdot 21}{6}+4\\cdot\\dfrac{10\\cdot 11}{2}=605$ 이다."
       },
       {
         "num": 5,
         "unit": "삼각함수의 활용",
         "level": "심화",
         "type": "객관식",
-        "latex": "평행사변형 $ABCD$ 에서 $\\overline{AB}=6$, $\\overline{BC}=8$, $\\angle B=120^{\\circ}$ 일 때, 대각선 $AC$ 의 길이는?",
+        "latex": "평행사변형 $ABCD$ 에서 $\\overline{AB}=6$, $\\overline{BC}=9$ 이고 $\\angle B=120^{\\circ}$ 이다. 두 대각선의 길이의 제곱의 합 $\\overline{AC}^{2}+\\overline{BD}^{2}$ 의 값은?",
         "choices": [
-          "$\\sqrt{37}$",
-          "$2\\sqrt{37}$",
-          "$\\sqrt{74}$",
-          "$3\\sqrt{37}$",
-          "$4\\sqrt{37}$"
+          "$222$",
+          "$234$",
+          "$246$",
+          "$258$",
+          "$210$"
         ],
         "answer": 2,
-        "solution": "삼각형 $ABC$ 에서 코사인법칙에 의해 $\\overline{AC}^{2}=6^{2}+8^{2}-2\\cdot 6\\cdot 8\\cos 120^{\\circ}=36+64+48=148$ 이므로 $\\overline{AC}=2\\sqrt{37}$ 이다."
+        "solution": "삼각형 $ABC$ 에서 $\\overline{AC}^{2}=6^2+9^2-2\\cdot 6\\cdot 9\\cos 120^{\\circ}$, 삼각형 $ABD$ 에서 $\\angle A=60^{\\circ}$ 이므로 $\\overline{BD}^{2}=6^2+9^2-2\\cdot 6\\cdot 9\\cos 60^{\\circ}$ 이다. 두 식을 더하면 $\\cos$ 항이 소거되어 $\\overline{AC}^{2}+\\overline{BD}^{2}=2(6^2+9^2)=234$ 이다."
       },
       {
         "num": 6,
@@ -1660,7 +1741,7 @@
           "$16$"
         ],
         "answer": 5,
-        "solution": "등차중항에서 $x=\\dfrac{2+18}{2}=10$ 이고, 등비중항에서 $y=\\sqrt{2\\cdot 18}=\\sqrt{36}=6$ 이다. 따라서 $x+y=10+6=16$ 이다."
+        "solution": "등차중항에서 $x=\\dfrac{2+18}{2}=10$, 등비중항에서 $y=\\sqrt{2\\cdot 18}=6$ 이므로 $x+y=16$ 이다."
       },
       {
         "num": 7,
@@ -1676,48 +1757,48 @@
           "$290$"
         ],
         "answer": 1,
-        "solution": "$a_3+a_5+a_7=3a_5=90$ 이므로 $a_5=30$ 이다. 등차수열의 합은 $\\displaystyle\\sum_{k=1}^{9} a_k=\\dfrac{9(a_1+a_9)}{2}=9a_5=9\\cdot 30=270$ 이다."
+        "solution": "$a_3+a_5+a_7=3a_5=90$ 이므로 $a_5=30$ 이다. $\\displaystyle\\sum_{k=1}^{9} a_k=\\dfrac{9(a_1+a_{9})}{2}=9a_5=270$ 이다."
       },
       {
         "num": 8,
         "unit": "여러 가지 수열",
         "level": "심화",
         "type": "객관식",
-        "latex": "$\\displaystyle\\sum_{k=1}^{40}\\dfrac{2}{(2k-1)(2k+1)}$ 의 값은?",
+        "latex": "$\\displaystyle\\sum_{k=1}^{49}\\dfrac{2}{(2k-1)(2k+1)}$ 의 값은?",
         "choices": [
-          "$\\dfrac{79}{81}$",
-          "$\\dfrac{78}{81}$",
-          "$\\dfrac{40}{41}$",
-          "$\\dfrac{80}{81}$",
-          "$\\dfrac{80}{82}$"
+          "$\\dfrac{97}{99}$",
+          "$\\dfrac{32}{33}$",
+          "$\\dfrac{98}{99}$",
+          "$\\dfrac{49}{50}$",
+          "$\\dfrac{98}{97}$"
         ],
-        "answer": 4,
-        "solution": "$\\dfrac{2}{(2k-1)(2k+1)}=\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}$ 이므로 망원급수로 $\\displaystyle\\sum_{k=1}^{40}\\left(\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}\\right)=1-\\dfrac{1}{81}=\\dfrac{80}{81}$ 이다.",
+        "answer": 3,
+        "solution": "$\\dfrac{2}{(2k-1)(2k+1)}=\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}$ 이므로 망원급수로 $1-\\dfrac{1}{99}=\\dfrac{98}{99}$ 이다.",
         "avs": [
           {
             "phase": "P",
             "title": "목표 확인",
-            "content": "부분분수 분해를 이용하여 $\\displaystyle\\sum_{k=1}^{40}\\dfrac{2}{(2k-1)(2k+1)}$ 의 값을 구한다."
+            "content": "부분분수 분해로 $\\displaystyle\\sum_{k=1}^{49}\\dfrac{2}{(2k-1)(2k+1)}$ 를 구한다."
           },
           {
             "phase": "C",
             "title": "조건 정리",
-            "content": "분모가 연속한 두 홀수의 곱 $(2k-1)(2k+1)$ 꼴이므로 부분분수로 분해할 수 있다."
+            "content": "분모가 연속한 두 홀수의 곱 $(2k-1)(2k+1)$ 꼴이다."
           },
           {
             "phase": "B",
             "title": "핵심 개념",
-            "content": "$\\dfrac{2}{(2k-1)(2k+1)}=\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}$ 로 분해하면 인접한 항이 소거되는 망원급수가 된다."
+            "content": "$\\dfrac{2}{(2k-1)(2k+1)}=\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}$ 로 분해하면 인접 항이 소거되는 망원급수가 된다."
           },
           {
             "phase": "S",
             "title": "풀이",
-            "content": "$\\displaystyle\\sum_{k=1}^{40}\\left(\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}\\right)=1-\\dfrac{1}{81}=\\dfrac{80}{81}$ 이다."
+            "content": "$\\displaystyle\\sum_{k=1}^{49}\\left(\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}\\right)=1-\\dfrac{1}{99}=\\dfrac{98}{99}$ 이다."
           },
           {
             "phase": "A",
             "title": "정답",
-            "content": "값은 $\\dfrac{80}{81}$ 이다."
+            "content": "값은 $\\dfrac{98}{99}$ 이다."
           }
         ]
       },
@@ -1726,57 +1807,84 @@
         "unit": "삼각함수의 활용",
         "level": "심화",
         "type": "객관식",
-        "latex": "수평인 지면 위의 두 지점 $A$, $B$ 사이의 거리가 $16$ 이다. 지점 $A$ 에서 나무 꼭대기 $P$ 를 올려본 각의 크기가 $30^{\\circ}$, 지점 $B$ 에서 올려본 각의 크기가 $60^{\\circ}$ 이고 $A$, $B$, 나무의 밑면이 한 직선 위에 있다. $A$ 가 $B$ 보다 나무에서 멀 때, 선분 $BP$ 의 길이는?",
+        "latex": "$\\overline{AB}=1$, $\\overline{AC}=\\sqrt{3}$ 인 직각삼각형 $ABC$ ($\\angle A=90^{\\circ}$) 모양의 종이가 있고, 이 삼각형의 외접원은 빗변 $BC$ 를 지름으로 한다. 변 $BC$ 위의 점 $D$, 변 $AB$ 위의 점 $E$, 변 $AC$ 위의 점 $F$ 에 대하여 선분 $EF$ 를 접는 선으로 하여 점 $A$ 가 점 $D$ 에 겹쳐지도록 접었다. 삼각형 $BDE$ 와 삼각형 $DCF$ 의 외접원의 반지름의 길이의 비가 $1:4$ 일 때, 선분 $DF$ 의 길이는 $\\dfrac{q}{p}\\sqrt{3}$ 이다. $p+q$ 의 값은? (단, $p$ 와 $q$ 는 서로소인 자연수이다.)",
         "choices": [
-          "$12$",
-          "$14$",
-          "$16$",
-          "$18$",
-          "$20$"
+          "$45$",
+          "$46$",
+          "$47$",
+          "$48$",
+          "$49$"
         ],
-        "answer": 3,
-        "solution": "삼각형 $ABP$ 에서 $\\angle PAB=30^{\\circ}$ 이고 $\\angle PBA=180^{\\circ}-60^{\\circ}=120^{\\circ}$ 이므로 $\\angle APB=30^{\\circ}$ 이다. 사인법칙에서 $\\dfrac{\\overline{BP}}{\\sin 30^{\\circ}}=\\dfrac{\\overline{AB}}{\\sin 30^{\\circ}}$ 이므로 $\\overline{BP}=\\overline{AB}=16$ 이다."
+        "answer": 5,
+        "solution": "$\\angle A=90^{\\circ}$ 이므로 $\\angle B=60^{\\circ}$, $\\angle C=30^{\\circ}$ 이다. 접은 성질로 $\\overline{ED}=\\overline{AE}$, $\\overline{FD}=\\overline{AF}$ 이고 $\\angle EDF=\\angle A=90^{\\circ}$ 이다. 삼각형 $BDE$, $DCF$ 에 사인법칙을 적용하면 외접원 반지름비 조건에서 $\\overline{AF}$ 가 결정되고, $D$ 가 $BC$ 위에 있다는 조건 $\\angle BDE+\\angle FDC=90^{\\circ}$ 로 연립하면 $\\overline{DF}=\\dfrac{19}{30}\\sqrt{3}$ 이다. 따라서 $p+q=49$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "직각삼각형 종이를 접어 점 $A$ 가 $BC$ 위의 점 $D$ 에 겹쳐질 때, 두 삼각형의 외접원 반지름비 조건으로 $\\overline{DF}$ 를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "$\\angle A=90^{\\circ}$ 에서 $\\angle B=60^{\\circ}$, $\\angle C=30^{\\circ}$ 이고, 접은 성질로 $\\overline{ED}=\\overline{AE}$, $\\overline{FD}=\\overline{AF}$, $\\angle EDF=90^{\\circ}$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "사인법칙으로 $2R_1=\\dfrac{\\overline{ED}}{\\sin B}$, $2R_2=\\dfrac{\\overline{FD}}{\\sin C}$ 이고, $D$ 가 $BC$ 위에 있으므로 $\\angle BDE+\\angle FDC=90^{\\circ}$ 이다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "반지름비와 각 조건을 연립하면 $\\overline{DF}=\\dfrac{19}{30}\\sqrt{3}$ 을 얻는다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=49$ 이다."
+          }
+        ]
       },
       {
         "num": 10,
         "unit": "여러 가지 수열",
         "level": "심화",
         "type": "객관식",
-        "latex": "첫째항이 $3$, 공차가 $4$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k\\,a_{k+1}}$ 의 값은?",
+        "latex": "첫째항이 $1$, 공차가 $4$ 인 등차수열 $\\{a_n\\}$ 에 대하여 $\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k\\,a_{k+1}}$ 의 값은?",
         "choices": [
-          "$\\dfrac{10}{249}$",
-          "$\\dfrac{20}{249}$",
-          "$\\dfrac{20}{250}$",
-          "$\\dfrac{1}{12}$",
-          "$\\dfrac{19}{249}$"
+          "$\\dfrac{1}{81}$",
+          "$\\dfrac{20}{81}$",
+          "$\\dfrac{20}{101}$",
+          "$\\dfrac{1}{4}$",
+          "$\\dfrac{40}{81}$"
         ],
         "answer": 2,
-        "solution": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{4}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 이고 $a_1=3$, $a_{21}=83$ 이므로 $\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{4}\\left(\\dfrac{1}{3}-\\dfrac{1}{83}\\right)=\\dfrac{20}{249}$ 이다.",
+        "solution": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{4}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 이고 $a_1=1$, $a_{21}=81$ 이므로 합은 $\\dfrac{20}{81}$ 이다.",
         "avs": [
           {
             "phase": "P",
             "title": "목표 확인",
-            "content": "등차수열의 곱으로 이루어진 분수의 시그마 $\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k a_{k+1}}$ 의 값을 구한다."
+            "content": "등차수열의 곱 분수의 시그마 $\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k a_{k+1}}$ 를 구한다."
           },
           {
             "phase": "C",
             "title": "조건 정리",
-            "content": "$a_n=3+4(n-1)$ 이고 공차가 $4$ 이므로 $a_1=3$, $a_{21}=83$ 이다."
+            "content": "$a_n=1+4(n-1)$ 이므로 $a_1=1$, $a_{21}=81$ 이다."
           },
           {
             "phase": "B",
             "title": "핵심 개념",
-            "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{4}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 부분분수 분해하면 망원급수가 된다."
+            "content": "$\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{4}\\left(\\dfrac{1}{a_k}-\\dfrac{1}{a_{k+1}}\\right)$ 로 분해하면 망원급수가 된다."
           },
           {
             "phase": "S",
             "title": "풀이",
-            "content": "$\\displaystyle\\sum_{k=1}^{20}\\dfrac{1}{a_k a_{k+1}}=\\dfrac{1}{4}\\left(\\dfrac{1}{3}-\\dfrac{1}{83}\\right)=\\dfrac{20}{249}$ 이다."
+            "content": "$\\dfrac{1}{4}\\left(\\dfrac{1}{1}-\\dfrac{1}{81}\\right)=\\dfrac{20}{81}$ 이다."
           },
           {
             "phase": "A",
             "title": "정답",
-            "content": "값은 $\\dfrac{20}{249}$ 이다."
+            "content": "값은 $\\dfrac{20}{81}$ 이다."
           }
         ]
       },
@@ -1785,39 +1893,39 @@
         "unit": "여러 가지 수열",
         "level": "심화",
         "type": "객관식",
-        "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=2^{n}+2$ 일 때, $a_{7}$ 의 값은?",
+        "latex": "수열 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합 $S_n$ 이 $S_n=3^{n}+4$ 일 때, $a_{5}$ 의 값은?",
         "choices": [
-          "$32$",
-          "$68$",
-          "$64$",
-          "$128$",
-          "$60$"
+          "$81$",
+          "$162$",
+          "$324$",
+          "$164$",
+          "$160$"
         ],
-        "answer": 3,
-        "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=(2^{n}+2)-(2^{n-1}+2)=2^{n-1}$ 이다. 따라서 $a_{7}=2^{6}=64$ 이다."
+        "answer": 2,
+        "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=3^{n}-3^{n-1}=(3-1)3^{n-1}$ 이다. 따라서 $a_{5}=162$ 이다."
       },
       {
         "num": 12,
         "unit": "삼각함수의 활용",
         "level": "심화",
         "type": "객관식",
-        "latex": "깃발의 높이를 구하기 위하여 깃발의 밑면 $G$ 로부터 떨어진 두 지점 $A$, $B$ 에서 측량하였더니 $\\angle GAB=45^{\\circ}$, $\\angle GBA=75^{\\circ}$, $\\overline{AB}=8$ 이었다. 깃발의 꼭대기를 $P$ 라 할 때 $\\angle PGB=90^{\\circ}$, $\\angle PBG=60^{\\circ}$ 이다. 깃발의 높이 $\\overline{GP}$ 의 값은?",
+        "latex": "깃발의 높이를 구하기 위하여 깃발의 밑면 $G$ 로부터 떨어진 두 지점 $A$, $B$ 에서 측량하였더니 $\\angle GAB=30^{\\circ}$, $\\angle GBA=90^{\\circ}$, $\\overline{AB}=12$ 이었다. 깃발의 꼭대기를 $P$ 라 할 때 $\\angle PGB=90^{\\circ}$, $\\angle PBG=60^{\\circ}$ 이다. 깃발의 높이 $\\overline{GP}$ 의 값은?",
         "choices": [
-          "$4\\sqrt{2}$",
-          "$8\\sqrt{2}$",
-          "$8\\sqrt{3}$",
-          "$16$",
-          "$12\\sqrt{2}$"
+          "$12$",
+          "$12\\sqrt{2}$",
+          "$12\\sqrt{3}$",
+          "$24$",
+          "$6\\sqrt{6}$"
         ],
-        "answer": 2,
-        "solution": "삼각형 $GAB$ 에서 $\\angle AGB=180^{\\circ}-45^{\\circ}-75^{\\circ}=60^{\\circ}$ 이므로 사인법칙에 의해 $\\dfrac{\\overline{GB}}{\\sin 45^{\\circ}}=\\dfrac{\\overline{AB}}{\\sin 60^{\\circ}}$, 즉 $\\overline{GB}=8\\cdot\\dfrac{\\sin 45^{\\circ}}{\\sin 60^{\\circ}}=\\dfrac{8\\sqrt{6}}{3}$ 이다. 직각삼각형 $PGB$ 에서 $\\overline{GP}=\\overline{GB}\\tan 60^{\\circ}=\\dfrac{8\\sqrt{6}}{3}\\cdot\\sqrt{3}=8\\sqrt{2}$ 이다."
+        "answer": 1,
+        "solution": "삼각형 $GAB$ 에서 $\\angle AGB=180^{\\circ}-30^{\\circ}-90^{\\circ}=60^{\\circ}$ 이므로 사인법칙에 의해 $\\overline{GB}=12\\cdot\\dfrac{\\sin 30^{\\circ}}{\\sin 60^{\\circ}}$ 이다. 직각삼각형 $PGB$ 에서 $\\overline{GP}=\\overline{GB}\\tan 60^{\\circ}=12$ 이다."
       },
       {
         "num": 13,
         "unit": "수학적 귀납법",
         "level": "심화",
         "type": "객관식",
-        "latex": "다음은 모든 자연수 $n$ 에 대하여 \\\\ $\\displaystyle\\sum_{k=1}^{n} k(k+1)(k+2)=\\dfrac{n(n+1)(n+2)(n+3)}{4}\\quad\\cdots\\ (\\ast)$ \\\\ 이 성립함을 수학적 귀납법으로 증명한 것이다. \\\\ (i) $n=1$ 일 때, (좌변)$=1\\cdot 2\\cdot 3=6$, (우변)$=\\dfrac{1\\cdot 2\\cdot 3\\cdot 4}{4}=6$ 이므로 $(\\ast)$ 이 성립한다. \\\\ (ii) $n=k$ 일 때 $(\\ast)$ 이 성립한다고 가정하면 \\\\ $\\displaystyle\\sum_{i=1}^{k+1} i(i+1)(i+2)=\\dfrac{k(k+1)(k+2)(k+3)}{4}+\\boxed{(\\text{가})}=\\dfrac{(k+1)(k+2)(k+3)\\cdot\\boxed{(\\text{나})}}{4}$ \\\\ 이므로 $n=k+1$ 일 때도 $(\\ast)$ 이 성립한다. \\\\ 위의 $\\boxed{(\\text{가})}=f(k)$, $\\boxed{(\\text{나})}=g(k)$ 라 할 때, $\\dfrac{f(2)}{g(2)}$ 의 값은?",
+        "latex": "다음은 모든 자연수 $n$ 에 대하여 \\\\ $\\displaystyle\\sum_{k=1}^{n} k(k+1)(k+2)=\\dfrac{n(n+1)(n+2)(n+3)}{4}\\quad\\cdots\\ (\\ast)$ \\\\ 이 성립함을 수학적 귀납법으로 증명한 것이다. \\\\ (i) $n=1$ 일 때, (좌변)$=1\\cdot 2\\cdot 3=6$, (우변)$=\\dfrac{1\\cdot 2\\cdot 3\\cdot 4}{4}=6$ 이므로 $(\\ast)$ 이 성립한다. \\\\ (ii) $n=k$ 일 때 $(\\ast)$ 이 성립한다고 가정하면 \\\\ $\\displaystyle\\sum_{i=1}^{k+1} i(i+1)(i+2)=\\dfrac{k(k+1)(k+2)(k+3)}{4}+(\\text{가})=\\dfrac{(k+1)(k+2)(k+3)\\cdot(\\text{나})}{4}$ \\\\ 이므로 $n=k+1$ 일 때도 $(\\ast)$ 이 성립한다. \\\\ 위의 $(\\text{가})=f(k)$, $(\\text{나})=g(k)$ 라 할 때, $\\dfrac{f(2)}{g(2)}$ 의 값은?",
         "choices": [
           "$6$",
           "$10$",
@@ -1826,27 +1934,27 @@
           "$15$"
         ],
         "answer": 2,
-        "solution": "$\\boxed{(\\text{가})}=(k+1)(k+2)(k+3)$ 이므로 $f(k)=(k+1)(k+2)(k+3)$ 이고, 우변을 묶으면 $\\dfrac{(k+1)(k+2)(k+3)(k+4)}{4}$ 이므로 $\\boxed{(\\text{나})}=k+4$, 즉 $g(k)=k+4$ 이다. 따라서 $\\dfrac{f(2)}{g(2)}=\\dfrac{3\\cdot 4\\cdot 5}{6}=10$ 이다.",
+        "solution": "$(\\text{가})=(k+1)(k+2)(k+3)$ 이므로 $f(k)=(k+1)(k+2)(k+3)$ 이고, 우변을 묶으면 $\\dfrac{(k+1)(k+2)(k+3)(k+4)}{4}$ 이므로 $g(k)=k+4$ 이다. 따라서 $\\dfrac{f(2)}{g(2)}=\\dfrac{3\\cdot 4\\cdot 5}{6}=10$ 이다.",
         "avs": [
           {
             "phase": "P",
             "title": "목표 확인",
-            "content": "수학적 귀납법 증명의 빈칸 $f(k)$, $g(k)$ 를 찾아 $\\dfrac{f(2)}{g(2)}$ 를 구한다."
+            "content": "수학적 귀납법 등식 증명의 빈칸 $f(k)$, $g(k)$ 를 찾아 $\\dfrac{f(2)}{g(2)}$ 를 구한다."
           },
           {
             "phase": "C",
             "title": "조건 정리",
-            "content": "$n=k$ 가정식에 제$(k+1)$항 $(k+1)(k+2)(k+3)$ 을 더한 것이 $n=k+1$ 식이어야 한다."
+            "content": "$n=k$ 가정식에 제$(k+1)$항을 더한 것이 $n=k+1$ 식과 같아야 한다."
           },
           {
             "phase": "B",
             "title": "핵심 개념",
-            "content": "따라서 $\\boxed{(\\text{가})}=(k+1)(k+2)(k+3)$ 이고, 두 항을 $(k+1)(k+2)(k+3)$ 으로 묶으면 $\\boxed{(\\text{나})}$ 가 결정된다."
+            "content": "더한 항이 $(\\text{가})=f(k)$ 이고, 공통인수로 묶으면 $(\\text{나})=g(k)$ 가 결정된다."
           },
           {
             "phase": "S",
             "title": "풀이",
-            "content": "$\\dfrac{k(k+1)(k+2)(k+3)}{4}+(k+1)(k+2)(k+3)=\\dfrac{(k+1)(k+2)(k+3)(k+4)}{4}$ 이므로 $g(k)=k+4$ 이다. $\\dfrac{f(2)}{g(2)}=\\dfrac{3\\cdot 4\\cdot 5}{6}=10$."
+            "content": "$f(k)=(k+1)(k+2)(k+3)$, $g(k)=k+4$ 이므로 $\\dfrac{f(2)}{g(2)}=10$ 이다."
           },
           {
             "phase": "A",
@@ -1860,73 +1968,73 @@
         "unit": "여러 가지 수열",
         "level": "심화",
         "type": "객관식",
-        "latex": "두 수열 $\\{a_n\\}$, $\\{b_n\\}$ 에 대하여 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합이 $S_n=2n^{2}$ 이고, $\\{b_n\\}$ 의 첫째항부터 제$n$항까지의 합이 $T_n=2^{n+1}-2$ 이다. $a_{6}+b_{6}$ 의 값은?",
+        "latex": "두 수열 $\\{a_n\\}$, $\\{b_n\\}$ 에 대하여 $\\{a_n\\}$ 의 첫째항부터 제$n$항까지의 합이 $S_n=4n^{2}$ 이고, $\\{b_n\\}$ 의 첫째항부터 제$n$항까지의 합이 $T_n=2^{n+1}-2$ 이다. $a_{4}+b_{4}$ 의 값은?",
         "choices": [
-          "$78$",
-          "$82$",
-          "$86$",
-          "$90$",
-          "$94$"
+          "$40$",
+          "$42$",
+          "$44$",
+          "$46$",
+          "$48$"
         ],
         "answer": 3,
-        "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=2n^2-2(n-1)^2=4n-2$ 이고, $b_n=T_n-T_{n-1}=2^{n+1}-2^{n}=2^{n}$ 이다. 따라서 $a_{6}=22$, $b_{6}=64$ 이므로 합은 $22+64=86$ 이다."
+        "solution": "$n\\ge 2$ 에서 $a_n=S_n-S_{n-1}=4n^2-4(n-1)^2=4(2n-1)$ 이고 $b_n=T_n-T_{n-1}=2^{n+1}-2^{n}=2^{n}$ 이다. 따라서 $a_{4}=28$, $b_{4}=16$ 이므로 합은 $44$ 이다."
       },
       {
         "num": 15,
         "unit": "등차수열과 등비수열",
         "level": "심화",
         "type": "객관식",
-        "latex": "등차수열 $\\{a_n\\}$ 의 첫째항부터 제$6$항까지의 합이 $30$, 첫째항부터 제$15$항까지의 합이 $168$ 일 때, 제$7$항부터 제$15$항까지의 합은?",
+        "latex": "등차수열 $\\{a_n\\}$ 의 첫째항부터 제$5$항까지의 합이 $25$, 첫째항부터 제$9$항까지의 합이 $90$ 일 때, 제$6$항부터 제$9$항까지의 합은?",
         "choices": [
-          "$118$",
-          "$128$",
-          "$148$",
-          "$138$",
-          "$158$"
+          "$45$",
+          "$55$",
+          "$75$",
+          "$65$",
+          "$85$"
         ],
         "answer": 4,
-        "solution": "제$7$항부터 제$15$항까지의 합은 (첫째항부터 제$15$항까지의 합)$-$(첫째항부터 제$6$항까지의 합)$=168-30=138$ 이다."
+        "solution": "제$6$항부터 제$9$항까지의 합 $=(90)-(25)=65$ 이다."
       },
       {
         "num": 16,
         "unit": "여러 가지 수열",
         "level": "심화",
         "type": "객관식",
-        "latex": "수열 $\\{a_n\\}$ 이 모든 자연수 $n$ 에 대하여 \\\\ (가) $a_{2n}=2n$ \\\\ (나) $\\displaystyle\\sum_{k=1}^{2n} a_k=n(2n+5)$ \\\\ 를 만족시킬 때, $a_3+a_5$ 의 값은?",
+        "latex": "수열 $\\{a_n\\}$ 이 모든 자연수 $n$ 에 대하여 \\\\ (가) $a_{2n}=\\dfrac{1}{3-2n}$ \\\\ (나) $\\displaystyle\\sum_{k=1}^{2n} a_k=\\dfrac{3n+4}{2n+1}$ \\\\ 를 만족시킬 때, $a_1-a_5$ 의 값은?",
         "choices": [
-          "$12$",
-          "$14$",
-          "$16$",
-          "$18$",
-          "$20$"
+          "$\\dfrac{6}{7}$",
+          "$\\dfrac{8}{7}$",
+          "$\\dfrac{10}{7}$",
+          "$\\dfrac{12}{7}$",
+          "$\\dfrac{4}{7}$"
         ],
-        "answer": 3,
-        "solution": "$n=1$ 에서 $a_1+a_2=7$ 이고 $a_2=2$ 이므로 $a_1=5$ 이다. $n=2$ 에서 $\\sum_{k=1}^{4}a_k=18$ 이고 $a_4=4$ 이므로 $a_3=18-5-2-4=7$ 이다. $n=3$ 에서 $\\sum_{k=1}^{6}a_k=33$ 이고 $a_6=6$ 이므로 $a_5=33-18-6=9$ 이다. 따라서 $a_3+a_5=7+9=16$ 이다.",
+        "answer": 2,
+        "solution": "(나)에서 $S_{2n}=\\dfrac{3n+4}{2n+1}$ 이고 (가)에서 $a_{2n}=\\dfrac{1}{3-2n}$ 이다. $a_1=S_2-a_2=\\dfrac{4}{3}$, 홀수항은 $a_{2n-1}=S_{2n}-S_{2n-2}-a_{2n}$ 로 구하면 $a_3=\\dfrac{2}{3}$, $a_5=\\dfrac{4}{21}$, $a_7=\\dfrac{38}{315}$ 이다. 따라서 $a_1-a_5=\\dfrac{8}{7}$ 이다.",
         "avs": [
           {
             "phase": "P",
             "title": "목표 확인",
-            "content": "짝수항 조건과 누적합 조건으로부터 $a_3$, $a_5$ 를 구해 그 합을 구한다."
+            "content": "짝수항 (가)와 누적합 (나)로부터 홀수항을 역산하여 $a_1-a_5$ 을 구한다."
           },
           {
             "phase": "C",
             "title": "조건 정리",
-            "content": "(가)에서 $a_2=2$, $a_4=4$, $a_6=6$ 이고, (나)에서 누적합 $\\sum_{k=1}^{2n} a_k=n(2n+5)$ 이다."
+            "content": "(가)에서 $a_2=1$, $a_4=-1$ 등 짝수항을, (나)에서 누적합 $S_{2n}$ 을 안다."
           },
           {
             "phase": "B",
             "title": "핵심 개념",
-            "content": "홀수항은 (누적합의 차)$-$(짝수항) 으로 구한다. 즉 $a_{2n-1}=\\sum_{k=1}^{2n}a_k-\\sum_{k=1}^{2n-2}a_k-a_{2n}$ 이다."
+            "content": "$a_1=S_2-a_2$ 이고, 홀수항은 $a_{2n-1}=S_{2n}-S_{2n-2}-a_{2n}$ 로 구한다."
           },
           {
             "phase": "S",
             "title": "풀이",
-            "content": "$a_1=5$, $a_3=7$, $a_5=9$ 이므로 $a_3+a_5=16$ 이다."
+            "content": "$a_1=\\dfrac{4}{3}$, $a_3=\\dfrac{2}{3}$, $a_5=\\dfrac{4}{21}$, $a_7=\\dfrac{38}{315}$ 이므로 $a_1-a_5=\\dfrac{8}{7}$ 이다."
           },
           {
             "phase": "A",
             "title": "정답",
-            "content": "$a_3+a_5=16$ 이다."
+            "content": "$a_1-a_5=\\dfrac{8}{7}$ 이다."
           }
         ]
       },
@@ -1935,41 +2043,41 @@
         "unit": "삼각함수의 활용",
         "level": "심화",
         "type": "객관식",
-        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=7$, $\\overline{AC}=8$ 이고 삼각형 $ABC$ 의 넓이가 $14\\sqrt{3}$ 이다. 변 $BC$ 를 한 변으로 하는 정사각형의 넓이는? (단, $\\angle A$ 는 예각)",
+        "latex": "삼각형 $ABC$ 에서 $\\overline{AB}=7$, $\\overline{AC}=5$ 이다. 변 $BC$ 를 한 변으로 하고 삼각형과 겹치지 않도록 하는 정사각형 $BEDC$ 를 만들었을 때, 삼각형 $ABE$ 의 넓이가 $20$ 이다. 정사각형 $BEDC$ 의 넓이는?",
         "choices": [
-          "$49$",
-          "$53$",
-          "$57$",
-          "$61$",
-          "$65$"
+          "$52$",
+          "$54$",
+          "$56$",
+          "$58$",
+          "$60$"
         ],
         "answer": 3,
-        "solution": "넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A=\\dfrac{1}{2}\\cdot 7\\cdot 8\\sin A=14\\sqrt{3}$ 에서 $\\sin A=\\dfrac{\\sqrt{3}}{2}$ 이고 $A$ 가 예각이므로 $A=60^{\\circ}$, $\\cos A=\\dfrac{1}{2}$ 이다. 코사인법칙에서 $\\overline{BC}^{2}=7^{2}+8^{2}-2\\cdot 7\\cdot 8\\cdot\\dfrac{1}{2}=49+64-56=57$ 이므로 정사각형의 넓이는 $57$ 이다.",
+        "solution": "정사각형의 넓이는 $\\overline{BC}^{2}$ 이다. $\\angle ABE=\\angle ABC+90^{\\circ}$ 이므로 삼각형 $ABE$ 의 넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{BC}\\sin(\\angle ABC+90^{\\circ})=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{BC}\\cos(\\angle ABC)=20$ 이므로 $\\overline{BC}\\cos(\\angle ABC)=\\dfrac{2\\cdot 20}{7}$ 이다. 코사인법칙 $\\overline{AC}^{2}=\\overline{AB}^{2}+\\overline{BC}^{2}-2\\,\\overline{AB}\\cdot\\overline{BC}\\cos(\\angle ABC)$ 에 대입하면 $\\overline{BC}^{2}=\\overline{AC}^{2}-\\overline{AB}^{2}+4\\cdot 20=56$ 이다.",
         "avs": [
           {
             "phase": "P",
             "title": "목표 확인",
-            "content": "삼각형의 넓이로 $\\angle A$ 를 구한 뒤 코사인법칙으로 $\\overline{BC}^{2}$, 곧 정사각형의 넓이를 구한다."
+            "content": "변 $BC$ 밖에 세운 정사각형의 넓이 $\\overline{BC}^{2}$ 를, 삼각형 $ABE$ 의 넓이 조건으로 구한다."
           },
           {
             "phase": "C",
             "title": "조건 정리",
-            "content": "$\\overline{AB}=7$, $\\overline{AC}=8$, 넓이$=14\\sqrt{3}$ 이며 정사각형의 넓이는 $\\overline{BC}^{2}$ 이다."
+            "content": "$\\overline{AB}=7$, $\\overline{AC}=5$, 삼각형 $ABE$ 넓이 $=20$ 이며 $\\angle ABE=\\angle ABC+90^{\\circ}$ 이다."
           },
           {
             "phase": "B",
             "title": "핵심 개념",
-            "content": "넓이 공식 $\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{AC}\\sin A$ 로 $\\sin A$ 를, 코사인법칙으로 $\\overline{BC}^{2}$ 를 구한다."
+            "content": "넓이 $=\\dfrac{1}{2}\\overline{AB}\\cdot\\overline{BC}\\cos(\\angle ABC)$ 로 $\\overline{BC}\\cos(\\angle ABC)$ 를 구한 뒤 코사인법칙에 넣는다."
           },
           {
             "phase": "S",
             "title": "풀이",
-            "content": "$\\sin A=\\dfrac{\\sqrt{3}}{2}$ 에서 $A=60^{\\circ}$ 이고 $\\overline{BC}^{2}=49+64-56=57$ 이다."
+            "content": "$\\overline{BC}\\cos(\\angle ABC)=\\dfrac{2\\cdot 20}{7}$, $\\overline{BC}^{2}=\\overline{AC}^{2}-\\overline{AB}^{2}+4\\cdot 20=56$ 이다."
           },
           {
             "phase": "A",
             "title": "정답",
-            "content": "정사각형의 넓이는 $57$ 이다."
+            "content": "정사각형의 넓이는 $56$ 이다."
           }
         ]
       },
@@ -1978,41 +2086,41 @@
         "unit": "수학적 귀납법",
         "level": "심화",
         "type": "객관식",
-        "latex": "수열 $\\{a_n\\}$ 이 모든 자연수 $n$ 에 대하여 다음 조건을 만족시킨다. \\\\ (가) $n$ 이 홀수이면 $a_{n+1}=a_n+2$ 이다. \\\\ (나) $n$ 이 짝수이면 $a_{n+1}=2a_n$ 이다. \\\\ $a_1=4$ 일 때, $a_5$ 의 값은?",
+        "latex": "수열 $\\{a_n\\}$ 이 모든 자연수 $n$ 에 대하여 다음 조건을 만족시킨다. \\\\ (가) $n$ 이 $3$ 의 배수가 아니면 $a_{n+1}=-a_n+n$ 이다. \\\\ (나) $n$ 이 $3$ 의 배수이면 $a_{n+3}=(-1)^{n}\\times a_n$ 이다. \\\\ $a_{13}=30$ 일 때, $\\displaystyle\\sum_{k=1}^{21} a_k$ 의 값은?",
         "choices": [
-          "$20$",
-          "$24$",
-          "$32$",
-          "$36$",
-          "$28$"
+          "$35$",
+          "$37$",
+          "$39$",
+          "$41$",
+          "$43$"
         ],
-        "answer": 5,
-        "solution": "$a_1=4$, $a_2=a_1+2=6$, $a_3=2a_2=12$, $a_4=a_3+2=14$, $a_5=2a_4=28$ 이다.",
+        "answer": 3,
+        "solution": "(나)에서 $3$ 의 배수 위치의 연결식으로 첫째항 $a_1$ 에 대한 관계가 정해지고, (가)로 각 묶음의 나머지 항을 표현한다. $3$ 의 배수가 아닌 $n$ 에서의 식과 (나)의 연결식을 연립하면 $a_1=30$ 이 되어 모든 항이 결정된다. 이때 $a_{13}=30$ 조건이 성립하고, $\\displaystyle\\sum_{k=1}^{21} a_k=39$ 이다.",
         "avs": [
           {
             "phase": "P",
             "title": "목표 확인",
-            "content": "홀수·짝수 번호에 따라 규칙이 다른 점화식으로 $a_5$ 를 구한다."
+            "content": "$3$ 의 배수 여부로 규칙이 갈리는 점화식에서 주어진 항으로부터 거꾸로 추적하여 합을 구한다."
           },
           {
             "phase": "C",
             "title": "조건 정리",
-            "content": "$n$ 이 홀수이면 $+2$, 짝수이면 $\\times 2$ 이고 $a_1=4$ 이다."
+            "content": "(가)는 $3$ 의 배수가 아닌 $n$ 에서의 점화식, (나)는 $3$ 의 배수 $n$ 에서 $a_{n+3}=(-1)^{n}a_n$ 이며 $a_{13}=30$ 이다."
           },
           {
             "phase": "B",
             "title": "핵심 개념",
-            "content": "항을 순서대로 계산하되 다음 항을 만드는 규칙이 현재 번호 $n$ 의 홀짝에 의해 결정됨에 주의한다."
+            "content": "$3k+1$ 번째 항을 미지수로 두고 (가)로 묶음 내부를 표현한 뒤, (나)의 연결식으로 미지수 사이의 관계를 연립한다."
           },
           {
             "phase": "S",
             "title": "풀이",
-            "content": "$a_2=6$, $a_3=12$, $a_4=14$, $a_5=28$ 이다."
+            "content": "연립하면 $a_1=30$ 로 모든 항이 정해지고 $a_{13}=30$ 가 확인된다. 모든 항을 더하면 합은 $39$ 이다."
           },
           {
             "phase": "A",
             "title": "정답",
-            "content": "$a_5=28$ 이다."
+            "content": "$\\displaystyle\\sum_{k=1}^{21} a_k=39$ 이다."
           }
         ]
       },
@@ -2021,50 +2129,7 @@
         "unit": "삼각함수의 활용",
         "level": "심화",
         "type": "객관식",
-        "latex": "원에 내접하는 사각형 $ABCD$ 에서 $\\overline{AB}=3$, $\\overline{BC}=5$, $\\overline{CD}=3$, $\\overline{DA}=5$ 일 때, 사각형 $ABCD$ 의 넓이는?",
-        "choices": [
-          "$15$",
-          "$9$",
-          "$12$",
-          "$18$",
-          "$21$"
-        ],
-        "answer": 1,
-        "solution": "원에 내접하는 사각형이므로 $\\angle B+\\angle D=180^{\\circ}$ 이다. 대각선 $AC$ 에 대하여 코사인법칙을 두 삼각형에 적용하면 $\\cos B=\\dfrac{3^2+5^2-\\overline{AC}^2}{2\\cdot 3\\cdot 5}$, $\\cos D=-\\cos B$ 이고 $\\overline{AC}^2$ 를 소거하면 $\\cos B=0$, 즉 $B=90^{\\circ}$ 이다. 따라서 넓이 $=2\\times\\dfrac{1}{2}\\cdot 3\\cdot 5=15$ 이다.",
-        "avs": [
-          {
-            "phase": "P",
-            "title": "목표 확인",
-            "content": "원에 내접하는 사각형의 마주보는 각의 성질을 이용하여 넓이를 구한다."
-          },
-          {
-            "phase": "C",
-            "title": "조건 정리",
-            "content": "네 변이 $3,5,3,5$ 이고 $\\angle B+\\angle D=180^{\\circ}$ 이다."
-          },
-          {
-            "phase": "B",
-            "title": "핵심 개념",
-            "content": "대각선 $AC$ 에 대해 두 삼각형에 코사인법칙을 적용하고 $\\cos D=-\\cos B$ 를 이용해 $\\overline{AC}^2$ 를 소거한다."
-          },
-          {
-            "phase": "S",
-            "title": "풀이",
-            "content": "소거 결과 $\\cos B=0$, 즉 $\\angle B=90^{\\circ}$ 이므로 넓이 $=\\dfrac{1}{2}\\cdot 3\\cdot 5\\times 2=15$ 이다."
-          },
-          {
-            "phase": "A",
-            "title": "정답",
-            "content": "사각형 $ABCD$ 의 넓이는 $15$ 이다."
-          }
-        ]
-      },
-      {
-        "num": 20,
-        "unit": "여러 가지 수열",
-        "level": "심화",
-        "type": "객관식",
-        "latex": "수열 $\\{a_n\\}$ 의 일반항이 $a_n=2n-17$ 이다. $\\displaystyle\\sum_{k=1}^{p} a_k=\\sum_{k=1}^{q} a_k$ 를 만족시키는 서로 다른 두 자연수 $p$, $q$ $(p<q)$ 의 순서쌍 $(p,\\ q)$ 의 개수는?",
+        "latex": "그림과 같이 사각형 $ABCD$ 가 한 원에 내접하고 다음 조건을 만족시킨다. \\\\ (가) $\\overline{AB}^{2}:\\overline{AD}^{2}:\\overline{BD}^{2}=4:9:19$ \\\\ (나) 삼각형 $BCD$ 의 넓이는 $3\\sqrt{3}$ 이다. \\\\ (다) $\\sin(\\angle DBC)+\\sin(\\angle BDC)=\\dfrac{3}{2}$ \\\\ 사각형 $ABCD$ 의 외접원의 넓이가 $\\dfrac{q}{p}\\pi$ 일 때, $p+q$ 의 값은? (단, $p$ 와 $q$ 는 서로소인 자연수이다.)",
         "choices": [
           "$5$",
           "$6$",
@@ -2073,7 +2138,50 @@
           "$9$"
         ],
         "answer": 3,
-        "solution": "$S_n=\\sum_{k=1}^{n}(2k-17)=n(n+1)-17n=n^2+-16n$ 이다. $S_p=S_q$ 이면 $p^2+-16p=q^2+-16q$, 즉 $(p-q)(p+q+-16)=0$ 이므로 $p+q=16$ 이다. $p<q$ 인 자연수 순서쌍은 7개이다."
+        "solution": "삼각형 $ABD$ 에서 코사인법칙으로 $\\cos(\\angle A)=\\dfrac{4+9-19}{2\\sqrt{4\\cdot 9}}=- \\frac{1}{2}$ 이므로 $\\sin(\\angle A)$ 가 정해지고, $\\overline{BD}=2R\\sin(\\angle A)$ 이다. 내접사각형이므로 $\\angle BCD=180^{\\circ}-\\angle A$ 이고 $\\sin(\\angle BCD)=\\sin(\\angle A)$ 이다. 삼각형 $BCD$ 에서 $\\overline{BC}=2R\\sin(\\angle BDC)$, $\\overline{CD}=2R\\sin(\\angle DBC)$ 이므로 넓이 $=2R^{2}\\sin(\\angle DBC)\\sin(\\angle BDC)\\sin(\\angle A)$ 이다. (다)와 $\\angle DBC+\\angle BDC=\\angle A$ 로 $\\sin(\\angle DBC)\\sin(\\angle BDC)$ 를 구해 (나)에 대입하면 $R^{2}=6$, 즉 외접원의 넓이는 $\\dfrac{6}{1}\\pi$ 이다. 따라서 $p+q=7$ 이다.",
+        "avs": [
+          {
+            "phase": "P",
+            "title": "목표 확인",
+            "content": "내접사각형의 변비·넓이·사인 합 조건으로 외접원의 넓이를 구한다."
+          },
+          {
+            "phase": "C",
+            "title": "조건 정리",
+            "content": "(가)로 $\\angle A$ 를, (나)로 삼각형 $BCD$ 의 넓이를, (다)로 두 밑각의 사인 합을 안다. 내접사각형이므로 $\\angle BCD=180^{\\circ}-\\angle A$ 이다."
+          },
+          {
+            "phase": "B",
+            "title": "핵심 개념",
+            "content": "삼각형 $ABD$ 에서 코사인법칙으로 $\\angle A$, 사인법칙으로 $2R$ 을 잡고, 삼각형 $BCD$ 의 넓이 $=2R^{2}\\sin(\\angle DBC)\\sin(\\angle BDC)\\sin(\\angle A)$ 를 쓴다."
+          },
+          {
+            "phase": "S",
+            "title": "풀이",
+            "content": "(다)와 $\\angle DBC+\\angle BDC=\\angle A$ 로 곱 $\\sin(\\angle DBC)\\sin(\\angle BDC)$ 를 구해 넓이식에 넣으면 $R^{2}=6$ 이다. 외접원 넓이는 $\\dfrac{6}{1}\\pi$ 이다."
+          },
+          {
+            "phase": "A",
+            "title": "정답",
+            "content": "$p+q=7$ 이다."
+          }
+        ]
+      },
+      {
+        "num": 20,
+        "unit": "여러 가지 수열",
+        "level": "심화",
+        "type": "객관식",
+        "latex": "수열 $\\{a_n\\}$ 이 \\\\ $a_n=\\begin{cases}(n-2)(n-13) & (n\\le 7) \\\\ -(n-2)(n-13) & (n\\ge 8)\\end{cases}$ \\\\ 일 때, $\\displaystyle\\sum_{k=1}^{p} a_k=\\sum_{k=1}^{q} a_k$ 를 만족시키는 서로 다른 두 자연수 $p$, $q$ $(p<q)$ 의 순서쌍 $(p,\\ q)$ 의 개수는?",
+        "choices": [
+          "$8$",
+          "$9$",
+          "$10$",
+          "$11$",
+          "$12$"
+        ],
+        "answer": 5,
+        "solution": "$S_n=\\displaystyle\\sum_{k=1}^{n} a_k$ 라 하면 $S_p=S_q$ 는 $\\displaystyle\\sum_{k=p+1}^{q} a_k=0$ 을 뜻한다. $a_n$ 은 $n\\le 7$ 에서 위로 볼록한 포물선 값, $n\\ge 8$ 에서 부호가 뒤집힌 값으로, 부분합 $S_n$ 의 증감과 부호 변화를 추적하면 $S_n$ 값이 같아지는 구간을 경우로 나누어 셀 수 있다. $S_0,S_1,\\cdots$ 의 값을 비교하여 같은 값을 갖는 모든 쌍을 세면 그 개수는 $12$ 이다."
       }
     ]
   ]
