@@ -6,6 +6,7 @@ import React, { useState, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, XCircle, AlertTriangle, Sparkles, X, ChevronLeft, ChevronRight, FileText } from 'lucide-react';
 import HintPlayerRouter from '@/components/hints/HintPlayerRouter';
+import { MathText } from '@/components/MathProblemRenderer';
 import { getMockHint } from '@/data/mockHints';
 import { HG1_2025_10 } from '@/data/mockExams/HG1_2025_10';
 import { HG1_2025_09 } from '@/data/mockExams/HG1_2025_09';
@@ -36,8 +37,10 @@ import { CSAT_2023_09 } from '@/data/mockExams/CSAT_2023_09';
 import { CSAT_2026_03 } from '@/data/mockExams/CSAT_2026_03';
 import { CSAT_2024_03 } from '@/data/mockExams/CSAT_2024_03';
 import { CSAT_2025_03 } from '@/data/mockExams/CSAT_2025_03';
+import { PREMIUM_GO3_01 } from '@/data/mockExams/PREMIUM_GO3_01';
 
 const EXAMS = {
+  'premium-go3-01': PREMIUM_GO3_01,
   'csat-2025-09': CSAT_2025_09, 'csat-2024-09': CSAT_2024_09, 'csat-2023-09': CSAT_2023_09,
   'csat-2026-03': CSAT_2026_03, 'csat-2025-03': CSAT_2025_03, 'csat-2024-03': CSAT_2024_03,
   'hg1-2025-10': HG1_2025_10, 'hg1-2025-09': HG1_2025_09, 'hg1-2025-06': HG1_2025_06, 'hg1-2025-03': HG1_2025_03,
@@ -99,13 +102,31 @@ export default function MockExamOMR() {
 
       {/* 고3식 2단: 좌 시험지 / 우 sticky OMR 판독기 */}
       <div style={{ display: 'flex', gap: 18, alignItems: 'flex-start', flexWrap: 'wrap' }}>
-        {/* 좌: 시험지 페이지 */}
+        {/* 좌: 시험지 — 프리미엄(텍스트 문제) vs 페이지이미지 */}
         <div style={{ flex: '1 1 520px', minWidth: 300, display: 'flex', flexDirection: 'column', gap: 10 }}>
-          {pages.map((src, i) => (
-            <a key={i} href={src} target="_blank" rel="noreferrer" style={{ display: 'block' }}>
-              <img src={src} alt={`${i + 1}페이지`} loading="lazy" style={{ width: '100%', display: 'block', borderRadius: 8, background: '#fff' }} />
-            </a>
-          ))}
+          {exam.premium ? (
+            exam.questions.map(q => (
+              <div key={q.num} style={{ background: '#fff', color: '#0f172a', borderRadius: 10, padding: '14px 16px', lineHeight: 1.7 }}>
+                <div style={{ fontWeight: 800, marginBottom: 6 }}>{q.num}. <span style={{ fontSize: 12, color: '#64748b', fontWeight: 600 }}>[{q.type}]</span></div>
+                <div style={{ fontSize: 15.5 }}><MathText text={q.prompt} /></div>
+                {q.obj && q.choices && q.choices.length > 0 && (
+                  <div style={{ marginTop: 10, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(90px, 1fr))', gap: 6 }}>
+                    {q.choices.map((c, idx) => (
+                      <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: 14.5 }}>
+                        <span style={{ fontWeight: 700 }}>{CIRC[idx]}</span> <MathText text={c} />
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))
+          ) : (
+            pages.map((src, i) => (
+              <a key={i} href={src} target="_blank" rel="noreferrer" style={{ display: 'block' }}>
+                <img src={src} alt={`${i + 1}페이지`} loading="lazy" style={{ width: '100%', display: 'block', borderRadius: 8, background: '#fff' }} />
+              </a>
+            ))
+          )}
         </div>
 
         {/* 우: OMR 판독기 (sticky) */}
