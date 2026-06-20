@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { supabase } from '@/services/supabaseClient';
+import { isPromoFree, PROMO_PAID_SOURCE } from '@/lib/promo';
 
 const AuthContext = createContext();
 
@@ -33,7 +34,12 @@ export function AuthProvider({ children }) {
       };
 
       localStorage.setItem('mentos_mock_user', JSON.stringify(legacyUser));
-      if (isPaid) {
+      if (isPromoFree()) {
+        // 🎉 3개월 전면무료 프로모션: 결제 여부와 무관하게 전체 개방.
+        localStorage.setItem('mentos_is_paid', 'true');
+        localStorage.setItem('mentos_premium', 'true');
+        localStorage.setItem('mentos_paid_source', PROMO_PAID_SOURCE);
+      } else if (isPaid) {
         localStorage.setItem('mentos_is_paid', 'true');
         localStorage.setItem('mentos_premium', isPremium ? 'true' : 'false');
         if (paidAt) localStorage.setItem('mentos_paid_at', paidAt);
@@ -52,10 +58,17 @@ export function AuthProvider({ children }) {
       }
     } else {
       localStorage.removeItem('mentos_mock_user');
-      localStorage.removeItem('mentos_is_paid');
-      localStorage.removeItem('mentos_premium');
-      localStorage.removeItem('mentos_paid_at');
-      localStorage.removeItem('mentos_premium_until');
+      if (isPromoFree()) {
+        // 🎉 프로모 기간엔 비로그인 방문자도 전체 무료 개방.
+        localStorage.setItem('mentos_is_paid', 'true');
+        localStorage.setItem('mentos_premium', 'true');
+        localStorage.setItem('mentos_paid_source', PROMO_PAID_SOURCE);
+      } else {
+        localStorage.removeItem('mentos_is_paid');
+        localStorage.removeItem('mentos_premium');
+        localStorage.removeItem('mentos_paid_at');
+        localStorage.removeItem('mentos_premium_until');
+      }
     }
   };
 

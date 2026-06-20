@@ -11,6 +11,7 @@
 // 서버 호출 실패 시 앱이 죽지 않도록 로컬 폴백(번호 임시발급)으로 동작한다.
 
 import { supabase } from '@/services/supabaseClient';
+import { isPromoFree } from '@/lib/promo';
 
 export const FREE_DAYS = 30;   // 무료 이용 기간(일)
 export const REVIEW_DAY = 7;   // 리뷰 작성 요구 시작일
@@ -52,6 +53,7 @@ function saveFreeEventRecord(rec) {
 }
 
 export function isTrulyPaid() {
+  if (isPromoFree()) return true; // 🎉 3개월 전면무료 프로모션 — 전원 개방
   if (localStorage.getItem('mentos_premium') === 'true') return true;
   if (localStorage.getItem('mentos_super_pass') === 'true') return true;
   // free_event 가 켠 mentos_is_paid 는 "실제 결제"가 아님

@@ -166,3 +166,4 @@ scripts/verify_*.json
 scripts/*_wave_run.mjs
 scripts/recover_*.json
 .claude/handoff.md
+_sasul_work/
