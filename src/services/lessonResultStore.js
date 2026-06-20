@@ -3,6 +3,7 @@
 // 현재는 localStorage 기반 MVP. 나중에 API 교체 시 saveResult() 내부만 바꾸면 됨.
 
 import { markActiveToday } from '@/lib/dailyStudy';
+import { awardForLesson } from '@/lib/rewards';
 
 const STORAGE_KEY = 'mentos_lesson_results';
 
@@ -33,8 +34,9 @@ export const saveResult = (result) => {
   existing.push(entry);
   localStorage.setItem(STORAGE_KEY, JSON.stringify(existing));
 
-  // 🔥 수업/숙제 완료 → 오늘을 스트릭 인정일로 보장
+  // 🔥 수업/숙제 완료 → 오늘을 스트릭 인정일로 보장 + 🎮 XP·코인 보상
   try { markActiveToday(); } catch { /* noop */ }
+  try { awardForLesson({ correctCount: entry.correctCount, accuracy: entry.accuracy }); } catch { /* noop */ }
 
   console.log('[LessonResult] Saved:', entry);
 

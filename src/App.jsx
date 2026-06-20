@@ -2,9 +2,9 @@ import { useEffect, useState, Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AppProvider } from '@/context/AppContext';
 import { initStudentProfile } from '@/engine/studentProfileEngine';
-import { addMinutes } from '@/lib/dailyStudy';
 import { AuthProvider, useAuth } from '@/context/AuthContext';
 import ErrorBoundary from '@/components/ErrorBoundary';
+import StudyTimeTracker from '@/components/StudyTimeTracker';
 
 const Landing = lazy(() => import("@/pages/Landing"));
 const Diagnosis = lazy(() => import("@/pages/Diagnosis"));
@@ -92,14 +92,6 @@ function AppContent() {
     }
   }, [user]);
 
-  // 🔥 학습시간 하트비트 — 앱이 포그라운드일 때 1분마다 오늘 학습시간 누적(일일 링·스트릭).
-  useEffect(() => {
-    const id = setInterval(() => {
-      if (document.visibilityState === 'visible') addMinutes(1);
-    }, 60 * 1000);
-    return () => clearInterval(id);
-  }, []);
-
   return (
     <AppProvider>
       {showSuccessOverlay && (
@@ -169,6 +161,7 @@ function AppContent() {
       )}
 
       <BrowserRouter>
+        <StudyTimeTracker />
         <ErrorBoundary>
         <Suspense fallback={<div style={{color:'white', padding:'2rem', background:'#09090b', height:'100vh'}}>Loading Mentos App...</div>}>
           <Routes>
