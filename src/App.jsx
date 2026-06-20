@@ -2,6 +2,7 @@ import { useEffect, useState, Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AppProvider } from '@/context/AppContext';
 import { initStudentProfile } from '@/engine/studentProfileEngine';
+import { addMinutes } from '@/lib/dailyStudy';
 import { AuthProvider, useAuth } from '@/context/AuthContext';
 import ErrorBoundary from '@/components/ErrorBoundary';
 
@@ -90,6 +91,14 @@ function AppContent() {
       window.history.replaceState({}, document.title, window.location.pathname);
     }
   }, [user]);
+
+  // 🔥 학습시간 하트비트 — 앱이 포그라운드일 때 1분마다 오늘 학습시간 누적(일일 링·스트릭).
+  useEffect(() => {
+    const id = setInterval(() => {
+      if (document.visibilityState === 'visible') addMinutes(1);
+    }, 60 * 1000);
+    return () => clearInterval(id);
+  }, []);
 
   return (
     <AppProvider>

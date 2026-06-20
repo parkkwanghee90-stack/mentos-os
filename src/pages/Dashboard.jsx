@@ -17,6 +17,7 @@ import { getCompletions } from '@/services/homeworkCompletion';
 import { fetchCloudDashboard, buildWeeklySeries } from '@/services/dashboardData';
 import '@/pages/Dashboard.css';
 import PremiumLectureModal from '@/components/lectures/PremiumLectureModal';
+import StudyHabitWidget from '@/components/StudyHabitWidget';
 
 const parseSubject = (subj) => {
   const map = { 'physics': '물리', 'chemistry': '화학', 'biology': '생명과학', 'earth': '지구과학', 'math': '수학', 'english': '영어', 'eng': '영어' };
@@ -630,6 +631,9 @@ export default function Dashboard() {
           <h1 className="dash-title">Mentos AI Learning OS</h1>
           <p className="dash-subtitle">AI가 분석한 나만의 학습 대시보드</p>
         </div>
+
+      {/* 🔥 학습 습관 — 연속 스트릭 + 오늘의 학습시간 링 */}
+      <StudyHabitWidget />
 
       {/* ═══ 1. Hero — 오늘의 학습 ═══ */}
       <div className="hero-card animate-fade-in">
