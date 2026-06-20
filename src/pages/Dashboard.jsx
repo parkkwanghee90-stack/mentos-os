@@ -745,6 +745,7 @@ export default function Dashboard() {
             { name: '확률과통계', desc: '확률과 통계', icon: '🎲', color: '#f59e0b' },
             { name: '모의고사', desc: '멘토스 실전 모의고사', icon: '📝', color: '#10b981' },
             { name: '프리미엄 AI 강의노트', desc: '⭐ AI 강의노트 · 무료 개방', icon: '📒', color: '#a855f7' },
+            { name: '⭐프리미엄 모의고사', desc: '고3 최신 · 멘토스 오리지널 1회', icon: '👑', color: '#d946ef', route: '/class/mock/premium-go3-01' },
           ].map(course => (
             <button
               key={course.name}
