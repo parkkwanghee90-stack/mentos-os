@@ -63,7 +63,7 @@ export default function LandingPricing() {
     setCheckoutPlan(plan);
   };
 
-  // 🎉 3개월 전면무료 프로모 기간: 유료 금액은 모두 숨기고 무료 안내만 노출.
+  // 🎉 1개월 전면무료 프로모 기간: 유료 금액은 모두 숨기고 무료 안내만 노출.
   //    종료일(promo.js)이 지나면 자동으로 아래 정규 가격표가 복구된다.
   if (isPromoFree()) {
     const daysLeft = promoDaysLeft();
@@ -73,7 +73,7 @@ export default function LandingPricing() {
           <div className="hv-pricing-intro" style={{ textAlign: "center", margin: "0 auto" }}>
             <span className="hv-pricing-eyebrow">🎉 오픈 기념 전면 무료</span>
             <h2 className="hv-h2">
-              지금은 <b>전 콘텐츠 3개월 무료</b><br />0원으로 다 써보세요
+              지금은 <b>전 콘텐츠 1개월 무료</b><br />0원으로 다 써보세요
             </h2>
             <p className="hv-sub">
               내신·모의고사·AI 1:1 과외·사고력 AVS 해설까지 <b>전부 무료 개방</b>.<br />

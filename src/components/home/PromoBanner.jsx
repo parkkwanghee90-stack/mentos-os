@@ -1,4 +1,4 @@
-// 🎉 3개월 전면무료 프로모 배너 — 사용자 확보용. 프로모 종료 시 자동으로 사라진다.
+// 🎉 1개월 전면무료 프로모 배너 — 사용자 확보용. 프로모 종료 시 자동으로 사라진다.
 import { useNavigate } from "react-router-dom";
 import { isPromoFree, promoDaysLeft } from "@/lib/promo";
 
@@ -35,7 +35,7 @@ export default function PromoBanner() {
     >
       <span style={{ fontSize: "1.15rem" }}>🎉</span>
       <span>
-        지금 <b style={{ textDecorationLine: "underline" }}>전 콘텐츠 3개월 무료</b> 개방 중 — 내신·모의고사·AI 강의·AVS 전부 0원
+        지금 <b style={{ textDecorationLine: "underline" }}>전 콘텐츠 1개월 무료</b> 개방 중 — 내신·모의고사·AI 강의·AVS 전부 0원
       </span>
       <span
         style={{
