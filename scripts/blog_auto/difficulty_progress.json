@@ -88,6 +88,11 @@
     {
       "grade": "go1",
       "slug": "불곡고"
+    },
+    {
+      "grade": "go2",
+      "slug": "한빛고",
+      "verified": true
     }
   ],
   "failed": [
@@ -112,50 +117,54 @@
       "grade": "go1",
       "slug": "창원신월고",
       "reason": "verify=쉬움 재생성필요"
+    },
+    {
+      "grade": "go1",
+      "slug": "낙생고",
+      "reason": "verify=쉬움 변별장치 단순화 재생성필요"
+    },
+    {
+      "grade": "go1",
+      "slug": "대성고",
+      "reason": "verify=쉬움 변별장치 단순화 재생성필요"
+    },
+    {
+      "grade": "go1",
+      "slug": "오성고",
+      "reason": "verify=쉬움 변별장치 단순화 재생성필요"
+    },
+    {
+      "grade": "go1",
+      "slug": "우성고",
+      "reason": "verify=쉬움 변별장치 단순화 재생성필요"
+    },
+    {
+      "grade": "go1",
+      "slug": "국제고",
+      "reason": "verify=쉬움 변별장치 단순화 재생성필요"
+    },
+    {
+      "grade": "go2",
+      "slug": "중산고",
+      "reason": "verify=쉬움 변별장치 단순화 재생성필요"
+    },
+    {
+      "grade": "go2",
+      "slug": "보평고",
+      "reason": "verify=쉬움 변별장치 단순화 재생성필요"
+    },
+    {
+      "grade": "go2",
+      "slug": "서현고",
+      "reason": "verify=쉬움 변별장치 단순화 재생성필요"
+    },
+    {
+      "grade": "go2",
+      "slug": "판교고",
+      "reason": "verify=쉬움 변별장치 단순화 재생성필요"
     }
   ],
   "needs_review": [],
   "needs_source": [],
-  "pending_verify": [
-    {
-      "grade": "go1",
-      "slug": "낙생고"
-    },
-    {
-      "grade": "go1",
-      "slug": "대성고"
-    },
-    {
-      "grade": "go1",
-      "slug": "오성고"
-    },
-    {
-      "grade": "go1",
-      "slug": "우성고"
-    },
-    {
-      "grade": "go1",
-      "slug": "국제고"
-    },
-    {
-      "grade": "go2",
-      "slug": "중산고"
-    },
-    {
-      "grade": "go2",
-      "slug": "보평고"
-    },
-    {
-      "grade": "go2",
-      "slug": "서현고"
-    },
-    {
-      "grade": "go2",
-      "slug": "판교고"
-    },
-    {
-      "grade": "go2",
-      "slug": "한빛고"
-    }
-  ]
+  "pending_verify": []
 }
