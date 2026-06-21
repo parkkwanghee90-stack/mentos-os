@@ -23,6 +23,7 @@ import RewardsWidget from '@/components/RewardsWidget';
 import WeaknessConquestMap from '@/components/WeaknessConquestMap';
 import DailyQuestCard from '@/components/DailyQuestCard';
 import LeagueWidget from '@/components/LeagueWidget';
+import ReferralCard from '@/components/ReferralCard';
 
 const parseSubject = (subj) => {
   const map = { 'physics': '물리', 'chemistry': '화학', 'biology': '생명과학', 'earth': '지구과학', 'math': '수학', 'english': '영어', 'eng': '영어' };
@@ -636,6 +637,9 @@ export default function Dashboard() {
           <h1 className="dash-title">Mentos AI Learning OS</h1>
           <p className="dash-subtitle">AI가 분석한 나만의 학습 대시보드</p>
         </div>
+
+      {/* 🎟️ 친구 초대 — 다음 학기 예상문제 + 무료기간 연장 */}
+      <ReferralCard />
 
       {/* 🔥 학습 습관 — 연속 스트릭 + 오늘의 학습시간 링 */}
       <StudyHabitWidget />

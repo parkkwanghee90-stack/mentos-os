@@ -2,6 +2,7 @@ import { useEffect, useState, Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AppProvider } from '@/context/AppContext';
 import { initStudentProfile } from '@/engine/studentProfileEngine';
+import { redeemPendingReferral, syncMyStats } from '@/lib/referral';
 import { AuthProvider, useAuth } from '@/context/AuthContext';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import StudyTimeTracker from '@/components/StudyTimeTracker';
@@ -91,6 +92,13 @@ function AppContent() {
       alert('결제가 실패했거나 취소되었습니다. 다시 시도해 주세요.');
       window.history.replaceState({}, document.title, window.location.pathname);
     }
+  }, [user]);
+
+  // 🎟️ 로그인/가입 후: 보류 중인 추천코드 적립 + 내 추천 집계 동기화(서버 진실).
+  useEffect(() => {
+    if (!user) return;
+    const name = user?.user_metadata?.name || null;
+    redeemPendingReferral(name).finally(() => { syncMyStats(); });
   }, [user]);
 
   return (
