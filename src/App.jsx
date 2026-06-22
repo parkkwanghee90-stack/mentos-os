@@ -2,9 +2,12 @@ import { useEffect, useState, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AppProvider } from '@/context/AppContext';
 import { initStudentProfile } from '@/engine/studentProfileEngine';
+import { redeemPendingReferral, syncMyStats } from '@/lib/referral';
 import { AuthProvider, useAuth } from '@/context/AuthContext';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import { lazyWithRetry as lazy } from '@/utils/lazyWithRetry';
+import StudyTimeTracker from '@/components/StudyTimeTracker';
+import CelebrationHost from '@/components/CelebrationHost';
 
 const Landing = lazy(() => import("@/pages/Landing"));
 const Diagnosis = lazy(() => import("@/pages/Diagnosis"));
@@ -27,6 +30,7 @@ const NaesinCourse = lazy(() => import("@/pages/NaesinCourse"));
 const Go2Course = lazy(() => import("@/pages/Go2Course"));
 const ExamPredictCourse = lazy(() => import("@/pages/ExamPredictCourse"));
 const CircleEqLab = lazy(() => import("@/pages/CircleEqLab"));
+const BrainGames = lazy(() => import("@/pages/BrainGames"));
 const LessonTest = lazy(() => import("@/pages/LessonTest"));
 const Login = lazy(() => import("@/pages/Login"));
 const AdminDashboard = lazy(() => import("@/pages/AdminDashboard"));
@@ -45,29 +49,21 @@ const DesignCheck = lazy(() => import("@/pages/DesignCheck"));
 // 진입 플로우: 매뉴얼 미확인 → /grade-select(매뉴얼) → /login → /dashboard
 function RootRedirect() {
   const manualSeen = localStorage.getItem('mentos_manual_seen') === 'true';
-  const isSuperPass = localStorage.getItem('mentos_super_pass') === 'true';
 
   if (!manualSeen) {
     // 1단계: 매뉴얼을 아직 안 봤으면 매뉴얼부터
     return <Navigate to="/grade-select" replace />;
   }
 
-  // 2단계: 매뉴얼은 봤지만 로그인 안 됐으면 → 로그인으로
-  // 3단계: 매뉴얼 봤고 로그인도 됐으면 → 대시보드로
-  // (LoginGate가 /dashboard에서 로그인 여부를 체크하므로 /dashboard로 보내면 됨)
-  if (isSuperPass) {
-    return <Navigate to="/dashboard" replace />;
-  }
-
+  // 매뉴얼을 봤으면 /dashboard로 (LoginGate가 로그인 여부를 체크)
   return <Navigate to="/dashboard" replace />;
 }
 
 // 홈("/") 진입 게이트: 비회원 → 랜딩 먼저, 회원 → 대시보드
 function RootGate() {
   const { user, loading } = useAuth();
-  const isSuperPass = localStorage.getItem('mentos_super_pass') === 'true';
   if (loading) return null; // 인증 확인 중 깜빡임 방지
-  if (user || isSuperPass) return <Navigate to="/dashboard" replace />;
+  if (user) return <Navigate to="/dashboard" replace />;
   return <Landing />;
 }
 
@@ -80,7 +76,7 @@ export default function App() {
 }
 
 function AppContent() {
-  const { updatePremiumStatus, user } = useAuth();
+  const { user } = useAuth();
   const [showSuccessOverlay, setShowSuccessOverlay] = useState(false);
 
   useEffect(() => {
@@ -88,23 +84,9 @@ function AppContent() {
 
     const params = new URLSearchParams(window.location.search);
     if (params.get('payment_success') === 'true') {
-      localStorage.setItem('mentos_is_paid', 'true');
-      
-      // Sync payment success to Supabase metadata
-      if (user) {
-        updatePremiumStatus(true);
-      }
-      
-      // Auto register if no user registered yet
-      if (!localStorage.getItem('mentos_mock_user')) {
-        localStorage.setItem('mentos_mock_user', JSON.stringify({
-          id: 'user_p_' + Date.now(),
-          name: '프리미엄 학생',
-          email: 'premium@mentos.ai',
-          role: 'student'
-        }));
-      }
-
+      // 보안: 클라이언트가 URL 파라미터만으로 프리미엄을 셀프 부여하지 않는다(결제 우회 차단).
+      // 실제 프리미엄 부여는 결제 완료 웹훅(payapp-feedback)이 서버에서 처리한다.
+      // 여기서는 완료 안내 오버레이만 표시한다(권한 반영은 서버 메타데이터 동기화로).
       setShowSuccessOverlay(true);
       // Clean query parameters from URL bar
       window.history.replaceState({}, document.title, window.location.pathname);
@@ -112,6 +94,13 @@ function AppContent() {
       alert('결제가 실패했거나 취소되었습니다. 다시 시도해 주세요.');
       window.history.replaceState({}, document.title, window.location.pathname);
     }
+  }, [user]);
+
+  // 🎟️ 로그인/가입 후: 보류 중인 추천코드 적립 + 내 추천 집계 동기화(서버 진실).
+  useEffect(() => {
+    if (!user) return;
+    const name = user?.user_metadata?.name || null;
+    redeemPendingReferral(name).finally(() => { syncMyStats(); });
   }, [user]);
 
   return (
@@ -182,7 +171,9 @@ function AppContent() {
         </div>
       )}
 
+      <CelebrationHost />
       <BrowserRouter>
+        <StudyTimeTracker />
         <ErrorBoundary>
         <Suspense fallback={<div style={{color:'white', padding:'2rem', background:'#09090b', height:'100vh'}}>Loading Mentos App...</div>}>
           <Routes>
@@ -208,9 +199,10 @@ function AppContent() {
             <Route path="/class/exam-predict" element={<ExamPredictCourse />} />
             <Route path="/class/exam-predict/:grade/:slug" element={<ExamPredictCourse />} />
             <Route path="/lab/circle-eq" element={<CircleEqLab />} />
+            <Route path="/brain" element={<BrainGames />} />
             
             <Route path="/login" element={<Login />} />
-            <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/admin" element={<LoginGate required={true} requiredRole="admin"><AdminDashboard /></LoginGate>} />
             
             {/* 로그인 필수 라우트: LoginGate 적용 */}
             <Route path="/dashboard" element={<LoginGate required={true}><Dashboard /></LoginGate>} />

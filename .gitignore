@@ -97,6 +97,14 @@ android/
 /scripts/curl_out.txt
 /scripts/upload_log.txt
 /scripts/tts_temp/
+# Auto-TTS runtime artifacts (progress log can contain API key prefixes; manifest/marker regenerate each run)
+/scripts/tts_progress.log
+/scripts/tts_manifest.json
+/scripts/auto_tts_launchd.out
+/scripts/auto_tts_launchd.err
+/scripts/.auto_tts_done
+/scripts/.su1_hint_cache/
+/scripts/.auto_tts.lock/
 /tts_audit_report.json
 /tts_progress_monitor.md
 /scratch_slug_check.mjs
@@ -165,3 +173,15 @@ node_modules
 /scripts/blog_auto/data/
 /scripts/blog_auto/data_problems/
 /scripts/blog_auto/out/
+# 미적분 AVS 작업 중간 산출물 (scratch — 재현 가능, 커밋 제외)
+scripts/out_*.json
+scripts/jobs_cal*.json
+scripts/jobs_stragglers.json
+scripts/jobs_adj.json
+scripts/keyfix*.json
+scripts/shift_report.json
+scripts/verify_*.json
+scripts/*_wave_run.mjs
+scripts/recover_*.json
+.claude/handoff.md
+_sasul_work/

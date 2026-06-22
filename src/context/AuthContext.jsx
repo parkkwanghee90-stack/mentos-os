@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { supabase } from '@/services/supabaseClient';
+import { isPromoFree, PROMO_PAID_SOURCE } from '@/lib/promo';
 
 const AuthContext = createContext();
 
@@ -12,9 +13,13 @@ export function AuthProvider({ children }) {
   const syncToLocalStorage = (currentSession) => {
     if (currentSession?.user) {
       const dbUser = currentSession.user;
-      const isPaid = dbUser.user_metadata?.is_paid === true || dbUser.user_metadata?.premium === true;
-      const isPremium = dbUser.user_metadata?.premium === true;
-      const paidAt = dbUser.user_metadata?.paid_at || null;
+      const meta = dbUser.user_metadata || {};
+      // 프리미엄 만료(premium_until) 반영 — 선착순 100명 1개월 무료 등 만료성 권한 지원
+      const premiumUntil = meta.premium_until || null;
+      const notExpired = !premiumUntil || new Date(premiumUntil).getTime() > Date.now();
+      const isPaid = (meta.is_paid === true || meta.premium === true) && notExpired;
+      const isPremium = meta.premium === true && notExpired;
+      const paidAt = meta.paid_at || null;
 
       const legacyUser = {
         id: dbUser.id,
@@ -29,24 +34,39 @@ export function AuthProvider({ children }) {
       };
 
       localStorage.setItem('mentos_mock_user', JSON.stringify(legacyUser));
-      if (isPaid) {
+      if (isPromoFree()) {
+        // 🎉 3개월 전면무료 프로모션: 결제 여부와 무관하게 전체 개방.
+        localStorage.setItem('mentos_is_paid', 'true');
+        localStorage.setItem('mentos_premium', 'true');
+        localStorage.setItem('mentos_paid_source', PROMO_PAID_SOURCE);
+      } else if (isPaid) {
         localStorage.setItem('mentos_is_paid', 'true');
         localStorage.setItem('mentos_premium', isPremium ? 'true' : 'false');
         if (paidAt) localStorage.setItem('mentos_paid_at', paidAt);
+        if (premiumUntil) localStorage.setItem('mentos_premium_until', premiumUntil);
+        else localStorage.removeItem('mentos_premium_until');
       } else {
         const localPaid = localStorage.getItem('mentos_is_paid') === 'true';
         const paidSrc = localStorage.getItem('mentos_paid_source');
-        // 무료이벤트(한달무료)가 임시로 켠 mentos_is_paid 는 "실제 결제"가 아니므로
-        // 프리미엄으로 승격하면 안 된다. (이게 켜지면 내신 등 유료 콘텐츠가 무료 개방됨)
-        if (localPaid && paidSrc !== 'free_event') {
+        // 무료이벤트/프로모가 임시로 켠 mentos_is_paid 는 "실제 결제"가 아니므로
+        // 프리미엄으로 승격하면 안 된다(프로모 종료 후 영구 권한으로 새는 것 방지).
+        if (localPaid && paidSrc !== 'free_event' && paidSrc !== 'promo_free') {
           updatePremiumStatus(true);
         }
       }
     } else {
       localStorage.removeItem('mentos_mock_user');
-      localStorage.removeItem('mentos_is_paid');
-      localStorage.removeItem('mentos_premium');
-      localStorage.removeItem('mentos_paid_at');
+      if (isPromoFree()) {
+        // 🎉 프로모 기간엔 비로그인 방문자도 전체 무료 개방.
+        localStorage.setItem('mentos_is_paid', 'true');
+        localStorage.setItem('mentos_premium', 'true');
+        localStorage.setItem('mentos_paid_source', PROMO_PAID_SOURCE);
+      } else {
+        localStorage.removeItem('mentos_is_paid');
+        localStorage.removeItem('mentos_premium');
+        localStorage.removeItem('mentos_paid_at');
+        localStorage.removeItem('mentos_premium_until');
+      }
     }
   };
 
@@ -118,18 +138,6 @@ export function AuthProvider({ children }) {
     const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password
-    });
-    if (error) throw error;
-    return data;
-  };
-
-  // Google OAuth Login
-  const signInWithGoogle = async () => {
-    const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: {
-        redirectTo: `${window.location.origin}/dashboard`
-      }
     });
     if (error) throw error;
     return data;
@@ -257,7 +265,6 @@ export function AuthProvider({ children }) {
       loading,
       signUpWithEmail,
       signInWithEmail,
-      signInWithGoogle,
       signOut,
       resetPassword,
       verifyAdminCode,

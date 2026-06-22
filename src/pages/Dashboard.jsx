@@ -17,6 +17,14 @@ import { getCompletions } from '@/services/homeworkCompletion';
 import { fetchCloudDashboard, buildWeeklySeries } from '@/services/dashboardData';
 import DashboardReviewSection from '@/components/dashboard/DashboardReviewSection';
 import '@/pages/Dashboard.css';
+import PremiumLectureModal from '@/components/lectures/PremiumLectureModal';
+import StudyHabitWidget from '@/components/StudyHabitWidget';
+import WeeklyReportCard from '@/components/WeeklyReportCard';
+import RewardsWidget from '@/components/RewardsWidget';
+import WeaknessConquestMap from '@/components/WeaknessConquestMap';
+import DailyQuestCard from '@/components/DailyQuestCard';
+import LeagueWidget from '@/components/LeagueWidget';
+import ReferralCard from '@/components/ReferralCard';
 
 const parseSubject = (subj) => {
   const map = { 'physics': '물리', 'chemistry': '화학', 'biology': '생명과학', 'earth': '지구과학', 'math': '수학', 'english': '영어', 'eng': '영어' };
@@ -430,7 +438,7 @@ export default function Dashboard() {
     }).filter(hw => hw.isComplete);
   }, [studentLevel]);
 
-  const mathWeakness = React.useMemo(() => analyzeMathWeakness(), [lessonHistory, completedHomeworkList]);
+  const mathWeakness = React.useMemo(() => analyzeMathWeakness(cloud), [cloud, lessonHistory, completedHomeworkList]);
   const topWeakUnits = mathWeakness.top3.length > 0 
     ? mathWeakness.top3.map(w => `${w.unit} (${w.tag})`)
     : ["이차함수와 이차방정식 (개념 결손)", "다항식의 연산 (연산 실수)", "항등식과 나머지정리 (응용 부족)"];
@@ -458,6 +466,7 @@ export default function Dashboard() {
 
   const [activeReportTab, setActiveReportTab] = React.useState('weekly');
   const [showFortTestModal, setShowFortTestModal] = React.useState(false);
+  const [showPremiumLecture, setShowPremiumLecture] = React.useState(false);
   const [fortAnswers, setFortAnswers] = React.useState({});
   const [fortGradingResult, setFortGradingResult] = React.useState(null);
 
@@ -630,6 +639,46 @@ export default function Dashboard() {
           <p className="dash-subtitle">AI가 분석한 나만의 학습 대시보드</p>
         </div>
 
+      {/* 🎟️ 친구 초대 — 다음 학기 예상문제 + 무료기간 연장 */}
+      <ReferralCard />
+
+      {/* 🔥 학습 습관 — 연속 스트릭 + 오늘의 학습시간 링 */}
+      <StudyHabitWidget />
+
+      {/* 🧠 두뇌게임 진입 (레벨0 입문 · 놀면서 사고력) */}
+      <button
+        type="button"
+        onClick={() => navigate('/brain')}
+        style={{
+          width: '100%', display: 'flex', alignItems: 'center', gap: '0.9rem', cursor: 'pointer',
+          textAlign: 'left', border: '1px solid rgba(244,114,182,0.3)', borderRadius: 20,
+          padding: '1rem 1.15rem', margin: '0.6rem 0',
+          background: 'linear-gradient(135deg, rgba(245,158,11,0.16), rgba(244,114,182,0.16), rgba(34,211,238,0.16))',
+        }}
+      >
+        <span style={{ fontSize: '2rem' }}>🧠</span>
+        <span style={{ flex: 1 }}>
+          <span style={{ display: 'block', fontWeight: 800, color: '#f8fafc', fontSize: '1rem' }}>두뇌 게임 하러가기</span>
+          <span style={{ display: 'block', fontSize: '0.78rem', color: '#cbd5e1', marginTop: 2 }}>24만들기 · 번개계산 · 네모네모로직 — 놀면서 코인 획득 🪙</span>
+        </span>
+        <span style={{ fontSize: '1.4rem', color: '#f9a8d4' }}>▶</span>
+      </button>
+
+      {/* 🎮 보상 — 레벨·XP·코인 → 수강시간 교환 */}
+      <RewardsWidget />
+
+      {/* 🎯 오늘의 퀘스트 */}
+      <DailyQuestCard />
+
+      {/* 🏅 성장 리그 */}
+      <LeagueWidget />
+
+      {/* 🗺️ 약점 정복 맵 */}
+      <WeaknessConquestMap />
+
+      {/* 📩 주간 부모 리포트 — 자동 주1회 + 수동 발송 */}
+      <WeeklyReportCard />
+
       {/* ═══ 1. Hero — 오늘의 학습 ═══ */}
       <div className="hero-card animate-fade-in">
         <div className="hero-content">
@@ -799,8 +848,8 @@ export default function Dashboard() {
           ))}
         </div>
         <div className="ai-comment">
-          <strong>AI 분석: </strong>
-          함수 단원 이해도가 빠르게 상승 중입니다. 복이차방정식 심화 보강을 추천합니다.
+          <strong>쉽게 풀어보면: </strong>
+          {mathWeakness.parentSummary}
         </div>
       </div>
 
@@ -1752,6 +1801,7 @@ export default function Dashboard() {
         </div>
       )}
     </div>
+      {showPremiumLecture && <PremiumLectureModal onClose={() => setShowPremiumLecture(false)} />}
     </div>
   );
 }
