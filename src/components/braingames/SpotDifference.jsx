@@ -78,11 +78,12 @@ export default function SpotDifference({ onWin }) {
   const [level, setLevel] = useState(0);
   const [found, setFound] = useState([]);
   const [miss, setMiss] = useState(null);
+  const [revealed, setRevealed] = useState(false);
 
   // 실사 이미지 팩 로드(폴더에 있으면 상위 레벨로 추가)
   useEffect(() => {
     fetch('/spot_levels/manifest.json').then((r) => r.ok ? r.json() : []).then((list) => {
-      if (Array.isArray(list)) setImgLevels(list.filter((x) => x && x.a && x.b && Array.isArray(x.diffs)).map((x) => ({ type: 'image', ...x })));
+      if (Array.isArray(list)) setImgLevels(list.filter((x) => x && Array.isArray(x.diffs) && (x.img || (x.a && x.b))).map((x) => ({ type: x.type || (x.img ? 'combo' : 'image'), ...x })));
     }).catch(() => {});
   }, []);
 
@@ -118,8 +119,9 @@ export default function SpotDifference({ onWin }) {
     } else { const mx = (e.clientX - rect.left) / rect.width, my = (e.clientY - rect.top) / rect.height; setMiss({ x: mx, y: my }); setTimeout(() => setMiss(null), 450); }
   };
 
-  const next = () => { setLevel((l) => Math.min(LEVELS.length - 1, l + 1)); setFound([]); };
-  const restart = () => { setLevel(0); setFound([]); };
+  const next = () => { setLevel((l) => Math.min(LEVELS.length - 1, l + 1)); setFound([]); setRevealed(false); };
+  const restart = () => { setLevel(0); setFound([]); setRevealed(false); };
+  const Mark = ({ dd, color }) => <span style={{ position: 'absolute', left: `${dd.x * 100}%`, top: `${dd.y * 100}%`, width: `${(dd.r || 0.06) * 200}%`, paddingBottom: `${(dd.r || 0.06) * 200}%`, transform: 'translate(-50%,-50%)', border: `3px solid ${color}`, borderRadius: '50%', pointerEvents: 'none' }} />;
 
   const FoundMarks = () => (cfg.type === 'vector'
     ? found.map((id) => <circle key={id} cx={HOTSPOT[id].cx} cy={HOTSPOT[id].cy} r={HOTSPOT[id].r} fill="none" stroke="#ef4444" strokeWidth="3" />)
@@ -148,14 +150,26 @@ export default function SpotDifference({ onWin }) {
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.9rem', padding: '1rem' }}>
       <div className="bg-title" style={{ fontSize: '1.4rem' }}>👁️ 틀린 그림 찾기</div>
       <div className="glass-card" style={{ padding: '0.6rem 1rem', color: '#f1f5f9', fontSize: '0.84rem' }}>
-        <b style={{ color: '#c4b5fd' }}>Lv.{level + 1}</b>{cfg.type === 'image' && <span style={{ color: '#fcd34d' }}> 📷실사</span>} · 다른 곳 <b style={{ color: '#f9a8d4' }}>{total}군데</b> · 찾음 <b style={{ color: '#34d399' }}>{found.length}</b>/{total}
+        <b style={{ color: '#c4b5fd' }}>Lv.{level + 1}</b>{(cfg.type === 'image' || cfg.type === 'combo') && <span style={{ color: '#fcd34d' }}> 📷{cfg.title ? cfg.title.replace(/^[0-9]+\.\s*/, '') : '실사'}</span>} · 다른 곳 <b style={{ color: '#f9a8d4' }}>{total}군데</b> · 찾음 <b style={{ color: '#34d399' }}>{found.length}</b>/{total}
       </div>
-      <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center', alignItems: 'flex-start' }}>
-        <div style={{ textAlign: 'center' }}><div style={{ color: '#fff', fontFamily: 'var(--jua)', marginBottom: 4 }}>그림 A</div><Img b={false} /></div>
-        <div style={{ textAlign: 'center' }}><div style={{ color: '#fff', fontFamily: 'var(--jua)', marginBottom: 4 }}>그림 B</div><Img b /></div>
-      </div>
-      <div style={{ display: 'flex', gap: '0.7rem' }}>
+      {cfg.type === 'combo' ? (
+        <>
+        <div style={{ color: '#fde68a', fontSize: '0.8rem', fontFamily: 'var(--jua)' }}>👉 오른쪽 그림에서 다른 곳을 누르세요</div>
+        <div onClick={click} style={{ position: 'relative', width: '100%', maxWidth: 560, ...imgStyle(cleared), padding: 0, overflow: 'hidden' }}>
+          <img src={cfg.img} alt="puzzle" style={{ width: '100%', display: 'block' }} draggable={false} />
+          {found.map((i) => <Mark key={i} dd={cfg.diffs[i]} color="#ef4444" />)}
+          {revealed && cfg.diffs.map((dd, i) => (found.includes(i) ? null : <Mark key={`r${i}`} dd={dd} color="#fbbf24" />))}
+        </div>
+        </>
+      ) : (
+        <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center', alignItems: 'flex-start' }}>
+          <div style={{ textAlign: 'center' }}><div style={{ color: '#fff', fontFamily: 'var(--jua)', marginBottom: 4 }}>그림 A</div><Img b={false} /></div>
+          <div style={{ textAlign: 'center' }}><div style={{ color: '#fff', fontFamily: 'var(--jua)', marginBottom: 4 }}>그림 B</div><Img b /></div>
+        </div>
+      )}
+      <div style={{ display: 'flex', gap: '0.7rem', flexWrap: 'wrap', justifyContent: 'center' }}>
         <button className="candy" onClick={restart} style={ctrl}><RotateCcw size={15} /> Lv.1부터</button>
+        {cfg.type === 'combo' && !cleared && <button className="candy" onClick={() => setRevealed((v) => !v)} style={ctrl}>💡 정답 보기</button>}
         {cleared && !isLast && <button className="candy" onClick={next} style={{ ...ctrl, background: 'linear-gradient(135deg,#f9a8d4,#ec4899)' }}>다음 레벨 <ArrowRight size={15} /></button>}
       </div>
       {cleared && (
