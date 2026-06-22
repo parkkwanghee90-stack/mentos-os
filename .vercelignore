@@ -127,3 +127,12 @@ public/math_pngs/**
 public/math_indexed/**
 public/math_pcbs_cache/**
 public/premium_lectures/**
+
+# ============================================================
+# 예외(반드시 배포): 앱이 직접 서빙하는 소수의 PNG (Supabase 아님)
+#   - 위 *.png / **/*.png 광역 차단을 여기서 되살림
+#   - 틀린그림찾기 두뇌게임 이미지 + 로그인/랜딩 배경
+# ============================================================
+!public/spot_levels/*.png
+!public/login.png
+!public/lecture.png
