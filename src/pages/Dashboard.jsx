@@ -639,30 +639,37 @@ export default function Dashboard() {
           <p className="dash-subtitle">AI가 분석한 나만의 학습 대시보드</p>
         </div>
 
+      {/* 🎮 두뇌게임 — 맨 위, 가장 크게 (게임 입구) */}
+      <button
+        type="button"
+        onClick={() => navigate('/brain')}
+        style={{
+          width: '100%', cursor: 'pointer', textAlign: 'left',
+          border: '1px solid rgba(244,114,182,0.4)', borderRadius: 24,
+          padding: '1.2rem 1.3rem', margin: '0.8rem 0',
+          background: 'linear-gradient(135deg, rgba(245,158,11,0.22), rgba(244,114,182,0.22), rgba(34,211,238,0.22))',
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+          <span style={{ fontSize: '2.6rem' }}>🎮</span>
+          <div style={{ flex: 1 }}>
+            <div style={{ fontWeight: 900, color: '#f8fafc', fontSize: '1.25rem' }}>두뇌 게임 하러가기</div>
+            <div style={{ fontSize: '0.82rem', color: '#cbd5e1', marginTop: 2 }}>놀면서 사고력 ↑ · 이기면 코인 획득 🪙</div>
+          </div>
+          <span style={{ fontSize: '1.6rem', color: '#f9a8d4' }}>▶</span>
+        </div>
+        <div style={{ display: 'flex', gap: 8, marginTop: 12, flexWrap: 'wrap' }}>
+          {['🎯 24만들기', '⚡ 번개계산', '🧩 네모네모로직'].map((t) => (
+            <span key={t} style={{ background: 'rgba(0,0,0,0.22)', color: '#fff', borderRadius: 999, padding: '0.3rem 0.7rem', fontSize: '0.8rem', fontWeight: 700 }}>{t}</span>
+          ))}
+        </div>
+      </button>
+
       {/* 🎟️ 친구 초대 — 다음 학기 예상문제 + 무료기간 연장 */}
       <ReferralCard />
 
       {/* 🔥 학습 습관 — 연속 스트릭 + 오늘의 학습시간 링 */}
       <StudyHabitWidget />
-
-      {/* 🧠 두뇌게임 진입 (레벨0 입문 · 놀면서 사고력) */}
-      <button
-        type="button"
-        onClick={() => navigate('/brain')}
-        style={{
-          width: '100%', display: 'flex', alignItems: 'center', gap: '0.9rem', cursor: 'pointer',
-          textAlign: 'left', border: '1px solid rgba(244,114,182,0.3)', borderRadius: 20,
-          padding: '1rem 1.15rem', margin: '0.6rem 0',
-          background: 'linear-gradient(135deg, rgba(245,158,11,0.16), rgba(244,114,182,0.16), rgba(34,211,238,0.16))',
-        }}
-      >
-        <span style={{ fontSize: '2rem' }}>🧠</span>
-        <span style={{ flex: 1 }}>
-          <span style={{ display: 'block', fontWeight: 800, color: '#f8fafc', fontSize: '1rem' }}>두뇌 게임 하러가기</span>
-          <span style={{ display: 'block', fontSize: '0.78rem', color: '#cbd5e1', marginTop: 2 }}>24만들기 · 번개계산 · 네모네모로직 — 놀면서 코인 획득 🪙</span>
-        </span>
-        <span style={{ fontSize: '1.4rem', color: '#f9a8d4' }}>▶</span>
-      </button>
 
       {/* 🎮 보상 — 레벨·XP·코인 → 수강시간 교환 */}
       <RewardsWidget />

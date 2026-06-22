@@ -561,8 +561,12 @@
 .home-v4 .hv-reviews-side { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
 @media (min-width: 1024px) { .home-v4 .hv-reviews-side { position: sticky; top: 90px; } }
 .home-v4 .hv-reviews-title { color: #fff; }
-.home-v4 .hv-reviews-list { display: grid; grid-template-columns: 1fr; gap: 14px; }
-@media (min-width: 560px) { .home-v4 .hv-reviews-list { grid-template-columns: repeat(2, 1fr); } }
+/* 모바일: 가로 스와이프 캐러셀(세로로 길어지지 않게) */
+.home-v4 .hv-reviews-list { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 10px; scrollbar-width: none; }
+.home-v4 .hv-reviews-list::-webkit-scrollbar { display: none; }
+.home-v4 .hv-reviews-list > * { flex: 0 0 80%; scroll-snap-align: start; }
+/* 데스크톱: 그리드 */
+@media (min-width: 560px) { .home-v4 .hv-reviews-list { display: grid; grid-template-columns: repeat(2, 1fr); overflow: visible; } .home-v4 .hv-reviews-list > * { flex: none; } }
 @media (min-width: 1024px) { .home-v4 .hv-reviews-list { grid-template-columns: repeat(4, 1fr); } }
 .home-v4 .hv-review { background: var(--surface); border: 1px solid var(--surface-line); border-radius: var(--r-md); padding: 20px 16px; }
 .home-v4 .hv-stars { display: inline-flex; gap: 2px; color: var(--gold); margin-bottom: 12px; }
