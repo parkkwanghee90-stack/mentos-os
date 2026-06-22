@@ -87,7 +87,7 @@ export default function SpotDifference({ onWin }) {
     }).catch(() => {});
   }, []);
 
-  const LEVELS = [...VECTOR_LEVELS, ...imgLevels];
+  const LEVELS = [...imgLevels, ...VECTOR_LEVELS]; // 실사 스토리 먼저(Lv1=우는여학생), 그 뒤 벡터
   const cfg = LEVELS[level] || VECTOR_LEVELS[0];
   const total = cfg.diffs.length;
   const cleared = found.length >= total;
