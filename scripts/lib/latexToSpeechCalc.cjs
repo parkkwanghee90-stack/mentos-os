@@ -23,8 +23,20 @@ function latexToSpeechCalc(text) {
        .replace(/\\lim/g, ' 극한 ')
        .replace(/\\to/g, ' 로 ');
 
-  // 3) 분수: \dfrac/\tfrac/\frac{a}{b} → "b 분의 a"
-  s = s.replace(/\\[dt]?frac\{([^{}]*)\}\{([^{}]*)\}/g, ' $2 분의 $1 ');
+  // 7) 위첨자/아래첨자: x^{2} → "x 제곱"(2일 때) 또는 "x의 n승"
+  // (분수보다 먼저 처리하여 분자/분모 안의 중첩 중괄호 x^{2}를 미리 풀어준다)
+  // 주의: 제곱(2)도 중괄호형/비중괄호형을 분리해 매칭해야 한다. \{?...\}? 형태는
+  // 닫는 중괄호 한쪽만 삼켜 분자/분모의 } 를 파괴할 수 있음(중첩 분수 버그).
+  s = s.replace(/\^\{2\}/g, ' 제곱 ')
+       .replace(/\^2/g, ' 제곱 ')
+       .replace(/\^\{([^{}]*)\}/g, ' 의 $1 승 ')
+       .replace(/\^([0-9a-zA-Z])/g, ' 의 $1 승 ')
+       .replace(/_\{([^{}]*)\}/g, ' $1 ')
+       .replace(/_([0-9a-zA-Z])/g, ' $1 ');
+
+  // 3) 분수: 가장 안쪽 \frac부터 반복 치환(중첩 분수/위첨자 처리 후이므로 중괄호 단순)
+  let prev;
+  do { prev = s; s = s.replace(/\\[dt]?frac\{([^{}]*)\}\{([^{}]*)\}/g, ' $2 분의 $1 '); } while (s !== prev);
 
   // 4) 로그/함수
   s = s.replace(/\\ln/g, ' 자연로그 ')
@@ -44,13 +56,6 @@ function latexToSpeechCalc(text) {
        .replace(/\\pi/g, ' 파이 ').replace(/\\theta/g, ' 세타 ')
        .replace(/\\mathbf\{([^{}]*)\}/g, '$1').replace(/\\boxed\{([^{}]*)\}/g, '$1')
        .replace(/\\text\{([^{}]*)\}/g, '$1');
-
-  // 7) 위첨자/아래첨자: x^{2} → "x 제곱"(2일 때) 또는 "x의 n승"
-  s = s.replace(/\^\{?2\}?/g, ' 제곱 ')
-       .replace(/\^\{([^{}]*)\}/g, ' 의 $1 승 ')
-       .replace(/\^([0-9a-zA-Z])/g, ' 의 $1 승 ')
-       .replace(/_\{([^{}]*)\}/g, ' $1 ')
-       .replace(/_([0-9a-zA-Z])/g, ' $1 ');
 
   // 8) 잔여 기호 정리
   s = s.replace(/[\\${}]/g, ' ')

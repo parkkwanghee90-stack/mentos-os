@@ -24,4 +24,10 @@ describe('latexToSpeechCalc 미적분 전처리', () => {
     const out = calc.latexToSpeechCalc('\\displaystyle\\int_0^1 \\dfrac{1}{x}\\,dx + \\ln 2');
     expect(out).not.toMatch(/\\[a-zA-Z]+/);
   });
+  it('분자/분모에 지수가 있는 분수(중첩 중괄호)도 처리', () => {
+    const out = calc.latexToSpeechCalc('\\dfrac{3x+2}{x^{2}}');
+    expect(out).toContain('분의');
+    expect(out).not.toContain('frac');
+    expect(out).not.toMatch(/\\[a-zA-Z]+/);
+  });
 });
