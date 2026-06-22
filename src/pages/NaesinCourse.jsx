@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, CheckCircle, XCircle, BookOpen, Sparkles, Lock, Volume2, VolumeX } from 'lucide-react';
+import { ArrowLeft, CheckCircle, XCircle, BookOpen, Sparkles, Lock } from 'lucide-react';
 import { MathText } from '@/components/MathProblemRenderer';
 import ClassroomBoard from '@/components/hints/ClassroomBoard';
 import COURSE from '@/data/naesin_full.json';
