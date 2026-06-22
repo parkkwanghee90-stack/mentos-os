@@ -4,7 +4,7 @@ export const CATEGORIES = [
   { key: 'calc', name: '🔢 계산력', desc: '연산·수 감각' },
   { key: 'logic', name: '🧩 논리·추론', desc: '연역·규칙 발견' },
   { key: 'focus', name: '👁️ 집중력', desc: '주의·관찰' },
-  { key: 'memory', name: '🧠 기억력', desc: '작업기억' },
+  { key: 'memory', name: '🧠 기억·순서', desc: '작업기억·과정 순서' },
   { key: 'space', name: '🧊 공간·도형', desc: '공간추론·회전' },
   { key: 'creative', name: '💡 창의·통찰', desc: '패턴·발상' },
 ];
@@ -15,6 +15,7 @@ export const GAMES = [
   { id: 'nono', cat: 'logic', name: '네모네모로직', emoji: '🧩', tagline: '숨은 그림 추리', accent: '#f472b6', bg: 'bg-pink', pref: 'girl' },
   { id: 'spot', cat: 'focus', name: '틀린그림찾기', emoji: '👁️', tagline: '다른 곳 5군데', accent: '#f472b6', bg: 'bg-pink', pref: 'girl' },
   { id: 'memory', cat: 'memory', name: '카드 짝맞추기', emoji: '🧠', tagline: '같은 그림 기억', accent: '#c084fc', bg: 'bg-pink', pref: 'all' },
+  { id: 'cook', cat: 'memory', name: '요리 순서 맞추기', emoji: '🍳', tagline: '만드는 순서 복원', accent: '#fb923c', bg: 'bg-amber', pref: 'girl' },
   { id: 'rotate', cat: 'space', name: '회전 도형', emoji: '🧊', tagline: '돌린 도형 찾기', accent: '#a78bfa', bg: 'bg-cyan', pref: 'boy' },
   { id: 'seq', cat: 'creative', name: '징검다리 건너기', emoji: '🐸', tagline: '규칙 찾아 강 건너기', accent: '#22c55e', bg: 'bg-cyan', pref: 'all' },
 ];

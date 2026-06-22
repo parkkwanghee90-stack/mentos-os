@@ -12,10 +12,11 @@ import SpotDifference from '@/components/braingames/SpotDifference';
 import MemoryMatch from '@/components/braingames/MemoryMatch';
 import RotateMatch from '@/components/braingames/RotateMatch';
 import SequenceFind from '@/components/braingames/SequenceFind';
+import OrderCook from '@/components/braingames/OrderCook';
 
 const COMPONENTS = {
   g24: Game24, speed: SpeedMath, nono: Nonogram,
-  spot: SpotDifference, memory: MemoryMatch, rotate: RotateMatch, seq: SequenceFind,
+  spot: SpotDifference, memory: MemoryMatch, rotate: RotateMatch, seq: SequenceFind, cook: OrderCook,
 };
 
 export default function BrainGames() {
