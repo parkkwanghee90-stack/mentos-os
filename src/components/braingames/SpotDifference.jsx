@@ -103,8 +103,10 @@ export default function SpotDifference({ onWin }) {
       const id = cfg.diffs.find((dd) => !found.includes(dd) && Math.hypot(x - HOTSPOT[dd].cx, y - HOTSPOT[dd].cy) <= HOTSPOT[dd].r);
       hit = id ?? -1;
     } else {
-      const fx = (e.clientX - rect.left) / rect.width, fy = (e.clientY - rect.top) / rect.height;
-      const idx = cfg.diffs.findIndex((dd, i) => !found.includes(i) && Math.hypot(fx - dd.x, fy - dd.y) <= (dd.r || 0.06));
+      // 픽셀 기준 정원 판정(이미지가 가로로 넓어 fx,fy 혼용 시 세로로 헛클릭됨) + 25% 여유
+      const W = rect.width, H = rect.height;
+      const px = e.clientX - rect.left, py = e.clientY - rect.top;
+      const idx = cfg.diffs.findIndex((dd, i) => !found.includes(i) && Math.hypot(px - dd.x * W, py - dd.y * H) <= (dd.r || 0.06) * W * 1.25);
       hit = idx >= 0 ? idx : -1;
     }
     if (hit !== -1) {

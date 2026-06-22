@@ -20,10 +20,11 @@ function makeRiver() {
 }
 function optsFor(seq, idx) {
   const ans = seq[idx];
+  if (!Number.isFinite(ans)) return []; // 범위 밖(도착 후) — 무한루프 방지
   const set = new Set([ans]);
   const cand = shuffle([ans + 1, ans - 1, ans + 2, ans + (seq[idx - 1] - seq[idx - 2] || 2), ans * 2 - 1, Math.round(ans * 1.5)]);
   for (const c of cand) { if (set.size >= 3) break; if (c > 0 && !set.has(c)) set.add(c); }
-  let n = ans + 3; while (set.size < 3) { if (n > 0 && !set.has(n)) set.add(n); n++; }
+  let n = ans + 3, guard = 0; while (set.size < 3 && guard++ < 100) { if (n > 0 && !set.has(n)) set.add(n); n++; }
   return shuffle([...set]);
 }
 
@@ -34,8 +35,8 @@ export default function SequenceFind({ onWin }) {
   const [fails, setFails] = useState(0);
   const [crossed, setCrossed] = useState(0);
 
-  const opts = optsFor(river.s, pos + 1);
   const done = pos >= LEN - 1;
+  const opts = done ? [] : optsFor(river.s, pos + 1); // done이면 pos+1이 범위 밖 → optsFor 무한루프 방지
 
   const hop = (v) => {
     if (done || splash) return;
@@ -74,8 +75,9 @@ export default function SequenceFind({ onWin }) {
             const shown = i <= pos;
             const isBank = i === LEN - 1;
             return (
-              <div key={i} style={{ flex: '0 0 auto', width: STONE, height: STONE, borderRadius: '46% 54% 50% 50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--num)', fontWeight: 800, fontSize: '1.1rem', color: '#fff', background: isBank ? 'linear-gradient(135deg,#86efac,#22c55e)' : 'linear-gradient(135deg,#a8a29e,#78716c)', boxShadow: '0 4px 0 rgba(0,0,0,0.25)' }}>
-                {isBank ? '🏁' : (shown ? n : '?')}
+              <div key={i} style={{ position: 'relative', flex: '0 0 auto', width: STONE, height: STONE, borderRadius: '46% 54% 50% 50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--num)', fontWeight: 800, fontSize: '1.05rem', color: '#fff', background: isBank ? 'linear-gradient(135deg,#86efac,#22c55e)' : 'linear-gradient(135deg,#a8a29e,#78716c)', boxShadow: '0 4px 0 rgba(0,0,0,0.25)' }}>
+                {isBank && <span style={{ position: 'absolute', top: -18, fontSize: '1rem' }}>🏁</span>}
+                {shown ? n : '?'}
               </div>
             );
           })}
