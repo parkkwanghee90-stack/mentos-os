@@ -2,11 +2,12 @@ import { describe, it, expect } from 'vitest';
 import calc from './latexToSpeechCalc.cjs';
 
 describe('latexToSpeechCalc 미적분 전처리', () => {
-  it('정적분 구간을 한국어로 읽는다', () => {
+  it('정적분 구간을 인테그랄+범위로 읽는다', () => {
     const out = calc.latexToSpeechCalc('\\displaystyle\\int_{1}^{2} x\\,dx');
     expect(out).toContain('1');
     expect(out).toContain('2');
-    expect(out).toContain('적분');
+    expect(out).toContain('인테그랄');
+    expect(out).toContain('부터');
     expect(out).not.toContain('\\int');
     expect(out).not.toContain('displaystyle');
   });
@@ -36,11 +37,11 @@ describe('latexToSpeechCalc 미적분 전처리', () => {
     expect(out).not.toContain('infty');
     expect(out).not.toMatch(/\\[a-zA-Z]+/);
   });
-  it('시그마 합의 범위를 읽고, 위끝을 지수(승)로 오독하지 않는다', () => {
+  it('시그마+범위를 읽고, 위끝을 지수(승)로 오독하지 않는다', () => {
     const out = calc.latexToSpeechCalc('\\sum_{k=1}^{n} k');
-    expect(out).toContain('합');
+    expect(out).toContain('시그마');
     expect(out).toContain('부터');
-    expect(out).not.toMatch(/n\s*승/);   // 위끝 n이 "n승"이 되면 안 됨
+    expect(out).not.toMatch(/n\s*승|엔\s*승/);   // 위끝 n이 "n승/엔승"이 되면 안 됨
     expect(out).not.toContain('sum');
   });
   it('big 괄호 크기 명령을 제거한다', () => {
