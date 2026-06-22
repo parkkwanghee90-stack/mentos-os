@@ -51,18 +51,22 @@
 - **`scripts/tts_elevenlabs_map.json`** — 텍스트폴더(hintDir) → ttsDir 매핑(숙제 폴더는 기존 STAGES에 없으므로 신규 매핑, pid·내용 검증). `tts_hintdir_map.json`과 동일 검증 절차.
 - **`scripts/tts_elevenlabs_progress.json`** — 처리 완료 키 + 누적 글자수(월 리셋 추적).
 
-### 수정 파일 (최소)
-- 없음에 가깝다. 앱은 이미 `math-tts/{ttsDir}/{NNN}.mp3`를 재생하므로, 동일 경로 업로드 시 **추가 연동 코드 불필요**. (단, 신규 ttsDir이 앱 라우팅/단원명 매핑에 연결돼 있는지 1건 확인 — 연결 안 됐으면 `useMathClassroomEngine`/`pathMapping` 매핑 보강.)
+### 수정 파일 (앱 연동 — 구현 중 발견으로 필수화)
+> **⚠️ 2026-06-23 EL-5 검증 발견:** 스펙 초안의 "앱 연동 거의 불필요" 가정은 **틀렸다.** 숙제(homework) AVS는 현재 앱에서 **음성 재생 기능이 연결돼 있지 않다.** 흐름: `HomeworkMathBox`가 `HintPlayerRouter`에 `unit={effectiveHintKey}`(예: `수학2_01함수의극한_통합숙제`) 전달 → `GeometryHintPlayer`가 `cleanUnit → TTS_UNIT_MAP[cleanUnit]`로 ttsDir 조립 → **숙제 hintKey는 `src/data/tts_map.json`에 없어 `engPath` 없음 → `return null`(음성 버튼 미표시)**. 따라서 음성을 만들어 올려도 앱이 재생하지 못한다.
+- **`src/data/tts_map.json`** — 숙제 `effectiveHintKey`(통합숙제 키) → ttsDir 매핑 항목 추가(앱이 음성 경로를 조립하도록). ttsDir 이름은 우리가 정함(권장: hintKey와 1:1 대응되는 안정적 영문 slug, 또는 hintKey 그대로).
+- **저장 ttsDir 규칙 변경:** 음성은 위 tts_map에 등록한 ttsDir 이름으로 `math-tts/{ttsDir}/{NNN}.mp3` 업로드(텍스트 폴더명 ≠ ttsDir이므로 **EL-5 매핑 테이블이 hintDir→ttsDir 의미 매핑을 담아야 함**, "동일명" 가정 폐기).
+- (`GeometryHintPlayer`의 cleanUnit 정규화가 숙제 hintKey를 그대로 통과시키는지 확인 — 공백/괄호 제거만 하므로 hintKey가 tts_map 키와 일치하면 OK.)
 
 ## 6. 데이터 흐름
 
 ```
-math_hints/{folder}/{NNN}.json (텍스트, Supabase)
-  → latexToSpeechCalc(낭독필드)         # 수식 → 한국어 구어
+math_hints/{hintDir}/{NNN}.json (텍스트, Supabase)
+  → extractNarration + latexToSpeechCalc   # 낭독필드 → 한국어 구어
   → 글자수 예측 → 월 한도 체크
-  → ttsElevenLabs.synthesize(text)      # mp3 buffer
-  → 업로드 math-tts/{ttsDir}/{NNN}.mp3  # 기존 경로
+  → ttsElevenLabs.synthesize(text)         # mp3 buffer
+  → 업로드 math-tts/{ttsDir}/{NNN}.mp3      # ttsDir = EL-5 매핑(hintDir→앱 ttsDir)
   → recordManifest(engine:elevenlabs, voiceId, chars)
+  → 앱: tts_map[숙제hintKey]=ttsDir 등록돼 있어야 음성버튼 표시·재생
   → tts_elevenlabs_progress.json 갱신
 한도 도달 → 진행 저장 후 exit 0 → 다음 배치/월에 재개
 앱: 기존대로 math-tts 경로 재생(코드 변경 없음)
