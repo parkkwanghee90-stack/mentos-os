@@ -60,5 +60,20 @@
   "partial": {
     "note": "매핑 유효하나 일부 pid 소스 부재",
     "func_limit_s4→1_limitstep4": "020 누락(19/20 가능)"
+  },
+  "deferred_classified": {
+    "note": "보류 7단원(소스 JSON 유실로 3.1 재생성 불가). 기존 클립을 tts_engine_classifier로 음색 판별(2026-06-22). gemini=OpenAI만큼 이질적이진 않음(2.5/3.1 구분불가), openai=확정 off-voice. 소스 확보 전까지 재생성 불가.",
+    "gemini_55": {
+      "seq_sum_s2": 20,
+      "seq_sum_s3": 20,
+      "line_s4_partial": 15
+    },
+    "openai_offvoice_80": {
+      "def_integ_app_s2": 20,
+      "def_integ_app_s3": 15,
+      "integ_s3": 20,
+      "trig_graph_s4": 20,
+      "line_s4_partial": 5
+    }
   }
 }
