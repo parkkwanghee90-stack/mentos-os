@@ -1,0 +1,69 @@
+/* 🧠 두뇌게임 "캔디 아케이드" — 게임별 분위기 배경 + 캔디 UI. */
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Fredoka:wght@500;600;700&display=swap');
+
+.bg-zone {
+  --jua: 'Jua', system-ui, 'Apple SD Gothic Neo', sans-serif;
+  --num: 'Fredoka', 'Jua', system-ui, sans-serif;
+  position: relative;
+  min-height: 100dvh;
+  overflow: hidden;
+  font-family: var(--jua);
+  color: #0f172a;
+}
+
+/* 게임별 배경 "월드" — 라디얼 그라디언트 메시 */
+.bg-amber  { background: #1a1206; }
+.bg-amber::before  { background:
+  radial-gradient(60% 50% at 20% 15%, #fbbf24 0%, transparent 60%),
+  radial-gradient(55% 45% at 85% 25%, #fb7185 0%, transparent 55%),
+  radial-gradient(70% 60% at 50% 100%, #f59e0b 0%, transparent 60%),
+  linear-gradient(160deg, #2a1a06, #3b1d09); }
+.bg-cyan   { background: #04141b; }
+.bg-cyan::before   { background:
+  radial-gradient(55% 50% at 18% 18%, #22d3ee 0%, transparent 58%),
+  radial-gradient(60% 50% at 85% 20%, #6366f1 0%, transparent 55%),
+  radial-gradient(80% 60% at 50% 105%, #06b6d4 0%, transparent 60%),
+  linear-gradient(160deg, #05222c, #071a2e); }
+.bg-pink   { background: #1b0a16; }
+.bg-pink::before   { background:
+  radial-gradient(55% 50% at 20% 16%, #f9a8d4 0%, transparent 58%),
+  radial-gradient(60% 50% at 84% 22%, #c084fc 0%, transparent 55%),
+  radial-gradient(80% 60% at 50% 105%, #f472b6 0%, transparent 60%),
+  linear-gradient(160deg, #2a0f24, #1f0b2e); }
+
+.bg-zone::before {
+  content: ''; position: absolute; inset: 0; z-index: 0; opacity: 0.9;
+  filter: saturate(1.05);
+}
+/* 그레인 질감 오버레이 */
+.bg-zone::after {
+  content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.bg-zone > * { position: relative; z-index: 1; }
+
+/* 둥둥 떠다니는 장식 도형 */
+.bg-deco { position: absolute; z-index: 0; border-radius: 30%; filter: blur(2px); opacity: 0.35; animation: floaty 9s ease-in-out infinite; }
+
+@keyframes floaty { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-18px) rotate(12deg); } }
+@keyframes pop { 0% { transform: scale(.7); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-8px)} 75%{transform:translateX(8px)} }
+@keyframes bounceIn { 0%{transform:scale(.4);opacity:0} 60%{transform:scale(1.12)} 100%{transform:scale(1);opacity:1} }
+
+/* 캔디 버튼/타일 공통 */
+.candy {
+  border: none; cursor: pointer; font-family: var(--num); font-weight: 700;
+  border-radius: 20px; transition: transform .12s, box-shadow .12s, filter .12s;
+  box-shadow: 0 7px 0 rgba(0,0,0,0.25), 0 12px 22px rgba(0,0,0,0.3);
+}
+.candy:active { transform: translateY(5px); box-shadow: 0 2px 0 rgba(0,0,0,0.25), 0 6px 12px rgba(0,0,0,0.3); }
+.candy:disabled { filter: grayscale(.5) brightness(.7); cursor: not-allowed; }
+
+.glass-card {
+  background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.18); border-radius: 26px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+}
+
+.bg-title { font-family: var(--jua); color: #fff; text-shadow: 0 3px 0 rgba(0,0,0,0.2); }
+.num-xl { font-family: var(--num); font-weight: 700; }

@@ -27,6 +27,7 @@ const LoginGate = lazy(() => import("@/components/auth/LoginGate"));
 const MentosMockExam = lazy(() => import("@/pages/MentosMockExam"));
 const MockExamOMR = lazy(() => import("@/pages/MockExamOMR"));
 const MockExamHub = lazy(() => import("@/pages/MockExamHub"));
+const BrainGames = lazy(() => import("@/pages/BrainGames"));
 const NaesinCourse = lazy(() => import("@/pages/NaesinCourse"));
 const Go2Course = lazy(() => import("@/pages/Go2Course"));
 const LessonTest = lazy(() => import("@/pages/LessonTest"));
@@ -194,6 +195,7 @@ function AppContent() {
             <Route path="/class/mock-exam" element={<MentosMockExam />} />
             <Route path="/class/mock/:examId" element={<MockExamOMR />} />
             <Route path="/class/mock-hub" element={<MockExamHub />} />
+            <Route path="/brain" element={<BrainGames />} />
             <Route path="/class/naesin" element={<NaesinCourse />} />
             <Route path="/class/go2" element={<Go2Course />} />
             

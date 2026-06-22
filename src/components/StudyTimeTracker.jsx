@@ -11,6 +11,7 @@ export function isStudyPath(p) {
   if (p === '/homework') return false;        // 숙제 목록(메뉴)
   if (p === '/class/mock-hub') return false;  // 모의고사 허브(메뉴)
   return (
+    p === '/brain' ||
     p.startsWith('/class/math') ||
     p.startsWith('/class/english') ||
     p.startsWith('/class/science') ||

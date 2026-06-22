@@ -644,6 +644,25 @@ export default function Dashboard() {
       {/* 🔥 학습 습관 — 연속 스트릭 + 오늘의 학습시간 링 */}
       <StudyHabitWidget />
 
+      {/* 🧠 두뇌게임 진입 (레벨0 입문 · 놀면서 사고력) */}
+      <button
+        type="button"
+        onClick={() => navigate('/brain')}
+        style={{
+          width: '100%', display: 'flex', alignItems: 'center', gap: '0.9rem', cursor: 'pointer',
+          textAlign: 'left', border: '1px solid rgba(244,114,182,0.3)', borderRadius: 20,
+          padding: '1rem 1.15rem', margin: '0.6rem 0',
+          background: 'linear-gradient(135deg, rgba(245,158,11,0.16), rgba(244,114,182,0.16), rgba(34,211,238,0.16))',
+        }}
+      >
+        <span style={{ fontSize: '2rem' }}>🧠</span>
+        <span style={{ flex: 1 }}>
+          <span style={{ display: 'block', fontWeight: 800, color: '#f8fafc', fontSize: '1rem' }}>두뇌 게임 하러가기</span>
+          <span style={{ display: 'block', fontSize: '0.78rem', color: '#cbd5e1', marginTop: 2 }}>24만들기 · 번개계산 · 네모네모로직 — 놀면서 코인 획득 🪙</span>
+        </span>
+        <span style={{ fontSize: '1.4rem', color: '#f9a8d4' }}>▶</span>
+      </button>
+
       {/* 🎮 보상 — 레벨·XP·코인 → 수강시간 교환 */}
       <RewardsWidget />
 
