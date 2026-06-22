@@ -30,4 +30,26 @@ describe('latexToSpeechCalc 미적분 전처리', () => {
     expect(out).not.toContain('frac');
     expect(out).not.toMatch(/\\[a-zA-Z]+/);
   });
+  it('무한대 \\infty를 읽는다', () => {
+    const out = calc.latexToSpeechCalc('\\lim_{n\\to\\infty} a_n');
+    expect(out).toContain('무한대');
+    expect(out).not.toContain('infty');
+    expect(out).not.toMatch(/\\[a-zA-Z]+/);
+  });
+  it('시그마 합의 범위를 읽고, 위끝을 지수(승)로 오독하지 않는다', () => {
+    const out = calc.latexToSpeechCalc('\\sum_{k=1}^{n} k');
+    expect(out).toContain('합');
+    expect(out).toContain('부터');
+    expect(out).not.toMatch(/n\s*승/);   // 위끝 n이 "n승"이 되면 안 됨
+    expect(out).not.toContain('sum');
+  });
+  it('big 괄호 크기 명령을 제거한다', () => {
+    const out = calc.latexToSpeechCalc('\\bigl[(2n+1)+3\\bigr]');
+    expect(out).not.toMatch(/bigl|bigr|\\big/);
+    expect(out).not.toMatch(/\\[a-zA-Z]+/);
+  });
+  it('복합 미적분 문장에 LaTeX 잔여가 없다', () => {
+    const out = calc.latexToSpeechCalc('\\displaystyle\\lim_{n\\to\\infty}\\dfrac{\\sum_{k=1}^{n}k^2}{n^3}');
+    expect(out).not.toMatch(/\\[a-zA-Z]+|infty|bigl|bigr|sum/);
+  });
 });

@@ -6,8 +6,10 @@ function latexToSpeechCalc(text) {
   if (!text) return '';
   let s = String(text);
 
-  // 0) 렌더 지시어 제거
-  s = s.replace(/\\displaystyle/g, ' ')
+  // 0) 렌더 지시어/크기명령 제거 + 무한대
+  s = s.replace(/\\infty/g, ' 무한대 ')
+       .replace(/\\displaystyle/g, ' ')
+       .replace(/\\(?:bigg?|Bigg?)[lr]?/g, ' ')   // \big \bigl \bigr \Big \bigg ...
        .replace(/\\left/g, ' ').replace(/\\right/g, ' ')
        .replace(/\\!|\\,|\\;|\\:/g, ' ');
 
@@ -22,6 +24,13 @@ function latexToSpeechCalc(text) {
   s = s.replace(/\\lim_\{([^}]*?)\\to([^}]*)\}/g, ' $1 가 $2 로 갈 때 극한 ')
        .replace(/\\lim/g, ' 극한 ')
        .replace(/\\to/g, ' 로 ');
+
+  // 2.5) 합(시그마)·곱: 범위가 있으면 "a부터 b까지의 합", 없으면 "합"
+  s = s.replace(/\\sum_\{([^{}]*)\}\^\{([^{}]*)\}/g, ' $1 부터 $2 까지의 합 ')
+       .replace(/\\sum_([^\s^]+)\^([^\s{]+)/g, ' $1 부터 $2 까지의 합 ')
+       .replace(/\\sum/g, ' 합 ')
+       .replace(/\\prod_\{([^{}]*)\}\^\{([^{}]*)\}/g, ' $1 부터 $2 까지의 곱 ')
+       .replace(/\\prod/g, ' 곱 ');
 
   // 7) 위첨자/아래첨자: x^{2} → "x 제곱"(2일 때) 또는 "x의 n승"
   // (분수보다 먼저 처리하여 분자/분모 안의 중첩 중괄호 x^{2}를 미리 풀어준다)
@@ -41,8 +50,7 @@ function latexToSpeechCalc(text) {
   // 4) 로그/함수
   s = s.replace(/\\ln/g, ' 자연로그 ')
        .replace(/\\log/g, ' 로그 ')
-       .replace(/\\sin/g, ' 사인 ').replace(/\\cos/g, ' 코사인 ').replace(/\\tan/g, ' 탄젠트 ')
-       .replace(/\\sum/g, ' 시그마 ').replace(/\\prod/g, ' 곱 ');
+       .replace(/\\sin/g, ' 사인 ').replace(/\\cos/g, ' 코사인 ').replace(/\\tan/g, ' 탄젠트 ');
 
   // 5) 도함수 프라임: f''(x), f'(x)
   s = s.replace(/([a-zA-Z])''\s*\(/g, ' $1 이계도함수 (')
