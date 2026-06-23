@@ -136,3 +136,5 @@ public/premium_lectures/**
 !public/spot_levels/*.png
 !public/login.png
 !public/lecture.png
+# 대문 '학교별 기출 분석' 포스터(소형 webp 5장) — **/*.webp 광역차단에서 되살림
+!public/school_exam/*.webp
