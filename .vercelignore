@@ -113,12 +113,14 @@ upload_manifest*.json
 
 # --- Forceful global media & asset block for "code-only" Vercel upload ---
 **/*.mp3
-**/*.webp
 **/*.wav
 **/*.mp4
 **/*.pdf
 **/*.zip
 **/*.apk
+# webp 광역차단(**/*.webp) 제거 — 대문 school_exam 포스터까지 막혔음.
+# 대신 용량 큰 concept_cards webp만 콕 제외(json은 앱이 씀→유지). hteachers는 위 폴더제외로 이미 빠짐.
+public/concept_cards/**/*.webp
 public/audio/**
 public/math_crops/**
 public/math_hints/**
@@ -136,5 +138,3 @@ public/premium_lectures/**
 !public/spot_levels/*.png
 !public/login.png
 !public/lecture.png
-# 대문 '학교별 기출 분석' 포스터(소형 webp 5장) — **/*.webp 광역차단에서 되살림
-!public/school_exam/*.webp
