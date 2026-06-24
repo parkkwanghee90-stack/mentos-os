@@ -358,6 +358,7 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId, gemini
   const [playbackSpeed, setPlaybackSpeed] = useState(1);
   const [imgH, setImgH] = useState(0);
   const [ttsPlaying, setTtsPlaying] = useState(false);
+  const [ttsUnavailable, setTtsUnavailable] = useState(false);
   const [ttsAudio, setTtsAudio] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
   const [activeTab, setActiveTab] = useState('text');
@@ -638,16 +639,19 @@ export default function GeometryHintPlayer({ data, ttsUnit, ttsProblemId, gemini
               speakText(narration, {
                 isReplay: true, // 사용자 클릭 재생: 출력횟수 스킵 로직 우회
                 onEnd: () => setTtsPlaying(false),
-                onError: () => setTtsPlaying(false),
+                onError: () => { setTtsPlaying(false); setTtsUnavailable(true); setTimeout(() => setTtsUnavailable(false), 2500); },
               });
             };
             return (
-              <button onClick={handleGeminiTts} className="avs-btn" style={{
-                ...btn(ttsPlaying ? '#dc2626' : '#7c3aed', isMobile),
-                display: 'flex', alignItems: 'center', gap: 4
-              }}>
-                {ttsPlaying ? '⏹ 정지' : '🔊 음성(Gemini)'}
-              </button>
+              <>
+                <button onClick={handleGeminiTts} className="avs-btn" style={{
+                  ...btn(ttsPlaying ? '#dc2626' : '#7c3aed', isMobile),
+                  display: 'flex', alignItems: 'center', gap: 4
+                }}>
+                  {ttsPlaying ? '⏹ 정지' : '🔊 음성(Gemini)'}
+                </button>
+                {ttsUnavailable && <span className="text-xs text-gray-400 ml-2">음성 일시 사용 불가</span>}
+              </>
             );
           })()}
           {/* 🔊 TTS 음성 듣기 버튼 (정적 파일 모드) */}

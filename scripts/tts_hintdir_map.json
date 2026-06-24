@@ -1,0 +1,79 @@
+{
+  "note": "ttsDir(math-tts 버킷) → Supabase mentos-assets/math_hints 소스폴더 매핑. 본문 검증 완료분만 등록.",
+  "verified": "2026-06-19 자동확정15(인수분해/다항식/나머지/복소수/고차/귀납/극한/삼각활용s4) 본문확인 + 모호17 본문확정(line_eq/quad_eq해 구분, 중복폴더는 정식명) + 후보없음군 본문확정11(higher_order/quad_func/극한/미분활용/적분)",
+  "map": {
+    "complex_s2": "04_complex_numstep2",
+    "complex_s4": "04_complex_numstep4",
+    "factor_s2": "factorization_step2",
+    "factor_s3": "factorization_step3",
+    "factor_s4": "factorization_step4",
+    "higher_order_eq_step2": "higher_order_eqstep2",
+    "induction_s2": "induction_def_step2",
+    "limit_s2": "1_limit2",
+    "poly_s2": "polynomial_step2",
+    "poly_s3": "polynomial_step3",
+    "poly_s4": "polynomial_step4",
+    "remain_s2": "remainder_step2",
+    "remain_s3": "remainder_step3",
+    "remain_s4": "remainder_step4",
+    "trig_util_s4": "trig_util_step4",
+    "cases_s2": "cases_step2",
+    "cases_s3": "cases_step3",
+    "circle_s3": "circle_eq_step3",
+    "integ_s4": "7_def_integral_step4",
+    "line_s3": "line_eq_step3",
+    "linear_ineq_s2": "linear_ineq_step2",
+    "linear_ineq_s3": "linear_ineq_step3",
+    "linear_ineq_s4": "linear_ineq_step4",
+    "matrix_s2": "matrix_step2",
+    "matrix_s3": "matrix_step3",
+    "matrix_s4": "matrix_step4",
+    "point_s3": "point_coord_step3",
+    "point_s4": "point_coord_step4",
+    "quad_eq_s2": "05_quad_eqstep2",
+    "quad_eq_s3": "05_quad_eqstep3",
+    "quad_ineq_s2": "quad_ineqstep2",
+    "higher_eq_s2": "higher_order_eqstep2",
+    "higher_eq_s3": "higher_order_eqstep3",
+    "higher_eq_s4": "higher_order_eqstep4",
+    "quad_func_s2": "06_quad_eq_funcstep2",
+    "func_limit_s3": "3_explog_limit",
+    "func_limit_s4": "1_limitstep4",
+    "deriv_app_s4": "5_derivative_app_step4",
+    "deriv_app2_s2": "7_derivative_app2",
+    "deriv_app_1s2": "6_derivative_app1",
+    "def_integ_s2": "8_def_integral",
+    "integ_s2": "7_various_integral"
+  },
+  "unmappable": {
+    "note": "전용 소스 폴더 부재 또는 pid 불일치 — 재생성 보류(수동 확인 필요)",
+    "dirs": [
+      "seq_sum_s2",
+      "seq_sum_s3",
+      "trig_graph_s4",
+      "integ_s3",
+      "def_integ_app_s2",
+      "def_integ_app_s3",
+      "line_s4"
+    ]
+  },
+  "partial": {
+    "note": "매핑 유효하나 일부 pid 소스 부재",
+    "func_limit_s4→1_limitstep4": "020 누락(19/20 가능)"
+  },
+  "deferred_classified": {
+    "note": "보류 7단원(소스 JSON 유실로 3.1 재생성 불가). 기존 클립을 tts_engine_classifier로 음색 판별(2026-06-22). gemini=OpenAI만큼 이질적이진 않음(2.5/3.1 구분불가), openai=확정 off-voice. 소스 확보 전까지 재생성 불가.",
+    "gemini_55": {
+      "seq_sum_s2": 20,
+      "seq_sum_s3": 20,
+      "line_s4_partial": 15
+    },
+    "openai_offvoice_80": {
+      "def_integ_app_s2": 20,
+      "def_integ_app_s3": 15,
+      "integ_s3": 20,
+      "trig_graph_s4": 20,
+      "line_s4_partial": 5
+    }
+  }
+}

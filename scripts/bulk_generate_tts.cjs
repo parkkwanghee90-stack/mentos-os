@@ -1,4 +1,7 @@
 // bulk_generate_tts.cjs
+// [DEPRECATED] 신규 생성은 generate_gemini_math_sang_tts.cjs / generate_su1_tts.cjs 사용.
+// 이 스크립트는 SSOT(gemini-3.1-flash-tts-preview + Aoede)로만 동작하도록 고정됨.
+const { TTS_MODEL, TTS_VOICE } = require('./lib/ttsVoice.cjs');
 const fs = require('fs');
 const path = require('path');
 require('dotenv').config({ override: true });
@@ -117,7 +120,7 @@ ${text}`;
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 120000);
     try {
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${GEMINI_API_KEY}`, {
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${TTS_MODEL}:generateContent?key=${GEMINI_API_KEY}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -126,7 +129,7 @@ ${text}`;
             responseModalities: ["AUDIO"],
             speechConfig: {
               voiceConfig: {
-                prebuiltVoiceConfig: { voiceName: "Aoede" }
+                prebuiltVoiceConfig: { voiceName: TTS_VOICE }
               }
             }
           }

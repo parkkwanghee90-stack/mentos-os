@@ -25,11 +25,19 @@ const { execSync } = require('child_process');
 
 dotenv.config();
 
-const GEMINI_API_KEYS = [
-  process.env.VITE_GEMINI_API_KEY,
-  process.env.VITE_GEMINI_API_KEY_2,
-  process.env.VITE_GEMINI_API_KEY_3,
-].filter(Boolean);
+// 동적 키 풀: VITE_GEMINI_API_KEY + VITE_GEMINI_API_KEY_2,_3,...,_N(연속 번호)을 모두 수집.
+// 서로 다른 GCP 프로젝트의 키를 추가할수록 일일 할당량(프로젝트당 100/day)이 합산된다.
+function collectGeminiKeys() {
+  const keys = [];
+  if (process.env.VITE_GEMINI_API_KEY) keys.push(process.env.VITE_GEMINI_API_KEY);
+  for (let i = 2; ; i++) {
+    const v = process.env[`VITE_GEMINI_API_KEY_${i}`];
+    if (!v) break;
+    keys.push(v);
+  }
+  return keys;
+}
+const GEMINI_API_KEYS = collectGeminiKeys();
 
 let currentKeyIndex = 0;
 function getCurrentKey() { return GEMINI_API_KEYS[currentKeyIndex]; }
@@ -43,8 +51,7 @@ const HINT_CACHE_DIR = path.join('scripts', '.su1_hint_cache');
 const MANIFEST_PATH = path.join('scripts', 'tts_manifest.json');
 // 음색 일관성: 기존 수1 TTS는 전부 gemini-3.1-flash-tts-preview + Aoede.
 // 새 클립도 반드시 동일 모델/보이스로만 생성(다른 모델은 같은 Aoede라도 음색이 달라 혼재 금지).
-const TTS_MODEL = 'gemini-3.1-flash-tts-preview';
-const TTS_VOICE = 'Aoede';
+const { TTS_MODEL, TTS_VOICE } = require('./lib/ttsVoice.cjs');
 
 // 수1 스테이지: hintDir = mentos-assets/math_hints/ 하위 폴더(getSafePath(단원) 결과),
 // ttsDir = math-tts 버킷 폴더(src/data/tts_map.json 과 일치해야 함).
@@ -84,15 +91,34 @@ const STAGES = {
   ind4:     { ko: '수학적귀납법4단계',      hintDir: 'induction_step4',    ttsDir: 'induction_s4' },
 };
 
-if (GEMINI_API_KEYS.length === 0) {
-  console.error('❌ Error: No Gemini API keys are defined');
-  process.exit(1);
+// 음색 통일용 추가 매핑 주입: scripts/tts_hintdir_map.json(ttsDir→Supabase hintDir, 내용+pid 검증완료)을
+// STAGES에 병합한다. 기존 ttsDir과 겹치지 않는 항목만 추가(수학 상/하/수2 단원).
+(function injectHintDirMap() {
+  const mapPath = path.join('scripts', 'tts_hintdir_map.json');
+  if (!fs.existsSync(mapPath)) return;
+  let map;
+  try { map = JSON.parse(fs.readFileSync(mapPath, 'utf8')).map || {}; } catch { return; }
+  const existing = new Set(Object.values(STAGES).map(s => s.ttsDir));
+  let n = 0;
+  for (const [ttsDir, hintDir] of Object.entries(map)) {
+    if (existing.has(ttsDir)) continue;
+    STAGES[`map_${ttsDir}`] = { ko: ttsDir, hintDir, ttsDir };
+    n++;
+  }
+  if (n && !process.argv.includes('--list-stages')) console.log(`[map] tts_hintdir_map.json에서 ${n}개 단원 STAGES 주입`);
+})();
+
+if (!process.argv.includes('--list-stages')) {
+  if (GEMINI_API_KEYS.length === 0) {
+    console.error('❌ Error: No Gemini API keys are defined');
+    process.exit(1);
+  }
+  if (!SUPABASE_URL || !SUPABASE_KEY) {
+    console.error('❌ Error: Supabase credentials are not defined in .env');
+    process.exit(1);
+  }
+  if (!fs.existsSync(LOCAL_OUTPUT_DIR)) fs.mkdirSync(LOCAL_OUTPUT_DIR, { recursive: true });
 }
-if (!SUPABASE_URL || !SUPABASE_KEY) {
-  console.error('❌ Error: Supabase credentials are not defined in .env');
-  process.exit(1);
-}
-if (!fs.existsSync(LOCAL_OUTPUT_DIR)) fs.mkdirSync(LOCAL_OUTPUT_DIR, { recursive: true });
 
 function recordManifest(remotePath, bytes) {
   let current = {};
@@ -550,6 +576,71 @@ async function processStage(key, opts) {
 
 async function main() {
   const args = process.argv.slice(2);
+
+  // --list-stages: print known ttsDirs as one JSON line and exit
+  if (args.includes('--list-stages')) {
+    const dirs = Object.values(STAGES).map(s => s.ttsDir);
+    console.log(`STAGES_JSON ${JSON.stringify(dirs)}`);
+    process.exit(0);
+  }
+
+  // --regen-keys k1,k2,...: regenerate specific {ttsDir}/{pid}.mp3 keys
+  const regenIdx = args.indexOf('--regen-keys');
+  if (regenIdx !== -1) {
+    const { isQuotaExhausted } = require('./lib/regenQuota.cjs');
+    // Build ttsDir → stage key lookup
+    const ttsDirToKey = {};
+    for (const [k, v] of Object.entries(STAGES)) ttsDirToKey[v.ttsDir] = k;
+
+    const keysArg = (args[regenIdx + 1] || '').split(',').map(s => s.trim()).filter(Boolean);
+    for (const clipKey of keysArg) {
+      const slashIdx = clipKey.lastIndexOf('/');
+      const ttsDir = clipKey.slice(0, slashIdx);
+      const filename = clipKey.slice(slashIdx + 1); // e.g. "001.mp3"
+      const pid = filename.replace(/\.mp3$/, '');
+      const stageKey = ttsDirToKey[ttsDir];
+      if (!stageKey) {
+        console.log(`REGEN_SKIP ${clipKey}`);
+        continue;
+      }
+      const { hintDir, ttsDir: td } = STAGES[stageKey];
+      const remotePath = `${td}/${pid}.mp3`;
+      try {
+        const data = await fetchHint(hintDir, pid);
+        const narrationText = buildNarration(data);
+        if (!narrationText) {
+          console.warn(`REGEN_SKIP ${clipKey} (no narration text)`);
+          continue;
+        }
+        const rawAudioBuffer = await generateGeminiTTS(narrationText);
+        const tempPcmPath = path.resolve(LOCAL_OUTPUT_DIR, `temp_regen_su1_${td}_${pid}.pcm`);
+        const tempMp3Path = path.resolve(LOCAL_OUTPUT_DIR, `temp_regen_su1_${td}_${pid}.mp3`);
+        fs.writeFileSync(tempPcmPath, rawAudioBuffer);
+        try {
+          execSync(`ffmpeg -y -f s16le -ar 24000 -ac 1 -i "${tempPcmPath}" -codec:a libmp3lame -qscale:a 2 "${tempMp3Path}"`, { stdio: 'pipe' });
+        } finally {
+          try { fs.unlinkSync(tempPcmPath); } catch (e) {}
+        }
+        const mp3Buffer = fs.readFileSync(tempMp3Path);
+        try { fs.unlinkSync(tempMp3Path); } catch (e) {}
+        if (mp3Buffer.length < 10240) throw new Error(`MP3 too small: ${mp3Buffer.length} bytes`);
+        const localFilePath = path.join(LOCAL_OUTPUT_DIR, `su1_${td}_${pid}.mp3`);
+        fs.writeFileSync(localFilePath, mp3Buffer);
+        await uploadToSupabase(mp3Buffer, remotePath);
+        recordManifest(remotePath, mp3Buffer.length);
+        console.log(`REGEN_DONE ${clipKey}`);
+        await new Promise(r => setTimeout(r, 6500));
+      } catch (err) {
+        if (isQuotaExhausted(err)) {
+          console.log('REGEN_QUOTA_EXHAUSTED');
+          process.exit(0);
+        }
+        console.error(`REGEN_ERR ${clipKey}: ${err.message}`);
+      }
+    }
+    return;
+  }
+
   const stageArg = args[0];
   const force = args.includes('--force');
   const dryRun = args.includes('--dry-run');

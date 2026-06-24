@@ -1,4 +1,12 @@
 // TTS 재생성 - PCBS + 마무리 멘트, 느린 속도, 자연스러운 나레이션
+//
+// [DEPRECATED] 이 스크립트는 OpenAI TTS(tts-1-hd / nova 음성) 생성기입니다.
+// 음색 통일 정책(gemini-3.1-flash-tts-preview + Aoede)상 신규 생성에 사용 금지.
+// 신규 생성: generate_gemini_math_sang_tts.cjs / generate_su1_tts.cjs (SSOT: scripts/lib/ttsVoice.cjs)
+// 이 생성기로 만든 기존 OpenAI 클립은 audit_tts_voice.cjs → regen_tts_from_worklist.cjs 로 3.1 재생성됩니다.
+console.error('[DEPRECATED] generate_tts.cjs(OpenAI tts-1-hd/nova)는 사용 중지되었습니다. Gemini 3.1 생성기를 사용하세요.');
+process.exit(1);
+
 const fs = require('fs');
 const path = require('path');
 require('dotenv').config();

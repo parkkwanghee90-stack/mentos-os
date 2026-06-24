@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const dotenv = require('dotenv');
 const { execSync } = require('child_process');
+const { TTS_MODEL, TTS_VOICE } = require('./lib/ttsVoice.cjs');
 
 dotenv.config();
 
@@ -149,7 +150,7 @@ async function generateGeminiTTS(text, retries = 3) {
       // Gemini voice 전용 모델 사용
       let response;
       try {
-        response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-tts-preview:generateContent?key=${currentKey}`, {
+        response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${TTS_MODEL}:generateContent?key=${currentKey}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           signal: controller.signal,
@@ -159,7 +160,7 @@ async function generateGeminiTTS(text, retries = 3) {
               responseModalities: ["AUDIO"],
               speechConfig: {
                 voiceConfig: {
-                  prebuiltVoiceConfig: { voiceName: "Aoede" }
+                  prebuiltVoiceConfig: { voiceName: TTS_VOICE }
                 }
               }
             }

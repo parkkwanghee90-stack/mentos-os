@@ -1,4 +1,7 @@
 // scripts/generate_gemini_gocha_tts.cjs
+// [DEPRECATED] 신규 생성은 generate_gemini_math_sang_tts.cjs / generate_su1_tts.cjs 사용.
+// 이 스크립트는 SSOT(gemini-3.1-flash-tts-preview + Aoede)로만 동작하도록 고정됨.
+const { TTS_MODEL, TTS_VOICE } = require('./lib/ttsVoice.cjs');
 const fs = require('fs');
 const path = require('path');
 const dotenv = require('dotenv');
@@ -91,7 +94,7 @@ async function generateGeminiTTS(text) {
 
 ${text}`;
 
-  const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${GEMINI_API_KEY}`, {
+  const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${TTS_MODEL}:generateContent?key=${GEMINI_API_KEY}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -107,7 +110,7 @@ ${text}`;
         speechConfig: {
           voiceConfig: {
             prebuiltVoiceConfig: {
-              voiceName: "Aoede"
+              voiceName: TTS_VOICE
             }
           }
         }

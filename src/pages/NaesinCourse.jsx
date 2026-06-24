@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, CheckCircle, XCircle, BookOpen, Sparkles, Lock, Volume2, VolumeX } from 'lucide-react';
+import { ArrowLeft, CheckCircle, XCircle, BookOpen, Sparkles, Lock } from 'lucide-react';
 import { MathText } from '@/components/MathProblemRenderer';
 import ClassroomBoard from '@/components/hints/ClassroomBoard';
 import COURSE from '@/data/naesin_full.json';
@@ -76,14 +76,15 @@ export default function NaesinCourse() {
   const [showAVS, setShowAVS] = useState(false);
   const [speaking, setSpeaking] = useState(false);
   const audioRef = useRef(null);
+  const [ttsUnavailable, setTtsUnavailable] = useState(false);
 
   const speakAVS = () => {
     if (speaking) { try { stopSpeaking(); } catch {} try { audioRef.current?.pause(); } catch {} audioRef.current = null; setSpeaking(false); return; }
     const narration = (prob?.avs || []).map(s => typeof s === 'string' ? s : `${s.title || ''}. ${s.content || ''}`).join('. ');
     if (!narration) return;
     setSpeaking(true);
-    const liveFallback = () => speakText(cleanForSpeech(narration), { isReplay: true, onEnd: () => setSpeaking(false), onError: () => setSpeaking(false) });
-    // 사전생성 Gemini 2.5 음성(mp3) 우선 재생, 없으면 라이브 Gemini로 폴백
+    const liveFallback = () => speakText(cleanForSpeech(narration), { isReplay: true, onEnd: () => setSpeaking(false), onError: () => { setSpeaking(false); setTtsUnavailable(true); setTimeout(() => setTtsUnavailable(false), 2500); } });
+    // 사전생성 Gemini 음성(mp3) 우선 재생, 없으면 라이브 Gemini로 폴백
     const base = import.meta.env.VITE_SUPABASE_URL;
     if (base && prob?.id) {
       const url = `${base}/storage/v1/object/public/mentos-assets/avs_tts/naesin/${prob.id}.mp3`;
@@ -239,6 +240,7 @@ export default function NaesinCourse() {
               <div style={{ marginTop: 16, borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: 14 }}>
                 <div style={{ display: 'flex', alignItems: 'center', marginBottom: 10 }}>
                   <span style={{ fontWeight: 800, color: '#a78bfa' }}><Sparkles size={16} /> 사고력 AVS 해설</span>
+                  {ttsUnavailable && <span style={{ fontSize: '0.72rem', color: '#9ca3af', marginLeft: '0.5rem' }}>음성 일시 사용 불가</span>}
                 </div>
                 {prob.avs && prob.avs.length ? (
                   <ClassroomBoard key={prob.id} steps={prob.avs} answer={prob.answer} figure={prob.figure}

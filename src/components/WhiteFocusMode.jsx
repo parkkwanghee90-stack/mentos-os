@@ -14,6 +14,7 @@ import MathGraphBoard from './MathGraphBoard';
 
 export default function WhiteFocusMode({ subject, onClose, teacher }) {
   const [step, setStep] = useState(0);
+  const [ttsUnavailable, setTtsUnavailable] = useState(false);
 
   const isMath = subject === 'math' || subject === '수학';
   const isEng = subject === 'english' || subject === '영어';
@@ -37,10 +38,10 @@ export default function WhiteFocusMode({ subject, onClose, teacher }) {
   }, [subject, data?.steps?.length]);
 
   const onRead = (text) => {
-    speakText(text, { voice: getVoiceForTeacher(teacher), subject });
+    speakText(text, { voice: getVoiceForTeacher(teacher), subject, onError: () => { setTtsUnavailable(true); setTimeout(() => setTtsUnavailable(false), 2500); } });
   };
   const onExplain = (text) => {
-    speakText(text, { voice: getVoiceForTeacher(teacher), subject });
+    speakText(text, { voice: getVoiceForTeacher(teacher), subject, onError: () => { setTtsUnavailable(true); setTimeout(() => setTtsUnavailable(false), 2500); } });
   };
 
   return (
@@ -94,13 +95,14 @@ export default function WhiteFocusMode({ subject, onClose, teacher }) {
                 <div style={{ fontSize: '2.2rem', fontWeight: '700', color: '#111827', textAlign: 'center', lineHeight: '1.5' }}>
                   {s.sentence}
                 </div>
-                <div style={{ display: 'flex', gap: '1rem' }}>
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
                   <button onClick={() => onRead(s.sentence)} style={{ padding: '0.8rem 1.5rem', fontSize: '1.2rem', backgroundColor: '#f3f4f6', border: '1px solid #d1d5db', borderRadius: '12px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 'bold', color: '#374151' }}>
                     ▶ 읽기
                   </button>
                   <button onClick={() => onExplain(s.explanation)} style={{ padding: '0.8rem 1.5rem', fontSize: '1.2rem', backgroundColor: '#eef2ff', border: '1px solid #c7d2fe', borderRadius: '12px', cursor: 'pointer', color: '#4f46e5', display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 'bold' }}>
                     💡 설명
                   </button>
+                  {ttsUnavailable && <span style={{ fontSize: '0.72rem', color: '#9ca3af' }}>음성 일시 사용 불가</span>}
                 </div>
               </div>
             ))}
@@ -140,10 +142,11 @@ export default function WhiteFocusMode({ subject, onClose, teacher }) {
                   <MathGraphBoard graphData={s.graph} />
                 )}
                 
-                <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
+                <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem', alignItems: 'center' }}>
                   <button onClick={() => onExplain(s.explanation)} style={{ padding: '0.6rem 1.2rem', fontSize: '1rem', backgroundColor: '#eef2ff', border: '1px solid #c7d2fe', borderRadius: '8px', cursor: 'pointer', color: '#4f46e5', fontWeight: 'bold' }}>
                     💡 AI 음성 듣기
                   </button>
+                  {ttsUnavailable && <span style={{ fontSize: '0.72rem', color: '#9ca3af' }}>음성 일시 사용 불가</span>}
                 </div>
               </div>
             ))}

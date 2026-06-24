@@ -512,6 +512,7 @@ export default function MentosMockExam() {
   const [viewingHint, setViewingHint] = useState(null); // 문항 ID 저장
   const [isMobile, setIsMobile] = useState(false);
   const [playingAudioId, setPlayingAudioId] = useState(null);
+  const [ttsUnavailable, setTtsUnavailable] = useState(false);
   const [audioInstance, setAudioInstance] = useState(null);
 
   useEffect(() => {
@@ -652,7 +653,7 @@ export default function MentosMockExam() {
       speakText(narration, {
         isReplay: true, // 사용자 클릭 재생: 출력횟수 스킵 로직 우회
         onEnd: () => setPlayingAudioId(null),
-        onError: () => setPlayingAudioId(null),
+        onError: () => { setPlayingAudioId(null); setTtsUnavailable(true); setTimeout(() => setTtsUnavailable(false), 2500); },
       });
       return;
     }
@@ -1057,6 +1058,7 @@ export default function MentosMockExam() {
                             </>
                           )}
                         </button>
+                        {ttsUnavailable && <span style={{ fontSize: '0.72rem', color: '#9ca3af', marginLeft: '0.5rem' }}>음성 일시 사용 불가</span>}
                         <style>{`
                           @keyframes avsBounce {
                             0% { height: 3px; }

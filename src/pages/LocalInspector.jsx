@@ -241,7 +241,7 @@ export default function LocalInspector() {
                   await speakText(testText, {
                     voice: 'nova',
                     onEnd: () => setIsPlayingTest(false),
-                    onError: () => setIsPlayingTest(false),
+                    onError: (e) => { setIsPlayingTest(false); console.warn('[Inspector] TTS 사용 불가:', e?.message); },
                     isReplay: true // skip 스킵 방지용
                   });
                 }

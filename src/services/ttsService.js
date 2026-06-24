@@ -1,16 +1,8 @@
 // src/services/ttsService.js
 // [SSOT] TTS 규정: TTS는 출력 순서 기반으로만 실행 (1번째, 6번째, 11번째 등)
+// [SSOT] 모델/보이스/시스템인스트럭션은 @/config/ttsVoice.js 에서 가져온다.
 
-const API_KEY  = () => import.meta.env.VITE_OPENAI_API_KEY;
-const BASE_URL = () => import.meta.env.VITE_OPENAI_BASE_URL || 'https://api.openai.com/v1';
-
-const VOICE_MAP = {
-  default:  'nova',
-  female:   'shimmer',
-  male:     'onyx',
-  friendly: 'nova',
-  strict:   'echo',
-};
+import { TTS_MODEL, TTS_VOICE, SYSTEM_INSTRUCTION } from '@/config/ttsVoice.js';
 
 let currentAudio = null;
 let currentObjectUrl = null;
@@ -49,7 +41,7 @@ export const speakText = async (text, { voice, onStart, onEnd, onError, isReplay
   }
 
   const filteredText = filterTtsContent(text);
-  
+
   if (!filteredText) {
     console.log('[TTS] SKIPPED - No text after filtering');
     onEnd?.();
@@ -58,7 +50,6 @@ export const speakText = async (text, { voice, onStart, onEnd, onError, isReplay
 
   if (isAudioPlaying) {
     console.log('[TTS] SKIPPED - already playing');
-    // We shouldn't drop the queue silently or we should wait? But user usually wants onEnd?
     onEnd?.();
     return;
   }
@@ -66,8 +57,6 @@ export const speakText = async (text, { voice, onStart, onEnd, onError, isReplay
   stopSpeaking();
   isAudioPlaying = true;
   console.log('[TTS] START (Turn: ' + outputCount + ')', filteredText.slice(0, 80) + '...');
-
-  const selectedVoice = voice || VOICE_MAP.default;
 
   // Gemini API Key 로드
   const geminiApiKey = import.meta.env.VITE_GEMINI_API_KEY || (typeof window !== 'undefined' ? localStorage.getItem('VITE_GEMINI_API_KEY') : null);
@@ -78,36 +67,35 @@ export const speakText = async (text, { voice, onStart, onEnd, onError, isReplay
     let blob = null;
 
     if (geminiApiKey) {
-      console.log('[TTS] Attempting Gemini 2.5 Voice API...');
+      console.log('[TTS] Attempting Gemini ' + TTS_MODEL + ' Voice API...');
       try {
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${geminiApiKey}`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            systemInstruction: {
-              parts: [{
-                text: "너는 수학 학습을 돕는 친절하고 활기찬 여자 대학생 선생님이야. 입력받은 한국어 수학 텍스트(수식 포함)를 자연스러운 한국어 구어로 낭독해줘. 절대로 인사말이나 해설, 추가 설명, 잡담을 덧붙이지 말고, 오직 주어진 텍스트 자체만 있는 그대로 읽어줘. 수식은 한국어 수학 읽기 표준에 맞춰 자연스럽게 읽어줘."
-              }]
+        const response = await fetch(
+          `https://generativelanguage.googleapis.com/v1beta/models/${TTS_MODEL}:generateContent?key=${geminiApiKey}`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
             },
-            contents: [{
-              parts: [{
-                text: filteredText
-              }]
-            }],
-            generationConfig: {
-              responseModalities: ["AUDIO"],
-              speechConfig: {
-                voiceConfig: {
-                  prebuiltVoiceConfig: {
-                    voiceName: "Aoede"
+            body: JSON.stringify({
+              systemInstruction: {
+                parts: [{ text: SYSTEM_INSTRUCTION }]
+              },
+              contents: [{
+                parts: [{ text: filteredText }]
+              }],
+              generationConfig: {
+                responseModalities: ["AUDIO"],
+                speechConfig: {
+                  voiceConfig: {
+                    prebuiltVoiceConfig: {
+                      voiceName: TTS_VOICE
+                    }
                   }
                 }
               }
-            }
-          })
-        });
+            })
+          }
+        );
 
         if (!response.ok) {
           const errorJson = await response.json().catch(() => ({}));
@@ -132,39 +120,16 @@ export const speakText = async (text, { voice, onStart, onEnd, onError, isReplay
         }
         const byteArray = new Uint8Array(byteNumbers);
         blob = new Blob([byteArray], { type: mimeType });
-        console.log('[TTS] Gemini 2.5 Voice generated successfully');
+        console.log('[TTS] Gemini ' + TTS_MODEL + ' Voice generated successfully');
       } catch (geminiError) {
-        console.warn('[TTS] Gemini 2.5 Voice failed, falling back to OpenAI:', geminiError.message);
+        console.warn('[TTS] Gemini 3.1 실패:', geminiError.message);
+        throw geminiError; // 폴백 없음 — catch에서 무음 처리
       }
     } else {
-      console.log('[TTS] No Gemini API key found, skipping Gemini...');
+      throw new Error('Gemini API key 없음 — 음성 생성 불가');
     }
 
-    // Gemini 실패 혹은 미설정 시 OpenAI 시도
-    if (!blob) {
-      console.log('[TTS] Attempting OpenAI TTS API...');
-      const res = await fetch(`${BASE_URL()}/audio/speech`, {
-        method: `POST`,
-        headers: {
-          Authorization:  `Bearer ${API_KEY()}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          model: 'tts-1',
-          voice: selectedVoice,
-          input: filteredText,
-          response_format: 'mp3',
-        }),
-      });
-
-      if (!res.ok) {
-        const err = await res.json().catch(() => ({}));
-        throw new Error(err?.error?.message || `OpenAI TTS API HTTP ${res.status}`);
-      }
-
-      blob = await res.blob();
-      console.log('[TTS] OpenAI TTS generated successfully');
-    }
+    if (!blob) throw new Error('오디오 생성 실패');
 
     if (currentObjectUrl) {
       URL.revokeObjectURL(currentObjectUrl);
@@ -190,9 +155,8 @@ export const speakText = async (text, { voice, onStart, onEnd, onError, isReplay
     await currentAudio.play();
 
   } catch (e) {
-    console.error('[TTS] speakText primary / secondary failure:', e);
+    console.error('[TTS] speakText 실패(무음 처리):', e);
     isAudioPlaying = false;
-    _browserFallback(filteredText, onEnd);
     onError?.(e);
   }
 };
@@ -226,30 +190,5 @@ export const setMuted = (v) => {
 
 export const getMuted = () => isMuted;
 
-export const getVoiceForTeacher = (teacher) => {
-  if (!teacher || !teacher.gender) {
-    console.warn('[TTS WARN] teacher missing or gender not specified. Fallback dynamically based on name.');
-    const name = teacher?.name || '';
-    if (name.includes('도진') || name.includes('석진')) return VOICE_MAP.male;
-    if (name.includes('윤아') || name.includes('유나')) return VOICE_MAP.female;
-    return VOICE_MAP.female;
-  }
-
-  let voiceId = teacher.gender === 'male' ? VOICE_MAP.male : VOICE_MAP.female;
-
-  console.log('[TTS VOICE]');
-  console.log('teacher:', teacher.name);
-  console.log('gender:', teacher.gender);
-  console.log('voice:', voiceId);
-
-  return voiceId;
-};
-
-const _browserFallback = (filteredText, onEnd) => {
-  if (!window.speechSynthesis || !filteredText) { onEnd?.(); return; }
-  const u = new SpeechSynthesisUtterance(filteredText);
-  u.lang  = 'ko-KR'; 
-  u.rate  = 1.0;
-  u.onend = () => onEnd?.();
-  window.speechSynthesis.speak(u);
-};
+// 보이스는 항상 SSOT(Aoede). 호환을 위해 export/시그니처만 유지한다.
+export const getVoiceForTeacher = () => TTS_VOICE;

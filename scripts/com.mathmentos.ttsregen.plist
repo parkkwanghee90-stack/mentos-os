@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  TTS 음색 통일 일일 재생성 launchd 에이전트.
+  등록:  cp scripts/com.mathmentos.ttsregen.plist ~/Library/LaunchAgents/
+         launchctl load ~/Library/LaunchAgents/com.mathmentos.ttsregen.plist
+  해제:  launchctl unload ~/Library/LaunchAgents/com.mathmentos.ttsregen.plist
+
+  ⚠️ 주의: 기존 com.mentos.autotts(SU1_GAPS 자동수확)와 동일한 Gemini 3.1 일일 할당량(키별 100)을 공유한다.
+     둘을 동시에 켜면 한쪽이 먼저 소진해 다른 쪽이 0이 될 수 있다. 등록 전 우선순위를 조정할 것.
+     (예: 자동수확을 일시 unload 하거나, 음색통일 완료까지 본 에이전트만 운용.)
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.mathmentos.ttsregen</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/local/bin/node</string>
+    <string>/Users/mac/mathmentos/scripts/cron_regen_tts_daily.cjs</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/Users/mac/mathmentos</string>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>9</integer>
+    <key>Minute</key>
+    <integer>5</integer>
+  </dict>
+  <key>StandardOutPath</key>
+  <string>/Users/mac/mathmentos/logs/ttsregen.out</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/mac/mathmentos/logs/ttsregen.err</string>
+</dict>
+</plist>

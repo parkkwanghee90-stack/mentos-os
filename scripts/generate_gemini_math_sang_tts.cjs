@@ -7,11 +7,19 @@ const { classifyRemoteClip } = require('./lib/tts_engine_classifier.cjs');
 
 dotenv.config();
 
-const GEMINI_API_KEYS = [
-  process.env.VITE_GEMINI_API_KEY,
-  process.env.VITE_GEMINI_API_KEY_2,
-  process.env.VITE_GEMINI_API_KEY_3,
-].filter(Boolean);
+// 동적 키 풀: VITE_GEMINI_API_KEY + VITE_GEMINI_API_KEY_2,_3,...,_N(연속 번호)을 모두 수집.
+// 서로 다른 GCP 프로젝트의 키를 추가할수록 일일 할당량(프로젝트당 100/day)이 합산된다.
+function collectGeminiKeys() {
+  const keys = [];
+  if (process.env.VITE_GEMINI_API_KEY) keys.push(process.env.VITE_GEMINI_API_KEY);
+  for (let i = 2; ; i++) {
+    const v = process.env[`VITE_GEMINI_API_KEY_${i}`];
+    if (!v) break;
+    keys.push(v);
+  }
+  return keys;
+}
+const GEMINI_API_KEYS = collectGeminiKeys();
 
 let currentKeyIndex = 0;
 
@@ -24,8 +32,7 @@ const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const BUCKET = 'math-tts';
 const LOCAL_OUTPUT_DIR = path.join('public', 'audio', 'math_hints');
 const MANIFEST_PATH = path.join('scripts', 'tts_manifest.json');
-const TTS_MODEL = 'gemini-3.1-flash-tts-preview';
-const TTS_VOICE = 'Aoede';
+const { TTS_MODEL, TTS_VOICE } = require('./lib/ttsVoice.cjs');
 
 // Tag each freshly generated clip with its engine/model in a manifest, so future
 // "overwrite legacy" runs can rely on recorded metadata instead of audio-header sniffing.
@@ -53,17 +60,18 @@ function recordManifest(remotePath, bytes) {
   }
 }
 
-if (GEMINI_API_KEYS.length === 0) {
-  console.error('❌ Error: No Gemini API keys are defined');
-  process.exit(1);
-}
-if (!SUPABASE_URL || !SUPABASE_KEY) {
-  console.error('❌ Error: Supabase credentials are not defined in .env');
-  process.exit(1);
-}
-
-if (!fs.existsSync(LOCAL_OUTPUT_DIR)) {
-  fs.mkdirSync(LOCAL_OUTPUT_DIR, { recursive: true });
+if (!process.argv.includes('--list-stages')) {
+  if (GEMINI_API_KEYS.length === 0) {
+    console.error('❌ Error: No Gemini API keys are defined');
+    process.exit(1);
+  }
+  if (!SUPABASE_URL || !SUPABASE_KEY) {
+    console.error('❌ Error: Supabase credentials are not defined in .env');
+    process.exit(1);
+  }
+  if (!fs.existsSync(LOCAL_OUTPUT_DIR)) {
+    fs.mkdirSync(LOCAL_OUTPUT_DIR, { recursive: true });
+  }
 }
 
 // Chapter specifications mapping for 수학 상
@@ -267,7 +275,7 @@ ${text}`;
 
       let response;
       try {
-        response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-tts-preview:generateContent?key=${currentKey}`, {
+        response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${TTS_MODEL}:generateContent?key=${currentKey}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           signal: controller.signal,
@@ -277,7 +285,7 @@ ${text}`;
               responseModalities: ["AUDIO"],
               speechConfig: {
                 voiceConfig: {
-                  prebuiltVoiceConfig: { voiceName: "Aoede" }
+                  prebuiltVoiceConfig: { voiceName: TTS_VOICE }
                 }
               }
             }
@@ -541,6 +549,79 @@ async function processStage(stageSpec, opts = {}) {
 
 async function main() {
   const args = process.argv.slice(2);
+
+  // --list-stages: print known remoteDirs as one JSON line and exit
+  if (args.includes('--list-stages')) {
+    const dirs = [];
+    for (const chapter of Object.values(CHAPTER_MAP)) {
+      for (const stage of chapter.stages) dirs.push(stage.remoteDir);
+    }
+    console.log(`STAGES_JSON ${JSON.stringify(dirs)}`);
+    process.exit(0);
+  }
+
+  // --regen-keys k1,k2,...: regenerate specific {remoteDir}/{pid}.mp3 keys
+  const regenIdx = args.indexOf('--regen-keys');
+  if (regenIdx !== -1) {
+    const { isQuotaExhausted } = require('./lib/regenQuota.cjs');
+    // Build remoteDir → stageSpec lookup
+    const remoteDirToSpec = {};
+    for (const chapter of Object.values(CHAPTER_MAP)) {
+      for (const stage of chapter.stages) remoteDirToSpec[stage.remoteDir] = stage;
+    }
+
+    const keysArg = (args[regenIdx + 1] || '').split(',').map(s => s.trim()).filter(Boolean);
+    for (const clipKey of keysArg) {
+      const slashIdx = clipKey.lastIndexOf('/');
+      const remoteDir = clipKey.slice(0, slashIdx);
+      const filename = clipKey.slice(slashIdx + 1); // e.g. "001.mp3"
+      const pid = filename.replace(/\.mp3$/, '');
+      const stageSpec = remoteDirToSpec[remoteDir];
+      if (!stageSpec) {
+        console.log(`REGEN_SKIP ${clipKey}`);
+        continue;
+      }
+      const { localDir, localAudioPrefix } = stageSpec;
+      const jsonPath = path.join('public', 'math_hints', localDir, `${pid}.json`);
+      const remotePath = `${remoteDir}/${pid}.mp3`;
+      try {
+        if (!fs.existsSync(jsonPath)) throw new Error(`hint JSON not found: ${jsonPath}`);
+        const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+        const narrationText = createNarration(data);
+        if (!narrationText) {
+          console.warn(`REGEN_SKIP ${clipKey} (no narration text)`);
+          continue;
+        }
+        const rawAudioBuffer = await generateGeminiTTS(narrationText);
+        const tempPcmPath = path.resolve(LOCAL_OUTPUT_DIR, `temp_regen_sang_${remoteDir.replace(/\//g, '_')}_${pid}.pcm`);
+        const tempMp3Path = path.resolve(LOCAL_OUTPUT_DIR, `temp_regen_sang_${remoteDir.replace(/\//g, '_')}_${pid}.mp3`);
+        fs.writeFileSync(tempPcmPath, rawAudioBuffer);
+        try {
+          execSync(`ffmpeg -y -f s16le -ar 24000 -ac 1 -i "${tempPcmPath}" -codec:a libmp3lame -qscale:a 2 "${tempMp3Path}"`, { stdio: 'pipe' });
+        } finally {
+          try { fs.unlinkSync(tempPcmPath); } catch (e) {}
+        }
+        const mp3Buffer = fs.readFileSync(tempMp3Path);
+        try { fs.unlinkSync(tempMp3Path); } catch (e) {}
+        if (mp3Buffer.length < 10240) throw new Error(`MP3 too small: ${mp3Buffer.length} bytes`);
+        const localFileName = `${localAudioPrefix}${String(Number(pid)).toString().padStart(2, '0')}.mp3`;
+        const localFilePath = path.join(LOCAL_OUTPUT_DIR, localFileName);
+        fs.writeFileSync(localFilePath, mp3Buffer);
+        await uploadToSupabase(mp3Buffer, remotePath);
+        recordManifest(remotePath, mp3Buffer.length);
+        console.log(`REGEN_DONE ${clipKey}`);
+        await new Promise(r => setTimeout(r, 6500));
+      } catch (err) {
+        if (isQuotaExhausted(err)) {
+          console.log('REGEN_QUOTA_EXHAUSTED');
+          process.exit(0);
+        }
+        console.error(`REGEN_ERR ${clipKey}: ${err.message}`);
+      }
+    }
+    return;
+  }
+
   const chapterArg = args[0];
   const force = args.includes('--force');
   const overwriteOpenai = args.includes('--overwrite-openai') || args.includes('--upgrade-legacy');
