@@ -18803,5 +18803,541 @@
     "bytes": 6363890,
     "chars": 3114,
     "generatedAt": "2026-06-24T02:06:43.452Z"
+  },
+  "math2_05_derivative_util_3_homework/029.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 7216527,
+    "chars": 3460,
+    "generatedAt": "2026-06-24T02:08:45.321Z"
+  },
+  "math2_05_derivative_util_3_homework/030.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 4567919,
+    "chars": 2141,
+    "generatedAt": "2026-06-24T02:09:25.908Z"
+  },
+  "math2_05_derivative_util_3_homework/031.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 4682022,
+    "chars": 2243,
+    "generatedAt": "2026-06-24T02:10:06.865Z"
+  },
+  "math2_05_derivative_util_3_homework/032.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 4454235,
+    "chars": 2182,
+    "generatedAt": "2026-06-24T02:10:46.085Z"
+  },
+  "math2_05_derivative_util_3_homework/033.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3930114,
+    "chars": 1821,
+    "generatedAt": "2026-06-24T02:11:20.480Z"
+  },
+  "math2_05_derivative_util_3_homework/034.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3637542,
+    "chars": 1711,
+    "generatedAt": "2026-06-24T02:11:53.006Z"
+  },
+  "math2_05_derivative_util_3_homework/035.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 5685960,
+    "chars": 2779,
+    "generatedAt": "2026-06-24T02:12:42.363Z"
+  },
+  "math2_05_derivative_util_3_homework/036.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3810577,
+    "chars": 1783,
+    "generatedAt": "2026-06-24T02:13:15.795Z"
+  },
+  "math2_05_derivative_util_3_homework/037.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 4431665,
+    "chars": 2164,
+    "generatedAt": "2026-06-24T02:13:53.935Z"
+  },
+  "math2_05_derivative_util_3_homework/038.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 5716471,
+    "chars": 2780,
+    "generatedAt": "2026-06-24T02:14:44.011Z"
+  },
+  "math2_05_derivative_util_3_homework/039.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 4073474,
+    "chars": 1933,
+    "generatedAt": "2026-06-24T02:15:20.063Z"
+  },
+  "math2_05_derivative_util_3_homework/040.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 6218858,
+    "chars": 2973,
+    "generatedAt": "2026-06-24T02:16:14.463Z"
+  },
+  "math2_05_derivative_util_3_homework/041.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 6618009,
+    "chars": 3218,
+    "generatedAt": "2026-06-24T02:17:12.727Z"
+  },
+  "math2_06_integral_homework/001.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3202865,
+    "chars": 1515,
+    "generatedAt": "2026-06-24T02:17:40.532Z"
+  },
+  "math2_06_integral_homework/002.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3304011,
+    "chars": 1591,
+    "generatedAt": "2026-06-24T02:18:10.757Z"
+  },
+  "math2_06_integral_homework/003.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3179877,
+    "chars": 1607,
+    "generatedAt": "2026-06-24T02:18:39.529Z"
+  },
+  "math2_06_integral_homework/004.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 2567567,
+    "chars": 1223,
+    "generatedAt": "2026-06-24T02:19:04.343Z"
+  },
+  "math2_06_integral_homework/005.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 2491080,
+    "chars": 1135,
+    "generatedAt": "2026-06-24T02:19:26.850Z"
+  },
+  "math2_06_integral_homework/006.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 2040520,
+    "chars": 965,
+    "generatedAt": "2026-06-24T02:19:46.099Z"
+  },
+  "math2_06_integral_homework/007.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 1723289,
+    "chars": 762,
+    "generatedAt": "2026-06-24T02:20:01.743Z"
+  },
+  "math2_06_integral_homework/008.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3147694,
+    "chars": 1516,
+    "generatedAt": "2026-06-24T02:20:29.717Z"
+  },
+  "math2_06_integral_homework/009.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 2528279,
+    "chars": 1205,
+    "generatedAt": "2026-06-24T02:20:53.165Z"
+  },
+  "math2_06_integral_homework/010.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3693967,
+    "chars": 1898,
+    "generatedAt": "2026-06-24T02:21:26.142Z"
+  },
+  "math2_06_integral_homework/011.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3119691,
+    "chars": 1388,
+    "generatedAt": "2026-06-24T02:21:53.844Z"
+  },
+  "math2_06_integral_homework/012.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3083328,
+    "chars": 1514,
+    "generatedAt": "2026-06-24T02:22:21.538Z"
+  },
+  "math2_06_integral_homework/013.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3241317,
+    "chars": 1514,
+    "generatedAt": "2026-06-24T02:22:50.775Z"
+  },
+  "math2_06_integral_homework/014.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3107152,
+    "chars": 1542,
+    "generatedAt": "2026-06-24T02:23:18.699Z"
+  },
+  "math2_06_integral_homework/015.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 2662444,
+    "chars": 1330,
+    "generatedAt": "2026-06-24T02:23:42.430Z"
+  },
+  "math2_06_integral_homework/016.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3020635,
+    "chars": 1394,
+    "generatedAt": "2026-06-24T02:24:09.201Z"
+  },
+  "math2_06_integral_homework/017.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 2511978,
+    "chars": 1171,
+    "generatedAt": "2026-06-24T02:24:31.482Z"
+  },
+  "math2_06_integral_homework/018.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 1531864,
+    "chars": 750,
+    "generatedAt": "2026-06-24T02:24:46.227Z"
+  },
+  "math2_06_integral_homework/019.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 2311776,
+    "chars": 1096,
+    "generatedAt": "2026-06-24T02:25:06.280Z"
+  },
+  "math2_06_integral_homework/020.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3009768,
+    "chars": 1381,
+    "generatedAt": "2026-06-24T02:25:32.581Z"
+  },
+  "math2_06_integral_homework/021.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 2559208,
+    "chars": 1245,
+    "generatedAt": "2026-06-24T02:25:55.885Z"
+  },
+  "math2_06_integral_homework/022.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 2025892,
+    "chars": 877,
+    "generatedAt": "2026-06-24T02:26:14.445Z"
+  },
+  "math2_06_integral_homework/023.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 2983018,
+    "chars": 1397,
+    "generatedAt": "2026-06-24T02:26:41.001Z"
+  },
+  "math2_06_integral_homework/025.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3818101,
+    "chars": 1825,
+    "generatedAt": "2026-06-24T02:27:13.579Z"
+  },
+  "math2_06_integral_homework/026.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 4319652,
+    "chars": 2100,
+    "generatedAt": "2026-06-24T02:27:51.877Z"
+  },
+  "math2_06_integral_homework/027.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 4815769,
+    "chars": 2383,
+    "generatedAt": "2026-06-24T02:28:33.687Z"
+  },
+  "math2_06_integral_homework/028.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 4946591,
+    "chars": 2442,
+    "generatedAt": "2026-06-24T02:29:17.751Z"
+  },
+  "math2_06_integral_homework/029.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 4118195,
+    "chars": 1939,
+    "generatedAt": "2026-06-24T02:29:54.343Z"
+  },
+  "math2_06_integral_homework/030.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 4494777,
+    "chars": 2103,
+    "generatedAt": "2026-06-24T02:30:35.290Z"
+  },
+  "math2_06_integral_homework/031.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 4411603,
+    "chars": 2074,
+    "generatedAt": "2026-06-24T02:31:14.530Z"
+  },
+  "math2_06_integral_homework/032.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 4458414,
+    "chars": 2215,
+    "generatedAt": "2026-06-24T02:31:52.213Z"
+  },
+  "math2_06_integral_homework/033.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3882048,
+    "chars": 1828,
+    "generatedAt": "2026-06-24T02:32:27.000Z"
+  },
+  "math2_06_integral_homework/034.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 5344906,
+    "chars": 2547,
+    "generatedAt": "2026-06-24T02:33:15.044Z"
+  },
+  "math2_06_integral_homework/035.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3758751,
+    "chars": 1824,
+    "generatedAt": "2026-06-24T02:33:47.372Z"
+  },
+  "math2_06_integral_homework/036.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3054907,
+    "chars": 1451,
+    "generatedAt": "2026-06-24T02:34:14.038Z"
+  },
+  "math2_06_integral_homework/037.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 4748478,
+    "chars": 2310,
+    "generatedAt": "2026-06-24T02:34:55.548Z"
+  },
+  "math2_06_integral_homework/038.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3934711,
+    "chars": 1898,
+    "generatedAt": "2026-06-24T02:35:30.981Z"
+  },
+  "math2_06_integral_homework/039.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 5339890,
+    "chars": 2716,
+    "generatedAt": "2026-06-24T02:36:36.569Z"
+  },
+  "math2_06_integral_homework/040.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3478300,
+    "chars": 1690,
+    "generatedAt": "2026-06-24T02:37:14.664Z"
+  },
+  "math2_06_integral_homework/041.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3972746,
+    "chars": 1932,
+    "generatedAt": "2026-06-24T02:37:55.055Z"
+  },
+  "math2_06_integral_homework/042.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 5911240,
+    "chars": 2958,
+    "generatedAt": "2026-06-24T02:39:16.681Z"
+  },
+  "math2_06_integral_homework/043.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 4456324,
+    "chars": 2104,
+    "generatedAt": "2026-06-24T02:40:09.379Z"
+  },
+  "math2_06_integral_homework/044.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 7015488,
+    "chars": 3393,
+    "generatedAt": "2026-06-24T02:41:12.567Z"
+  },
+  "math2_06_integral_homework/045.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 4256540,
+    "chars": 1991,
+    "generatedAt": "2026-06-24T02:42:03.557Z"
+  },
+  "math2_06_integral_homework/046.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3230450,
+    "chars": 1539,
+    "generatedAt": "2026-06-24T02:42:32.371Z"
+  },
+  "math2_06_integral_homework/047.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3002244,
+    "chars": 1465,
+    "generatedAt": "2026-06-24T02:42:58.866Z"
+  },
+  "math2_06_integral_homework/048.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 4391541,
+    "chars": 2079,
+    "generatedAt": "2026-06-24T02:43:36.724Z"
+  },
+  "math2_06_integral_homework/049.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 4272004,
+    "chars": 2113,
+    "generatedAt": "2026-06-24T02:44:14.137Z"
+  },
+  "math2_06_integral_homework/050.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3903364,
+    "chars": 1825,
+    "generatedAt": "2026-06-24T02:44:48.844Z"
+  },
+  "math2_06_integral_homework/051.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3983195,
+    "chars": 1963,
+    "generatedAt": "2026-06-24T02:45:23.935Z"
+  },
+  "math2_06_integral_homework/052.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 3569833,
+    "chars": 1679,
+    "generatedAt": "2026-06-24T02:45:54.964Z"
+  },
+  "math2_06_integral_homework/053.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 5149719,
+    "chars": 2380,
+    "generatedAt": "2026-06-24T02:46:39.507Z"
+  },
+  "math2_06_integral_homework/054.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 5925869,
+    "chars": 2871,
+    "generatedAt": "2026-06-24T02:47:30.197Z"
+  },
+  "math2_06_integral_homework/055.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 5803407,
+    "chars": 2795,
+    "generatedAt": "2026-06-24T02:48:20.157Z"
   }
 }
