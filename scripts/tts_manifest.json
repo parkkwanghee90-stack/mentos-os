@@ -19563,5 +19563,37 @@
     "bytes": 5347831,
     "chars": 2587,
     "generatedAt": "2026-06-24T03:04:34.801Z"
+  },
+  "math2_07_def_integral_util_homework/017.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 4395302,
+    "chars": 2191,
+    "generatedAt": "2026-06-24T03:05:47.760Z"
+  },
+  "math2_07_def_integral_util_homework/018.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 4379002,
+    "chars": 2128,
+    "generatedAt": "2026-06-24T03:06:26.242Z"
+  },
+  "math2_07_def_integral_util_homework/019.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 4929454,
+    "chars": 2378,
+    "generatedAt": "2026-06-24T03:07:10.788Z"
+  },
+  "math2_07_def_integral_util_homework/020.mp3": {
+    "engine": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "voiceId": "K1gL0LDHPVEQ8CtVR6WU",
+    "bytes": 4376912,
+    "chars": 2150,
+    "generatedAt": "2026-06-24T03:07:48.966Z"
   }
 }
