@@ -143,5 +143,21 @@
   "이차방정식4단계": "quad_eq_s4",
   "이차방정식과이차함수2단계": "quad_func_s2",
   "이차방정식과이차함수3단계": "quad_func_s3",
-  "이차방정식과이차함수4단계": "quad_func_s4"
+  "이차방정식과이차함수4단계": "quad_func_s4",
+  "미적분_01수열의극한_통합숙제": "calculus_01_seq_limit_homework",
+  "미적분_02급수_통합숙제": "calculus_02_series_homework",
+  "미적분_03지수로그함수미분_통합숙제": "calculus_03_explog_func_homework",
+  "미적분_04삼각함수미분_통합숙제": "calculus_04_trig_derivative_homework",
+  "미적분_05여러가지미분법_통합숙제": "calculus_05_misc_derivatives_homework",
+  "미적분_06도함수활용1_통합숙제": "calculus_06_derivative_util_1_homework",
+  "미적분_07도함수활용2_통합숙제": "calculus_07_derivative_util_2_homework",
+  "미적분_08여러가지적분법_통합숙제": "calculus_08_misc_integrals_homework",
+  "미적분_09정적분_통합숙제": "calculus_09_def_integral_homework",
+  "수학2_01함수의극한_통합숙제": "math2_01_limit_homework",
+  "수학2_02함수의연속_통합숙제": "math2_02_continuity_homework",
+  "수학2_03미분계수_통합숙제": "math2_03_derivative_coeff_homework",
+  "수학2_04도함수활용12_통합숙제": "math2_04_derivative_util_12_homework",
+  "수학2_05도함수활용3_통합숙제": "math2_05_derivative_util_3_homework",
+  "수학2_06부정적분정적분_통합숙제": "math2_06_integral_homework",
+  "수학2_07정적분활용_통합숙제": "math2_07_def_integral_util_homework"
 }

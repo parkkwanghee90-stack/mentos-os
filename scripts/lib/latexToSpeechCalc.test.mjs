@@ -1,0 +1,56 @@
+import { describe, it, expect } from 'vitest';
+import calc from './latexToSpeechCalc.cjs';
+
+describe('latexToSpeechCalc 미적분 전처리', () => {
+  it('정적분 구간을 인테그랄+범위로 읽는다', () => {
+    const out = calc.latexToSpeechCalc('\\displaystyle\\int_{1}^{2} x\\,dx');
+    expect(out).toContain('1');
+    expect(out).toContain('2');
+    expect(out).toContain('인테그랄');
+    expect(out).toContain('부터');
+    expect(out).not.toContain('\\int');
+    expect(out).not.toContain('displaystyle');
+  });
+  it('분수 dfrac/frac을 ~분의~로', () => {
+    expect(calc.latexToSpeechCalc('\\dfrac{3x+2}{x^2}')).toContain('분의');
+  });
+  it('ln과 lim을 한국어로', () => {
+    expect(calc.latexToSpeechCalc('\\ln x')).toContain('자연로그');
+    expect(calc.latexToSpeechCalc('\\lim_{x \\to 0} f(x)')).toContain('극한');
+  });
+  it('도함수 프라임을 읽는다', () => {
+    expect(calc.latexToSpeechCalc("f'(x)")).toMatch(/프라임|도함수/);
+  });
+  it('LaTeX 명령 잔여가 없다', () => {
+    const out = calc.latexToSpeechCalc('\\displaystyle\\int_0^1 \\dfrac{1}{x}\\,dx + \\ln 2');
+    expect(out).not.toMatch(/\\[a-zA-Z]+/);
+  });
+  it('분자/분모에 지수가 있는 분수(중첩 중괄호)도 처리', () => {
+    const out = calc.latexToSpeechCalc('\\dfrac{3x+2}{x^{2}}');
+    expect(out).toContain('분의');
+    expect(out).not.toContain('frac');
+    expect(out).not.toMatch(/\\[a-zA-Z]+/);
+  });
+  it('무한대 \\infty를 읽는다', () => {
+    const out = calc.latexToSpeechCalc('\\lim_{n\\to\\infty} a_n');
+    expect(out).toContain('무한대');
+    expect(out).not.toContain('infty');
+    expect(out).not.toMatch(/\\[a-zA-Z]+/);
+  });
+  it('시그마+범위를 읽고, 위끝을 지수(승)로 오독하지 않는다', () => {
+    const out = calc.latexToSpeechCalc('\\sum_{k=1}^{n} k');
+    expect(out).toContain('시그마');
+    expect(out).toContain('부터');
+    expect(out).not.toMatch(/n\s*승|엔\s*승/);   // 위끝 n이 "n승/엔승"이 되면 안 됨
+    expect(out).not.toContain('sum');
+  });
+  it('big 괄호 크기 명령을 제거한다', () => {
+    const out = calc.latexToSpeechCalc('\\bigl[(2n+1)+3\\bigr]');
+    expect(out).not.toMatch(/bigl|bigr|\\big/);
+    expect(out).not.toMatch(/\\[a-zA-Z]+/);
+  });
+  it('복합 미적분 문장에 LaTeX 잔여가 없다', () => {
+    const out = calc.latexToSpeechCalc('\\displaystyle\\lim_{n\\to\\infty}\\dfrac{\\sum_{k=1}^{n}k^2}{n^3}');
+    expect(out).not.toMatch(/\\[a-zA-Z]+|infty|bigl|bigr|sum/);
+  });
+});
